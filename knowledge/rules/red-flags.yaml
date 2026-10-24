@@ -415,6 +415,28 @@
     basis: judgment
     sources: [nhs-headaches]
     note: "Đau đầu dữ dội kèm sốt cần loại trừ viêm màng não, sốt xuất huyết, sốt rét (lượt C lô 1 đề xuất); các dấu hiệu nặng hơn (cứng gáy, lú lẫn, ban xuất huyết) đã có quy tắc mức 2."
+- id: rf_cholangitis_triad
+  level: 2
+  when:
+    all:
+      - { finding: fever, is: present }
+      - { finding: jaundice, is: present }
+      - { finding: abdominal_pain, is: present }
+  reason_vi: "Sốt kèm vàng da và đau bụng có thể là viêm đường mật, cần khám cấp cứu."
+  evidence:
+    tier: C
+    basis: verbal
+    sources: [msd-choledocholithiasis-cholangitis]
+    note: "Tam chứng Charcot; MSD: viêm đường mật cấp là cấp cứu (lượt B lô 3 đề xuất). Cần nguồn hướng dẫn chính thức (Tokyo Guidelines 2018)."
+- id: rf_painful_hernia
+  level: 2
+  when: { finding: hernia_lump_painful, is: present }
+  reason_vi: "Khối phồng đau ở bẹn hoặc rốn không đẩy lên được có thể là thoát vị nghẹt, cần khám cấp cứu."
+  evidence:
+    tier: B
+    basis: judgment
+    sources: [wses-asbo-2018]
+    note: "Thoát vị nghẹt gây tắc ruột cần mổ cấp cứu (lượt B lô 3 đề xuất finding). Nguồn WSES về tắc ruột; cần thêm hướng dẫn về thoát vị."
 - id: rf_flu_risk_chronic_disease
   level: 3
   when:

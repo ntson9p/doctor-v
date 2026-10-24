@@ -1,0 +1,175 @@
+id: acute_appendicitis
+names:
+  vi: "Viêm ruột thừa cấp tính"
+  vi_common: ["Viêm ruột thừa", "Đau ruột thừa"]
+  en: "Acute appendicitis"
+codes:
+  icd10: "K35"
+  icd10_verified: true
+  mondo: "MONDO:0005649"
+summary_vi:
+  - "Ruột thừa bị viêm cấp, hay gặp nhất ở tuổi thiếu niên và người trẻ."
+  - "Đau thường bắt đầu quanh rốn, sau vài giờ chuyển xuống bụng dưới bên phải và tăng dần."
+  - "Cần được khám và điều trị sớm vì ruột thừa có thể vỡ, gây viêm phúc mạc."
+urgency: 2
+cant_miss: true
+specialties: [general_surgery, emergency]
+priors:
+  - complaint: abdominal_pain
+    default: P3
+    by_age: { infant_0_2m: P6, child_2m_5y: P5, elder_75p: P4 }
+    evidence:
+      tier: A
+      basis: numeric
+      sources: [viniol-fampract-2014, bundy-2007-jama-child-appendicitis, erkan-2004-child-abdominal-pain, nhs-appendicitis, msd-appendicitis]
+      reported: "Chăm sóc ban đầu (người lớn): 1,9%; cấp cứu nhi không chọn lọc (O'Shea 1988): 10%; cấp cứu nhi 2–16 tuổi (Erkan 2004): khoảng 3,8%"
+      population: "Người lớn ở chăm sóc ban đầu; trẻ em ở khoa cấp cứu"
+      note: "P3 (1–5%) cho trẻ từ 5 tuổi đến người 74 tuổi: số liệu chăm sóc ban đầu 1,9%; ở cấp cứu nhi 4–10%, hạ xuống cho bối cảnh cộng đồng. Hay gặp nhất ở tuổi vị thành niên và 20–29 tuổi (MSD). Trẻ 2 tháng – 5 tuổi: P5 vì ít gặp (NHS: hiếm ở trẻ dưới 12 tháng; người soạn ước dưới 0,2% số lần trẻ nhỏ đau bụng), nhưng khi gặp thì phần lớn đã thủng (Bundy 2007), nên an toàn dựa vào các quy tắc dấu hiệu nguy hiểm và ngưỡng 'không được bỏ sót'. Từ 75 tuổi: P4 vì tỷ lệ mắc giảm theo tuổi trong khi nguyên nhân đau bụng khác tăng; người già hay không điển hình. Dưới 2 tháng: P6."
+  - complaint: fever
+    default: P5
+    by_age: { infant_0_2m: P6 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [bundy-2007-jama-child-appendicitis, msd-appendicitis]
+      note: "Sốt gặp ở khoảng 60–75% người viêm ruột thừa (Bundy 2007; AAFP 2018) nhưng đau bụng gần như luôn là triệu chứng nổi bật, nên rất ít người chọn sốt làm triệu chứng chính. Ước P5 (dưới 0,2% người đi khám vì sốt). Lượt B đã thử P4 trong một mô phỏng nhỏ: người lớn sốt kèm đau bụng, tiêu chảy (viêm dạ dày – ruột điển hình) bị đẩy lên mức 2 chỉ vì viêm ruột thừa vượt ngưỡng 1%, nên hạ xuống P5."
+findings:
+  - finding: abd_pain_location
+    dist: { epigastric: 0.06, right_upper: 0.03, left_upper: 0.01, periumbilical: 0.14, right_lower: 0.62, left_lower: 0.02, suprapubic: 0.05, whole: 0.07 }
+    evidence:
+      tier: A
+      basis: numeric
+      sources: [snyder-2018-aafp-appendicitis, wagner-1996-jama-appendicitis, bundy-2007-jama-child-appendicitis, nhs-appendicitis]
+      locator: "AAFP 2018 Bảng 1 (theo Wagner 1996); Bundy 2007 Bảng 3"
+      reported: "Đau hố chậu phải: LR− 0–0,28 ở người lớn (độ nhạy suy ra từ 75% trở lên); trẻ em LR+ 1,2, LR− 0,56 (độ nhạy suy ra khoảng 80%)"
+      note: "Số liệu bệnh viện đo khi đau đã khu trú. Người dùng ở cộng đồng có thể kiểm tra sớm, lúc đau còn quanh rốn hoặc thượng vị, nên hạ tỷ lệ bụng dưới bên phải xuống khoảng 60%."
+  - finding: abd_pain_migrated_rlq
+    freq: frequent
+    evidence:
+      tier: A
+      basis: numeric
+      sources: [snyder-2018-aafp-appendicitis, wagner-1996-jama-appendicitis, bundy-2007-jama-child-appendicitis]
+      locator: "AAFP 2018 Bảng 1; Bundy 2007 (Dolgin 1992, Kharbanda 2005)"
+      reported: "Người lớn: LR+ 3,2, LR− 0,50 (độ nhạy suy ra khoảng 59%); trẻ em: độ nhạy 0,45–0,68"
+  - finding: abd_pain_onset
+    dist: { sudden: 0.15, gradual: 0.85 }
+    evidence:
+      tier: C
+      basis: verbal
+      sources: [msd-appendicitis, nhs-appendicitis]
+      note: "Đau bắt đầu âm ỉ quanh rốn hoặc thượng vị, vài giờ sau mới khu trú và tăng dần; đau đột ngột, dữ dội ngay từ đầu không điển hình. Tỷ lệ là ước lượng."
+  - finding: abd_pain_duration
+    dist: { lt_6h: 0.15, h6_24: 0.42, d1_3: 0.35, d4_14: 0.06, gt_2w: 0.02 }
+    evidence:
+      tier: A
+      basis: judgment
+      sources: [snyder-2018-aafp-appendicitis, bundy-2007-jama-child-appendicitis]
+      locator: "AAFP 2018 Bảng 1 (không có cơn đau tương tự trước đây: LR− 0,32)"
+      note: "Phần lớn người bệnh đến khám trong 1–2 ngày đầu; thủng ruột thừa tăng khi để quá 36 giờ (Bundy 2007). Khoảng 1/10 từng có cơn đau tương tự, nhưng đau kéo dài trên 2 tuần hoặc tái đi tái lại ít gặp. Phân bố là ước lượng."
+  - finding: abd_pain_worse_movement
+    freq: frequent
+    evidence:
+      tier: A
+      basis: numeric
+      sources: [bundy-2007-jama-child-appendicitis, msd-appendicitis, nhs-appendicitis]
+      locator: "Bundy 2007 Bảng 3 (Kharbanda 2005); MSD: đau tăng khi ho và cử động"
+      reported: "Đau khi gõ, nhảy hoặc ho: độ nhạy 0,78 ở trẻ đến cấp cứu"
+      note: "Hạ một mức (từ very_frequent) cho bối cảnh cộng đồng, vì dấu hiệu kích thích phúc mạc rõ dần theo thời gian."
+  - finding: abd_pain_severe
+    freq: occasional
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [nhs-appendicitis, msd-appendicitis]
+      note: "Đau thường tăng dần, vừa phải; đau dữ dội, không chịu nổi gặp khi viêm nặng hoặc thủng. Ước 20–30%."
+  - finding: nausea
+    freq: frequent
+    evidence:
+      tier: A
+      basis: numeric
+      sources: [snyder-2018-aafp-appendicitis, msd-appendicitis]
+      locator: "AAFP 2018 Bảng 1 (buồn nôn LR+ 0,69–1,2)"
+      reported: "Buồn nôn gần như không phân biệt (LR quanh 1)"
+      note: "Buồn nôn thường gặp nhưng không đặc hiệu. Mức frequent (50%) chỉ cao hơn tỷ lệ nền 35% một chút, đúng với LR quanh 1."
+  - finding: vomiting
+    freq: frequent
+    evidence:
+      tier: A
+      basis: numeric
+      sources: [bundy-2007-jama-child-appendicitis, snyder-2018-aafp-appendicitis]
+      locator: "Bundy 2007 Bảng 2 (O'Shea 1988); AAFP 2018 Bảng 1"
+      reported: "Trẻ em: độ nhạy 0,79; người lớn: LR+ 0,92"
+      note: "Ở người lớn nôn không phân biệt được với đau bụng khác ở cấp cứu; ở trẻ em hay gặp hơn. Chọn frequent cho chung các lứa tuổi."
+  - finding: loss_of_appetite
+    freq: frequent
+    evidence:
+      tier: A
+      basis: numeric
+      sources: [snyder-2018-aafp-appendicitis, bundy-2007-jama-child-appendicitis]
+      locator: "AAFP 2018 Bảng 1; Bundy 2007 Bảng 2"
+      reported: "Người lớn: LR+ 1,3, LR− 0,64 (độ nhạy suy ra khoảng 70%); trẻ em (O'Shea): độ nhạy 0,21"
+      note: "Trẻ em ít khi được ghi nhận chán ăn; chọn frequent thay vì very_frequent."
+  - finding: fever
+    freq: frequent
+    evidence:
+      tier: A
+      basis: numeric
+      sources: [snyder-2018-aafp-appendicitis, bundy-2007-jama-child-appendicitis, msd-appendicitis]
+      locator: "AAFP 2018 Bảng 1; Bundy 2007 Bảng 2"
+      reported: "Người lớn: LR+ 1,9, LR− 0,58 (độ nhạy suy ra khoảng 60%); trẻ em: độ nhạy 0,75"
+      note: "Số liệu ở bệnh viện; sốt thường nhẹ và xuất hiện sau đau, nên ở cộng đồng giữ mức frequent."
+  - finding: fever_max_temp
+    dist: { lt_38: 0.50, t38_39: 0.40, ge_39: 0.10 }
+    evidence:
+      tier: C
+      basis: verbal
+      sources: [msd-appendicitis]
+      locator: "MSD: sốt nhẹ (37,7–38,3°C) thường gặp"
+      note: "Phân bố trong số người đã có sốt; sốt cao từ 39°C gợi ý thủng hoặc nguyên nhân khác. Tỷ lệ là ước lượng."
+  - finding: fever_duration
+    dist: { d1_2: 0.80, d3_5: 0.16, d6_7: 0.03, gt_7d: 0.01 }
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [msd-appendicitis, bundy-2007-jama-child-appendicitis]
+      note: "Sốt xuất hiện sau đau và bệnh diễn biến trong 1–3 ngày; sốt kéo dài nhiều ngày gợi ý bệnh khác hoặc áp xe ruột thừa. Phân bố là ước lượng."
+  - finding: abdominal_pain
+    freq: almost_always
+    evidence:
+      tier: A
+      basis: verbal
+      sources: [bundy-2007-jama-child-appendicitis, nhs-appendicitis, msd-appendicitis]
+      locator: "Bundy 2007: đau bụng gần như luôn có ở trẻ lớn"
+      note: "Dùng khi triệu chứng chính là sốt."
+  - finding: diarrhea
+    freq: occasional
+    evidence:
+      tier: A
+      basis: numeric
+      sources: [bundy-2007-jama-child-appendicitis, nhs-appendicitis, msd-appendicitis]
+      locator: "Bundy 2007 Bảng 2 (O'Shea 1988); NHS: táo bón hoặc tiêu chảy; MSD: tiêu chảy gợi ý ruột thừa sau manh tràng"
+      reported: "Trẻ em: độ nhạy 0,33"
+      note: "Người lớn ít hơn trẻ em (MSD: đi ngoài thường giảm). Liên kết ở mức occasional để tiêu chảy không loại trừ quá mạnh viêm ruột thừa."
+  - finding: abdomen_hard_swollen
+    freq: occasional
+    evidence:
+      tier: A
+      basis: numeric
+      sources: [snyder-2018-aafp-appendicitis, wagner-1996-jama-appendicitis]
+      locator: "AAFP 2018 Bảng 1 (co cứng thành bụng LR+ 3,8, LR− 0,82)"
+      reported: "Co cứng thành bụng: độ nhạy suy ra khoảng 23%"
+      note: "Số liệu bệnh viện, gồm cả ca đã thủng; ở cộng đồng ít hơn nhưng vẫn ước trong khoảng 7,5–33%."
+warning_signs:
+  - abd_pain_severe
+  - abdomen_hard_swollen
+  - abd_pain_worse_movement
+  - abd_pain_migrated_rlq
+  - persistent_vomiting
+see_doctor_vi:
+  - "Đến cơ sở cấp cứu ngay khi đau bụng dưới bên phải tăng dần, nhất là kèm sốt hoặc nôn (ói)."
+  - "Trẻ nhỏ, người già và phụ nữ có thai có thể đau không điển hình, cần đi khám sớm."
+review:
+  status: draft
+  authors: ["agent:pass-b"]
+  updated: "2026-10-25"
+  notes_vi: "Giữ mức xử trí 2 và cant_miss như gợi ý: bỏ sót có thể thủng ruột thừa, viêm phúc mạc trong 1–3 ngày; MSD: tử vong cao nếu không điều trị. NHS xếp nghi viêm ruột thừa vào nhóm khám khẩn hoặc gọi 111 (đau dữ dội: 999), docs/kb-guide.md lấy viêm ruột thừa làm ví dụ mức 2. Điểm chưa chắc: (1) độ nhạy được suy từ cặp LR+ và LR− trong bảng AAFP (không mở được toàn văn JAMA RCE của Wagner 1996); (2) phân bố vị trí đau và thời gian đau ở cộng đồng là ước lượng, số liệu gốc ở bệnh viện; (3) tỷ lệ nền 0,10 của đau di chuyển: với mức frequent, LR+ khoảng 5, phù hợp tài liệu (3–7); (4) chưa liên kết ho, tiểu buốt vì không tìm được nguồn cho tần suất; người soạn không muốn hạ khả năng viêm ruột thừa khi trẻ có ho kèm theo; (5) chưa có số liệu Việt Nam về tỷ lệ viêm ruột thừa trong số người đau bụng ở tuyến ban đầu. Mã và tên ICD-10 tiếng Việt đã đối chiếu qua công cụ tra cứu của icd.kcb.vn (bộ mã theo Thông tư 06/2026/TT-BYT) ngày 24/10/2026; mã MONDO tra qua EBI OLS."

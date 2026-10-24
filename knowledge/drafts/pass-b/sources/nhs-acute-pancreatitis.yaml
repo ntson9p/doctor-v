@@ -1,0 +1,12 @@
+id: nhs-acute-pancreatitis
+type: web_page
+title: "Acute pancreatitis"
+publisher: "NHS (UK)"
+url: "https://www.nhs.uk/conditions/acute-pancreatitis/"
+license_class: L1
+license_note: "Open Government Licence v3.0; bản chuyển thể không được trình bày như nội dung của NHS."
+default_tier: C
+accessed: "2026-10-25"
+verified: true
+verified_by: "agent:pass-b"
+notes_vi: "Trang rà soát lần cuối 11/3/2026. Đau bụng trên (giữa hai bờ sườn) bắt đầu đột ngột và không hết, có thể lan ra hai bên và ra sau lưng, tăng sau ăn, khi cử động hoặc khi nằm; buồn nôn, nôn, sốt. Cần điều trị tại bệnh viện ngay. Gọi 999 hoặc đến cấp cứu nếu đau lan ra sau lưng, chướng bụng kéo dài, tim đập nhanh, khó thở, hoặc da quanh rốn, thắt lưng bầm tím. Nguyên nhân hay gặp nhất là sỏi mật và uống nhiều rượu."

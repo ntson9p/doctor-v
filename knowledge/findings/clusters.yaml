@@ -43,6 +43,10 @@
   rho: high
   label_vi: "Đau ngực"
   rationale_vi: "Đau thắt ngực dữ dội và đau tức ngực là hai mức của cùng một triệu chứng."
+- id: pain_radiation
+  rho: medium
+  label_vi: "Đau lan ra lưng, vai"
+  rationale_vi: "Hai câu đau lan ra sau lưng và lan lên vai phải cùng hỏi vùng lưng bên phải nên dễ trả lời trùng (lượt B lô 3)."
 - id: gi_bleeding
   rho: medium
   label_vi: "Xuất huyết tiêu hóa"

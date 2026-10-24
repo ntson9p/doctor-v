@@ -1,0 +1,166 @@
+id: cystitis
+names:
+  vi: "Viêm bàng quang cấp tính"
+  vi_common: ["Viêm bàng quang", "Viêm đường tiết niệu", "Nhiễm trùng đường tiểu"]
+  en: "Acute cystitis (lower urinary tract infection)"
+codes:
+  icd10: "N30.0"
+  icd10_verified: true
+  mondo: "MONDO:0001650"
+summary_vi:
+  - "Bàng quang bị nhiễm khuẩn, gặp ở phụ nữ nhiều hơn hẳn nam giới."
+  - "Thường tiểu buốt, tiểu nhiều lần, đau nhẹ vùng bụng dưới, ít khi sốt."
+  - "Sốt, đau hông lưng hoặc nôn (ói) gợi ý nhiễm khuẩn đã lên thận."
+urgency: 4
+cant_miss: false
+specialties: [general_medicine, urology]
+priors:
+  - complaint: abdominal_pain
+    default: P3
+    by_age: { infant_0_2m: P5, child_2m_5y: P4 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [viniol-fampract-2014, erkan-2004-child-abdominal-pain, little-2010-bmj-uti-symptoms]
+      reported: "Chăm sóc ban đầu: nguyên nhân tiết niệu 5,3% người lớn đau bụng; cấp cứu nhi 2–16 tuổi: nhiễm khuẩn tiết niệu 8%; 47% phụ nữ viêm bàng quang có đau bụng mức khá khó chịu"
+      note: "Phần lớn người viêm bàng quang chọn triệu chứng tiểu buốt, không chọn đau bụng; chỉ khoảng một nửa có đau bụng (Little 2010). Ước P3 (khoảng 2%) cho trẻ từ 5 tuổi và người lớn, là trung bình hai giới; hệ số giới tính bên dưới điều chỉnh cho nữ và nam. Trẻ dưới 5 tuổi nhiễm khuẩn tiết niệu hay biểu hiện sốt hơn là đau bụng (P4)."
+prior_modifiers:
+  - when: { sex: [female] }
+    factor: 1.8
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [byt-qd-3931-2015]
+      locator: "3931/QĐ-BYT, bài Viêm bàng quang cấp, phần mở đầu"
+      reported: "Tỷ lệ nữ/nam = 9/1"
+      note: "Tỷ số 9/1 tương ứng hệ số 1,8 cho nữ và 0,2 cho nam so với mức trung bình hai giới."
+  - when: { sex: [male] }
+    factor: 0.2
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [byt-qd-3931-2015]
+      reported: "Tỷ lệ nữ/nam = 9/1"
+      note: "Xem hệ số cho nữ. Nam giới bị tiểu buốt đã có quy tắc rf_uti_high_risk (mức 3)."
+findings:
+  - finding: dysuria
+    freq: very_frequent
+    evidence:
+      tier: A
+      basis: numeric
+      sources: [bent-2002-jama-uti, little-2010-bmj-uti-symptoms, byt-qd-3931-2015]
+      locator: "Bent 2002 (tóm tắt); Little 2010 Bảng 1; 3931/QĐ-BYT mục 2.1.1 (hội chứng bàng quang: tiểu buốt, tiểu dắt)"
+      reported: "Độ nhạy suy từ LR+ 1,5 và LR− 0,5: khoảng 75%; tiểu buốt mức khá khó chịu trở lên: 64%"
+      population: "Phụ nữ có triệu chứng nhiễm khuẩn tiết niệu ở chăm sóc ban đầu"
+  - finding: urinary_frequency
+    freq: very_frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [little-2010-bmj-uti-symptoms, byt-qd-3931-2015]
+      locator: "Little 2010 Bảng 1; 3931/QĐ-BYT mục 2.1.1"
+      reported: "Tiểu nhiều lần ban ngày mức khá khó chịu trở lên: 78%"
+      note: "Cùng cụm 'triệu chứng đường tiểu dưới' với tiểu buốt nên bộ suy luận đã giảm đếm trùng."
+  - finding: hematuria
+    freq: occasional
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [little-2010-bmj-uti-symptoms, byt-qd-3931-2015, bent-2002-jama-uti]
+      locator: "Little 2010 Bảng 1; 3931/QĐ-BYT mục 2.1.1 (có thể tiểu máu cuối bãi)"
+      reported: "Tiểu máu mức khá khó chịu trở lên: 16%; LR+ 2,0 (Bent 2002)"
+  - finding: abd_pain_location
+    dist: { epigastric: 0.02, right_upper: 0.01, left_upper: 0.01, periumbilical: 0.05, right_lower: 0.10, left_lower: 0.08, suprapubic: 0.65, whole: 0.08 }
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-3931-2015]
+      locator: "3931/QĐ-BYT mục 2.1.1 (có thể đau nhẹ vùng trên khớp mu)"
+      note: "Trang NHS về nhiễm khuẩn tiết niệu (nhs-utis, lượt B mở ngày 25/10/2026) cũng nêu đau bụng dưới. Tỷ lệ là ước lượng."
+  - finding: abd_pain_duration
+    dist: { lt_6h: 0.04, h6_24: 0.14, d1_3: 0.42, d4_14: 0.30, gt_2w: 0.10 }
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [little-2010-bmj-uti-symptoms]
+      locator: "Little 2010, mục Kết quả"
+      reported: "Triệu chứng bắt đầu trung vị 3 ngày trước khi khám (3–7 ngày); 13% trên 10 ngày; 71% đã từng bị viêm bàng quang"
+      note: "Lựa chọn 'tái đi tái lại' gồm cả người hay bị viêm bàng quang."
+  - finding: abd_pain_onset
+    dist: { sudden: 0.10, gradual: 0.90 }
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [byt-qd-3931-2015]
+      note: "Đau thường nhẹ, âm ỉ vùng trên xương mu; ước lượng."
+  - finding: abd_pain_severe
+    freq: rare
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-3931-2015]
+      locator: "3931/QĐ-BYT mục 2.1.1 (có thể đau nhẹ vùng trên khớp mu)"
+      note: "Đau thường nhẹ; mức rare thấp hơn tỷ lệ nền 5%."
+  - finding: fever
+    freq: rare
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-3931-2015]
+      locator: "3931/QĐ-BYT mục 2.1.1 (thường không sốt hoặc chỉ sốt nhẹ dưới 38°C)"
+      note: "Sốt gợi ý viêm thận – bể thận. Mức rare thấp hơn tỷ lệ nền 5%."
+  - finding: fever_max_temp
+    dist: { lt_38: 0.85, t38_39: 0.13, ge_39: 0.02 }
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-3931-2015]
+      locator: "3931/QĐ-BYT mục 2.1.1 (chỉ sốt nhẹ, nhiệt độ dưới 38°C)"
+      note: "Phân bố trong số người đã có sốt. Tỷ lệ là ước lượng."
+  - finding: flank_pain
+    freq: occasional
+    evidence:
+      tier: A
+      basis: numeric
+      sources: [bent-2002-jama-uti]
+      locator: "Bent 2002 (đau lưng LR+ 1,6, LR− 0,8)"
+      reported: "Đau lưng: độ nhạy suy ra khoảng 40% trong nhiễm khuẩn tiết niệu nói chung"
+      note: "Số của Bent gồm cả nhiễm khuẩn tiết niệu trên; với viêm bàng quang đơn thuần ước thấp hơn (occasional)."
+  - finding: vomiting
+    freq: rare
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [little-2010-bmj-uti-symptoms]
+      note: "Viêm bàng quang chưa biến chứng ít khi nôn; Little 2010 loại người có buồn nôn, nôn vì đó là dấu hiệu bệnh nặng hơn. Mức rare thấp hơn tỷ lệ nền 20% khi đau bụng."
+  - finding: nausea
+    freq: occasional
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [little-2010-bmj-uti-symptoms]
+      note: "Buồn nôn ít gặp ở viêm bàng quang đơn thuần; mức occasional (20%) thấp hơn tỷ lệ nền 35% khi đau bụng. Ước lượng."
+  - finding: abnormal_vaginal_discharge
+    freq: rare
+    evidence:
+      tier: A
+      basis: numeric
+      sources: [bent-2002-jama-uti]
+      reported: "Có khí hư: LR 0,3; ngứa rát âm đạo: LR 0,2"
+      note: "Khí hư bất thường gợi ý viêm âm đạo, viêm vùng chậu hơn là viêm bàng quang. Mức rare (2,5%) so với tỷ lệ nền 15% cho LR khoảng 0,17, gần với số của Bent."
+warning_signs:
+  - chills_rigors
+  - persistent_vomiting
+  - confusion
+  - drowsy_hard_to_wake
+self_care_vi:
+  - "Uống đủ nước, không nhịn tiểu lâu."
+see_doctor_vi:
+  - "Đặt lịch khám trong vài ngày tới để được xét nghiệm nước tiểu và điều trị."
+  - "Đi khám trong ngày nếu sốt, đau hông lưng, nôn (ói), đang mang thai, hoặc là nam giới."
+  - "Trẻ em bị tiểu buốt và người từ 65 tuổi cũng nên đi khám trong ngày."
+review:
+  status: draft
+  authors: ["agent:pass-b"]
+  updated: "2026-10-25"
+  notes_vi: "Giữ mức xử trí 4 như gợi ý (docs/kb-guide.md: viêm bàng quang không sốt; NHS: phụ nữ 16–64 tuổi không mang thai có thể hỏi dược sĩ; nam, có thai, trẻ em, người từ 65 tuổi cần khám khẩn, đã có quy tắc rf_uti_high_risk). Dùng hệ số giới tính mới (nữ 1,8; nam 0,2) theo tỷ lệ nữ/nam 9/1 của 3931/QĐ-BYT. Điểm chưa chắc: (1) prior P3 cho triệu chứng chính đau bụng là ước lượng, vì phần lớn người viêm bàng quang sẽ không chọn đau bụng; (2) số liệu Little 2010 là tỷ lệ triệu chứng ở mức khá khó chịu trở lên, nên tỷ lệ có triệu chứng thật sự còn cao hơn; (3) độ nhạy của tiểu buốt suy từ cặp LR trong tóm tắt Bent 2002; (4) nam giới viêm bàng quang thường kèm bệnh tuyến tiền liệt, nên được đánh giá như nhiễm khuẩn có biến chứng; (5) lượt B đã mở trang NHS về nhiễm khuẩn tiết niệu (nhs-utis) ngày 25/10/2026 (rà soát lần cuối 11/7/2025; nội dung khớp mô tả ở trên), nhưng không sửa sổ đăng ký nguồn, nên chưa dùng nguồn này cho các liên kết bậc A/B. Mã và tên ICD-10 tiếng Việt đã đối chiếu qua công cụ tra cứu của icd.kcb.vn (bộ mã theo Thông tư 06/2026/TT-BYT) ngày 24/10/2026; mã MONDO tra qua EBI OLS."

@@ -64,10 +64,18 @@ export function checkDrafts(relDir: string, root: string = DEFAULT_KNOWLEDGE_ROO
   const drafts = loadConditionDrafts(root, relDir);
   issues.push(...drafts.issues);
 
+  // A draft source already moved into the registry (by pass C) is a note, not an error.
+  const registryIds = new Set(loaded.knowledge.sources.map((s) => s.data.id));
   const draftSources: Located<SourceYaml>[] = [];
   for (const abs of listYamlFiles(join(root, relDir, 'sources'))) {
     const data = parseYamlFile(abs, sourceSchema, root, issues);
-    if (data) draftSources.push({ file: `${relDir}/sources/${data.id}.yaml`, data });
+    if (!data) continue;
+    const file = `${relDir}/sources/${data.id}.yaml`;
+    if (registryIds.has(data.id)) {
+      issues.push({ severity: 'warning', file, path: 'id', message: `Nguồn "${data.id}" đã có trong knowledge/sources/; dùng bản trong sổ đăng ký` });
+    } else {
+      draftSources.push({ file, data });
+    }
   }
 
   const catalogIds = new Set(loaded.knowledge.findings.map((f) => f.data.id));

@@ -1,0 +1,15 @@
+id: bent-2002-jama-uti
+type: systematic_review
+title: "Does this woman have an acute uncomplicated urinary tract infection?"
+publisher: "JAMA 2002;287(20):2701–2710 (Bent S, Nallamothu BK, Simel DL, Fihn SD, Saint S; loạt The Rational Clinical Examination)"
+date: "2002-05"
+url: "https://europepmc.org/article/MED/12020306"
+doi: "10.1001/jama.287.20.2701"
+pmid: "12020306"
+license_class: L3
+license_note: "Bản quyền JAMA: chỉ dùng dữ kiện kèm trích dẫn."
+default_tier: A
+accessed: "2026-10-24"
+verified: true
+verified_by: "agent:pass-b"
+notes_vi: "Lượt B chỉ đọc tóm tắt (Europe PMC). LR+: tiểu buốt 1,5; tiểu nhiều lần 1,8; tiểu máu 2,0; đau lưng 1,6; ấn đau góc sườn lưng 1,7. LR−: không tiểu buốt 0,5; không đau lưng 0,8. Có khí hư LR 0,3; ngứa rát âm đạo LR 0,2. Tiểu buốt kèm tiểu nhiều lần, không có khí hư hay ngứa rát: LR 24,6. Lượt B suy từ LR+ 1,5 và LR− 0,5: độ nhạy của tiểu buốt khoảng 75%."

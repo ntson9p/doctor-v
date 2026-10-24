@@ -1,0 +1,244 @@
+id: acute_gastroenteritis
+names:
+  vi: "Viêm dạ dày – ruột cấp"
+  vi_common: ["Tiêu chảy cấp", "Ngộ độc thực phẩm"]
+  en: "Acute gastroenteritis"
+codes:
+  icd10: "A09"
+  icd10_verified: true
+  mondo: "MONDO:0002269"
+summary_vi:
+  - "Đường tiêu hóa bị viêm cấp do vi rút, vi khuẩn hoặc thức ăn, nước uống nhiễm bẩn."
+  - "Thường tiêu chảy, nôn (ói), đau bụng quặn, có thể sốt."
+  - "Phần lớn tự khỏi sau vài ngày; điều cần lo nhất là mất nước, nhất là ở trẻ nhỏ và người già."
+urgency: 5
+cant_miss: false
+specialties: [gastroenterology, infectious_disease]
+priors:
+  - complaint: abdominal_pain
+    default: P2
+    by_age: { infant_0_2m: P3, child_2m_5y: P1 }
+    evidence:
+      tier: A
+      basis: numeric
+      sources: [viniol-fampract-2014, erkan-2004-child-abdominal-pain, who-treatment-diarrhoea-2005]
+      reported: "Chăm sóc ban đầu: 7,2–18,7% người lớn đến khám vì đau bụng; cấp cứu nhi (2–16 tuổi): 15,4%"
+      population: "Người lớn ở chăm sóc ban đầu (tổng quan Viniol 2014); trẻ em ở khoa cấp cứu nhi Thổ Nhĩ Kỳ (Erkan 2004)"
+      note: "Người lớn và trẻ 5 tuổi trở lên: P2 theo hai nguồn trên. Trẻ 2 tháng – 5 tuổi: P1 vì trẻ dưới 3 tuổi ở nước đang phát triển bị trung bình 3 đợt tiêu chảy mỗi năm (WHO 2005) và trẻ nhỏ chưa tự mô tả được đau, nên viêm dạ dày – ruột chiếm phần lớn các lần đau bụng; đây là ước lượng, chưa có số liệu Việt Nam ở tuyến ban đầu. Trẻ dưới 2 tháng: P3 (bú mẹ, ít gặp hơn; nhóm này chỉ sàng lọc dấu hiệu nguy hiểm)."
+  - complaint: fever
+    default: P3
+    by_age: { child_2m_5y: P2 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [lively-2018-norovirus-outbreaks, who-treatment-diarrhoea-2005, byt-qd-5642-2015]
+      note: "Sốt gặp ở khoảng 22% ca do norovirus và 58% ca do vi khuẩn (Lively 2018); 5642/QĐ-BYT ghi sốt, nôn, đau bụng, tiêu chảy là biểu hiện chung của tiêu chảy do vi khuẩn. Trẻ nhỏ bị tiêu chảy nhiều đợt mỗi năm (WHO 2005) nên ở trẻ 2 tháng – 5 tuổi bị sốt, bệnh này thường gặp (ước P2); ở người lớn, sốt ít khi là lý do chính khi bị viêm dạ dày – ruột (ước P3). Chưa có số liệu Việt Nam về lý do đi khám vì sốt."
+findings:
+  - finding: diarrhea
+    freq: very_frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [lively-2018-norovirus-outbreaks, byt-qd-5642-2015]
+      locator: "Lively 2018, Bảng 1; 5642/QĐ-BYT, bài Tiêu chảy do vi khuẩn, mục 1 và 3.1"
+      reported: "Trung vị tỷ lệ ca có tiêu chảy: 86% (norovirus), 100% (vi khuẩn)"
+      population: "Vụ dịch viêm dạ dày – ruột cấp ở Mỹ (NORS 2009–2012)"
+      note: "Chọn very_frequent thay vì almost_always vì một số ca (nhất là lúc mới khởi phát, hoặc thể chủ yếu nôn) chưa tiêu chảy khi kiểm tra."
+  - finding: vomiting
+    freq: frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [lively-2018-norovirus-outbreaks, byt-qd-5642-2015]
+      locator: "Lively 2018, Bảng 1"
+      reported: "Trung vị tỷ lệ ca có nôn: 72% (norovirus), 39% (vi khuẩn)"
+      population: "Vụ dịch viêm dạ dày – ruột cấp ở Mỹ"
+  - finding: nausea
+    freq: frequent
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-5642-2015]
+      locator: "5642/QĐ-BYT, bài Tiêu chảy do vi khuẩn, mục 3.1 (nôn và buồn nôn)"
+      note: "Nguồn chỉ liệt kê buồn nôn, không cho tần suất. Ước khoảng một nửa, cao hơn tỷ lệ nền 35% một chút."
+  - finding: fever
+    freq: frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [lively-2018-norovirus-outbreaks, byt-qd-5642-2015]
+      locator: "Lively 2018, Bảng 1; 5642/QĐ-BYT mục 3.1 (có thể sốt hoặc không sốt)"
+      reported: "Trung vị tỷ lệ ca có sốt: 22% (norovirus), 58% (vi khuẩn)"
+      note: "Hỗn hợp vi rút và vi khuẩn ở cộng đồng: ước 35–45%, xếp frequent."
+  - finding: fever_max_temp
+    dist: { lt_38: 0.40, t38_39: 0.42, ge_39: 0.18 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-5642-2015]
+      locator: "5642/QĐ-BYT mục 3.2 (lỵ trực khuẩn, Salmonella sốt cao; tụ cầu, ETEC không sốt)"
+      note: "Phần lớn sốt nhẹ hoặc vừa; sốt cao gặp ở lỵ, Salmonella. Phân bố là ước lượng."
+  - finding: fever_duration
+    dist: { d1_2: 0.70, d3_5: 0.25, d6_7: 0.03, gt_7d: 0.02 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [lively-2018-norovirus-outbreaks, nhs-diarrhoea-vomiting]
+      note: "Thời gian bệnh trung vị 48 giờ (norovirus) đến 144 giờ (vi khuẩn); sốt thường ngắn hơn tiêu chảy. Sốt quá 5 ngày gợi ý nguyên nhân khác (ví dụ thương hàn). Phân bố là ước lượng."
+  - finding: abdominal_pain
+    freq: very_frequent
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-5642-2015, nhs-diarrhoea-vomiting]
+      locator: "5642/QĐ-BYT, bài Tiêu chảy do vi khuẩn, mục 1 (sốt, nôn, đau bụng, tiêu chảy là biểu hiện chung thường thấy)"
+      note: "Dùng khi triệu chứng chính là sốt."
+  - finding: abd_pain_colicky
+    freq: frequent
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-5642-2015]
+      locator: "5642/QĐ-BYT mục 3.2 (lỵ, E. coli xâm nhập: đau bụng quặn từng cơn)"
+      note: "Đau quặn hay gặp ở thể xâm nhập; tả, tụ cầu ít đau quặn. Ước khoảng một nửa, cao hơn tỷ lệ nền 20%."
+  - finding: abd_pain_location
+    dist: { epigastric: 0.18, right_upper: 0.03, left_upper: 0.03, periumbilical: 0.32, right_lower: 0.05, left_lower: 0.06, suprapubic: 0.03, whole: 0.30 }
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [byt-qd-5642-2015, nhs-diarrhoea-vomiting]
+      note: "Đau lan tỏa, quanh rốn hoặc khắp bụng, không khu trú ở một hố chậu. Phân bố là ước lượng của người soạn."
+  - finding: abd_pain_duration
+    dist: { lt_6h: 0.25, h6_24: 0.35, d1_3: 0.30, d4_14: 0.08, gt_2w: 0.02 }
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [nhs-diarrhoea-vomiting, lively-2018-norovirus-outbreaks]
+      note: "Nôn thường hết trong 1–2 ngày, tiêu chảy trong 5–7 ngày (NHS); người dùng thường kiểm tra trong 1–2 ngày đầu. Phân bố là ước lượng."
+  - finding: abd_pain_severe
+    freq: rare
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [nhs-diarrhoea-vomiting]
+      locator: "NHS Diarrhoea and vomiting (Call 999 or go to A&E: sudden, severe tummy ache)"
+      note: "Đau bụng đột ngột, dữ dội được NHS xếp vào nhóm cần cấp cứu, tức là không phải biểu hiện điển hình của tiêu chảy, nôn thông thường. Mức rare (2,5%) thấp hơn tỷ lệ nền 5% để câu trả lời 'Có' làm giảm khả năng bệnh này."
+  - finding: abd_pain_worse_movement
+    freq: rare
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [nhs-diarrhoea-vomiting]
+      note: "Đau tăng khi đi lại, ho, xe xóc là dấu hiệu kích thích phúc mạc, gợi ý bệnh ngoại khoa hơn viêm dạ dày – ruột. Ước lượng, thấp hơn tỷ lệ nền 5%."
+  - finding: diarrhea_bloody
+    freq: occasional
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [lively-2018-norovirus-outbreaks, byt-qd-5642-2015, who-treatment-diarrhoea-2005]
+      locator: "Lively 2018, Bảng 1; 5642/QĐ-BYT mục 3.1 (tiêu chảy xâm nhập: phân có nhầy, đôi khi có máu); WHO 2005 mục 2.2"
+      reported: "Phân có máu: trung vị 0% ca (norovirus), 30% ca (vi khuẩn)"
+      note: "Tần suất trong số người đã có tiêu chảy. Ở Việt Nam tỷ lệ do vi khuẩn (lỵ, E. coli xâm nhập) không nhỏ, ước 7,5–20%."
+  - finding: unsafe_food_shared
+    freq: occasional
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-5642-2015, lively-2018-norovirus-outbreaks]
+      locator: "5642/QĐ-BYT, bài Tiêu chảy do vi khuẩn, mục 1 và 3.4 (liên quan vệ sinh an toàn thực phẩm; dịch tễ: nguồn lây)"
+      note: "Phần lớn ca ở cộng đồng là lẻ tẻ; nhiều người cùng bị sau bữa ăn chung gặp ở ngộ độc thực phẩm và vụ dịch. Ước 10–25%. Tỷ lệ nền 1% nên câu trả lời 'Có' gợi ý mạnh bệnh này."
+  - finding: persistent_vomiting
+    freq: occasional
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [nhs-diarrhoea-vomiting, who-treatment-diarrhoea-2005]
+      note: "Nôn liên tục không giữ được nước là dấu hiệu cần đi khám (NHS; WHO 2005: nôn nhiều lần). Ước 10–25% số ca."
+  - finding: vomiting_bilious
+    freq: occasional
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [nhs-diarrhoea-vomiting]
+      note: "Tần suất trong số người có nôn. Sau nhiều lần nôn, chất nôn thường có dịch vàng đắng; người dùng có thể trả lời 'Có' dù không tắc ruột. Liên kết ở mức occasional để không đẩy quá mạnh về tắc ruột. Ước lượng, cần bác sĩ duyệt."
+  - finding: sunken_eyes
+    freq: occasional
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [who-treatment-diarrhoea-2005, byt-qd-5642-2015]
+      locator: "WHO 2005 mục 2.3 và Bảng 1 (mắt trũng là dấu hiệu mất nước); 5642/QĐ-BYT bảng mức độ mất nước"
+      note: "Nguồn không cho tần suất. Ước khoảng 10–20% trẻ bị tiêu chảy có mắt trũng khi được hỏi."
+  - finding: decreased_urine
+    freq: occasional
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-5642-2015, who-treatment-diarrhoea-2005]
+      locator: "5642/QĐ-BYT, bảng mức độ mất nước (nước tiểu ít, thiểu niệu)"
+      note: "Tiểu ít là dấu hiệu mất nước; nguồn không cho tần suất. Ước 10–25%."
+  - finding: child_vomits_everything
+    freq: occasional
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [who-treatment-diarrhoea-2005]
+      locator: "WHO 2005 mục 4.2.4 (đưa trẻ đi khám khi nôn nhiều lần)"
+      note: "Áp dụng cho trẻ 2 tháng – 5 tuổi. Nôn nhiều ở giai đoạn đầu hay gặp với vi rút rota; ước 10–20%."
+  - finding: episodic_crying_legs_drawn
+    freq: occasional
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [bines-2006-intussusception-vietnam]
+      locator: "Bines 2006 Bảng 3, nhóm chứng (trẻ dưới 2 tuổi có nôn, đau bụng, chảy máu hậu môn... nhưng không bị lồng ruột)"
+      reported: "Độ đặc hiệu của 'đau bụng hoặc biểu hiện tương đương' 82% ở Hà Nội, 81% ở Melbourne, tức khoảng 18–19% trẻ không lồng ruột vẫn có dấu hiệu này"
+      note: "Áp dụng cho trẻ 2 tháng – 5 tuổi. Trẻ viêm dạ dày – ruột cũng có thể đau quặn, khóc từng cơn. Không liên kết thì bệnh này dùng tỷ lệ nền 1%, làm lồng ruột được ưu tiên quá mạnh (khoảng 80 lần) khi trẻ đang tiêu chảy, nôn. Ngưỡng 'không được bỏ sót' của lồng ruột vẫn giữ an toàn."
+  - finding: headache
+    freq: occasional
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-5642-2015]
+      locator: "5642/QĐ-BYT mục 3.1 (tình trạng nhiễm độc: mệt mỏi, nhức đầu)"
+      note: "Nguồn không cho tần suất; ước 20%. Thấp hơn tỷ lệ nền khi sốt (50%), cao hơn khi đau bụng (5%)."
+  - finding: fatigue
+    freq: frequent
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-5642-2015]
+      locator: "5642/QĐ-BYT mục 3.1 (mệt mỏi)"
+      note: "Nguồn không cho tần suất; ước khoảng một nửa."
+  - finding: loss_of_appetite
+    freq: frequent
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [who-treatment-diarrhoea-2005]
+      note: "Trẻ ăn uống kém là lý do cần đi khám (WHO 2005 mục 4.2.4); chán ăn hay gặp khi viêm dạ dày – ruột. Ước khoảng một nửa."
+warning_signs:
+  - drowsy_hard_to_wake
+  - child_unable_to_drink
+  - persistent_vomiting
+  - decreased_urine
+  - cold_hands_feet
+  - diarrhea_bloody
+  - abd_pain_severe
+self_care_vi:
+  - "Uống nhiều nước, uống từng ngụm nhỏ nếu đang buồn nôn."
+  - "Dùng dung dịch bù nước (oresol), pha đúng theo hướng dẫn trên gói."
+  - "Trẻ còn bú: tiếp tục cho bú, cho ăn bình thường."
+  - "Không tự cho trẻ nhỏ dùng thuốc cầm tiêu chảy hoặc thuốc chống nôn."
+  - "Rửa tay bằng xà phòng trước khi ăn và sau khi đi vệ sinh."
+  - "Ăn chín, uống nước đã đun sôi."
+see_doctor_vi:
+  - "Đi khám ngay nếu nôn liên tục, không giữ được nước uống."
+  - "Đi khám trong ngày nếu phân có máu, sốt cao, tiểu ít, hoặc trẻ ăn uống kém."
+  - "Đi khám nếu tiêu chảy quá 7 ngày hoặc nôn quá 2 ngày."
+  - "Trẻ nhỏ và người già cần được khám sớm khi có dấu hiệu mất nước như khát nhiều, mắt trũng."
+review:
+  status: draft
+  authors: ["agent:pass-b"]
+  updated: "2026-10-25"
+  notes_vi: "Mức xử trí 5 giữ như gợi ý: ca điển hình không mất nước được chăm sóc tại nhà (WHO 2005: uống thêm nước, tiếp tục ăn; NHS: tự chăm sóc); mất nước, nôn liên tục, phân có máu đã có quy tắc riêng (rf_child_dehydration, rf_persistent_vomiting, rf_bloody_diarrhea). Điểm chưa chắc: (1) prior P1 cho trẻ 2 tháng – 5 tuổi và P3 cho triệu chứng chính sốt ở người lớn là ước lượng, chưa có số liệu Việt Nam ở tuyến ban đầu; (2) tần suất 'người ăn cùng cũng bị' và phân có máu phụ thuộc nhiều vào tỷ lệ vi rút/vi khuẩn ở Việt Nam; (3) nôn ra dịch vàng đắng hay gặp sau nhiều lần nôn, có thể làm nhầm với tắc ruột; (4) không dùng hướng dẫn NICE CG84 vì trang NICE chặn truy cập tự động. Tên ICD-10 tiếng Việt A09 (Thông tư 06/2026/TT-BYT) dài nên tên chính thức dùng dạng rút gọn; đã đối chiếu mã qua công cụ tra cứu của icd.kcb.vn ngày 24/10/2026."

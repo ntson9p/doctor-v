@@ -37,7 +37,8 @@
   question_vi: "Có nôn ra dịch màu xanh lá, hoặc vàng đắng như mật không?"
   requires:
     - { finding: vomiting, is: present }
-  leak: moderate
+  leak: 0.10
+  leak_note: "Nôn nhiều lần do viêm dạ dày ruột cũng có thể ra dịch vàng đắng; 5% là thấp (lượt B lô 3). Ước lượng."
 - id: abd_pain_radiates_right_shoulder
   kind: symptom
   type: binary
@@ -45,7 +46,18 @@
   question_vi: "Cơn đau có lan lên vai phải hoặc sau lưng bên phải không?"
   requires:
     - { finding: abdominal_pain, is: present }
+  cluster: pain_radiation
   leak: moderate
+- id: hernia_lump_painful
+  kind: sign
+  type: binary
+  label_vi: "Khối phồng đau ở bẹn hoặc rốn"
+  question_vi: "Ở bẹn hoặc quanh rốn có khối phồng đau, không đẩy lên được không?"
+  help_vi: "Khối thoát vị bị nghẹt thường căng, đau, đỏ và không tự lặn khi nằm."
+  alt_question:
+    text_vi: "Sờ vùng bẹn hoặc rốn, có cục phồng mới, ấn rất đau không?"
+  leak: specific
+  notes_vi: "Lượt B lô 3 đề xuất (thoát vị nghẹt là nguyên nhân tắc ruột)."
 - id: swelling_behind_ear
   kind: sign
   type: binary

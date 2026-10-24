@@ -1,0 +1,12 @@
+id: nhs-acute-cholecystitis
+type: web_page
+title: "Acute cholecystitis"
+publisher: "NHS (UK)"
+url: "https://www.nhs.uk/conditions/acute-cholecystitis/"
+license_class: L1
+license_note: "Open Government Licence v3.0; bản chuyển thể không được trình bày như nội dung của NHS."
+default_tier: C
+accessed: "2026-10-25"
+verified: true
+verified_by: "agent:pass-b"
+notes_vi: "Trang rà soát lần cuối 21/02/2023. Đau đột ngột, dữ dội ở bụng trên bên phải, lan về phía vai phải, thường kéo dài không hết sau vài giờ; có thể sốt, buồn nôn, nôn, vàng da. Nên đi khám càng sớm càng tốt khi đau bụng đột ngột và dữ dội; nhiều khả năng phải nhập viện. Sỏi mật gặp ở hơn 1/10 người lớn ở Anh."

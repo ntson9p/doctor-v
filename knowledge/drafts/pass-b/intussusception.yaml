@@ -1,0 +1,151 @@
+id: intussusception
+names:
+  vi: "Lồng ruột"
+  en: "Intussusception"
+codes:
+  icd10: "K56.1"
+  icd10_verified: true
+  mondo: "MONDO:0007835"
+summary_vi:
+  - "Một đoạn ruột chui lồng vào đoạn ruột kế tiếp, gây tắc ruột."
+  - "Hay gặp ở trẻ dưới 2 tuổi: khóc thét từng cơn, nôn (ói), có thể đi ngoài phân nhầy máu."
+  - "Cần đưa trẻ đi cấp cứu sớm để tháo lồng, tránh hoại tử ruột."
+urgency: 2
+cant_miss: true
+specialties: [pediatrics, general_surgery]
+priors:
+  - complaint: abdominal_pain
+    default: P6
+    by_age: { infant_0_2m: P5, child_2m_5y: P3, child_5_12: P5 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [jiang-2013-intussusception-review, who-intussusception-2002, burnett-2018-intussusception-asia, bines-2006-intussusception-vietnam]
+      reported: "Việt Nam: khoảng 302/100.000 trẻ dưới 1 tuổi mỗi năm (trung bình thế giới 74); 1995–1999 chiếm 5–8% trẻ dưới 12 tháng nhập viện ở Hà Nội, Huế, TP.HCM"
+      population: "Trẻ dưới 2 tuổi ở bệnh viện Việt Nam"
+      note: "Việt Nam thuộc nhóm có tỷ lệ mắc cao nhất thế giới. Tuổi trung vị 9–12 tháng, 55% ca ở năm thứ hai (Burnett 2018); rất ít trước 3 tháng. Người soạn ước 1–3% trẻ 2 tháng – 5 tuổi đau bụng hoặc quấy khóc từng cơn (P3): cao ở trẻ 4–24 tháng, thấp ở trẻ 3–5 tuổi. Trẻ 5–12 tuổi: P5 (thường có điểm dẫn như polyp, túi thừa). Người lớn: P6 (lồng ruột người lớn thường biểu hiện như tắc ruột). Chưa có số liệu ở tuyến ban đầu; nếu bộ ca kiểm thử cho thấy xếp mức quá cao, cân nhắc P4."
+findings:
+  - finding: episodic_crying_legs_drawn
+    freq: very_frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [park-2021-intussusception-korea, bines-2006-intussusception-vietnam]
+      locator: "Park 2021 (đau từng cơn hoặc quấy khóc từng cơn); Bines 2006 Bảng 3 (đau bụng hoặc biểu hiện tương đương)"
+      reported: "Đau hoặc quấy khóc từng cơn 77,4%; đau bụng hoặc tương đương 100% ở Hà Nội, 94% ở Melbourne"
+      population: "Trẻ lồng ruột ở khoa cấp cứu (Hàn Quốc) và ở Bệnh viện Nhi Trung ương"
+      note: "Dấu hiệu chỉ áp dụng cho trẻ 2 tháng – 5 tuổi."
+  - finding: red_jelly_stool
+    freq: occasional
+    freq_by_age: { child_5_12: rare }
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [burnett-2018-intussusception-asia, park-2021-intussusception-korea, bines-2006-intussusception-vietnam]
+      locator: "Burnett 2018 (Việt Nam); Park 2021 Bảng 1; Bines 2006 Bảng 3"
+      reported: "Phân có máu 20% (Việt Nam, Burnett 2018); 23,1% chung, 44,8% dưới 1 tuổi, 6,9% từ 2 tuổi (Park 2021); chảy máu qua hậu môn 47%, phân như mứt dâu 15% (Hà Nội)"
+      note: "Dấu hiệu muộn; không có phân máu không loại trừ lồng ruột. Trẻ lớn ít gặp hơn nhiều (freq_by_age)."
+  - finding: vomiting
+    freq: very_frequent
+    freq_by_age: { child_5_12: occasional }
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [burnett-2018-intussusception-asia, bines-2006-intussusception-vietnam, park-2021-intussusception-korea]
+      locator: "Burnett 2018 (Việt Nam); Bines 2006 Bảng 3; Park 2021 Bảng 1"
+      reported: "Nôn 76% (Việt Nam); Hà Nội: nôn không có mật 61%, nôn dịch mật 30%; Park: 71,8% dưới 1 tuổi, 24,0% từ 2 tuổi"
+  - finding: vomiting_bilious
+    freq: occasional
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [bines-2006-intussusception-vietnam]
+      locator: "Bines 2006 Bảng 3"
+      reported: "Nôn dịch mật 30% số trẻ lồng ruột ở Hà Nội (khoảng 1/3 số trẻ có nôn)"
+      note: "Tần suất trong số trẻ có nôn; hạ xuống occasional vì người dùng ở cộng đồng thường kiểm tra sớm hơn."
+  - finding: abd_pain_colicky
+    freq: very_frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [park-2021-intussusception-korea, who-intussusception-2002]
+      locator: "Park 2021 (đau từng cơn: dữ dội, theo chu kỳ, kiểu co thắt)"
+      reported: "Đau từng cơn 77,4%"
+      note: "Áp dụng cho trẻ tự nói được hoặc khi cha mẹ thấy trẻ đau từng cơn."
+  - finding: abd_pain_severe
+    freq: occasional
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [park-2021-intussusception-korea]
+      note: "Park 2021 định nghĩa đau từng cơn là đau dữ dội, theo chu kỳ; trong cơn trẻ khóc thét, cha mẹ có thể trả lời 'đau dữ dội', nhưng giữa các cơn trẻ nằm yên. Thông tin này phần lớn đã có trong câu 'khóc thét từng cơn' (hai câu tương quan), nên chỉ để occasional để câu trả lời 'Không' không làm giảm quá mạnh khả năng lồng ruột (lượt B thử trong mô phỏng)."
+  - finding: drowsy_hard_to_wake
+    freq: occasional
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [bines-2006-intussusception-vietnam, park-2021-intussusception-korea]
+      locator: "Bines 2006 Bảng 3; Park 2021 Bảng 1"
+      reported: "Li bì 38% (Hà Nội), 96% (Melbourne); Park: 25,9% dưới 1 tuổi, 8,6–9,1% trẻ lớn hơn"
+      note: "Câu hỏi 'ngủ li bì, khó đánh thức' là ngưỡng nặng hơn 'lừ đừ'; Bines ghi li bì và xanh tái thường xuất hiện từng lúc theo cơn đau. Chọn occasional."
+  - finding: fever
+    freq: occasional
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [burnett-2018-intussusception-asia, park-2021-intussusception-korea]
+      reported: "Sốt 16% (Việt Nam, Burnett 2018); 12–17% (Park 2021)"
+  - finding: diarrhea
+    freq: occasional
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [park-2021-intussusception-korea, burnett-2018-intussusception-asia]
+      reported: "Tiêu chảy 5% (Việt Nam, Burnett 2018); 9,7–17,2% (Park 2021)"
+      note: "Liên kết để tiêu chảy không loại trừ quá mạnh lồng ruột (dễ nhầm với viêm dạ dày – ruột)."
+  - finding: abdomen_hard_swollen
+    freq: occasional
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [bines-2006-intussusception-vietnam]
+      locator: "Bines 2006 Bảng 3"
+      reported: "Chướng bụng 17% (Hà Nội), 31% (Melbourne)"
+  - finding: abd_pain_duration
+    dist: { lt_6h: 0.35, h6_24: 0.42, d1_3: 0.18, d4_14: 0.04, gt_2w: 0.01 }
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [park-2021-intussusception-korea, who-intussusception-2002]
+      locator: "Park 2021 (thời gian từ khởi phát đến khi đến cấp cứu)"
+      reported: "Dưới 6 giờ 33,8%; trên 24 giờ 16,8%; trung vị 11 giờ"
+      note: "Đẩy nhẹ về phía sớm hơn vì người dùng kiểm tra trước khi đến viện."
+  - finding: abd_pain_onset
+    dist: { sudden: 0.65, gradual: 0.35 }
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [park-2021-intussusception-korea, bines-2006-intussusception-vietnam]
+      note: "Cơn đau, khóc thét thường đến đột ngột ở trẻ đang bình thường. Tỷ lệ là ước lượng."
+  - finding: abd_pain_location
+    dist: { epigastric: 0.08, right_upper: 0.12, left_upper: 0.03, periumbilical: 0.25, right_lower: 0.10, left_lower: 0.02, suprapubic: 0.02, whole: 0.38 }
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [bines-2006-intussusception-vietnam, park-2021-intussusception-korea]
+      note: "Trẻ nhỏ không chỉ được chỗ đau nên cha mẹ thường chọn 'khắp bụng' hoặc 'không rõ'; khối lồng hay nằm ở hạ sườn phải hoặc quanh rốn. Phân bố là ước lượng."
+warning_signs:
+  - red_jelly_stool
+  - episodic_crying_legs_drawn
+  - vomiting_bilious
+  - drowsy_hard_to_wake
+  - abdomen_hard_swollen
+  - persistent_vomiting
+see_doctor_vi:
+  - "Đưa trẻ đến cơ sở cấp cứu ngay khi trẻ khóc thét từng cơn, nôn (ói), hoặc đi ngoài phân nhầy máu."
+  - "Đến viện sớm thì khả năng phải mổ cắt ruột thấp hơn."
+review:
+  status: draft
+  authors: ["agent:pass-b"]
+  updated: "2026-10-25"
+  notes_vi: "Giữ mức xử trí 2 và cant_miss như gợi ý: đến viện sau 48 giờ làm tăng rõ tỷ lệ phải cắt ruột và tử vong (WHO 2002); ở Việt Nam phần lớn được tháo lồng bằng hơi hoặc nước, rất ít tử vong khi đến sớm (Burnett 2018). Điểm chưa chắc: (1) prior P3 cho trẻ 2 tháng – 5 tuổi là ước lượng, nhóm tuổi gộp cả trẻ 6–24 tháng (nguy cơ cao) và trẻ 3–5 tuổi (nguy cơ thấp); (2) ở Việt Nam phân có máu ít hơn sách kinh điển (20%), có lẽ vì được siêu âm sớm; (3) dấu hiệu 'sờ thấy khối ở bụng' có ở 82% trẻ Hà Nội khi bác sĩ khám nhưng cha mẹ khó tự nhận ra, nên không đề xuất; (4) quy tắc rf_red_jelly_stool vẫn chỉ dựa trên judgment, nay có thể bổ sung WHO 2002 và Bines 2006 làm nguồn. Mã và tên ICD-10 tiếng Việt đã đối chiếu qua công cụ tra cứu của icd.kcb.vn (bộ mã theo Thông tư 06/2026/TT-BYT) ngày 24/10/2026; mã MONDO tra qua EBI OLS."

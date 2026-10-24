@@ -1,0 +1,12 @@
+id: nhs-kidney-stones
+type: web_page
+title: "Kidney stones"
+publisher: "NHS (UK)"
+url: "https://www.nhs.uk/conditions/kidney-stones/"
+license_class: L1
+license_note: "Open Government Licence v3.0; bản chuyển thể không được trình bày như nội dung của NHS."
+default_tier: C
+accessed: "2026-10-25"
+verified: true
+verified_by: "agent:pass-b"
+notes_vi: "Trang rà soát lần cuối 17/9/2026. Đau thường bắt đầu ở bên hông bụng hoặc thắt lưng, có thể lan xuống bẹn, có thể lúc đau lúc đỡ; có thể sốt hoặc rét run, buồn nôn, nôn, đi tiểu nhiều lần, nước tiểu đục. Hẹn khám khẩn hoặc gọi 111 khi đau dữ dội hoặc có sốt, rét run. Sỏi có thể tái phát; yếu tố nguy cơ gồm đã từng bị sỏi, người trong gia đình bị sỏi, uống ít nước."

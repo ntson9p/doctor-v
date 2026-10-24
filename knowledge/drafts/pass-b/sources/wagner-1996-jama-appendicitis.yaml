@@ -1,0 +1,15 @@
+id: wagner-1996-jama-appendicitis
+type: systematic_review
+title: "Does this patient have appendicitis?"
+publisher: "JAMA 1996;276(19):1589–1594 (Wagner JM, McKinney WP, Carpenter JL; loạt The Rational Clinical Examination)"
+date: "1996-11"
+url: "https://europepmc.org/article/MED/8918857"
+doi: "10.1001/jama.1996.03540190061030"
+pmid: "8918857"
+license_class: L3
+license_note: "Bản quyền JAMA: chỉ dùng dữ kiện kèm trích dẫn."
+default_tier: A
+accessed: "2026-10-24"
+verified: true
+verified_by: "agent:pass-b"
+notes_vi: "Lượt B chỉ đọc được tóm tắt (Europe PMC REST API); tóm tắt không có số liệu. Các LR của bài này được đọc qua Bảng 1 của snyder-2018-aafp-appendicitis. Tóm tắt nêu: dấu hiệu cơ thắt lưng chậu (psoas), sốt, đau di chuyển xuống hố chậu phải làm tăng khả năng viêm ruột thừa; nôn trước khi đau làm giảm khả năng; không có đau di chuyển, không đau hố chậu phải, không có phản ứng thành bụng hoặc không sốt làm giảm khả năng."

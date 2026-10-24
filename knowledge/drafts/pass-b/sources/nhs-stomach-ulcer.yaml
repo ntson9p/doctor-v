@@ -1,0 +1,12 @@
+id: nhs-stomach-ulcer
+type: web_page
+title: "Stomach ulcer"
+publisher: "NHS (UK)"
+url: "https://www.nhs.uk/conditions/stomach-ulcer/"
+license_class: L1
+license_note: "Open Government Licence v3.0; bản chuyển thể không được trình bày như nội dung của NHS."
+default_tier: C
+accessed: "2026-10-25"
+verified: true
+verified_by: "agent:pass-b"
+notes_vi: "Trang rà soát lần cuối 12/8/2025. Triệu chứng chính là đau bụng trên, có thể nóng rát, hay nặng hơn về đêm; có thể kèm khó tiêu, ợ nóng, đầy bụng, buồn nôn hoặc nôn. Đi khám khi khó tiêu không đỡ hoặc đau hay tái lại; khám khẩn khi đau nặng lên, sụt cân, chán ăn, nôn kéo dài; gọi 999 hoặc đến cấp cứu khi nôn ra máu hoặc bã cà phê, phân đen hoặc có máu, đau bụng dữ dội. Nguyên nhân chính: vi khuẩn H. pylori và dùng thường xuyên thuốc giảm đau chống viêm; hút thuốc và tuổi cao làm tăng nguy cơ."

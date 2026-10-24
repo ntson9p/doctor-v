@@ -91,6 +91,7 @@
   question_vi: "Cơn đau có lan ra sau lưng không?"
   requires:
     - { finding: abdominal_pain, is: present }
+  cluster: pain_radiation
   leak: moderate
 - id: abd_pain_radiates_groin
   kind: symptom
