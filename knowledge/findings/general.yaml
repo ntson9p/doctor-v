@@ -208,7 +208,8 @@
   kind: sign
   type: binary
   label_vi: "Lú lẫn"
-  question_vi: "Có lú lẫn, nói năng lẫn lộn, không nhận ra người quen không?"
+  question_vi: "Có mới bị lú lẫn, nói năng lẫn lộn, không nhận ra người quen không?"
+  help_vi: "Không tính tình trạng hay quên đã có từ trước."
   alt_question:
     text_vi: "Có nói đúng tên mình và biết đang ở đâu không?"
     inverted: true

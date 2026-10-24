@@ -1,5 +1,5 @@
-id: h-fever-023
-set: holdout
+id: d-from-h-fever-023
+set: dev
 title_vi: "Nam 72 tuổi, sốt, đau đầu dữ dội, nôn, sáng nay lú lẫn"
 narrative_vi: "Ông N., 72 tuổi, ở Thái Bình, bị tăng huyết áp. Từ hôm qua ông sốt 38,8°C, kêu đau đầu dữ dội, buồn nôn và nôn 1 lần, mệt, bỏ ăn. Sáng nay con cháu thấy ông nói năng lẫn lộn, không nhớ mình đang ở đâu. Gia đình không biết ông có cứng gáy không. Ông không ho, không khó thở, không tiểu buốt, không yếu liệt tay chân, không méo miệng."
 patient:
@@ -41,4 +41,4 @@ source:
     - "https://www.nhs.uk/conditions/meningitis/"
     - "https://www.nhs.uk/conditions/sepsis/"
 author: "agent:vignette-holdout"
-notes_vi: "Chấp nhận nhiễm khuẩn huyết vì không có thông tin cứng gáy, hai bệnh chồng lấp ở người cao tuổi."
+notes_vi: "Chấp nhận nhiễm khuẩn huyết vì không có thông tin cứng gáy, hai bệnh chồng lấp ở người cao tuổi. Chuyển từ bộ giữ kín (h-fever-023) ngày 25/10/2026: ca được dùng để sửa dữ liệu sau lần chạy đầu bộ giữ kín (cần mức 1, app ra mức 2), theo quy tắc giữ kín của docs/evaluation.md."

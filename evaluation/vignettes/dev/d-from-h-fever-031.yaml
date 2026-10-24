@@ -1,5 +1,5 @@
-id: h-fever-031
-set: holdout
+id: d-from-h-fever-031
+set: dev
 title_vi: "Nam 16 tuổi, sốt cao đột ngột, ban tím không mất khi ấn, tay chân lạnh"
 narrative_vi: "Em T., nam, 16 tuổi, học sinh nội trú ở Hà Nội. Sáng nay em sốt cao đột ngột 39,8°C, đau đầu, buồn nôn, nôn, đau nhức hai chân. Chiều nay em mệt lả không tự đi được, tay chân lạnh. Ở cẳng chân và bụng xuất hiện nhiều nốt tím, ấn ly thủy tinh lên vẫn thấy rõ. Em còn tỉnh, chưa thấy cứng gáy."
 patient:
@@ -43,3 +43,4 @@ source:
     - "https://www.nhs.uk/conditions/sepsis/"
     - "https://www.nhs.uk/conditions/meningitis/"
 author: "agent:vignette-holdout"
+notes_vi: "Chuyển từ bộ giữ kín (h-fever-031) ngày 25/10/2026: ca được dùng để sửa dữ liệu sau lần chạy đầu bộ giữ kín (cần mức 1, app ra mức 2), theo quy tắc giữ kín của docs/evaluation.md."

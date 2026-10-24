@@ -59,6 +59,25 @@ describe('session flow', () => {
     expect(result.urgentConditions).toEqual(['mening']);
   });
 
+  it('at level 2, asks the open signs that could raise it to level 1 before stopping', () => {
+    const kb2 = makeKb({
+      rules: [
+        ...kb.rules,
+        { id: 'r_neck_rash', level: 1, when: { all: [{ finding: 'neck', is: 'present' }, { finding: 'rash', is: 'present' }] }, complaints: null },
+      ],
+    });
+    let s = startSession(kb2, 'fever', ADULT, { es_collapse: 'absent' });
+    s = answerStep(kb2, s, ask(nextStep(kb2, s)), { neck: 'present' });
+    const escalation = ask(nextStep(kb2, s));
+    expect(escalation).toMatchObject({ kind: 'finding', findingId: 'rash', phase: 'escalation' });
+    const raised = answerStep(kb2, s, escalation, { rash: 'present' });
+    expect(nextStep(kb2, raised)).toEqual({ kind: 'done', reason: 'emergency' });
+    expect(sessionResult(kb2, raised).triage.level).toBe(1);
+    const notRaised = answerStep(kb2, s, escalation, { rash: 'absent' });
+    expect(nextStep(kb2, notRaised)).toEqual({ kind: 'done', reason: 'emergency' });
+    expect(sessionResult(kb2, notRaised).triage.level).toBe(2);
+  });
+
   it('asks an unknown danger sign again with the alternative wording, inverting the answer', () => {
     let s = startSession(kb, 'fever', ADULT, { es_collapse: 'absent' });
     s = answerStep(kb, s, ask(nextStep(kb, s)), { neck: 'unknown' });

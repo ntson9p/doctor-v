@@ -13,6 +13,16 @@ export interface ExprEnv {
   ageGroup: string;
 }
 
+/** Findings referenced by an expression, in the order they appear. */
+export function exprFindings(expr: Expr, out: string[] = []): string[] {
+  if ('all' in expr) expr.all.forEach((e) => exprFindings(e, out));
+  else if ('any' in expr) expr.any.forEach((e) => exprFindings(e, out));
+  else if ('not' in expr) exprFindings(expr.not, out);
+  else if ('atLeast' in expr) expr.of.forEach((e) => exprFindings(e, out));
+  else if ('finding' in expr && !out.includes(expr.finding)) out.push(expr.finding);
+  return out;
+}
+
 export function valueOf(env: ExprEnv, findingId: string): string | undefined {
   return env.implied.has(findingId) ? 'present' : env.answers[findingId];
 }

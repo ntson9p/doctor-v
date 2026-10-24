@@ -76,7 +76,9 @@ show('Sạch ', cleanMetrics);
 show('Nhiễu', noisyMetrics);
 
 if (args.includes('--report')) {
-  const date = new Date().toISOString().slice(0, 10);
+  // Local calendar date (toISOString would give the UTC date, a day behind in Vietnam before 7 am).
+  const now = new Date();
+  const date = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, '0')}-${String(now.getDate()).padStart(2, '0')}`;
   const dir = fileURLToPath(new URL('../../reports/', import.meta.url));
   mkdirSync(dir, { recursive: true });
   const file = `${dir}${date}-${set}-${kb.version}.md`;

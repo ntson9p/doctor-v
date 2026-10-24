@@ -1,5 +1,5 @@
-id: h-abd-031
-set: holdout
+id: d-from-h-abd-031
+set: dev
 title_vi: "Nữ 31 tuổi chậm kinh 6 tuần, đột ngột đau dữ dội bụng dưới phải, ngất, da tái"
 narrative_vi: "Chị H., 31 tuổi, ở Đắk Lắk, chậm kinh khoảng 6 tuần nhưng chưa thử thai. Khoảng 1 giờ trước chị đột ngột đau dữ dội bụng dưới bên phải, rồi ngất trong nhà vệ sinh. Hiện chị tỉnh nhưng da tái, vã mồ hôi lạnh, tay chân lạnh, rất mệt, choáng váng khi ngồi dậy. Bụng đau, không cho sờ vào. Chị ra ít máu âm đạo."
 patient:
@@ -36,3 +36,4 @@ source:
     - nice-ng126
     - "https://www.nhs.uk/conditions/ectopic-pregnancy/"
 author: "agent:vignette-holdout"
+notes_vi: "Chuyển từ bộ giữ kín (h-abd-031) ngày 25/10/2026: ca được dùng để sửa dữ liệu sau lần chạy đầu bộ giữ kín (cần mức 1, app ra mức 2), theo quy tắc giữ kín của docs/evaluation.md."

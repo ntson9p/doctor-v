@@ -4,7 +4,7 @@
  */
 import { ageGroupOf, isApplicable } from './context.ts';
 import type { PatientContext } from './context.ts';
-import { evalExpr } from './expr.ts';
+import { evalExpr, exprFindings } from './expr.ts';
 import type { ExprEnv } from './expr.ts';
 import { indexKb } from './kb-index.ts';
 import type { EngineIndex } from './kb-index.ts';
@@ -14,7 +14,7 @@ import { evidenceItems, hypothesesFor, posterior } from './posterior.ts';
 import { analyze, isConfident, pickQuestion } from './selection.ts';
 import { computeTriage } from './triage.ts';
 
-export type Phase = 'screen' | 'red_flags' | 'intake' | 'adaptive';
+export type Phase = 'screen' | 'red_flags' | 'escalation' | 'intake' | 'adaptive';
 
 export type AskStep =
   | { kind: 'finding'; findingId: string; phase: Phase; alt: boolean }
@@ -127,11 +127,33 @@ export function nextStep(kb: CompiledKb, state: SessionState): Step {
     return { kind: 'group', groupId: null, findingIds: screenOpen, phase: 'screen', allowUnknown: false };
   }
 
-  // 2. Stop at once when a danger rule already demands emergency care.
+  // 2. A danger rule already demands emergency care: stop at once for level 1. At level 2, first
+  //    ask the open danger signs that would make a level 1 rule hold (call 115 or go by own means),
+  //    then stop. Stopping at the first level 2 rule never let a second sign raise it to level 1.
   const hyps = hypothesesFor(idx, state.complaintId, state.ctx, ageGroup);
   const probs = posterior(idx, hyps, evidenceItems(idx, answers, env.implied), state.complaintId);
   const triage = computeTriage({ idx, complaintId: state.complaintId, env, hyps, probs });
-  if (triage.reasons.some((r) => (r.kind === 'rule' || r.kind === 'emergency_screen') && r.level <= 2)) {
+  const altAsked = new Set(
+    state.history.flatMap((h) => (h.step.kind === 'finding' && h.step.alt ? [h.step.findingId] : [])),
+  );
+  const urgent = triage.reasons.filter((r) => (r.kind === 'rule' || r.kind === 'emergency_screen') && r.level <= 2);
+  if (urgent.length > 0) {
+    if (urgent.some((r) => r.level === 1)) return { kind: 'done', reason: 'emergency' };
+    for (const rule of idx.rulesFor(state.complaintId)) {
+      if (rule.level !== 1) continue;
+      for (const id of exprFindings(rule.when)) {
+        const f = idx.findingById.get(id);
+        if (!f) continue;
+        // An "unknown" sign of a level 1 rule is asked again with the alternative wording first.
+        if (f.altQuestion && answers[id] === UNKNOWN && !altAsked.has(id)) {
+          return { kind: 'finding', findingId: id, phase: 'escalation', alt: true };
+        }
+        if (!isOpen(id) || !askable(id)) continue;
+        const values = f.type === 'binary' ? ['present'] : f.options;
+        const raises = values.some((v) => evalExpr(rule.when, { ...env, answers: { ...answers, [id]: v } }) === 'T');
+        if (raises) return { kind: 'finding', findingId: id, phase: 'escalation', alt: false };
+      }
+    }
     return { kind: 'done', reason: 'emergency' };
   }
 
@@ -146,9 +168,6 @@ export function nextStep(kb: CompiledKb, state: SessionState): Step {
   }
 
   // 4. Danger signs answered "unknown": ask once more with the alternative wording.
-  const altAsked = new Set(
-    state.history.flatMap((h) => (h.step.kind === 'finding' && h.step.alt ? [h.step.findingId] : [])),
-  );
   for (const id of idx.redFlagFindingsFor(state.complaintId)) {
     const f = idx.findingById.get(id);
     if (f?.altQuestion && answers[id] === UNKNOWN && !altAsked.has(id)) {

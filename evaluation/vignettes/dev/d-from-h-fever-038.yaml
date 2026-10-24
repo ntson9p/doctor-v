@@ -1,5 +1,5 @@
-id: h-fever-038
-set: holdout
+id: d-from-h-fever-038
+set: dev
 title_vi: "Bé gái 7 tuổi, sốt cao 2 ngày, đau đầu, nôn, co giật, li bì, mùa hè miền Bắc"
 narrative_vi: "Bé L., 7 tuổi, ở Bắc Giang, nhà gần chuồng lợn và ruộng lúa. Hai ngày nay bé sốt 39,5°C, đau đầu nhiều, nôn nhiều lần. Sáng nay bé co giật toàn thân khoảng 2 phút, sau đó ngủ li bì, khi tỉnh thì nói lẫn lộn. Mẹ thấy cổ bé cứng, khó cúi. Bé không nổi ban, không ho, không có loét miệng."
 patient:
@@ -37,4 +37,4 @@ source:
   references:
     - "https://www.nhs.uk/conditions/headaches/"
 author: "agent:vignette-holdout"
-notes_vi: "Ngoài danh mục bệnh; gần giống viêm màng não do vi khuẩn nên dễ bị xếp vào bệnh đó."
+notes_vi: "Ngoài danh mục bệnh; gần giống viêm màng não do vi khuẩn nên dễ bị xếp vào bệnh đó. Chuyển từ bộ giữ kín (h-fever-038) ngày 25/10/2026: ca được dùng để sửa dữ liệu sau lần chạy đầu bộ giữ kín (cần mức 1, app ra mức 2), theo quy tắc giữ kín của docs/evaluation.md."

@@ -1,5 +1,5 @@
-id: h-head-015
-set: holdout
+id: d-from-h-head-015
+set: dev
 title_vi: "Nữ 70 tuổi đốt than sưởi trong phòng kín, sáng dậy đau đầu, nôn, lú lẫn"
 narrative_vi: "Bà M., 70 tuổi, ở Hà Nội, bị tăng huyết áp. Đêm qua trời rét, hai ông bà đốt bếp than tổ ong để sưởi trong phòng ngủ đóng kín cửa. Sáng nay bà dậy thấy đau đầu nhiều khắp đầu, buồn nôn, nôn 2 lần, choáng váng, mệt lả không đứng vững, nói năng lơ mơ, lẫn lộn. Ông cũng bị đau đầu, buồn nôn. Bà không sốt, không yếu một bên người."
 patient:
@@ -38,4 +38,4 @@ source:
   references:
     - "https://www.nhs.uk/conditions/carbon-monoxide-poisoning/"
 author: "agent:vignette-holdout"
-notes_vi: "Ngoài danh mục bệnh. Danh mục chưa có câu hỏi về sưởi than, đun bếp trong phòng kín, người cùng nhà có triệu chứng giống nhau."
+notes_vi: "Ngoài danh mục bệnh. Danh mục chưa có câu hỏi về sưởi than, đun bếp trong phòng kín, người cùng nhà có triệu chứng giống nhau. Chuyển từ bộ giữ kín (h-head-015) ngày 25/10/2026: ca được dùng để sửa dữ liệu sau lần chạy đầu bộ giữ kín (cần mức 1, app ra mức 2), theo quy tắc giữ kín của docs/evaluation.md."

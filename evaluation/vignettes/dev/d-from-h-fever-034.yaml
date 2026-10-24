@@ -1,5 +1,5 @@
-id: h-fever-034
-set: holdout
+id: d-from-h-fever-034
+set: dev
 title_vi: "Nữ 20 tuổi, sốt xuất huyết ngày 5, hết sốt nhưng mệt lả, chân tay lạnh, tiểu ít"
 narrative_vi: "Chị U., 20 tuổi, sinh viên ở Đà Nẵng, không mang thai. Khu trọ có nhiều người bị sốt xuất huyết. Chị sốt cao 39,5°C 4 ngày, kèm đau đầu, đau sau hốc mắt, đau mỏi người. Hôm nay là ngày thứ 5, chị hết sốt nhưng đau bụng nhiều, nôn liên tục, mệt lả không đứng dậy nổi, choáng váng như sắp ngất. Tay chân lạnh, vã mồ hôi, từ sáng đến giờ gần như không đi tiểu."
 patient:
@@ -46,3 +46,4 @@ source:
     - byt-qd-2760-2023
     - who-dengue-2009
 author: "agent:vignette-holdout"
+notes_vi: "Chuyển từ bộ giữ kín (h-fever-034) ngày 25/10/2026: ca được dùng để sửa dữ liệu sau lần chạy đầu bộ giữ kín (cần mức 1, app ra mức 2), theo quy tắc giữ kín của docs/evaluation.md."

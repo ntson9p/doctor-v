@@ -1,5 +1,5 @@
-id: h-fever-026
-set: holdout
+id: d-from-h-fever-026
+set: dev
 title_vi: "Bé gái 14 tháng, sốt cao, nôn ra tất cả, không uống được, li bì, thóp phồng"
 narrative_vi: "Bé Q., 14 tháng, ở Bắc Ninh. Từ hôm qua bé sốt 39,6°C. Hôm nay bé nôn ra hết mọi thứ, không chịu uống, ngủ li bì, gọi khó tỉnh, khi bế lên thì khóc thét. Mẹ sờ thấy thóp phồng căng. Bé không nổi ban, không ho, không tiêu chảy. Gia đình không biết cách kiểm tra cứng gáy."
 patient:
@@ -38,4 +38,4 @@ source:
     - nice-ng143
     - "https://www.nhs.uk/conditions/meningitis/"
 author: "agent:vignette-holdout"
-notes_vi: "Người nhà không biết đánh giá cứng gáy nên ghi 'không rõ'."
+notes_vi: "Người nhà không biết đánh giá cứng gáy nên ghi 'không rõ'. Chuyển từ bộ giữ kín (h-fever-026) ngày 25/10/2026: ca được dùng để sửa dữ liệu sau lần chạy đầu bộ giữ kín (cần mức 1, app ra mức 2), theo quy tắc giữ kín của docs/evaluation.md."

@@ -1,5 +1,5 @@
-id: h-fever-033
-set: holdout
+id: d-from-h-fever-033
+set: dev
 title_vi: "Bé trai 2 tuổi, tay chân miệng ngày 3, giật mình nhiều, thở nhanh, vã mồ hôi, li bì"
 narrative_vi: "Bé H., 2 tuổi, ở Tây Ninh, bị tay chân miệng ngày thứ 3, lớp mẫu giáo có nhiều bạn bị. Bé sốt 39,5°C, uống thuốc hạ sốt không giảm. Từ chiều bé giật mình rất nhiều lần, run tay chân. Tối nay bé thở nhanh, vã mồ hôi, tay chân lạnh, li bì, nôn 2 lần."
 patient:
@@ -37,3 +37,4 @@ source:
   references:
     - byt-qd-292-2024
 author: "agent:vignette-holdout"
+notes_vi: "Chuyển từ bộ giữ kín (h-fever-033) ngày 25/10/2026: ca được dùng để sửa dữ liệu sau lần chạy đầu bộ giữ kín (cần mức 1, app ra mức 2), theo quy tắc giữ kín của docs/evaluation.md."

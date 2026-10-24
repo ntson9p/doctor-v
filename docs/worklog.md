@@ -190,3 +190,32 @@ Trước đó, khi nhiễu có 1 ca chửa ngoài tử cung bị bỏ sót vì c
 Số câu hỏi trung vị 14 (sạch), 16 (nhiễu).
 
 **Còn tồn:** ngưỡng 1% của bệnh "không được bỏ sót" làm ca viêm dạ dày – ruột sốt, đau quanh rốn bị khuyên đi cấp cứu, vì viêm ruột thừa còn khoảng 2%. Ngưỡng này hợp với bệnh tính bằng giờ (nhiễm khuẩn huyết, viêm màng não), có thể quá chặt với bệnh "cửa sổ" 1–2 ngày như viêm ruột thừa. Đây là quyết định chuyên môn, cần bác sĩ thẩm định.
+
+### Lần chạy đầu bộ ca giữ kín (94 ca, phiên bản dữ liệu 7ab307c94b37)
+
+Báo cáo: `evaluation/reports/2026-10-24-holdout-7ab307c94b37.md`. Ngày trong tên file là ngày UTC; ngày chạy theo giờ Việt Nam là 25/10. Từ lần này, ngày lấy theo giờ máy.
+
+| | Top-1 | Top-3 | Top-10 | An toàn | Bỏ sót cấp cứu | Khuyên quá mức | ECE |
+|---|---|---|---|---|---|---|---|
+| Chỉ tiêu | ≥ 45% | ≥ 65% | ≥ 85% | ≥ 97% | ≤ 5% | ≤ 35% | ≤ 0,10 |
+| Sạch | 75,9% | 88,6% | 93,7% | **88,3%** | **8/47** | 10,6% | 0,085 |
+| Nhiễu (5 hạt giống) | 72,9% | 86,3% | 92,9% | 85,5% | 54/235 | 16,6% | 0,050 |
+
+**Không đạt chỉ tiêu an toàn.** Bộ dev cho 0/38, trong khi ca dev do chính các lượt soạn dữ liệu viết, còn bộ giữ kín do agent độc lập viết: dữ liệu đã hợp với bộ dev hơn thực tế.
+
+**Cả 8 ca bỏ sót đều cần mức 1 (gọi 115) mà app ra mức 2 (đến cấp cứu ngay).** Không ca cấp cứu nào bị khuyên ở nhà hay khám muộn.
+
+Hai nguyên nhân có tính hệ thống, đã sửa:
+1. App dừng ngay ở quy tắc mức 2 đầu tiên, nên dấu hiệu thứ hai (ví dụ ban xuất huyết sau tay chân lạnh) không bao giờ được hỏi. Giờ ở mức 2, app hỏi thêm các dấu hiệu có thể nâng lên mức 1 rồi mới dừng, và hỏi lại bằng câu thay thế dấu hiệu mức 1 đang "Không rõ".
+2. Thiếu quy tắc mức 1:
+   - lú lẫn hoặc li bì: nâng từ mức 2 (NHS khuyên gọi 999; người bệnh không tự đến viện an toàn được);
+   - sốc: tay chân lạnh, da tái kèm mệt lả, tiểu ít hoặc ngất (2760);
+   - nghi chửa ngoài tử cung vỡ (NHS).
+
+   Câu "lú lẫn" thêm chữ "mới bị", để không tính người vốn hay quên.
+
+**Thủ tục giữ kín:** 8 ca dùng để sửa đã chuyển sang dev (`d-from-h-…`); bộ giữ kín còn 86 ca. Cần agent độc lập viết ca thay thế trước lần chấm sau.
+
+Ở các ca khác của báo cáo, tôi chỉ xem tiêu đề và mức xử trí, không dùng để sửa dữ liệu.
+
+**Sau khi sửa (dev, 107 ca, sạch):** top-1 75,2%, top-3 94,3%, an toàn 100%, bỏ sót 0/46.

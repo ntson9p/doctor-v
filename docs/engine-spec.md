@@ -22,7 +22,9 @@ Bộ suy luận là **mô hình Bayes đơn bệnh** ("single-fault"): giả đ�
 Hàm `nextStep` quyết định bước tiếp theo từ trạng thái hiện tại, theo thứ tự:
 
 1. **Sàng lọc cấp cứu** (`rules/emergency-screen.yaml`): hỏi nếu chưa trả lời. Giao diện thường hỏi màn này trước cả tuổi và giới, rồi truyền câu trả lời vào khi bắt đầu phiên.
-2. **Dừng ngay ("emergency")** nếu đã có quy tắc hoặc mục sàng lọc cấp cứu cho mức 1–2.
+2. **Dừng vì cấp cứu ("emergency")** khi đã có quy tắc hoặc mục sàng lọc cấp cứu thỏa ở mức 1–2:
+   - mức 1: dừng ngay;
+   - mức 2: trước khi dừng, hỏi thêm (pha `escalation`) các dấu hiệu có thể đưa một quy tắc mức 1 thành thỏa. Mỗi lần một câu, theo thứ tự quy tắc rồi thứ tự dấu hiệu trong quy tắc. Dấu hiệu của quy tắc mức 1 đang "Không rõ" mà có `alt_question` thì được hỏi lại trước. Hết câu như vậy thì dừng. Lý do: dừng ngay ở quy tắc mức 2 đầu tiên khiến dấu hiệu thứ hai không bao giờ được hỏi. Ví dụ tay chân lạnh (mức 2) cộng ban xuất huyết là sốc nhiễm khuẩn (mức 1); lần chạy đầu bộ ca giữ kín có 8 ca cần mức 1 mà app ra mức 2.
 3. **Dấu hiệu nguy hiểm bắt buộc** của triệu chứng chính (`red_flags`), theo đúng thứ tự khai báo.
    - Mỗi mục là một dấu hiệu, hoặc một nhóm chọn nhiều.
    - Chỉ hỏi những mục áp dụng cho đối tượng (giới, nhóm tuổi), đã thỏa điều kiện hỏi (`requires`) và chưa được trả lời.

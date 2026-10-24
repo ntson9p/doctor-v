@@ -183,18 +183,18 @@
     locator: "NG240 khuyến cáo 1.1.9, 1.1.10, 1.1.13; NHS Stomach ache và Headaches (Call 999 or go to A&E)"
     note: "Quy tắc mới của lượt R. NG240: ban xuất huyết lan nhanh hoặc nốt trên 2 mm thì nghĩ nhiều bệnh não mô cầu và chuyển viện cấp cứu; không loại trừ bệnh chỉ vì chưa sốt. NHS: đau bụng hoặc đau đầu kèm ban không mất khi ấn thì gọi 999 hoặc đến cấp cứu."
 - id: rf_altered_consciousness
-  level: 2
+  level: 1
   when:
     any:
       - { finding: confusion, is: present }
       - { finding: drowsy_hard_to_wake, is: present }
-  reason_vi: "Lú lẫn hoặc li bì là dấu hiệu bệnh nặng."
+  reason_vi: "Lú lẫn hoặc li bì là dấu hiệu bệnh nặng: gọi 115 hoặc nhờ người đưa đi cấp cứu ngay."
   evidence:
     tier: B
-    basis: verbal
+    basis: judgment
     sources: [nice-ng253, nice-ng254, who-imci-chart-booklet-2014, byt-qd-2760-2023, nhs-sepsis]
     locator: "NG253 bảng 1; NG254 bảng 1–3; IMCI general danger signs; 2760 Phụ lục 2, mục IV.A.3.b; NHS Sepsis"
-    note: "Lượt R thay NG51 (đã bị thay thế) bằng NG253 và NG254: thay đổi ý thức mới là tiêu chí nguy cơ cao. IMCI: li bì hoặc hôn mê là dấu hiệu nguy hiểm toàn thân. 2760: vật vã, lừ đừ, li bì là dấu hiệu cảnh báo; lú lẫn là dấu hiệu cần đến khám lại ngay."
+    note: "Lượt R thay NG51 (đã bị thay thế) bằng NG253 và NG254: thay đổi ý thức mới là tiêu chí nguy cơ cao. IMCI: li bì hoặc hôn mê là dấu hiệu nguy hiểm toàn thân. 2760: vật vã, lừ đừ, li bì là dấu hiệu cảnh báo; lú lẫn là dấu hiệu cần đến khám lại ngay. Người bảo trì nâng mức 2 lên mức 1 (25/10/2026): NHS khuyên gọi 999 khi lú lẫn, li bì (Sepsis, Meningitis); người lú lẫn, li bì không tự đến viện an toàn được, và hành động của mức 1 gồm cả nhờ người đưa đến cấp cứu. Lần chạy đầu bộ ca giữ kín: 5/8 ca cần mức 1 mà app ra mức 2 có lú lẫn hoặc li bì. Chờ bác sĩ duyệt."
 - id: rf_shock_signs
   level: 2
   when:
@@ -208,6 +208,22 @@
     sources: [byt-qd-2760-2023, nice-ng253, nice-ng254, byt-qd-3377-2023]
     locator: "2760 mục II.2.1, IV.A.3.b; NG253 bảng 1; NG254 bảng 1–2; 3377 mục 3.2.2"
     note: "2760: tay chân lạnh, ẩm và mệt lả, bứt rứt là dấu hiệu cần đến khám lại ngay; lạnh đầu chi, da nổi vân tím là biểu hiện sốc. NICE: da loang lổ hoặc xám tái là nguy cơ cao; tay chân lạnh là nguy cơ trung bình–cao ở trẻ dưới 12 tuổi. 3377: suy sụp (không tự ngồi, đứng, đi được) là tiêu chuẩn sốt rét ác tính. Lượt R thay NG51 bằng NG253, NG254."
+- id: rf_shock_multiple_signs
+  level: 1
+  when:
+    all:
+      - { finding: cold_hands_feet, is: present }
+      - any:
+          - { finding: severe_weakness, is: present }
+          - { finding: decreased_urine, is: present }
+          - { finding: fainting_or_near_fainting, is: present }
+  reason_vi: "Tay chân lạnh, da tái kèm mệt lả, tiểu ít hoặc ngất là dấu hiệu sốc: gọi 115 ngay."
+  evidence:
+    tier: B
+    basis: judgment
+    sources: [byt-qd-2760-2023, nice-ng253, nice-ng254, nhs-sepsis]
+    locator: "2760 mục II.2.1, IV.A.3.b, Phụ lục 2; NG253 bảng 1; NG254 bảng 1–3; NHS Sepsis"
+    note: "Người bảo trì thêm (25/10/2026). 2760: lạnh đầu chi, da nổi vân tím là biểu hiện sốc; tiểu ít, mệt lả là dấu hiệu cảnh báo. NICE: da loang lổ hoặc xám tái, không tiểu 18 giờ là nguy cơ cao. Từng dấu hiệu vẫn ở mức 2 (rf_shock_signs); dấu hiệu tuần hoàn kèm một hậu quả (mệt lả, tiểu ít, ngất) được coi là sốc. Câu hỏi tay chân lạnh đã ghi rõ lạnh ngắt, da tái hoặc nổi vân tím, để không tính cảm giác lạnh khi đang rét run. Chờ bác sĩ duyệt."
 - id: rf_sepsis_multiple_signs
   level: 1
   when:
@@ -663,6 +679,25 @@
     sources: [nice-ng126, who-bec-2018]
     locator: "NG126 khuyến cáo 1.4.1, 1.4.3, 1.4.7, 1.4.9; WHO BEC: Shock (ectopic pregnancy)"
     note: "NG126: thai sớm có đau và ra máu cần chuyển đơn vị cấp cứu thai sớm, chuyển ngay nếu ấn đau bụng hoặc tiểu khung, chuyển thẳng cấp cứu nếu huyết động không ổn định hoặc đau, ra máu nhiều. Ở Việt Nam tương ứng cấp cứu sản."
+- id: rf_ectopic_rupture_signs
+  level: 1
+  complaints: [abdominal_pain]
+  when:
+    all:
+      - { finding: fainting_or_near_fainting, is: present }
+      - any:
+          - { finding: abd_pain_severe, is: present }
+          - { finding: cold_hands_feet, is: present }
+      - any:
+          - { finding: pregnant, is: present }
+          - { finding: missed_period, is: present }
+  reason_vi: "Đau bụng kèm ngất ở người có thể đang có thai có thể là chửa ngoài tử cung vỡ: gọi 115 ngay."
+  evidence:
+    tier: C
+    basis: judgment
+    sources: [nhs-ectopic-pregnancy]
+    locator: "NHS Ectopic pregnancy: symptoms of a ruptured ectopic pregnancy"
+    note: "Người bảo trì thêm (25/10/2026). NHS: dấu hiệu vỡ gồm đau bụng đột ngột, dữ dội, chóng mặt nhiều hoặc ngất, da rất tái; gọi 999 hoặc đến cấp cứu ngay. Đòi thêm đau dữ dội hoặc da tái vì choáng váng đơn thuần hay gặp khi có thai. Ngất kèm đau bụng đã ở mức 2 (rf_fainting_with_pain); mức 1 vì chảy máu trong ổ bụng có thể gây sốc nhanh. Cần nguồn sản khoa Việt Nam."
 - id: rf_pregnant_abdominal_pain
   level: 3
   when:
