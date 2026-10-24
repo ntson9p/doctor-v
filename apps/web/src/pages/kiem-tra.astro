@@ -1,0 +1,11 @@
+---
+import CheckApp from '../components/check/CheckApp.tsx';
+import Base from '../layouts/Base.astro';
+---
+
+<Base title="Kiểm tra triệu chứng · doctor-v">
+  <CheckApp client:load />
+  <noscript>
+    <p class="error">Trình duyệt đang tắt JavaScript nên chưa chạy được phần kiểm tra. Nếu nguy cấp, gọi 115.</p>
+  </noscript>
+</Base>

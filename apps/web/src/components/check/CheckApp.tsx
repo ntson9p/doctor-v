@@ -1,0 +1,277 @@
+/**
+ * The whole check flow (docs/plan.md §3.1): warning, emergency screen, basic information, chief
+ * complaint, one question per screen, review, result. Everything runs in the browser; the flow is
+ * kept in sessionStorage so a reload does not lose the answers (it is gone when the tab closes).
+ */
+import type { AskStep, CompiledKb, Phase, SessionState, Step } from '@doctor-v/engine';
+import {
+  answerStep,
+  emergencyScreenStep,
+  goBack,
+  groupResponse,
+  nextStep,
+  sessionResult,
+  startSession,
+  stopEarly,
+} from '@doctor-v/engine';
+import { useEffect, useState } from 'preact/hooks';
+import { loadKb } from '../../lib/kb.ts';
+import { KEYS, readJson, remove, writeJson } from '../../lib/storage.ts';
+import { Call115 } from './Call115.tsx';
+import { Complaints } from './Complaints.tsx';
+import { FindingQuestion } from './FindingQuestion.tsx';
+import { GroupQuestion } from './GroupQuestion.tsx';
+import { EMPTY_PROFILE, Profile, ageMonthsOf } from './Profile.tsx';
+import type { ProfileData } from './Profile.tsx';
+import { Result } from './Result.tsx';
+import { Review } from './Review.tsx';
+
+type View = 'intro' | 'screen' | 'call115' | 'profile' | 'complaint' | 'ask' | 'review' | 'result';
+
+interface Flow {
+  kbVersion: string;
+  view: View;
+  /** Emergency-screen answers, asked before age and sex. */
+  screen: Record<string, string> | null;
+  profile: ProfileData;
+  session: SessionState | null;
+}
+
+const STAGES = ['Dấu hiệu cấp cứu', 'Thông tin cơ bản', 'Câu hỏi', 'Kết quả'] as const;
+const STAGE_OF: Record<View, number> = { intro: -1, screen: 0, call115: -1, profile: 1, complaint: 1, ask: 2, review: 3, result: -1 };
+const PHASE_LABEL: Record<Phase, string> = {
+  screen: 'Dấu hiệu cấp cứu',
+  red_flags: 'Dấu hiệu nguy hiểm',
+  escalation: 'Dấu hiệu nguy hiểm',
+  intake: 'Triệu chứng đi kèm',
+  adaptive: 'Câu hỏi thêm',
+};
+
+// Sessions are immutable, so the next step can be cached per session object: choosing the view
+// and rendering the question would otherwise compute it twice (slow on low-end phones).
+const stepCache = new WeakMap<SessionState, Step>();
+function nextStepOf(kb: CompiledKb, session: SessionState): Step {
+  let step = stepCache.get(session);
+  if (!step) {
+    step = nextStep(kb, session);
+    stepCache.set(session, step);
+  }
+  return step;
+}
+
+const fresh = (kb: CompiledKb, view: View = 'intro'): Flow => ({ kbVersion: kb.version, view, screen: null, profile: EMPTY_PROFILE, session: null });
+
+function Progress({ view, phase }: { view: View; phase: Phase | null }) {
+  const stage = STAGE_OF[view];
+  if (stage < 0) return null;
+  return (
+    <nav aria-label="Tiến trình">
+      <ol class="progress">
+        {STAGES.map((s, i) => (
+          <li key={s} aria-current={i === stage ? 'step' : undefined}>
+            {i + 1}. {s}
+            {i === stage && phase && view === 'ask' ? ` · ${PHASE_LABEL[phase]}` : ''}
+          </li>
+        ))}
+      </ol>
+    </nav>
+  );
+}
+
+function Intro({ onDone }: { onDone: () => void }) {
+  return (
+    <div>
+      <h1 tabIndex={-1} data-autofocus>
+        Trước khi bắt đầu
+      </h1>
+      <ul>
+        <li>Ứng dụng gợi ý nên đi khám ở đâu, khi nào. Ứng dụng không chẩn đoán bệnh.</li>
+        <li>Nếu có dấu hiệu nguy kịch, hãy gọi 115 ngay, không cần trả lời câu hỏi.</li>
+        <li>Câu trả lời chỉ được xử lý trên máy của bạn, không gửi đi đâu.</li>
+        <li>Đây là bản thử nghiệm. Nội dung chưa được bác sĩ thẩm định.</li>
+      </ul>
+      <button type="button" class="btn btn--primary btn--block" onClick={onDone}>
+        Tôi đã hiểu
+      </button>
+    </div>
+  );
+}
+
+export default function CheckApp() {
+  const [kb, setKb] = useState<CompiledKb | null>(null);
+  const [failed, setFailed] = useState(false);
+  const [flow, setFlow] = useState<Flow | null>(null);
+
+  useEffect(() => {
+    loadKb()
+      .then((k) => {
+        setKb(k);
+        const saved = readJson<Flow>('session', KEYS.session);
+        setFlow(saved && saved.kbVersion === k.version ? saved : fresh(k));
+      })
+      .catch(() => setFailed(true));
+  }, []);
+
+  useEffect(() => {
+    if (flow) writeJson('session', KEYS.session, flow);
+  }, [flow]);
+
+  // Each new screen: move focus to its heading and scroll to the top.
+  const screenKey = flow ? `${flow.view}:${flow.session?.history.length ?? 0}` : '';
+  useEffect(() => {
+    const el = document.querySelector<HTMLElement>('[data-autofocus]');
+    el?.focus({ preventScroll: true });
+    window.scrollTo(0, 0);
+  }, [screenKey]);
+
+  if (failed) {
+    return (
+      <p class="error" role="alert">
+        Không tải được dữ liệu. Hãy kiểm tra kết nối mạng rồi tải lại trang. Nếu nguy cấp, gọi 115.
+      </p>
+    );
+  }
+  if (!kb || !flow) return <p>Đang tải…</p>;
+
+  const set = (patch: Partial<Flow>): void => setFlow({ ...flow, ...patch });
+  /** Moves the session on: the next question, or the review (the result at once for emergencies). */
+  const advance = (session: SessionState): void => {
+    const step = nextStepOf(kb, session);
+    if (step.kind !== 'done') return set({ session, view: 'ask' });
+    const immediate = step.reason === 'emergency' || step.reason === 'screen_only';
+    set({ session, view: immediate ? 'result' : 'review' });
+  };
+  const restart = (): void => {
+    remove('session', KEYS.session);
+    setFlow(fresh(kb, 'screen'));
+  };
+
+  const view = flow.view;
+  const session = flow.session;
+  const step = view === 'ask' && session ? nextStepOf(kb, session) : null;
+  const ask = step && step.kind !== 'done' ? step : null;
+  let body: preact.JSX.Element;
+
+  if (view === 'intro') {
+    body = <Intro onDone={() => set({ view: 'screen' })} />;
+  } else if (view === 'screen') {
+    const s = emergencyScreenStep(kb);
+    body = (
+      <GroupQuestion
+        key="screen"
+        kb={kb}
+        title={kb.text.emergencyScreen.title}
+        noneLabel={kb.text.emergencyScreen.noneLabel}
+        findingIds={s.kind === 'group' ? s.findingIds : []}
+        allowUnknown={false}
+        onAnswer={(checked) => {
+          const answers = groupResponse(s, checked ?? []);
+          set({ screen: answers, view: (checked ?? []).length > 0 ? 'call115' : 'profile' });
+        }}
+      />
+    );
+  } else if (view === 'call115') {
+    const signs = Object.entries(flow.screen ?? {})
+      .filter(([, v]) => v === 'present')
+      .map(([id]) => id);
+    body = <Call115 kb={kb} signs={signs} onBack={() => set({ screen: null, view: 'screen' })} />;
+  } else if (view === 'profile') {
+    body = <Profile kb={kb} initial={flow.profile} onDone={(profile) => set({ profile, view: 'complaint' })} />;
+  } else if (view === 'complaint') {
+    const ageMonths = ageMonthsOf(flow.profile);
+    const sex = flow.profile.sex;
+    body =
+      ageMonths === null || sex === null ? (
+        <button type="button" class="btn btn--block" onClick={() => set({ view: 'profile' })}>
+          Nhập lại thông tin cơ bản
+        </button>
+      ) : (
+        <Complaints
+          kb={kb}
+          ageMonths={ageMonths}
+          onPick={(complaintId) => {
+            const ctx = { ageMonths, sex, regionId: flow.profile.regionId, month: new Date().getMonth() + 1 };
+            advance(startSession(kb, complaintId, ctx, flow.screen ?? {}));
+          }}
+        />
+      );
+  } else if (view === 'ask' && session) {
+    if (!ask) {
+      body = (
+        <button type="button" class="btn btn--primary btn--block" onClick={() => set({ view: 'review' })}>
+          Xem lại câu trả lời
+        </button>
+      );
+    } else {
+      const answer = (s: AskStep, response: Record<string, string>): void => advance(answerStep(kb, session, s, response));
+      const question =
+        ask.kind === 'finding' ? (
+          <FindingQuestion
+            key={`${session.history.length}:${ask.findingId}:${ask.alt}`}
+            kb={kb}
+            findingId={ask.findingId}
+            alt={ask.alt}
+            forOther={flow.profile.forOther}
+            onAnswer={(v) => answer(ask, { [ask.findingId]: v })}
+          />
+        ) : (
+          <GroupQuestion
+            key={`${session.history.length}:${ask.groupId ?? 'screen'}`}
+            kb={kb}
+            title={ask.groupId === null ? kb.text.emergencyScreen.title : (kb.text.groups[ask.groupId]?.title ?? '')}
+            noneLabel={ask.groupId === null ? kb.text.emergencyScreen.noneLabel : (kb.text.groups[ask.groupId]?.noneLabel ?? '')}
+            findingIds={ask.findingIds}
+            allowUnknown={ask.allowUnknown}
+            onAnswer={(checked) => answer(ask, checked === null ? groupResponse(ask, [], true) : groupResponse(ask, checked))}
+          />
+        );
+      const canStop = session.history.length >= kb.params.stop.softMaxQuestions;
+      body = (
+        <>
+          {question}
+          <div class="row" style={{ marginTop: '1.5rem' }}>
+            <button
+              type="button"
+              class="btn"
+              onClick={() => (session.history.length > 0 ? set({ session: goBack(session) }) : set({ view: 'complaint' }))}
+            >
+              Quay lại
+            </button>
+            {canStop ? (
+              <button type="button" class="btn" onClick={() => advance(stopEarly(session))}>
+                Dừng và xem kết quả
+              </button>
+            ) : null}
+          </div>
+        </>
+      );
+    }
+  } else if (view === 'review' && session) {
+    body = (
+      <Review
+        kb={kb}
+        history={session.history}
+        forOther={flow.profile.forOther}
+        onEdit={(i) => set({ session: { ...session, history: session.history.slice(0, i), stoppedByUser: false }, view: 'ask' })}
+        onDone={() => set({ view: 'result' })}
+      />
+    );
+  } else if (view === 'result' && session) {
+    body = (
+      <Result kb={kb} result={sessionResult(kb, session)} onReview={() => set({ view: 'review' })} onRestart={restart} />
+    );
+  } else {
+    body = (
+      <button type="button" class="btn btn--primary btn--block" onClick={restart}>
+        Bắt đầu lại
+      </button>
+    );
+  }
+
+  return (
+    <div>
+      <Progress view={view} phase={ask?.phase ?? null} />
+      {body}
+    </div>
+  );
+}

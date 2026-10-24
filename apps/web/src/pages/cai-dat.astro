@@ -1,0 +1,57 @@
+---
+import Base from '../layouts/Base.astro';
+
+const steps = [
+  { scale: '1', label: 'Vừa' },
+  { scale: '1.25', label: 'Lớn' },
+  { scale: '1.5', label: 'Rất lớn' },
+  { scale: '1.75', label: 'Lớn nhất' },
+];
+---
+
+<Base title="Cài đặt · doctor-v">
+  <h1>Cài đặt</h1>
+
+  <div class="section">
+    <h2>Cỡ chữ</h2>
+    <p>Chọn cỡ chữ dễ đọc nhất. Cỡ chữ được lưu trên máy này.</p>
+    <div class="font-size__steps">
+      {
+        steps.map((s) => (
+          <button type="button" class="btn" data-font-scale={s.scale} aria-pressed="false">
+            {s.label}
+          </button>
+        ))
+      }
+    </div>
+    <button type="button" class="btn btn--link" data-font-reset>Đặt lại cỡ chữ</button>
+  </div>
+
+  <div class="section">
+    <h2>Xóa dữ liệu trên máy</h2>
+    <p>Xóa cỡ chữ đã lưu và câu trả lời của lần kiểm tra đang dở.</p>
+    <button type="button" class="btn" id="clear-data">Xóa dữ liệu</button>
+    <p id="clear-done" role="status" class="note"></p>
+  </div>
+
+  <script is:inline>
+    document.getElementById('clear-data').addEventListener('click', function () {
+      [localStorage, sessionStorage].forEach(function (store) {
+        try {
+          Object.keys(store)
+            .filter(function (k) {
+              return k.indexOf('dv.') === 0;
+            })
+            .forEach(function (k) {
+              store.removeItem(k);
+            });
+        } catch (e) {}
+      });
+      document.documentElement.style.setProperty('--scale', '1');
+      document.querySelectorAll('[data-font-scale]').forEach(function (b) {
+        b.setAttribute('aria-pressed', String(b.getAttribute('data-font-scale') === '1'));
+      });
+      document.getElementById('clear-done').textContent = 'Đã xóa dữ liệu trên máy này.';
+    });
+  </script>
+</Base>

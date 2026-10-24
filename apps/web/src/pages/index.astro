@@ -1,0 +1,27 @@
+---
+import Base from '../layouts/Base.astro';
+import { builtKnowledge } from '../lib/build-kb.ts';
+
+const { kb } = builtKnowledge();
+const emergencySigns = kb.emergencyScreen.items.map((i) => kb.text.findings[i.findingId]?.label ?? i.findingId);
+const complaints = kb.complaints.map((c) => kb.text.complaints[c.id]?.label ?? c.id);
+---
+
+<Base title="doctor-v · Nên đi khám ở đâu, khi nào">
+  <h1>Bạn hoặc người thân đang không khỏe?</h1>
+  <p>Trả lời vài câu hỏi đơn giản để biết nên tự theo dõi, đi khám, hay cần đi cấp cứu ngay.</p>
+  <a class="btn btn--primary btn--block" href="/kiem-tra">Bắt đầu kiểm tra</a>
+
+  <div class="section" style="margin-top: 2rem">
+    <h2>Gọi 115 ngay nếu có</h2>
+    <ul>
+      {emergencySigns.map((s) => <li>{s}</li>)}
+    </ul>
+    <a class="btn btn-115 btn--block" href="tel:115">Gọi 115</a>
+  </div>
+
+  <p class="note">
+    Bản thử nghiệm: mới có {complaints.length} triệu chứng chính ({complaints.join(', ').toLowerCase()}). Ứng dụng không chẩn
+    đoán bệnh. Nội dung chưa được bác sĩ thẩm định.
+  </p>
+</Base>

@@ -1,0 +1,69 @@
+---
+import Base from '../layouts/Base.astro';
+import { builtKnowledge } from '../lib/build-kb.ts';
+
+const { kb, knowledge } = builtKnowledge();
+const GROUPS: { type: string; title: string }[] = [
+  { type: 'guideline_vn', title: 'Hướng dẫn của Bộ Y tế' },
+  { type: 'guideline_intl', title: 'Hướng dẫn quốc tế' },
+  { type: 'systematic_review', title: 'Tổng quan hệ thống' },
+  { type: 'primary_study', title: 'Nghiên cứu' },
+  { type: 'web_page', title: 'Trang thông tin chính thức' },
+  { type: 'reference', title: 'Tài liệu tham khảo' },
+  { type: 'statistic', title: 'Số liệu thống kê' },
+];
+const sources = knowledge.sources.map((s) => s.data).sort((a, b) => a.title.localeCompare(b.title, 'vi'));
+const byType = GROUPS.map((g) => ({ ...g, items: sources.filter((s) => s.type === g.type) })).filter((g) => g.items.length > 0);
+const known = new Set(GROUPS.map((g) => g.type));
+const others = sources.filter((s) => !known.has(s.type));
+---
+
+<Base title="Giới thiệu và nguồn · doctor-v">
+  <h1>Giới thiệu</h1>
+  <p>
+    doctor-v là công cụ thông tin sức khỏe. Dựa trên câu trả lời của bạn, ứng dụng gợi ý mức độ cần đi khám và các tình trạng
+    có thể liên quan. Ứng dụng không chẩn đoán bệnh và không thay thế việc khám bệnh.
+  </p>
+
+  <h2>Cách hoạt động</h2>
+  <ul>
+    <li>Mức xử trí do các quy tắc an toàn quyết định, dựa trên hướng dẫn chính thức.</li>
+    <li>Con số % là ước tính từ tần suất triệu chứng trong y văn, chưa được hiệu chuẩn trên người bệnh thật.</li>
+    <li>Bản thử nghiệm có {kb.complaints.length} triệu chứng chính và {kb.conditions.length} tình trạng.</li>
+  </ul>
+
+  <h2>Quyền riêng tư</h2>
+  <ul>
+    <li>Không có máy chủ, không thu thập dữ liệu, không dùng cookie.</li>
+    <li>Câu trả lời chỉ được tính trên máy của bạn và tự xóa khi đóng thẻ trình duyệt.</li>
+    <li>Cỡ chữ bạn chọn được lưu trên máy. Có thể xóa trong <a href="/cai-dat">Cài đặt</a>.</li>
+  </ul>
+
+  <h2>Trạng thái</h2>
+  <p>
+    Nội dung chưa được bác sĩ thẩm định. Phiên bản dữ liệu {kb.version}.
+  </p>
+
+  <h2>Nguồn ({sources.length})</h2>
+  <p class="note">Mỗi con số trong dữ liệu đều ghi nguồn. Nội dung có bản quyền chỉ được dùng dưới dạng dữ kiện kèm trích dẫn.</p>
+  {
+    [...byType, ...(others.length > 0 ? [{ type: 'other', title: 'Khác', items: others }] : [])].map((g) => (
+      <details class="more">
+        <summary>
+          {g.title} ({g.items.length})
+        </summary>
+        <ul>
+          {g.items.map((s) => (
+            <li>
+              {s.url ? <a href={s.url} rel="noopener noreferrer">{s.title}</a> : s.title}. {s.publisher}
+              {s.doc_number ? ` (${s.doc_number})` : ''}.
+            </li>
+          ))}
+        </ul>
+      </details>
+    ))
+  }
+
+  <h2>Phông chữ</h2>
+  <p>Be Vietnam Pro, giấy phép SIL Open Font License 1.1 (<a href="/fonts/OFL.txt">xem giấy phép</a>).</p>
+</Base>

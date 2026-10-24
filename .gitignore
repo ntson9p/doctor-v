@@ -7,3 +7,5 @@ coverage/
 Thumbs.db
 # Local scratch output of evaluation runs (reports worth keeping go to evaluation/reports/)
 evaluation/.out/
+# Copied from @fontsource/be-vietnam-pro before dev and build (apps/web/scripts/copy-fonts.mjs)
+apps/web/public/fonts/

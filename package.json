@@ -6,6 +6,7 @@
   "type": "module",
   "workspaces": [
     "packages/*",
+    "apps/*",
     "evaluation"
   ],
   "engines": {
@@ -26,7 +27,9 @@
     "eval:tune": "node evaluation/src/cli/tune.ts",
     "play": "node evaluation/src/cli/play.ts",
     "kb:agreement": "node packages/kb/src/cli/agreement.ts",
-    "kb:priors": "node packages/kb/src/cli/priors.ts"
+    "kb:priors": "node packages/kb/src/cli/priors.ts",
+    "web:dev": "npm run dev -w @doctor-v/web",
+    "web:build": "npm run build -w @doctor-v/web"
   },
   "devDependencies": {
     "@eslint/js": "10.0.1",
