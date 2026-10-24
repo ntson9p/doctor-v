@@ -141,6 +141,13 @@ describe('result', () => {
     expect(result.kbVersion).toBe('test');
   });
 
+  it('adds warning signs of likely conditions even when they are not urgent', () => {
+    const s = runToEnd(startSession(kb, 'fever', ADULT), { rash: 'present', cough: 'present', runny: 'present' });
+    const result = sessionResult(kb, s);
+    expect(result.conditions[0]?.conditionId).toBe('measles');
+    expect(result.safetyNet).toContain('breathless');
+  });
+
   it('adds warning signs of urgent conditions that are still possible to the safety net', () => {
     // A toddler has a higher meningitis prior (≈ 5% here), so its warning signs are listed.
     const toddler = { ...ADULT, ageMonths: 24 };

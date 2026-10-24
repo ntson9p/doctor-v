@@ -5,7 +5,8 @@
   label_vi: "Đau đầu"
   question_vi: "Có đau đầu không?"
   leak: nonspecific
-  leak_by_complaint: { abdominal_pain: moderate }
+  leak_by_complaint: { abdominal_pain: moderate, fever: 0.5 }
+  leak_note: "Khi sốt do bất kỳ nguyên nhân nào, đau đầu gặp ở khoảng một nửa số người; 20% làm kết quả quá tự tin (lượt B lô 2). Ước lượng, cần bác sĩ duyệt."
 - id: headache_thunderclap
   kind: symptom
   type: binary

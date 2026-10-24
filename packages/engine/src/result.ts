@@ -123,10 +123,12 @@ export function sessionResult(kb: CompiledKb, state: SessionState): SessionResul
   conditions.sort((a, b) => b.probability - a.probability);
   const pOther = probs[probs.length - 1] ?? 0;
 
-  // Safety-netting: the complaint's own list, then warning signs of urgent conditions still possible.
+  // Safety-netting: the complaint's own list, then warning signs of urgent conditions still
+  // possible and of any condition that is likely (e.g. dengue, level 3, has warning signs too).
   const safety: string[] = [...(idx.complaintById.get(state.complaintId)?.safetyNet ?? [])];
   for (const cs of conditions) {
-    if (cs.probability < params.safetyNetMinProb || cs.urgency > 2) continue;
+    const urgentPossible = cs.urgency <= 2 && cs.probability >= params.safetyNetMinProb;
+    if (!urgentPossible && cs.probability < params.safetyNetLikelyProb) continue;
     safety.push(...(idx.conditionById.get(cs.conditionId)?.warningSigns ?? []));
   }
   const safetyNet = [...new Set(safety)].filter((id) => {

@@ -183,7 +183,9 @@ $$\text{contrib}_f(d) = \tau\, w_f \big[\log P(v\mid d) - \log P(v \mid \text{ot
 Hiển thị tối đa 5 đóng góp dương ("vì sao gợi ý") và 5 đóng góp âm.
 
 **Danh sách "Đi cấp cứu ngay nếu…" (safety net):**
-- gồm `safety_net` của triệu chứng chính, cộng `warning_signs` của các bệnh có $P \ge$ `safety_net_min_prob` (0,5%) và mức xử trí 1–2;
+- gồm `safety_net` của triệu chứng chính, cộng `warning_signs` của:
+  - các bệnh mức xử trí 1–2 có $P \ge$ `safety_net_min_prob` (0,5%);
+  - mọi bệnh có $P \ge$ `safety_net_likely_prob` (10%). Ví dụ sốt xuất huyết (mức 3) vẫn có dấu hiệu cảnh báo cần dặn;
 - bỏ dấu hiệu đã trả lời "có" hoặc không áp dụng cho đối tượng.
 
 **Chuyên khoa:** theo thứ tự:
@@ -217,7 +219,8 @@ Hiển thị tối đa 5 đóng góp dương ("vì sao gợi ý") và 5 đóng g
 | `prior_levels` | 0,30 / 0,10 / 0,02 / 0,005 / 0,0006 / 0,0001 | Thang log 6 mức |
 | `cluster_rho` | 0,2 / 0,5 / 0,8 | |
 | `other_prior` | 0,15 | Tinh chỉnh theo tỷ lệ ca ngoài hệ thống |
-| `other_urgency_cumulative` | 0,01 / 0,05 / 0,20 / 0,50 | |
+| `other_urgency_cumulative` | 0,005 / 0,02 / 0,20 / 0,50 | q₂ = 0,05 khiến "nguyên nhân khác" ≥ 40% tự đẩy lên mức 2; đã hạ xuống 0,02 |
+| `safety_net_likely_prob` | 0,10 | Bệnh có khả năng cao thêm dấu hiệu cảnh báo vào safety net |
 | `temperature` | 1,0 | Tinh chỉnh bằng `eval:tune` |
 | `thresholds` | 0,10 / 0,02 / 0,10 / 0,25 | Từ ma trận tổn thất |
 | `cant_miss_threshold` | 0,01 | |

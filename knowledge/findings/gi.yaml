@@ -5,6 +5,8 @@
   label_vi: "Đau bụng"
   question_vi: "Có đau bụng không?"
   leak: moderate
+  leak_by_complaint: { fever: 0.15 }
+  leak_note: "Đau bụng nhẹ khá thường gặp khi sốt do vi rút (lượt B lô 2). Ước lượng, cần bác sĩ duyệt."
 - id: abd_pain_location
   kind: symptom
   type: categorical

@@ -68,6 +68,7 @@ export function compileKnowledge(k: RawKnowledge): CompiledKb {
       softMaxQuestions: p.stop.soft_max_questions,
     },
     safetyNetMinProb: p.safety_net_min_prob,
+    safetyNetLikelyProb: p.safety_net_likely_prob,
     candidateMinProb: p.candidate_min_prob,
     display: {
       roundTo: p.display.round_to,

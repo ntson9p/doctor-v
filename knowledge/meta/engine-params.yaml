@@ -35,8 +35,11 @@ cluster_rho:
 
 # Xác suất ban đầu của "nguyên nhân khác" (bệnh chưa có trong hệ thống) — tinh chỉnh
 other_prior: 0.15
-# P(mức khẩn của "nguyên nhân khác" <= k), k = 1..4 (tích lũy)
-other_urgency_cumulative: [0.01, 0.05, 0.20, 0.50]
+# P(mức khẩn của "nguyên nhân khác" <= k), k = 1..4 (tích lũy).
+# q2 = 0,02 (trước là 0,05): với 0,05, chỉ riêng "nguyên nhân khác" ≥ 40% đã đẩy mức xử trí lên 2,
+# tức khuyên đi cấp cứu chỉ vì app không chắc (lượt B lô 2 phát hiện). Không chắc chắn đã được chặn
+# bằng self_care_block_other; nguy hiểm thật được bắt bằng quy tắc và bệnh "không được bỏ sót".
+other_urgency_cumulative: [0.005, 0.02, 0.20, 0.50]
 
 # Hệ số nhiệt nhân vào tổng bằng chứng (0,5–1); 1 = chưa hiệu chỉnh — tinh chỉnh
 temperature: 1.0
@@ -74,8 +77,11 @@ stop:
   soft_max_questions: 20
 
 default_unknown_rate: 0.1
-# Bệnh mức 1–2 có xác suất từ mức này trở lên được đưa vào danh sách "Đi cấp cứu ngay nếu…"
+# Danh sách "Đi cấp cứu ngay nếu…" gồm dấu hiệu cảnh báo của:
+# - bệnh mức 1–2 có xác suất từ safety_net_min_prob;
+# - mọi bệnh có xác suất từ safety_net_likely_prob (ví dụ sốt xuất huyết mức 3 vẫn có dấu hiệu cảnh báo).
 safety_net_min_prob: 0.005
+safety_net_likely_prob: 0.10
 # Bỏ qua bệnh có xác suất dưới mức này khi tìm câu hỏi liên quan
 candidate_min_prob: 0.0005
 

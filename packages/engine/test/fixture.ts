@@ -22,6 +22,7 @@ export const PARAMS: EngineParams = {
   lambdaAfterStable: 1,
   stop: { triageChangeProb: 0.05, top3Mass: 0.8, minEigBits: 0.05, minVoi: 0.01, maxQuestions: 30, softMaxQuestions: 20 },
   safetyNetMinProb: 0.005,
+  safetyNetLikelyProb: 0.1,
   candidateMinProb: 0.0005,
   display: { roundTo: 5, minShown: 5, maxShown: 95 },
   calibrated: false,
@@ -89,6 +90,7 @@ export function makeKb(overrides: Partial<CompiledKb> = {}): CompiledKb {
       binary('cough', 0.2, { clusterId: 'resp' }),
       binary('runny', 0.2, { clusterId: 'resp' }),
       binary('rash', 0.05),
+      binary('breathless', 0.05),
       duration,
       binary('pregnant', 0.05, { appliesTo: { sex: ['female'], ageGroups: ['adult_18_44'] } }),
     ],
@@ -116,6 +118,7 @@ export function makeKb(overrides: Partial<CompiledKb> = {}): CompiledKb {
         urgency: 3,
         priors: { fever: { default: 0.02, byAge: {} } },
         links: { rash: 0.95, cough: 0.8, runny: 0.8, duration: [0.4, 0.6] },
+        warningSigns: ['breathless'],
         priorModifiers: [
           { months: [1, 2, 3], regions: null, sex: null, factor: 3 },
           { months: null, regions: null, sex: ['female'], factor: 2 },

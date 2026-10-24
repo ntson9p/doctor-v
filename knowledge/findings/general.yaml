@@ -60,7 +60,8 @@
   question_vi: "Có đau nhức cơ, mỏi khắp người không?"
   cluster: aches
   leak: nonspecific
-  leak_by_complaint: { abdominal_pain: moderate, headache: moderate }
+  leak_by_complaint: { abdominal_pain: moderate, headache: moderate, fever: 0.4 }
+  leak_note: "Đau nhức người rất thường gặp khi sốt do bất kỳ nguyên nhân nào (lượt B lô 2). Ước lượng, cần bác sĩ duyệt."
 - id: arthralgia
   kind: symptom
   type: binary
@@ -68,6 +69,8 @@
   question_vi: "Có đau các khớp như cổ tay, cổ chân, đầu gối không?"
   cluster: aches
   leak: moderate
+  leak_by_complaint: { fever: nonspecific }
+  leak_note: "Đau khớp hay đi kèm sốt do vi rút (lượt B lô 2)."
 - id: retro_orbital_pain
   kind: symptom
   type: binary
@@ -80,6 +83,8 @@
   label_vi: "Mệt mỏi nhiều"
   question_vi: "Có mệt mỏi, uể oải hơn hẳn bình thường không?"
   leak: nonspecific
+  leak_by_complaint: { fever: 0.5 }
+  leak_note: "Mệt mỏi gặp ở phần lớn người đang sốt, bất kể nguyên nhân. Ước lượng, cần bác sĩ duyệt."
 - id: severe_weakness
   kind: sign
   type: binary
@@ -96,8 +101,8 @@
   label_vi: "Chán ăn"
   question_vi: "Có chán ăn, ăn ít hơn hẳn bình thường không?"
   leak: nonspecific
-  leak_by_complaint: { abdominal_pain: 0.3 }
-  leak_note: "Chán ăn rất thường gặp khi đau bụng do bất kỳ nguyên nhân nào (lượt A lô 3). Ước lượng, cần bác sĩ duyệt."
+  leak_by_complaint: { abdominal_pain: 0.3, fever: 0.4 }
+  leak_note: "Chán ăn rất thường gặp khi đau bụng hoặc khi sốt do bất kỳ nguyên nhân nào (lượt A lô 3, lượt B lô 2). Ước lượng, cần bác sĩ duyệt."
 - id: rash_any
   kind: sign
   type: binary

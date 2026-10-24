@@ -165,7 +165,10 @@ export interface EngineParams {
     maxQuestions: number;
     softMaxQuestions: number;
   };
+  /** Urgent (level 1–2) conditions at or above this probability add their warning signs. */
   safetyNetMinProb: number;
+  /** Any condition at or above this probability adds its warning signs. */
+  safetyNetLikelyProb: number;
   candidateMinProb: number;
   display: { roundTo: number; minShown: number; maxShown: number };
   calibrated: boolean;

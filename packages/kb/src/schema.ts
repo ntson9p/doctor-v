@@ -355,6 +355,7 @@ export const engineParamsSchema = z.strictObject({
   }),
   default_unknown_rate: probability,
   safety_net_min_prob: probability,
+  safety_net_likely_prob: probability,
   candidate_min_prob: probability,
   display: z.strictObject({
     round_to: z.number().int().positive(),
