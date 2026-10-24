@@ -119,6 +119,9 @@
   help_vi: "Xem sổ tiêm chủng. Chọn 'Không rõ' nếu không nhớ."
   applies_to:
     age_groups: [child_2m_5y, child_5_12, teen_13_17]
+  # Trẻ dưới 18 tháng chưa đến lịch tiêm đủ 2 mũi, nên câu trả lời "chưa" không mang thông tin (lượt A lô 1).
+  requires:
+    - { not: { age_months_lt: 18 } }
   unknown_rate: 0.3
   leak: 0.85
   leak_note: "Tỷ lệ tiêm vắc xin sởi trong tiêm chủng mở rộng ở Việt Nam cao; giá trị này là ước tính, cần thay bằng số liệu chính thức."

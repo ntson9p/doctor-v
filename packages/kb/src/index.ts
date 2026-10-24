@@ -70,11 +70,19 @@ export function checkDrafts(relDir: string, root: string = DEFAULT_KNOWLEDGE_ROO
     if (data) draftSources.push({ file: `${relDir}/sources/${data.id}.yaml`, data });
   }
 
+  const catalogIds = new Set(loaded.knowledge.findings.map((f) => f.data.id));
   const proposed: Located<FindingYaml>[] = [];
   for (const draft of drafts.drafts) {
     (draft.data.proposed_findings ?? []).forEach((raw, i) => {
       const parsed = findingSchema.safeParse(raw);
-      if (parsed.success) {
+      if (parsed.success && catalogIds.has(parsed.data.id)) {
+        issues.push({
+          severity: 'warning',
+          file: draft.file,
+          path: `proposed_findings.${i}`,
+          message: `Dấu hiệu đề xuất "${parsed.data.id}" đã được gộp vào danh mục; dùng bản trong knowledge/findings/`,
+        });
+      } else if (parsed.success) {
         proposed.push({ file: draft.file, data: parsed.data });
       } else {
         for (const iss of parsed.error.issues) {

@@ -1,0 +1,79 @@
+# Dấu hiệu bổ sung trong đợt thử nghiệm, theo đề xuất của các lượt soạn (lượt A lô 1–3)
+# và của người viết bộ ca giữ kín. Tần suất trong từng bệnh do lượt C khai báo.
+- id: symptoms_worsen_after_improving
+  kind: history
+  type: binary
+  label_vi: "Đã đỡ rồi lại nặng lên"
+  question_vi: "Bệnh đã đỡ được vài ngày rồi lại nặng lên không?"
+  leak: moderate
+- id: lymph_node_swelling
+  kind: sign
+  type: binary
+  label_vi: "Nổi hạch"
+  question_vi: "Có nổi hạch (cục nhỏ sưng dưới da) ở cổ, nách hoặc bẹn không?"
+  help_vi: "Hạch sưng là cục nhỏ, tròn dưới da, ấn có thể đau."
+  leak: moderate
+- id: pig_pork_exposure
+  kind: exposure
+  type: binary
+  label_vi: "Tuần qua ăn tiết canh, thịt lợn tái hoặc giết mổ lợn"
+  question_vi: "Tuần qua có ăn tiết canh, thịt lợn tái, hoặc giết mổ lợn không?"
+  help_vi: "Bệnh liên cầu lợn lây qua tiết canh, thịt lợn chưa chín, hoặc vết xước khi giết mổ lợn."
+  applies_to:
+    age_groups: [teen_13_17, adult_18_44, adult_45_64, elder_65_74, elder_75p]
+  leak: moderate
+- id: kidney_stones_known
+  kind: history
+  type: binary
+  label_vi: "Đã biết có sỏi thận, sỏi tiết niệu"
+  question_vi: "Đã từng được bác sĩ nói là có sỏi thận, sỏi tiết niệu không?"
+  applies_to:
+    age_groups: [teen_13_17, adult_18_44, adult_45_64, elder_65_74, elder_75p]
+  leak: moderate
+- id: vomiting_bilious
+  kind: sign
+  type: binary
+  label_vi: "Nôn ra dịch xanh hoặc vàng đắng"
+  question_vi: "Có nôn ra dịch màu xanh lá, hoặc vàng đắng như mật không?"
+  requires:
+    - { finding: vomiting, is: present }
+  leak: moderate
+- id: abd_pain_radiates_right_shoulder
+  kind: symptom
+  type: binary
+  label_vi: "Đau lan lên vai phải"
+  question_vi: "Cơn đau có lan lên vai phải hoặc sau lưng bên phải không?"
+  requires:
+    - { finding: abdominal_pain, is: present }
+  leak: moderate
+- id: swelling_behind_ear
+  kind: sign
+  type: binary
+  label_vi: "Sưng đỏ, đau sau tai"
+  question_vi: "Sau tai có sưng đỏ, đau, làm vành tai bị đẩy ra không?"
+  leak: specific
+- id: periorbital_swelling
+  kind: sign
+  type: binary
+  label_vi: "Sưng nề, đỏ quanh mắt"
+  question_vi: "Có sưng nề, đỏ quanh một bên mắt không?"
+  leak: specific
+- id: covid_self_test
+  kind: measurement
+  type: categorical
+  label_vi: "Kết quả tự xét nghiệm nhanh COVID-19"
+  question_vi: "Kết quả tự xét nghiệm nhanh COVID-19 trong lần bệnh này là gì?"
+  help_vi: "Que thử nhanh: hiện 2 vạch là dương tính, 1 vạch là âm tính."
+  options:
+    - { id: positive, label_vi: "Dương tính (2 vạch)" }
+    - { id: negative, label_vi: "Âm tính (1 vạch)" }
+    - { id: not_tested, label_vi: "Chưa xét nghiệm" }
+  # "Chưa xét nghiệm" phải có cùng tỷ lệ (0,70) trong mọi phân bố để không mang thông tin.
+  baseline: { positive: 0.01, negative: 0.29, not_tested: 0.70 }
+  requires:
+    - any:
+        - { finding: fever, is: present }
+        - { finding: cough, is: present }
+        - { finding: sore_throat, is: present }
+        - { finding: loss_of_smell_taste, is: present }
+  cost: 1.5

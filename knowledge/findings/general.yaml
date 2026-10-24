@@ -111,7 +111,7 @@
   type: binary
   label_vi: "Nốt đỏ tím không mất khi ấn"
   question_vi: "Trên da có nốt đỏ hoặc tím, ấn vào không mất đi không?"
-  help_vi: "Ấn mạnh thành ly thủy tinh lên nốt. Nếu vẫn nhìn rõ nốt qua thành ly là không mất màu. Cần xem khắp người, kể cả lòng trắng mắt."
+  help_vi: "Nốt phẳng màu đỏ hoặc tím, như chấm máu hay vết bầm. Ấn thành ly thủy tinh lên nốt: vẫn thấy rõ nốt là không mất màu. Nốt phỏng nước (như tay chân miệng) không tính."
   alt_question:
     text_vi: "Có chấm đỏ li ti hoặc mảng tím bầm mới xuất hiện trên da không?"
   requires:

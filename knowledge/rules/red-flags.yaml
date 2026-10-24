@@ -357,6 +357,53 @@
     basis: verbal
     sources: [nhs-utis]
     note: "Người bảo trì thêm theo đề xuất của lượt A lô 3: NHS khuyên nhóm này đi khám sớm (nguy cơ biến chứng cao hơn)."
+- id: rf_flu_risk_chronic_disease
+  level: 3
+  when:
+    all:
+      - { finding: fever, is: present }
+      - any:
+          - { finding: cough, is: present }
+          - { finding: sore_throat, is: present }
+      - any:
+          - { finding: diabetes, is: present }
+          - { finding: known_heart_disease, is: present }
+  reason_vi: "Người có bệnh tim hoặc đái tháo đường bị sốt, ho nên được khám trong ngày."
+  evidence:
+    tier: B
+    basis: verbal
+    sources: [byt-qd-1840-2025]
+    note: "1840/QĐ-BYT liệt kê người có bệnh mạn tính vào nhóm nguy cơ cúm nặng (lượt R đã ghi nhận, lượt A lô 1 đề xuất quy tắc)."
+- id: rf_swelling_behind_ear
+  level: 2
+  when: { finding: swelling_behind_ear, is: present }
+  reason_vi: "Sưng đỏ, đau sau tai có thể là viêm xương chũm, cần khám cấp cứu."
+  evidence:
+    tier: C
+    basis: judgment
+    sources: [byt-qd-5643-2015]
+    note: "Viêm xương chũm là biến chứng nặng của viêm tai giữa (lượt A lô 1 đề xuất). Nguồn do lượt A thêm; lượt C cần xác minh và chuyển vào sổ đăng ký."
+- id: rf_periorbital_swelling
+  level: 2
+  when: { finding: periorbital_swelling, is: present }
+  reason_vi: "Sưng nề, đỏ quanh mắt có thể là nhiễm trùng hốc mắt, cần khám cấp cứu."
+  evidence:
+    tier: C
+    basis: judgment
+    sources: [byt-qd-5643-2015]
+    note: "Biến chứng hốc mắt của viêm xoang có thể gây mất thị lực (lượt A lô 1 đề xuất). Cần xác minh nguồn."
+- id: rf_child_bilious_vomiting
+  level: 2
+  when:
+    all:
+      - { age_groups: [infant_0_2m, child_2m_5y, child_5_12] }
+      - { finding: vomiting_bilious, is: present }
+  reason_vi: "Trẻ nôn ra dịch xanh có thể bị tắc ruột, cần khám cấp cứu."
+  evidence:
+    tier: C
+    basis: judgment
+    sources: [wses-asbo-2018]
+    note: "Nôn dịch mật ở trẻ là dấu hiệu tắc ruột cần loại trừ ngay (lượt A lô 3 đề xuất finding). Cần nguồn nhi khoa chính thức."
 - id: rf_fever_3_6_months_high_temp
   level: 2
   when:
