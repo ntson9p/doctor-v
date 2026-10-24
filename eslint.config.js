@@ -21,7 +21,7 @@ export default defineConfig([
     rules: {
       eqeqeq: ['error', 'always'],
       '@typescript-eslint/consistent-type-imports': 'error',
-      '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '^_' }],
+      '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '^_', ignoreRestSiblings: true }],
       '@typescript-eslint/switch-exhaustiveness-check': 'error',
     },
   },

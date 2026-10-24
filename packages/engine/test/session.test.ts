@@ -1,0 +1,141 @@
+import { describe, expect, it } from 'vitest';
+import {
+  answerStep,
+  currentAnswers,
+  displayPercent,
+  goBack,
+  groupResponse,
+  nextStep,
+  sessionResult,
+  startSession,
+  stopEarly,
+} from '../src/index.ts';
+import type { AskStep, SessionState, Step } from '../src/index.ts';
+import { ADULT, PARAMS, makeKb } from './fixture.ts';
+
+const kb = makeKb();
+
+function ask(step: Step): AskStep {
+  if (step.kind === 'done') throw new Error(`Session ended early: ${step.reason}`);
+  return step;
+}
+
+/** Answers every question from a fixed table (absent when missing); returns the final state. */
+function runToEnd(state: SessionState, table: Record<string, string>): SessionState {
+  let s = state;
+  for (let i = 0; i < 50; i++) {
+    const step = nextStep(kb, s);
+    if (step.kind === 'done') return s;
+    const ids = step.kind === 'finding' ? [step.findingId] : step.findingIds;
+    s = answerStep(kb, s, step, Object.fromEntries(ids.map((id) => [id, table[id] ?? 'absent'])));
+  }
+  throw new Error('Session did not end');
+}
+
+describe('session flow', () => {
+  it('asks the emergency screen first, then mandatory red flags, then intake groups', () => {
+    let s = startSession(kb, 'fever', ADULT);
+    const screen = ask(nextStep(kb, s));
+    expect(screen).toMatchObject({ kind: 'group', groupId: null, phase: 'screen' });
+    s = answerStep(kb, s, screen, groupResponse(screen, []));
+
+    const redFlag = ask(nextStep(kb, s));
+    expect(redFlag).toMatchObject({ kind: 'finding', findingId: 'neck', phase: 'red_flags' });
+    s = answerStep(kb, s, redFlag, { neck: 'absent' });
+
+    const intake = ask(nextStep(kb, s));
+    expect(intake).toMatchObject({ kind: 'group', groupId: 'assoc', phase: 'intake' });
+    expect(intake.kind === 'group' && intake.findingIds).toEqual(['cough', 'runny', 'rash']);
+  });
+
+  it('stops at once with "emergency" when a level 1–2 rule applies', () => {
+    let s = startSession(kb, 'fever', ADULT, { es_collapse: 'absent' });
+    s = answerStep(kb, s, ask(nextStep(kb, s)), { neck: 'present' });
+    expect(nextStep(kb, s)).toEqual({ kind: 'done', reason: 'emergency' });
+    expect(sessionResult(kb, s).triage.level).toBe(2);
+  });
+
+  it('asks an unknown danger sign again with the alternative wording, inverting the answer', () => {
+    let s = startSession(kb, 'fever', ADULT, { es_collapse: 'absent' });
+    s = answerStep(kb, s, ask(nextStep(kb, s)), { neck: 'unknown' });
+    const alt = ask(nextStep(kb, s));
+    expect(alt).toMatchObject({ kind: 'finding', findingId: 'neck', alt: true });
+    // "Có" to "Can you touch your chest with your chin?" means no neck stiffness.
+    s = answerStep(kb, s, alt, { neck: 'present' });
+    expect(currentAnswers(s).neck).toBe('absent');
+    expect(nextStep(kb, s)).toMatchObject({ kind: 'group', groupId: 'assoc' });
+  });
+
+  it('only screens danger signs for young infants', () => {
+    const infant = { ...ADULT, ageMonths: 1 };
+    const s = runToEnd(startSession(kb, 'fever', infant), {});
+    expect(nextStep(kb, s)).toEqual({ kind: 'done', reason: 'screen_only' });
+    const result = sessionResult(kb, s);
+    expect(result.rankingSuppressed).toBe(true);
+    expect(result.triage.level).toBeLessThanOrEqual(3);
+  });
+
+  it('ends, never repeats a question, and is deterministic', () => {
+    const table = { cough: 'present', runny: 'present', duration: 'short' };
+    const a = runToEnd(startSession(kb, 'fever', ADULT), table);
+    const b = runToEnd(startSession(kb, 'fever', ADULT), table);
+    const asked = a.history.flatMap((h) => Object.keys(h.answers));
+    expect(new Set(asked).size).toBe(asked.length);
+    expect(sessionResult(kb, a)).toEqual(sessionResult(kb, b));
+    expect(sessionResult(kb, a).conditions[0]?.conditionId).toBe('cold');
+  });
+
+  it('goes back by dropping the last step', () => {
+    let s = startSession(kb, 'fever', ADULT, { es_collapse: 'absent' });
+    const before = s;
+    s = answerStep(kb, s, ask(nextStep(kb, s)), { neck: 'absent' });
+    expect(goBack(s)).toEqual(before);
+  });
+
+  it('still asks mandatory red flags after an early stop, and then never recommends self-care', () => {
+    let s = stopEarly(startSession(kb, 'fever', ADULT, { es_collapse: 'absent' }));
+    expect(nextStep(kb, s)).toMatchObject({ kind: 'finding', findingId: 'neck' });
+    s = answerStep(kb, s, ask(nextStep(kb, s)), { neck: 'absent' });
+    const intake = ask(nextStep(kb, s));
+    s = answerStep(kb, s, intake, groupResponse(intake, ['cough', 'runny']));
+    expect(nextStep(kb, s)).toEqual({ kind: 'done', reason: 'stopped_by_user' });
+    const result = sessionResult(kb, s);
+    expect(result.triage.level).toBe(4);
+    expect(result.triage.reasons.some((r) => r.kind === 'guard_early_stop')).toBe(true);
+  });
+
+  it('rejects answers that do not belong to the step', () => {
+    const s = startSession(kb, 'fever', ADULT, { es_collapse: 'absent' });
+    const step = ask(nextStep(kb, s));
+    expect(() => answerStep(kb, s, step, { cough: 'present' })).toThrow();
+    expect(() => answerStep(kb, s, step, { neck: 'maybe' })).toThrow();
+  });
+});
+
+describe('result', () => {
+  it('rounds display percentages and never shows 0% or 100%', () => {
+    expect(displayPercent(0.024, PARAMS.display)).toEqual({ kind: 'below', percent: 5 });
+    expect(displayPercent(0.026, PARAMS.display)).toEqual({ kind: 'about', percent: 5 });
+    expect(displayPercent(0.648, PARAMS.display)).toEqual({ kind: 'about', percent: 65 });
+    expect(displayPercent(0.999, PARAMS.display)).toEqual({ kind: 'about', percent: 95 });
+  });
+
+  it('explains the ranking with the answers that raised or lowered each condition', () => {
+    const s = runToEnd(startSession(kb, 'fever', ADULT), { cough: 'present', runny: 'present' });
+    const result = sessionResult(kb, s);
+    const cold = result.conditions.find((c) => c.conditionId === 'cold');
+    expect(cold?.supporting.map((c) => c.findingId)).toContain('cough');
+    expect(result.conditions.find((c) => c.conditionId === 'measles')?.opposing.map((c) => c.findingId)).toContain('rash');
+    expect(result.kbVersion).toBe('test');
+  });
+
+  it('adds warning signs of urgent conditions that are still possible to the safety net', () => {
+    // A toddler has a higher meningitis prior (≈ 5% here), so its warning signs are listed.
+    const toddler = { ...ADULT, ageMonths: 24 };
+    const s = startSession(kb, 'fever', toddler, { es_collapse: 'absent' });
+    const result = sessionResult(kb, s);
+    expect(result.safetyNet).toEqual(['neck', 'rash']);
+    expect(result.specialties[0]).toBe('emergency');
+    expect(result.specialties).toContain('pediatrics');
+  });
+});
