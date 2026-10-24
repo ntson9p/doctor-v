@@ -1,5 +1,5 @@
-id: h-head-021
-set: holdout
+id: d-from-h-head-021
+set: dev
 title_vi: "Nữ 15 tuổi ôn thi, thiếu ngủ, đau đầu bó chặt hai bên gần như hằng ngày 2 tháng"
 narrative_vi: "Em N., nữ, 15 tuổi, học sinh lớp 9 ở Cần Thơ, đang ôn thi vào lớp 10. Hai tháng nay em học thêm đến khuya, mỗi đêm chỉ ngủ khoảng 5 tiếng, ngồi máy tính và điện thoại nhiều. Gần như ngày nào em cũng đau đầu như bị đội mũ chật, bó chặt hai bên trán và thái dương, thường từ chiều đến tối, mức nhẹ, vẫn học được. Em uống paracetamol khoảng 3 lần mỗi tuần. Em không buồn nôn, không sợ ánh sáng hay tiếng ồn, đi lại không làm đau tăng. Sáng ngủ dậy em không đau, đau không làm em thức giấc ban đêm. Em không sốt, nhìn rõ, tay chân bình thường, không bị va đập đầu. Hôm nay em đau từ 3 giờ chiều đến giờ, khoảng 5 tiếng."
 patient:
@@ -10,6 +10,7 @@ patient:
 complaint: headache
 answers:
   headache_course: recurrent_similar
+  headache_frequent: present
   headache_duration: h4_72
   headache_location: both_sides
   headache_character: pressing
@@ -45,4 +46,4 @@ source:
     - ihs-ichd3-2018
     - nice-cg150
 author: "agent:vignette-holdout"
-notes_vi: "Không có dấu hiệu báo động ở trẻ vị thành niên (đau làm thức giấc, nôn buổi sáng, đau nặng dần). Dùng thuốc giảm đau khoảng 12 ngày mỗi tháng, cần được tư vấn để tránh đau đầu do lạm dụng thuốc."
+notes_vi: "Không có dấu hiệu báo động ở trẻ vị thành niên (đau làm thức giấc, nôn buổi sáng, đau nặng dần). Dùng thuốc giảm đau khoảng 12 ngày mỗi tháng, cần được tư vấn để tránh đau đầu do lạm dụng thuốc. Chuyển từ bộ giữ kín (h-head-021) ngày 25/10/2026: ca được dùng làm căn cứ cho vòng sửa thứ hai sau lần chấm thứ hai (bị xếp thấp hơn mức cần), theo quy tắc giữ kín của docs/evaluation.md. Người bảo trì thêm câu trả lời cho dấu hiệu mới headache_frequent (có) theo lời kể đau đầu gần như ngày nào."

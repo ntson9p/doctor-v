@@ -1,5 +1,5 @@
-id: h-fever-045
-set: holdout
+id: d-from-h-fever-045
+set: dev
 title_vi: "Bé trai 4 tuổi, đau bụng quanh rốn rồi mới sốt, nôn, đi ngoài lỏng ít một, đau tăng khi đi lại"
 narrative_vi: "Bé T., 4 tuổi, ở Long An. Sáng hôm qua bé kêu đau bụng quanh rốn, bỏ ăn, đến trưa nôn 2 lần. Chiều hôm qua bé bắt đầu sốt, đo được 38,6°C. Đêm qua bé đi ngoài phân lỏng 3 lần, mỗi lần ít, không có máu, nôn thêm 1 lần. Sáng nay bé mệt, không chịu chạy nhảy, đi lom khom ôm bụng; ngồi xe máy qua chỗ xóc là bé khóc vì đau bụng. Bé vẫn uống được nước, đi tiểu bình thường, tỉnh táo. Bé không ho, không sổ mũi. Trong nhà không ai bị đau bụng hay tiêu chảy. Bé đã tiêm đủ 2 mũi vắc xin sởi."
 patient:
@@ -56,4 +56,4 @@ source:
     - humes-bmj-2006
     - msd-appendicitis
 author: "agent:vignette-holdout"
-notes_vi: "Dễ nhầm viêm dạ dày – ruột cấp; manh mối là đau có trước sốt, đau tăng khi vận động, không ai ăn cùng bị bệnh. Trẻ 4 tuổi chưa tả được đau chuyển xuống bụng dưới bên phải nên câu này để 'không rõ'."
+notes_vi: "Dễ nhầm viêm dạ dày – ruột cấp; manh mối là đau có trước sốt, đau tăng khi vận động, không ai ăn cùng bị bệnh. Trẻ 4 tuổi chưa tả được đau chuyển xuống bụng dưới bên phải nên câu này để 'không rõ'. Chuyển từ bộ giữ kín (h-fever-045) ngày 25/10/2026: ca được dùng làm căn cứ cho vòng sửa thứ hai sau lần chấm thứ hai (bị xếp thấp hơn mức cần), theo quy tắc giữ kín của docs/evaluation.md."

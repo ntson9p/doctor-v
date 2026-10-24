@@ -1,5 +1,5 @@
-id: h-head-017
-set: holdout
+id: d-from-h-head-017
+set: dev
 title_vi: "Nữ 45 tuổi, đau đầu gần như hằng ngày 4 tháng, uống thuốc giảm đau khoảng 20 ngày mỗi tháng"
 narrative_vi: "Chị H., 45 tuổi, ở Hà Nội, bị đau nửa đầu từ trẻ. Bốn tháng nay chị đau đầu gần như ngày nào, đau âm ỉ, bó chặt cả hai bên, thường có sẵn khi ngủ dậy, mức vừa. Mỗi tháng chị uống thuốc giảm đau có caffeine khoảng 20 ngày. Chị căng thẳng, ngủ kém. Chị không buồn nôn, không nhìn mờ, không yếu tay chân, không sốt."
 patient:
@@ -10,6 +10,7 @@ patient:
 complaint: headache
 answers:
   headache_course: recurrent_similar
+  headache_frequent: present
   headache_duration: gt_3d
   headache_location: both_sides
   headache_character: pressing
@@ -38,4 +39,4 @@ source:
     - nice-cg150
     - "https://www.nhs.uk/conditions/headaches/"
 author: "agent:vignette-holdout"
-notes_vi: "Ngoài danh mục bệnh. Danh mục chưa có câu hỏi về số ngày dùng thuốc giảm đau mỗi tháng và đau đầu khi ngủ dậy."
+notes_vi: "Ngoài danh mục bệnh. Danh mục chưa có câu hỏi về số ngày dùng thuốc giảm đau mỗi tháng và đau đầu khi ngủ dậy. Chuyển từ bộ giữ kín (h-head-017) ngày 25/10/2026: ca được dùng làm căn cứ cho vòng sửa thứ hai sau lần chấm thứ hai (bị xếp thấp hơn mức cần), theo quy tắc giữ kín của docs/evaluation.md. Người bảo trì thêm câu trả lời cho dấu hiệu mới headache_frequent (có) theo lời kể đau đầu gần như ngày nào."

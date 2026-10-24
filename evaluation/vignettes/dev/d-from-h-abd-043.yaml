@@ -1,5 +1,5 @@
-id: h-abd-043
-set: holdout
+id: d-from-h-abd-043
+set: dev
 title_vi: "Nữ 29 tuổi chưa có thai sau 2 năm, đau bụng kinh nặng dần, đau khi quan hệ"
 narrative_vi: "Chị V., 29 tuổi, nhân viên văn phòng ở Hải Phòng, lấy chồng 2 năm, không tránh thai nhưng chưa có thai. Trước đây chị chỉ đau bụng kinh nhẹ. Khoảng 2 năm nay, kỳ kinh nào chị cũng đau bụng dưới, mỗi năm một nặng hơn: đau âm ỉ, nặng tức sâu trong bụng dưới, bắt đầu trước kỳ kinh 1–2 ngày và kéo dài suốt kỳ, lan ra thắt lưng. Chị đau khi quan hệ, nhất là khi vào sâu, và đau khi đi ngoài trong những ngày có kinh. Thuốc giảm đau chỉ đỡ một phần, chị vẫn đi làm được. Hôm nay là ngày thứ 2 kỳ kinh, đau giống các tháng gần đây. Kinh đều, không ra máu ngoài kỳ kinh, khí hư bình thường, không sốt. Que thử thai đầu kỳ âm tính."
 patient:
@@ -41,4 +41,4 @@ source:
     - msd-dysmenorrhea
     - nhs-period-pain
 author: "agent:vignette-holdout"
-notes_vi: "Ngoài danh mục bệnh; gần nhất là đau bụng kinh nguyên phát nhưng đau mới nặng dần ở tuổi gần 30 và đau khi quan hệ gợi ý nguyên nhân thực thể. Danh mục chưa có câu hỏi về đau khi đi ngoài lúc hành kinh và chậm có thai."
+notes_vi: "Ngoài danh mục bệnh; gần nhất là đau bụng kinh nguyên phát nhưng đau mới nặng dần ở tuổi gần 30 và đau khi quan hệ gợi ý nguyên nhân thực thể. Danh mục chưa có câu hỏi về đau khi đi ngoài lúc hành kinh và chậm có thai. Chuyển từ bộ giữ kín (h-abd-043) ngày 25/10/2026: ca được dùng làm căn cứ cho vòng sửa thứ hai sau lần chấm thứ hai (bị xếp thấp hơn mức cần), theo quy tắc giữ kín của docs/evaluation.md."

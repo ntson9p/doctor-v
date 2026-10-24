@@ -1,5 +1,5 @@
-id: h-fever-014
-set: holdout
+id: d-from-h-fever-014
+set: dev
 title_vi: "Bé trai 9 tuổi, sổ mũi đặc 12 ngày không đỡ, nặng mặt, sốt nhẹ"
 narrative_vi: "Bé H., 9 tuổi, ở Hà Nội. Bé bị sổ mũi, nghẹt mũi đã 12 ngày, không đỡ. Nước mũi đặc, màu vàng xanh. Bé ho có đờm cả ngày lẫn đêm, kêu nặng vùng trán và má khi cúi đầu, đau đầu nhẹ vùng trán. Hai ngày nay bé sốt nhẹ 37,8°C. Không đau tai, không sưng quanh mắt, vẫn ăn uống và đi học được."
 patient:
@@ -39,3 +39,4 @@ source:
   references:
     - "https://www.nhs.uk/conditions/sinusitis-sinus-infection/"
 author: "agent:vignette-holdout"
+notes_vi: "Chuyển từ bộ giữ kín (h-fever-014) ngày 25/10/2026: ca được dùng làm căn cứ cho vòng sửa thứ hai sau lần chấm thứ hai (bị xếp thấp hơn mức cần), theo quy tắc giữ kín của docs/evaluation.md."
