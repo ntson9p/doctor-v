@@ -24,7 +24,7 @@
   type: binary
   label_vi: "Đau thắt ngực dữ dội"
   question_vi: "Có đau thắt hoặc đè nặng ngực dữ dội, kèm vã mồ hôi không?"
-  help_vi: "Đau như bị đè ép giữa ngực, có thể lan lên cổ, hàm hoặc tay trái."
+  help_vi: "Đau như bị đè ép giữa ngực, có thể lan lên cổ, hàm, vai, cánh tay hoặc ra sau lưng."
   alt_question:
     text_vi: "Có đau hoặc tức nặng giữa ngực kéo dài hơn 15 phút không?"
   cluster: chest_pain

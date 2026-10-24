@@ -29,4 +29,5 @@ safety_net:
   - black_stool
   - fainting_or_near_fainting
   - persistent_vomiting
-sources: [nhs-stomach-ache]
+  - no_stool_or_gas
+sources: [nhs-stomach-ache, who-bec-2018, wses-asbo-2018, nice-ng126]

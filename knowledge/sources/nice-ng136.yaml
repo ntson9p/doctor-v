@@ -3,10 +3,12 @@ type: guideline_intl
 title: "Hypertension in adults: diagnosis and management"
 publisher: "National Institute for Health and Care Excellence (NICE)"
 doc_number: "NG136"
-date: "2019"
+date: "2019-08-28"
 url: "https://www.nice.org.uk/guidance/ng136"
 license_class: L3
-license_note: "Nội dung có bản quyền NICE: chỉ dùng dữ kiện kèm trích dẫn, không sao chép câu chữ."
+license_note: "Nội dung có bản quyền NICE (© NICE, All rights reserved): chỉ dùng dữ kiện kèm trích dẫn, không sao chép câu chữ."
 default_tier: B
 accessed: "2026-10-24"
-verified: false
+verified: true
+verified_by: "agent:pass-r"
+notes_vi: "Xuất bản 28/8/2019, cập nhật lần cuối 26/02/2026. Khuyến cáo 1.5.1: huyết áp từ 180/120 không kèm triệu chứng thì thăm dò tổn thương cơ quan đích càng sớm càng tốt, đo lại trong 7 ngày. Khuyến cáo 1.5.2: khám chuyên khoa trong ngày nếu từ 180/120 kèm xuất huyết võng mạc hoặc phù gai thị, hoặc triệu chứng đe dọa tính mạng (lú lẫn mới, đau ngực, dấu hiệu suy tim, tổn thương thận cấp). Tăng huyết áp độ 3 (nặng): tâm thu từ 180 hoặc tâm trương từ 120. nice.org.uk trả lỗi 403 với truy cập tự động; lượt R đã đọc các trang chính thức (Overview, Recommendations, History) qua dịch vụ đọc văn bản r.jina.ai."

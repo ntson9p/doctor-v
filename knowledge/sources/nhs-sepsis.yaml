@@ -1,0 +1,12 @@
+id: nhs-sepsis
+type: web_page
+title: "Sepsis"
+publisher: "NHS (UK)"
+url: "https://www.nhs.uk/conditions/sepsis/"
+license_class: L1
+license_note: "Open Government Licence v3.0; bản chuyển thể không được trình bày như nội dung của NHS."
+default_tier: C
+accessed: "2026-10-24"
+verified: true
+verified_by: "agent:pass-r"
+notes_vi: "Trang rà soát lần cuối 14/5/2026. Danh sách 'Call 999 or go to A&E' cho trẻ dưới 5 tuổi gồm: thở rất nhanh hoặc khó thở (thở rên, rút lõm), da/môi/lưỡi tím, xám, tái hoặc loang lổ, ban không mất khi ấn, sốt từ 38°C ở trẻ dưới 3 tháng hoặc từ 39°C ở trẻ 3–6 tháng, nhiệt độ dưới 36°C, khóc yếu hoặc thét, li bì, bỏ bú, không tiểu 12 giờ. Cho người từ 5 tuổi: thở rất nhanh, lú lẫn hoặc nói ngọng, da tím tái hoặc loang lổ, ban không mất khi ấn."

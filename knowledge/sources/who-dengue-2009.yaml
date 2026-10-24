@@ -2,9 +2,13 @@ id: who-dengue-2009
 type: guideline_intl
 title: "Dengue: guidelines for diagnosis, treatment, prevention and control (new edition)"
 publisher: "World Health Organization"
+doc_number: "WHO/HTM/NTD/DEN/2009.1"
 date: "2009"
 url: "https://iris.who.int/handle/10665/44188"
 license_class: L3
+license_note: "© World Health Organization 2009, All rights reserved: chỉ dùng dữ kiện kèm trích dẫn, không sao chép hay dịch nguyên văn."
 default_tier: B
 accessed: "2026-10-24"
-verified: false
+verified: true
+verified_by: "agent:pass-r"
+notes_vi: "Đã mở bản văn bản trên kho IRIS (ISBN 978 92 4 154787 1). Bìa ghi 'Expiry date: 2014'. Hình 1.4 nêu dấu hiệu cảnh báo: đau bụng hoặc ấn đau, nôn liên tục, ứ dịch, chảy máu niêm mạc, li bì hoặc vật vã, gan to trên 2 cm, Hct tăng kèm tiểu cầu giảm nhanh. Về xử trí lâm sàng, WHO đã ban hành hướng dẫn mới năm 2025 (xem who-arbovirus-2025); phân độ năm 2009 vẫn được hướng dẫn mới dẫn lại."

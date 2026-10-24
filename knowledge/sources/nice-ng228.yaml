@@ -3,10 +3,12 @@ type: guideline_intl
 title: "Subarachnoid haemorrhage caused by a ruptured aneurysm: diagnosis and management"
 publisher: "National Institute for Health and Care Excellence (NICE)"
 doc_number: "NG228"
-date: "2022"
+date: "2022-11-23"
 url: "https://www.nice.org.uk/guidance/ng228"
 license_class: L3
-license_note: "Nội dung có bản quyền NICE: chỉ dùng dữ kiện kèm trích dẫn, không sao chép câu chữ."
+license_note: "Nội dung có bản quyền NICE (© NICE, All rights reserved): chỉ dùng dữ kiện kèm trích dẫn, không sao chép câu chữ."
 default_tier: B
 accessed: "2026-10-24"
-verified: false
+verified: true
+verified_by: "agent:pass-r"
+notes_vi: "Xuất bản 23/11/2022; chưa có bản cập nhật. Khuyến cáo 1.1.3: đau đầu sét đánh (đột ngột, dữ dội, thường đạt đỉnh trong 1–5 phút) là dấu hiệu nguy hiểm của xuất huyết dưới nhện; 1.1.5: người nghi xuất huyết dưới nhện ở ngoài bệnh viện cần được chuyển ngay đến khoa cấp cứu. nice.org.uk trả lỗi 403 với truy cập tự động; lượt R đã đọc các trang chính thức (Overview, Recommendations, History) qua dịch vụ đọc văn bản r.jina.ai."

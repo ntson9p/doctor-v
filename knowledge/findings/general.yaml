@@ -4,7 +4,7 @@
   type: binary
   label_vi: "Sốt"
   question_vi: "Có sốt không?"
-  help_vi: "Sốt là khi nhiệt độ từ 37,5°C trở lên, hoặc sờ thấy người nóng hơn bình thường."
+  help_vi: "Sốt là khi nhiệt độ đo ở nách từ 37,5°C trở lên, hoặc sờ thấy người nóng hơn bình thường."
   alt_question:
     text_vi: "Sờ trán, ngực có thấy nóng hơn bình thường không?"
   leak: moderate
@@ -109,7 +109,7 @@
   type: binary
   label_vi: "Nốt đỏ tím không mất khi ấn"
   question_vi: "Trên da có nốt đỏ hoặc tím, ấn vào không mất đi không?"
-  help_vi: "Ấn mạnh thành ly thủy tinh lên nốt. Nếu vẫn nhìn rõ nốt qua thành ly là không mất màu."
+  help_vi: "Ấn mạnh thành ly thủy tinh lên nốt. Nếu vẫn nhìn rõ nốt qua thành ly là không mất màu. Cần xem khắp người, kể cả lòng trắng mắt."
   alt_question:
     text_vi: "Có chấm đỏ li ti hoặc mảng tím bầm mới xuất hiện trên da không?"
   requires:
@@ -189,6 +189,7 @@
   type: binary
   label_vi: "Nôn liên tục"
   question_vi: "Có nôn nhiều lần, uống gì cũng nôn ra không?"
+  help_vi: "Ví dụ: nôn từ 3 lần trong 1 giờ, hoặc từ 4 lần trong 6 giờ."
   alt_question:
     text_vi: "Trong 6 giờ qua, có giữ được nước uống mà không nôn ra không?"
     inverted: true

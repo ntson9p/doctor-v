@@ -3,10 +3,12 @@ type: guideline_intl
 title: "Head injury: assessment and early management"
 publisher: "National Institute for Health and Care Excellence (NICE)"
 doc_number: "NG232"
-date: "2023"
+date: "2023-05-18"
 url: "https://www.nice.org.uk/guidance/ng232"
 license_class: L3
-license_note: "Nội dung có bản quyền NICE: chỉ dùng dữ kiện kèm trích dẫn, không sao chép câu chữ."
+license_note: "Nội dung có bản quyền NICE (© NICE, All rights reserved): chỉ dùng dữ kiện kèm trích dẫn, không sao chép câu chữ."
 default_tier: B
 accessed: "2026-10-24"
-verified: false
+verified: true
+verified_by: "agent:pass-r"
+notes_vi: "Xuất bản 18/5/2023. Đã đối chiếu khuyến cáo 1.2.2 (dịch vụ tư vấn từ xa gọi xe cấp cứu khi bất tỉnh hoặc không tỉnh táo hoàn toàn, có dấu hiệu thần kinh khu trú kể cả thay đổi thị lực, co giật, chấn thương năng lượng cao), 1.2.3 (chuyển khoa cấp cứu khi đau đầu dai dẳng từ sau chấn thương, nôn, mất ý thức đã hồi phục, quên, dùng thuốc chống đông...) và 1.2.4. nice.org.uk trả lỗi 403 với truy cập tự động; lượt R đã đọc các trang chính thức (Overview, Recommendations, History) qua dịch vụ đọc văn bản r.jina.ai."

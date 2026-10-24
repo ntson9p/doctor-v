@@ -11,7 +11,7 @@
   type: binary
   label_vi: "Đau đầu đột ngột, dữ dội nhất từ trước tới nay"
   question_vi: "Cơn đau đầu có đến đột ngột, dữ dội nhất từ trước tới nay không?"
-  help_vi: "Đau lên mức mạnh nhất chỉ trong vài phút, như bị đánh mạnh vào đầu."
+  help_vi: "Đau lên mức mạnh nhất trong vòng 5 phút, như bị đánh mạnh vào đầu."
   alt_question:
     text_vi: "Cơn đau có bùng lên rất mạnh chỉ trong vài phút không?"
   requires:

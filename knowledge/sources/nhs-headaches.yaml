@@ -1,0 +1,12 @@
+id: nhs-headaches
+type: web_page
+title: "Headaches"
+publisher: "NHS (UK)"
+url: "https://www.nhs.uk/symptoms/headaches/"
+license_class: L1
+license_note: "Open Government Licence v3.0; bản chuyển thể không được trình bày như nội dung của NHS."
+default_tier: C
+accessed: "2026-10-24"
+verified: true
+verified_by: "agent:pass-r"
+notes_vi: "Trang rà soát lần cuối 17/4/2024. 'Call 999 or go to A&E': co giật; tê yếu người hoặc mặt; đau đột ngột và cực kỳ dữ dội; chấn thương đầu trong 3 tháng qua; khó nói, khó giữ thăng bằng, khó đi hoặc nhớ; li bì hoặc lú lẫn; mất thị lực; ban không mất khi ấn; sốt rất cao, cứng gáy hoặc sợ ánh sáng. 'Urgent GP / NHS 111': kèm vấn đề về mắt; đau tăng khi ho, hắt hơi, cúi, gắng sức; kèm nôn; trẻ đau tăng dần hoặc đau thức giấc ban đêm; đau hàm khi nhai hoặc đau da đầu."

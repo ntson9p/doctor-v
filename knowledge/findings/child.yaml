@@ -38,7 +38,7 @@
   type: binary
   label_vi: "Thở nhanh, rút lõm lồng ngực"
   question_vi: "Bé có thở nhanh, hoặc lồng ngực rút lõm khi thở không?"
-  help_vi: "Rút lõm lồng ngực là khi bé hít vào, phần dưới lồng ngực lõm sâu xuống."
+  help_vi: "Thở nhanh là từ 60 lần/phút trở lên khi bé nằm yên. Rút lõm lồng ngực là khi bé hít vào, phần dưới lồng ngực lõm sâu xuống."
   alt_question:
     text_vi: "Khi bé nằm yên, có thấy bé thở gấp hơn bình thường không?"
   applies_to:
@@ -49,6 +49,7 @@
   type: binary
   label_vi: "Người lạnh, nhiệt độ thấp"
   question_vi: "Người bé có lạnh, nhiệt độ dưới 35,5°C không?"
+  help_vi: "Đo nhiệt độ ở nách. Nếu không có nhiệt kế, sờ bụng hoặc nách bé xem có lạnh bất thường không."
   alt_question:
     text_vi: "Sờ ngực, bụng bé có thấy lạnh hơn bình thường không?"
   applies_to:
@@ -88,6 +89,7 @@
   type: binary
   label_vi: "Giật mình, chới với"
   question_vi: "Bé có hay giật mình, chới với, nhất là khi ngủ không?"
+  help_vi: "Là những cơn giật mình ngắn 1–2 giây ở tay chân, hay gặp lúc mới ngủ hoặc khi nằm ngửa."
   applies_to:
     age_groups: [child_2m_5y, child_5_12]
   leak: specific

@@ -3,10 +3,12 @@ type: guideline_intl
 title: "Ectopic pregnancy and miscarriage: diagnosis and initial management"
 publisher: "National Institute for Health and Care Excellence (NICE)"
 doc_number: "NG126"
-date: "2019"
+date: "2019-04-17"
 url: "https://www.nice.org.uk/guidance/ng126"
 license_class: L3
-license_note: "Nội dung có bản quyền NICE: chỉ dùng dữ kiện kèm trích dẫn, không sao chép câu chữ."
+license_note: "Nội dung có bản quyền NICE (© NICE, All rights reserved): chỉ dùng dữ kiện kèm trích dẫn, không sao chép câu chữ."
 default_tier: B
 accessed: "2026-10-24"
-verified: false
+verified: true
+verified_by: "agent:pass-r"
+notes_vi: "Xuất bản 17/4/2019, cập nhật lần cuối 17/6/2026 (khuyến cáo mới về dự phòng anti-D); thay thế CG154. Áp dụng cho thai đến 13 tuần. Đã đối chiếu chương 'Symptoms and signs of ectopic pregnancy and initial assessment', khuyến cáo 1.4.1, 1.4.3, 1.4.7, 1.4.9. nice.org.uk trả lỗi 403 với truy cập tự động; lượt R đã đọc các trang chính thức (Overview, Recommendations, History) qua dịch vụ đọc văn bản r.jina.ai."

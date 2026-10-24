@@ -1,0 +1,16 @@
+id: nice-ng253
+type: guideline_intl
+title: "Suspected sepsis in people aged 16 or over: recognition, assessment and early management"
+publisher: "National Institute for Health and Care Excellence (NICE)"
+doc_number: "NG253"
+date: "2025-11-19"
+supersedes:
+  - "NG51 (2016), một phần"
+url: "https://www.nice.org.uk/guidance/ng253"
+license_class: L3
+license_note: "Nội dung có bản quyền NICE (© NICE, All rights reserved): chỉ dùng dữ kiện kèm trích dẫn, không sao chép câu chữ."
+default_tier: B
+accessed: "2026-10-24"
+verified: true
+verified_by: "agent:pass-r"
+notes_vi: "Xuất bản 19/11/2025, cập nhật lần cuối 23/9/2026 (khuyến cáo về procalcitonin). Bảng 1 (cộng đồng): tiêu chí nguy cơ cao gồm thay đổi ý thức mới có bằng chứng khách quan, nhịp thở từ 25 lần/phút, huyết áp tâm thu từ 90 mmHg trở xuống, mạch trên 130, không tiểu 18 giờ, da loang lổ hoặc xám tái, tím môi lưỡi, ban xuất huyết không mất khi ấn; nguy cơ trung bình gồm suy giảm miễn dịch, nhiệt độ dưới 36°C, không tiểu 12–18 giờ. nice.org.uk trả lỗi 403 với truy cập tự động; lượt R đã đọc các trang chính thức (Overview, Recommendations, History) qua dịch vụ đọc văn bản r.jina.ai."

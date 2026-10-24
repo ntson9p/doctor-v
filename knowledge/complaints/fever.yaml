@@ -18,6 +18,10 @@ red_flags:
   - group: fever_red_flags
   - finding: rash_any
   - finding: rash_non_blanching
+  # Lượt R: chảy máu niêm mạc là dấu hiệu cảnh báo sốt xuất huyết (2760, Phụ lục 2);
+  # số ngày sốt cần cho các quy tắc giai đoạn nguy hiểm (ngày 3–7) và tay chân miệng.
+  - finding: bleeding_gums_nose
+  - finding: fever_duration
   - finding: pregnant
 intake: [fever_associated, chronic_conditions]
 # Điền sau khi các bệnh của đợt thử nghiệm đã có trong knowledge/conditions/.
@@ -30,4 +34,5 @@ safety_net:
   - persistent_vomiting
   - cold_hands_feet
   - seizure_recent
-sources: [who-imci-chart-booklet-2014, nice-ng143, nice-ng51]
+  - bleeding_gums_nose
+sources: [who-imci-chart-booklet-2014, nice-ng143, nice-ng253, nice-ng254, byt-qd-2760-2023]

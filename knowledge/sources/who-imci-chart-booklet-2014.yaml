@@ -9,4 +9,5 @@ license_note: "WHO 2014, All rights reserved: chỉ dùng dữ kiện (dấu hi�
 default_tier: B
 accessed: "2026-10-24"
 verified: true
-verified_by: "agent:research-vietnam-sources (dấu hiệu nguy hiểm toàn thân, qua kho IRIS)"
+verified_by: "agent:pass-r"
+notes_vi: "Đã tải PDF Chart booklet và bản văn bản của Module 2 qua API kho IRIS (bộ IMCI distance learning course, xuất bản 06/3/2014). Đã đối chiếu: dấu hiệu nguy hiểm toàn thân (2 tháng–5 tuổi); trẻ dưới 2 tháng 'very severe disease' gồm bú kém, co giật, thở nhanh từ 60 lần/phút, rút lõm lồng ngực nặng, sốt từ 37,5°C, nhiệt độ dưới 35,5°C (đo ở nách), chỉ cử động khi bị kích thích; sốt mỗi ngày quá 7 ngày thì chuyển khám; phân loại mất nước. Bản PDF dùng phông chữ đặc biệt nên công cụ trích xuất làm mất các con số ngưỡng; ngưỡng được đối chiếu qua Module 2."

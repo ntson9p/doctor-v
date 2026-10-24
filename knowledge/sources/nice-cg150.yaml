@@ -3,10 +3,12 @@ type: guideline_intl
 title: "Headaches in over 12s: diagnosis and management"
 publisher: "National Institute for Health and Care Excellence (NICE)"
 doc_number: "CG150"
-date: "2012"
+date: "2012-09-19"
 url: "https://www.nice.org.uk/guidance/cg150"
 license_class: L3
-license_note: "Nội dung có bản quyền NICE: chỉ dùng dữ kiện kèm trích dẫn, không sao chép câu chữ."
+license_note: "Nội dung có bản quyền NICE (© NICE, All rights reserved): chỉ dùng dữ kiện kèm trích dẫn, không sao chép câu chữ."
 default_tier: B
 accessed: "2026-10-24"
-verified: false
+verified: true
+verified_by: "agent:pass-r"
+notes_vi: "Xuất bản 19/9/2012, cập nhật lần cuối 03/6/2025, rà soát 23/9/2026; NICE đang cập nhật phần điều trị (quyết định 12/2025), mục 1.1 Đánh giá không đổi. Khuyến cáo 1.1.1–1.1.2 liệt kê dấu hiệu cần 'đánh giá, cân nhắc thăm dò hoặc chuyển tuyến' nhưng không quy định mức khẩn. nice.org.uk trả lỗi 403 với truy cập tự động; lượt R đã đọc các trang chính thức (Overview, Recommendations, History) qua dịch vụ đọc văn bản r.jina.ai."

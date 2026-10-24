@@ -6,9 +6,11 @@ doc_number: "2671/QĐ-BYT"
 date: "2023-06-26"
 supersedes:
   - "250/QĐ-BYT (2022-01-28)"
-url: "https://caselaw.vn/van-ban-phap-luat/508431-quyet-dinh-so-2671-qd-byt-ngay-26-06-2023-cua-bo-truong-bo-y-te-huong-dan-chan-doan-va-dieu-tri-covid-19"
+  - "437/QĐ-BYT (2022-02-27)"
+url: "https://soyte.laichau.gov.vn/upload/1001027/20230627/1__Huong_dan_chan_doan_dieu_tri_COVID-19_-2671_Q__signed_02cac48f95.pdf"
 license_class: L0
 default_tier: B
 accessed: "2026-10-24"
-verified: false
-notes_vi: "URL hiện là trang thứ cấp; cần thay bằng bản chính thức."
+verified: true
+verified_by: "agent:pass-r"
+notes_vi: "Đã mở PDF ký số trên cổng Sở Y tế Lai Châu: số 2671/QĐ-BYT, Hà Nội ngày 26/6/2023. Điều 1 thay thế hướng dẫn kèm 250/QĐ-BYT (văn bản ghi nhầm ngày '28/11/2022', đúng là 28/01/2022) và 437/QĐ-BYT ngày 27/02/2022. Chưa thấy văn bản thay thế tính đến 10/2026."

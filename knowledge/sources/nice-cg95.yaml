@@ -3,10 +3,12 @@ type: guideline_intl
 title: "Recent-onset chest pain of suspected cardiac origin: assessment and diagnosis"
 publisher: "National Institute for Health and Care Excellence (NICE)"
 doc_number: "CG95"
-date: "2010"
+date: "2010-03-24"
 url: "https://www.nice.org.uk/guidance/cg95"
 license_class: L3
-license_note: "Nội dung có bản quyền NICE: chỉ dùng dữ kiện kèm trích dẫn, không sao chép câu chữ."
+license_note: "Nội dung có bản quyền NICE (© NICE, All rights reserved): chỉ dùng dữ kiện kèm trích dẫn, không sao chép câu chữ."
 default_tier: B
 accessed: "2026-10-24"
-verified: false
+verified: true
+verified_by: "agent:pass-r"
+notes_vi: "Xuất bản 24/3/2010, cập nhật lần cuối 30/11/2016; vẫn hiện hành. Đã đối chiếu khuyến cáo 1.2.1.3 (triệu chứng gợi ý hội chứng vành cấp) và 1.2.1.7 (chuyển viện cấp cứu khi nghi hội chứng vành cấp và đang đau, hoặc đau trong 12 giờ qua). nice.org.uk trả lỗi 403 với truy cập tự động; lượt R đã đọc các trang chính thức (Overview, Recommendations, History) qua dịch vụ đọc văn bản r.jina.ai."

@@ -11,8 +11,8 @@
 - id: pain_radiates_arm_jaw
   kind: symptom
   type: binary
-  label_vi: "Đau lan lên cổ, hàm, tay trái"
-  question_vi: "Cơn đau có lan lên cổ, hàm, vai hoặc tay trái không?"
+  label_vi: "Đau lan lên cổ, hàm, vai, tay"
+  question_vi: "Cơn đau có lan lên cổ, hàm, vai hoặc cánh tay không?"
   requires:
     - any:
         - { finding: chest_pain_pressure, is: present }
@@ -29,7 +29,7 @@
   type: categorical
   label_vi: "Huyết áp đo được"
   question_vi: "Huyết áp đo được gần nhất là bao nhiêu?"
-  help_vi: "Chọn 'Không rõ' nếu chưa đo. Ví dụ 150/95 nghĩa là số trên 150, số dưới 95."
+  help_vi: "Chọn 'Không rõ' nếu chưa đo. Ví dụ 150/95 nghĩa là số trên 150, số dưới 95. Nếu hai số thuộc hai mức khác nhau, chọn mức cao hơn."
   options:
     - { id: normal, label_vi: "Dưới 140/90 mmHg" }
     - { id: high, label_vi: "Từ 140/90 đến dưới 160/110 mmHg" }

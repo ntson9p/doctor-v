@@ -3,10 +3,12 @@ type: guideline_intl
 title: "Acute upper gastrointestinal bleeding in over 16s: management"
 publisher: "National Institute for Health and Care Excellence (NICE)"
 doc_number: "CG141"
-date: "2012"
+date: "2012-06-13"
 url: "https://www.nice.org.uk/guidance/cg141"
 license_class: L3
-license_note: "Nội dung có bản quyền NICE: chỉ dùng dữ kiện kèm trích dẫn, không sao chép câu chữ."
+license_note: "Nội dung có bản quyền NICE (© NICE, All rights reserved): chỉ dùng dữ kiện kèm trích dẫn, không sao chép câu chữ."
 default_tier: B
 accessed: "2026-10-24"
-verified: false
+verified: true
+verified_by: "agent:pass-r"
+notes_vi: "Xuất bản 13/6/2012, cập nhật lần cuối 25/8/2016; vẫn hiện hành. Là hướng dẫn xử trí trong bệnh viện (người trên 16 tuổi), không có tiêu chí phân loại trước viện: mọi người xuất huyết tiêu hóa trên cấp cần được đánh giá nguy cơ bằng thang Blatchford ngay lần đánh giá đầu (khuyến cáo 1.1.1–1.1.2). nice.org.uk trả lỗi 403 với truy cập tự động; lượt R đã đọc các trang chính thức (Overview, Recommendations, History) qua dịch vụ đọc văn bản r.jina.ai."

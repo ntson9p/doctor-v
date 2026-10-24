@@ -3,10 +3,12 @@ type: guideline_intl
 title: "Hypertension in pregnancy: diagnosis and management"
 publisher: "National Institute for Health and Care Excellence (NICE)"
 doc_number: "NG133"
-date: "2019"
+date: "2019-06-25"
 url: "https://www.nice.org.uk/guidance/ng133"
 license_class: L3
-license_note: "Nội dung có bản quyền NICE: chỉ dùng dữ kiện kèm trích dẫn, không sao chép câu chữ."
+license_note: "Nội dung có bản quyền NICE (© NICE, All rights reserved): chỉ dùng dữ kiện kèm trích dẫn, không sao chép câu chữ."
 default_tier: B
 accessed: "2026-10-24"
-verified: false
+verified: true
+verified_by: "agent:pass-r"
+notes_vi: "Xuất bản 25/6/2019, cập nhật lần cuối 17/4/2023. Khuyến cáo 1.1.1: phụ nữ có thai cần gặp nhân viên y tế ngay khi có triệu chứng tiền sản giật (đau đầu dữ dội, nhìn mờ hoặc chớp sáng, đau dữ dội ngay dưới sườn, nôn, phù mặt, tay hoặc chân đột ngột). Mục định nghĩa: tăng huyết áp nặng là trên 160 mmHg tâm thu hoặc trên 110 mmHg tâm trương; bảng xử trí: nhập viện, dưới 160/110 thì xử trí như tăng huyết áp. nice.org.uk trả lỗi 403 với truy cập tự động; lượt R đã đọc các trang chính thức (Overview, Recommendations, History) qua dịch vụ đọc văn bản r.jina.ai."

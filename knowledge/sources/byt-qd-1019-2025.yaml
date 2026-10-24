@@ -6,9 +6,10 @@ doc_number: "1019/QĐ-BYT"
 date: "2025-03-26"
 supersedes:
   - "1327/QĐ-BYT (2014-04-18)"
-url: "https://luatvietnam.vn/y-te/quyet-dinh-1019-qd-byt-2025-tai-lieu-chuyen-mon-huong-dan-chan-doan-va-dieu-tri-benh-soi-395950-d1.html"
+url: "https://syt.hue.gov.vn/Root/OldData/00.18.H57/UploadFiles/TinTuc/2025/3/27/1019qdbyt2025banchuan.signed.pdf.pdf"
 license_class: L0
 default_tier: B
 accessed: "2026-10-24"
-verified: false
-notes_vi: "URL hiện là trang thứ cấp; cần thay bằng bản chính thức."
+verified: true
+verified_by: "agent:pass-r"
+notes_vi: "Đã mở PDF ký số (Bộ Y tế ký ngày 26/3/2025) trên cổng Sở Y tế Huế; bìa ghi 'Ban hành kèm theo Quyết định số 1019/QĐ-BYT ngày 26 tháng 3 năm 2025'. Tệp chỉ có phần tài liệu kèm theo, không có trang quyết định; văn bản cũ 1327/QĐ-BYT (18/4/2014) được nêu trong mục tài liệu tham khảo. Cổng Sở Y tế Huế yêu cầu cookie JavaScript khi tải."
