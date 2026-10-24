@@ -24,7 +24,8 @@
     "eval:check": "node evaluation/src/cli/check.ts",
     "eval": "node evaluation/src/cli/run.ts",
     "eval:tune": "node evaluation/src/cli/tune.ts",
-    "play": "node evaluation/src/cli/play.ts"
+    "play": "node evaluation/src/cli/play.ts",
+    "kb:agreement": "node packages/kb/src/cli/agreement.ts"
   },
   "devDependencies": {
     "@eslint/js": "10.0.1",
