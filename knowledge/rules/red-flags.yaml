@@ -1,0 +1,373 @@
+# Quy tắc mức xử trí (docs/kb-guide.md, mục 4.7). Mức xử trí cuối cùng là mức khẩn nhất
+# trong các quy tắc thỏa mãn và mức suy ra từ xác suất (docs/engine-spec.md).
+# Trạng thái: bản nháp do người bảo trì soạn; đang chờ agent đối chiếu nguồn (lượt R).
+
+# ---------- Trẻ nhỏ ----------
+- id: rg_young_infant_any
+  level: 3
+  when: { age_groups: [infant_0_2m] }
+  reason_vi: "Trẻ dưới 2 tháng tuổi bị bệnh cần được nhân viên y tế khám sớm."
+  evidence:
+    tier: B
+    basis: judgment
+    sources: [who-imci-chart-booklet-2014]
+    note: "Chính sách an toàn của doctor-v (docs/plan.md, mục 3.1): trẻ dưới 2 tháng luôn được khuyên đi khám, không xếp hạng bệnh."
+- id: rg_young_infant_danger_sign
+  level: 2
+  when:
+    all:
+      - { age_groups: [infant_0_2m] }
+      - any:
+          - { finding: young_infant_not_feeding, is: present }
+          - { finding: seizure_recent, is: present }
+          - { finding: young_infant_fast_breathing, is: present }
+          - { finding: young_infant_low_temp, is: present }
+          - { finding: young_infant_reduced_movement, is: present }
+          - { finding: bulging_fontanelle, is: present }
+  reason_vi: "Trẻ dưới 2 tháng có dấu hiệu nguy hiểm cần được đưa đi cấp cứu ngay."
+  evidence: { tier: B, basis: verbal, sources: [who-imci-chart-booklet-2014] }
+- id: rg_fever_under_3_months
+  level: 2
+  when:
+    all:
+      - { age_months_lt: 3 }
+      - { finding: fever, is: present }
+  reason_vi: "Trẻ dưới 3 tháng tuổi bị sốt cần được khám cấp cứu ngay."
+  evidence:
+    tier: B
+    basis: verbal
+    sources: [nice-ng143]
+    note: "NICE NG143 xếp trẻ dưới 3 tháng có nhiệt độ từ 38°C vào nhóm nguy cơ cao."
+- id: rg_child_general_danger_sign
+  level: 2
+  when:
+    all:
+      - { age_groups: [child_2m_5y] }
+      - any:
+          - { finding: child_unable_to_drink, is: present }
+          - { finding: child_vomits_everything, is: present }
+          - { finding: seizure_recent, is: present }
+          - { finding: drowsy_hard_to_wake, is: present }
+  reason_vi: "Trẻ có dấu hiệu nguy hiểm toàn thân cần được đưa đi cấp cứu ngay."
+  evidence: { tier: B, basis: verbal, sources: [who-imci-chart-booklet-2014] }
+- id: rf_child_dehydration
+  level: 3
+  when:
+    all:
+      - { age_groups: [child_2m_5y, child_5_12] }
+      - any:
+          - { finding: diarrhea, is: present }
+          - { finding: persistent_vomiting, is: present }
+      - any:
+          - { finding: sunken_eyes, is: present }
+          - { finding: decreased_urine, is: present }
+  reason_vi: "Trẻ có dấu hiệu mất nước cần được khám trong hôm nay."
+  evidence: { tier: B, basis: verbal, sources: [who-imci-chart-booklet-2014] }
+- id: rf_hfmd_startle
+  level: 2
+  when:
+    all:
+      - any:
+          - { finding: hand_foot_blisters, is: present }
+          - { finding: mouth_ulcers, is: present }
+      - { finding: startle_myoclonus, is: present }
+  reason_vi: "Trẻ nghi tay chân miệng mà hay giật mình, chới với cần được khám ngay."
+  evidence: { tier: B, basis: verbal, sources: [byt-qd-292-2024] }
+
+# ---------- Sốt và nhiễm trùng nặng ----------
+- id: rf_neck_stiffness
+  level: 2
+  when: { finding: neck_stiffness, is: present }
+  reason_vi: "Cứng gáy có thể là dấu hiệu viêm màng não hoặc chảy máu trong não."
+  evidence: { tier: B, basis: verbal, sources: [nice-ng143, nice-cg150] }
+- id: rf_fever_non_blanching_rash
+  level: 2
+  when:
+    all:
+      - { finding: fever, is: present }
+      - { finding: rash_non_blanching, is: present }
+  reason_vi: "Sốt kèm nốt đỏ tím không mất khi ấn cần được khám ngay để loại trừ bệnh nặng."
+  evidence: { tier: B, basis: verbal, sources: [nice-ng143, byt-qd-2760-2023] }
+- id: rf_altered_consciousness
+  level: 2
+  when:
+    any:
+      - { finding: confusion, is: present }
+      - { finding: drowsy_hard_to_wake, is: present }
+  reason_vi: "Lú lẫn hoặc li bì là dấu hiệu bệnh nặng."
+  evidence: { tier: B, basis: verbal, sources: [nice-ng51, who-imci-chart-booklet-2014] }
+- id: rf_shock_signs
+  level: 2
+  when:
+    any:
+      - { finding: cold_hands_feet, is: present }
+      - { finding: severe_weakness, is: present }
+  reason_vi: "Tay chân lạnh hoặc mệt lả có thể là dấu hiệu sốc."
+  evidence: { tier: B, basis: verbal, sources: [nice-ng51, byt-qd-2760-2023] }
+- id: rf_fever_mucosal_bleeding
+  level: 2
+  when:
+    all:
+      - { finding: fever, is: present }
+      - { finding: bleeding_gums_nose, is: present }
+  reason_vi: "Sốt kèm chảy máu chân răng hoặc chảy máu mũi cần được khám ngay."
+  evidence: { tier: B, basis: verbal, sources: [byt-qd-2760-2023] }
+- id: rf_fever_severe_abdominal_pain
+  level: 2
+  when:
+    all:
+      - { finding: fever, is: present }
+      - { finding: abd_pain_severe, is: present }
+  reason_vi: "Sốt kèm đau bụng dữ dội cần được khám ngay."
+  evidence: { tier: B, basis: verbal, sources: [byt-qd-2760-2023] }
+- id: rf_fever_vomiting_critical_phase
+  level: 2
+  when:
+    all:
+      - { finding: fever, is: present }
+      - { finding: persistent_vomiting, is: present }
+      - { finding: fever_duration, in: [d3_5, d6_7] }
+  reason_vi: "Nôn nhiều vào ngày thứ 3–7 của sốt có thể là dấu hiệu cảnh báo sốt xuất huyết."
+  evidence: { tier: B, basis: verbal, sources: [byt-qd-2760-2023] }
+- id: rf_persistent_vomiting
+  level: 3
+  when: { finding: persistent_vomiting, is: present }
+  reason_vi: "Nôn liên tục dễ gây mất nước, cần được khám trong hôm nay."
+  evidence:
+    tier: B
+    basis: judgment
+    sources: [who-imci-chart-booklet-2014, byt-qd-2760-2023]
+    note: "Nôn liên tục là dấu hiệu nguy hiểm ở trẻ (IMCI) và dấu hiệu cảnh báo trong sốt xuất huyết; ở người lớn chọn mức 3 để kịp bù nước."
+- id: rf_fever_breathing
+  level: 3
+  when:
+    all:
+      - { finding: fever, is: present }
+      - { finding: breathing_difficulty, is: present }
+  reason_vi: "Sốt kèm khó thở cần được khám trong hôm nay."
+  evidence:
+    tier: B
+    basis: judgment
+    sources: [nice-ng143, nice-ng51]
+    note: "Khó thở dữ dội đã được bắt ở màn sàng lọc cấp cứu; khó thở mức vừa kèm sốt cần khám trong ngày."
+- id: rf_high_risk_fever
+  level: 3
+  when:
+    all:
+      - { finding: fever, is: present }
+      - any:
+          - { finding: immunocompromised, is: present }
+          - { finding: pregnant, is: present }
+          - { age_years_gte: 75 }
+  reason_vi: "Người có nguy cơ cao bị sốt nên được khám sớm."
+  evidence: { tier: B, basis: verbal, sources: [byt-qd-1840-2025, nice-ng51] }
+- id: rf_prolonged_fever
+  level: 3
+  when: { finding: fever_duration, in: [gt_7d] }
+  reason_vi: "Sốt kéo dài hơn 7 ngày cần đi khám để tìm nguyên nhân."
+  evidence:
+    tier: B
+    basis: judgment
+    sources: [nice-ng143]
+    note: "NICE NG143 coi sốt từ 5 ngày ở trẻ là dấu hiệu cần đánh giá; doctor-v dùng mốc 7 ngày cho mọi lứa tuổi."
+
+# ---------- Đau bụng ----------
+- id: rf_severe_abdominal_pain
+  level: 2
+  when: { finding: abd_pain_severe, is: present }
+  reason_vi: "Đau bụng dữ dội cần được khám cấp cứu."
+  evidence: { tier: C, basis: verbal, sources: [nhs-stomach-ache] }
+- id: rf_abdomen_hard_swollen
+  level: 2
+  when: { finding: abdomen_hard_swollen, is: present }
+  reason_vi: "Bụng cứng hoặc chướng căng có thể là dấu hiệu bệnh cấp cứu trong ổ bụng."
+  evidence: { tier: C, basis: verbal, sources: [nhs-stomach-ache] }
+- id: rf_gi_bleeding
+  level: 2
+  when:
+    any:
+      - { finding: vomiting_blood, is: present }
+      - { finding: black_stool, is: present }
+  reason_vi: "Nôn ra máu hoặc đi ngoài phân đen là dấu hiệu chảy máu đường tiêu hóa."
+  evidence: { tier: B, basis: verbal, sources: [nice-cg141] }
+- id: rf_fainting_with_pain
+  level: 2
+  when:
+    all:
+      - { finding: fainting_or_near_fainting, is: present }
+      - any:
+          - { finding: abdominal_pain, is: present }
+          - { finding: headache, is: present }
+          - { finding: chest_pain_pressure, is: present }
+  reason_vi: "Ngất hoặc choáng kèm đau cần được khám cấp cứu."
+  evidence: { tier: C, basis: verbal, sources: [nhs-stomach-ache] }
+- id: rf_bowel_obstruction_signs
+  level: 2
+  when:
+    all:
+      - { finding: no_stool_or_gas, is: present }
+      - any:
+          - { finding: vomiting, is: present }
+          - { finding: persistent_vomiting, is: present }
+          - { finding: abdomen_hard_swollen, is: present }
+  reason_vi: "Không đi ngoài, không xì hơi kèm nôn hoặc chướng bụng có thể là tắc ruột."
+  evidence: { tier: C, basis: verbal, sources: [nhs-stomach-ache] }
+- id: rf_no_stool_or_gas
+  level: 3
+  when: { finding: no_stool_or_gas, is: present }
+  reason_vi: "Không đi ngoài và không xì hơi được cần được khám trong hôm nay."
+  evidence:
+    tier: C
+    basis: judgment
+    sources: [nhs-stomach-ache]
+    note: "Riêng dấu hiệu này chưa đủ để nghĩ tắc ruột; khi kèm nôn hoặc chướng bụng thì áp dụng quy tắc mức 2."
+- id: rf_pregnant_pain_bleeding
+  level: 2
+  when:
+    all:
+      - { finding: abdominal_pain, is: present }
+      - { finding: vaginal_bleeding, is: present }
+      - any:
+          - { finding: pregnant, is: present }
+          - { finding: missed_period, is: present }
+  reason_vi: "Đau bụng kèm ra máu khi đang có thai hoặc chậm kinh cần được khám cấp cứu."
+  evidence: { tier: B, basis: verbal, sources: [nice-ng126] }
+- id: rf_pregnant_abdominal_pain
+  level: 3
+  when:
+    all:
+      - { finding: abdominal_pain, is: present }
+      - { finding: pregnant, is: present }
+  reason_vi: "Phụ nữ có thai bị đau bụng cần được khám trong hôm nay."
+  evidence:
+    tier: B
+    basis: judgment
+    sources: [nice-ng126]
+    note: "Đau bụng khi có thai cần loại trừ chửa ngoài tử cung và các biến chứng thai kỳ."
+- id: rf_red_jelly_stool
+  level: 2
+  when: { finding: red_jelly_stool, is: present }
+  reason_vi: "Trẻ đi ngoài phân nhầy máu như mứt dâu có thể bị lồng ruột, cần khám cấp cứu."
+  evidence: { tier: B, basis: verbal, sources: [byt-qd-3312-2015] }
+- id: rf_chest_pain
+  level: 2
+  when: { finding: chest_pain_pressure, is: present }
+  reason_vi: "Đau hoặc tức nặng giữa ngực cần được khám cấp cứu để loại trừ bệnh tim."
+  evidence: { tier: B, basis: verbal, sources: [nice-cg95] }
+- id: rf_chest_pain_with_features
+  level: 1
+  when:
+    all:
+      - { finding: chest_pain_pressure, is: present }
+      - any:
+          - { finding: cold_sweat, is: present }
+          - { finding: pain_radiates_arm_jaw, is: present }
+          - { finding: breathing_difficulty, is: present }
+  reason_vi: "Đau ngực kèm vã mồ hôi, đau lan lên tay hoặc khó thở có thể là nhồi máu cơ tim."
+  evidence: { tier: B, basis: verbal, sources: [nice-cg95] }
+
+# ---------- Đau đầu, thần kinh ----------
+- id: rf_thunderclap_headache
+  level: 1
+  when: { finding: headache_thunderclap, is: present }
+  reason_vi: "Đau đầu đột ngột, dữ dội nhất từ trước tới nay có thể là chảy máu não."
+  evidence: { tier: B, basis: verbal, sources: [nice-cg150, nice-ng228] }
+- id: rf_new_seizure
+  level: 2
+  when: { finding: seizure_recent, is: present }
+  reason_vi: "Co giật trong lần bệnh này cần được khám cấp cứu."
+  evidence: { tier: B, basis: verbal, sources: [nice-cg150, nice-ng143] }
+- id: rf_vision_loss
+  level: 2
+  when: { finding: vision_loss_or_double, is: present }
+  reason_vi: "Đột ngột mất thị lực hoặc nhìn đôi cần được khám cấp cứu."
+  evidence: { tier: B, basis: verbal, sources: [nice-cg150] }
+- id: rf_head_injury
+  level: 3
+  when: { finding: headache_after_head_injury, is: present }
+  reason_vi: "Đau đầu sau va đập đầu cần được khám để loại trừ tổn thương trong sọ."
+  evidence: { tier: B, basis: verbal, sources: [nice-ng232] }
+- id: rf_head_injury_with_signs
+  level: 2
+  when:
+    all:
+      - { finding: headache_after_head_injury, is: present }
+      - any:
+          - { finding: vomiting, is: present }
+          - { finding: persistent_vomiting, is: present }
+          - { finding: confusion, is: present }
+          - { finding: drowsy_hard_to_wake, is: present }
+  reason_vi: "Đau đầu sau va đập kèm nôn hoặc lơ mơ cần được khám cấp cứu."
+  evidence: { tier: B, basis: verbal, sources: [nice-ng232] }
+- id: rf_pregnancy_hypertension_signs
+  level: 2
+  when:
+    all:
+      - { finding: pregnant, is: present }
+      - { finding: gestational_age, in: [ge_20w] }
+      - any:
+          - { finding: headache, is: present }
+          - { finding: blurred_vision, is: present }
+          - { finding: edema_face_hands, is: present }
+  reason_vi: "Thai từ 20 tuần kèm đau đầu, nhìn mờ hoặc phù cần được khám ngay để loại trừ tiền sản giật."
+  evidence: { tier: B, basis: verbal, sources: [nice-ng133] }
+- id: rf_postpartum_headache
+  level: 3
+  when:
+    all:
+      - { finding: recent_childbirth, is: present }
+      - any:
+          - { finding: headache, is: present }
+          - { finding: blurred_vision, is: present }
+  reason_vi: "Đau đầu hoặc nhìn mờ trong 6 tuần sau sinh cần được khám sớm."
+  evidence:
+    tier: B
+    basis: judgment
+    sources: [nice-ng133]
+    note: "Tiền sản giật có thể xuất hiện sau sinh; chọn mức 3, chờ bác sĩ duyệt."
+- id: rf_pregnancy_severe_bp
+  level: 2
+  when:
+    all:
+      - { finding: pregnant, is: present }
+      - { finding: bp_measured, in: [very_high, extreme] }
+  reason_vi: "Huyết áp từ 160/110 khi đang có thai cần được khám cấp cứu."
+  evidence: { tier: B, basis: verbal, sources: [nice-ng133] }
+- id: rf_extreme_bp_with_symptoms
+  level: 2
+  when:
+    all:
+      - { finding: bp_measured, in: [extreme] }
+      - any:
+          - { finding: headache, is: present }
+          - { finding: blurred_vision, is: present }
+          - { finding: chest_pain_pressure, is: present }
+          - { finding: breathing_difficulty, is: present }
+  reason_vi: "Huyết áp từ 180/120 kèm đau đầu, nhìn mờ, đau ngực hoặc khó thở cần được khám cấp cứu."
+  evidence: { tier: B, basis: verbal, sources: [nice-ng136] }
+- id: rf_extreme_bp
+  level: 3
+  when: { finding: bp_measured, in: [extreme] }
+  reason_vi: "Huyết áp từ 180/120 cần được khám trong hôm nay."
+  evidence: { tier: B, basis: verbal, sources: [nice-ng136] }
+- id: rf_new_headache_over_50
+  level: 3
+  when:
+    all:
+      - { age_years_gte: 50 }
+      - { finding: headache_course, in: [first_time, progressive] }
+  reason_vi: "Đau đầu kiểu mới ở người từ 50 tuổi cần được khám sớm."
+  evidence: { tier: B, basis: verbal, sources: [nice-cg150] }
+- id: rf_progressive_headache
+  level: 3
+  when: { finding: headache_course, in: [progressive] }
+  reason_vi: "Đau đầu nặng dần trong nhiều tuần cần được khám sớm."
+  evidence: { tier: B, basis: verbal, sources: [nice-cg150] }
+- id: rf_immunocompromised_headache
+  level: 3
+  when:
+    all:
+      - { finding: immunocompromised, is: present }
+      - { finding: headache, is: present }
+  reason_vi: "Người suy giảm sức đề kháng bị đau đầu cần được khám sớm."
+  evidence: { tier: B, basis: verbal, sources: [nice-cg150] }

@@ -1,0 +1,79 @@
+# Nhóm câu hỏi chọn nhiều. Mục được chọn = "có"; mục không chọn = "không có";
+# chọn "Tôi không rõ" (khi allow_unknown) = mọi mục "không rõ". Tối đa 7 mục mỗi nhóm.
+- id: young_infant_danger_signs
+  title_vi: "Bé có dấu hiệu nào sau đây không?"
+  findings:
+    - young_infant_not_feeding
+    - seizure_recent
+    - young_infant_fast_breathing
+    - young_infant_low_temp
+    - young_infant_reduced_movement
+    - bulging_fontanelle
+    - fever
+  none_label_vi: "Không có dấu hiệu nào ở trên"
+  allow_unknown: true
+  applies_to:
+    age_groups: [infant_0_2m]
+- id: child_danger_signs
+  title_vi: "Bé có dấu hiệu nào sau đây không?"
+  findings: [child_unable_to_drink, child_vomits_everything, seizure_recent, drowsy_hard_to_wake]
+  none_label_vi: "Không có dấu hiệu nào ở trên"
+  allow_unknown: true
+  applies_to:
+    age_groups: [child_2m_5y]
+- id: fever_red_flags
+  title_vi: "Có dấu hiệu nào sau đây không?"
+  findings:
+    - neck_stiffness
+    - confusion
+    - drowsy_hard_to_wake
+    - breathing_difficulty
+    - persistent_vomiting
+    - cold_hands_feet
+    - severe_weakness
+  none_label_vi: "Không có dấu hiệu nào ở trên"
+  allow_unknown: true
+  applies_to:
+    age_groups: [child_2m_5y, child_5_12, teen_13_17, adult_18_44, adult_45_64, elder_65_74, elder_75p]
+- id: fever_associated
+  title_vi: "Ngoài sốt, còn có triệu chứng nào sau đây không?"
+  findings: [cough, sore_throat, runny_nose, headache, abdominal_pain, diarrhea, rash_any]
+  none_label_vi: "Không có triệu chứng nào ở trên"
+- id: abdominal_red_flags
+  title_vi: "Có dấu hiệu nào sau đây không?"
+  findings:
+    - abd_pain_severe
+    - abdomen_hard_swollen
+    - vomiting_blood
+    - black_stool
+    - fainting_or_near_fainting
+    - no_stool_or_gas
+    - persistent_vomiting
+  none_label_vi: "Không có dấu hiệu nào ở trên"
+  allow_unknown: true
+- id: abdominal_associated
+  title_vi: "Ngoài đau bụng, còn có triệu chứng nào sau đây không?"
+  findings: [fever, nausea, vomiting, diarrhea, dysuria, vaginal_bleeding, heartburn]
+  none_label_vi: "Không có triệu chứng nào ở trên"
+- id: headache_red_flags
+  title_vi: "Có dấu hiệu nào sau đây không?"
+  findings:
+    - headache_thunderclap
+    - neck_stiffness
+    - confusion
+    - seizure_recent
+    - vision_loss_or_double
+    - headache_after_head_injury
+  none_label_vi: "Không có dấu hiệu nào ở trên"
+  allow_unknown: true
+- id: headache_associated
+  title_vi: "Ngoài đau đầu, còn có triệu chứng nào sau đây không?"
+  findings: [fever, nausea, vomiting, photophobia, nasal_congestion, stress_poor_sleep]
+  none_label_vi: "Không có triệu chứng nào ở trên"
+- id: chronic_conditions
+  title_vi: "Có bệnh nền hoặc tình trạng nào sau đây không?"
+  findings: [diabetes, hypertension_known, known_heart_disease, immunocompromised]
+  none_label_vi: "Không có bệnh nào ở trên"
+  allow_unknown: true
+  applies_to:
+    age_groups: [teen_13_17, adult_18_44, adult_45_64, elder_65_74, elder_75p]

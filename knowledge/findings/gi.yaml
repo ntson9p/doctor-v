@@ -1,0 +1,205 @@
+# Tiêu hóa, gan mật.
+- id: abdominal_pain
+  kind: symptom
+  type: binary
+  label_vi: "Đau bụng"
+  question_vi: "Có đau bụng không?"
+  leak: moderate
+- id: abd_pain_location
+  kind: symptom
+  type: categorical
+  label_vi: "Vị trí đau bụng"
+  question_vi: "Đau nhiều nhất ở vùng nào của bụng?"
+  options:
+    - { id: epigastric, label_vi: "Vùng trên rốn (thượng vị)" }
+    - { id: right_upper, label_vi: "Dưới sườn bên phải" }
+    - { id: left_upper, label_vi: "Dưới sườn bên trái" }
+    - { id: periumbilical, label_vi: "Quanh rốn" }
+    - { id: right_lower, label_vi: "Bụng dưới bên phải" }
+    - { id: left_lower, label_vi: "Bụng dưới bên trái" }
+    - { id: suprapubic, label_vi: "Bụng dưới, ở giữa (hạ vị)" }
+    - { id: whole, label_vi: "Khắp bụng, không rõ chỗ nào" }
+  baseline:
+    epigastric: 0.25
+    right_upper: 0.10
+    left_upper: 0.05
+    periumbilical: 0.15
+    right_lower: 0.10
+    left_lower: 0.10
+    suprapubic: 0.10
+    whole: 0.15
+  requires:
+    - { finding: abdominal_pain, is: present }
+- id: abd_pain_onset
+  kind: history
+  type: categorical
+  label_vi: "Cách bắt đầu đau bụng"
+  question_vi: "Cơn đau bụng bắt đầu như thế nào?"
+  options:
+    - { id: sudden, label_vi: "Đột ngột, đau rất mạnh ngay từ đầu" }
+    - { id: gradual, label_vi: "Từ từ, tăng dần" }
+  baseline: { sudden: 0.25, gradual: 0.75 }
+  requires:
+    - { finding: abdominal_pain, is: present }
+- id: abd_pain_duration
+  kind: history
+  type: categorical
+  label_vi: "Thời gian đau bụng"
+  question_vi: "Đã đau bụng bao lâu?"
+  options:
+    - { id: lt_6h, label_vi: "Dưới 6 giờ" }
+    - { id: h6_24, label_vi: "Từ 6 đến 24 giờ" }
+    - { id: d1_3, label_vi: "Từ 1 đến 3 ngày" }
+    - { id: d4_14, label_vi: "Từ 4 đến 14 ngày" }
+    - { id: gt_2w, label_vi: "Hơn 2 tuần, hoặc đau tái đi tái lại" }
+  baseline: { lt_6h: 0.20, h6_24: 0.20, d1_3: 0.25, d4_14: 0.15, gt_2w: 0.20 }
+  requires:
+    - { finding: abdominal_pain, is: present }
+- id: abd_pain_severe
+  kind: symptom
+  type: binary
+  label_vi: "Đau bụng dữ dội"
+  question_vi: "Có đau bụng dữ dội, không chịu nổi không?"
+  alt_question:
+    text_vi: "Đau đến mức không đi lại hay nằm yên được không?"
+  requires:
+    - { finding: abdominal_pain, is: present }
+  leak: moderate
+- id: abd_pain_colicky
+  kind: symptom
+  type: binary
+  label_vi: "Đau quặn từng cơn"
+  question_vi: "Có đau quặn từng cơn, lúc đau lúc đỡ không?"
+  requires:
+    - { finding: abdominal_pain, is: present }
+  leak: nonspecific
+- id: abd_pain_migrated_rlq
+  kind: history
+  type: binary
+  label_vi: "Đau từ quanh rốn chuyển xuống bụng dưới bên phải"
+  question_vi: "Đau bắt đầu quanh rốn, rồi chuyển xuống bụng dưới bên phải không?"
+  requires:
+    - { finding: abdominal_pain, is: present }
+  leak: specific
+- id: abd_pain_radiates_back
+  kind: symptom
+  type: binary
+  label_vi: "Đau lan ra sau lưng"
+  question_vi: "Cơn đau có lan ra sau lưng không?"
+  requires:
+    - { finding: abdominal_pain, is: present }
+  leak: moderate
+- id: abd_pain_radiates_groin
+  kind: symptom
+  type: binary
+  label_vi: "Đau lan xuống bẹn"
+  question_vi: "Cơn đau có lan xuống bẹn hoặc bộ phận sinh dục không?"
+  requires:
+    - any:
+        - { finding: abdominal_pain, is: present }
+        - { finding: flank_pain, is: present }
+  leak: specific
+- id: pain_after_fatty_meal
+  kind: history
+  type: binary
+  label_vi: "Đau sau bữa ăn nhiều dầu mỡ"
+  question_vi: "Cơn đau có xuất hiện sau bữa ăn nhiều dầu mỡ không?"
+  requires:
+    - { finding: abdominal_pain, is: present }
+  leak: moderate
+- id: abd_pain_meal_relation
+  kind: history
+  type: categorical
+  label_vi: "Liên quan giữa đau bụng và bữa ăn"
+  question_vi: "Đau bụng liên quan đến bữa ăn như thế nào?"
+  options:
+    - { id: hungry_relieved_by_food, label_vi: "Đau lúc đói, ăn vào thì đỡ" }
+    - { id: worse_after_meal, label_vi: "Đau tăng sau khi ăn" }
+    - { id: no_relation, label_vi: "Không liên quan đến bữa ăn" }
+  baseline: { hungry_relieved_by_food: 0.15, worse_after_meal: 0.25, no_relation: 0.60 }
+  requires:
+    - { finding: abdominal_pain, is: present }
+- id: abd_pain_worse_movement
+  kind: sign
+  type: binary
+  label_vi: "Đau tăng khi đi lại, ho, xe xóc"
+  question_vi: "Đau bụng có tăng khi đi lại, khi ho hoặc khi xe xóc không?"
+  requires:
+    - { finding: abdominal_pain, is: present }
+  leak: moderate
+- id: abdomen_hard_swollen
+  kind: sign
+  type: binary
+  label_vi: "Bụng cứng hoặc chướng căng"
+  question_vi: "Bụng có cứng như gỗ, hoặc chướng căng to lên không?"
+  alt_question:
+    text_vi: "Sờ vào bụng có thấy cứng, đau đến mức không cho ấn không?"
+  leak: specific
+- id: no_stool_or_gas
+  kind: symptom
+  type: binary
+  label_vi: "Không đi ngoài, không xì hơi được"
+  question_vi: "Có bị không đi ngoài và không xì hơi được không?"
+  alt_question:
+    text_vi: "Từ khi đau đến giờ, có xì hơi được lần nào không?"
+    inverted: true
+  leak: specific
+- id: nausea
+  kind: symptom
+  type: binary
+  label_vi: "Buồn nôn"
+  question_vi: "Có buồn nôn không?"
+  cluster: vomiting
+  leak: nonspecific
+- id: vomiting
+  kind: symptom
+  type: binary
+  label_vi: "Nôn (ói)"
+  question_vi: "Có nôn (ói) không?"
+  cluster: vomiting
+  leak: moderate
+  leak_by_complaint: { abdominal_pain: nonspecific }
+- id: vomiting_blood
+  kind: sign
+  type: binary
+  label_vi: "Nôn ra máu"
+  question_vi: "Có nôn ra máu, hoặc chất nâu đen như bã cà phê không?"
+  alt_question:
+    text_vi: "Chất nôn có màu đỏ, hoặc màu nâu đen không?"
+  cluster: gi_bleeding
+  leak: specific
+- id: diarrhea
+  kind: symptom
+  type: binary
+  label_vi: "Tiêu chảy (đi ngoài phân lỏng)"
+  question_vi: "Có đi ngoài phân lỏng từ 3 lần trở lên trong 1 ngày không?"
+  leak: moderate
+- id: diarrhea_bloody
+  kind: sign
+  type: binary
+  label_vi: "Phân có máu, nhầy máu"
+  question_vi: "Phân có lẫn máu hoặc nhầy máu không?"
+  requires:
+    - { finding: diarrhea, is: present }
+  leak: specific
+- id: black_stool
+  kind: sign
+  type: binary
+  label_vi: "Đi ngoài phân đen"
+  question_vi: "Có đi ngoài phân đen như hắc ín hoặc bã cà phê không?"
+  alt_question:
+    text_vi: "Lần đi ngoài gần nhất, phân có màu đen bóng không?"
+  cluster: gi_bleeding
+  leak: specific
+- id: heartburn
+  kind: symptom
+  type: binary
+  label_vi: "Ợ chua, nóng rát sau xương ức"
+  question_vi: "Có ợ chua, hoặc nóng rát sau xương ức không?"
+  leak: moderate
+- id: unsafe_food_shared
+  kind: exposure
+  type: binary
+  label_vi: "Người ăn cùng cũng bị"
+  question_vi: "Những người ăn cùng có bị đau bụng, nôn hoặc tiêu chảy không?"
+  leak: specific

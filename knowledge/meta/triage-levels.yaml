@@ -1,0 +1,20 @@
+- level: 1
+  id: call_115
+  label_vi: "Gọi 115 ngay"
+  action_vi: "Gọi 115, hoặc nhờ người đưa đến khoa cấp cứu gần nhất ngay. Không tự lái xe."
+- level: 2
+  id: go_emergency
+  label_vi: "Đến cơ sở cấp cứu ngay"
+  action_vi: "Đến khoa cấp cứu của bệnh viện gần nhất ngay bây giờ. Không chờ đến ngày mai."
+- level: 3
+  id: see_doctor_24h
+  label_vi: "Đi khám trong vòng 24 giờ"
+  action_vi: "Đi khám tại cơ sở y tế trong hôm nay, chậm nhất là ngày mai."
+- level: 4
+  id: see_doctor_soon
+  label_vi: "Đặt lịch khám trong vài ngày tới"
+  action_vi: "Sắp xếp đi khám trong vài ngày tới. Đi khám sớm hơn nếu thấy nặng thêm."
+- level: 5
+  id: self_care
+  label_vi: "Theo dõi tại nhà"
+  action_vi: "Có thể tự chăm sóc và theo dõi tại nhà. Đi khám nếu không đỡ hoặc có dấu hiệu cần đi khám."

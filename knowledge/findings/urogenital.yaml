@@ -1,0 +1,121 @@
+# Tiết niệu, sinh dục, thai sản.
+- id: dysuria
+  kind: symptom
+  type: binary
+  label_vi: "Đau buốt khi đi tiểu"
+  question_vi: "Có đau buốt hoặc nóng rát khi đi tiểu không?"
+  cluster: lower_urinary
+  leak: moderate
+- id: urinary_frequency
+  kind: symptom
+  type: binary
+  label_vi: "Đi tiểu nhiều lần, mỗi lần ít"
+  question_vi: "Có phải đi tiểu nhiều lần, mỗi lần ít không?"
+  cluster: lower_urinary
+  leak: moderate
+- id: flank_pain
+  kind: symptom
+  type: binary
+  label_vi: "Đau hông lưng"
+  question_vi: "Có đau vùng hông lưng, một hoặc hai bên không?"
+  leak: moderate
+- id: hematuria
+  kind: sign
+  type: binary
+  label_vi: "Tiểu ra máu"
+  question_vi: "Nước tiểu có màu đỏ, hoặc hồng như nước rửa thịt không?"
+  leak: specific
+- id: pregnant
+  kind: risk_factor
+  type: binary
+  label_vi: "Đang mang thai"
+  question_vi: "Hiện có đang mang thai, hoặc có thể đang có thai không?"
+  help_vi: "Chọn 'Không rõ' nếu bị chậm kinh mà chưa thử thai."
+  applies_to:
+    sex: [female]
+    age_groups: [teen_13_17, adult_18_44, adult_45_64]
+  cluster: pregnancy_signs
+  leak: moderate
+- id: gestational_age
+  kind: history
+  type: categorical
+  label_vi: "Tuổi thai"
+  question_vi: "Thai được bao nhiêu tuần?"
+  options:
+    - { id: lt_20w, label_vi: "Dưới 20 tuần (dưới 5 tháng)" }
+    - { id: ge_20w, label_vi: "Từ 20 tuần trở lên" }
+  baseline: { lt_20w: 0.5, ge_20w: 0.5 }
+  requires:
+    - { finding: pregnant, is: present }
+- id: recent_childbirth
+  kind: history
+  type: binary
+  label_vi: "Vừa sinh con trong 6 tuần"
+  question_vi: "Có sinh con trong vòng 6 tuần qua không?"
+  applies_to:
+    sex: [female]
+    age_groups: [teen_13_17, adult_18_44, adult_45_64]
+  leak: specific
+- id: missed_period
+  kind: history
+  type: binary
+  label_vi: "Chậm kinh"
+  question_vi: "Lần này có bị chậm kinh hoặc mất kinh không?"
+  applies_to:
+    sex: [female]
+    age_groups: [teen_13_17, adult_18_44, adult_45_64]
+  cluster: pregnancy_signs
+  leak: moderate
+- id: vaginal_bleeding
+  kind: sign
+  type: binary
+  label_vi: "Ra máu âm đạo bất thường"
+  question_vi: "Có ra máu âm đạo bất thường (không phải kỳ kinh) không?"
+  alt_question:
+    text_vi: "Ngoài kỳ kinh, có thấy máu ở quần lót hoặc băng vệ sinh không?"
+  applies_to:
+    sex: [female]
+    age_groups: [teen_13_17, adult_18_44, adult_45_64, elder_65_74, elder_75p]
+  leak: moderate
+- id: abnormal_vaginal_discharge
+  kind: sign
+  type: binary
+  label_vi: "Khí hư bất thường"
+  question_vi: "Có ra khí hư (huyết trắng) nhiều, có mùi hoặc màu lạ không?"
+  applies_to:
+    sex: [female]
+    age_groups: [teen_13_17, adult_18_44, adult_45_64, elder_65_74, elder_75p]
+  leak: moderate
+- id: pain_with_menses
+  kind: history
+  type: binary
+  label_vi: "Đau trùng với kỳ kinh"
+  question_vi: "Cơn đau có xuất hiện đúng vào kỳ kinh không?"
+  requires:
+    - { finding: abdominal_pain, is: present }
+  applies_to:
+    sex: [female]
+    age_groups: [teen_13_17, adult_18_44, adult_45_64]
+  leak: moderate
+- id: pain_with_intercourse
+  kind: symptom
+  type: binary
+  label_vi: "Đau khi quan hệ tình dục"
+  question_vi: "Có đau bụng dưới khi quan hệ tình dục không?"
+  applies_to:
+    sex: [female]
+    age_groups: [teen_13_17, adult_18_44, adult_45_64]
+  cost: 3
+  sensitive: true
+  leak: moderate
+- id: new_sexual_partner
+  kind: exposure
+  type: binary
+  label_vi: "Có bạn tình mới"
+  question_vi: "Trong 3 tháng qua, có bạn tình mới hoặc nhiều bạn tình không?"
+  applies_to:
+    sex: [female]
+    age_groups: [teen_13_17, adult_18_44, adult_45_64]
+  cost: 3
+  sensitive: true
+  leak: moderate

@@ -1,0 +1,36 @@
+# Phạm vi đợt thử nghiệm (Giai đoạn 1): 3 triệu chứng chính, 33 bệnh, chia 4 lô soạn.
+# suggested_urgency / suggested_cant_miss chỉ là gợi ý ban đầu của người bảo trì;
+# agent soạn bệnh phải đối chiếu với hướng dẫn chính thức và quyết định lại (ghi lý do).
+- { id: common_cold, name_vi: "Cảm lạnh (viêm mũi họng cấp)", complaints: [fever, headache], batch: 1, suggested_urgency: 5, suggested_cant_miss: false }
+- { id: influenza, name_vi: "Cúm mùa", complaints: [fever, headache], batch: 1, suggested_urgency: 5, suggested_cant_miss: false }
+- { id: covid19, name_vi: "COVID-19", complaints: [fever, headache], batch: 1, suggested_urgency: 5, suggested_cant_miss: false }
+- { id: pneumonia, name_vi: "Viêm phổi", complaints: [fever, abdominal_pain], batch: 1, suggested_urgency: 3, suggested_cant_miss: false }
+- { id: measles, name_vi: "Sởi", complaints: [fever], batch: 1, suggested_urgency: 3, suggested_cant_miss: false }
+- { id: acute_otitis_media, name_vi: "Viêm tai giữa cấp", complaints: [fever], batch: 1, suggested_urgency: 4, suggested_cant_miss: false }
+- { id: hand_foot_mouth_disease, name_vi: "Bệnh tay chân miệng", complaints: [fever], batch: 1, suggested_urgency: 3, suggested_cant_miss: false }
+- { id: acute_sinusitis, name_vi: "Viêm mũi xoang cấp", complaints: [headache, fever], batch: 1, suggested_urgency: 5, suggested_cant_miss: false }
+- { id: dengue, name_vi: "Sốt xuất huyết Dengue", complaints: [fever, headache, abdominal_pain], batch: 2, suggested_urgency: 3, suggested_cant_miss: false }
+- { id: malaria, name_vi: "Sốt rét", complaints: [fever, headache], batch: 2, suggested_urgency: 3, suggested_cant_miss: false }
+- { id: scrub_typhus, name_vi: "Sốt mò", complaints: [fever, headache], batch: 2, suggested_urgency: 3, suggested_cant_miss: false }
+- { id: typhoid_fever, name_vi: "Sốt thương hàn", complaints: [fever, abdominal_pain, headache], batch: 2, suggested_urgency: 3, suggested_cant_miss: false }
+- { id: sepsis, name_vi: "Nhiễm khuẩn huyết", complaints: [fever], batch: 2, suggested_urgency: 1, suggested_cant_miss: true }
+- { id: bacterial_meningitis, name_vi: "Viêm màng não do vi khuẩn", complaints: [fever, headache], batch: 2, suggested_urgency: 2, suggested_cant_miss: true }
+- { id: acute_pyelonephritis, name_vi: "Viêm thận – bể thận cấp", complaints: [fever, abdominal_pain], batch: 2, suggested_urgency: 3, suggested_cant_miss: false }
+- { id: acute_gastroenteritis, name_vi: "Viêm dạ dày – ruột cấp (tiêu chảy cấp, ngộ độc thực phẩm)", complaints: [abdominal_pain, fever], batch: 3, suggested_urgency: 5, suggested_cant_miss: false }
+- { id: acute_appendicitis, name_vi: "Viêm ruột thừa cấp", complaints: [abdominal_pain, fever], batch: 3, suggested_urgency: 2, suggested_cant_miss: true }
+- { id: peptic_ulcer_gastritis, name_vi: "Viêm, loét dạ dày – tá tràng", complaints: [abdominal_pain], batch: 3, suggested_urgency: 4, suggested_cant_miss: false }
+- { id: acute_cholecystitis, name_vi: "Viêm túi mật cấp", complaints: [abdominal_pain, fever], batch: 3, suggested_urgency: 2, suggested_cant_miss: false }
+- { id: acute_pancreatitis, name_vi: "Viêm tụy cấp", complaints: [abdominal_pain], batch: 3, suggested_urgency: 2, suggested_cant_miss: true }
+- { id: renal_colic, name_vi: "Cơn đau quặn thận (sỏi tiết niệu)", complaints: [abdominal_pain], batch: 3, suggested_urgency: 3, suggested_cant_miss: false }
+- { id: cystitis, name_vi: "Viêm bàng quang (nhiễm khuẩn tiết niệu dưới)", complaints: [abdominal_pain], batch: 3, suggested_urgency: 4, suggested_cant_miss: false }
+- { id: bowel_obstruction, name_vi: "Tắc ruột", complaints: [abdominal_pain], batch: 3, suggested_urgency: 2, suggested_cant_miss: true }
+- { id: intussusception, name_vi: "Lồng ruột", complaints: [abdominal_pain], batch: 3, suggested_urgency: 2, suggested_cant_miss: true }
+- { id: ectopic_pregnancy, name_vi: "Chửa ngoài tử cung", complaints: [abdominal_pain], batch: 4, suggested_urgency: 2, suggested_cant_miss: true }
+- { id: pelvic_inflammatory_disease, name_vi: "Viêm vùng chậu (viêm phần phụ)", complaints: [abdominal_pain, fever], batch: 4, suggested_urgency: 3, suggested_cant_miss: false }
+- { id: primary_dysmenorrhea, name_vi: "Đau bụng kinh nguyên phát", complaints: [abdominal_pain], batch: 4, suggested_urgency: 5, suggested_cant_miss: false }
+- { id: preeclampsia, name_vi: "Tiền sản giật", complaints: [headache, abdominal_pain], batch: 4, suggested_urgency: 2, suggested_cant_miss: true }
+- { id: acute_coronary_syndrome, name_vi: "Hội chứng vành cấp (nhồi máu cơ tim)", complaints: [abdominal_pain], batch: 4, suggested_urgency: 1, suggested_cant_miss: true }
+- { id: tension_type_headache, name_vi: "Đau đầu do căng thẳng", complaints: [headache], batch: 4, suggested_urgency: 5, suggested_cant_miss: false }
+- { id: migraine, name_vi: "Đau nửa đầu (migraine)", complaints: [headache], batch: 4, suggested_urgency: 5, suggested_cant_miss: false }
+- { id: subarachnoid_hemorrhage, name_vi: "Xuất huyết dưới nhện", complaints: [headache], batch: 4, suggested_urgency: 1, suggested_cant_miss: true }
+- { id: stroke, name_vi: "Đột quỵ não", complaints: [headache], batch: 4, suggested_urgency: 1, suggested_cant_miss: true }

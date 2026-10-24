@@ -1,0 +1,12 @@
+# Màn sàng lọc cấp cứu: hỏi đầu tiên, trước cả tuổi và giới.
+# Chọn bất kỳ mục nào thì dừng ngay và hiện màn "Gọi 115".
+title_vi: "Có dấu hiệu nào sau đây không?"
+none_label_vi: "Không có dấu hiệu nào ở trên"
+items:
+  - { finding: es_unresponsive_or_seizing, level: 1 }
+  - { finding: es_severe_breathing, level: 1 }
+  - { finding: es_crushing_chest_pain, level: 1 }
+  - { finding: es_stroke_signs, level: 1 }
+  - { finding: es_severe_bleeding, level: 1 }
+  - { finding: es_anaphylaxis, level: 1 }
+  - { finding: es_self_harm, level: 1 }

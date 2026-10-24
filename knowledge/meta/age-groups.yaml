@@ -1,0 +1,33 @@
+# Nhóm tuổi tính theo tháng: min_months tính cả, max_months không tính.
+- id: infant_0_2m
+  label_vi: "Dưới 2 tháng tuổi"
+  min_months: 0
+  max_months: 2
+- id: child_2m_5y
+  label_vi: "Từ 2 tháng đến dưới 5 tuổi"
+  min_months: 2
+  max_months: 60
+- id: child_5_12
+  label_vi: "Từ 5 đến 12 tuổi"
+  min_months: 60
+  max_months: 156
+- id: teen_13_17
+  label_vi: "Từ 13 đến 17 tuổi"
+  min_months: 156
+  max_months: 216
+- id: adult_18_44
+  label_vi: "Từ 18 đến 44 tuổi"
+  min_months: 216
+  max_months: 540
+- id: adult_45_64
+  label_vi: "Từ 45 đến 64 tuổi"
+  min_months: 540
+  max_months: 780
+- id: elder_65_74
+  label_vi: "Từ 65 đến 74 tuổi"
+  min_months: 780
+  max_months: 900
+- id: elder_75p
+  label_vi: "Từ 75 tuổi trở lên"
+  min_months: 900
+  max_months: null

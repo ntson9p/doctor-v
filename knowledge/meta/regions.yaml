@@ -1,0 +1,8 @@
+- id: north
+  label_vi: "Miền Bắc"
+- id: central
+  label_vi: "Miền Trung"
+- id: highlands
+  label_vi: "Tây Nguyên"
+- id: south
+  label_vi: "Miền Nam"

@@ -1,0 +1,39 @@
+# Danh sách đề xuất (chưa có danh mục chuẩn chính thức đã xác minh; xem docs/research/vietnam-sources.md).
+- id: emergency
+  label_vi: "Cấp cứu"
+- id: general_medicine
+  label_vi: "Khám bệnh đa khoa (Nội tổng quát)"
+- id: pediatrics
+  label_vi: "Nhi khoa"
+- id: infectious_disease
+  label_vi: "Truyền nhiễm (Bệnh nhiệt đới)"
+- id: respiratory
+  label_vi: "Hô hấp"
+- id: cardiology
+  label_vi: "Tim mạch"
+- id: neurology
+  label_vi: "Thần kinh"
+- id: gastroenterology
+  label_vi: "Tiêu hóa – Gan mật"
+- id: general_surgery
+  label_vi: "Ngoại khoa (Ngoại tổng quát)"
+- id: urology
+  label_vi: "Tiết niệu"
+- id: nephrology
+  label_vi: "Thận (Nội thận)"
+- id: obstetrics_gynecology
+  label_vi: "Sản phụ khoa"
+- id: ent
+  label_vi: "Tai Mũi Họng"
+- id: ophthalmology
+  label_vi: "Mắt"
+- id: dermatology
+  label_vi: "Da liễu"
+- id: endocrinology
+  label_vi: "Nội tiết"
+- id: musculoskeletal
+  label_vi: "Cơ xương khớp"
+- id: mental_health
+  label_vi: "Sức khỏe tâm thần"
+- id: dentistry
+  label_vi: "Răng Hàm Mặt"

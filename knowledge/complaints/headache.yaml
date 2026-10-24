@@ -1,0 +1,30 @@
+id: headache
+label_vi: "Đau đầu"
+icon: head
+synonyms_vi:
+  - "nhức đầu"
+  - "đau nửa đầu"
+  - "căng đầu"
+  - "nặng đầu"
+  - "đau sau gáy"
+  - "đau thái dương"
+description_vi: "Đau ở vùng đầu, trán, thái dương hoặc sau gáy."
+implies: [headache]
+age_groups: [child_2m_5y, child_5_12, teen_13_17, adult_18_44, adult_45_64, elder_65_74, elder_75p]
+red_flags:
+  - group: child_danger_signs
+  - group: headache_red_flags
+  - finding: pregnant
+  - finding: gestational_age
+  - finding: recent_childbirth
+intake: [headache_associated, chronic_conditions]
+# Điền sau khi các bệnh của đợt thử nghiệm đã có trong knowledge/conditions/.
+cant_miss: []
+safety_net:
+  - headache_thunderclap
+  - neck_stiffness
+  - confusion
+  - vision_loss_or_double
+  - seizure_recent
+  - es_stroke_signs
+sources: [nice-cg150]

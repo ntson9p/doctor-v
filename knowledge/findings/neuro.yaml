@@ -1,0 +1,151 @@
+# Thần kinh, đau đầu, mắt.
+- id: headache
+  kind: symptom
+  type: binary
+  label_vi: "Đau đầu"
+  question_vi: "Có đau đầu không?"
+  leak: nonspecific
+  leak_by_complaint: { abdominal_pain: moderate }
+- id: headache_thunderclap
+  kind: symptom
+  type: binary
+  label_vi: "Đau đầu đột ngột, dữ dội nhất từ trước tới nay"
+  question_vi: "Cơn đau đầu có đến đột ngột, dữ dội nhất từ trước tới nay không?"
+  help_vi: "Đau lên mức mạnh nhất chỉ trong vài phút, như bị đánh mạnh vào đầu."
+  alt_question:
+    text_vi: "Cơn đau có bùng lên rất mạnh chỉ trong vài phút không?"
+  requires:
+    - { finding: headache, is: present }
+  leak: specific
+- id: headache_course
+  kind: history
+  type: categorical
+  label_vi: "Kiểu đau đầu"
+  question_vi: "Trước đây đã từng bị kiểu đau đầu này chưa?"
+  options:
+    - { id: first_time, label_vi: "Lần đầu bị như vậy" }
+    - { id: recurrent_similar, label_vi: "Đã bị nhiều lần, giống lần này" }
+    - { id: progressive, label_vi: "Nặng dần lên trong vài tuần nay" }
+  baseline: { first_time: 0.35, recurrent_similar: 0.55, progressive: 0.10 }
+  requires:
+    - { finding: headache, is: present }
+- id: headache_duration
+  kind: history
+  type: categorical
+  label_vi: "Thời gian đau đầu"
+  question_vi: "Cơn đau đầu lần này đã kéo dài bao lâu?"
+  options:
+    - { id: lt_4h, label_vi: "Dưới 4 giờ" }
+    - { id: h4_72, label_vi: "Từ 4 giờ đến 3 ngày" }
+    - { id: gt_3d, label_vi: "Hơn 3 ngày" }
+  baseline: { lt_4h: 0.35, h4_72: 0.45, gt_3d: 0.20 }
+  requires:
+    - { finding: headache, is: present }
+- id: headache_location
+  kind: symptom
+  type: categorical
+  label_vi: "Vị trí đau đầu"
+  question_vi: "Đau ở vùng nào của đầu?"
+  options:
+    - { id: one_side, label_vi: "Một bên đầu" }
+    - { id: both_sides, label_vi: "Cả hai bên đầu" }
+    - { id: forehead_face, label_vi: "Vùng trán, quanh mắt hoặc mặt" }
+    - { id: back_neck, label_vi: "Phía sau đầu, gáy" }
+    - { id: whole_head, label_vi: "Khắp đầu" }
+  baseline: { one_side: 0.20, both_sides: 0.25, forehead_face: 0.20, back_neck: 0.15, whole_head: 0.20 }
+  requires:
+    - { finding: headache, is: present }
+- id: headache_character
+  kind: symptom
+  type: categorical
+  label_vi: "Cảm giác đau đầu"
+  question_vi: "Cảm giác đau đầu giống kiểu nào hơn?"
+  options:
+    - { id: throbbing, label_vi: "Giật giật theo nhịp mạch" }
+    - { id: pressing, label_vi: "Bó chặt hoặc đè nặng" }
+  baseline: { throbbing: 0.4, pressing: 0.6 }
+  requires:
+    - { finding: headache, is: present }
+- id: headache_severity
+  kind: symptom
+  type: categorical
+  label_vi: "Mức độ đau đầu"
+  question_vi: "Đau đầu ở mức nào?"
+  options:
+    - { id: mild, label_vi: "Nhẹ, vẫn làm việc được" }
+    - { id: moderate, label_vi: "Vừa, phải nghỉ ngơi" }
+    - { id: severe, label_vi: "Rất đau, không làm gì được" }
+  baseline: { mild: 0.4, moderate: 0.4, severe: 0.2 }
+  requires:
+    - { finding: headache, is: present }
+- id: headache_worse_activity
+  kind: symptom
+  type: binary
+  label_vi: "Đau đầu tăng khi vận động"
+  question_vi: "Đau đầu có tăng lên khi đi lại, leo cầu thang không?"
+  requires:
+    - { finding: headache, is: present }
+  leak: moderate
+- id: photophobia
+  kind: symptom
+  type: binary
+  label_vi: "Sợ ánh sáng"
+  question_vi: "Ánh sáng có làm khó chịu hơn hẳn bình thường không?"
+  cluster: light_sound
+  leak: moderate
+- id: phonophobia
+  kind: symptom
+  type: binary
+  label_vi: "Sợ tiếng ồn"
+  question_vi: "Tiếng ồn có làm khó chịu hơn hẳn bình thường không?"
+  cluster: light_sound
+  leak: moderate
+- id: visual_aura
+  kind: symptom
+  type: binary
+  label_vi: "Thấy chớp sáng trước cơn đau"
+  question_vi: "Trước cơn đau, có thấy chớp sáng hoặc đường gợn sóng không?"
+  requires:
+    - { finding: headache, is: present }
+  cluster: visual
+  leak: specific
+- id: blurred_vision
+  kind: symptom
+  type: binary
+  label_vi: "Nhìn mờ, thấy đốm sáng"
+  question_vi: "Có nhìn mờ, hoặc thấy đốm sáng, đom đóm trước mắt không?"
+  cluster: visual
+  leak: moderate
+- id: vision_loss_or_double
+  kind: symptom
+  type: binary
+  label_vi: "Đột ngột mất thị lực hoặc nhìn đôi"
+  question_vi: "Có đột ngột mất một phần thị lực, hoặc nhìn một thành hai không?"
+  alt_question:
+    text_vi: "Mắt có đột ngột nhìn kém hẳn đi so với trước không?"
+  cluster: visual
+  leak: specific
+- id: neck_stiffness
+  kind: sign
+  type: binary
+  label_vi: "Cứng gáy"
+  question_vi: "Có cứng gáy (cổ cứng, khó cúi đầu xuống) không?"
+  help_vi: "Cứng gáy là khi cổ cứng, đau, không cúi được cằm chạm ngực."
+  alt_question:
+    text_vi: "Có cúi đầu cho cằm chạm ngực được không?"
+    inverted: true
+  leak: specific
+- id: headache_after_head_injury
+  kind: history
+  type: binary
+  label_vi: "Đau đầu sau va đập đầu"
+  question_vi: "Đau đầu có xuất hiện sau khi bị ngã hoặc va đập đầu không?"
+  requires:
+    - { finding: headache, is: present }
+  leak: specific
+- id: stress_poor_sleep
+  kind: history
+  type: binary
+  label_vi: "Căng thẳng hoặc thiếu ngủ"
+  question_vi: "Trong tuần qua có căng thẳng, lo lắng hoặc thiếu ngủ không?"
+  leak: nonspecific

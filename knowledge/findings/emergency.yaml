@@ -1,0 +1,68 @@
+# Dấu hiệu cấp cứu của màn sàng lọc đầu tiên (rules/emergency-screen.yaml).
+- id: es_unresponsive_or_seizing
+  kind: sign
+  type: binary
+  label_vi: "Bất tỉnh hoặc đang co giật"
+  question_vi: "Có đang bất tỉnh, gọi không tỉnh, hoặc đang co giật không?"
+  help_vi: "Bất tỉnh là khi gọi to, lay nhẹ vai mà không mở mắt, không đáp lại."
+  alt_question:
+    text_vi: "Khi gọi to và lay nhẹ vai, có mở mắt đáp lại không?"
+    inverted: true
+  leak: specific
+- id: es_severe_breathing
+  kind: sign
+  type: binary
+  label_vi: "Khó thở dữ dội"
+  question_vi: "Có khó thở dữ dội, thở rít, hoặc môi tím tái không?"
+  help_vi: "Ví dụ: thở rất gấp, không nói được trọn câu, môi hoặc đầu ngón tay tím."
+  alt_question:
+    text_vi: "Có nói được trọn một câu mà không phải dừng lại thở không?"
+    inverted: true
+  leak: specific
+- id: es_crushing_chest_pain
+  kind: symptom
+  type: binary
+  label_vi: "Đau thắt ngực dữ dội"
+  question_vi: "Có đau thắt hoặc đè nặng ngực dữ dội, kèm vã mồ hôi không?"
+  help_vi: "Đau như bị đè ép giữa ngực, có thể lan lên cổ, hàm hoặc tay trái."
+  alt_question:
+    text_vi: "Có đau hoặc tức nặng giữa ngực kéo dài hơn 15 phút không?"
+  cluster: chest_pain
+  leak: specific
+- id: es_stroke_signs
+  kind: sign
+  type: binary
+  label_vi: "Dấu hiệu đột quỵ"
+  question_vi: "Có đột ngột méo miệng, yếu tê một bên người, hoặc nói khó không?"
+  help_vi: "Nhờ người bệnh cười, giơ hai tay và nói một câu. Một bên yếu hơn hoặc nói ngọng là dấu hiệu nguy hiểm."
+  alt_question:
+    text_vi: "Khi cười và giơ hai tay lên, hai bên có đều nhau không?"
+    inverted: true
+  leak: specific
+- id: es_severe_bleeding
+  kind: sign
+  type: binary
+  label_vi: "Chảy máu nhiều"
+  question_vi: "Có đang chảy máu nhiều, ép chặt mà không cầm được không?"
+  alt_question:
+    text_vi: "Ép chặt vết thương mà máu vẫn thấm ướt khăn không?"
+  leak: specific
+- id: es_anaphylaxis
+  kind: sign
+  type: binary
+  label_vi: "Dị ứng nặng"
+  question_vi: "Có sưng môi, lưỡi hoặc khó thở sau ăn, uống thuốc, bị đốt không?"
+  help_vi: "Ví dụ: sau khi ăn hải sản, dùng hoặc tiêm thuốc, hoặc bị ong đốt."
+  alt_question:
+    text_vi: "Môi, lưỡi hoặc mặt có đang sưng to lên không?"
+  leak: specific
+- id: es_self_harm
+  kind: symptom
+  type: binary
+  label_vi: "Có ý định tự làm hại bản thân"
+  question_vi: "Có đang có ý định tự làm hại bản thân không?"
+  help_vi: "Nếu có, hãy gọi 115 hoặc đến cơ sở y tế gần nhất, và nhờ người thân ở bên cạnh."
+  alt_question:
+    text_vi: "Có đang nghĩ đến việc tự tử không?"
+  sensitive: true
+  leak: specific

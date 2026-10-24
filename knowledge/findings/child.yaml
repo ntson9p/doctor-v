@@ -1,0 +1,136 @@
+# Dấu hiệu riêng ở trẻ em (dấu hiệu nguy hiểm theo IMCI của WHO, mất nước, tay chân miệng, lồng ruột).
+- id: child_unable_to_drink
+  kind: sign
+  type: binary
+  label_vi: "Không uống được, không bú được"
+  question_vi: "Bé có không uống được hoặc không bú được không?"
+  alt_question:
+    text_vi: "Khi cho uống nước hoặc cho bú, bé có uống, bú được không?"
+    inverted: true
+  applies_to:
+    age_groups: [child_2m_5y]
+  leak: specific
+- id: child_vomits_everything
+  kind: sign
+  type: binary
+  label_vi: "Nôn ra tất cả mọi thứ"
+  question_vi: "Bé có nôn ra tất cả mọi thứ ăn, uống vào không?"
+  alt_question:
+    text_vi: "Trong vài giờ qua, bé có giữ được chút sữa hoặc nước nào không?"
+    inverted: true
+  applies_to:
+    age_groups: [child_2m_5y]
+  cluster: vomiting
+  leak: specific
+- id: young_infant_not_feeding
+  kind: sign
+  type: binary
+  label_vi: "Bú kém hoặc bỏ bú"
+  question_vi: "Bé có bú kém hoặc bỏ bú không?"
+  alt_question:
+    text_vi: "Hôm nay bé có bú được như mọi ngày không?"
+    inverted: true
+  applies_to:
+    age_groups: [infant_0_2m]
+  leak: specific
+- id: young_infant_fast_breathing
+  kind: sign
+  type: binary
+  label_vi: "Thở nhanh, rút lõm lồng ngực"
+  question_vi: "Bé có thở nhanh, hoặc lồng ngực rút lõm khi thở không?"
+  help_vi: "Rút lõm lồng ngực là khi bé hít vào, phần dưới lồng ngực lõm sâu xuống."
+  alt_question:
+    text_vi: "Khi bé nằm yên, có thấy bé thở gấp hơn bình thường không?"
+  applies_to:
+    age_groups: [infant_0_2m]
+  leak: specific
+- id: young_infant_low_temp
+  kind: sign
+  type: binary
+  label_vi: "Người lạnh, nhiệt độ thấp"
+  question_vi: "Người bé có lạnh, nhiệt độ dưới 35,5°C không?"
+  alt_question:
+    text_vi: "Sờ ngực, bụng bé có thấy lạnh hơn bình thường không?"
+  applies_to:
+    age_groups: [infant_0_2m]
+  leak: specific
+- id: young_infant_reduced_movement
+  kind: sign
+  type: binary
+  label_vi: "Ít cử động"
+  question_vi: "Bé chỉ cử động khi bị kích thích, hoặc không cử động không?"
+  alt_question:
+    text_vi: "Khi thức, bé có tự cử động chân tay như mọi ngày không?"
+    inverted: true
+  applies_to:
+    age_groups: [infant_0_2m]
+  leak: specific
+- id: bulging_fontanelle
+  kind: sign
+  type: binary
+  label_vi: "Thóp phồng"
+  question_vi: "Thóp (chỗ mềm trên đỉnh đầu) của bé có phồng căng không?"
+  alt_question:
+    text_vi: "Khi bé nằm yên, sờ nhẹ đỉnh đầu có thấy căng phồng không?"
+  applies_to:
+    age_groups: [infant_0_2m, child_2m_5y]
+  leak: specific
+- id: sunken_eyes
+  kind: sign
+  type: binary
+  label_vi: "Mắt trũng"
+  question_vi: "Mắt bé có trũng sâu hơn bình thường không?"
+  applies_to:
+    age_groups: [child_2m_5y, child_5_12]
+  leak: specific
+- id: startle_myoclonus
+  kind: sign
+  type: binary
+  label_vi: "Giật mình, chới với"
+  question_vi: "Bé có hay giật mình, chới với, nhất là khi ngủ không?"
+  applies_to:
+    age_groups: [child_2m_5y, child_5_12]
+  leak: specific
+- id: red_jelly_stool
+  kind: sign
+  type: binary
+  label_vi: "Phân nhầy máu như mứt dâu"
+  question_vi: "Phân có nhầy lẫn máu đỏ, giống mứt dâu không?"
+  alt_question:
+    text_vi: "Tã hoặc bô của bé có dính chất nhầy màu đỏ sẫm không?"
+  applies_to:
+    age_groups: [child_2m_5y, child_5_12]
+  leak: specific
+- id: episodic_crying_legs_drawn
+  kind: sign
+  type: binary
+  label_vi: "Khóc thét từng cơn, co chân lên bụng"
+  question_vi: "Bé có khóc thét từng cơn, co chân lên bụng rồi lại nằm yên không?"
+  applies_to:
+    age_groups: [child_2m_5y]
+  leak: specific
+- id: measles_vaccinated
+  kind: risk_factor
+  type: binary
+  label_vi: "Đã tiêm đủ vắc xin sởi"
+  question_vi: "Đã tiêm đủ 2 mũi vắc xin phòng sởi chưa?"
+  help_vi: "Xem sổ tiêm chủng. Chọn 'Không rõ' nếu không nhớ."
+  applies_to:
+    age_groups: [child_2m_5y, child_5_12, teen_13_17]
+  unknown_rate: 0.3
+  leak: 0.85
+  leak_note: "Tỷ lệ tiêm vắc xin sởi trong tiêm chủng mở rộng ở Việt Nam cao; giá trị này là ước tính, cần thay bằng số liệu chính thức."
+- id: measles_contact
+  kind: exposure
+  type: binary
+  label_vi: "Tiếp xúc người bị sởi"
+  question_vi: "Trong 3 tuần qua, có tiếp xúc người bị sởi không?"
+  leak: specific
+- id: hfmd_contact
+  kind: exposure
+  type: binary
+  label_vi: "Gần trẻ bị tay chân miệng"
+  question_vi: "Ở nhà hoặc lớp học có trẻ đang bị tay chân miệng không?"
+  applies_to:
+    age_groups: [child_2m_5y, child_5_12]
+  leak: specific

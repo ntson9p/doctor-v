@@ -1,0 +1,49 @@
+# Cụm dấu hiệu hay đi cùng nhau; bộ suy luận giảm trọng số để tránh "đếm trùng".
+- id: aches
+  rho: medium
+  label_vi: "Đau nhức cơ, khớp"
+  rationale_vi: "Đau cơ và đau khớp thường cùng xuất hiện trong các bệnh sốt do vi rút."
+- id: shock_signs
+  rho: medium
+  label_vi: "Dấu hiệu sốc"
+  rationale_vi: "Mệt lả và tay chân lạnh cùng phản ánh tình trạng tuần hoàn kém."
+- id: hfmd_lesions
+  rho: medium
+  label_vi: "Tổn thương tay chân miệng"
+  rationale_vi: "Loét miệng và phỏng nước ở tay chân thường cùng xuất hiện trong bệnh tay chân miệng."
+- id: altered_consciousness
+  rho: high
+  label_vi: "Rối loạn tri giác"
+  rationale_vi: "Lú lẫn và li bì là hai mức của cùng một tình trạng."
+- id: vomiting
+  rho: high
+  label_vi: "Buồn nôn, nôn"
+  rationale_vi: "Buồn nôn, nôn và nôn liên tục là các mức của cùng một triệu chứng."
+- id: nasal
+  rho: medium
+  label_vi: "Triệu chứng mũi"
+  rationale_vi: "Sổ mũi và nghẹt mũi thường đi cùng nhau."
+- id: light_sound
+  rho: medium
+  label_vi: "Sợ ánh sáng, tiếng ồn"
+  rationale_vi: "Sợ ánh sáng và sợ tiếng ồn thường cùng có trong cơn đau nửa đầu."
+- id: visual
+  rho: medium
+  label_vi: "Triệu chứng thị giác"
+  rationale_vi: "Chớp sáng, nhìn mờ và mất thị lực là các biểu hiện thị giác có liên quan với nhau."
+- id: lower_urinary
+  rho: medium
+  label_vi: "Triệu chứng đường tiểu dưới"
+  rationale_vi: "Tiểu buốt và tiểu nhiều lần thường cùng xuất hiện khi viêm bàng quang."
+- id: pregnancy_signs
+  rho: high
+  label_vi: "Dấu hiệu có thai"
+  rationale_vi: "Chậm kinh và có thai gần như là cùng một thông tin."
+- id: chest_pain
+  rho: high
+  label_vi: "Đau ngực"
+  rationale_vi: "Đau thắt ngực dữ dội và đau tức ngực là hai mức của cùng một triệu chứng."
+- id: gi_bleeding
+  rho: medium
+  label_vi: "Xuất huyết tiêu hóa"
+  rationale_vi: "Nôn ra máu và đi ngoài phân đen cùng phản ánh chảy máu đường tiêu hóa trên."

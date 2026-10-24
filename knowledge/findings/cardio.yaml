@@ -1,0 +1,48 @@
+# Tim mạch, huyết áp.
+- id: chest_pain_pressure
+  kind: symptom
+  type: binary
+  label_vi: "Đau, tức nặng giữa ngực"
+  question_vi: "Có đau hoặc tức nặng ở giữa ngực không?"
+  alt_question:
+    text_vi: "Có cảm giác bị đè ép hoặc thắt chặt ở ngực không?"
+  cluster: chest_pain
+  leak: moderate
+- id: pain_radiates_arm_jaw
+  kind: symptom
+  type: binary
+  label_vi: "Đau lan lên cổ, hàm, tay trái"
+  question_vi: "Cơn đau có lan lên cổ, hàm, vai hoặc tay trái không?"
+  requires:
+    - any:
+        - { finding: chest_pain_pressure, is: present }
+        - { finding: abdominal_pain, is: present }
+  leak: specific
+- id: cold_sweat
+  kind: sign
+  type: binary
+  label_vi: "Vã mồ hôi lạnh"
+  question_vi: "Có vã mồ hôi lạnh không?"
+  leak: moderate
+- id: bp_measured
+  kind: measurement
+  type: categorical
+  label_vi: "Huyết áp đo được"
+  question_vi: "Huyết áp đo được gần nhất là bao nhiêu?"
+  help_vi: "Chọn 'Không rõ' nếu chưa đo. Ví dụ 150/95 nghĩa là số trên 150, số dưới 95."
+  options:
+    - { id: normal, label_vi: "Dưới 140/90 mmHg" }
+    - { id: high, label_vi: "Từ 140/90 đến dưới 160/110 mmHg" }
+    - { id: very_high, label_vi: "Từ 160/110 đến dưới 180/120 mmHg" }
+    - { id: extreme, label_vi: "Từ 180/120 mmHg trở lên" }
+  baseline: { normal: 0.75, high: 0.18, very_high: 0.05, extreme: 0.02 }
+  applies_to:
+    age_groups: [teen_13_17, adult_18_44, adult_45_64, elder_65_74, elder_75p]
+  cost: 2
+  unknown_rate: 0.5
+- id: edema_face_hands
+  kind: sign
+  type: binary
+  label_vi: "Phù mặt, phù tay mới xuất hiện"
+  question_vi: "Có sưng phù mặt hoặc bàn tay mới xuất hiện không?"
+  leak: moderate

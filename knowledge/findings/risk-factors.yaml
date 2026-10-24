@@ -1,0 +1,74 @@
+# Yếu tố nguy cơ và bệnh nền (hỏi một lần, dùng cho nhiều bệnh).
+- id: immunocompromised
+  kind: risk_factor
+  type: binary
+  label_vi: "Sức đề kháng suy giảm"
+  question_vi: "Có bệnh hoặc dùng thuốc làm giảm sức đề kháng không?"
+  help_vi: "Ví dụ: đang điều trị ung thư, dùng thuốc corticoid kéo dài, nhiễm HIV, đã ghép tạng."
+  leak: moderate
+- id: diabetes
+  kind: risk_factor
+  type: binary
+  label_vi: "Đái tháo đường (tiểu đường)"
+  question_vi: "Có bị đái tháo đường (tiểu đường) không?"
+  applies_to:
+    age_groups: [teen_13_17, adult_18_44, adult_45_64, elder_65_74, elder_75p]
+  leak: 0.07
+  leak_note: "STEPS 2021: 7,1% người 18–69 tuổi có đái tháo đường (docs/research/vietnam-sources.md)."
+- id: hypertension_known
+  kind: risk_factor
+  type: binary
+  label_vi: "Tăng huyết áp"
+  question_vi: "Có bị tăng huyết áp (cao huyết áp) không?"
+  applies_to:
+    age_groups: [adult_18_44, adult_45_64, elder_65_74, elder_75p]
+  leak: 0.15
+  leak_note: "STEPS 2021: 26,2% có huyết áp cao, khoảng 6/10 chưa từng được phát hiện; tỷ lệ tự biết ước khoảng 10–15%."
+- id: known_heart_disease
+  kind: risk_factor
+  type: binary
+  label_vi: "Bệnh tim đã biết"
+  question_vi: "Có bệnh tim đã biết, như bệnh mạch vành hoặc suy tim không?"
+  applies_to:
+    age_groups: [adult_18_44, adult_45_64, elder_65_74, elder_75p]
+  leak: moderate
+- id: smoker
+  kind: risk_factor
+  type: binary
+  label_vi: "Hút thuốc lá, thuốc lào"
+  question_vi: "Có đang hút thuốc lá hoặc thuốc lào không?"
+  applies_to:
+    age_groups: [teen_13_17, adult_18_44, adult_45_64, elder_65_74, elder_75p]
+  leak: 0.2
+  leak_note: "Ước tính chung cho người trưởng thành (nam hút nhiều, nữ rất ít); cần thay bằng số liệu GATS Việt Nam."
+- id: heavy_alcohol
+  kind: risk_factor
+  type: binary
+  label_vi: "Uống nhiều rượu bia"
+  question_vi: "Có hay uống nhiều rượu bia, hoặc vừa uống rất nhiều không?"
+  applies_to:
+    age_groups: [teen_13_17, adult_18_44, adult_45_64, elder_65_74, elder_75p]
+  leak: 0.15
+  leak_note: "Ước tính chung cho người trưởng thành; cần thay bằng số liệu STEPS về uống rượu bia ở mức có hại."
+- id: regular_painkiller_use
+  kind: risk_factor
+  type: binary
+  label_vi: "Hay dùng thuốc giảm đau, thuốc xương khớp"
+  question_vi: "Có hay uống thuốc giảm đau hoặc thuốc xương khớp không?"
+  applies_to:
+    age_groups: [teen_13_17, adult_18_44, adult_45_64, elder_65_74, elder_75p]
+  leak: moderate
+- id: gallstones_known
+  kind: history
+  type: binary
+  label_vi: "Đã biết có sỏi mật"
+  question_vi: "Đã từng được bác sĩ nói là có sỏi mật không?"
+  applies_to:
+    age_groups: [teen_13_17, adult_18_44, adult_45_64, elder_65_74, elder_75p]
+  leak: moderate
+- id: previous_abdominal_surgery
+  kind: history
+  type: binary
+  label_vi: "Đã từng mổ bụng"
+  question_vi: "Đã từng mổ bụng (kể cả mổ đẻ) không?"
+  leak: moderate

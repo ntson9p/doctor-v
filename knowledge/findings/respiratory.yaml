@@ -1,0 +1,103 @@
+# Hô hấp, tai mũi họng.
+- id: cough
+  kind: symptom
+  type: binary
+  label_vi: "Ho"
+  question_vi: "Có ho không?"
+  leak: nonspecific
+  leak_by_complaint: { abdominal_pain: moderate, headache: moderate }
+- id: productive_cough
+  kind: symptom
+  type: binary
+  label_vi: "Ho có đờm"
+  question_vi: "Ho có đờm (đàm) không?"
+  requires:
+    - { finding: cough, is: present }
+  leak: nonspecific
+- id: runny_nose
+  kind: symptom
+  type: binary
+  label_vi: "Sổ mũi"
+  question_vi: "Có sổ mũi (chảy nước mũi) không?"
+  cluster: nasal
+  leak: nonspecific
+  leak_by_complaint: { abdominal_pain: moderate }
+- id: nasal_congestion
+  kind: symptom
+  type: binary
+  label_vi: "Nghẹt mũi"
+  question_vi: "Có nghẹt mũi (tắc mũi) không?"
+  cluster: nasal
+  leak: nonspecific
+  leak_by_complaint: { abdominal_pain: moderate }
+- id: sore_throat
+  kind: symptom
+  type: binary
+  label_vi: "Đau họng"
+  question_vi: "Có đau họng, nuốt đau không?"
+  leak: nonspecific
+  leak_by_complaint: { abdominal_pain: moderate, headache: moderate }
+- id: loss_of_smell_taste
+  kind: symptom
+  type: binary
+  label_vi: "Mất khả năng ngửi, nếm"
+  question_vi: "Có mất hoặc giảm hẳn khả năng ngửi mùi, nếm vị không?"
+  leak: specific
+- id: breathing_difficulty
+  kind: symptom
+  type: binary
+  label_vi: "Khó thở, thở nhanh"
+  question_vi: "Có khó thở, thở nhanh hoặc thở mệt hơn bình thường không?"
+  help_vi: "Ở trẻ nhỏ: thở nhanh, cánh mũi phập phồng, hoặc lồng ngực rút lõm khi hít vào."
+  alt_question:
+    text_vi: "Có phải ngừng nghỉ để thở khi nói hoặc đi lại không?"
+  leak: moderate
+- id: pleuritic_chest_pain
+  kind: symptom
+  type: binary
+  label_vi: "Đau ngực khi hít sâu, khi ho"
+  question_vi: "Có đau ngực khi hít sâu hoặc khi ho không?"
+  leak: moderate
+- id: ear_pain
+  kind: symptom
+  type: binary
+  label_vi: "Đau tai"
+  question_vi: "Có đau tai không?"
+  help_vi: "Trẻ nhỏ có thể hay kéo, dụi tai hoặc quấy khóc khi nằm."
+  leak: moderate
+- id: ear_discharge
+  kind: sign
+  type: binary
+  label_vi: "Chảy dịch, chảy mủ tai"
+  question_vi: "Có chảy dịch hoặc mủ từ tai ra không?"
+  leak: specific
+- id: facial_pain_pressure
+  kind: symptom
+  type: binary
+  label_vi: "Đau, nặng vùng trán, má"
+  question_vi: "Có đau hoặc nặng vùng trán, má, tăng lên khi cúi đầu không?"
+  leak: moderate
+- id: purulent_nasal_discharge
+  kind: sign
+  type: binary
+  label_vi: "Nước mũi đục, vàng xanh"
+  question_vi: "Nước mũi có đục, màu vàng hoặc xanh không?"
+  requires:
+    - { finding: runny_nose, is: present }
+  leak: nonspecific
+- id: nasal_symptoms_over_10_days
+  kind: history
+  type: binary
+  label_vi: "Sổ mũi, nghẹt mũi hơn 10 ngày"
+  question_vi: "Sổ mũi hoặc nghẹt mũi đã kéo dài hơn 10 ngày chưa?"
+  requires:
+    - any:
+        - { finding: runny_nose, is: present }
+        - { finding: nasal_congestion, is: present }
+  leak: moderate
+- id: sick_contact_respiratory
+  kind: exposure
+  type: binary
+  label_vi: "Tiếp xúc người đang sốt, ho"
+  question_vi: "Trong 7 ngày qua, có tiếp xúc gần người đang sốt hoặc ho không?"
+  leak: nonspecific

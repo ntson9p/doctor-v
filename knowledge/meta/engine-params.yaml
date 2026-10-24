@@ -1,0 +1,87 @@
+# Tham số số học của bộ suy luận. Ý nghĩa từng tham số: docs/engine-spec.md.
+# Giá trị khởi đầu lấy theo docs/research/symptom-checker-methodology.md (mục 4.3);
+# các tham số đánh dấu "tinh chỉnh" sẽ được hiệu chỉnh trên bộ ca phát triển.
+
+# "Trong 100 người bệnh, bao nhiêu người có dấu hiệu này" (docs/kb-guide.md, mục 2.1)
+frequency_levels:
+  rare: 0.025
+  occasional: 0.20
+  frequent: 0.50
+  very_frequent: 0.80
+  almost_always: 0.95
+
+# Tỷ lệ nền của dấu hiệu khi không có bệnh liên kết (kb-guide, mục 2.2)
+leak_levels:
+  specific: 0.01
+  moderate: 0.05
+  nonspecific: 0.20
+leak_floor: 0.001
+
+# Mức phổ biến ban đầu theo triệu chứng chính (kb-guide, mục 2.3)
+prior_levels:
+  P1: 0.30
+  P2: 0.10
+  P3: 0.02
+  P4: 0.005
+  P5: 0.0006
+  P6: 0.0001
+
+# Tương quan trong cụm dấu hiệu, dùng để giảm "đếm trùng"
+cluster_rho:
+  low: 0.2
+  medium: 0.5
+  high: 0.8
+
+# Xác suất ban đầu của "nguyên nhân khác" (bệnh chưa có trong hệ thống) — tinh chỉnh
+other_prior: 0.15
+# P(mức khẩn của "nguyên nhân khác" <= k), k = 1..4 (tích lũy)
+other_urgency_cumulative: [0.01, 0.05, 0.20, 0.50]
+
+# Hệ số nhiệt nhân vào tổng bằng chứng (0,5–1); 1 = chưa hiệu chỉnh — tinh chỉnh
+temperature: 1.0
+# Làm trơn phân bố của dấu hiệu nhiều lựa chọn
+categorical_smoothing: 0.02
+
+# Ngưỡng xác suất cộng dồn cho mức 1..4
+thresholds: [0.10, 0.02, 0.10, 0.25]
+# Ngưỡng riêng cho bệnh "không được bỏ sót" ở mức 1–2
+cant_miss_threshold: 0.01
+# Người từ 75 tuổi: dùng ngưỡng nhân với hệ số này
+elder_age_groups: [elder_75p]
+elder_threshold_factor: 0.5
+# Nhóm nguy cơ cao: dấu hiệu nguy hiểm "Không rõ" được tính đúng mức của quy tắc
+high_risk_age_groups: [infant_0_2m, child_2m_5y, elder_75p]
+high_risk_findings: [pregnant, immunocompromised]
+# Nhóm tuổi chỉ sàng lọc dấu hiệu nguy hiểm, không xếp hạng bệnh
+screen_only_age_groups: [infant_0_2m]
+# Không khuyên "theo dõi tại nhà" khi xác suất "nguyên nhân khác" vượt mức này
+self_care_block_other: 0.30
+
+# Ma trận tổn thất: trọng số phân loại thấp hơn mức cần, theo mức thật 1..4
+under_triage_weights: [49, 49, 9, 3]
+cant_miss_weight: 99
+# Trọng số thông tin chẩn đoán khi chọn câu hỏi: trước / sau khi mức xử trí ổn định
+lambda_before_stable: 0.1
+lambda_after_stable: 1.0
+
+stop:
+  triage_change_prob: 0.05
+  top3_mass: 0.80
+  min_eig_bits: 0.05
+  min_voi: 0.01
+  max_questions: 30
+  soft_max_questions: 20
+
+default_unknown_rate: 0.1
+# Bệnh mức 1–2 có xác suất từ mức này trở lên được đưa vào danh sách "Đi cấp cứu ngay nếu…"
+safety_net_min_prob: 0.005
+# Bỏ qua bệnh có xác suất dưới mức này khi tìm câu hỏi liên quan
+candidate_min_prob: 0.0005
+
+# Cách hiện con số %: làm tròn 5%, dưới 5% ghi "dưới 5%", không vượt 95%
+display:
+  round_to: 5
+  min_shown: 5
+  max_shown: 95
+# Chuyển thành true khi đạt chỉ tiêu hiệu chuẩn trên bộ ca giữ kín
+calibrated: false

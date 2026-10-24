@@ -1,0 +1,235 @@
+# Dấu hiệu toàn thân: sốt, đau nhức, da, tri giác, mất nước.
+- id: fever
+  kind: symptom
+  type: binary
+  label_vi: "Sốt"
+  question_vi: "Có sốt không?"
+  help_vi: "Sốt là khi nhiệt độ từ 37,5°C trở lên, hoặc sờ thấy người nóng hơn bình thường."
+  alt_question:
+    text_vi: "Sờ trán, ngực có thấy nóng hơn bình thường không?"
+  leak: moderate
+- id: fever_max_temp
+  kind: measurement
+  type: categorical
+  label_vi: "Nhiệt độ cao nhất"
+  question_vi: "Nhiệt độ cao nhất đo được là bao nhiêu?"
+  help_vi: "Chọn 'Không rõ' nếu chưa đo nhiệt độ."
+  options:
+    - { id: lt_38, label_vi: "Dưới 38°C" }
+    - { id: t38_39, label_vi: "Từ 38°C đến dưới 39°C" }
+    - { id: ge_39, label_vi: "Từ 39°C trở lên" }
+  baseline: { lt_38: 0.35, t38_39: 0.40, ge_39: 0.25 }
+  requires:
+    - { finding: fever, is: present }
+  cost: 2
+  unknown_rate: 0.3
+- id: fever_duration
+  kind: history
+  type: categorical
+  label_vi: "Số ngày sốt"
+  question_vi: "Đã sốt bao nhiêu ngày?"
+  options:
+    - { id: d1_2, label_vi: "1–2 ngày" }
+    - { id: d3_5, label_vi: "3–5 ngày" }
+    - { id: d6_7, label_vi: "6–7 ngày" }
+    - { id: gt_7d, label_vi: "Hơn 7 ngày" }
+  baseline: { d1_2: 0.50, d3_5: 0.30, d6_7: 0.10, gt_7d: 0.10 }
+  requires:
+    - { finding: fever, is: present }
+- id: chills_rigors
+  kind: symptom
+  type: binary
+  label_vi: "Rét run"
+  question_vi: "Có cơn rét run, lạnh run cầm cập không?"
+  help_vi: "Rét run là cảm giác lạnh và run người không kiểm soát được, thường ngay trước khi sốt cao."
+  requires:
+    - { finding: fever, is: present }
+  leak: nonspecific
+- id: fever_cyclic
+  kind: history
+  type: binary
+  label_vi: "Sốt thành cơn cách ngày"
+  question_vi: "Có sốt thành từng cơn, cách 1–2 ngày lại lên cơn không?"
+  requires:
+    - { finding: fever, is: present }
+  leak: moderate
+- id: myalgia
+  kind: symptom
+  type: binary
+  label_vi: "Đau nhức cơ, mỏi người"
+  question_vi: "Có đau nhức cơ, mỏi khắp người không?"
+  cluster: aches
+  leak: nonspecific
+  leak_by_complaint: { abdominal_pain: moderate, headache: moderate }
+- id: arthralgia
+  kind: symptom
+  type: binary
+  label_vi: "Đau khớp"
+  question_vi: "Có đau các khớp như cổ tay, cổ chân, đầu gối không?"
+  cluster: aches
+  leak: moderate
+- id: retro_orbital_pain
+  kind: symptom
+  type: binary
+  label_vi: "Đau sau hốc mắt"
+  question_vi: "Có đau nhức sau hốc mắt, đau tăng khi đảo mắt không?"
+  leak: moderate
+- id: fatigue
+  kind: symptom
+  type: binary
+  label_vi: "Mệt mỏi nhiều"
+  question_vi: "Có mệt mỏi, uể oải hơn hẳn bình thường không?"
+  leak: nonspecific
+- id: severe_weakness
+  kind: sign
+  type: binary
+  label_vi: "Mệt lả, không tự đi lại được"
+  question_vi: "Có mệt lả đến mức gần như không tự đi lại được không?"
+  alt_question:
+    text_vi: "Có tự đứng dậy và đi lại trong nhà được không?"
+    inverted: true
+  cluster: shock_signs
+  leak: specific
+- id: loss_of_appetite
+  kind: symptom
+  type: binary
+  label_vi: "Chán ăn"
+  question_vi: "Có chán ăn, ăn ít hơn hẳn bình thường không?"
+  leak: nonspecific
+- id: rash_any
+  kind: sign
+  type: binary
+  label_vi: "Phát ban, nổi mẩn"
+  question_vi: "Có nổi ban hoặc nổi mẩn đỏ trên da không?"
+  alt_question:
+    text_vi: "Trên da có chỗ nào mới nổi đỏ, nổi chấm hoặc nổi mụn không?"
+  leak: moderate
+- id: rash_non_blanching
+  kind: sign
+  type: binary
+  label_vi: "Nốt đỏ tím không mất khi ấn"
+  question_vi: "Trên da có nốt đỏ hoặc tím, ấn vào không mất đi không?"
+  help_vi: "Ấn mạnh thành ly thủy tinh lên nốt. Nếu vẫn nhìn rõ nốt qua thành ly là không mất màu."
+  alt_question:
+    text_vi: "Có chấm đỏ li ti hoặc mảng tím bầm mới xuất hiện trên da không?"
+  requires:
+    - { finding: rash_any, is: present }
+  leak: moderate
+- id: rash_spreads_from_face
+  kind: sign
+  type: binary
+  label_vi: "Ban mọc từ mặt lan xuống người"
+  question_vi: "Ban có mọc từ sau tai, mặt rồi lan dần xuống người không?"
+  requires:
+    - { finding: rash_any, is: present }
+  leak: moderate
+- id: mouth_ulcers
+  kind: sign
+  type: binary
+  label_vi: "Loét hoặc phỏng nước trong miệng"
+  question_vi: "Có vết loét hoặc nốt phỏng nước trong miệng không?"
+  help_vi: "Trẻ nhỏ có thể chảy nhiều nước dãi hoặc bỏ ăn vì đau miệng."
+  cluster: hfmd_lesions
+  leak: moderate
+- id: hand_foot_blisters
+  kind: sign
+  type: binary
+  label_vi: "Phỏng nước ở lòng bàn tay, bàn chân"
+  question_vi: "Có nốt phỏng nước ở lòng bàn tay, bàn chân hoặc mông không?"
+  cluster: hfmd_lesions
+  leak: specific
+- id: red_eyes
+  kind: sign
+  type: binary
+  label_vi: "Đỏ mắt"
+  question_vi: "Có bị đỏ mắt không?"
+  help_vi: "Có thể kèm chảy nước mắt hoặc khó chịu khi nhìn ánh sáng."
+  leak: moderate
+- id: eschar
+  kind: sign
+  type: binary
+  label_vi: "Vết loét đóng vảy đen"
+  question_vi: "Trên da có vết loét tròn, đóng vảy đen, không đau không?"
+  help_vi: "Hay ở nách, bẹn, thắt lưng hoặc vùng da kín. Cần xem kỹ khắp người."
+  cost: 1.5
+  unknown_rate: 0.3
+  leak: specific
+- id: jaundice
+  kind: sign
+  type: binary
+  label_vi: "Vàng da, vàng mắt"
+  question_vi: "Da hoặc lòng trắng mắt có bị vàng không?"
+  leak: specific
+- id: bleeding_gums_nose
+  kind: sign
+  type: binary
+  label_vi: "Chảy máu chân răng, chảy máu mũi"
+  question_vi: "Có chảy máu chân răng hoặc chảy máu mũi không?"
+  alt_question:
+    text_vi: "Khi đánh răng hoặc xì mũi, có thấy máu không?"
+  leak: specific
+- id: cold_hands_feet
+  kind: sign
+  type: binary
+  label_vi: "Tay chân lạnh, da tái"
+  question_vi: "Tay chân có lạnh ngắt, da tái hoặc nổi vân tím không?"
+  alt_question:
+    text_vi: "Sờ bàn tay, bàn chân có thấy lạnh hơn hẳn bình thường không?"
+  cluster: shock_signs
+  leak: specific
+- id: decreased_urine
+  kind: sign
+  type: binary
+  label_vi: "Tiểu ít"
+  question_vi: "Trong 12 giờ qua, lượng nước tiểu có ít hẳn đi không?"
+  help_vi: "Ví dụ: cả buổi không đi tiểu, hoặc nước tiểu ít và sẫm màu."
+  leak: moderate
+- id: persistent_vomiting
+  kind: symptom
+  type: binary
+  label_vi: "Nôn liên tục"
+  question_vi: "Có nôn nhiều lần, uống gì cũng nôn ra không?"
+  alt_question:
+    text_vi: "Trong 6 giờ qua, có giữ được nước uống mà không nôn ra không?"
+    inverted: true
+  cluster: vomiting
+  leak: moderate
+- id: confusion
+  kind: sign
+  type: binary
+  label_vi: "Lú lẫn"
+  question_vi: "Có lú lẫn, nói năng lẫn lộn, không nhận ra người quen không?"
+  alt_question:
+    text_vi: "Có nói đúng tên mình và biết đang ở đâu không?"
+    inverted: true
+  applies_to:
+    age_groups: [child_5_12, teen_13_17, adult_18_44, adult_45_64, elder_65_74, elder_75p]
+  cluster: altered_consciousness
+  leak: specific
+- id: drowsy_hard_to_wake
+  kind: sign
+  type: binary
+  label_vi: "Li bì, khó đánh thức"
+  question_vi: "Có ngủ li bì, lơ mơ, khó đánh thức không?"
+  alt_question:
+    text_vi: "Khi gọi hoặc lay nhẹ, có tỉnh dậy và đáp lại ngay không?"
+    inverted: true
+  cluster: altered_consciousness
+  leak: specific
+- id: seizure_recent
+  kind: history
+  type: binary
+  label_vi: "Co giật"
+  question_vi: "Trong lần bị bệnh này, có lên cơn co giật không?"
+  help_vi: "Co giật là khi người co cứng hoặc giật tay chân không kiểm soát, thường kèm mất ý thức."
+  alt_question:
+    text_vi: "Có lúc nào người co cứng, giật tay chân, mắt trợn ngược không?"
+  leak: specific
+- id: fainting_or_near_fainting
+  kind: symptom
+  type: binary
+  label_vi: "Ngất hoặc choáng như sắp ngất"
+  question_vi: "Có bị ngất, hoặc choáng váng như sắp ngất không?"
+  alt_question:
+    text_vi: "Có lúc nào tối sầm mắt, phải ngồi hoặc nằm xuống ngay không?"
+  leak: moderate

@@ -1,0 +1,32 @@
+id: abdominal_pain
+label_vi: "Đau bụng"
+icon: abdomen
+synonyms_vi:
+  - "đau bao tử"
+  - "đau dạ dày"
+  - "đau thượng vị"
+  - "đau quặn bụng"
+  - "đau quanh rốn"
+  - "đau bụng dưới"
+  - "đau bụng kinh"
+  - "chướng bụng"
+  - "đầy bụng"
+description_vi: "Đau ở bất kỳ vùng nào của bụng, từ dưới ngực đến bẹn."
+implies: [abdominal_pain]
+red_flags:
+  - group: young_infant_danger_signs
+  - group: child_danger_signs
+  - group: abdominal_red_flags
+  - finding: red_jelly_stool
+  - finding: pregnant
+intake: [abdominal_associated, chronic_conditions]
+# Điền sau khi các bệnh của đợt thử nghiệm đã có trong knowledge/conditions/.
+cant_miss: []
+safety_net:
+  - abd_pain_severe
+  - abdomen_hard_swollen
+  - vomiting_blood
+  - black_stool
+  - fainting_or_near_fainting
+  - persistent_vomiting
+sources: [nhs-stomach-ache]

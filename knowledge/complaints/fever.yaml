@@ -1,0 +1,33 @@
+id: fever
+label_vi: "Sốt"
+icon: thermometer
+synonyms_vi:
+  - "nóng sốt"
+  - "sốt cao"
+  - "sốt nhẹ"
+  - "người nóng"
+  - "hâm hấp sốt"
+  - "sốt về chiều"
+  - "ớn lạnh"
+  - "rét run"
+description_vi: "Nhiệt độ cơ thể từ 37,5°C trở lên, hoặc người nóng hơn bình thường."
+implies: [fever]
+red_flags:
+  - group: young_infant_danger_signs
+  - group: child_danger_signs
+  - group: fever_red_flags
+  - finding: rash_any
+  - finding: rash_non_blanching
+  - finding: pregnant
+intake: [fever_associated, chronic_conditions]
+# Điền sau khi các bệnh của đợt thử nghiệm đã có trong knowledge/conditions/.
+cant_miss: []
+safety_net:
+  - neck_stiffness
+  - rash_non_blanching
+  - breathing_difficulty
+  - drowsy_hard_to_wake
+  - persistent_vomiting
+  - cold_hands_feet
+  - seizure_recent
+sources: [who-imci-chart-booklet-2014, nice-ng143, nice-ng51]
