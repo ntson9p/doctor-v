@@ -62,7 +62,7 @@ Kiểm tra: `npm run eval:check` (hoặc `npm run eval:check -- --set holdout`).
 
 Bộ chạy (`evaluation/src/`) chạy toàn bộ phiên hỏi đáp của bộ suy luận. Khi bộ suy luận hỏi:
 - dấu hiệu có trong `answers`: trả lời đúng giá trị đó;
-- dấu hiệu có/không không có trong `answers`: trả lời theo `default_unmentioned`;
+- dấu hiệu có/không không có trong `answers`: trả lời theo `default_unmentioned`. Ngoại lệ: dấu hiệu mà phần đông mọi người đều "có" (tỷ lệ nền ≥ 0,5, ví dụ "đã tiêm đủ vắc xin sởi") được trả lời "không rõ", vì ca không nhắc đến thì không suy ra được "không";
 - dấu hiệu nhiều lựa chọn không có trong `answers`: "không rõ";
 - câu hỏi nhóm: từng mục trả lời như trên.
 

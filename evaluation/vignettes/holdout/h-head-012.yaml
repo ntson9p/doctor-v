@@ -1,0 +1,41 @@
+id: h-head-012
+set: holdout
+title_vi: "Nữ 58 tuổi, đột ngột đau đầu sau gáy, choáng váng, nhìn đôi, nôn, đi loạng choạng"
+narrative_vi: "Bà P., 58 tuổi, ở Đồng Nai, bị đái tháo đường và tăng huyết áp. Khoảng 2 giờ trước bà đột ngột đau đầu vùng sau gáy, choáng váng, đi loạng choạng, nhìn một vật thành hai, nôn 2 lần. Bà không méo miệng, hai tay giơ lên đều nhau, nói được. Huyết áp đo được 170/100 mmHg. Bà không sốt."
+patient:
+  age_years: 58
+  sex: female
+  region: south
+  month: 8
+complaint: headache
+answers:
+  headache_course: first_time
+  headache_duration: lt_4h
+  headache_location: back_neck
+  headache_severity: moderate
+  headache_thunderclap: absent
+  vision_loss_or_double: present
+  blurred_vision: present
+  vomiting: present
+  nausea: present
+  fainting_or_near_fainting: present
+  es_stroke_signs: absent
+  neck_stiffness: absent
+  confusion: absent
+  photophobia: absent
+  bp_measured: very_high
+  hypertension_known: present
+  diabetes: present
+  fever: absent
+  headache_after_head_injury: absent
+default_unmentioned: absent
+expected:
+  condition: stroke
+  acceptable: []
+  triage: 1
+source:
+  basis: "Đột quỵ tuần hoàn sau: đau đầu vùng chẩm, nhìn đôi, chóng mặt, mất thăng bằng, nôn, không có méo miệng hay yếu tay; gọi 115 ngay (3312/QĐ-BYT năm 2024)."
+  references:
+    - byt-qd-3312-2024
+author: "agent:vignette-holdout"
+notes_vi: "Không có dấu hiệu FAST nên dễ bỏ sót. Danh mục chưa có câu hỏi về chóng mặt quay cuồng và đi loạng choạng."

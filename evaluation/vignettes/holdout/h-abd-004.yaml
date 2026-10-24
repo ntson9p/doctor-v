@@ -1,0 +1,44 @@
+id: h-abd-004
+set: holdout
+title_vi: "Nữ 30 tuổi sau ăn cỗ cưới, đau quặn quanh rốn, nôn, tiêu chảy, nhiều người cùng bị"
+narrative_vi: "Chị L., 30 tuổi, ở Đà Nẵng, không mang thai. Tối qua chị đi ăn cưới, đến 2 giờ sáng bắt đầu đau quặn quanh rốn, buồn nôn, nôn 3 lần, đi ngoài phân lỏng 6 lần. Nhiều người ăn cùng bàn cũng bị đau bụng, tiêu chảy. Chị sốt nhẹ 37,8°C, mệt, nhưng vẫn uống được nước, đi tiểu bình thường. Phân không có máu."
+patient:
+  age_years: 30
+  sex: female
+  region: central
+  month: 6
+complaint: abdominal_pain
+answers:
+  abd_pain_location: periumbilical
+  abd_pain_onset: gradual
+  abd_pain_duration: h6_24
+  abd_pain_severe: absent
+  abd_pain_colicky: present
+  abd_pain_migrated_rlq: absent
+  abd_pain_worse_movement: absent
+  diarrhea: present
+  diarrhea_bloody: absent
+  vomiting: present
+  persistent_vomiting: absent
+  nausea: present
+  fever: present
+  fever_max_temp: lt_38
+  fever_duration: d1_2
+  unsafe_food_shared: present
+  fatigue: present
+  decreased_urine: absent
+  black_stool: absent
+  abdomen_hard_swollen: absent
+  pregnant: absent
+  missed_period: absent
+default_unmentioned: absent
+expected:
+  condition: acute_gastroenteritis
+  acceptable: []
+  triage: 5
+source:
+  basis: "Ngộ độc thực phẩm, viêm dạ dày ruột cấp không mất nước ở người lớn khỏe: tự chăm sóc, bù nước bằng oresol (NHS Diarrhoea and vomiting; NHS Stomach ache)."
+  references:
+    - nhs-stomach-ache
+    - "https://www.nhs.uk/conditions/diarrhoea-and-vomiting/"
+author: "agent:vignette-holdout"

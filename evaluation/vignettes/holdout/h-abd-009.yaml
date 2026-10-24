@@ -1,0 +1,44 @@
+id: h-abd-009
+set: holdout
+title_vi: "Nữ 48 tuổi có sỏi mật, đau dưới sườn phải 18 giờ sau bữa nhiều mỡ, sốt 38,6°C"
+narrative_vi: "Chị M., 48 tuổi, ở Hà Nội, được bác sĩ nói có sỏi mật từ 2 năm trước. Tối qua sau bữa lẩu nhiều mỡ, chị đau dưới sườn phải, đau liên tục đến giờ khoảng 18 tiếng, lan ra sau lưng và vai phải. Hít sâu hay đi lại đều đau hơn. Chị sốt 38,6°C, chán ăn, buồn nôn, nôn 2 lần. Không vàng da, không vàng mắt. Chị không mang thai."
+patient:
+  age_years: 48
+  sex: female
+  region: north
+  month: 10
+complaint: abdominal_pain
+answers:
+  abd_pain_location: right_upper
+  abd_pain_onset: gradual
+  abd_pain_duration: h6_24
+  abd_pain_severe: present
+  abd_pain_colicky: absent
+  pain_after_fatty_meal: present
+  abd_pain_meal_relation: worse_after_meal
+  abd_pain_worse_movement: present
+  abd_pain_radiates_back: present
+  gallstones_known: present
+  fever: present
+  fever_max_temp: t38_39
+  fever_duration: d1_2
+  chills_rigors: absent
+  nausea: present
+  vomiting: present
+  loss_of_appetite: present
+  jaundice: absent
+  diarrhea: absent
+  heartburn: absent
+  heavy_alcohol: absent
+  pregnant: absent
+  missed_period: absent
+default_unmentioned: absent
+expected:
+  condition: acute_cholecystitis
+  acceptable: []
+  triage: 2
+source:
+  basis: "Viêm túi mật cấp do sỏi: đau hạ sườn phải liên tục trên 6 giờ, sốt, nôn, đau tăng khi vận động; cần đến cấp cứu (NHS Gallstones: đau kèm sốt cao cần đi cấp cứu)."
+  references:
+    - "https://www.nhs.uk/conditions/gallstones/"
+author: "agent:vignette-holdout"

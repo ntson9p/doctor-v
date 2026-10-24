@@ -1,0 +1,38 @@
+id: h-abd-016
+set: holdout
+title_vi: "Nữ 26 tuổi mang thai 16 tuần, tiểu buốt, tiểu nhiều lần, nước tiểu hồng"
+narrative_vi: "Chị N., 26 tuổi, ở Hà Nam, đang mang thai 16 tuần. Hai ngày nay chị tiểu buốt, đi tiểu nhiều lần, đau tức bụng dưới. Sáng nay nước tiểu có màu hồng nhạt. Không sốt, không đau hông lưng, không ra máu âm đạo, không đau bụng từng cơn."
+patient:
+  age_years: 26
+  sex: female
+  region: north
+  month: 3
+complaint: abdominal_pain
+answers:
+  abd_pain_location: suprapubic
+  abd_pain_onset: gradual
+  abd_pain_duration: d1_3
+  abd_pain_severe: absent
+  abd_pain_colicky: absent
+  dysuria: present
+  urinary_frequency: present
+  hematuria: present
+  flank_pain: absent
+  fever: absent
+  pregnant: present
+  gestational_age: lt_20w
+  vaginal_bleeding: absent
+  abnormal_vaginal_discharge: absent
+  nausea: absent
+  vomiting: absent
+default_unmentioned: absent
+expected:
+  condition: cystitis
+  acceptable: []
+  triage: 3
+source:
+  basis: "Nhiễm khuẩn tiết niệu dưới ở phụ nữ có thai: khám gấp, cấy nước tiểu và dùng kháng sinh ngay (NHS UTI: người mang thai cần khám gấp; NICE NG109)."
+  references:
+    - "https://www.nhs.uk/conditions/urinary-tract-infections-utis/"
+    - "https://www.nhs.uk/conditions/cystitis/"
+author: "agent:vignette-holdout"

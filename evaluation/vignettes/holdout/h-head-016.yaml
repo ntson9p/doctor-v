@@ -1,0 +1,39 @@
+id: h-head-016
+set: holdout
+title_vi: "Nữ 67 tuổi, đột ngột đau nhức quanh mắt trái, mắt đỏ, nhìn mờ, thấy quầng sáng, nôn"
+narrative_vi: "Bà L., 67 tuổi, ở Huế, bị viễn thị. Tối nay sau khi xem ti vi trong phòng tối, bà đột ngột đau nhức dữ dội quanh mắt trái lan lên trán. Mắt trái đỏ, nhìn kém hẳn đi, thấy quầng sáng nhiều màu quanh bóng đèn, chói mắt. Bà buồn nôn, nôn 2 lần. Bà không sốt, không yếu tay chân, không méo miệng."
+patient:
+  age_years: 67
+  sex: female
+  region: central
+  month: 11
+complaint: headache
+answers:
+  headache_course: first_time
+  headache_duration: lt_4h
+  headache_location: forehead_face
+  headache_severity: severe
+  headache_thunderclap: absent
+  red_eyes: present
+  blurred_vision: present
+  vision_loss_or_double: present
+  photophobia: present
+  nausea: present
+  vomiting: present
+  fever: absent
+  neck_stiffness: absent
+  es_stroke_signs: absent
+  confusion: absent
+  hypertension_known: absent
+  headache_after_head_injury: absent
+default_unmentioned: absent
+expected:
+  condition: other
+  acceptable: []
+  triage: 2
+source:
+  basis: "Cơn glôcôm góc đóng cấp: đau mắt dữ dội lan lên trán, mắt đỏ, nhìn mờ, quầng sáng quanh đèn, buồn nôn, nôn; cấp cứu nhãn khoa ngay (NHS Glaucoma)."
+  references:
+    - "https://www.nhs.uk/conditions/glaucoma/"
+author: "agent:vignette-holdout"
+notes_vi: "Ngoài danh mục bệnh. Danh mục chưa có câu hỏi về đau nhức trong mắt và quầng sáng quanh đèn."

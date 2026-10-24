@@ -1,0 +1,47 @@
+id: h-head-002
+set: holdout
+title_vi: "Nam 15 tuổi, đau đầu vùng trán, đau sau hốc mắt, sốt 39,3°C, xóm có sốt xuất huyết"
+narrative_vi: "Em H., nam, 15 tuổi, ở Đồng Tháp. Từ hôm qua em đau đầu nhiều vùng trán, nhức giật giật, đau sau hốc mắt, kèm sốt 39,3°C. Em đau mỏi khắp người, mệt, chán ăn, buồn nôn, nôn 1 lần. Xóm em đang có nhiều người bị sốt xuất huyết. Em không cứng gáy, không sợ ánh sáng, không lú lẫn, không ho, không nổi ban."
+patient:
+  age_years: 15
+  sex: male
+  region: south
+  month: 9
+complaint: headache
+answers:
+  headache_course: first_time
+  headache_duration: h4_72
+  headache_location: forehead_face
+  headache_character: throbbing
+  headache_severity: moderate
+  headache_thunderclap: absent
+  fever: present
+  fever_max_temp: ge_39
+  fever_duration: d1_2
+  retro_orbital_pain: present
+  myalgia: present
+  fatigue: present
+  loss_of_appetite: present
+  nausea: present
+  vomiting: present
+  persistent_vomiting: absent
+  neck_stiffness: absent
+  photophobia: absent
+  confusion: absent
+  rash_any: absent
+  bleeding_gums_nose: absent
+  abdominal_pain: absent
+  cough: absent
+  dengue_nearby: present
+  measles_vaccinated: present
+default_unmentioned: absent
+expected:
+  condition: dengue
+  acceptable: []
+  triage: 3
+source:
+  basis: "Sốt xuất huyết Dengue ngày 2, người bệnh chọn triệu chứng chính là đau đầu; chưa có dấu hiệu cảnh báo, cần khám và xét nghiệm trong 24 giờ (2760/QĐ-BYT; WHO 2009)."
+  references:
+    - byt-qd-2760-2023
+    - who-dengue-2009
+author: "agent:vignette-holdout"

@@ -1,0 +1,48 @@
+id: h-fever-034
+set: holdout
+title_vi: "Nữ 20 tuổi, sốt xuất huyết ngày 5, hết sốt nhưng mệt lả, chân tay lạnh, tiểu ít"
+narrative_vi: "Chị U., 20 tuổi, sinh viên ở Đà Nẵng, không mang thai. Khu trọ có nhiều người bị sốt xuất huyết. Chị sốt cao 39,5°C 4 ngày, kèm đau đầu, đau sau hốc mắt, đau mỏi người. Hôm nay là ngày thứ 5, chị hết sốt nhưng đau bụng nhiều, nôn liên tục, mệt lả không đứng dậy nổi, choáng váng như sắp ngất. Tay chân lạnh, vã mồ hôi, từ sáng đến giờ gần như không đi tiểu."
+patient:
+  age_years: 20
+  sex: female
+  region: central
+  month: 10
+complaint: fever
+answers:
+  fever_max_temp: ge_39
+  fever_duration: d3_5
+  severe_weakness: present
+  cold_hands_feet: present
+  cold_sweat: present
+  fainting_or_near_fainting: present
+  decreased_urine: present
+  abdominal_pain: present
+  abd_pain_location: whole
+  abd_pain_onset: gradual
+  abd_pain_duration: h6_24
+  abd_pain_severe: present
+  vomiting: present
+  persistent_vomiting: present
+  nausea: present
+  headache: present
+  headache_severity: moderate
+  retro_orbital_pain: present
+  myalgia: present
+  bleeding_gums_nose: absent
+  rash_any: absent
+  confusion: absent
+  drowsy_hard_to_wake: absent
+  diarrhea: absent
+  dengue_nearby: present
+  pregnant: absent
+default_unmentioned: absent
+expected:
+  condition: dengue
+  acceptable: []
+  triage: 1
+source:
+  basis: "Sốc sốt xuất huyết Dengue lúc hết sốt: mệt lả, chân tay lạnh, vã mồ hôi, tiểu ít, choáng, đau bụng, nôn liên tục; cấp cứu ngay (2760/QĐ-BYT; WHO 2009)."
+  references:
+    - byt-qd-2760-2023
+    - who-dengue-2009
+author: "agent:vignette-holdout"

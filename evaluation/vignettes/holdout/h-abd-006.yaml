@@ -1,0 +1,45 @@
+id: h-abd-006
+set: holdout
+title_vi: "Nam 70 tuổi, đau âm ỉ bụng dưới bên phải 2 ngày, sốt 38,3°C, chán ăn"
+narrative_vi: "Ông T., 70 tuổi, ở Quảng Nam, bị đái tháo đường và tăng huyết áp. Hai ngày nay ông đau âm ỉ bụng dưới, nay đau nhiều hơn ở bên phải, không nhớ lúc đầu đau ở đâu. Đi lại thì đau tăng. Ông sốt 38,3°C, mệt, chán ăn, buồn nôn nhưng không nôn, vẫn đi ngoài và xì hơi được. Ông không tiểu buốt, chưa từng mổ bụng."
+patient:
+  age_years: 70
+  sex: male
+  region: central
+  month: 9
+complaint: abdominal_pain
+answers:
+  abd_pain_location: right_lower
+  abd_pain_onset: gradual
+  abd_pain_duration: d1_3
+  abd_pain_severe: absent
+  abd_pain_colicky: absent
+  abd_pain_migrated_rlq: unknown
+  abd_pain_worse_movement: present
+  abd_pain_meal_relation: no_relation
+  fever: present
+  fever_max_temp: t38_39
+  fever_duration: d1_2
+  loss_of_appetite: present
+  nausea: present
+  vomiting: absent
+  fatigue: present
+  diarrhea: absent
+  abdomen_hard_swollen: absent
+  no_stool_or_gas: absent
+  dysuria: absent
+  urinary_frequency: absent
+  hematuria: absent
+  diabetes: present
+  hypertension_known: present
+  previous_abdominal_surgery: absent
+default_unmentioned: absent
+expected:
+  condition: acute_appendicitis
+  acceptable: []
+  triage: 2
+source:
+  basis: "Viêm ruột thừa ở người cao tuổi: đau không điển hình, không rõ đau di chuyển, nguy cơ vỡ cao; vẫn cần khám cấp cứu (NHS Appendicitis: đau có thể nhẹ hơn hoặc ở chỗ khác ở người lớn tuổi)."
+  references:
+    - "https://www.nhs.uk/conditions/appendicitis/"
+author: "agent:vignette-holdout"

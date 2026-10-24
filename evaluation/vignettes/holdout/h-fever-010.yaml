@@ -1,0 +1,38 @@
+id: h-fever-010
+set: holdout
+title_vi: "Bé trai 20 tháng, sổ mũi 3 ngày, sốt 38,6°C, kéo dụi tai, quấy khóc khi nằm"
+narrative_vi: "Bé P., 20 tháng, ở Vĩnh Long. Bé sổ mũi, nghẹt mũi, ho nhẹ 3 ngày nay. Từ tối qua bé sốt 38,6°C, quấy khóc, hay kéo và dụi tai phải, khóc nhiều khi nằm. Bé ăn kém hơn nhưng vẫn bú và uống được. Không chảy mủ tai, không nôn, không nổi ban. Bé tỉnh, chơi được khi hạ sốt. Bé đã tiêm đủ 2 mũi vắc xin sởi."
+patient:
+  age_months: 20
+  sex: male
+  region: south
+  month: 9
+complaint: fever
+answers:
+  fever_max_temp: t38_39
+  fever_duration: d1_2
+  ear_pain: present
+  ear_discharge: absent
+  runny_nose: present
+  nasal_congestion: present
+  cough: present
+  loss_of_appetite: present
+  child_unable_to_drink: absent
+  child_vomits_everything: absent
+  vomiting: absent
+  drowsy_hard_to_wake: absent
+  breathing_difficulty: absent
+  rash_any: absent
+  diarrhea: absent
+  measles_vaccinated: present
+default_unmentioned: absent
+expected:
+  condition: acute_otitis_media
+  acceptable: []
+  triage: 4
+source:
+  basis: "Viêm tai giữa cấp sau viêm mũi họng ở trẻ dưới 2 tuổi, không có dấu hiệu nguy hiểm: cần bác sĩ khám tai trong vài ngày (NICE NG91; NHS Ear infections)."
+  references:
+    - "https://www.nhs.uk/conditions/ear-infections/"
+author: "agent:vignette-holdout"
+notes_vi: "Trẻ dưới 2 tuổi viêm tai giữa hai bên có thể cần kháng sinh nên cần được khám; không cần đi cấp cứu."

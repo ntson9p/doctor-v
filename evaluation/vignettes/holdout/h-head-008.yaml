@@ -1,0 +1,42 @@
+id: h-head-008
+set: holdout
+title_vi: "Nam 14 tuổi, chớp sáng trước mắt 20 phút rồi đau giật hai bên trán, giống các cơn trước"
+narrative_vi: "Em B., nam, 14 tuổi, ở Đà Nẵng. Năm ngoái bác sĩ đã khám và cho biết em bị đau nửa đầu. Đây là cơn thứ ba trong 6 tháng, giống các lần trước: đầu tiên em thấy những đường ngoằn ngoèo, chớp sáng trước mắt khoảng 20 phút, sau đó đau giật giật cả hai bên trán. Em buồn nôn, sợ ánh sáng, muốn nằm yên trong phòng tối. Cơn đau mới bắt đầu khoảng 1 giờ. Em không yếu tay chân, nói bình thường, không sốt."
+patient:
+  age_years: 14
+  sex: male
+  region: central
+  month: 10
+complaint: headache
+answers:
+  headache_course: recurrent_similar
+  headache_duration: lt_4h
+  headache_location: both_sides
+  headache_character: throbbing
+  headache_severity: moderate
+  headache_thunderclap: absent
+  visual_aura: present
+  blurred_vision: present
+  vision_loss_or_double: absent
+  photophobia: present
+  phonophobia: absent
+  nausea: present
+  vomiting: absent
+  headache_worse_activity: present
+  es_stroke_signs: absent
+  confusion: absent
+  fever: absent
+  neck_stiffness: absent
+  headache_after_head_injury: absent
+default_unmentioned: absent
+expected:
+  condition: migraine
+  acceptable: []
+  triage: 5
+source:
+  basis: "Đau nửa đầu có tiền triệu thị giác điển hình ở thanh thiếu niên đã được bác sĩ khám: tiền triệu dưới 1 giờ, đau hai bên, cơn ngắn; tự chăm sóc (NICE CG150; NHS Migraine: chỉ cần khám gấp khi tiền triệu kéo dài trên 1 giờ)."
+  references:
+    - nice-cg150
+    - "https://www.nhs.uk/conditions/migraine/"
+author: "agent:vignette-holdout"
+notes_vi: "Người bệnh trả lời 'có' cả câu nhìn mờ, thấy đốm sáng vì tiền triệu; ở trẻ vị thành niên, đau nửa đầu hay đau hai bên và ngắn hơn người lớn."

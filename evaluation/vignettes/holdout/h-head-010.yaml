@@ -1,0 +1,42 @@
+id: h-head-010
+set: holdout
+title_vi: "Nữ 48 tuổi, 2 ngày trước đột ngột đau đầu rất mạnh, nay còn đau, gáy cứng, chói mắt"
+narrative_vi: "Chị N., 48 tuổi, ở Thành phố Hồ Chí Minh, trước nay hiếm khi đau đầu. Hai ngày trước, khi đang cúi xuống nhặt đồ, chị đột ngột đau đầu rất mạnh, đau lên đỉnh điểm chỉ trong vài phút. Chị nghĩ là đau nửa đầu nên uống thuốc giảm đau và nằm nghỉ. Đến nay chị vẫn đau âm ỉ khắp đầu ở mức vừa, gáy hơi cứng, buồn nôn, chói mắt. Chị tỉnh táo, không nôn, không yếu tay chân, không sốt."
+patient:
+  age_years: 48
+  sex: female
+  region: south
+  month: 3
+complaint: headache
+answers:
+  headache_course: first_time
+  headache_duration: h4_72
+  headache_location: whole_head
+  headache_severity: moderate
+  headache_thunderclap: present
+  neck_stiffness: present
+  photophobia: present
+  nausea: present
+  vomiting: absent
+  confusion: absent
+  drowsy_hard_to_wake: absent
+  fever: absent
+  es_stroke_signs: absent
+  vision_loss_or_double: absent
+  hypertension_known: absent
+  smoker: absent
+  headache_after_head_injury: absent
+  regular_painkiller_use: absent
+  pregnant: absent
+default_unmentioned: absent
+expected:
+  condition: subarachnoid_hemorrhage
+  acceptable: []
+  triage: 2
+source:
+  basis: "Xuất huyết dưới nhện đến muộn sau cơn đau đầu sét đánh; người bệnh tỉnh táo, ổn định nhưng vẫn cần đến cấp cứu ngay để chụp cắt lớp (NICE NG228)."
+  references:
+    - nice-ng228
+    - nice-cg150
+author: "agent:vignette-holdout"
+notes_vi: "Người bệnh tưởng là đau nửa đầu nên đến muộn; mức độ đau hiện tại chỉ còn vừa."

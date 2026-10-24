@@ -1,0 +1,41 @@
+id: h-abd-011
+set: holdout
+title_vi: "Nam 45 tuổi uống rượu nhiều dịp Tết, đột ngột đau dữ dội thượng vị xuyên ra lưng, nôn"
+narrative_vi: "Anh V., 45 tuổi, ở Quảng Ninh, uống rượu nhiều đã nhiều năm, mấy ngày Tết uống liên tục. Khoảng 5 giờ trước anh đột ngột đau dữ dội vùng trên rốn, đau xuyên ra sau lưng, phải ngồi cúi gập người mới đỡ. Anh nôn nhiều lần, uống gì cũng nôn. Anh không sốt, không đi ngoài phân đen, không đau ngực."
+patient:
+  age_years: 45
+  sex: male
+  region: north
+  month: 2
+complaint: abdominal_pain
+answers:
+  abd_pain_location: epigastric
+  abd_pain_onset: sudden
+  abd_pain_duration: lt_6h
+  abd_pain_severe: present
+  abd_pain_radiates_back: present
+  abd_pain_colicky: absent
+  vomiting: present
+  persistent_vomiting: present
+  nausea: present
+  heavy_alcohol: present
+  smoker: present
+  gallstones_known: absent
+  fever: absent
+  black_stool: absent
+  vomiting_blood: absent
+  abdomen_hard_swollen: absent
+  chest_pain_pressure: absent
+  es_crushing_chest_pain: absent
+  cold_sweat: absent
+  diarrhea: absent
+default_unmentioned: absent
+expected:
+  condition: acute_pancreatitis
+  acceptable: []
+  triage: 2
+source:
+  basis: "Viêm tụy cấp do rượu: đau thượng vị đột ngột dữ dội lan ra lưng, nôn nhiều; cần đến cấp cứu ngay (NHS Acute pancreatitis: đau lan ra lưng cần gọi cấp cứu hoặc đến cấp cứu)."
+  references:
+    - "https://www.nhs.uk/conditions/acute-pancreatitis/"
+author: "agent:vignette-holdout"

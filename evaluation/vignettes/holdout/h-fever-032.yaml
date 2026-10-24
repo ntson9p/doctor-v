@@ -1,0 +1,38 @@
+id: h-fever-032
+set: holdout
+title_vi: "Bé gái 7 tuần tuổi, sốt, ho, thở nhanh, rút lõm lồng ngực, bú kém"
+narrative_vi: "Bé gái 7 tuần tuổi, ở Quảng Trị. Anh trai của bé đang bị sổ mũi, ho. Ba ngày nay bé sổ mũi, nghẹt mũi, ho. Từ hôm qua bé sốt 38,3°C, thở nhanh, phần dưới lồng ngực lõm sâu khi hít vào, bú kém hẳn. Bé vẫn cử động chân tay bình thường, không co giật."
+patient:
+  age_months: 1
+  sex: female
+  region: central
+  month: 2
+complaint: fever
+answers:
+  fever_max_temp: t38_39
+  fever_duration: d1_2
+  cough: present
+  runny_nose: present
+  nasal_congestion: present
+  young_infant_fast_breathing: present
+  young_infant_not_feeding: present
+  breathing_difficulty: present
+  young_infant_low_temp: absent
+  young_infant_reduced_movement: absent
+  drowsy_hard_to_wake: absent
+  seizure_recent: absent
+  sick_contact_respiratory: present
+  vomiting: absent
+  diarrhea: absent
+  rash_any: absent
+default_unmentioned: absent
+expected:
+  condition: pneumonia
+  acceptable: []
+  triage: 2
+source:
+  basis: "Trẻ dưới 2 tháng thở nhanh, rút lõm lồng ngực nặng, bú kém: có thể nhiễm khuẩn nặng theo IMCI trẻ nhỏ, chuyển viện khẩn cấp."
+  references:
+    - who-imci-chart-booklet-2014
+author: "agent:vignette-holdout"
+notes_vi: "Cần phân biệt với viêm tiểu phế quản. Nhóm dưới 2 tháng tuổi chỉ sàng lọc dấu hiệu nguy hiểm."

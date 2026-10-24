@@ -1,0 +1,41 @@
+id: h-fever-016
+set: holdout
+title_vi: "Nam 28 tuổi ở Gia Lai, ngủ rừng 2 tuần trước, sốt rét run thành cơn cách ngày"
+narrative_vi: "Anh R., 28 tuổi, ở Gia Lai. Hai tuần trước anh vào rừng lấy măng, ngủ lại trong rừng 3 đêm. Năm ngày nay anh lên cơn rét run, sau đó sốt cao 39,5°C rồi vã mồ hôi, cứ cách 1 ngày lại lên cơn. Anh đau đầu, đau mỏi người, mệt, chán ăn, buồn nôn. Anh không vàng da, vẫn tỉnh táo. Anh không làm rẫy, không phát cỏ."
+patient:
+  age_years: 28
+  sex: male
+  region: highlands
+  month: 6
+complaint: fever
+answers:
+  fever_max_temp: ge_39
+  fever_duration: d3_5
+  chills_rigors: present
+  fever_cyclic: present
+  headache: present
+  headache_severity: moderate
+  myalgia: present
+  fatigue: present
+  loss_of_appetite: present
+  nausea: present
+  vomiting: absent
+  jaundice: absent
+  confusion: absent
+  severe_weakness: absent
+  malaria_area_exposure: present
+  bush_exposure: absent
+  eschar: absent
+  cough: absent
+  dengue_nearby: absent
+default_unmentioned: absent
+expected:
+  condition: malaria
+  acceptable: []
+  triage: 3
+source:
+  basis: "Sốt rét chưa biến chứng: cơn rét run – sốt – vã mồ hôi, có phơi nhiễm ngủ rừng ở Tây Nguyên; cần xét nghiệm và điều trị ngay trong ngày (3377/QĐ-BYT; NHS Malaria)."
+  references:
+    - byt-qd-3377-2023
+    - "https://www.nhs.uk/conditions/malaria/"
+author: "agent:vignette-holdout"

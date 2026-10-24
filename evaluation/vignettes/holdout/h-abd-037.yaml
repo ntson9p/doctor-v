@@ -1,0 +1,40 @@
+id: h-abd-037
+set: holdout
+title_vi: "Nữ 25 tuổi, đột ngột đau dữ dội bụng dưới phải khi tập thể dục, nôn, thử thai âm tính"
+narrative_vi: "Chị X., 25 tuổi, ở Thành phố Hồ Chí Minh. Ba giờ trước, khi đang tập thể dục, chị đột ngột đau dữ dội bụng dưới bên phải, đau từng đợt, lan xuống bẹn. Chị buồn nôn, nôn 3 lần. Kỳ kinh gần nhất cách đây 2 tuần, que thử thai âm tính. Không sốt, không ra máu âm đạo, không tiểu buốt."
+patient:
+  age_years: 25
+  sex: female
+  region: south
+  month: 8
+complaint: abdominal_pain
+answers:
+  abd_pain_location: right_lower
+  abd_pain_onset: sudden
+  abd_pain_duration: lt_6h
+  abd_pain_severe: present
+  abd_pain_colicky: present
+  abd_pain_migrated_rlq: absent
+  abd_pain_radiates_groin: present
+  nausea: present
+  vomiting: present
+  fever: absent
+  missed_period: absent
+  pregnant: absent
+  vaginal_bleeding: absent
+  abnormal_vaginal_discharge: absent
+  dysuria: absent
+  hematuria: absent
+  flank_pain: absent
+  diarrhea: absent
+default_unmentioned: absent
+expected:
+  condition: other
+  acceptable: []
+  triage: 2
+source:
+  basis: "Xoắn buồng trứng: đau bụng dưới một bên đột ngột dữ dội, từng đợt, buồn nôn, nôn ở phụ nữ trẻ; đến cấp cứu ngay (NHS Stomach ache: đau bụng bắt đầu đột ngột và dữ dội)."
+  references:
+    - nhs-stomach-ache
+author: "agent:vignette-holdout"
+notes_vi: "Ngoài danh mục bệnh; dễ nhầm cơn đau quặn thận hoặc viêm ruột thừa."

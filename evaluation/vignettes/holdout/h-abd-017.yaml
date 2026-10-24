@@ -1,0 +1,36 @@
+id: h-abd-017
+set: holdout
+title_vi: "Nam 65 tuổi từng mổ bụng, đau quặn quanh rốn, bụng chướng, nôn, không xì hơi"
+narrative_vi: "Ông Q., 65 tuổi, ở Hải Phòng, 10 năm trước đã mổ bụng vì thủng dạ dày. Từ hôm qua ông đau quặn từng cơn quanh rốn, bụng chướng căng dần. Ông nôn nhiều lần, chất nôn màu xanh vàng, uống vào lại nôn. Từ hôm qua đến giờ ông không đi ngoài được và không xì hơi. Không sốt, không đi ngoài phân đen."
+patient:
+  age_years: 65
+  sex: male
+  region: north
+  month: 6
+complaint: abdominal_pain
+answers:
+  abd_pain_location: periumbilical
+  abd_pain_onset: gradual
+  abd_pain_duration: d1_3
+  abd_pain_severe: present
+  abd_pain_colicky: present
+  abdomen_hard_swollen: present
+  no_stool_or_gas: present
+  vomiting: present
+  persistent_vomiting: present
+  nausea: present
+  previous_abdominal_surgery: present
+  fever: absent
+  diarrhea: absent
+  black_stool: absent
+  vomiting_blood: absent
+default_unmentioned: absent
+expected:
+  condition: bowel_obstruction
+  acceptable: []
+  triage: 2
+source:
+  basis: "Tắc ruột do dính sau mổ: đau quặn, nôn, bụng chướng, bí trung đại tiện; đến cấp cứu ngay (NHS Stomach ache: không đi ngoài và không xì hơi được cần đi cấp cứu)."
+  references:
+    - nhs-stomach-ache
+author: "agent:vignette-holdout"

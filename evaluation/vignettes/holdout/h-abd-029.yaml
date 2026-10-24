@@ -1,0 +1,42 @@
+id: h-abd-029
+set: holdout
+title_vi: "Nữ 63 tuổi bị đái tháo đường, khó chịu thượng vị lan ra lưng, buồn nôn, mệt, khó thở, không đau ngực"
+narrative_vi: "Bà N., 63 tuổi, ở Huế, bị đái tháo đường và tăng huyết áp. Khoảng 3 giờ nay bà khó chịu, tức âm ỉ vùng trên rốn, lan ra sau lưng, buồn nôn, nôn 1 lần. Bà mệt rũ, hơi khó thở khi đi lại trong nhà. Bà không thấy đau ngực, không vã mồ hôi, không sốt. Bà nghĩ là đau dạ dày."
+patient:
+  age_years: 63
+  sex: female
+  region: central
+  month: 3
+complaint: abdominal_pain
+answers:
+  abd_pain_location: epigastric
+  abd_pain_onset: gradual
+  abd_pain_duration: lt_6h
+  abd_pain_severe: absent
+  abd_pain_radiates_back: present
+  abd_pain_meal_relation: no_relation
+  chest_pain_pressure: absent
+  es_crushing_chest_pain: absent
+  pain_radiates_arm_jaw: absent
+  nausea: present
+  vomiting: present
+  fatigue: present
+  breathing_difficulty: present
+  cold_sweat: absent
+  heartburn: absent
+  severe_weakness: absent
+  diabetes: present
+  hypertension_known: present
+  fever: absent
+default_unmentioned: absent
+expected:
+  condition: acute_coronary_syndrome
+  acceptable: []
+  triage: 1
+source:
+  basis: "Nhồi máu cơ tim không điển hình ở phụ nữ đái tháo đường: khó chịu thượng vị, buồn nôn, nôn, mệt, khó thở, đau lan ra lưng, không đau ngực (NHS Heart attack: có thể giống khó tiêu, buồn nôn, khó thở; NICE CG95)."
+  references:
+    - nice-cg95
+    - "https://www.nhs.uk/conditions/heart-attack/"
+author: "agent:vignette-holdout"
+notes_vi: "Ca khó: không có đau ngực, không vã mồ hôi; đau lan ra lưng làm nghĩ sang viêm tụy."

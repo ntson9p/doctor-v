@@ -1,0 +1,43 @@
+id: h-abd-014
+set: holdout
+title_vi: "Nữ 35 tuổi, đau quặn bụng dưới phải 8 giờ lan xuống bẹn, tiểu nhiều lần, không tiểu máu"
+narrative_vi: "Chị Đ., 35 tuổi, ở Hà Nội, không mang thai, kinh nguyệt đều, vừa sạch kinh 1 tuần. Từ sáng, khoảng 8 giờ trước, chị đột ngột đau quặn từng cơn ở bụng dưới bên phải, lan xuống bẹn và ra hông lưng phải. Chị buồn nôn, đi tiểu nhiều lần, nước tiểu không đỏ. Không sốt, không ra khí hư hay ra máu âm đạo."
+patient:
+  age_years: 35
+  sex: female
+  region: north
+  month: 7
+complaint: abdominal_pain
+answers:
+  abd_pain_location: right_lower
+  abd_pain_onset: sudden
+  abd_pain_duration: h6_24
+  abd_pain_severe: absent
+  abd_pain_colicky: present
+  abd_pain_radiates_groin: present
+  abd_pain_migrated_rlq: absent
+  abd_pain_worse_movement: absent
+  flank_pain: present
+  hematuria: absent
+  urinary_frequency: present
+  dysuria: absent
+  nausea: present
+  vomiting: absent
+  fever: absent
+  loss_of_appetite: absent
+  pregnant: absent
+  missed_period: absent
+  vaginal_bleeding: absent
+  abnormal_vaginal_discharge: absent
+  pain_with_menses: absent
+default_unmentioned: absent
+expected:
+  condition: renal_colic
+  acceptable: []
+  triage: 3
+source:
+  basis: "Sỏi niệu quản đoạn thấp: đau quặn bụng dưới phải lan xuống bẹn và ra hông lưng, tiểu nhiều lần, không tiểu máu đại thể; khám gấp trong ngày (NHS Kidney stones)."
+  references:
+    - "https://www.nhs.uk/conditions/kidney-stones/"
+author: "agent:vignette-holdout"
+notes_vi: "Dễ nhầm với viêm ruột thừa hoặc bệnh phụ khoa."

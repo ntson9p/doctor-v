@@ -1,0 +1,40 @@
+id: h-abd-034
+set: holdout
+title_vi: "Nữ 30 tuổi, đau quặn bụng dưới trái tái đi tái lại 8 tháng, đi ngoài xong đỡ"
+narrative_vi: "Chị Y., 30 tuổi, nhân viên văn phòng ở Hà Nội. Tám tháng nay chị hay đau quặn bụng dưới bên trái, đau tăng sau ăn, đi ngoài xong thì đỡ. Chị lúc đi ngoài phân lỏng, lúc táo bón, hay đầy hơi, nhất là khi căng thẳng công việc. Đợt này chị đi ngoài phân lỏng 3 lần mỗi ngày. Không sụt cân, phân không có máu, không sốt. Chị không mang thai."
+patient:
+  age_years: 30
+  sex: female
+  region: north
+  month: 5
+complaint: abdominal_pain
+answers:
+  abd_pain_location: left_lower
+  abd_pain_onset: gradual
+  abd_pain_duration: gt_2w
+  abd_pain_severe: absent
+  abd_pain_colicky: present
+  abd_pain_meal_relation: worse_after_meal
+  diarrhea: present
+  diarrhea_bloody: absent
+  black_stool: absent
+  stress_poor_sleep: present
+  nausea: absent
+  vomiting: absent
+  fever: absent
+  loss_of_appetite: absent
+  abdomen_hard_swollen: absent
+  pregnant: absent
+  pain_with_menses: absent
+  unsafe_food_shared: absent
+default_unmentioned: absent
+expected:
+  condition: other
+  acceptable: []
+  triage: 4
+source:
+  basis: "Hội chứng ruột kích thích: đau bụng tái diễn, đỡ sau khi đi ngoài, thay đổi tính chất phân, đầy hơi, liên quan căng thẳng, không có dấu hiệu báo động; đặt lịch khám trong vài ngày (NHS IBS: triệu chứng trên 4 tuần cần gặp bác sĩ)."
+  references:
+    - "https://www.nhs.uk/conditions/irritable-bowel-syndrome-ibs/symptoms/"
+author: "agent:vignette-holdout"
+notes_vi: "Ngoài danh mục bệnh. Danh mục chưa có câu hỏi về đỡ đau sau khi đi ngoài, táo bón, đầy hơi, sụt cân."

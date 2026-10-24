@@ -1,0 +1,42 @@
+id: h-abd-026
+set: holdout
+title_vi: "Nữ 15 tuổi, đau bụng kinh kèm tiêu chảy, buồn nôn, đau đầu nhẹ"
+narrative_vi: "Em T., nữ, 15 tuổi, ở Thành phố Hồ Chí Minh, có kinh được hơn 1 năm. Sáng nay là ngày đầu kỳ kinh, em đau quặn bụng dưới, lan ra lưng, kèm đi ngoài phân lỏng 3 lần, buồn nôn, đau đầu nhẹ, mệt. Các kỳ kinh trước em cũng đau và đi ngoài như vậy. Em không sốt, ăn uống bình thường, nhà không ai bị tiêu chảy."
+patient:
+  age_years: 15
+  sex: female
+  region: south
+  month: 5
+complaint: abdominal_pain
+answers:
+  abd_pain_location: suprapubic
+  abd_pain_onset: gradual
+  abd_pain_duration: gt_2w
+  abd_pain_severe: absent
+  abd_pain_colicky: present
+  pain_with_menses: present
+  abd_pain_radiates_back: present
+  diarrhea: present
+  diarrhea_bloody: absent
+  nausea: present
+  vomiting: absent
+  headache: present
+  headache_severity: mild
+  fatigue: present
+  fever: absent
+  missed_period: absent
+  pregnant: absent
+  new_sexual_partner: absent
+  abnormal_vaginal_discharge: absent
+  unsafe_food_shared: absent
+default_unmentioned: absent
+expected:
+  condition: primary_dysmenorrhea
+  acceptable: []
+  triage: 5
+source:
+  basis: "Đau bụng kinh nguyên phát kèm tiêu chảy, buồn nôn, đau đầu, lặp lại mỗi kỳ kinh ở trẻ vị thành niên; tự chăm sóc (NHS Period pain)."
+  references:
+    - "https://www.nhs.uk/conditions/period-pain/"
+author: "agent:vignette-holdout"
+notes_vi: "Dễ nhầm viêm dạ dày ruột nếu không hỏi liên quan với kỳ kinh."

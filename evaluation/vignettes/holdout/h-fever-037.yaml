@@ -1,0 +1,43 @@
+id: h-fever-037
+set: holdout
+title_vi: "Bé trai 2 tuổi, sốt cao 6 ngày, mắt đỏ, môi nứt, ban đỏ, phù bàn tay bàn chân"
+narrative_vi: "Bé T., 2 tuổi, ở Thành phố Hồ Chí Minh. Bé sốt cao 39–40°C đã 6 ngày, uống thuốc hạ sốt chỉ đỡ ít giờ. Hai mắt bé đỏ nhưng không có ghèn, môi đỏ, khô nứt, lưỡi đỏ. Người bé nổi ban đỏ ở thân, bàn tay bàn chân sưng phù, đỏ. Bé quấy khóc nhiều, ăn kém. Bé không ho, không sổ mũi, đã tiêm đủ 2 mũi vắc xin sởi."
+patient:
+  age_years: 2
+  sex: male
+  region: south
+  month: 4
+complaint: fever
+answers:
+  fever_max_temp: ge_39
+  fever_duration: d6_7
+  red_eyes: present
+  rash_any: present
+  rash_non_blanching: absent
+  rash_spreads_from_face: absent
+  edema_face_hands: present
+  loss_of_appetite: present
+  mouth_ulcers: absent
+  hand_foot_blisters: absent
+  cough: absent
+  runny_nose: absent
+  diarrhea: absent
+  vomiting: absent
+  breathing_difficulty: absent
+  child_unable_to_drink: absent
+  drowsy_hard_to_wake: absent
+  measles_vaccinated: present
+  measles_contact: absent
+  hfmd_contact: absent
+default_unmentioned: absent
+expected:
+  condition: other
+  acceptable: []
+  triage: 3
+source:
+  basis: "Bệnh Kawasaki: sốt từ 5 ngày, mắt đỏ không ghèn, môi đỏ nứt, ban đỏ, phù đỏ bàn tay bàn chân; cần khám gấp trong ngày (NHS Kawasaki disease; NICE NG143: sốt từ 5 ngày cần đánh giá)."
+  references:
+    - "https://www.nhs.uk/conditions/kawasaki-disease/"
+    - nice-ng143
+author: "agent:vignette-holdout"
+notes_vi: "Ngoài danh mục bệnh, dễ nhầm với sởi. Danh mục chưa có dấu hiệu môi đỏ nứt, lưỡi đỏ, hạch cổ, bong da đầu ngón."

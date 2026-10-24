@@ -1,0 +1,38 @@
+id: h-fever-012
+set: holdout
+title_vi: "Bé trai 2 tuổi, sốt 1 ngày, loét miệng, phỏng nước tay chân, lớp có trẻ bị tay chân miệng"
+narrative_vi: "Bé K., 2 tuổi, ở Bình Dương, đi nhà trẻ. Lớp bé có 3 bạn đang nghỉ vì tay chân miệng. Từ hôm qua bé sốt 38,5°C, chảy nhiều nước dãi, bỏ ăn vì đau miệng. Mẹ thấy trong miệng có vết loét, lòng bàn tay, lòng bàn chân và mông có nốt phỏng nước nhỏ. Bé không giật mình, không nôn, vẫn uống sữa được, chơi bình thường."
+patient:
+  age_years: 2
+  sex: male
+  region: south
+  month: 4
+complaint: fever
+answers:
+  fever_max_temp: t38_39
+  fever_duration: d1_2
+  mouth_ulcers: present
+  hand_foot_blisters: present
+  rash_any: present
+  rash_non_blanching: absent
+  rash_spreads_from_face: absent
+  loss_of_appetite: present
+  hfmd_contact: present
+  startle_myoclonus: absent
+  vomiting: absent
+  child_unable_to_drink: absent
+  child_vomits_everything: absent
+  drowsy_hard_to_wake: absent
+  breathing_difficulty: absent
+  cough: absent
+  measles_vaccinated: present
+default_unmentioned: absent
+expected:
+  condition: hand_foot_mouth_disease
+  acceptable: []
+  triage: 3
+source:
+  basis: "Tay chân miệng độ 1 (chỉ loét miệng và tổn thương da): điều trị ngoại trú, cần được khám để phân độ và hẹn tái khám, theo dõi dấu hiệu chuyển độ (292/QĐ-BYT)."
+  references:
+    - byt-qd-292-2024
+author: "agent:vignette-holdout"

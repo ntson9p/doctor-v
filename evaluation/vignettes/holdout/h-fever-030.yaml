@@ -1,0 +1,37 @@
+id: h-fever-030
+set: holdout
+title_vi: "Bé trai 3 tuổi, sốt, ho, thở nhanh, rút lõm lồng ngực, không uống được"
+narrative_vi: "Bé V., 3 tuổi, ở Lào Cai. Bé ho, sổ mũi 5 ngày, 3 ngày nay sốt 39,3°C. Hôm nay bé thở nhanh, phần dưới lồng ngực rút lõm khi hít vào, không chịu uống nước, không bú được. Bé mệt, bỏ ăn nhưng vẫn tỉnh, không co giật, không nôn. Môi không tím."
+patient:
+  age_years: 3
+  sex: male
+  region: north
+  month: 12
+complaint: fever
+answers:
+  fever_max_temp: ge_39
+  fever_duration: d3_5
+  cough: present
+  runny_nose: present
+  breathing_difficulty: present
+  child_unable_to_drink: present
+  child_vomits_everything: absent
+  drowsy_hard_to_wake: absent
+  seizure_recent: absent
+  es_severe_breathing: absent
+  loss_of_appetite: present
+  fatigue: present
+  vomiting: absent
+  diarrhea: absent
+  rash_any: absent
+  measles_vaccinated: present
+default_unmentioned: absent
+expected:
+  condition: pneumonia
+  acceptable: []
+  triage: 2
+source:
+  basis: "Viêm phổi kèm dấu hiệu nguy hiểm toàn thân (không uống được) là viêm phổi nặng hoặc bệnh rất nặng theo IMCI: chuyển viện khẩn cấp."
+  references:
+    - who-imci-chart-booklet-2014
+author: "agent:vignette-holdout"

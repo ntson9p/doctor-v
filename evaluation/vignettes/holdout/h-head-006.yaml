@@ -1,0 +1,45 @@
+id: h-head-006
+set: holdout
+title_vi: "Nữ 66 tuổi, đau căng vùng gáy 4 ngày khi mất ngủ, giống kiểu đau đã có từ lâu"
+narrative_vi: "Bà T., 66 tuổi, ở Hải Dương, bị tăng huyết áp, uống thuốc đều. Từ thời trẻ bà đã hay bị đau đầu kiểu này. Bốn ngày nay bà chăm chồng nằm viện, mất ngủ, lại đau căng tức vùng gáy và sau đầu, mức vừa, phải nằm nghỉ. Tiếng ồn làm bà khó chịu hơn. Huyết áp đo sáng nay 135/85 mmHg. Bà không buồn nôn, không nhìn mờ, không yếu tay chân, không sốt, không đau hàm khi nhai."
+patient:
+  age_years: 66
+  sex: female
+  region: north
+  month: 4
+complaint: headache
+answers:
+  headache_course: recurrent_similar
+  headache_duration: gt_3d
+  headache_location: back_neck
+  headache_character: pressing
+  headache_severity: moderate
+  headache_thunderclap: absent
+  headache_worse_activity: absent
+  photophobia: absent
+  phonophobia: present
+  nausea: absent
+  vomiting: absent
+  stress_poor_sleep: present
+  bp_measured: normal
+  hypertension_known: present
+  fever: absent
+  blurred_vision: absent
+  vision_loss_or_double: absent
+  es_stroke_signs: absent
+  confusion: absent
+  neck_stiffness: absent
+  regular_painkiller_use: absent
+  headache_after_head_injury: absent
+default_unmentioned: absent
+expected:
+  condition: tension_type_headache
+  acceptable: []
+  triage: 5
+source:
+  basis: "Đau đầu do căng thẳng ở người cao tuổi có tiền sử cùng kiểu đau từ lâu, không có dấu hiệu báo động: không phải đau đầu mới sau 50 tuổi, không rối loạn thị giác, không yếu liệt, huyết áp bình thường (NICE CG150)."
+  references:
+    - nice-cg150
+    - "https://www.nhs.uk/conditions/tension-headaches/"
+author: "agent:vignette-holdout"
+notes_vi: "Dễ bị khuyên quá mức vì tuổi cao và đau vùng gáy."

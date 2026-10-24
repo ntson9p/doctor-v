@@ -1,0 +1,41 @@
+id: h-head-001
+set: holdout
+title_vi: "Nữ 32 tuổi, sau cảm 1 tuần, nặng trán và má khi cúi, nghẹt mũi, nước mũi vàng"
+narrative_vi: "Chị K., 32 tuổi, ở Thành phố Hồ Chí Minh, không mang thai. Một tuần trước chị bị cảm, sổ mũi. Mấy ngày nay chị đau nặng vùng trán và hai bên má, cúi đầu xuống thì đau tăng. Chị nghẹt mũi, nước mũi đặc màu vàng, ho ít. Chị không sốt, không sợ ánh sáng, không buồn nôn. Đau ở mức nhẹ, vẫn đi làm được."
+patient:
+  age_years: 32
+  sex: female
+  region: south
+  month: 7
+complaint: headache
+answers:
+  headache_course: first_time
+  headache_duration: gt_3d
+  headache_location: forehead_face
+  headache_character: pressing
+  headache_severity: mild
+  headache_thunderclap: absent
+  facial_pain_pressure: present
+  nasal_congestion: present
+  runny_nose: present
+  purulent_nasal_discharge: present
+  nasal_symptoms_over_10_days: absent
+  cough: present
+  productive_cough: absent
+  fever: absent
+  sore_throat: absent
+  photophobia: absent
+  nausea: absent
+  neck_stiffness: absent
+  vision_loss_or_double: absent
+  pregnant: absent
+default_unmentioned: absent
+expected:
+  condition: acute_sinusitis
+  acceptable: []
+  triage: 5
+source:
+  basis: "Viêm mũi xoang cấp sau nhiễm vi rút, dưới 10 ngày, không có dấu hiệu biến chứng: tự chăm sóc (NICE NG79; NHS Sinusitis)."
+  references:
+    - "https://www.nhs.uk/conditions/sinusitis-sinus-infection/"
+author: "agent:vignette-holdout"

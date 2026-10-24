@@ -1,0 +1,44 @@
+id: h-abd-002
+set: holdout
+title_vi: "Bé gái 8 tuổi, sốt 6 ngày, đau quanh rốn, tiêu chảy, chán ăn"
+narrative_vi: "Bé H., 8 tuổi, ở Đồng Tháp. Bé sốt đã 6 ngày, nay sốt 39,2°C, mệt, bỏ ăn, đau đầu nhẹ. Bé đau âm ỉ quanh rốn, buồn nôn, đi ngoài phân lỏng 3–4 lần mỗi ngày, không có máu. Nhà dùng nước sông chưa đun sôi kỹ. Trong nhà không ai bị tiêu chảy. Bé vẫn uống nước được, mắt không trũng."
+patient:
+  age_years: 8
+  sex: female
+  region: south
+  month: 6
+complaint: abdominal_pain
+answers:
+  abd_pain_location: periumbilical
+  abd_pain_onset: gradual
+  abd_pain_duration: d4_14
+  abd_pain_severe: absent
+  abd_pain_colicky: absent
+  abd_pain_worse_movement: absent
+  fever: present
+  fever_max_temp: ge_39
+  fever_duration: d6_7
+  diarrhea: present
+  diarrhea_bloody: absent
+  nausea: present
+  vomiting: absent
+  loss_of_appetite: present
+  fatigue: present
+  headache: present
+  headache_severity: mild
+  sunken_eyes: absent
+  unsafe_food_shared: absent
+  red_jelly_stool: absent
+  cough: absent
+  rash_any: absent
+  jaundice: absent
+  dengue_nearby: absent
+  measles_vaccinated: present
+default_unmentioned: absent
+expected:
+  condition: typhoid_fever
+  acceptable: []
+  triage: 3
+source:
+  basis: "Thương hàn ở trẻ: sốt kéo dài gần 1 tuần, đau bụng, tiêu chảy, chán ăn, dùng nước không an toàn ở đồng bằng sông Cửu Long; cần khám trong 24 giờ."
+author: "agent:vignette-holdout"

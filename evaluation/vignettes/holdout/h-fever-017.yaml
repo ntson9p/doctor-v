@@ -1,0 +1,42 @@
+id: h-fever-017
+set: holdout
+title_vi: "Nam 45 tuổi vừa từ châu Phi về, sốt 2 ngày không thành cơn, tiêu chảy"
+narrative_vi: "Anh S., 45 tuổi, ở Hà Nội. Anh về nước được 9 ngày sau 2 năm làm xây dựng ở Angola, không uống thuốc phòng sốt rét. Hai ngày nay anh sốt 38,5–38,9°C, có lúc ớn lạnh run, nhưng không thành cơn rõ ràng. Anh đau đầu, đau mỏi người, mệt, chán ăn, buồn nôn, đi ngoài phân lỏng 3–4 lần mỗi ngày, không có máu. Anh không vàng da, không lú lẫn, không ho."
+patient:
+  age_years: 45
+  sex: male
+  region: north
+  month: 4
+complaint: fever
+answers:
+  fever_max_temp: t38_39
+  fever_duration: d1_2
+  chills_rigors: present
+  fever_cyclic: absent
+  headache: present
+  headache_severity: moderate
+  myalgia: present
+  fatigue: present
+  loss_of_appetite: present
+  nausea: present
+  vomiting: absent
+  diarrhea: present
+  diarrhea_bloody: absent
+  abdominal_pain: absent
+  jaundice: absent
+  confusion: absent
+  malaria_area_exposure: present
+  unsafe_food_shared: absent
+  cough: absent
+default_unmentioned: absent
+expected:
+  condition: malaria
+  acceptable: []
+  triage: 3
+source:
+  basis: "Sốt rét nhập cảnh ở người từ vùng có sốt rét về, không uống thuốc phòng: cần xét nghiệm tìm ký sinh trùng ngay trong ngày (NHS Malaria; 3377/QĐ-BYT)."
+  references:
+    - byt-qd-3377-2023
+    - "https://www.nhs.uk/conditions/malaria/"
+author: "agent:vignette-holdout"
+notes_vi: "Sống ở miền Bắc, sốt không thành cơn và có tiêu chảy nên dễ nghĩ sang viêm dạ dày ruột."

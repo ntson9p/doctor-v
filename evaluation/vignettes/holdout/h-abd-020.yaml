@@ -1,0 +1,34 @@
+id: h-abd-020
+set: holdout
+title_vi: "Bé gái 2 tuổi, đau bụng từng cơn 10 giờ, nôn, li bì giữa các cơn, chưa có phân máu"
+narrative_vi: "Bé A., 2 tuổi, ở Hà Nội, tuần trước bị sổ mũi, nay vẫn còn sổ mũi ít. Khoảng 10 giờ trước bé bắt đầu từng cơn ôm bụng khóc, co chân lên bụng rồi lại nằm im. Bé nôn 4 lần, vẫn uống được ít nước. Giữa các cơn bé lả đi, ngủ li bì, gọi mới mở mắt. Bé chưa đi ngoài ra máu, không sốt."
+patient:
+  age_years: 2
+  sex: female
+  region: north
+  month: 12
+complaint: abdominal_pain
+answers:
+  abd_pain_onset: sudden
+  abd_pain_duration: h6_24
+  abd_pain_severe: present
+  abd_pain_colicky: present
+  episodic_crying_legs_drawn: present
+  red_jelly_stool: absent
+  vomiting: present
+  child_vomits_everything: absent
+  child_unable_to_drink: absent
+  drowsy_hard_to_wake: present
+  fever: absent
+  diarrhea: absent
+  runny_nose: present
+  abdomen_hard_swollen: absent
+default_unmentioned: absent
+expected:
+  condition: intussusception
+  acceptable: []
+  triage: 2
+source:
+  basis: "Lồng ruột giai đoạn sớm chưa có phân máu sau nhiễm vi rút đường hô hấp; li bì giữa các cơn đau là dấu hiệu nặng; cần đến cấp cứu ngay."
+author: "agent:vignette-holdout"
+notes_vi: "Nhiều ca lồng ruột không có đủ bộ ba triệu chứng kinh điển."

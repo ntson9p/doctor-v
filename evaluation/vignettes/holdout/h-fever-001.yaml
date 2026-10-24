@@ -1,0 +1,37 @@
+id: h-fever-001
+set: holdout
+title_vi: "Nữ 26 tuổi, sốt nhẹ 1 ngày, sổ mũi, nghẹt mũi, đau họng"
+narrative_vi: "Chị H., 26 tuổi, nhân viên văn phòng ở Hà Nội. Từ hôm qua chị sổ mũi, nghẹt mũi, đau họng nhẹ và ho khan. Nhiệt độ cao nhất đo được 37,8°C. Chị vẫn ăn uống và đi làm được. Đồng nghiệp cùng phòng cũng đang bị cảm. Không khó thở, không đau nhức người nhiều, không mất mùi vị."
+patient:
+  age_years: 26
+  sex: female
+  region: north
+  month: 11
+complaint: fever
+answers:
+  fever_max_temp: lt_38
+  fever_duration: d1_2
+  runny_nose: present
+  nasal_congestion: present
+  sore_throat: present
+  cough: present
+  productive_cough: absent
+  sick_contact_respiratory: present
+  myalgia: absent
+  chills_rigors: absent
+  fatigue: absent
+  headache: absent
+  breathing_difficulty: absent
+  loss_of_smell_taste: absent
+  ear_pain: absent
+  pregnant: absent
+default_unmentioned: absent
+expected:
+  condition: common_cold
+  acceptable: []
+  triage: 5
+source:
+  basis: "Cảm lạnh thông thường: triệu chứng mũi họng, sốt nhẹ, không có dấu hiệu nặng; tự chăm sóc tại nhà (NHS Common cold)."
+  references:
+    - "https://www.nhs.uk/conditions/common-cold/"
+author: "agent:vignette-holdout"

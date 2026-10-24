@@ -1,0 +1,48 @@
+id: h-abd-003
+set: holdout
+title_vi: "Nữ 30 tuổi mang thai 24 tuần, sốt cao, rét run, đau dưới sườn phải và hông lưng, nôn nhiều"
+narrative_vi: "Chị T., 30 tuổi, ở Hải Dương, đang mang thai 24 tuần. Từ hôm qua chị đau âm ỉ dưới sườn phải lan ra hông lưng phải, rét run, sốt 39,3°C. Chị buồn nôn, nôn nhiều lần, uống nước vào lại nôn ra. Chị đi tiểu nhiều lần nhưng không buốt. Không ra máu âm đạo, không đau bụng từng cơn. Huyết áp đo ở trạm y tế 120/75 mmHg."
+patient:
+  age_years: 30
+  sex: female
+  region: north
+  month: 8
+complaint: abdominal_pain
+answers:
+  abd_pain_location: right_upper
+  abd_pain_onset: gradual
+  abd_pain_duration: d1_3
+  abd_pain_severe: absent
+  abd_pain_colicky: absent
+  abd_pain_meal_relation: no_relation
+  pain_after_fatty_meal: absent
+  flank_pain: present
+  fever: present
+  fever_max_temp: ge_39
+  fever_duration: d1_2
+  chills_rigors: present
+  dysuria: absent
+  urinary_frequency: present
+  hematuria: absent
+  nausea: present
+  vomiting: present
+  persistent_vomiting: present
+  pregnant: present
+  gestational_age: ge_20w
+  vaginal_bleeding: absent
+  bp_measured: normal
+  headache: absent
+  edema_face_hands: absent
+  diarrhea: absent
+  jaundice: absent
+default_unmentioned: absent
+expected:
+  condition: acute_pyelonephritis
+  acceptable: []
+  triage: 2
+source:
+  basis: "Viêm thận – bể thận ở phụ nữ có thai, nôn không giữ được nước: cần nhập viện truyền kháng sinh (NHS Kidney infection: phụ nữ có thai có thể cần điều trị tại bệnh viện; NICE NG111 khuyên chuyển viện khi có thai hoặc không uống được)."
+  references:
+    - "https://www.nhs.uk/conditions/kidney-infection/"
+author: "agent:vignette-holdout"
+notes_vi: "Đau dưới sườn phải ở thai phụ dễ nhầm với viêm túi mật, viêm ruột thừa; không có tiểu buốt."

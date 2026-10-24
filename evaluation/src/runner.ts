@@ -53,11 +53,16 @@ export function contextOf(v: Vignette): PatientContext {
   return { ageMonths: ageMonthsOf(v), sex: v.patient.sex, regionId: v.patient.region ?? null, month: v.patient.month ?? null };
 }
 
-/** The vignette's true value for a finding. */
+/**
+ * The vignette's true value for a finding. Unmentioned binary findings follow
+ * `default_unmentioned`, except findings that most people have (leak ≥ 0.5, e.g. "fully
+ * vaccinated"): for those, silence says nothing, so the answer is "unknown".
+ */
 export function trueValue(f: Finding, v: Vignette): string {
   const given = v.answers[f.id];
   if (given !== undefined) return given;
-  return f.type === 'binary' ? (v.default_unmentioned ?? 'absent') : UNKNOWN;
+  if (f.type !== 'binary' || f.leak >= 0.5) return UNKNOWN;
+  return v.default_unmentioned ?? 'absent';
 }
 
 export function runVignette(kb: CompiledKb, v: Vignette, options: RunOptions = {}): CaseRun {

@@ -1,0 +1,43 @@
+id: h-head-009
+set: holdout
+title_vi: "Nam 42 tuổi, đột ngột đau đầu dữ dội nhất từ trước tới nay khi nâng tạ, nôn, cứng gáy"
+narrative_vi: "Anh T., 42 tuổi, ở Hà Nội, hút thuốc lá, bị tăng huyết áp nhưng không uống thuốc đều. Khoảng 1 giờ trước, khi đang nâng tạ ở phòng tập, anh đột ngột đau đầu dữ dội vùng sau gáy như bị ai đánh mạnh vào đầu, đau nhất từ trước đến nay. Anh nôn 2 lần, cổ cứng, chói mắt khi nhìn đèn. Anh vẫn tỉnh, nói được, không yếu tay chân, không bị va đập đầu."
+patient:
+  age_years: 42
+  sex: male
+  region: north
+  month: 11
+complaint: headache
+answers:
+  headache_course: first_time
+  headache_duration: lt_4h
+  headache_location: back_neck
+  headache_severity: severe
+  headache_thunderclap: present
+  vomiting: present
+  nausea: present
+  neck_stiffness: present
+  photophobia: present
+  confusion: absent
+  drowsy_hard_to_wake: absent
+  fainting_or_near_fainting: absent
+  seizure_recent: absent
+  es_stroke_signs: absent
+  es_unresponsive_or_seizing: absent
+  vision_loss_or_double: absent
+  fever: absent
+  headache_after_head_injury: absent
+  smoker: present
+  hypertension_known: present
+default_unmentioned: absent
+expected:
+  condition: subarachnoid_hemorrhage
+  acceptable: []
+  triage: 1
+source:
+  basis: "Xuất huyết dưới nhện: đau đầu sét đánh khi gắng sức, nôn, cứng gáy, sợ ánh sáng; gọi cấp cứu ngay (NICE NG228; NHS Subarachnoid haemorrhage)."
+  references:
+    - nice-ng228
+    - nice-cg150
+    - "https://www.nhs.uk/conditions/subarachnoid-haemorrhage/"
+author: "agent:vignette-holdout"

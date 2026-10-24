@@ -1,0 +1,44 @@
+id: h-fever-035
+set: holdout
+title_vi: "Nam 30 tuổi ở Đắk Nông, ngủ rừng, sốt 5 ngày, nay vàng mắt, lú lẫn, tiểu ít"
+narrative_vi: "Anh M., 30 tuổi, ở Đắk Nông, làm nghề khai thác gỗ, hay ngủ lại trong rừng. Năm ngày nay anh sốt cao 39–40°C, rét run, đau đầu nhiều, đau mỏi người, nôn. Hôm nay vợ thấy anh vàng mắt, nói năng lẫn lộn, mệt lả không tự đi được, đi tiểu rất ít, nước tiểu sẫm màu. Anh không co giật."
+patient:
+  age_years: 30
+  sex: male
+  region: highlands
+  month: 7
+complaint: fever
+answers:
+  fever_max_temp: ge_39
+  fever_duration: d3_5
+  chills_rigors: present
+  fever_cyclic: absent
+  headache: present
+  headache_severity: severe
+  myalgia: present
+  vomiting: present
+  persistent_vomiting: absent
+  jaundice: present
+  confusion: present
+  severe_weakness: present
+  decreased_urine: present
+  seizure_recent: absent
+  neck_stiffness: absent
+  breathing_difficulty: absent
+  rash_any: absent
+  bleeding_gums_nose: absent
+  eschar: absent
+  malaria_area_exposure: present
+  bush_exposure: absent
+default_unmentioned: absent
+expected:
+  condition: malaria
+  acceptable: []
+  triage: 1
+source:
+  basis: "Sốt rét nặng có biến chứng (rối loạn ý thức, vàng da, thiểu niệu) ở người ngủ rừng Tây Nguyên: cấp cứu ngay (3377/QĐ-BYT; NHS Malaria)."
+  references:
+    - byt-qd-3377-2023
+    - "https://www.nhs.uk/conditions/malaria/"
+author: "agent:vignette-holdout"
+notes_vi: "Danh mục chưa có dấu hiệu nước tiểu sẫm màu."

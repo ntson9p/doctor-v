@@ -1,0 +1,39 @@
+id: h-fever-013
+set: holdout
+title_vi: "Bé gái 3 tuổi, sốt 39,2°C 2 ngày, loét miệng, giật mình khi ngủ, nôn"
+narrative_vi: "Bé T., 3 tuổi, ở Đồng Nai. Bé sốt 39,2°C đã 2 ngày, uống thuốc hạ sốt vẫn sốt lại. Trong miệng có vài vết loét, chỉ có vài nốt phỏng nước nhỏ ở mông, tay chân chưa thấy nốt. Đêm qua bé giật mình 2 lần khi ngủ, quấy khóc, khó ngủ. Sáng nay bé nôn 2 lần. Bé vẫn tỉnh, uống được nước, thở bình thường. Không rõ bé có tiếp xúc với trẻ bị tay chân miệng không."
+patient:
+  age_years: 3
+  sex: female
+  region: south
+  month: 10
+complaint: fever
+answers:
+  fever_max_temp: ge_39
+  fever_duration: d1_2
+  mouth_ulcers: present
+  hand_foot_blisters: present
+  rash_any: present
+  rash_non_blanching: absent
+  startle_myoclonus: present
+  vomiting: present
+  child_vomits_everything: absent
+  child_unable_to_drink: absent
+  loss_of_appetite: present
+  hfmd_contact: unknown
+  drowsy_hard_to_wake: absent
+  breathing_difficulty: absent
+  cold_hands_feet: absent
+  seizure_recent: absent
+  measles_vaccinated: present
+default_unmentioned: absent
+expected:
+  condition: hand_foot_mouth_disease
+  acceptable: []
+  triage: 2
+source:
+  basis: "Tay chân miệng độ 2a (bệnh sử có giật mình, sốt từ 39°C, nôn, quấy khóc): cần nhập viện điều trị và theo dõi (292/QĐ-BYT)."
+  references:
+    - byt-qd-292-2024
+author: "agent:vignette-holdout"
+notes_vi: "Tổn thương da ít, chỉ ở mông, không rõ nguồn lây nên dễ bỏ sót."

@@ -1,0 +1,43 @@
+id: h-fever-004
+set: holdout
+title_vi: "Nữ 72 tuổi bị đái tháo đường, sốt, ho, đau mỏi người 2 ngày"
+narrative_vi: "Bà L., 72 tuổi, ở Nam Định, bị đái tháo đường và tăng huyết áp. Từ hôm qua bà sốt 38,5°C, ho khan, đau họng, sổ mũi, đau mỏi người, đau đầu nhẹ, mệt và chán ăn. Đứa cháu đi học về bị cúm trước đó 2 ngày. Bà không khó thở, không đau ngực, vẫn tỉnh táo và ăn uống được ít."
+patient:
+  age_years: 72
+  sex: female
+  region: north
+  month: 2
+complaint: fever
+answers:
+  fever_max_temp: t38_39
+  fever_duration: d1_2
+  chills_rigors: absent
+  cough: present
+  productive_cough: absent
+  sore_throat: present
+  runny_nose: present
+  myalgia: present
+  fatigue: present
+  loss_of_appetite: present
+  headache: present
+  headache_severity: mild
+  sick_contact_respiratory: present
+  diabetes: present
+  hypertension_known: present
+  breathing_difficulty: absent
+  chest_pain_pressure: absent
+  pleuritic_chest_pain: absent
+  confusion: absent
+  loss_of_smell_taste: absent
+default_unmentioned: absent
+expected:
+  condition: influenza
+  acceptable: [covid19]
+  triage: 3
+source:
+  basis: "Cúm ở người từ 65 tuổi có đái tháo đường (nhóm nguy cơ): cần khám sớm để cân nhắc thuốc kháng vi rút (1840/QĐ-BYT; NHS Flu: người từ 65 tuổi hoặc có bệnh mạn tính cần khám gấp)."
+  references:
+    - byt-qd-1840-2025
+    - "https://www.nhs.uk/conditions/flu/"
+author: "agent:vignette-holdout"
+notes_vi: "Cúm và COVID-19 không phân biệt được nếu không xét nghiệm nên chấp nhận COVID-19."

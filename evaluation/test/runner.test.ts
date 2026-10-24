@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import { ADULT, makeKb } from '../../packages/engine/test/fixture.ts';
-import { computeMetrics, ece, rng, runVignette } from '../src/index.ts';
+import { computeMetrics, ece, rng, runVignette, trueValue } from '../src/index.ts';
 import type { Vignette } from '../src/index.ts';
 
 const kb = makeKb();
@@ -30,6 +30,31 @@ describe('simulated patient', () => {
     const run = runVignette(kb, vignette('collapse', { es_collapse: 'present' }, 'mening', 1));
     expect(run.triage).toBe(1);
     expect(run.stopReason).toBe('emergency');
+  });
+
+  it('answers "unknown" for unmentioned findings that most people have', () => {
+    const kb2 = makeKb({
+      findings: [
+        ...kb.findings,
+        {
+          id: 'vaccinated',
+          type: 'binary',
+          leak: 0.85,
+          leakByComplaint: {},
+          clusterId: null,
+          requires: [],
+          appliesTo: null,
+          cost: 1,
+          unknownRate: 0.1,
+          altQuestion: null,
+        },
+      ],
+    });
+    const f = kb2.findings.find((x) => x.id === 'vaccinated');
+    const v = vignette('vacc', {}, 'cold', 5);
+    expect(f && trueValue(f, v)).toBe('unknown');
+    const cough = kb2.findings.find((x) => x.id === 'cough');
+    expect(cough && trueValue(cough, v)).toBe('absent');
   });
 
   it('is reproducible with noise', () => {

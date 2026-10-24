@@ -1,0 +1,38 @@
+id: h-abd-033
+set: holdout
+title_vi: "Nữ 42 tuổi có sỏi túi mật, đau dưới sườn phải 3 giờ sau bữa nhiều mỡ, không sốt"
+narrative_vi: "Chị Q., 42 tuổi, ở Thành phố Hồ Chí Minh, đã biết có sỏi túi mật. Khoảng 2 giờ sau bữa tối nhiều dầu mỡ, chị đau tức nhiều dưới sườn phải, đau liên tục, lan ra sau lưng, đến giờ đã 3 tiếng. Chị buồn nôn, nôn 1 lần. Mấy tháng nay chị đã bị 2 lần tương tự, mỗi lần vài giờ rồi tự hết. Không sốt, không vàng da. Chị không mang thai."
+patient:
+  age_years: 42
+  sex: female
+  region: south
+  month: 3
+complaint: abdominal_pain
+answers:
+  abd_pain_location: right_upper
+  abd_pain_onset: gradual
+  abd_pain_duration: lt_6h
+  abd_pain_severe: absent
+  abd_pain_colicky: absent
+  pain_after_fatty_meal: present
+  abd_pain_meal_relation: worse_after_meal
+  abd_pain_radiates_back: present
+  abd_pain_worse_movement: absent
+  gallstones_known: present
+  nausea: present
+  vomiting: present
+  fever: absent
+  jaundice: absent
+  heartburn: absent
+  pregnant: absent
+default_unmentioned: absent
+expected:
+  condition: other
+  acceptable: []
+  triage: 3
+source:
+  basis: "Cơn đau quặn mật do sỏi túi mật chưa viêm: đau hạ sườn phải sau bữa nhiều mỡ, kéo dài vài giờ, không sốt, không vàng da; NHS khuyên khám gấp khi đau bụng do sỏi mật kéo dài trên 30 phút (NHS Gallstones)."
+  references:
+    - "https://www.nhs.uk/conditions/gallstones/"
+author: "agent:vignette-holdout"
+notes_vi: "Ngoài danh mục bệnh; khác viêm túi mật cấp ở chỗ không sốt và đau dưới 6 giờ."

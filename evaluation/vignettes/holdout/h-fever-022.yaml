@@ -1,0 +1,42 @@
+id: h-fever-022
+set: holdout
+title_vi: "Nữ 52 tuổi đang hóa trị ung thư, sốt 38,4°C, ớn lạnh, không có triệu chứng khu trú"
+narrative_vi: "Chị G., 52 tuổi, ở Hà Nội, đang hóa trị ung thư vú, đợt truyền gần nhất cách đây 10 ngày. Chiều nay chị thấy ớn lạnh, đo nhiệt độ 38,4°C. Chị mệt và ăn kém nhưng vẫn tỉnh táo, tự đi lại được. Không ho, không đau họng, không tiểu buốt, không tiêu chảy, không đau ở đâu rõ."
+patient:
+  age_years: 52
+  sex: female
+  region: north
+  month: 10
+complaint: fever
+answers:
+  fever_max_temp: t38_39
+  fever_duration: d1_2
+  chills_rigors: present
+  fatigue: present
+  loss_of_appetite: present
+  immunocompromised: present
+  severe_weakness: absent
+  cold_hands_feet: absent
+  breathing_difficulty: absent
+  confusion: absent
+  cough: absent
+  sore_throat: absent
+  dysuria: absent
+  urinary_frequency: absent
+  diarrhea: absent
+  abdominal_pain: absent
+  headache: absent
+  mouth_ulcers: absent
+  rash_any: absent
+  pregnant: absent
+default_unmentioned: absent
+expected:
+  condition: sepsis
+  acceptable: []
+  triage: 2
+source:
+  basis: "Sốt khi đang hóa trị phải được xử trí như nhiễm khuẩn huyết do giảm bạch cầu cho đến khi loại trừ: đến bệnh viện ngay để dùng kháng sinh (NICE CG151; NICE NG51)."
+  references:
+    - nice-ng51
+author: "agent:vignette-holdout"
+notes_vi: "Chưa có dấu hiệu nặng lúc hỏi nhưng có thể diễn biến rất nhanh; chỉ yếu tố suy giảm miễn dịch giúp nhận ra mức khẩn."

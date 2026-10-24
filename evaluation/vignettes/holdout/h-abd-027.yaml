@@ -1,0 +1,42 @@
+id: h-abd-027
+set: holdout
+title_vi: "Nữ 36 tuổi mang thai 37 tuần, đau thượng vị lan hạ sườn phải, nôn, phù mặt và tay"
+narrative_vi: "Chị P., 36 tuổi, ở Cần Thơ, mang thai lần đầu được 37 tuần. Từ khoảng 6 giờ trước chị đau tức vùng trên rốn lan sang dưới sườn phải, kèm nóng rát sau xương ức, buồn nôn và nôn 2 lần. Chị nghĩ là đau dạ dày. Chị đau đầu nhẹ, mặt và hai bàn tay sưng phù mấy ngày nay. Ở nhà không có máy đo huyết áp. Không sốt, không ra máu âm đạo, không nhìn mờ."
+patient:
+  age_years: 36
+  sex: female
+  region: south
+  month: 7
+complaint: abdominal_pain
+answers:
+  abd_pain_location: epigastric
+  abd_pain_onset: gradual
+  abd_pain_duration: h6_24
+  abd_pain_severe: absent
+  abd_pain_colicky: absent
+  abd_pain_meal_relation: no_relation
+  heartburn: present
+  nausea: present
+  vomiting: present
+  headache: present
+  headache_severity: mild
+  blurred_vision: absent
+  edema_face_hands: present
+  pregnant: present
+  gestational_age: ge_20w
+  fever: absent
+  vaginal_bleeding: absent
+  jaundice: absent
+  diarrhea: absent
+default_unmentioned: absent
+expected:
+  condition: preeclampsia
+  acceptable: []
+  triage: 2
+source:
+  basis: "Tiền sản giật nặng, hội chứng HELLP: đau thượng vị, hạ sườn phải, nôn, đau đầu, phù ở thai phụ trên 20 tuần; đến bệnh viện sản ngay (NICE NG133; NHS Pre-eclampsia: đau dưới sườn, nôn, ợ nóng không đỡ cần được khám ngay)."
+  references:
+    - nice-ng133
+    - "https://www.nhs.uk/conditions/pre-eclampsia/"
+author: "agent:vignette-holdout"
+notes_vi: "Huyết áp chưa đo được; thai phụ tưởng là đau dạ dày."

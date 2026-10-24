@@ -1,0 +1,43 @@
+id: h-fever-003
+set: holdout
+title_vi: "Nam 35 tuổi, sốt cao đột ngột, rét run, đau nhức người, ho khan mùa đông"
+narrative_vi: "Anh T., 35 tuổi, ở Hà Nội, khỏe mạnh. Chiều qua anh đột ngột rét run rồi sốt 39,4°C. Anh đau nhức khắp người, đau đầu, mệt rã rời, chán ăn, ho khan, đau họng, sổ mũi ít. Ở cơ quan đang có nhiều người bị cúm. Không khó thở, không đau ngực."
+patient:
+  age_years: 35
+  sex: male
+  region: north
+  month: 1
+complaint: fever
+answers:
+  fever_max_temp: ge_39
+  fever_duration: d1_2
+  chills_rigors: present
+  myalgia: present
+  fatigue: present
+  loss_of_appetite: present
+  headache: present
+  headache_location: whole_head
+  headache_severity: moderate
+  cough: present
+  productive_cough: absent
+  sore_throat: present
+  runny_nose: present
+  nasal_congestion: absent
+  sick_contact_respiratory: present
+  breathing_difficulty: absent
+  chest_pain_pressure: absent
+  pleuritic_chest_pain: absent
+  loss_of_smell_taste: absent
+  neck_stiffness: absent
+  rash_any: absent
+default_unmentioned: absent
+expected:
+  condition: influenza
+  acceptable: []
+  triage: 5
+source:
+  basis: "Cúm mùa điển hình ở người trẻ khỏe, không thuộc nhóm nguy cơ, không có dấu hiệu nặng: điều trị và theo dõi tại nhà (1840/QĐ-BYT; NHS Flu)."
+  references:
+    - byt-qd-1840-2025
+    - "https://www.nhs.uk/conditions/flu/"
+author: "agent:vignette-holdout"

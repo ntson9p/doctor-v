@@ -1,0 +1,40 @@
+id: h-fever-024
+set: holdout
+title_vi: "Nữ 27 tuổi, tiểu buốt 3 ngày, nay sốt 39,2°C, rét run, đau hông lưng phải"
+narrative_vi: "Chị X., 27 tuổi, ở Thành phố Hồ Chí Minh, không mang thai. Ba ngày trước chị bị tiểu buốt, đi tiểu nhiều lần. Từ hôm qua chị rét run, sốt 39,2°C, đau âm ỉ hông lưng bên phải, buồn nôn và nôn 1 lần. Chị mệt, ăn kém nhưng vẫn uống được nước. Không ra khí hư bất thường, vẫn tỉnh táo."
+patient:
+  age_years: 27
+  sex: female
+  region: south
+  month: 6
+complaint: fever
+answers:
+  fever_max_temp: ge_39
+  fever_duration: d1_2
+  chills_rigors: present
+  flank_pain: present
+  dysuria: present
+  urinary_frequency: present
+  hematuria: absent
+  nausea: present
+  vomiting: present
+  persistent_vomiting: absent
+  fatigue: present
+  loss_of_appetite: present
+  myalgia: absent
+  abdominal_pain: absent
+  abnormal_vaginal_discharge: absent
+  cough: absent
+  confusion: absent
+  cold_hands_feet: absent
+  pregnant: absent
+default_unmentioned: absent
+expected:
+  condition: acute_pyelonephritis
+  acceptable: []
+  triage: 3
+source:
+  basis: "Viêm thận – bể thận cấp không biến chứng ở phụ nữ không mang thai, không có dấu hiệu nhiễm khuẩn huyết: khám gấp trong ngày để dùng kháng sinh (NHS Kidney infection)."
+  references:
+    - "https://www.nhs.uk/conditions/kidney-infection/"
+author: "agent:vignette-holdout"

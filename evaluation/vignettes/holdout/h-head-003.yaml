@@ -1,0 +1,46 @@
+id: h-head-003
+set: holdout
+title_vi: "Nam 19 tuổi, sốt cao, đau đầu dữ dội, cứng gáy, sợ ánh sáng, nôn"
+narrative_vi: "Anh S., 19 tuổi, sinh viên ở ký túc xá tại Hà Nội. Từ chiều qua anh sốt 39,5°C, đau đầu dữ dội khắp đầu, tăng dần trong vài giờ. Anh nôn 2 lần, rất khó chịu khi nhìn ánh sáng, cổ cứng, không cúi được cằm chạm ngực. Anh mệt, đau mỏi người. Anh vẫn tỉnh, nói chuyện bình thường. Trên da không có nốt ban."
+patient:
+  age_years: 19
+  sex: male
+  region: north
+  month: 3
+complaint: headache
+answers:
+  headache_course: first_time
+  headache_duration: h4_72
+  headache_location: whole_head
+  headache_severity: severe
+  headache_thunderclap: absent
+  fever: present
+  fever_max_temp: ge_39
+  fever_duration: d1_2
+  neck_stiffness: present
+  photophobia: present
+  phonophobia: absent
+  nausea: present
+  vomiting: present
+  persistent_vomiting: absent
+  myalgia: present
+  fatigue: present
+  confusion: absent
+  drowsy_hard_to_wake: absent
+  seizure_recent: absent
+  rash_any: absent
+  cough: absent
+  headache_after_head_injury: absent
+  es_stroke_signs: absent
+default_unmentioned: absent
+expected:
+  condition: bacterial_meningitis
+  acceptable: []
+  triage: 2
+source:
+  basis: "Viêm màng não do vi khuẩn ở người trẻ: sốt, đau đầu tăng dần, cứng gáy, sợ ánh sáng, nôn; còn tỉnh táo, cần đến cấp cứu ngay (NHS Meningitis; NICE CG150)."
+  references:
+    - "https://www.nhs.uk/conditions/meningitis/"
+    - nice-cg150
+author: "agent:vignette-holdout"
+notes_vi: "Người bệnh còn tỉnh nên mức 2; nếu lú lẫn, li bì hoặc có ban xuất huyết thì gọi 115."

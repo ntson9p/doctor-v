@@ -1,0 +1,41 @@
+id: h-head-018
+set: holdout
+title_vi: "Nam 33 tuổi, đau đầu giật hai bên, buồn nôn sau đêm uống nhiều rượu bia"
+narrative_vi: "Anh P., 33 tuổi, ở Thành phố Hồ Chí Minh. Tối qua anh uống rất nhiều bia rượu trong tiệc tất niên, ngủ ít. Sáng dậy, khoảng 3 giờ nay, anh đau đầu giật giật cả hai bên, đi lại thì đau hơn, buồn nôn, khát nước, mệt, khó chịu với ánh sáng và tiếng ồn. Những lần say rượu trước anh cũng bị như vậy. Anh không bị ngã, không va đập đầu, không sốt, không nôn."
+patient:
+  age_years: 33
+  sex: male
+  region: south
+  month: 2
+complaint: headache
+answers:
+  headache_course: recurrent_similar
+  headache_duration: lt_4h
+  headache_location: both_sides
+  headache_character: throbbing
+  headache_severity: moderate
+  headache_thunderclap: absent
+  headache_worse_activity: present
+  heavy_alcohol: present
+  nausea: present
+  vomiting: absent
+  fatigue: present
+  photophobia: present
+  phonophobia: present
+  stress_poor_sleep: present
+  headache_after_head_injury: absent
+  fever: absent
+  confusion: absent
+  neck_stiffness: absent
+  es_stroke_signs: absent
+default_unmentioned: absent
+expected:
+  condition: other
+  acceptable: []
+  triage: 5
+source:
+  basis: "Đau đầu sau say rượu: tự chăm sóc, uống đủ nước, nghỉ ngơi (NHS Headaches: uống quá nhiều rượu là nguyên nhân thường gặp, có thể tự điều trị)."
+  references:
+    - "https://www.nhs.uk/conditions/headaches/"
+author: "agent:vignette-holdout"
+notes_vi: "Ngoài danh mục bệnh; ca kiểm tra mức tự chăm sóc khi nguyên nhân không có trong danh mục."

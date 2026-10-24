@@ -1,0 +1,42 @@
+id: h-abd-005
+set: holdout
+title_vi: "Nam 20 tuổi, đau quanh rốn chuyển xuống bụng dưới phải 14 giờ, buồn nôn, sốt nhẹ"
+narrative_vi: "Anh B., 20 tuổi, sinh viên ở Hà Nội. Khoảng 14 giờ trước anh thấy đau âm ỉ quanh rốn, sau đó đau chuyển xuống bụng dưới bên phải, tăng dần. Đi lại, ho hay xe xóc đều làm đau hơn. Anh buồn nôn, nôn 1 lần, chán ăn, sốt nhẹ 37,9°C. Anh không tiêu chảy, không tiểu buốt, vẫn xì hơi được."
+patient:
+  age_years: 20
+  sex: male
+  region: north
+  month: 5
+complaint: abdominal_pain
+answers:
+  abd_pain_location: right_lower
+  abd_pain_onset: gradual
+  abd_pain_duration: h6_24
+  abd_pain_severe: absent
+  abd_pain_colicky: absent
+  abd_pain_migrated_rlq: present
+  abd_pain_worse_movement: present
+  abd_pain_radiates_back: absent
+  abd_pain_radiates_groin: absent
+  abd_pain_meal_relation: no_relation
+  nausea: present
+  vomiting: present
+  loss_of_appetite: present
+  fever: present
+  fever_max_temp: lt_38
+  fever_duration: d1_2
+  diarrhea: absent
+  dysuria: absent
+  hematuria: absent
+  abdomen_hard_swollen: absent
+  no_stool_or_gas: absent
+default_unmentioned: absent
+expected:
+  condition: acute_appendicitis
+  acceptable: []
+  triage: 2
+source:
+  basis: "Viêm ruột thừa cấp điển hình: đau quanh rốn chuyển xuống hố chậu phải, tăng khi vận động, chán ăn, buồn nôn, sốt nhẹ; cần khám cấp cứu ngoại khoa trong ngày, không chờ đến hôm sau (NHS Appendicitis)."
+  references:
+    - "https://www.nhs.uk/conditions/appendicitis/"
+author: "agent:vignette-holdout"

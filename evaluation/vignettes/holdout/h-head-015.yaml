@@ -1,0 +1,41 @@
+id: h-head-015
+set: holdout
+title_vi: "Nữ 70 tuổi đốt than sưởi trong phòng kín, sáng dậy đau đầu, nôn, lú lẫn"
+narrative_vi: "Bà M., 70 tuổi, ở Hà Nội, bị tăng huyết áp. Đêm qua trời rét, hai ông bà đốt bếp than tổ ong để sưởi trong phòng ngủ đóng kín cửa. Sáng nay bà dậy thấy đau đầu nhiều khắp đầu, buồn nôn, nôn 2 lần, choáng váng, mệt lả không đứng vững, nói năng lơ mơ, lẫn lộn. Ông cũng bị đau đầu, buồn nôn. Bà không sốt, không yếu một bên người."
+patient:
+  age_years: 70
+  sex: female
+  region: north
+  month: 1
+complaint: headache
+answers:
+  headache_course: first_time
+  headache_duration: lt_4h
+  headache_location: whole_head
+  headache_character: throbbing
+  headache_severity: moderate
+  headache_thunderclap: absent
+  nausea: present
+  vomiting: present
+  confusion: present
+  severe_weakness: present
+  fainting_or_near_fainting: present
+  fatigue: present
+  breathing_difficulty: absent
+  fever: absent
+  neck_stiffness: absent
+  es_stroke_signs: absent
+  blurred_vision: absent
+  hypertension_known: present
+  headache_after_head_injury: absent
+default_unmentioned: absent
+expected:
+  condition: other
+  acceptable: []
+  triage: 1
+source:
+  basis: "Ngộ độc khí CO do đốt than sưởi trong phòng kín mùa đông miền Bắc: đau đầu, buồn nôn, chóng mặt, mệt lả, lú lẫn, người cùng phòng cũng bị; đưa ra chỗ thoáng và gọi cấp cứu (NHS Carbon monoxide poisoning)."
+  references:
+    - "https://www.nhs.uk/conditions/carbon-monoxide-poisoning/"
+author: "agent:vignette-holdout"
+notes_vi: "Ngoài danh mục bệnh. Danh mục chưa có câu hỏi về sưởi than, đun bếp trong phòng kín, người cùng nhà có triệu chứng giống nhau."

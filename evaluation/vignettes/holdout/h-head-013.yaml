@@ -1,0 +1,41 @@
+id: h-head-013
+set: holdout
+title_vi: "Nữ 70 tuổi, đột ngột đau đầu dữ dội khi rặn, ngất 1 phút, nôn, cứng gáy"
+narrative_vi: "Bà H., 70 tuổi, ở Nghệ An, bị tăng huyết áp. Khoảng 30 phút trước, khi đang rặn đi ngoài, bà đột ngột đau đầu dữ dội như búa bổ, rồi ngất đi khoảng 1 phút, ngồi gục xuống, không bị đập đầu. Hiện bà đã tỉnh, nói được nhưng vẫn đau đầu dữ dội, nôn 2 lần, kêu đau cứng gáy. Con trai đo huyết áp 190/100 mmHg. Bà không yếu tay chân, không méo miệng."
+patient:
+  age_years: 70
+  sex: female
+  region: central
+  month: 2
+complaint: headache
+answers:
+  headache_course: first_time
+  headache_duration: lt_4h
+  headache_location: whole_head
+  headache_severity: severe
+  headache_thunderclap: present
+  fainting_or_near_fainting: present
+  vomiting: present
+  nausea: present
+  neck_stiffness: present
+  photophobia: unknown
+  confusion: absent
+  drowsy_hard_to_wake: absent
+  seizure_recent: absent
+  es_unresponsive_or_seizing: absent
+  es_stroke_signs: absent
+  bp_measured: extreme
+  hypertension_known: present
+  fever: absent
+  headache_after_head_injury: absent
+default_unmentioned: absent
+expected:
+  condition: subarachnoid_hemorrhage
+  acceptable: []
+  triage: 1
+source:
+  basis: "Xuất huyết dưới nhện ở người cao tuổi tăng huyết áp: đau đầu sét đánh khi rặn, ngất thoáng qua, nôn, cứng gáy; gọi cấp cứu ngay (NICE NG228; NHS Subarachnoid haemorrhage)."
+  references:
+    - nice-ng228
+    - "https://www.nhs.uk/conditions/subarachnoid-haemorrhage/"
+author: "agent:vignette-holdout"

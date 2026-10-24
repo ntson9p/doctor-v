@@ -1,0 +1,44 @@
+id: h-fever-023
+set: holdout
+title_vi: "Nam 72 tuổi, sốt, đau đầu dữ dội, nôn, sáng nay lú lẫn"
+narrative_vi: "Ông N., 72 tuổi, ở Thái Bình, bị tăng huyết áp. Từ hôm qua ông sốt 38,8°C, kêu đau đầu dữ dội, buồn nôn và nôn 1 lần, mệt, bỏ ăn. Sáng nay con cháu thấy ông nói năng lẫn lộn, không nhớ mình đang ở đâu. Gia đình không biết ông có cứng gáy không. Ông không ho, không khó thở, không tiểu buốt, không yếu liệt tay chân, không méo miệng."
+patient:
+  age_years: 72
+  sex: male
+  region: north
+  month: 2
+complaint: fever
+answers:
+  fever_max_temp: t38_39
+  fever_duration: d1_2
+  chills_rigors: absent
+  headache: present
+  headache_severity: severe
+  headache_thunderclap: absent
+  nausea: present
+  vomiting: present
+  confusion: present
+  drowsy_hard_to_wake: absent
+  neck_stiffness: unknown
+  photophobia: unknown
+  seizure_recent: absent
+  es_stroke_signs: absent
+  rash_any: absent
+  cough: absent
+  breathing_difficulty: absent
+  dysuria: absent
+  fatigue: present
+  loss_of_appetite: present
+  hypertension_known: present
+default_unmentioned: absent
+expected:
+  condition: bacterial_meningitis
+  acceptable: [sepsis]
+  triage: 1
+source:
+  basis: "Viêm màng não do vi khuẩn ở người cao tuổi: sốt, đau đầu, lú lẫn, cứng gáy khó đánh giá; lú lẫn mới kèm sốt cần gọi cấp cứu (NHS Meningitis; NHS Sepsis)."
+  references:
+    - "https://www.nhs.uk/conditions/meningitis/"
+    - "https://www.nhs.uk/conditions/sepsis/"
+author: "agent:vignette-holdout"
+notes_vi: "Chấp nhận nhiễm khuẩn huyết vì không có thông tin cứng gáy, hai bệnh chồng lấp ở người cao tuổi."

@@ -1,0 +1,35 @@
+id: h-abd-036
+set: holdout
+title_vi: "Nam 14 tuổi, đột ngột đau dữ dội tinh hoàn trái lan lên bụng dưới, nôn"
+narrative_vi: "Em K., nam, 14 tuổi, ở Hà Nội. Lúc 5 giờ sáng em thức dậy vì đau dữ dội đột ngột ở tinh hoàn trái, đau lan lên bụng dưới bên trái và bẹn. Em buồn nôn, nôn 2 lần. Em ngại nên chỉ nói với mẹ là đau bụng. Em không sốt, không tiểu buốt, không bị va đập."
+patient:
+  age_years: 14
+  sex: male
+  region: north
+  month: 1
+complaint: abdominal_pain
+answers:
+  abd_pain_location: left_lower
+  abd_pain_onset: sudden
+  abd_pain_duration: lt_6h
+  abd_pain_severe: present
+  abd_pain_colicky: absent
+  abd_pain_radiates_groin: present
+  nausea: present
+  vomiting: present
+  fever: absent
+  dysuria: absent
+  hematuria: absent
+  flank_pain: absent
+  diarrhea: absent
+default_unmentioned: absent
+expected:
+  condition: other
+  acceptable: []
+  triage: 2
+source:
+  basis: "Xoắn tinh hoàn: đau tinh hoàn đột ngột dữ dội kèm đau bụng, buồn nôn, nôn; cần đến cấp cứu ngay vì phải mổ sớm để giữ tinh hoàn (NHS Testicle pain)."
+  references:
+    - "https://www.nhs.uk/conditions/testicle-pain/"
+author: "agent:vignette-holdout"
+notes_vi: "Ngoài danh mục bệnh. Danh mục chưa có câu hỏi về đau hoặc sưng tinh hoàn, bìu."

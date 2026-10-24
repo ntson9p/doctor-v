@@ -1,0 +1,38 @@
+id: h-fever-005
+set: holdout
+title_vi: "Nữ 30 tuổi, sốt, đau họng, mất mùi vị, chồng mắc COVID-19"
+narrative_vi: "Chị V., 30 tuổi, ở Thành phố Hồ Chí Minh, không mang thai. Chồng chị vừa xét nghiệm dương tính COVID-19 cách đây 3 ngày. Từ hôm qua chị sốt 38,3°C, đau họng, ho khan, sổ mũi, đau mỏi người, mệt và đau đầu nhẹ. Sáng nay chị thấy mất mùi, ăn không thấy vị. Không khó thở, không đau ngực."
+patient:
+  age_years: 30
+  sex: female
+  region: south
+  month: 5
+complaint: fever
+answers:
+  fever_max_temp: t38_39
+  fever_duration: d1_2
+  sore_throat: present
+  cough: present
+  productive_cough: absent
+  runny_nose: present
+  loss_of_smell_taste: present
+  myalgia: present
+  fatigue: present
+  headache: present
+  headache_severity: mild
+  sick_contact_respiratory: present
+  breathing_difficulty: absent
+  chest_pain_pressure: absent
+  diarrhea: absent
+  pregnant: absent
+default_unmentioned: absent
+expected:
+  condition: covid19
+  acceptable: []
+  triage: 5
+source:
+  basis: "COVID-19 mức nhẹ ở người trẻ không có yếu tố nguy cơ: cách ly, chăm sóc tại nhà (2671/QĐ-BYT; NHS COVID-19)."
+  references:
+    - byt-qd-2671-2023
+    - "https://www.nhs.uk/conditions/covid-19/covid-19-symptoms-and-what-to-do/"
+author: "agent:vignette-holdout"

@@ -1,0 +1,45 @@
+id: h-abd-001
+set: holdout
+title_vi: "Bé trai 7 tuổi, sốt cao, đau bụng dưới sườn phải, ho, thở nhanh"
+narrative_vi: "Bé K., 7 tuổi, ở Đà Nẵng. Từ hôm qua bé sốt 39,4°C, kêu đau bụng bên phải, phía dưới sườn, buồn nôn và nôn 1 lần. Bé ho khan vài tiếng, mẹ thấy bé thở nhanh hơn bình thường. Bé mệt, bỏ ăn. Bé không tiêu chảy, không tiểu buốt, đau không tăng khi đi lại."
+patient:
+  age_years: 7
+  sex: male
+  region: central
+  month: 1
+complaint: abdominal_pain
+answers:
+  abd_pain_location: right_upper
+  abd_pain_onset: gradual
+  abd_pain_duration: h6_24
+  abd_pain_severe: absent
+  abd_pain_colicky: absent
+  abd_pain_migrated_rlq: absent
+  abd_pain_worse_movement: absent
+  abd_pain_meal_relation: no_relation
+  fever: present
+  fever_max_temp: ge_39
+  fever_duration: d1_2
+  cough: present
+  productive_cough: absent
+  breathing_difficulty: present
+  pleuritic_chest_pain: absent
+  vomiting: present
+  nausea: present
+  loss_of_appetite: present
+  fatigue: present
+  diarrhea: absent
+  dysuria: absent
+  sore_throat: absent
+  measles_vaccinated: present
+default_unmentioned: absent
+expected:
+  condition: pneumonia
+  acceptable: []
+  triage: 3
+source:
+  basis: "Viêm phổi thùy dưới ở trẻ biểu hiện bằng đau bụng (đau quy chiếu), kèm ho, thở nhanh, sốt cao; không có dấu hiệu nguy hiểm nên cần khám trong ngày (NHS Pneumonia)."
+  references:
+    - "https://www.nhs.uk/conditions/pneumonia/"
+author: "agent:vignette-holdout"
+notes_vi: "Dễ nhầm với bệnh ngoại khoa; ho và thở nhanh là manh mối."

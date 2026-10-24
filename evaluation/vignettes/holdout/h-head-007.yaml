@@ -1,0 +1,40 @@
+id: h-head-007
+set: holdout
+title_vi: "Nữ 25 tuổi, đau giật một bên đầu, buồn nôn, sợ ánh sáng, giống các cơn trước"
+narrative_vi: "Chị H., 25 tuổi, ở Hà Nội. Từ năm 16 tuổi, mỗi tháng chị bị 1–2 cơn đau đầu giật giật ở một bên đầu, thường gần kỳ kinh hoặc khi thiếu ngủ. Cơn lần này bắt đầu từ sáng, đau bên trái, phải nằm nghỉ trong phòng tối. Chị buồn nôn, sợ ánh sáng và tiếng ồn, đi lại thì đau tăng. Chị không thấy chớp sáng trước cơn, không yếu tay chân, không sốt."
+patient:
+  age_years: 25
+  sex: female
+  region: north
+  month: 6
+complaint: headache
+answers:
+  headache_course: recurrent_similar
+  headache_duration: h4_72
+  headache_location: one_side
+  headache_character: throbbing
+  headache_severity: moderate
+  headache_thunderclap: absent
+  headache_worse_activity: present
+  photophobia: present
+  phonophobia: present
+  nausea: present
+  vomiting: absent
+  visual_aura: absent
+  blurred_vision: absent
+  stress_poor_sleep: present
+  fever: absent
+  neck_stiffness: absent
+  es_stroke_signs: absent
+  pregnant: absent
+default_unmentioned: absent
+expected:
+  condition: migraine
+  acceptable: []
+  triage: 5
+source:
+  basis: "Đau nửa đầu không có tiền triệu: đau một bên, giật theo nhịp, tăng khi vận động, buồn nôn, sợ ánh sáng và tiếng ồn, tái diễn nhiều năm (NICE CG150; NHS Migraine)."
+  references:
+    - nice-cg150
+    - "https://www.nhs.uk/conditions/migraine/"
+author: "agent:vignette-holdout"

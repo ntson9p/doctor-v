@@ -1,0 +1,41 @@
+id: h-fever-026
+set: holdout
+title_vi: "Bé gái 14 tháng, sốt cao, nôn ra tất cả, không uống được, li bì, thóp phồng"
+narrative_vi: "Bé Q., 14 tháng, ở Bắc Ninh. Từ hôm qua bé sốt 39,6°C. Hôm nay bé nôn ra hết mọi thứ, không chịu uống, ngủ li bì, gọi khó tỉnh, khi bế lên thì khóc thét. Mẹ sờ thấy thóp phồng căng. Bé không nổi ban, không ho, không tiêu chảy. Gia đình không biết cách kiểm tra cứng gáy."
+patient:
+  age_months: 14
+  sex: female
+  region: north
+  month: 4
+complaint: fever
+answers:
+  fever_max_temp: ge_39
+  fever_duration: d1_2
+  vomiting: present
+  child_vomits_everything: present
+  child_unable_to_drink: present
+  drowsy_hard_to_wake: present
+  bulging_fontanelle: present
+  neck_stiffness: unknown
+  seizure_recent: absent
+  es_unresponsive_or_seizing: absent
+  rash_any: absent
+  cough: absent
+  runny_nose: absent
+  diarrhea: absent
+  breathing_difficulty: absent
+  cold_hands_feet: absent
+  measles_vaccinated: absent
+default_unmentioned: absent
+expected:
+  condition: bacterial_meningitis
+  acceptable: []
+  triage: 1
+source:
+  basis: "Bệnh rất nặng có sốt theo IMCI (nhiều dấu hiệu nguy hiểm toàn thân) kèm thóp phồng, là dấu hiệu đỏ của NICE NG143: nghi viêm màng não, cần cấp cứu ngay (NHS Meningitis)."
+  references:
+    - who-imci-chart-booklet-2014
+    - nice-ng143
+    - "https://www.nhs.uk/conditions/meningitis/"
+author: "agent:vignette-holdout"
+notes_vi: "Người nhà không biết đánh giá cứng gáy nên ghi 'không rõ'."

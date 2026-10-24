@@ -1,0 +1,39 @@
+id: h-abd-021
+set: holdout
+title_vi: "Nữ 28 tuổi chậm kinh 2 tuần, thử thai dương tính, đau bụng dưới trái, ra máu nâu"
+narrative_vi: "Chị T., 28 tuổi, ở Thành phố Hồ Chí Minh. Chị bị chậm kinh 2 tuần, thử que thấy 2 vạch. Từ hôm qua chị đau âm ỉ bụng dưới bên trái, ra ít máu nâu đen ở âm đạo. Chị hơi buồn nôn. Không ngất, không choáng, không sốt, chưa từng mổ bụng."
+patient:
+  age_years: 28
+  sex: female
+  region: south
+  month: 9
+complaint: abdominal_pain
+answers:
+  abd_pain_location: left_lower
+  abd_pain_onset: gradual
+  abd_pain_duration: d1_3
+  abd_pain_severe: absent
+  abd_pain_colicky: absent
+  missed_period: present
+  pregnant: present
+  gestational_age: lt_20w
+  vaginal_bleeding: present
+  fainting_or_near_fainting: absent
+  nausea: present
+  vomiting: absent
+  fever: absent
+  dysuria: absent
+  diarrhea: absent
+  abnormal_vaginal_discharge: absent
+  previous_abdominal_surgery: absent
+default_unmentioned: absent
+expected:
+  condition: ectopic_pregnancy
+  acceptable: []
+  triage: 2
+source:
+  basis: "Chửa ngoài tử cung chưa vỡ: chậm kinh, thử thai dương tính, đau bụng dưới một bên, ra máu âm đạo; cần được đánh giá cấp cứu sản phụ khoa ngay (NICE NG126; NHS Ectopic pregnancy)."
+  references:
+    - nice-ng126
+    - "https://www.nhs.uk/conditions/ectopic-pregnancy/"
+author: "agent:vignette-holdout"

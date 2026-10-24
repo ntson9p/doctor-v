@@ -1,0 +1,43 @@
+id: h-fever-002
+set: holdout
+title_vi: "Bé trai 3 tuổi, sốt 38,5°C từ sáng, sổ mũi, ho, vẫn chơi bình thường"
+narrative_vi: "Bé N., 3 tuổi, ở Cần Thơ. Từ sáng nay bé sốt 38,5°C, sổ mũi trong, nghẹt mũi và ho vài tiếng. Anh chị của bé cũng đang sổ mũi. Bé ăn kém hơn mọi ngày nhưng vẫn uống nước, uống sữa tốt, hạ sốt thì chơi bình thường. Không khó thở, không nôn, không nổi ban. Bé đã tiêm chủng đầy đủ, kể cả 2 mũi vắc xin sởi."
+patient:
+  age_years: 3
+  sex: male
+  region: south
+  month: 6
+complaint: fever
+answers:
+  fever_max_temp: t38_39
+  fever_duration: d1_2
+  runny_nose: present
+  nasal_congestion: present
+  cough: present
+  productive_cough: absent
+  loss_of_appetite: present
+  sick_contact_respiratory: present
+  sore_throat: unknown
+  breathing_difficulty: absent
+  ear_pain: absent
+  rash_any: absent
+  vomiting: absent
+  diarrhea: absent
+  child_unable_to_drink: absent
+  child_vomits_everything: absent
+  drowsy_hard_to_wake: absent
+  seizure_recent: absent
+  measles_vaccinated: present
+default_unmentioned: absent
+expected:
+  condition: common_cold
+  acceptable: []
+  triage: 5
+source:
+  basis: "Trẻ dưới 5 tuổi sốt, không có dấu hiệu vàng hoặc đỏ theo bảng đèn giao thông (NICE NG143), không có dấu hiệu nguy hiểm toàn thân (IMCI): chăm sóc tại nhà, dặn dấu hiệu cần đi khám."
+  references:
+    - nice-ng143
+    - who-imci-chart-booklet-2014
+    - "https://www.nhs.uk/conditions/common-cold/"
+author: "agent:vignette-holdout"
+notes_vi: "Ca kiểm tra khả năng nhận đúng mức tự chăm sóc ở trẻ nhỏ sốt do cảm lạnh."

@@ -1,0 +1,38 @@
+id: h-fever-018
+set: holdout
+title_vi: "Nữ 50 tuổi làm nương ở Yên Bái, sốt cao 6 ngày, đau đầu, vết loét vảy đen ở bẹn"
+narrative_vi: "Chị P., 50 tuổi, làm nương ngô ở Yên Bái, hay phát cỏ quanh nương. Sáu ngày nay chị sốt cao 39,5°C, có lúc rét run, đau đầu nhiều, đau mỏi người, hai mắt đỏ, ho khan ít. Chị mệt, chán ăn. Khi tắm, chị thấy ở bẹn có một vết loét tròn, đóng vảy đen, không đau. Chị không nổi ban, không khó thở."
+patient:
+  age_years: 50
+  sex: female
+  region: north
+  month: 7
+complaint: fever
+answers:
+  fever_max_temp: ge_39
+  fever_duration: d6_7
+  chills_rigors: present
+  headache: present
+  headache_severity: moderate
+  myalgia: present
+  red_eyes: present
+  cough: present
+  productive_cough: absent
+  fatigue: present
+  loss_of_appetite: present
+  eschar: present
+  rash_any: absent
+  bush_exposure: present
+  malaria_area_exposure: absent
+  breathing_difficulty: absent
+  confusion: absent
+  jaundice: absent
+  dengue_nearby: absent
+default_unmentioned: absent
+expected:
+  condition: scrub_typhus
+  acceptable: []
+  triage: 3
+source:
+  basis: "Sốt mò điển hình: sốt cao kéo dài, đau đầu, đau cơ, mắt đỏ, vết loét đóng vảy đen ở vùng da kín, phơi nhiễm bụi cỏ ở miền núi phía Bắc mùa hè; cần khám trong 24 giờ để điều trị kháng sinh sớm."
+author: "agent:vignette-holdout"

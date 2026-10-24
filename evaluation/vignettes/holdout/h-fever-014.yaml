@@ -1,0 +1,41 @@
+id: h-fever-014
+set: holdout
+title_vi: "Bé trai 9 tuổi, sổ mũi đặc 12 ngày không đỡ, nặng mặt, sốt nhẹ"
+narrative_vi: "Bé H., 9 tuổi, ở Hà Nội. Bé bị sổ mũi, nghẹt mũi đã 12 ngày, không đỡ. Nước mũi đặc, màu vàng xanh. Bé ho có đờm cả ngày lẫn đêm, kêu nặng vùng trán và má khi cúi đầu, đau đầu nhẹ vùng trán. Hai ngày nay bé sốt nhẹ 37,8°C. Không đau tai, không sưng quanh mắt, vẫn ăn uống và đi học được."
+patient:
+  age_years: 9
+  sex: male
+  region: north
+  month: 11
+complaint: fever
+answers:
+  fever_max_temp: lt_38
+  fever_duration: d1_2
+  runny_nose: present
+  purulent_nasal_discharge: present
+  nasal_congestion: present
+  nasal_symptoms_over_10_days: present
+  cough: present
+  productive_cough: present
+  facial_pain_pressure: present
+  headache: present
+  headache_location: forehead_face
+  headache_severity: mild
+  ear_pain: absent
+  sore_throat: absent
+  breathing_difficulty: absent
+  edema_face_hands: absent
+  red_eyes: absent
+  vision_loss_or_double: absent
+  neck_stiffness: absent
+  measles_vaccinated: present
+default_unmentioned: absent
+expected:
+  condition: acute_sinusitis
+  acceptable: []
+  triage: 4
+source:
+  basis: "Viêm mũi xoang cấp kéo dài trên 10 ngày không cải thiện ở trẻ, không có dấu hiệu biến chứng: cần bác sĩ khám trong vài ngày (NICE NG79; NHS Sinusitis: trẻ từ 11 tuổi trở xuống cần gặp bác sĩ)."
+  references:
+    - "https://www.nhs.uk/conditions/sinusitis-sinus-infection/"
+author: "agent:vignette-holdout"

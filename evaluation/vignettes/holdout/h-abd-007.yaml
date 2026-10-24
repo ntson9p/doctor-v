@@ -1,0 +1,41 @@
+id: h-abd-007
+set: holdout
+title_vi: "Nam 40 tuổi, đau rát thượng vị lúc đói 3 tháng, ăn vào đỡ, ợ chua"
+narrative_vi: "Anh N., 40 tuổi, ở Thành phố Hồ Chí Minh, hút thuốc lá, công việc căng thẳng, ăn uống thất thường. Ba tháng nay anh hay đau rát vùng trên rốn, đau lúc đói và về đêm, ăn vào thì đỡ. Anh hay ợ chua, nóng rát sau xương ức, đôi khi buồn nôn. Không nôn ra máu, phân vàng bình thường, không sụt cân. Anh không dùng thuốc giảm đau thường xuyên."
+patient:
+  age_years: 40
+  sex: male
+  region: south
+  month: 4
+complaint: abdominal_pain
+answers:
+  abd_pain_location: epigastric
+  abd_pain_onset: gradual
+  abd_pain_duration: gt_2w
+  abd_pain_severe: absent
+  abd_pain_colicky: absent
+  abd_pain_meal_relation: hungry_relieved_by_food
+  abd_pain_radiates_back: absent
+  pain_after_fatty_meal: absent
+  heartburn: present
+  nausea: present
+  vomiting: absent
+  vomiting_blood: absent
+  black_stool: absent
+  fever: absent
+  loss_of_appetite: absent
+  stress_poor_sleep: present
+  smoker: present
+  regular_painkiller_use: absent
+  heavy_alcohol: absent
+default_unmentioned: absent
+expected:
+  condition: peptic_ulcer_gastritis
+  acceptable: []
+  triage: 4
+source:
+  basis: "Loét tá tràng, viêm dạ dày: đau thượng vị lúc đói, ăn vào đỡ, tái đi tái lại, không có dấu hiệu báo động; đặt lịch khám trong vài ngày (NHS Stomach ulcer; NHS Stomach ache: đau bụng hay tái lại cần gặp bác sĩ)."
+  references:
+    - "https://www.nhs.uk/conditions/stomach-ulcer/"
+    - nhs-stomach-ache
+author: "agent:vignette-holdout"

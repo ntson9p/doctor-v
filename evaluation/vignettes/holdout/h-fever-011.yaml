@@ -1,0 +1,35 @@
+id: h-fever-011
+set: holdout
+title_vi: "Bé gái 6 tuổi, đau tai, sốt 3 ngày, sáng nay chảy mủ tai"
+narrative_vi: "Bé A., 6 tuổi, ở Nghệ An. Sau mấy ngày sổ mũi, bé kêu đau tai trái và sốt 38,5°C. Sáng nay gối của bé dính dịch mủ vàng chảy ra từ tai trái, sau đó bé đỡ đau hơn. Bé đã sốt 3 ngày. Bé không đau đầu, không cứng gáy, vẫn ăn uống được."
+patient:
+  age_years: 6
+  sex: female
+  region: central
+  month: 10
+complaint: fever
+answers:
+  fever_max_temp: t38_39
+  fever_duration: d3_5
+  ear_pain: present
+  ear_discharge: present
+  runny_nose: present
+  nasal_congestion: present
+  cough: absent
+  sore_throat: absent
+  headache: absent
+  neck_stiffness: absent
+  loss_of_appetite: absent
+  vomiting: absent
+  drowsy_hard_to_wake: absent
+  measles_vaccinated: present
+default_unmentioned: absent
+expected:
+  condition: acute_otitis_media
+  acceptable: []
+  triage: 3
+source:
+  basis: "Viêm tai giữa cấp có chảy dịch mủ tai (thủng màng nhĩ): NHS khuyên khám gấp khi có dịch chảy ra từ tai; NICE NG91 cân nhắc kháng sinh khi có chảy dịch tai."
+  references:
+    - "https://www.nhs.uk/conditions/ear-infections/"
+author: "agent:vignette-holdout"

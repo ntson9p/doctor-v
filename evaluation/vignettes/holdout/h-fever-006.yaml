@@ -1,0 +1,40 @@
+id: h-fever-006
+set: holdout
+title_vi: "Nam 76 tuổi, sốt 3 ngày, ho, rất mệt, chán ăn, cháu mắc COVID-19"
+narrative_vi: "Ông K., 76 tuổi, ở Hà Nội, bị tăng huyết áp. Tuần trước cháu nội của ông xét nghiệm dương tính COVID-19. Ba ngày nay ông sốt 38,2°C, ho khan, đau họng, rất mệt và chán ăn. Ông không mất mùi vị, không khó thở, không đau ngực, vẫn tỉnh táo và tự đi lại được."
+patient:
+  age_years: 76
+  sex: male
+  region: north
+  month: 8
+complaint: fever
+answers:
+  fever_max_temp: t38_39
+  fever_duration: d3_5
+  cough: present
+  productive_cough: absent
+  sore_throat: present
+  fatigue: present
+  loss_of_appetite: present
+  myalgia: absent
+  sick_contact_respiratory: present
+  hypertension_known: present
+  loss_of_smell_taste: absent
+  runny_nose: absent
+  breathing_difficulty: absent
+  chest_pain_pressure: absent
+  confusion: absent
+  severe_weakness: absent
+  diarrhea: absent
+default_unmentioned: absent
+expected:
+  condition: covid19
+  acceptable: [influenza]
+  triage: 3
+source:
+  basis: "COVID-19 ở người cao tuổi (nhóm nguy cơ cao): cần khám để cân nhắc thuốc kháng vi rút sớm và theo dõi (2671/QĐ-BYT; NHS COVID-19: người từ 60 tuổi cần tìm trợ giúp y tế, nhất là khi mệt, chán ăn)."
+  references:
+    - byt-qd-2671-2023
+    - "https://www.nhs.uk/conditions/covid-19/covid-19-symptoms-and-what-to-do/"
+author: "agent:vignette-holdout"
+notes_vi: "Người cao tuổi hay biểu hiện không điển hình (mệt, chán ăn), không mất mùi vị. Chấp nhận cúm vì không phân biệt được nếu không xét nghiệm."

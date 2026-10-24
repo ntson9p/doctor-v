@@ -1,0 +1,43 @@
+id: h-fever-036
+set: holdout
+title_vi: "Nam 40 tuổi lội nước lũ, sốt cao 3 ngày, đau bắp chân, mắt đỏ"
+narrative_vi: "Anh H., 40 tuổi, nông dân ở Quảng Ngãi. Sau trận lũ cách đây 9 ngày, anh lội nước, dọn bùn ngoài ruộng không đi ủng, chân có vết xước. Ba ngày nay anh sốt cao đột ngột 39,6°C, rét run, đau nhức cơ nhiều nhất ở bắp chân, đau đầu, hai mắt đỏ. Anh buồn nôn, chán ăn, mệt. Không vàng da, đi tiểu bình thường, không chảy máu, không ho."
+patient:
+  age_years: 40
+  sex: male
+  region: central
+  month: 11
+complaint: fever
+answers:
+  fever_max_temp: ge_39
+  fever_duration: d3_5
+  chills_rigors: present
+  myalgia: present
+  red_eyes: present
+  headache: present
+  headache_severity: moderate
+  nausea: present
+  loss_of_appetite: present
+  fatigue: present
+  jaundice: absent
+  decreased_urine: absent
+  bleeding_gums_nose: absent
+  rash_any: absent
+  cough: absent
+  breathing_difficulty: absent
+  retro_orbital_pain: absent
+  dengue_nearby: absent
+  bush_exposure: present
+  eschar: absent
+  malaria_area_exposure: absent
+default_unmentioned: absent
+expected:
+  condition: other
+  acceptable: []
+  triage: 3
+source:
+  basis: "Bệnh do Leptospira sau phơi nhiễm nước lũ ở miền Trung: sốt đột ngột, đau cơ, đỏ mắt, chưa có vàng da hay tiểu ít; ở vùng nhiệt đới cần khám trong 24 giờ để xét nghiệm và điều trị kháng sinh sớm (NHS Leptospirosis: vàng da, tiểu ít cần khám gấp)."
+  references:
+    - "https://www.nhs.uk/conditions/leptospirosis/"
+author: "agent:vignette-holdout"
+notes_vi: "Ngoài danh mục bệnh. Danh mục chưa có câu hỏi về lội nước lũ, tiếp xúc nước tiểu chuột, đau bắp chân."

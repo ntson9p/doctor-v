@@ -1,0 +1,45 @@
+id: h-fever-021
+set: holdout
+title_vi: "Nam 60 tuổi bị đái tháo đường, vết thương chân nhiễm trùng, sốt rét run, thở nhanh, lẫn lộn"
+narrative_vi: "Ông Đ., 60 tuổi, ở Bến Tre, bị đái tháo đường nhiều năm. Một tuần trước ông giẫm phải đinh, vết thương ở bàn chân trái sưng đỏ, chảy mủ. Từ hôm qua ông rét run, sốt 39,6°C. Hôm nay ông thở nhanh, mệt lả không tự đứng dậy được, tay chân lạnh, da nổi vân tím, từ sáng chỉ đi tiểu rất ít. Vợ ông thấy ông nói năng lẫn lộn."
+patient:
+  age_years: 60
+  sex: male
+  region: south
+  month: 3
+complaint: fever
+answers:
+  fever_max_temp: ge_39
+  fever_duration: d1_2
+  chills_rigors: present
+  severe_weakness: present
+  breathing_difficulty: present
+  cold_hands_feet: present
+  decreased_urine: present
+  confusion: present
+  drowsy_hard_to_wake: absent
+  fatigue: present
+  loss_of_appetite: present
+  diabetes: present
+  es_severe_breathing: absent
+  cough: absent
+  dysuria: absent
+  flank_pain: absent
+  abdominal_pain: absent
+  headache: absent
+  neck_stiffness: absent
+  rash_any: absent
+  vomiting: absent
+  diarrhea: absent
+default_unmentioned: absent
+expected:
+  condition: sepsis
+  acceptable: []
+  triage: 1
+source:
+  basis: "Nhiễm khuẩn huyết có dấu hiệu nguy cơ cao theo NICE NG51 (lú lẫn mới, thở nhanh, da nổi vân, tiểu ít): gọi cấp cứu ngay (NHS Sepsis)."
+  references:
+    - nice-ng51
+    - "https://www.nhs.uk/conditions/sepsis/"
+author: "agent:vignette-holdout"
+notes_vi: "Nguồn nhiễm khuẩn ở da bàn chân; danh mục chưa có câu hỏi về vết thương hoặc nhiễm trùng da."

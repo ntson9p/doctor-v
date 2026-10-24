@@ -1,0 +1,39 @@
+id: h-abd-023
+set: holdout
+title_vi: "Nữ 23 tuổi có bạn tình mới, đau bụng dưới 2 bên 5 ngày, khí hư hôi, đau khi quan hệ"
+narrative_vi: "Chị H., 23 tuổi, ở Thành phố Hồ Chí Minh, có bạn tình mới từ 2 tháng nay. Năm ngày nay chị đau âm ỉ bụng dưới cả hai bên, đau khi quan hệ. Khí hư ra nhiều, màu vàng, có mùi hôi. Chị sốt nhẹ 37,8°C. Chị không chậm kinh, que thử thai âm tính. Không tiểu buốt, không nôn."
+patient:
+  age_years: 23
+  sex: female
+  region: south
+  month: 8
+complaint: abdominal_pain
+answers:
+  abd_pain_location: suprapubic
+  abd_pain_onset: gradual
+  abd_pain_duration: d4_14
+  abd_pain_severe: absent
+  abd_pain_colicky: absent
+  abnormal_vaginal_discharge: present
+  pain_with_intercourse: present
+  new_sexual_partner: present
+  fever: present
+  fever_max_temp: lt_38
+  fever_duration: d3_5
+  pregnant: absent
+  missed_period: absent
+  vaginal_bleeding: absent
+  dysuria: absent
+  nausea: absent
+  vomiting: absent
+  pain_with_menses: absent
+default_unmentioned: absent
+expected:
+  condition: pelvic_inflammatory_disease
+  acceptable: []
+  triage: 3
+source:
+  basis: "Viêm vùng chậu mức nhẹ – vừa: đau bụng dưới hai bên, khí hư bất thường, đau khi quan hệ, sốt nhẹ; khám gấp để điều trị kháng sinh sớm (NHS Pelvic inflammatory disease)."
+  references:
+    - "https://www.nhs.uk/conditions/pelvic-inflammatory-disease-pid/"
+author: "agent:vignette-holdout"

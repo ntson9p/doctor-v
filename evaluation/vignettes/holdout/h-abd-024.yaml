@@ -1,0 +1,38 @@
+id: h-abd-024
+set: holdout
+title_vi: "Nữ 35 tuổi đặt vòng, đau bụng dưới trái 10 ngày, tiểu buốt, ra máu sau quan hệ"
+narrative_vi: "Chị L., 35 tuổi, ở Hà Nội, đã có chồng, đặt vòng tránh thai. Mười ngày nay chị đau âm ỉ bụng dưới bên trái, đau khi quan hệ, ra máu ít sau quan hệ. Khí hư nhiều hơn, có mùi. Chị cũng thấy tiểu buốt, đi tiểu nhiều lần. Không sốt, không đau hông lưng, không chậm kinh."
+patient:
+  age_years: 35
+  sex: female
+  region: north
+  month: 3
+complaint: abdominal_pain
+answers:
+  abd_pain_location: left_lower
+  abd_pain_onset: gradual
+  abd_pain_duration: d4_14
+  abd_pain_severe: absent
+  dysuria: present
+  urinary_frequency: present
+  abnormal_vaginal_discharge: present
+  vaginal_bleeding: present
+  pain_with_intercourse: present
+  new_sexual_partner: absent
+  fever: absent
+  pregnant: absent
+  missed_period: absent
+  flank_pain: absent
+  hematuria: absent
+  nausea: absent
+default_unmentioned: absent
+expected:
+  condition: pelvic_inflammatory_disease
+  acceptable: []
+  triage: 3
+source:
+  basis: "Viêm vùng chậu không sốt, có triệu chứng tiết niệu nên dễ nhầm viêm bàng quang; khí hư bất thường, đau khi quan hệ, ra máu sau quan hệ là manh mối (NHS Pelvic inflammatory disease)."
+  references:
+    - "https://www.nhs.uk/conditions/pelvic-inflammatory-disease-pid/"
+author: "agent:vignette-holdout"
+notes_vi: "Danh mục chưa có câu hỏi về dụng cụ tử cung (vòng tránh thai)."

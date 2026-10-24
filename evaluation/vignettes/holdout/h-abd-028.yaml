@@ -1,0 +1,40 @@
+id: h-abd-028
+set: holdout
+title_vi: "Nam 58 tuổi hút thuốc, đột ngột đau thượng vị và giữa ngực lan tay trái, vã mồ hôi"
+narrative_vi: "Ông T., 58 tuổi, ở Thành phố Hồ Chí Minh, hút thuốc lá, bị tăng huyết áp. Khoảng 40 phút trước, khi đang leo cầu thang, ông đột ngột đau tức vùng trên rốn và giữa ngực như bị đè nặng, lan lên vai và tay trái. Ông vã mồ hôi lạnh, buồn nôn, hơi khó thở. Nghỉ ngơi mà không đỡ."
+patient:
+  age_years: 58
+  sex: male
+  region: south
+  month: 1
+complaint: abdominal_pain
+answers:
+  abd_pain_location: epigastric
+  abd_pain_onset: sudden
+  abd_pain_duration: lt_6h
+  abd_pain_severe: present
+  abd_pain_meal_relation: no_relation
+  chest_pain_pressure: present
+  es_crushing_chest_pain: present
+  pain_radiates_arm_jaw: present
+  cold_sweat: present
+  nausea: present
+  vomiting: absent
+  breathing_difficulty: present
+  smoker: present
+  hypertension_known: present
+  diabetes: absent
+  known_heart_disease: absent
+  heartburn: absent
+  fever: absent
+default_unmentioned: absent
+expected:
+  condition: acute_coronary_syndrome
+  acceptable: []
+  triage: 1
+source:
+  basis: "Hội chứng vành cấp: đau thượng vị kèm đau thắt giữa ngực lan tay trái, vã mồ hôi, buồn nôn khi gắng sức, không đỡ khi nghỉ; gọi cấp cứu (NICE CG95; NHS Heart attack)."
+  references:
+    - nice-cg95
+    - "https://www.nhs.uk/conditions/heart-attack/"
+author: "agent:vignette-holdout"

@@ -1,0 +1,40 @@
+id: h-head-005
+set: holdout
+title_vi: "Nữ 35 tuổi, đau đầu bó chặt hai bên khi căng thẳng, giống nhiều lần trước"
+narrative_vi: "Chị V., 35 tuổi, kế toán ở Thành phố Hồ Chí Minh. Nhiều năm nay, mỗi tháng chị bị vài lần đau đầu như có vòng bó chặt quanh đầu, đau cả hai bên, mức nhẹ, vẫn làm việc được. Lần này đau từ trưa đến giờ khoảng 6 tiếng, đúng dịp cuối tháng căng thẳng, thức khuya. Chị không buồn nôn, không sợ ánh sáng hay tiếng ồn, đi lại không làm đau tăng."
+patient:
+  age_years: 35
+  sex: female
+  region: south
+  month: 9
+complaint: headache
+answers:
+  headache_course: recurrent_similar
+  headache_duration: h4_72
+  headache_location: both_sides
+  headache_character: pressing
+  headache_severity: mild
+  headache_thunderclap: absent
+  headache_worse_activity: absent
+  photophobia: absent
+  phonophobia: absent
+  nausea: absent
+  vomiting: absent
+  stress_poor_sleep: present
+  visual_aura: absent
+  blurred_vision: absent
+  neck_stiffness: absent
+  fever: absent
+  regular_painkiller_use: absent
+  pregnant: absent
+default_unmentioned: absent
+expected:
+  condition: tension_type_headache
+  acceptable: []
+  triage: 5
+source:
+  basis: "Đau đầu do căng thẳng từng đợt: đau hai bên kiểu bó chặt, nhẹ – vừa, không buồn nôn, không tăng khi vận động, tái diễn (NICE CG150; NHS Tension headaches)."
+  references:
+    - nice-cg150
+    - "https://www.nhs.uk/conditions/tension-headaches/"
+author: "agent:vignette-holdout"

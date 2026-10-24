@@ -1,0 +1,42 @@
+id: h-head-004
+set: holdout
+title_vi: "Nữ 30 tuổi mang thai 34 tuần, đau đầu dữ dội, nhìn mờ, phù mặt tay, huyết áp 165/110"
+narrative_vi: "Chị L., 30 tuổi, ở Thái Nguyên, mang thai con đầu được 34 tuần. Từ sáng nay chị đau đầu dữ dội vùng trán, nhức giật giật, uống paracetamol không đỡ. Chị nhìn mờ, thấy đốm sáng lóe trước mắt, hơi buồn nôn. Mấy ngày nay mặt và hai bàn tay sưng phù. Huyết áp đo ở trạm y tế là 165/110 mmHg. Trước khi có thai chị không bị tăng huyết áp."
+patient:
+  age_years: 30
+  sex: female
+  region: north
+  month: 5
+complaint: headache
+answers:
+  headache_course: first_time
+  headache_duration: h4_72
+  headache_location: forehead_face
+  headache_character: throbbing
+  headache_severity: severe
+  headache_thunderclap: absent
+  blurred_vision: present
+  vision_loss_or_double: absent
+  edema_face_hands: present
+  bp_measured: very_high
+  pregnant: present
+  gestational_age: ge_20w
+  nausea: present
+  vomiting: absent
+  abdominal_pain: absent
+  seizure_recent: absent
+  confusion: absent
+  fever: absent
+  neck_stiffness: absent
+  hypertension_known: absent
+default_unmentioned: absent
+expected:
+  condition: preeclampsia
+  acceptable: []
+  triage: 2
+source:
+  basis: "Tiền sản giật có dấu hiệu nặng (đau đầu dữ dội, rối loạn thị giác, huyết áp từ 160/110 mmHg) ở thai 34 tuần: đến bệnh viện sản ngay (NICE NG133; NHS Pre-eclampsia)."
+  references:
+    - nice-ng133
+    - "https://www.nhs.uk/conditions/pre-eclampsia/"
+author: "agent:vignette-holdout"

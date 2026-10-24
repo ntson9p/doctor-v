@@ -1,0 +1,40 @@
+id: h-fever-029
+set: holdout
+title_vi: "Bé trai 3 tuần tuổi, sốt 38,4°C, bú kém"
+narrative_vi: "Bé trai 3 tuần tuổi, ở Thành phố Hồ Chí Minh, sinh đủ tháng. Từ chiều nay bé sốt, đo nhiệt độ 38,4°C. Bé bú kém hẳn, mỗi cữ chỉ bú vài phút rồi bỏ, ngủ nhiều hơn nhưng vẫn cựa quậy khi được đánh thức. Bé không ho, không nôn, không tiêu chảy, thở bình thường."
+patient:
+  age_months: 0
+  sex: male
+  region: south
+  month: 5
+complaint: fever
+answers:
+  fever_max_temp: t38_39
+  fever_duration: d1_2
+  young_infant_not_feeding: present
+  young_infant_fast_breathing: absent
+  young_infant_low_temp: absent
+  young_infant_reduced_movement: absent
+  drowsy_hard_to_wake: absent
+  bulging_fontanelle: absent
+  seizure_recent: absent
+  breathing_difficulty: absent
+  cough: absent
+  runny_nose: absent
+  vomiting: absent
+  diarrhea: absent
+  rash_any: absent
+  jaundice: absent
+default_unmentioned: absent
+expected:
+  condition: sepsis
+  acceptable: []
+  triage: 2
+source:
+  basis: "Trẻ dưới 2 tháng sốt và bú kém: có thể nhiễm khuẩn nặng theo IMCI trẻ nhỏ; trẻ dưới 3 tháng sốt từ 38°C là dấu hiệu đỏ (NICE NG143); cần đến bệnh viện ngay (NHS Sepsis)."
+  references:
+    - who-imci-chart-booklet-2014
+    - nice-ng143
+    - "https://www.nhs.uk/conditions/sepsis/"
+author: "agent:vignette-holdout"
+notes_vi: "Nhóm dưới 2 tháng tuổi chỉ sàng lọc dấu hiệu nguy hiểm, không xếp hạng bệnh."

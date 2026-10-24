@@ -1,0 +1,46 @@
+id: h-fever-027
+set: holdout
+title_vi: "Nữ 82 tuổi, lú lẫn, bỏ ăn, tiểu nhiều lần, nước tiểu hôi, chỉ sốt nhẹ"
+narrative_vi: "Bà T., 82 tuổi, ở Nam Định, bị đái tháo đường và tăng huyết áp, sống cùng con gái. Ba ngày nay bà đi tiểu nhiều lần, nước tiểu đục và hôi. Từ hôm qua bà lú lẫn, không nhận ra cháu, bỏ ăn, mệt lả không tự ngồi dậy được. Người hơi ấm, đo được 37,8°C. Hôm nay bà đi tiểu rất ít, tay chân lạnh. Con gái không biết bà có đau bụng hay tiểu buốt không vì bà không nói rõ được."
+patient:
+  age_years: 82
+  sex: female
+  region: north
+  month: 7
+complaint: fever
+answers:
+  fever_max_temp: lt_38
+  fever_duration: d1_2
+  confusion: present
+  severe_weakness: present
+  loss_of_appetite: present
+  decreased_urine: present
+  cold_hands_feet: present
+  urinary_frequency: present
+  dysuria: unknown
+  flank_pain: unknown
+  abdominal_pain: unknown
+  chills_rigors: absent
+  breathing_difficulty: absent
+  cough: absent
+  vomiting: absent
+  diarrhea: absent
+  rash_any: absent
+  drowsy_hard_to_wake: absent
+  seizure_recent: absent
+  es_stroke_signs: absent
+  diabetes: present
+  hypertension_known: present
+  immunocompromised: absent
+default_unmentioned: unknown
+expected:
+  condition: sepsis
+  acceptable: [acute_pyelonephritis]
+  triage: 1
+source:
+  basis: "Nhiễm khuẩn huyết từ đường tiết niệu ở người rất cao tuổi: sốt nhẹ, lú lẫn, bỏ ăn, tiểu ít, chân tay lạnh (NICE NG51; NHS Sepsis: sốt cao ít gặp ở người cao tuổi)."
+  references:
+    - nice-ng51
+    - "https://www.nhs.uk/conditions/sepsis/"
+author: "agent:vignette-holdout"
+notes_vi: "Người nhà không trả lời được nhiều câu hỏi nên các dấu hiệu không ghi được để 'không rõ'. Chấp nhận viêm thận – bể thận vì là ổ nhiễm khuẩn gốc."

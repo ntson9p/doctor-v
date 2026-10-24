@@ -1,0 +1,41 @@
+id: h-head-017
+set: holdout
+title_vi: "Nữ 45 tuổi, đau đầu gần như hằng ngày 4 tháng, uống thuốc giảm đau khoảng 20 ngày mỗi tháng"
+narrative_vi: "Chị H., 45 tuổi, ở Hà Nội, bị đau nửa đầu từ trẻ. Bốn tháng nay chị đau đầu gần như ngày nào, đau âm ỉ, bó chặt cả hai bên, thường có sẵn khi ngủ dậy, mức vừa. Mỗi tháng chị uống thuốc giảm đau có caffeine khoảng 20 ngày. Chị căng thẳng, ngủ kém. Chị không buồn nôn, không nhìn mờ, không yếu tay chân, không sốt."
+patient:
+  age_years: 45
+  sex: female
+  region: north
+  month: 6
+complaint: headache
+answers:
+  headache_course: recurrent_similar
+  headache_duration: gt_3d
+  headache_location: both_sides
+  headache_character: pressing
+  headache_severity: moderate
+  headache_thunderclap: absent
+  regular_painkiller_use: present
+  stress_poor_sleep: present
+  photophobia: absent
+  phonophobia: absent
+  nausea: absent
+  vomiting: absent
+  blurred_vision: absent
+  vision_loss_or_double: absent
+  neck_stiffness: absent
+  fever: absent
+  es_stroke_signs: absent
+  pregnant: absent
+default_unmentioned: absent
+expected:
+  condition: other
+  acceptable: []
+  triage: 4
+source:
+  basis: "Đau đầu do lạm dụng thuốc giảm đau (dùng từ 15 ngày mỗi tháng trở lên ở người có sẵn đau đầu): cần gặp bác sĩ trong vài ngày để ngừng thuốc có kế hoạch (NICE CG150; NHS Headaches: hay bị đau đầu, uống quá nhiều thuốc giảm đau)."
+  references:
+    - nice-cg150
+    - "https://www.nhs.uk/conditions/headaches/"
+author: "agent:vignette-holdout"
+notes_vi: "Ngoài danh mục bệnh. Danh mục chưa có câu hỏi về số ngày dùng thuốc giảm đau mỗi tháng và đau đầu khi ngủ dậy."

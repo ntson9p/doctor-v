@@ -1,0 +1,39 @@
+id: h-abd-018
+set: holdout
+title_vi: "Nữ 82 tuổi chưa từng mổ, không đi ngoài 5 ngày, bụng to dần, không xì hơi, mới nôn"
+narrative_vi: "Bà H., 82 tuổi, ở Tiền Giang, bị tăng huyết áp, chưa từng mổ bụng. Mấy tháng nay bà hay táo bón xen kẽ đi ngoài phân lỏng. Năm ngày nay bà không đi ngoài, bụng to dần, căng tức, đau quặn nhẹ từng lúc. Hai ngày nay bà không xì hơi được, sáng nay bắt đầu nôn. Bà chán ăn, mệt. Không sốt."
+patient:
+  age_years: 82
+  sex: female
+  region: south
+  month: 11
+complaint: abdominal_pain
+answers:
+  abd_pain_location: whole
+  abd_pain_onset: gradual
+  abd_pain_duration: d4_14
+  abd_pain_severe: absent
+  abd_pain_colicky: present
+  abdomen_hard_swollen: present
+  no_stool_or_gas: present
+  vomiting: present
+  persistent_vomiting: absent
+  nausea: present
+  loss_of_appetite: present
+  fatigue: present
+  previous_abdominal_surgery: absent
+  fever: absent
+  black_stool: absent
+  diarrhea: absent
+  hypertension_known: present
+default_unmentioned: absent
+expected:
+  condition: bowel_obstruction
+  acceptable: []
+  triage: 2
+source:
+  basis: "Tắc ruột thấp tiến triển chậm ở người rất cao tuổi (u đại tràng, xoắn đại tràng): đau không dữ dội nhưng vẫn là cấp cứu ngoại khoa (NHS Stomach ache: không đi ngoài và không xì hơi được)."
+  references:
+    - nhs-stomach-ache
+author: "agent:vignette-holdout"
+notes_vi: "Ca khó: không có tiền sử mổ, đau nhẹ, diễn biến nhiều ngày."

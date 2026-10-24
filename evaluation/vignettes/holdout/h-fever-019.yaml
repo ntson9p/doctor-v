@@ -1,0 +1,41 @@
+id: h-fever-019
+set: holdout
+title_vi: "Nam 70 tuổi, sốt hơn 1 tuần, đau đầu, ban đỏ ở thân, hay phát cỏ kiếm củi"
+narrative_vi: "Ông B., 70 tuổi, ở Hòa Bình, bị tăng huyết áp. Ông hay vào đồi kiếm củi, phát cỏ vườn. Đã hơn 1 tuần ông sốt 38–38,8°C, đau đầu âm ỉ, mỏi người, mệt, chán ăn, ho khan. Hai ngày nay trên ngực và bụng có ban đỏ nhạt, ấn vào thì mất. Ông không tự xem được lưng và vùng kín nên không biết có vết loét không. Ông tỉnh táo, không khó thở."
+patient:
+  age_years: 70
+  sex: male
+  region: north
+  month: 9
+complaint: fever
+answers:
+  fever_max_temp: t38_39
+  fever_duration: gt_7d
+  headache: present
+  headache_severity: mild
+  myalgia: present
+  fatigue: present
+  loss_of_appetite: present
+  cough: present
+  productive_cough: absent
+  rash_any: present
+  rash_non_blanching: absent
+  rash_spreads_from_face: absent
+  eschar: unknown
+  bush_exposure: present
+  red_eyes: absent
+  chills_rigors: absent
+  hypertension_known: present
+  breathing_difficulty: absent
+  confusion: absent
+  jaundice: absent
+  malaria_area_exposure: absent
+default_unmentioned: absent
+expected:
+  condition: scrub_typhus
+  acceptable: []
+  triage: 3
+source:
+  basis: "Sốt mò ở người cao tuổi: sốt kéo dài, ban dát sẩn ở thân, phơi nhiễm bụi rậm; vết loét thường ở vùng khó tự quan sát (nách, bẹn, thắt lưng)."
+author: "agent:vignette-holdout"
+notes_vi: "Người bệnh trả lời 'không rõ' với câu hỏi vết loét. Người cao tuổi sốt trên 7 ngày cần khám trong 24 giờ."

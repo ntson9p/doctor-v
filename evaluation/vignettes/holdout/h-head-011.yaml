@@ -1,0 +1,40 @@
+id: h-head-011
+set: holdout
+title_vi: "Nam 66 tuổi tăng huyết áp, đột ngột đau đầu, nôn, yếu tay chân phải, méo miệng"
+narrative_vi: "Ông K., 66 tuổi, ở Bắc Giang, bị tăng huyết áp nhưng hay bỏ thuốc, hút thuốc lào. Sáng nay trời rét, khoảng 1 giờ trước khi đang ăn sáng, ông đột ngột đau đầu nhiều, nôn 1 lần, rồi tay chân phải yếu, cầm đũa bị rơi, miệng méo, nói ngọng. Con trai đo huyết áp được 200/110 mmHg. Ông vẫn tỉnh, không co giật."
+patient:
+  age_years: 66
+  sex: male
+  region: north
+  month: 1
+complaint: headache
+answers:
+  headache_course: first_time
+  headache_duration: lt_4h
+  headache_location: whole_head
+  headache_severity: severe
+  headache_thunderclap: absent
+  es_stroke_signs: present
+  vomiting: present
+  nausea: present
+  confusion: absent
+  drowsy_hard_to_wake: absent
+  seizure_recent: absent
+  vision_loss_or_double: absent
+  neck_stiffness: absent
+  bp_measured: extreme
+  hypertension_known: present
+  smoker: present
+  diabetes: absent
+  fever: absent
+  headache_after_head_injury: absent
+default_unmentioned: absent
+expected:
+  condition: stroke
+  acceptable: []
+  triage: 1
+source:
+  basis: "Đột quỵ não (nghĩ xuất huyết não): đau đầu đột ngột, nôn, yếu nửa người, méo miệng, nói khó, huyết áp rất cao; gọi 115 ngay (3312/QĐ-BYT năm 2024)."
+  references:
+    - byt-qd-3312-2024
+author: "agent:vignette-holdout"

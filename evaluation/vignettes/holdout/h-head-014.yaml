@@ -1,0 +1,41 @@
+id: h-head-014
+set: holdout
+title_vi: "Nữ 27 tuổi sinh con được 5 ngày, đau đầu dữ dội, nhìn mờ, huyết áp 170/112"
+narrative_vi: "Chị T., 27 tuổi, ở Huế, sinh thường con đầu cách đây 5 ngày, khi mang thai không có vấn đề gì. Từ tối qua chị đau đầu dữ dội vùng sau đầu, nhức giật giật, uống paracetamol không đỡ, nhìn mờ. Mặt chị sưng phù. Chồng đo huyết áp ở nhà được 170/112 mmHg. Chị không sốt, không co giật, vẫn tỉnh táo."
+patient:
+  age_years: 27
+  sex: female
+  region: central
+  month: 11
+complaint: headache
+answers:
+  headache_course: first_time
+  headache_duration: h4_72
+  headache_location: back_neck
+  headache_character: throbbing
+  headache_severity: severe
+  headache_thunderclap: absent
+  blurred_vision: present
+  vision_loss_or_double: absent
+  edema_face_hands: present
+  bp_measured: very_high
+  recent_childbirth: present
+  pregnant: absent
+  nausea: absent
+  vomiting: absent
+  fever: absent
+  neck_stiffness: absent
+  seizure_recent: absent
+  confusion: absent
+  photophobia: absent
+default_unmentioned: absent
+expected:
+  condition: preeclampsia
+  acceptable: []
+  triage: 2
+source:
+  basis: "Tiền sản giật khởi phát sau sinh: đau đầu dữ dội không đỡ với thuốc giảm đau, nhìn mờ, phù mặt, huyết áp từ 160/110 mmHg; đến bệnh viện ngay (NICE NG133; NHS Pre-eclampsia: có thể xuất hiện vài ngày hoặc vài tuần sau sinh)."
+  references:
+    - nice-ng133
+    - "https://www.nhs.uk/conditions/pre-eclampsia/"
+author: "agent:vignette-holdout"

@@ -1,0 +1,42 @@
+id: h-abd-012
+set: holdout
+title_vi: "Nữ 55 tuổi có sỏi mật, không uống rượu, đau dữ dội thượng vị lan ra lưng sau bữa nhiều mỡ"
+narrative_vi: "Bà K., 55 tuổi, ở Bình Định, không uống rượu, đã biết có sỏi mật. Khoảng 10 giờ trước, sau bữa tối nhiều dầu mỡ, bà đột ngột đau dữ dội vùng trên rốn, đau lan ra sau lưng. Bà buồn nôn, nôn nhiều lần, sốt nhẹ 37,8°C. Bà không vàng da, bụng không chướng."
+patient:
+  age_years: 55
+  sex: female
+  region: central
+  month: 8
+complaint: abdominal_pain
+answers:
+  abd_pain_location: epigastric
+  abd_pain_onset: sudden
+  abd_pain_duration: h6_24
+  abd_pain_severe: present
+  abd_pain_radiates_back: present
+  pain_after_fatty_meal: present
+  abd_pain_meal_relation: worse_after_meal
+  abd_pain_colicky: absent
+  vomiting: present
+  persistent_vomiting: absent
+  nausea: present
+  gallstones_known: present
+  heavy_alcohol: absent
+  fever: present
+  fever_max_temp: lt_38
+  fever_duration: d1_2
+  jaundice: absent
+  abdomen_hard_swollen: absent
+  black_stool: absent
+  pregnant: absent
+default_unmentioned: absent
+expected:
+  condition: acute_pancreatitis
+  acceptable: []
+  triage: 2
+source:
+  basis: "Viêm tụy cấp do sỏi mật: đau thượng vị dữ dội lan ra lưng, nôn, sốt nhẹ (NHS Acute pancreatitis: sỏi mật và rượu là hai nguyên nhân thường gặp nhất)."
+  references:
+    - "https://www.nhs.uk/conditions/acute-pancreatitis/"
+author: "agent:vignette-holdout"
+notes_vi: "Triệu chứng gần giống viêm túi mật nhưng đau ở thượng vị xuyên ra lưng."

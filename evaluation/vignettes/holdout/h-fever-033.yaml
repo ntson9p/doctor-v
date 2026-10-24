@@ -1,0 +1,39 @@
+id: h-fever-033
+set: holdout
+title_vi: "Bé trai 2 tuổi, tay chân miệng ngày 3, giật mình nhiều, thở nhanh, vã mồ hôi, li bì"
+narrative_vi: "Bé H., 2 tuổi, ở Tây Ninh, bị tay chân miệng ngày thứ 3, lớp mẫu giáo có nhiều bạn bị. Bé sốt 39,5°C, uống thuốc hạ sốt không giảm. Từ chiều bé giật mình rất nhiều lần, run tay chân. Tối nay bé thở nhanh, vã mồ hôi, tay chân lạnh, li bì, nôn 2 lần."
+patient:
+  age_years: 2
+  sex: male
+  region: south
+  month: 9
+complaint: fever
+answers:
+  fever_max_temp: ge_39
+  fever_duration: d3_5
+  mouth_ulcers: present
+  hand_foot_blisters: present
+  rash_any: present
+  rash_non_blanching: absent
+  startle_myoclonus: present
+  breathing_difficulty: present
+  cold_hands_feet: present
+  cold_sweat: present
+  drowsy_hard_to_wake: present
+  vomiting: present
+  child_vomits_everything: absent
+  child_unable_to_drink: absent
+  hfmd_contact: present
+  seizure_recent: absent
+  cough: absent
+  measles_vaccinated: present
+default_unmentioned: absent
+expected:
+  condition: hand_foot_mouth_disease
+  acceptable: []
+  triage: 1
+source:
+  basis: "Tay chân miệng độ 3 (thở nhanh, vã mồ hôi, lạnh chi, rối loạn tri giác sau giật mình nhiều lần): cấp cứu, chuyển tuyến có hồi sức (292/QĐ-BYT)."
+  references:
+    - byt-qd-292-2024
+author: "agent:vignette-holdout"

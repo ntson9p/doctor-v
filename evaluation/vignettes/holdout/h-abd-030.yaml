@@ -1,0 +1,43 @@
+id: h-abd-030
+set: holdout
+title_vi: "Nam 78 tuổi bị đái tháo đường, nóng rát thượng vị buổi sáng, vã mồ hôi lạnh"
+narrative_vi: "Ông L., 78 tuổi, ở Hà Nội, bị đái tháo đường và tăng huyết áp. Sáng nay trời lạnh, ngủ dậy khoảng 1 giờ thì ông thấy nóng rát, tức vùng trên rốn, vã mồ hôi lạnh, buồn nôn. Ông nghĩ là đau dạ dày nên uống thuốc dạ dày nhưng không đỡ. Ông không thấy đau ngực, không khó thở, không ngất."
+patient:
+  age_years: 78
+  sex: male
+  region: north
+  month: 12
+complaint: abdominal_pain
+answers:
+  abd_pain_location: epigastric
+  abd_pain_onset: gradual
+  abd_pain_duration: lt_6h
+  abd_pain_severe: absent
+  abd_pain_meal_relation: no_relation
+  cold_sweat: present
+  nausea: present
+  vomiting: absent
+  heartburn: present
+  chest_pain_pressure: absent
+  es_crushing_chest_pain: absent
+  pain_radiates_arm_jaw: absent
+  breathing_difficulty: absent
+  fainting_or_near_fainting: absent
+  diabetes: present
+  hypertension_known: present
+  known_heart_disease: absent
+  smoker: absent
+  regular_painkiller_use: absent
+  fever: absent
+  black_stool: absent
+default_unmentioned: absent
+expected:
+  condition: acute_coronary_syndrome
+  acceptable: []
+  triage: 1
+source:
+  basis: "Nhồi máu cơ tim ở người cao tuổi đái tháo đường chỉ biểu hiện bằng đau rát thượng vị và vã mồ hôi lạnh, không đau ngực; cần gọi cấp cứu để làm điện tâm đồ sớm (NICE CG95; NHS Heart attack)."
+  references:
+    - nice-cg95
+    - "https://www.nhs.uk/conditions/heart-attack/"
+author: "agent:vignette-holdout"

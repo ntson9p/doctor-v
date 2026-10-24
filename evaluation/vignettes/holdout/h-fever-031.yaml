@@ -1,0 +1,45 @@
+id: h-fever-031
+set: holdout
+title_vi: "Nam 16 tuổi, sốt cao đột ngột, ban tím không mất khi ấn, tay chân lạnh"
+narrative_vi: "Em T., nam, 16 tuổi, học sinh nội trú ở Hà Nội. Sáng nay em sốt cao đột ngột 39,8°C, đau đầu, buồn nôn, nôn, đau nhức hai chân. Chiều nay em mệt lả không tự đi được, tay chân lạnh. Ở cẳng chân và bụng xuất hiện nhiều nốt tím, ấn ly thủy tinh lên vẫn thấy rõ. Em còn tỉnh, chưa thấy cứng gáy."
+patient:
+  age_years: 16
+  sex: male
+  region: north
+  month: 3
+complaint: fever
+answers:
+  fever_max_temp: ge_39
+  fever_duration: d1_2
+  rash_any: present
+  rash_non_blanching: present
+  rash_spreads_from_face: absent
+  cold_hands_feet: present
+  myalgia: present
+  vomiting: present
+  nausea: present
+  severe_weakness: present
+  headache: present
+  headache_severity: moderate
+  neck_stiffness: absent
+  photophobia: absent
+  confusion: absent
+  drowsy_hard_to_wake: absent
+  breathing_difficulty: absent
+  bleeding_gums_nose: absent
+  cough: absent
+  diarrhea: absent
+  dengue_nearby: absent
+  measles_vaccinated: present
+default_unmentioned: absent
+expected:
+  condition: sepsis
+  acceptable: [bacterial_meningitis]
+  triage: 1
+source:
+  basis: "Nhiễm khuẩn huyết do não mô cầu: sốt, ban xuất huyết không mất khi ấn, chân tay lạnh, đau chân, mệt lả; gọi cấp cứu ngay (NICE NG51; NHS Sepsis; NHS Meningitis)."
+  references:
+    - nice-ng51
+    - "https://www.nhs.uk/conditions/sepsis/"
+    - "https://www.nhs.uk/conditions/meningitis/"
+author: "agent:vignette-holdout"

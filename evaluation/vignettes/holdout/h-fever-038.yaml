@@ -1,0 +1,40 @@
+id: h-fever-038
+set: holdout
+title_vi: "Bé gái 7 tuổi, sốt cao 2 ngày, đau đầu, nôn, co giật, li bì, mùa hè miền Bắc"
+narrative_vi: "Bé L., 7 tuổi, ở Bắc Giang, nhà gần chuồng lợn và ruộng lúa. Hai ngày nay bé sốt 39,5°C, đau đầu nhiều, nôn nhiều lần. Sáng nay bé co giật toàn thân khoảng 2 phút, sau đó ngủ li bì, khi tỉnh thì nói lẫn lộn. Mẹ thấy cổ bé cứng, khó cúi. Bé không nổi ban, không ho, không có loét miệng."
+patient:
+  age_years: 7
+  sex: female
+  region: north
+  month: 6
+complaint: fever
+answers:
+  fever_max_temp: ge_39
+  fever_duration: d1_2
+  headache: present
+  headache_severity: severe
+  vomiting: present
+  nausea: present
+  seizure_recent: present
+  drowsy_hard_to_wake: present
+  confusion: present
+  neck_stiffness: present
+  es_unresponsive_or_seizing: absent
+  rash_any: absent
+  cough: absent
+  breathing_difficulty: absent
+  startle_myoclonus: absent
+  mouth_ulcers: absent
+  hand_foot_blisters: absent
+  measles_vaccinated: present
+default_unmentioned: absent
+expected:
+  condition: other
+  acceptable: []
+  triage: 1
+source:
+  basis: "Viêm não cấp ở trẻ (nghĩ viêm não Nhật Bản ở miền Bắc mùa hè): sốt, đau đầu, nôn, co giật, rối loạn ý thức; gọi cấp cứu (NHS Headaches: đau đầu kèm co giật, lơ mơ, lú lẫn cần gọi cấp cứu)."
+  references:
+    - "https://www.nhs.uk/conditions/headaches/"
+author: "agent:vignette-holdout"
+notes_vi: "Ngoài danh mục bệnh; gần giống viêm màng não do vi khuẩn nên dễ bị xếp vào bệnh đó."

@@ -1,0 +1,41 @@
+id: h-abd-008
+set: holdout
+title_vi: "Nam 66 tuổi uống thuốc giảm đau xương khớp, đau thượng vị, đi ngoài phân đen"
+narrative_vi: "Ông H., 66 tuổi, ở Nam Định, bị thoái hóa khớp gối, uống thuốc giảm đau xương khớp hằng ngày đã 2 tháng. Một tuần nay ông đau âm ỉ vùng trên rốn, buồn nôn. Từ hôm qua ông đi ngoài 2 lần phân đen, nát, dính như hắc ín, mùi rất khắm. Ông mệt nhưng không ngất, không choáng, không nôn ra máu. Ông bị tăng huyết áp."
+patient:
+  age_years: 66
+  sex: male
+  region: north
+  month: 12
+complaint: abdominal_pain
+answers:
+  abd_pain_location: epigastric
+  abd_pain_onset: gradual
+  abd_pain_duration: d4_14
+  abd_pain_severe: absent
+  black_stool: present
+  vomiting_blood: absent
+  nausea: present
+  vomiting: absent
+  heartburn: absent
+  fatigue: present
+  fainting_or_near_fainting: absent
+  cold_sweat: absent
+  regular_painkiller_use: present
+  heavy_alcohol: absent
+  hypertension_known: present
+  fever: absent
+  diarrhea: absent
+default_unmentioned: absent
+expected:
+  condition: peptic_ulcer_gastritis
+  acceptable: []
+  triage: 2
+source:
+  basis: "Loét dạ dày – tá tràng do thuốc chống viêm giảm đau, biến chứng xuất huyết tiêu hóa trên (phân đen như hắc ín): đến cấp cứu ngay (NICE CG141; NHS Stomach ache; NHS Stomach ulcer)."
+  references:
+    - nice-cg141
+    - nhs-stomach-ache
+    - "https://www.nhs.uk/conditions/stomach-ulcer/"
+author: "agent:vignette-holdout"
+notes_vi: "Nếu kèm ngất, choáng hoặc vã mồ hôi thì cần gọi 115."

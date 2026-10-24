@@ -1,0 +1,43 @@
+id: h-fever-020
+set: holdout
+title_vi: "Nam 22 tuổi, sốt tăng dần 8 ngày, đau đầu, chán ăn, đau bụng âm ỉ"
+narrative_vi: "Anh C., 22 tuổi, ở An Giang, hay ăn gỏi sống và uống nước đá ngoài quán. Đã 8 ngày anh sốt, mấy ngày đầu sốt nhẹ, nay sốt cao 39,3°C. Anh đau đầu, rất mệt, chán ăn, buồn nôn, đau âm ỉ khắp bụng, đau mỏi người, ho khan ít. Anh không tiêu chảy, không nổi ban, không vàng da, vẫn tự đi lại được."
+patient:
+  age_years: 22
+  sex: male
+  region: south
+  month: 5
+complaint: fever
+answers:
+  fever_max_temp: ge_39
+  fever_duration: gt_7d
+  chills_rigors: absent
+  headache: present
+  headache_severity: moderate
+  fatigue: present
+  loss_of_appetite: present
+  nausea: present
+  vomiting: absent
+  abdominal_pain: present
+  abd_pain_location: whole
+  abd_pain_onset: gradual
+  abd_pain_duration: d4_14
+  abd_pain_severe: absent
+  diarrhea: absent
+  cough: present
+  productive_cough: absent
+  myalgia: present
+  rash_any: absent
+  jaundice: absent
+  severe_weakness: absent
+  malaria_area_exposure: absent
+  dengue_nearby: absent
+  bush_exposure: absent
+default_unmentioned: absent
+expected:
+  condition: typhoid_fever
+  acceptable: []
+  triage: 3
+source:
+  basis: "Thương hàn điển hình: sốt tăng dần kéo dài trên 1 tuần, đau đầu, mệt, chán ăn, đau bụng âm ỉ, ăn uống không an toàn ở đồng bằng sông Cửu Long; cần khám trong 24 giờ."
+author: "agent:vignette-holdout"

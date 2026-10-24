@@ -1,0 +1,42 @@
+id: h-fever-025
+set: holdout
+title_vi: "Bé trai 14 tháng, tiêu chảy, nôn 2 ngày, sốt, mắt trũng, tã ít ướt"
+narrative_vi: "Bé L., 14 tháng, ở Cà Mau. Hai ngày nay bé đi ngoài phân toàn nước khoảng 8 lần mỗi ngày, nôn 4–5 lần, sốt 38,4°C. Mẹ thấy mắt bé trũng, tã ít ướt hơn hẳn, bé quấy khóc và uống nước háo hức. Bé không nôn ra hết mọi thứ, vẫn uống được, không li bì. Phân không có máu. Bé mới tiêm 1 mũi vắc xin sởi."
+patient:
+  age_months: 14
+  sex: male
+  region: south
+  month: 1
+complaint: fever
+answers:
+  fever_max_temp: t38_39
+  fever_duration: d1_2
+  diarrhea: present
+  diarrhea_bloody: absent
+  vomiting: present
+  child_vomits_everything: absent
+  child_unable_to_drink: absent
+  sunken_eyes: present
+  decreased_urine: present
+  drowsy_hard_to_wake: absent
+  loss_of_appetite: present
+  abdominal_pain: unknown
+  red_jelly_stool: absent
+  episodic_crying_legs_drawn: absent
+  cough: absent
+  runny_nose: absent
+  rash_any: absent
+  seizure_recent: absent
+  measles_vaccinated: absent
+default_unmentioned: absent
+expected:
+  condition: acute_gastroenteritis
+  acceptable: []
+  triage: 3
+source:
+  basis: "Tiêu chảy cấp có mất nước (quấy khóc, mắt trũng, uống háo hức) theo IMCI: bù nước theo phác đồ B tại cơ sở y tế trong ngày (NHS Diarrhoea and vomiting: trẻ dưới 5 tuổi có dấu hiệu mất nước cần được tư vấn gấp)."
+  references:
+    - who-imci-chart-booklet-2014
+    - "https://www.nhs.uk/conditions/diarrhoea-and-vomiting/"
+author: "agent:vignette-holdout"
+notes_vi: "Danh mục chưa có dấu hiệu 'uống háo hức' và 'nếp véo da mất chậm' để phân độ mất nước."

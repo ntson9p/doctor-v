@@ -1,0 +1,34 @@
+id: h-abd-019
+set: holdout
+title_vi: "Bé trai 9 tháng, khóc thét từng cơn, co chân lên bụng, nôn, phân nhầy máu"
+narrative_vi: "Bé T., 9 tháng, ở Thành phố Hồ Chí Minh, trước đó khỏe mạnh. Khoảng 8 giờ trước bé đột ngột khóc thét từng cơn, co hai chân lên bụng, mỗi cơn vài phút rồi nằm yên, khoảng 15–20 phút lại lên cơn. Bé nôn 3 lần, bú ít hơn nhưng vẫn bú được. Lần đi ngoài vừa rồi tã có nhầy lẫn máu đỏ sẫm như mứt dâu. Bé không sốt, chưa li bì."
+patient:
+  age_months: 9
+  sex: male
+  region: south
+  month: 3
+complaint: abdominal_pain
+answers:
+  abd_pain_onset: sudden
+  abd_pain_duration: h6_24
+  abd_pain_severe: present
+  abd_pain_colicky: present
+  episodic_crying_legs_drawn: present
+  red_jelly_stool: present
+  vomiting: present
+  child_vomits_everything: absent
+  child_unable_to_drink: absent
+  loss_of_appetite: present
+  fever: absent
+  diarrhea: absent
+  drowsy_hard_to_wake: absent
+  abdomen_hard_swollen: absent
+default_unmentioned: absent
+expected:
+  condition: intussusception
+  acceptable: []
+  triage: 2
+source:
+  basis: "Lồng ruột cấp ở nhũ nhi với bộ ba kinh điển: khóc thét đau bụng từng cơn, nôn, phân nhầy máu như mứt dâu; cần cấp cứu ngoại nhi để tháo lồng sớm."
+author: "agent:vignette-holdout"
+notes_vi: "Trẻ chưa biết nói nên vị trí đau bụng để 'không rõ'."

@@ -1,0 +1,41 @@
+id: h-fever-008
+set: holdout
+title_vi: "Bé gái 2 tuổi chưa tiêm vắc xin sởi, sốt cao 4 ngày, mắt đỏ, ban từ mặt lan xuống"
+narrative_vi: "Bé M., 2 tuổi, ở Hà Nội. Bé chưa tiêm vắc xin sởi vì hay bị bệnh vào đúng lịch tiêm. Bé sốt cao 39–40°C đã 4 ngày, ho, chảy nước mũi, mắt đỏ, chảy nước mắt. Hôm qua bé nổi ban đỏ sau tai, lên mặt, nay lan xuống ngực và lưng. Hàng xóm có trẻ đang bị sởi. Bé mệt, ăn kém nhưng vẫn uống được, không khó thở, không tiêu chảy."
+patient:
+  age_years: 2
+  sex: female
+  region: north
+  month: 3
+complaint: fever
+answers:
+  fever_max_temp: ge_39
+  fever_duration: d3_5
+  cough: present
+  runny_nose: present
+  red_eyes: present
+  rash_any: present
+  rash_spreads_from_face: present
+  rash_non_blanching: absent
+  fatigue: present
+  loss_of_appetite: present
+  measles_vaccinated: absent
+  measles_contact: present
+  breathing_difficulty: absent
+  diarrhea: absent
+  ear_pain: absent
+  child_unable_to_drink: absent
+  child_vomits_everything: absent
+  drowsy_hard_to_wake: absent
+  seizure_recent: absent
+default_unmentioned: absent
+expected:
+  condition: measles
+  acceptable: []
+  triage: 3
+source:
+  basis: "Sởi điển hình: sốt, viêm long (ho, chảy mũi, mắt đỏ), ban mọc từ sau tai, mặt rồi lan xuống thân; trẻ chưa tiêm vắc xin, có tiếp xúc (1019/QĐ-BYT; NHS Measles: nghi sởi cần khám gấp)."
+  references:
+    - byt-qd-1019-2025
+    - "https://www.nhs.uk/conditions/measles/"
+author: "agent:vignette-holdout"

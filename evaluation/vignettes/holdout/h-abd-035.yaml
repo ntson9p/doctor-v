@@ -1,0 +1,36 @@
+id: h-abd-035
+set: holdout
+title_vi: "Bé trai 6 tuổi, đau quanh rốn từng lúc 2 tháng, 4–5 ngày mới đi ngoài, phân cứng"
+narrative_vi: "Bé P., 6 tuổi, ở Bắc Ninh. Hai tháng nay bé hay kêu đau bụng quanh rốn, đau từng lúc. Bé 4–5 ngày mới đi ngoài một lần, phân to, cứng, đi rất đau nên hay nhịn. Bé ăn kém hơn trước. Bé vẫn xì hơi bình thường, không nôn, không sốt, bụng không chướng căng, vẫn chơi và đi học bình thường."
+patient:
+  age_years: 6
+  sex: male
+  region: north
+  month: 10
+complaint: abdominal_pain
+answers:
+  abd_pain_location: periumbilical
+  abd_pain_onset: gradual
+  abd_pain_duration: gt_2w
+  abd_pain_severe: absent
+  abd_pain_colicky: present
+  no_stool_or_gas: absent
+  abdomen_hard_swollen: absent
+  vomiting: absent
+  nausea: absent
+  diarrhea: absent
+  fever: absent
+  loss_of_appetite: present
+  red_jelly_stool: absent
+  dysuria: absent
+default_unmentioned: absent
+expected:
+  condition: other
+  acceptable: []
+  triage: 4
+source:
+  basis: "Táo bón chức năng ở trẻ (NICE CG99): đau bụng tái diễn, đi ngoài thưa, phân to cứng, hay nhịn, không có dấu hiệu báo động; đặt lịch khám trong vài ngày (NHS Stomach ache: đau bụng hay tái lại cần gặp bác sĩ)."
+  references:
+    - nhs-stomach-ache
+author: "agent:vignette-holdout"
+notes_vi: "Ngoài danh mục bệnh. Danh mục chỉ có 'không đi ngoài, không xì hơi được' (dấu hiệu tắc ruột), chưa có câu hỏi về số lần đi ngoài và phân cứng."
