@@ -396,8 +396,9 @@
   evidence:
     tier: B
     basis: judgment
-    sources: [byt-qd-3931-2015]
-    note: "Người bảo trì thêm theo đề xuất của lượt A lô 3: thận ứ nước nhiễm khuẩn do sỏi là cấp cứu tiết niệu. Nguồn byt-qd-3931-2015 do lượt A thêm; cần lượt C xác minh và chuyển vào sổ đăng ký."
+    sources: [eau-urolithiasis-2026, nhs-kidney-stones]
+    locator: "EAU Urolithiasis 2026, mục 3.4.2; NHS Kidney stones (urgent GP appointment or NHS 111)"
+    note: "Người bảo trì thêm theo đề xuất của lượt A lô 3. Lượt C lô 3 chỉ ra 3931/QĐ-BYT không nêu đây là cấp cứu; người bảo trì thay bằng EAU: thận tắc nghẽn kèm dấu hiệu nhiễm khuẩn tiết niệu là cấp cứu tiết niệu, cần giải áp khẩn. Tại nhà không xác định được tắc nghẽn; quy tắc dùng sốt kèm cơn đau quặn thận làm dấu hiệu thay thế (nhận định). NHS khuyên hẹn khám khẩn (mức 3) khi đau dữ dội hoặc sốt; giữ mức 2 vì cần siêu âm và xét nghiệm ngay để loại trừ thận tắc nghẽn nhiễm khuẩn. Chờ bác sĩ duyệt."
 - id: rf_uti_high_risk
   level: 3
   when:
@@ -406,13 +407,20 @@
       - any:
           - { sex: male }
           - { finding: pregnant, is: present }
-          - { age_groups: [child_2m_5y, child_5_12] }
-  reason_vi: "Tiểu buốt ở nam giới, phụ nữ có thai hoặc trẻ em cần được khám trong hôm nay."
+          - { age_months_lt: 192 }
+          - { age_years_gte: 65 }
+          - { finding: diabetes, is: present }
+          - { finding: immunocompromised, is: present }
+          - { finding: fever, is: present }
+          - { finding: hematuria, is: present }
+          - { finding: flank_pain, is: present }
+  reason_vi: "Tiểu buốt ở nhóm dễ biến chứng, hoặc kèm sốt, tiểu ra máu, đau hông lưng, cần được khám trong hôm nay."
   evidence:
     tier: C
     basis: verbal
     sources: [nhs-utis]
-    note: "Người bảo trì thêm theo đề xuất của lượt A lô 3: NHS khuyên nhóm này đi khám sớm (nguy cơ biến chứng cao hơn)."
+    locator: "NHS Urinary tract infections (UTIs): Ask for an urgent GP appointment or get help from NHS 111"
+    note: "Người bảo trì thêm theo đề xuất của lượt A lô 3. Lượt C lô 3 mở trang: NHS khuyên hẹn khám khẩn khi từ 65 tuổi, trẻ từ 15 tuổi trở xuống, nam giới, có thai, đái tháo đường, suy giảm miễn dịch, sốt hoặc run, tiểu ra máu, đau bụng dưới hoặc đau lưng dưới sườn; người bảo trì bổ sung đủ các nhóm (trước chỉ có nam giới, có thai, trẻ dưới 12 tuổi)."
 - id: rf_sudden_balance_loss
   level: 2
   complaints: [headache]
@@ -538,9 +546,10 @@
   reason_vi: "Trẻ nôn ra dịch xanh có thể bị tắc ruột, cần khám cấp cứu."
   evidence:
     tier: C
-    basis: judgment
-    sources: [wses-asbo-2018]
-    note: "Nôn dịch mật ở trẻ là dấu hiệu tắc ruột cần loại trừ ngay (lượt A lô 3 đề xuất finding). Cần nguồn nhi khoa chính thức."
+    basis: verbal
+    sources: [nhs-diarrhoea-vomiting, wses-asbo-2018, bines-bwho-2006]
+    locator: "NHS Diarrhoea and vomiting (Call 999 or go to A&E); Bines 2006 bảng 3"
+    note: "Nôn dịch mật ở trẻ là dấu hiệu tắc ruột cần loại trừ ngay (lượt A lô 3 đề xuất finding). Lượt C lô 3 mở trang NHS: gọi 999 hoặc đến cấp cứu khi nôn dịch xanh (trẻ em: vàng xanh hoặc xanh). Bines 2006: 30% trẻ lồng ruột ở Hà Nội nôn dịch mật. Vẫn cần nguồn nhi khoa Việt Nam."
 - id: rf_fever_3_6_months_high_temp
   level: 2
   when:
@@ -698,8 +707,8 @@
   evidence:
     tier: B
     basis: judgment
-    sources: [byt-qd-3312-2015]
-    locator: "3312/QĐ-BYT (2015), chương Tiêu hóa, bài Xuất huyết tiêu hóa (xuất huyết tiêu hóa dưới)"
+    sources: [byt-qd-3312-2015, who-intussusception-2002, bines-bwho-2006]
+    locator: "3312/QĐ-BYT (2015), chương Tiêu hóa, bài Xuất huyết tiêu hóa (xuất huyết tiêu hóa dưới); WHO 2002; Bines 2006 bảng 3"
     note: "Văn bản không có bài riêng về lồng ruột; bài Xuất huyết tiêu hóa nêu lồng ruột là nguyên nhân xuất huyết tiêu hóa dưới ở trẻ, cần khám bụng loại trừ nguyên nhân ngoại khoa và điều trị phẫu thuật. Hình ảnh 'phân như mứt dâu' và mức 2 là đánh giá của người soạn; cần nguồn ngoại nhi chính thức và bác sĩ duyệt. IMCI xếp phân có máu do lỵ ở mức điều trị ngoại trú; câu hỏi nhấn mạnh 'giống mứt dâu' để phân biệt."
 - id: rf_chest_pain
   level: 2

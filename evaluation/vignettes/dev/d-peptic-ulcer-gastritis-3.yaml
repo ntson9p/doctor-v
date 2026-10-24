@@ -1,0 +1,36 @@
+id: d-peptic-ulcer-gastritis-3
+set: dev
+title_vi: "Nam 42 tuổi, uống rượu hằng ngày, 3 tuần đau rát vùng trên rốn lúc đói (dễ nhầm viêm tụy)"
+narrative_vi: "Anh D., 42 tuổi, uống rượu gần như hằng ngày. Ba tuần nay đau rát vùng trên rốn, đau tăng lúc đói, ăn vào đỡ, hay ợ chua; hôm qua sau bữa nhậu đau nhiều hơn, buồn nôn. Đau không lan ra sau lưng, không dữ dội. Không nôn, không sốt, không vàng da, không tiêu chảy, không đi ngoài phân đen."
+patient:
+  age_years: 42
+  sex: male
+  region: central
+  month: 2
+complaint: abdominal_pain
+answers:
+  abd_pain_location: epigastric
+  abd_pain_meal_relation: hungry_relieved_by_food
+  abd_pain_duration: gt_2w
+  abd_pain_onset: gradual
+  heavy_alcohol: present
+  nausea: present
+  heartburn: present
+  vomiting: absent
+  abd_pain_radiates_back: absent
+  abd_pain_severe: absent
+  fever: absent
+  jaundice: absent
+  diarrhea: absent
+  black_stool: absent
+  vomiting_blood: absent
+default_unmentioned: absent
+expected:
+  condition: peptic_ulcer_gastritis
+  acceptable: []
+  triage: 4
+source:
+  basis: "Uống nhiều rượu và đau thượng vị dễ gợi ý viêm tụy cấp, nhưng đau kéo dài nhiều tuần, đỡ khi ăn, không lan ra lưng, không dữ dội, không nôn (ACG 2024: đau viêm tụy liên tục, thường dữ dội, lan ra lưng); kiểu đau phù hợp viêm, loét dạ dày (MSD). Không có dấu hiệu báo động: khám trong vài ngày (NHS)."
+  references: [msd-peptic-ulcer, acg-pancreatitis-2024, nhs-stomach-ulcer]
+author: "agent:pass-c"
+notes_vi: "Ca dễ nhầm với viêm tụy cấp."

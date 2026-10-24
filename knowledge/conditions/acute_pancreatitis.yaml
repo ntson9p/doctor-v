@@ -1,0 +1,248 @@
+id: acute_pancreatitis
+names:
+  vi: "Viêm tụy cấp tính"
+  vi_common: ["Viêm tụy cấp", "Viêm tụy"]
+  en: "Acute pancreatitis"
+codes:
+  icd10: "K85"
+  icd10_verified: true
+  mondo: "MONDO:0006515"
+summary_vi:
+  - "Tụy (tuyến nằm sau dạ dày) bị viêm cấp; ở Việt Nam hay do rượu bia, mỡ máu rất cao hoặc sỏi mật."
+  - "Thường đau dữ dội, liên tục vùng trên rốn, hay lan ra sau lưng, kèm nôn (ói) nhiều."
+  - "Cần điều trị trong bệnh viện vì một số ca diễn biến nặng nhanh, có thể nguy hiểm tính mạng."
+urgency: 2
+cant_miss: true
+specialties: [gastroenterology, emergency]
+priors:
+  - complaint: abdominal_pain
+    default: P4
+    by_age: { infant_0_2m: P6, child_2m_5y: P6, child_5_12: P5, teen_13_17: P5 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [viniol-fampract-2014, cervellin-atm-2016, acg-pancreatitis-2024, phan-medicine-2024, nguyen-bmcgastro-2025]
+      reported: "Bệnh mật – tụy 4,0% người đau bụng ở chăm sóc ban đầu (Viniol); viêm tụy 1,4% dưới 65 tuổi, 3,3% từ 65 tuổi ở cấp cứu (Cervellin); tuổi trung bình 41,5 và 47,3 ở hai nhóm người bệnh tại Chợ Rẫy"
+      note: "Người lớn: P4 (0,2–1%), hai lượt giống nhau: viêm tụy chỉ là phần nhỏ của nhóm mật – tụy ở chăm sóc ban đầu; ở Việt Nam rượu và tăng triglycerid làm bệnh hay gặp ở tuổi lao động. Ở cấp cứu tỷ lệ ở người từ 65 tuổi gấp khoảng 2 lần người trẻ (Cervellin), chưa đủ để nâng một mức. Trẻ 5–12 tuổi: lượt A P6, lượt B P5; lượt C chọn P5 (cùng là ước lượng, chọn mức thận trọng cho bệnh không được bỏ sót). Trẻ dưới 5 tuổi: P6."
+prior_modifiers:
+  - when: { sex: [male] }
+    factor: 1.3
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [phan-medicine-2024, nguyen-bmcgastro-2025]
+      reported: "Nam/nữ 2,8/1 (Phan 2024); nam 62,3% (Nguyen 2025)"
+      population: "Người viêm tụy cấp nhập Bệnh viện Chợ Rẫy (tuyến cuối)"
+      note: "Chỉ lượt B có; lượt C giữ vì hai nghiên cứu Việt Nam cho thấy khác biệt rõ. Nam chiếm khoảng 62–74% ca, tương ứng hệ số khoảng 1,3 cho nam và 0,7 cho nữ so với mức trung bình hai giới. Số liệu bệnh viện tuyến cuối."
+  - when: { sex: [female] }
+    factor: 0.7
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [phan-medicine-2024, nguyen-bmcgastro-2025]
+      reported: "Nam/nữ 2,8/1 (Phan 2024); nam 62,3% (Nguyen 2025)"
+      note: "Xem hệ số cho nam."
+findings:
+  - finding: abd_pain_location
+    dist: { epigastric: 0.60, right_upper: 0.08, left_upper: 0.12, periumbilical: 0.055, right_lower: 0.01, left_lower: 0.01, suprapubic: 0.01, whole: 0.115 }
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [acg-pancreatitis-2024, msd-acute-pancreatitis, nhs-acute-pancreatitis]
+      locator: "ACG 2024: đau thượng vị hoặc hạ sườn trái; đau ở bụng dưới không phù hợp"
+      note: "Trung bình hai lượt (lệch rất nhỏ). Để khoảng 11% 'khắp bụng' cho ca đau lan tỏa, thể nặng (NHS: có thể đau khắp bụng). Tỷ lệ là ước lượng."
+  - finding: abd_pain_radiates_back
+    freq: frequent
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [acg-pancreatitis-2024, msd-acute-pancreatitis, nhs-acute-pancreatitis]
+      locator: "ACG 2024: đau thường liên tục, lan ra lưng, ngực hoặc hai bên hông; MSD: hay lan ra sau lưng"
+      note: "Chữ 'thường' của ACG áp dụng chung cho ba hướng lan (lưng, ngực, hông), nên lan ra lưng riêng ước khoảng một nửa. Hai lượt giống nhau."
+  - finding: abd_pain_radiates_right_shoulder
+    freq: occasional
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [nhs-acute-pancreatitis, acg-pancreatitis-2024]
+      note: "Chỉ lượt B có. Câu hỏi gồm cả 'sau lưng bên phải', nên người viêm tụy đau lan ra lưng có thể trả lời 'Có'; ước 20%. Cùng cụm pain_radiation với câu đau lan ra sau lưng."
+  - finding: flank_pain
+    freq: occasional
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [acg-pancreatitis-2024, nhs-acute-pancreatitis]
+      locator: "ACG 2024: lan ra hai bên hông; NHS: có thể lan ra hai bên"
+      note: "Chỉ lượt B có. Lượt C giữ vì hai nguồn mô tả; ước 20%."
+  - finding: abd_pain_severe
+    freq: frequent
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [acg-pancreatitis-2024, msd-acute-pancreatitis, nhs-acute-pancreatitis]
+      locator: "ACG 2024: cường độ thường được mô tả là dữ dội nhưng có thể khác nhau; MSD: thường đủ nặng để cần thuốc giảm đau đường tiêm"
+      note: "Lượt C: hai lượt lệch một mức (A very_frequent, B frequent). Mô tả 'thường dữ dội' là ở người bệnh nhập viện; hạ một mức cho người tự kiểm tra (kb-guide mục 2.1), và 'không chịu nổi' là ngưỡng cao. Khi trả lời 'Có', quy tắc rf_severe_abdominal_pain đã xếp mức 2; mức very_frequent làm câu trả lời 'Không' hạ bệnh không được bỏ sót này khoảng 4 lần."
+  - finding: abd_pain_onset
+    dist: { sudden: 0.50, gradual: 0.50 }
+    evidence:
+      tier: C
+      basis: verbal
+      sources: [msd-acute-pancreatitis, nhs-acute-pancreatitis, phan-medicine-2024]
+      locator: "MSD: khởi phát đột ngột khi do sỏi mật, tăng dần trong vài ngày khi do rượu"
+      note: "Ở Việt Nam rượu và tăng triglycerid chiếm phần lớn nguyên nhân, nên khoảng một nửa khởi phát từ từ. Hai lượt giống nhau; tỷ lệ là ước lượng."
+  - finding: abd_pain_duration
+    dist: { lt_6h: 0.25, h6_24: 0.365, d1_3: 0.29, d4_14: 0.075, gt_2w: 0.02 }
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [msd-acute-pancreatitis, nhs-acute-pancreatitis]
+      locator: "MSD: đau kéo dài vài ngày; NHS: đau đột ngột và không hết"
+      note: "Trung bình hai lượt. Đau dữ dội nên đa số đi khám trong 1–2 ngày đầu. Phân bố là ước lượng."
+  - finding: abd_pain_meal_relation
+    dist: { hungry_relieved_by_food: 0.03, worse_after_meal: 0.45, no_relation: 0.52 }
+    evidence:
+      tier: C
+      basis: verbal
+      sources: [nhs-acute-pancreatitis, msd-acute-pancreatitis]
+      locator: "NHS: đau tăng sau khi ăn, khi cử động hoặc khi nằm"
+      note: "Hai lượt giống nhau; tỷ lệ là ước lượng."
+  - finding: pain_after_fatty_meal
+    freq: occasional
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [acg-pancreatitis-2024, nguyen-bmcgastro-2025]
+      note: "Chỉ lượt A có. Lượt C giữ: viêm tụy do sỏi mật hoặc tăng triglycerid (23,6% ở Chợ Rẫy) có thể khởi phát sau bữa ăn nhiều dầu mỡ; ước 20%. Liên kết làm tăng một bệnh không được bỏ sót nên an toàn."
+  - finding: abd_pain_worse_movement
+    freq: occasional
+    evidence:
+      tier: C
+      basis: verbal
+      sources: [msd-acute-pancreatitis, nhs-acute-pancreatitis, nguyen-bmcgastro-2025]
+      locator: "MSD: ho, cử động mạnh, hít sâu làm đau tăng; NHS: đau tăng khi cử động; Nguyen 2025: phản ứng thành bụng 6,4%"
+      note: "Hai lượt giống nhau; ước 20%."
+  - finding: abdomen_hard_swollen
+    freq: occasional
+    evidence:
+      tier: C
+      basis: verbal
+      sources: [msd-acute-pancreatitis, nhs-acute-pancreatitis, nguyen-bmcgastro-2025]
+      locator: "MSD: có thể chướng bụng do liệt ruột; NHS: chướng bụng kéo dài là dấu hiệu cần cấp cứu"
+      reported: "Phản ứng hoặc co cứng thành bụng lúc nhập viện: 6,4% (Chợ Rẫy)"
+      note: "Câu hỏi gộp bụng cứng và chướng căng; chướng bụng do liệt ruột hay gặp ở thể vừa và nặng. Hai lượt giống nhau."
+  - finding: nausea
+    freq: very_frequent
+    evidence:
+      tier: C
+      basis: verbal
+      sources: [msd-acute-pancreatitis, nhs-acute-pancreatitis]
+      locator: "MSD: buồn nôn, nôn thường gặp"
+      note: "Hai lượt giống nhau."
+  - finding: vomiting
+    freq: very_frequent
+    evidence:
+      tier: C
+      basis: verbal
+      sources: [msd-acute-pancreatitis, nhs-acute-pancreatitis]
+      locator: "MSD: buồn nôn, nôn thường gặp"
+      note: "Hai lượt giống nhau."
+  - finding: persistent_vomiting
+    freq: occasional
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [msd-acute-pancreatitis, acg-pancreatitis-2024]
+      note: "Nôn nhiều lần, không giữ được nước gặp ở một phần đáng kể và góp phần gây giảm thể tích tuần hoàn; ước 20–30%. Hai lượt giống nhau."
+  - finding: vomiting_bilious
+    freq: occasional
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [msd-acute-pancreatitis]
+      note: "Chỉ lượt B có (dấu hiệu mới). Tần suất trong số người có nôn: nôn nhiều lần thường ra dịch vàng đắng; ước 20%, gấp đôi tỷ lệ nền 10%."
+  - finding: loss_of_appetite
+    freq: frequent
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [msd-acute-pancreatitis]
+      note: "Chỉ lượt A có. Buồn nôn, nôn thường gặp nên người bệnh thường bỏ ăn; ước khoảng một nửa."
+  - finding: fever
+    freq: occasional
+    evidence:
+      tier: C
+      basis: numeric
+      sources: [msd-acute-pancreatitis, nhs-acute-pancreatitis]
+      reported: "Trên 60% người bệnh có sốt trong quá trình bệnh (MSD)"
+      note: "Lượt C: hai lượt lệch một mức (A occasional, B frequent). Chọn occasional theo lượt A: con số trên 60% là trong cả đợt nằm viện, sốt thường xuất hiện muộn; lúc mới đau, khi người dùng tự kiểm tra, ít hơn. Mức thấp hơn cũng làm câu trả lời 'Không sốt' ít hạ bệnh không được bỏ sót này."
+  - finding: fever_max_temp
+    dist: { lt_38: 0.45, t38_39: 0.42, ge_39: 0.13 }
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [msd-acute-pancreatitis]
+      note: "Chỉ lượt B có. Phân bố trong số người đã có sốt; thường sốt nhẹ trong những ngày đầu. Tỷ lệ là ước lượng."
+  - finding: fever_duration
+    dist: { d1_2: 0.65, d3_5: 0.28, d6_7: 0.05, gt_7d: 0.02 }
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [msd-acute-pancreatitis]
+      note: "Chỉ lượt B có. Phân bố trong số người có sốt; bệnh cấp, thường đi khám trong 1–2 ngày đầu. Phân bố là ước lượng."
+  - finding: jaundice
+    freq: occasional
+    evidence:
+      tier: C
+      basis: verbal
+      sources: [msd-acute-pancreatitis]
+      locator: "MSD: đôi khi có vàng mắt do tắc ống mật hoặc phù đầu tụy"
+      note: "Ở Việt Nam viêm tụy do sỏi mật ít hơn phương Tây, nên có thể thấp hơn. Hai lượt giống nhau."
+  - finding: heavy_alcohol
+    freq: frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [phan-medicine-2024, nguyen-bmcgastro-2025, acg-pancreatitis-2024]
+      reported: "Nguyên nhân có rượu (đơn thuần hoặc kèm tăng triglycerid): 37,8% (Phan 2024), 42,3% (Nguyen 2025); tiền sử uống rượu 54,1% (Nguyen 2025); ACG: rượu 25–35%"
+      population: "Người viêm tụy cấp nhập Bệnh viện Chợ Rẫy"
+      note: "Tỷ lệ nền 15%, nên câu trả lời 'Có' làm tăng khả năng khoảng 3 lần. Hai lượt giống nhau."
+  - finding: gallstones_known
+    freq: occasional
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [phan-medicine-2024, nguyen-bmcgastro-2025, acg-pancreatitis-2024]
+      reported: "Do sỏi mật: 10,8% (Phan 2024), 25,0% (Nguyen 2025); ở Mỹ 40–70% (ACG)"
+      note: "Không phải ai có sỏi cũng đã biết trước; ước 20% người bệnh trả lời 'Có'. Hai lượt giống nhau."
+  - finding: diabetes
+    freq: occasional
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [phan-medicine-2024, nguyen-bmcgastro-2025]
+      reported: "Đái tháo đường: 43,7% (Phan 2024), 26,8% (Nguyen 2025)"
+      population: "Bệnh viện tuyến cuối"
+      note: "Chỉ lượt B có; lượt C giữ vì có số liệu Việt Nam. Liên quan viêm tụy do tăng triglycerid. Hạ một mức vì số liệu từ bệnh viện tuyến cuối; tỷ lệ nền 7% nên câu trả lời 'Có' làm tăng khả năng khoảng 3 lần."
+warning_signs:
+  - abd_pain_severe
+  - persistent_vomiting
+  - abdomen_hard_swollen
+  - breathing_difficulty
+  - cold_hands_feet
+  - confusion
+  - decreased_urine
+  - fainting_or_near_fainting
+self_care_vi:
+  - "Không uống rượu bia."
+  - "Không ăn uống trong khi chờ được đưa đi khám."
+see_doctor_vi:
+  - "Đến cơ sở cấp cứu ngay khi đau vùng trên rốn dữ dội, kéo dài, lan ra sau lưng."
+  - "Bệnh cần được điều trị trong bệnh viện, không tự điều trị tại nhà."
+  - "Gọi 115 nếu khó thở, lơ mơ, tay chân lạnh hoặc tiểu rất ít."
+review:
+  status: source_checked
+  authors: ["agent:pass-a", "agent:pass-b"]
+  reconciler: "agent:pass-c"
+  doctor_reviewer: null
+  updated: "2026-10-25"
+  notes_vi: "Lượt C đã đối chiếu 25 liên kết và mở lại mọi nguồn được trích. Bác sĩ cần xem: (1) prior P4 suy từ nhóm 'mật – tụy' ở chăm sóc ban đầu nước ngoài; ở Việt Nam viêm tụy do rượu và tăng triglycerid có thể làm tỷ lệ cao hơn; (2) hệ số giới tính (nam 1,3, nữ 0,7) dựa trên số liệu bệnh viện tuyến cuối; (3) đau dữ dội để frequent và sốt để occasional, thấp hơn mô tả ở người bệnh nằm viện, để người đến sớm không bị hạ khả năng quá mạnh; (4) không tìm được tổng quan về độ chính xác của triệu chứng cho viêm tụy, nên tần suất dựa trên mô tả của ACG, MSD, NHS; (5) chưa có câu hỏi 'đã biết mỡ máu cao', là nguyên nhân hàng đầu ở Việt Nam (23,6–34,7% ở Chợ Rẫy); (6) bỏ liên kết đau quặn từng cơn (mức bằng tỷ lệ nền) và tiêu chảy (rare, chỉ là ước lượng, hạ một bệnh không được bỏ sót)."

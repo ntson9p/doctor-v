@@ -1,0 +1,40 @@
+id: d-intussusception-3
+set: dev
+title_vi: "Bé trai 14 tháng, nôn, tiêu chảy, khóc thét từng cơn co chân lên bụng (dễ nhầm viêm dạ dày – ruột)"
+narrative_vi: "Bé P., 14 tháng tuổi (trai). Từ đêm qua nôn 4 lần, đi ngoài phân lỏng 3 lần không có máu; từ sáng có những cơn khóc thét, co chân lên bụng, mỗi cơn vài phút. Không sốt. Bé vẫn uống được nước, chưa li bì, còn đi tiểu, mắt không trũng. Không ai trong nhà bị tiêu chảy."
+patient:
+  age_months: 14
+  sex: male
+  region: central
+  month: 12
+complaint: abdominal_pain
+answers:
+  vomiting: present
+  diarrhea: present
+  diarrhea_bloody: absent
+  episodic_crying_legs_drawn: present
+  abd_pain_colicky: present
+  fever: absent
+  red_jelly_stool: absent
+  child_unable_to_drink: absent
+  child_vomits_everything: absent
+  drowsy_hard_to_wake: absent
+  seizure_recent: absent
+  abd_pain_duration: h6_24
+  abd_pain_onset: sudden
+  vomiting_bilious: absent
+  sunken_eyes: absent
+  decreased_urine: absent
+  abd_pain_severe: absent
+  unsafe_food_shared: absent
+  persistent_vomiting: absent
+default_unmentioned: absent
+expected:
+  condition: intussusception
+  acceptable: []
+  triage: 2
+source:
+  basis: "Lồng ruột có thể kèm tiêu chảy (Park 2021: 9,7–17,2%), dễ nhầm với viêm dạ dày – ruột; cơn khóc thét, co chân từng cơn ở trẻ 14 tháng (đỉnh mắc ở năm thứ hai, Burnett 2018) cần khám cấp cứu để loại trừ lồng ruột (WHO 2002; Reust 2016)."
+  references: [park-frontpediatr-2021, burnett-vaccine-2018, who-intussusception-2002, reust-afp-2016]
+author: "agent:pass-c"
+notes_vi: "Ca dễ nhầm với viêm dạ dày – ruột cấp."

@@ -1,0 +1,34 @@
+id: d-acute-pancreatitis-1
+set: dev
+title_vi: "Nam 40 tuổi, uống nhiều rượu, đau dữ dội vùng trên rốn lan ra sau lưng, nôn nhiều"
+narrative_vi: "Anh S., 40 tuổi, uống rượu nhiều. Sau bữa nhậu tối qua, đau vùng trên rốn tăng dần rồi dữ dội, liên tục, lan ra sau lưng, buồn nôn, nôn 4 lần. Đã đau khoảng 10 giờ. Không sốt, không tiêu chảy, không vàng da, không ngất."
+patient:
+  age_years: 40
+  sex: male
+  region: south
+  month: 2
+complaint: abdominal_pain
+answers:
+  abd_pain_severe: present
+  abd_pain_location: epigastric
+  abd_pain_radiates_back: present
+  abd_pain_duration: h6_24
+  abd_pain_onset: gradual
+  heavy_alcohol: present
+  nausea: present
+  vomiting: present
+  persistent_vomiting: absent
+  fever: absent
+  diarrhea: absent
+  jaundice: absent
+  fainting_or_near_fainting: absent
+  abdomen_hard_swollen: absent
+default_unmentioned: absent
+expected:
+  condition: acute_pancreatitis
+  acceptable: []
+  triage: 2
+source:
+  basis: "Ca điển hình: đau thượng vị liên tục, dữ dội, lan ra sau lưng, nôn, sau uống rượu (ACG 2024; MSD; NHS: đau dữ dội lan ra lưng thì gọi 999 hoặc đến cấp cứu). Bệnh cần điều trị tại bệnh viện ngay."
+  references: [acg-pancreatitis-2024, msd-acute-pancreatitis, nhs-acute-pancreatitis]
+author: "agent:pass-c"

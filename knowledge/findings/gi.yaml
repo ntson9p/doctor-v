@@ -74,6 +74,7 @@
   question_vi: "Có đau quặn từng cơn, lúc đau lúc đỡ không?"
   requires:
     - { finding: abdominal_pain, is: present }
+  cluster: colicky_pain
   leak: nonspecific
 - id: abd_pain_migrated_rlq
   kind: history

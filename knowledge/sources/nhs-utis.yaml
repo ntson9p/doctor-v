@@ -6,6 +6,7 @@ url: "https://www.nhs.uk/conditions/urinary-tract-infections-utis/"
 license_class: L1
 license_note: "Open Government Licence v3.0; bản chuyển thể không được trình bày như nội dung của NHS."
 default_tier: C
-accessed: "2026-10-24"
-verified: false
-notes_vi: "Thêm bởi người bảo trì; chưa mở để xác minh."
+accessed: "2026-10-25"
+verified: true
+verified_by: "agent:pass-c"
+notes_vi: "Người bảo trì thêm; lượt C lô 3 mở trang ngày 25/10/2026 (rà soát 11/7/2025, hạn 11/7/2028). Người lớn: đau, nóng rát khi đi tiểu; tiểu nhiều lần, tiểu gấp, tiểu đêm; nước tiểu đục hoặc có máu; đau bụng dưới hoặc đau lưng ngay dưới sườn; sốt hoặc thấy nóng lạnh, run; người già có thể lú lẫn. Trẻ em: sốt, quấy, bú kém, đái dầm, nôn. Phụ nữ 16–64 tuổi không có thai có thể hỏi dược sĩ. Hẹn khám khẩn hoặc gọi 111 khi từ 65 tuổi, trẻ từ 15 tuổi trở xuống, nam giới, có thai, đái tháo đường, suy giảm miễn dịch, sốt hoặc run, tiểu ra máu, đau bụng dưới hoặc đau lưng dưới sườn, triệu chứng nặng nhanh hoặc không đỡ sau 48 giờ điều trị, hay tái phát. Gọi 999 hoặc đến cấp cứu khi lú lẫn, lơ mơ, nói khó. Lượt A trích trang này với ID nhs-uti (đường dẫn /conditions/cystitis/)."

@@ -1,0 +1,15 @@
+id: taylor-aem-2013
+type: systematic_review
+title: "Adult small bowel obstruction"
+publisher: "Academic Emergency Medicine 2013;20(6):528–544 (Taylor MR, Lalani N)"
+date: "2013-06"
+url: "https://europepmc.org/article/MED/23758299"
+doi: "10.1111/acem.12150"
+pmid: "23758299"
+license_class: L3
+license_note: "Bản quyền Wiley: chỉ dùng dữ kiện kèm trích dẫn."
+default_tier: A
+accessed: "2026-10-25"
+verified: true
+verified_by: "agent:pass-c"
+notes_vi: "Lượt C lô 3 đọc tóm tắt qua API Europe PMC. Tắc ruột non chiếm khoảng 2% người lớn đau bụng ở khoa cấp cứu. Yếu tố bệnh sử và khám có giá trị nhất: từng mổ bụng, táo bón, nhu động ruột bất thường, chướng bụng (tóm tắt không ghi độ nhạy). Siêu âm có LR+ 14,1, LR− 0,13."

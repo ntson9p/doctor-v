@@ -51,6 +51,10 @@
   rho: medium
   label_vi: "Đi rừng, làm rẫy"
   rationale_vi: "Người đi rừng, ngủ rẫy thường cũng làm rẫy, phát cỏ, nên hai câu phơi nhiễm hay cùng được trả lời là có (lượt C lô 2)."
+- id: colicky_pain
+  rho: high
+  label_vi: "Đau quặn từng cơn ở trẻ nhỏ"
+  rationale_vi: "Ở trẻ nhỏ, cha mẹ trả lời câu đau quặn từng cơn dựa vào chính các cơn khóc thét, co chân lên bụng; tính độc lập thì một thông tin bị đếm hai lần (lượt C lô 3)."
 - id: gi_bleeding
   rho: medium
   label_vi: "Xuất huyết tiêu hóa"

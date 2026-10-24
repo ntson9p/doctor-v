@@ -1,0 +1,32 @@
+id: d-intussusception-2
+set: dev
+title_vi: "Bé gái 5 tháng, lừ đừ, nôn, tái từng lúc, đi ngoài phân nhầy máu như mứt dâu"
+narrative_vi: "Bé H., 5 tháng tuổi (gái). Từ sáng bé lừ đừ hơn, bú kém hơn, nôn 2 lần, mặt tái từng lúc; chiều nay đi ngoài phân nhầy lẫn máu đỏ sẫm như mứt dâu. Mẹ không thấy bé khóc thét từng cơn rõ. Không sốt, không tiêu chảy. Bé vẫn bú được, gọi vẫn tỉnh."
+patient:
+  age_months: 5
+  sex: female
+  region: south
+  month: 3
+complaint: abdominal_pain
+answers:
+  red_jelly_stool: present
+  vomiting: present
+  episodic_crying_legs_drawn: absent
+  fever: absent
+  diarrhea: absent
+  child_unable_to_drink: absent
+  child_vomits_everything: absent
+  drowsy_hard_to_wake: absent
+  seizure_recent: absent
+  abd_pain_severe: absent
+  persistent_vomiting: absent
+default_unmentioned: absent
+expected:
+  condition: intussusception
+  acceptable: []
+  triage: 2
+source:
+  basis: "Ca không điển hình: trẻ nhỏ có thể chỉ li bì, xanh tái từng lúc (Bines 2006; Park 2021: li bì 25,9% ở trẻ dưới 1 tuổi), không rõ cơn khóc. Phân nhầy máu như mứt dâu ở trẻ nhỏ cần nghĩ lồng ruột và khám cấp cứu (3312/QĐ-BYT, bài Xuất huyết tiêu hóa; WHO 2002)."
+  references: [bines-bwho-2006, park-frontpediatr-2021, byt-qd-3312-2015, who-intussusception-2002]
+author: "agent:pass-c"
+notes_vi: "Ca không điển hình: thiếu cơn khóc thét."

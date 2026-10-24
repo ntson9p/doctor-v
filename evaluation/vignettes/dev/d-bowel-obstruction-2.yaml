@@ -1,0 +1,34 @@
+id: d-bowel-obstruction-2
+set: dev
+title_vi: "Nam 82 tuổi, 3 ngày bụng chướng dần, đau ít, không đi ngoài, không xì hơi"
+narrative_vi: "Ông Đ., 82 tuổi, chưa từng mổ bụng. Ba ngày nay bụng chướng dần, chỉ đau âm ỉ ít, không đau quặn rõ, buồn nôn, nôn 1 lần. Từ hôm qua không đi ngoài và không xì hơi được. Không sốt, không đau dữ dội."
+patient:
+  age_years: 82
+  sex: male
+  region: south
+  month: 4
+complaint: abdominal_pain
+answers:
+  abdomen_hard_swollen: present
+  no_stool_or_gas: present
+  nausea: present
+  vomiting: present
+  persistent_vomiting: absent
+  abd_pain_severe: absent
+  abd_pain_colicky: absent
+  previous_abdominal_surgery: absent
+  abd_pain_location: whole
+  abd_pain_duration: d1_3
+  abd_pain_onset: gradual
+  fever: absent
+  diarrhea: absent
+default_unmentioned: absent
+expected:
+  condition: bowel_obstruction
+  acceptable: []
+  triage: 2
+source:
+  basis: "Ca không điển hình ở người già: đau ít rõ (WSES 2018: ở người già đau thường không nổi bật), không từng mổ bụng (tắc đại tràng do u, xoắn ruột hay gặp ở người già; MSD: tắc đại tràng triệu chứng từ từ, chướng bụng, táo bón đến bí, nôn muộn). Không xì hơi kèm chướng bụng: cấp cứu (NHS; WSES)."
+  references: [wses-asbo-2018, msd-intestinal-obstruction, nhs-stomach-ache]
+author: "agent:pass-c"
+notes_vi: "Ca không điển hình: người từ 75 tuổi, đau ít."

@@ -1,0 +1,168 @@
+id: intussusception
+names:
+  vi: "Lồng ruột"
+  vi_common: ["Lồng ruột cấp"]
+  en: "Intussusception"
+codes:
+  icd10: "K56.1"
+  icd10_verified: true
+  mondo: "MONDO:0007835"
+summary_vi:
+  - "Một đoạn ruột chui lồng vào đoạn ruột kế tiếp, gây tắc ruột."
+  - "Hay gặp ở trẻ dưới 2 tuổi: bé khóc thét từng cơn, nôn (ói), có thể đi ngoài phân nhầy máu."
+  - "Đưa trẻ đến viện sớm thì thường tháo được lồng bằng bơm hơi, không phải mổ."
+urgency: 2
+cant_miss: true
+specialties: [pediatrics, general_surgery]
+priors:
+  - complaint: abdominal_pain
+    default: P6
+    by_age: { infant_0_2m: P5, child_2m_5y: P3, child_5_12: P5 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [tran-tmh-2013, vantrang-jpediatr-2014, jiang-plosone-2013, burnett-vaccine-2018, who-intussusception-2002, park-frontpediatr-2021]
+      reported: "Tỷ lệ mắc 296/100.000 trẻ dưới 1 tuổi và 196/100.000 trẻ dưới 5 tuổi mỗi năm (Nha Trang); 296/100.000 trẻ nhũ nhi (TP.HCM); Việt Nam 302/100.000 so với trung bình thế giới 74/100.000 (Jiang)"
+      population: "Trẻ em ở bệnh viện Việt Nam"
+      note: "Hai lượt giống nhau. Việt Nam thuộc nhóm có tỷ lệ mắc cao nhất thế giới; tuổi trung vị 9–12 tháng, 55% ca ở năm thứ hai (Burnett), không ca nào dưới 3 tháng ở Nha Trang. Từ tỷ lệ mắc khoảng 200/100.000 trẻ dưới 5 tuổi mỗi năm và số lần trẻ được đưa đi khám vì đau bụng hoặc quấy khóc, người soạn ước 1–3% trẻ 2 tháng – 5 tuổi đau bụng (P3): cao ở trẻ 4–24 tháng, thấp ở trẻ 3–5 tuổi. Dưới 2 tháng P5 (thấp nhất ở 0–2 tháng, Jiang); trẻ 5–12 tuổi P5 (thường có điểm dẫn); người lớn P6. Chưa có số liệu ở tuyến ban đầu."
+findings:
+  - finding: episodic_crying_legs_drawn
+    freq: very_frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [tran-tmh-2013, park-frontpediatr-2021, bines-bwho-2006]
+      locator: "Tran 2013 (đau bụng từng cơn); Park 2021 (đau hoặc quấy khóc từng cơn); Bines 2006 Bảng 3"
+      reported: "Đau bụng từng cơn 98,9% (Nha Trang); đau hoặc quấy khóc từng cơn 77,4% (Hàn Quốc); đau bụng 100% (Hà Nội)"
+      population: "Trẻ lồng ruột ở bệnh viện"
+      note: "Không chọn almost_always vì số liệu do bác sĩ ghi nhận, cha mẹ có thể chỉ thấy bé quấy khóc. Dấu hiệu chỉ hỏi ở trẻ 2 tháng – 5 tuổi. Hai lượt giống nhau."
+  - finding: abd_pain_colicky
+    freq: very_frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [tran-tmh-2013, park-frontpediatr-2021]
+      reported: "Đau bụng từng cơn 98,9% (Nha Trang); 77,4% (Hàn Quốc)"
+      note: "Áp dụng khi cha mẹ hoặc trẻ lớn kể đau quặn từng cơn. Câu này và câu 'khóc thét từng cơn' hỏi gần cùng một điều nhưng chưa cùng cụm (xem đề xuất trong biên bản). Hai lượt giống nhau."
+  - finding: vomiting
+    freq: very_frequent
+    freq_by_age: { child_5_12: occasional }
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [tran-tmh-2013, burnett-vaccine-2018, bines-bwho-2006, park-frontpediatr-2021]
+      locator: "Burnett 2018 (Việt Nam); Bines 2006 Bảng 3; Park 2021 Bảng theo nhóm tuổi"
+      reported: "Nôn 84,5% (Nha Trang), 76% (Việt Nam, Burnett); Hà Nội: nôn không có mật 61%, nôn dịch mật 30%; Park: 71,8% dưới 1 tuổi, 42,8% từ 1–2 tuổi, 24,0% từ 2 tuổi"
+      note: "Mức chung theo số liệu Việt Nam. freq_by_age chỉ có ở lượt B; lượt C giữ vì Park cho thấy trẻ lớn nôn ít hơn rõ (24%)."
+  - finding: red_jelly_stool
+    freq: occasional
+    freq_by_age: { child_5_12: rare }
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [tran-tmh-2013, burnett-vaccine-2018, bines-bwho-2006, park-frontpediatr-2021, reust-afp-2016]
+      locator: "Bines 2006 Bảng 3; Park 2021 Bảng theo nhóm tuổi"
+      reported: "Phân máu 17,1% (Nha Trang), 20% (Việt Nam, Burnett); Hà Nội: chảy máu qua hậu môn 47%, phân như mứt dâu 15%; Park: 44,8% dưới 1 tuổi, 6,9% từ 2 tuổi"
+      note: "Dấu hiệu muộn; không có phân máu không loại trừ lồng ruột (Reust: bộ ba kinh điển dưới một nửa số ca). freq_by_age chỉ có ở lượt B; lượt C giữ vì Park cho thấy trẻ lớn ít gặp hơn rõ. Mức rare ở trẻ 5–12 tuổi vẫn cao hơn tỷ lệ nền 1%, nên câu trả lời 'Có' vẫn làm tăng khả năng bệnh."
+  - finding: vomiting_bilious
+    freq: occasional
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [bines-bwho-2006]
+      locator: "Bines 2006 Bảng 3"
+      reported: "Nôn dịch mật 30% số trẻ lồng ruột ở Hà Nội (khoảng 1/3 số trẻ có nôn); 9% trẻ nhóm chứng có nôn dịch mật"
+      note: "Chỉ lượt B có (dấu hiệu mới). Tần suất trong số trẻ có nôn; số bệnh viện khoảng 33% được hạ một mức (kb-guide mục 2.1) vì người dùng thường kiểm tra sớm hơn. Ở trẻ, câu trả lời 'Có' đã được quy tắc rf_child_bilious_vomiting xếp mức 2."
+  - finding: child_vomits_everything
+    freq: occasional
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [tran-tmh-2013]
+      note: "Chỉ lượt A có. Lượt C giữ: nôn rất hay gặp (84,5%) nhưng nôn tất cả mọi thứ ít hơn; ước 20%. Liên kết làm tăng một bệnh không được bỏ sót nên an toàn; quy tắc dấu hiệu nguy hiểm toàn thân đã xếp mức 2."
+  - finding: abdomen_hard_swollen
+    freq: occasional
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [tran-tmh-2013, bines-bwho-2006]
+      reported: "Chướng bụng 8,6% (Nha Trang); 17% (Hà Nội), 31% (Melbourne)"
+      note: "Hai lượt giống nhau."
+  - finding: drowsy_hard_to_wake
+    freq: occasional
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [bines-bwho-2006, park-frontpediatr-2021]
+      locator: "Bines 2006 Bảng 3; Park 2021"
+      reported: "Li bì 38% (Hà Nội), 96% (Melbourne); Park: 25,9% dưới 1 tuổi, 8,6–9,1% trẻ lớn hơn"
+      note: "Câu hỏi 'ngủ li bì, khó đánh thức' là ngưỡng nặng hơn 'lừ đừ'; li bì và xanh tái thường xuất hiện từng lúc theo cơn đau (Bines). Một số trẻ nhỏ chỉ biểu hiện li bì, dễ bỏ sót. Hai lượt giống nhau."
+  - finding: fever
+    freq: occasional
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [burnett-vaccine-2018, park-frontpediatr-2021]
+      reported: "Sốt 16% (Việt Nam, Burnett); 12,1–16,6% theo nhóm tuổi (Park)"
+      note: "Hai lượt giống nhau."
+  - finding: diarrhea
+    freq: occasional
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [park-frontpediatr-2021, burnett-vaccine-2018]
+      reported: "Tiêu chảy 9,7–17,2% theo nhóm tuổi (Park); 5% (Việt Nam, Burnett)"
+      note: "Liên kết để tiêu chảy không loại trừ quá mạnh lồng ruột (dễ nhầm với viêm dạ dày – ruột). Hai lượt giống nhau."
+  - finding: abd_pain_severe
+    freq: occasional
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [park-frontpediatr-2021, tran-tmh-2013]
+      note: "Lượt C: hai lượt lệch một mức (A frequent, B occasional). Trong cơn trẻ khóc thét, cha mẹ có thể trả lời 'đau dữ dội', nhưng giữa các cơn trẻ nằm yên; thông tin này phần lớn đã có trong câu 'khóc thét từng cơn'. Chọn occasional: khi trả lời 'Có', quy tắc rf_severe_abdominal_pain đã xếp mức 2, nên mức thấp hơn làm câu trả lời 'Không' ít hạ bệnh không được bỏ sót này hơn."
+  - finding: abd_pain_duration
+    dist: { lt_6h: 0.40, h6_24: 0.385, d1_3: 0.165, d4_14: 0.04, gt_2w: 0.01 }
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [tran-tmh-2013, park-frontpediatr-2021, who-intussusception-2002]
+      reported: "Từ khởi phát đến khi vào viện: trung vị 5 giờ (tứ phân vị 3–10) ở Nha Trang; dưới 6 giờ 33,8%, trên 24 giờ 16,8%, trung vị 11 giờ ở Hàn Quốc"
+      note: "Trung bình hai lượt; đẩy nhẹ về phía sớm vì người dùng kiểm tra trước khi đến viện."
+  - finding: abd_pain_onset
+    dist: { sudden: 0.625, gradual: 0.375 }
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [park-frontpediatr-2021, bines-bwho-2006]
+      note: "Trung bình hai lượt. Cơn đau, khóc thét thường đến đột ngột ở trẻ đang bình thường. Tỷ lệ là ước lượng."
+  - finding: abd_pain_location
+    dist: { epigastric: 0.075, right_upper: 0.11, left_upper: 0.03, periumbilical: 0.225, right_lower: 0.10, left_lower: 0.025, suprapubic: 0.02, whole: 0.415 }
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [bines-bwho-2006, reust-afp-2016]
+      note: "Trung bình hai lượt. Trẻ nhỏ không chỉ được chỗ đau nên cha mẹ thường chọn 'khắp bụng' hoặc 'không rõ'; khối lồng hay nằm ở bên phải hoặc quanh rốn (Reust: ấn đau hố chậu phải, khối hình quả chuối)."
+warning_signs:
+  - red_jelly_stool
+  - episodic_crying_legs_drawn
+  - vomiting_bilious
+  - drowsy_hard_to_wake
+  - child_vomits_everything
+  - child_unable_to_drink
+  - abdomen_hard_swollen
+  - persistent_vomiting
+  - cold_hands_feet
+self_care_vi:
+  - "Không cho bé ăn uống thêm trong khi đưa đi cấp cứu."
+  - "Ghi lại giờ bắt đầu các cơn khóc, cơn nôn để báo cho nhân viên y tế."
+see_doctor_vi:
+  - "Đưa bé đến cơ sở cấp cứu ngay khi bé khóc thét từng cơn, co chân lên bụng, nhất là khi kèm nôn (ói)."
+  - "Đi ngay nếu bé đi ngoài phân nhầy máu, nôn dịch xanh hoặc lừ đừ."
+  - "Đến viện sớm thì khả năng tháo lồng bằng bơm hơi cao, ít phải mổ cắt ruột."
+review:
+  status: source_checked
+  authors: ["agent:pass-a", "agent:pass-b"]
+  reconciler: "agent:pass-c"
+  doctor_reviewer: null
+  updated: "2026-10-25"
+  notes_vi: "Lượt C đã đối chiếu 14 liên kết và mở lại mọi nguồn được trích. Bác sĩ cần xem: (1) prior P3 cho trẻ 2 tháng – 5 tuổi là ước lượng từ tỷ lệ mắc; nhóm tuổi gộp cả trẻ 4–24 tháng (nguy cơ cao) và trẻ 3–5 tuổi (nguy cơ thấp); (2) tần suất lấy từ bệnh viện ở Việt Nam và Hàn Quốc, khác nhau nhiều (nôn 84,5% và 46,1%); (3) câu 'khóc thét từng cơn' và 'đau quặn từng cơn' hỏi gần cùng một điều nhưng chưa cùng cụm, nên khi cả hai 'Có' bằng chứng bị đếm trùng (đề xuất gom cụm); (4) chưa có hướng dẫn chính thức của Bộ Y tế về lồng ruột; (5) dấu hiệu 'sờ thấy khối ở bụng' (82% ở Hà Nội khi bác sĩ khám) cha mẹ khó tự nhận ra nên không có câu hỏi."

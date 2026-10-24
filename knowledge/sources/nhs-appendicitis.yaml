@@ -1,0 +1,12 @@
+id: nhs-appendicitis
+type: web_page
+title: "Appendicitis"
+publisher: "NHS (UK)"
+url: "https://www.nhs.uk/conditions/appendicitis/"
+license_class: L1
+license_note: "Open Government Licence v3.0; bản chuyển thể không được trình bày như nội dung của NHS."
+default_tier: C
+accessed: "2026-10-25"
+verified: true
+verified_by: "agent:pass-c"
+notes_vi: "Lượt C lô 3 mở trang (rà soát 09/8/2024, hạn 09/8/2027). Đau thường bắt đầu quanh rốn, vài giờ sau chuyển xuống bụng dưới bên phải và tăng dần; đau tăng khi cử động, ho, ấn vào. Có thể kèm buồn nôn hoặc nôn, chán ăn, sốt, táo bón hoặc tiêu chảy, đi tiểu nhiều lần; người già có thể lú lẫn đột ngột. Phụ nữ có thai, trẻ nhỏ, người già hay không điển hình. Hiếm ở trẻ dưới 12 tháng; hay gặp nhất ở trẻ trên 10 tuổi và người trẻ. Hẹn khám khẩn hoặc gọi 111 khi đau tăng dần, không hết, hoặc chuyển xuống bụng dưới bên phải; gọi 999 hoặc đến cấp cứu khi đau bụng dữ dội hoặc có dấu hiệu nhiễm khuẩn huyết."

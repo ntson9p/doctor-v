@@ -1,0 +1,42 @@
+id: d-acute-cholecystitis-1
+set: dev
+title_vi: "Nữ 52 tuổi, có sỏi mật, đau dưới sườn phải 14 giờ lan lên vai phải, sốt, nôn"
+narrative_vi: "Chị V., 52 tuổi, đã được siêu âm thấy sỏi túi mật. Tối qua sau bữa ăn nhiều dầu mỡ bắt đầu đau dưới sườn phải, tăng dần, đến nay đã liên tục 14 giờ, lan lên vai phải. Sốt 38,3°C, buồn nôn, nôn 2 lần, chán ăn; ăn vào đau hơn. Không vàng da, không tiêu chảy, không rét run. Đau nhiều nhưng vẫn chịu được. Đã mãn kinh, không có thai, không ra máu âm đạo."
+patient:
+  age_years: 52
+  sex: female
+  region: north
+  month: 11
+complaint: abdominal_pain
+answers:
+  abd_pain_location: right_upper
+  abd_pain_duration: h6_24
+  abd_pain_onset: gradual
+  gallstones_known: present
+  pain_after_fatty_meal: present
+  abd_pain_meal_relation: worse_after_meal
+  abd_pain_radiates_right_shoulder: present
+  abd_pain_radiates_back: absent
+  fever: present
+  fever_max_temp: t38_39
+  fever_duration: d1_2
+  chills_rigors: absent
+  nausea: present
+  vomiting: present
+  loss_of_appetite: present
+  jaundice: absent
+  diarrhea: absent
+  abd_pain_severe: absent
+  persistent_vomiting: absent
+  pregnant: absent
+  missed_period: absent
+  vaginal_bleeding: absent
+default_unmentioned: absent
+expected:
+  condition: acute_cholecystitis
+  acceptable: []
+  triage: 2
+source:
+  basis: "Ca điển hình: đau hạ sườn phải kéo dài trên 6 giờ, lan lên vai phải, sốt, nôn, có sỏi túi mật (MSD; NHS Acute cholecystitis). Bệnh cần nhập viện, truyền dịch, kháng sinh và thường mổ cắt túi mật sớm (MSD; Gallaher 2022), nên cần đến cơ sở cấp cứu."
+  references: [msd-acute-cholecystitis, nhs-acute-cholecystitis, gallaher-jama-2022]
+author: "agent:pass-c"

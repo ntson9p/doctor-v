@@ -26,8 +26,8 @@ red_flags:
   - group: fever_red_flags
   - finding: fever_duration
 intake: [abdominal_associated, fever_exposures, chronic_conditions]
-# Điền sau khi các bệnh của đợt thử nghiệm đã có trong knowledge/conditions/.
-cant_miss: []
+# Bệnh "không được bỏ sót" (mức 1–2) có prior cho triệu chứng chính này; danh sách để kiểm tra an toàn.
+cant_miss: [acute_appendicitis, acute_coronary_syndrome, acute_pancreatitis, bowel_obstruction, ectopic_pregnancy, intussusception, preeclampsia]
 safety_net:
   - abd_pain_severe
   - abdomen_hard_swollen

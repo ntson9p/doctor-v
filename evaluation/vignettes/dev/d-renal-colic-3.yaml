@@ -1,0 +1,38 @@
+id: d-renal-colic-3
+set: dev
+title_vi: "Nam 26 tuổi, 4 giờ đau quặn bụng dưới bên phải lan xuống bẹn (dễ nhầm viêm ruột thừa)"
+narrative_vi: "Anh E., 26 tuổi. Bốn giờ nay đột ngột đau quặn từng cơn bụng dưới bên phải, có lúc lan xuống bẹn phải, buồn nôn. Đau không bắt đầu từ quanh rốn, không tăng khi đi lại, không dữ dội. Không đau hông lưng, không sốt, không nôn, không tiêu chảy, không đau khi đi tiểu, vẫn ăn được. Không để ý màu nước tiểu."
+patient:
+  age_years: 26
+  sex: male
+  region: north
+  month: 7
+complaint: abdominal_pain
+answers:
+  abd_pain_location: right_lower
+  abd_pain_colicky: present
+  abd_pain_radiates_groin: present
+  abd_pain_onset: sudden
+  abd_pain_duration: lt_6h
+  nausea: present
+  flank_pain: absent
+  vomiting: absent
+  abd_pain_migrated_rlq: absent
+  abd_pain_worse_movement: absent
+  fever: absent
+  diarrhea: absent
+  hematuria: unknown
+  dysuria: absent
+  loss_of_appetite: absent
+  abd_pain_severe: absent
+  kidney_stones_known: absent
+default_unmentioned: absent
+expected:
+  condition: renal_colic
+  acceptable: []
+  triage: 3
+source:
+  basis: "Sỏi niệu quản đoạn thấp có thể gây đau hố chậu phải, dễ nhầm viêm ruột thừa; đau quặn từng cơn, khởi phát đột ngột, lan xuống bẹn, không đau di chuyển từ quanh rốn, không tăng khi cử động, không chán ăn gợi ý cơn đau quặn thận (3931/QĐ-BYT mục 3.1: cơn đau niệu quản lan dọc đường đi của niệu quản xuống hố chậu, bộ phận sinh dục; STONE 2014). Khám trong ngày (NHS)."
+  references: [byt-qd-3931-2015, moore-bmj-2014, nhs-kidney-stones, nhs-appendicitis]
+author: "agent:pass-c"
+notes_vi: "Ca dễ nhầm với viêm ruột thừa cấp."

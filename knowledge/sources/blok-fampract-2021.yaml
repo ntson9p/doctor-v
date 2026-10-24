@@ -1,0 +1,15 @@
+id: blok-fampract-2021
+type: primary_study
+title: "Appendicitis in children with acute abdominal pain in primary care, a retrospective cohort study"
+publisher: "Family Practice 2021;38(6):758–765 (Blok và cộng sự)"
+date: "2021-11"
+url: "https://europepmc.org/article/MED/34278425"
+doi: "10.1093/fampra/cmab039"
+pmid: "34278425"
+license_class: L3
+license_note: "Chưa rõ giấy phép: chỉ dùng dữ kiện kèm trích dẫn, không sao chép câu chữ."
+default_tier: B
+accessed: "2026-10-25"
+verified: true
+verified_by: "agent:pass-c"
+notes_vi: "Lượt C lô 3 đọc tóm tắt qua API Europe PMC. Chăm sóc ban đầu ở Hà Lan (cơ sở dữ liệu IPCI, 2010–2016): 5691 trẻ 4–18 tuổi đau bụng cấp, 944 trẻ (16,6%) được chuyển tuyến; 291 trẻ (5,1%) viêm ruột thừa; 55/291 (18,9%) bị chẩn đoán sai ở lần khám đầu."

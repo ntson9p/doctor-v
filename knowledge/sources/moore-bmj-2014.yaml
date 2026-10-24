@@ -1,0 +1,15 @@
+id: moore-bmj-2014
+type: primary_study
+title: "Derivation and validation of a clinical prediction rule for uncomplicated ureteral stone — the STONE score: retrospective and prospective observational cohort studies"
+publisher: "BMJ 2014;348:g2191 (Moore CL, Bomann S, Daniels B, Luty S, Molinaro A, Singh D, Gross CP)"
+date: "2014-03"
+url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC3966515/"
+doi: "10.1136/bmj.g2191"
+pmid: "24671981"
+license_class: L2
+license_note: "CC BY-NC 3.0: dùng phi thương mại, ghi công."
+default_tier: B
+accessed: "2026-10-25"
+verified: true
+verified_by: "agent:pass-c"
+notes_vi: "Lượt C lô 3 đọc toàn văn trên PMC. Khoa cấp cứu Mỹ, nhóm phát triển 1040 người lớn chụp CT vì nghi sỏi (loại người có sốt hoặc bạch cầu niệu), 515 người (49,5%) có sỏi niệu quản. Bảng 2 ghi số người có từng yếu tố và số trong đó có sỏi; lượt C tính tỷ lệ trong 515 người có sỏi: nam 72%; đau dưới 6 giờ 57%, 6–24 giờ 27%, trên 1 tuần 4,5%; khởi phát đột ngột 82%; đau 7–10/10 86%; đau liên tục 43%; lan xuống bẹn 44%; buồn nôn (có hoặc không nôn) 77%, có nôn 43%; tự thấy tiểu máu 27%; hồng cầu niệu 92%; tiểu buốt 25%; đau lưng 26%; đau khi cử động 18%; tiêu chảy 4%; tiền sử sỏi 38%. Lượt B trích cùng bài với ID moore-2014-bmj-stone-score."

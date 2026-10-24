@@ -33,12 +33,13 @@
 - id: vomiting_bilious
   kind: sign
   type: binary
-  label_vi: "Nôn ra dịch xanh hoặc vàng đắng"
-  question_vi: "Có nôn ra dịch màu xanh lá, hoặc vàng đắng như mật không?"
+  label_vi: "Nôn ra dịch xanh"
+  question_vi: "Có nôn ra dịch màu xanh lá hoặc vàng xanh không?"
+  help_vi: "Dịch vàng nhạt hoặc nước trong, hay gặp khi nôn nhiều lần, không tính là dịch xanh."
   requires:
     - { finding: vomiting, is: present }
   leak: 0.10
-  leak_note: "Nôn nhiều lần do viêm dạ dày ruột cũng có thể ra dịch vàng đắng; 5% là thấp (lượt B lô 3). Ước lượng."
+  leak_note: "Nhóm chứng ở Hà Nội (Bines 2006, phần lớn viêm dạ dày – ruột): 9% nôn dịch mật (độ đặc hiệu 91%); 5% là thấp (lượt B lô 3). Câu hỏi bỏ chữ \"vàng đắng\" theo NHS (lượt C lô 3)."
 - id: abd_pain_radiates_right_shoulder
   kind: symptom
   type: binary

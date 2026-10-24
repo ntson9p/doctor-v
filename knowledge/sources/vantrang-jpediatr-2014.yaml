@@ -1,0 +1,15 @@
+id: vantrang-jpediatr-2014
+type: primary_study
+title: "Incidence and Epidemiology of Intussusception among Infants in Ho Chi Minh City, Vietnam"
+publisher: "The Journal of Pediatrics 2014;164(2):366–371"
+date: "2014"
+url: "https://europepmc.org/article/MED/24238857"
+doi: "10.1016/j.jpeds.2013.10.006"
+pmid: "24238857"
+license_class: L3
+license_note: "Bản quyền nhà xuất bản: chỉ dùng dữ kiện kèm trích dẫn, không sao chép câu chữ."
+default_tier: B
+accessed: "2026-10-25"
+verified: true
+verified_by: "agent:pass-c"
+notes_vi: "Lượt C lô 3 đọc tóm tắt qua API Europe PMC. 869 ca lồng ruột ở TP.HCM (2009–2011): 296/100.000 trẻ nhũ nhi mỗi năm; tuổi trung bình khoảng 8,6 tháng; phải mổ khoảng 1% ở một bệnh viện và 5% ở bệnh viện kia; dùng mã ICD-10-CM K56.1."

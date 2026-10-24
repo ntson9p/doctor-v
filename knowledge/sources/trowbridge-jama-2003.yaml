@@ -1,0 +1,15 @@
+id: trowbridge-jama-2003
+type: systematic_review
+title: "Does this patient have acute cholecystitis?"
+publisher: "JAMA 2003;289(1):80–86 (Trowbridge RL, Rutkowski NK, Shojania KG; loạt The Rational Clinical Examination)"
+date: "2003-01"
+url: "https://europepmc.org/article/MED/12503981"
+doi: "10.1001/jama.289.1.80"
+pmid: "12503981"
+license_class: L3
+license_note: "Bản quyền JAMA: chỉ dùng dữ kiện kèm trích dẫn."
+default_tier: A
+accessed: "2026-10-25"
+verified: true
+verified_by: "agent:pass-c"
+notes_vi: "Lượt C lô 3 đọc tóm tắt qua API Europe PMC. Không có dấu hiệu lâm sàng hay xét nghiệm đơn lẻ nào đủ để khẳng định hoặc loại trừ viêm túi mật: dấu Murphy LR+ 2,8 (0,8–8,6); ấn đau hạ sườn phải LR− 0,4 (0,2–1,1). LR của đau hạ sườn phải và sốt đọc qua Bảng 2 của cartwright-afp-2008 (tài liệu tham khảo 5)."

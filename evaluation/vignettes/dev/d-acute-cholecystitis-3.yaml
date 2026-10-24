@@ -1,0 +1,44 @@
+id: d-acute-cholecystitis-3
+set: dev
+title_vi: "Nữ 58 tuổi, tăng huyết áp, đái tháo đường, đau tức dưới sườn phải và trên rốn 8 giờ (dễ nhầm hội chứng vành cấp)"
+narrative_vi: "Bà H., 58 tuổi, bị tăng huyết áp và đái tháo đường. Từ 8 giờ trước đau tức dưới sườn phải lan sang vùng trên rốn, đau liên tục, tăng sau bữa trưa, buồn nôn, nôn 1 lần. Không đau ngực, không khó thở, không vã mồ hôi, không sốt, không vàng da. Đau không lan lên vai, cổ, tay, không dữ dội. Chưa từng được nói có sỏi mật."
+patient:
+  age_years: 58
+  sex: female
+  region: north
+  month: 1
+complaint: abdominal_pain
+answers:
+  abd_pain_location: right_upper
+  abd_pain_duration: h6_24
+  abd_pain_onset: gradual
+  abd_pain_meal_relation: worse_after_meal
+  nausea: present
+  vomiting: present
+  diabetes: present
+  hypertension_known: present
+  chest_pain_pressure: absent
+  breathing_difficulty: absent
+  cold_sweat: absent
+  fever: absent
+  jaundice: absent
+  gallstones_known: absent
+  pain_radiates_arm_jaw: absent
+  abd_pain_radiates_right_shoulder: absent
+  abd_pain_radiates_back: absent
+  abd_pain_severe: absent
+  pregnant: absent
+  missed_period: absent
+  vaginal_bleeding: absent
+  heartburn: absent
+  diarrhea: absent
+default_unmentioned: absent
+expected:
+  condition: acute_cholecystitis
+  acceptable: []
+  triage: 2
+source:
+  basis: "Phụ nữ cao tuổi, đái tháo đường có thể bị hội chứng vành cấp biểu hiện đau thượng vị, buồn nôn (2187/QĐ-BYT); ở đây đau khu trú dưới sườn phải, liên tục trên 6 giờ, tăng sau ăn, kèm nôn, không có đau ngực, khó thở, vã mồ hôi, phù hợp viêm túi mật cấp (MSD; Cartwright 2008). Cần đến cơ sở cấp cứu (MSD: cần nhập viện)."
+  references: [msd-acute-cholecystitis, cartwright-afp-2008, byt-qd-2187-2019]
+author: "agent:pass-c"
+notes_vi: "Ca dễ nhầm với hội chứng vành cấp (lô 4)."

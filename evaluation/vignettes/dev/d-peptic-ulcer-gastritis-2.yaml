@@ -1,0 +1,35 @@
+id: d-peptic-ulcer-gastritis-2
+set: dev
+title_vi: "Nam 14 tuổi, 3 tuần đau âm ỉ vùng trên rốn lúc đói, có lúc buồn nôn"
+narrative_vi: "Em Q., 14 tuổi (nam). Ba tuần nay hay đau âm ỉ vùng trên rốn, nhất là lúc đói và sáng sớm, ăn vào đỡ, có lúc buồn nôn. Không nôn, không sốt, không tiêu chảy, không đi ngoài phân đen. Đau không dữ dội, không lan, không ợ chua. Không dùng thuốc giảm đau."
+patient:
+  age_years: 14
+  sex: male
+  region: south
+  month: 5
+complaint: abdominal_pain
+answers:
+  abd_pain_location: epigastric
+  abd_pain_meal_relation: hungry_relieved_by_food
+  abd_pain_duration: gt_2w
+  abd_pain_onset: gradual
+  nausea: present
+  vomiting: absent
+  fever: absent
+  diarrhea: absent
+  black_stool: absent
+  vomiting_blood: absent
+  heartburn: absent
+  abd_pain_severe: absent
+  regular_painkiller_use: absent
+  abd_pain_radiates_back: absent
+default_unmentioned: absent
+expected:
+  condition: peptic_ulcer_gastritis
+  acceptable: []
+  triage: 4
+source:
+  basis: "Ca không điển hình về tuổi: ở trẻ có triệu chứng được nội soi tại TP.HCM, 80% nhiễm H. pylori, 19% có loét, tăng theo tuổi; 75% đau thượng vị (Nguyen 2023). Đau thượng vị liên quan bữa ăn, không có dấu hiệu báo động: khám trong vài ngày (NHS Stomach ulcer)."
+  references: [nguyen-healthcare-2023, msd-peptic-ulcer, nhs-stomach-ulcer]
+author: "agent:pass-c"
+notes_vi: "Ca không điển hình: thiếu niên."

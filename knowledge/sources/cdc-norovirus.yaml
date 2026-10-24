@@ -1,0 +1,12 @@
+id: cdc-norovirus
+type: web_page
+title: "About Norovirus"
+publisher: "U.S. Centers for Disease Control and Prevention (CDC)"
+date: "2024-04-24"
+url: "https://www.cdc.gov/norovirus/about/index.html"
+license_class: L0
+default_tier: C
+accessed: "2026-10-25"
+verified: true
+verified_by: "agent:pass-c"
+notes_vi: "Lượt C lô 3 mở trang (ngày trên trang 24/4/2024). Triệu chứng thường gặp: tiêu chảy, nôn, buồn nôn, đau bụng; triệu chứng khác: sốt, đau đầu, đau mỏi người. Khởi phát 12–48 giờ sau phơi nhiễm; phần lớn đỡ sau 1–3 ngày. Dấu hiệu mất nước: tiểu ít, khô miệng, chóng mặt khi đứng, trẻ khóc ít nước mắt, ngủ li bì hoặc quấy bất thường."

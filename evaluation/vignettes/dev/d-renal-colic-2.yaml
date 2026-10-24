@@ -1,0 +1,43 @@
+id: d-renal-colic-2
+set: dev
+title_vi: "Nữ 30 tuổi, 2 ngày đau từng đợt bụng dưới bên phải lan ra hông lưng, tiểu nhiều lần, nước tiểu hồng"
+narrative_vi: "Chị G., 30 tuổi. Hai ngày nay đau âm ỉ từng đợt bụng dưới bên phải, có lúc lan ra hông lưng phải, đi tiểu nhiều lần, nước tiểu hồng. Không đau buốt khi đi tiểu, không sốt, không buồn nôn. Không có thai, không chậm kinh, không ra máu âm đạo, không ra khí hư bất thường. Đau không dữ dội, không tăng khi đi lại."
+patient:
+  age_years: 30
+  sex: female
+  region: south
+  month: 5
+complaint: abdominal_pain
+answers:
+  abd_pain_location: right_lower
+  flank_pain: present
+  abd_pain_colicky: present
+  abd_pain_duration: d1_3
+  abd_pain_onset: gradual
+  urinary_frequency: present
+  hematuria: present
+  dysuria: absent
+  fever: absent
+  nausea: absent
+  vomiting: absent
+  pregnant: absent
+  missed_period: absent
+  vaginal_bleeding: absent
+  abnormal_vaginal_discharge: absent
+  kidney_stones_known: absent
+  abd_pain_radiates_groin: absent
+  abd_pain_severe: absent
+  abd_pain_migrated_rlq: absent
+  abd_pain_worse_movement: absent
+  pain_with_menses: absent
+  diarrhea: absent
+default_unmentioned: absent
+expected:
+  condition: renal_colic
+  acceptable: []
+  triage: 3
+source:
+  basis: "Ca không điển hình: nữ, đau không dữ dội, khởi phát từ từ, kèm tiểu nhiều lần (sỏi ở đoạn niệu quản sát bàng quang; NHS Kidney stones) và tiểu máu, không sốt, không tiểu buốt. 3931/QĐ-BYT: một số trường hợp chỉ đau ê ẩm thắt lưng. Khám trong ngày để siêu âm, xét nghiệm nước tiểu."
+  references: [byt-qd-3931-2015, nhs-kidney-stones, moore-bmj-2014]
+author: "agent:pass-c"
+notes_vi: "Ca không điển hình: nữ, đau vừa, có triệu chứng đường tiểu."

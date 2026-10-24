@@ -1,0 +1,37 @@
+id: d-cystitis-1
+set: dev
+title_vi: "Nữ 26 tuổi, 2 ngày tiểu buốt, tiểu nhiều lần, tức nhẹ trên xương mu, không sốt"
+narrative_vi: "Chị A., 26 tuổi. Hai ngày nay đi tiểu buốt, tiểu nhiều lần, mỗi lần ít, tức nhẹ vùng bụng dưới trên xương mu. Không sốt, không đau hông lưng, không buồn nôn, không tiểu ra máu. Không có thai, không chậm kinh, không ra máu âm đạo, không ra khí hư bất thường."
+patient:
+  age_years: 26
+  sex: female
+  region: north
+  month: 8
+complaint: abdominal_pain
+answers:
+  dysuria: present
+  urinary_frequency: present
+  abd_pain_location: suprapubic
+  abd_pain_duration: d1_3
+  abd_pain_onset: gradual
+  fever: absent
+  flank_pain: absent
+  nausea: absent
+  vomiting: absent
+  hematuria: absent
+  pregnant: absent
+  missed_period: absent
+  vaginal_bleeding: absent
+  abnormal_vaginal_discharge: absent
+  abd_pain_severe: absent
+  diarrhea: absent
+  pain_with_menses: absent
+default_unmentioned: absent
+expected:
+  condition: cystitis
+  acceptable: []
+  triage: 4
+source:
+  basis: "Ca điển hình viêm bàng quang cấp thông thường ở phụ nữ: tiểu buốt, tiểu dắt, đau nhẹ trên khớp mu, không sốt (3931/QĐ-BYT); tiểu buốt kèm tiểu nhiều lần, không có khí hư hay ngứa rát: LR 24,6 (Bent 2002). Phụ nữ 16–64 tuổi không có thai có thể hỏi dược sĩ (NHS); kb-guide mục 2.5 xếp viêm bàng quang không sốt ở mức 4."
+  references: [byt-qd-3931-2015, bent-jama-2002, nhs-utis]
+author: "agent:pass-c"

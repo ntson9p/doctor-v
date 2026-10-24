@@ -1,0 +1,40 @@
+id: d-acute-gastroenteritis-1
+set: dev
+title_vi: "Nam 28 tuổi, đau quặn quanh rốn, tiêu chảy, nôn sau bữa cỗ, người ăn cùng cũng bị"
+narrative_vi: "Anh H., 28 tuổi, ở TP.HCM. Tối qua ăn cỗ, từ sáng nay đau quặn quanh rốn, đi ngoài phân lỏng 5 lần, nôn 2 lần, buồn nôn, chán ăn, hơi sốt 37,8°C. Hai người ăn cùng cũng bị tiêu chảy. Ăn vào là đau quặn, mót đi ngoài. Vẫn uống được nước, đi tiểu bình thường. Đau không dữ dội, không tăng khi đi lại, không chuyển xuống bụng dưới bên phải."
+patient:
+  age_years: 28
+  sex: male
+  region: south
+  month: 7
+complaint: abdominal_pain
+answers:
+  abd_pain_location: periumbilical
+  abd_pain_duration: h6_24
+  abd_pain_onset: gradual
+  abd_pain_colicky: present
+  abd_pain_meal_relation: worse_after_meal
+  diarrhea: present
+  diarrhea_bloody: absent
+  vomiting: present
+  nausea: present
+  loss_of_appetite: present
+  fever: present
+  fever_max_temp: lt_38
+  fever_duration: d1_2
+  unsafe_food_shared: present
+  persistent_vomiting: absent
+  abd_pain_severe: absent
+  abd_pain_worse_movement: absent
+  abd_pain_migrated_rlq: absent
+  decreased_urine: absent
+  dysuria: absent
+default_unmentioned: absent
+expected:
+  condition: acute_gastroenteritis
+  acceptable: []
+  triage: 5
+source:
+  basis: "Ca điển hình: tiêu chảy, nôn, đau quặn bụng sau bữa ăn chung, người ăn cùng cũng bị (5642/QĐ-BYT, bài Bệnh tiêu chảy do vi khuẩn; CDC). Không có dấu hiệu cần đi khám của CDC và NHS (sốt dưới 38,9°C, giữ được nước, không có máu), nên tự chăm sóc tại nhà bằng uống nhiều nước, dung dịch bù nước (NHS, WHO 2005)."
+  references: [byt-qd-5642-2015, cdc-food-poisoning, nhs-diarrhoea-vomiting, who-diarrhoea-2005]
+author: "agent:pass-c"

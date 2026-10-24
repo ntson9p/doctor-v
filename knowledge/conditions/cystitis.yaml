@@ -1,0 +1,193 @@
+id: cystitis
+names:
+  vi: "Viêm bàng quang cấp tính"
+  vi_common: ["Viêm bàng quang", "Nhiễm trùng đường tiểu", "Viêm đường tiết niệu"]
+  en: "Acute cystitis (lower urinary tract infection)"
+codes:
+  icd10: "N30.0"
+  icd10_verified: true
+  mondo: "MONDO:0001650"
+summary_vi:
+  - "Bàng quang bị nhiễm khuẩn cấp, gặp ở phụ nữ nhiều hơn hẳn nam giới."
+  - "Thường đau buốt khi đi tiểu, đi tiểu nhiều lần, tức nhẹ bụng dưới, đôi khi tiểu ra máu."
+  - "Thường không sốt; sốt, rét run, đau hông lưng hoặc nôn (ói) gợi ý nhiễm khuẩn đã lan lên thận."
+urgency: 4
+cant_miss: false
+specialties: [general_medicine, urology]
+priors:
+  - complaint: abdominal_pain
+    default: P3
+    by_age: { infant_0_2m: P5, child_2m_5y: P4 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [viniol-fampract-2014, erkan-pedint-2004, little-bmj-2010, giesen-bmcfampract-2010, byt-qd-3312-2015]
+      reported: "Chăm sóc ban đầu: nguyên nhân tiết niệu 5,3% người lớn đau bụng (Viniol); cấp cứu nhi 2–16 tuổi: nhiễm khuẩn tiết niệu 8% (Erkan); 47% phụ nữ viêm bàng quang có đau bụng mức khá khó chịu (Little); đau bụng dưới có ở 50% (Giesen)"
+      note: "Hai lượt giống nhau. Phần lớn người viêm bàng quang sẽ chọn triệu chứng tiểu buốt chứ không chọn đau bụng, vì chỉ khoảng một nửa có đau bụng. P3 (khoảng 2%) là mức trung bình hai giới cho trẻ từ 5 tuổi và người lớn; hệ số giới tính bên dưới điều chỉnh cho nữ và nam. Trẻ dưới 5 tuổi nhiễm khuẩn tiết niệu hay biểu hiện sốt, quấy hơn là đau bụng (3312/QĐ-BYT), nên P4; dưới 2 tháng P5."
+prior_modifiers:
+  - when: { sex: [female] }
+    factor: 1.8
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [byt-qd-3931-2015, byt-qd-3312-2015]
+      locator: "3931/QĐ-BYT, bài Viêm bàng quang cấp, phần mở đầu; 3312/QĐ-BYT, bài Nhiễm trùng đường tiểu (khoảng 5% trẻ gái, 1–2% trẻ trai)"
+      reported: "Tỷ lệ nữ/nam = 9/1"
+      note: "Chỉ lượt B có; lượt C giữ vì nguồn chính thức nêu khác biệt rõ. Tỷ số 9/1 tương ứng hệ số 1,8 cho nữ và 0,2 cho nam so với mức trung bình hai giới. Ở trẻ em tỷ số thấp hơn (khoảng 3/1), nhưng hệ số không tách được theo tuổi."
+  - when: { sex: [male] }
+    factor: 0.2
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [byt-qd-3931-2015]
+      reported: "Tỷ lệ nữ/nam = 9/1"
+      note: "Xem hệ số cho nữ. Nam giới bị tiểu buốt đã có quy tắc rf_uti_high_risk (mức 3)."
+findings:
+  - finding: dysuria
+    freq: very_frequent
+    evidence:
+      tier: A
+      basis: numeric
+      sources: [giesen-bmcfampract-2010, bent-jama-2002, little-bmj-2010, byt-qd-3931-2015]
+      locator: "Giesen 2010 Bảng 2; Little 2010; 3931/QĐ-BYT, bài Viêm bàng quang cấp (hội chứng bàng quang: tiểu buốt, tiểu dắt)"
+      reported: "Độ nhạy 0,80 (0,74–0,86) (Giesen); khoảng 0,75 suy từ LR của Bent; mức khá khó chịu trở lên 64% (Little)"
+      population: "Phụ nữ nghi nhiễm khuẩn tiết niệu ở chăm sóc ban đầu"
+      note: "Hai lượt giống nhau."
+  - finding: urinary_frequency
+    freq: very_frequent
+    evidence:
+      tier: A
+      basis: numeric
+      sources: [giesen-bmcfampract-2010, little-bmj-2010, byt-qd-3931-2015]
+      locator: "Giesen 2010 Bảng 2; Little 2010"
+      reported: "Độ nhạy 0,88 (0,83–0,92) (Giesen); tiểu nhiều lần ban ngày mức khá khó chịu trở lên 78% (Little)"
+      population: "Phụ nữ nghi nhiễm khuẩn tiết niệu ở chăm sóc ban đầu"
+      note: "Cùng cụm 'triệu chứng đường tiểu dưới' với tiểu buốt nên bộ suy luận đã giảm đếm trùng. Hai lượt giống nhau."
+  - finding: hematuria
+    freq: occasional
+    evidence:
+      tier: A
+      basis: numeric
+      sources: [giesen-bmcfampract-2010, little-bmj-2010, bent-jama-2002, byt-qd-3931-2015]
+      reported: "Độ nhạy 0,25 (Giesen); mức khá khó chịu trở lên 16% (Little); LR+ 2,0 (Bent)"
+      note: "3931/QĐ-BYT: có thể tiểu máu cuối bãi. Hai lượt giống nhau."
+  - finding: flank_pain
+    freq: occasional
+    evidence:
+      tier: A
+      basis: numeric
+      sources: [giesen-bmcfampract-2010, bent-jama-2002]
+      reported: "Đau hông: độ nhạy 0,26; đau lưng 0,38 (Giesen); đau lưng LR+ 1,6, LR− 0,8 (Bent)"
+      note: "Các nghiên cứu gộp nhiễm khuẩn tiết niệu nói chung; ở viêm bàng quang đơn thuần có lẽ thấp hơn. Đau hông lưng kèm sốt gợi ý viêm thận – bể thận. Hai lượt giống nhau."
+  - finding: fever
+    freq: rare
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-3931-2015, giesen-bmcfampract-2010]
+      locator: "3931/QĐ-BYT, bài Viêm bàng quang cấp, mục 2.1.1 (thường không sốt hoặc chỉ sốt nhẹ dưới 38°C); Giesen 2010 Bảng 2 (sốt: độ nhạy 0,10)"
+      note: "Lượt C: hai lượt lệch một mức (A occasional theo Giesen 0,10; B rare theo 3931). Chọn rare: số liệu của Giesen gộp cả nhiễm khuẩn tiết niệu trên, và hệ thống đã có bệnh viêm thận – bể thận riêng; mức occasional (cao hơn tỷ lệ nền 5%) sẽ làm sốt tăng khả năng viêm bàng quang, kéo người sốt, tiểu buốt về mức 4 thay vì mức 3."
+  - finding: fever_max_temp
+    dist: { lt_38: 0.80, t38_39: 0.165, ge_39: 0.035 }
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-3931-2015, byt-qd-3312-2015]
+      locator: "3931/QĐ-BYT (chỉ sốt nhẹ, dưới 38°C); 3312/QĐ-BYT, bài Nhiễm trùng đường tiểu (nhiễm trùng tiểu thấp: sốt dưới 38,5°C hoặc không sốt)"
+      note: "Phân bố trong số người đã có sốt; trung bình hai lượt."
+  - finding: abd_pain_location
+    dist: { epigastric: 0.025, right_upper: 0.0175, left_upper: 0.0175, periumbilical: 0.05, right_lower: 0.085, left_lower: 0.075, suprapubic: 0.65, whole: 0.08 }
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-3931-2015, byt-qd-3312-2015, nhs-utis]
+      locator: "3931/QĐ-BYT (có thể đau nhẹ vùng trên khớp mu khi bàng quang căng); 3312/QĐ-BYT (trẻ lớn đau vùng bụng dưới); NHS: đau bụng dưới"
+      note: "Trung bình hai lượt; tỷ lệ là ước lượng."
+  - finding: abd_pain_severe
+    freq: rare
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-3931-2015]
+      locator: "3931/QĐ-BYT (có thể đau nhẹ vùng trên khớp mu)"
+      note: "Đau thường nhẹ; mức rare thấp hơn tỷ lệ nền 5%. Hai lượt giống nhau."
+  - finding: abd_pain_onset
+    dist: { sudden: 0.10, gradual: 0.90 }
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [byt-qd-3931-2015]
+      note: "Tức bụng dưới âm ỉ, tăng dần cùng triệu chứng tiểu buốt; khởi phát đột ngột, rất đau ít phù hợp. Hai lượt giống nhau; tỷ lệ là ước lượng."
+  - finding: abd_pain_duration
+    dist: { lt_6h: 0.06, h6_24: 0.20, d1_3: 0.42, d4_14: 0.24, gt_2w: 0.08 }
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [little-bmj-2010, nhs-utis]
+      locator: "Little 2010, mục Kết quả"
+      reported: "Triệu chứng bắt đầu trung vị 3 ngày trước khi khám (tứ phân vị 3–7 ngày); 13% trên 10 ngày; 71% đã từng bị viêm bàng quang"
+      population: "Phụ nữ đi khám ở chăm sóc ban đầu (Anh)"
+      note: "Lượt C: hai lượt lệch nhiều (TVD 0,22; lượt A ước sớm hơn, lượt B theo Little). Lượt C dựa vào số liệu của Little, chuyển nhẹ về phía sớm hơn vì người tự kiểm tra có thể kiểm tra trước khi đi khám. Lựa chọn 'tái đi tái lại' gồm cả người hay bị viêm bàng quang."
+  - finding: abd_pain_worse_movement
+    freq: rare
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [byt-qd-3931-2015]
+      note: "Chỉ lượt A có. Lượt C giữ: viêm bàng quang không gây kích thích phúc mạc; liên kết giúp phân biệt với viêm ruột thừa, viêm vùng chậu, và hạ một bệnh lành tính nên an toàn. Thấp hơn tỷ lệ nền 5%."
+  - finding: abd_pain_meal_relation
+    dist: { hungry_relieved_by_food: 0.03, worse_after_meal: 0.05, no_relation: 0.92 }
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [byt-qd-3931-2015]
+      note: "Chỉ lượt A có. Lượt C giữ: đau do bàng quang, không liên quan bữa ăn. Phân bố là ước lượng."
+  - finding: nausea
+    freq: occasional
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [little-bmj-2010, nhs-utis]
+      note: "Buồn nôn ít gặp ở viêm bàng quang đơn thuần (Little 2010 loại người có buồn nôn, nôn vì đó là dấu hiệu bệnh nặng hơn); mức occasional (20%) thấp hơn tỷ lệ nền 35% khi đau bụng. Ở trẻ em có thể nôn (NHS). Hai lượt giống nhau."
+  - finding: vomiting
+    freq: rare
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [little-bmj-2010, byt-qd-3931-2015, nhs-utis]
+      note: "Viêm bàng quang chưa biến chứng ít khi nôn; nôn kèm sốt gợi ý nhiễm khuẩn đã lan lên thận. Thấp hơn tỷ lệ nền 20% khi đau bụng. Hai lượt giống nhau."
+  - finding: diarrhea
+    freq: rare
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [byt-qd-3931-2015]
+      note: "Chỉ lượt A có. Lượt C giữ: tiêu chảy không thuộc bệnh cảnh viêm bàng quang ở người lớn; liên kết giúp phân biệt với viêm dạ dày – ruột. Thấp hơn tỷ lệ nền 5%."
+  - finding: abnormal_vaginal_discharge
+    freq: rare
+    evidence:
+      tier: A
+      basis: numeric
+      sources: [bent-jama-2002, giesen-bmcfampract-2010]
+      reported: "Có khí hư: LR 0,3, ngứa rát âm đạo: LR 0,2 (Bent); khí hư: độ nhạy 0,15, LR+ 0,65 (Giesen)"
+      note: "Chỉ lượt B có (lượt A không liên kết vì khi đó tỷ lệ nền chỉ 5%). Với tỷ lệ nền mới 15%, mức rare (2,5%) cho LR khoảng 0,17, mạnh hơn y văn (0,3–0,65); mức occasional lại làm câu trả lời 'Có' tăng khả năng, sai chiều. Chọn rare: khí hư bất thường gợi ý viêm âm đạo, viêm vùng chậu (mức 3) hơn là viêm bàng quang."
+warning_signs:
+  - chills_rigors
+  - persistent_vomiting
+  - confusion
+  - drowsy_hard_to_wake
+  - cold_hands_feet
+self_care_vi:
+  - "Uống đủ nước để đi tiểu đều trong ngày."
+  - "Không nhịn tiểu lâu."
+see_doctor_vi:
+  - "Đặt lịch khám trong vài ngày tới để được xét nghiệm nước tiểu và điều trị."
+  - "Đi khám trong ngày nếu sốt, rét run, đau hông lưng, tiểu ra máu, hoặc nôn (ói)."
+  - "Nam giới, phụ nữ có thai, trẻ em và người từ 65 tuổi bị tiểu buốt nên đi khám trong ngày."
+review:
+  status: source_checked
+  authors: ["agent:pass-a", "agent:pass-b"]
+  reconciler: "agent:pass-c"
+  doctor_reviewer: null
+  updated: "2026-10-25"
+  notes_vi: "Lượt C đã đối chiếu 16 liên kết và mở lại mọi nguồn được trích. Bác sĩ cần xem: (1) prior P3 cho triệu chứng chính đau bụng là ước lượng, vì phần lớn người viêm bàng quang sẽ không chọn đau bụng; hệ số giới tính (nữ 1,8, nam 0,2) theo tỷ lệ nữ/nam 9/1 của 3931/QĐ-BYT; (2) sốt để rare (thấp hơn số 0,10 của Giesen) để người sốt, tiểu buốt được xét viêm thận – bể thận trước; (3) khí hư bất thường để rare, mạnh hơn y văn; (4) số liệu triệu chứng lấy từ phụ nữ ở chăm sóc ban đầu nước ngoài, chưa có ở nam giới, trẻ em và ở Việt Nam; (5) NHS khuyên người từ 65 tuổi bị nhiễm khuẩn tiết niệu đi khám khẩn, nhưng quy tắc rf_uti_high_risk chưa có điều kiện tuổi này (đề xuất cho người bảo trì)."

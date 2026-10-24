@@ -1,0 +1,186 @@
+id: acute_appendicitis
+names:
+  vi: "Viêm ruột thừa cấp tính"
+  vi_common: ["Viêm ruột thừa", "Đau ruột thừa"]
+  en: "Acute appendicitis"
+codes:
+  icd10: "K35"
+  icd10_verified: true
+  mondo: "MONDO:0005649"
+summary_vi:
+  - "Ruột thừa (đoạn ruột nhỏ ở bụng dưới bên phải) bị viêm cấp, hay gặp nhất ở tuổi thiếu niên và người trẻ."
+  - "Đau thường bắt đầu quanh rốn, vài giờ sau chuyển xuống bụng dưới bên phải, kèm chán ăn, buồn nôn hoặc sốt nhẹ."
+  - "Cần được khám và điều trị sớm vì ruột thừa có thể vỡ, gây viêm phúc mạc."
+urgency: 2
+cant_miss: true
+specialties: [general_surgery, emergency]
+priors:
+  - complaint: abdominal_pain
+    default: P3
+    by_age: { infant_0_2m: P6, child_2m_5y: P4, elder_65_74: P4, elder_75p: P4 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [viniol-fampract-2014, blok-fampract-2021, erkan-pedint-2004, cervellin-atm-2016, wickramasinghe-wjs-2021, nhs-appendicitis, bundy-jama-2007]
+      reported: "Chăm sóc ban đầu: 1,9% người lớn đau bụng (Viniol), 5,1% trẻ 4–18 tuổi đau bụng cấp (Blok); cấp cứu nhi 2–16 tuổi: khoảng 3,8% (Erkan); cấp cứu người lớn: 4,5% dưới 65 tuổi, 1,5% từ 65 tuổi (Cervellin)"
+      population: "Chăm sóc ban đầu và cấp cứu ở châu Âu, Thổ Nhĩ Kỳ; chưa có số liệu Việt Nam"
+      note: "Trẻ từ 5 tuổi đến người 64 tuổi: P3 (hai lượt giống nhau). Số 5,1% của Blok sát ranh giới P2 nhưng chỉ tính đau bụng cấp ở trẻ đã đi khám; triệu chứng chính của doctor-v gồm cả đau mạn, nên giữ P3. Từ 65 tuổi: P4, vì ở cấp cứu tỷ lệ chỉ bằng khoảng một phần ba người trẻ (Cervellin) và đỉnh mắc ở 15–19 tuổi (Wickramasinghe); lượt A chọn P4 cho 65–74 tuổi, lượt B để P3, lượt C theo lượt A vì có số liệu. Trẻ 2 tháng – 5 tuổi: lượt A P4, lượt B P5; lượt C chọn P4 (cùng là ước lượng, chọn mức thận trọng cho bệnh không được bỏ sót): bệnh hiếm ở tuổi này (NHS: hiếm dưới 12 tháng) nhưng khi gặp thì phần lớn đã thủng (Bundy). Dưới 2 tháng: P6."
+  - complaint: fever
+    default: P5
+    by_age: { infant_0_2m: P6 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [wickramasinghe-wjs-2021, humes-bmj-2006, reust-afp-2016, nhs-appendicitis, bundy-jama-2007]
+      note: "Lượt C kiểm tra mức P5 của lượt B theo nguồn. Đau bụng gần như luôn là triệu chứng nổi bật (NHS); sốt thường nhẹ, đến khoảng 38°C (Humes) và xuất hiện sau khi đau (Reust). Tỷ lệ mắc khoảng 228/100.000 mỗi năm, cao nhất ở 15–19 tuổi (Wickramasinghe), trong khi lượt đi khám vì sốt ở trẻ em và người trẻ nhiều hơn hàng trăm lần; dù toàn bộ người bệnh đều chọn 'sốt' thì tỷ lệ cũng chỉ quanh 0,2–0,5%, mà thực tế chỉ một phần nhỏ chọn sốt làm triệu chứng chính, nên dưới 0,2% (P5). Lượt A để P4 cho trẻ 5–17 tuổi vì trẻ hay sốt (Bundy: 75%), nhưng đó là tần suất sốt trong bệnh, không phải tỷ lệ bệnh trong người đi khám vì sốt; lượt C chọn P5. Khi người dùng chọn 'sốt' mà có đau bụng dưới bên phải, đau di chuyển, đau tăng khi đi lại, các dấu hiệu này vẫn đẩy bệnh lên mạnh."
+findings:
+  - finding: abdominal_pain
+    freq: almost_always
+    evidence:
+      tier: C
+      basis: verbal
+      sources: [nhs-appendicitis, msd-appendicitis, humes-bmj-2006]
+      note: "Chỉ có tác dụng khi triệu chứng chính là sốt. Hai lượt giống nhau; nguồn mô tả đau bụng là triệu chứng chính, không cho tần suất."
+  - finding: abd_pain_location
+    dist: { epigastric: 0.045, right_upper: 0.03, left_upper: 0.01, periumbilical: 0.13, right_lower: 0.65, left_lower: 0.015, suprapubic: 0.05, whole: 0.07 }
+    evidence:
+      tier: A
+      basis: numeric
+      sources: [snyder-afp-2018, wagner-jama-1996, bundy-jama-2007, nhs-appendicitis]
+      locator: "AAFP 2018 Bảng 1 (theo Wagner 1996); Bundy 2007 Bảng 3"
+      reported: "Đau hố chậu phải: người lớn LR+ 7,3–8,5, LR− 0–0,28 (độ nhạy suy ra khoảng 80%); trẻ em LR+ 1,2, LR− 0,56"
+      note: "Trung bình hai lượt (A 0,68, B 0,62 ở bụng dưới bên phải). Số liệu bệnh viện đo khi đau đã khu trú; người tự kiểm tra có thể đến sớm, lúc còn đau quanh rốn hoặc thượng vị, nên hạ xuống 0,65. Khoảng 7% đau khắp bụng (khi đã thủng)."
+  - finding: abd_pain_migrated_rlq
+    freq: frequent
+    evidence:
+      tier: A
+      basis: numeric
+      sources: [snyder-afp-2018, wagner-jama-1996, bundy-jama-2007, benabbas-aem-2017, humes-bmj-2006]
+      locator: "AAFP 2018 Bảng 1; Bundy 2007 (Dolgin 1992, Kharbanda 2005); Benabbas 2017 (tóm tắt)"
+      reported: "Người lớn LR+ 3,2, LR− 0,50 (độ nhạy suy ra khoảng 59%); trẻ em độ nhạy 0,45–0,68, LR+ 4,81 ở trẻ đau bụng chưa phân loại"
+      note: "Humes: trình tự kinh điển chỉ có ở khoảng một nửa người bệnh. Với tỷ lệ nền 0,10 của câu hỏi, mức frequent cho LR+ khoảng 5 và LR− khoảng 0,56, phù hợp y văn. Hai lượt giống nhau."
+  - finding: abd_pain_worse_movement
+    freq: frequent
+    evidence:
+      tier: A
+      basis: numeric
+      sources: [bundy-jama-2007, benabbas-aem-2017, msd-appendicitis, nhs-appendicitis]
+      locator: "Bundy 2007 Bảng 3 (Kharbanda 2005); Benabbas 2017 (tóm tắt)"
+      reported: "Đau khi ho, nhảy hoặc gõ: độ nhạy 0,78 ở trẻ đến cấp cứu; LR+ 7,64 ở trẻ đau bụng chưa phân loại"
+      note: "Hạ một mức (từ very_frequent) cho bối cảnh cộng đồng, vì dấu hiệu kích thích phúc mạc rõ dần theo thời gian. Hai lượt giống nhau."
+  - finding: abd_pain_severe
+    freq: occasional
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [nhs-appendicitis, msd-appendicitis, humes-bmj-2006]
+      note: "Đau thường tăng dần, ở mức vừa trong ngày đầu; đau dữ dội gặp khi viêm nặng hoặc đã thủng. Ước 20–30%. Hai lượt giống nhau."
+  - finding: abd_pain_onset
+    dist: { sudden: 0.15, gradual: 0.85 }
+    evidence:
+      tier: C
+      basis: verbal
+      sources: [msd-appendicitis, humes-bmj-2006]
+      note: "Đau bắt đầu âm ỉ quanh rốn hoặc thượng vị rồi tăng dần; đau đột ngột, rất mạnh ngay từ đầu không điển hình. Hai lượt giống nhau; tỷ lệ là ước lượng."
+  - finding: abd_pain_duration
+    dist: { lt_6h: 0.15, h6_24: 0.385, d1_3: 0.365, d4_14: 0.075, gt_2w: 0.025 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [snyder-afp-2018, bundy-jama-2007, humes-bmj-2006]
+      locator: "AAFP 2018 Bảng 1 (chưa từng đau tương tự: LR− 0,32, tức khoảng 14% từng đau tương tự)"
+      note: "Trung bình hai lượt. Phần lớn đến khám trong 1–2 ngày đầu; nguy cơ thủng tăng sau 36 giờ (Humes). Đau trên 2 tuần hoặc tái đi tái lại ít gặp. Phân bố là ước lượng."
+  - finding: nausea
+    freq: frequent
+    evidence:
+      tier: A
+      basis: numeric
+      sources: [snyder-afp-2018, humes-bmj-2006, msd-appendicitis]
+      locator: "AAFP 2018 Bảng 1 (buồn nôn LR+ 0,69–1,2; LR− 0,70–0,84)"
+      reported: "Độ nhạy suy ra khoảng 0,6–0,7 ở người lớn; 0,29 ở trẻ em (Bundy, giá trị không chắc chắn)"
+      note: "Buồn nôn thường gặp nhưng gần như không phân biệt; mức frequent chỉ cao hơn tỷ lệ nền 35% một chút. Hai lượt giống nhau."
+  - finding: vomiting
+    freq: frequent
+    evidence:
+      tier: A
+      basis: numeric
+      sources: [snyder-afp-2018, bundy-jama-2007]
+      locator: "AAFP 2018 Bảng 1; Bundy 2007 Bảng 2 (O'Shea 1988)"
+      reported: "Người lớn LR+ 0,92, LR− 1,1 (độ nhạy suy ra khoảng 0,5); trẻ em độ nhạy 0,79"
+      note: "Trẻ em nôn nhiều hơn người lớn nhưng chưa tách theo tuổi (xem biên bản). Hai lượt giống nhau."
+  - finding: loss_of_appetite
+    freq: frequent
+    evidence:
+      tier: A
+      basis: numeric
+      sources: [snyder-afp-2018, humes-bmj-2006, bundy-jama-2007]
+      locator: "AAFP 2018 Bảng 1"
+      reported: "Người lớn LR+ 1,3, LR− 0,64 (độ nhạy suy ra khoảng 0,7); trẻ em 0,21 (Bundy, giá trị không chắc chắn)"
+      note: "Humes: chán ăn thường nổi bật. Hai lượt giống nhau."
+  - finding: fever
+    freq: frequent
+    evidence:
+      tier: A
+      basis: numeric
+      sources: [snyder-afp-2018, cartwright-afp-2008, bundy-jama-2007, msd-appendicitis]
+      locator: "AAFP 2018 Bảng 1; Cartwright 2008 Bảng 2; Bundy 2007 Bảng 2"
+      reported: "Người lớn LR+ 1,9–3,2, LR− 0,4–0,58 (độ nhạy suy ra khoảng 0,6); trẻ em độ nhạy 0,75"
+      note: "Số liệu bệnh viện; sốt thường nhẹ và đến sau đau, người dùng đến sớm có thể chưa sốt, nên giữ frequent. Hai lượt giống nhau."
+  - finding: fever_max_temp
+    dist: { lt_38: 0.475, t38_39: 0.425, ge_39: 0.10 }
+    evidence:
+      tier: C
+      basis: verbal
+      sources: [msd-appendicitis, humes-bmj-2006]
+      locator: "MSD: sốt nhẹ 37,7–38,3°C thường gặp; Humes: sốt đến khoảng 38°C"
+      note: "Phân bố trong số người đã sốt; trung bình hai lượt. Sốt từ 39°C gợi ý đã thủng hoặc bệnh khác."
+  - finding: fever_duration
+    dist: { d1_2: 0.825, d3_5: 0.145, d6_7: 0.02, gt_7d: 0.01 }
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [humes-bmj-2006, reust-afp-2016]
+      note: "Phân bố trong số người đã sốt; trung bình hai lượt. Sốt đến sau đau và bệnh diễn biến trong 1–3 ngày (Reust: sốt sau khi đau gợi ý bệnh ngoại khoa); sốt nhiều ngày gợi ý bệnh khác hoặc áp xe ruột thừa."
+  - finding: diarrhea
+    freq: occasional
+    evidence:
+      tier: A
+      basis: numeric
+      sources: [bundy-jama-2007, humes-bmj-2006, nhs-appendicitis, msd-appendicitis]
+      locator: "Bundy 2007 Bảng 2 (O'Shea 1988); Humes (khoảng 20% thể dưới manh tràng, tiểu khung)"
+      reported: "Trẻ em: độ nhạy 0,33 (LR+ 2,6)"
+      note: "Người lớn ít hơn trẻ em (MSD: đi ngoài thường ít đi). Giữ occasional để tiêu chảy không loại trừ quá mạnh viêm ruột thừa. Hai lượt giống nhau."
+  - finding: abdomen_hard_swollen
+    freq: occasional
+    evidence:
+      tier: A
+      basis: numeric
+      sources: [snyder-afp-2018, wagner-jama-1996]
+      locator: "AAFP 2018 Bảng 1 (co cứng thành bụng LR+ 3,8, LR− 0,82)"
+      reported: "Co cứng thành bụng: độ nhạy suy ra khoảng 23%"
+      population: "Người lớn nghi viêm ruột thừa ở bệnh viện, gồm cả ca đã thủng"
+      note: "Lượt C: hai lượt lệch một mức (A rare, B occasional). Chọn occasional: là dấu hiệu nguy hiểm của bệnh không được bỏ sót, và mức rare (2,5%) lại cao hơn tỷ lệ nền 1% nên không đạt ý 'ít gặp' của lượt A. Ở cộng đồng có thể thấp hơn bệnh viện, nhưng vẫn ước trong khoảng 7,5–33%."
+warning_signs:
+  - abd_pain_severe
+  - abdomen_hard_swollen
+  - abd_pain_migrated_rlq
+  - abd_pain_worse_movement
+  - persistent_vomiting
+  - fainting_or_near_fainting
+  - cold_hands_feet
+  - confusion
+  - drowsy_hard_to_wake
+self_care_vi:
+  - "Không ăn uống thêm trong khi chờ đi khám, vì có thể cần mổ."
+  - "Không tự uống thuốc, kể cả thuốc nam, trước khi được bác sĩ khám."
+see_doctor_vi:
+  - "Đến cơ sở cấp cứu ngay khi đau bụng tăng dần, nhất là khi đau chuyển xuống bụng dưới bên phải."
+  - "Đi khám ngay nếu đau bụng kèm sốt hoặc nôn (ói)."
+  - "Trẻ nhỏ, người cao tuổi và phụ nữ có thai có thể đau không điển hình, cần đi khám sớm."
+review:
+  status: source_checked
+  authors: ["agent:pass-a", "agent:pass-b"]
+  reconciler: "agent:pass-c"
+  doctor_reviewer: null
+  updated: "2026-10-25"
+  notes_vi: "Lượt C đã đối chiếu 18 liên kết và mở lại mọi nguồn được trích. Bác sĩ cần xem: (1) prior khi sốt để P5 theo cách tính từ tỷ lệ mắc (Wickramasinghe) và mô tả sốt nhẹ, đến sau đau (Humes, Reust); trẻ 2 tháng – 5 tuổi để P4 (thận trọng hơn lượt B); (2) độ nhạy ở người lớn suy từ cặp LR trong bảng của AAFP (theo Wagner 1996), chưa đọc được toàn văn JAMA; (3) trẻ em nôn, sốt nhiều hơn người lớn (Bundy: 0,79 và 0,75) nhưng chưa khai báo freq_by_age; (4) bỏ ba liên kết chỉ có ở lượt A: tiểu buốt (rare), liên quan bữa ăn và đau quặn từng cơn (mức bằng tỷ lệ nền, không mang thông tin), để không hạ một bệnh không được bỏ sót bằng liên kết thiếu số liệu ở người lớn; (5) chưa có số liệu Việt Nam."

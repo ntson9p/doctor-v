@@ -1,0 +1,45 @@
+id: d-acute-cholecystitis-2
+set: dev
+title_vi: "Nam 80 tuổi, đái tháo đường, sốt 2 ngày, mệt, chán ăn, nôn, tức nhẹ dưới sườn phải"
+narrative_vi: "Ông T., 80 tuổi, bị đái tháo đường. Hai ngày nay sốt 38,2°C, mệt, chán ăn, buồn nôn, nôn 2 lần. Hỏi kỹ thì có tức âm ỉ dưới sườn phải, không lan, không dữ dội. Không ho, không khó thở, không đau khi đi tiểu, không đau hông lưng, không tiêu chảy, không vàng da, không rét run, vẫn tỉnh táo."
+patient:
+  age_years: 80
+  sex: male
+  region: south
+  month: 8
+complaint: fever
+answers:
+  fever_max_temp: t38_39
+  fever_duration: d1_2
+  abdominal_pain: present
+  abd_pain_location: right_upper
+  abd_pain_duration: d1_3
+  abd_pain_onset: gradual
+  abd_pain_severe: absent
+  vomiting: present
+  nausea: present
+  loss_of_appetite: present
+  fatigue: present
+  diabetes: present
+  gallstones_known: unknown
+  cough: absent
+  breathing_difficulty: absent
+  dysuria: absent
+  urinary_frequency: absent
+  flank_pain: absent
+  diarrhea: absent
+  jaundice: absent
+  chills_rigors: absent
+  confusion: absent
+  abd_pain_radiates_right_shoulder: absent
+  persistent_vomiting: absent
+default_unmentioned: absent
+expected:
+  condition: acute_cholecystitis
+  acceptable: []
+  triage: 2
+source:
+  basis: "Ca không điển hình ở người già: triệu chứng toàn thân (chán ăn, nôn, mệt, sốt) nổi bật hơn đau (MSD). Viêm túi mật cấp cần nhập viện; người từ 65 tuổi được lợi khi mổ (Gallaher 2022), nên cần đến cơ sở cấp cứu."
+  references: [msd-acute-cholecystitis, gallaher-jama-2022]
+author: "agent:pass-c"
+notes_vi: "Ca không điển hình: người từ 75 tuổi, triệu chứng chính người nhà chọn là \"Sốt\"."

@@ -1,0 +1,12 @@
+id: cdc-food-poisoning
+type: web_page
+title: "Signs and Symptoms of Food Poisoning"
+publisher: "U.S. Centers for Disease Control and Prevention (CDC)"
+date: "2025-11-24"
+url: "https://www.cdc.gov/food-safety/signs-symptoms/index.html"
+license_class: L0
+default_tier: C
+accessed: "2026-10-25"
+verified: true
+verified_by: "agent:pass-c"
+notes_vi: "Lượt C lô 3 mở trang (ngày trên trang 24/11/2025). Triệu chứng hay gặp: tiêu chảy, đau hoặc quặn bụng, buồn nôn, nôn, sốt. Cần đi khám khi sốt trên 102°F (khoảng 38,9°C), tiêu chảy quá 3 ngày, tiêu chảy có máu, nôn đến mức không giữ được nước, hoặc có dấu hiệu mất nước."

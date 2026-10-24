@@ -1,0 +1,33 @@
+id: d-cystitis-2
+set: dev
+title_vi: "Nam 55 tuổi, 3 ngày tiểu buốt, tiểu nhiều lần, tức bụng dưới, không sốt"
+narrative_vi: "Ông L., 55 tuổi. Ba ngày nay đi tiểu buốt, tiểu nhiều lần, tức bụng dưới. Không sốt, không đau hông lưng, không nôn, không tiểu ra máu, không tiêu chảy."
+patient:
+  age_years: 55
+  sex: male
+  region: central
+  month: 10
+complaint: abdominal_pain
+answers:
+  dysuria: present
+  urinary_frequency: present
+  abd_pain_location: suprapubic
+  abd_pain_duration: d1_3
+  abd_pain_onset: gradual
+  fever: absent
+  flank_pain: absent
+  hematuria: absent
+  nausea: absent
+  vomiting: absent
+  diarrhea: absent
+  abd_pain_severe: absent
+default_unmentioned: absent
+expected:
+  condition: cystitis
+  acceptable: []
+  triage: 3
+source:
+  basis: "Ca không điển hình về giới: viêm bàng quang ở nam ít gặp (nữ/nam 9/1) và được xử trí như nhiễm khuẩn có biến chứng (3931/QĐ-BYT, mục viêm bàng quang cấp ở nam giới). NHS: nam giới có triệu chứng nhiễm khuẩn tiết niệu cần hẹn khám khẩn trong ngày (mức 3)."
+  references: [byt-qd-3931-2015, nhs-utis]
+author: "agent:pass-c"
+notes_vi: "Ca không điển hình: nam giới."

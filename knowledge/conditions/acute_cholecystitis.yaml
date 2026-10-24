@@ -1,0 +1,209 @@
+id: acute_cholecystitis
+names:
+  vi: "Viêm túi mật cấp tính"
+  vi_common: ["Viêm túi mật", "Viêm túi mật do sỏi"]
+  en: "Acute cholecystitis"
+codes:
+  icd10: "K81.0"
+  icd10_verified: true
+  mondo: "MONDO:0043994"
+summary_vi:
+  - "Túi mật bị viêm cấp, phần lớn do sỏi làm tắc đường ra của túi mật."
+  - "Thường đau liên tục nhiều giờ dưới sườn phải hoặc vùng trên rốn, có thể lan lên vai phải, kèm sốt, buồn nôn, nôn."
+  - "Cần được điều trị ở bệnh viện, thường phải mổ cắt túi mật, để tránh hoại tử, thủng túi mật."
+urgency: 2
+cant_miss: false
+specialties: [general_surgery, gastroenterology]
+priors:
+  - complaint: abdominal_pain
+    default: P3
+    by_age: { infant_0_2m: P6, child_2m_5y: P6, child_5_12: P6, teen_13_17: P5, adult_18_44: P4 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [viniol-fampract-2014, cervellin-atm-2016, msd-acute-cholecystitis, nhs-acute-cholecystitis, gallaher-jama-2022]
+      reported: "Bệnh mật – tụy 4,0% người đau bụng ở chăm sóc ban đầu (Viniol); cơn đau quặn mật hoặc viêm túi mật 6,0% dưới 65 tuổi và 13,2% từ 65 tuổi ở cấp cứu (Cervellin)"
+      population: "Chăm sóc ban đầu và cấp cứu ở châu Âu; chưa có số liệu Việt Nam"
+      note: "Hai lượt khai báo khác cách nhưng cùng mức theo từng nhóm tuổi: 18–44 tuổi P4, từ 45 tuổi P3, trẻ em P6, 13–17 tuổi P5. Viêm túi mật cấp chỉ là một phần của nhóm mật – tụy (cùng cơn đau quặn mật, sỏi ống mật chủ, viêm tụy); sỏi mật tăng theo tuổi (NHS: hơn 1/10 người lớn ở Anh có sỏi). Ở Việt Nam sỏi đường mật trong gan và giun chui ống mật từng phổ biến hơn phương Tây; các bệnh đó chưa có trong hệ thống nên người bệnh có thể được xếp vào bệnh này."
+  - complaint: fever
+    default: P5
+    by_age: { infant_0_2m: P6, child_2m_5y: P6, child_5_12: P6, teen_13_17: P6, elder_65_74: P4, elder_75p: P4 }
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [msd-acute-cholecystitis, jain-aem-2017]
+      note: "Hai lượt giống nhau. Sốt gặp ở 31–62% (Jain) nhưng đau dưới sườn phải thường nổi bật hơn, nên ít người chọn sốt làm triệu chứng chính (P5). Người già có thể chỉ có triệu chứng toàn thân như chán ăn, nôn, mệt, sốt (MSD), nên từ 65 tuổi ước P4."
+findings:
+  - finding: abdominal_pain
+    freq: very_frequent
+    evidence:
+      tier: C
+      basis: verbal
+      sources: [msd-acute-cholecystitis, nhs-acute-cholecystitis]
+      note: "Chỉ có tác dụng khi triệu chứng chính là sốt. Lượt C: hai lượt lệch một mức (A very_frequent, B almost_always). Chọn very_frequent vì người già có thể chỉ có triệu chứng toàn thân (MSD); mức almost_always làm câu trả lời 'Không đau bụng' loại trừ bệnh quá mạnh ở nhóm này."
+  - finding: abd_pain_location
+    dist: { epigastric: 0.225, right_upper: 0.61, left_upper: 0.02, periumbilical: 0.035, right_lower: 0.035, left_lower: 0.01, suprapubic: 0.01, whole: 0.055 }
+    evidence:
+      tier: A
+      basis: numeric
+      sources: [cartwright-afp-2008, trowbridge-jama-2003, jain-aem-2017, nhs-acute-cholecystitis]
+      locator: "Cartwright 2008 Bảng 2 (theo Trowbridge 2003); Jain 2017 (tóm tắt)"
+      reported: "Đau hạ sườn phải: LR+ 2,5, LR− 0,3 (độ nhạy suy ra khoảng 0,8); độ nhạy 56–93% (Jain); dưới 25% không đau hạ sườn phải hoặc không có cơn đau quặn"
+      note: "Trung bình hai lượt; phần còn lại chủ yếu đau vùng trên rốn."
+  - finding: abd_pain_onset
+    dist: { sudden: 0.425, gradual: 0.575 }
+    evidence:
+      tier: C
+      basis: verbal
+      sources: [nhs-acute-cholecystitis, msd-acute-cholecystitis]
+      locator: "NHS: đau đột ngột, nhói; MSD: đạt đỉnh trong 15–60 phút"
+      note: "Trung bình hai lượt (A 0,35, B 0,50 đột ngột). Tỷ lệ là ước lượng."
+  - finding: abd_pain_duration
+    dist: { lt_6h: 0.10, h6_24: 0.35, d1_3: 0.39, d4_14: 0.135, gt_2w: 0.025 }
+    evidence:
+      tier: C
+      basis: verbal
+      sources: [msd-acute-cholecystitis, nhs-acute-cholecystitis]
+      locator: "MSD: đau kéo dài trên 6 giờ; NHS: đau dai dẳng, không hết sau vài giờ"
+      note: "Trung bình hai lượt. Đau dưới 6 giờ hợp với cơn đau quặn mật hơn. Phân bố là ước lượng."
+  - finding: abd_pain_meal_relation
+    dist: { hungry_relieved_by_food: 0.03, worse_after_meal: 0.42, no_relation: 0.55 }
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [gallaher-jama-2022]
+      locator: "Gallaher 2022 (tóm tắt): triệu chứng đôi khi tăng sau ăn"
+      note: "Chỉ lượt A có (A để 0,50 'đau tăng sau ăn'). Lượt C giữ nhưng hạ còn 0,42, vì thông tin này một phần đã có trong câu 'đau sau bữa ăn nhiều dầu mỡ' (hai câu không cùng cụm, dễ đếm trùng). Lựa chọn 'đau lúc đói, ăn vào đỡ' rất ít gặp, giúp phân biệt với viêm loét dạ dày. Cần bác sĩ duyệt."
+  - finding: pain_after_fatty_meal
+    freq: occasional
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [gallaher-jama-2022, msd-acute-cholecystitis]
+      locator: "Gallaher 2022 (tóm tắt): triệu chứng đôi khi tăng sau ăn"
+      note: "Hai lượt giống nhau. Bữa ăn nhiều dầu mỡ hay được kể là yếu tố khởi phát cơn đau mật, nhưng các nguồn đã mở không cho tần suất và dấu hiệu kém đặc hiệu; ước 20%, cao hơn tỷ lệ nền 5%. Cần bác sĩ duyệt."
+  - finding: abd_pain_radiates_right_shoulder
+    freq: frequent
+    evidence:
+      tier: C
+      basis: verbal
+      sources: [nhs-acute-cholecystitis, msd-acute-cholecystitis]
+      locator: "NHS: đau lan về phía vai phải; MSD: có thể lan ra bả vai phải hoặc lưng trên"
+      note: "NHS mô tả như đặc điểm điển hình, MSD ghi 'có thể'; chọn frequent. Câu này cùng cụm pain_radiation với câu đau lan ra sau lưng, nên bộ suy luận giảm đếm trùng. Hai lượt giống nhau."
+  - finding: abd_pain_radiates_back
+    freq: occasional
+    evidence:
+      tier: C
+      basis: verbal
+      sources: [msd-acute-cholecystitis]
+      locator: "MSD: đau có thể lan ra lưng trên"
+      note: "Để mức thấp vì phần lớn thông tin đã có trong câu đau lan lên vai phải hoặc sau lưng bên phải. Hai lượt giống nhau."
+  - finding: abd_pain_severe
+    freq: occasional
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [nhs-acute-cholecystitis, msd-acute-cholecystitis]
+      note: "Lượt C: hai lượt lệch một mức (A frequent, B occasional). Đau nặng hơn cơn đau quặn mật (MSD), NHS mô tả đau dữ dội, nhưng 'không chịu nổi' là ngưỡng cao. Chọn occasional: khi người dùng trả lời 'Có', quy tắc rf_severe_abdominal_pain đã xếp mức 2, nên tác dụng chính của liên kết là ở câu trả lời 'Không'; mức thấp hơn làm câu 'Không' ít hạ bệnh nguy hiểm này hơn (thận trọng hơn)."
+  - finding: abd_pain_worse_movement
+    freq: occasional
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [nhs-acute-cholecystitis, msd-acute-cholecystitis, jain-aem-2017]
+      locator: "NHS: hít sâu làm đau tăng; Jain 2017: dấu Murphy độ nhạy 62%"
+      note: "Dấu Murphy là dấu hiệu khi khám, không trùng với câu hỏi đau tăng khi đi lại, ho, xe xóc; ước 20%. Hai lượt cùng mức; lượt C hạ bậc từ A xuống C vì mức là ước lượng, nguồn bậc A chỉ nói về dấu Murphy."
+  - finding: abdomen_hard_swollen
+    freq: rare
+    above_leak_ok: true
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [msd-acute-cholecystitis]
+      locator: "MSD: không điều trị, khoảng 10% thủng túi mật, viêm phúc mạc; liệt ruột khi có biến chứng"
+      note: "Chỉ lượt A có. Co cứng khu trú dưới sườn phải người dùng khó tự nhận biết; bụng cứng toàn bộ gợi ý biến chứng thủng, hoại tử. Mức rare (2,5%) cao hơn tỷ lệ nền 1% là có chủ ý (above_leak_ok) để câu trả lời 'Có' không hạ bệnh nguy hiểm này; quy tắc rf_abdomen_hard_swollen đã xếp mức 2."
+  - finding: fever
+    freq: frequent
+    evidence:
+      tier: A
+      basis: numeric
+      sources: [jain-aem-2017, cartwright-afp-2008, msd-acute-cholecystitis]
+      locator: "Jain 2017 (tóm tắt); Cartwright 2008 Bảng 2"
+      reported: "Sốt: độ nhạy 31–62% ở cấp cứu (Jain); LR+ 1,8, LR− 0,8 (Cartwright, theo Trowbridge)"
+      note: "MSD: sốt thường nhẹ, có khi không sốt, nhất là người già. Hai lượt giống nhau."
+  - finding: fever_max_temp
+    dist: { lt_38: 0.475, t38_39: 0.40, ge_39: 0.125 }
+    evidence:
+      tier: C
+      basis: verbal
+      sources: [msd-acute-cholecystitis]
+      locator: "MSD: sốt thường nhẹ"
+      note: "Phân bố trong số người đã có sốt; trung bình hai lượt. Sốt cao kèm rét run, vàng da gợi ý biến chứng hoặc viêm đường mật."
+  - finding: fever_duration
+    dist: { d1_2: 0.65, d3_5: 0.28, d6_7: 0.045, gt_7d: 0.025 }
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [msd-acute-cholecystitis]
+      note: "Phân bố trong số người có sốt; trung bình hai lượt. Sốt đi cùng đợt đau cấp nên thường ngắn."
+  - finding: nausea
+    freq: frequent
+    evidence:
+      tier: C
+      basis: verbal
+      sources: [gallaher-jama-2022, nhs-acute-cholecystitis, msd-acute-cholecystitis]
+      locator: "Gallaher: đau hạ sườn phải, sốt, buồn nôn là biểu hiện điển hình; NHS: một số người buồn nôn, nôn"
+      note: "Lượt C: hai lượt lệch một mức (A very_frequent, B frequent). Chọn frequent: NHS chỉ ghi 'một số người', và tỷ lệ nền 35% của buồn nôn khi đau bụng cao, nên mức very_frequent làm câu trả lời 'Không' hạ bệnh nguy hiểm này quá mạnh."
+  - finding: vomiting
+    freq: frequent
+    evidence:
+      tier: C
+      basis: verbal
+      sources: [msd-acute-cholecystitis, nhs-acute-cholecystitis]
+      locator: "MSD: nôn thường gặp; NHS: một số người buồn nôn, nôn"
+      note: "Lượt C: hai lượt lệch một mức (A very_frequent theo chữ 'thường gặp' của MSD, B frequent). Chọn frequent vì NHS chỉ ghi 'một số người' và vì lý do thận trọng như với buồn nôn."
+  - finding: loss_of_appetite
+    freq: frequent
+    evidence:
+      tier: C
+      basis: verbal
+      sources: [nhs-acute-cholecystitis, msd-acute-cholecystitis]
+      note: "Chỉ lượt A có. Lượt C giữ vì NHS liệt kê chán ăn và MSD ghi chán ăn ở người già; chưa có số liệu."
+  - finding: jaundice
+    freq: occasional
+    evidence:
+      tier: A
+      basis: numeric
+      sources: [jain-aem-2017, msd-acute-cholecystitis, nhs-acute-cholecystitis]
+      reported: "Vàng da: độ nhạy 11–14%, đặc hiệu 86–99% (Jain)"
+      note: "MSD: vàng da kèm viêm túi mật gợi ý tắc một phần ống mật chủ. Sốt kèm vàng da và đau bụng đã có quy tắc rf_cholangitis_triad (mức 2). Hai lượt giống nhau."
+  - finding: gallstones_known
+    freq: frequent
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [msd-acute-cholecystitis, gallaher-jama-2022]
+      locator: "MSD: từ 90% có sỏi túi mật, phần lớn đã từng có cơn đau quặn mật; Gallaher: sỏi gây 90–95% ca"
+      note: "Gần như ai cũng có sỏi nhưng không phải ai cũng đã được nói là có sỏi; siêu âm bụng phổ biến ở Việt Nam nên ước khoảng một nửa đã biết. Hai lượt giống nhau; cần bác sĩ duyệt."
+warning_signs:
+  - abd_pain_severe
+  - abdomen_hard_swollen
+  - jaundice
+  - chills_rigors
+  - confusion
+  - cold_hands_feet
+  - persistent_vomiting
+self_care_vi:
+  - "Không ăn uống trong khi chờ được khám, nhất là đồ nhiều dầu mỡ."
+  - "Hỏi bác sĩ hoặc dược sĩ trước khi dùng thuốc giảm đau."
+see_doctor_vi:
+  - "Đến cơ sở cấp cứu ngay khi đau dưới sườn phải kéo dài hơn vài giờ, nhất là kèm sốt."
+  - "Vàng da, vàng mắt kèm sốt hoặc rét run cần đi cấp cứu ngay."
+  - "Người cao tuổi, người bị đái tháo đường dễ có biến chứng, không nên chờ đợi."
+review:
+  status: source_checked
+  authors: ["agent:pass-a", "agent:pass-b"]
+  reconciler: "agent:pass-c"
+  doctor_reviewer: null
+  updated: "2026-10-25"
+  notes_vi: "Lượt C đã đối chiếu 22 liên kết và mở lại mọi nguồn được trích. Bác sĩ cần xem: (1) prior chỉ suy từ nhóm 'mật – tụy' 4,0% ở chăm sóc ban đầu và số liệu cấp cứu ở Ý; ở Việt Nam sỏi trong gan, viêm đường mật hay gặp nhưng chưa có trong hệ thống; (2) giữ cant_miss: false như hai lượt (biến chứng thường diễn tiến trong nhiều ngày; mức 2 dùng ngưỡng cộng dồn 2%), nhưng nên cân nhắc lại cho người già, người đái tháo đường; (3) đau dữ dội, buồn nôn, nôn để mức thấp hơn của lượt A để câu trả lời 'Không' không hạ quá mạnh bệnh này; (4) bỏ ba liên kết chỉ có ở lượt A: rét run và đau quặn từng cơn (mức bằng tỷ lệ nền) và tiêu chảy (rare, ước lượng không có nguồn, hạ một bệnh nguy hiểm); rét run vẫn ở danh sách dấu hiệu cảnh báo; (5) chưa có hệ số giới tính vì nguồn đã mở không nêu tỷ lệ nam/nữ."

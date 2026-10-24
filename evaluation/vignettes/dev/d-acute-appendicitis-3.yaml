@@ -1,0 +1,40 @@
+id: d-acute-appendicitis-3
+set: dev
+title_vi: "Bé trai 9 tuổi, đau bụng dưới bên phải, nôn, sốt, tiêu chảy (dễ nhầm viêm dạ dày – ruột)"
+narrative_vi: "Bé M., 9 tuổi. Từ đêm qua đau bụng, sáng nay bé chỉ vào bụng dưới bên phải, đi lại khom người, kêu đau khi nhảy và khi ho. Bé nôn 2 lần, sốt 38,3°C, chán ăn, đi ngoài phân lỏng 3 lần, không có máu. Cha mẹ không rõ lúc đầu bé đau ở đâu. Không ai trong nhà bị tiêu chảy. Không ho, không đau khi đi tiểu."
+patient:
+  age_years: 9
+  sex: male
+  region: north
+  month: 10
+complaint: abdominal_pain
+answers:
+  abd_pain_location: right_lower
+  abd_pain_migrated_rlq: unknown
+  abd_pain_worse_movement: present
+  abd_pain_duration: h6_24
+  abd_pain_onset: gradual
+  vomiting: present
+  nausea: present
+  fever: present
+  fever_max_temp: t38_39
+  fever_duration: d1_2
+  diarrhea: present
+  diarrhea_bloody: absent
+  unsafe_food_shared: absent
+  loss_of_appetite: present
+  abd_pain_severe: absent
+  persistent_vomiting: absent
+  dysuria: absent
+  red_jelly_stool: absent
+  cough: absent
+default_unmentioned: absent
+expected:
+  condition: acute_appendicitis
+  acceptable: []
+  triage: 2
+source:
+  basis: "Trẻ viêm ruột thừa hay sốt (độ nhạy 0,75), nôn (0,79) và có thể tiêu chảy (0,33) (Bundy 2007), dễ bị nhầm với viêm dạ dày – ruột; đau khu trú hố chậu phải, đau khi nhảy, ho (Bundy, Benabbas 2017) gợi ý viêm ruột thừa. Cần khám cấp cứu (NHS; kb-guide mục 2.5)."
+  references: [bundy-jama-2007, benabbas-aem-2017, nhs-appendicitis]
+author: "agent:pass-c"
+notes_vi: "Ca dễ nhầm với viêm dạ dày – ruột cấp."

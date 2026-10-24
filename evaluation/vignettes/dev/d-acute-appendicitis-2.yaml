@@ -1,0 +1,38 @@
+id: d-acute-appendicitis-2
+set: dev
+title_vi: "Nữ 77 tuổi, 2 ngày đau âm ỉ bụng dưới bên phải, chán ăn, không sốt"
+narrative_vi: "Bà K., 77 tuổi. Hai ngày nay đau âm ỉ bụng dưới bên phải, tăng dần, ăn kém, buồn nôn, mệt. Không nhớ rõ lúc đầu đau ở đâu. Hơi đau thêm khi đi lại. Không sốt (37,2°C), không nôn, không tiêu chảy; đi ngoài ít hơn mọi ngày nhưng vẫn xì hơi được. Đau không dữ dội, không đau ngực, không đau khi đi tiểu."
+patient:
+  age_years: 77
+  sex: female
+  region: south
+  month: 9
+complaint: abdominal_pain
+answers:
+  abd_pain_location: right_lower
+  abd_pain_duration: d1_3
+  abd_pain_onset: gradual
+  abd_pain_migrated_rlq: unknown
+  abd_pain_worse_movement: present
+  loss_of_appetite: present
+  nausea: present
+  fatigue: present
+  fever: absent
+  vomiting: absent
+  diarrhea: absent
+  no_stool_or_gas: absent
+  abd_pain_severe: absent
+  abd_pain_colicky: absent
+  dysuria: absent
+  chest_pain_pressure: absent
+  vaginal_bleeding: absent
+default_unmentioned: absent
+expected:
+  condition: acute_appendicitis
+  acceptable: []
+  triage: 2
+source:
+  basis: "Ca không điển hình ở người cao tuổi: đau ít hơn, không sốt, không rõ đau di chuyển (MSD: người già hay không điển hình; NHS). Người già và trẻ nhỏ thủng ruột thừa tới 97% do chẩn đoán muộn (Humes 2006), nên cần khám cấp cứu."
+  references: [msd-appendicitis, nhs-appendicitis, humes-bmj-2006]
+author: "agent:pass-c"
+notes_vi: "Ca không điển hình: người từ 75 tuổi, ít triệu chứng."

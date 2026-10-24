@@ -1,0 +1,35 @@
+id: d-intussusception-1
+set: dev
+title_vi: "Bé trai 8 tháng, 5 giờ khóc thét từng cơn, co chân lên bụng, nôn"
+narrative_vi: "Bé K., 8 tháng tuổi (trai). Từ 5 giờ nay bé từng cơn khóc thét, co chân lên bụng, mỗi cơn vài phút rồi nằm yên, mệt; nôn 3 lần ra sữa, không có dịch xanh. Chưa đi ngoài phân máu. Không sốt, không tiêu chảy. Bé vẫn bú được, không li bì."
+patient:
+  age_months: 8
+  sex: male
+  region: north
+  month: 5
+complaint: abdominal_pain
+answers:
+  episodic_crying_legs_drawn: present
+  abd_pain_colicky: present
+  vomiting: present
+  vomiting_bilious: absent
+  abd_pain_duration: lt_6h
+  abd_pain_onset: sudden
+  red_jelly_stool: absent
+  fever: absent
+  diarrhea: absent
+  child_unable_to_drink: absent
+  child_vomits_everything: absent
+  drowsy_hard_to_wake: absent
+  seizure_recent: absent
+  abd_pain_severe: absent
+  persistent_vomiting: absent
+default_unmentioned: absent
+expected:
+  condition: intussusception
+  acceptable: []
+  triage: 2
+source:
+  basis: "Ca điển hình ở Việt Nam: trẻ dưới 2 tuổi đau bụng từng cơn (98,9%), nôn (84,5%), phân máu chỉ 17% (Tran 2013; Bines 2006). Cần đưa trẻ đến viện sớm để tháo lồng, vì đến sau 48 giờ tỷ lệ phải cắt ruột và tử vong cao hơn rõ (WHO 2002)."
+  references: [tran-tmh-2013, bines-bwho-2006, who-intussusception-2002]
+author: "agent:pass-c"

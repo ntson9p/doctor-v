@@ -25,8 +25,8 @@ red_flags:
   - group: fever_red_flags
   - finding: fever_duration
 intake: [headache_associated, fever_exposures, chronic_conditions]
-# Điền sau khi các bệnh của đợt thử nghiệm đã có trong knowledge/conditions/.
-cant_miss: []
+# Bệnh "không được bỏ sót" (mức 1–2) có prior cho triệu chứng chính này; danh sách để kiểm tra an toàn.
+cant_miss: [bacterial_meningitis, preeclampsia, stroke, subarachnoid_hemorrhage]
 safety_net:
   - headache_thunderclap
   - neck_stiffness

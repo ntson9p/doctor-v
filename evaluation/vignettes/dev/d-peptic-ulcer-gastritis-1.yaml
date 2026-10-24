@@ -1,0 +1,36 @@
+id: d-peptic-ulcer-gastritis-1
+set: dev
+title_vi: "Nam 45 tuổi, 3 tháng đau rát vùng trên rốn lúc đói, ăn vào đỡ, hay dùng thuốc giảm đau"
+narrative_vi: "Anh P., 45 tuổi. Ba tháng nay hay đau rát, cồn cào vùng trên rốn, đau lúc đói và về đêm, ăn vào thì đỡ, thỉnh thoảng ợ chua. Hay uống thuốc giảm đau vì đau khớp gối. Không buồn nôn, không nôn, không nôn ra máu, không đi ngoài phân đen, không sốt, không sụt cân. Đau không dữ dội, không lan ra sau lưng. Không hút thuốc, ít uống rượu."
+patient:
+  age_years: 45
+  sex: male
+  region: north
+  month: 4
+complaint: abdominal_pain
+answers:
+  abd_pain_location: epigastric
+  abd_pain_meal_relation: hungry_relieved_by_food
+  abd_pain_duration: gt_2w
+  abd_pain_onset: gradual
+  heartburn: present
+  regular_painkiller_use: present
+  nausea: absent
+  vomiting: absent
+  vomiting_blood: absent
+  black_stool: absent
+  fever: absent
+  abd_pain_severe: absent
+  diarrhea: absent
+  abd_pain_radiates_back: absent
+  smoker: absent
+  heavy_alcohol: absent
+default_unmentioned: absent
+expected:
+  condition: peptic_ulcer_gastritis
+  acceptable: []
+  triage: 4
+source:
+  basis: "Đau thượng vị rát, cồn cào, đỡ khi ăn, đau về đêm, tái đi tái lại; dùng thuốc chống viêm không steroid là nguyên nhân chính (MSD; NHS Stomach ulcer). Không có dấu hiệu báo động (nôn ra máu, phân đen, sụt cân, nôn kéo dài), nên khám trong vài ngày (NHS: khám bác sĩ khi đau hay tái lại; kb-guide mục 2.5)."
+  references: [msd-peptic-ulcer, nhs-stomach-ulcer]
+author: "agent:pass-c"

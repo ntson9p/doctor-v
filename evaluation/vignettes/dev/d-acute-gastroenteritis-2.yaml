@@ -1,0 +1,41 @@
+id: d-acute-gastroenteritis-2
+set: dev
+title_vi: "Bé trai 18 tháng, sốt 38,5°C, nôn, tiêu chảy, chưa mất nước"
+narrative_vi: "Bé T., 18 tháng tuổi. Sốt 38,5°C từ hôm qua, nôn 3 lần, từ đêm qua đi ngoài phân lỏng toé nước 6 lần, không có máu. Bé hay quấy, có vẻ đau bụng nhưng không khóc thét từng cơn. Bé vẫn bú và uống nước được, còn đi tiểu, mắt không trũng, tỉnh táo. Không ho, không sổ mũi, không phát ban."
+patient:
+  age_months: 18
+  sex: male
+  region: north
+  month: 12
+complaint: fever
+answers:
+  fever_max_temp: t38_39
+  fever_duration: d1_2
+  vomiting: present
+  diarrhea: present
+  diarrhea_bloody: absent
+  abdominal_pain: present
+  episodic_crying_legs_drawn: absent
+  persistent_vomiting: absent
+  child_unable_to_drink: absent
+  child_vomits_everything: absent
+  drowsy_hard_to_wake: absent
+  seizure_recent: absent
+  sunken_eyes: absent
+  decreased_urine: absent
+  cough: absent
+  runny_nose: absent
+  sore_throat: absent
+  rash_any: absent
+  ear_pain: absent
+  breathing_difficulty: absent
+default_unmentioned: absent
+expected:
+  condition: acute_gastroenteritis
+  acceptable: []
+  triage: 5
+source:
+  basis: "Ca không điển hình về tuổi và triệu chứng chính (cha mẹ chọn \"Sốt\"). Tiêu chảy cấp không mất nước ở trẻ: điều trị tại nhà theo phác đồ A, hướng dẫn cha mẹ dấu hiệu cần đưa trẻ đi khám ngay (3312/QĐ-BYT, bài Tiêu chảy cấp; WHO 2005 mục 4.2). Trẻ trên 12 tháng, uống được, không có dấu hiệu nguy hiểm nên theo dõi tại nhà (NHS)."
+  references: [byt-qd-3312-2015, who-diarrhoea-2005, nhs-diarrhoea-vomiting]
+author: "agent:pass-c"
+notes_vi: "Kiểm tra lời dặn của lô 3: viêm dạ dày – ruột có sốt không được đẩy lên mức 2 chỉ vì viêm ruột thừa."

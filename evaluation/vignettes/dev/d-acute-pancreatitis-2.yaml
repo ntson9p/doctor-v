@@ -1,0 +1,41 @@
+id: d-acute-pancreatitis-2
+set: dev
+title_vi: "Nữ 35 tuổi, đái tháo đường, không uống rượu, 2 ngày đau tăng dần vùng trên rốn lệch trái, nôn"
+narrative_vi: "Chị Y., 35 tuổi, bị đái tháo đường, không uống rượu. Hai ngày nay đau âm ỉ rồi tăng dần vùng trên rốn lệch trái, đau liên tục, ăn vào đau hơn, buồn nôn, nôn 3 lần. Đau nhiều nhưng chưa đến mức không chịu nổi, không lan ra sau lưng. Không sốt, không tiêu chảy, không vàng da. Không có thai, không chậm kinh, không ra máu âm đạo. Chưa từng được nói có sỏi mật."
+patient:
+  age_years: 35
+  sex: female
+  region: south
+  month: 6
+complaint: abdominal_pain
+answers:
+  abd_pain_location: epigastric
+  abd_pain_duration: d1_3
+  abd_pain_onset: gradual
+  abd_pain_meal_relation: worse_after_meal
+  nausea: present
+  vomiting: present
+  diabetes: present
+  heavy_alcohol: absent
+  abd_pain_radiates_back: absent
+  abd_pain_severe: absent
+  abd_pain_colicky: absent
+  fever: absent
+  diarrhea: absent
+  jaundice: absent
+  gallstones_known: absent
+  heartburn: absent
+  pregnant: absent
+  missed_period: absent
+  vaginal_bleeding: absent
+  persistent_vomiting: absent
+default_unmentioned: absent
+expected:
+  condition: acute_pancreatitis
+  acceptable: []
+  triage: 2
+source:
+  basis: "Ca không điển hình: nữ, không uống rượu, đau tăng dần không dữ dội, không lan ra lưng. Ở Việt Nam tăng triglycerid là nguyên nhân hàng đầu (34,7%) và 43,7% người bệnh có đái tháo đường (Phan 2024); đau thượng vị liên tục kèm nôn phù hợp viêm tụy cấp (ACG 2024). Bệnh cần điều trị tại bệnh viện (NHS)."
+  references: [phan-medicine-2024, acg-pancreatitis-2024, nhs-acute-pancreatitis]
+author: "agent:pass-c"
+notes_vi: "Ca không điển hình: thiếu đau lan ra lưng và đau dữ dội."

@@ -1,0 +1,37 @@
+id: d-bowel-obstruction-1
+set: dev
+title_vi: "Nữ 60 tuổi, từng mổ bụng, đau quặn quanh rốn, nôn dịch xanh, bụng chướng, không xì hơi"
+narrative_vi: "Bà N., 60 tuổi, từng mổ đẻ và mổ ruột thừa. Từ hôm qua đau quặn từng cơn quanh rốn, buồn nôn, nôn nhiều lần ra dịch xanh, uống gì cũng nôn, bụng chướng căng; từ sáng không đi ngoài và không xì hơi được. Không sốt, không tiêu chảy. Đã mãn kinh, không ra máu âm đạo."
+patient:
+  age_years: 60
+  sex: female
+  region: north
+  month: 9
+complaint: abdominal_pain
+answers:
+  abd_pain_location: periumbilical
+  abd_pain_colicky: present
+  vomiting: present
+  vomiting_bilious: present
+  persistent_vomiting: present
+  abdomen_hard_swollen: present
+  no_stool_or_gas: present
+  previous_abdominal_surgery: present
+  nausea: present
+  abd_pain_duration: d1_3
+  abd_pain_onset: gradual
+  abd_pain_severe: absent
+  fever: absent
+  diarrhea: absent
+  pregnant: absent
+  missed_period: absent
+  vaginal_bleeding: absent
+default_unmentioned: absent
+expected:
+  condition: bowel_obstruction
+  acceptable: []
+  triage: 2
+source:
+  basis: "Ca điển hình tắc ruột non do dính: đau quặn từng cơn, nôn, chướng bụng, bí trung đại tiện ở người từng mổ bụng (WSES 2018; AAFP 2011). Tắc ruột non là cấp cứu ngoại khoa (WSES); NHS: đau bụng kèm không đi ngoài, không xì hơi được thì gọi 999 hoặc đến cấp cứu."
+  references: [wses-asbo-2018, jackson-afp-2011, nhs-stomach-ache]
+author: "agent:pass-c"

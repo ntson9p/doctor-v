@@ -1,0 +1,12 @@
+id: nhs-kidney-stones
+type: web_page
+title: "Kidney stones"
+publisher: "NHS (UK)"
+url: "https://www.nhs.uk/conditions/kidney-stones/"
+license_class: L1
+license_note: "Open Government Licence v3.0; bản chuyển thể không được trình bày như nội dung của NHS."
+default_tier: C
+accessed: "2026-10-25"
+verified: true
+verified_by: "agent:pass-c"
+notes_vi: "Lượt C lô 3 mở trang (rà soát 17/9/2026, hạn 17/9/2029). Sỏi lớn có thể gây đau dữ dội bắt đầu ở bên hông bụng hoặc thắt lưng, có thể lan xuống bẹn, bộ phận sinh dục; đau có thể lúc nặng lúc đỡ. Có thể sốt, thấy nóng lạnh hoặc run, buồn nôn, nôn, đi tiểu nhiều lần, nước tiểu đục. Hẹn khám khẩn hoặc gọi 111 khi đau dữ dội hoặc sốt, rét run. Sỏi có thể tái phát; yếu tố tái phát gồm đã từng bị sỏi, người thân bị sỏi, hay bị nhiễm khuẩn tiết niệu."

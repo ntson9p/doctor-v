@@ -24,8 +24,8 @@ red_flags:
   - finding: fever_duration
   - finding: pregnant
 intake: [fever_associated, fever_exposures, chronic_conditions]
-# Điền sau khi các bệnh của đợt thử nghiệm đã có trong knowledge/conditions/.
-cant_miss: []
+# Bệnh "không được bỏ sót" (mức 1–2) có prior cho triệu chứng chính này; danh sách để kiểm tra an toàn.
+cant_miss: [acute_appendicitis, bacterial_meningitis, sepsis]
 safety_net:
   - neck_stiffness
   - rash_non_blanching

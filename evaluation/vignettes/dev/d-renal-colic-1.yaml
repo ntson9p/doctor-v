@@ -1,0 +1,36 @@
+id: d-renal-colic-1
+set: dev
+title_vi: "Nam 35 tuổi, từng bị sỏi, đột ngột đau quặn hông lưng trái lan xuống bẹn, nước tiểu hồng"
+narrative_vi: "Anh C., 35 tuổi, hai năm trước từng bị sỏi thận. Cách đây 3 giờ đột ngột đau quặn từng cơn ở hông lưng trái, lan ra bụng dưới bên trái và xuống bìu, đi lại không yên. Buồn nôn, nôn 1 lần, nước tiểu hơi hồng. Không sốt, không đau khi đi tiểu, không tiêu chảy. Đau nhiều nhưng vẫn chịu được."
+patient:
+  age_years: 35
+  sex: male
+  region: central
+  month: 6
+complaint: abdominal_pain
+answers:
+  flank_pain: present
+  abd_pain_location: left_lower
+  abd_pain_radiates_groin: present
+  abd_pain_colicky: present
+  abd_pain_onset: sudden
+  abd_pain_duration: lt_6h
+  nausea: present
+  vomiting: present
+  hematuria: present
+  kidney_stones_known: present
+  fever: absent
+  abd_pain_severe: absent
+  dysuria: absent
+  diarrhea: absent
+  abd_pain_worse_movement: absent
+  persistent_vomiting: absent
+default_unmentioned: absent
+expected:
+  condition: renal_colic
+  acceptable: []
+  triage: 3
+source:
+  basis: "Ca điển hình: cơn đau quặn thận đột ngột ở hố thắt lưng một bên, lan ra trước, xuống bẹn, bộ phận sinh dục, không có tư thế giảm đau, buồn nôn, nôn (3931/QĐ-BYT, bài Sỏi thận tiết niệu; STONE 2014). Không sốt: khám trong ngày để giảm đau, siêu âm (NHS Kidney stones: khám khẩn hoặc gọi 111)."
+  references: [byt-qd-3931-2015, moore-bmj-2014, nhs-kidney-stones]
+author: "agent:pass-c"

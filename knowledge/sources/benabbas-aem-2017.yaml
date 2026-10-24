@@ -1,0 +1,15 @@
+id: benabbas-aem-2017
+type: systematic_review
+title: "Diagnostic Accuracy of History, Physical Examination, Laboratory Tests, and Point-of-care Ultrasound for Pediatric Acute Appendicitis in the Emergency Department: A Systematic Review and Meta-analysis"
+publisher: "Academic Emergency Medicine 2017;24(5):523–551 (Benabbas R, Hanna M, Shah J, Sinert R)"
+date: "2017-05"
+url: "https://europepmc.org/article/MED/28214369"
+doi: "10.1111/acem.13181"
+pmid: "28214369"
+license_class: L3
+license_note: "Bản quyền Wiley: chỉ dùng dữ kiện kèm trích dẫn."
+default_tier: A
+accessed: "2026-10-25"
+verified: true
+verified_by: "agent:pass-c"
+notes_vi: "Lượt C lô 3 đọc tóm tắt qua API Europe PMC. 21 nghiên cứu, 8605 trẻ ở khoa cấp cứu (tỷ lệ viêm ruột thừa gộp 39,2%). Ở trẻ đau bụng chưa phân loại: đau chuyển xuống hố chậu phải LR+ 4,81 (3,59–6,44); đau khi ho hoặc nhảy LR+ 7,64 (5,94–9,83). Ở trẻ đã nghi viêm ruột thừa, không có dấu hiệu bệnh sử nào có giá trị mạnh."

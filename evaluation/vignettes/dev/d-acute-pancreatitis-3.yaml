@@ -1,0 +1,38 @@
+id: d-acute-pancreatitis-3
+set: dev
+title_vi: "Nam 48 tuổi, hay đau dạ dày, uống bia rượu, đau vùng trên rốn liên tục lan ra sau lưng (dễ nhầm viêm loét dạ dày)"
+narrative_vi: "Anh B., 48 tuổi, hay ợ chua, uống bia rượu thường xuyên. Từ sáng nay đau vùng trên rốn, liên tục, ngày càng tăng, lan ra sau lưng, ăn vào đau hơn, buồn nôn, nôn 2 lần. Đau nhiều nhưng còn chịu được. Không sốt, không tiêu chảy, không đi ngoài phân đen, không nôn ra máu."
+patient:
+  age_years: 48
+  sex: male
+  region: north
+  month: 1
+complaint: abdominal_pain
+answers:
+  abd_pain_location: epigastric
+  abd_pain_radiates_back: present
+  abd_pain_duration: h6_24
+  abd_pain_onset: gradual
+  abd_pain_meal_relation: worse_after_meal
+  nausea: present
+  vomiting: present
+  heavy_alcohol: present
+  heartburn: present
+  abd_pain_severe: absent
+  abd_pain_colicky: absent
+  fever: absent
+  diarrhea: absent
+  black_stool: absent
+  vomiting_blood: absent
+  persistent_vomiting: absent
+  regular_painkiller_use: absent
+default_unmentioned: absent
+expected:
+  condition: acute_pancreatitis
+  acceptable: []
+  triage: 2
+source:
+  basis: "Đau thượng vị ở người hay ợ chua dễ bị coi là đau dạ dày, nhưng đau liên tục, tăng dần, lan ra lưng, kèm nôn ở người uống rượu nhiều gợi ý viêm tụy cấp (ACG 2024; MSD; Nguyen 2025: rượu là nguyên nhân hàng đầu ở Chợ Rẫy). Bệnh cần điều trị tại bệnh viện (NHS)."
+  references: [acg-pancreatitis-2024, msd-acute-pancreatitis, nguyen-bmcgastro-2025, nhs-acute-pancreatitis]
+author: "agent:pass-c"
+notes_vi: "Ca dễ nhầm với viêm, loét dạ dày – tá tràng."

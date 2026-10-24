@@ -1,0 +1,15 @@
+id: giesen-bmcfampract-2010
+type: systematic_review
+title: "Predicting acute uncomplicated urinary tract infection in women: a systematic review of the diagnostic accuracy of symptoms and signs"
+publisher: "BMC Family Practice 2010;11:78 (Giesen LGM và cộng sự)"
+date: "2010"
+url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC2987910/"
+doi: "10.1186/1471-2296-11-78"
+pmid: "20969801"
+license_class: L1
+license_note: "CC BY 2.0: dùng và chuyển thể, ghi công."
+default_tier: A
+accessed: "2026-10-25"
+verified: true
+verified_by: "agent:pass-c"
+notes_vi: "Lượt C lô 3 đọc toàn văn trên PMC. 16 nghiên cứu (3711 phụ nữ) ở chăm sóc ban đầu. Bảng 2 (ngưỡng 10^2 CFU/ml), độ nhạy / đặc hiệu: tiểu buốt 0,80 / 0,38; tiểu nhiều lần 0,88 / 0,20; tiểu gấp 0,67 / 0,45; tiểu máu 0,25 / 0,85; đau bụng dưới 0,50 / 0,50; đau hông 0,26 / 0,69; đau lưng 0,38 / 0,57; sốt 0,10 / 0,92; khí hư 0,15 / 0,77 (LR+ 0,65)."

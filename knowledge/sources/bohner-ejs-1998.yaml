@@ -1,0 +1,15 @@
+id: bohner-ejs-1998
+type: primary_study
+title: "Simple data from history and physical examination help to exclude bowel obstruction and to avoid radiographic studies in patients with acute abdominal pain"
+publisher: "European Journal of Surgery 1998;164(10):777–784 (Böhner H, Yang Q, Franke C, Verreet PR, Ohmann C)"
+date: "1998-10"
+url: "https://europepmc.org/article/MED/9840308"
+doi: "10.1080/110241598750005435"
+pmid: "9840308"
+license_class: L3
+license_note: "Bản quyền nhà xuất bản: chỉ dùng dữ kiện kèm trích dẫn, không sao chép câu chữ."
+default_tier: B
+accessed: "2026-10-25"
+verified: true
+verified_by: "agent:pass-c"
+notes_vi: "Lượt C lô 3 đọc tóm tắt qua API Europe PMC. Nghiên cứu tiến cứu ở 6 bệnh viện Đức: 1254 người đau bụng cấp dưới 7 ngày, 48 người (3,8%) tắc ruột. Sáu dấu hiệu nhạy nhất: chướng bụng, nhu động ruột tăng, tiền sử táo bón, từng mổ bụng, tuổi trên 50, nôn. Các LR đọc qua Bảng 2 của cartwright-afp-2008 (tài liệu tham khảo 4)."

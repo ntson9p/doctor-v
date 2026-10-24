@@ -120,7 +120,7 @@ Lô 2–3 đang chạy.
 
 ## 2026-10-25 — Giai đoạn 1: lượt C lô 1, 2, 4; sửa cách chọn câu hỏi
 
-**Lượt C (đối chiếu A–B, viết ca phát triển):** xong lô 1, 2, 4 (24 bệnh, 72 ca dev). Lô 3 đang chạy. Lượt C bắt được một trích dẫn bịa trong lượt A (một tỷ lệ không có trong bài báo được dẫn).
+**Lượt C (đối chiếu A–B, viết ca phát triển):** xong cả 4 lô (33 bệnh, 99 ca dev, 95 nguồn mới; mọi nguồn mới đã mở để xác minh, không qua proxy). Lượt C bắt được một trích dẫn bịa trong lượt A (một tỷ lệ không có trong bài báo được dẫn).
 
 **Đề xuất của lượt C lô 2 đã làm:**
 - Toán tử `at_least` cho quy tắc. Quy tắc mức 1 mới: sốt kèm từ 2 trong 4 nhóm dấu hiệu nặng (ý thức; hô hấp; tuần hoàn hoặc mệt lả; ban xuất huyết). Mỗi nhóm gộp các câu về cùng một tình trạng.
@@ -157,3 +157,36 @@ Trước đó, khi nhiễu có 1 ca chửa ngoài tử cung bị bỏ sót vì c
 - câu "phù mặt, bàn tay" chưa hợp với sốt mò (phù mặt và mu chân);
 - quy tắc chung cho sốt kèm vàng da cần nguồn;
 - liên kết quy tắc → bệnh, để danh sách "cần loại trừ" hiện tay chân miệng khi quy tắc nặng dựa vào nhiệt độ hoặc số ngày sốt.
+
+### Lượt C lô 3 (9 bệnh đau bụng cấp) và cơ chế ưu tiên loại trừ
+
+**Vấn đề:** viêm ruột thừa còn 4–6% ở ca viêm dạ dày – ruột, trên ngưỡng 1% của bệnh "không được bỏ sót". Không câu đơn lẻ nào kéo được nó xuống dưới 1%, nên VOI một bước bằng 0, và phiên dừng trước khi hỏi vị trí đau. Ở ca tắc ruột, phiên dừng sau 3 câu thích ứng, không hỏi "từng mổ bụng" hay "nôn dịch xanh".
+
+**Đã sửa:** khi mức 1–2 chỉ dựa vào xác suất, ưu tiên các câu mang thông tin về nhóm bệnh khẩn đó, và chưa dừng khi còn câu như vậy. Trên 99 ca dev: Brier 0,494 → 0,477; log loss 1,242 → 1,209; số câu trung vị không đổi.
+
+**Đề xuất của lượt C lô 3:**
+- **Đã làm:**
+  - gom cụm "khóc thét từng cơn" với "đau quặn từng cơn";
+  - quy tắc tiểu buốt theo đủ các nhóm của NHS;
+  - quy tắc sốt kèm cơn đau quặn thận: đổi nguồn sang hướng dẫn EAU 2026 (mục 3.4.2: thận tắc nghẽn nhiễm khuẩn là cấp cứu), giữ mức 2;
+  - câu "nôn dịch xanh" bỏ chữ "vàng đắng" theo NHS;
+  - sửa chú thích tỷ lệ nền theo Bines 2006;
+  - thêm nguồn cho quy tắc phân nhầy máu;
+  - điền danh sách `cant_miss` của 3 triệu chứng chính.
+- **Không làm:** câu bắt buộc "vị trí đau". Qua 10 hạt giống nhiễu, chính xác hơn chút (top-1 72,7% → 73,8%) nhưng số ca cấp cứu bị bỏ sót tăng 8 → 11/380.
+- **Để sau:**
+  - dấu hiệu mới "đau về đêm", "mỡ máu cao";
+  - "nguyên nhân khác" khi đau bụng: tổng prior các bệnh chỉ 31–50%, nên mỗi bệnh bị phóng to 2–2,7 lần khi chuẩn hóa.
+
+**Đánh giá nhiễu giờ dùng 5 hạt giống:** chỉ riêng việc đổi thứ tự câu hỏi đã làm số ca bị bỏ sót đổi một ca với một hạt giống.
+
+**Bộ dev, 99 ca của 33 bệnh:**
+
+| | Top-1 | Top-3 | An toàn | Bỏ sót cấp cứu | Khuyên quá mức |
+|---|---|---|---|---|---|
+| Trả lời đúng ca | 76,8% | 93,9% | 100% | 0/38 | 8,1% |
+| Nhiễu (5 hạt giống) | 72,7% | 89,9% | 98,8% | 3/190 | 20,4% |
+
+Số câu hỏi trung vị 14 (sạch), 16 (nhiễu).
+
+**Còn tồn:** ngưỡng 1% của bệnh "không được bỏ sót" làm ca viêm dạ dày – ruột sốt, đau quanh rốn bị khuyên đi cấp cứu, vì viêm ruột thừa còn khoảng 2%. Ngưỡng này hợp với bệnh tính bằng giờ (nhiễm khuẩn huyết, viêm màng não), có thể quá chặt với bệnh "cửa sổ" 1–2 ngày như viêm ruột thừa. Đây là quyết định chuyên môn, cần bác sĩ thẩm định.

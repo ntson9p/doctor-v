@@ -1,0 +1,15 @@
+id: wickramasinghe-wjs-2021
+type: primary_study
+title: "The Worldwide Epidemiology of Acute Appendicitis: An Analysis of the Global Health Data Exchange Dataset"
+publisher: "World Journal of Surgery 2021;45(7):1999–2008 (Wickramasinghe DP và cộng sự)"
+date: "2021"
+url: "https://europepmc.org/article/MED/33755751"
+doi: "10.1007/s00268-021-06077-5"
+pmid: "33755751"
+license_class: L3
+license_note: "Bản quyền nhà xuất bản: chỉ dùng dữ kiện kèm trích dẫn, không sao chép câu chữ."
+default_tier: B
+accessed: "2026-10-25"
+verified: true
+verified_by: "agent:pass-c"
+notes_vi: "Lượt C lô 3 đọc tóm tắt qua API Europe PMC. Dữ liệu GBD 2019: tỷ lệ mắc toàn cầu 228/100.000 mỗi năm (khoảng 17,7 triệu ca), đỉnh ở nhóm 15–19 tuổi; tử vong tăng mạnh sau thập niên thứ ba; nước có chỉ số phát triển thấp có tỷ lệ mắc thấp nhất. Tóm tắt không có số liệu riêng cho Việt Nam."

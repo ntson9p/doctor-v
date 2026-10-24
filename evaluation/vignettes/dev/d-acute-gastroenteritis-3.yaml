@@ -1,0 +1,44 @@
+id: d-acute-gastroenteritis-3
+set: dev
+title_vi: "Nữ 22 tuổi, đau quanh rốn, nôn, sốt 38,2°C, tiêu chảy (dễ nhầm viêm ruột thừa)"
+narrative_vi: "Chị L., 22 tuổi. Từ chiều qua đau quặn quanh rốn, buồn nôn, nôn 3 lần, sốt 38,2°C, chán ăn, đi ngoài phân lỏng 4 lần. Đau không chuyển xuống bụng dưới bên phải, không tăng khi đi lại hay khi ho, không dữ dội. Không ai ăn cùng bị bệnh. Không có thai, không chậm kinh, không ra máu âm đạo, không ra khí hư bất thường, không đau khi đi tiểu."
+patient:
+  age_years: 22
+  sex: female
+  region: central
+  month: 6
+complaint: abdominal_pain
+answers:
+  abd_pain_location: periumbilical
+  abd_pain_duration: h6_24
+  abd_pain_onset: gradual
+  abd_pain_colicky: present
+  vomiting: present
+  nausea: present
+  loss_of_appetite: present
+  fever: present
+  fever_max_temp: t38_39
+  fever_duration: d1_2
+  diarrhea: present
+  diarrhea_bloody: absent
+  unsafe_food_shared: absent
+  abd_pain_migrated_rlq: absent
+  abd_pain_worse_movement: absent
+  abd_pain_severe: absent
+  persistent_vomiting: absent
+  pregnant: absent
+  missed_period: absent
+  vaginal_bleeding: absent
+  abnormal_vaginal_discharge: absent
+  pain_with_menses: absent
+  dysuria: absent
+default_unmentioned: absent
+expected:
+  condition: acute_gastroenteritis
+  acceptable: []
+  triage: 5
+source:
+  basis: "Đau quanh rốn, nôn, sốt dễ nhầm với giai đoạn đầu viêm ruột thừa, nhưng tiêu chảy nhiều lần, đau không khu trú, không chuyển xuống hố chậu phải, không tăng khi cử động (NHS Appendicitis; Bundy 2007). Sốt dưới 38,9°C, giữ được nước, không có máu trong phân: tự chăm sóc tại nhà (NHS, CDC), đi khám nếu đau chuyển xuống bụng dưới bên phải hoặc tăng dần."
+  references: [nhs-diarrhoea-vomiting, cdc-food-poisoning, nhs-appendicitis, bundy-jama-2007]
+author: "agent:pass-c"
+notes_vi: "Ca dễ nhầm với viêm ruột thừa cấp (bệnh không được bỏ sót, lô 3)."

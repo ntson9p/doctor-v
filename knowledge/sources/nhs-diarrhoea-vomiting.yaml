@@ -1,0 +1,12 @@
+id: nhs-diarrhoea-vomiting
+type: web_page
+title: "Diarrhoea and vomiting"
+publisher: "NHS (UK)"
+url: "https://www.nhs.uk/conditions/diarrhoea-and-vomiting/"
+license_class: L1
+license_note: "Open Government Licence v3.0; bản chuyển thể không được trình bày như nội dung của NHS."
+default_tier: C
+accessed: "2026-10-25"
+verified: true
+verified_by: "agent:pass-c"
+notes_vi: "Lượt C lô 3 mở trang (rà soát 21/12/2023, hạn 21/12/2026). Tiêu chảy thường hết trong 5–7 ngày, nôn trong 1–2 ngày. Tự chăm sóc: nghỉ ngơi, uống nhiều nước từng ngụm nhỏ, tiếp tục cho bú; không cho trẻ dưới 12 tuổi dùng thuốc cầm tiêu chảy. Gọi 111 khi nôn liên tục không giữ được nước, tiêu chảy có máu, trẻ dưới 5 tuổi có dấu hiệu mất nước, tiêu chảy quá 7 ngày hoặc nôn quá 2 ngày. Gọi 999 hoặc đến cấp cứu khi nôn ra máu hoặc như bã cà phê, nôn dịch xanh (trẻ em: vàng xanh hoặc xanh), cứng gáy kèm sợ ánh sáng, đau bụng đột ngột dữ dội, da tím tái hoặc loang lổ, khó thở nặng, lú lẫn."

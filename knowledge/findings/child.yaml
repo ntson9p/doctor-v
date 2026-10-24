@@ -113,8 +113,9 @@
   question_vi: "Bé có khóc thét từng cơn, co chân lên bụng rồi lại nằm yên không?"
   applies_to:
     age_groups: [child_2m_5y]
+  cluster: colicky_pain
   leak: 0.10
-  leak_note: "Ở nhóm chứng của nghiên cứu lồng ruột tại Hà Nội (Bines 2006), khoảng 18% trẻ có cơn quấy khóc; 1% là quá thấp (lượt B lô 3)."
+  leak_note: "Ở nhóm chứng của nghiên cứu lồng ruột tại Hà Nội (Bines 2006, phần lớn viêm dạ dày – ruột), khoảng 18% trẻ có \"đau bụng\" (tiêu chuẩn phụ; bài báo không tách riêng khóc từng cơn); 1% là quá thấp (lượt B lô 3; lượt C lô 3 sửa câu chữ)."
 - id: measles_vaccinated
   kind: risk_factor
   type: binary

@@ -1,0 +1,39 @@
+id: d-bowel-obstruction-3
+set: dev
+title_vi: "Nam 45 tuổi, từng mổ bụng, đau quặn quanh rốn, nôn dịch vàng xanh, đi ngoài phân nước (dễ nhầm viêm dạ dày – ruột)"
+narrative_vi: "Anh K., 45 tuổi, 5 năm trước mổ bụng vì vỡ lách. Từ chiều qua đau quặn từng cơn quanh rốn, buồn nôn, nôn 3 lần ra dịch vàng xanh, đi ngoài phân lỏng toàn nước 3 lần, chán ăn. Bụng không chướng rõ, vẫn còn xì hơi. Không sốt. Không ai ăn cùng bị bệnh. Đau không dữ dội."
+patient:
+  age_years: 45
+  sex: male
+  region: central
+  month: 11
+complaint: abdominal_pain
+answers:
+  abd_pain_location: periumbilical
+  abd_pain_colicky: present
+  vomiting: present
+  vomiting_bilious: present
+  nausea: present
+  diarrhea: present
+  diarrhea_bloody: absent
+  previous_abdominal_surgery: present
+  abdomen_hard_swollen: absent
+  no_stool_or_gas: absent
+  persistent_vomiting: absent
+  fever: absent
+  unsafe_food_shared: absent
+  abd_pain_duration: h6_24
+  abd_pain_onset: gradual
+  abd_pain_severe: absent
+  loss_of_appetite: present
+  hernia_lump_painful: absent
+default_unmentioned: absent
+expected:
+  condition: bowel_obstruction
+  acceptable: []
+  triage: 2
+source:
+  basis: "Tắc ruột non không hoàn toàn có thể tiêu chảy phân nước, dễ bị chẩn đoán nhầm là viêm dạ dày – ruột (WSES 2018; MSD). Người từng mổ bụng, đau quặn, nôn dịch mật, không sốt, không có người ăn cùng bị bệnh: cần khám cấp cứu để loại trừ tắc ruột (WSES; Böhner 1998)."
+  references: [wses-asbo-2018, msd-intestinal-obstruction, bohner-ejs-1998]
+author: "agent:pass-c"
+notes_vi: "Ca dễ nhầm với viêm dạ dày – ruột cấp."
