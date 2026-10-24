@@ -44,6 +44,17 @@ export function evalExpr(expr: Expr, env: ExprEnv): Tri {
     const r = evalExpr(expr.not, env);
     return r === 'U' ? 'U' : r === 'T' ? 'F' : 'T';
   }
+  if ('atLeast' in expr) {
+    let yes = 0;
+    let undetermined = 0;
+    for (const e of expr.of) {
+      const r = evalExpr(e, env);
+      if (r === 'T') yes += 1;
+      else if (r === 'U') undetermined += 1;
+    }
+    if (yes >= expr.atLeast) return 'T';
+    return yes + undetermined >= expr.atLeast ? 'U' : 'F';
+  }
   if ('finding' in expr) {
     const v = valueOf(env, expr.finding);
     if (v === undefined) return 'F';

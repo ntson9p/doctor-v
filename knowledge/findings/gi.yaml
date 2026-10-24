@@ -174,6 +174,8 @@
     text_vi: "Chất nôn có màu đỏ, hoặc màu nâu đen không?"
   cluster: gi_bleeding
   leak: specific
+  leak_by_complaint: { fever: 0.003 }
+  leak_note: "Người sốt hiếm khi xuất huyết tiêu hóa; một phần trả lời 'có' do uống thuốc có sắt hoặc bismuth (người bảo trì, lượt C lô 2). Ước lượng."
 - id: diarrhea
   kind: symptom
   type: binary
@@ -197,6 +199,8 @@
     text_vi: "Lần đi ngoài gần nhất, phân có màu đen bóng không?"
   cluster: gi_bleeding
   leak: specific
+  leak_by_complaint: { fever: 0.003 }
+  leak_note: "Người sốt hiếm khi xuất huyết tiêu hóa; một phần trả lời 'có' do uống thuốc có sắt hoặc bismuth (người bảo trì, lượt C lô 2). Ước lượng."
 - id: heartburn
   kind: symptom
   type: binary

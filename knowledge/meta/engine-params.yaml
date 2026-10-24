@@ -36,15 +36,18 @@ cluster_rho:
 # Xác suất ban đầu của "nguyên nhân khác" (bệnh chưa có trong hệ thống) — tinh chỉnh
 other_prior: 0.15
 # P(mức khẩn của "nguyên nhân khác" <= k), k = 1..4 (tích lũy).
-# q2 = 0,02 (trước là 0,05): với 0,05, chỉ riêng "nguyên nhân khác" ≥ 40% đã đẩy mức xử trí lên 2,
-# tức khuyên đi cấp cứu chỉ vì app không chắc (lượt B lô 2 phát hiện). Không chắc chắn đã được chặn
-# bằng self_care_block_other; nguy hiểm thật được bắt bằng quy tắc và bệnh "không được bỏ sót".
-other_urgency_cumulative: [0.005, 0.02, 0.20, 0.50]
+# q2 = 0,01 (lần lượt 0,05 → 0,02 → 0,01): với 0,05, chỉ riêng "nguyên nhân khác" ≥ 40% đã đẩy mức
+# xử trí lên 2, tức khuyên đi cấp cứu chỉ vì app không chắc (lượt B lô 2); với 0,02 bằng ngưỡng mức 2,
+# khi "nguyên nhân khác" chiếm 85–90% thì chỉ cần 0,3–0,5% của bệnh mức 1–2 là lên mức 2 (lượt C lô 2).
+# Không chắc chắn đã được chặn bằng self_care_block_other; nguy hiểm thật được bắt bằng quy tắc và
+# bệnh "không được bỏ sót".
+other_urgency_cumulative: [0.002, 0.01, 0.20, 0.50]
 
 # Hệ số nhiệt nhân vào tổng bằng chứng (0,5–1); 1 = chưa hiệu chỉnh — tinh chỉnh
 temperature: 1.0
-# Làm trơn phân bố của dấu hiệu nhiều lựa chọn
-categorical_smoothing: 0.02
+# Làm trơn phân bố của dấu hiệu nhiều lựa chọn. 0,01 (trước là 0,02): với 0,02, "sốt hơn 7 ngày" chỉ
+# giảm sốt xuất huyết khoảng 3 lần dù theo 2760 sốt xuất huyết không sốt quá 7 ngày (lượt C lô 2).
+categorical_smoothing: 0.01
 
 # Ngưỡng xác suất cộng dồn cho mức 1..4
 thresholds: [0.10, 0.02, 0.10, 0.25]
@@ -74,7 +77,9 @@ stop:
   # cùng mức xử trí như cảm lạnh, cúm, COVID-19 chiếm hết top 3 nên câu phân biệt không bao giờ được hỏi).
   top1_mass: 0.70
   min_eig_bits: 0.05
-  min_voi: 0.01
+  # Gánh nặng của một câu hỏi: giá trị an toàn chỉ tính phần vượt mức này; cũng là ngưỡng dừng.
+  # 0,1 (trước là 0,01): cùng độ chính xác trên bộ dev, ít câu hơn (người bảo trì, lô 2).
+  min_voi: 0.1
   max_questions: 30
   soft_max_questions: 20
 

@@ -47,7 +47,11 @@ export interface SessionResult {
    * ranking then rests on very few answers, so UIs show `urgentConditions` instead of it.
    */
   emergencyStop: boolean;
-  /** Urgent (level 1–2) conditions still possible, most probable first, at most 3. */
+  /**
+   * Conditions a doctor should rule out first: level 1–2 conditions still possible, and
+   * conditions whose own warning signs are present (e.g. dengue with its warning signs);
+   * most probable first, at most 3.
+   */
   urgentConditions: string[];
   /** All candidate conditions, most probable first. */
   conditions: ConditionScore[];
@@ -122,6 +126,8 @@ export function sessionResult(kb: CompiledKb, state: SessionState): SessionResul
   });
   conditions.sort((a, b) => b.probability - a.probability);
   const pOther = probs[probs.length - 1] ?? 0;
+  const warningSignPresent = (id: string): boolean =>
+    (idx.conditionById.get(id)?.warningSigns ?? []).some((f) => env.answers[f] === 'present' || env.implied.has(f));
 
   // Safety-netting: the complaint's own list, then warning signs of urgent conditions still
   // possible and of any condition that is likely (e.g. dengue, level 3, has warning signs too).
@@ -156,7 +162,7 @@ export function sessionResult(kb: CompiledKb, state: SessionState): SessionResul
     rankingSuppressed: params.screenOnlyAgeGroups.includes(env.ageGroup),
     emergencyStop: stopReason === 'emergency',
     urgentConditions: conditions
-      .filter((c) => c.urgency <= 2 && c.probability >= params.safetyNetMinProb)
+      .filter((c) => c.probability >= params.safetyNetMinProb && (c.urgency <= 2 || warningSignPresent(c.conditionId)))
       .slice(0, 3)
       .map((c) => c.conditionId),
     conditions,

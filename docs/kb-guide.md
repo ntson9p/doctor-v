@@ -375,9 +375,17 @@ review:
 ```
 
 Điều kiện `when` gồm:
-- **toán tử:** `all`, `any`, `not`;
+- **toán tử:** `all`, `any`, `not`, và `{ at_least: n, of: [...] }` (đúng khi ít nhất n điều kiện con đúng; ví dụ "sốt kèm từ 2 nhóm dấu hiệu nặng");
 - **điều kiện dấu hiệu:** `{ finding: X, is: present | absent | unknown }`, `{ finding: X, in: [lựa chọn…] }`;
 - **điều kiện đối tượng:** `{ age_groups: [...] }`, `{ age_months_lt: 3 }`, `{ age_years_gte: 75 }`, `{ sex: female }`.
+
+Dấu hiệu **chưa được hỏi** được tính là "không có bằng chứng" (sai). Vì vậy:
+- Muốn "không kèm ho", viết `{ finding: cough, is: absent }` (phải có câu trả lời "không"), **không** viết `not: { finding: cough, is: present }`: dạng sau đúng ngay cả khi chưa hỏi ho. Bộ kiểm tra cảnh báo dạng này trong quy tắc.
+- Với `at_least`, mỗi nhóm dấu hiệu cùng phản ánh một tình trạng (lú lẫn và li bì) nên gộp bằng `any` thành một điều kiện con, để hai câu trả lời về cùng một tình trạng không tự đủ ngưỡng.
+
+**Phạm vi `complaints`:** quy tắc không ghi phạm vi áp dụng cho mọi triệu chứng chính, và dấu hiệu của nó có thể được hỏi thích ứng ở mọi triệu chứng chính (bộ suy luận tính giá trị câu hỏi theo quy tắc). Quy tắc chỉ hợp với một số triệu chứng chính phải ghi phạm vi. Ví dụ khối thoát vị đau chỉ ghi `[abdominal_pain]`, nếu không người sốt cũng bị hỏi về thoát vị.
+
+**Tỷ lệ nền của dấu hiệu nguy hiểm:** dấu hiệu dùng trong quy tắc mức 1–2 được hỏi khi xác suất có dấu hiệu đủ lớn so với trọng số bỏ sót (49). Với `leak: specific` (1%), câu hỏi gần như luôn được hỏi. Nếu dấu hiệu rất hiếm ở người có triệu chứng chính đó mà không mắc bệnh liên kết, ghi `leak` hoặc `leak_by_complaint` thực tế (0,001–0,003) kèm `leak_note`.
 
 Khi một dấu hiệu trong quy tắc mức 1–2 được trả lời "Không rõ" (kể cả sau câu hỏi thay thế), bộ suy luận coi như "có thể có": ít nhất mức 3, hoặc đúng mức của quy tắc nếu người bệnh thuộc nhóm nguy cơ cao (trẻ nhỏ, người từ 75 tuổi, có thai, suy giảm miễn dịch).
 

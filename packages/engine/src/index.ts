@@ -10,7 +10,7 @@ export { OTHER, conditionPrior, evidenceItems, hypothesesFor, likelihood, poster
 export type { EvidenceItem, Hypotheses } from './posterior.ts';
 export { computeTriage, probabilityLevel } from './triage.ts';
 export type { Triage, TriageReason } from './triage.ts';
-export { analyze, decisionRisk, pickQuestion } from './selection.ts';
+export { analyze, dangerCap, expectedLoss, pickQuestion } from './selection.ts';
 export type { Analysis, QuestionScore } from './selection.ts';
 export {
   answerStep,

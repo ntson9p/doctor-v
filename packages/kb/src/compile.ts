@@ -17,6 +17,7 @@ export function convertExpr(e: ExprYaml): Expr {
   if ('all' in e) return { all: e.all.map(convertExpr) };
   if ('any' in e) return { any: e.any.map(convertExpr) };
   if ('not' in e) return { not: convertExpr(e.not) };
+  if ('at_least' in e) return { atLeast: e.at_least, of: e.of.map(convertExpr) };
   if ('finding' in e) return 'is' in e ? { finding: e.finding, is: e.is } : { finding: e.finding, in: [...e.in] };
   if ('age_groups' in e) return { ageGroups: [...e.age_groups] };
   if ('age_months_lt' in e) return { ageMonthsLt: e.age_months_lt };

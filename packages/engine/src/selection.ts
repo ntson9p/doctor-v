@@ -13,14 +13,18 @@ import type { Condition, Finding, TriageLevel } from './model.ts';
 import { evidenceItems, likelihood, posterior } from './posterior.ts';
 import type { Hypotheses } from './posterior.ts';
 import { computeTriage, isElder } from './triage.ts';
+import type { Triage } from './triage.ts';
 
 export interface QuestionScore {
   findingId: string;
-  /** Expected reduction of triage decision loss. */
+  /**
+   * Expected reduction of triage decision loss. Negative when the risk of an "unknown"
+   * answer (which raises the level by policy) outweighs what the answer could reveal.
+   */
   voi: number;
   /** Expected information gain about the diagnosis, in bits. */
   eig: number;
-  /** Probability that answering changes the triage level. */
+  /** Probability that a real answer (not "unknown") changes the triage level. */
   changeProb: number;
 }
 
@@ -57,26 +61,42 @@ export function otherUrgencyPmf(idx: EngineIndex): number[] {
   return [q[0], q[1] - q[0], q[2] - q[1], q[3] - q[2], 1 - q[3]];
 }
 
-/** Expected loss of the best triage decision under the posterior. */
-export function decisionRisk(idx: EngineIndex, hyps: Hypotheses, probs: readonly number[], ageGroup: string): number {
-  const elder = isElder(idx, ageGroup);
-  const pmf = otherUrgencyPmf(idx);
-  let best = Infinity;
-  for (let k = 1; k <= 5; k++) {
-    let expected = 0;
-    hyps.conditions.forEach((c: Condition | null, h) => {
-      const ph = probs[h] ?? 0;
-      if (c === null) {
-        pmf.forEach((pu, i) => {
-          expected += ph * pu * loss(idx, k, i + 1, false, elder);
-        });
-      } else {
-        expected += ph * loss(idx, k, c.urgency, c.cantMiss, elder);
-      }
-    });
-    if (expected < best) best = expected;
+/**
+ * Most urgent level demanded by danger rules or emergency-screen items that hold (6 when
+ * none). Such a rule is taken as ground truth: the patient needs at least that level,
+ * whatever the condition. Levels raised by "unknown" answers are policy, not truth.
+ */
+export function dangerCap(triage: Triage): number {
+  let cap = 6;
+  for (const r of triage.reasons) {
+    if ((r.kind === 'rule' || r.kind === 'emergency_screen') && r.level < cap) cap = r.level;
   }
-  return best;
+  return cap;
+}
+
+/** Expected loss of triage level k under the posterior, urgencies capped by danger rules. */
+export function expectedLoss(
+  idx: EngineIndex,
+  hyps: Hypotheses,
+  probs: readonly number[],
+  k: number,
+  cap: number,
+  elder: boolean,
+): number {
+  const pmf = otherUrgencyPmf(idx);
+  let expected = 0;
+  hyps.conditions.forEach((c: Condition | null, h) => {
+    const ph = probs[h] ?? 0;
+    if (ph === 0) return;
+    if (c === null) {
+      pmf.forEach((pu, i) => {
+        expected += ph * pu * loss(idx, k, Math.min(i + 1, cap), false, elder);
+      });
+    } else {
+      expected += ph * loss(idx, k, Math.min(c.urgency, cap), c.cantMiss && c.urgency <= cap, elder);
+    }
+  });
+  return expected;
 }
 
 export interface SelectionInput {
@@ -107,15 +127,21 @@ export function analyze(input: SelectionInput): Analysis {
   const { idx, env, hyps, complaintId } = input;
   const params = idx.kb.params;
   const alpha = params.categoricalSmoothing;
+  const elder = isElder(idx, env.ageGroup);
   const probs = posterior(idx, hyps, evidenceItems(idx, env.answers, env.implied), complaintId);
   const triageLevel = computeTriage({ idx, complaintId, env, hyps, probs }).level;
-  const riskNow = decisionRisk(idx, hyps, probs, env.ageGroup);
   const entropyNow = entropyBits(probs);
 
   const scores: QuestionScore[] = [];
   for (const f of candidateFindings(input, probs)) {
     const u = f.unknownRate;
-    let expRisk = 0;
+    const envUnknown: ExprEnv = { ...env, answers: { ...env.answers, [f.id]: UNKNOWN } };
+    const levelUnknown = u > 0 ? computeTriage({ idx, complaintId, env: envUnknown, hyps, probs }).level : triageLevel;
+    // Expected loss over the possible true answers when the question is not asked (today's
+    // level), asked and answered, or asked and answered "unknown" (the level policy then gives).
+    let riskNotAsked = 0;
+    let riskAnswered = 0;
+    let riskUnknown = 0;
     let expEntropy = 0;
     let changeProb = 0;
     for (const value of answerSpace(f)) {
@@ -127,19 +153,17 @@ export function analyze(input: SelectionInput): Analysis {
       const answers = { ...env.answers, [f.id]: value };
       const env2: ExprEnv = { ...env, answers };
       const probs2 = posterior(idx, hyps, evidenceItems(idx, answers, env.implied), complaintId);
-      expRisk += pv * decisionRisk(idx, hyps, probs2, env.ageGroup);
+      const triage2 = computeTriage({ idx, complaintId, env: env2, hyps, probs: probs2 });
+      const cap = dangerCap(triage2);
+      riskNotAsked += pv * expectedLoss(idx, hyps, probs2, triageLevel, cap, elder);
+      riskAnswered += pv * expectedLoss(idx, hyps, probs2, triage2.level, cap, elder);
+      riskUnknown += pv * expectedLoss(idx, hyps, probs2, levelUnknown, cap, elder);
       expEntropy += pv * entropyBits(probs2);
-      if (computeTriage({ idx, complaintId, env: env2, hyps, probs: probs2 }).level !== triageLevel) {
-        changeProb += (1 - u) * pv;
-      }
-    }
-    if (u > 0) {
-      const env2: ExprEnv = { ...env, answers: { ...env.answers, [f.id]: UNKNOWN } };
-      if (computeTriage({ idx, complaintId, env: env2, hyps, probs }).level !== triageLevel) changeProb += u;
+      if (triage2.level !== triageLevel) changeProb += (1 - u) * pv;
     }
     scores.push({
       findingId: f.id,
-      voi: Math.max(0, (1 - u) * (riskNow - expRisk)),
+      voi: riskNotAsked - ((1 - u) * riskAnswered + u * riskUnknown),
       eig: Math.max(0, (1 - u) * (entropyNow - expEntropy)),
       changeProb,
     });
@@ -153,6 +177,8 @@ export function analyze(input: SelectionInput): Analysis {
 /**
  * Picks the next question. While the triage level is unstable, only questions that could
  * change it are considered, and the probability of changing it is added to the score.
+ * Safety value counts only above `min_voi`, the burden of one more question. Returns null
+ * when no question has a positive score.
  */
 export function pickQuestion(idx: EngineIndex, analysis: Analysis): QuestionScore | null {
   const params = idx.kb.params;
@@ -161,10 +187,11 @@ export function pickQuestion(idx: EngineIndex, analysis: Analysis): QuestionScor
     : analysis.scores.filter((s) => s.changeProb >= params.stop.triageChangeProb);
   const lambda = analysis.stable ? params.lambdaAfterStable : params.lambdaBeforeStable;
   let best: QuestionScore | null = null;
-  let bestScore = -Infinity;
+  let bestScore = 0;
   for (const s of pool) {
     const cost = idx.findingById.get(s.findingId)?.cost ?? 1;
-    const score = (s.voi + lambda * s.eig + (analysis.stable ? 0 : s.changeProb)) / cost;
+    const safety = Math.max(0, s.voi - params.stop.minVoi);
+    const score = (safety + lambda * s.eig + (analysis.stable ? 0 : s.changeProb)) / cost;
     if (score > bestScore) {
       best = s;
       bestScore = score;

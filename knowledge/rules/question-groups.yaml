@@ -16,7 +16,7 @@
     age_groups: [infant_0_2m]
 - id: child_danger_signs
   title_vi: "Bé có dấu hiệu nào sau đây không?"
-  findings: [child_unable_to_drink, child_vomits_everything, seizure_recent, drowsy_hard_to_wake]
+  findings: [child_unable_to_drink, child_vomits_everything, seizure_recent, drowsy_hard_to_wake, bulging_fontanelle]
   none_label_vi: "Không có dấu hiệu nào ở trên"
   allow_unknown: true
   applies_to:
@@ -35,6 +35,10 @@
   allow_unknown: true
   applies_to:
     age_groups: [child_2m_5y, child_5_12, teen_13_17, adult_18_44, adult_45_64, elder_65_74, elder_75p]
+  # Hỏi cho mọi triệu chứng chính khi có sốt: nhiễm khuẩn huyết có thể bắt đầu từ đau bụng (viêm đường
+  # mật, viêm thận – bể thận) hoặc đau đầu (viêm màng não) (lượt C lô 2).
+  requires:
+    - { finding: fever, is: present }
 - id: fever_associated
   title_vi: "Ngoài sốt, còn có triệu chứng nào sau đây không?"
   findings: [cough, sore_throat, runny_nose, headache, abdominal_pain, diarrhea, rash_any]

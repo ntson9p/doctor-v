@@ -65,7 +65,7 @@ $$P(f{=}\text{có} \mid h) = \begin{cases} p_{hf} & \text{nếu bệnh } h \text
 
 **Dấu hiệu nhiều lựa chọn** ($K$ lựa chọn, phân bố $\theta_h$; bệnh không liên kết dùng `baseline`):
 
-$$P(f{=}v \mid h) = \frac{\theta_{hv} + \alpha}{1 + K\alpha}, \qquad \alpha = \texttt{categorical\_smoothing} = 0{,}02$$
+$$P(f{=}v \mid h) = \frac{\theta_{hv} + \alpha}{1 + K\alpha}, \qquad \alpha = \texttt{categorical\_smoothing} = 0{,}01$$
 
 ## 5. Chống đếm trùng và hệ số nhiệt
 
@@ -138,30 +138,37 @@ $$\text{Loss}(k,u) = \begin{cases} u - k & k < u \ (\text{quá mức}) \\ (k-u)\
 - Người từ 75 tuổi dùng $W' = 2W + 1$, tương ứng với nửa ngưỡng ở mục 6.2.
 - "Nguyên nhân khác" dùng phân bố mức suy từ $q_k$.
 
-$$R(P) = \min_k \sum_h P(h)\, \mathbb{E}[\text{Loss}(k, u_h)]$$
+**Quy tắc nguy hiểm là "sự thật":** khi với câu trả lời $a$ có quy tắc hoặc mục sàng lọc cấp cứu mức $c_a$ thỏa (không tính mức do câu trả lời "Không rõ"), mức cần thật của mọi giả thuyết bị chặn ở $c_a$: $u_h \to \min(u_h, c_a)$. Nhờ vậy giá trị câu hỏi thấy được quy tắc, không chỉ xác suất bệnh.
 
-**Các đại lượng cho mỗi ứng viên:**
+Tổn thất kỳ vọng của mức $k$ dưới phân bố $P$, với mức chặn $c$:
 
-$$\text{VOI}(q) = (1-u_q)\Big[R(P) - \sum_a P(a) R(P\mid a)\Big], \qquad \text{EIG}(q) = (1-u_q)\Big[H(P) - \sum_a P(a) H(P\mid a)\Big]$$
+$$R_k(P, c) = \sum_h P(h)\, \mathbb{E}[\text{Loss}(k, \min(u_h, c))]$$
 
-$$\text{Pđổi}(q) = (1-u_q)\sum_a P(a)\,\mathbb{1}[L(P\mid a) \ne L] + u_q\,\mathbb{1}[L(\text{không rõ}) \ne L]$$
+**Các đại lượng cho mỗi ứng viên** ($L$ là mức xử trí đầy đủ hiện tại, mục 6; $L_a$ là mức khi trả lời $a$; $L_?$ là mức khi trả lời "Không rõ"):
 
-Trong đó $L$ là mức xử trí đầy đủ (mục 6), kể cả quy tắc. $H$ là entropy (bit) trên mọi giả thuyết.
+$$\text{VOI}(q) = \sum_a P(a)\Big[R_L(P\mid a, c_a) - (1-u_q)\,R_{L_a}(P\mid a, c_a) - u_q\,R_{L_?}(P\mid a, c_a)\Big]$$
+
+- Số hạng đầu: không hỏi, giữ mức $L$, trong khi câu trả lời thật vẫn có thể là $a$.
+- Số hạng sau: hỏi và được trả lời, hoặc bị trả lời "Không rõ" (khi đó quy tắc mức 1–2 có dấu hiệu "Không rõ" nâng mức lên ít nhất 3, mục 6.1). Vì vậy câu hỏi về một dấu hiệu nguy hiểm rất hiếm có thể có VOI âm: rủi ro bị "Không rõ" rồi khuyên quá mức lớn hơn giá trị câu trả lời.
+
+$$\text{EIG}(q) = (1-u_q)\Big[H(P) - \sum_a P(a) H(P\mid a)\Big], \qquad \text{Pđổi}(q) = (1-u_q)\sum_a P(a)\,\mathbb{1}[L_a \ne L]$$
+
+$H$ là entropy (bit) trên mọi giả thuyết. Pđổi **không** tính nhánh "Không rõ": mức tăng do "Không rõ" là hệ quả của việc hỏi, không phải dấu hiệu mức xử trí chưa ổn định.
 
 **Mức xử trí ổn định** khi mọi ứng viên có Pđổi < `triage_change_prob` (0,05).
 
-**Điểm chọn câu**, chia cho chi phí `cost` của câu hỏi:
-- Khi **chưa ổn định**: chỉ xét ứng viên có Pđổi ≥ 0,05, điểm = (VOI + λ₁·EIG + Pđổi) / cost, với λ₁ = `lambda_before_stable` (0,1).
-- Khi **đã ổn định**: điểm = (VOI + λ₂·EIG) / cost, với λ₂ = `lambda_after_stable` (1).
+**Điểm chọn câu**, chia cho chi phí `cost` của câu hỏi. Giá trị an toàn chỉ tính phần vượt `min_voi` (0,1), coi như "gánh nặng" của một câu hỏi: $V^+ = \max(0, \text{VOI} - \text{min\_voi})$.
+- Khi **chưa ổn định**: chỉ xét ứng viên có Pđổi ≥ 0,05, điểm = ($V^+$ + λ₁·EIG + Pđổi) / cost, với λ₁ = `lambda_before_stable` (0,1).
+- Khi **đã ổn định**: điểm = ($V^+$ + λ₂·EIG) / cost, với λ₂ = `lambda_after_stable` (1).
 
-Điểm bằng nhau thì chọn dấu hiệu đứng trước trong danh mục.
+Điểm bằng nhau thì chọn dấu hiệu đứng trước trong danh mục. Không câu nào có điểm dương thì dừng ("no_more_questions").
 
 ## 8. Điều kiện dừng
 
 Phiên thích ứng dừng khi:
 - **"confident":** đủ cả ba điều kiện:
   1. mức xử trí ổn định;
-  2. max VOI < `min_voi` (0,01);
+  2. max VOI < `min_voi` (0,1);
   3. xác suất bệnh đứng đầu ≥ `top1_mass` (0,70), **hoặc** max EIG < `min_eig_bits` (0,05 bit);
 - **"no_more_questions":** không còn ứng viên;
 - **"max_questions":** đã hỏi `max_questions` (30) bước. Trần mềm `soft_max_questions` (20) chỉ để giao diện cho phép dừng sớm.
@@ -198,7 +205,7 @@ Hiển thị tối đa 5 đóng góp dương ("vì sao gợi ý") và 5 đóng g
 
 **Dừng vì cấp cứu** (`emergencyStop = true`):
 - Lúc dừng mới có vài câu trả lời, nên danh sách xếp hạng chưa đáng tin; bệnh lành tính có thể vẫn đứng đầu.
-- Giao diện **không hiện danh sách xếp hạng và con số %**. Thay vào đó chỉ hiện `urgentConditions`: tối đa 3 tình trạng mức 1–2 còn khả năng ($P \ge$ `safety_net_min_prob`), với tiêu đề "Bác sĩ cần loại trừ".
+- Giao diện **không hiện danh sách xếp hạng và con số %**. Thay vào đó chỉ hiện `urgentConditions`, với tiêu đề "Bác sĩ cần loại trừ": tối đa 3 tình trạng có $P \ge$ `safety_net_min_prob`, là bệnh mức 1–2, **hoặc** bệnh đang có dấu hiệu cảnh báo của chính nó (`warning_signs`), ví dụ sốt xuất huyết có tiểu ít ở ngày thứ 4. Sắp theo xác suất.
 
 ## 10. Tính tất định và kiểm thử
 
@@ -219,16 +226,17 @@ Hiển thị tối đa 5 đóng góp dương ("vì sao gợi ý") và 5 đóng g
 | `prior_levels` | 0,30 / 0,10 / 0,02 / 0,005 / 0,0006 / 0,0001 | Thang log 6 mức |
 | `cluster_rho` | 0,2 / 0,5 / 0,8 | |
 | `other_prior` | 0,15 | Tinh chỉnh theo tỷ lệ ca ngoài hệ thống |
-| `other_urgency_cumulative` | 0,005 / 0,02 / 0,20 / 0,50 | q₂ = 0,05 khiến "nguyên nhân khác" ≥ 40% tự đẩy lên mức 2; đã hạ xuống 0,02 |
+| `other_urgency_cumulative` | 0,002 / 0,01 / 0,20 / 0,50 | q₂ = 0,05 khiến "nguyên nhân khác" ≥ 40% tự đẩy lên mức 2; q₂ = 0,02 bằng ngưỡng mức 2 nên chỉ cần 0,3–0,5% của bệnh mức 1–2 là lên mức 2; đã hạ xuống 0,01 |
 | `safety_net_likely_prob` | 0,10 | Bệnh có khả năng cao thêm dấu hiệu cảnh báo vào safety net |
 | `temperature` | 1,0 | Tinh chỉnh bằng `eval:tune` |
+| `categorical_smoothing` | 0,01 | 0,02 làm "sốt hơn 7 ngày" chỉ giảm sốt xuất huyết khoảng 3 lần |
 | `thresholds` | 0,10 / 0,02 / 0,10 / 0,25 | Từ ma trận tổn thất |
 | `cant_miss_threshold` | 0,01 | |
 | `elder_threshold_factor` | 0,5 | Áp dụng từ 75 tuổi |
 | `self_care_block_other` | 0,30 | |
 | `under_triage_weights` / `cant_miss_weight` | 49 / 49 / 9 / 3; 99 | |
 | `lambda_before_stable` / `lambda_after_stable` | 0,1 / 1 | |
-| `stop` | Pđổi 0,05; bệnh đầu 0,70; EIG 0,05 bit; VOI 0,01; trần 30 (mềm 20) | |
+| `stop` | Pđổi 0,05; bệnh đầu 0,70; EIG 0,05 bit; VOI 0,1; trần 30 (mềm 20) | `min_voi` cũng là "gánh nặng" trừ vào giá trị an toàn khi chọn câu (mục 7) |
 | `safety_net_min_prob` | 0,005 | |
 | `display` | làm tròn 5%; tối thiểu 5%; tối đa 95% | |
 
@@ -240,7 +248,8 @@ Hiển thị tối đa 5 đóng góp dương ("vì sao gợi ý") và 5 đóng g
 | Trọng số cụm theo kích thước cụm $\lvert C\rvert$ | Theo **số câu đã trả lời** $n$ trong cụm | Câu chưa hỏi không đóng góp bằng chứng, nên không có lý do giảm trọng số câu đã hỏi vì chúng |
 | Dừng khi top-3 ≥ 0,80, **hoặc** EIG < 0,05, **hoặc** VOI < 0,01 | Dừng khi ổn định **và** VOI < 0,01 **và** (**bệnh đứng đầu ≥ 0,70** hoặc EIG < 0,05) | Với điều kiện "hoặc VOI < 0,01", phiên sẽ dừng ngay khi mức xử trí ổn định, trước khi kịp phân biệt bệnh. Còn với "top-3 ≥ 0,80", các bệnh cùng mức xử trí (cảm lạnh, cúm, COVID-19) chiếm hết top 3, nên câu phân biệt như kết quả tự xét nghiệm không bao giờ được hỏi (lượt C lô 1 phát hiện). Cách mới vừa giữ được câu hỏi an toàn, vừa giữ được câu hỏi phân biệt |
 | Chưa nêu | **Dừng ngay** khi có quy tắc mức 1–2 | Người cần đi cấp cứu không nên phải trả lời thêm câu hỏi |
-| Chưa nêu | Khi mức xử trí chưa ổn định, cộng thêm Pđổi vào điểm câu hỏi | Bảo đảm phiên tiến về trạng thái ổn định, kể cả khi sự thay đổi đến từ quy tắc mà VOI (tính trên xác suất) không thấy |
+| Chưa nêu | Khi mức xử trí chưa ổn định, cộng thêm Pđổi vào điểm câu hỏi | Bảo đảm phiên tiến về trạng thái ổn định |
+| VOI tính trên rủi ro $R(P)$ của xác suất bệnh; Pđổi gồm cả nhánh "Không rõ" | VOI có **quy tắc nguy hiểm** (chặn mức cần thật) và **chi phí của "Không rõ"**; Pđổi bỏ nhánh "Không rõ"; giá trị an toàn chỉ tính phần vượt `min_voi` = 0,1 | Cách cũ làm mọi câu hỏi dấu hiệu nguy hiểm có Pđổi ≥ `unknown_rate` (0,1), nên mức xử trí luôn "chưa ổn định" và phiên hỏi lần lượt từng dấu hiệu nguy hiểm của mọi quy tắc, kể cả khối thoát vị ở người sốt (người bảo trì, lô 2). Trên 72 ca dev (24 bệnh), sau thay đổi này cùng với phạm vi quy tắc: số câu trung vị 15 (thích ứng 7), top-1 84,7%, top-3 94,4%, không bỏ sót ca cấp cứu |
 
 ## 13. Hạn chế đã biết
 

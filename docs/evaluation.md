@@ -72,13 +72,13 @@ Bộ chạy (`evaluation/src/`) chạy toàn bộ phiên hỏi đáp của bộ 
 
 | Chỉ số | Định nghĩa |
 |---|---|
-| Top-1 / top-3 / top-10 | Bệnh đúng (hoặc bệnh trong `acceptable`) nằm ở vị trí 1 / trong 3 / trong 10 bệnh đứng đầu. Ca `other` không tính |
+| Top-1 / top-3 / top-10 | Bệnh đúng (hoặc bệnh trong `acceptable`) nằm ở vị trí 1 / trong 3 / trong 10 của danh sách người dùng thấy. Ca `other` không tính. Ca dừng sớm vì dấu hiệu nguy hiểm chỉ hiện danh sách "bác sĩ cần loại trừ" (bệnh mức 1–2, tối đa 3), nên chấm theo danh sách đó |
 | Mức xử trí đúng | Mức gợi ý bằng mức đúng |
 | Mức xử trí an toàn | Mức gợi ý khẩn bằng hoặc hơn mức đúng (số nhỏ hơn hoặc bằng) |
 | Bỏ sót cấp cứu | Trong các ca mức đúng 1–2, tỷ lệ ca được gợi ý mức kém khẩn hơn |
 | Khuyên quá mức | Tỷ lệ ca được gợi ý khẩn hơn mức đúng |
 | Tự chăm sóc nhận đúng | Trong các ca mức đúng 5, tỷ lệ ca được gợi ý mức 5 |
-| Hiệu chuẩn (ECE) | Chênh lệch trung bình giữa xác suất hiển thị và tỷ lệ đúng thực tế, chia 10 khoảng |
+| Hiệu chuẩn (ECE) | Chênh lệch trung bình giữa xác suất hiển thị và tỷ lệ đúng thực tế, chia 10 khoảng. Không tính ca dừng khẩn cấp (không hiện %) |
 | Brier | Sai số bình phương trung bình của xác suất cho bệnh đúng |
 | Số câu hỏi | Trung vị và phân vị 90 số màn hình câu hỏi mỗi phiên |
 

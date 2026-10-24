@@ -65,7 +65,8 @@
   question_vi: "Sau tai có sưng đỏ, đau, làm vành tai bị đẩy ra không?"
   alt_question:
     text_vi: "Nhìn từ phía sau, một bên vành tai có chìa ra hơn bên kia không?"
-  leak: specific
+  leak: 0.001
+  leak_note: "Viêm xương chũm rất hiếm (dưới 1/1.000 ca viêm tai giữa); với 1%, câu này bị hỏi ở hầu hết người sốt vì quy tắc mức 2 làm giá trị câu hỏi lớn (người bảo trì, lượt C lô 2). Ước lượng."
 - id: periorbital_swelling
   kind: sign
   type: binary
@@ -73,7 +74,8 @@
   question_vi: "Có sưng nề, đỏ quanh một bên mắt không?"
   alt_question:
     text_vi: "Mi mắt có sưng đến mức khó mở mắt không?"
-  leak: specific
+  leak: 0.002
+  leak_note: "Sưng đỏ quanh một bên mắt ở người sốt hoặc đau đầu không do viêm xoang: chắp, lẹo, côn trùng đốt, viêm mô tế bào quanh mắt; hiếm (người bảo trì, lượt C lô 2). Ước lượng."
 - id: sudden_loss_of_balance
   kind: sign
   type: binary

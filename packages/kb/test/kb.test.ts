@@ -1,5 +1,7 @@
 import { describe, expect, it } from 'vitest';
-import { buildKnowledge, checkKnowledge, lintText, splitSentences, wordCount } from '../src/index.ts';
+import { evalExpr } from '@doctor-v/engine';
+import type { ExprEnv } from '@doctor-v/engine';
+import { buildKnowledge, checkKnowledge, convertExpr, lintText, splitSentences, validateKnowledge, wordCount } from '../src/index.ts';
 
 describe('Vietnamese text rules', () => {
   const messages = (text: string, kind: 'question' | 'sentence' | 'label') => lintText(text, kind).map((h) => h.message);
@@ -51,5 +53,39 @@ describe('repository knowledge base', () => {
       }
     }
     expect(kb.text.findings.fever?.question).toBe('Có sốt không?');
+  });
+
+  it('compiles at_least and rejects a threshold above the number of conditions', () => {
+    expect(convertExpr({ at_least: 2, of: [{ sex: 'male' }, { age_years_gte: 18 }] })).toEqual({
+      atLeast: 2,
+      of: [{ sex: 'male' }, { ageYearsGte: 18 }],
+    });
+    const k = checkKnowledge().knowledge;
+    expect(k).not.toBeNull();
+    if (!k) return;
+    const bad = structuredClone(k);
+    bad.rules.data.push({
+      ...bad.rules.data[0]!,
+      id: 'rf_test_at_least',
+      when: { at_least: 3, of: [{ finding: 'fever', is: 'present' }, { finding: 'confusion', is: 'present' }] },
+    });
+    const errors = validateKnowledge(bad).filter((i) => i.severity === 'error');
+    expect(errors.map((i) => i.message)).toEqual(['at_least (3) lớn hơn số điều kiện (2)']);
+  });
+
+  it('calls 115 for fever with two sepsis sign groups, not for two answers about one state', () => {
+    const rule = buildKnowledge().kb?.rules.find((r) => r.id === 'rf_sepsis_multiple_signs');
+    expect(rule?.level).toBe(1);
+    if (!rule) return;
+    const env = (answers: Record<string, string>): ExprEnv => ({
+      answers,
+      implied: new Set(['fever']),
+      ctx: { ageMonths: 40 * 12, sex: 'female', regionId: null, month: 7 },
+      ageGroup: 'adult_18_44',
+    });
+    expect(evalExpr(rule.when, env({ confusion: 'present', breathing_difficulty: 'present' }))).toBe('T');
+    expect(evalExpr(rule.when, env({ confusion: 'present', drowsy_hard_to_wake: 'present' }))).toBe('F');
+    expect(evalExpr(rule.when, env({ cold_hands_feet: 'present', severe_weakness: 'present' }))).toBe('F');
+    expect(evalExpr(rule.when, env({ confusion: 'present', breathing_difficulty: 'unknown' }))).toBe('U');
   });
 });

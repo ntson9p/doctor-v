@@ -16,6 +16,7 @@ export function findingsInExpr(expr: ExprYaml, out: Set<string> = new Set()): Se
   if ('all' in expr) expr.all.forEach((e) => findingsInExpr(e, out));
   else if ('any' in expr) expr.any.forEach((e) => findingsInExpr(e, out));
   else if ('not' in expr) findingsInExpr(expr.not, out);
+  else if ('at_least' in expr) expr.of.forEach((e) => findingsInExpr(e, out));
   else if ('finding' in expr) out.add(expr.finding);
   return out;
 }
@@ -80,6 +81,10 @@ export function validateKnowledge(k: RawKnowledge): Issue[] {
     if ('all' in expr) expr.all.forEach((e, i) => checkExpr(e, file, `${path}.all.${i}`));
     else if ('any' in expr) expr.any.forEach((e, i) => checkExpr(e, file, `${path}.any.${i}`));
     else if ('not' in expr) checkExpr(expr.not, file, `${path}.not`);
+    else if ('at_least' in expr) {
+      expr.of.forEach((e, i) => checkExpr(e, file, `${path}.of.${i}`));
+      if (expr.at_least > expr.of.length) add('error', file, path, `at_least (${expr.at_least}) lớn hơn số điều kiện (${expr.of.length})`);
+    }
     else if ('finding' in expr) {
       const f = findingById.get(expr.finding)?.data;
       if (!f) {
@@ -393,9 +398,25 @@ export function validateKnowledge(k: RawKnowledge): Issue[] {
   }
 
   // ---------- Rules and emergency screen ----------
+  // In a rule an unasked finding counts as false, so "not present" is already true before the
+  // question is asked; "is: absent" waits for a real "no".
+  const notPresentPaths = (expr: ExprYaml, path: string, out: string[]): string[] => {
+    if ('all' in expr) expr.all.forEach((e, j) => notPresentPaths(e, `${path}.all.${j}`, out));
+    else if ('any' in expr) expr.any.forEach((e, j) => notPresentPaths(e, `${path}.any.${j}`, out));
+    else if ('at_least' in expr) expr.of.forEach((e, j) => notPresentPaths(e, `${path}.of.${j}`, out));
+    else if ('not' in expr) {
+      const inner = expr.not;
+      if ('finding' in inner && 'is' in inner && inner.is === 'present') out.push(`${path}.not`);
+      else notPresentPaths(inner, `${path}.not`, out);
+    }
+    return out;
+  };
   k.rules.data.forEach((r, i) => {
     const file = k.rules.file;
     checkExpr(r.when, file, `${i}.when`);
+    for (const path of notPresentPaths(r.when, `${i}.when`, [])) {
+      add('warning', file, path, '"not: is present" đúng cả khi câu hỏi chưa được hỏi; dùng "is: absent" nếu cần câu trả lời "không"');
+    }
     lint(r.reason_vi, 'sentence', file, `${i}.reason_vi`);
     for (const id of r.complaints ?? []) {
       if (!complaintById.has(id)) add('error', file, `${i}.complaints`, `Không có triệu chứng chính "${id}"`);

@@ -20,6 +20,10 @@ red_flags:
   - finding: pregnant
   - finding: gestational_age
   - finding: recent_childbirth
+  # Khi có sốt: dấu hiệu nặng của nhiễm khuẩn huyết và số ngày sốt (cần cho các quy tắc giai đoạn
+  # nguy hiểm của sốt xuất huyết), như với triệu chứng chính "Sốt" (lượt C lô 2).
+  - group: fever_red_flags
+  - finding: fever_duration
 intake: [headache_associated, fever_exposures, chronic_conditions]
 # Điền sau khi các bệnh của đợt thử nghiệm đã có trong knowledge/conditions/.
 cant_miss: []

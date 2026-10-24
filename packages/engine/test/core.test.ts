@@ -3,15 +3,17 @@ import { describe, expect, it } from 'vitest';
 import { entropyBits, logSumExp, normalizeLog } from '../src/math.ts';
 import {
   OTHER,
+  analyze,
   computeTriage,
   evalExpr,
   evidenceItems,
   hypothesesFor,
   indexKb,
+  pickQuestion,
   posterior,
 } from '../src/index.ts';
 import type { ExprEnv, PatientContext } from '../src/index.ts';
-import { ADULT, makeKb } from './fixture.ts';
+import { ADULT, PARAMS, makeKb } from './fixture.ts';
 
 const kb = makeKb();
 const idx = indexKb(kb);
@@ -60,6 +62,19 @@ describe('three-valued expressions', () => {
     expect(evalExpr({ not: { finding: 'neck', is: 'present' } }, env)).toBe('U');
     expect(evalExpr({ ageYearsGte: 30 }, env)).toBe('T');
     expect(evalExpr({ ageMonthsLt: 3 }, env)).toBe('F');
+  });
+  it('counts at-least-n, undetermined while unknown answers could still reach n', () => {
+    const rash = { finding: 'rash', is: 'present' } as const;
+    const fever = { finding: 'fever', is: 'present' } as const;
+    const neck = { finding: 'neck', is: 'present' } as const;
+    const cough = { finding: 'cough', is: 'present' } as const;
+    const runny = { finding: 'runny', is: 'present' } as const;
+    expect(evalExpr({ atLeast: 2, of: [rash, fever, neck] }, env)).toBe('T');
+    expect(evalExpr({ atLeast: 2, of: [rash, neck, cough] }, env)).toBe('U');
+    expect(evalExpr({ atLeast: 2, of: [rash, cough, runny] }, env)).toBe('F');
+    expect(evalExpr({ atLeast: 3, of: [rash, neck, cough] }, env)).toBe('F');
+    expect(evalExpr({ atLeast: 1, of: [cough, neck] }, env)).toBe('U');
+    expect(evalExpr({ atLeast: 2, of: [rash, { any: [cough, fever] }] }, env)).toBe('T');
   });
 });
 
@@ -207,5 +222,36 @@ describe('triage', () => {
         },
       ),
     );
+  });
+});
+
+describe('question selection', () => {
+  // Two danger signs with level-2 rules and no linked condition: one plausible (5%), one very rare (0.1%).
+  const base = makeKb();
+  const sign = (id: string, leak: number) => ({ ...base.findings.find((f) => f.id === 'rash')!, id, leak });
+  const kb2 = makeKb({
+    params: { ...PARAMS, stop: { ...PARAMS.stop, minVoi: 0.1 } },
+    findings: [...base.findings, sign('bleed', 0.05), sign('hernia', 0.001)],
+    rules: [
+      ...base.rules,
+      { id: 'r_bleed', level: 2, when: { finding: 'bleed', is: 'present' }, complaints: null },
+      { id: 'r_hernia', level: 2, when: { finding: 'hernia', is: 'present' }, complaints: null },
+    ],
+  });
+  const idx2 = indexKb(kb2);
+  const answers = { cough: 'present', runny: 'present', rash: 'absent', neck: 'absent', duration: 'short' };
+  const env: ExprEnv = { answers, implied, ctx: ADULT, ageGroup: 'adult_18_44' };
+  const hyps = hypothesesFor(idx2, 'fever', ADULT, 'adult_18_44');
+  const analysis = analyze({ idx: idx2, complaintId: 'fever', ctx: ADULT, env, hyps });
+  const score = (id: string) => analysis.scores.find((s) => s.findingId === id);
+
+  it('does not treat a possible "unknown" answer as instability', () => {
+    // Before the fix every danger sign had changeProb >= unknown_rate (0.1).
+    expect(score('hernia')?.changeProb).toBeLessThan(0.01);
+  });
+  it('values a danger sign by the rule it can trigger, minus the cost of an "unknown" answer', () => {
+    expect(score('bleed')?.voi).toBeGreaterThan(0.5);
+    expect(score('hernia')?.voi).toBeLessThan(0.1);
+    expect(pickQuestion(idx2, analysis)?.findingId).toBe('bleed');
   });
 });

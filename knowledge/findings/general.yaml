@@ -60,8 +60,8 @@
   question_vi: "Có đau nhức cơ, mỏi khắp người không?"
   cluster: aches
   leak: nonspecific
-  leak_by_complaint: { abdominal_pain: moderate, headache: moderate, fever: 0.4 }
-  leak_note: "Đau nhức người rất thường gặp khi sốt do bất kỳ nguyên nhân nào (lượt B lô 2). Ước lượng, cần bác sĩ duyệt."
+  leak_by_complaint: { abdominal_pain: moderate, headache: moderate, fever: 0.55 }
+  leak_note: "Đau nhức người rất thường gặp khi sốt do bất kỳ nguyên nhân nào (lượt B lô 2); khoảng 55% ở người sốt không do sốt xuất huyết (Phuong 2006, Low 2011, Le-Viet 2019; lượt C lô 2). Ước lượng, cần bác sĩ duyệt."
 - id: arthralgia
   kind: symptom
   type: binary
@@ -77,6 +77,8 @@
   label_vi: "Đau sau hốc mắt"
   question_vi: "Có đau nhức sau hốc mắt, đau tăng khi đảo mắt không?"
   leak: moderate
+  leak_by_complaint: { fever: 0.15 }
+  leak_note: "Khoảng 15% người sốt không do sốt xuất huyết có đau sau hốc mắt (Phuong 2006, Low 2011, Le-Viet 2019; lượt C lô 2). Ước lượng, cần bác sĩ duyệt."
 - id: fatigue
   kind: symptom
   type: binary
@@ -101,8 +103,8 @@
   label_vi: "Chán ăn"
   question_vi: "Có chán ăn, ăn ít hơn hẳn bình thường không?"
   leak: nonspecific
-  leak_by_complaint: { abdominal_pain: 0.3, fever: 0.4 }
-  leak_note: "Chán ăn rất thường gặp khi đau bụng hoặc khi sốt do bất kỳ nguyên nhân nào (lượt A lô 3, lượt B lô 2). Ước lượng, cần bác sĩ duyệt."
+  leak_by_complaint: { abdominal_pain: 0.3, fever: 0.65 }
+  leak_note: "Chán ăn rất thường gặp khi đau bụng hoặc khi sốt do bất kỳ nguyên nhân nào (lượt A lô 3, lượt B lô 2); khoảng 60–70% ở người sốt không do sốt xuất huyết (Phuong 2006, Low 2011, Le-Viet 2019; lượt C lô 2). Ước lượng, cần bác sĩ duyệt."
 - id: rash_any
   kind: sign
   type: binary
@@ -233,6 +235,8 @@
   alt_question:
     text_vi: "Có lúc nào người co cứng, giật tay chân, mắt trợn ngược không?"
   leak: specific
+  leak_by_complaint: { fever: 0.002 }
+  leak_note: "Co giật do sốt chủ yếu ở trẻ 6 tháng–5 tuổi, nhóm đã được hỏi trong nhóm dấu hiệu nguy hiểm; ở người lớn sốt, co giật rất hiếm. 1% làm câu này bị hỏi ở mọi người sốt (người bảo trì, lượt C lô 2). Ước lượng; cần tỷ lệ nền theo tuổi."
 - id: fainting_or_near_fainting
   kind: symptom
   type: binary

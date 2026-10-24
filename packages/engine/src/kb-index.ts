@@ -24,6 +24,7 @@ function collectFindings(expr: Expr, out: Set<string>): void {
   if ('all' in expr) expr.all.forEach((e) => collectFindings(e, out));
   else if ('any' in expr) expr.any.forEach((e) => collectFindings(e, out));
   else if ('not' in expr) collectFindings(expr.not, out);
+  else if ('atLeast' in expr) expr.of.forEach((e) => collectFindings(e, out));
   else if ('finding' in expr) out.add(expr.finding);
 }
 

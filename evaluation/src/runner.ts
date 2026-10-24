@@ -2,7 +2,7 @@
  * Simulated patients: runs a full engine session for a vignette (docs/evaluation.md §3).
  */
 import { OTHER, UNKNOWN, answerStep, indexKb, nextStep, sessionResult, startSession } from '@doctor-v/engine';
-import type { CompiledKb, Finding, PatientContext, SessionResult, StopReason, TriageLevel } from '@doctor-v/engine';
+import type { CompiledKb, Finding, PatientContext, Phase, SessionResult, StopReason, TriageLevel } from '@doctor-v/engine';
 import { ageMonthsOf } from './vignette.ts';
 import type { Vignette } from './vignette.ts';
 
@@ -19,7 +19,10 @@ export interface CaseRun {
   acceptable: string[];
   expectedTriage: number;
   triage: TriageLevel;
-  /** 1-based rank of the first acceptable condition; null when the gold is "other" or absent. */
+  /**
+   * 1-based rank of the first acceptable condition in the list the user sees; null when the gold
+   * is "other" or absent. After an emergency stop that list is `urgentConditions` (at most 3).
+   */
   rank: number | null;
   /** Probability of the gold condition (or of OTHER for out-of-scope cases). */
   goldProbability: number;
@@ -28,6 +31,13 @@ export interface CaseRun {
   questions: number;
   stopReason: StopReason | null;
   rankingSuppressed: boolean;
+  /** Stopped early on a danger rule: no percentages are shown, only the urgent list. */
+  emergencyStop: boolean;
+  /**
+   * Questions in the order asked (a group step lists its findings), with the answers as given
+   * to the wording shown (an inverted alternative question is stored inverted).
+   */
+  steps: { phase: Phase; findingIds: string[]; answers: Record<string, string> }[];
   result: SessionResult;
 }
 
@@ -70,6 +80,7 @@ export function runVignette(kb: CompiledKb, v: Vignette, options: RunOptions = {
   const noise = options.noise ?? 0;
   const random = rng(seedFor(v.id, options.seed ?? 1));
   let state = startSession(kb, v.complaint, contextOf(v));
+  const steps: CaseRun['steps'] = [];
 
   for (let guard = 0; guard < 100; guard++) {
     const step = nextStep(kb, state);
@@ -88,13 +99,14 @@ export function runVignette(kb: CompiledKb, v: Vignette, options: RunOptions = {
         response[id] = noise > 0 && step.phase !== 'screen' && random() < noise ? UNKNOWN : truth;
       }
     }
+    steps.push({ phase: step.phase, findingIds: ids, answers: response });
     state = answerStep(kb, state, step, response);
   }
 
   const result = sessionResult(kb, state);
   const gold = v.expected.condition;
   const accepted = new Set([gold, ...(v.expected.acceptable ?? [])]);
-  const ranked = result.conditions.map((c) => c.conditionId);
+  const ranked = result.emergencyStop ? result.urgentConditions : result.conditions.map((c) => c.conditionId);
   const firstHit = ranked.findIndex((id) => accepted.has(id));
   const probabilities: Record<string, number> = Object.fromEntries(result.conditions.map((c) => [c.conditionId, c.probability]));
   probabilities[OTHER] = result.other.probability;
@@ -112,6 +124,8 @@ export function runVignette(kb: CompiledKb, v: Vignette, options: RunOptions = {
     questions: result.questionsAsked,
     stopReason: result.stopReason,
     rankingSuppressed: result.rankingSuppressed,
+    emergencyStop: result.emergencyStop,
+    steps,
     result,
   };
 }

@@ -32,6 +32,8 @@ export type Expr =
   | { all: Expr[] }
   | { any: Expr[] }
   | { not: Expr }
+  /** True when at least `atLeast` of the expressions are true. */
+  | { atLeast: number; of: Expr[] }
   | { finding: string; is: BinaryValue }
   | { finding: string; in: string[] }
   | { ageGroups: string[] }

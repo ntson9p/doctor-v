@@ -1,0 +1,15 @@
+id: curtis-pediatrics-2010
+type: systematic_review
+title: "Clinical features suggestive of meningitis in children: a systematic review of prospective data"
+publisher: "Pediatrics 2010;126:952–960 (Curtis S, Stobart K, Vandermeer B, Simel DL, Klassen T)"
+date: "2010-11"
+url: "https://europepmc.org/article/MED/20974781"
+doi: "10.1542/peds.2010-0277"
+pmid: "20974781"
+license_class: L3
+license_note: "Bản quyền nhà xuất bản: chỉ dùng dữ kiện kèm trích dẫn, không sao chép câu chữ."
+default_tier: A
+accessed: "2026-10-25"
+verified: true
+verified_by: "agent:pass-c"
+notes_vi: "Lượt C chỉ đọc tóm tắt qua API Europe PMC. 10 nghiên cứu tiến cứu ở trẻ em: bệnh sử thóp phồng LR 8,0; cứng gáy LR 7,7; co giật ngoài tuổi co giật do sốt LR 4,4; bú, ăn kém LR 2,0. Khám: cứng gáy LR 4,0; thóp phồng LR 3,5; sốt trên 40°C LR 2,9. Không sốt không loại trừ được bệnh (LR 0,70)."

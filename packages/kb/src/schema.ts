@@ -69,6 +69,7 @@ export type ExprYaml =
   | { all: ExprYaml[] }
   | { any: ExprYaml[] }
   | { not: ExprYaml }
+  | { at_least: number; of: ExprYaml[] }
   | { finding: string; is: 'present' | 'absent' | 'unknown' }
   | { finding: string; in: string[] }
   | { age_groups: string[] }
@@ -81,6 +82,7 @@ export const exprSchema: z.ZodType<ExprYaml> = z.lazy(() =>
     z.strictObject({ all: z.array(exprSchema).min(1) }),
     z.strictObject({ any: z.array(exprSchema).min(1) }),
     z.strictObject({ not: exprSchema }),
+    z.strictObject({ at_least: z.number().int().min(1), of: z.array(exprSchema).min(2) }),
     z.strictObject({ finding: ID, is: z.enum(['present', 'absent', 'unknown']) }),
     z.strictObject({ finding: ID, in: z.array(ID).min(1) }),
     z.strictObject({ age_groups: z.array(ID).min(1) }),

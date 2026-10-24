@@ -47,6 +47,10 @@
   rho: medium
   label_vi: "Đau lan ra lưng, vai"
   rationale_vi: "Hai câu đau lan ra sau lưng và lan lên vai phải cùng hỏi vùng lưng bên phải nên dễ trả lời trùng (lượt B lô 3)."
+- id: forest_field
+  rho: medium
+  label_vi: "Đi rừng, làm rẫy"
+  rationale_vi: "Người đi rừng, ngủ rẫy thường cũng làm rẫy, phát cỏ, nên hai câu phơi nhiễm hay cùng được trả lời là có (lượt C lô 2)."
 - id: gi_bleeding
   rho: medium
   label_vi: "Xuất huyết tiêu hóa"

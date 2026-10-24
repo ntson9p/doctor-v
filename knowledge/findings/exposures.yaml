@@ -11,6 +11,7 @@
   label_vi: "Tháng qua đi rừng, ngủ rẫy hoặc đến vùng sốt rét"
   question_vi: "Tháng qua có đi rừng, ngủ rẫy, hoặc đến vùng sốt rét không?"
   help_vi: "Vùng sốt rét: rừng núi, biên giới ở Tây Nguyên, Nam Trung Bộ, Đông Nam Bộ; hoặc từ nước có sốt rét về."
+  cluster: forest_field
   leak: 0.02
   leak_note: "Người sống hoặc làm việc ở vùng rừng núi trả lời 'có' khá thường xuyên; 1% là thấp (lượt B lô 2). Ước lượng."
 - id: bush_exposure
@@ -19,5 +20,6 @@
   label_vi: "Hai tuần qua làm rẫy, phát cỏ, ngồi nằm trên cỏ"
   question_vi: "Hai tuần qua có làm rẫy, phát cỏ, hoặc ngồi nằm trên cỏ không?"
   help_vi: "Ấu trùng mò sống ở bụi rậm, bãi cỏ và bám vào người khi tiếp xúc."
+  cluster: forest_field
   leak: 0.10
   leak_note: "Làm vườn, làm rẫy, cắt cỏ rất phổ biến ở nông thôn; 5% là thấp (lượt B lô 2). Ước lượng."

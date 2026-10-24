@@ -75,6 +75,9 @@
     text_vi: "Khi bé nằm yên, sờ nhẹ đỉnh đầu có thấy căng phồng không?"
   applies_to:
     age_groups: [infant_0_2m, child_2m_5y]
+  # Thóp trước thường đóng trước 18–24 tháng tuổi.
+  requires:
+    - { age_months_lt: 24 }
   leak: specific
 - id: sunken_eyes
   kind: sign

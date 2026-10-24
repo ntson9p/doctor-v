@@ -14,6 +14,8 @@ export interface Metrics {
   cases: number;
   /** In-scope cases with a ranked condition list (excludes "other" gold and young infants). */
   ranked: number;
+  /** Cases that stopped early on a danger rule; they are ranked by the urgent list. */
+  emergencyStops: number;
   top1: Rate;
   top3: Rate;
   top10: Rate;
@@ -23,7 +25,7 @@ export interface Metrics {
   emergencyUnderTriage: Rate;
   overTriage: Rate;
   selfCareCorrect: Rate;
-  /** Expected calibration error of the displayed probabilities (conditions with p ≥ 5%). */
+  /** Expected calibration error of the displayed probabilities (conditions with p ≥ 5%; emergency stops show none). */
   eceDisplayed: number;
   /** Expected calibration error of the top-1 probability. */
   eceTop1: number;
@@ -71,18 +73,19 @@ export function computeMetrics(runs: readonly CaseRun[]): Metrics {
     if (r.rankingSuppressed) continue;
     const accepted = new Set([r.expectedCondition, ...r.acceptable]);
     for (const [id, p] of Object.entries(r.probabilities)) {
-      if (id !== OTHER && p >= 0.05) displayed.push({ p, correct: accepted.has(id) });
+      if (id !== OTHER && p >= 0.05 && !r.emergencyStop) displayed.push({ p, correct: accepted.has(id) });
       const y = id === r.expectedCondition ? 1 : 0;
       brierSum += (p - y) ** 2;
     }
     const best = r.top[0];
-    if (best) top1.push({ p: best.p, correct: accepted.has(best.id) });
+    if (best && !r.emergencyStop) top1.push({ p: best.p, correct: accepted.has(best.id) });
   }
   const scored = runs.filter((r) => !r.rankingSuppressed).length;
 
   return {
     cases: runs.length,
     ranked: ranked.length,
+    emergencyStops: runs.filter((r) => r.emergencyStop).length,
     top1: rate(within(1), ranked.length),
     top3: rate(within(3), ranked.length),
     top10: rate(within(10), ranked.length),

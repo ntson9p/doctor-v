@@ -1,0 +1,12 @@
+id: nhs-meningitis
+type: web_page
+title: "Meningitis"
+publisher: "NHS (UK)"
+url: "https://www.nhs.uk/conditions/meningitis/"
+license_class: L1
+license_note: "Open Government Licence v3.0; bản chuyển thể không được trình bày như nội dung của NHS."
+default_tier: C
+accessed: "2026-10-25"
+verified: true
+verified_by: "agent:pass-c"
+notes_vi: "Lượt C mở lại trang (rà soát lần cuối 12/6/2026). Triệu chứng xuất hiện đột ngột, có thể gồm: sốt, tay chân rất lạnh, cứng gáy, đau khớp và cơ, đau đầu dữ dội tăng dần, đau mắt khi nhìn ánh sáng, co giật, nôn và tiêu chảy, lú lẫn, ngủ li bì khó đánh thức, nốt hoặc ban không mất khi ấn thành ly; không phải ai cũng có đủ. Trẻ dưới 5 tuổi: bỏ bú, khóc thét bất thường, người cứng hoặc mềm nhũn, thóp phồng. Danh sách gọi 999 hoặc đến cấp cứu ngay; không tự lái xe đến cấp cứu."

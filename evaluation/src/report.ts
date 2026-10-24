@@ -48,6 +48,9 @@ export function renderReport(input: ReportInput): string {
   lines.push(`- Ngày chạy: ${input.date}`);
   lines.push(`- Phiên bản dữ liệu: \`${kb.version}\` (${kb.conditions.length} bệnh, ${kb.findings.length} dấu hiệu)`);
   lines.push(`- Số ca: ${clean.cases}, trong đó ${clean.ranked} ca được xếp hạng bệnh`);
+  lines.push(
+    `- Dừng sớm vì dấu hiệu nguy hiểm: ${clean.emergencyStops} ca (sạch), ${noisy.emergencyStops} ca (nhiễu); các ca này chỉ hiện danh sách "bác sĩ cần loại trừ" (tối đa 3 bệnh), nên top-k chấm theo danh sách đó và ECE không tính`,
+  );
   lines.push(`- Hệ số nhiệt: ${kb.params.temperature}; đã hiệu chuẩn: ${kb.params.calibrated ? 'có' : 'chưa'}`);
   lines.push('- "Nhiễu": 15% câu trả lời (trừ màn sàng lọc cấp cứu) bị đổi thành "Không rõ", hạt giống cố định.');
   lines.push('');
