@@ -58,6 +58,17 @@
   label_vi: "Sưng nề, đỏ quanh mắt"
   question_vi: "Có sưng nề, đỏ quanh một bên mắt không?"
   leak: specific
+- id: sudden_loss_of_balance
+  kind: sign
+  type: binary
+  label_vi: "Đột ngột mất thăng bằng, đi loạng choạng"
+  question_vi: "Có đột ngột mất thăng bằng, đi loạng choạng không?"
+  help_vi: "Ví dụ: đang bình thường bỗng đứng không vững, đi bị xiêu sang một bên."
+  alt_question:
+    text_vi: "Có tự đi thẳng vài bước mà không phải vịn không?"
+    inverted: true
+  leak: specific
+  notes_vi: "Chữ B (Balance) trong BE-FAST; lượt A lô 4 đề xuất."
 - id: covid_self_test
   kind: measurement
   type: categorical

@@ -118,7 +118,7 @@ export function renderAgreement(report: AgreementReport): string {
   lines.push('# Mức đồng thuận giữa lượt A và lượt B');
   lines.push('');
   lines.push(`- Số cặp liên kết có/không có trong cả hai lượt: ${report.pairs}`);
-  lines.push(`- Kappa có trọng số bậc hai trên 5 mức tần suất: **${report.weightedKappa.toFixed(3)}**`);
+  lines.push(`- Kappa có trọng số bậc hai trên ${FREQ_LEVELS.length} mức tần suất: **${report.weightedKappa.toFixed(3)}**`);
   if (report.missingInB.length > 0) lines.push(`- Bệnh chỉ có ở lượt A: ${report.missingInB.join(', ')}`);
   if (report.missingInA.length > 0) lines.push(`- Bệnh chỉ có ở lượt B: ${report.missingInA.join(', ')}`);
   lines.push('');

@@ -63,6 +63,7 @@
     - confusion
     - seizure_recent
     - vision_loss_or_double
+    - sudden_loss_of_balance
     - headache_after_head_injury
   none_label_vi: "Không có dấu hiệu nào ở trên"
   allow_unknown: true

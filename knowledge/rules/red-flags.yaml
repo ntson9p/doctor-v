@@ -357,6 +357,15 @@
     basis: verbal
     sources: [nhs-utis]
     note: "Người bảo trì thêm theo đề xuất của lượt A lô 3: NHS khuyên nhóm này đi khám sớm (nguy cơ biến chứng cao hơn)."
+- id: rf_sudden_balance_loss
+  level: 2
+  when: { finding: sudden_loss_of_balance, is: present }
+  reason_vi: "Đột ngột mất thăng bằng có thể là dấu hiệu đột quỵ, cần khám cấp cứu."
+  evidence:
+    tier: B
+    basis: verbal
+    sources: [byt-qd-3312-2024]
+    note: "Chữ B trong BE-FAST; 3312/QĐ-BYT (2024) nêu thất điều, chóng mặt ở đột quỵ hệ sau (lượt A lô 4 đề xuất). Nguồn chưa xác minh bản chính thức."
 - id: rf_flu_risk_chronic_disease
   level: 3
   when:
