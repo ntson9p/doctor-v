@@ -286,3 +286,29 @@ Ca duy nhất bị xếp thấp: sởi giai đoạn khởi phát, chưa nổi ba
 14 kiểm thử Playwright và axe đều đạt, trên Pixel 5 và trên màn 320 px. Các kiểm thử đã tìm ra và sửa 2 lỗi tràn ngang ở cỡ chữ lớn nhất:
 - đầu trang chật: giờ tự rút gọn theo cỡ chữ (container query tính bằng em);
 - ô nhập liệu không co lại trong hàng.
+
+### Giai đoạn 2: hoàn thiện bản đầu
+
+**Xem lại giao diện bằng ảnh chụp từng màn** (`apps/web/scripts/screenshots.mjs`). Đã sửa:
+- "Vì sao gợi ý" liệt kê cả câu trả lời "không", đọc như thể người bệnh có dấu hiệu đó. Nay chỉ nêu dấu hiệu có và lựa chọn kèm giá trị.
+- Hiệu ứng hover dính lại sau khi chạm trên màn cảm ứng, làm nút ở câu sau trông như đã chọn sẵn.
+- "Quay lại" trông như một đáp án.
+- Tiến trình xuống 5 dòng ở chữ lớn.
+- Giải thích lẫn vào tên dấu hiệu.
+- Tên bệnh lặp; con số % lệch vị trí.
+
+**Tốc độ** (`apps/web/scripts/latency.mjs`):
+- máy tính: trung vị 59 ms mỗi câu;
+- CPU chậm 6 lần: trung vị 327 ms, ra kết quả 785 ms.
+
+Đã thêm trạng thái "đang xử lý" hiện trước khi tính. Đã thêm lớp chặn chạm nhầm: bỏ qua mọi lần chạm trong 0,4 giây đầu sau khi câu mới hiện ra, vì lần chạm thứ hai bị giữ lại trong lúc tính sẽ trả lời một câu người dùng chưa đọc.
+
+**Câu chữ pháp lý:** dùng đúng bản nháp trong `docs/legal/` cho màn "Trước khi bắt đầu", các cảnh báo trên kết quả và nhãn chân trang. Thêm trang "Điều khoản và quyền riêng tư", ghi rõ là bản nháp.
+
+**Kiểm thử:** 18 kiểm thử Playwright và axe đều đạt trên Pixel 5 và trên màn 320 px.
+
+**Mốc duyệt Giai đoạn 2: chủ dự án thử trên điện thoại** (`npm run web:phone`).
+
+**Việc tồn của giao diện (Giai đoạn 4):**
+- tra cứu bệnh, hình cơ thể, nút Nghe, tóm tắt chia sẻ/in, offline (service worker), chế độ tối;
+- cân nhắc chạy engine trong Web Worker nếu máy yếu vẫn chậm.
