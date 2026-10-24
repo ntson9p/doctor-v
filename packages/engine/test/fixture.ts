@@ -20,7 +20,7 @@ export const PARAMS: EngineParams = {
   cantMissWeight: 99,
   lambdaBeforeStable: 0.1,
   lambdaAfterStable: 1,
-  stop: { triageChangeProb: 0.05, top3Mass: 0.8, minEigBits: 0.05, minVoi: 0.01, maxQuestions: 30, softMaxQuestions: 20 },
+  stop: { triageChangeProb: 0.05, top1Mass: 0.7, minEigBits: 0.05, minVoi: 0.01, maxQuestions: 30, softMaxQuestions: 20 },
   safetyNetMinProb: 0.005,
   safetyNetLikelyProb: 0.1,
   candidateMinProb: 0.0005,

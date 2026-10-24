@@ -1,0 +1,43 @@
+id: d-influenza-3
+set: dev
+title_vi: "Nam 20 tuổi, sốt 39,5°C ngày đầu, đau đầu dữ dội, đau nhức người, không cứng gáy"
+narrative_vi: "Anh P., 20 tuổi, sinh viên ở ký túc xá tại Hà Nội, nhiều bạn cùng phòng đang sốt, ho. Sáng nay đột ngột sốt 39,5°C, rét run, đau đầu dữ dội khắp đầu, đau nhức người, mệt, ho, đau họng. Cúi đầu được, cằm chạm ngực. Không sợ ánh sáng, không nôn, không lơ mơ, không phát ban. Chưa xét nghiệm COVID-19."
+patient:
+  age_years: 20
+  sex: male
+  region: north
+  month: 2
+complaint: fever
+answers:
+  fever_max_temp: ge_39
+  fever_duration: d1_2
+  chills_rigors: present
+  headache: present
+  headache_severity: severe
+  headache_duration: h4_72
+  headache_location: whole_head
+  headache_thunderclap: absent
+  myalgia: present
+  fatigue: present
+  cough: present
+  sore_throat: present
+  runny_nose: absent
+  neck_stiffness: absent
+  confusion: absent
+  drowsy_hard_to_wake: absent
+  photophobia: absent
+  nausea: absent
+  vomiting: absent
+  rash_any: absent
+  breathing_difficulty: absent
+  sick_contact_respiratory: present
+  covid_self_test: not_tested
+default_unmentioned: absent
+expected:
+  condition: influenza
+  acceptable: []
+  triage: 5
+source:
+  basis: "Dễ nhầm với viêm màng não do vi khuẩn (sốt cao kèm đau đầu dữ dội). Không có cứng gáy, sợ ánh sáng, thay đổi ý thức hay ban xuất huyết (NICE NG240), có triệu chứng hô hấp và dịch tễ cúm nên phù hợp cúm nhẹ, theo dõi tại nhà (1840/QĐ-BYT)."
+  references: [byt-qd-1840-2025, nice-ng240, nhs-headaches]
+author: "agent:pass-c"

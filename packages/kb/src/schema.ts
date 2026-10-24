@@ -194,6 +194,8 @@ export const binaryLinkSchema = z.strictObject({
   freq: z.enum(FREQ_LEVELS),
   /** Overrides for age groups where the frequency clearly differs (e.g. neck stiffness in infants). */
   freq_by_age: z.record(ID, z.enum(FREQ_LEVELS)).optional(),
+  /** The author confirms that a rare/very_rare value above the finding's leak is intended. */
+  above_leak_ok: z.literal(true).optional(),
   evidence: evidenceSchema,
 });
 
@@ -347,7 +349,7 @@ export const engineParamsSchema = z.strictObject({
   lambda_after_stable: z.number().nonnegative(),
   stop: z.strictObject({
     triage_change_prob: probability,
-    top3_mass: probability,
+    top1_mass: probability,
     min_eig_bits: z.number().nonnegative(),
     min_voi: z.number().nonnegative(),
     max_questions: z.number().int().positive(),

@@ -1,0 +1,37 @@
+id: d-acute-otitis-media-1
+set: dev
+title_vi: "Bé trai 20 tháng sốt 38,6°C, kéo tai, quấy khóc đêm, sổ mũi"
+narrative_vi: "Bé B., 20 tháng, ở Hà Nội, đã tiêm đủ 2 mũi vắc xin sởi. Bé sổ mũi, nghẹt mũi, ho 4 ngày; từ hôm qua sốt 38,6°C, hay kéo tai phải, quấy khóc nhiều khi nằm, ngủ không yên. Tai không chảy dịch, sau tai không sưng. Bé vẫn bú, uống được, không nôn, không li bì, không thở nhanh."
+patient:
+  age_months: 20
+  sex: male
+  region: north
+  month: 11
+complaint: fever
+answers:
+  fever_max_temp: t38_39
+  fever_duration: d1_2
+  ear_pain: present
+  ear_discharge: absent
+  swelling_behind_ear: absent
+  runny_nose: present
+  nasal_congestion: present
+  cough: present
+  breathing_difficulty: absent
+  rash_any: absent
+  mouth_ulcers: absent
+  vomiting: absent
+  child_unable_to_drink: absent
+  child_vomits_everything: absent
+  seizure_recent: absent
+  drowsy_hard_to_wake: absent
+  measles_vaccinated: present
+default_unmentioned: absent
+expected:
+  condition: acute_otitis_media
+  acceptable: []
+  triage: 4
+source:
+  basis: "Viêm tai giữa cấp điển hình (5643/QĐ-BYT: trẻ đang sổ mũi, ngạt mũi đột nhiên đau tai, sốt). Cần soi tai để quyết định điều trị; không có dấu hiệu nặng nên có thể khám trong vài ngày (MSD: theo dõi nếu tái khám được trong 48–72 giờ; NHS Ear infections)."
+  references: [byt-qd-5643-2015, msd-acute-otitis-media, nhs-ear-infections]
+author: "agent:pass-c"

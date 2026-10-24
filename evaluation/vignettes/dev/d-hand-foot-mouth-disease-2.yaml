@@ -1,0 +1,40 @@
+id: d-hand-foot-mouth-disease-2
+set: dev
+title_vi: "Bé gái 9 tháng sốt 38°C, loét miệng, bú kém, ban ở mông, chưa có phỏng nước tay chân"
+narrative_vi: "Bé G., 9 tháng, ở Quảng Ngãi. Bé sốt 38°C từ hôm qua, chảy nước dãi, bú ít vì đau miệng; mẹ thấy trong miệng có vài vết loét đỏ, ở mông có vài nốt ban đỏ phẳng, chưa thấy phỏng nước ở lòng bàn tay, bàn chân. Bé không giật mình, không nôn, không li bì, không thở nhanh."
+patient:
+  age_months: 9
+  sex: female
+  region: central
+  month: 4
+complaint: fever
+answers:
+  fever_max_temp: lt_38
+  fever_duration: d1_2
+  mouth_ulcers: present
+  hand_foot_blisters: absent
+  rash_any: present
+  rash_non_blanching: absent
+  rash_spreads_from_face: absent
+  loss_of_appetite: present
+  startle_myoclonus: absent
+  vomiting: absent
+  breathing_difficulty: absent
+  child_unable_to_drink: absent
+  child_vomits_everything: absent
+  seizure_recent: absent
+  drowsy_hard_to_wake: absent
+  bulging_fontanelle: absent
+  cough: absent
+  runny_nose: absent
+  red_eyes: absent
+  hfmd_contact: unknown
+default_unmentioned: absent
+expected:
+  condition: hand_foot_mouth_disease
+  acceptable: []
+  triage: 3
+source:
+  basis: "Ca không điển hình: trẻ dưới 12 tháng, chỉ loét miệng và ban không rõ phỏng nước (292/QĐ-BYT mục II.1.2, thể không điển hình). Trạm y tế xã và phòng khám tư nhân phải chuyển tuyến bệnh độ 1 ở trẻ dưới 12 tháng (mục III.2.1)."
+  references: [byt-qd-292-2024]
+author: "agent:pass-c"

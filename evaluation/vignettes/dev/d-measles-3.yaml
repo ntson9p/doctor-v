@@ -1,0 +1,43 @@
+id: d-measles-3
+set: dev
+title_vi: "Bé gái 9 tuổi mới tiêm 1 mũi sởi, mùa mưa, sốt ngày 4 kèm phát ban"
+narrative_vi: "Bé A., 9 tuổi, ở Bình Dương, mới tiêm 1 mũi vắc xin sởi. Tháng 7, nhà bên cạnh có người bị sốt xuất huyết. Bé sốt 39°C đã 4 ngày, ho, chảy mũi, đỏ mắt; hôm nay nổi ban đỏ từ mặt lan xuống thân, ấn vào ban thì mất màu. Không chảy máu chân răng, không đau bụng, không nôn, không đau nhức người."
+patient:
+  age_years: 9
+  sex: female
+  region: south
+  month: 7
+complaint: fever
+answers:
+  fever_max_temp: ge_39
+  fever_duration: d3_5
+  cough: present
+  runny_nose: present
+  red_eyes: present
+  rash_any: present
+  rash_spreads_from_face: present
+  rash_non_blanching: absent
+  bleeding_gums_nose: absent
+  abdominal_pain: absent
+  vomiting: absent
+  persistent_vomiting: absent
+  myalgia: absent
+  arthralgia: absent
+  retro_orbital_pain: absent
+  headache: absent
+  measles_vaccinated: absent
+  measles_contact: unknown
+  dengue_nearby: present
+  breathing_difficulty: absent
+  decreased_urine: absent
+  mouth_ulcers: absent
+  hand_foot_blisters: absent
+default_unmentioned: absent
+expected:
+  condition: measles
+  acceptable: []
+  triage: 3
+source:
+  basis: "Dễ nhầm với sốt xuất huyết Dengue (sốt phát ban trong mùa mưa, có ca sốt xuất huyết gần nhà). Viêm long đường hô hấp, viêm kết mạc và ban mọc từ mặt lan xuống, mất khi căng da là sởi (1019/QĐ-BYT mục 2.1.1, 2.5). Sởi không biến chứng cần khám trong 24 giờ (mục 3.2.1)."
+  references: [byt-qd-1019-2025, byt-qd-2760-2023]
+author: "agent:pass-c"

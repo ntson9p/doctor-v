@@ -1,0 +1,40 @@
+id: d-measles-1
+set: dev
+title_vi: "Bé gái 26 tháng chưa tiêm vắc xin sởi, sốt cao ngày 4, ban từ mặt lan xuống người"
+narrative_vi: "Bé M., 26 tháng, ở Đồng Nai, chưa tiêm vắc xin sởi. Bé sốt cao 39,5°C đã 4 ngày, ho, chảy mũi, đỏ mắt. Từ hôm qua nổi ban đỏ ở sau tai, mặt rồi lan xuống cổ, ngực; ấn vào ban thì mất màu. Bé hàng xóm vừa bị sởi 2 tuần trước. Bé vẫn bú, uống được, không nôn, không li bì, không thở nhanh."
+patient:
+  age_months: 26
+  sex: female
+  region: south
+  month: 12
+complaint: fever
+answers:
+  fever_max_temp: ge_39
+  fever_duration: d3_5
+  cough: present
+  runny_nose: present
+  red_eyes: present
+  rash_any: present
+  rash_spreads_from_face: present
+  rash_non_blanching: absent
+  measles_vaccinated: absent
+  measles_contact: present
+  child_unable_to_drink: absent
+  child_vomits_everything: absent
+  seizure_recent: absent
+  drowsy_hard_to_wake: absent
+  breathing_difficulty: absent
+  vomiting: absent
+  diarrhea: absent
+  mouth_ulcers: absent
+  hand_foot_blisters: absent
+  ear_pain: absent
+default_unmentioned: absent
+expected:
+  condition: measles
+  acceptable: []
+  triage: 3
+source:
+  basis: "Sởi thể điển hình theo 1019/QĐ-BYT mục 2.1.1 và ca bệnh lâm sàng mục 2.4.2. Sởi không biến chứng: điều trị ngoại trú, uống vitamin A, cách ly, tái khám mỗi 2–3 ngày (mục 3.2.1), nên cần khám trong 24 giờ."
+  references: [byt-qd-1019-2025, cdc-measles-clinical-overview]
+author: "agent:pass-c"

@@ -1,0 +1,42 @@
+id: d-hand-foot-mouth-disease-1
+set: dev
+title_vi: "Bé trai 24 tháng sốt nhẹ ngày 1, loét miệng, phỏng nước lòng bàn tay, bàn chân"
+narrative_vi: "Bé F., 24 tháng, đi nhà trẻ ở TP.HCM, đã tiêm đủ 2 mũi vắc xin sởi. Lớp bé có 2 bạn đang nghỉ vì tay chân miệng. Hôm nay bé sốt 38,2°C, chảy nhiều nước dãi, bỏ ăn vì đau miệng; trong miệng có vài vết loét, lòng bàn tay, bàn chân và mông có nốt phỏng nước nhỏ. Bé không giật mình, không nôn, không li bì, vẫn uống được."
+patient:
+  age_months: 24
+  sex: male
+  region: south
+  month: 10
+complaint: fever
+answers:
+  fever_max_temp: t38_39
+  fever_duration: d1_2
+  mouth_ulcers: present
+  hand_foot_blisters: present
+  rash_any: present
+  rash_non_blanching: absent
+  rash_spreads_from_face: absent
+  loss_of_appetite: present
+  hfmd_contact: present
+  startle_myoclonus: absent
+  vomiting: absent
+  persistent_vomiting: absent
+  breathing_difficulty: absent
+  cold_hands_feet: absent
+  child_unable_to_drink: absent
+  child_vomits_everything: absent
+  seizure_recent: absent
+  drowsy_hard_to_wake: absent
+  cough: absent
+  runny_nose: absent
+  red_eyes: absent
+  measles_vaccinated: present
+default_unmentioned: absent
+expected:
+  condition: hand_foot_mouth_disease
+  acceptable: []
+  triage: 3
+source:
+  basis: "Tay chân miệng độ 1 điển hình (292/QĐ-BYT mục II.1.1, II.6.1). Mọi trẻ đến khám cần được phân độ; độ 1 điều trị ngoại trú, tái khám mỗi 1–2 ngày (mục III.3.1), nên khám trong 24 giờ."
+  references: [byt-qd-292-2024]
+author: "agent:pass-c"

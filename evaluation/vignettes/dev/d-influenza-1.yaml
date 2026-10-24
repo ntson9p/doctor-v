@@ -1,0 +1,44 @@
+id: d-influenza-1
+set: dev
+title_vi: "Nam 30 tuổi ở Hà Nội, tháng 1, sốt cao đột ngột, rét run, đau nhức người, ho khan"
+narrative_vi: "Anh D., 30 tuổi, ở Hà Nội. Từ hôm qua đột ngột sốt cao 39,5°C, rét run, đau đầu, đau nhức khắp người, mệt, chán ăn, ho khan, đau họng, sổ mũi. Vài người cùng phòng làm việc vừa bị cúm. Tự xét nghiệm nhanh COVID-19 âm tính. Không khó thở, không đau ngực, không nôn. Không có bệnh nền."
+patient:
+  age_years: 30
+  sex: male
+  region: north
+  month: 1
+complaint: fever
+answers:
+  fever_max_temp: ge_39
+  fever_duration: d1_2
+  chills_rigors: present
+  myalgia: present
+  headache: present
+  fatigue: present
+  loss_of_appetite: present
+  cough: present
+  productive_cough: absent
+  sore_throat: present
+  runny_nose: present
+  nasal_congestion: absent
+  breathing_difficulty: absent
+  pleuritic_chest_pain: absent
+  vomiting: absent
+  diarrhea: absent
+  rash_any: absent
+  arthralgia: absent
+  sick_contact_respiratory: present
+  covid_self_test: negative
+  diabetes: absent
+  hypertension_known: absent
+  known_heart_disease: absent
+  immunocompromised: absent
+default_unmentioned: absent
+expected:
+  condition: influenza
+  acceptable: []
+  triage: 5
+source:
+  basis: "Cúm mùa nhẹ điển hình theo 1840/QĐ-BYT mục II.1.1: khởi phát đột ngột với sốt, ớn lạnh, đau đầu, đau cơ, mệt, ho khan, đau họng. Cúm nhẹ không có yếu tố nguy cơ: điều trị hỗ trợ, theo dõi tại nhà (mục III.2.2)."
+  references: [byt-qd-1840-2025, cdc-flu-clinical-signs]
+author: "agent:pass-c"

@@ -159,7 +159,7 @@ export interface EngineParams {
   lambdaAfterStable: number;
   stop: {
     triageChangeProb: number;
-    top3Mass: number;
+    top1Mass: number;
     minEigBits: number;
     minVoi: number;
     maxQuestions: number;

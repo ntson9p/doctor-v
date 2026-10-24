@@ -162,7 +162,7 @@ Phiên thích ứng dừng khi:
 - **"confident":** đủ cả ba điều kiện:
   1. mức xử trí ổn định;
   2. max VOI < `min_voi` (0,01);
-  3. tổng xác suất 3 bệnh đầu ≥ `top3_mass` (0,80), **hoặc** max EIG < `min_eig_bits` (0,05 bit);
+  3. xác suất bệnh đứng đầu ≥ `top1_mass` (0,70), **hoặc** max EIG < `min_eig_bits` (0,05 bit);
 - **"no_more_questions":** không còn ứng viên;
 - **"max_questions":** đã hỏi `max_questions` (30) bước. Trần mềm `soft_max_questions` (20) chỉ để giao diện cho phép dừng sớm.
 
@@ -228,7 +228,7 @@ Hiển thị tối đa 5 đóng góp dương ("vì sao gợi ý") và 5 đóng g
 | `self_care_block_other` | 0,30 | |
 | `under_triage_weights` / `cant_miss_weight` | 49 / 49 / 9 / 3; 99 | |
 | `lambda_before_stable` / `lambda_after_stable` | 0,1 / 1 | |
-| `stop` | Pđổi 0,05; top-3 0,80; EIG 0,05 bit; VOI 0,01; trần 30 (mềm 20) | |
+| `stop` | Pđổi 0,05; bệnh đầu 0,70; EIG 0,05 bit; VOI 0,01; trần 30 (mềm 20) | |
 | `safety_net_min_prob` | 0,005 | |
 | `display` | làm tròn 5%; tối thiểu 5%; tối đa 95% | |
 
@@ -238,7 +238,7 @@ Hiển thị tối đa 5 đóng góp dương ("vì sao gợi ý") và 5 đóng g
 |---|---|---|
 | Lưu tham số dạng noisy-OR: $P(f\mid d) = 1-(1-\ell_f)(1-p_{df})$ | Lưu **tần suất quan sát** $P(f\mid d) = p_{df}$; bệnh không liên kết dùng $\ell_f$ | Nguồn y văn và bác sĩ cho tần suất quan sát (độ nhạy). Công thức noisy-OR sẽ làm lệch các tần suất này, ví dụ 20% thành 36% khi $\ell = 0{,}2$. Cách lưu này còn cho phép khai báo dấu hiệu **ít gặp hơn nền** (ho trong viêm ruột thừa). Khi chuyển sang mô hình nhiều bệnh, đổi $p = 1-(1-F)/(1-\ell)$ cho các liên kết có $F > \ell$ |
 | Trọng số cụm theo kích thước cụm $\lvert C\rvert$ | Theo **số câu đã trả lời** $n$ trong cụm | Câu chưa hỏi không đóng góp bằng chứng, nên không có lý do giảm trọng số câu đã hỏi vì chúng |
-| Dừng khi top-3 ≥ 0,80, **hoặc** EIG < 0,05, **hoặc** VOI < 0,01 | Dừng khi ổn định **và** VOI < 0,01 **và** (top-3 ≥ 0,80 hoặc EIG < 0,05) | Với điều kiện "hoặc VOI < 0,01", phiên sẽ dừng ngay khi mức xử trí ổn định, trước khi kịp phân biệt bệnh. Cách mới vừa giữ được câu hỏi an toàn, vừa giữ được câu hỏi phân biệt |
+| Dừng khi top-3 ≥ 0,80, **hoặc** EIG < 0,05, **hoặc** VOI < 0,01 | Dừng khi ổn định **và** VOI < 0,01 **và** (**bệnh đứng đầu ≥ 0,70** hoặc EIG < 0,05) | Với điều kiện "hoặc VOI < 0,01", phiên sẽ dừng ngay khi mức xử trí ổn định, trước khi kịp phân biệt bệnh. Còn với "top-3 ≥ 0,80", các bệnh cùng mức xử trí (cảm lạnh, cúm, COVID-19) chiếm hết top 3, nên câu phân biệt như kết quả tự xét nghiệm không bao giờ được hỏi (lượt C lô 1 phát hiện). Cách mới vừa giữ được câu hỏi an toàn, vừa giữ được câu hỏi phân biệt |
 | Chưa nêu | **Dừng ngay** khi có quy tắc mức 1–2 | Người cần đi cấp cứu không nên phải trả lời thêm câu hỏi |
 | Chưa nêu | Khi mức xử trí chưa ổn định, cộng thêm Pđổi vào điểm câu hỏi | Bảo đảm phiên tiến về trạng thái ổn định, kể cả khi sự thay đổi đến từ quy tắc mà VOI (tính trên xác suất) không thấy |
 

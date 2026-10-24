@@ -29,8 +29,8 @@ export interface Analysis {
   triageLevel: TriageLevel;
   scores: QuestionScore[];
   stable: boolean;
-  /** Probability mass of the 3 most likely conditions (OTHER excluded). */
-  top3Mass: number;
+  /** Probability of the most likely condition (OTHER excluded). */
+  top1Mass: number;
 }
 
 /** Answer values whose probabilities sum to 1 for every hypothesis ("unknown" handled apart). */
@@ -146,9 +146,8 @@ export function analyze(input: SelectionInput): Analysis {
   }
 
   const stable = scores.every((s) => s.changeProb < params.stop.triageChangeProb);
-  const conditionProbs = probs.slice(0, -1).sort((a, b) => b - a);
-  const top3Mass = conditionProbs.slice(0, 3).reduce((a, b) => a + b, 0);
-  return { probs, triageLevel, scores, stable, top3Mass };
+  const top1Mass = Math.max(0, ...probs.slice(0, -1));
+  return { probs, triageLevel, scores, stable, top1Mass };
 }
 
 /**
@@ -177,7 +176,7 @@ export function pickQuestion(idx: EngineIndex, analysis: Analysis): QuestionScor
 /**
  * True when the adaptive phase should end (docs/engine-spec.md §8): the triage level is
  * stable, no question is still worth asking for safety (VOI), and the diagnosis is either
- * concentrated (top-3 mass) or cannot be refined further (EIG).
+ * concentrated on one condition (top-1 mass) or cannot be refined further (EIG).
  */
 export function isConfident(idx: EngineIndex, analysis: Analysis): boolean {
   const stop = idx.kb.params.stop;
@@ -185,5 +184,5 @@ export function isConfident(idx: EngineIndex, analysis: Analysis): boolean {
   const maxVoi = Math.max(0, ...analysis.scores.map((s) => s.voi));
   if (maxVoi >= stop.minVoi) return false;
   const maxEig = Math.max(0, ...analysis.scores.map((s) => s.eig));
-  return analysis.top3Mass >= stop.top3Mass || maxEig < stop.minEigBits;
+  return analysis.top1Mass >= stop.top1Mass || maxEig < stop.minEigBits;
 }

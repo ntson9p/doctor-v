@@ -1,0 +1,38 @@
+id: d-hand-foot-mouth-disease-3
+set: dev
+title_vi: "Bé trai 3 tuổi tay chân miệng ngày 3, sốt 39,5°C, giật mình khi ngủ, nôn"
+narrative_vi: "Bé H., 3 tuổi, ở Long An, đã tiêm đủ 2 mũi vắc xin sởi. Bé bị loét miệng, phỏng nước ở tay chân từ 3 ngày nay. Hôm nay sốt 39,5°C, nôn 2 lần, quấy khóc khó ngủ; đêm qua giật mình chới với 2 lần lúc mới ngủ. Cổ bé mềm, vẫn gọi tỉnh, uống được nước, không thở nhanh, không phát ban xuất huyết."
+patient:
+  age_years: 3
+  sex: male
+  region: south
+  month: 11
+complaint: fever
+answers:
+  fever_max_temp: ge_39
+  fever_duration: d3_5
+  mouth_ulcers: present
+  hand_foot_blisters: present
+  rash_any: present
+  rash_non_blanching: absent
+  startle_myoclonus: present
+  vomiting: present
+  persistent_vomiting: absent
+  child_vomits_everything: absent
+  child_unable_to_drink: absent
+  seizure_recent: absent
+  drowsy_hard_to_wake: absent
+  neck_stiffness: absent
+  breathing_difficulty: absent
+  cold_hands_feet: absent
+  loss_of_appetite: present
+  measles_vaccinated: present
+default_unmentioned: absent
+expected:
+  condition: hand_foot_mouth_disease
+  acceptable: []
+  triage: 2
+source:
+  basis: "Dễ nhầm với viêm màng não, nhiễm khuẩn huyết (sốt cao, nôn, dấu hiệu thần kinh). Tay chân miệng có giật mình theo bệnh sử và sốt trên 39°C là độ 2a (292/QĐ-BYT mục II.6.2.1): điều trị nội trú, giật mình là dấu hiệu cần tái khám ngay (mục III.3.1), nên đến bệnh viện ngay."
+  references: [byt-qd-292-2024]
+author: "agent:pass-c"

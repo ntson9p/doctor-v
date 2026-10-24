@@ -1,0 +1,42 @@
+id: d-pneumonia-2
+set: dev
+title_vi: "Nam 78 tuổi, sốt nhẹ, ho có đờm, mệt, chán ăn, không khó thở"
+narrative_vi: "Ông U., 78 tuổi, ở Thái Bình, có đái tháo đường và tăng huyết áp. Hai ngày nay sốt nhẹ 37,9°C, ho khạc đờm, mệt nhiều, chán ăn. Ông không than khó thở, không đau ngực, không rét run, vẫn tỉnh táo. Không sổ mũi, không đau họng. Chụp phim sau đó thấy viêm phổi thùy dưới phải."
+patient:
+  age_years: 78
+  sex: male
+  region: north
+  month: 2
+complaint: fever
+answers:
+  fever_max_temp: lt_38
+  fever_duration: d1_2
+  cough: present
+  productive_cough: present
+  fatigue: present
+  loss_of_appetite: present
+  breathing_difficulty: absent
+  pleuritic_chest_pain: absent
+  chills_rigors: absent
+  confusion: absent
+  drowsy_hard_to_wake: absent
+  severe_weakness: absent
+  runny_nose: absent
+  sore_throat: absent
+  nasal_congestion: absent
+  headache: absent
+  myalgia: absent
+  covid_self_test: not_tested
+  diabetes: present
+  hypertension_known: present
+  known_heart_disease: absent
+  immunocompromised: absent
+default_unmentioned: absent
+expected:
+  condition: pneumonia
+  acceptable: []
+  triage: 3
+source:
+  basis: "Ca không điển hình ở người cao tuổi: triệu chứng không rầm rộ (4235/QĐ-BYT; Metlay 1997). Từ 75 tuổi và có bệnh nền là nguy cơ cao; tối thiểu cần khám trong ngày (CRB-65 có 1 điểm do tuổi)."
+  references: [byt-qd-4235-2012, metlay-archintmed-1997]
+author: "agent:pass-c"

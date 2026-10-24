@@ -1,0 +1,41 @@
+id: d-influenza-2
+set: dev
+title_vi: "Nữ 72 tuổi, tháng 12, sốt nhẹ, mệt, chán ăn, ho"
+narrative_vi: "Bà L., 72 tuổi, ở Nam Định, có tăng huyết áp. Hai ngày nay sốt nhẹ 37,8°C, mệt nhiều, chán ăn, đau mỏi người, ho khan, sổ mũi. Không đau đầu, không đau họng, không rét run. Không khó thở, không lú lẫn. Cháu nội đi học về bị cúm tuần trước. Chưa tự xét nghiệm."
+patient:
+  age_years: 72
+  sex: female
+  region: north
+  month: 12
+complaint: fever
+answers:
+  fever_max_temp: lt_38
+  fever_duration: d1_2
+  fatigue: present
+  loss_of_appetite: present
+  myalgia: present
+  cough: present
+  productive_cough: absent
+  runny_nose: present
+  headache: absent
+  sore_throat: absent
+  chills_rigors: absent
+  breathing_difficulty: absent
+  pleuritic_chest_pain: absent
+  confusion: absent
+  drowsy_hard_to_wake: absent
+  sick_contact_respiratory: present
+  covid_self_test: not_tested
+  hypertension_known: present
+  diabetes: absent
+  known_heart_disease: absent
+  immunocompromised: absent
+default_unmentioned: absent
+expected:
+  condition: influenza
+  acceptable: []
+  triage: 3
+source:
+  basis: "Ca không điển hình ở người cao tuổi (1840 mục II.1.1: triệu chứng có thể không điển hình ở người trên 65 tuổi). Trên 65 tuổi là yếu tố nguy cơ cúm nặng (mục II.2.3), cần dùng thuốc kháng vi rút sớm (mục III.2.1) nên khám trong ngày."
+  references: [byt-qd-1840-2025, cdc-flu-clinical-signs]
+author: "agent:pass-c"

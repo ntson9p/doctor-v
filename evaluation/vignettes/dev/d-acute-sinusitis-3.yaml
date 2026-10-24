@@ -1,0 +1,53 @@
+id: d-acute-sinusitis-3
+set: dev
+title_vi: "Nam 40 tuổi đau đầu vùng trán dữ dội, sốt 38,5°C, chảy mũi mủ 11 ngày, không cứng gáy"
+narrative_vi: "Anh M., 40 tuổi, ở TP.HCM. Bị sổ mũi hơn 10 ngày, đã đỡ rồi 2 ngày nay nặng lên: chảy mũi mủ đặc, nghẹt mũi, sốt 38,5°C, đau đầu dữ dội vùng trán và quanh mắt, tăng khi cúi. Cúi đầu được, cằm chạm ngực, không sợ ánh sáng, không nôn, không lú lẫn, không nhìn mờ, quanh mắt không sưng đỏ."
+patient:
+  age_years: 40
+  sex: male
+  region: south
+  month: 8
+complaint: headache
+answers:
+  fever: present
+  fever_max_temp: t38_39
+  fever_duration: d1_2
+  headache_severity: severe
+  headache_location: forehead_face
+  headache_duration: h4_72
+  headache_course: first_time
+  headache_thunderclap: absent
+  neck_stiffness: absent
+  confusion: absent
+  drowsy_hard_to_wake: absent
+  seizure_recent: absent
+  photophobia: absent
+  phonophobia: absent
+  nausea: absent
+  vomiting: absent
+  vision_loss_or_double: absent
+  blurred_vision: absent
+  periorbital_swelling: absent
+  purulent_nasal_discharge: present
+  runny_nose: present
+  nasal_congestion: present
+  nasal_symptoms_over_10_days: present
+  symptoms_worsen_after_improving: present
+  facial_pain_pressure: present
+  cough: absent
+  loss_of_smell_taste: absent
+  rash_any: absent
+  rash_non_blanching: absent
+  dengue_nearby: absent
+  myalgia: absent
+  retro_orbital_pain: absent
+  immunocompromised: absent
+default_unmentioned: absent
+expected:
+  condition: acute_sinusitis
+  acceptable: []
+  triage: 3
+source:
+  basis: "Dễ nhầm với viêm màng não (sốt kèm đau đầu dữ dội). Không cứng gáy, không thay đổi ý thức, không ban xuất huyết (NICE NG240); bệnh hai pha, chảy mũi mủ, đau mặt tăng khi cúi là viêm mũi xoang cấp (5643). Đau đầu, đau mặt dữ dội cần được khám sớm (CDC; NHS: khám gấp nếu đau nặng hoặc thuốc giảm đau không đỡ)."
+  references: [byt-qd-5643-2015, cdc-sinus-infection, nhs-sinusitis, nice-ng240]
+author: "agent:pass-c"

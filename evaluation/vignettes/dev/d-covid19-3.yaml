@@ -1,0 +1,38 @@
+id: d-covid19-3
+set: dev
+title_vi: "Nữ 67 tuổi, sốt 38,4°C, ho, đau họng, mệt, test dương tính, không khó thở"
+narrative_vi: "Bà T., 67 tuổi, ở Cần Thơ, có tăng huyết áp. Hai ngày nay sốt 38,4°C, ho khan, đau họng, sổ mũi, mệt, đau mỏi người. Que thử nhanh COVID-19 lên 2 vạch. Không khó thở, không đau ngực, tỉnh táo, vẫn tự sinh hoạt được."
+patient:
+  age_years: 67
+  sex: female
+  region: south
+  month: 3
+complaint: fever
+answers:
+  fever_max_temp: t38_39
+  fever_duration: d1_2
+  cough: present
+  productive_cough: absent
+  sore_throat: present
+  runny_nose: present
+  fatigue: present
+  myalgia: present
+  chills_rigors: absent
+  breathing_difficulty: absent
+  pleuritic_chest_pain: absent
+  confusion: absent
+  drowsy_hard_to_wake: absent
+  covid_self_test: positive
+  hypertension_known: present
+  diabetes: absent
+  known_heart_disease: absent
+  immunocompromised: absent
+default_unmentioned: absent
+expected:
+  condition: covid19
+  acceptable: []
+  triage: 3
+source:
+  basis: "Dễ nhầm với viêm phổi ở người cao tuổi. Không khó thở nên là mức độ nhẹ (2671 mục 5.2.1), nhưng trên 60 tuổi và có bệnh nền là yếu tố nguy cơ diễn tiến nặng (bảng 5), cần được khám sớm để cân nhắc thuốc kháng vi rút."
+  references: [byt-qd-2671-2023]
+author: "agent:pass-c"

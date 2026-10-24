@@ -1,0 +1,41 @@
+id: d-acute-sinusitis-2
+set: dev
+title_vi: "Bé trai 8 tuổi sốt nhẹ ngày 6, chảy mũi vàng 12 ngày, đã đỡ rồi lại nặng lên"
+narrative_vi: "Bé L., 8 tuổi, ở Bình Định, đã tiêm đủ 2 mũi vắc xin sởi. Bé sổ mũi, ho gần 2 tuần; tuần trước đã đỡ, 6 ngày nay lại sốt nhẹ 37,8°C, chảy mũi vàng đặc, nghẹt mũi, ho nhiều về đêm, đau đầu, đau họng. Quanh mắt không sưng, không khó thở, không nôn."
+patient:
+  age_years: 8
+  sex: male
+  region: central
+  month: 9
+complaint: fever
+answers:
+  fever_max_temp: lt_38
+  fever_duration: d6_7
+  runny_nose: present
+  purulent_nasal_discharge: present
+  nasal_congestion: present
+  nasal_symptoms_over_10_days: present
+  symptoms_worsen_after_improving: present
+  cough: present
+  headache: present
+  sore_throat: present
+  facial_pain_pressure: unknown
+  periorbital_swelling: absent
+  ear_pain: absent
+  breathing_difficulty: absent
+  vomiting: absent
+  persistent_vomiting: absent
+  decreased_urine: absent
+  rash_any: absent
+  confusion: absent
+  measles_vaccinated: present
+  covid_self_test: not_tested
+default_unmentioned: absent
+expected:
+  condition: acute_sinusitis
+  acceptable: []
+  triage: 4
+source:
+  basis: "Ca không điển hình ở trẻ em: sốt nhẹ kéo dài, chảy mũi vàng xanh, ho, nhức đầu ở trẻ trên 6 tuổi (5643/QĐ-BYT, bài Viêm mũi xoang trẻ em); bệnh hai pha. NHS: trẻ từ 11 tuổi trở xuống nghi viêm xoang nên được bác sĩ khám."
+  references: [byt-qd-5643-2015, nhs-sinusitis, cdc-sinus-infection]
+author: "agent:pass-c"

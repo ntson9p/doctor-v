@@ -70,7 +70,9 @@ lambda_after_stable: 1.0
 
 stop:
   triage_change_prob: 0.05
-  top3_mass: 0.80
+  # Bệnh đứng đầu đạt mức này thì có thể dừng (trước đây dùng tổng 3 bệnh đầu ≥ 0,80: các bệnh
+  # cùng mức xử trí như cảm lạnh, cúm, COVID-19 chiếm hết top 3 nên câu phân biệt không bao giờ được hỏi).
+  top1_mass: 0.70
   min_eig_bits: 0.05
   min_voi: 0.01
   max_questions: 30

@@ -1,0 +1,38 @@
+id: d-common-cold-1
+set: dev
+title_vi: "Nữ 26 tuổi, sốt nhẹ 2 ngày, sổ mũi, nghẹt mũi, đau họng, ho"
+narrative_vi: "Chị H., 26 tuổi, nhân viên văn phòng ở Hà Nội. Hai ngày nay sốt nhẹ, cao nhất 37,8°C, sổ mũi nước trong, nghẹt mũi, đau rát họng, ho khan, đau đầu nhẹ. Đồng nghiệp cùng phòng cũng đang sổ mũi. Không đau cơ, không mệt nhiều, không khó thở. Ăn uống bình thường, không có thai."
+patient:
+  age_years: 26
+  sex: female
+  region: north
+  month: 7
+complaint: fever
+answers:
+  fever_max_temp: lt_38
+  fever_duration: d1_2
+  runny_nose: present
+  nasal_congestion: present
+  sore_throat: present
+  cough: present
+  productive_cough: absent
+  headache: present
+  myalgia: absent
+  fatigue: absent
+  chills_rigors: absent
+  purulent_nasal_discharge: absent
+  breathing_difficulty: absent
+  loss_of_smell_taste: absent
+  rash_any: absent
+  sick_contact_respiratory: present
+  covid_self_test: not_tested
+  pregnant: absent
+default_unmentioned: absent
+expected:
+  condition: common_cold
+  acceptable: []
+  triage: 5
+source:
+  basis: "Ca điển hình theo NHS Common cold và MSD Common cold; mô tả viêm mũi họng cấp của 5643/QĐ-BYT. Không có dấu hiệu cần đi khám nên theo dõi tại nhà."
+  references: [nhs-common-cold, msd-common-cold, byt-qd-5643-2015]
+author: "agent:pass-c"

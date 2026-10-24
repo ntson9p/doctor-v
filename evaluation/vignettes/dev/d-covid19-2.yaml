@@ -1,0 +1,40 @@
+id: d-covid19-2
+set: dev
+title_vi: "Nam 29 tuổi, đau đầu 2 ngày, đau họng, mất ngửi, không sốt, test dương tính"
+narrative_vi: "Anh V., 29 tuổi, ở Hải Phòng. Hai ngày nay đau đầu khắp đầu mức vừa, phải nghỉ ngơi; kèm đau họng, nghẹt mũi, mệt và mất hẳn khả năng ngửi mùi. Không sốt, không ho. Không buồn nôn, không sợ ánh sáng, không cứng gáy. Que thử nhanh COVID-19 dương tính."
+patient:
+  age_years: 29
+  sex: male
+  region: north
+  month: 4
+complaint: headache
+answers:
+  fever: absent
+  sore_throat: present
+  nasal_congestion: present
+  runny_nose: absent
+  cough: absent
+  fatigue: present
+  loss_of_smell_taste: present
+  covid_self_test: positive
+  headache_duration: h4_72
+  headache_location: whole_head
+  headache_severity: moderate
+  headache_course: first_time
+  photophobia: absent
+  phonophobia: absent
+  nausea: absent
+  vomiting: absent
+  neck_stiffness: absent
+  facial_pain_pressure: absent
+  purulent_nasal_discharge: absent
+  stress_poor_sleep: absent
+default_unmentioned: absent
+expected:
+  condition: covid19
+  acceptable: []
+  triage: 5
+source:
+  basis: "Ca không điển hình: COVID-19 không sốt, đến vì đau đầu. 2671/QĐ-BYT mục 2.1 (đau đầu, đau họng, mất khứu giác là triệu chứng) và mục 5.2.1 (mức độ nhẹ); xét nghiệm kháng nguyên dương tính (mục 2.2)."
+  references: [byt-qd-2671-2023, nice-cg150]
+author: "agent:pass-c"

@@ -1,0 +1,39 @@
+id: d-common-cold-2
+set: dev
+title_vi: "Nam 42 tuổi, đau đầu nhẹ 2 ngày kèm nghẹt mũi, sổ mũi, không sốt"
+narrative_vi: "Anh T., 42 tuổi, ở Đà Nẵng. Hai ngày nay nặng đầu vùng trán mức nhẹ, vẫn đi làm được; kèm nghẹt mũi, sổ mũi nước trong, đau họng, ho ít. Không sốt. Không buồn nôn, không sợ ánh sáng. Vợ đang bị sổ mũi. Không đau mặt khi cúi, không giảm ngửi."
+patient:
+  age_years: 42
+  sex: male
+  region: central
+  month: 11
+complaint: headache
+answers:
+  fever: absent
+  nasal_congestion: present
+  runny_nose: present
+  sore_throat: present
+  cough: present
+  purulent_nasal_discharge: absent
+  facial_pain_pressure: absent
+  loss_of_smell_taste: absent
+  nasal_symptoms_over_10_days: absent
+  headache_duration: h4_72
+  headache_location: forehead_face
+  headache_severity: mild
+  photophobia: absent
+  phonophobia: absent
+  nausea: absent
+  vomiting: absent
+  stress_poor_sleep: absent
+  sick_contact_respiratory: present
+  covid_self_test: not_tested
+default_unmentioned: absent
+expected:
+  condition: common_cold
+  acceptable: []
+  triage: 5
+source:
+  basis: "Ca không điển hình: cảm lạnh đến vì đau đầu, không sốt. NHS Common cold: đau đầu nhẹ, tự khỏi; không có dấu hiệu đau đầu nguy hiểm theo NICE CG150."
+  references: [nhs-common-cold, msd-common-cold, nice-cg150]
+author: "agent:pass-c"

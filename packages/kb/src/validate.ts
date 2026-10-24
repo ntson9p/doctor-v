@@ -357,7 +357,7 @@ export function validateKnowledge(k: RawKnowledge): Issue[] {
         if (f.type !== 'binary') add('error', file, path, `"${link.finding}" là dấu hiệu nhiều lựa chọn: dùng "dist"`);
         checkAgeGroups(Object.keys(link.freq_by_age ?? {}), file, `${path}.freq_by_age`);
         // "Uncommon in this condition" must sit below the background rate, or a "yes" raises the condition.
-        if (f.type === 'binary' && (link.freq === 'very_rare' || link.freq === 'rare')) {
+        if (f.type === 'binary' && (link.freq === 'very_rare' || link.freq === 'rare') && link.above_leak_ok !== true) {
           const value = params.frequency_levels[link.freq];
           for (const prior of c.priors) {
             const raw = f.leak_by_complaint?.[prior.complaint] ?? f.leak;

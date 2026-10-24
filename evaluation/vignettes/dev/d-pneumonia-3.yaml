@@ -1,0 +1,43 @@
+id: d-pneumonia-3
+set: dev
+title_vi: "Bé trai 7 tuổi đau bụng trên rốn, sốt 39°C, ho 2 ngày, thở nhanh"
+narrative_vi: "Bé I., 7 tuổi, ở Đắk Lắk, đã tiêm đủ 2 mũi vắc xin sởi. Bé ho 2 ngày, từ chiều qua sốt 39°C và kêu đau bụng vùng dưới sườn phải, đau tăng khi ho; nôn 1 lần. Mẹ thấy bé thở nhanh hơn bình thường. Bụng mềm, đau không dữ dội, không đau chuyển xuống hố chậu phải, không tiêu chảy."
+patient:
+  age_years: 7
+  sex: male
+  region: highlands
+  month: 6
+complaint: abdominal_pain
+answers:
+  fever: present
+  fever_max_temp: ge_39
+  fever_duration: d1_2
+  cough: present
+  productive_cough: absent
+  breathing_difficulty: present
+  pleuritic_chest_pain: absent
+  abd_pain_location: right_upper
+  abd_pain_duration: h6_24
+  abd_pain_onset: gradual
+  abd_pain_severe: absent
+  abdomen_hard_swollen: absent
+  abd_pain_migrated_rlq: absent
+  abd_pain_worse_movement: present
+  vomiting: present
+  persistent_vomiting: absent
+  nausea: present
+  diarrhea: absent
+  no_stool_or_gas: absent
+  runny_nose: absent
+  sore_throat: absent
+  dysuria: absent
+  measles_vaccinated: present
+default_unmentioned: absent
+expected:
+  condition: pneumonia
+  acceptable: []
+  triage: 3
+source:
+  basis: "Dễ nhầm với viêm ruột thừa: viêm phổi thùy dưới ở trẻ có thể gây đau bụng (Moustaki 2003; 4235). Ho, sốt kèm thở nhanh là viêm phổi theo 3312/QĐ-BYT (2015) và IMCI; viêm phổi không nặng điều trị ngoại trú nhưng cần khám trong ngày."
+  references: [byt-qd-3312-2015, moustaki-pedpulmonol-2003, who-imci-chart-booklet-2014]
+author: "agent:pass-c"

@@ -61,7 +61,7 @@ export function compileKnowledge(k: RawKnowledge): CompiledKb {
     lambdaAfterStable: p.lambda_after_stable,
     stop: {
       triageChangeProb: p.stop.triage_change_prob,
-      top3Mass: p.stop.top3_mass,
+      top1Mass: p.stop.top1_mass,
       minEigBits: p.stop.min_eig_bits,
       minVoi: p.stop.min_voi,
       maxQuestions: p.stop.max_questions,

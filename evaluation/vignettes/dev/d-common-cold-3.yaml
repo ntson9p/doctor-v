@@ -1,0 +1,38 @@
+id: d-common-cold-3
+set: dev
+title_vi: "Bé trai 3 tuổi sốt 38,5°C 2 ngày, ho, sổ mũi, không thở nhanh"
+narrative_vi: "Bé K., 3 tuổi, đi nhà trẻ ở TP.HCM, đã tiêm đủ 2 mũi vắc xin sởi. Hai ngày nay sốt, cao nhất 38,5°C, ho, sổ mũi, nghẹt mũi. Bé vẫn chơi, uống nước và ăn được. Mẹ đếm nhịp thở lúc bé nằm yên khoảng 30 lần/phút, không thấy rút lõm lồng ngực. Không nôn, không co giật, không li bì, không phát ban. Bé không kêu đau tai. Trong lớp có nhiều bạn sổ mũi."
+patient:
+  age_years: 3
+  sex: male
+  region: south
+  month: 6
+complaint: fever
+answers:
+  fever_max_temp: t38_39
+  fever_duration: d1_2
+  cough: present
+  productive_cough: absent
+  runny_nose: present
+  nasal_congestion: present
+  breathing_difficulty: absent
+  child_unable_to_drink: absent
+  child_vomits_everything: absent
+  seizure_recent: absent
+  drowsy_hard_to_wake: absent
+  ear_pain: absent
+  rash_any: absent
+  vomiting: absent
+  diarrhea: absent
+  measles_vaccinated: present
+  sick_contact_respiratory: present
+default_unmentioned: absent
+expected:
+  condition: common_cold
+  acceptable: [influenza]
+  triage: 5
+source:
+  basis: "Dễ nhầm với viêm phổi. IMCI: trẻ ho hoặc khó thở, không thở nhanh, không rút lõm lồng ngực, không dấu hiệu nguy hiểm toàn thân là 'không viêm phổi: ho hoặc cảm lạnh', chăm sóc tại nhà. NICE NG143: không có dấu hiệu vàng hoặc đỏ."
+  references: [who-imci-chart-booklet-2014, nice-ng143, byt-qd-3312-2015]
+author: "agent:pass-c"
+notes_vi: "Chấp nhận cúm vì không phân biệt được cúm với cảm lạnh ở trẻ nhỏ nếu không xét nghiệm."

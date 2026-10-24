@@ -1,0 +1,40 @@
+id: d-acute-otitis-media-3
+set: dev
+title_vi: "Bé gái 28 tháng sốt 39,6°C, đau tai, nôn 1 lần, quấy khóc"
+narrative_vi: "Bé E., 28 tháng, ở Nha Trang, đã tiêm đủ 2 mũi vắc xin sởi. Bé sổ mũi vài ngày, từ hôm qua sốt cao 39,6°C, kêu đau tai, khóc nhiều, nôn 1 lần sau khi uống sữa. Bé vẫn uống nước được, cổ mềm, không li bì, không co giật, không phát ban."
+patient:
+  age_months: 28
+  sex: female
+  region: central
+  month: 10
+complaint: fever
+answers:
+  fever_max_temp: ge_39
+  fever_duration: d1_2
+  ear_pain: present
+  ear_discharge: absent
+  swelling_behind_ear: absent
+  vomiting: present
+  persistent_vomiting: absent
+  child_vomits_everything: absent
+  child_unable_to_drink: absent
+  drowsy_hard_to_wake: absent
+  seizure_recent: absent
+  neck_stiffness: absent
+  bulging_fontanelle: absent
+  rash_any: absent
+  runny_nose: present
+  nasal_congestion: present
+  cough: absent
+  breathing_difficulty: absent
+  diarrhea: absent
+  measles_vaccinated: present
+default_unmentioned: absent
+expected:
+  condition: acute_otitis_media
+  acceptable: []
+  triage: 3
+source:
+  basis: "Dễ nhầm với viêm màng não (sốt cao, quấy khóc, nôn ở trẻ nhỏ). Không cứng gáy, không li bì, không co giật, không ban xuất huyết (NICE NG240). Viêm tai kèm sốt rất cao hoặc nôn cần khám gấp trong ngày (NHS Ear infections); sốt từ 39°C là tiêu chí dùng kháng sinh (MSD)."
+  references: [nhs-ear-infections, msd-acute-otitis-media, nice-ng240]
+author: "agent:pass-c"

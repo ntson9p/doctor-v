@@ -1,0 +1,44 @@
+id: d-acute-sinusitis-1
+set: dev
+title_vi: "Nữ 34 tuổi đau đầu vùng trán, nghẹt mũi, nước mũi vàng xanh 12 ngày"
+narrative_vi: "Chị K., 34 tuổi, ở Hà Nội. Bị cảm 12 ngày nay mà nghẹt mũi, chảy nước mũi vàng xanh không đỡ; 4 ngày nay đau nặng vùng trán và má, tăng khi cúi đầu, ngửi kém, ho ít. Không sốt. Không buồn nôn, không sợ ánh sáng, không nhìn mờ, quanh mắt không sưng. Không có thai."
+patient:
+  age_years: 34
+  sex: female
+  region: north
+  month: 12
+complaint: headache
+answers:
+  fever: absent
+  nasal_congestion: present
+  runny_nose: present
+  purulent_nasal_discharge: present
+  nasal_symptoms_over_10_days: present
+  facial_pain_pressure: present
+  loss_of_smell_taste: present
+  cough: present
+  symptoms_worsen_after_improving: absent
+  headache_location: forehead_face
+  headache_duration: gt_3d
+  headache_severity: moderate
+  photophobia: absent
+  phonophobia: absent
+  nausea: absent
+  vomiting: absent
+  vision_loss_or_double: absent
+  blurred_vision: absent
+  periorbital_swelling: absent
+  neck_stiffness: absent
+  sore_throat: absent
+  ear_pain: absent
+  covid_self_test: not_tested
+  pregnant: absent
+default_unmentioned: absent
+expected:
+  condition: acute_sinusitis
+  acceptable: []
+  triage: 4
+source:
+  basis: "Viêm mũi xoang cấp nghĩ do vi khuẩn theo 5643/QĐ-BYT (viêm mũi kéo dài hơn 10 ngày; đau vùng mặt, ngạt mũi, chảy mũi mủ, ngửi kém). CDC: triệu chứng quá 10 ngày không đỡ thì đi khám; không có dấu hiệu biến chứng."
+  references: [byt-qd-5643-2015, cdc-sinus-infection, nhs-sinusitis]
+author: "agent:pass-c"

@@ -1,0 +1,38 @@
+id: d-acute-otitis-media-2
+set: dev
+title_vi: "Bé gái 7 tháng sốt 38,4°C, quấy, dụi tai, khó ngủ"
+narrative_vi: "Bé C., 7 tháng, ở Huế. Bé sổ mũi 3 ngày, từ sáng nay sốt 38,4°C, quấy khóc, hay dụi tai trái, bú ít hơn mọi ngày nhưng vẫn bú được, ngủ không yên. Không nôn, không co giật, không li bì, không thở nhanh, không phát ban."
+patient:
+  age_months: 7
+  sex: female
+  region: central
+  month: 1
+complaint: fever
+answers:
+  fever_max_temp: t38_39
+  fever_duration: d1_2
+  ear_pain: present
+  ear_discharge: absent
+  swelling_behind_ear: absent
+  runny_nose: present
+  nasal_congestion: present
+  cough: absent
+  breathing_difficulty: absent
+  rash_any: absent
+  mouth_ulcers: absent
+  vomiting: absent
+  child_unable_to_drink: absent
+  child_vomits_everything: absent
+  seizure_recent: absent
+  drowsy_hard_to_wake: absent
+  bulging_fontanelle: absent
+  loss_of_appetite: present
+default_unmentioned: absent
+expected:
+  condition: acute_otitis_media
+  acceptable: []
+  triage: 4
+source:
+  basis: "Ca không điển hình ở trẻ nhũ nhi: chỉ quấy, dụi tai, khó bú, khó ngủ (MSD). NHS Ear infections: trẻ dưới 12 tháng nghi viêm tai cần được bác sĩ khám; không có dấu hiệu khám gấp (sốt rất cao, chảy dịch tai, sưng quanh tai, nôn, đau cả hai tai)."
+  references: [msd-acute-otitis-media, nhs-ear-infections, byt-qd-5643-2015]
+author: "agent:pass-c"

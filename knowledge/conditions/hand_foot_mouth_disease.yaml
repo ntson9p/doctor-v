@@ -1,0 +1,244 @@
+id: hand_foot_mouth_disease
+names:
+  vi: "Bệnh tay chân miệng"
+  vi_common: ["Tay chân miệng"]
+  en: "Hand, foot and mouth disease"
+codes:
+  icd10: "B08.4"
+  icd10_verified: false
+  mondo: "MONDO:0005779"
+summary_vi:
+  - "Bệnh truyền nhiễm do vi rút đường ruột, hay gặp ở trẻ dưới 5 tuổi, dễ thành dịch."
+  - "Thường sốt nhẹ, loét miệng, nổi phỏng nước ở lòng bàn tay, bàn chân, mông, gối."
+  - "Biến chứng thần kinh, tim, phổi hay xuất hiện từ ngày thứ 2 đến ngày thứ 5 của bệnh."
+urgency: 3
+cant_miss: false
+specialties: [pediatrics, infectious_disease]
+priors:
+  - complaint: fever
+    default: P6
+    by_age:
+      child_2m_5y: P3
+      child_5_12: P4
+      teen_13_17: P5
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-292-2024, hoang-ijid-2019, nhan-plosntd-2020]
+      reported: "tuổi trung vị trẻ đến khám khoảng 19–20 tháng; đợt dịch 2011–2012 trên 200.000 ca nhập viện, 2018 trên 130.000 ca"
+      note: "Thang tuyệt đối (kb-guide 2.3). 292: bệnh quanh năm, gặp ở mọi tuổi nhưng thường ở trẻ dưới 5 tuổi. Chỉ 40–65% ca ngoại trú có sốt. Ước 1–5% trẻ dưới 5 tuổi đi khám vì sốt (P3), 0,2–1% trẻ 5–12 tuổi, rất hiếm ở người lớn. Hai lượt thống nhất."
+prior_modifiers:
+  - when: { regions: [south], months: [3, 4, 5, 9, 10, 11, 12] }
+    factor: 1.3
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-3312-2015, tu-eid-2007, nguyen-scitotenv-2017]
+      locator: "3312/2015, bài Bệnh tay-chân-miệng, mục 1.2"
+      note: "Tại các tỉnh phía Nam, bệnh tăng cao từ tháng 3 đến tháng 5 và từ tháng 9 đến tháng 12 (3312/2015; Tu 2007); đồng bằng sông Cửu Long có đỉnh tháng 10–12 (Nguyen 2017). 292/2024 chỉ ghi bệnh xảy ra quanh năm. Độ lớn hệ số là ước lượng của lượt A, chọn sao cho trung bình cả năm gần bằng 1."
+  - when: { regions: [south], months: [1, 2, 6, 7, 8] }
+    factor: 0.6
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-3312-2015, tu-eid-2007]
+      locator: "3312/2015, bài Bệnh tay-chân-miệng, mục 1.2"
+      note: "Các tháng ngoài hai đỉnh ở phía Nam; hệ số là ước lượng (lượt A)."
+  - when: { regions: [highlands], months: [5, 6, 7, 8, 9, 10] }
+    factor: 1.25
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [pham-wpsar-2019]
+      reported: "mùa mưa trung bình 25 ca/tháng so với mùa khô 15 ca/tháng"
+      population: "Đắk Lắk 2012–2013, số liệu từ mọi trạm y tế xã"
+      note: "25/20 = 1,25 so với trung bình năm (lượt B)."
+  - when: { regions: [highlands], months: [11, 12, 1, 2, 3, 4] }
+    factor: 0.75
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [pham-wpsar-2019]
+      reported: "mùa khô khoảng 15 ca/tháng so với trung bình năm 20 ca/tháng"
+      population: "Đắk Lắk 2012–2013"
+      note: "Lượt C thêm hệ số đối ứng cho mùa khô (15/20 = 0,75) để trung bình cả năm bằng 1; lượt B chỉ có hệ số mùa mưa."
+findings:
+  - finding: fever
+    freq: frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [hoang-ijid-2019, nhan-plosntd-2020]
+      reported: "63,9% và 42,0% ca ngoại trú (nội trú 79–88%)"
+      population: "trẻ ngoại trú tại 3 bệnh viện TP.HCM"
+      note: "Bệnh chỉ có prior cho triệu chứng chính sốt nên liên kết này hiện không được dùng; ghi lại cho đầy đủ (lượt A)."
+  - finding: fever_max_temp
+    dist: { lt_38: 0.42, t38_39: 0.44, ge_39: 0.14 }
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-292-2024, hoang-ijid-2019]
+      locator: "292 mục II.1.1, II.6.2.1"
+      note: "292: sốt nhẹ; sốt trên 39°C là dấu hiệu độ 2a. Nhiệt độ trung vị lúc khám ở trẻ ngoại trú 37,0°C (Hoang). Phân bố trong số trẻ có sốt; trung bình của hai lượt."
+  - finding: fever_duration
+    dist: { d1_2: 0.71, d3_5: 0.26, d6_7: 0.02, gt_7d: 0.01 }
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-292-2024, hoang-ijid-2019]
+      locator: "292 mục II.1.1, II.6.2.1, III.3.1"
+      note: "Khởi phát 1–2 ngày; sốt trên 2 ngày kèm nôn nhiều, lừ đừ là độ 2a; sốt quá 48 giờ phải tái khám ngay. Trẻ ngoại trú đến khám trung vị ngày 1,2 của bệnh. Phân bố theo thời điểm người dùng hỏi; trung bình của hai lượt."
+  - finding: mouth_ulcers
+    freq: very_frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [hoang-ijid-2019, nhan-plosntd-2020, byt-qd-292-2024]
+      locator: "292 mục II.1.1"
+      reported: "85,8% và 81,7% ca ngoại trú"
+      note: "292: loét đỏ hay phỏng nước 2–3 mm ở niêm mạc miệng, lợi, lưỡi, gây đau miệng, bỏ ăn, tăng tiết nước bọt."
+  - finding: hand_foot_blisters
+    freq: very_frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [hoang-ijid-2019, nhan-plosntd-2020, byt-qd-292-2024]
+      locator: "292 mục II.1.1"
+      reported: "ban da 91,7% ca ngoại trú, trong đó 39,7% chủ yếu dạng dát; trên 91% với EV-A71, CV-A6, CV-A16 nhưng 61% với CV-A10"
+      note: "292: hồng ban hoặc bóng nước ở lòng bàn tay, khuỷu tay, lòng bàn chân, gối, mông. Câu hỏi hỏi về nốt phỏng nước; nốt dát có thể được cha mẹ trả lời 'có' hoặc 'không'. Người hỏi sớm (ngày 1) có thể chưa có tổn thương. Cần bác sĩ duyệt."
+  - finding: rash_any
+    freq: very_frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [hoang-ijid-2019, nhan-plosntd-2020]
+      reported: "91,7% và 89,3% ca ngoại trú"
+      note: "Để very_frequent vì người dùng có thể hỏi trước khi mọc ban (giai đoạn khởi phát 1–2 ngày)."
+  - finding: rash_non_blanching
+    freq: rare
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-292-2024]
+      locator: "292 mục II.1.1, II.4.2"
+      note: "Tổn thương là hồng ban hoặc bóng nước; câu hỏi của danh mục nay ghi rõ nốt phỏng nước không tính. Ban xuất huyết, chấm xuất huyết gợi ý não mô cầu, sốt xuất huyết (292, chẩn đoán phân biệt). Lượt A để occasional (lo cha mẹ nhầm sẩn với nốt không mất khi ấn), trước khi có câu hướng dẫn mới; chọn rare (lượt B), thấp hơn tỷ lệ nền 5%. Tần suất trong số trẻ đã có ban."
+  - finding: rash_spreads_from_face
+    freq: rare
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-292-2024]
+      locator: "292 mục II.1.1"
+      note: "Tổn thương ở lòng bàn tay, khuỷu tay, lòng bàn chân, gối, mông; không mọc từ mặt lan xuống như sởi. Tần suất trong số trẻ đã có ban."
+  - finding: loss_of_appetite
+    freq: frequent
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-292-2024]
+      locator: "292 mục II.1.1"
+      note: "292 nêu biếng ăn ở giai đoạn khởi phát và ăn, bú kém ở giai đoạn toàn phát (loét miệng gây đau, bỏ ăn). Không có tỷ lệ; hai lượt thống nhất frequent."
+  - finding: vomiting
+    freq: occasional
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [hoang-ijid-2019, nhan-plosntd-2020, byt-qd-292-2024]
+      reported: "24,6% và 23,3% ca ngoại trú"
+      note: "292: nôn ói nhiều là dấu hiệu cần tái khám ngay."
+  - finding: cough
+    freq: frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [hoang-ijid-2019, nhan-plosntd-2020]
+      reported: "35,1% và 31,3% ca ngoại trú; gộp 289/852 (33,9%)"
+      note: "Số gộp hai nghiên cứu nằm ngay trên ranh giới 33%; chọn frequent (lượt B)."
+  - finding: runny_nose
+    freq: frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [hoang-ijid-2019, nhan-plosntd-2020]
+      reported: "36,3% và 29,8% ca ngoại trú; gộp 292/852 (34,3%)"
+      note: "Như ho; chọn frequent (lượt B)."
+  - finding: sore_throat
+    freq: frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [tu-eid-2007, byt-qd-292-2024]
+      locator: "292 mục II.1.1"
+      reported: "38,7–43,1% (trẻ nằm viện, TP.HCM 2005)"
+      note: "292: đau họng ở giai đoạn khởi phát; trẻ nhỏ biểu hiện bằng bỏ ăn, chảy nước dãi. Chỉ lượt A có liên kết này; giữ vì nguồn ủng hộ."
+  - finding: red_eyes
+    freq: rare
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [hoang-ijid-2019]
+      reported: "viêm kết mạc 2% ca ngoại trú"
+      note: "Mức rare thấp hơn tỷ lệ nền 5%: đỏ mắt hướng sang sởi."
+  - finding: headache
+    freq: rare
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [hoang-ijid-2019]
+      reported: "5,5% ca ngoại trú"
+      note: "Phần lớn trẻ dưới 3 tuổi, khó tự báo đau đầu. Chỉ lượt B có liên kết này."
+  - finding: startle_myoclonus
+    freq: occasional
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [hoang-ijid-2019, nhan-plosntd-2020, byt-qd-292-2024]
+      locator: "292 mục II.1.1, II.5.1, II.6.2"
+      reported: "giật mình 10,8% (Hoang) và 0% (Nhan) ở ngoại trú bệnh viện tuyến cuối, gộp 64/852 (7,5%); nội trú 20,6–60,8%"
+      note: "292: giật mình chới với là dấu hiệu quan trọng báo hiệu biến chứng thần kinh. Lượt B để rare (cao hơn tỷ lệ nền 1%, bộ kiểm tra cảnh báo). Số gộp ở ngoại trú nằm đúng ranh giới rare và occasional; với dấu hiệu cảnh báo của bệnh có biến chứng nguy hiểm, chọn mức mạnh hơn (occasional, lượt A). Quy tắc rf_hfmd_startle quyết định mức xử trí."
+  - finding: breathing_difficulty
+    freq: rare
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-292-2024]
+      locator: "292 mục II.5.2, II.6.3"
+      note: "Thở nhanh, khó thở là dấu hiệu độ 3; hiếm ở ca khám ban đầu. Mức rare thấp hơn tỷ lệ nền 5%; khi có kèm phỏng nước hoặc loét miệng, quy tắc rf_hfmd_warning_signs xếp mức 2. Chỉ lượt A có liên kết này."
+  - finding: hfmd_contact
+    freq: occasional
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-292-2024, byt-qd-3312-2015]
+      locator: "292 mục II.3.1; 3312/2015 bài Bệnh tay-chân-miệng, mục 1.2"
+      note: "Chẩn đoán ca lâm sàng dựa cả vào yếu tố dịch tễ (số trẻ mắc cùng thời gian); đi nhà trẻ, mẫu giáo là yếu tố nguy cơ lây. Nhiều trẻ không rõ nguồn lây; chưa có tỷ lệ, hai lượt thống nhất occasional."
+warning_signs:
+  - startle_myoclonus
+  - drowsy_hard_to_wake
+  - seizure_recent
+  - breathing_difficulty
+  - persistent_vomiting
+  - child_unable_to_drink
+  - cold_hands_feet
+  - confusion
+  - es_severe_breathing
+self_care_vi:
+  - "Cho trẻ ăn thức ăn lỏng, nguội, chia nhiều bữa nhỏ; trẻ còn bú thì tiếp tục cho bú."
+  - "Giữ vệ sinh răng miệng cho trẻ."
+  - "Không làm vỡ các nốt phỏng nước."
+  - "Cho trẻ nghỉ học 7–10 ngày kể từ khi bị bệnh."
+  - "Rửa tay trước và sau khi chăm sóc trẻ, không dùng chung đồ dùng cá nhân."
+see_doctor_vi:
+  - "Đưa trẻ đi khám trong 24 giờ, sau đó khám lại mỗi 1–2 ngày theo hẹn."
+  - "Trẻ còn sốt cần được khám lại mỗi ngày cho đến khi hết sốt ít nhất 48 giờ."
+  - "Trẻ dưới 12 tháng tuổi hoặc có bệnh khác kèm theo nên được khám ở bệnh viện."
+  - "Đưa trẻ đi khám ngay nếu sốt trên 39°C hoặc quá 48 giờ, nôn nhiều, giật mình, li bì, thở nhanh."
+  - "Gọi 115 hoặc đến cấp cứu ngay nếu trẻ co giật, hôn mê, khó thở hoặc da nổi vân tím."
+sources: [byt-qd-292-2024]
+review:
+  status: source_checked
+  authors: ["agent:pass-a", "agent:pass-b"]
+  reconciler: "agent:pass-c"
+  doctor_reviewer: null
+  updated: "2026-10-24"
+  notes_vi: "Cần bác sĩ xem: (1) prior và các hệ số mùa, vùng là ước lượng; hệ số phía Nam dựa trên 3312/2015 và số liệu 2005, bản 292/2024 không nhắc mùa; lượt C bỏ hệ số cả vùng phía Nam ×1,5 của lượt B (chỉ có mô tả bằng lời, cộng dồn với hệ số mùa); (2) tỷ lệ triệu chứng lấy từ ngoại trú bệnh viện nhi tuyến cuối, có thể nặng hơn ca ở trạm y tế; (3) cha mẹ có thể nhầm dát đỏ với phỏng nước; (4) bỏ các liên kết có tần suất gần bằng tỷ lệ nền: tiêu chảy (5%), li bì (1,5%), co giật, không uống được; các dấu hiệu này đã có quy tắc mức xử trí; (5) giật mình để occasional (số gộp ngoại trú 7,5%) thay cho rare; (6) mã ICD-10 chưa đối chiếu được."
