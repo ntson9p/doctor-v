@@ -2,6 +2,11 @@ import AxeBuilder from '@axe-core/playwright';
 import { expect, test } from '@playwright/test';
 import type { Page } from '@playwright/test';
 
+// These tests click as soon as a screen appears; the tap guard has its own test below.
+test.beforeEach(async ({ page }, info) => {
+  if (!info.title.includes('tap guard')) await page.addInitScript(() => (window.__dvTapSettleMs = 0));
+});
+
 async function expectNoAxeViolations(page: Page): Promise<void> {
   const results = await new AxeBuilder({ page }).withTags(['wcag2a', 'wcag2aa', 'wcag21aa', 'wcag22aa']).analyze();
   expect(results.violations.map((v) => `${v.id}: ${v.nodes.map((n) => n.target.join(' ')).join(', ')}`)).toEqual([]);
@@ -22,9 +27,15 @@ async function startCheck(page: Page, age: string, sex: 'Nữ' | 'Nam'): Promise
   await page.getByRole('button', { name: 'Tiếp tục' }).click();
 }
 
+/** Waits until the engine is idle: screens are read only once the busy state is gone. */
+async function settle(page: Page): Promise<void> {
+  await page.locator('.check[aria-busy="false"]').waitFor();
+}
+
 /** Answers every question with "no" (or the first option) until the review screen. */
 async function answerNoToEverything(page: Page, eachScreen?: () => Promise<void>): Promise<number> {
   for (let i = 0; i < 45; i++) {
+    await settle(page);
     if (eachScreen) await eachScreen();
     if (await page.getByRole('heading', { name: 'Xem lại câu trả lời' }).isVisible()) return i;
     if (await page.locator('.triage').isVisible()) return i;
@@ -115,4 +126,33 @@ test('"Sửa" on the review screen asks again from that question', async ({ page
   await expect(page.locator('[data-autofocus]')).toHaveText(firstQuestion);
   await answerNoToEverything(page);
   await expect(page.getByRole('heading', { name: 'Xem lại câu trả lời' })).toBeVisible();
+});
+
+test('tap guard: taps in the first moments after a question appears are ignored', async ({ page }) => {
+  const anyAnswer = page.getByRole('button', { name: /^(Không|Không có (dấu hiệu|triệu chứng|bệnh|điều) nào ở trên)$/ }).first();
+  // The whole screen: two checklists in a row can share the same title.
+  const question = page.locator('main');
+  await page.goto('/kiem-tra');
+  await page.getByRole('button', { name: 'Tôi đã hiểu' }).click();
+  // The emergency screen is guarded too: an instant tap is ignored, a later one is taken.
+  await page.getByRole('button', { name: 'Không có dấu hiệu nào ở trên' }).click();
+  await expect(page.getByLabel(/^Tuổi của/)).toHaveCount(0);
+  await page.waitForTimeout(450);
+  await page.getByRole('button', { name: 'Không có dấu hiệu nào ở trên' }).click();
+  await page.getByLabel(/^Tuổi của/).fill('30');
+  await page.getByLabel('Nam', { exact: true }).check();
+  await page.getByRole('button', { name: 'Tiếp tục' }).click();
+  await page.getByRole('button', { name: /Đau đầu/ }).click();
+  await settle(page);
+  // A tap right after the question appears (a second tap queued while the last answer computed).
+  const shown = await question.innerText();
+  await anyAnswer.click();
+  await page.waitForTimeout(150);
+  await settle(page);
+  expect(await question.innerText()).toBe(shown);
+  // After the screen has settled the same tap is taken.
+  await page.waitForTimeout(450);
+  await anyAnswer.click();
+  await settle(page);
+  await expect.poll(() => question.innerText()).not.toBe(shown);
 });

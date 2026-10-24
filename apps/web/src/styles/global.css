@@ -343,6 +343,14 @@ strong {
 
 /* ---------- Check flow ---------- */
 
+/* While the engine works: buttons look pressed and take no taps. */
+.check[aria-busy='true'] .btn,
+.check[aria-busy='true'] .choice,
+.check[aria-busy='true'] .complaint {
+  opacity: 0.6;
+  pointer-events: none;
+}
+
 .progress {
   margin: 0 0 0.75rem;
   color: var(--text-muted);

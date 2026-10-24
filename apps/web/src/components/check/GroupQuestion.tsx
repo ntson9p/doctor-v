@@ -1,5 +1,6 @@
 import type { CompiledKb } from '@doctor-v/engine';
 import { useState } from 'preact/hooks';
+import { useTapGuard } from '../../lib/tap-guard.ts';
 
 interface Props {
   kb: CompiledKb;
@@ -17,7 +18,15 @@ interface Props {
  */
 export function GroupQuestion({ kb, title, noneLabel, findingIds, allowUnknown, onAnswer }: Props) {
   const [checked, setChecked] = useState<string[]>([]);
-  const toggle = (id: string): void => setChecked(checked.includes(id) ? checked.filter((x) => x !== id) : [...checked, id]);
+  const settled = useTapGuard();
+  const toggle = (id: string, input: HTMLInputElement): void => {
+    // An ignored tap must not leave the box looking ticked.
+    if (!settled()) {
+      input.checked = checked.includes(id);
+      return;
+    }
+    setChecked(checked.includes(id) ? checked.filter((x) => x !== id) : [...checked, id]);
+  };
 
   return (
     <div>
@@ -31,7 +40,7 @@ export function GroupQuestion({ kb, title, noneLabel, findingIds, allowUnknown, 
           const help = kb.text.findings[id]?.help;
           return (
             <label key={id} class="choice">
-              <input type="checkbox" checked={checked.includes(id)} onChange={() => toggle(id)} />
+              <input type="checkbox" checked={checked.includes(id)} onChange={(e) => toggle(id, e.currentTarget)} />
               <span class="choice__text">
                 <span>{kb.text.findings[id]?.label ?? id}</span>
                 {help ? <span class="choice__help">{help}</span> : null}
@@ -41,14 +50,14 @@ export function GroupQuestion({ kb, title, noneLabel, findingIds, allowUnknown, 
         })}
       </fieldset>
       <div class="stack" style={{ marginTop: '1.25rem' }}>
-        <button type="button" class="btn btn--primary btn--block" disabled={checked.length === 0} onClick={() => onAnswer(checked)}>
+        <button type="button" class="btn btn--primary btn--block" disabled={checked.length === 0} onClick={() => settled() && onAnswer(checked)}>
           {checked.length === 0 ? 'Tiếp tục' : `Tiếp tục (đã chọn ${checked.length})`}
         </button>
-        <button type="button" class="btn btn--block" onClick={() => onAnswer([])}>
+        <button type="button" class="btn btn--block" onClick={() => settled() && onAnswer([])}>
           {noneLabel}
         </button>
         {allowUnknown ? (
-          <button type="button" class="btn btn--block" onClick={() => onAnswer(null)}>
+          <button type="button" class="btn btn--block" onClick={() => settled() && onAnswer(null)}>
             Tôi không rõ
           </button>
         ) : null}

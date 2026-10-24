@@ -3,7 +3,7 @@
  * complaint, one question per screen, review, result. Everything runs in the browser; the flow is
  * kept in sessionStorage so a reload does not lose the answers (it is gone when the tab closes).
  */
-import type { AskStep, CompiledKb, Phase, SessionState, Step } from '@doctor-v/engine';
+import type { AskStep, CompiledKb, Phase, SessionResult, SessionState, Step } from '@doctor-v/engine';
 import {
   answerStep,
   emergencyScreenStep,
@@ -59,6 +59,16 @@ function nextStepOf(kb: CompiledKb, session: SessionState): Step {
   return step;
 }
 
+const resultCache = new WeakMap<SessionState, SessionResult>();
+function resultOf(kb: CompiledKb, session: SessionState): SessionResult {
+  let result = resultCache.get(session);
+  if (!result) {
+    result = sessionResult(kb, session);
+    resultCache.set(session, result);
+  }
+  return result;
+}
+
 const fresh = (kb: CompiledKb, view: View = 'intro'): Flow => ({ kbVersion: kb.version, view, screen: null, profile: EMPTY_PROFILE, session: null });
 
 function Progress({ view, phase }: { view: View; phase: Phase | null }) {
@@ -95,6 +105,7 @@ export default function CheckApp() {
   const [kb, setKb] = useState<CompiledKb | null>(null);
   const [failed, setFailed] = useState(false);
   const [flow, setFlow] = useState<Flow | null>(null);
+  const [busy, setBusy] = useState(false);
 
   useEffect(() => {
     loadKb()
@@ -128,6 +139,19 @@ export default function CheckApp() {
   if (!kb || !flow) return <p>Đang tải…</p>;
 
   const set = (patch: Partial<Flow>): void => setFlow({ ...flow, ...patch });
+  /**
+   * Runs engine work after the browser has painted a busy state: it can take about half a second
+   * on a low-end phone, and without feedback a tap looks ignored.
+   */
+  const later = (work: () => void): void => {
+    setBusy(true);
+    requestAnimationFrame(() =>
+      setTimeout(() => {
+        work();
+        setBusy(false);
+      }, 0),
+    );
+  };
   /** Moves the session on: the next question, or the review (the result at once for emergencies). */
   const advance = (session: SessionState): void => {
     const step = nextStepOf(kb, session);
@@ -185,7 +209,7 @@ export default function CheckApp() {
           ageMonths={ageMonths}
           onPick={(complaintId) => {
             const ctx = { ageMonths, sex, regionId: flow.profile.regionId, month: new Date().getMonth() + 1 };
-            advance(startSession(kb, complaintId, ctx, flow.screen ?? {}));
+            later(() => advance(startSession(kb, complaintId, ctx, flow.screen ?? {})));
           }}
         />
       );
@@ -197,7 +221,7 @@ export default function CheckApp() {
         </button>
       );
     } else {
-      const answer = (s: AskStep, response: Record<string, string>): void => advance(answerStep(kb, session, s, response));
+      const answer = (s: AskStep, response: Record<string, string>): void => later(() => advance(answerStep(kb, session, s, response)));
       const question =
         ask.kind === 'finding' ? (
           <FindingQuestion
@@ -231,7 +255,7 @@ export default function CheckApp() {
           </button>
           {question}
           {canStop ? (
-            <button type="button" class="btn btn--link" style={{ marginTop: '1.5rem' }} onClick={() => advance(stopEarly(session))}>
+            <button type="button" class="btn btn--link" style={{ marginTop: '1.5rem' }} onClick={() => later(() => advance(stopEarly(session)))}>
               Dừng hỏi và xem kết quả
             </button>
           ) : null}
@@ -245,12 +269,17 @@ export default function CheckApp() {
         history={session.history}
         forOther={flow.profile.forOther}
         onEdit={(i) => set({ session: { ...session, history: session.history.slice(0, i), stoppedByUser: false }, view: 'ask' })}
-        onDone={() => set({ view: 'result' })}
+        onDone={() =>
+          later(() => {
+            resultOf(kb, session);
+            set({ view: 'result' });
+          })
+        }
       />
     );
   } else if (view === 'result' && session) {
     body = (
-      <Result kb={kb} result={sessionResult(kb, session)} onReview={() => set({ view: 'review' })} onRestart={restart} />
+      <Result kb={kb} result={resultOf(kb, session)} onReview={() => set({ view: 'review' })} onRestart={restart} />
     );
   } else {
     body = (
@@ -261,7 +290,10 @@ export default function CheckApp() {
   }
 
   return (
-    <div>
+    <div class="check" aria-busy={busy}>
+      <p class="visually-hidden" role="status">
+        {busy ? 'Đang xử lý' : ''}
+      </p>
       <Progress view={view} phase={ask?.phase ?? null} />
       {body}
     </div>

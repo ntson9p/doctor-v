@@ -26,7 +26,12 @@ export default defineConfig([
     },
   },
   {
-    files: ['**/*.js'],
+    files: ['**/*.js', '**/*.mjs'],
     extends: [tseslint.configs.disableTypeChecked],
+  },
+  {
+    // Playwright scripts and tests: callbacks passed to the page run in the browser.
+    files: ['apps/web/scripts/**', 'apps/web/e2e/**'],
+    languageOptions: { globals: { ...globals.browser, ...globals.node } },
   },
 ]);

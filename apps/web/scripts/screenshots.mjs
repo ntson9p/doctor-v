@@ -10,6 +10,7 @@ mkdirSync(out, { recursive: true });
 const browser = await chromium.launch();
 const context = await browser.newContext({ ...devices['Pixel 5'] });
 await context.addInitScript((s) => localStorage.setItem('dv.fontScale', s), scale);
+await context.addInitScript(() => (window.__dvTapSettleMs = 0));
 const page = await context.newPage();
 const base = 'http://localhost:4321';
 let n = 0;

@@ -1,6 +1,7 @@
 import type { CompiledKb } from '@doctor-v/engine';
 import { UNKNOWN } from '@doctor-v/engine';
 import { useState } from 'preact/hooks';
+import { useTapGuard } from '../../lib/tap-guard.ts';
 
 interface Props {
   kb: CompiledKb;
@@ -14,6 +15,7 @@ interface Props {
 /** One yes/no/unknown or multiple-choice question per screen. */
 export function FindingQuestion({ kb, findingId, alt, forOther, onAnswer }: Props) {
   const [showHelp, setShowHelp] = useState(false);
+  const settled = useTapGuard();
   const text = kb.text.findings[findingId];
   const finding = kb.findings.find((f) => f.id === findingId);
   if (!text || !finding) return <p class="error">Không tìm thấy câu hỏi "{findingId}".</p>;
@@ -42,11 +44,11 @@ export function FindingQuestion({ kb, findingId, alt, forOther, onAnswer }: Prop
       ) : null}
       <div class="stack" role="group" aria-label="Chọn câu trả lời">
         {options.map((o) => (
-          <button key={o.value} type="button" class="btn btn--block" onClick={() => onAnswer(o.value)}>
+          <button key={o.value} type="button" class="btn btn--block" onClick={() => settled() && onAnswer(o.value)}>
             {o.label}
           </button>
         ))}
-        <button type="button" class="btn btn--block" onClick={() => onAnswer(UNKNOWN)}>
+        <button type="button" class="btn btn--block" onClick={() => settled() && onAnswer(UNKNOWN)}>
           Không rõ
         </button>
       </div>
