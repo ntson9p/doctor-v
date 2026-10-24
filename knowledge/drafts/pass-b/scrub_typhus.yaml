@@ -1,0 +1,196 @@
+id: scrub_typhus
+names:
+  vi: "Bệnh sốt mò"
+  vi_common: ["Sốt mò"]
+  en: "Scrub typhus"
+codes:
+  icd10: "A75.3"
+  icd10_verified: false
+  mondo: "MONDO:0019365"
+summary_vi:
+  - "Bệnh do vi khuẩn Orientia, lây khi bị ấu trùng mò sống ở bụi cỏ đốt."
+  - "Thường sốt cao, đau đầu, đau mỏi người; có thể có vết loét đóng vảy đen không đau."
+  - "Nếu không được điều trị đúng và sớm, bệnh có thể gây biến chứng nặng ở phổi, tim."
+urgency: 3
+cant_miss: false
+specialties: [infectious_disease]
+priors:
+  - complaint: fever
+    default: P4
+    by_age: { infant_0_2m: P6, child_2m_5y: P5, child_5_12: P5, teen_13_17: P5 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [katoh-2019-scrub-typhus-hanoi, bonell-2017-scrub-typhus-burden, byt-qd-5642-2015]
+      reported: "2,9% người lớn nằm viện vì sốt tại Bạch Mai (2012–2013); 3,5% ca nhập Bệnh viện Nhiệt đới Trung ương không có chẩn đoán ngay (2001–2003)"
+      note: "Đây là tỷ lệ ở bệnh viện tuyến cuối, nơi người bệnh đã sốt khoảng 1 tuần. Ở cộng đồng, phần lớn sốt do vi rút nên tỷ lệ thấp hơn: ước lượng P4 (0,2–1%) cho người lớn. Các nghiên cứu Việt Nam đã đọc chỉ gồm người lớn (tuổi trung bình khoảng 45); trẻ em ít được báo cáo nên hạ xuống P5. 5642: bệnh lưu hành ở Việt Nam, rải rác quanh năm, nhiều ở nông thôn."
+  - complaint: headache
+    default: P5
+    by_age: { infant_0_2m: P6, child_2m_5y: P6, child_5_12: P6 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [hamaguchi-2015-rickettsiosis-hanoi, katoh-2019-scrub-typhus-hanoi]
+      note: "Đau đầu có ở khoảng 67–71% người sốt mò, nhưng người bệnh thường chọn 'sốt' là triệu chứng chính; ước lượng P5 cho người lớn."
+prior_modifiers:
+  - when: { regions: [north], months: [5, 6, 7, 8, 9, 10] }
+    factor: 1.5
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [hamaguchi-2015-rickettsiosis-hanoi, byt-qd-5642-2015]
+      locator: "Hamaguchi bảng 1 và bảng 2; 5642 bài Sốt mò mục 2"
+      reported: "74,7% ca sốt mò nhập viện vào mùa mưa tháng 5–10, so với 49,0% ở nhóm sốt không do rickettsia (OR 3,09)"
+      note: "So với mức trung bình năm, nguy cơ trong mùa mưa gấp khoảng 74,7/49 ≈ 1,5 lần. Số liệu từ Bạch Mai (người bệnh các tỉnh phía Bắc); 5642: cao điểm các tháng xuân – hè – thu."
+  - when: { regions: [north], months: [11, 12, 1, 2, 3, 4] }
+    factor: 0.5
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [hamaguchi-2015-rickettsiosis-hanoi]
+      locator: "Bảng 1"
+      reported: "25,3% ca sốt mò vào mùa khô tháng 11–4, so với 51,0% ở nhóm sốt không do rickettsia"
+      note: "25,3/51 ≈ 0,5. Chưa có số liệu mùa cho miền Trung, Tây Nguyên, miền Nam nên không đặt hệ số."
+findings:
+  - finding: eschar
+    freq: frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [hamaguchi-2015-rickettsiosis-hanoi, katoh-2019-scrub-typhus-hanoi, byt-qd-5642-2015]
+      locator: "Hamaguchi bảng 1; Katoh bảng 1 và phần Introduction; 5642 bài Sốt mò mục 3.1"
+      reported: "62,9% (Hamaguchi, nhóm khác 2,1–5,4%); 18,2% (Katoh, nhóm khác 0,7%); các nghiên cứu Việt Nam trước 46–94%"
+      population: "người lớn nằm viện, bác sĩ khám tìm"
+      note: "Dấu hiệu đặc hiệu theo 5642. Tỷ lệ lệch nhiều giữa các nghiên cứu; người dùng tự xem có thể bỏ sót vết loét ở nách, bẹn (câu hỏi có tỷ lệ 'không rõ' 30%). Chọn mức giữa: frequent."
+  - finding: bush_exposure
+    freq: frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [hamaguchi-2015-rickettsiosis-hanoi, katoh-2019-scrub-typhus-hanoi, byt-qd-5642-2015]
+      locator: "Hamaguchi bảng 1 (nghề phơi nhiễm cao); Katoh bảng 1 (nông dân); 5642 bài Sốt mò mục 2"
+      reported: "Nghề phơi nhiễm cao 61,2% (Hamaguchi); nông dân 60,6% so với 32,7% ở nhóm khác (Katoh)"
+      note: "Số liệu chỉ tính nghề nghiệp; câu hỏi doctor-v rộng hơn (làm rẫy, phát cỏ, ngồi nằm trên cỏ trong 2 tuần) nên tỷ lệ thật có thể cao hơn. 5642: người bị bệnh khi đi vào nơi cây cỏ thấp có mò."
+  - finding: fever
+    freq: almost_always
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-5642-2015]
+      locator: "Bài Sốt mò mục 3.1 (sốt cao liên tục)"
+      note: "Chỉ có tác dụng khi triệu chứng chính là đau đầu."
+  - finding: fever_duration
+    dist: { d1_2: 0.08, d3_5: 0.32, d6_7: 0.27, gt_7d: 0.33 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [katoh-2019-scrub-typhus-hanoi, hamaguchi-2015-rickettsiosis-hanoi, byt-qd-5642-2015]
+      locator: "Katoh bảng 1; Hamaguchi bảng 1; 5642 bài Sốt mò mục 3.1"
+      reported: "Sốt trung vị 7 ngày (5–10) trước nhập viện (Katoh); 76% sốt trên 7 ngày khi nhập viện (Hamaguchi)"
+      note: "Người dùng cộng đồng kiểm tra sớm hơn lúc nhập viện nên dồn bớt về 3–7 ngày. Ca nhẹ không điều trị có thể sốt 3–4 tuần (5642)."
+  - finding: fever_max_temp
+    dist: { lt_38: 0.08, t38_39: 0.40, ge_39: 0.52 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-5642-2015, hamaguchi-2015-rickettsiosis-hanoi]
+      locator: "5642 bài Sốt mò mục 3.1; Hamaguchi bảng 1 (nhiệt độ trên 38°C khi nhập viện 80,6%)"
+      note: "Phân bố ước lượng, lệch về sốt cao."
+  - finding: chills_rigors
+    freq: frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [hamaguchi-2015-rickettsiosis-hanoi, katoh-2019-scrub-typhus-hanoi, byt-qd-5642-2015]
+      locator: "Hamaguchi bảng 1; Katoh bảng 1; 5642 mục 3.1 (có thể kèm theo rét run)"
+      reported: "82,3% (Hamaguchi); 24,2% (Katoh)"
+      note: "Hai nguồn lệch nhau; chọn mức giữa."
+  - finding: headache
+    freq: very_frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [hamaguchi-2015-rickettsiosis-hanoi, katoh-2019-scrub-typhus-hanoi]
+      locator: "Hamaguchi bảng 1; Katoh bảng 1"
+      reported: "70,5% (Hamaguchi); 66,7% so với 46,5% ở nhóm khác (Katoh)"
+  - finding: myalgia
+    freq: frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [hamaguchi-2015-rickettsiosis-hanoi, katoh-2019-scrub-typhus-hanoi, byt-qd-5642-2015]
+      locator: "Hamaguchi bảng 1; Katoh bảng 1; 5642 mục 3.1 (đau mỏi người)"
+      reported: "67,9% (Hamaguchi); 21,2% (Katoh)"
+  - finding: cough
+    freq: frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [hamaguchi-2015-rickettsiosis-hanoi, katoh-2019-scrub-typhus-hanoi, byt-qd-5642-2015]
+      locator: "Hamaguchi bảng 1; Katoh bảng 1; 5642 mục 3.1 (tổn thương phổi: thường có ho)"
+      reported: "43,9% (Hamaguchi); 42,4% (Katoh)"
+  - finding: sore_throat
+    freq: rare
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [katoh-2019-scrub-typhus-hanoi]
+      locator: "Bảng 1"
+      reported: "6,1% (nhóm khác 7,3%)"
+      note: "Đau họng ít gặp ở sốt mò, trong khi rất hay gặp ở sốt do vi rút đường hô hấp."
+  - finding: red_eyes
+    freq: occasional
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [katoh-2019-scrub-typhus-hanoi, byt-qd-5642-2015]
+      locator: "Katoh bảng 1; 5642 mục 3.1 (xung huyết kết mạc mắt)"
+      reported: "Xung huyết kết mạc 39,4% so với 16,6% ở nhóm khác (bác sĩ khám)"
+      note: "Hạ một mức vì người dùng tự nhận biết đỏ mắt kém hơn bác sĩ khám."
+  - finding: rash_any
+    freq: occasional
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [hamaguchi-2015-rickettsiosis-hanoi, katoh-2019-scrub-typhus-hanoi, byt-qd-5642-2015]
+      locator: "Hamaguchi bảng 1; Katoh bảng 1; 5642 mục 3.1 (ban dát sẩn cuối tuần đầu)"
+      reported: "31,2% (Hamaguchi); 9,1% (Katoh)"
+  - finding: lymph_node_swelling
+    freq: occasional
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [hamaguchi-2015-rickettsiosis-hanoi, katoh-2019-scrub-typhus-hanoi, byt-qd-5642-2015]
+      locator: "Hamaguchi bảng 1; Katoh bảng 1; 5642 mục 3.1 (hạch sưng tại chỗ vết loét và hạch toàn thân, mềm, không đau)"
+      reported: "Nổi hạch 64,1% (Hamaguchi, nhóm khác 16,8–19,7%); nhiều hạch 12,1% (Katoh)"
+      note: "Bác sĩ khám thấy nhiều hơn người bệnh tự sờ thấy, nhất là hạch không đau; chọn occasional."
+  - finding: headache_duration
+    dist: { lt_4h: 0.05, h4_72: 0.50, gt_3d: 0.45 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [katoh-2019-scrub-typhus-hanoi, byt-qd-5642-2015]
+      locator: "Katoh bảng 1 (sốt trung vị 7 ngày); 5642 mục 3.1"
+      note: "Đau đầu đi cùng đợt sốt kéo dài nhiều ngày; ước lượng."
+warning_signs:
+  - breathing_difficulty
+  - confusion
+  - drowsy_hard_to_wake
+  - cold_hands_feet
+  - severe_weakness
+  - decreased_urine
+  - jaundice
+  - seizure_recent
+self_care_vi:
+  - "Uống đủ nước, nghỉ ngơi; hạ sốt bằng chườm mát."
+  - "Xem kỹ khắp người, nhất là nách, bẹn, thắt lưng, để tìm vết loét đóng vảy đen."
+  - "Khi làm rẫy, phát cỏ, nên mặc quần áo kín và bôi thuốc xua côn trùng lên da hở."
+see_doctor_vi:
+  - "Đi khám trong 24 giờ, nhất là khi sốt sau làm rẫy, phát cỏ hoặc có vết loét đóng vảy đen."
+  - "Báo cho nhân viên y tế nếu đã đi rừng, làm rẫy hoặc ngồi nằm trên cỏ."
+  - "Đến cơ sở cấp cứu ngay nếu khó thở, lơ mơ, tiểu ít hoặc tay chân lạnh."
+review:
+  status: draft
+  authors: ["agent:pass-b"]
+  updated: "2026-10-24"
+  notes_vi: "Mức xử trí 3, không thuộc nhóm không được bỏ sót: giữ như gợi ý; 5642 điều trị bằng kháng sinh uống, người bệnh thường hết sốt sau 1–3 ngày; biến chứng hô hấp, tuần hoàn, não do các quy tắc mức 2 xử lý. Điểm chưa chắc: (1) toàn bộ số liệu triệu chứng lấy từ người lớn nằm viện tuyến cuối ở Hà Nội; hai nghiên cứu cùng nơi lệch nhau nhiều (vết loét 63% so với 18%, rét run 82% so với 24%, đau cơ 68% so với 21%); (2) chưa có số liệu ở trẻ em và ở miền Trung, miền Nam; (3) prior cộng đồng là ước lượng từ tỷ lệ ở bệnh viện; (4) không liên kết khó thở, lú lẫn, vàng da vì là dấu hiệu nặng, tần suất ở cộng đồng thấp và đã có quy tắc. Không tra được icd.kcb.vn nên icd10_verified: false."

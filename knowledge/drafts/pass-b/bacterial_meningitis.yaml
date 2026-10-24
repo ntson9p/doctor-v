@@ -1,0 +1,209 @@
+id: bacterial_meningitis
+names:
+  vi: "Viêm màng não do vi khuẩn"
+  vi_common: ["Viêm màng não mủ", "Viêm màng não nhiễm khuẩn"]
+  en: "Bacterial meningitis"
+codes:
+  icd10: "G00.9"
+  icd10_verified: false
+  mondo: "MONDO:0006670"
+summary_vi:
+  - "Tình trạng nhiễm khuẩn cấp tính ở màng bọc não và tủy sống."
+  - "Thường sốt, đau đầu dữ dội, nôn, cứng gáy; có thể lơ mơ, co giật hoặc nổi nốt tím trên da."
+  - "Đây là bệnh cấp cứu, cần được điều trị tại bệnh viện càng sớm càng tốt."
+urgency: 2
+cant_miss: true
+specialties: [emergency, infectious_disease]
+priors:
+  - complaint: fever
+    default: P6
+    by_age: { infant_0_2m: P4, child_2m_5y: P5, elder_65_74: P5, elder_75p: P5 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [truong-2023-meningitis-children-south-vn, bijlsma-2016-meningitis-netherlands, mai-2008-ssuis-meningitis-vietnam]
+      reported: "2.560 trẻ dưới 5 tuổi có viêm màng não mủ có thể trong 10 năm ở 2 bệnh viện nhi TP.HCM, 2/3 dưới 1 tuổi; viêm màng não do Hib khoảng 12/100.000 trẻ dưới 5 tuổi ở Hà Nội năm 2002 (trước vắc xin); người lớn Hà Lan 0,94–1,72/100.000/năm"
+      note: "Tỷ lệ mắc vài ca trên 100.000 dân mỗi năm so với hàng chục nghìn lượt sốt, nên trong số người sốt chỉ khoảng 0,01% (P6) ở người lớn. Trẻ nhỏ (nhất là dưới 1 tuổi) và người cao tuổi cao hơn: P5; trẻ dưới 2 tháng P4 (chỉ dùng sàng lọc). Ở Việt Nam, liên cầu lợn làm tăng số ca ở người lớn (Mai 2008), chưa đủ số liệu để nâng prior."
+  - complaint: headache
+    default: P5
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [wertheim-2009-ssuis-north-vietnam, attia-1999-jama-meningitis]
+      note: "Người lớn bị viêm màng não thường đau đầu dữ dội (92% ở loạt ca Việt Nam) và có thể chọn 'đau đầu' là triệu chứng chính; nhóm người đi khám vì đau đầu nhỏ hơn nhiều so với nhóm sốt. Ước lượng P5 (0,02–0,2%). Câu hỏi sốt và cứng gáy được hỏi bắt buộc nên sẽ tách nhóm này."
+findings:
+  - finding: fever
+    freq: very_frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [wertheim-2009-ssuis-north-vietnam, nguyenhuu-2022-meningitis-children-vn, curtis-2010-meningitis-children]
+      locator: "Wertheim bảng 2; Nguyen-Huu bảng 2; Curtis (tóm tắt)"
+      reported: "Sốt 100% (người lớn, liên cầu lợn); 93,9% (trẻ em); ở trẻ em không sốt không loại trừ được bệnh (LR 0,70)"
+      note: "Không chọn almost_always để trả lời 'không sốt' không loại gần hết viêm màng não (trẻ nhỏ, người cao tuổi, người đã dùng thuốc hạ sốt). Chỉ có tác dụng khi triệu chứng chính là đau đầu."
+  - finding: headache
+    freq: very_frequent
+    freq_by_age: { infant_0_2m: rare, child_2m_5y: occasional }
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [wertheim-2009-ssuis-north-vietnam, nguyenhuu-2022-meningitis-children-vn, attia-1999-jama-meningitis, nhs-meningitis]
+      locator: "Wertheim bảng 2; Nguyen-Huu bảng 2; Attia (tóm tắt); NHS (đau đầu dữ dội tăng dần)"
+      reported: "92% (người lớn Việt Nam); 30,3% (trẻ em, đa số 1–5 tuổi); độ nhạy gộp 50% trong tổng quan Attia (gồm cả viêm màng não vi rút)"
+      note: "Trẻ nhỏ không tự kể được đau đầu nên mức thấp hơn nhiều. Chỉ có tác dụng khi triệu chứng chính là sốt."
+  - finding: neck_stiffness
+    freq: frequent
+    freq_by_age: { infant_0_2m: occasional, child_2m_5y: occasional }
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [wertheim-2009-ssuis-north-vietnam, nguyenhuu-2022-meningitis-children-vn, vandebeek-2004-nejm-meningitis, nhs-meningitis]
+      locator: "Wertheim bảng 2; Nguyen-Huu bảng 2; van de Beek (tóm tắt)"
+      reported: "88% (người lớn Việt Nam, bác sĩ khám); 42,4% (trẻ em); bộ ba sốt, cứng gáy, thay đổi ý thức chỉ có ở 44% (Hà Lan)"
+      note: "Hạ một mức so với số liệu bệnh viện vì người dùng tự đánh giá cứng gáy và có thể kiểm tra ở giai đoạn sớm. Ở trẻ nhỏ cứng gáy ít gặp và khó nhận biết hơn."
+  - finding: confusion
+    freq: occasional
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [wertheim-2009-ssuis-north-vietnam, vandebeek-2004-nejm-meningitis, nhs-meningitis]
+      locator: "Wertheim bảng 2; van de Beek (tóm tắt); NHS"
+      reported: "Lú lẫn 46% (người lớn Việt Nam)"
+      note: "Hạ một mức so với số liệu bệnh viện (dấu hiệu của bệnh nặng)."
+  - finding: drowsy_hard_to_wake
+    freq: occasional
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [vandebeek-2004-nejm-meningitis, nguyenhuu-2022-meningitis-children-vn, nhs-meningitis]
+      locator: "van de Beek (tóm tắt); Nguyen-Huu bảng 2; NHS"
+      reported: "14% hôn mê khi nhập viện (Hà Lan); rối loạn ý thức 15,2% (trẻ em Việt Nam)"
+  - finding: seizure_recent
+    freq: occasional
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [nguyenhuu-2022-meningitis-children-vn, byt-qd-5642-2015, curtis-2010-meningitis-children]
+      locator: "Nguyen-Huu bảng 2; 5642 bài Viêm màng não nhiễm khuẩn mục 3.1 (co giật là dấu hiệu ít gặp hơn); Curtis (co giật ngoài tuổi co giật do sốt: LR 4,4)"
+      reported: "Co giật 42,4% ở trẻ em nằm viện"
+      note: "Ở người lớn ít gặp hơn (5642); ở trẻ em hay gặp hơn nhưng số liệu từ bệnh viện. Chọn một mức chung occasional."
+  - finding: vomiting
+    freq: frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [nguyenhuu-2022-meningitis-children-vn, attia-1999-jama-meningitis, byt-qd-5642-2015]
+      locator: "Nguyen-Huu bảng 2; Attia (tóm tắt); 5642 mục 3.1 (nôn vọt)"
+      reported: "Nôn 60,6% (trẻ em); buồn nôn hoặc nôn: độ nhạy gộp 30% ở người lớn"
+  - finding: persistent_vomiting
+    freq: occasional
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-5642-2015, nhs-meningitis]
+      locator: "5642 mục 3.1 (nôn vọt); NHS"
+      note: "Ước lượng."
+  - finding: photophobia
+    freq: occasional
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-5642-2015, nhs-meningitis]
+      locator: "5642 mục 3.1 (tăng cảm giác: sợ ánh sáng, là một trong các dấu hiệu có thể có); NHS (đau mắt khi nhìn ánh sáng)"
+      note: "Nguồn chỉ nói 'có thể có', không có tần suất."
+  - finding: rash_any
+    freq: occasional
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [wertheim-2009-ssuis-north-vietnam, nhs-meningitis, byt-qd-5642-2015]
+      locator: "Wertheim (Results: ban xuất huyết hoặc bầm 14%); NHS; 5642 mục 3.1 (ban hoại tử gợi ý căn nguyên)"
+      reported: "14% (liên cầu lợn, người lớn Việt Nam)"
+      note: "Ban hay gặp hơn ở bệnh do não mô cầu, ít gặp ở Việt Nam hơn châu Âu."
+  - finding: rash_non_blanching
+    freq: very_frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [wertheim-2009-ssuis-north-vietnam, nhs-meningitis]
+      locator: "Wertheim (Results); NHS (ban không mất khi ấn thành ly)"
+      reported: "7/7 ca có ban là ban xuất huyết, bầm tím hoặc tử ban (Wertheim)"
+      note: "Tần suất trong số người bệnh đã có ban. Cỡ mẫu nhỏ; chọn very_frequent thay vì almost_always."
+  - finding: pig_pork_exposure
+    freq: occasional
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [mai-2008-ssuis-meningitis-vietnam, wertheim-2009-ssuis-north-vietnam, huong-2014-ssuis-review]
+      locator: "Mai 2008 (tóm tắt); Wertheim bảng 2; Huong 2014 bảng 2"
+      reported: "Liên cầu lợn chiếm 33,6% người lớn nghi viêm màng não vi khuẩn ở miền Nam; trong đó 33,1% có tiếp xúc lợn hoặc thịt lợn (Mai); tiếp xúc lợn 32% (Wertheim); gộp: nghề liên quan lợn 38,1%, ăn thực phẩm nguy cơ 37,3% (Huong)"
+      note: "Ước tính trong toàn bộ viêm màng não vi khuẩn ở người lớn: khoảng 1/3 do liên cầu lợn × khoảng 1/3–1/2 có phơi nhiễm ≈ 10–20%. Chỉ hỏi người từ 13 tuổi."
+  - finding: bulging_fontanelle
+    freq: occasional
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [nguyenhuu-2022-meningitis-children-vn, curtis-2010-meningitis-children, nhs-meningitis]
+      locator: "Nguyen-Huu bảng 2; Curtis (tóm tắt: bệnh sử thóp phồng LR 8,0); NHS"
+      reported: "Thóp phồng 21,2% (trẻ em nằm viện, đa số 1–5 tuổi)"
+      note: "Chỉ hỏi trẻ dưới 5 tuổi; trẻ còn thóp mở (dưới khoảng 18 tháng) có tần suất cao hơn."
+  - finding: child_unable_to_drink
+    freq: occasional
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [nguyenhuu-2022-meningitis-children-vn, curtis-2010-meningitis-children, nhs-meningitis]
+      locator: "Nguyen-Huu bảng 2 (chán ăn 48,5%); Curtis (bú kém LR 2,0); NHS (bỏ bú)"
+      note: "Câu hỏi 'không uống được, không bú được' nặng hơn 'chán ăn'; chọn occasional."
+  - finding: cold_hands_feet
+    freq: occasional
+    evidence:
+      tier: C
+      basis: verbal
+      sources: [nhs-meningitis]
+      locator: "Symptoms of meningitis (very cold hands and feet)"
+      note: "Nguồn liệt kê nhưng không nêu tần suất; ước lượng occasional."
+  - finding: headache_severity
+    dist: { mild: 0.05, moderate: 0.25, severe: 0.70 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [nhs-meningitis, byt-qd-5642-2015]
+      locator: "NHS (đau đầu dữ dội tăng dần); 5642 mục 3.1"
+      note: "Phân bố ước lượng, lệch mạnh về đau nhiều."
+  - finding: headache_duration
+    dist: { lt_4h: 0.15, h4_72: 0.70, gt_3d: 0.15 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-5642-2015, wertheim-2009-ssuis-north-vietnam]
+      locator: "5642 mục 3.1 (khởi phát và diễn biến từ vài giờ đến vài ngày); Wertheim bảng 2 (triệu chứng trung vị 4 ngày trước nhập viện)"
+      note: "Ước lượng."
+  - finding: headache_course
+    dist: { first_time: 0.90, recurrent_similar: 0.07, progressive: 0.03 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-5642-2015]
+      locator: "Mục 3.1"
+      note: "Bệnh cấp tính, đau đầu kiểu mới; ước lượng."
+warning_signs:
+  - neck_stiffness
+  - confusion
+  - drowsy_hard_to_wake
+  - seizure_recent
+  - rash_non_blanching
+  - bulging_fontanelle
+  - persistent_vomiting
+  - cold_hands_feet
+self_care_vi:
+  - "Không tự điều trị tại nhà và không chờ xem có đỡ không."
+see_doctor_vi:
+  - "Gọi 115 hoặc đến khoa cấp cứu gần nhất ngay; không tự lái xe."
+  - "Ấn mạnh thành ly thủy tinh lên nốt đỏ trên da; nốt không mất màu là dấu hiệu rất nguy hiểm."
+  - "Người chăm sóc, tiếp xúc gần với người bệnh nên hỏi nhân viên y tế về thuốc phòng bệnh."
+review:
+  status: draft
+  authors: ["agent:pass-b"]
+  updated: "2026-10-24"
+  notes_vi: "Mức xử trí 2, thuộc nhóm không được bỏ sót: giữ như gợi ý, phù hợp ví dụ kb-guide mục 2.5, 5642 (bệnh cấp cứu, cần kháng sinh kịp thời) và NHS (gọi 999 hoặc đến cấp cứu ngay). Trường hợp có ban xuất huyết hoặc dấu hiệu sốc đã có quy tắc riêng. Điểm chưa chắc: (1) prior là ước lượng từ tỷ lệ mắc, không có số liệu ở người đi khám vì sốt hoặc đau đầu; (2) số liệu triệu chứng người lớn Việt Nam chỉ có loạt ca liên cầu lợn (Wertheim, 50 ca) và tóm tắt các nghiên cứu khác; số liệu trẻ em từ 33 ca; (3) đã hạ một mức cứng gáy, lú lẫn so với số liệu bệnh viện; lượt C cân nhắc giữ mức cao hơn nếu ưu tiên độ nhạy; (4) không dùng NICE NG240 vì lượt B không mở trực tiếp được (lỗi 403). Không liên kết đau đầu kiểu sét đánh: nếu ghi tần suất thấp hơn tỷ lệ nền 1% thì trả lời 'có' sẽ làm giảm khả năng viêm màng não, không an toàn; để tỷ lệ nền."

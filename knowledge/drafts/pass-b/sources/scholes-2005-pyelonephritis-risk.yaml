@@ -1,0 +1,15 @@
+id: scholes-2005-pyelonephritis-risk
+type: primary_study
+title: "Risk factors associated with acute pyelonephritis in healthy women"
+publisher: "Annals of Internal Medicine 2005;142:20–27 (Scholes D, Hooton TM, Roberts PL, Gupta K, Stapleton AE, Stamm WE)"
+date: "2005-01"
+url: "https://europepmc.org/article/MED/15630106"
+doi: "10.7326/0003-4819-142-1-200501040-00008"
+pmid: "15630106"
+license_class: L3
+license_note: "Bản quyền ACP: chỉ dùng dữ kiện kèm trích dẫn."
+default_tier: B
+accessed: "2026-10-24"
+verified: true
+verified_by: "agent:pass-b"
+notes_vi: "Lượt B chỉ đọc tóm tắt trên Europe PMC. Nghiên cứu bệnh–chứng dựa vào cộng đồng ở phụ nữ 18–49 tuổi không có thai (Washington, Hoa Kỳ): chỉ 7% phải nằm viện; E. coli 85%. Yếu tố nguy cơ độc lập: giao hợp từ 3 lần/tuần (OR 5,6), nhiễm khuẩn tiết niệu gần đây (OR 4,4), đái tháo đường (OR 4,1), són tiểu gần đây (OR 3,9), bạn tình mới trong năm qua (OR 2,2)."

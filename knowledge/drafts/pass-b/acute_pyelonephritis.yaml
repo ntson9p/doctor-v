@@ -1,0 +1,211 @@
+id: acute_pyelonephritis
+names:
+  vi: "Viêm thận – bể thận cấp"
+  vi_common: ["Nhiễm trùng thận", "Viêm đài bể thận"]
+  en: "Acute pyelonephritis"
+codes:
+  icd10: "N10"
+  icd10_verified: false
+  mondo: "MONDO:0003529"
+summary_vi:
+  - "Nhiễm khuẩn cấp tính ở thận, thường do vi khuẩn từ bàng quang đi ngược lên."
+  - "Thường sốt cao, rét run, đau hông lưng một bên, có thể kèm tiểu buốt, tiểu nhiều lần."
+  - "Phụ nữ, người có thai, người có sỏi tiết niệu hoặc đái tháo đường dễ mắc hơn."
+urgency: 3
+cant_miss: false
+specialties: [nephrology, urology]
+priors:
+  - complaint: fever
+    default: P3
+    by_age: { infant_0_2m: P2, elder_65_74: P2, elder_75p: P2 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [shaikh-2008-uti-prevalence-children, kim-2018-pyelonephritis-korea, byt-qd-3931-2015]
+      reported: "Nhiễm khuẩn tiết niệu ở 7,0% trẻ nhũ nhi bị sốt, 2,1% trẻ gái sốt trên 12 tháng; viêm thận – bể thận cấp ở Hàn Quốc 39,1/10.000 người từ 15 tuổi mỗi năm, tăng theo tuổi"
+      note: "Không có số liệu Việt Nam. Ở trẻ nhỏ, nhiễm khuẩn tiết niệu có sốt phần lớn là viêm thận – bể thận; trẻ dưới 2 tháng P2 (chỉ dùng sàng lọc), trẻ 2 tháng – 5 tuổi giữ P3 vì phần lớn trên 1 tuổi. Người lớn P3 (1–5%); từ 65 tuổi nhiễm khuẩn tiết niệu là nguồn sốt hay gặp và tỷ lệ mắc tăng theo tuổi, ước lượng P2. Khác biệt theo giới xử lý bằng prior_modifiers."
+  - complaint: abdominal_pain
+    default: P3
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-3931-2015, nhs-kidney-infection]
+      note: "Đau hông lưng, đau bụng dưới là triệu chứng chính hay gặp; trong số người đi khám vì đau bụng, ước lượng 1–5% (P3), chưa có số liệu Việt Nam. Viêm bàng quang không sốt là bệnh riêng."
+prior_modifiers:
+  - when: { sex: [female] }
+    factor: 1.7
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [kim-2018-pyelonephritis-korea, scholes-2005-pyelonephritis-risk, nhs-kidney-infection]
+      locator: "Kim 2018: Incidence"
+      reported: "Nữ 71,3 so với nam 6,5 đợt/10.000 người/năm (gấp khoảng 11 lần), người từ 15 tuổi, Hàn Quốc"
+      note: "Prior gốc là của cả hai giới. Chọn tỷ số nữ:nam khoảng 6 (thận trọng hơn 11 lần của Hàn Quốc vì trẻ nhỏ và người cao tuổi chênh lệch ít hơn): nữ × 1,7, nam × 0,3."
+  - when: { sex: [male] }
+    factor: 0.3
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [kim-2018-pyelonephritis-korea]
+      locator: "Incidence"
+      reported: "Nam 6,5 so với nữ 71,3 đợt/10.000 người/năm"
+      note: "Cặp với hệ số nữ × 1,7 (xem trên). Trẻ trai dưới 3 tháng chưa cắt bao quy đầu có tỷ lệ cao (Shaikh 2008) nhưng nhóm dưới 2 tháng chỉ dùng sàng lọc."
+findings:
+  - finding: fever
+    freq: very_frequent
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-3931-2015, nhs-kidney-infection, pinson-1997-fever-pyelonephritis]
+      locator: "3931 bài Viêm thận bể thận cấp mục 2 (hội chứng nhiễm trùng: sốt cao rét run 39–40°C); NHS; Pinson 1997 (tóm tắt)"
+      note: "Chỉ có tác dụng khi triệu chứng chính là đau bụng. Không chọn almost_always vì có người bệnh không sốt (Pinson: nhiều phụ nữ nghi viêm thận – bể thận ở cấp cứu không sốt)."
+  - finding: fever_max_temp
+    dist: { lt_38: 0.10, t38_39: 0.35, ge_39: 0.55 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-3931-2015]
+      locator: "Mục 2 (sốt cao 39–40°C)"
+      note: "Phân bố ước lượng."
+  - finding: fever_duration
+    dist: { d1_2: 0.55, d3_5: 0.33, d6_7: 0.08, gt_7d: 0.04 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-3931-2015]
+      locator: "Mục 2 (bệnh thường xuất hiện đột ngột)"
+      note: "Bệnh cấp, người bệnh thường đi khám trong vài ngày đầu; ước lượng."
+  - finding: chills_rigors
+    freq: frequent
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-3931-2015, nhs-kidney-infection]
+      locator: "3931 mục 2 (sốt cao rét run); NHS (thấy nóng, lạnh hoặc run)"
+      note: "Nguồn mô tả rét run là biểu hiện điển hình nhưng không nêu tần suất; chọn frequent để thận trọng."
+  - finding: flank_pain
+    freq: very_frequent
+    freq_by_age: { infant_0_2m: rare, child_2m_5y: occasional }
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-3931-2015, nhs-kidney-infection]
+      locator: "3931 mục 2 (đau hông lưng, mạng sườn, thường một bên; vỗ hông lưng dương tính hay gặp); NHS (đau thắt lưng hoặc hông)"
+      note: "Trẻ nhỏ không chỉ được chỗ đau; NHS: trẻ dưới 2 tuổi có thể chỉ có sốt."
+  - finding: dysuria
+    freq: frequent
+    freq_by_age: { infant_0_2m: rare, child_2m_5y: occasional }
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-3931-2015, nhs-kidney-infection]
+      locator: "3931 mục 2 (hội chứng bàng quang cấp: tiểu buốt, tiểu dắt, tiểu khó là dấu hiệu sớm); NHS"
+      note: "Không có tần suất; nguồn mô tả là dấu hiệu sớm, thường gặp nhưng không phải ai cũng có. Trẻ nhỏ không kể được."
+  - finding: urinary_frequency
+    freq: frequent
+    freq_by_age: { infant_0_2m: rare, child_2m_5y: occasional }
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-3931-2015, nhs-kidney-infection]
+      locator: "3931 mục 2 (tiểu dắt); NHS (tiểu nhiều lần, gấp)"
+      note: "Như trên; cùng cụm với tiểu buốt."
+  - finding: hematuria
+    freq: occasional
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-3931-2015, nhs-kidney-infection]
+      locator: "3931 mục 2 (tiểu máu, tiểu đục); NHS (tiểu ra máu: đi khám gấp)"
+      note: "Nguồn nói có thể có; chọn occasional."
+  - finding: nausea
+    freq: frequent
+    evidence:
+      tier: C
+      basis: verbal
+      sources: [nhs-kidney-infection]
+      locator: "Symptoms (feeling or being sick)"
+      note: "Nguồn liệt kê, không nêu tần suất; ước lượng."
+  - finding: vomiting
+    freq: occasional
+    evidence:
+      tier: C
+      basis: verbal
+      sources: [nhs-kidney-infection]
+      locator: "Symptoms (being sick)"
+  - finding: abdominal_pain
+    freq: frequent
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [nhs-kidney-infection, byt-qd-3931-2015]
+      locator: "NHS (đau bụng dưới hoặc lưng ngay dưới sườn); 3931 mục 2 (có thể có cơn đau quặn thận)"
+      note: "Chỉ có tác dụng khi triệu chứng chính là sốt; nhiều người mô tả đau hông lưng là đau bụng. Ước lượng."
+  - finding: abd_pain_location
+    dist: { epigastric: 0.04, right_upper: 0.18, left_upper: 0.18, periumbilical: 0.04, right_lower: 0.14, left_lower: 0.14, suprapubic: 0.18, whole: 0.10 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-3931-2015, nhs-kidney-infection]
+      locator: "3931 mục 2 (đau hông lưng, mạng sườn một bên); NHS (bụng dưới, lưng dưới sườn)"
+      note: "Danh sách vị trí không có 'hông lưng'; người bệnh có thể chọn dưới sườn, bụng dưới một bên hoặc hạ vị (do viêm bàng quang đi kèm). Phân bố ước lượng."
+  - finding: abd_pain_radiates_back
+    freq: frequent
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-3931-2015, nhs-kidney-infection]
+      locator: "3931 mục 2; NHS"
+      note: "Đau nằm ở hông lưng nên nhiều người sẽ trả lời đau lan ra sau lưng; ước lượng."
+  - finding: abd_pain_radiates_groin
+    freq: occasional
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-3931-2015]
+      locator: "Mục 2 (có thể xuất hiện cơn đau quặn thận)"
+      note: "Gợi ý có sỏi gây tắc đi kèm; quy tắc rf_fever_obstructing_stone (mức 2) xử lý trường hợp sốt kèm đau quặn."
+  - finding: abd_pain_duration
+    dist: { lt_6h: 0.08, h6_24: 0.30, d1_3: 0.45, d4_14: 0.15, gt_2w: 0.02 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-3931-2015]
+      locator: "Mục 2 (bệnh xuất hiện đột ngột)"
+      note: "Ước lượng."
+  - finding: diabetes
+    freq: occasional
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [scholes-2005-pyelonephritis-risk]
+      locator: "Tóm tắt (đái tháo đường: OR 4,1)"
+      note: "Nguồn chỉ có tỷ số chênh, không có tỷ lệ; với tỷ lệ nền 7%, OR khoảng 4 tương ứng khoảng 20% người bệnh có đái tháo đường. Ước lượng."
+  - finding: kidney_stones_known
+    freq: occasional
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-3931-2015, nhs-kidney-infection]
+      locator: "3931 mục 1 (yếu tố thuận lợi: tắc nghẽn do sỏi); NHS (sỏi thận làm tăng nguy cơ)"
+      note: "Không có tần suất; ước lượng."
+warning_signs:
+  - confusion
+  - drowsy_hard_to_wake
+  - cold_hands_feet
+  - severe_weakness
+  - decreased_urine
+  - persistent_vomiting
+self_care_vi:
+  - "Uống nhiều nước, nghỉ ngơi."
+  - "Không tự dùng kháng sinh còn thừa ở nhà."
+see_doctor_vi:
+  - "Đi khám trong 24 giờ để xét nghiệm nước tiểu và được kê kháng sinh phù hợp."
+  - "Sốt cao, rét run thường cần điều trị tại bệnh viện."
+  - "Người có thai, người cao tuổi hoặc có đái tháo đường nên đi khám ngay trong ngày."
+  - "Đến cơ sở cấp cứu ngay nếu lơ mơ, lú lẫn, nôn liên tục, tiểu rất ít hoặc tay chân lạnh."
+review:
+  status: draft
+  authors: ["agent:pass-b"]
+  updated: "2026-10-24"
+  notes_vi: "Mức xử trí 3, không thuộc nhóm không được bỏ sót: giữ như gợi ý và ví dụ kb-guide mục 2.5; NHS khuyên khám gấp trong ngày, gọi cấp cứu khi lú lẫn, lơ mơ. Lưu ý 3931 khuyên điều trị nội trú khi sốt cao rét run và chỉ cho điều trị ngoại trú ca nhẹ; doctor-v vẫn để mức 3 vì người bệnh được nhập viện sau khi khám, còn dấu hiệu nhiễm khuẩn nặng do quy tắc mức 2 xử lý. Điểm chưa chắc: (1) không có số liệu Việt Nam về tỷ lệ viêm thận – bể thận trong số người sốt hoặc đau bụng; (2) tần suất triệu chứng chủ yếu là mô tả bằng lời (3931, NHS), chưa tìm được nghiên cứu có số liệu ở người bệnh ngoại trú; (3) hệ số giới tính lấy từ Hàn Quốc (người từ 15 tuổi), áp dụng cho mọi lứa tuổi; (4) danh sách vị trí đau bụng không có 'hông lưng'; (5) không liên kết tiêu chảy dù NHS có liệt kê: chưa có tần suất, và khi thử trên bộ dữ liệu nháp, liên kết occasional (cao hơn tỷ lệ nền 5%) làm người trẻ sốt kéo dài kèm đau bụng, tiêu chảy bị xếp viêm thận – bể thận đứng đầu; (6) tỷ lệ nền 5% của 'đau bụng' khi sốt thấp hơn thực tế (Phuong 2006: 14% ở bệnh sốt khác), nên liên kết đau bụng 'frequent' có thể làm bệnh này nổi lên quá mức. Bài Viêm thận bể thận cấp trong 3931 (tr. 49–53 bản PDF) do lượt B tự đọc; 2388/QĐ-BYT năm 2024 không bãi bỏ bài này theo ghi chú của sổ nguồn."

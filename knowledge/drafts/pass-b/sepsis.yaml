@@ -1,0 +1,163 @@
+id: sepsis
+names:
+  vi: "Nhiễm khuẩn huyết"
+  vi_common: ["Nhiễm trùng máu", "Nhiễm trùng huyết"]
+  en: "Sepsis"
+codes:
+  icd10: "A41.9"
+  icd10_verified: false
+  mondo: "MONDO:0005229"
+summary_vi:
+  - "Tình trạng nhiễm khuẩn nặng, vi khuẩn lan vào máu và làm suy nhiều cơ quan."
+  - "Có thể sốt cao, rét run hoặc thân nhiệt thấp, kèm thở nhanh, lú lẫn, tay chân lạnh, tiểu ít."
+  - "Đây là tình trạng cấp cứu, cần được điều trị ngay tại bệnh viện."
+urgency: 1
+cant_miss: true
+specialties: [emergency, infectious_disease]
+priors:
+  - complaint: fever
+    default: P4
+    by_age:
+      infant_0_2m: P3
+      child_2m_5y: P5
+      child_5_12: P5
+      teen_13_17: P5
+      adult_18_44: P5
+      adult_45_64: P5
+      elder_65_74: P4
+      elder_75p: P3
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [rudd-2020-gbd-sepsis, nhs-sepsis, byt-qd-5642-2015]
+      locator: "Rudd 2020: Results (tỷ lệ mắc theo tuổi); NHS Sepsis (nhóm nguy cơ cao); 5642 bài Nhiễm khuẩn huyết (yếu tố nguy cơ)"
+      reported: "Tỷ lệ mắc chuẩn hóa theo tuổi toàn cầu khoảng 677/100.000/năm (2017), đỉnh ở trẻ nhỏ và người cao tuổi; gánh nặng cao ở Đông Nam Á"
+      note: "Không có số liệu về tỷ lệ nhiễm khuẩn huyết trong số người sốt ở cộng đồng Việt Nam. Ước lượng: dưới 65 tuổi (từ 2 tháng) bị sốt rất hiếm khi là nhiễm khuẩn huyết (P5); 65–74 tuổi P4; từ 75 tuổi P3 (NHS: người trên 75 tuổi là nhóm nguy cơ cao; 5642: người già); trẻ dưới 2 tháng P3 (chỉ dùng sàng lọc). Đã thử trên bộ dữ liệu nháp của lượt B: với P4 cho trẻ 2 tháng – 5 tuổi và người 45–64 tuổi, người chỉ sốt cao 1–2 ngày, không dấu hiệu nguy hiểm, bị xếp 'đến cấp cứu ngay' (vượt ngưỡng 1% của bệnh không được bỏ sót); với P3 cho 65–74 tuổi, người 70 tuổi chỉ sốt kèm rét run bị xếp 'gọi 115'. NHS chỉ khuyên gọi cấp cứu khi có dấu hiệu cụ thể (lú lẫn, thở rất nhanh, da tím tái hoặc loang lổ, ban không mất khi ấn, sốt rất cao hoặc thân nhiệt thấp, run), và các dấu hiệu này đã có quy tắc riêng. Cần bác sĩ duyệt."
+findings:
+  - finding: chills_rigors
+    freq: frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [wattanapaiboon-2020-sepsis-symptoms, byt-qd-5642-2015, nhs-sepsis]
+      locator: "Wattanapaiboon bảng 2; 5642 mục 2.1 (sốt có thể kèm rét run hoặc không); NHS (shivering)"
+      reported: "Sốt và/hoặc rét run 53,8%; rét run dữ dội, đau cơ hoặc sốt 54,9%"
+      population: "người lớn nhiễm khuẩn huyết ở khoa cấp cứu, Thái Lan"
+      note: "Tần suất trong số người có sốt."
+  - finding: fever_max_temp
+    dist: { lt_38: 0.25, t38_39: 0.30, ge_39: 0.45 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-5642-2015, nhs-sepsis]
+      locator: "5642 mục 2.1 (sốt rất thường gặp; ca nặng có thể hạ thân nhiệt); NHS (nhiệt độ rất cao hoặc rất thấp)"
+      note: "Phân bố ước lượng: lệch về sốt cao, nhưng nhóm dưới 38°C gồm cả người thân nhiệt thấp, người cao tuổi."
+  - finding: confusion
+    freq: occasional
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [wattanapaiboon-2020-sepsis-symptoms, nhs-sepsis, byt-qd-5642-2015]
+      locator: "Wattanapaiboon bảng 2; NHS (confusion, slurred speech); 5642 mục 2.1 (có thể thay đổi ý thức)"
+      reported: "Nói ngọng hoặc lú lẫn 22,2%"
+  - finding: drowsy_hard_to_wake
+    freq: occasional
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [nhs-sepsis, byt-qd-5642-2015]
+      locator: "NHS (trẻ dưới 5 tuổi: khó đánh thức, ngủ nhiều hơn); 5642 mục 2.1"
+      note: "Ước lượng; cùng cụm với lú lẫn."
+  - finding: breathing_difficulty
+    freq: frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [wattanapaiboon-2020-sepsis-symptoms, byt-qd-5642-2015, nhs-sepsis]
+      locator: "Wattanapaiboon bảng 1–2; 5642 mục 2.1 (thở nhanh); NHS (very fast breathing)"
+      reported: "Khó thở nhiều 41,4%; ổ nhiễm ở phổi 49,9%"
+  - finding: cold_hands_feet
+    freq: occasional
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [nhs-sepsis, wattanapaiboon-2020-sepsis-symptoms, byt-qd-5642-2015]
+      locator: "NHS (da, môi tái, xám hoặc loang lổ); Wattanapaiboon bảng 1–2 (42,8% sốc nhiễm khuẩn; da loang lổ chỉ ghi nhận 1,1%); 5642 mục 2.1 (sốc nhiễm khuẩn)"
+      note: "Dấu hiệu giảm tưới máu thường bị ghi chép thiếu; ước lượng occasional cho người dùng cộng đồng."
+  - finding: severe_weakness
+    freq: occasional
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-5642-2015, wattanapaiboon-2020-sepsis-symptoms]
+      locator: "5642 mục 2.1 (triệu chứng toàn thân); Wattanapaiboon bảng 2 (mệt mỏi 16,2%)"
+      note: "Không có số liệu về mệt lả đến mức không tự đi lại; ước lượng."
+  - finding: decreased_urine
+    freq: occasional
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [wattanapaiboon-2020-sepsis-symptoms, nhs-sepsis, byt-qd-5642-2015]
+      locator: "Wattanapaiboon bảng 2 (cả ngày không đi tiểu 4,1%); NHS (trẻ không đi tiểu 12 giờ); 5642 mục 2.1 (thiểu niệu)"
+      note: "Câu hỏi doctor-v (lượng nước tiểu ít hẳn trong 12 giờ) dễ thỏa hơn 'cả ngày không đi tiểu', nên chọn occasional."
+  - finding: fainting_or_near_fainting
+    freq: occasional
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-5642-2015, wattanapaiboon-2020-sepsis-symptoms]
+      locator: "5642 mục 2.1 (sốc nhiễm khuẩn: tụt huyết áp); Wattanapaiboon bảng 1 (42,8% sốc)"
+      note: "Choáng, ngất do tụt huyết áp; không có số liệu tần suất, ước lượng."
+  - finding: rash_non_blanching
+    freq: frequent
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [nhs-sepsis, wertheim-2009-ssuis-north-vietnam]
+      locator: "NHS (ban không mất khi ấn); Wertheim (ban xuất huyết, bầm tím ở 14% ca liên cầu lợn)"
+      note: "Tần suất trong số người nhiễm khuẩn huyết đã có ban: ban do não mô cầu, liên cầu lợn, rối loạn đông máu thường là ban xuất huyết. Ước lượng."
+  - finding: immunocompromised
+    freq: occasional
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [wattanapaiboon-2020-sepsis-symptoms, byt-qd-5642-2015, nhs-sepsis]
+      locator: "Wattanapaiboon bảng 1; 5642 (yếu tố nguy cơ); NHS (higher-risk groups)"
+      reported: "Suy giảm miễn dịch 10,8%"
+  - finding: diabetes
+    freq: occasional
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [wattanapaiboon-2020-sepsis-symptoms, byt-qd-5642-2015]
+      locator: "Wattanapaiboon bảng 1; 5642 (yếu tố nguy cơ: tiểu đường)"
+      reported: "Đái tháo đường 25,2%"
+      population: "người lớn, tuổi trung vị 67"
+  - finding: child_unable_to_drink
+    freq: occasional
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [nhs-sepsis]
+      locator: "Trẻ dưới 5 tuổi: not feeding"
+      note: "Chỉ hỏi ở trẻ 2 tháng – 5 tuổi; ước lượng, chưa có số liệu."
+warning_signs:
+  - confusion
+  - drowsy_hard_to_wake
+  - breathing_difficulty
+  - cold_hands_feet
+  - severe_weakness
+  - decreased_urine
+  - rash_non_blanching
+  - fainting_or_near_fainting
+self_care_vi:
+  - "Không tự chữa tại nhà và không chờ xem có đỡ không."
+  - "Trong lúc chờ xe cấp cứu, cho người bệnh nằm nghỉ và mang theo các thuốc đang dùng."
+see_doctor_vi:
+  - "Gọi 115 hoặc đến khoa cấp cứu gần nhất ngay."
+  - "Báo cho nhân viên y tế các bệnh nền, thuốc đang dùng và nơi có thể bị nhiễm khuẩn như phổi, đường tiểu, vết thương."
+review:
+  status: draft
+  authors: ["agent:pass-b"]
+  updated: "2026-10-24"
+  notes_vi: "Mức xử trí 1, thuộc nhóm không được bỏ sót: giữ như gợi ý, phù hợp ví dụ trong kb-guide mục 2.5, 5642 (tình trạng nhiễm trùng cấp tính nặng, tử vong 20–50%, điều trị kháng sinh tĩnh mạch ngay) và NHS (gọi 999 hoặc đến cấp cứu). Điểm chưa chắc: (1) prior hoàn toàn là ước lượng, không có số liệu về tỷ lệ nhiễm khuẩn huyết trong số người sốt ở cộng đồng; (2) tần suất triệu chứng lấy từ một nghiên cứu ở khoa cấp cứu Thái Lan (người cao tuổi, bệnh nặng); ở người dùng cộng đồng có thể thấp hơn; (3) mô hình một bệnh: nhiễm khuẩn huyết thường đi kèm viêm phổi, viêm thận – bể thận, nên xác suất có thể bị chia sẻ với bệnh nguồn; (4) không dùng NICE NG253/NG254 vì lượt B không mở trực tiếp được (nice.org.uk trả lỗi 403). Chưa liên kết tiếp xúc lợn (liên cầu lợn) vì chưa có số liệu tỷ lệ trong toàn bộ nhiễm khuẩn huyết. MONDO:0005229 là 'bacterial infectious disease with sepsis' (MONDO không có mục 'sepsis' riêng)."

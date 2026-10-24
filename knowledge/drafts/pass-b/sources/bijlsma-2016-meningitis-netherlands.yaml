@@ -1,0 +1,15 @@
+id: bijlsma-2016-meningitis-netherlands
+type: primary_study
+title: "Community-acquired bacterial meningitis in adults in the Netherlands, 2006–14: a prospective cohort study"
+publisher: "Lancet Infectious Diseases 2016;16:339–347 (Bijlsma MW, Brouwer MC, Kasanmoentalib ES và cộng sự)"
+date: "2015-12"
+url: "https://europepmc.org/article/MED/26652862"
+doi: "10.1016/S1473-3099(15)00430-2"
+pmid: "26652862"
+license_class: L3
+license_note: "Bản quyền Elsevier: chỉ dùng dữ kiện kèm trích dẫn."
+default_tier: B
+accessed: "2026-10-24"
+verified: true
+verified_by: "agent:pass-b"
+notes_vi: "Lượt B chỉ đọc tóm tắt trên Europe PMC. 1.412 đợt viêm màng não vi khuẩn ở người lớn Hà Lan (2006–2014): tỷ lệ mắc giảm từ 1,72 xuống 0,94/100.000 người lớn mỗi năm; phế cầu 72%; tử vong 17%. Dùng để ước lượng thứ bậc độ lớn của prior ở người lớn."
