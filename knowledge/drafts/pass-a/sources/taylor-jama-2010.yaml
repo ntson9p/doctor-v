@@ -1,0 +1,15 @@
+id: taylor-jama-2010
+type: systematic_review
+title: "Does this patient have malaria?"
+publisher: "JAMA (The Rational Clinical Examination; Taylor SM, Molyneux ME, Simel DL, Meshnick SR, Juliano JJ)"
+date: "2010"
+url: "https://europepmc.org/article/MED/21057136"
+doi: "10.1001/jama.2010.1578"
+pmid: "21057136"
+license_class: L3
+license_note: "Bản quyền nhà xuất bản: chỉ dùng dữ kiện kèm trích dẫn, không sao chép câu chữ."
+default_tier: A
+accessed: "2026-10-24"
+verified: true
+verified_by: "agent:pass-a (chỉ đọc tóm tắt qua Europe PMC)"
+notes_vi: "Vùng lưu hành: từng triệu chứng riêng lẻ ít giá trị; lách to LR 3,3, gan to LR 2,4. Người đi về từ vùng sốt rét: sốt LR 5,1; lách to LR 6,5; tăng bilirubin LR 7,3; giảm tiểu cầu LR 5,6."

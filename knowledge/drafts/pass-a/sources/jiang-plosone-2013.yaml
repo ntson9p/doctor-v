@@ -1,0 +1,15 @@
+id: jiang-plosone-2013
+type: systematic_review
+title: "Childhood intussusception: a literature review"
+publisher: "PLoS ONE"
+date: "2013"
+url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC3718796/"
+doi: "10.1371/journal.pone.0068482"
+pmid: "23894308"
+license_class: L0
+license_note: "CC0 (public domain)."
+default_tier: B
+accessed: "2026-10-24"
+verified: true
+verified_by: "agent:pass-a (đọc toàn văn trên PMC)"
+notes_vi: "Tỷ lệ mắc ở trẻ dưới 1 tuổi: trung bình 74/100.000, Việt Nam 302/100.000; đỉnh 4–7 tháng tuổi, thấp nhất 0–2 tháng; ở châu Á 13% phải mổ, tử vong khoảng 0,2%."

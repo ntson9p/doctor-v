@@ -1,0 +1,13 @@
+id: nhs-period-pain
+type: web_page
+title: "Period pain"
+publisher: "NHS (UK)"
+date: "2026-03-18"
+url: "https://www.nhs.uk/conditions/period-pain/"
+license_class: L1
+license_note: "Open Government Licence v3.0; bản chuyển thể không được trình bày như nội dung của NHS."
+default_tier: C
+accessed: "2026-10-24"
+verified: true
+verified_by: "agent:pass-a (đọc trang)"
+notes_vi: "Đau bụng trước hoặc trong kỳ kinh, có thể lan ra lưng, đùi, thường kéo dài tới 3 ngày. Tự chăm sóc: tắm nước ấm, chườm ấm bụng, xoa bóp bụng và lưng, vận động nhẹ, thuốc giảm đau không kê đơn. Đi khám nếu đau tăng, kinh nhiều hoặc không đều, đau ảnh hưởng sinh hoạt, đau khi quan hệ hoặc khi đi tiểu, đi ngoài, ra máu giữa kỳ kinh. Khám sớm nếu đau dữ dội hoặc nặng hơn thường lệ mà thuốc giảm đau không đỡ. Nguyên nhân thứ phát: lạc nội mạc tử cung, u xơ tử cung, viêm vùng chậu, vòng tránh thai."

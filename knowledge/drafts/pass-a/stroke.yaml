@@ -1,0 +1,162 @@
+id: stroke
+names:
+  vi: "Đột quỵ não"
+  vi_common: ["Đột quỵ", "Tai biến mạch máu não"]
+  en: "Stroke"
+codes:
+  icd10: "I64"
+  icd10_verified: true
+  mondo: "MONDO:0005098"
+summary_vi:
+  - "Mạch máu não bị tắc hoặc vỡ đột ngột, làm một vùng não bị tổn thương."
+  - "Thường đột ngột méo miệng, yếu tê một bên người, nói khó; khi chảy máu não hay kèm đau đầu, nôn."
+  - "Cần gọi 115 ngay vì được điều trị càng sớm thì kết quả càng tốt."
+urgency: 1
+cant_miss: true
+specialties: [neurology, emergency]
+priors:
+  - complaint: headache
+    default: P6
+    by_age: { adult_45_64: P5, elder_65_74: P4, elder_75p: P4 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-3312-2024, kumral-jnnp-1995, melo-neurology-1996, ihs-ichd3-2018]
+      note: "Đột quỵ là nguyên nhân tử vong hàng đầu ở Việt Nam; nhồi máu não chiếm 76,2% (3312/QĐ-BYT). Đau đầu lúc khởi phát gặp ở 16% nhồi máu não và 36% xuất huyết não (Kumral 1995), 57% xuất huyết não (Melo 1996); ICHD-3: đau đầu hiếm khi là biểu hiện nổi bật của nhồi máu não, nhưng có thể nổi bật trong chảy máu tiểu não. Vì vậy đột quỵ biểu hiện chủ yếu bằng đau đầu phần lớn là xuất huyết hoặc đột quỵ tuần hoàn sau. Prior tính trên mọi người đau đầu, kể cả người sẽ chọn 'dấu hiệu đột quỵ' ở màn sàng lọc (xem liên kết es_stroke_signs). Ước: từ 65 tuổi P4, 45–64 tuổi P5, dưới 45 tuổi rất hiếm (P6)."
+findings:
+  - finding: es_stroke_signs
+    freq: very_frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [aroor-stroke-2017, byt-qd-3312-2024, ihs-ichd3-2018]
+      reported: "14,1% người nhồi máu não không có triệu chứng FAST (méo mặt, yếu tay, nói khó)"
+      population: "người nhồi máu não nhập viện (Mỹ)"
+      note: "Dấu hiệu then chốt. Đột quỵ biểu hiện bằng đau đầu có nhiều ca tuần hoàn sau, chảy máu tiểu não (đau vùng chẩm, mất thăng bằng, nôn theo 3312/QĐ-BYT) dễ không có dấu hiệu FAST, nên chọn very_frequent thay vì almost_always. Ở bước xếp hạng, người dùng đã trả lời 'không' ở màn sàng lọc, nên liên kết này làm khả năng đột quỵ giảm khoảng 5 lần, không loại trừ."
+  - finding: headache_course
+    dist: { first_time: 0.85, recurrent_similar: 0.05, progressive: 0.10 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [ihs-ichd3-2018]
+      note: "Đau đầu mới, khởi phát cấp tính cùng lúc với các triệu chứng của đột quỵ (ICHD-3 mục 6.1.1, 6.2.1). Phân bố là ước lượng."
+  - finding: headache_severity
+    dist: { mild: 0.15, moderate: 0.40, severe: 0.45 }
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [ihs-ichd3-2018]
+      note: "Đau đầu do nhồi máu não thường ở mức vừa; do xuất huyết thì hay gặp hơn và nặng hơn (ICHD-3). Phân bố là ước lượng."
+  - finding: headache_location
+    dist: { one_side: 0.30, both_sides: 0.10, forehead_face: 0.10, back_neck: 0.25, whole_head: 0.25 }
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [ihs-ichd3-2018, byt-qd-3312-2024]
+      note: "Đau có thể khu trú theo vị trí ổ chảy máu hoặc cùng bên ổ nhồi máu (ICHD-3); chảy máu tiểu não gây đau đầu vùng chẩm dữ dội (3312/QĐ-BYT). Chia theo lựa chọn là ước lượng."
+  - finding: headache_thunderclap
+    freq: occasional
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [ihs-ichd3-2018, byt-qd-3312-2024]
+      note: "Đau đầu do xuất huyết não đôi khi khởi phát kiểu sét đánh; hiếm khi nhồi máu não do huyết khối từ xa biểu hiện bằng đau đầu đột ngột đơn độc (ICHD-3). Xuất huyết não khởi phát đột ngột (3312/QĐ-BYT)."
+  - finding: vomiting
+    freq: frequent
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-3312-2024, melo-neurology-1996]
+      note: "Buồn nôn là triệu chứng hay gặp của xuất huyết não, chảy máu tiểu não gây nôn (3312/QĐ-BYT); đau đầu lúc khởi phát hay gặp hơn ở người có nôn (Melo 1996). Ước frequent ở đột quỵ biểu hiện bằng đau đầu."
+  - finding: confusion
+    freq: occasional
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-3312-2024, msd-stroke-overview]
+      note: "Rối loạn ý thức hay gặp trong xuất huyết não (3312/QĐ-BYT) và đột quỵ tuần hoàn sau (MSD). Người còn tự dùng doctor-v thường tỉnh táo, nên chọn occasional."
+  - finding: vision_loss_or_double
+    freq: occasional
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [aroor-stroke-2017, byt-qd-3312-2024, msd-stroke-overview]
+      reported: "40% người nhồi máu não không có triệu chứng FAST có triệu chứng thị giác"
+      population: "người nhồi máu não không có dấu hiệu FAST"
+      note: "Mất thị lực, nhìn đôi là triệu chứng của nhồi máu não (3312/QĐ-BYT) và đột quỵ tuần hoàn sau (MSD). Tần suất trên mọi ca đột quỵ biểu hiện bằng đau đầu thấp hơn 40%; chọn occasional."
+  - finding: sudden_loss_of_balance
+    freq: frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [aroor-stroke-2017, byt-qd-3312-2024, msd-stroke-overview]
+      reported: "42% người nhồi máu não không có triệu chứng FAST có mất thăng bằng khi đi hoặc yếu chân"
+      population: "người nhồi máu não không có dấu hiệu FAST"
+      note: "Dấu hiệu đề xuất mới (xem proposed_findings). Thất điều, chóng mặt là triệu chứng của nhồi máu não; chảy máu tiểu não gây mất thăng bằng (3312/QĐ-BYT); đột quỵ hệ đốt sống – thân nền gây chóng mặt, thất điều (MSD)."
+  - finding: seizure_recent
+    freq: rare
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-3312-2024]
+      note: "Co giật có thể gặp khi chảy máu ở thùy trán, thái dương hoặc đỉnh (3312/QĐ-BYT); không có tỷ lệ, ước rare trên mọi ca đột quỵ."
+  - finding: neck_stiffness
+    freq: occasional
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-3312-2024]
+      note: "Khi có hôn mê, cứng gáy, co giật, huyết áp tăng cao, nôn hoặc đau đầu thì nghĩ nhiều đến chảy máu não (phần chẩn đoán phân biệt của 3312/QĐ-BYT). Không có tỷ lệ; ước occasional."
+  - finding: hypertension_known
+    freq: frequent
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-3312-2024, msd-stroke-overview]
+      note: "Tăng huyết áp là nguyên nhân chính của xuất huyết não nguyên phát (3312/QĐ-BYT) và là yếu tố nguy cơ hàng đầu của đột quỵ (MSD). Chọn frequent thay vì very_frequent vì nhiều người tăng huyết áp ở Việt Nam chưa từng được phát hiện (khoảng 6/10 theo STEPS 2021) và tỷ lệ nền của danh mục (15%) thấp hơn tỷ lệ ở người cao tuổi."
+  - finding: bp_measured
+    dist: { normal: 0.20, high: 0.30, very_high: 0.25, extreme: 0.25 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-3312-2024]
+      note: "Huyết áp tăng cao gợi ý chảy máu não (3312/QĐ-BYT). Số đo gần nhất có thể đo trước khi bệnh khởi phát nên vẫn giữ 20% 'dưới 140/90'. Phân bố là ước lượng."
+  - finding: diabetes
+    freq: occasional
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [msd-stroke-overview]
+      note: "Đái tháo đường là yếu tố nguy cơ đột quỵ (MSD). Chưa có tỷ lệ ở người Việt; ước occasional (tỷ lệ nền của danh mục 7%)."
+  - finding: known_heart_disease
+    freq: occasional
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [msd-stroke-overview]
+      note: "Rung nhĩ và các bệnh tim gây huyết khối (nhồi máu cơ tim, bệnh van tim) là yếu tố nguy cơ nhồi máu não (MSD). Chưa có tỷ lệ; ước occasional."
+warning_signs: [es_stroke_signs, confusion, drowsy_hard_to_wake, seizure_recent, vision_loss_or_double, headache_thunderclap, persistent_vomiting, sudden_loss_of_balance]
+self_care_vi:
+  - "Ghi lại giờ bắt đầu có triệu chứng để báo nhân viên y tế."
+  - "Không tự lái xe đến bệnh viện."
+see_doctor_vi:
+  - "Gọi 115 ngay để được đưa đến bệnh viện có thể điều trị đột quỵ."
+  - "Không chờ xem triệu chứng có tự hết hay không."
+proposed_findings:
+  - id: sudden_loss_of_balance
+    kind: sign
+    type: binary
+    label_vi: "Đột ngột mất thăng bằng, đi loạng choạng"
+    question_vi: "Có đột ngột mất thăng bằng, đi loạng choạng không?"
+    help_vi: "Ví dụ: đang bình thường bỗng đứng không vững, đi bị xiêu sang một bên."
+    alt_question:
+      text_vi: "Có tự đi thẳng vài bước được như mọi khi không?"
+      inverted: true
+    leak: specific
+    sources: [aroor-stroke-2017, byt-qd-3312-2024]
+    notes_vi: "Chữ B (Balance) trong BE-FAST. Trong người nhồi máu não không có dấu hiệu FAST (14,1%), 42% có mất thăng bằng hoặc yếu chân (Aroor 2017); chảy máu tiểu não và đột quỵ tuần hoàn sau gây mất thăng bằng, thất điều (3312/QĐ-BYT). Màn sàng lọc hiện chỉ hỏi méo miệng, yếu tê một bên, nói khó nên bỏ sót nhóm này. Đề xuất thêm vào danh mục và cân nhắc đưa vào màn sàng lọc cấp cứu hoặc nhóm dấu hiệu nguy hiểm của đau đầu."
+review:
+  status: draft
+  authors: ["agent:pass-a"]
+  updated: "2026-10-24"
+  notes_vi: "Giữ urgency 1, cant_miss true: 3312/QĐ-BYT yêu cầu nhanh chóng vận chuyển an toàn người bệnh đến cơ sở có khả năng điều trị đột quỵ não; điều trị càng sớm kết quả càng tốt (MSD). Bệnh chỉ có prior cho triệu chứng chính đau đầu, nên tập trung vào thể biểu hiện bằng đau đầu (phần lớn xuất huyết não, chảy máu tiểu não, đột quỵ tuần hoàn sau). Điểm chưa chắc chắn: (1) prior là ước lượng, chưa có tỷ lệ đột quỵ trong người đau đầu ở tuyến ban đầu Việt Nam; (2) tỷ lệ có dấu hiệu FAST ở đột quỵ biểu hiện bằng đau đầu chưa có số trực tiếp (dùng số của nhồi máu não chung); (3) các tần suất khác (nôn, rối loạn ý thức, cứng gáy) chủ yếu dựa trên mô tả bằng lời; (4) danh mục thiếu dấu hiệu mất thăng bằng đột ngột, đã đề xuất 'sudden_loss_of_balance'; (5) mã I64 là mã đột quỵ không xác định loại, vì bệnh gộp cả nhồi máu và xuất huyết não; tên chính thức lấy theo tên hướng dẫn 3312/QĐ-BYT."

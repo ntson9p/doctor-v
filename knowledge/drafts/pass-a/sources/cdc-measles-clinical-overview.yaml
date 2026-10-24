@@ -1,0 +1,12 @@
+id: cdc-measles-clinical-overview
+type: guideline_intl
+title: "Clinical Overview of Measles"
+publisher: "Centers for Disease Control and Prevention (CDC)"
+date: "2026-08-05"
+url: "https://www.cdc.gov/measles/hcp/clinical-overview/index.html"
+license_class: L0
+default_tier: B
+accessed: "2026-10-24"
+verified: true
+verified_by: "agent:pass-a (đọc trang dành cho nhân viên y tế; cập nhật 05/08/2026)"
+notes_vi: "Giai đoạn tiền triệu: sốt (có thể tới 40,5°C), mệt, ho, sổ mũi, đỏ mắt; hạt Koplik; sau đó ban dát sẩn lan từ đầu xuống thân rồi chân. Biến chứng thường gặp: viêm tai giữa, viêm phế quản phổi, viêm thanh khí quản, tiêu chảy. Nhóm nguy cơ cao: trẻ dưới 5 tuổi, người lớn trên 20 tuổi, phụ nữ có thai, suy giảm miễn dịch."

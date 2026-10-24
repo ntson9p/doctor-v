@@ -1,0 +1,15 @@
+id: vansamkar-plosntd-2015
+type: systematic_review
+title: "Streptococcus suis meningitis: a systematic review and meta-analysis"
+publisher: "PLoS Neglected Tropical Diseases (van Samkar A, Brouwer MC, Schultsz C, van der Ende A, van de Beek D)"
+date: "2015"
+url: "https://europepmc.org/article/MED/26505485"
+doi: "10.1371/journal.pntd.0004191"
+pmid: "26505485"
+license_class: L1
+license_note: "CC BY: được dùng, ghi công tác giả."
+default_tier: A
+accessed: "2026-10-24"
+verified: true
+verified_by: "agent:pass-a (đọc tóm tắt qua Europe PMC)"
+notes_vi: "913 bệnh nhân trong 24 nghiên cứu: tiếp xúc lợn hoặc thịt lợn 61%; sốt 97%; đau đầu 95%; cứng gáy 93%; điếc là di chứng ở 53%; tử vong 2,9%; nam 82%."

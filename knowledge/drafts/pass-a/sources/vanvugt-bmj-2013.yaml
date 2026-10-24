@@ -1,0 +1,15 @@
+id: vanvugt-bmj-2013
+type: primary_study
+title: "Use of serum C reactive protein and procalcitonin concentrations in addition to symptoms and signs to predict pneumonia in patients presenting to primary care with acute cough: diagnostic study"
+publisher: "BMJ (van Vugt SF, Broekhuizen BD, Lammens C và cs., GRACE consortium)"
+date: "2013"
+url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC3639712/"
+doi: "10.1136/bmj.f2450"
+pmid: "23633005"
+license_class: L2
+license_note: "CC BY-NC: chỉ dùng dữ kiện kèm trích dẫn."
+default_tier: B
+accessed: "2026-10-24"
+verified: true
+verified_by: "agent:pass-a (đọc toàn văn qua Europe PMC: Bảng 1)"
+notes_vi: "2.820 người lớn ho cấp ở chăm sóc ban đầu tại 12 nước châu Âu; 140 người (5%) viêm phổi trên X quang. Ở người viêm phổi: có đờm 86%, khó thở 69%, không sổ mũi 44%, sốt (tự báo) 59%, đau ngực 57%, tiêu chảy 11%, đang hút thuốc 30% (toàn mẫu 28%), có bệnh nền 36%; trung bình 9 ngày bệnh trước khi khám."

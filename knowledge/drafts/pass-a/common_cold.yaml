@@ -1,0 +1,213 @@
+id: common_cold
+names:
+  vi: "Viêm mũi họng cấp"
+  vi_common: ["Cảm lạnh"]
+  en: "Common cold (acute nasopharyngitis)"
+codes:
+  icd10: "J00"
+  icd10_verified: false
+  mondo: "MONDO:0005709"
+summary_vi:
+  - "Bệnh nhiễm vi rút ở mũi, họng, rất hay gặp, lây qua đường hô hấp."
+  - "Thường sổ mũi, nghẹt mũi, đau họng, ho; có thể sốt nhẹ, nhất là ở trẻ nhỏ."
+  - "Thường tự khỏi trong 1–2 tuần; trẻ nhỏ có thể lâu hơn."
+urgency: 5
+cant_miss: false
+specialties: [general_medicine, pediatrics, ent]
+priors:
+  - complaint: fever
+    default: P2
+    by_age: { child_2m_5y: P1, child_5_12: P1 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [nguyen-jcv-2016, todd-irv-2018, cdc-common-cold]
+      note: "Ở hộ gia đình miền Bắc, rhinovirus là vi rút hay gặp nhất trong các ca sốt kèm ho hoặc đau họng (28% số mẫu, cúm 17%). Ở phòng khám ban đầu TP.HCM, 59% ca giống cúm không phải cúm. Trẻ nhỏ hay sốt khi cảm lạnh, người lớn ít sốt (CDC). Ước lượng: P1 ở trẻ 2 tháng–12 tuổi, P2 ở người lớn vì người lớn sốt còn nhiều nguyên nhân khác. Chưa có số liệu Việt Nam về tỷ lệ trong tất cả người sốt."
+  - complaint: headache
+    default: P3
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [cdc-common-cold, pappas-pidj-2008]
+      note: "Đau đầu có trong danh sách triệu chứng cảm lạnh (CDC) nhưng hiếm khi là triệu chứng chính; ở trẻ tuổi đi học chỉ 15% đau đầu lúc khởi phát. Người đến vì đau đầu phần lớn là đau đầu nguyên phát. Ước lượng của người soạn, chưa có số liệu."
+findings:
+  - finding: fever
+    freq: occasional
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [pappas-pidj-2008, cdc-common-cold]
+      reported: "cảm giác sốt 15% lúc khởi phát"
+      population: "trẻ tuổi đi học bị cảm lạnh"
+      note: "CDC: sốt thường nhẹ ở trẻ lớn và người lớn. Trẻ nhỏ hay sốt hơn."
+  - finding: fever_max_temp
+    dist: { lt_38: 0.55, t38_39: 0.35, ge_39: 0.10 }
+    evidence:
+      tier: C
+      basis: verbal
+      sources: [cdc-common-cold]
+      note: "CDC: sốt thường ở mức nhẹ. Con số phân bố là ước lượng của người soạn theo mô tả này."
+  - finding: fever_duration
+    dist: { d1_2: 0.65, d3_5: 0.30, d6_7: 0.03, gt_7d: 0.02 }
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [nhs-common-cold]
+      note: "NHS khuyên đi khám khi sốt cao hơn 3 ngày, tức là sốt trong cảm lạnh thường ngắn. Phân bố là ước lượng."
+  - finding: runny_nose
+    freq: very_frequent
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [nhs-common-cold, pappas-pidj-2008, todd-irv-2018]
+      reported: "triệu chứng chính (NHS); hay gặp nhất ở trẻ đi học; 70% ca giống cúm không phải cúm"
+  - finding: nasal_congestion
+    freq: very_frequent
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [nhs-common-cold, pappas-pidj-2008]
+      reported: "triệu chứng chính; hay gặp nhất ở trẻ đi học"
+  - finding: sore_throat
+    freq: very_frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [todd-irv-2018, nhs-common-cold]
+      reported: "86% ca giống cúm không phải cúm"
+      population: "người 10–70 tuổi, phòng khám ban đầu TP.HCM"
+      note: "NHS liệt kê đau họng là triệu chứng chính."
+  - finding: cough
+    freq: very_frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [todd-irv-2018, pappas-pidj-2008, nhs-common-cold]
+      reported: "86% ca giống cúm không phải cúm; một trong hai dấu hiệu hay gặp nhất ở trẻ đi học"
+  - finding: headache
+    freq: frequent
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [pappas-pidj-2008, todd-irv-2018, cdc-common-cold]
+      note: "Trẻ đi học: 15% đau đầu lúc khởi phát; người 10–70 tuổi có sốt (ca giống cúm không phải cúm): 91%. Chọn mức giữa cho mọi lứa tuổi."
+  - finding: myalgia
+    freq: frequent
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [cdc-common-cold, todd-irv-2018]
+      note: "CDC: đau mỏi người nhẹ. Ở ca có sốt (giống cúm) không phải cúm, đau cơ 91%, ngang cúm. Chọn frequent để đau cơ không phân biệt quá mạnh giữa cúm và cảm lạnh có sốt."
+  - finding: fatigue
+    freq: frequent
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [nhs-common-cold]
+      note: "NHS: mệt, khó chịu là triệu chứng chính; câu hỏi của doctor-v là mệt hơn hẳn bình thường nên chọn frequent."
+  - finding: loss_of_smell_taste
+    freq: rare
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [marquez-jamanetwopen-2022]
+      reported: "3,0% người có triệu chứng hô hấp nhưng âm tính COVID-19"
+      population: "điểm xét nghiệm cộng đồng, giai đoạn Omicron BA.1"
+      note: "Nhóm âm tính COVID-19 dùng làm đại diện cho nhiễm vi rút hô hấp khác."
+  - finding: facial_pain_pressure
+    freq: occasional
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [ebell-afm-2019, nhs-common-cold]
+      note: "NHS không liệt kê đau mặt trong cảm lạnh. Ở người nghi viêm xoang nhưng không xác nhận, 37% đau má hoặc trán (Ebell, độ đặc hiệu 0,63). Cảm lạnh nói chung ít hơn, chọn occasional."
+  - finding: purulent_nasal_discharge
+    freq: frequent
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [ebell-afm-2019, thompson-bmj-2013]
+      note: "Nước mũi đục, vàng xanh hay gặp trong cảm lạnh và không đặc hiệu: 46% người nghi viêm xoang nhưng không xác nhận có chảy mũi mủ (Ebell). Tần suất tính trong số người có sổ mũi."
+  - finding: nasal_symptoms_over_10_days
+    freq: occasional
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [thompson-bmj-2013, pappas-pidj-2008]
+      note: "Ở trẻ, khoảng 50% cảm lạnh còn triệu chứng vào ngày 10 (Thompson), 73% ở trẻ đi học (Pappas). Nhưng người dùng thường hỏi khi mới bệnh vài ngày, và người lớn đỡ nhanh hơn, nên chọn occasional."
+  - finding: breathing_difficulty
+    freq: rare
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [nhs-common-cold]
+      note: "Khó thở không phải triệu chứng của cảm lạnh; NHS khuyên đi khám khi khó thở."
+  - finding: pleuritic_chest_pain
+    freq: rare
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [nhs-common-cold]
+      note: "Đau ngực không phải triệu chứng của cảm lạnh; NHS khuyên đi khám khi đau ngực."
+  - finding: symptoms_worsen_after_improving
+    freq: rare
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-5643-2015, nhs-common-cold]
+      note: "Dấu hiệu đề xuất. Cảm lạnh thường đỡ dần; nặng lên sau 5–7 ngày gợi ý viêm mũi xoang do vi khuẩn (BYT 5643/QĐ-BYT, chương Viêm mũi xoang cấp tính)."
+  - finding: headache_duration
+    dist: { lt_4h: 0.15, h4_72: 0.60, gt_3d: 0.25 }
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [nhs-common-cold]
+      note: "Đau đầu kéo dài theo đợt bệnh vài ngày. Ước lượng của người soạn."
+  - finding: headache_location
+    dist: { one_side: 0.08, both_sides: 0.27, forehead_face: 0.30, back_neck: 0.10, whole_head: 0.25 }
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [cdc-common-cold]
+      note: "Không có số liệu; ước lượng: ít khi đau một bên, hay đau vùng trán khi nghẹt mũi."
+  - finding: headache_course
+    dist: { first_time: 0.45, recurrent_similar: 0.50, progressive: 0.05 }
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [cdc-common-cold]
+      note: "Nhiều người đã từng đau đầu tương tự trong các lần cảm lạnh trước; hiếm khi nặng dần trong nhiều tuần. Ước lượng."
+  - finding: headache_severity
+    dist: { mild: 0.55, moderate: 0.37, severe: 0.08 }
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [cdc-common-cold]
+      note: "Cảm lạnh là bệnh nhẹ, đau đầu thường nhẹ. Ước lượng của người soạn."
+warning_signs: [es_severe_breathing, drowsy_hard_to_wake, confusion, child_unable_to_drink]
+self_care_vi:
+  - "Nghỉ ngơi, uống nhiều nước và ăn uống đủ chất."
+  - "Người lớn có thể súc họng bằng nước muối ấm."
+  - "Không dùng aspirin cho trẻ dưới 16 tuổi."
+  - "Kháng sinh không có tác dụng với cảm lạnh, không nên tự mua dùng."
+  - "Hỏi dược sĩ hoặc bác sĩ trước khi dùng thuốc hạ sốt, giảm đau hoặc thuốc nhỏ mũi."
+see_doctor_vi:
+  - "Đi khám nếu sốt cao hơn 3 ngày, hoặc triệu chứng không đỡ sau 10 ngày."
+  - "Đi khám nếu khó thở, đau ngực, hoặc ho kéo dài hơn 3 tuần."
+  - "Người có bệnh nền hoặc sức đề kháng suy giảm nên đi khám sớm."
+  - "Đưa trẻ đi khám ngay nếu bỏ bú, li bì, thở nhanh hoặc rút lõm lồng ngực."
+review:
+  status: draft
+  authors: ["agent:pass-a"]
+  updated: "2026-10-24"
+  notes_vi: "Giữ mức 5 (theo dõi tại nhà) như gợi ý: NHS và CDC coi cảm lạnh là bệnh tự khỏi, chỉ khám khi có dấu hiệu cụ thể. Điểm chưa chắc: (1) prior chỉ là ước lượng từ nghiên cứu căn nguyên hội chứng giống cúm ở Hà Nam và TP.HCM, chưa có tỷ lệ trong tất cả người sốt; (2) tần suất đau đầu, đau cơ khác nhiều giữa trẻ em và người lớn có sốt; (3) các phân bố về đau đầu và nhiệt độ là ước lượng; (4) tên ICD-10 tiếng Việt chưa đối chiếu trên icd.kcb.vn; (5) liên kết symptoms_worsen_after_improving dùng dấu hiệu đề xuất."
+proposed_findings:
+  - id: symptoms_worsen_after_improving
+    kind: history
+    type: binary
+    label_vi: "Đã đỡ rồi lại nặng lên"
+    question_vi: "Bệnh đã đỡ được vài ngày, rồi lại nặng lên không?"
+    help_vi: "Ví dụ: sổ mũi, sốt đã đỡ, sau đó lại sốt hoặc đau nhức mặt nhiều hơn."
+    leak: moderate
+    sources: [byt-qd-5643-2015, ebell-afm-2019, cdc-sinus-infection]
+    notes_vi: "Bệnh hai pha gợi ý viêm mũi xoang do vi khuẩn hoặc biến chứng sau cảm lạnh, cúm (BYT 5643/QĐ-BYT; CDC; Ebell 2019: độ nhạy 74%). Giúp phân biệt viêm mũi xoang cấp với cảm lạnh."

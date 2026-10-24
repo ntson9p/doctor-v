@@ -1,0 +1,175 @@
+id: subarachnoid_hemorrhage
+names:
+  vi: "Xuất huyết dưới nhện"
+  vi_common: ["Xuất huyết dưới nhện", "Chảy máu dưới nhện", "Vỡ phình mạch máu não"]
+  en: "Subarachnoid hemorrhage"
+codes:
+  icd10: "I60"
+  icd10_verified: true
+  mondo: "MONDO:0005099"
+summary_vi:
+  - "Chảy máu vào khoang quanh não, phần lớn do vỡ phình động mạch não."
+  - "Điển hình là đau đầu đột ngột, dữ dội nhất từ trước tới nay, có thể kèm nôn, cứng gáy, ngất."
+  - "Đây là cấp cứu, cần gọi 115 ngay."
+urgency: 1
+cant_miss: true
+specialties: [neurology, emergency]
+priors:
+  - complaint: headache
+    default: P5
+    by_age: { child_2m_5y: P6, child_5_12: P6, teen_13_17: P6 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [perry-bmj-2010, byt-qd-3312-2024, msd-sah]
+      note: "Ở khoa cấp cứu, 6,5% người lớn tỉnh táo có đau đầu đạt đỉnh trong 1 giờ là xuất huyết dưới nhện (Perry 2010); trong mọi người đau đầu ở cộng đồng hoặc tuyến ban đầu, tỷ lệ thấp hơn nhiều, ước 0,02–0,2% (P5). Hay gặp ở tuổi 40–65, nữ nhiều hơn nam 1,6 lần (3312/QĐ-BYT; MSD). Trẻ em và thiếu niên rất hiếm (P6). 3312/QĐ-BYT ghi Việt Nam chưa có nghiên cứu cộng đồng lớn về phình mạch não."
+findings:
+  - finding: headache_thunderclap
+    freq: very_frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [perry-bmj-2010, ihs-ichd3-2018, byt-qd-3312-2024, msd-sah]
+      reported: "đau đầu dữ dội nhất đời 93,1%; thời gian đạt đỉnh trung bình 3,4 phút"
+      population: "130 người xuất huyết dưới nhện ở khoa cấp cứu (đã chọn người đau đạt đỉnh trong 1 giờ)"
+      note: "Khởi phát đột ngột là đặc điểm then chốt (ICHD-3; 3312/QĐ-BYT: đau đầu kiểu sét đánh). Hạ một mức vì nghiên cứu chỉ nhận người đau đạt đỉnh trong 1 giờ và ở khoa cấp cứu; ICHD-3 lưu ý đau có thể chỉ ở mức vừa."
+  - finding: neck_stiffness
+    freq: frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [perry-bmj-2010, msd-sah, byt-qd-3312-2024]
+      reported: "than đau hoặc cứng cổ 71,1%; cứng gáy khi khám 30,4%"
+      population: "130 người xuất huyết dưới nhện ở khoa cấp cứu"
+      note: "Câu hỏi doctor-v (cổ cứng, khó cúi xuống) nằm giữa hai số đo. Lúc mới khởi phát cổ thường chưa cứng, dấu hiệu màng não xuất hiện trong 24 giờ (MSD); 3312/QĐ-BYT coi cứng gáy là dấu hiệu thường gặp, có giá trị chẩn đoán cao."
+  - finding: vomiting
+    freq: frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [perry-bmj-2010, byt-qd-3312-2024]
+      reported: "nôn 58,6%"
+      population: "130 người xuất huyết dưới nhện ở khoa cấp cứu"
+      note: "3312/QĐ-BYT: nôn là triệu chứng thường gặp."
+  - finding: fainting_or_near_fainting
+    freq: occasional
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [perry-bmj-2010, msd-sah]
+      reported: "mất ý thức 16,9% (có người chứng kiến 11,5%)"
+      population: "130 người xuất huyết dưới nhện tỉnh táo khi đến khoa cấp cứu"
+  - finding: seizure_recent
+    freq: occasional
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-3312-2024, msd-sah]
+      note: "Có thể co giật (MSD; 3312/QĐ-BYT liệt kê co giật trong các triệu chứng khác, ít giá trị chẩn đoán). Không có tỷ lệ; 'có thể có' tương ứng occasional."
+  - finding: confusion
+    freq: occasional
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-3312-2024, msd-sah]
+      note: "Có thể rối loạn ý thức, chảy máu ít thì hồi phục nhanh (3312/QĐ-BYT); lú lẫn hay gặp trong 5–10 ngày đầu (MSD). Người còn tự dùng doctor-v thường tỉnh táo, nên chọn occasional."
+  - finding: es_stroke_signs
+    freq: occasional
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [ihs-ichd3-2018, msd-sah, perry-bmj-2010]
+      note: "Đau đầu do chảy máu nội sọ có thể đơn độc hoặc kèm dấu hiệu thần kinh khu trú (ICHD-3 mục 6.2); khoảng 25% về sau có dấu hiệu thiếu máu não do co thắt mạch (MSD). Ước occasional. Người có dấu hiệu đột quỵ đã dừng ở màn sàng lọc, nên ở bước xếp hạng liên kết này chỉ làm khả năng giảm khoảng 1,2 lần."
+  - finding: vision_loss_or_double
+    freq: occasional
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-3312-2024]
+      note: "3312/QĐ-BYT liệt kê giảm thị lực trong các triệu chứng khác (ít giá trị chẩn đoán). Không có tỷ lệ."
+  - finding: sudden_loss_of_balance
+    freq: occasional
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-3312-2024]
+      note: "Dấu hiệu đề xuất mới (xem proposed_findings). 3312/QĐ-BYT liệt kê mất thăng bằng trong các triệu chứng khác (ít giá trị chẩn đoán)."
+  - finding: headache_severity
+    dist: { mild: 0.03, moderate: 0.12, severe: 0.85 }
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [perry-bmj-2010, ihs-ichd3-2018]
+      reported: "mức đau trung bình lúc đỉnh 9,3/10"
+      population: "130 người xuất huyết dưới nhện ở khoa cấp cứu"
+      note: "ICHD-3 lưu ý đau có thể chỉ ở mức vừa và không kèm dấu hiệu khác, nên giữ 15% cho mức nhẹ và vừa."
+  - finding: headache_course
+    dist: { first_time: 0.90, recurrent_similar: 0.05, progressive: 0.05 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [ihs-ichd3-2018, perry-bmj-2010]
+      note: "Đau đầu mới, khởi phát đột ngột (ICHD-3). Người có cơn đau đầu tái diễn giống vậy trên 6 tháng bị loại khỏi nghiên cứu Perry; vẫn giữ 5% cho người vốn có đau đầu từ trước. Phân bố là ước lượng."
+  - finding: headache_location
+    dist: { one_side: 0.08, both_sides: 0.10, forehead_face: 0.07, back_neck: 0.40, whole_head: 0.35 }
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-3312-2024]
+      note: "Đau đầu dữ dội lan xuống vùng gáy chẩm (3312/QĐ-BYT). Chia theo lựa chọn là ước lượng."
+  - finding: headache_duration
+    dist: { lt_4h: 0.55, h4_72: 0.35, gt_3d: 0.10 }
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [perry-bmj-2010, ihs-ichd3-2018]
+      note: "Người bệnh thường tìm giúp đỡ sớm sau cơn đau đột ngột; một phần đến muộn sau vài ngày (nghiên cứu Perry nhận người đến trong 14 ngày; ICHD-3 ghi một phần tư đến một nửa bị chẩn đoán nhầm lúc đầu). Phân bố là ước lượng."
+  - finding: bp_measured
+    dist: { normal: 0.25, high: 0.27, very_high: 0.25, extreme: 0.23 }
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [perry-bmj-2010]
+      reported: "huyết áp tâm thu trung bình 159 (độ lệch chuẩn 29) mmHg, so với 141 ở người không xuất huyết dưới nhện"
+      population: "khoa cấp cứu, lúc đến viện"
+      note: "Phân bố suy từ trung bình và độ lệch chuẩn huyết áp tâm thu, giả định phân phối chuẩn."
+  - finding: hypertension_known
+    freq: occasional
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-3312-2024]
+      note: "Tăng huyết áp là yếu tố nguy cơ hình thành và vỡ phình mạch, thường đi kèm xuất huyết dưới nhện (3312/QĐ-BYT). Không có tỷ lệ tăng huyết áp đã biết; ước occasional."
+  - finding: fever
+    freq: rare
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [perry-bmj-2010, msd-sah]
+      reported: "nhiệt độ trung bình lúc đến viện 36,3°C"
+      population: "130 người xuất huyết dưới nhện ở khoa cấp cứu"
+      note: "Sốt chỉ hay gặp từ ngày 5–10 (MSD). Lúc mới khởi phát không sốt, giúp phân biệt với viêm màng não."
+warning_signs: [headache_thunderclap, neck_stiffness, confusion, drowsy_hard_to_wake, seizure_recent, persistent_vomiting, fainting_or_near_fainting, es_stroke_signs]
+self_care_vi:
+  - "Nằm yên, nhờ người ở bên cạnh trong lúc chờ xe cấp cứu."
+see_doctor_vi:
+  - "Gọi 115 ngay nếu đau đầu đột ngột, dữ dội nhất từ trước tới nay, kể cả khi cơn đau đã giảm."
+  - "Không tự lái xe đến bệnh viện."
+proposed_findings:
+  - id: sudden_loss_of_balance
+    kind: sign
+    type: binary
+    label_vi: "Đột ngột mất thăng bằng, đi loạng choạng"
+    question_vi: "Có đột ngột mất thăng bằng, đi loạng choạng không?"
+    help_vi: "Ví dụ: đang bình thường bỗng đứng không vững, đi bị xiêu sang một bên."
+    alt_question:
+      text_vi: "Có tự đi thẳng vài bước được như mọi khi không?"
+      inverted: true
+    leak: specific
+    sources: [aroor-stroke-2017, byt-qd-3312-2024]
+    notes_vi: "Chữ B (Balance) trong BE-FAST. Trong người nhồi máu não không có dấu hiệu FAST (14,1%), 42% có mất thăng bằng hoặc yếu chân (Aroor 2017); chảy máu tiểu não và đột quỵ tuần hoàn sau gây mất thăng bằng, thất điều (3312/QĐ-BYT). Màn sàng lọc hiện chỉ hỏi méo miệng, yếu tê một bên, nói khó nên bỏ sót nhóm này. Đề xuất thêm vào danh mục và cân nhắc đưa vào màn sàng lọc cấp cứu hoặc nhóm dấu hiệu nguy hiểm của đau đầu."
+review:
+  status: draft
+  authors: ["agent:pass-a"]
+  updated: "2026-10-24"
+  notes_vi: "Giữ urgency 1, cant_miss true: ICHD-3 gọi đây là cấp cứu can thiệp thần kinh, tử vong 40–50% (10–20% chết trước khi đến viện); 3312/QĐ-BYT ghi 10% tử vong trước khi kịp cấp cứu, chảy máu tái phát sớm khoảng 18% và 75% trong 2 giờ đầu. Điểm chưa chắc chắn: (1) prior là ước lượng, chưa có tỷ lệ xuất huyết dưới nhện trong người đau đầu ở tuyến ban đầu; (2) số liệu triệu chứng lấy từ khoa cấp cứu Canada, đã chọn người đau đạt đỉnh trong 1 giờ; (3) chưa có nguồn đã mở về tỷ lệ sợ ánh sáng nên chưa liên kết, dù đây có thể là dấu hiệu làm người bệnh bị nhầm với migraine (ICHD-3: chẩn đoán nhầm hay gặp nhất là migraine); (4) câu hỏi 'cứng gáy' do người dùng tự trả lời, khác với khám thực thể. Liên kết 'sudden_loss_of_balance' là dấu hiệu đề xuất mới (khai báo giống hệt trong bản nháp stroke)."

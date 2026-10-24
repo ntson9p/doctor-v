@@ -1,0 +1,166 @@
+id: acute_sinusitis
+names:
+  vi: "Viêm mũi xoang cấp tính"
+  vi_common: ["Viêm xoang cấp"]
+  en: "Acute rhinosinusitis"
+codes:
+  icd10: "J01.9"
+  icd10_verified: false
+summary_vi:
+  - "Viêm niêm mạc mũi và các xoang, thường xảy ra sau cảm lạnh hoặc cúm."
+  - "Thường nghẹt mũi, nước mũi đục, đau nặng vùng trán, má, giảm khả năng ngửi."
+  - "Hay gặp khi triệu chứng mũi kéo dài hơn 10 ngày, hoặc nặng lên sau khi đã đỡ."
+urgency: 4
+cant_miss: false
+specialties: [ent, general_medicine]
+priors:
+  - complaint: headache
+    default: P3
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [ebell-afm-2019, byt-qd-5643-2015]
+      note: "Đau đầu gặp ở khoảng một nửa số ca (Ebell); BYT lưu ý đau đầu, đau nửa đầu dễ bị nhầm với đau do viêm xoang. Người đến vì đau đầu phần lớn là đau đầu nguyên phát. Ước lượng của người soạn."
+  - complaint: fever
+    default: P4
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [ebell-afm-2019]
+      note: "Chỉ khoảng 11% ca viêm mũi xoang cấp sốt trên 38°C, nên hiếm khi là nguyên nhân của sốt. Ước lượng."
+findings:
+  - finding: fever
+    freq: occasional
+    evidence:
+      tier: A
+      basis: numeric
+      sources: [ebell-afm-2019]
+      reported: "sốt trên 38°C: độ nhạy 11% (7 nghiên cứu)"
+      population: "người lớn ngoại trú nghi viêm mũi xoang cấp"
+  - finding: facial_pain_pressure
+    freq: frequent
+    evidence:
+      tier: A
+      basis: numeric
+      sources: [ebell-afm-2019, byt-qd-5643-2015, nhs-sinusitis]
+      reported: "đau má hoặc trán 49%; đau tăng khi cúi 72%; đau má một bên 30%"
+      note: "Câu hỏi gộp đau vùng trán, má và đau tăng khi cúi, nên chọn frequent. BYT, NHS coi đau nhức vùng mặt là triệu chứng chính."
+  - finding: purulent_nasal_discharge
+    freq: very_frequent
+    evidence:
+      tier: A
+      basis: numeric
+      sources: [ebell-afm-2019, byt-qd-5643-2015]
+      reported: "chảy mũi mủ: độ nhạy 71% tính trên mọi ca (10 nghiên cứu)"
+      note: "Tần suất của doctor-v tính trong số người có sổ mũi (chảy mũi bất kỳ 75%), nên còn cao hơn 71%."
+  - finding: runny_nose
+    freq: very_frequent
+    evidence:
+      tier: A
+      basis: numeric
+      sources: [ebell-afm-2019]
+      reported: "chảy mũi bất kỳ: độ nhạy 75%"
+  - finding: nasal_congestion
+    freq: very_frequent
+    evidence:
+      tier: A
+      basis: numeric
+      sources: [ebell-afm-2019, byt-qd-5643-2015]
+      reported: "nghẹt hoặc tắc mũi: độ nhạy 83%"
+  - finding: loss_of_smell_taste
+    freq: frequent
+    evidence:
+      tier: A
+      basis: numeric
+      sources: [ebell-afm-2019, nhs-sinusitis]
+      reported: "giảm hoặc mất ngửi: độ nhạy 61%"
+  - finding: headache
+    freq: frequent
+    evidence:
+      tier: A
+      basis: numeric
+      sources: [ebell-afm-2019]
+      reported: "độ nhạy 50%"
+  - finding: cough
+    freq: very_frequent
+    evidence:
+      tier: A
+      basis: numeric
+      sources: [ebell-afm-2019]
+      reported: "độ nhạy 69%"
+  - finding: nasal_symptoms_over_10_days
+    freq: frequent
+    evidence:
+      tier: A
+      basis: numeric
+      sources: [ebell-afm-2019, byt-qd-5643-2015, cdc-sinus-infection]
+      reported: "kéo dài trên 5, 10 hoặc 21 ngày: độ nhạy 25–70%"
+      note: "BYT: nghĩ đến viêm mũi xoang do vi khuẩn khi viêm mũi do vi rút kéo dài hơn 10 ngày hoặc nặng lên sau 5–7 ngày."
+  - finding: symptoms_worsen_after_improving
+    freq: frequent
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [ebell-afm-2019, byt-qd-5643-2015, cdc-sinus-infection]
+      reported: "bệnh hai pha: độ nhạy 74% (3 nghiên cứu, khoảng tin cậy rộng)"
+      note: "Dấu hiệu đề xuất. Nhiều ca chỉ kéo dài mà không có pha đỡ rồi nặng lại, nên hạ xuống frequent."
+  - finding: ear_pain
+    freq: occasional
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-5643-2015, nhs-sinusitis]
+      note: "BYT: đau nhức ở tai là triệu chứng phụ; NHS: cảm giác nặng tai."
+  - finding: sore_throat
+    freq: occasional
+    evidence:
+      tier: C
+      basis: verbal
+      sources: [cdc-sinus-infection]
+      note: "CDC liệt kê đau họng do dịch chảy xuống họng; không có tỷ lệ."
+  - finding: headache_duration
+    dist: { lt_4h: 0.05, h4_72: 0.40, gt_3d: 0.55 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-5643-2015]
+      note: "Đau kéo dài liên tục theo đợt viêm (BYT phân biệt với đau dây thần kinh V từng cơn); thường đã bệnh nhiều ngày. Ước lượng."
+  - finding: headache_location
+    dist: { one_side: 0.15, both_sides: 0.10, forehead_face: 0.60, back_neck: 0.03, whole_head: 0.12 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [ebell-afm-2019, nhs-sinusitis]
+      note: "Đau quanh má, mắt, trán (NHS); đau má một bên 30% (Ebell). Phân bố là ước lượng."
+  - finding: headache_course
+    dist: { first_time: 0.40, recurrent_similar: 0.50, progressive: 0.10 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-5643-2015]
+      note: "Có thể bị nhiều đợt (viêm mũi xoang cấp tái phát); hiếm khi nặng dần nhiều tuần. Ước lượng."
+warning_signs: [neck_stiffness, confusion, drowsy_hard_to_wake, vision_loss_or_double, seizure_recent]
+self_care_vi:
+  - "Nghỉ ngơi, uống nhiều nước."
+  - "Rửa mũi bằng nước muối sinh lý."
+  - "Không hút thuốc, tránh khói bụi."
+  - "Hỏi dược sĩ trước khi dùng thuốc giảm đau, thuốc xịt hoặc nhỏ mũi."
+see_doctor_vi:
+  - "Đi khám trong vài ngày tới nếu triệu chứng kéo dài hơn 10 ngày, hoặc nặng lên sau khi đã đỡ."
+  - "Đi khám sớm nếu sốt hơn 3–4 ngày, hoặc đau đầu, đau mặt dữ dội."
+  - "Đi cấp cứu ngay nếu sưng đỏ quanh mắt, nhìn mờ, nhìn đôi, cứng gáy hoặc lú lẫn."
+review:
+  status: draft
+  authors: ["agent:pass-a"]
+  updated: "2026-10-24"
+  notes_vi: "Đổi mức xử trí từ gợi ý 5 sang 4. Lý do: doctor-v có bệnh cảm lạnh (viêm mũi họng do vi rút) riêng, nên ca được xếp vào viêm mũi xoang cấp chủ yếu là ca kéo dài hơn 10 ngày, nặng lên sau khi đã đỡ, hoặc đau mặt rõ. Với các ca này, BYT 5643/QĐ-BYT nghĩ đến viêm mũi xoang do vi khuẩn và điều trị bằng thuốc, CDC khuyên đi khám. NHS vẫn cho tự chăm sóc tới 3 tuần, nên mức 4 (khám trong vài ngày) là thỏa hiệp; bác sĩ cần duyệt. Biến chứng ổ mắt, nội sọ (BYT liệt kê viêm tấy ổ mắt, viêm màng não, áp xe não) dựa vào quy tắc; danh mục chưa có dấu hiệu sưng đỏ quanh mắt. Điểm chưa chắc: (1) tần suất lấy từ tổng quan Ebell 2019 ở người lớn đã nghi viêm xoang, có thể khác ở trẻ em; (2) prior với đau đầu và sốt chỉ là ước lượng; (3) dấu hiệu đề xuất symptoms_worsen_after_improving; (4) mã J01.9 chưa đối chiếu, không tìm thấy mã MONDO riêng cho viêm xoang cấp ở người."
+proposed_findings:
+  - id: symptoms_worsen_after_improving
+    kind: history
+    type: binary
+    label_vi: "Đã đỡ rồi lại nặng lên"
+    question_vi: "Bệnh đã đỡ được vài ngày, rồi lại nặng lên không?"
+    help_vi: "Ví dụ: sổ mũi, sốt đã đỡ, sau đó lại sốt hoặc đau nhức mặt nhiều hơn."
+    leak: moderate
+    sources: [byt-qd-5643-2015, ebell-afm-2019, cdc-sinus-infection]
+    notes_vi: "Bệnh hai pha gợi ý viêm mũi xoang do vi khuẩn hoặc biến chứng sau cảm lạnh, cúm (BYT 5643/QĐ-BYT; CDC; Ebell 2019: độ nhạy 74%). Giúp phân biệt viêm mũi xoang cấp với cảm lạnh."

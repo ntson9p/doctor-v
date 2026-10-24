@@ -1,0 +1,148 @@
+id: covid19
+names:
+  vi: "COVID-19"
+  en: "COVID-19"
+codes:
+  icd10: "U07.1"
+  icd10_verified: false
+  mondo: "MONDO:0100096"
+summary_vi:
+  - "Bệnh do vi rút SARS-CoV-2, lây qua đường hô hấp."
+  - "Thường sốt, ho, đau họng, sổ mũi, đau đầu, mệt; một số người giảm hoặc mất khả năng ngửi, nếm."
+  - "Phần lớn bệnh nhẹ, có thể chăm sóc tại nhà; người cao tuổi hoặc có bệnh nền dễ bị nặng hơn."
+urgency: 5
+cant_miss: false
+specialties: [infectious_disease, general_medicine, respiratory]
+priors:
+  - complaint: fever
+    default: P3
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-2671-2023, marquez-jamanetwopen-2022]
+      note: "Năm 2026, COVID-19 lưu hành với biến thể Omicron (BYT 2671/QĐ-BYT), không còn số liệu giám sát rộng. Ước lượng thấp hơn cúm, khoảng 1–5% người sốt; chỉ có sốt ở khoảng 1/3 ca Omicron có triệu chứng. Cần cập nhật khi có đợt dịch."
+  - complaint: headache
+    default: P4
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [marquez-jamanetwopen-2022, menni-lancet-2022]
+      note: "Đau đầu gặp ở 35–75% ca có triệu chứng nhưng hiếm khi là lý do chính để tìm hiểu. Ước lượng thấp hơn cúm và cảm lạnh."
+findings:
+  - finding: fever
+    freq: occasional
+    evidence:
+      tier: A
+      basis: numeric
+      sources: [marquez-jamanetwopen-2022, struyf-cochrane-2022]
+      reported: "30,4% (Omicron BA.1, cộng đồng); 22,5% ở người đã tiêm nhắc; độ nhạy gộp 37,6% (tổng quan, chủ yếu trước Omicron)"
+  - finding: cough
+    freq: frequent
+    evidence:
+      tier: A
+      basis: numeric
+      sources: [marquez-jamanetwopen-2022, struyf-cochrane-2022, menni-lancet-2022]
+      reported: "67,4% (Marquez); độ nhạy gộp 62,4% (Cochrane); ho kéo dài 49,8% (ZOE)"
+  - finding: productive_cough
+    freq: occasional
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-2671-2023]
+      locator: "Mục III.3.1"
+      note: "BYT mô tả ho khan ở giai đoạn khởi phát. Không có tỷ lệ."
+  - finding: sore_throat
+    freq: frequent
+    evidence:
+      tier: A
+      basis: numeric
+      sources: [menni-lancet-2022, marquez-jamanetwopen-2022, struyf-cochrane-2022]
+      reported: "70,5% (ZOE, Omicron); 43,4% (Marquez); LR+ 0,81 (Cochrane)"
+      note: "Đau họng phổ biến nhưng không đặc hiệu, hay gặp ở bệnh khác như nhau."
+  - finding: runny_nose
+    freq: frequent
+    evidence:
+      tier: A
+      basis: numeric
+      sources: [menni-lancet-2022, struyf-cochrane-2022]
+      reported: "76,5% (ZOE, người đã tiêm, tự báo trong 14 ngày)"
+      note: "Cochrane: sổ mũi gợi ý bệnh nhiễm trùng khác hơn là COVID-19. Chọn frequent, thấp hơn cảm lạnh, để sổ mũi nghiêng về cảm lạnh."
+  - finding: nasal_congestion
+    freq: frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [marquez-jamanetwopen-2022]
+      reported: "38,8% (Omicron BA.1; nhóm âm tính 34,6%)"
+  - finding: headache
+    freq: frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [menni-lancet-2022, marquez-jamanetwopen-2022]
+      reported: "74,7% (ZOE); 35,5% (Marquez)"
+  - finding: myalgia
+    freq: occasional
+    evidence:
+      tier: A
+      basis: numeric
+      sources: [marquez-jamanetwopen-2022, struyf-cochrane-2022]
+      reported: "28,6% (Marquez); 26% (chăm sóc ban đầu, Cochrane)"
+  - finding: fatigue
+    freq: frequent
+    evidence:
+      tier: A
+      basis: numeric
+      sources: [struyf-cochrane-2022, marquez-jamanetwopen-2022]
+      reported: "độ nhạy gộp 40,2% (Cochrane); 19,6% (Marquez)"
+  - finding: loss_of_smell_taste
+    freq: occasional
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [vihta-cid-2022, menni-lancet-2022, marquez-jamanetwopen-2022]
+      reported: "12–17% (Omicron, Anh); 5,3% (Marquez); trước Omicron 40–53%"
+      note: "Đã giảm nhiều từ khi có Omicron; vẫn gặp nhiều hơn so với bệnh hô hấp khác (nhóm âm tính 3,0%)."
+  - finding: breathing_difficulty
+    freq: occasional
+    evidence:
+      tier: A
+      basis: numeric
+      sources: [struyf-cochrane-2022, marquez-jamanetwopen-2022]
+      reported: "độ nhạy gộp 23,3% (Cochrane, có ca khoa cấp cứu); 8,0% (Marquez)"
+      note: "BYT: khó thở là dấu hiệu từ mức trung bình (viêm phổi) trở lên."
+  - finding: headache_duration
+    dist: { lt_4h: 0.10, h4_72: 0.60, gt_3d: 0.30 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-2671-2023]
+      note: "Ca nhẹ hồi phục sau 7–10 ngày (BYT); đau đầu kéo dài theo đợt bệnh. Ước lượng."
+  - finding: headache_location
+    dist: { one_side: 0.05, both_sides: 0.30, forehead_face: 0.25, back_neck: 0.10, whole_head: 0.30 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-2671-2023]
+      note: "Không có số liệu; đau đầu trong bệnh toàn thân thường lan tỏa. Ước lượng."
+  - finding: headache_course
+    dist: { first_time: 0.55, recurrent_similar: 0.42, progressive: 0.03 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-2671-2023]
+      note: "Bệnh cấp; hiếm khi nặng dần trong nhiều tuần. Ước lượng."
+warning_signs: [es_severe_breathing, breathing_difficulty, confusion, drowsy_hard_to_wake, cold_hands_feet, severe_weakness]
+self_care_vi:
+  - "Nghỉ ngơi, uống đủ nước và ăn uống đủ chất."
+  - "Hạn chế tiếp xúc người khác, nhất là người cao tuổi và người có bệnh nền."
+  - "Đeo khẩu trang, rửa tay thường xuyên khi còn triệu chứng."
+  - "Hỏi dược sĩ hoặc bác sĩ trước khi dùng thuốc."
+see_doctor_vi:
+  - "Người trên 60 tuổi, có bệnh nền, có thai hoặc chưa tiêm vắc xin nên liên hệ cơ sở y tế sớm."
+  - "Đi khám ngay nếu khó thở, thở nhanh, đau tức ngực hoặc lơ mơ."
+review:
+  status: draft
+  authors: ["agent:pass-a"]
+  updated: "2026-10-24"
+  notes_vi: "Giữ mức 5 như gợi ý: BYT 2671/QĐ-BYT (Bảng 4) cho người không triệu chứng hoặc mức nhẹ điều trị tại nhà. Điểm chưa chắc: (1) prior năm 2026 không có số liệu giám sát, chỉ là ước lượng; (2) tần suất triệu chứng thay đổi theo biến thể và miễn dịch cộng đồng; số liệu Omicron lấy từ Anh và Mỹ (người đã tiêm), có thể khác ở Việt Nam; (3) hai nguồn Omicron chênh nhau nhiều (ZOE ghi nhận triệu chứng trong 14 ngày nên cao hơn); (4) chưa có dấu hiệu tự xét nghiệm nhanh tại nhà trong danh mục, đây là thông tin phân biệt mạnh nếu người bảo trì muốn thêm; (5) mã ICD-10 U07.1 chưa đối chiếu. Đã mở bản PDF ký số 2671/QĐ-BYT (Sở Y tế Lai Châu) và đối chiếu các mục II, III, V."

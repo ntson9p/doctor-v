@@ -1,0 +1,15 @@
+id: struyf-cochrane-2022
+type: systematic_review
+title: "Signs and symptoms to determine if a patient presenting in primary care or hospital outpatient settings has COVID-19"
+publisher: "Cochrane Database of Systematic Reviews (Struyf T, Deeks JJ, Dinnes J và cs.)"
+date: "2022"
+url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC9121352/"
+doi: "10.1002/14651858.CD013665.pub3"
+pmid: "35593186"
+license_class: L2
+license_note: "CC BY-NC: chỉ dùng dữ kiện kèm trích dẫn."
+default_tier: A
+accessed: "2026-10-24"
+verified: true
+verified_by: "agent:pass-a (đọc toàn văn qua Europe PMC: tóm tắt kết quả, bảng chăm sóc ban đầu)"
+notes_vi: "42 nghiên cứu tiến cứu, 52.608 người, phần lớn trước giai đoạn Omicron, ở khoa cấp cứu và điểm xét nghiệm ngoại trú. Độ nhạy gộp: ho 62,4% (độ đặc hiệu 45,4%), sốt 37,6%, khó thở 23,3%, mệt 40,2%, mất ngửi 26,4% (độ đặc hiệu 94,2%), mất ngửi hoặc mất vị 39,2%. Đau họng, sổ mũi gợi ý bệnh nhiễm trùng khác hơn là COVID-19 (LR+ của đau họng 0,81). Ở chăm sóc ban đầu: đau đầu 11–40%, đau cơ 26%."

@@ -1,0 +1,15 @@
+id: wickramasinghe-wjs-2021
+type: primary_study
+title: "The Worldwide Epidemiology of Acute Appendicitis: An Analysis of the Global Health Data Exchange Dataset"
+publisher: "World Journal of Surgery"
+date: "2021"
+url: "https://pubmed.ncbi.nlm.nih.gov/33755751/"
+doi: "10.1007/s00268-021-06077-5"
+pmid: "33755751"
+license_class: L3
+license_note: "Bản quyền nhà xuất bản: chỉ dùng dữ kiện kèm trích dẫn, không sao chép câu chữ."
+default_tier: B
+accessed: "2026-10-24"
+verified: true
+verified_by: "agent:pass-a (đọc tóm tắt (abstract) qua Europe PMC)"
+notes_vi: "Dựa trên dữ liệu GBD 2019: tỷ lệ mắc 228/100.000, đỉnh ở nhóm 15–19 tuổi."

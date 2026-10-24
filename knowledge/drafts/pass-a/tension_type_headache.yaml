@@ -1,0 +1,138 @@
+id: tension_type_headache
+names:
+  vi: "Đau đầu do căng thẳng"
+  vi_common: ["Đau đầu do căng thẳng", "Đau đầu căng cơ"]
+  en: "Tension-type headache"
+codes:
+  icd10: "G44.2"
+  icd10_verified: true
+summary_vi:
+  - "Loại đau đầu hay gặp nhất, đau như bó chặt hoặc đè nặng ở cả hai bên đầu."
+  - "Thường đau nhẹ đến vừa, không buồn nôn, không tăng khi đi lại."
+  - "Hay liên quan đến căng thẳng, thiếu ngủ và thường tự hết trong vài giờ đến vài ngày."
+urgency: 5
+cant_miss: false
+specialties: [neurology, general_medicine]
+priors:
+  - complaint: headache
+    default: P1
+    by_age: { child_2m_5y: P4, child_5_12: P2, elder_65_74: P2, elder_75p: P2 }
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [vo-jhp-2024, rasmussen-archneurol-1992, ihs-ichd3-2018]
+      reported: "tỷ lệ mắc 1 năm: đau đầu căng thẳng 54,0%, migraine 21,8%, đau đầu bất kỳ 82,6%"
+      population: "1362 sinh viên y ở Hà Nội, 2024"
+      note: "Đau đầu căng thẳng là loại đau đầu phổ biến nhất trong dân số (Việt Nam: 54% sinh viên y trong 1 năm; Đan Mạch: 63% thể từng đợt). Phần lớn thể thưa không cần đi khám (ICHD-3), nhưng vẫn là nguyên nhân hàng đầu khi người lớn tự tìm hiểu về đau đầu, nên chọn P1 cho 13–64 tuổi. Trẻ 5–12 tuổi đau đầu hay do sốt, nhiễm vi rút (P2); trẻ dưới 5 tuổi khó mô tả kiểu đau và rất ít gặp (P4). Từ 65 tuổi đau đầu do nguyên nhân thứ phát nhiều hơn (P2)."
+findings:
+  - finding: headache_location
+    dist: { one_side: 0.08, both_sides: 0.37, forehead_face: 0.15, back_neck: 0.15, whole_head: 0.25 }
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [rasmussen-cephalalgia-1991, ihs-ichd3-2018]
+      reported: "đau hai bên 90%"
+      population: "dân số Đan Mạch"
+      note: "Chia các lựa chọn hai bên (hai bên, trán, gáy, khắp đầu) là ước lượng."
+  - finding: headache_character
+    dist: { throbbing: 0.22, pressing: 0.78 }
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [rasmussen-cephalalgia-1991, ihs-ichd3-2018]
+      reported: "đau bó chặt, đè nặng 78%"
+      population: "dân số Đan Mạch"
+  - finding: headache_severity
+    dist: { mild: 0.55, moderate: 0.42, severe: 0.03 }
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [rasmussen-cephalalgia-1991, ihs-ichd3-2018]
+      reported: "đau nhẹ hoặc vừa 99%"
+      population: "dân số Đan Mạch"
+      note: "Tỷ lệ nhẹ so với vừa là ước lượng."
+  - finding: headache_worse_activity
+    freq: occasional
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [rasmussen-cephalalgia-1991, ihs-ichd3-2018]
+      reported: "72% không tăng khi vận động (tức khoảng 28% có tăng)"
+      population: "dân số Đan Mạch"
+  - finding: headache_duration
+    dist: { lt_4h: 0.45, h4_72: 0.42, gt_3d: 0.13 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [ihs-ichd3-2018]
+      note: "Mỗi đợt kéo dài 30 phút đến 7 ngày (ICHD-3). Phân bố theo các lựa chọn là ước lượng."
+  - finding: headache_course
+    dist: { first_time: 0.15, recurrent_similar: 0.80, progressive: 0.05 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [ihs-ichd3-2018]
+      note: "Chẩn đoán cần ít nhất 10 đợt (ICHD-3) nên phần lớn đã từng bị giống vậy. Đau đầu nặng dần trong vài tuần không phải kiểu của bệnh này. Phân bố là ước lượng."
+  - finding: nausea
+    freq: rare
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [ihs-ichd3-2018, smetana-archintmed-2000]
+      note: "Tiêu chuẩn ICHD-3 yêu cầu không buồn nôn; buồn nôn là dấu hiệu phân biệt mạnh nhất với migraine (LR 19,2)."
+  - finding: vomiting
+    freq: rare
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [ihs-ichd3-2018]
+      note: "Tiêu chuẩn ICHD-3 yêu cầu không nôn."
+  - finding: photophobia
+    freq: occasional
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [ihs-ichd3-2018, smetana-archintmed-2000]
+      note: "ICHD-3 cho phép có tối đa một trong hai: sợ ánh sáng hoặc sợ tiếng ồn. LR của sợ ánh sáng giữa migraine và đau đầu căng thẳng khoảng 5,8 (Smetana), gợi ý tần suất ở đau đầu căng thẳng chỉ khoảng 1/5–1/6 so với migraine. Ước occasional."
+  - finding: phonophobia
+    freq: occasional
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [ihs-ichd3-2018, smetana-archintmed-2000]
+      note: "Như sợ ánh sáng: ICHD-3 cho phép tối đa một trong hai; LR giữa migraine và đau đầu căng thẳng khoảng 5,2. Ước occasional."
+  - finding: stress_poor_sleep
+    freq: frequent
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [rasmussen-pain-1993]
+      note: "Căng thẳng tinh thần là yếu tố khởi phát nổi bật nhất, kiểu ngủ cũng liên quan (Rasmussen 1993); không có tỷ lệ. Cũng hay gặp ở migraine nên giúp phân biệt với đau đầu do nhiễm trùng hơn là với migraine."
+  - finding: fever
+    freq: rare
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [ihs-ichd3-2018]
+      note: "Đau đầu kiểu căng thẳng xuất hiện mới cùng lúc với một bệnh khác (như sốt do nhiễm trùng) được xếp là đau đầu thứ phát do bệnh đó (ICHD-3, quy tắc chung của chương 2). Tần suất là ước lượng."
+  - finding: neck_stiffness
+    freq: rare
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [ihs-ichd3-2018]
+      note: "Có thể căng, mỏi cơ cổ vai (tăng nhạy cảm cơ quanh sọ theo ICHD-3), nhưng cứng gáy thật (không cúi được cằm chạm ngực) không phải đặc điểm của bệnh. Chọn rare để câu trả lời 'có' nghiêng về bệnh nguy hiểm; quy tắc cứng gáy vẫn khuyên đi cấp cứu."
+warning_signs: [headache_thunderclap, neck_stiffness, confusion, vision_loss_or_double, seizure_recent]
+self_care_vi:
+  - "Nghỉ ngơi ở nơi yên tĩnh, ngủ đủ giấc."
+  - "Thư giãn, xoa bóp nhẹ vùng cổ vai."
+  - "Hỏi dược sĩ về thuốc giảm đau không kê đơn phù hợp."
+  - "Hạn chế dùng thuốc giảm đau nhiều ngày trong tháng vì có thể làm đau đầu kéo dài."
+see_doctor_vi:
+  - "Đi khám nếu đau đầu nhiều ngày trong tháng hoặc thuốc giảm đau không còn đỡ."
+  - "Đi khám ngay nếu đau đầu kiểu mới, nặng dần, hoặc kèm sốt, nôn, yếu tay chân."
+review:
+  status: draft
+  authors: ["agent:pass-a"]
+  updated: "2026-10-24"
+  notes_vi: "Giữ urgency 5 như gợi ý (kb-guide xếp đau đầu căng thẳng là theo dõi tại nhà; ICHD-3 ghi thể thưa thường không cần đến nhân viên y tế). Điểm chưa chắc chắn: (1) số liệu đặc điểm cơn đau lấy từ dân số Đan Mạch (tóm tắt), chưa có số liệu Việt Nam về đặc điểm cơn đau; (2) tỷ lệ sợ ánh sáng, sợ tiếng ồn suy ra từ tiêu chuẩn ICHD-3 và LR, chưa có tần suất trực tiếp; (3) prior ngang migraine (cùng P1) vì đau đầu căng thẳng phổ biến hơn trong dân số nhưng migraine làm người bệnh đi khám nhiều hơn; (4) bộ suy luận không có hệ số theo giới, nên không thể hiện được migraine hay gặp ở nữ hơn."

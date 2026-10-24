@@ -1,0 +1,12 @@
+id: nhs-appendicitis
+type: web_page
+title: "Appendicitis"
+publisher: "NHS (UK)"
+url: "https://www.nhs.uk/conditions/appendicitis/"
+license_class: L1
+license_note: "Open Government Licence v3.0; bản chuyển thể không được trình bày như nội dung của NHS."
+default_tier: C
+accessed: "2026-10-24"
+verified: true
+verified_by: "agent:pass-a (đọc trang; cập nhật 09/08/2024)"
+notes_vi: "Đau bắt đầu quanh rốn rồi chuyển xuống bụng dưới bên phải; buồn nôn, chán ăn, sốt, táo bón hoặc tiêu chảy. Hiếm ở trẻ dưới 12 tháng. Đau bụng dữ dội: gọi cấp cứu."

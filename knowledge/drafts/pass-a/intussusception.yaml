@@ -1,0 +1,140 @@
+id: intussusception
+names:
+  vi: "Lồng ruột"
+  vi_common: ["Lồng ruột cấp", "Lồng ruột ở trẻ nhỏ"]
+  en: "Intussusception"
+codes:
+  icd10: "K56.1"
+  icd10_verified: false
+  mondo: "MONDO:0007835"
+summary_vi:
+  - "Một đoạn ruột chui lồng vào đoạn ruột kế tiếp, gây tắc ruột."
+  - "Hay gặp ở trẻ dưới 2 tuổi: bé khóc thét từng cơn, nôn, có thể đi ngoài phân nhầy máu."
+  - "Nếu được đưa đến viện sớm, thường tháo được lồng bằng bơm hơi, không phải mổ."
+urgency: 2
+cant_miss: true
+specialties: [pediatrics, general_surgery, emergency]
+priors:
+  - complaint: abdominal_pain
+    default: P6
+    by_age: { infant_0_2m: P5, child_2m_5y: P3, child_5_12: P5 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [tran-tmh-2013, vantrang-jpediatr-2014, jiang-plosone-2013, park-frontpediatr-2021]
+      reported: "Tỷ lệ mắc ở trẻ dưới 1 tuổi 296/100.000 mỗi năm (Nha Trang, TP.HCM), dưới 5 tuổi 196/100.000; 74% ca dưới 2 tuổi, không ca nào dưới 3 tháng (Nha Trang)"
+      note: "Việt Nam thuộc nhóm có tỷ lệ mắc cao nhất thế giới (Jiang: 302/100.000 so với trung bình 74/100.000). Từ tỷ lệ mắc khoảng 200/100.000 trẻ dưới 5 tuổi mỗi năm và số lần trẻ được đưa khám vì đau bụng, ước lượng lồng ruột chiếm 1–5% (P3) trẻ 2 tháng–5 tuổi đau bụng. Dưới 2 tháng rất ít gặp (Jiang: thấp nhất ở 0–2 tháng) nên P5; trẻ 5–12 tuổi ít gặp (Park: 33% ca từ 2 tuổi trở lên, phần lớn dưới 5 tuổi) nên P5; người lớn rất hiếm nên P6. Ước lượng của người soạn."
+findings:
+  - finding: episodic_crying_legs_drawn
+    freq: very_frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [tran-tmh-2013, park-frontpediatr-2021]
+      reported: "Đau bụng từng cơn 98,9% (Nha Trang); đau từng cơn hoặc quấy khóc 77,4% (Ulsan)"
+      population: "trẻ dưới 5 tuổi ở bệnh viện"
+      note: "Chọn very_frequent: số liệu Việt Nam gần almost_always nhưng do bác sĩ ghi nhận, cha mẹ có thể chỉ thấy bé quấy khóc. Dấu hiệu chỉ hỏi ở trẻ 2 tháng–5 tuổi."
+  - finding: abd_pain_colicky
+    freq: very_frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [tran-tmh-2013, park-frontpediatr-2021]
+      reported: "Đau bụng từng cơn 98,9% (Nha Trang); 77,4% (Ulsan)"
+      note: "Áp dụng khi cha mẹ hoặc trẻ lớn kể đau quặn từng cơn."
+  - finding: vomiting
+    freq: very_frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [tran-tmh-2013, park-frontpediatr-2021]
+      reported: "Nôn 84,5% (Nha Trang); 46,1% chung, 71,8% ở trẻ dưới 1 tuổi (Ulsan)"
+      note: "Chọn theo số liệu Việt Nam; trẻ lớn ít nôn hơn."
+  - finding: red_jelly_stool
+    freq: occasional
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [tran-tmh-2013, park-frontpediatr-2021, reust-afp-2016]
+      reported: "Phân máu 17,1% (Nha Trang); 23,1% chung, 44,8% ở trẻ dưới 1 tuổi (Ulsan); bộ ba kinh điển 9,3–13,9%"
+      note: "Trẻ được đưa đến viện sớm nên ít có phân máu; Reust: bộ ba kinh điển gặp ở dưới 50% ca. Không có phân máu không loại trừ lồng ruột."
+  - finding: child_vomits_everything
+    freq: occasional
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [tran-tmh-2013]
+      note: "Nôn rất hay gặp (84,5%) nhưng nôn tất cả mọi thứ ít hơn. Ước lượng của người soạn."
+  - finding: abdomen_hard_swollen
+    freq: occasional
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [tran-tmh-2013]
+      reported: "Chướng bụng 8,6%"
+  - finding: drowsy_hard_to_wake
+    freq: occasional
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [park-frontpediatr-2021]
+      reported: "Li bì 14,4% chung, 25,9% ở trẻ dưới 1 tuổi"
+      note: "Một số trẻ nhỏ chỉ biểu hiện li bì, dễ bỏ sót."
+  - finding: fever
+    freq: occasional
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [park-frontpediatr-2021]
+      reported: "Sốt 14,9%"
+  - finding: diarrhea
+    freq: occasional
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [park-frontpediatr-2021]
+      reported: "Tiêu chảy 12,7% chung, 17,2% ở trẻ dưới 1 tuổi"
+      note: "Lồng ruột có thể bị nhầm với viêm dạ dày – ruột khi trẻ đi ngoài phân lỏng."
+  - finding: abd_pain_duration
+    dist: { lt_6h: 0.45, h6_24: 0.35, d1_3: 0.15, d4_14: 0.04, gt_2w: 0.01 }
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [tran-tmh-2013, park-frontpediatr-2021]
+      reported: "Thời gian từ khi có triệu chứng đến khi vào viện: trung vị 5 giờ, khoảng tứ phân vị 3–10 giờ (Nha Trang); trung vị 11 giờ (Ulsan)"
+      note: "Phân bố là ước lượng dựa trên các trung vị trên."
+  - finding: abd_pain_onset
+    dist: { sudden: 0.60, gradual: 0.40 }
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [tran-tmh-2013, reust-afp-2016]
+      note: "Cơn khóc thét thường xuất hiện đột ngột ở trẻ đang khỏe. Ước lượng của người soạn."
+  - finding: abd_pain_location
+    dist: { epigastric: 0.07, right_upper: 0.10, left_upper: 0.03, periumbilical: 0.20, right_lower: 0.10, left_lower: 0.03, suprapubic: 0.02, whole: 0.45 }
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [reust-afp-2016]
+      note: "Trẻ nhỏ không chỉ được chỗ đau nên cha mẹ thường chọn khắp bụng; khối lồng hay ở bên phải (Reust: ấn đau hố chậu phải, khối hình quả chuối). Ước lượng của người soạn."
+  - finding: abd_pain_severe
+    freq: frequent
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [tran-tmh-2013]
+      note: "Bé khóc thét từng cơn, cha mẹ thường mô tả là đau dữ dội. Ước lượng của người soạn."
+warning_signs: [red_jelly_stool, drowsy_hard_to_wake, child_vomits_everything, child_unable_to_drink, abdomen_hard_swollen, persistent_vomiting, cold_hands_feet]
+self_care_vi:
+  - "Không cho bé ăn uống thêm trong khi đưa đi cấp cứu."
+  - "Ghi lại giờ bắt đầu các cơn khóc, cơn nôn để báo cho nhân viên y tế."
+see_doctor_vi:
+  - "Đưa bé đến cơ sở cấp cứu ngay khi bé khóc thét từng cơn, co chân lên bụng, nhất là khi kèm nôn."
+  - "Đưa đến sớm giúp tháo lồng bằng bơm hơi dễ thành công, thường không phải mổ."
+review:
+  status: draft
+  authors: ["agent:pass-a"]
+  updated: "2026-10-24"
+  notes_vi: >-
+    Giữ urgency 2 và cant_miss true như gợi ý: đến sớm thì tháo lồng bằng hơi thành công ở 185/187 ca (Nha Trang), châu Á chỉ 13% phải mổ (Jiang); đến muộn có thể hoại tử ruột.
+    Điểm chưa chắc chắn: (1) prior P3 cho trẻ 2 tháng–5 tuổi là ước lượng từ tỷ lệ mắc, chưa có số liệu tỷ lệ lồng ruột trong trẻ đau bụng ở cộng đồng; (2) tần suất lấy từ bệnh viện ở Việt Nam và Hàn Quốc, khác nhau nhiều (nôn 84,5% và 46,1%); (3) Bộ Y tế chưa có hướng dẫn riêng về lồng ruột: 3312/QĐ-BYT chỉ nhắc lồng ruột như một nguyên nhân ngoại khoa của tiêu chảy và xuất huyết tiêu hóa, nên nguồn của quy tắc rf_red_jelly_stool (3312/QĐ-BYT) nên được xem lại; (4) dấu hiệu nôn ra dịch xanh (đề xuất vomiting_bilious trong bản nháp tắc ruột) cũng hữu ích cho lồng ruột.

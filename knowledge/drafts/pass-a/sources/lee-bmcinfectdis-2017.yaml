@@ -1,0 +1,15 @@
+id: lee-bmcinfectdis-2017
+type: primary_study
+title: "Seasonal patterns of dengue fever and associated climate factors in 4 provinces in Vietnam from 1994 to 2013"
+publisher: "BMC Infectious Diseases (Lee HS, Nguyen-Viet H, Nam VS và cs.)"
+date: "2017"
+url: "https://europepmc.org/article/MED/28320341"
+doi: "10.1186/s12879-017-2326-8"
+pmid: "28320341"
+license_class: L1
+license_note: "CC BY 4.0: được dùng, ghi công tác giả."
+default_tier: B
+accessed: "2026-10-24"
+verified: true
+verified_by: "agent:pass-a (đọc toàn văn qua Europe PMC, PMC5359841: Bảng 2 và phần Kết quả)"
+notes_vi: "Số liệu giám sát 1994–2013. Tỷ suất mắc trung bình mỗi tháng (trên 100.000 dân): Hà Nội 3,4; TP.HCM 10,3; An Giang 15,4; Khánh Hòa 23,5. Cả 4 tỉnh tăng vào nửa cuối năm, thấp nhất khoảng tháng 2–4. Hà Nội mùa vụ rất rõ: tháng 10 cao gấp khoảng 55 lần tháng 2."

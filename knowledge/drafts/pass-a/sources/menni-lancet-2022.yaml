@@ -1,0 +1,15 @@
+id: menni-lancet-2022
+type: primary_study
+title: "Symptom prevalence, duration, and risk of hospital admission in individuals infected with SARS-CoV-2 during periods of omicron and delta variant dominance: a prospective observational study from the ZOE COVID Study"
+publisher: "Lancet (Menni C, Valdes AM, Polidori L và cs.)"
+date: "2022"
+url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC8989396/"
+doi: "10.1016/S0140-6736(22)00327-0"
+pmid: "35397851"
+license_class: L1
+license_note: "CC BY: dùng và chuyển thể, ghi công."
+default_tier: B
+accessed: "2026-10-24"
+verified: true
+verified_by: "agent:pass-a (đọc toàn văn qua Europe PMC: Kết quả)"
+notes_vi: "Người lớn đã tiêm vắc xin ở Anh, tự báo cáo qua ứng dụng, giai đoạn Omicron (n = 4.990): sổ mũi 76,5%, đau đầu 74,7%, đau họng 70,5%, hắt hơi 63,0%, ho kéo dài 49,8%, khàn tiếng 42,6%; mất ngửi 16,7% (giai đoạn Delta 52,7%). Nhập viện 1,9%."

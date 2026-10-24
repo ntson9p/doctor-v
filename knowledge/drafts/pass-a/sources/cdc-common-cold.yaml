@@ -1,0 +1,12 @@
+id: cdc-common-cold
+type: web_page
+title: "About Common Cold"
+publisher: "Centers for Disease Control and Prevention (CDC)"
+date: "2026-02-19"
+url: "https://www.cdc.gov/common-cold/about/index.html"
+license_class: L0
+default_tier: C
+accessed: "2026-10-24"
+verified: true
+verified_by: "agent:pass-a (đọc trang; ngày rà soát 19/02/2026)"
+notes_vi: "Triệu chứng: sổ mũi, nghẹt mũi, ho, hắt hơi, đau họng, đau đầu, đau mỏi người nhẹ, sốt (thường nhẹ ở trẻ lớn và người lớn). Thường kéo dài dưới 1 tuần. Gặp quanh năm."

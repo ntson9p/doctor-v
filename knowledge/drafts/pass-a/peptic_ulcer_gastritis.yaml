@@ -1,0 +1,141 @@
+id: peptic_ulcer_gastritis
+names:
+  vi: "Viêm, loét dạ dày – tá tràng"
+  vi_common: ["Đau dạ dày", "Đau bao tử", "Viêm dạ dày"]
+  en: "Gastritis and peptic ulcer disease"
+codes:
+  icd10: "K27"
+  icd10_verified: false
+  mondo: "MONDO:0004247"
+summary_vi:
+  - "Niêm mạc dạ dày hoặc tá tràng bị viêm hay loét, hay do vi khuẩn HP (Helicobacter pylori) hoặc thuốc giảm đau."
+  - "Thường đau rát, cồn cào vùng trên rốn, hay tái đi tái lại và liên quan đến bữa ăn."
+  - "Biến chứng nguy hiểm là chảy máu (nôn ra máu, đi ngoài phân đen) hoặc thủng dạ dày."
+urgency: 4
+cant_miss: false
+specialties: [gastroenterology, general_medicine]
+priors:
+  - complaint: abdominal_pain
+    default: P2
+    by_age: { infant_0_2m: P6, child_2m_5y: P5, child_5_12: P3 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [viniol-fampract-2014, nasseri-cgh-2023, nguyen-bmcgastro-2010, dao-frontpubh-2022, nguyen-healthcare-2023]
+      reported: "Viêm dạ dày 5,2% người đau bụng ở chăm sóc ban đầu (Viniol); loét 4,4% người khó tiêu ở cộng đồng (Nasseri-Moghaddam); ở Việt Nam 65,6% người nội soi nhiễm H. pylori, 21% người nhiễm có loét; loét chiếm 13,9–15,8% ca nội soi tại Hà Nội; 19% trẻ 4–16 tuổi có triệu chứng được nội soi có loét"
+      note: "Bệnh này gộp viêm dạ dày và loét, gần với cách người Việt gọi 'đau dạ dày'. Tỷ lệ nhiễm H. pylori ở Việt Nam cao hơn châu Âu, nên chọn P2 cho người từ 13 tuổi (cao hơn mức 5,2% của Viniol). Trẻ 5–12 tuổi: loét gặp ít hơn và tăng theo tuổi, nên P3; dưới 5 tuổi P5. Số liệu Việt Nam đều ở bệnh viện có nội soi, chưa có số liệu cộng đồng."
+findings:
+  - finding: abd_pain_location
+    dist: { epigastric: 0.75, right_upper: 0.06, left_upper: 0.07, periumbilical: 0.05, right_lower: 0.01, left_lower: 0.01, suprapubic: 0.01, whole: 0.04 }
+    evidence:
+      tier: C
+      basis: verbal
+      sources: [msd-peptic-ulcer]
+      note: "MSD: đau thường khu trú ở thượng vị. Một số người đau lệch sang hạ sườn hoặc quanh rốn; phân bố cụ thể là ước lượng."
+  - finding: abd_pain_meal_relation
+    dist: { hungry_relieved_by_food: 0.35, worse_after_meal: 0.35, no_relation: 0.30 }
+    evidence:
+      tier: C
+      basis: verbal
+      sources: [msd-peptic-ulcer]
+      note: "MSD: đau thường đỡ khi ăn và tái lại 2–3 giờ sau ăn (loét tá tràng), nhưng ăn có thể làm đau tăng (loét dạ dày); chỉ khoảng một nửa có kiểu điển hình. Phân bố là ước lượng."
+  - finding: abd_pain_duration
+    dist: { lt_6h: 0.05, h6_24: 0.08, d1_3: 0.12, d4_14: 0.20, gt_2w: 0.55 }
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [msd-peptic-ulcer]
+      note: "Đau tái đi tái lại nhiều tuần, nhiều tháng; đợt cấp do rượu hoặc thuốc giảm đau thì ngắn hơn. Ước lượng của người soạn."
+  - finding: abd_pain_onset
+    dist: { sudden: 0.10, gradual: 0.90 }
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [msd-peptic-ulcer]
+      note: "Đau thường âm ỉ, tăng dần; đau đột ngột, dữ dội, lan khắp bụng là dấu hiệu thủng (MSD). Ước lượng của người soạn."
+  - finding: abd_pain_colicky
+    freq: occasional
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [msd-peptic-ulcer]
+      note: "MSD: đau rát hoặc cồn cào, không phải đau quặn; nhưng đau theo bữa ăn có thể được kể là lúc đau lúc đỡ. Ước lượng của người soạn."
+  - finding: abd_pain_severe
+    freq: rare
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [msd-peptic-ulcer]
+      note: "Đau thường ở mức nhẹ đến vừa; đau dữ dội đột ngột gợi ý thủng, là biến chứng ít gặp. Ước lượng của người soạn."
+  - finding: abd_pain_worse_movement
+    freq: rare
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [msd-peptic-ulcer]
+      note: "Không có kích thích phúc mạc trừ khi đã thủng. Ước lượng của người soạn."
+  - finding: abdomen_hard_swollen
+    freq: rare
+    evidence:
+      tier: C
+      basis: verbal
+      sources: [msd-peptic-ulcer]
+      note: "MSD: bụng cứng như gỗ là dấu hiệu thủng, một biến chứng ít gặp."
+  - finding: heartburn
+    freq: occasional
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [nasseri-cgh-2023]
+      note: "Ở người khó tiêu, viêm thực quản trào ngược là bất thường hay gặp nhất khi nội soi (11%), nên ợ chua, nóng rát sau xương ức hay đi kèm. MSD không nêu triệu chứng này. Ước lượng của người soạn."
+  - finding: regular_painkiller_use
+    freq: occasional
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [msd-peptic-ulcer, nguyen-bmcgastro-2010]
+      note: "MSD: thuốc chống viêm không steroid gây trên 50% ca loét ở Mỹ; ở Việt Nam H. pylori là nguyên nhân chính (65,6% người nội soi nhiễm), nên ước lượng khoảng 20% người bệnh hay dùng thuốc giảm đau."
+  - finding: black_stool
+    freq: rare
+    evidence:
+      tier: C
+      basis: verbal
+      sources: [msd-peptic-ulcer]
+      note: "Chảy máu là biến chứng hay gặp nhất của loét nhưng chỉ ở số ít người bệnh; khi có phân đen thì quy tắc rf_gi_bleeding đã nâng lên mức 2."
+  - finding: vomiting_blood
+    freq: rare
+    evidence:
+      tier: C
+      basis: verbal
+      sources: [msd-peptic-ulcer]
+      note: "Nôn ra máu hoặc chất như bã cà phê là biến chứng chảy máu, ít gặp; quy tắc rf_gi_bleeding đã nâng lên mức 2."
+  - finding: fever
+    freq: rare
+    evidence:
+      tier: C
+      basis: verbal
+      sources: [msd-peptic-ulcer]
+      note: "MSD không nêu sốt là triệu chứng của loét; liên kết rare để sốt làm giảm khả năng bệnh này."
+  - finding: diarrhea
+    freq: rare
+    evidence:
+      tier: C
+      basis: verbal
+      sources: [msd-peptic-ulcer]
+      note: "MSD: tiêu chảy không phải triệu chứng của loét (chỉ nổi bật trong u tiết gastrin, rất hiếm)."
+warning_signs: [vomiting_blood, black_stool, abd_pain_severe, abdomen_hard_swollen, fainting_or_near_fainting, persistent_vomiting]
+self_care_vi:
+  - "Ăn đúng bữa, tránh để quá đói hoặc ăn quá no."
+  - "Hạn chế rượu bia, thuốc lá, đồ ăn quá cay, chua nếu thấy đau tăng."
+  - "Không tự dùng thuốc giảm đau, thuốc xương khớp khi chưa hỏi bác sĩ hoặc dược sĩ."
+see_doctor_vi:
+  - "Đi khám trong vài ngày để được kiểm tra dạ dày và vi khuẩn HP khi cần."
+  - "Đi khám sớm nếu sụt cân không rõ lý do, hoặc chán ăn, đầy bụng kéo dài."
+  - "Đến cơ sở cấp cứu ngay nếu nôn ra máu, đi ngoài phân đen, hoặc đau bụng dữ dội đột ngột."
+review:
+  status: draft
+  authors: ["agent:pass-a"]
+  updated: "2026-10-24"
+  notes_vi: >-
+    Giữ urgency 4 như gợi ý: bệnh chưa biến chứng cần khám và điều trị trong vài ngày; chảy máu và thủng (MSD) được xử lý bằng quy tắc rf_gi_bleeding, rf_severe_abdominal_pain, rf_abdomen_hard_swollen.
+    Điểm chưa chắc chắn: (1) bệnh gộp viêm dạ dày và loét, chồng lấn với khó tiêu chức năng (chưa có trong hệ thống), nên prior P2 là ước lượng; (2) mã ICD-10 chọn K27 (loét dạ dày – tá tràng không rõ vị trí), nhưng viêm dạ dày là K29 và loét theo vị trí là K25, K26; (3) liên kết ợ chua và dùng thuốc giảm đau là ước lượng, chưa có số liệu Việt Nam về tỷ lệ loét do thuốc chống viêm; (4) không liên kết buồn nôn, nôn, chán ăn vì tần suất ước lượng gần bằng tỷ lệ nền; (5) danh mục chưa có các dấu hiệu báo động của khó tiêu như sụt cân, nuốt nghẹn; nên cân nhắc thêm khi có bệnh ung thư dạ dày.

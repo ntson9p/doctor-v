@@ -1,0 +1,115 @@
+id: acute_otitis_media
+names:
+  vi: "Viêm tai giữa cấp tính"
+  vi_common: ["Viêm tai giữa cấp"]
+  en: "Acute otitis media"
+codes:
+  icd10: "H66.0"
+  icd10_verified: false
+  mondo: "MONDO:0001031"
+summary_vi:
+  - "Viêm nhiễm trong tai giữa, hay gặp ở trẻ nhỏ, thường xảy ra sau sổ mũi, nghẹt mũi."
+  - "Thường đau tai, sốt; trẻ nhỏ hay quấy khóc, kéo hoặc dụi tai."
+  - "Nhiều trường hợp đỡ trong khoảng 3 ngày, nhưng có thể chảy mủ tai hoặc có biến chứng."
+urgency: 4
+cant_miss: false
+specialties: [ent, pediatrics]
+priors:
+  - complaint: fever
+    default: P5
+    by_age: { child_2m_5y: P2, child_5_12: P3, teen_13_17: P4 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-5643-2015, fortanier-plosone-2015, laine-pediatrics-2010]
+      note: "Viêm tai giữa cấp rất hay gặp ở trẻ nhỏ, thường sau viêm mũi họng (BYT). Năm đầu đời có khoảng 624 đợt sốt kèm đau tai hoặc chảy tai trên 1.000 trẻ-năm (Hà Lan); trong trẻ 6–35 tháng bị phụ huynh nghi viêm tai, khoảng một nửa có viêm tai giữa (Laine). Ở người lớn hiếm. Chưa có số liệu Việt Nam về tỷ lệ trong trẻ sốt; ước lượng P2 ở trẻ dưới 5 tuổi."
+findings:
+  - finding: fever
+    freq: frequent
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [laine-pediatrics-2010, kontiokari-pidj-1998, nhs-ear-infections, byt-qd-5643-2015]
+      note: "Sốt gặp ở cả trẻ có và không có viêm tai giữa (RR 1,2 theo Laine; 1,8 theo Kontiokari). BYT mô tả sốt cao ở thể điển hình; NHS liệt kê sốt là triệu chứng. Không có tỷ lệ chung."
+  - finding: fever_max_temp
+    dist: { lt_38: 0.20, t38_39: 0.45, ge_39: 0.35 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-5643-2015, laine-pediatrics-2010]
+      note: "BYT: thể điển hình sốt cao tới 40°C; Laine: nhiệt độ cao nhất không phân biệt được viêm tai giữa. Phân bố là ước lượng."
+  - finding: fever_duration
+    dist: { d1_2: 0.60, d3_5: 0.33, d6_7: 0.05, gt_7d: 0.02 }
+    evidence:
+      tier: A
+      basis: numeric
+      sources: [thompson-bmj-2013]
+      reported: "sốt trung vị khoảng 3 ngày; đau tai hết ở 50% trẻ vào ngày 3, 90% vào ngày 7–8"
+      note: "Phân bố tại thời điểm hỏi là ước lượng từ thời gian bệnh."
+  - finding: ear_pain
+    freq: very_frequent
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-5643-2015, rothman-jama-2003, kontiokari-pidj-1998, nhs-ear-infections]
+      locator: "BYT 5643: Viêm tai giữa cấp tính trẻ em, mục 3.1.1"
+      note: "BYT: trẻ đang sổ mũi, ngạt mũi đột nhiên đau tai nhiều kèm sốt. Đau tai là triệu chứng có ích nhất (LR+ 3,0–7,3; RR 21,3 so với nhiễm trùng hô hấp trên không viêm tai ở trẻ nhà trẻ). Trẻ chưa biết nói biểu hiện bằng dụi, kéo tai, quấy khóc (NHS). Không có tỷ lệ chung; chọn very_frequent theo mô tả điển hình."
+  - finding: ear_discharge
+    freq: occasional
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-5643-2015, nhs-ear-infections]
+      note: "Màng nhĩ có thể tự vỡ vào khoảng ngày thứ 4, khi đó chảy mủ tai, đỡ đau và hạ sốt (BYT). Không có tỷ lệ."
+  - finding: runny_nose
+    freq: frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [abbott-plosone-2023, byt-qd-5643-2015]
+      reported: "40% lúc vào nghiên cứu"
+      population: "trẻ 18 tháng–16 tuổi, chăm sóc ban đầu, Úc"
+      note: "BYT: trẻ thường đang sổ mũi, ngạt mũi khi bắt đầu viêm tai."
+  - finding: nasal_congestion
+    freq: frequent
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-5643-2015]
+      note: "Viêm vòm mũi họng là nguyên nhân chính; trẻ thường đang ngạt mũi."
+  - finding: cough
+    freq: frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [abbott-plosone-2023]
+      reported: "38% lúc vào nghiên cứu"
+  - finding: vomiting
+    freq: occasional
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-5643-2015, nhs-ear-infections]
+      note: "BYT nêu trẻ nhỏ viêm tai có thể sốt, nôn, tiêu chảy; NHS coi nôn là lý do cần khám gấp. Không có tỷ lệ."
+  - finding: breathing_difficulty
+    freq: rare
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-5643-2015]
+      note: "Không phải triệu chứng của viêm tai giữa; khó thở gợi ý bệnh đường hô hấp dưới."
+warning_signs: [neck_stiffness, drowsy_hard_to_wake, confusion, seizure_recent]
+self_care_vi:
+  - "Hỏi dược sĩ về thuốc giảm đau, hạ sốt phù hợp với tuổi."
+  - "Không dùng aspirin cho trẻ dưới 16 tuổi."
+  - "Không cho bất cứ thứ gì vào tai, kể cả tăm bông."
+  - "Nếu tai chảy dịch, chỉ lau nhẹ bên ngoài bằng bông sạch."
+see_doctor_vi:
+  - "Đi khám trong vài ngày tới để được soi tai và quyết định điều trị."
+  - "Trẻ dưới 12 tháng tuổi, hoặc đau tai không đỡ sau 3 ngày, cần đi khám sớm."
+  - "Đi khám ngay nếu chảy mủ tai, sưng đỏ sau tai, sốt rất cao, nôn hoặc lừ đừ."
+review:
+  status: draft
+  authors: ["agent:pass-a"]
+  updated: "2026-10-24"
+  notes_vi: "Giữ mức 4 như gợi ý: NHS cho biết viêm tai thường đỡ trong 3 ngày, chỉ cần khám nếu trẻ dưới 12 tháng hoặc không đỡ sau 3 ngày; BYT 5643/QĐ-BYT khuyên điều trị bằng thuốc và theo dõi biến chứng nên cần khám, nhưng không cần trong 24 giờ ở ca điển hình. Đề nghị người bảo trì cân nhắc quy tắc mức 3 cho trẻ dưới 2 tuổi sốt kèm đau tai, và dấu hiệu sưng đỏ sau tai, vành tai bị đẩy ra trước (viêm xương chũm, BYT 5643) — dấu hiệu này chưa có trong danh mục. Điểm chưa chắc: (1) prior chưa có số liệu Việt Nam; (2) tần suất đau tai ở trẻ chưa biết nói phụ thuộc cách phụ huynh nhận biết; (3) tỷ lệ sổ mũi, ho lấy từ quần thể bản địa ở Úc; (4) mã H66.0 (viêm tai giữa mủ cấp) chưa đối chiếu."

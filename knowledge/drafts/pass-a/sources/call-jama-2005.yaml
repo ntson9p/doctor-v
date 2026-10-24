@@ -1,0 +1,15 @@
+id: call-jama-2005
+type: systematic_review
+title: "Does this patient have influenza?"
+publisher: "JAMA (Call SA, Vollenweider MA, Hornung CA, Simel DL, McKinney WP)"
+date: "2005"
+url: "https://europepmc.org/article/MED/15728170"
+doi: "10.1001/jama.293.8.987"
+pmid: "15728170"
+license_class: L3
+license_note: "Bản quyền nhà xuất bản: chỉ dùng dữ kiện kèm trích dẫn."
+default_tier: A
+accessed: "2026-10-24"
+verified: true
+verified_by: "agent:pass-a (chỉ đọc tóm tắt qua Europe PMC)"
+notes_vi: "Không triệu chứng nào có LR gộp trên 2 ở mọi lứa tuổi. Không sốt (LR 0,40), không ho (LR 0,42), không nghẹt mũi (LR 0,49) làm giảm khả năng cúm. Ở người từ 60 tuổi: sốt kèm ho và khởi phát cấp (LR 5,4), sốt kèm ho (LR 5,0), sốt (LR 3,8), mệt mỏi (LR 2,6), ớn lạnh (LR 2,6)."

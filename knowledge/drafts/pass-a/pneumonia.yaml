@@ -1,0 +1,128 @@
+id: pneumonia
+names:
+  vi: "Viêm phổi mắc phải cộng đồng"
+  vi_common: ["Viêm phổi"]
+  en: "Community-acquired pneumonia"
+codes:
+  icd10: "J18.9"
+  icd10_verified: false
+  mondo: "MONDO:0005249"
+summary_vi:
+  - "Viêm nhiễm ở nhu mô phổi, thường do vi khuẩn hoặc vi rút, mắc ở cộng đồng."
+  - "Thường sốt, ho có đờm, thở nhanh hoặc khó thở; có thể đau ngực khi hít sâu."
+  - "Cần được khám và điều trị sớm, nhất là trẻ nhỏ và người cao tuổi."
+urgency: 3
+cant_miss: false
+specialties: [respiratory, pediatrics, general_medicine]
+priors:
+  - complaint: fever
+    default: P3
+    by_age: { child_2m_5y: P2, elder_65_74: P2, elder_75p: P2 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [vanvugt-bmj-2013, byt-qd-3312-2015]
+      note: "Ở người lớn ho cấp đến chăm sóc ban đầu, 5% viêm phổi trên X quang (GRACE). Người sốt còn nhiều nguyên nhân khác ngoài hô hấp nên ước P3 ở người lớn. Trẻ dưới 5 tuổi và người cao tuổi mắc nhiều hơn, chọn P2. Chưa có số liệu Việt Nam ở tuyến ban đầu."
+  - complaint: abdominal_pain
+    default: P5
+    by_age: { child_2m_5y: P3, child_5_12: P3, teen_13_17: P4, elder_65_74: P4, elder_75p: P4 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [moustaki-pedpulmonol-2003]
+      note: "34% trẻ trên 4 tuổi bị viêm phổi thùy có đau bụng (bệnh viện); viêm phổi thùy dưới ở trẻ có thể giống bệnh bụng cấp. Ở người lớn, đau bụng hiếm khi do viêm phổi; người cao tuổi hay có biểu hiện không điển hình. Ước lượng của người soạn, chưa có số liệu ở người đau bụng."
+findings:
+  - finding: fever
+    freq: very_frequent
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-3312-2015, vanvugt-bmj-2013]
+      locator: "BYT 3312/2015: Viêm phổi do vi khuẩn ở trẻ em, tr. 262"
+      reported: "người lớn ho cấp: tự báo sốt 59% (GRACE)"
+      note: "Ở trẻ, BYT định nghĩa viêm phổi là ho, sốt kèm thở nhanh, rút lõm lồng ngực hoặc ran phổi. Chọn very_frequent vì liên kết này chủ yếu dùng khi triệu chứng chính là đau bụng, mà ca đau bụng do viêm phổi phần lớn là trẻ em."
+  - finding: fever_duration
+    dist: { d1_2: 0.25, d3_5: 0.45, d6_7: 0.17, gt_7d: 0.13 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [vanvugt-bmj-2013]
+      note: "Người viêm phổi đến khám sau trung bình 9 ngày bệnh (GRACE); viêm phổi thường xuất hiện sau vài ngày nhiễm trùng hô hấp. Phân bố là ước lượng."
+  - finding: cough
+    freq: very_frequent
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-3312-2015, vanvugt-bmj-2013]
+      locator: "BYT 3312/2015: tr. 262"
+      note: "Ho là một phần của định nghĩa viêm phổi ở trẻ (BYT). GRACE chỉ nhận người có ho nên không dùng để ước tỷ lệ."
+  - finding: productive_cough
+    freq: very_frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [vanvugt-bmj-2013]
+      reported: "có đờm 86% (toàn mẫu ho cấp 79%)"
+      population: "người lớn ho cấp, chăm sóc ban đầu châu Âu"
+      note: "Trẻ nhỏ ít khạc được đờm; phụ huynh có thể mô tả ho có đờm khi nghe tiếng đờm."
+  - finding: breathing_difficulty
+    freq: very_frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [vanvugt-bmj-2013, byt-qd-3312-2015]
+      reported: "khó thở 69% (người lớn, GRACE); thở nhanh hoặc rút lõm lồng ngực là tiêu chuẩn ở trẻ (BYT)"
+  - finding: pleuritic_chest_pain
+    freq: frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [vanvugt-bmj-2013]
+      reported: "đau ngực 57% (toàn mẫu ho cấp 46%)"
+      note: "GRACE hỏi đau ngực chung, không riêng đau khi hít sâu hoặc khi ho."
+  - finding: runny_nose
+    freq: frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [vanvugt-bmj-2013]
+      reported: "56% có sổ mũi (44% không sổ mũi, so với 29% ở toàn mẫu)"
+      note: "Không sổ mũi là yếu tố dự báo độc lập của viêm phổi (OR 1,9)."
+  - finding: diarrhea
+    freq: occasional
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [vanvugt-bmj-2013]
+      reported: "11% (toàn mẫu 7%)"
+  - finding: abdominal_pain
+    freq: occasional
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [moustaki-pedpulmonol-2003]
+      reported: "34% trẻ trên 4 tuổi bị viêm phổi thùy"
+      population: "trẻ nằm viện"
+      note: "Hạ một mức vì số liệu bệnh viện, và người lớn viêm phổi ít đau bụng."
+  - finding: drowsy_hard_to_wake
+    freq: rare
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-3312-2015]
+      locator: "tr. 262: dấu hiệu viêm phổi nặng"
+      note: "Lơ mơ, hôn mê là dấu hiệu viêm phổi nặng ở trẻ; hiếm ở người đi khám ban đầu."
+warning_signs: [es_severe_breathing, drowsy_hard_to_wake, confusion, child_unable_to_drink, child_vomits_everything, seizure_recent, cold_hands_feet]
+self_care_vi:
+  - "Nghỉ ngơi, uống đủ nước; trẻ nhỏ cần được tiếp tục ăn, bú."
+  - "Làm thông thoáng mũi cho trẻ."
+  - "Dùng thuốc đúng theo hướng dẫn của bác sĩ, không tự ý ngừng thuốc."
+see_doctor_vi:
+  - "Đi khám trong hôm nay để được khám phổi và điều trị phù hợp."
+  - "Đi cấp cứu ngay nếu bỏ bú, không uống được, lơ mơ, co giật, tím tái hoặc thở rất mệt."
+  - "Tái khám theo hẹn, hoặc sớm hơn nếu sốt cao hơn hay thở nhanh hơn."
+review:
+  status: draft
+  authors: ["agent:pass-a"]
+  updated: "2026-10-24"
+  notes_vi: "Giữ mức 3 như gợi ý: BYT 3312/QĐ-BYT (2015) cho viêm phổi chưa nặng ở trẻ điều trị ngoại trú bằng thuốc và hướng dẫn chăm sóc tại nhà, cần khám để xác định; viêm phổi nặng dùng quy tắc dấu hiệu nguy hiểm. Chưa mở được hướng dẫn viêm phổi người lớn của BYT (4815/QĐ-BYT năm 2020; có thông tin chưa kiểm chứng là đã được thay bằng 2147/QĐ-BYT năm 2026), nên tần suất ở người lớn lấy từ nghiên cứu GRACE ở châu Âu. Điểm chưa chắc: (1) prior chưa có số liệu Việt Nam; (2) prior với đau bụng chỉ là ước lượng; (3) tần suất triệu chứng trộn trẻ em (định nghĩa của BYT) và người lớn (GRACE, đã chọn người có ho); (4) phân bố số ngày sốt là ước lượng."

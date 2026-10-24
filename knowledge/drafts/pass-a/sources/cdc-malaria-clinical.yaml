@@ -1,0 +1,12 @@
+id: cdc-malaria-clinical
+type: web_page
+title: "Clinical Features of Malaria"
+publisher: "Centers for Disease Control and Prevention (CDC)"
+date: "2024-03-20"
+url: "https://www.cdc.gov/malaria/hcp/clinical-features/index.html"
+license_class: L0
+default_tier: B
+accessed: "2026-10-24"
+verified: true
+verified_by: "agent:pass-a (đọc trang: triệu chứng sốt rét chưa biến chứng, thời gian ủ bệnh, tiêu chuẩn sốt rét nặng)"
+notes_vi: "Triệu chứng: sốt, ớn lạnh, vã mồ hôi, đau đầu, buồn nôn và nôn, đau nhức người, mệt mỏi (không nêu tần suất). Ủ bệnh thường 7–30 ngày; P. vivax, P. ovale có thể phát bệnh nhiều tháng sau khi bị muỗi đốt."

@@ -1,0 +1,217 @@
+id: acute_cholecystitis
+names:
+  vi: "Viêm túi mật cấp"
+  vi_common: ["Viêm túi mật", "Viêm túi mật do sỏi"]
+  en: "Acute cholecystitis"
+codes:
+  icd10: "K81.0"
+  icd10_verified: false
+  mondo: "MONDO:0043994"
+summary_vi:
+  - "Túi mật bị viêm cấp, phần lớn do sỏi làm tắc đường ra của túi mật."
+  - "Đau liên tục nhiều giờ dưới sườn phải hoặc vùng trên rốn, có thể lan lên vai phải, kèm sốt, nôn."
+  - "Cần được khám và điều trị ở bệnh viện, thường phải mổ cắt túi mật."
+urgency: 2
+cant_miss: false
+specialties: [general_surgery, gastroenterology, emergency]
+priors:
+  - complaint: abdominal_pain
+    default: P4
+    by_age: { infant_0_2m: P6, child_2m_5y: P6, child_5_12: P6, teen_13_17: P5, adult_45_64: P3, elder_65_74: P3, elder_75p: P3 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [viniol-fampract-2014, cervellin-atm-2016, gallaher-jama-2022]
+      reported: "Bệnh mật – tụy 4,0% người đau bụng ở chăm sóc ban đầu (Viniol); cơn đau quặn mật hoặc viêm túi mật 6,0% ở người dưới 65 tuổi và 13,2% ở người trên 65 tuổi tại cấp cứu (Cervellin)"
+      note: "Viêm túi mật cấp chỉ là một phần của nhóm bệnh mật (cùng cơn đau quặn mật, sỏi ống mật chủ). Người 18–44 tuổi: P4; từ 45 tuổi: P3 vì sỏi mật tăng theo tuổi. Trẻ em hiếm. Ước lượng của người soạn dựa trên các số trên; chưa có số liệu Việt Nam."
+  - complaint: fever
+    default: P5
+    by_age: { infant_0_2m: P6, child_2m_5y: P6, child_5_12: P6, teen_13_17: P6, elder_65_74: P4, elder_75p: P4 }
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [msd-acute-cholecystitis]
+      note: "Sốt thường nhẹ và đi sau đau bụng. Người cao tuổi có thể chỉ có triệu chứng toàn thân không đặc hiệu (MSD), nên P4 ở người từ 65 tuổi. Ước lượng của người soạn."
+findings:
+  - finding: abdominal_pain
+    freq: very_frequent
+    evidence:
+      tier: C
+      basis: verbal
+      sources: [nhs-acute-cholecystitis, msd-acute-cholecystitis]
+      note: "Đau bụng là triệu chứng chính; không chọn almost_always vì người cao tuổi có thể chỉ có triệu chứng toàn thân (MSD). Liên kết này chỉ có tác dụng khi triệu chứng chính là sốt."
+  - finding: abd_pain_location
+    dist: { epigastric: 0.25, right_upper: 0.60, left_upper: 0.02, periumbilical: 0.03, right_lower: 0.03, left_lower: 0.01, suprapubic: 0.01, whole: 0.05 }
+    evidence:
+      tier: A
+      basis: numeric
+      sources: [cartwright-afp-2008, trowbridge-jama-2003, nhs-acute-cholecystitis]
+      locator: "Cartwright 2008, bảng 2 và phần viêm túi mật"
+      reported: "Đau hạ sườn phải: LR+ 2,5, LR− 0,3 (suy ra độ nhạy khoảng 0,8); dưới 25% người bệnh không đau hạ sườn phải hoặc không có cơn đau quặn"
+      note: "Phần còn lại chủ yếu là đau vùng thượng vị."
+  - finding: abd_pain_onset
+    dist: { sudden: 0.35, gradual: 0.65 }
+    evidence:
+      tier: C
+      basis: verbal
+      sources: [nhs-acute-cholecystitis, msd-acute-cholecystitis]
+      note: "NHS: đau đột ngột, nhói; MSD: đau tăng đến đỉnh trong 15–60 phút. Ước lượng khoảng một phần ba chọn 'đột ngột, rất mạnh ngay từ đầu'."
+  - finding: abd_pain_duration
+    dist: { lt_6h: 0.10, h6_24: 0.35, d1_3: 0.40, d4_14: 0.13, gt_2w: 0.02 }
+    evidence:
+      tier: C
+      basis: verbal
+      sources: [msd-acute-cholecystitis]
+      note: "MSD: đau kéo dài trên 6 giờ, khác với cơn đau quặn mật. Phân bố cụ thể là ước lượng."
+  - finding: abd_pain_meal_relation
+    dist: { hungry_relieved_by_food: 0.03, worse_after_meal: 0.50, no_relation: 0.47 }
+    evidence:
+      tier: C
+      basis: verbal
+      sources: [gallaher-jama-2022]
+      note: "Gallaher: triệu chứng có thể liên quan đến bữa ăn. Phân bố là ước lượng."
+  - finding: pain_after_fatty_meal
+    freq: occasional
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [gallaher-jama-2022]
+      note: "Bữa ăn nhiều dầu mỡ hay được kể là yếu tố khởi phát nhưng không có số liệu; chọn occasional. Ước lượng của người soạn."
+  - finding: abd_pain_radiates_back
+    freq: occasional
+    evidence:
+      tier: C
+      basis: verbal
+      sources: [msd-acute-cholecystitis, nhs-acute-cholecystitis]
+      note: "MSD: đau có thể lan ra bả vai phải hoặc lưng trên; NHS: lan về vai phải. Danh mục chưa có câu hỏi riêng về đau lan lên vai phải (xem đề xuất)."
+  - finding: abd_pain_radiates_right_shoulder
+    freq: frequent
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [nhs-acute-cholecystitis, msd-acute-cholecystitis]
+      note: "Dấu hiệu đề xuất (xem proposed_findings). NHS mô tả đau lan về vai phải là đặc điểm chính; chưa có số liệu, ước lượng khoảng một nửa."
+  - finding: abd_pain_colicky
+    freq: occasional
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [msd-acute-cholecystitis]
+      note: "Đau do viêm túi mật thường liên tục chứ không quặn từng cơn (MSD: kéo dài trên 6 giờ). Ước lượng của người soạn."
+  - finding: abd_pain_severe
+    freq: frequent
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [nhs-acute-cholecystitis]
+      note: "NHS: đau đột ngột, nhói và có thể dữ dội. Ước lượng của người soạn."
+  - finding: abd_pain_worse_movement
+    freq: occasional
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [msd-acute-cholecystitis]
+      note: "MSD: sau vài giờ xuất hiện dấu Murphy và co cứng cơ hạ sườn phải (kích thích phúc mạc khu trú). Ước lượng của người soạn."
+  - finding: abdomen_hard_swollen
+    freq: rare
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [msd-acute-cholecystitis]
+      note: "Co cứng khu trú dưới sườn phải người dùng khó tự nhận biết; bụng cứng toàn bộ gợi ý thủng (khoảng 10% nếu không điều trị, MSD). Ước lượng của người soạn."
+  - finding: fever
+    freq: frequent
+    evidence:
+      tier: A
+      basis: numeric
+      sources: [cartwright-afp-2008, trowbridge-jama-2003, msd-acute-cholecystitis]
+      reported: "Sốt: LR+ 1,8, LR− 0,8 (suy ra độ nhạy khoảng 0,35)"
+      note: "MSD: sốt nhẹ thường gặp, đôi khi không sốt. Con số 35% nằm sát ranh giới occasional/frequent; chọn frequent."
+  - finding: fever_max_temp
+    dist: { lt_38: 0.50, t38_39: 0.38, ge_39: 0.12 }
+    evidence:
+      tier: C
+      basis: verbal
+      sources: [msd-acute-cholecystitis]
+      note: "Phân bố trong số người có sốt. MSD: sốt thường nhẹ; sốt cao, rét run gợi ý mủ túi mật, hoại tử hoặc thủng. Phân bố là ước lượng."
+  - finding: fever_duration
+    dist: { d1_2: 0.65, d3_5: 0.28, d6_7: 0.04, gt_7d: 0.03 }
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [msd-acute-cholecystitis]
+      note: "Phân bố trong số người có sốt; sốt đi cùng đợt đau cấp nên thường ngắn. Ước lượng của người soạn."
+  - finding: chills_rigors
+    freq: occasional
+    evidence:
+      tier: C
+      basis: verbal
+      sources: [msd-acute-cholecystitis]
+      note: "Tần suất trong số người có sốt. MSD: sốt cao kèm rét run gợi ý biến chứng (mủ túi mật, hoại tử, thủng)."
+  - finding: nausea
+    freq: very_frequent
+    evidence:
+      tier: C
+      basis: verbal
+      sources: [gallaher-jama-2022, nhs-acute-cholecystitis]
+      note: "Gallaher: buồn nôn thuộc biểu hiện điển hình."
+  - finding: vomiting
+    freq: very_frequent
+    evidence:
+      tier: C
+      basis: verbal
+      sources: [msd-acute-cholecystitis, nhs-acute-cholecystitis]
+      note: "MSD: nôn thường gặp."
+  - finding: loss_of_appetite
+    freq: frequent
+    evidence:
+      tier: C
+      basis: verbal
+      sources: [nhs-acute-cholecystitis]
+      note: "NHS liệt kê chán ăn trong các triệu chứng; chưa có số liệu, chọn frequent."
+  - finding: jaundice
+    freq: occasional
+    evidence:
+      tier: C
+      basis: verbal
+      sources: [nhs-acute-cholecystitis, cartwright-afp-2008, msd-acute-cholecystitis]
+      note: "NHS liệt kê vàng da; Cartwright: vàng da có LR 1,0 trong nhóm nghi viêm túi mật; MSD: có vàng da thì nghĩ sỏi kẹt ống mật chủ."
+  - finding: gallstones_known
+    freq: frequent
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [msd-acute-cholecystitis, gallaher-jama-2022]
+      note: "MSD: phần lớn người bệnh đã từng có cơn đau quặn mật; từ 90% có sỏi mật. Tỷ lệ đã được bác sĩ báo có sỏi chưa rõ; ước lượng khoảng một nửa."
+  - finding: diarrhea
+    freq: rare
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [msd-acute-cholecystitis]
+      note: "Không thuộc bệnh cảnh; liên kết để phân biệt với viêm dạ dày – ruột. Ước lượng của người soạn."
+warning_signs: [abd_pain_severe, abdomen_hard_swollen, jaundice, chills_rigors, confusion, cold_hands_feet, persistent_vomiting]
+self_care_vi:
+  - "Không ăn uống trong khi chờ được khám, nhất là đồ nhiều dầu mỡ."
+  - "Hỏi bác sĩ hoặc dược sĩ trước khi dùng thuốc giảm đau."
+see_doctor_vi:
+  - "Đến cơ sở cấp cứu ngay khi đau dưới sườn phải kéo dài vài giờ, nhất là khi kèm sốt."
+  - "Đi ngay nếu vàng da, vàng mắt hoặc rét run."
+  - "Người cao tuổi, người bị đái tháo đường dễ có biến chứng, không nên chờ đợi."
+proposed_findings:
+  - id: abd_pain_radiates_right_shoulder
+    kind: symptom
+    type: binary
+    label_vi: "Đau lan lên vai phải"
+    question_vi: "Cơn đau có lan lên vai phải hoặc bả vai phải không?"
+    requires:
+      - { finding: abdominal_pain, is: present }
+    leak: moderate
+    notes_vi: "NHS, MSD: đau do viêm túi mật lan về vai phải, bả vai phải. Hiện chỉ có câu hỏi đau lan ra sau lưng; tách riêng giúp phân biệt bệnh túi mật với viêm tụy (lan ra sau lưng) và loét dạ dày."
+review:
+  status: draft
+  authors: ["agent:pass-a"]
+  updated: "2026-10-24"
+  notes_vi: >-
+    Giữ urgency 2 và cant_miss false như gợi ý. MSD và Gallaher: cần nhập viện, mổ cắt túi mật sớm; khoảng 10% có thể thủng nếu không điều trị, tử vong khi thủng tới 16%. NHS chỉ khuyên khám bác sĩ càng sớm càng tốt (gần mức 3), nhưng ở Việt Nam việc này cần siêu âm, xét nghiệm tại bệnh viện trong ngày, nên chọn mức 2. Không đặt cant_miss vì biến chứng thường diễn tiến trong nhiều ngày; ngưỡng cộng dồn 2% của mức 2 đã đủ nhạy.
+    Điểm chưa chắc chắn: (1) tần suất lấy từ LR của Trowbridge 2003 qua bảng Cartwright 2008, chưa đọc được toàn văn JAMA; (2) prior dựa trên số liệu châu Âu (Viniol, Cervellin), chưa có số liệu Việt Nam; ở Việt Nam sỏi ống mật chủ, sỏi trong gan và viêm đường mật hay gặp nhưng chưa có trong hệ thống, có thể bị xếp vào bệnh này; (3) người cao tuổi biểu hiện không điển hình; (4) đề xuất dấu hiệu abd_pain_radiates_right_shoulder.

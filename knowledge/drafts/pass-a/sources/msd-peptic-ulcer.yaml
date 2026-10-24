@@ -1,0 +1,13 @@
+id: msd-peptic-ulcer
+type: reference
+title: "Peptic Ulcer Disease (MSD Manual Professional Edition)"
+publisher: "Merck Sharp & Dohme (MSD Manuals)"
+date: "2025-01"
+url: "https://www.msdmanuals.com/professional/gastrointestinal-disorders/gastritis-and-peptic-ulcer-disease/peptic-ulcer-disease"
+license_class: L3
+license_note: "Bản quyền nhà xuất bản: chỉ dùng dữ kiện kèm trích dẫn, không sao chép câu chữ."
+default_tier: C
+accessed: "2026-10-24"
+verified: true
+verified_by: "agent:pass-a (đọc trang)"
+notes_vi: "Đau rát hoặc cồn cào, thường đỡ khi ăn (loét tá tràng), có khi ăn vào lại đau (loét dạ dày); chỉ khoảng một nửa có kiểu triệu chứng điển hình. Thuốc chống viêm không steroid gây trên 50% ca loét (Mỹ). Biến chứng: chảy máu, thủng, hẹp môn vị."

@@ -1,0 +1,200 @@
+id: typhoid_fever
+names:
+  vi: "Thương hàn"
+  vi_common: ["Sốt thương hàn"]
+  en: "Typhoid fever"
+codes:
+  icd10: "A01.0"
+  icd10_verified: true
+  mondo: "MONDO:0005619"
+summary_vi:
+  - "Bệnh do vi khuẩn thương hàn, lây qua thức ăn, nước uống bị nhiễm bẩn."
+  - "Thường sốt tăng dần và kéo dài nhiều ngày, kèm đau đầu, mệt mỏi, đau bụng."
+  - "Nếu không điều trị có thể gây xuất huyết tiêu hóa hoặc thủng ruột."
+urgency: 3
+cant_miss: false
+specialties: [infectious_disease]
+priors:
+  - complaint: fever
+    default: P5
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [hoang-heliyon-2025, phuong-bmcinfectdis-2006, byt-qd-5642-2015]
+      note: "Số liệu báo cáo ở Cần Thơ 2014–2022: thương hàn 0,36 ca/100.000/năm, so với dengue 176,8 (Hoang 2025). Tuyến cơ sở Bình Thuận 2001–2002: thầy thuốc nghĩ thương hàn ở 2,8–5,2% người sốt cấp không rõ ổ, nhưng không có xác nhận vi sinh (Phuong 2006). Báo cáo thương hàn cần cấy máu nên bỏ sót nhiều. Ước 0,02–0,2% người chọn 'Sốt' (P5)."
+  - complaint: abdominal_pain
+    default: P6
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [hoang-heliyon-2025, azmatullah-jgh-2015]
+      note: "Đau bụng gặp ở khoảng một nửa ca thương hàn, nhưng bệnh hiếm ở Việt Nam hiện nay và người bệnh thường chọn 'Sốt'. Người chọn 'Đau bụng' chủ yếu do bệnh tiêu hóa khác. Dưới 0,02% (P6)."
+  - complaint: headache
+    default: P6
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [hoang-heliyon-2025, azmatullah-jgh-2015]
+      note: "Đau đầu gặp ở 46–63% ca thương hàn, nhưng bệnh hiếm và người bệnh thường chọn 'Sốt'. Dưới 0,02% (P6)."
+findings:
+  - finding: fever
+    freq: almost_always
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [azmatullah-jgh-2015, byt-qd-5642-2015]
+      reported: "97–100% ở mọi nhóm tuổi."
+      note: "Liên kết có tác dụng khi triệu chứng chính là đau bụng hoặc đau đầu."
+  - finding: fever_duration
+    dist: { d1_2: 0.07, d3_5: 0.28, d6_7: 0.20, gt_7d: 0.45 }
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [azmatullah-jgh-2015, byt-qd-5642-2015]
+      locator: "5642/QĐ-BYT, bài Thương hàn, mục 3.1"
+      reported: "Trẻ em khám ở cộng đồng, trạm y tế: chỉ 36% bị bệnh dưới 1 tuần khi được xác định."
+      note: "Sốt tăng dần trong tuần đầu, sốt cao liên tục ở tuần thứ hai, kéo dài 2–3 tuần nếu không điều trị (5642). Phân bố số ngày đã sốt tại thời điểm hỏi; người soạn ước lượng từ các dữ kiện trên."
+  - finding: fever_max_temp
+    dist: { lt_38: 0.10, t38_39: 0.40, ge_39: 0.50 }
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [azmatullah-jgh-2015, byt-qd-5642-2015]
+      reported: "Sốt cao 29% (trẻ em ở cộng đồng) đến 38% (người lớn); sốt tăng dần tới 40°C trong tuần đầu (5642)."
+      note: "Định nghĩa 'sốt cao' khác nhau giữa các nghiên cứu; phân bố do người soạn ước lượng."
+  - finding: headache
+    freq: frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [azmatullah-jgh-2015, byt-qd-5642-2015]
+      reported: "63% người lớn; 46% trẻ em ở cộng đồng, trạm y tế; 14% trẻ dưới 5 tuổi."
+  - finding: abdominal_pain
+    freq: frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [azmatullah-jgh-2015]
+      reported: "Đau hoặc ấn đau bụng 54% người lớn; 50% trẻ em ở cộng đồng, trạm y tế."
+  - finding: abd_pain_location
+    dist: { epigastric: 0.15, right_upper: 0.08, left_upper: 0.04, periumbilical: 0.15, right_lower: 0.20, left_lower: 0.05, suprapubic: 0.03, whole: 0.30 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-5642-2015]
+      locator: "5642/QĐ-BYT, bài Thương hàn, mục 3.1 (bụng chướng, ùng ục hố chậu phải)"
+      note: "Tổn thương chủ yếu ở hồi tràng cuối (hố chậu phải); đau thường lan tỏa. Phân bố do người soạn ước lượng, cần bác sĩ duyệt."
+  - finding: abd_pain_onset
+    dist: { sudden: 0.10, gradual: 0.90 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-5642-2015]
+      note: "Bệnh khởi phát từ từ, tăng dần (5642). Đau đột ngột, dữ dội gợi ý biến chứng thủng ruột. Phân bố do người soạn ước lượng."
+  - finding: abd_pain_duration
+    dist: { lt_6h: 0.03, h6_24: 0.10, d1_3: 0.30, d4_14: 0.47, gt_2w: 0.10 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-5642-2015]
+      note: "Triệu chứng tiêu hóa kéo dài theo đợt sốt nhiều ngày. Phân bố do người soạn ước lượng."
+  - finding: diarrhea
+    freq: occasional
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [azmatullah-jgh-2015, byt-qd-5642-2015]
+      reported: "46% người lớn (bệnh viện); 36% trẻ em bệnh viện; 10% trẻ em ở cộng đồng."
+      note: "Tuần đầu hay táo bón, tuần thứ hai có thể tiêu chảy (5642). Chọn mức giữa các nguồn."
+  - finding: vomiting
+    freq: occasional
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [azmatullah-jgh-2015]
+      reported: "Buồn nôn hoặc nôn: 49% người lớn (bệnh viện); 23% trẻ em ở cộng đồng."
+      note: "Số liệu gộp buồn nôn với nôn; riêng nôn ít hơn, nên chọn occasional."
+  - finding: cough
+    freq: frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [azmatullah-jgh-2015, byt-qd-5642-2015]
+      reported: "41% người lớn; 33% trẻ em ở cộng đồng."
+      note: "5642: nghe phổi có thể có ran phế quản; ho dễ làm nhầm với viêm phế quản."
+  - finding: fatigue
+    freq: frequent
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-5642-2015]
+      locator: "5642/QĐ-BYT, bài Thương hàn, mục 3.1.b (suy nhược)"
+      note: "Hướng dẫn liệt kê suy nhược trong thời kỳ khởi phát nhưng không nêu tần suất; ước khoảng 50%."
+  - finding: bleeding_gums_nose
+    freq: occasional
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-5642-2015]
+      locator: "5642/QĐ-BYT, bài Thương hàn, mục 3.1.b (có thể chảy máu mũi)"
+      note: "'Có thể có' tương ứng occasional theo bảng 2.1. Chưa có số liệu."
+  - finding: rash_any
+    freq: rare
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [azmatullah-jgh-2015, byt-qd-5642-2015]
+      reported: "Ban hồng hoặc phát ban 8% người lớn, 5% trẻ em (bệnh viện)."
+      note: "Đào ban ít nốt, ở ngực bụng, mất sau vài ngày (5642); người bệnh ít khi tự nhận ra."
+  - finding: drowsy_hard_to_wake
+    freq: rare
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [azmatullah-jgh-2015, byt-qd-5642-2015]
+      reported: "Rối loạn ý thức 29% người lớn, 12% trẻ em (bệnh viện)."
+      note: "Li bì, thờ ơ ở tuần thứ hai (5642). Số liệu bệnh viện, hạ một mức cho cộng đồng."
+  - finding: black_stool
+    freq: rare
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [azmatullah-jgh-2015, byt-qd-5642-2015]
+      reported: "Xuất huyết tiêu hóa 5–7% (bệnh viện)."
+      note: "Biến chứng; thường ở tuần thứ hai, thứ ba."
+  - finding: headache_course
+    dist: { first_time: 0.70, recurrent_similar: 0.20, progressive: 0.10 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-5642-2015]
+      note: "Đau đầu cấp cùng đợt sốt; một số người thấy đau tăng dần theo ngày. Phân bố do người soạn ước lượng."
+  - finding: headache_duration
+    dist: { lt_4h: 0.05, h4_72: 0.40, gt_3d: 0.55 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-5642-2015]
+      note: "Đau đầu kéo dài theo đợt sốt nhiều ngày. Phân bố do người soạn ước lượng."
+warning_signs:
+  - abd_pain_severe
+  - abdomen_hard_swollen
+  - black_stool
+  - vomiting_blood
+  - confusion
+  - drowsy_hard_to_wake
+  - cold_hands_feet
+  - persistent_vomiting
+self_care_vi:
+  - "Uống đủ nước, ăn thức ăn mềm, dễ tiêu."
+  - "Rửa tay bằng xà phòng trước khi ăn và sau khi đi vệ sinh."
+  - "Ăn chín, uống sôi để tránh lây cho người trong nhà."
+see_doctor_vi:
+  - "Sốt kéo dài nhiều ngày cần đi khám trong 24 giờ để xét nghiệm tìm nguyên nhân."
+  - "Chỉ dùng kháng sinh theo đơn của bác sĩ."
+  - "Đi cấp cứu ngay nếu đau bụng dữ dội, bụng cứng, đi ngoài phân đen hoặc lơ mơ."
+review:
+  status: draft
+  authors: ["agent:pass-a"]
+  updated: "2026-10-24"
+  notes_vi: "Giữ urgency 3, cant_miss false theo gợi ý: ca chưa biến chứng điều trị kháng sinh, cần khám và cấy máu sớm; biến chứng (xuất huyết, thủng ruột, viêm não) do quy tắc dấu hiệu nguy hiểm xử lý. Điểm chưa chắc: (1) Tỷ lệ mắc thương hàn hiện nay ở Việt Nam: chỉ có số liệu báo cáo ở Cần Thơ, nhiều khả năng thấp hơn thực tế do ít cấy máu; prior P5 có thể thấp ở vùng nông thôn Đồng bằng sông Cửu Long. (2) Hầu hết số liệu triệu chứng từ bệnh viện ở Nam Á; số liệu cộng đồng chỉ có ở trẻ em. (3) Danh mục chưa có dấu hiệu táo bón (24% người lớn), lưỡi bẩn; không đề xuất vì giá trị phân biệt thấp. (4) Phân bố vị trí, thời gian đau bụng là ước lượng."

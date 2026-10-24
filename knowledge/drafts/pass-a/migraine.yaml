@@ -1,0 +1,169 @@
+id: migraine
+names:
+  vi: "Bệnh đau nửa đầu (migraine)"
+  vi_common: ["Đau nửa đầu (migraine)", "Thiên đầu thống"]
+  en: "Migraine"
+codes:
+  icd10: "G43"
+  icd10_verified: true
+  mondo: "MONDO:0005277"
+summary_vi:
+  - "Đau đầu từng cơn tái đi tái lại, thường đau giật giật theo nhịp mạch ở một bên đầu."
+  - "Mỗi cơn kéo dài 4 giờ đến 3 ngày, hay kèm buồn nôn, sợ ánh sáng, sợ tiếng ồn."
+  - "Một số người thấy chớp sáng hoặc đường gợn sóng trước cơn đau."
+urgency: 5
+cant_miss: false
+specialties: [neurology, general_medicine]
+priors:
+  - complaint: headache
+    default: P1
+    by_age: { child_2m_5y: P4, child_5_12: P2, adult_45_64: P2, elder_65_74: P3, elder_75p: P4 }
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [vo-jhp-2024, rasmussen-archneurol-1992, detsky-jama-2006]
+      reported: "tỷ lệ mắc 1 năm: migraine 21,8% (nữ 25,4%, nam 17,0%), đau đầu bất kỳ 82,6%"
+      population: "1362 sinh viên y ở Hà Nội, 2024"
+      note: "Migraine gặp ở khoảng 1/5 sinh viên Việt Nam trong 1 năm và hay làm người bệnh mất khả năng sinh hoạt, nên là nguyên nhân hàng đầu khi người trẻ tự tìm hiểu về đau đầu (P1 cho 13–44 tuổi). Tuổi càng cao càng ít gặp (OR 0,84 mỗi năm tuổi trong nghiên cứu Việt Nam): 45–64 tuổi P2, 65–74 tuổi P3, từ 75 tuổi P4 (khởi phát mới ở người lớn tuổi hiếm, cần nghĩ nguyên nhân khác). Trẻ 5–12 tuổi P2; trẻ dưới 5 tuổi khó nhận biết (P4). Prior không phân theo giới vì bộ suy luận chưa hỗ trợ."
+findings:
+  - finding: headache_location
+    dist: { one_side: 0.50, both_sides: 0.14, forehead_face: 0.18, back_neck: 0.05, whole_head: 0.13 }
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [rasmussen-cephalalgia-1991, kelman-headache-2005, chakravarty-jhp-2008, ihs-ichd3-2018]
+      reported: "đau một bên 62% (dân số Đan Mạch); 66,6% (cơ sở chuyên khoa); chỉ đau một bên 40,5% ở người lớn, 10,5% ở trẻ em (Ấn Độ)"
+      population: "người lớn bị migraine"
+      note: "Vị trí hay gặp nhất là quanh mắt, thái dương, trán (Kelman 2005), nên giữ một phần cho lựa chọn 'trán, quanh mắt'. Trẻ em hay đau hai bên hơn (ICHD-3) nhưng phân bố không tách được theo tuổi."
+  - finding: headache_character
+    dist: { throbbing: 0.78, pressing: 0.22 }
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [rasmussen-cephalalgia-1991, ihs-ichd3-2018]
+      reported: "đau theo nhịp mạch 78%"
+      population: "dân số Đan Mạch"
+  - finding: headache_severity
+    dist: { mild: 0.07, moderate: 0.38, severe: 0.55 }
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [rasmussen-cephalalgia-1991, detsky-jama-2006, ihs-ichd3-2018]
+      reported: "đau nặng 85%"
+      population: "dân số Đan Mạch"
+      note: "Lựa chọn 'Rất đau, không làm gì được' chặt hơn mức 'nặng' của nghiên cứu, và nhiều người đã uống thuốc, nên chỉ tính 55%. ICHD-3 yêu cầu mức vừa hoặc nặng."
+  - finding: headache_worse_activity
+    freq: very_frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [rasmussen-cephalalgia-1991, smetana-archintmed-2000, ihs-ichd3-2018]
+      reported: "tăng khi vận động thường ngày 96%"
+      population: "dân số Đan Mạch"
+      note: "Số liệu ở mức almost_always nhưng chọn very_frequent: tự trả lời trên điện thoại kém chính xác hơn phỏng vấn, và nhiều người nằm yên trong cơn nên không nhận ra. LR của dấu hiệu này giữa migraine và đau đầu căng thẳng là 3,7 (Smetana)."
+  - finding: headache_duration
+    dist: { lt_4h: 0.30, h4_72: 0.60, gt_3d: 0.10 }
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [ihs-ichd3-2018]
+      note: "Cơn 4–72 giờ khi không điều trị; trẻ dưới 18 tuổi 2–72 giờ (ICHD-3). Người dùng hỏi giữa cơn, và cơn đã điều trị có thể ngắn hơn, nên giữ 30% cho 'dưới 4 giờ'. Phân bố là ước lượng."
+  - finding: headache_course
+    dist: { first_time: 0.10, recurrent_similar: 0.85, progressive: 0.05 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [ihs-ichd3-2018]
+      note: "Chẩn đoán cần ít nhất 5 cơn (ICHD-3) nên phần lớn đã từng bị giống vậy; cơn đầu tiên khó phân biệt với đau đầu thứ phát. Phân bố là ước lượng."
+  - finding: nausea
+    freq: very_frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [silberstein-headache-1995, smetana-archintmed-2000, ihs-ichd3-2018]
+      reported: "trên 90% từng buồn nôn khi lên cơn, khoảng 1/3 buồn nôn ở mọi cơn (Silberstein); LR dương so với đau đầu căng thẳng 19,2 (Smetana)"
+      population: "người tự báo cáo migraine (Mỹ); tổng quan"
+      note: "Tỷ lệ theo từng cơn thấp hơn tỷ lệ 'từng bị', nên chọn very_frequent."
+  - finding: vomiting
+    freq: occasional
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [silberstein-headache-1995]
+      reported: "gần 70% từng nôn khi lên cơn, khoảng 1/3 trong số đó nôn ở phần lớn các cơn"
+      population: "người tự báo cáo migraine (Mỹ)"
+      note: "Ước tính nôn trong một cơn bất kỳ khoảng 20–30%."
+  - finding: photophobia
+    freq: very_frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [evans-headache-2008, smetana-archintmed-2000, ihs-ichd3-2018]
+      reported: "khi hỏi thông thường, 76% xác nhận nhạy cảm với ánh sáng và tiếng ồn (24% phủ nhận); khi hỏi kỹ 93%"
+      population: "người bệnh migraine ở cơ sở chuyên khoa"
+  - finding: phonophobia
+    freq: very_frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [evans-headache-2008, smetana-archintmed-2000, ihs-ichd3-2018]
+      reported: "như sợ ánh sáng (76% khi hỏi thông thường); LR dương so với đau đầu căng thẳng 5,2"
+      population: "người bệnh migraine ở cơ sở chuyên khoa"
+  - finding: visual_aura
+    freq: occasional
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [rasmussen-archneurol-1992, ihs-ichd3-2018, smetana-archintmed-2000]
+      reported: "migraine có aura 4% so với không aura 6% dân số trong 1 năm; aura thị giác có ở trên 90% người migraine có aura"
+      population: "dân số Đan Mạch"
+      note: "Khoảng 40% người migraine từng có aura, nhưng nhiều người có cả cơn không aura, nên tỷ lệ theo từng cơn ước 20–25%."
+  - finding: blurred_vision
+    freq: occasional
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [ihs-ichd3-2018]
+      note: "Nhìn mờ nằm trong các triệu chứng báo trước của cơn migraine (ICHD-3). Không có tỷ lệ; cùng cụm 'visual' với chớp sáng."
+  - finding: vision_loss_or_double
+    freq: rare
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [ihs-ichd3-2018]
+      note: "Aura thị giác có thể để lại ám điểm (vùng nhìn không thấy), người bệnh có thể trả lời là mất một phần thị lực. Chọn rare để câu trả lời 'có' vẫn nghiêng về đột quỵ; quy tắc mất thị lực đột ngột khuyên đi cấp cứu."
+  - finding: stress_poor_sleep
+    freq: frequent
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [rasmussen-pain-1993, smetana-archintmed-2000]
+      note: "Căng thẳng là yếu tố khởi phát nổi bật nhất ở cả migraine và đau đầu căng thẳng; kiểu ngủ liên quan với cả hai (Rasmussen 1993). Các yếu tố khởi phát ngoài thức ăn gặp như nhau ở hai loại (Smetana)."
+  - finding: fever
+    freq: rare
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [ihs-ichd3-2018]
+      note: "Đau đầu kiểu migraine xuất hiện mới cùng lúc với bệnh khác (như sốt do nhiễm trùng) được xếp là đau đầu thứ phát (ICHD-3). Tần suất là ước lượng."
+  - finding: neck_stiffness
+    freq: rare
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [ihs-ichd3-2018]
+      note: "ICHD-3 ghi mỏi, cứng cổ trong giai đoạn báo trước và sau cơn, đó là căng cơ; cứng gáy thật (không cúi được cằm chạm ngực) không phải đặc điểm của migraine. Chọn rare để câu trả lời 'có' nghiêng về viêm màng não hoặc xuất huyết dưới nhện."
+warning_signs: [headache_thunderclap, neck_stiffness, confusion, vision_loss_or_double, seizure_recent]
+self_care_vi:
+  - "Khi lên cơn, nằm nghỉ trong phòng tối, yên tĩnh."
+  - "Hỏi dược sĩ về thuốc giảm đau không kê đơn phù hợp."
+  - "Ghi nhật ký cơn đau để tìm yếu tố gây cơn như thiếu ngủ, căng thẳng, bỏ bữa."
+  - "Hạn chế dùng thuốc giảm đau nhiều ngày trong tháng vì có thể làm đau đầu kéo dài."
+see_doctor_vi:
+  - "Đi khám nếu cơn đau xảy ra nhiều lần mỗi tháng hoặc ảnh hưởng học tập, công việc."
+  - "Đi khám ngay nếu đây là lần đầu bị như vậy, hoặc cơn lần này khác hẳn mọi lần."
+review:
+  status: draft
+  authors: ["agent:pass-a"]
+  updated: "2026-10-24"
+  notes_vi: "Giữ urgency 5 như gợi ý: cơn migraine điển hình, đã từng bị giống vậy, có thể tự chăm sóc; cơn đầu tiên hoặc khác thường được nhắc đi khám, còn dấu hiệu nguy hiểm do quy tắc đảm nhận. Điểm chưa chắc chắn: (1) phần lớn số liệu đặc điểm cơn đau từ tóm tắt nghiên cứu ở Đan Mạch, Mỹ, Ấn Độ; chưa có số liệu đặc điểm cơn đau ở người Việt; (2) tần suất buồn nôn, sợ ánh sáng theo từng cơn chưa có số trực tiếp; (3) phân bố vị trí và thời gian cơn không tách được cho trẻ em (trẻ hay đau hai bên, cơn ngắn hơn); (4) bộ suy luận chưa có hệ số theo giới dù migraine gặp ở nữ nhiều hơn khoảng 1,5–2 lần; (5) aura có thể bị người dùng mô tả như mất thị lực hoặc tê một bên (giống đột quỵ); hiện để quy tắc an toàn xử lý."

@@ -1,0 +1,227 @@
+id: acute_gastroenteritis
+names:
+  vi: "Viêm dạ dày – ruột cấp"
+  vi_common: ["Tiêu chảy cấp", "Ngộ độc thực phẩm", "Viêm ruột cấp"]
+  en: "Acute gastroenteritis"
+codes:
+  icd10: "A09"
+  icd10_verified: false
+  mondo: "MONDO:0002269"
+summary_vi:
+  - "Viêm cấp ở dạ dày và ruột, thường do vi rút, vi khuẩn hoặc thức ăn, nước uống nhiễm bẩn."
+  - "Hay gây tiêu chảy, nôn, đau quặn bụng, có thể kèm sốt."
+  - "Thường tự khỏi sau vài ngày, nhưng dễ gây mất nước ở trẻ nhỏ và người cao tuổi."
+urgency: 5
+cant_miss: false
+specialties: [general_medicine, pediatrics, infectious_disease, gastroenterology]
+priors:
+  - complaint: abdominal_pain
+    default: P2
+    by_age: { infant_0_2m: P3, child_2m_5y: P1 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [viniol-fampract-2014, byt-qd-3312-2015, vu-ijid-2006]
+      reported: "Người lớn ở chăm sóc ban đầu: viêm dạ dày – ruột 7,2–18,7% người đau bụng (Viniol); 80% ca tiêu chảy ở trẻ là trẻ dưới 2 tuổi, đỉnh 6–18 tháng (3312)"
+      note: "Người từ 5 tuổi: P2 theo Viniol. Trẻ 2 tháng–5 tuổi: tiêu chảy cấp là bệnh rất thường gặp (3312; Hà Nội: 71% trẻ tiêu chảy đến viện dưới 2 tuổi), là nguyên nhân hàng đầu khi trẻ nhỏ đau bụng, nên P1. Dưới 2 tháng: chỉ sàng lọc, để P3. Chưa có số liệu cộng đồng ở Việt Nam."
+  - complaint: fever
+    default: P3
+    by_age: { infant_0_2m: P3, child_2m_5y: P2, child_5_12: P2 }
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [vu-ijid-2006, tran-jidc-2025, cdc-norovirus]
+      reported: "Sốt ở 43,6% (Hà Nội) và 27,1% (Thái Bình) trẻ dưới 5 tuổi tiêu chảy nằm viện"
+      note: "Trẻ nhỏ bị viêm dạ dày – ruột hay sốt và sốt thường là lý do cha mẹ chọn, nên P2 cho trẻ 2 tháng–12 tuổi. Người lớn thường chọn tiêu chảy hoặc đau bụng làm triệu chứng chính, nên P3. Ước lượng của người soạn."
+findings:
+  - finding: abdominal_pain
+    freq: very_frequent
+    evidence:
+      tier: C
+      basis: verbal
+      sources: [cdc-norovirus, cdc-food-poisoning]
+      note: "CDC: đau hoặc quặn bụng là triệu chứng thường gặp. Liên kết này chỉ có tác dụng khi triệu chứng chính là sốt."
+  - finding: diarrhea
+    freq: very_frequent
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-3312-2015, cdc-norovirus, cdc-food-poisoning]
+      note: "Tiêu chảy là biểu hiện chính (định nghĩa tiêu chảy cấp trong 3312). Không chọn almost_always vì một số ca ngộ độc thực phẩm hoặc nhiễm vi rút giai đoạn đầu chỉ nôn."
+  - finding: diarrhea_bloody
+    freq: occasional
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [tran-jidc-2025, vu-ijid-2006, cdc-food-poisoning]
+      reported: "Tiêu chảy phân máu 17,5% trẻ dưới 5 tuổi nằm viện ở Thái Bình; phân nhầy 21% ở Hà Nội"
+      population: "trẻ dưới 5 tuổi nằm viện"
+      note: "Tần suất trong số người có tiêu chảy. Số liệu bệnh viện; ở cộng đồng có lẽ thấp hơn nhưng vẫn trong khoảng occasional."
+  - finding: vomiting
+    freq: frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [vu-ijid-2006, tran-jidc-2025, cdc-norovirus]
+      reported: "Nôn 53,8% (Hà Nội); buồn nôn và nôn 49,7% (Thái Bình)"
+      population: "trẻ dưới 5 tuổi bị tiêu chảy đến bệnh viện"
+  - finding: nausea
+    freq: very_frequent
+    evidence:
+      tier: C
+      basis: verbal
+      sources: [cdc-norovirus, cdc-food-poisoning]
+      note: "CDC: buồn nôn là triệu chứng thường gặp."
+  - finding: persistent_vomiting
+    freq: occasional
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [cdc-food-poisoning, byt-qd-3312-2015]
+      note: "Nôn đến mức không giữ được nước là dấu hiệu cần đi khám (CDC) và chỉ định nhập viện ở trẻ (3312); chỉ gặp ở một phần người bệnh. Ước lượng của người soạn."
+  - finding: child_vomits_everything
+    freq: occasional
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [byt-qd-3312-2015]
+      note: "3312: nôn tất cả mọi thứ là dấu hiệu cần đưa trẻ đến cơ sở y tế. Ước lượng của người soạn."
+  - finding: fever
+    freq: frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [vu-ijid-2006, tran-jidc-2025, cdc-norovirus, cdc-food-poisoning]
+      reported: "Sốt 43,6% (Hà Nội), 27,1% (Thái Bình) ở trẻ tiêu chảy nằm viện"
+      note: "CDC liệt kê sốt trong các triệu chứng; chọn frequent."
+  - finding: fever_max_temp
+    dist: { lt_38: 0.40, t38_39: 0.40, ge_39: 0.20 }
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [cdc-food-poisoning]
+      note: "Phân bố trong số người có sốt. Đa số sốt nhẹ đến vừa; sốt trên 38,9°C là dấu hiệu cần đi khám theo CDC. Ước lượng của người soạn."
+  - finding: fever_duration
+    dist: { d1_2: 0.70, d3_5: 0.25, d6_7: 0.03, gt_7d: 0.02 }
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [cdc-norovirus]
+      note: "Phân bố trong số người có sốt. Phần lớn đỡ sau 1–3 ngày (CDC, norovirus); sốt trên 7 ngày gợi ý bệnh khác như thương hàn."
+  - finding: abd_pain_location
+    dist: { epigastric: 0.15, right_upper: 0.04, left_upper: 0.03, periumbilical: 0.30, right_lower: 0.06, left_lower: 0.06, suprapubic: 0.06, whole: 0.30 }
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [cdc-food-poisoning]
+      note: "Đau quặn lan tỏa, khó chỉ rõ chỗ; nghiêng về quanh rốn và khắp bụng. Ước lượng của người soạn."
+  - finding: abd_pain_colicky
+    freq: frequent
+    evidence:
+      tier: C
+      basis: verbal
+      sources: [cdc-food-poisoning]
+      note: "CDC: đau hoặc quặn bụng; không phải ai cũng mô tả là đau từng cơn, nên chọn frequent."
+  - finding: abd_pain_duration
+    dist: { lt_6h: 0.25, h6_24: 0.35, d1_3: 0.30, d4_14: 0.09, gt_2w: 0.01 }
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-3312-2015, cdc-norovirus]
+      note: "Tiêu chảy cấp kéo dài không quá 14 ngày (3312); phần lớn đỡ sau 1–3 ngày (CDC). Phân bố cụ thể là ước lượng."
+  - finding: abd_pain_meal_relation
+    dist: { hungry_relieved_by_food: 0.05, worse_after_meal: 0.40, no_relation: 0.55 }
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [cdc-food-poisoning]
+      note: "Ăn uống có thể làm quặn bụng và đi ngoài nhiều hơn. Ước lượng của người soạn."
+  - finding: abd_pain_severe
+    freq: occasional
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [cdc-norovirus]
+      note: "Đau thường ở mức nhẹ đến vừa; đau dữ dội cần nghĩ đến bệnh khác. Ước lượng của người soạn."
+  - finding: abd_pain_worse_movement
+    freq: rare
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [cdc-food-poisoning]
+      note: "Không có kích thích phúc mạc; liên kết để phân biệt với viêm ruột thừa. Ước lượng của người soạn."
+  - finding: abdomen_hard_swollen
+    freq: rare
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-3312-2015]
+      note: "3312: chướng bụng khi tiêu chảy thường do hạ kali máu hoặc dùng thuốc cầm tiêu chảy không phù hợp; bụng cứng không phù hợp."
+  - finding: loss_of_appetite
+    freq: frequent
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [byt-qd-3312-2015]
+      note: "Trẻ tiêu chảy thường ăn kém ('không chịu ăn' là dấu hiệu cần tái khám trong 3312). Ước lượng của người soạn."
+  - finding: unsafe_food_shared
+    freq: occasional
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [cdc-norovirus, cdc-food-poisoning]
+      note: "Norovirus và ngộ độc thực phẩm hay thành ổ dịch trong gia đình hoặc bữa tiệc; triệu chứng xuất hiện 12–48 giờ sau phơi nhiễm (CDC). Ước lượng khoảng 10–20% ca có người ăn cùng cũng bị."
+  - finding: sunken_eyes
+    freq: occasional
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [tran-jidc-2025, byt-qd-3312-2015]
+      reported: "Mất nước vừa 37,7%, nặng 4,2% ở trẻ dưới 5 tuổi nằm viện"
+      note: "Mắt trũng là dấu hiệu mất nước trong 3312. Ở cộng đồng ít hơn nhiều so với trẻ nằm viện, nên chọn occasional."
+  - finding: decreased_urine
+    freq: occasional
+    evidence:
+      tier: C
+      basis: verbal
+      sources: [cdc-norovirus, byt-qd-3312-2015]
+      note: "CDC và 3312: tiểu ít là dấu hiệu mất nước; gặp ở một phần người bệnh."
+  - finding: red_jelly_stool
+    freq: rare
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [byt-qd-3312-2015]
+      note: "Lỵ (phân nhầy máu) ở trẻ có thể được cha mẹ mô tả giống phân 'mứt dâu'; để rare thay vì không liên kết để không loại trừ hẳn. Ước lượng của người soạn."
+  - finding: headache
+    freq: occasional
+    evidence:
+      tier: C
+      basis: verbal
+      sources: [cdc-norovirus]
+      note: "CDC: đau đầu là triệu chứng khác (không thường gặp) của norovirus."
+  - finding: myalgia
+    freq: occasional
+    evidence:
+      tier: C
+      basis: verbal
+      sources: [cdc-norovirus]
+      note: "CDC: đau mỏi người là triệu chứng khác (không thường gặp) của norovirus."
+warning_signs: [persistent_vomiting, child_vomits_everything, child_unable_to_drink, drowsy_hard_to_wake, cold_hands_feet, severe_weakness, abd_pain_severe]
+self_care_vi:
+  - "Uống nhiều nước, nhất là dung dịch bù nước (oresol) pha đúng hướng dẫn trên gói."
+  - "Uống từng ngụm nhỏ; trẻ nhỏ cho uống từng thìa, nếu nôn thì chờ 5–10 phút rồi cho uống tiếp."
+  - "Tiếp tục cho trẻ bú mẹ và cho ăn lại sớm theo khả năng."
+  - "Không tự cho trẻ dùng thuốc cầm nôn, cầm tiêu chảy."
+  - "Rửa tay bằng xà phòng sau khi đi vệ sinh và trước khi ăn."
+see_doctor_vi:
+  - "Đi khám nếu tiêu chảy kéo dài hơn 3 ngày, phân có máu, hoặc sốt từ 39°C."
+  - "Đưa trẻ đi khám ngay nếu trẻ khát nhiều, nôn tất cả mọi thứ, không chịu ăn hoặc tiểu ít."
+  - "Đến cơ sở cấp cứu ngay nếu li bì, lả đi, hoặc nôn liên tục không uống được."
+review:
+  status: draft
+  authors: ["agent:pass-a"]
+  updated: "2026-10-24"
+  notes_vi: >-
+    Giữ urgency 5 như gợi ý: 3312/QĐ-BYT điều trị trẻ chưa mất nước tại nhà bằng dung dịch bù nước (phác đồ A); CDC: phần lớn đỡ sau 1–3 ngày. Mất nước, nôn liên tục, phân máu được nâng mức bằng quy tắc (rf_child_dehydration, rf_persistent_vomiting, quy tắc trẻ nhỏ).
+    Điểm chưa chắc chắn: (1) prior P1 cho trẻ 2 tháng–5 tuổi là ước lượng, chưa có số liệu phân bố nguyên nhân đau bụng ở trẻ trong cộng đồng Việt Nam; (2) tần suất sốt, nôn, phân máu lấy từ trẻ nằm viện ở Hà Nội, Thái Bình, nên có thể cao hơn ở cộng đồng; chưa có số liệu ở người lớn Việt Nam; (3) lời khuyên 'không tự dùng thuốc cầm nôn, cầm tiêu chảy' cho trẻ dựa trên 3312 (mục 4.5); (4) 3312 xếp 'nôn ra mật' vào chỉ định nhập viện nhưng danh mục chưa có dấu hiệu này (đề xuất vomiting_bilious trong bản nháp tắc ruột).

@@ -1,0 +1,173 @@
+id: sepsis
+names:
+  vi: "Nhiễm khuẩn huyết"
+  vi_common: ["Nhiễm trùng huyết", "Nhiễm trùng máu"]
+  en: "Sepsis"
+codes:
+  icd10: "A41.9"
+  icd10_verified: true
+  mondo: "MONDO:0005229"
+summary_vi:
+  - "Tình trạng nhiễm khuẩn nặng, vi khuẩn lan vào máu và làm tổn thương nhiều cơ quan."
+  - "Có thể gây sốc và tử vong nhanh nếu không được cấp cứu kịp thời."
+  - "Hay gặp ở trẻ nhỏ, người cao tuổi và người có sức đề kháng suy giảm."
+urgency: 1
+cant_miss: true
+specialties: [emergency, infectious_disease]
+priors:
+  - complaint: fever
+    default: P5
+    by_age: { infant_0_2m: P3, child_2m_5y: P4, elder_65_74: P4, elder_75p: P3 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-5642-2015, nhs-sepsis, loots-bjgp-2022]
+      note: "Chưa có số liệu Việt Nam về tỷ lệ nhiễm khuẩn huyết trong người sốt ở tuyến đầu. Người lớn trẻ sốt tự kiểm tra: rất hiếm, ước 0,02–0,2% (P5). Nhóm nguy cơ (5642, NHS): trẻ sơ sinh, trẻ dưới 1 tuổi, người cao tuổi, người suy giảm miễn dịch. Ở người cao tuổi bệnh cấp nghi nhiễm khuẩn nặng được bác sĩ gia đình khám tại nhà, 42% là nhiễm khuẩn huyết (Loots 2022, chọn lọc mạnh). Ước P4 cho trẻ 2 tháng–5 tuổi và người 65–74 tuổi, P3 cho người từ 75 tuổi và trẻ dưới 2 tháng."
+findings:
+  - finding: confusion
+    freq: frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [loots-bjgp-2022, nhs-sepsis, byt-qd-5642-2015]
+      reported: "Rối loạn ý thức 54% ở nhóm nhiễm khuẩn huyết, 22% ở nhóm không (người cao tuổi, khám tại nhà)."
+      note: "Ở người trẻ có thể ít hơn; chọn frequent."
+  - finding: drowsy_hard_to_wake
+    freq: frequent
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [nhs-sepsis, byt-qd-5642-2015, loots-bjgp-2022]
+      note: "NHS: trẻ li bì, khó đánh thức là dấu hiệu cần gọi cấp cứu; 5642: có thể thay đổi ý thức. Với trẻ dưới 5 tuổi (không hỏi lú lẫn), đây là dấu hiệu ý thức chính. Ước khoảng một nửa; cùng cụm với lú lẫn."
+  - finding: breathing_difficulty
+    freq: frequent
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [loots-bjgp-2022, nhs-sepsis, byt-qd-5642-2015]
+      reported: "Nhịp thở trung bình 26 lần/phút ở nhóm nhiễm khuẩn huyết; nguồn nhiễm khuẩn hô hấp 40%."
+      note: "5642: thở nhanh; NHS: khó thở, thở rất nhanh. Ước khoảng một nửa người bệnh thấy khó thở hoặc thở nhanh."
+  - finding: chills_rigors
+    freq: frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [loots-bjgp-2022, nhs-sepsis, byt-qd-5642-2015]
+      reported: "Rét run 66% (nhóm không nhiễm khuẩn huyết: 60%)."
+      note: "Tần suất có điều kiện trong số người đã sốt."
+  - finding: cold_hands_feet
+    freq: occasional
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [nhs-sepsis, byt-qd-5642-2015]
+      note: "NHS: da, môi tái, xám hoặc loang lổ là dấu hiệu cần gọi cấp cứu. Dấu hiệu tưới máu kém, ước 20–30% người bệnh khi đến khám."
+  - finding: severe_weakness
+    freq: frequent
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [loots-bjgp-2022, byt-qd-5642-2015]
+      note: "Người bệnh thường suy sụp, mệt lả; 84% có bệnh tiến triển nhanh (Loots 2022). Không có số liệu riêng về không tự đi lại được; ước khoảng một nửa. Cần bác sĩ duyệt."
+  - finding: decreased_urine
+    freq: occasional
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [nhs-sepsis, byt-qd-5642-2015]
+      note: "NHS: tiểu rất ít hoặc không tiểu trong 18 giờ; 5642: thiểu niệu là biểu hiện suy tạng. Ước 20–30%."
+  - finding: fainting_or_near_fainting
+    freq: occasional
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-5642-2015]
+      note: "Tụt huyết áp, sốc nhiễm khuẩn là biến chứng (5642). Ước khoảng 20% có choáng hoặc ngất."
+  - finding: fever_max_temp
+    dist: { lt_38: 0.15, t38_39: 0.35, ge_39: 0.50 }
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [loots-bjgp-2022, nhs-sepsis, byt-qd-5642-2015]
+      reported: "Nhiệt độ trung bình 39,0°C (độ lệch chuẩn 0,7) ở nhóm nhiễm khuẩn huyết."
+      note: "Một phần người bệnh hạ thân nhiệt (5642, NHS), nên giữ tỷ lệ dưới 38°C khoảng 15%."
+  - finding: fever_duration
+    dist: { d1_2: 0.55, d3_5: 0.30, d6_7: 0.08, gt_7d: 0.07 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [loots-bjgp-2022]
+      reported: "Bệnh tiến triển nhanh ở 84% nhóm nhiễm khuẩn huyết."
+      note: "Phân bố do người soạn ước lượng."
+  - finding: immunocompromised
+    freq: occasional
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-5642-2015, nhs-sepsis, loots-bjgp-2022]
+      reported: "Dùng thuốc ức chế miễn dịch 4% ở nhóm nhiễm khuẩn huyết, 3% ở nhóm không (người cao tuổi Hà Lan)."
+      note: "5642 và NHS coi suy giảm miễn dịch (corticoid kéo dài, hóa trị, ghép tạng, HIV) là yếu tố nguy cơ. Ước khoảng 15–20% người bệnh; số liệu Loots không thấy khác biệt, cần bác sĩ duyệt."
+  - finding: diabetes
+    freq: occasional
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [loots-bjgp-2022, byt-qd-5642-2015]
+      reported: "36% ở nhóm nhiễm khuẩn huyết, 24% ở nhóm không (tuổi trung vị 80)."
+      note: "Người bệnh doctor-v trẻ hơn, nên hạ xuống occasional. 5642: tiểu đường là yếu tố nguy cơ."
+  - finding: cough
+    freq: frequent
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [loots-bjgp-2022]
+      reported: "Nguồn nhiễm khuẩn hô hấp 40%."
+      note: "Ước khoảng 40–50% có ho, chủ yếu khi nguồn là viêm phổi."
+  - finding: dysuria
+    freq: occasional
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [loots-bjgp-2022, byt-qd-5642-2015]
+      reported: "Nguồn nhiễm khuẩn tiết niệu 30%."
+      note: "5642: ổ nhiễm khuẩn khởi điểm có thể ở đường tiết niệu. Không phải ai cũng tiểu buốt; ước khoảng 20%."
+  - finding: rash_non_blanching
+    freq: frequent
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [nhs-sepsis, byt-qd-5642-2015]
+      note: "Tần suất có điều kiện trong số người bệnh đã có phát ban. Ban xuất huyết gặp trong nhiễm khuẩn huyết do não mô cầu, liên cầu lợn (5642); NHS coi ban không mất khi ấn là dấu hiệu gọi cấp cứu. Ước khoảng một nửa ban ở người nhiễm khuẩn huyết là ban xuất huyết."
+  - finding: persistent_vomiting
+    freq: occasional
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [nhs-sepsis]
+      note: "NHS: trẻ dưới 5 tuổi có thể nôn liên tục. Ước khoảng 20%."
+  - finding: child_unable_to_drink
+    freq: occasional
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [nhs-sepsis]
+      note: "NHS: trẻ dưới 5 tuổi có thể bỏ ăn, bỏ bú. Chỉ áp dụng cho trẻ 2 tháng–5 tuổi. Ước khoảng 20–30%."
+warning_signs:
+  - confusion
+  - drowsy_hard_to_wake
+  - breathing_difficulty
+  - cold_hands_feet
+  - severe_weakness
+  - decreased_urine
+  - rash_non_blanching
+  - seizure_recent
+  - fainting_or_near_fainting
+see_doctor_vi:
+  - "Gọi 115 hoặc đưa người bệnh đến khoa cấp cứu gần nhất ngay."
+  - "Nhiễm khuẩn huyết cần được dùng kháng sinh đường tĩnh mạch càng sớm càng tốt."
+  - "Báo cho nhân viên y tế về bệnh nền và các thuốc đang dùng."
+review:
+  status: draft
+  authors: ["agent:pass-a"]
+  updated: "2026-10-24"
+  notes_vi: "Giữ urgency 1, cant_miss true theo gợi ý và bảng mức xử trí (kb-guide mục 2.5 lấy nhiễm khuẩn huyết làm ví dụ mức 1); NHS khuyên gọi cấp cứu khi có dấu hiệu nhiễm khuẩn huyết; 5642: tử vong 20–50%, cần kháng sinh ngay. Không khai báo self_care_vi vì không có chăm sóc tại nhà phù hợp. Tên chính thức trong ICD-10 (A41.9) là 'Nhiễm trùng hệ thống, không xác định' (bao gồm 'nhiễm trùng huyết'); dùng tên 'Nhiễm khuẩn huyết' theo 5642. Điểm chưa chắc: (1) prior hoàn toàn là ước lượng theo nhóm tuổi; chưa có số liệu ở tuyến đầu Việt Nam. (2) Mô hình chỉ cho một bệnh mỗi lần, trong khi nhiễm khuẩn huyết đi kèm bệnh nguồn (viêm phổi, viêm thận bể thận); xác suất sẽ chia giữa các bệnh này. (3) Nghiên cứu duy nhất ở tuyến đầu (Loots 2022) chỉ có người cao tuổi Hà Lan. (4) NICE NG51 đã bị thay bằng NG253, NG254 (theo danh mục nguồn); chưa đọc được nội dung NG253 nên không trích dẫn."

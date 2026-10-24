@@ -1,0 +1,15 @@
+id: wagner-jama-1996
+type: systematic_review
+title: "Does this patient have appendicitis?"
+publisher: "JAMA (The Rational Clinical Examination)"
+date: "1996"
+url: "https://pubmed.ncbi.nlm.nih.gov/8918857/"
+doi: "10.1001/jama.1996.03540190061030"
+pmid: "8918857"
+license_class: L3
+license_note: "Bản quyền nhà xuất bản: chỉ dùng dữ kiện kèm trích dẫn, không sao chép câu chữ."
+default_tier: A
+accessed: "2026-10-24"
+verified: true
+verified_by: "agent:pass-a (đọc tóm tắt (abstract) qua Europe PMC; tóm tắt không có số liệu)"
+notes_vi: "Tóm tắt: dấu cơ thắt lưng chậu, sốt, đau chuyển xuống hố chậu phải làm tăng khả năng; nôn trước khi đau làm giảm khả năng. Số LR lấy qua bảng của Snyder 2018 và Cartwright 2008."

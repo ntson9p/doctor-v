@@ -1,0 +1,13 @@
+id: nhs-ear-infections
+type: web_page
+title: "Ear infections"
+publisher: "NHS (UK)"
+date: "2025-01-16"
+url: "https://www.nhs.uk/conditions/ear-infections/"
+license_class: L1
+license_note: "Open Government Licence v3.0; bản chuyển thể không được trình bày như nội dung của NHS."
+default_tier: C
+accessed: "2026-10-24"
+verified: true
+verified_by: "agent:pass-a (đọc trang; ngày rà soát 16/01/2025)"
+notes_vi: "Triệu chứng: đau tai, sốt, nghe kém, chảy dịch tai, cảm giác đầy tai. Trẻ nhỏ có thể dụi, kéo tai, quấy khóc, bỏ ăn. Thường đỡ trong 3 ngày, có khi tới 1 tuần. Đi khám nếu trẻ dưới 12 tháng hoặc không đỡ sau 3 ngày. Cần khám gấp nếu rất mệt, sốt rất cao, sưng quanh tai, chảy dịch tai, nôn, trẻ dưới 12 tháng đau cả hai tai, có bệnh nền."

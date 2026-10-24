@@ -1,0 +1,198 @@
+id: renal_colic
+names:
+  vi: "Cơn đau quặn thận do sỏi tiết niệu"
+  vi_common: ["Sỏi thận", "Sỏi niệu quản", "Đau quặn thận"]
+  en: "Renal colic (urinary tract stones)"
+codes:
+  icd10: "N20"
+  icd10_verified: false
+  mondo: "MONDO:0024647"
+summary_vi:
+  - "Cơn đau dữ dội khi viên sỏi di chuyển và làm tắc đường dẫn nước tiểu từ thận xuống."
+  - "Đau quặn từng cơn ở hông lưng một bên, lan ra trước bụng và xuống bẹn, có thể tiểu ra máu."
+  - "Sỏi nhỏ có thể tự ra theo nước tiểu; sốt kèm theo là dấu hiệu nhiễm khuẩn cần khám ngay."
+urgency: 3
+cant_miss: false
+specialties: [urology, emergency]
+priors:
+  - complaint: abdominal_pain
+    default: P3
+    by_age: { infant_0_2m: P6, child_2m_5y: P6, child_5_12: P5, teen_13_17: P4 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-3931-2015, viniol-fampract-2014, cervellin-atm-2016]
+      reported: "Chăm sóc ban đầu: nguyên nhân tiết niệu 5,3% (gồm cả nhiễm khuẩn tiết niệu); cấp cứu ở Ý: cơn đau quặn thận 31,2% (34,5% ở người dưới 65 tuổi, 20,8% ở người trên 65 tuổi)"
+      note: "Người lớn: P3 (1–5%). Bối cảnh của doctor-v gần chăm sóc ban đầu hơn cấp cứu; người đau quặn thận dữ dội thường đến thẳng cấp cứu nên tỷ lệ 31% ở cấp cứu bị chọn lọc. Sỏi chiếm khoảng một nửa trong 5,3% của Viniol; ở Việt Nam (vùng nhiệt đới, 3931/QĐ-BYT) có thể cao hơn, nên P3 ở mức cao. Mô phỏng với P2 cho thấy bệnh này lấn át các ca đau thượng vị, đau quanh rốn chưa hỏi đau hông lưng. 3931: tuổi mắc thường 30–55, nam nhiều hơn nữ; trẻ em ít gặp. Chưa có số liệu cộng đồng ở Việt Nam."
+findings:
+  - finding: abd_pain_location
+    dist: { epigastric: 0.06, right_upper: 0.13, left_upper: 0.13, periumbilical: 0.06, right_lower: 0.22, left_lower: 0.22, suprapubic: 0.10, whole: 0.08 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-3931-2015, nhs-kidney-stones]
+      locator: "3931/QĐ-BYT, bài Sỏi thận tiết niệu, mục 3.1"
+      note: "Đau bắt đầu ở hố thắt lưng một bên, lan ra trước, xuống hố chậu và bộ phận sinh dục (3931). Danh mục vị trí không có lựa chọn 'hông lưng', nên ước lượng người bệnh chọn bụng dưới một bên (sỏi niệu quản) hoặc dưới sườn một bên (sỏi bể thận). Ước lượng của người soạn."
+  - finding: flank_pain
+    freq: very_frequent
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-3931-2015, moore-bmj-2014, nhs-kidney-stones]
+      note: "3931: cơn đau khởi phát ở vùng hố thắt lưng một bên. STONE: phần lớn người chụp CT vì nghi sỏi có đau hông lưng. Hạ từ almost_always xuống very_frequent vì một số người mô tả là đau bụng."
+  - finding: abd_pain_radiates_groin
+    freq: frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [moore-bmj-2014, byt-qd-3931-2015, nhs-kidney-stones]
+      locator: "Moore 2014, bảng 2"
+      reported: "Đau lan xuống bẹn: khoảng 44% người có sỏi (336 người có triệu chứng này, 68,2% có sỏi; tổng 515 người có sỏi)"
+      population: "người lớn ở khoa cấp cứu Mỹ, được chụp CT vì nghi sỏi"
+  - finding: abd_pain_radiates_back
+    freq: frequent
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [byt-qd-3931-2015, nhs-kidney-stones]
+      note: "Đau xuất phát ở thắt lưng rồi lan ra trước (3931; NHS: đau bắt đầu ở bên bụng hoặc thắt lưng), nên nhiều người sẽ trả lời 'có' khi được hỏi đau lan ra sau lưng. Ước lượng của người soạn."
+  - finding: abd_pain_colicky
+    freq: very_frequent
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-3931-2015, nhs-kidney-stones]
+      note: "3931: cơn đau quặn thận điển hình ở giai đoạn sỏi mới gây tắc. NHS: đau từng đợt, lúc rất đau lúc đỡ."
+  - finding: abd_pain_onset
+    dist: { sudden: 0.75, gradual: 0.25 }
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-3931-2015]
+      note: "3931: cơn đau xuất hiện đột ngột, thường sau gắng sức, cường độ mạnh. Một số ca chỉ đau ê ẩm thắt lưng nên vẫn để 25% khởi phát từ từ."
+  - finding: abd_pain_severe
+    freq: very_frequent
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-3931-2015, nhs-kidney-stones]
+      note: "3931: cường độ đau thường mạnh, không có tư thế giảm đau."
+  - finding: abd_pain_duration
+    dist: { lt_6h: 0.55, h6_24: 0.27, d1_3: 0.10, d4_14: 0.05, gt_2w: 0.03 }
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [moore-bmj-2014]
+      locator: "Moore 2014, bảng 2"
+      reported: "Trong nhóm có sỏi (pass A tính từ bảng 2): đau dưới 6 giờ khoảng 57%, 6–24 giờ khoảng 27%, 1 ngày–1 tuần khoảng 12%, trên 1 tuần khoảng 4%"
+      population: "người lớn ở khoa cấp cứu Mỹ"
+  - finding: abd_pain_worse_movement
+    freq: rare
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [byt-qd-3931-2015]
+      note: "Người bị cơn đau quặn thận thường vật vã, không tìm được tư thế đỡ đau, khác với đau do viêm phúc mạc (nằm yên, cử động thì đau tăng). Ước lượng của người soạn."
+  - finding: abd_pain_meal_relation
+    dist: { hungry_relieved_by_food: 0.03, worse_after_meal: 0.07, no_relation: 0.90 }
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [byt-qd-3931-2015]
+      note: "Cơn đau do tắc niệu quản, không liên quan bữa ăn. Ước lượng của người soạn."
+  - finding: hematuria
+    freq: occasional
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [moore-bmj-2014, byt-qd-3931-2015]
+      reported: "Tự thấy tiểu máu: khoảng 27% người có sỏi; hồng cầu trong nước tiểu khi xét nghiệm: khoảng 92%"
+      note: "Câu hỏi của doctor-v là tiểu máu nhìn thấy được, nên dùng con số 27%."
+  - finding: dysuria
+    freq: occasional
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [moore-bmj-2014]
+      reported: "Tiểu buốt: khoảng 25% người có sỏi"
+  - finding: urinary_frequency
+    freq: occasional
+    evidence:
+      tier: C
+      basis: verbal
+      sources: [nhs-kidney-stones, byt-qd-3931-2015]
+      note: "NHS: cần đi tiểu nhiều lần; 3931: sỏi bàng quang gây tiểu buốt, tiểu láu. Chưa có số liệu, chọn occasional."
+  - finding: nausea
+    freq: very_frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [moore-bmj-2014, byt-qd-3931-2015]
+      reported: "Buồn nôn, có hoặc không kèm nôn: khoảng 77% người có sỏi"
+  - finding: vomiting
+    freq: frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [moore-bmj-2014]
+      reported: "Buồn nôn kèm nôn: khoảng 43% người có sỏi"
+  - finding: fever
+    freq: occasional
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-3931-2015, nhs-kidney-stones]
+      note: "3931: có thể sốt, rét run nếu kèm nhiễm khuẩn. Sốt khi có sỏi gây tắc là tình trạng cần xử trí cấp cứu."
+  - finding: chills_rigors
+    freq: frequent
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-3931-2015, nhs-kidney-stones]
+      note: "Tần suất trong số người đã có sốt. Sốt ở người có sỏi thường do nhiễm khuẩn, khi đó hay kèm rét run (3931; NHS: thấy nóng, lạnh hoặc run)."
+  - finding: abdomen_hard_swollen
+    freq: rare
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-3931-2015]
+      note: "3931: có thể chướng bụng do liệt ruột; bụng cứng như gỗ không phù hợp với cơn đau quặn thận."
+  - finding: diarrhea
+    freq: rare
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [byt-qd-3931-2015]
+      note: "Tiêu chảy không có trong bệnh cảnh mô tả; liên kết để giúp phân biệt với viêm dạ dày – ruột. Ước lượng của người soạn."
+  - finding: kidney_stones_known
+    freq: frequent
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [nhs-kidney-stones]
+      note: "Dấu hiệu đề xuất (xem proposed_findings). NHS liệt kê từng có sỏi là yếu tố nguy cơ. Ước lượng khoảng một nửa người bị cơn đau quặn thận đã từng được phát hiện sỏi; cần nguồn có số liệu."
+warning_signs: [fever, chills_rigors, decreased_urine, abd_pain_severe, persistent_vomiting]
+self_care_vi:
+  - "Trong lúc đang đau quặn, không cố uống thật nhiều nước."
+  - "Khi hết cơn đau, uống đủ nước để mỗi ngày đi tiểu được trên 2 lít."
+  - "Hỏi bác sĩ hoặc dược sĩ trước khi dùng thuốc giảm đau."
+see_doctor_vi:
+  - "Đi khám trong hôm nay để được siêu âm và xét nghiệm nước tiểu."
+  - "Đến cơ sở cấp cứu ngay nếu sốt, rét run, tiểu rất ít, hoặc đau không đỡ."
+proposed_findings:
+  - id: kidney_stones_known
+    kind: history
+    type: binary
+    label_vi: "Đã biết có sỏi thận, sỏi niệu quản"
+    question_vi: "Đã từng được bác sĩ nói là có sỏi thận hoặc sỏi niệu quản không?"
+    applies_to:
+      age_groups: [teen_13_17, adult_18_44, adult_45_64, elder_65_74, elder_75p]
+    leak: moderate
+    notes_vi: "Tiền sử sỏi là yếu tố nguy cơ chính của cơn đau quặn thận (NHS). Tương tự gallstones_known; giúp phân biệt với viêm ruột thừa, viêm tụy, bệnh phụ khoa và hội chứng vành cấp."
+review:
+  status: draft
+  authors: ["agent:pass-a"]
+  updated: "2026-10-24"
+  notes_vi: >-
+    Giữ urgency 3 như gợi ý: NHS khuyên khám gấp trong ngày khi đau dữ dội hoặc sốt; 3931/QĐ-BYT điều trị nội khoa cơn đau, chỉ can thiệp sớm khi không đáp ứng hoặc có biến chứng. Khi người dùng chọn đau dữ dội, quy tắc rf_severe_abdominal_pain đã nâng lên mức 2.
+    Điểm chưa chắc chắn: (1) prior P3 cho người lớn dựa trên số liệu chăm sóc ban đầu (5,3%, gồm cả nhiễm khuẩn tiết niệu); cấp cứu cho 31% nhưng bị chọn lọc; Việt Nam có thể cao hơn (cân nhắc P2 nếu có số liệu); chưa có số liệu cộng đồng Việt Nam; (2) danh mục vị trí đau không có 'hông lưng', nên phân bố vị trí là ước lượng; (3) số liệu triệu chứng lấy từ khoa cấp cứu Mỹ (STONE), nam giới chiếm khoảng 72% người có sỏi nhưng prior không khai báo được theo giới; (4) sốt kèm sỏi gây tắc (thận ứ mủ) là cấp cứu, nhưng chưa có quy tắc riêng cho tổ hợp sốt + đau hông lưng + đau quặn; đề nghị xem xét; (5) đề xuất dấu hiệu mới kidney_stones_known.

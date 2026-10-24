@@ -1,0 +1,15 @@
+id: monto-aim-2000
+type: primary_study
+title: "Clinical signs and symptoms predicting influenza infection"
+publisher: "Archives of Internal Medicine (Monto AS, Gravenstein S, Elliott M, Colopy M, Schweinle J)"
+date: "2000"
+url: "https://europepmc.org/article/MED/11088084"
+doi: "10.1001/archinte.160.21.3243"
+pmid: "11088084"
+license_class: L3
+license_note: "Bản quyền nhà xuất bản: chỉ dùng dữ kiện kèm trích dẫn."
+default_tier: B
+accessed: "2026-10-24"
+verified: true
+verified_by: "agent:pass-a (chỉ đọc tóm tắt qua Europe PMC)"
+notes_vi: "3.744 người lớn, vị thành niên có hội chứng giống cúm trong các thử nghiệm thuốc; 66% xác định cúm. Người bị cúm có ho 93% (so với 80%), sốt 68% (so với 40%), nghẹt mũi 91% (so với 81%)."

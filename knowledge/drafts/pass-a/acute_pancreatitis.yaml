@@ -1,0 +1,178 @@
+id: acute_pancreatitis
+names:
+  vi: "Viêm tụy cấp"
+  vi_common: ["Viêm tụy"]
+  en: "Acute pancreatitis"
+codes:
+  icd10: "K85"
+  icd10_verified: false
+  mondo: "MONDO:0006515"
+summary_vi:
+  - "Tụy (tuyến nằm sau dạ dày) bị viêm cấp, hay do rượu bia, sỏi mật hoặc mỡ máu rất cao."
+  - "Thường đau dữ dội, liên tục vùng trên rốn, lan ra sau lưng, kèm nôn nhiều."
+  - "Một số người bị thể nặng, có thể nguy hiểm tính mạng nếu không được điều trị sớm."
+urgency: 2
+cant_miss: true
+specialties: [gastroenterology, emergency, general_surgery]
+priors:
+  - complaint: abdominal_pain
+    default: P4
+    by_age: { infant_0_2m: P6, child_2m_5y: P6, child_5_12: P6, teen_13_17: P5 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [viniol-fampract-2014, acg-pancreatitis-2024, nguyen-bmcgastro-2025]
+      reported: "Bệnh mật – tụy 4,0% người đau bụng ở chăm sóc ban đầu (Viniol); tỷ lệ mắc 3,4–73,4/100.000 dân mỗi năm (ACG); ở Bệnh viện Chợ Rẫy tuổi trung bình 47, nam 62%"
+      note: "Ước lượng 0,2–1% người lớn đau bụng ở cộng đồng (P4); phần lớn tỷ lệ 4,0% của Viniol là bệnh túi mật. Rượu bia và tăng triglycerid là nguyên nhân hàng đầu ở Việt Nam. Trẻ em hiếm. Ước lượng của người soạn."
+findings:
+  - finding: abd_pain_location
+    dist: { epigastric: 0.60, right_upper: 0.08, left_upper: 0.12, periumbilical: 0.05, right_lower: 0.01, left_lower: 0.01, suprapubic: 0.01, whole: 0.12 }
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [acg-pancreatitis-2024, msd-acute-pancreatitis]
+      note: "ACG: đau thượng vị hoặc hạ sườn trái; đau ở bụng dưới không phù hợp với viêm tụy. Phân bố cụ thể là ước lượng; 12% đau khắp bụng ở ca nặng."
+  - finding: abd_pain_radiates_back
+    freq: frequent
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [acg-pancreatitis-2024, msd-acute-pancreatitis]
+      note: "ACG: đau liên tục, thường lan ra sau lưng, ngực hoặc hai bên hông; không nêu tỷ lệ lan riêng ra sau lưng nên chọn frequent thay vì very_frequent."
+  - finding: abd_pain_severe
+    freq: very_frequent
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [acg-pancreatitis-2024]
+      note: "ACG: cường độ đau thường được mô tả là dữ dội, nhưng có thể thay đổi."
+  - finding: abd_pain_onset
+    dist: { sudden: 0.50, gradual: 0.50 }
+    evidence:
+      tier: C
+      basis: verbal
+      sources: [msd-acute-pancreatitis]
+      note: "MSD: viêm tụy do sỏi mật khởi phát đột ngột; do rượu thì đau tăng dần trong vài ngày. Tỷ lệ là ước lượng."
+  - finding: abd_pain_duration
+    dist: { lt_6h: 0.25, h6_24: 0.35, d1_3: 0.30, d4_14: 0.08, gt_2w: 0.02 }
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [acg-pancreatitis-2024, msd-acute-pancreatitis]
+      note: "Đau dữ dội nên thường đi khám trong 1–2 ngày; ACG: phần lớn triệu chứng kéo dài vài ngày. Ước lượng của người soạn."
+  - finding: abd_pain_colicky
+    freq: occasional
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [acg-pancreatitis-2024]
+      note: "ACG: đau quặn hoặc âm ỉ không phù hợp viêm tụy. Người dân hay gọi mọi cơn đau mạnh là 'đau quặn', nên để occasional (gần bằng tỷ lệ nền) thay vì rare, tránh hạ thấp một bệnh không được bỏ sót."
+  - finding: abd_pain_meal_relation
+    dist: { hungry_relieved_by_food: 0.03, worse_after_meal: 0.45, no_relation: 0.52 }
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [msd-acute-pancreatitis]
+      note: "Ăn uống thường làm đau tăng; nhiều ca khởi phát sau bữa nhậu hoặc ăn nhiều. Ước lượng của người soạn."
+  - finding: abd_pain_worse_movement
+    freq: occasional
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [nguyen-bmcgastro-2025, msd-acute-pancreatitis]
+      note: "Phản ứng thành bụng chỉ gặp ở 6,4% người bệnh ở Chợ Rẫy; MSD: ngồi cúi người ra trước có thể đỡ đau. Ước lượng của người soạn."
+  - finding: abdomen_hard_swollen
+    freq: occasional
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [nguyen-bmcgastro-2025, msd-acute-pancreatitis]
+      reported: "Phản ứng hoặc co cứng thành bụng: 6,4% (Chợ Rẫy)"
+      note: "Câu hỏi gộp cả bụng cứng và bụng chướng; chướng bụng do liệt ruột hay gặp ở thể vừa và nặng, nên chọn occasional. Ước lượng của người soạn."
+  - finding: nausea
+    freq: very_frequent
+    evidence:
+      tier: C
+      basis: verbal
+      sources: [msd-acute-pancreatitis]
+      note: "MSD: buồn nôn và nôn thường gặp."
+  - finding: vomiting
+    freq: very_frequent
+    evidence:
+      tier: C
+      basis: verbal
+      sources: [msd-acute-pancreatitis]
+      note: "MSD: buồn nôn và nôn thường gặp."
+  - finding: persistent_vomiting
+    freq: occasional
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [msd-acute-pancreatitis, acg-pancreatitis-2024]
+      note: "Nôn nhiều góp phần gây giảm thể tích tuần hoàn (ACG). Ước lượng của người soạn."
+  - finding: loss_of_appetite
+    freq: frequent
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [msd-acute-pancreatitis]
+      note: "Buồn nôn, nôn thường gặp nên người bệnh thường bỏ ăn. Ước lượng của người soạn."
+  - finding: fever
+    freq: occasional
+    evidence:
+      tier: C
+      basis: numeric
+      sources: [msd-acute-pancreatitis]
+      reported: "Trên 60% có sốt trong quá trình bệnh"
+      note: "Sốt thường xuất hiện muộn hơn, khi đã nằm viện; lúc mới đau thì ít hơn. Hạ một mức (từ frequent) cho bối cảnh cộng đồng."
+  - finding: jaundice
+    freq: occasional
+    evidence:
+      tier: C
+      basis: verbal
+      sources: [msd-acute-pancreatitis]
+      note: "MSD: đôi khi vàng mắt do tắc ống mật chủ hoặc đầu tụy phù nề, nhất là viêm tụy do sỏi."
+  - finding: heavy_alcohol
+    freq: frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [nguyen-bmcgastro-2025, acg-pancreatitis-2024]
+      reported: "Rượu đơn thuần 28,2%, rượu kèm tăng triglycerid 14,1% (Chợ Rẫy); ACG: rượu 25–35%"
+      population: "người bệnh viêm tụy cấp ở Bệnh viện Chợ Rẫy, TP.HCM"
+  - finding: gallstones_known
+    freq: occasional
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [nguyen-bmcgastro-2025, acg-pancreatitis-2024]
+      reported: "Sỏi mật là nguyên nhân ở 25% (Chợ Rẫy), 40–70% (ACG)"
+      note: "Không phải ai có sỏi cũng đã được báo trước; ước lượng occasional."
+  - finding: pain_after_fatty_meal
+    freq: occasional
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [acg-pancreatitis-2024, nguyen-bmcgastro-2025]
+      note: "Viêm tụy do sỏi mật hoặc tăng triglycerid (23,6% ở Chợ Rẫy) có thể khởi phát sau bữa ăn nhiều dầu mỡ. Ước lượng của người soạn."
+  - finding: diarrhea
+    freq: rare
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [msd-acute-pancreatitis]
+      note: "Không thuộc bệnh cảnh điển hình; liên kết để phân biệt với viêm dạ dày – ruột. Ước lượng của người soạn."
+warning_signs: [abd_pain_severe, persistent_vomiting, breathing_difficulty, cold_hands_feet, confusion, decreased_urine, fainting_or_near_fainting, abdomen_hard_swollen]
+self_care_vi:
+  - "Ngừng uống rượu bia hoàn toàn."
+  - "Không ăn uống trong khi chờ được đưa đi khám."
+see_doctor_vi:
+  - "Đến cơ sở cấp cứu ngay khi đau vùng trên rốn dữ dội, liên tục, lan ra sau lưng."
+  - "Gọi 115 nếu khó thở, lơ mơ, tay chân lạnh hoặc tiểu rất ít."
+review:
+  status: draft
+  authors: ["agent:pass-a"]
+  updated: "2026-10-24"
+  notes_vi: >-
+    Giữ urgency 2 và cant_miss true như gợi ý: ACG cho biết 15–25% là thể vừa hoặc nặng, cần đánh giá nguy cơ và bù dịch sớm; ở Chợ Rẫy tử vong 7,3% (bệnh viện tuyến cuối).
+    Điểm chưa chắc chắn: (1) không tìm được tổng quan hệ thống về độ chính xác của triệu chứng (loại JAMA Rational Clinical Examination) cho viêm tụy; tổng quan Cochrane hiện có chỉ về xét nghiệm men tụy, nên tần suất triệu chứng dựa trên mô tả của ACG và MSD; (2) tỷ lệ đau lan ra sau lưng chưa có số liệu, để frequent; (3) số liệu Việt Nam lấy từ bệnh viện tuyến cuối, nhiều ca nặng, nên tần suất dấu hiệu nặng có thể cao hơn ở cộng đồng; (4) tăng triglycerid là nguyên nhân lớn ở Việt Nam (23,6% đơn thuần, 14,1% kèm rượu) nhưng danh mục chưa có câu hỏi 'đã biết mỡ máu cao'; (5) prior P4 là ước lượng.

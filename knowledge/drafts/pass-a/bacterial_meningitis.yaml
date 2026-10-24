@@ -1,0 +1,217 @@
+id: bacterial_meningitis
+names:
+  vi: "Viêm màng não do vi khuẩn"
+  vi_common: ["Viêm màng não mủ", "Viêm màng não nhiễm khuẩn"]
+  en: "Bacterial meningitis"
+codes:
+  icd10: "G00.9"
+  icd10_verified: true
+  mondo: "MONDO:0006670"
+summary_vi:
+  - "Bệnh nhiễm khuẩn lớp màng bao quanh não và tủy sống."
+  - "Thường sốt, đau đầu nhiều, nôn, cứng gáy; có thể lơ mơ hoặc co giật."
+  - "Đây là bệnh cấp cứu, cần điều trị kháng sinh càng sớm càng tốt."
+urgency: 2
+cant_miss: true
+specialties: [emergency, infectious_disease, neurology]
+priors:
+  - complaint: fever
+    default: P6
+    by_age: { infant_0_2m: P4, child_2m_5y: P5, elder_65_74: P5, elder_75p: P5 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-5642-2015, mai-cid-2008, curtis-pediatrics-2010]
+      note: "Chưa có số liệu Việt Nam về tỷ lệ viêm màng não vi khuẩn trong người sốt ở tuyến đầu. Căn nguyên ở trẻ em: Hib, phế cầu, não mô cầu; người lớn: liên cầu lợn, phế cầu, não mô cầu (5642). Liên cầu lợn là căn nguyên hàng đầu ở người lớn miền Nam (33,6% ca nghi viêm màng não vi khuẩn, Mai 2008). Trên mọi người sốt, ước dưới 0,02% (P6) ở trẻ lớn và người lớn trẻ; 0,02–0,2% (P5) ở trẻ dưới 5 tuổi và người từ 65 tuổi; trẻ dưới 2 tháng cao hơn (P4, nhóm này chỉ sàng lọc)."
+  - complaint: headache
+    default: P6
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-5642-2015, attia-jama-1999]
+      note: "Người chọn 'Đau đầu' chủ yếu là đau đầu căng thẳng, đau nửa đầu, bệnh nhiễm vi rút. Viêm màng não vi khuẩn dưới 0,02% (P6); dựa vào sốt, cứng gáy, rối loạn ý thức để nâng khả năng."
+findings:
+  - finding: fever
+    freq: very_frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [vansamkar-plosntd-2015, byt-qd-5642-2015, nice-ng240, curtis-pediatrics-2010]
+      reported: "Sốt 97% ở viêm màng não do liên cầu lợn; ở trẻ em, không sốt không loại trừ được (LR 0,70)."
+      note: "NG240: sốt ít gặp hơn ở trẻ nhũ nhi và người cao tuổi, nên chọn very_frequent. Liên kết có tác dụng khi triệu chứng chính là đau đầu."
+  - finding: neck_stiffness
+    freq: frequent
+    evidence:
+      tier: A
+      basis: numeric
+      sources: [vansamkar-plosntd-2015, curtis-pediatrics-2010, attia-jama-1999, nice-ng240]
+      reported: "Cứng gáy 93% (liên cầu lợn, người lớn nằm viện); trẻ em: cứng gáy theo tiền sử LR 7,7, khi khám LR 4,0."
+      note: "Hạ xuống frequent: số liệu người lớn nằm viện; người dân tự nhận biết ở giai đoạn sớm khó hơn; NG240: cứng gáy ít gặp và khó nhận ra ở trẻ nhỏ, người sa sút trí tuệ, viêm khớp. Chọn mức thấp hơn cũng an toàn hơn vì không làm giảm quá mạnh khi không có cứng gáy."
+  - finding: headache
+    freq: frequent
+    evidence:
+      tier: A
+      basis: numeric
+      sources: [attia-jama-1999, vansamkar-plosntd-2015, nice-ng240]
+      reported: "Độ nhạy gộp của đau đầu 50% (người lớn, Attia); 95% ở viêm màng não do liên cầu lợn."
+      note: "NG240: đau đầu khó nhận biết ở trẻ nhỏ."
+  - finding: confusion
+    freq: frequent
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [vandebeek-nejm-2004, byt-qd-5642-2015, nice-ng240]
+      reported: "Bộ ba sốt, cứng gáy, rối loạn ý thức 44%; 95% có ít nhất 2 trong 4 dấu hiệu; 14% hôn mê khi vào viện."
+      note: "5642: thay đổi ý thức (kích thích, ngủ gà, lú lẫn). Không đọc được tỷ lệ riêng của rối loạn ý thức; ước khoảng một nửa ở người lớn, thấp hơn khi đến sớm."
+  - finding: drowsy_hard_to_wake
+    freq: frequent
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [nice-ng240, byt-qd-5642-2015]
+      note: "NG240: li bì thường gặp ở trẻ nhũ nhi, trẻ nhỏ và người cao tuổi; ở người lớn trẻ ít hơn, nên chọn frequent thay vì very_frequent. Cùng cụm với lú lẫn."
+  - finding: vomiting
+    freq: occasional
+    evidence:
+      tier: A
+      basis: numeric
+      sources: [attia-jama-1999, byt-qd-5642-2015, nice-ng240]
+      reported: "Độ nhạy gộp của buồn nôn hoặc nôn 30% (người lớn)."
+      note: "5642: nôn vọt; trẻ em hay nôn hơn."
+  - finding: persistent_vomiting
+    freq: occasional
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-5642-2015]
+      note: "Nôn vọt do tăng áp lực nội sọ (5642). Ước khoảng 20%."
+  - finding: photophobia
+    freq: occasional
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-5642-2015, nice-ng240]
+      note: "5642 liệt kê sợ ánh sáng trong dấu hiệu màng não; NG240: khó nhận ra ở trẻ nhũ nhi. Không có tần suất; ước khoảng 20–30%."
+  - finding: seizure_recent
+    freq: occasional
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-5642-2015, curtis-pediatrics-2010]
+      reported: "Trẻ em: co giật ngoài tuổi co giật do sốt LR 4,4."
+      note: "5642 xếp co giật vào nhóm dấu hiệu ít gặp hơn."
+  - finding: rash_any
+    freq: occasional
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-5642-2015, nice-ng240, vandebeek-nejm-2004]
+      note: "Ban gặp chủ yếu khi căn nguyên là não mô cầu (chiếm 37% số đợt bệnh ở Hà Lan; van de Beek ghi nhận không có ban là yếu tố tiên lượng xấu). Ở Việt Nam, liên cầu lợn và phế cầu chiếm phần lớn ở người lớn. Ước khoảng 20%."
+  - finding: rash_non_blanching
+    freq: frequent
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [nice-ng240, byt-qd-5642-2015]
+      note: "Tần suất có điều kiện trong số người bệnh đã có phát ban: ban do não mô cầu thường là chấm, mảng xuất huyết không mất khi ấn, có thể đổi từ ban mất khi ấn sang không mất (NG240); 5642: ban hoại tử gợi ý căn nguyên."
+  - finding: bulging_fontanelle
+    freq: occasional
+    evidence:
+      tier: A
+      basis: judgment
+      sources: [curtis-pediatrics-2010, nice-ng240]
+      reported: "Thóp phồng theo tiền sử LR 8,0; khi khám LR 3,5."
+      note: "Chỉ hỏi trẻ dưới 5 tuổi còn thóp. Nguồn chỉ cho LR, không cho tần suất; ước 20–30% trẻ nhỏ bị bệnh."
+  - finding: headache_worse_activity
+    freq: frequent
+    evidence:
+      tier: A
+      basis: judgment
+      sources: [attia-jama-1999]
+      reported: "Đau tăng khi lắc đầu nhanh: độ nhạy 100%, độ đặc hiệu 54% ở người sốt kèm đau đầu."
+      note: "Câu hỏi của danh mục (đau tăng khi đi lại, leo cầu thang) không hoàn toàn giống nghiệm pháp lắc đầu, nên chỉ chọn frequent. Tần suất có điều kiện trong số người đã đau đầu."
+  - finding: fever_max_temp
+    dist: { lt_38: 0.12, t38_39: 0.30, ge_39: 0.58 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [curtis-pediatrics-2010, nice-ng240]
+      reported: "Trẻ em: sốt trên 40°C có LR 2,9."
+      note: "Một phần người bệnh không sốt cao (trẻ nhũ nhi, người cao tuổi). Phân bố do người soạn ước lượng."
+  - finding: fever_duration
+    dist: { d1_2: 0.70, d3_5: 0.23, d6_7: 0.04, gt_7d: 0.03 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-5642-2015]
+      note: "Bệnh khởi phát và diễn biến trong vài giờ đến vài ngày (5642). Phân bố do người soạn ước lượng."
+  - finding: headache_severity
+    dist: { mild: 0.05, moderate: 0.30, severe: 0.65 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-5642-2015, nice-ng240]
+      note: "Đau đầu nhiều trong hội chứng màng não. Phân bố do người soạn ước lượng."
+  - finding: headache_course
+    dist: { first_time: 0.85, recurrent_similar: 0.05, progressive: 0.10 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-5642-2015]
+      note: "Đau đầu cấp, kiểu mới. Phân bố do người soạn ước lượng."
+  - finding: headache_duration
+    dist: { lt_4h: 0.12, h4_72: 0.75, gt_3d: 0.13 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-5642-2015]
+      note: "Khởi phát trong vài giờ đến vài ngày (5642). Phân bố do người soạn ước lượng."
+  - finding: headache_location
+    dist: { one_side: 0.05, both_sides: 0.15, forehead_face: 0.15, back_neck: 0.25, whole_head: 0.40 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-5642-2015]
+      note: "Đau đầu lan tỏa, hay kèm đau gáy. Phân bố do người soạn ước lượng."
+  - finding: immunocompromised
+    freq: occasional
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-5642-2015]
+      note: "5642: người suy giảm miễn dịch có bệnh cảnh nặng hơn và có thể do Listeria. Ước khoảng 15–20% người bệnh có bệnh hoặc thuốc làm giảm sức đề kháng."
+  - finding: pig_pork_exposure
+    freq: occasional
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [mai-cid-2008, vansamkar-plosntd-2015]
+      reported: "Liên cầu lợn chiếm 33,6% ca nghi viêm màng não vi khuẩn ở người lớn miền Nam; 33% (Việt Nam) đến 61% (gộp các nghiên cứu) số ca này có tiếp xúc lợn hoặc thịt lợn."
+      note: "Dấu hiệu đề xuất (xem proposed_findings). Tính chung mọi lứa tuổi và căn nguyên: khoảng 10–20% người bệnh có phơi nhiễm; trẻ em hiếm."
+warning_signs:
+  - neck_stiffness
+  - confusion
+  - drowsy_hard_to_wake
+  - seizure_recent
+  - rash_non_blanching
+  - bulging_fontanelle
+  - persistent_vomiting
+see_doctor_vi:
+  - "Đến khoa cấp cứu ngay, không chờ đến ngày mai."
+  - "Gọi 115 nếu người bệnh lơ mơ, co giật hoặc có nốt tím trên da."
+  - "Báo cho nhân viên y tế nếu gần đây có ăn tiết canh hoặc mổ lợn bệnh."
+proposed_findings:
+  - id: pig_pork_exposure
+    kind: exposure
+    type: binary
+    label_vi: "Ăn tiết canh, thịt lợn tái hoặc mổ lợn bệnh"
+    question_vi: "Hai tuần qua có ăn tiết canh, thịt lợn tái, hoặc mổ lợn bệnh không?"
+    help_vi: "Lợn còn gọi là heo. Vi khuẩn liên cầu lợn lây qua tiết canh, thịt lợn chưa chín, hoặc vết xước khi mổ lợn."
+    leak: moderate
+    sources: [mai-cid-2008, vansamkar-plosntd-2015, byt-qd-5642-2015]
+    notes_vi: "Lý do đề xuất: liên cầu lợn (Streptococcus suis) là căn nguyên hàng đầu của viêm màng não vi khuẩn ở người lớn miền Nam Việt Nam (Mai 2008) và là căn nguyên nhiễm khuẩn huyết được 5642 nêu riêng. Tiếp xúc lợn hoặc thịt lợn có ở 61% ca (van Samkar 2015). Danh mục chưa có câu hỏi phơi nhiễm này; nó giúp phân biệt viêm màng não, nhiễm khuẩn huyết với sốt xuất huyết, cúm, sốt mò ở người lớn sốt cao. Tỷ lệ nền 5% là ước lượng (ăn tiết canh còn phổ biến ở một số vùng), cần số liệu."
+review:
+  status: draft
+  authors: ["agent:pass-a"]
+  updated: "2026-10-24"
+  notes_vi: "Giữ urgency 2, cant_miss true theo gợi ý: 5642 coi là bệnh cấp cứu; NICE NG240 khuyên chuyển viện cấp cứu ngay khi nghi ngờ. Ca có lơ mơ, co giật, ban xuất huyết đã được quy tắc mức 2 xử lý. Điểm chưa chắc: (1) prior hoàn toàn là ước lượng; tỷ lệ mắc ở Việt Nam sau khi có vắc xin Hib chưa có số liệu đã kiểm chứng; phế cầu chưa có trong tiêm chủng mở rộng. (2) Tần suất từng dấu hiệu ở người lớn (bài NEJM 2004) chỉ đọc được tóm tắt; dùng số liệu liên cầu lợn và Attia thay thế. (3) Trẻ nhũ nhi và trẻ nhỏ biểu hiện khác (ít sốt, ít cứng gáy, hay li bì, quấy khóc, bỏ bú) nhưng định dạng chỉ cho một tần suất. (4) Câu hỏi headache_worse_activity không trùng nghiệm pháp lắc đầu. (5) Đề xuất dấu hiệu mới pig_pork_exposure."

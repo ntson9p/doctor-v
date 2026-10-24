@@ -1,0 +1,15 @@
+id: detsky-jama-2006
+type: systematic_review
+title: "Does this patient with headache have a migraine or need neuroimaging?"
+publisher: "JAMA (The Rational Clinical Examination; Detsky ME và cộng sự)"
+date: "2006"
+url: "https://europepmc.org/article/MED/16968852"
+doi: "10.1001/jama.296.10.1274"
+pmid: "16968852"
+license_class: L3
+license_note: "Bản quyền nhà xuất bản: chỉ dùng dữ kiện kèm trích dẫn, không sao chép câu chữ."
+default_tier: A
+accessed: "2026-10-24"
+verified: true
+verified_by: "agent:pass-a (chỉ đọc tóm tắt qua Europe PMC)"
+notes_vi: "Tiêu chí POUND (đau theo nhịp mạch, kéo dài 4–72 giờ, một bên, buồn nôn, làm mất khả năng sinh hoạt): có 4/5 thì LR 24; 3/5 LR 3,5; từ 2 trở xuống LR 0,41. Dấu hiệu gợi ý tổn thương nặng trên chẩn đoán hình ảnh: kiểu đau từng chùm LR 10,7; khám thần kinh bất thường 5,3; đau đầu không xếp loại được 3,8; có aura 3,2; tăng khi gắng sức hoặc rặn 2,3; nôn 1,8."

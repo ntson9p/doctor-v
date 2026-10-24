@@ -1,0 +1,133 @@
+id: pelvic_inflammatory_disease
+names:
+  vi: "Bệnh viêm tiểu khung ở nữ giới"
+  vi_common: ["Viêm vùng chậu (viêm phần phụ)", "Viêm phần phụ", "Viêm tiểu khung"]
+  en: "Pelvic inflammatory disease"
+codes:
+  icd10: "N73.9"
+  icd10_verified: true
+  mondo: "MONDO:0000922"
+summary_vi:
+  - "Nhiễm khuẩn ở tử cung, vòi trứng, buồng trứng, thường lây qua quan hệ tình dục hoặc sau thủ thuật phụ khoa."
+  - "Hay gặp đau bụng dưới hai bên, sốt, khí hư nhiều hoặc có mùi."
+  - "Cần điều trị sớm để tránh áp xe, vô sinh và thai ngoài tử cung về sau."
+urgency: 3
+cant_miss: false
+specialties: [obstetrics_gynecology]
+applicability:
+  sex: [female]
+  reason_vi: "Bệnh của cơ quan sinh dục nữ."
+priors:
+  - complaint: abdominal_pain
+    default: P3
+    by_age: { infant_0_2m: P6, child_2m_5y: P6, child_5_12: P6, teen_13_17: P4, adult_45_64: P4, elder_65_74: P6, elder_75p: P6 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-315-2015, cdc-sti-pid, msd-pid]
+      note: "Tính trong số phụ nữ. 315/QĐ-BYT coi viêm nhiễm đường sinh dục là bệnh phổ biến ở phụ nữ, hay gặp sau đẻ, sau sẩy hoặc phá thai, sau thủ thuật (nạo hút, đặt hoặc tháo vòng). CDC lưu ý nhiều ca chỉ có triệu chứng nhẹ, hay bị bỏ sót. Ước khoảng 2% phụ nữ 18–44 tuổi đau bụng ở tuyến ban đầu (P3). Tuổi 13–17 và 45–64 ít hơn (P4); trẻ em và người từ 65 tuổi rất hiếm (P6). Chưa có số liệu Việt Nam theo triệu chứng chính."
+  - complaint: fever
+    default: P4
+    by_age: { infant_0_2m: P6, child_2m_5y: P6, child_5_12: P6, teen_13_17: P5, adult_45_64: P5, elder_65_74: P6, elder_75p: P6 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-315-2015, msd-pid]
+      note: "Trong phụ nữ đến khám vì sốt, phần lớn là bệnh nhiễm trùng hô hấp, sốt xuất huyết, nhiễm khuẩn tiết niệu; viêm phần phụ cấp có sốt (tới 39°C theo 315/QĐ-BYT) nhưng ít người coi sốt là triệu chứng chính. Ước khoảng 0,5% (P4) ở 18–44 tuổi."
+findings:
+  - finding: abdominal_pain
+    freq: almost_always
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-315-2015, cdc-sti-pid]
+      note: "Đau bụng dưới là triệu chứng nổi bật (315/QĐ-BYT) và là tiêu chí tối thiểu để nghĩ tới bệnh (CDC). Chỉ có tác dụng khi triệu chứng chính là sốt."
+  - finding: abd_pain_location
+    dist: { epigastric: 0.02, right_upper: 0.04, left_upper: 0.01, periumbilical: 0.03, right_lower: 0.15, left_lower: 0.12, suprapubic: 0.53, whole: 0.10 }
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [byt-qd-315-2015, msd-pid]
+      reported: "đau vùng bụng dưới, thường cả hai bên (90%)"
+      population: "viêm phần phụ cấp (315/QĐ-BYT)"
+      note: "Đau hai bên bụng dưới thường được chọn là 'bụng dưới, ở giữa'; một phần nhỏ đau trội một bên. Viêm quanh gan gây đau hạ sườn phải (MSD). Tỷ lệ chia theo lựa chọn là ước lượng."
+  - finding: abd_pain_worse_movement
+    freq: frequent
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-315-2015]
+      note: "315/QĐ-BYT mô tả đau bụng dưới tăng khi đi lại ở thể cấp; thể mạn đau tăng khi đi lại nhiều, làm việc nặng. Không có số liệu."
+  - finding: abd_pain_duration
+    dist: { lt_6h: 0.05, h6_24: 0.12, d1_3: 0.35, d4_14: 0.33, gt_2w: 0.15 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-315-2015]
+      note: "Có thể cấp, bán cấp (khoảng 30%, đau âm ỉ) hoặc mạn tính (315/QĐ-BYT). Ít khi đến khám trong vài giờ đầu. Phân bố là ước lượng."
+  - finding: fever
+    freq: frequent
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-315-2015, msd-pid, cdc-sti-pid]
+      note: "Thể cấp có sốt, tới 39°C; thể bán cấp sốt nhẹ 37,5–38°C (315/QĐ-BYT); MSD ghi bệnh hay biểu hiện sốt. CDC lưu ý nhiều ca chỉ có triệu chứng kín đáo và sốt trên 38,3°C chỉ là tiêu chí bổ sung, nên chọn frequent thay vì very_frequent."
+  - finding: abnormal_vaginal_discharge
+    freq: frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [byt-qd-315-2015, cdc-sti-pid]
+      reported: "khí hư nhiều, có khi là mủ: 39–65%"
+      population: "viêm phần phụ cấp, khám mỏ vịt (315/QĐ-BYT)"
+  - finding: vaginal_bleeding
+    freq: occasional
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-315-2015, cdc-sti-pid]
+      reported: "rối loạn kinh nguyệt 50%"
+      note: "Con số 50% của 315/QĐ-BYT gồm cả rong kinh, kinh nhiều; câu hỏi trong doctor-v chỉ tính ra máu ngoài kỳ kinh, nên hạ xuống occasional. CDC liệt kê ra máu bất thường trong các dấu hiệu kín đáo."
+  - finding: dysuria
+    freq: occasional
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [byt-qd-315-2015, msd-pid]
+      reported: "dấu hiệu kích thích (mót rặn, đi nặng, tiểu khó, tiểu không hết) 15–25%"
+      population: "viêm phần phụ cấp (315/QĐ-BYT)"
+  - finding: pain_with_intercourse
+    freq: occasional
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [cdc-sti-pid, msd-pid]
+      note: "CDC xếp đau khi giao hợp vào nhóm dấu hiệu kín đáo; MSD ghi là ít gặp hơn đau bụng, sốt, khí hư."
+  - finding: new_sexual_partner
+    freq: occasional
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [msd-pid, byt-qd-315-2015]
+      note: "Bạn tình mới trong 12 tháng hoặc nhiều bạn tình là yếu tố nguy cơ (MSD). Ở Việt Nam bệnh cũng hay gặp sau đẻ, sẩy, phá thai, thủ thuật đặt hoặc tháo vòng (315/QĐ-BYT), nên chỉ chọn occasional."
+  - finding: pregnant
+    freq: rare
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [cdc-sti-pid]
+      note: "Viêm vùng chậu khi đang có thai ít gặp; CDC xếp là tình huống nguy cơ cao phải nhập viện. Câu trả lời 'có thai' nên nghiêng về thai ngoài tử cung hơn. Tần suất là ước lượng."
+warning_signs: [abd_pain_severe, persistent_vomiting, abdomen_hard_swollen, severe_weakness, cold_hands_feet]
+self_care_vi:
+  - "Nghỉ ngơi, uống đủ nước trong khi chờ đi khám."
+  - "Bạn tình cũng cần đi khám và điều trị."
+  - "Hỏi bác sĩ hoặc dược sĩ trước khi dùng thuốc."
+see_doctor_vi:
+  - "Đi khám phụ khoa trong hôm nay hoặc ngày mai để được điều trị sớm."
+  - "Điều trị sớm giúp giảm nguy cơ vô sinh và thai ngoài tử cung về sau."
+  - "Đi cấp cứu ngay nếu đau bụng dữ dội, nôn nhiều, mệt lả hoặc đang có thai."
+review:
+  status: draft
+  authors: ["agent:pass-a"]
+  updated: "2026-10-24"
+  notes_vi: "Giữ urgency 3 như gợi ý: CDC khuyên bắt đầu điều trị ngay khi nghĩ tới bệnh, thể nhẹ và vừa điều trị ngoại trú; nhập viện khi không loại trừ được bệnh cần mổ, áp xe, có thai, nôn, sốt cao (đã đưa vào warning_signs và quy tắc chung). Không xếp cant_miss vì biến chứng nặng thường xảy ra sau nhiều ngày. Applicability chỉ giới hạn giới nữ (bất khả về sinh học ở nam); trẻ em và người cao tuổi dùng prior P6 thay vì loại trừ cứng. Điểm chưa chắc chắn: (1) prior là ước lượng, chưa có số liệu Việt Nam; (2) tần suất sốt khác nhiều giữa nguồn (315/QĐ-BYT mô tả có sốt, CDC nhấn mạnh thể kín đáo); (3) chưa có nguồn đã mở cho thời điểm khởi phát so với kỳ kinh, buồn nôn và nôn, nên chưa liên kết; (4) tên chính thức theo ICD-10 (Thông tư 06/2026/TT-BYT, N73.9) là 'Bệnh viêm tiểu khung ở nữ giới, không xác định'; 315/QĐ-BYT dùng tên 'Viêm phần phụ' (N70)."

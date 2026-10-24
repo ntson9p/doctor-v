@@ -1,0 +1,15 @@
+id: moore-bmj-2014
+type: primary_study
+title: "Derivation and validation of a clinical prediction rule for uncomplicated ureteral stone — the STONE score: retrospective and prospective observational cohort studies"
+publisher: "BMJ"
+date: "2014"
+url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC3966515/"
+doi: "10.1136/bmj.g2191"
+pmid: "24671981"
+license_class: L2
+license_note: "CC BY-NC 3.0: dùng phi thương mại, ghi công."
+default_tier: B
+accessed: "2026-10-24"
+verified: true
+verified_by: "agent:pass-a (đọc toàn văn trên PMC)"
+notes_vi: "Khoa cấp cứu Mỹ, 1040 người lớn chụp CT nghi sỏi, 49,5% có sỏi niệu quản. Tỷ lệ trong nhóm có sỏi do pass A tính từ bảng 2: đau dưới 6 giờ khoảng 57%, buồn nôn khoảng 77%, nôn khoảng 43%, lan xuống bẹn khoảng 44%, tiểu buốt khoảng 25%, tự thấy tiểu máu khoảng 27%."

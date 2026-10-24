@@ -1,0 +1,184 @@
+id: acute_pyelonephritis
+names:
+  vi: "Viêm thận bể thận cấp"
+  vi_common: ["Nhiễm trùng thận", "Viêm đài bể thận cấp"]
+  en: "Acute pyelonephritis"
+codes:
+  icd10: "N10"
+  icd10_verified: true
+  mondo: "MONDO:0003529"
+summary_vi:
+  - "Nhiễm khuẩn ở thận, thường do vi khuẩn từ bàng quang đi ngược lên."
+  - "Thường sốt cao, rét run, đau hông lưng một bên; có thể tiểu buốt, tiểu nhiều lần."
+  - "Hay gặp ở phụ nữ, người có thai, người có sỏi hoặc tắc đường tiểu."
+urgency: 3
+cant_miss: false
+specialties: [urology, nephrology]
+priors:
+  - complaint: fever
+    default: P3
+    by_age: { infant_0_2m: P2, elder_65_74: P2, elder_75p: P2 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [ki-aje-2004, shaikh-pidj-2008, chitu-medicina-2026, byt-qd-3931-2015]
+      note: "Hàn Quốc: 35,7 ca/10.000 dân/năm (nữ 59,0; nam 12,6), tăng theo tuổi (Ki 2004). Trẻ nhũ nhi sốt: nhiễm khuẩn tiết niệu 7,0%; bé gái trên 12 tháng 2,1% (Shaikh 2008). Người cao tuổi hay có biểu hiện không điển hình và nhiễm khuẩn tiết niệu là nguồn sốt thường gặp. Ước 1–5% (P3) người chọn 'Sốt' nói chung; 5–20% (P2) ở trẻ dưới 2 tháng và người từ 65 tuổi. Chưa có số liệu Việt Nam."
+  - complaint: abdominal_pain
+    default: P3
+    by_age: { child_2m_5y: P4 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [chitu-medicina-2026, ki-aje-2004, byt-qd-3931-2015]
+      note: "Viêm thận bể thận chiếm 0,5% lượt khám cấp cứu nói chung (Mỹ); người đau hông lưng, đau bụng dưới kèm sốt thường chọn 'Đau bụng'. Ước 1–5% (P3) người chọn 'Đau bụng'; trẻ nhỏ ít khi khai đau bụng khu trú (P4). Chưa có số liệu Việt Nam."
+findings:
+  - finding: flank_pain
+    freq: very_frequent
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-3931-2015, chitu-medicina-2026]
+      locator: "3931/QĐ-BYT, bài Viêm thận bể thận cấp, mục 2"
+      note: "Đau hông lưng, mạng sườn, thường một bên; vỗ hông lưng dương tính hay gặp (3931). Là một phần định nghĩa ca bệnh (Chițu 2026). Trẻ nhỏ và người cao tuổi có thể không kể đau hông lưng."
+  - finding: dysuria
+    freq: frequent
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-3931-2015, chitu-medicina-2026]
+      locator: "3931/QĐ-BYT, bài Viêm thận bể thận cấp, mục 2 (hội chứng bàng quang cấp)"
+      note: "Tiểu buốt, tiểu dắt là dấu hiệu sớm trước khi viêm thận bể thận (3931), nhưng không phải ai cũng có. Không có số liệu tần suất; ước khoảng 50%."
+  - finding: urinary_frequency
+    freq: frequent
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-3931-2015, chitu-medicina-2026]
+      note: "Như tiểu buốt; ước khoảng 50%. Cùng cụm triệu chứng đường tiểu dưới."
+  - finding: hematuria
+    freq: occasional
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-3931-2015]
+      note: "3931 liệt kê tiểu máu, tiểu đục, tiểu mủ trong hội chứng bàng quang cấp. Tiểu máu nhìn thấy bằng mắt ít hơn; ước 10–20%."
+  - finding: fever
+    freq: very_frequent
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-3931-2015, chitu-medicina-2026]
+      locator: "3931/QĐ-BYT, bài Viêm thận bể thận cấp, mục 2 (hội chứng nhiễm trùng)"
+      note: "Sốt cao, rét run 39–40°C; sốt từ 38°C là một phần định nghĩa ca bệnh. Một số ca, nhất là người cao tuổi, không sốt rõ. Liên kết có tác dụng khi triệu chứng chính là đau bụng."
+  - finding: chills_rigors
+    freq: frequent
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-3931-2015]
+      note: "3931 mô tả sốt cao rét run; không có tần suất. Ước khoảng 50–60% trong số người đã sốt."
+  - finding: fever_max_temp
+    dist: { lt_38: 0.08, t38_39: 0.32, ge_39: 0.60 }
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-3931-2015]
+      note: "Sốt cao 39–40°C (3931). Phân bố do người soạn ước lượng."
+  - finding: fever_duration
+    dist: { d1_2: 0.50, d3_5: 0.35, d6_7: 0.08, gt_7d: 0.07 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-3931-2015]
+      note: "Bệnh thường xuất hiện đột ngột (3931); người bệnh hay đi khám trong vài ngày đầu. Phân bố do người soạn ước lượng."
+  - finding: abdominal_pain
+    freq: frequent
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-3931-2015]
+      note: "Đau hông lưng, mạng sườn, có thể có cơn đau quặn thận (3931); nhiều người mô tả là đau bụng. Ước khoảng 50%."
+  - finding: abd_pain_location
+    dist: { epigastric: 0.05, right_upper: 0.20, left_upper: 0.18, periumbilical: 0.05, right_lower: 0.15, left_lower: 0.14, suprapubic: 0.15, whole: 0.08 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-3931-2015]
+      note: "Đau thường một bên hông lưng, mạng sườn (gần nhất với 'dưới sườn phải/trái'), có thể lan xuống bụng dưới; đau hạ vị khi kèm viêm bàng quang. Phân bố do người soạn ước lượng."
+  - finding: abd_pain_radiates_back
+    freq: frequent
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-3931-2015]
+      note: "Đau ở hông lưng nên người đau bụng thường thấy đau ra sau lưng. Ước khoảng 50%."
+  - finding: abd_pain_radiates_groin
+    freq: occasional
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-3931-2015]
+      note: "'Có thể xuất hiện cơn đau quặn thận' (3931), tương ứng occasional."
+  - finding: abd_pain_duration
+    dist: { lt_6h: 0.08, h6_24: 0.27, d1_3: 0.45, d4_14: 0.17, gt_2w: 0.03 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-3931-2015]
+      note: "Bệnh cấp tính, khởi phát đột ngột. Phân bố do người soạn ước lượng."
+  - finding: headache
+    freq: frequent
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-3931-2015]
+      note: "3931: sốt kèm đau đầu và mệt mỏi; không có tần suất. Ước khoảng 40–50%."
+  - finding: fatigue
+    freq: frequent
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-3931-2015, chitu-medicina-2026]
+      note: "3931: mệt mỏi; Chițu: người cao tuổi hay chỉ mệt mỏi. Ước khoảng 50–60%."
+  - finding: pregnant
+    freq: occasional
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-3931-2015]
+      note: "Có thai là yếu tố thuận lợi (3931). Ước khoảng 10–20% phụ nữ 13–64 tuổi bị bệnh đang có thai; chỉ hỏi phụ nữ trong độ tuổi này."
+  - finding: confusion
+    freq: rare
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [chitu-medicina-2026]
+      note: "Người cao tuổi có thể chỉ biểu hiện lú lẫn (Chițu 2026); tính chung mọi lứa tuổi thì hiếm."
+  - finding: decreased_urine
+    freq: occasional
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [chitu-medicina-2026, byt-qd-3931-2015]
+      note: "Người cao tuổi có thể tiểu ít (Chițu 2026); sốt cao có thể gây mất nước (3931). Ước khoảng 15–20%."
+warning_signs:
+  - confusion
+  - drowsy_hard_to_wake
+  - cold_hands_feet
+  - severe_weakness
+  - persistent_vomiting
+  - decreased_urine
+  - breathing_difficulty
+  - fainting_or_near_fainting
+self_care_vi:
+  - "Uống đủ nước và nghỉ ngơi."
+  - "Hỏi bác sĩ hoặc dược sĩ trước khi dùng thuốc giảm đau, hạ sốt."
+see_doctor_vi:
+  - "Đi khám trong 24 giờ để xét nghiệm nước tiểu và được dùng kháng sinh phù hợp."
+  - "Phụ nữ có thai, người cao tuổi, người tiểu đường nên đi khám ngay trong ngày."
+  - "Đi cấp cứu ngay nếu lơ mơ, tay chân lạnh, nôn liên tục hoặc tiểu rất ít."
+review:
+  status: draft
+  authors: ["agent:pass-a"]
+  updated: "2026-10-24"
+  notes_vi: "Giữ urgency 3, cant_miss false theo gợi ý: ca điển hình cần khám, xét nghiệm nước tiểu và kháng sinh trong ngày; 3931 cảnh báo có thể chuyển sốc nhiễm khuẩn nếu chậm điều trị, phần này do quy tắc dấu hiệu nguy hiểm và bệnh nhiễm khuẩn huyết xử lý. Tên ICD-10 N10 là 'Viêm ống thận mô kẽ cấp tính' (bao gồm viêm thận bể thận cấp); dùng tên theo bài trong 3931. Điểm chưa chắc: (1) Bệnh gặp ở nữ nhiều gấp khoảng 5 lần nam (Ki 2004) nhưng định dạng prior không cho điều chỉnh theo giới: prior P3 là trung bình hai giới, đánh giá cao ở nam, thấp ở nữ. Đề nghị cho phép by_sex hoặc thêm dấu hiệu theo giới. (2) Tần suất tiểu buốt, tiểu nhiều lần, đau hông lưng chỉ có mô tả bằng lời; chưa tìm được số liệu cộng đồng. (3) Trẻ nhỏ thường chỉ sốt, nôn, quấy khóc, không kể được đau hông lưng hay tiểu buốt; định dạng chỉ cho một tần suất. (4) Nguồn 3931 là bản lưu trên trang thứ cấp (vnras.com)."

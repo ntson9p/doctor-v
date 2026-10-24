@@ -1,0 +1,15 @@
+id: trowbridge-jama-2003
+type: systematic_review
+title: "Does this patient have acute cholecystitis?"
+publisher: "JAMA (The Rational Clinical Examination)"
+date: "2003"
+url: "https://pubmed.ncbi.nlm.nih.gov/12503981/"
+doi: "10.1001/jama.289.1.80"
+pmid: "12503981"
+license_class: L3
+license_note: "Bản quyền nhà xuất bản: chỉ dùng dữ kiện kèm trích dẫn, không sao chép câu chữ."
+default_tier: A
+accessed: "2026-10-24"
+verified: true
+verified_by: "agent:pass-a (đọc tóm tắt (abstract) qua Europe PMC)"
+notes_vi: "Không dấu hiệu đơn lẻ nào đủ để khẳng định hay loại trừ; Murphy LR+ 2,8; ấn đau hạ sườn phải LR− 0,4. LR của đau hạ sườn phải và sốt lấy qua Cartwright 2008."

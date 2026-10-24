@@ -1,0 +1,15 @@
+id: blok-fampract-2021
+type: primary_study
+title: "Appendicitis in children with acute abdominal pain in primary care, a retrospective cohort study"
+publisher: "Family Practice (Oxford University Press)"
+date: "2021"
+url: "https://pubmed.ncbi.nlm.nih.gov/34278425/"
+doi: "10.1093/fampra/cmab039"
+pmid: "34278425"
+license_class: L3
+license_note: "Bản quyền nhà xuất bản: chỉ dùng dữ kiện kèm trích dẫn, không sao chép câu chữ."
+default_tier: B
+accessed: "2026-10-24"
+verified: true
+verified_by: "agent:pass-a (đọc tóm tắt (abstract) qua Europe PMC)"
+notes_vi: "Chăm sóc ban đầu ở Hà Lan, trẻ 4–18 tuổi đau bụng cấp: 291/5691 (5,1%) bị viêm ruột thừa; gần 1/5 bị bỏ sót ở lần khám đầu."

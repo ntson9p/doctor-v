@@ -1,0 +1,179 @@
+id: primary_dysmenorrhea
+names:
+  vi: "Đau bụng kinh nguyên phát"
+  vi_common: ["Đau bụng kinh", "Thống kinh"]
+  en: "Primary dysmenorrhea"
+codes:
+  icd10: "N94.4"
+  icd10_verified: true
+  mondo: "MONDO:1060206"
+summary_vi:
+  - "Đau quặn bụng dưới ngay trước hoặc trong những ngày đầu hành kinh, không do bệnh ở tử cung hay buồng trứng."
+  - "Thường bắt đầu trong năm đầu sau khi có kinh, hay kèm mỏi mệt, đau lưng."
+  - "Đau thường giảm sau 1–3 ngày và có thể tự chăm sóc tại nhà."
+urgency: 5
+cant_miss: false
+specialties: [obstetrics_gynecology]
+applicability:
+  sex: [female]
+  age_groups: [teen_13_17, adult_18_44, adult_45_64]
+  reason_vi: "Chỉ gặp ở nữ giới đang có kinh nguyệt."
+priors:
+  - complaint: abdominal_pain
+    default: P2
+    by_age: { teen_13_17: P1, adult_45_64: P4 }
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [pham-fgwh-2025, msd-dysmenorrhea]
+      reported: "78,6% nữ sinh viên bị đau bụng kinh nguyên phát; 69,4% đau vừa hoặc nặng"
+      population: "341 nữ sinh viên điều dưỡng 19–24 tuổi, Hà Nội, 2024"
+      note: "Tính trong số nữ giới. Đau bụng kinh rất phổ biến, nhưng một nửa không dùng biện pháp giảm đau nào, nên chỉ một phần đi tìm hiểu hoặc đi khám. Ước khoảng 10% (P2) phụ nữ 18–44 tuổi đau bụng; ở tuổi 13–17 là một trong những nguyên nhân đau bụng hàng đầu (P1). Bệnh giảm dần theo tuổi và sau lần mang thai đầu (MSD); ở 45–64 tuổi đau kiểu kinh mới xuất hiện nên nghĩ nguyên nhân khác (P4)."
+findings:
+  - finding: pain_with_menses
+    freq: almost_always
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [pham-fgwh-2025, msd-dysmenorrhea]
+      reported: "bắt đầu ngày đầu hành kinh 69,8%, trước 1 ngày 20,1%, trước từ 2 ngày 6,0%"
+      population: "268 nữ sinh viên Việt Nam bị đau bụng kinh"
+      note: "Theo định nghĩa, đau gắn với kỳ kinh (bắt đầu cùng lúc hoặc trước 1–3 ngày, theo MSD)."
+  - finding: abd_pain_location
+    dist: { epigastric: 0.01, right_upper: 0.01, left_upper: 0.01, periumbilical: 0.05, right_lower: 0.06, left_lower: 0.06, suprapubic: 0.75, whole: 0.05 }
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [pham-fgwh-2025, msd-dysmenorrhea]
+      reported: "đau bụng dưới 97,0%"
+      population: "268 nữ sinh viên Việt Nam bị đau bụng kinh"
+      note: "Chia theo lựa chọn là ước lượng; phần lớn chọn 'bụng dưới, ở giữa'."
+  - finding: abd_pain_colicky
+    freq: very_frequent
+    evidence:
+      tier: C
+      basis: verbal
+      sources: [msd-dysmenorrhea, nhs-period-pain]
+      note: "Đau quặn từng cơn trên nền đau âm ỉ bụng dưới (MSD); co thắt có thể lan ra lưng, đùi (NHS)."
+  - finding: abd_pain_radiates_back
+    freq: frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [pham-fgwh-2025, msd-dysmenorrhea]
+      reported: "đau thắt lưng 67,8%"
+      population: "268 nữ sinh viên Việt Nam bị đau bụng kinh"
+      note: "67,8% nằm sát ranh giới frequent/very_frequent; câu hỏi doctor-v hỏi đau lan ra sau lưng, hẹp hơn 'có đau thắt lưng', nên chọn frequent."
+  - finding: abd_pain_duration
+    dist: { lt_6h: 0.20, h6_24: 0.25, d1_3: 0.30, d4_14: 0.03, gt_2w: 0.22 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [pham-fgwh-2025, msd-dysmenorrhea]
+      reported: "đau vài giờ 21,3%, 1 ngày 42,2%, từ 2 ngày 33,2%"
+      note: "Lần đau thường dưới 3 ngày (giảm sau 2–3 ngày theo MSD). Người dùng hỏi giữa cơn nên thời gian đã đau ngắn hơn tổng thời gian. Lựa chọn 'Hơn 2 tuần, hoặc đau tái đi tái lại' được tính khoảng 22% vì đau lặp lại mỗi kỳ kinh."
+  - finding: abd_pain_severe
+    freq: occasional
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [pham-fgwh-2025]
+      reported: "đau nặng 18,7%"
+      population: "268 nữ sinh viên Việt Nam bị đau bụng kinh"
+  - finding: fatigue
+    freq: frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [pham-fgwh-2025, msd-dysmenorrhea]
+      reported: "mệt 60,3%"
+      population: "268 nữ sinh viên Việt Nam bị đau bụng kinh"
+  - finding: headache
+    freq: occasional
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [pham-fgwh-2025, msd-dysmenorrhea]
+      reported: "đau đầu 12,7%"
+      population: "268 nữ sinh viên Việt Nam bị đau bụng kinh"
+  - finding: nausea
+    freq: occasional
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [pham-fgwh-2025, msd-dysmenorrhea]
+      reported: "buồn nôn 12,0%"
+      population: "268 nữ sinh viên Việt Nam bị đau bụng kinh"
+  - finding: diarrhea
+    freq: occasional
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [pham-fgwh-2025, msd-dysmenorrhea]
+      reported: "tiêu chảy 13,1%"
+      population: "268 nữ sinh viên Việt Nam bị đau bụng kinh"
+  - finding: fainting_or_near_fainting
+    freq: occasional
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [pham-fgwh-2025]
+      reported: "chóng mặt 10,5%"
+      note: "Nghiên cứu chỉ ghi 'chóng mặt', không tách choáng sắp ngất; câu hỏi doctor-v hẹp hơn nên con số thật có thể thấp hơn. Giữ occasional; quy tắc 'ngất kèm đau' vẫn khuyên đi cấp cứu."
+  - finding: fever
+    freq: rare
+    evidence:
+      tier: C
+      basis: verbal
+      sources: [msd-dysmenorrhea]
+      note: "Sốt là dấu hiệu gợi ý nguyên nhân khác (MSD)."
+  - finding: abnormal_vaginal_discharge
+    freq: rare
+    evidence:
+      tier: C
+      basis: verbal
+      sources: [msd-dysmenorrhea]
+      note: "Khí hư có mủ gợi ý nguyên nhân khác như viêm vùng chậu (MSD)."
+  - finding: vaginal_bleeding
+    freq: rare
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [nhs-period-pain]
+      note: "Máu kinh không tính là ra máu bất thường; ra máu giữa kỳ kinh là lý do đi khám tìm nguyên nhân khác (NHS)."
+  - finding: pain_with_intercourse
+    freq: rare
+    evidence:
+      tier: C
+      basis: verbal
+      sources: [msd-dysmenorrhea, nhs-period-pain]
+      note: "Đau khi giao hợp gợi ý lạc nội mạc tử cung (MSD) và là lý do đi khám (NHS)."
+  - finding: pregnant
+    freq: rare
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [msd-dysmenorrhea]
+      note: "Đang hành kinh nên hầu như không có thai; MSD khuyên thử thai cho mọi phụ nữ tuổi sinh đẻ đau vùng chậu. Câu trả lời 'có thai' phải nghiêng về thai ngoài tử cung hoặc sẩy thai."
+  - finding: missed_period
+    freq: rare
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [msd-dysmenorrhea]
+      note: "Đau xảy ra cùng kỳ kinh nên hầu như không chậm kinh. Cùng cụm 'pregnancy_signs' với 'pregnant'."
+warning_signs: [abd_pain_severe, fainting_or_near_fainting, abdomen_hard_swollen, persistent_vomiting]
+self_care_vi:
+  - "Chườm ấm bụng dưới bằng túi chườm hoặc chai nước ấm bọc khăn."
+  - "Tắm nước ấm, xoa nhẹ bụng và lưng."
+  - "Vận động nhẹ như đi bộ, bơi, đạp xe nếu thấy dễ chịu."
+  - "Hỏi dược sĩ về thuốc giảm đau không kê đơn phù hợp."
+see_doctor_vi:
+  - "Đi khám nếu đau làm không đi học, đi làm được, hoặc thuốc giảm đau không đỡ."
+  - "Đi khám nếu đau kinh nặng dần, kinh ra nhiều hoặc không đều."
+  - "Đi khám nếu đau khi quan hệ, ra máu ngoài kỳ kinh hoặc ra khí hư bất thường."
+review:
+  status: draft
+  authors: ["agent:pass-a"]
+  updated: "2026-10-24"
+  notes_vi: "Giữ urgency 5 như gợi ý (kb-guide xếp đau bụng kinh điển hình là theo dõi tại nhà; NHS hướng dẫn tự chăm sóc và chỉ khám sớm khi đau dữ dội không đỡ thuốc). Applicability: chỉ nữ 13–64 tuổi; không gồm nhóm 5–12 tuổi dù một số bé 11–12 tuổi đã có kinh, vì câu hỏi 'đau trùng kỳ kinh' trong danh mục cũng chỉ áp dụng từ 13 tuổi (bỏ sót nhỏ, theo hướng an toàn). Điểm chưa chắc chắn: (1) số liệu triệu chứng lấy từ một nghiên cứu sinh viên điều dưỡng ở Hà Nội; (2) lựa chọn thời gian đau 'tái đi tái lại' dễ bị người dùng chọn vì đau lặp lại mỗi tháng; (3) tỷ lệ 'choáng sắp ngất' suy từ 'chóng mặt'. Không nêu tên thuốc giảm đau để tránh dùng ibuprofen khi có thể đang sốt xuất huyết."

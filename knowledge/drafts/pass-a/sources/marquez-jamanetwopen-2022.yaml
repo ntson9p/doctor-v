@@ -1,0 +1,15 @@
+id: marquez-jamanetwopen-2022
+type: primary_study
+title: "COVID-19 Symptoms and Duration of Rapid Antigen Test Positivity at a Community Testing and Surveillance Site During Pre-Delta, Delta, and Omicron BA.1 Periods"
+publisher: "JAMA Network Open (Marquez C, Kerkhoff AD, Schrom J và cs.)"
+date: "2022"
+url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC9552893/"
+doi: "10.1001/jamanetworkopen.2022.35844"
+pmid: "36215069"
+license_class: L1
+license_note: "CC BY: dùng và chuyển thể, ghi công."
+default_tier: B
+accessed: "2026-10-24"
+verified: true
+verified_by: "agent:pass-a (đọc toàn văn qua Europe PMC: Bảng 1)"
+notes_vi: "Điểm xét nghiệm cộng đồng ở San Francisco. Giai đoạn Omicron BA.1, 3.032 người có triệu chứng dương tính (so với người có triệu chứng âm tính): sốt 30,4% (14,4%), ho 67,4% (50,6%), khó thở 8,0% (6,0%), mệt 19,6% (17,0%), đau cơ 28,6% (17,8%), đau đầu 35,5% (29,9%), mất ngửi hoặc vị 5,3% (3,0%), đau họng 43,4% (37,2%), nghẹt mũi 38,8% (34,6%), buồn nôn 5,0%, tiêu chảy 4,8%."

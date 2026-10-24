@@ -1,0 +1,12 @@
+id: cdc-sinus-infection
+type: web_page
+title: "Sinus Infection Basics"
+publisher: "Centers for Disease Control and Prevention (CDC)"
+date: "2024-04-17"
+url: "https://www.cdc.gov/sinus-infection/about/index.html"
+license_class: L0
+default_tier: C
+accessed: "2026-10-24"
+verified: true
+verified_by: "agent:pass-a (đọc trang)"
+notes_vi: "Triệu chứng: sổ mũi, nghẹt mũi, đau hoặc nặng mặt, đau đầu, chảy dịch xuống họng, đau họng, ho, hôi miệng. Phần lớn do vi rút. Đi khám khi: triệu chứng nặng (đau đầu, đau mặt dữ dội), nặng lên sau khi đã đỡ, kéo dài hơn 10 ngày không đỡ, sốt hơn 3–4 ngày, bị nhiều lần trong năm."

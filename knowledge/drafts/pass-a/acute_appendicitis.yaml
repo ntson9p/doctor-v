@@ -1,0 +1,191 @@
+id: acute_appendicitis
+names:
+  vi: "Viêm ruột thừa cấp"
+  vi_common: ["Viêm ruột thừa", "Đau ruột thừa"]
+  en: "Acute appendicitis"
+codes:
+  icd10: "K35"
+  icd10_verified: false
+  mondo: "MONDO:0005649"
+summary_vi:
+  - "Ruột thừa (đoạn ruột nhỏ ở bụng dưới bên phải) bị viêm cấp."
+  - "Đau thường bắt đầu quanh rốn rồi chuyển xuống bụng dưới bên phải, kèm chán ăn, buồn nôn hoặc sốt nhẹ."
+  - "Cần được mổ sớm; để muộn ruột thừa có thể vỡ, gây viêm phúc mạc."
+urgency: 2
+cant_miss: true
+specialties: [general_surgery, emergency, pediatrics]
+priors:
+  - complaint: abdominal_pain
+    default: P3
+    by_age: { infant_0_2m: P6, child_2m_5y: P4, elder_65_74: P4, elder_75p: P4 }
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [viniol-fampract-2014, blok-fampract-2021, cervellin-atm-2016, wickramasinghe-wjs-2021, nhs-appendicitis, bundy-jama-2007]
+      reported: "Chăm sóc ban đầu: 1,9% người lớn đau bụng (Viniol); 5,1% trẻ 4–18 tuổi đau bụng cấp (Blok)"
+      population: "chăm sóc ban đầu ở châu Âu; chưa có số liệu Việt Nam"
+      note: "Người lớn và trẻ từ 5 tuổi: P3 (1–5%). Số 5,1% của Blok sát ranh giới P2 nhưng chỉ tính đau bụng cấp ở người đã đi khám; triệu chứng chính của doctor-v gồm cả đau mạn và người dùng cộng đồng nhẹ hơn, nên giữ P3. Dưới 5 tuổi ít gặp (NHS: hiếm dưới 12 tháng) nên P4; dưới 2 tháng P6. Người từ 65 tuổi: GBD cho đỉnh mắc ở 15–19 tuổi, Cervellin ghi 1,5% ở cấp cứu với người trên 65 tuổi, nên P4."
+  - complaint: fever
+    default: P5
+    by_age: { infant_0_2m: P6, child_5_12: P4, teen_13_17: P4 }
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [humes-bmj-2006, bundy-jama-2007]
+      note: "Viêm ruột thừa hiếm khi có triệu chứng chính là sốt: sốt thường nhẹ và đến sau đau bụng (Humes). Trẻ em sốt rõ hơn (Bundy: 75% trẻ bị viêm ruột thừa ở cấp cứu có sốt) nên trẻ 5–17 tuổi P4. Ước lượng của người soạn, cần bác sĩ duyệt."
+findings:
+  - finding: abdominal_pain
+    freq: almost_always
+    evidence:
+      tier: C
+      basis: verbal
+      sources: [nhs-appendicitis, humes-bmj-2006]
+      note: "Đau bụng là triệu chứng chính; liên kết này chỉ có tác dụng khi triệu chứng chính là sốt."
+  - finding: abd_pain_location
+    dist: { epigastric: 0.03, right_upper: 0.03, left_upper: 0.01, periumbilical: 0.12, right_lower: 0.68, left_lower: 0.01, suprapubic: 0.05, whole: 0.07 }
+    evidence:
+      tier: A
+      basis: numeric
+      sources: [snyder-afp-2018, cartwright-afp-2008, bundy-jama-2007, humes-bmj-2006]
+      locator: "Snyder 2018 bảng 1; Cartwright 2008 bảng 2; Bundy 2007 bảng 3"
+      reported: "Đau hố chậu phải ở người lớn: LR+ 7,3–8,5, LR− 0–0,28 (suy ra độ nhạy khoảng 0,8); ở trẻ em LR 1,2"
+      note: "Hạ tỷ lệ hố chậu phải xuống 0,68 vì người dùng cộng đồng đến sớm (còn đau quanh rốn) và trẻ em đau không điển hình; 7% đau khắp bụng (viêm phúc mạc khi thủng). Câu hỏi là vị trí đau nhiều nhất lúc hiện tại."
+  - finding: abd_pain_migrated_rlq
+    freq: frequent
+    evidence:
+      tier: A
+      basis: numeric
+      sources: [snyder-afp-2018, cartwright-afp-2008, bundy-jama-2007, benabbas-aem-2017, humes-bmj-2006]
+      reported: "Người lớn: LR+ 3,2–3,6, LR− 0,4–0,5 (suy ra độ nhạy 0,6–0,7); trẻ em: độ nhạy 0,45–0,68; Benabbas LR+ 4,81"
+      note: "Humes: trình tự đau quanh rốn rồi chuyển xuống hố chậu phải chỉ gặp ở khoảng một nửa người bệnh. Chọn frequent (50%)."
+  - finding: abd_pain_worse_movement
+    freq: frequent
+    evidence:
+      tier: A
+      basis: numeric
+      sources: [bundy-jama-2007, benabbas-aem-2017]
+      reported: "Đau khi ho, nhảy hoặc gõ bụng: độ nhạy 0,78 (Kharbanda 2005); LR+ 7,64 ở trẻ đau bụng chưa phân loại"
+      population: "trẻ em ở khoa cấp cứu"
+      note: "Hạ một mức (từ very_frequent) vì số liệu cấp cứu; người dùng cộng đồng thường đến sớm hơn."
+  - finding: abdomen_hard_swollen
+    freq: rare
+    evidence:
+      tier: A
+      basis: numeric
+      sources: [snyder-afp-2018]
+      reported: "Co cứng thành bụng: LR+ 3,8, LR− 0,82 (suy ra độ nhạy khoảng 0,2–0,25)"
+      population: "người lớn nghi viêm ruột thừa ở bệnh viện"
+      note: "Dấu hiệu viêm phúc mạc, thường khi đã thủng; số liệu bệnh viện nên hạ một mức xuống rare."
+  - finding: abd_pain_severe
+    freq: occasional
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [humes-bmj-2006, nhs-appendicitis]
+      note: "Đau thường tăng dần, ở mức vừa trong ngày đầu; đau dữ dội gợi ý thủng hoặc viêm phúc mạc. Ước lượng của người soạn."
+  - finding: abd_pain_onset
+    dist: { sudden: 0.15, gradual: 0.85 }
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [humes-bmj-2006, bundy-jama-2007]
+      note: "Đau quanh rốn tăng dần trong 24 giờ đầu (Humes). Bundy: khởi phát đột ngột có LR 1,0 trong nhóm trẻ nghi viêm ruột thừa. Lựa chọn 'đột ngột, rất mạnh ngay từ đầu' ít phù hợp; ước lượng 15%."
+  - finding: abd_pain_duration
+    dist: { lt_6h: 0.15, h6_24: 0.35, d1_3: 0.38, d4_14: 0.09, gt_2w: 0.03 }
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [bundy-jama-2007, snyder-afp-2018, humes-bmj-2006]
+      reported: "Triệu chứng dưới 24 giờ: độ nhạy 0,50 (O'Shea); 'chưa từng đau tương tự' LR+ 1,5, LR− 0,32 (khoảng 13% từng đau tương tự)"
+      note: "Phần lớn đến khám trong 1–3 ngày; nguy cơ thủng tăng sau 36 giờ (Humes). Ước lượng phân bố từ các số trên."
+  - finding: abd_pain_colicky
+    freq: occasional
+    evidence:
+      tier: A
+      basis: numeric
+      sources: [bundy-jama-2007]
+      reported: "Đau từng cơn: độ nhạy 0,20, LR+ 0,48 (Kharbanda 2005)"
+      note: "Sau giai đoạn đầu, đau ruột thừa thường liên tục, không quặn từng cơn."
+  - finding: abd_pain_meal_relation
+    dist: { hungry_relieved_by_food: 0.03, worse_after_meal: 0.12, no_relation: 0.85 }
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [humes-bmj-2006]
+      note: "Đau không gắn với bữa ăn; người bệnh thường chán ăn. Ước lượng của người soạn."
+  - finding: fever
+    freq: frequent
+    evidence:
+      tier: A
+      basis: numeric
+      sources: [snyder-afp-2018, cartwright-afp-2008, bundy-jama-2007]
+      reported: "Người lớn: LR+ 1,9–3,2, LR− 0,4–0,58 (suy ra độ nhạy 0,6–0,7); trẻ em: độ nhạy 0,75 (O'Shea)"
+      note: "Số liệu bệnh viện và cấp cứu; người dùng đến sớm có thể chưa sốt, nên chọn frequent (50%)."
+  - finding: fever_max_temp
+    dist: { lt_38: 0.45, t38_39: 0.45, ge_39: 0.10 }
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [humes-bmj-2006, reust-afp-2016]
+      note: "Phân bố trong số người đã sốt. Humes: sốt thường đến khoảng 38°C; sốt cao gợi ý đã thủng. Ước lượng của người soạn."
+  - finding: fever_duration
+    dist: { d1_2: 0.85, d3_5: 0.13, d6_7: 0.01, gt_7d: 0.01 }
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [humes-bmj-2006, reust-afp-2016]
+      note: "Phân bố trong số người đã sốt. Sốt đến sau đau và diễn tiến trong 1–2 ngày (Reust: sốt xuất hiện sau khi đau gợi ý bệnh ngoại khoa). Sốt nhiều ngày ít phù hợp, trừ khi đã có ổ áp xe."
+  - finding: nausea
+    freq: frequent
+    evidence:
+      tier: A
+      basis: numeric
+      sources: [snyder-afp-2018, humes-bmj-2006]
+      reported: "Buồn nôn: LR+ 0,69–1,2, LR− 0,70–0,84 (suy ra độ nhạy khoảng 0,6–0,7)"
+      note: "Các nghiên cứu khác nhau nhiều; chọn frequent (50%)."
+  - finding: vomiting
+    freq: frequent
+    evidence:
+      tier: A
+      basis: numeric
+      sources: [snyder-afp-2018, bundy-jama-2007]
+      reported: "Người lớn: LR+ 0,92, LR− 1,1 (suy ra độ nhạy khoảng 0,5); trẻ em: độ nhạy 0,79 (O'Shea)"
+  - finding: loss_of_appetite
+    freq: frequent
+    evidence:
+      tier: A
+      basis: numeric
+      sources: [snyder-afp-2018, cartwright-afp-2008, humes-bmj-2006]
+      reported: "Chán ăn: LR+ 1,1–1,3, LR− 0,64–0,9 (suy ra độ nhạy 0,55–0,7)"
+      note: "Humes: chán ăn thường nổi bật."
+  - finding: diarrhea
+    freq: occasional
+    evidence:
+      tier: A
+      basis: numeric
+      sources: [bundy-jama-2007, nhs-appendicitis]
+      reported: "Trẻ em: tiêu chảy có độ nhạy 0,33 (O'Shea)"
+      note: "NHS liệt kê táo bón hoặc tiêu chảy; người lớn ít hơn trẻ em. Chọn occasional để không bỏ sót viêm ruột thừa khi có tiêu chảy."
+  - finding: dysuria
+    freq: rare
+    evidence:
+      tier: A
+      basis: numeric
+      sources: [bundy-jama-2007]
+      reported: "Tiểu buốt: độ nhạy 0, độ đặc hiệu 0,97 (O'Shea, trẻ em)"
+      note: "Ruột thừa nằm sát bàng quang đôi khi gây tiểu buốt, nhưng hiếm."
+warning_signs: [abd_pain_severe, abdomen_hard_swollen, persistent_vomiting, fainting_or_near_fainting, cold_hands_feet, confusion, drowsy_hard_to_wake]
+self_care_vi:
+  - "Không ăn uống thêm trong khi chờ đi khám, vì có thể cần mổ."
+  - "Không tự uống thuốc giảm đau, thuốc nhuận tràng hoặc thuốc nam khi chưa được khám."
+see_doctor_vi:
+  - "Đến cơ sở cấp cứu ngay khi đau bụng tăng dần, nhất là khi đau chuyển xuống bụng dưới bên phải."
+  - "Trẻ nhỏ, người cao tuổi, phụ nữ có thai có thể đau không điển hình."
+  - "Đi khám sớm khi đau bụng kèm sốt hoặc nôn."
+review:
+  status: draft
+  authors: ["agent:pass-a"]
+  updated: "2026-10-24"
+  notes_vi: >-
+    Giữ urgency 2 và cant_miss true như gợi ý: NHS khuyên gọi cấp cứu khi đau bụng dữ dội; Humes ghi thủng 16–30% và tới 97% ở trẻ nhỏ, người cao tuổi, nguy cơ thủng tăng sau 36 giờ.
+    Điểm chưa chắc chắn: (1) prior trẻ 5–17 tuổi để P3, nhưng Blok ghi 5,1% (sát P2); (2) tần suất ở người lớn suy từ cặp LR+/LR− của Wagner qua bảng AFP, không có độ nhạy trực tiếp; (3) leak của abd_pain_migrated_rlq là specific (1%) nên mô hình cho LR khoảng 50, trong khi y văn cho LR+ 3–7 (Benabbas, Blok), đề nghị xem lại leak (moderate); (4) leak 20% của loss_of_appetite và nausea có lẽ thấp so với nhóm đau bụng (độ đặc hiệu khoảng 0,4–0,5), làm các bệnh có liên kết được tăng nhẹ; (5) chưa có số liệu triệu chứng ở Việt Nam; mã ICD-10 chưa đối chiếu được vì icd.kcb.vn chỉ chạy bằng JavaScript.

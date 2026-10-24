@@ -1,0 +1,15 @@
+id: nguyen-vaccine-2013
+type: statistic
+title: "National surveillance for influenza and influenza-like illness in Vietnam, 2006-2010"
+publisher: "Vaccine (Nguyen YT, Graitcer SB, Nguyen TH và cs.)"
+date: "2013"
+url: "https://europepmc.org/article/MED/23911781"
+doi: "10.1016/j.vaccine.2013.07.018"
+pmid: "23911781"
+license_class: L3
+license_note: "Bản quyền nhà xuất bản: chỉ dùng dữ kiện kèm trích dẫn."
+default_tier: B
+accessed: "2026-10-24"
+verified: true
+verified_by: "agent:pass-a (chỉ đọc tóm tắt qua Europe PMC)"
+notes_vi: "Giám sát quốc gia tại 15 điểm: 22% trong 29.804 người có hội chứng giống cúm dương tính với cúm; trẻ tuổi đi học cao nhất (29%). Cúm lưu hành gần như quanh năm, nhiều đỉnh trong năm."

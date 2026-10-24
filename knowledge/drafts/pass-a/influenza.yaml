@@ -1,0 +1,197 @@
+id: influenza
+names:
+  vi: "Cúm mùa"
+  vi_common: ["Cúm"]
+  en: "Seasonal influenza"
+codes:
+  icd10: "J11"
+  icd10_verified: false
+  mondo: "MONDO:0005812"
+summary_vi:
+  - "Bệnh do vi rút cúm, lây qua đường hô hấp, có quanh năm và hay tăng vào mùa đông xuân."
+  - "Thường khởi phát đột ngột với sốt, ớn lạnh, đau đầu, đau mỏi người, ho khan."
+  - "Phần lớn hết sốt sau 3–5 ngày; người cao tuổi, trẻ nhỏ, người có thai hoặc có bệnh nền dễ bị nặng."
+urgency: 5
+cant_miss: false
+specialties: [general_medicine, infectious_disease, pediatrics]
+priors:
+  - complaint: fever
+    default: P2
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [nguyen-vaccine-2013, todd-irv-2018, nguyen-jcv-2016]
+      reported: "cúm chiếm 22% ca giống cúm (giám sát quốc gia 2006–2010), 40,6% (phòng khám ban đầu TP.HCM), 13–24% (cộng đồng Hà Nam)"
+      note: "Ca giống cúm (sốt kèm ho hoặc đau họng) chỉ là một phần trong tất cả người sốt; ước lượng cúm chiếm khoảng 5–15% người sốt đi khám ở mọi lứa tuổi, nên chọn P2. Trẻ tuổi đi học có tỷ lệ cúm cao nhất (29%) nhưng vẫn trong khoảng P2."
+  - complaint: headache
+    default: P3
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [todd-irv-2018, byt-qd-1840-2025]
+      note: "Đau đầu gặp ở hơn 90% người lớn bị cúm có sốt, nhưng người bị cúm thường đến vì sốt hơn là vì đau đầu. Ước lượng của người soạn."
+prior_modifiers:
+  - when: { months: [12, 1, 2, 3, 4, 5], regions: [north] }
+    factor: 1.5
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [nguyen-jcv-2016, byt-qd-1840-2025]
+      reported: "78% đợt cúm xảy ra vào mùa đông–xuân (Hà Nam, 2008–2013)"
+      note: "Quy đổi: 78% số ca trong 6 tháng, tức khoảng 1,5 lần mức trung bình năm. Người soạn quy ước đông–xuân là tháng 12–5. BYT: bệnh tăng cao vào mùa đông xuân."
+  - when: { months: [6, 7, 8, 9, 10, 11], regions: [north] }
+    factor: 0.5
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [nguyen-jcv-2016]
+      reported: "22% đợt cúm xảy ra vào mùa hè–thu (Hà Nam)"
+      note: "Quy đổi: khoảng 0,45 lần mức trung bình năm. Ở phía Nam cúm có quanh năm với nhiều đỉnh không cố định (Todd 2018), nên không đặt hệ số theo tháng cho các vùng khác."
+findings:
+  - finding: fever
+    freq: very_frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [todd-irv-2018, silvennoinen-pidj-2009, monto-aim-2000, cdc-flu-clinical-signs]
+      reported: "92% (cúm A, người 10–70 tuổi); 95% (trẻ ngoại trú); 68% có sốt khi đo (Monto)"
+      note: "CDC: nhiều người cao tuổi, người suy giảm miễn dịch không sốt."
+  - finding: fever_max_temp
+    dist: { lt_38: 0.12, t38_39: 0.48, ge_39: 0.40 }
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [silvennoinen-pidj-2009, todd-irv-2018]
+      reported: "50% trẻ sốt từ 39°C; người 10–70 tuổi: nhiệt độ trung vị 38,5°C (khoảng tứ phân vị 38–39)"
+      note: "Trộn số liệu trẻ em và người lớn; nhiệt độ cao nhất ở nhà thường cao hơn nhiệt độ lúc khám."
+  - finding: fever_duration
+    dist: { d1_2: 0.55, d3_5: 0.38, d6_7: 0.05, gt_7d: 0.02 }
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-1840-2025, todd-irv-2018]
+      locator: "BYT 1840: mục II.1.1"
+      note: "BYT: phần lớn chỉ sốt 3–5 ngày. Người bệnh thường đi khám ngày 2–3 (Todd). Phân bố tại thời điểm hỏi là ước lượng."
+  - finding: chills_rigors
+    freq: frequent
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-1840-2025, cdc-flu-clinical-signs, call-jama-2005]
+      note: "Ớn lạnh là triệu chứng khởi phát thường gặp (BYT, CDC); ở người từ 60 tuổi, ớn lạnh có LR 2,6. Câu hỏi của doctor-v là rét run, mức nặng hơn ớn lạnh, nên chọn frequent."
+  - finding: myalgia
+    freq: very_frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [todd-irv-2018, byt-qd-1840-2025, silvennoinen-pidj-2009]
+      reported: "91% (người 10–70 tuổi); 13% (trẻ 7–13 tuổi)"
+      note: "Trẻ em ít đau cơ hơn nhiều; con số chủ yếu đại diện cho người lớn."
+  - finding: headache
+    freq: very_frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [todd-irv-2018, silvennoinen-pidj-2009, byt-qd-1840-2025]
+      reported: "93% (người 10–70 tuổi); 39% (trẻ 7–13 tuổi)"
+  - finding: fatigue
+    freq: very_frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [todd-irv-2018, byt-qd-1840-2025]
+      reported: "mệt mỏi 97% (cúm A)"
+  - finding: cough
+    freq: very_frequent
+    evidence:
+      tier: A
+      basis: numeric
+      sources: [todd-irv-2018, monto-aim-2000, silvennoinen-pidj-2009, call-jama-2005]
+      reported: "95% (Todd); 93% (Monto); 77% (trẻ); không ho có LR 0,42"
+  - finding: productive_cough
+    freq: occasional
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-1840-2025, cdc-flu-clinical-signs]
+      note: "BYT, CDC mô tả ho khan; ho có đờm ít gặp hơn. Không có tỷ lệ."
+  - finding: sore_throat
+    freq: very_frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [todd-irv-2018]
+      reported: "89% (cúm A)"
+      population: "người 10–70 tuổi có hội chứng giống cúm, phòng khám ban đầu TP.HCM"
+  - finding: runny_nose
+    freq: very_frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [todd-irv-2018, silvennoinen-pidj-2009]
+      reported: "86% (cúm A); 78% (trẻ)"
+  - finding: nasal_congestion
+    freq: very_frequent
+    evidence:
+      tier: A
+      basis: numeric
+      sources: [monto-aim-2000, call-jama-2005]
+      reported: "91% (Monto); không nghẹt mũi có LR 0,49"
+  - finding: vomiting
+    freq: occasional
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-1840-2025, cdc-flu-clinical-signs, todd-irv-2018]
+      note: "BYT, CDC: trẻ em có thể buồn nôn, nôn, tiêu chảy. Người 10–70 tuổi: triệu chứng tiêu hóa 7%."
+  - finding: loss_of_smell_taste
+    freq: rare
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-1840-2025, cdc-flu-clinical-signs]
+      note: "Không có trong danh sách triệu chứng của BYT và CDC; nghẹt mũi có thể làm giảm ngửi."
+  - finding: headache_duration
+    dist: { lt_4h: 0.10, h4_72: 0.70, gt_3d: 0.20 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-1840-2025]
+      note: "Đau đầu kéo dài theo giai đoạn sốt 3–5 ngày. Ước lượng."
+  - finding: headache_location
+    dist: { one_side: 0.05, both_sides: 0.30, forehead_face: 0.25, back_neck: 0.10, whole_head: 0.30 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [cdc-flu-clinical-signs]
+      note: "Không có số liệu; đau đầu trong bệnh toàn thân thường lan tỏa, ít khi một bên. Ước lượng."
+  - finding: headache_course
+    dist: { first_time: 0.55, recurrent_similar: 0.42, progressive: 0.03 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-1840-2025]
+      note: "Bệnh cấp, khởi phát đột ngột; hiếm khi nặng dần trong nhiều tuần. Ước lượng."
+  - finding: headache_severity
+    dist: { mild: 0.25, moderate: 0.50, severe: 0.25 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [cdc-flu-clinical-signs]
+      note: "Cúm thường làm người bệnh mệt, phải nghỉ ngơi; ít người hoàn toàn không làm được gì. Ước lượng."
+warning_signs: [es_severe_breathing, breathing_difficulty, confusion, drowsy_hard_to_wake, cold_hands_feet, severe_weakness, seizure_recent, persistent_vomiting]
+self_care_vi:
+  - "Nghỉ ngơi, uống đủ nước và ăn uống đủ chất, nhất là trẻ nhỏ và người cao tuổi."
+  - "Không dùng thuốc hạ sốt có chứa aspirin khi bị cúm."
+  - "Không tự dùng kháng sinh khi bị cúm nhẹ."
+  - "Hạn chế tiếp xúc người khác, đeo khẩu trang và rửa tay thường xuyên."
+see_doctor_vi:
+  - "Người có thai, người trên 65 tuổi, trẻ dưới 5 tuổi hoặc người có bệnh nền nên đi khám sớm."
+  - "Bác sĩ có thể cân nhắc thuốc kháng vi rút cho những người này."
+  - "Đi khám ngay nếu khó thở, thở nhanh, đau tức ngực hoặc lơ mơ."
+  - "Đi khám nếu sốt kéo dài hơn 5 ngày."
+review:
+  status: draft
+  authors: ["agent:pass-a"]
+  updated: "2026-10-24"
+  notes_vi: "Giữ mức 5 như gợi ý: BYT 1840/QĐ-BYT cho điều trị ngoại trú cúm nhẹ và chỉ dùng thuốc kháng vi rút cho người có yếu tố nguy cơ; CDC: phần lớn tự khỏi. Đề nghị người bảo trì cân nhắc quy tắc mức 3 cho người sốt kèm triệu chứng hô hấp thuộc nhóm nguy cơ của BYT (trên 65 tuổi, trẻ dưới 5 tuổi, có thai hoặc mới sinh 2 tuần, bệnh nền) để kịp dùng thuốc kháng vi rút; quy tắc rf_high_risk_fever hiện chỉ gồm từ 75 tuổi, có thai, suy giảm miễn dịch. Điểm chưa chắc: (1) tần suất đau cơ, đau đầu khác nhiều giữa trẻ em và người lớn; (2) số liệu triệu chứng lấy từ người có hội chứng giống cúm nên có thể cao hơn cúm nói chung; (3) hệ số mùa ở miền Bắc dựa trên một đoàn hệ xã (Hà Nam) với khoảng 70 đợt cúm, quy ước tháng của mùa là của người soạn; (4) mã ICD-10 J11 chưa đối chiếu trên icd.kcb.vn. Đã mở bản PDF ký số 1840/QĐ-BYT (cổng Hải Phòng) và đối chiếu mục I, II.1, II.2.3, III.2.2."

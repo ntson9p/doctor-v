@@ -1,0 +1,14 @@
+id: ihs-ichd3-2018
+type: guideline_intl
+title: "The International Classification of Headache Disorders, 3rd edition (ICHD-3)"
+publisher: "Headache Classification Committee of the International Headache Society (Cephalalgia 2018;38(1):1–211)"
+date: "2018"
+url: "https://ichd-3.org/wp-content/uploads/2018/01/The-International-Classification-of-Headache-Disorders-3rd-Edition-2018.pdf"
+doi: "10.1177/0333102417738202"
+license_class: L2
+license_note: "IHS cho phép sao chép tự do cho mục đích khoa học, giáo dục, lâm sàng; dùng thương mại phải xin phép và trả phí; bản dịch phải đăng ký với IHS. doctor-v chỉ dùng dữ kiện, câu chữ tự viết."
+default_tier: B
+accessed: "2026-10-24"
+verified: true
+verified_by: "agent:pass-a (đọc bản PDF: mục 1.1, 1.2, 2.1, 2.2, 6.1.1, 6.2.1, 6.2.2, 10.3.4)"
+notes_vi: "Trang ichd-3.org hiển thị tiêu chuẩn bằng JavaScript nên không đọc được; dùng bản PDF chính thức đăng trên cùng trang. Migraine không aura: cơn 4–72 giờ (dưới 18 tuổi 2–72 giờ), có 2/4 đặc điểm (một bên, theo nhịp mạch, vừa hoặc nặng, tăng khi vận động) và có buồn nôn/nôn hoặc sợ cả ánh sáng lẫn tiếng ồn. Đau đầu căng thẳng: 30 phút đến 7 ngày, có 2/4 đặc điểm (hai bên, bó chặt, nhẹ hoặc vừa, không tăng khi vận động), không buồn nôn, tối đa một trong hai: sợ ánh sáng hoặc sợ tiếng ồn."
