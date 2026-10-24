@@ -64,6 +64,9 @@
   type: binary
   label_vi: "Chậm kinh"
   question_vi: "Lần này có bị chậm kinh hoặc mất kinh không?"
+  # Hỏi lại khi "Không rõ" (kinh không đều): câu then chốt cho chửa ngoài tử cung (người bảo trì, lô 2).
+  alt_question:
+    text_vi: "Từ lần có kinh gần nhất đến nay đã hơn 4 tuần chưa?"
   applies_to:
     sex: [female]
     age_groups: [teen_13_17, adult_18_44, adult_45_64]

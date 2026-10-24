@@ -143,11 +143,11 @@ Lô 2–3 đang chạy.
 | | Top-1 | Top-3 | Bỏ sót cấp cứu | Khuyên quá mức |
 |---|---|---|---|---|
 | Trả lời đúng ca | 81,9% | 95,8% | 0/23 | 5/72 |
-| 15% câu trả lời thành "Không rõ" | 77,8% | 93,1% | 1/23 | 11/72 |
+| 15% câu trả lời thành "Không rõ" | 79,2% | 94,4% | 0/23 | 11/72 |
 
 Số câu hỏi trung vị 15, trong đó 7 câu thích ứng.
 
-Ca bỏ sót khi nhiễu: chửa ngoài tử cung, khi câu "chậm kinh" bị "Không rõ" (nên thêm câu hỏi thay thế cho chậm kinh).
+Trước đó, khi nhiễu có 1 ca chửa ngoài tử cung bị bỏ sót vì câu "chậm kinh" bị "Không rõ". Đã thêm câu hỏi thay thế ("Từ lần có kinh gần nhất đến nay đã hơn 4 tuần chưa?").
 
 **Còn tồn (đã ghi để làm):**
 - sốt rét và thương hàn còn bị "nguyên nhân khác" lấn át ở 2 ca;
