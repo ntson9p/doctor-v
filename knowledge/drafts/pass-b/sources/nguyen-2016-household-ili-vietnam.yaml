@@ -1,0 +1,15 @@
+id: nguyen-2016-household-ili-vietnam
+type: primary_study
+title: "Epidemiology and etiology of influenza-like-illness in households in Vietnam; it's not all about the kids!"
+publisher: "Journal of Clinical Virology 2016;82:126-132 (Nguyen DNT và cộng sự)"
+date: "2016"
+url: "https://doi.org/10.1016/j.jcv.2016.07.014"
+doi: "10.1016/j.jcv.2016.07.014"
+pmid: "27479176"
+license_class: L1
+license_note: "CC BY (theo siêu dữ liệu Europe PMC)."
+default_tier: B
+accessed: "2026-10-24"
+verified: true
+verified_by: "agent:pass-b"
+notes_vi: "Đã đọc toàn văn (PMC4994428) qua API Europe PMC. Cộng đồng nông thôn Hà Nam (miền Bắc), 263 hộ, 2008–2013, tìm ca chủ động. Trong các mẫu dương tính: rhinovirus 28%, cúm 17%, coronavirus 8%. Bảng 3: 55/71 đợt cúm (78%) vào mùa đông và xuân; 84/124 đợt rhinovirus (68%) vào mùa hè và thu."

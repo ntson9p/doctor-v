@@ -1,0 +1,162 @@
+id: covid19
+names:
+  vi: "COVID-19"
+  vi_common: ["Bệnh COVID-19", "Nhiễm vi rút corona"]
+  en: "COVID-19"
+codes:
+  icd10: "U07.1"
+  icd10_verified: true
+  mondo: "MONDO:0100096"
+summary_vi:
+  - "Bệnh do vi rút corona mới (SARS-CoV-2) gây ra, lây qua đường hô hấp."
+  - "Hiện nay thường giống cảm cúm: sốt, ho, đau họng, sổ mũi, đau đầu; đôi khi mất ngửi, mất vị."
+  - "Người cao tuổi, người có bệnh nền hoặc suy giảm miễn dịch dễ bị nặng hơn."
+urgency: 5
+cant_miss: false
+specialties: [infectious_disease, general_medicine]
+priors:
+  - complaint: fever
+    default: P3
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [byt-qd-2671-2023, struyf-2022-cochrane-covid-symptoms]
+      note: "Chưa có số liệu năm 2025–2026 về tỷ lệ COVID-19 ở người đi khám vì sốt tại Việt Nam. 2671 ghi Omicron là chủng phổ biến; bệnh lưu hành theo từng đợt, ít được xét nghiệm. Ước 1–5% (P3) cho mọi nhóm tuổi, cao hơn trong đợt dịch."
+  - complaint: headache
+    default: P4
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [menni-2022-omicron-symptoms, byt-qd-2671-2023]
+      note: "Đau đầu rất thường gặp khi mắc COVID-19 (74,7% thời Omicron) nhưng ít khi là lý do chính đi khám; ước 0,2–1%."
+findings:
+  - finding: runny_nose
+    freq: very_frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [menni-2022-omicron-symptoms, struyf-2022-cochrane-covid-symptoms, byt-qd-2671-2023]
+      reported: "76,5% (Omicron, cộng đồng); 30,3% (trước Omicron, lúc đến khám)"
+      population: "người lớn đã tiêm vắc xin tự báo qua ứng dụng (Anh)"
+      note: "Chọn số liệu thời Omicron vì gần với chủng đang lưu hành (2671); số Cochrane đo trước Omicron."
+  - finding: sore_throat
+    freq: very_frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [menni-2022-omicron-symptoms, struyf-2022-cochrane-covid-symptoms]
+      reported: "70,5% (Omicron); 31,0% (trước Omicron)"
+      population: "người lớn đã tiêm vắc xin, cộng đồng"
+  - finding: headache
+    freq: very_frequent
+    freq_by_age:
+      child_2m_5y: occasional
+      child_5_12: frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [menni-2022-omicron-symptoms, struyf-2022-cochrane-covid-symptoms]
+      reported: "74,7% (Omicron, người lớn); 35,8% (trước Omicron)"
+      note: "Cochrane: đau đầu, đau cơ, mệt ở trẻ em có độ nhạy thấp hơn người lớn; trẻ nhỏ cũng khó tự báo, nên hạ mức cho trẻ."
+  - finding: cough
+    freq: frequent
+    evidence:
+      tier: A
+      basis: numeric
+      sources: [struyf-2022-cochrane-covid-symptoms, menni-2022-omicron-symptoms, byt-qd-2671-2023]
+      reported: "62,4% (11 nghiên cứu); ho kéo dài 49,8% (Omicron)"
+      note: "2671 mô tả ho khan."
+  - finding: loss_of_smell_taste
+    freq: occasional
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [menni-2022-omicron-symptoms, struyf-2022-cochrane-covid-symptoms, byt-qd-2671-2023]
+      reported: "mất ngửi 16,7% thời Omicron (Delta 52,7%); trước Omicron mất ngửi hoặc mất vị 39,2%"
+      population: "người lớn, cộng đồng"
+      note: "Đặc hiệu (độ đặc hiệu khoảng 92–94%) nhưng không còn phổ biến như các đợt dịch đầu."
+  - finding: myalgia
+    freq: frequent
+    freq_by_age:
+      child_2m_5y: occasional
+      child_5_12: occasional
+    evidence:
+      tier: A
+      basis: numeric
+      sources: [struyf-2022-cochrane-covid-symptoms, byt-qd-2671-2023]
+      reported: "37,5% (6 nghiên cứu)"
+      note: "Trẻ em có độ nhạy thấp hơn người lớn (Cochrane, không có số gộp riêng)."
+  - finding: fatigue
+    freq: frequent
+    evidence:
+      tier: A
+      basis: numeric
+      sources: [struyf-2022-cochrane-covid-symptoms, byt-qd-2671-2023]
+      reported: "40,2% (8 nghiên cứu)"
+  - finding: diarrhea
+    freq: occasional
+    evidence:
+      tier: A
+      basis: numeric
+      sources: [struyf-2022-cochrane-covid-symptoms, byt-qd-2671-2023]
+      reported: "18,5% (11 nghiên cứu)"
+  - finding: breathing_difficulty
+    freq: occasional
+    evidence:
+      tier: A
+      basis: numeric
+      sources: [struyf-2022-cochrane-covid-symptoms, byt-qd-2671-2023]
+      reported: "khó thở 23,3% (12 nghiên cứu, chủ yếu cấp cứu và điểm xét nghiệm, trước Omicron)"
+      note: "Ở cộng đồng thời Omicron có lẽ thấp hơn (khoảng 10%), vẫn gần mức occasional hơn rare. Theo 2671, ca nhẹ không khó thở; khó thở là mức trung bình trở lên."
+  - finding: sick_contact_respiratory
+    freq: frequent
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-2671-2023]
+      locator: "mục II.2.1"
+      note: "Ca nghi ngờ theo 2671 cần có yếu tố dịch tễ (tiếp xúc gần người bệnh hoặc sống trong ổ dịch). Chưa có tỷ lệ cụ thể."
+  - finding: fever
+    freq: frequent
+    evidence:
+      tier: A
+      basis: numeric
+      sources: [struyf-2022-cochrane-covid-symptoms, byt-qd-2671-2023]
+      reported: "sốt 37,6% (trước Omicron)"
+      note: "Chỉ có tác dụng khi triệu chứng chính là đau đầu."
+  - finding: fever_duration
+    dist: { d1_2: 0.55, d3_5: 0.37, d6_7: 0.06, gt_7d: 0.02 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-2671-2023, menni-2022-omicron-symptoms]
+      note: "Thời Omicron, thời gian có triệu chứng trung bình 6,9 ngày (Menni 2022); sốt thường ngắn hơn. Ước phần lớn sốt dưới 5 ngày; cần số liệu."
+  - finding: covid_self_test
+    dist: { positive: 0.22, negative: 0.08, not_tested: 0.70 }
+    evidence:
+      tier: A
+      basis: numeric
+      sources: [dinnes-2022-cochrane-covid-antigen]
+      reported: "độ nhạy test nhanh ở người có triệu chứng 73,0% (tuần đầu 80,9%)"
+      note: "Giữ 'chưa xét nghiệm' 0,70 như mọi phân bố; trong 30% còn lại, 73% dương tính. Người tự làm test có thể đạt độ nhạy thấp hơn."
+warning_signs:
+  - es_severe_breathing
+  - breathing_difficulty
+  - confusion
+  - drowsy_hard_to_wake
+  - cold_hands_feet
+  - chest_pain_pressure
+self_care_vi:
+  - "Nghỉ ngơi, uống đủ nước, theo dõi nhiệt độ hằng ngày."
+  - "Đeo khẩu trang, hạn chế tiếp xúc, nhất là với người già và người có bệnh nền."
+  - "Khi chưa loại trừ được sốt xuất huyết, không tự dùng aspirin hoặc ibuprofen."
+see_doctor_vi:
+  - "Người cao tuổi, người có bệnh nền, có thai hoặc suy giảm miễn dịch nên đi khám sớm."
+  - "Đi khám nếu sốt quá 3 ngày, hoặc mệt nhiều hơn sau vài ngày."
+  - "Đi cấp cứu ngay nếu khó thở, thở nhanh, đau tức ngực, môi tím hoặc lơ mơ."
+sources: [byt-qd-2671-2023, byt-qd-2760-2023]
+review:
+  status: draft
+  authors: ["agent:pass-b"]
+  updated: "2026-10-24"
+  notes_vi: "Giữ urgency 5 như gợi ý: 2671 xếp ca nhẹ (không viêm phổi, không khó thở, tỉnh táo, tự phục vụ được) và có thể theo dõi tại nhà; nhóm nguy cơ và khó thở đã có quy tắc riêng. ICD-10 tra trên dữ liệu icd.kcb.vn: U07.1 'COVID-19, xác định có vi rút' (U07.2 khi chưa xác định vi rút). Chưa chắc chắn: (1) prior hoàn toàn là ước lượng, không có số liệu lưu hành 2025–2026; (2) tần suất triệu chứng thời Omicron lấy từ người lớn đã tiêm ở Anh, ghi nhận trong 7 ngày trước và sau xét nghiệm, có thể cao hơn lúc người dùng hỏi; (3) số liệu Cochrane là trước Omicron. Chưa thêm hệ số theo tháng vì chưa có mùa rõ ở Việt Nam. 'Khó thở' được đưa vào dấu hiệu cảnh báo theo 2671 (mức trung bình trở lên)."

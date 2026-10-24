@@ -1,0 +1,156 @@
+id: measles
+names:
+  vi: "Sởi"
+  vi_common: ["Bệnh sởi", "Lên sởi"]
+  en: "Measles"
+codes:
+  icd10: "B05"
+  icd10_verified: true
+  mondo: "MONDO:0004619"
+summary_vi:
+  - "Bệnh truyền nhiễm do vi rút sởi, lây rất mạnh qua đường hô hấp."
+  - "Sốt cao, ho, sổ mũi, đỏ mắt vài ngày rồi mới phát ban từ sau tai, mặt lan xuống người."
+  - "Trẻ nhỏ và người chưa tiêm vắc xin dễ bị biến chứng như viêm phổi, viêm tai, tiêu chảy."
+urgency: 3
+cant_miss: false
+specialties: [infectious_disease, pediatrics]
+priors:
+  - complaint: fever
+    default: P5
+    by_age:
+      child_2m_5y: P4
+      child_5_12: P4
+      adult_45_64: P6
+      elder_65_74: P6
+      elder_75p: P6
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [nguyentien-2026-measles-dongnai, do-2021-measles-north-vietnam, byt-qd-1019-2025]
+      note: "Bệnh bùng phát theo đợt: miền Bắc 2013–2014 có 9577 ca xác định (55,7% dưới 5 tuổi); Đồng Nai 2024–2025 có 11.434 ca (55,9% dưới 5 tuổi, 24,3% 5–10 tuổi, 19,8% trên 10 tuổi). 1019: hay gặp ở trẻ dưới 3 tuổi, người lớn chưa tiêm cũng mắc. Ước trung bình theo thời gian 0,2–1% ở trẻ em; trong đợt dịch tại địa phương có thể cao hơn nhiều, ngoài đợt dịch thấp hơn nhiều."
+findings:
+  - finding: rash_any
+    freq: very_frequent
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-1019-2025, cdc-measles-clinical]
+      locator: "1019 mục 2.1.1"
+      note: "Ban là dấu hiệu chính, nhưng chỉ xuất hiện sau khi sốt cao 3–4 ngày; người dùng hỏi trong giai đoạn khởi phát sẽ chưa có ban, nên chọn very_frequent thay vì almost_always."
+  - finding: rash_spreads_from_face
+    freq: very_frequent
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-1019-2025, cdc-measles-clinical]
+      locator: "1019 mục 2.1.1 (giai đoạn toàn phát)"
+      note: "Ban xuất hiện từ sau tai, sau gáy, trán, mặt, cổ rồi lan xuống thân mình và tứ chi; CDC: lan từ đầu xuống thân rồi chân. Tần suất trong số người đã có ban; lúc ban mới mọc ở mặt, người dùng có thể chưa trả lời được."
+  - finding: rash_non_blanching
+    freq: rare
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-1019-2025]
+      locator: "mục 2.1.1 và 2.7.8"
+      note: "Ban dát sẩn mất khi căng da; thể xuất huyết hiện nay hiếm gặp. Tần suất trong số người đã có ban."
+  - finding: red_eyes
+    freq: very_frequent
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-1019-2025, cdc-measles-clinical]
+      locator: "1019 mục 1 và 2.1.1"
+      note: "Viêm kết mạc thuộc triệu chứng điển hình của giai đoạn khởi phát (1019; CDC: ho, chảy mũi, viêm kết mạc)."
+  - finding: cough
+    freq: very_frequent
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-1019-2025, cdc-measles-clinical]
+      note: "Viêm long đường hô hấp trên (ho, chảy mũi) là triệu chứng điển hình; ho có thể kéo dài 1–2 tuần sau khi hết ban."
+  - finding: runny_nose
+    freq: very_frequent
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-1019-2025, cdc-measles-clinical]
+  - finding: fever_max_temp
+    dist: { lt_38: 0.05, t38_39: 0.25, ge_39: 0.70 }
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-1019-2025, cdc-measles-clinical]
+      note: "1019: sốt cao trong giai đoạn khởi phát; CDC: sốt có thể tới 40,5°C. Thể không điển hình chỉ sốt nhẹ."
+  - finding: fever_duration
+    dist: { d1_2: 0.20, d3_5: 0.50, d6_7: 0.22, gt_7d: 0.08 }
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-1019-2025]
+      locator: "mục 2.1.1"
+      note: "Khởi phát 2–4 ngày, phát ban sau 3–4 ngày sốt, sốt giảm khi ban mọc hết (toàn phát 2–5 ngày). Phân bố theo thời điểm người dùng hỏi."
+  - finding: diarrhea
+    freq: occasional
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-1019-2025, cdc-measles-clinical]
+      locator: "1019 mục 2.7.3"
+      note: "1019: tiêu chảy, nôn trớ thường gặp trong giai đoạn cấp; CDC xếp tiêu chảy vào biến chứng hay gặp. Ở cộng đồng ước occasional (không có số liệu Việt Nam)."
+  - finding: ear_pain
+    freq: occasional
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-1019-2025, cdc-measles-clinical]
+      locator: "1019 mục 2.7.2"
+      note: "Viêm tai giữa cấp là biến chứng tai mũi họng phổ biến nhất của sởi."
+  - finding: breathing_difficulty
+    freq: occasional
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-1019-2025, cdc-measles-clinical]
+      locator: "1019 mục 2.7.1 và 3.2.1"
+      note: "Viêm phổi là nguyên nhân tử vong hay gặp nhất; thở nhanh là dấu hiệu phải khám lại ngay. Ở người dùng cộng đồng ước occasional."
+  - finding: measles_vaccinated
+    freq: occasional
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [do-2021-measles-north-vietnam, byt-qd-1019-2025]
+      reported: "76,3% ca bệnh chưa tiêm hoặc không rõ tiền sử tiêm"
+      population: "ca sởi xác định, miền Bắc 2013–2014"
+      note: "1019: phần lớn trẻ bị sởi chưa tiêm vắc xin. Câu hỏi hỏi đủ 2 mũi và chỉ hỏi từ 18 tháng tuổi; tỷ lệ đủ 2 mũi trong số ca bệnh có lẽ dưới 24%."
+  - finding: measles_contact
+    freq: occasional
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-1019-2025]
+      locator: "mục 2.4.1"
+      note: "Ca nghi ngờ gồm tiền sử tiếp xúc người bệnh sởi trong 7–21 ngày hoặc sống trong vùng dịch. Nhiều người không biết nguồn lây; chưa có tỷ lệ, ước occasional."
+warning_signs:
+  - child_unable_to_drink
+  - child_vomits_everything
+  - es_severe_breathing
+  - breathing_difficulty
+  - drowsy_hard_to_wake
+  - confusion
+  - seizure_recent
+self_care_vi:
+  - "Cho người bệnh ở phòng riêng, đeo khẩu trang, hạn chế tiếp xúc với người khác."
+  - "Không đến nơi đông người; trẻ nghỉ học đến 4 ngày sau khi phát ban."
+  - "Ăn uống đủ chất theo tuổi, tiếp tục cho trẻ bú mẹ."
+  - "Giữ vệ sinh da, mắt, mũi, miệng hằng ngày."
+see_doctor_vi:
+  - "Đi khám trong 24 giờ để được xác định bệnh và hướng dẫn điều trị, theo dõi."
+  - "Báo trước cho cơ sở y tế là nghi sởi để được khám ở khu riêng, tránh lây cho người khác."
+  - "Đi khám lại ngay nếu không ăn uống được, nôn mọi thứ, thở nhanh, tím tái hoặc lơ mơ."
+  - "Người tiếp xúc chưa tiêm vắc xin sởi nên hỏi cơ sở y tế về việc tiêm phòng."
+sources: [byt-qd-1019-2025, cdc-measles-clinical]
+review:
+  status: draft
+  authors: ["agent:pass-b"]
+  updated: "2026-10-24"
+  notes_vi: "Giữ urgency 3 như gợi ý: 1019 cho điều trị ngoại trú sởi không biến chứng nhưng mọi trẻ cần được uống vitamin A, cách ly, hẹn tái khám 2–3 ngày một lần; ca bệnh cần được xác định và báo cáo. ICD-10 tra trên dữ liệu icd.kcb.vn: B05 'Sởi' (B05.9 khi không biến chứng). Chưa chắc chắn: (1) prior thay đổi rất lớn theo đợt dịch, không có hệ số theo tháng vì hai đợt dịch lớn có đỉnh khác nhau (miền Bắc nửa đầu 2014; Đồng Nai tháng 12/2024–1/2025); (2) tần suất ho, sổ mũi, đỏ mắt chỉ có mô tả bằng lời, chưa có số liệu Việt Nam; (3) rash_any để very_frequent vì người dùng có thể hỏi trước khi mọc ban. Danh mục chưa có câu hỏi 'ban xuất hiện sau mấy ngày sốt', là dấu hiệu phân biệt sởi với sốt phát ban khác."

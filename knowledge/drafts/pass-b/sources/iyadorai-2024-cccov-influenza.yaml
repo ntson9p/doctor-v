@@ -1,0 +1,15 @@
+id: iyadorai-2024-cccov-influenza
+type: primary_study
+title: "Clinical symptoms, comorbidities and health outcomes among outpatients infected with the common cold coronaviruses versus influenza virus"
+publisher: "Virology Journal 2024;21:251 (Iyadorai T và cộng sự)"
+date: "2024"
+url: "https://doi.org/10.1186/s12985-024-02524-6"
+doi: "10.1186/s12985-024-02524-6"
+pmid: "39380036"
+license_class: L1
+license_note: "CC BY (theo siêu dữ liệu Europe PMC)."
+default_tier: B
+accessed: "2026-10-24"
+verified: true
+verified_by: "agent:pass-b"
+notes_vi: "Đã đọc toàn văn (PMC11462790) qua API Europe PMC. Ngoại trú nhiễm trùng hô hấp trên ở Kuala Lumpur (Malaysia), trước COVID-19, chủ yếu người lớn. Bảng 1, coronavirus gây cảm lạnh (n = 205): ho 85,9%, chảy mũi 84,9%, đau họng 72,2%, hắt hơi 70,7%, nghẹt mũi 60,5%, đau cơ 57,6%, đau đầu 56,6%, sốt 46,8%. Cúm (n = 417): sốt 83,0%, ho 84,7%, chảy mũi 59,0%, đau họng 44,6%, nghẹt mũi 39,6%, đau cơ 19,4%, đau đầu 9,8% (hồi cứu, tỷ lệ đau đầu, đau cơ thấp bất thường)."

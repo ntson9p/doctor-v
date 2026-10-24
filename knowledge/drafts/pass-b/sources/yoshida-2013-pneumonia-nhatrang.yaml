@@ -1,0 +1,14 @@
+id: yoshida-2013-pneumonia-nhatrang
+type: primary_study
+title: "Incidence of radiologically-confirmed pneumonia and Haemophilus influenzae type b carriage before Haemophilus influenzae type b conjugate vaccine introduction in Central Vietnam"
+publisher: "Journal of Pediatrics 2013;163(1 Suppl):S38-43 (Yoshida LM và cộng sự)"
+date: "2013"
+url: "https://europepmc.org/abstract/MED/23773592"
+doi: "10.1016/j.jpeds.2013.03.029"
+pmid: "23773592"
+license_class: L3
+default_tier: B
+accessed: "2026-10-24"
+verified: true
+verified_by: "agent:pass-b"
+notes_vi: "Chỉ đọc tóm tắt (qua API Europe PMC). Nha Trang: viêm phổi có xác nhận X quang phải nhập viện ở trẻ dưới 5 tuổi 3,3/1000 trẻ; cao nhất ở nhóm 12–23 tháng (8,3/1000)."

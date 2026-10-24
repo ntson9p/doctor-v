@@ -1,0 +1,205 @@
+id: common_cold
+names:
+  vi: "Viêm mũi họng cấp"
+  vi_common: ["Cảm lạnh", "Cảm thường"]
+  en: "Common cold (acute nasopharyngitis)"
+codes:
+  icd10: "J00"
+  icd10_verified: true
+  mondo: "MONDO:0005709"
+summary_vi:
+  - "Bệnh nhiễm vi rút ở mũi họng, rất hay gặp, lây qua đường hô hấp."
+  - "Thường sổ mũi, nghẹt mũi, đau họng, ho; người lớn ít khi sốt, trẻ em có thể sốt cao hơn."
+  - "Phần lớn tự khỏi trong khoảng 10 ngày, ho có thể kéo dài thêm vài ngày."
+urgency: 5
+cant_miss: false
+specialties: [general_medicine, ent]
+priors:
+  - complaint: fever
+    default: P2
+    by_age:
+      child_2m_5y: P1
+      child_5_12: P1
+      elder_65_74: P3
+      elder_75p: P3
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-5643-2015, nguyen-2016-household-ili-vietnam, todd-2018-hcmc-ili, msd-common-cold]
+      note: "Viêm mũi họng cấp là bệnh cấp tính hay gặp (5643); rhinovirus là vi rút hay gặp nhất trong các đợt hội chứng giống cúm ở hộ gia đình miền Bắc (28% mẫu dương tính) và đứng đầu nhóm vi rút ngoài cúm ở TP.HCM. Trẻ em hay sốt khi cảm lạnh nên ước P1; người lớn ít khi sốt (MSD) nên P2; người cao tuổi bị sốt thường do bệnh khác nặng hơn nên P3."
+  - complaint: headache
+    default: P3
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [iyadorai-2024-cccov-influenza, pappas-2008-cold-children, msd-common-cold]
+      note: "Đau đầu có ở khoảng một nửa người lớn cảm lạnh đi khám (56,6%), 15% trẻ tuổi đi học lúc khởi phát; ít khi là lý do chính đi khám. Ước 1–5%."
+findings:
+  - finding: runny_nose
+    freq: very_frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [iyadorai-2024-cccov-influenza, pappas-2008-cold-children, msd-common-cold, byt-qd-5643-2015]
+      locator: "Iyadorai 2024 bảng 1"
+      reported: "chảy mũi 84,9% (cảm lạnh do coronavirus, ngoại trú)"
+      population: "người lớn ngoại trú, Malaysia; trẻ tuổi đi học (Pappas)"
+  - finding: nasal_congestion
+    freq: frequent
+    freq_by_age:
+      child_2m_5y: very_frequent
+      child_5_12: very_frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [iyadorai-2024-cccov-influenza, pappas-2008-cold-children, byt-qd-5643-2015]
+      reported: "người lớn 60,5%; ở trẻ tuổi đi học là triệu chứng hay gặp nhất"
+      note: "5643: thường có ngạt mũi. Pappas 2008 (tóm tắt): nghẹt mũi và sổ mũi là triệu chứng hay gặp nhất ở trẻ."
+  - finding: sore_throat
+    freq: very_frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [iyadorai-2024-cccov-influenza, msd-common-cold, byt-qd-5643-2015]
+      reported: "72,2% (người lớn ngoại trú)"
+      note: "MSD: bệnh thường bắt đầu bằng ngứa hoặc đau họng. Trẻ nhỏ khó tự báo."
+  - finding: cough
+    freq: very_frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [iyadorai-2024-cccov-influenza, pappas-2008-cold-children, byt-qd-5643-2015]
+      reported: "85,9% (người lớn ngoại trú); ở trẻ tuổi đi học là dấu hiệu hay gặp nhất"
+  - finding: productive_cough
+    freq: frequent
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-5643-2015, msd-common-cold]
+      locator: "5643, bài Viêm mũi họng cấp tính, mục 3.1.1"
+      note: "5643: lúc đầu ho khan, sau ho có đờm. MSD: đờm mủ ít gặp khi do rhinovirus. Tần suất trong số người có ho."
+  - finding: purulent_nasal_discharge
+    freq: frequent
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-5643-2015, msd-common-cold, ebell-2019-rhinosinusitis-signs]
+      note: "5643: nước mũi lúc đầu trong, sau đục. MSD: dịch mũi có thể đặc, đục mà không phải bội nhiễm vi khuẩn. Ebell 2019: 46% người nghi viêm xoang nhưng không có viêm xoang vẫn có chảy mũi mủ. Tần suất trong số người có sổ mũi."
+  - finding: nasal_symptoms_over_10_days
+    freq: occasional
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [msd-common-cold, pappas-2008-cold-children]
+      note: "MSD: phần lớn triệu chứng hết trong 10 ngày; Pappas: 73% trẻ tuổi đi học còn triệu chứng sau 10 ngày. Người dùng thường hỏi trong tuần đầu, nên ước occasional."
+  - finding: symptoms_worsen_after_improving
+    freq: occasional
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [msd-common-cold, byt-qd-5643-2015, ebell-2019-rhinosinusitis-signs]
+      note: "Cảm lạnh thường giảm dần rồi hết; đỡ rồi lại nặng lên gợi ý biến chứng như viêm xoang (5643: nghĩ viêm xoang khi xấu đi sau 5–7 ngày). Tuy vậy Ebell 2019: 59% người nghi viêm xoang nhưng không có viêm xoang vẫn kể bệnh nặng lên lần hai (độ đặc hiệu 0,41), nên không để mức rare."
+  - finding: fever
+    freq: frequent
+    freq_by_age:
+      child_5_12: occasional
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [iyadorai-2024-cccov-influenza, pappas-2008-cold-children, msd-common-cold]
+      reported: "46,8% (người lớn ngoại trú); cảm giác sốt 15% lúc khởi phát (trẻ tuổi đi học)"
+      note: "Chỉ có tác dụng khi triệu chứng chính là đau đầu. MSD: nhiệt độ thường bình thường; người đi khám có thể sốt nhiều hơn."
+  - finding: fever_max_temp
+    dist: { lt_38: 0.50, t38_39: 0.38, ge_39: 0.12 }
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-5643-2015, msd-common-cold]
+      note: "5643: có thể chỉ sốt vừa 38–39°C, trẻ em có khi sốt cao 40°C. MSD: người lớn, trẻ lớn ít khi sốt, nếu có thường sốt nhẹ. Phân bố trong số người có sốt."
+  - finding: fever_duration
+    dist: { d1_2: 0.62, d3_5: 0.33, d6_7: 0.04, gt_7d: 0.01 }
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-5643-2015]
+      locator: "bài Viêm mũi họng cấp tính, mục 5.1"
+      note: "Viêm mũi họng do vi rút tự khỏi sau 3–5 ngày. Sốt quá 5 ngày gợi ý bội nhiễm hoặc bệnh khác."
+  - finding: headache
+    freq: frequent
+    freq_by_age:
+      child_2m_5y: occasional
+      child_5_12: occasional
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [iyadorai-2024-cccov-influenza, pappas-2008-cold-children, byt-qd-5643-2015]
+      reported: "56,6% (người lớn); 15% lúc khởi phát (trẻ tuổi đi học)"
+      note: "Dùng khi triệu chứng chính là sốt."
+  - finding: myalgia
+    freq: frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [iyadorai-2024-cccov-influenza, msd-common-cold, byt-qd-5643-2015]
+      reported: "57,6% (người lớn ngoại trú)"
+      note: "MSD chỉ nêu đau cơ nhẹ có thể có; 5643 nêu đau mình mẩy. Có thể thấp hơn ở trẻ em."
+  - finding: ear_pain
+    freq: occasional
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-5643-2015]
+      locator: "bài Viêm mũi họng cấp tính, mục 3.1.1"
+      note: "5643: nuốt đau, đau nhói lan lên tai."
+  - finding: loss_of_smell_taste
+    freq: rare
+    evidence:
+      tier: A
+      basis: numeric
+      sources: [struyf-2022-cochrane-covid-symptoms]
+      reported: "mất ngửi có độ đặc hiệu 94,2%, tức khoảng 6% ở người nghi COVID-19 nhưng không mắc"
+      note: "Số gián tiếp; nghẹt mũi có thể làm giảm ngửi. Mức rare cao hơn tỷ lệ nền 1% là có chủ ý (khoảng 6% so với 1%)."
+  - finding: breathing_difficulty
+    freq: rare
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [msd-common-cold]
+      note: "Cảm lạnh không biến chứng không gây khó thở; MSD chỉ nêu cảm lạnh làm nặng hen, viêm phế quản mạn. Khó thở gợi ý viêm phổi hoặc bệnh khác."
+  - finding: rash_any
+    freq: rare
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [msd-common-cold, byt-qd-5643-2015]
+      note: "Phát ban không thuộc bệnh cảnh cảm lạnh trong cả hai nguồn; 5643 lưu ý viêm mũi họng có thể là giai đoạn đầu của sởi, thủy đậu."
+  - finding: sick_contact_respiratory
+    freq: frequent
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [nguyen-2016-household-ili-vietnam, byt-qd-5643-2015]
+      note: "Bệnh lây qua nước bọt, nước mũi khi nói, ho, hắt hơi (5643) và lây trong hộ gia đình. Chưa có tỷ lệ cụ thể."
+warning_signs:
+  - es_severe_breathing
+  - drowsy_hard_to_wake
+  - confusion
+  - child_unable_to_drink
+  - seizure_recent
+  - neck_stiffness
+  - rash_non_blanching
+self_care_vi:
+  - "Nghỉ ngơi, uống đủ nước, ăn đồ lỏng dễ tiêu."
+  - "Không cần dùng kháng sinh vì bệnh do vi rút gây ra."
+  - "Khi chưa loại trừ được sốt xuất huyết, không tự dùng aspirin hoặc ibuprofen."
+  - "Che miệng khi ho, hắt hơi và rửa tay thường xuyên."
+see_doctor_vi:
+  - "Đi khám nếu sốt quá 3 ngày, hoặc sổ mũi, nghẹt mũi quá 10 ngày không đỡ."
+  - "Đi khám nếu đã đỡ rồi lại nặng lên, đau tai, hoặc đau nhức vùng trán, má."
+  - "Đi cấp cứu ngay nếu khó thở, li bì, co giật, hoặc trẻ không uống được."
+sources: [byt-qd-5643-2015, msd-common-cold, byt-qd-2760-2023]
+review:
+  status: draft
+  authors: ["agent:pass-b"]
+  updated: "2026-10-24"
+  notes_vi: "Giữ urgency 5 như gợi ý (MSD: tự khỏi, không dùng kháng sinh). Tên chính theo ICD-10 tiếng Việt (tra trên dữ liệu icd.kcb.vn): J00 'Viêm mũi họng cấp [cảm thường]'. Lưu ý: bài 'Viêm mũi họng cấp tính' của 5643 gộp cả viêm họng do vi khuẩn và khuyên dùng kháng sinh; bản nháp chỉ lấy phần mô tả triệu chứng, còn lời khuyên không dùng kháng sinh theo MSD. Chưa chắc chắn: (1) số liệu tần suất chủ yếu từ người lớn nhiễm coronavirus gây cảm lạnh ở Malaysia (một phần nhỏ của cảm lạnh, rhinovirus mới là chính); (2) prior là ước lượng; (3) loss_of_smell_taste để mức rare (cao hơn tỷ lệ nền) có chủ ý, kb:check cảnh báo. Không có hệ số theo mùa vì rhinovirus không theo mùa rõ ở miền Bắc (68% đợt vào hè, thu, ngược với cúm)."

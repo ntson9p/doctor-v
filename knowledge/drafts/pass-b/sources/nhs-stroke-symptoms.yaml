@@ -1,0 +1,12 @@
+id: "nhs-stroke-symptoms"
+type: "web_page"
+title: "Symptoms of a stroke"
+publisher: "NHS (UK)"
+url: "https://www.nhs.uk/conditions/stroke/symptoms/"
+license_class: "L1"
+license_note: "Open Government Licence v3.0; bản chuyển thể không được trình bày như nội dung của NHS."
+default_tier: "C"
+accessed: "2026-10-24"
+verified: true
+verified_by: "agent:pass-b"
+notes_vi: "Đã mở trực tiếp; rà soát lần cuối 12/9/2024. Nhận biết bằng FAST: méo mặt, yếu tay, nói khó, gọi cấp cứu ngay. Triệu chứng khác: yếu hoặc tê một bên người, nhìn mờ hoặc mất thị lực, lú lẫn, chóng mặt hoặc ngã, đau đầu dữ dội, buồn nôn hoặc nôn. Gọi 999 kể cả khi triệu chứng đã tự hết; không tự lái xe đến viện."

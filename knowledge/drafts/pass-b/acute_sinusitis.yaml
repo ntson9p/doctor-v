@@ -1,0 +1,174 @@
+id: acute_sinusitis
+names:
+  vi: "Viêm mũi xoang cấp tính"
+  vi_common: ["Viêm xoang cấp", "Viêm xoang"]
+  en: "Acute rhinosinusitis"
+codes:
+  icd10: "J01.9"
+  icd10_verified: true
+summary_vi:
+  - "Viêm niêm mạc mũi và các xoang quanh mũi, thường xảy ra sau một đợt cảm lạnh."
+  - "Thường nghẹt mũi, chảy mũi đục, đau hoặc nặng vùng trán, má, có thể giảm ngửi."
+  - "Nên nghĩ tới khi triệu chứng kéo dài quá 10 ngày, hoặc đã đỡ rồi lại nặng lên."
+urgency: 4
+cant_miss: false
+specialties: [ent]
+priors:
+  - complaint: headache
+    default: P3
+    by_age:
+      child_2m_5y: P4
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [byt-qd-5643-2015, ebell-2019-rhinosinusitis-signs, nhs-sinusitis]
+      note: "Đau đầu là triệu chứng phụ của viêm mũi xoang cấp (5643) và có ở khoảng một nửa người bệnh (Ebell 2019); 5643 lưu ý đau đầu, đau nửa đầu rất dễ nhầm với đau do viêm xoang. Ước 1–5% người đau đầu ở tuyến ban đầu; trẻ dưới 5 tuổi ít khi than đau đầu."
+  - complaint: fever
+    default: P4
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [ebell-2019-rhinosinusitis-signs, byt-qd-5643-2015]
+      note: "Chỉ khoảng 11% người viêm mũi xoang cấp có nhiệt độ trên 38°C (Ebell 2019), nên hiếm khi là nguyên nhân chính của sốt; trẻ em có thể sốt nhẹ kéo dài (5643). Ước 0,2–1%."
+findings:
+  - finding: nasal_congestion
+    freq: very_frequent
+    evidence:
+      tier: A
+      basis: numeric
+      sources: [ebell-2019-rhinosinusitis-signs, byt-qd-5643-2015]
+      locator: "Ebell 2019 bảng 3"
+      reported: "nghẹt mũi 0,83 (9 nghiên cứu)"
+      population: "người ngoại trú nghi viêm mũi xoang cấp"
+  - finding: runny_nose
+    freq: very_frequent
+    evidence:
+      tier: A
+      basis: numeric
+      sources: [ebell-2019-rhinosinusitis-signs, byt-qd-5643-2015]
+      reported: "có chảy mũi 0,75 (4 nghiên cứu)"
+  - finding: purulent_nasal_discharge
+    freq: very_frequent
+    evidence:
+      tier: A
+      basis: numeric
+      sources: [ebell-2019-rhinosinusitis-signs, byt-qd-5643-2015, nhs-sinusitis]
+      reported: "chảy mũi mủ 0,71 (10 nghiên cứu) trong khi có chảy mũi 0,75"
+      note: "Tần suất trong số người có sổ mũi nên còn cao hơn 0,71."
+  - finding: facial_pain_pressure
+    freq: very_frequent
+    evidence:
+      tier: A
+      basis: numeric
+      sources: [ebell-2019-rhinosinusitis-signs, byt-qd-5643-2015, nhs-sinusitis]
+      reported: "đau khi cúi người 0,72 (5 nghiên cứu); đau vùng hàm hoặc trán 0,49 (3 nghiên cứu)"
+      note: "Câu hỏi của danh mục gộp đau, nặng vùng trán, má với tăng khi cúi đầu. 5643 xếp đau, nhức vùng mặt vào triệu chứng chính."
+  - finding: cough
+    freq: very_frequent
+    evidence:
+      tier: A
+      basis: numeric
+      sources: [ebell-2019-rhinosinusitis-signs, byt-qd-5643-2015]
+      reported: "ho 0,69 (7 nghiên cứu)"
+  - finding: symptoms_worsen_after_improving
+    freq: very_frequent
+    evidence:
+      tier: A
+      basis: numeric
+      sources: [ebell-2019-rhinosinusitis-signs, byt-qd-5643-2015]
+      reported: "bệnh nặng lên lần hai 0,74 (3 nghiên cứu; độ đặc hiệu chỉ 0,41)"
+      note: "5643: nghĩ viêm mũi xoang do vi khuẩn khi bệnh xấu đi sau 5–7 ngày hoặc kéo dài quá 10 ngày."
+  - finding: nasal_symptoms_over_10_days
+    freq: frequent
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-5643-2015, ebell-2019-rhinosinusitis-signs]
+      note: "Theo định nghĩa (5643), viêm xoang được nghĩ tới khi viêm mũi kéo dài quá 10 ngày hoặc xấu đi sau 5 ngày; Ebell 2019: thời gian bệnh có độ nhạy 25–70% tùy ngưỡng. Ước frequent. Tần suất trong số người có sổ mũi hoặc nghẹt mũi."
+  - finding: loss_of_smell_taste
+    freq: occasional
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-5643-2015, nhs-sinusitis]
+      note: "Ngửi kém hoặc mất ngửi là triệu chứng chính trong 5643 và NHS; không có tỷ lệ. Ước occasional."
+  - finding: ear_pain
+    freq: occasional
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-5643-2015, nhs-sinusitis]
+      note: "5643 xếp đau nhức ở tai vào triệu chứng phụ; NHS nêu cảm giác căng tai."
+  - finding: fever
+    freq: occasional
+    freq_by_age:
+      child_2m_5y: frequent
+      child_5_12: frequent
+    evidence:
+      tier: A
+      basis: numeric
+      sources: [ebell-2019-rhinosinusitis-signs, byt-qd-5643-2015]
+      reported: "nhiệt độ trên 38°C 0,11 (7 nghiên cứu, người lớn)"
+      note: "Chỉ có tác dụng khi triệu chứng chính là đau đầu. 5643 (bài Viêm mũi xoang trẻ em): trẻ thường sốt nhẹ kéo dài, nên tăng mức cho trẻ."
+  - finding: fever_max_temp
+    dist: { lt_38: 0.55, t38_39: 0.35, ge_39: 0.10 }
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-5643-2015, ebell-2019-rhinosinusitis-signs]
+      note: "Phần lớn sốt nhẹ (5643: trẻ sốt nhẹ kéo dài); nhiệt độ trên 38°C chỉ có ở khoảng 11% người bệnh. Phân bố trong số người có sốt."
+  - finding: fever_duration
+    dist: { d1_2: 0.30, d3_5: 0.35, d6_7: 0.15, gt_7d: 0.20 }
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [byt-qd-5643-2015]
+      note: "Viêm xoang thường kéo dài hơn viêm hô hấp trên do vi rút (5–7 ngày); trẻ có thể sốt nhẹ kéo dài. Không có số liệu."
+  - finding: headache
+    freq: frequent
+    freq_by_age:
+      child_5_12: very_frequent
+    evidence:
+      tier: A
+      basis: numeric
+      sources: [ebell-2019-rhinosinusitis-signs, byt-qd-5643-2015]
+      reported: "đau đầu 0,50 (6 nghiên cứu)"
+      note: "Dùng khi triệu chứng chính là sốt. 5643 (bài Viêm mũi xoang trẻ em): trẻ trên 6 tuổi luôn có nhức đầu."
+  - finding: headache_location
+    dist: { one_side: 0.15, both_sides: 0.10, forehead_face: 0.50, back_neck: 0.05, whole_head: 0.20 }
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [ebell-2019-rhinosinusitis-signs, byt-qd-5643-2015]
+      note: "Đau vùng hàm hoặc trán 0,49, đau một bên hàm 0,30 (Ebell 2019). Lệch về vùng trán, mặt nhưng giữ vừa phải vì câu 'đau, nặng vùng trán, má' đã hỏi cùng ý (tránh đếm trùng)."
+  - finding: headache_duration
+    dist: { lt_4h: 0.05, h4_72: 0.35, gt_3d: 0.60 }
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [byt-qd-5643-2015]
+      locator: "mục 3.2.3"
+      note: "Đau do viêm xoang kéo dài liên tục nhiều ngày; 5643 phân biệt với đau nửa đầu kéo dài 4–72 giờ. Không có số liệu."
+warning_signs:
+  - periorbital_swelling
+  - vision_loss_or_double
+  - neck_stiffness
+  - confusion
+  - drowsy_hard_to_wake
+  - seizure_recent
+self_care_vi:
+  - "Rửa mũi bằng nước muối sinh lý nhiều lần trong ngày."
+  - "Nghỉ ngơi, uống đủ nước, tránh khói thuốc lá và bụi."
+  - "Hỏi bác sĩ hoặc dược sĩ trước khi dùng thuốc xịt, thuốc nhỏ mũi."
+  - "Thuốc nhỏ mũi co mạch chỉ nên dùng vài ngày, dùng lâu có thể làm bệnh nặng hơn."
+  - "Không tự dùng kháng sinh khi chưa được bác sĩ khám."
+see_doctor_vi:
+  - "Đi khám trong vài ngày nếu triệu chứng quá 10 ngày không đỡ, hoặc đã đỡ rồi lại nặng lên."
+  - "Trẻ em có biểu hiện viêm xoang nên được bác sĩ khám."
+  - "Đi cấp cứu ngay nếu sưng đỏ quanh mắt, nhìn mờ, nhìn đôi, đau đầu dữ dội hoặc cứng gáy."
+sources: [byt-qd-5643-2015, nhs-sinusitis]
+review:
+  status: draft
+  authors: ["agent:pass-b"]
+  updated: "2026-10-24"
+  notes_vi: "Đổi urgency từ 5 (gợi ý) sang 4: bản nháp dùng định nghĩa của 5643 (nghĩ viêm mũi xoang do vi khuẩn khi viêm mũi xấu đi sau 5–7 ngày hoặc quá 10 ngày), và 5643 điều trị chủ yếu bằng kháng sinh theo đơn, rửa mũi, thuốc xịt; NHS cũng khuyên trẻ từ 11 tuổi trở xuống đi khám bác sĩ. Viêm mũi do vi rút trong 10 ngày đầu thuộc bệnh 'common_cold' (mức 5). Nếu lượt C định nghĩa bệnh này rộng hơn (gồm cả viêm xoang sau vi rút tự khỏi), mức 5 cũng có căn cứ (NHS: thường tự khỏi trong 4 tuần). ICD-10 tra trên dữ liệu icd.kcb.vn: J01 'Viêm mũi xoang cấp tính', J01.9 'Viêm mũi xoang cấp, không đặc hiệu'. MONDO không có mục riêng cho viêm xoang cấp ở người (chỉ có 'sinusitis' MONDO:0005961), nên bỏ trống. Chưa chắc chắn: (1) tần suất từ người lớn nghi viêm xoang ở tuyến ban đầu châu Âu, Mỹ; (2) độ đặc hiệu của 'bệnh nặng lên lần hai' thấp (0,41) nên mức very_frequent có thể làm tăng quá mức khả năng viêm xoang; (3) prior là ước lượng; (4) có nguy cơ đếm trùng giữa facial_pain_pressure và headache_location (đã giảm phân bố vị trí). Không liên kết periorbital_swelling: 5643 (bài Viêm mũi xoang trẻ em) có nêu phù nề quanh mắt ở trẻ trên 6 tuổi nhưng không rõ tần suất; dấu hiệu này chỉ để trong warning_signs vì đã có quy tắc rf_periorbital_swelling mức 2."

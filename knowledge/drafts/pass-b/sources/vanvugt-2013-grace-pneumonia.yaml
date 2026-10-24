@@ -1,0 +1,15 @@
+id: vanvugt-2013-grace-pneumonia
+type: primary_study
+title: "Use of serum C reactive protein and procalcitonin concentrations in addition to symptoms and signs to predict pneumonia in patients presenting to primary care with acute cough: diagnostic study"
+publisher: "BMJ 2013;346:f2450 (van Vugt SF và cộng sự, nghiên cứu GRACE)"
+date: "2013"
+url: "https://doi.org/10.1136/bmj.f2450"
+doi: "10.1136/bmj.f2450"
+pmid: "23633005"
+license_class: L2
+license_note: "CC BY-NC (theo siêu dữ liệu Europe PMC)."
+default_tier: B
+accessed: "2026-10-24"
+verified: true
+verified_by: "agent:pass-b"
+notes_vi: "Đã đọc toàn văn (PMC3639712) qua API Europe PMC. 2820 người lớn ho cấp ở tuyến ban đầu châu Âu, 140 người (5%) viêm phổi trên phim. Bảng 1, ở người viêm phổi: có đờm 86%, khó thở 69%, sốt (bệnh sử) 59%, đau ngực 57%, không sổ mũi 44% (tức có sổ mũi khoảng 56%), tiêu chảy 11%."

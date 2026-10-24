@@ -1,0 +1,14 @@
+id: metlay-1997-cap-age-symptoms
+type: primary_study
+title: "Influence of age on symptoms at presentation in patients with community-acquired pneumonia"
+publisher: "Archives of Internal Medicine 1997;157(13):1453-1459 (Metlay JP và cộng sự)"
+date: "1997"
+url: "https://europepmc.org/abstract/MED/9224224"
+doi: "10.1001/archinte.1997.00440340089009"
+pmid: "9224224"
+license_class: L3
+default_tier: B
+accessed: "2026-10-24"
+verified: true
+verified_by: "agent:pass-b"
+notes_vi: "Chỉ đọc tóm tắt (qua API Europe PMC). 1812 người lớn viêm phổi (nội và ngoại trú): 17/18 triệu chứng được báo ít hơn rõ rệt khi tuổi càng cao, kể cả sau khi hiệu chỉnh bệnh nền và mức nặng."

@@ -1,0 +1,201 @@
+id: pneumonia
+names:
+  vi: "Viêm phổi"
+  vi_common: ["Viêm phổi cộng đồng", "Viêm phế quản phổi"]
+  en: "Community-acquired pneumonia"
+codes:
+  icd10: "J18.9"
+  icd10_verified: true
+  mondo: "MONDO:0005249"
+summary_vi:
+  - "Nhiễm trùng ở phổi, thường do vi khuẩn hoặc vi rút, mắc phải ngoài bệnh viện."
+  - "Thường sốt, ho, có đờm, khó thở hoặc thở nhanh, có thể đau ngực khi hít sâu."
+  - "Trẻ nhỏ và người cao tuổi dễ bị nặng; người già có khi chỉ mệt lả hoặc lú lẫn."
+urgency: 3
+cant_miss: false
+specialties: [respiratory, general_medicine]
+priors:
+  - complaint: fever
+    default: P3
+    by_age:
+      child_2m_5y: P2
+      elder_65_74: P2
+      elder_75p: P2
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [yoshida-2013-pneumonia-nhatrang, takahashi-2013-cap-vietnam, byt-qd-3312-2015, byt-qd-4235-2012]
+      note: "Nha Trang: viêm phổi có xác nhận X quang phải nhập viện ở trẻ dưới 5 tuổi 3,3/1000 trẻ (12–23 tháng: 8,3/1000); người lớn nhập viện 0,81/1000, từ 65 tuổi 4,6/1000 (gấp khoảng 10 lần người trẻ). Số ca ngoại trú nhiều hơn số nhập viện. Ước 5–20% người đi khám vì sốt ở trẻ dưới 5 tuổi và người từ 65 tuổi, 1–5% ở nhóm khác."
+  - complaint: abdominal_pain
+    default: P5
+    by_age:
+      child_2m_5y: P3
+      child_5_12: P3
+      teen_13_17: P4
+      elder_65_74: P4
+      elder_75p: P4
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [moustaki-2003-pneumonia-abdominal-pain, byt-qd-4235-2012]
+      note: "34% trẻ trên 4 tuổi viêm phổi thùy có đau bụng (Moustaki 2003); 4235 ghi người lớn viêm phổi có khi nôn, chướng bụng, đau bụng. Viêm phổi là nguyên nhân ngoài ổ bụng ít gặp của đau bụng: ước 1–5% ở trẻ em, 0,2–1% ở vị thành niên và người cao tuổi, 0,02–0,2% ở người lớn."
+findings:
+  - finding: cough
+    freq: very_frequent
+    freq_by_age:
+      elder_75p: frequent
+    evidence:
+      tier: A
+      basis: numeric
+      sources: [htun-2019-pneumonia-primary-care, byt-qd-4235-2012, byt-qd-3312-2015, metlay-1997-cap-age-symptoms]
+      reported: "0,91 (6 nghiên cứu, người lớn tuyến ban đầu)"
+      note: "Nhiều nghiên cứu chỉ tuyển người có ho nên số bị thổi phồng; chọn very_frequent. 3312: chẩn đoán viêm phổi trẻ em dựa trên trẻ ho, sốt kèm thở nhanh hoặc rút lõm. Metlay 1997: người cao tuổi báo ít triệu chứng hơn rõ rệt nên hạ một mức từ 75 tuổi (không có số)."
+  - finding: productive_cough
+    freq: very_frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [vanvugt-2013-grace-pneumonia, htun-2019-pneumonia-primary-care, byt-qd-4235-2012]
+      reported: "có đờm 86% (GRACE); khạc đờm 0,66 trong khi ho 0,91 (Htun), tức khoảng 73% số người có ho"
+      population: "người lớn ho cấp ở tuyến ban đầu"
+      note: "4235: ho khan rồi ho có đờm đặc vàng, xanh hoặc màu gỉ sắt. Trẻ nhỏ ít khạc đờm; chưa có nguồn để tách theo tuổi."
+  - finding: breathing_difficulty
+    freq: frequent
+    freq_by_age:
+      child_2m_5y: very_frequent
+    evidence:
+      tier: A
+      basis: numeric
+      sources: [htun-2019-pneumonia-primary-care, vanvugt-2013-grace-pneumonia, shah-2017-child-pneumonia-rce, byt-qd-3312-2015]
+      reported: "người lớn: khó thở 0,63 (Htun), 69% (GRACE); trẻ em: thở nhanh trên 40 lần/phút có độ nhạy 79% (Shah)"
+      note: "3312: viêm phổi trẻ em cần có thở nhanh, rút lõm lồng ngực hoặc nghe phổi bất thường. Câu hỏi của danh mục gồm cả thở nhanh, rút lõm ở trẻ nhỏ."
+  - finding: pleuritic_chest_pain
+    freq: frequent
+    freq_by_age:
+      child_2m_5y: rare
+      child_5_12: occasional
+    evidence:
+      tier: A
+      basis: numeric
+      sources: [htun-2019-pneumonia-primary-care, vanvugt-2013-grace-pneumonia, shah-2017-child-pneumonia-rce, byt-qd-4235-2012]
+      reported: "người lớn: đau ngực 0,49 (Htun), 57% (GRACE); trẻ em (nghiên cứu có vị thành niên): đau ngực 8–14%"
+      note: "4235: đau ngực bên tổn thương thường có. Nguồn đo đau ngực chung, không riêng đau khi hít sâu. Trẻ dưới 5 tuổi khó tự báo."
+  - finding: fever
+    freq: frequent
+    freq_by_age:
+      child_2m_5y: very_frequent
+      child_5_12: very_frequent
+    evidence:
+      tier: A
+      basis: numeric
+      sources: [htun-2019-pneumonia-primary-care, vanvugt-2013-grace-pneumonia, shah-2017-child-pneumonia-rce]
+      reported: "người lớn: sốt theo bệnh sử 0,61 (Htun), 59% (GRACE); trẻ em: nhiệt độ trên 37,5°C 80–92% (Shah)"
+      note: "Chỉ có tác dụng khi triệu chứng chính là đau bụng."
+  - finding: fever_max_temp
+    dist: { lt_38: 0.15, t38_39: 0.40, ge_39: 0.45 }
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-4235-2012, htun-2019-pneumonia-primary-care]
+      note: "4235: khởi phát đột ngột với sốt cao 39–40°C, rét run. Nhiệt độ đo từ 38°C lúc khám có độ nhạy 0,40 (Htun); nhiệt độ cao nhất ở nhà thường cao hơn. Phân bố trong số người có sốt."
+  - finding: fever_duration
+    dist: { d1_2: 0.30, d3_5: 0.45, d6_7: 0.15, gt_7d: 0.10 }
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [byt-qd-4235-2012, takahashi-2013-cap-vietnam]
+      note: "Chưa có phân bố số ngày sốt. Người bệnh hay đến khám sau vài ngày; viêm phổi sau cúm có thể sốt kéo dài. Ước lệch về 3–7 ngày so với nền."
+  - finding: chills_rigors
+    freq: frequent
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-4235-2012]
+      locator: "bài Viêm phổi mắc phải ở cộng đồng, mục 2.1.1"
+      note: "Sốt cao kèm rét run khi khởi phát (thể điển hình ở người lớn); không có số liệu, xếp frequent. Tần suất trong số người có sốt."
+  - finding: runny_nose
+    freq: frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [vanvugt-2013-grace-pneumonia]
+      reported: "không sổ mũi 44%, tức có sổ mũi khoảng 56% (so với 71% ở người ho cấp nói chung)"
+      population: "người lớn ho cấp ở tuyến ban đầu"
+  - finding: diarrhea
+    freq: occasional
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [vanvugt-2013-grace-pneumonia]
+      reported: "11% (so với 7% ở người ho cấp nói chung)"
+  - finding: confusion
+    freq: rare
+    freq_by_age:
+      elder_65_74: occasional
+      elder_75p: occasional
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-4235-2012, metlay-1997-cap-age-symptoms]
+      locator: "4235 mục 2.1.1 (trường hợp đặc biệt)"
+      note: "4235: người cao tuổi triệu chứng không rầm rộ, có khi khởi đầu bằng lú lẫn; người nghiện rượu có thể lú lẫn. Lú lẫn đã có quy tắc mức 2."
+  - finding: symptoms_worsen_after_improving
+    freq: occasional
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-1840-2025]
+      locator: "mục II.1.2"
+      note: "Viêm phổi có thể là biến chứng của cúm (1840: biểu hiện viêm phổi với đau tức ngực, khó thở tăng dần). Chưa có tỷ lệ; ước occasional."
+  - finding: abd_pain_location
+    dist:
+      epigastric: 0.25
+      right_upper: 0.25
+      left_upper: 0.15
+      periumbilical: 0.10
+      right_lower: 0.08
+      left_lower: 0.05
+      suprapubic: 0.02
+      whole: 0.10
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [moustaki-2003-pneumonia-abdominal-pain, byt-qd-4235-2012]
+      note: "Không có số liệu vị trí. Viêm phổi thùy dưới hay gây đau vùng bụng trên cùng bên; trẻ em có thể đau quanh rốn hoặc hố chậu phải (đau do hạch mạc treo theo Moustaki 2003). Cần bác sĩ duyệt."
+  - finding: abd_pain_worse_movement
+    freq: frequent
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [byt-qd-4235-2012]
+      note: "Đau do viêm màng phổi lan xuống bụng thường tăng khi ho, khi hít sâu; câu hỏi của danh mục có hỏi đau tăng khi ho. Không có số liệu."
+  - finding: abd_pain_duration
+    dist: { lt_6h: 0.10, h6_24: 0.25, d1_3: 0.45, d4_14: 0.18, gt_2w: 0.02 }
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [byt-qd-4235-2012, takahashi-2013-cap-vietnam]
+      note: "Bệnh cấp tính, thời gian từ khởi phát đến nhập viện trung bình khoảng 2 ngày (Takahashi 2013, bảng 1); đau bụng kéo dài hoặc tái đi tái lại nhiều tuần không phù hợp."
+warning_signs:
+  - es_severe_breathing
+  - child_unable_to_drink
+  - child_vomits_everything
+  - drowsy_hard_to_wake
+  - confusion
+  - seizure_recent
+  - cold_hands_feet
+  - severe_weakness
+self_care_vi:
+  - "Nghỉ ngơi, uống đủ nước, ăn đủ chất; trẻ còn bú thì tiếp tục cho bú."
+  - "Dùng thuốc đúng loại, đủ ngày theo đơn của bác sĩ."
+  - "Khi chưa loại trừ được sốt xuất huyết, không tự dùng aspirin hoặc ibuprofen."
+see_doctor_vi:
+  - "Đi khám trong 24 giờ để được nghe phổi, chụp phổi khi cần và điều trị."
+  - "Sau khi khám, đi khám lại ngay nếu thở nhanh hơn, khó thở hơn hoặc sốt không giảm."
+  - "Đi cấp cứu ngay nếu tím tái, lơ mơ, co giật, hoặc trẻ không uống được, nôn mọi thứ."
+sources: [byt-qd-4235-2012, byt-qd-3312-2015, byt-qd-2760-2023]
+review:
+  status: draft
+  authors: ["agent:pass-b"]
+  updated: "2026-10-24"
+  notes_vi: "Giữ urgency 3 như gợi ý: 4235 cho điều trị ngoại trú khi CURB65 0–1 điểm, 3312 cho điều trị ngoại trú viêm phổi không nặng ở trẻ, nhưng đều cần được khám (nghe phổi, đếm nhịp thở, có khi chụp phim). ICD-10 tra trên dữ liệu icd.kcb.vn: J18.9 'Viêm phổi, không đặc hiệu'. Chưa chắc chắn: (1) prior dựa trên tỷ suất nhập viện ở Nha Trang, chưa có số liệu ngoại trú; (2) prior cho đau bụng và phân bố vị trí đau bụng là ước lượng, cần bác sĩ duyệt; (3) tần suất người lớn lấy từ nghiên cứu tuyển người có ho; (4) chưa có nguồn tách tần suất khạc đờm theo tuổi (trẻ nhỏ ít khạc đờm). Bài viêm phổi của 4235/QĐ-BYT (2012) chưa được kiểm tra có văn bản thay thế hay không. Liên kết rare của confusion (mặc định) cao hơn tỷ lệ nền 1% là có chủ ý: lú lẫn gặp ở viêm phổi nhiều hơn nền, nhất là người cao tuổi (kb:check cảnh báo)."

@@ -1,0 +1,12 @@
+id: "nhs-ectopic-pregnancy"
+type: "web_page"
+title: "Ectopic pregnancy"
+publisher: "NHS (UK)"
+url: "https://www.nhs.uk/conditions/ectopic-pregnancy/"
+license_class: "L1"
+license_note: "Open Government Licence v3.0; bản chuyển thể không được trình bày như nội dung của NHS."
+default_tier: "C"
+accessed: "2026-10-24"
+verified: true
+verified_by: "agent:pass-b"
+notes_vi: "Đã mở trực tiếp; rà soát lần cuối 23/8/2022. Khoảng 1/90 thai. Triệu chứng thường xuất hiện từ tuần 4 đến tuần 12: chậm kinh, đau bụng thấp một bên, ra máu âm đạo hoặc dịch nâu, đau đầu vai, khó chịu khi đi tiểu hoặc đi ngoài; có người không có triệu chứng. Dấu hiệu vỡ (đau bụng đột ngột dữ dội, choáng hoặc ngất, buồn nôn, da rất tái): gọi 999 hoặc đến cấp cứu; có các triệu chứng trên và có thể có thai: gọi bác sĩ hoặc 111 ngay."

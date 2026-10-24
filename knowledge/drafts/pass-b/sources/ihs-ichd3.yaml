@@ -1,0 +1,12 @@
+id: "ihs-ichd3"
+type: "guideline_intl"
+title: "The International Classification of Headache Disorders, 3rd edition (ICHD-3)"
+publisher: "Headache Classification Committee of the International Headache Society"
+url: "https://ichd-3.org/"
+license_class: "L3"
+license_note: "Trang web ghi © 2021 International Headache Society: chỉ dùng dữ kiện kèm trích dẫn, không sao chép câu chữ."
+default_tier: "B"
+accessed: "2026-10-24"
+verified: true
+verified_by: "agent:pass-b"
+notes_vi: "Đã mở trực tiếp các trang 1.1 (đau nửa đầu không tiền triệu), 1.2 (có tiền triệu) và 2.2 (đau đầu căng thẳng từng đợt thường xuyên). Đã đối chiếu tiêu chuẩn: đau nửa đầu cơn 4–72 giờ (trẻ dưới 18 tuổi 2–72 giờ), ít nhất 2 trong 4 đặc điểm (một bên, theo nhịp mạch, vừa hoặc nặng, tăng khi vận động thường ngày), kèm buồn nôn/nôn hoặc sợ cả ánh sáng lẫn tiếng ồn; trẻ em hay đau hai bên hơn; tiền triệu thị giác gặp ở trên 90% người đau nửa đầu có tiền triệu. Đau đầu căng thẳng: 30 phút đến 7 ngày, ít nhất 2 trong 4 đặc điểm (hai bên, ép chặt, nhẹ hoặc vừa, không tăng khi vận động), không buồn nôn hay nôn, nhiều nhất một trong sợ ánh sáng hoặc sợ tiếng ồn."

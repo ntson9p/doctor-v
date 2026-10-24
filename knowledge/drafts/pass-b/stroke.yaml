@@ -1,0 +1,182 @@
+id: stroke
+names:
+  vi: "Đột quỵ não"
+  vi_common: ["Tai biến mạch máu não", "Đột quỵ", "Xuất huyết não", "Nhồi máu não"]
+  en: "Stroke"
+codes:
+  icd10: "I64"
+  icd10_verified: true
+  mondo: "MONDO:0005098"
+summary_vi:
+  - "Một vùng não đột ngột bị tổn thương do tắc mạch máu não hoặc do vỡ mạch gây chảy máu."
+  - "Dấu hiệu hay gặp là méo miệng, yếu tê một bên người, nói khó; có thể đau đầu, nôn, chóng mặt."
+  - "Cần gọi 115 ngay vì điều trị càng sớm, tổn thương não càng ít."
+urgency: 1
+cant_miss: true
+specialties: [neurology, emergency]
+priors:
+  - complaint: headache
+    default: P5
+    by_age: { child_2m_5y: P6, child_5_12: P6, teen_13_17: P6, adult_18_44: P6, elder_65_74: P4, elder_75p: P3 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-3312-2024, vestergaard-1993-headache-stroke, jorgensen-1994-headache-stroke, goldstein-2006-ed-headache]
+      locator: "3312/QĐ-BYT, bài nhồi máu não cấp, mục 1.2"
+      note: "Prior này chỉ tính đột quỵ có đau đầu là triệu chứng chính (chủ yếu xuất huyết não, đột quỵ tiểu não, tuần hoàn sau). Ở Việt Nam đột quỵ là nguyên nhân tử vong hàng đầu, nhồi máu não chiếm 76,2% (3312/QĐ-BYT). Đau đầu lúc khởi phát gặp ở 27–28% người đột quỵ, 50% người xuất huyết não (Vestergaard 1993; Jørgensen 1994). Người trên 50 tuổi đau đầu đến cấp cứu có nguy cơ bệnh thực thể cao hơn (Goldstein 2006). Người soạn ước: dưới 45 tuổi dưới 0,02% (P6); 45–64 tuổi 0,02–0,2% (P5); 65–74 tuổi 0,2–1% (P4); từ 75 tuổi 1–5% (P3). Người có méo miệng, yếu liệt đã được màn sàng lọc cấp cứu bắt trước."
+findings:
+  - finding: es_stroke_signs
+    freq: very_frequent
+    evidence:
+      tier: A
+      basis: numeric
+      sources: [zhelev-2019-cochrane-stroke-scales, byt-qd-3312-2024, nhs-stroke-symptoms]
+      reported: "Thang ROSIER ở khoa cấp cứu có độ nhạy gộp 0,88 (khoảng dự báo 0,75–0,95); FAST có độ chính xác tương tự."
+      note: "Câu hỏi gần với FAST (méo mặt, yếu tê một bên, nói khó). Nhóm biểu hiện chủ yếu bằng đau đầu có nhiều đột quỵ tuần hoàn sau, tiểu não (3312/QĐ-BYT: chảy máu tiểu não gây nhức đầu vùng chẩm, thất điều, nôn), dễ không có dấu hiệu FAST; vì vậy chọn very_frequent, không chọn almost_always. Trả lời 'Có' đã dừng phiên ở màn sàng lọc cấp cứu; liên kết này chủ yếu để trả lời 'Không' giảm khả năng khoảng 5 lần."
+  - finding: headache_thunderclap
+    freq: occasional
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-3312-2024]
+      note: "Chảy máu não khởi phát đột ngột, triệu chứng đạt tối đa sau 30 phút đến vài giờ; chảy máu tiểu não gây nhức đầu dữ dội vùng chẩm (3312/QĐ-BYT). Không có tỷ lệ đau đầu kiểu sét đánh; người soạn ước occasional."
+  - finding: vomiting
+    freq: frequent
+    evidence:
+      tier: A
+      basis: verbal
+      sources: [runchey-2010-jama-hemorrhagic-stroke, byt-qd-3312-2024, nhs-stroke-symptoms]
+      note: "Nôn làm tăng khả năng xuất huyết so với nhồi máu (LR 3,0; Runchey 2010); 3312/QĐ-BYT: nôn hay gặp trong chảy máu não, chảy máu tiểu não. Với nhóm biểu hiện bằng đau đầu, người soạn ước frequent."
+  - finding: nausea
+    freq: frequent
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-3312-2024, nhs-stroke-symptoms]
+      note: "3312/QĐ-BYT: triệu chứng hay gặp của chảy máu não gồm đau đầu, buồn nôn, liệt nửa người, rối loạn ý thức. Chọn frequent; cùng cụm vomiting."
+  - finding: confusion
+    freq: occasional
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-3312-2024, nhs-stroke-symptoms]
+      note: "Rối loạn ý thức hay gặp trong chảy máu não (3312/QĐ-BYT); NHS: lú lẫn. Ở người còn tự kiểm tra được, người soạn hạ còn occasional."
+  - finding: drowsy_hard_to_wake
+    freq: occasional
+    evidence:
+      tier: A
+      basis: judgment
+      sources: [runchey-2010-jama-hemorrhagic-stroke, byt-qd-3312-2024]
+      note: "Hôn mê làm tăng khả năng xuất huyết (LR 6,2; Runchey 2010). Người soạn ước occasional ở bối cảnh tự kiểm tra; cùng cụm với lú lẫn."
+  - finding: seizure_recent
+    freq: occasional
+    evidence:
+      tier: A
+      basis: judgment
+      sources: [runchey-2010-jama-hemorrhagic-stroke, byt-qd-3312-2024]
+      note: "Co giật kèm thiếu hụt thần kinh có LR 4,7 cho xuất huyết (Runchey 2010); 3312/QĐ-BYT: có thể có cơn động kinh khi chảy máu thùy trán, thái dương, đỉnh. Người soạn ước khoảng 10%: occasional."
+  - finding: neck_stiffness
+    freq: occasional
+    evidence:
+      tier: A
+      basis: judgment
+      sources: [runchey-2010-jama-hemorrhagic-stroke, byt-qd-3312-2024]
+      note: "Cứng gáy làm tăng khả năng xuất huyết (LR 5,0; Runchey 2010); 3312/QĐ-BYT bảng 1: cứng gáy gợi ý chảy máu não. Ước occasional."
+  - finding: vision_loss_or_double
+    freq: occasional
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-3312-2024, nhs-stroke-symptoms]
+      note: "3312/QĐ-BYT: rối loạn thị lực, nhìn đôi trong triệu chứng khởi phát của nhồi máu não; NHS: nhìn mờ hoặc mất thị lực. Chọn occasional."
+  - finding: blurred_vision
+    freq: occasional
+    evidence:
+      tier: C
+      basis: verbal
+      sources: [nhs-stroke-symptoms]
+      note: "NHS: nhìn mờ. Cùng cụm visual với 'vision_loss_or_double'."
+  - finding: fainting_or_near_fainting
+    freq: occasional
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [nhs-stroke-symptoms, byt-qd-3312-2024]
+      note: "NHS: chóng mặt hoặc ngã; 3312/QĐ-BYT: chóng mặt, thất điều trong triệu chứng khởi phát. Câu hỏi hỏi ngất hoặc choáng như sắp ngất, gần nghĩa một phần; ước occasional."
+  - finding: headache_course
+    dist: { first_time: 0.85, recurrent_similar: 0.10, progressive: 0.05 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-3312-2024]
+      note: "Bệnh khởi phát đột ngột (3312/QĐ-BYT); đau đầu thường là kiểu mới. Người có bệnh đau đầu từ trước có thể thấy giống cơn cũ. Ước lượng của người soạn."
+  - finding: headache_duration
+    dist: { lt_4h: 0.50, h4_72: 0.42, gt_3d: 0.08 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-3312-2024]
+      note: "Triệu chứng chảy máu não đạt tối đa sau 30 phút đến vài giờ (3312/QĐ-BYT). Phân bố là ước lượng."
+  - finding: headache_location
+    dist: { one_side: 0.35, both_sides: 0.12, forehead_face: 0.10, back_neck: 0.23, whole_head: 0.20 }
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [jorgensen-1994-headache-stroke, vestergaard-1993-headache-stroke, byt-qd-3312-2024]
+      reported: "Đau đầu khu trú một bên ở 46% người đột quỵ có đau đầu, cùng bên tổn thương ở 68% số này (Jørgensen 1994)."
+      note: "Chảy máu tiểu não gây đau vùng chẩm (3312/QĐ-BYT). Tỷ lệ các vùng còn lại là ước lượng."
+  - finding: headache_severity
+    dist: { mild: 0.15, moderate: 0.35, severe: 0.50 }
+    evidence:
+      tier: A
+      basis: judgment
+      sources: [harriott-2020-headache-ischemic-stroke, byt-qd-3312-2024]
+      note: "Đau đầu trong nhồi máu não phần lớn ở mức vừa đến nặng (Harriott 2020); chảy máu tiểu não gây đau dữ dội (3312/QĐ-BYT). Phân bố là ước lượng."
+  - finding: hypertension_known
+    freq: frequent
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-3312-2024]
+      note: "3312/QĐ-BYT: tăng huyết áp là nguyên nhân chính của chảy máu não nguyên phát. Nhiều người Việt Nam chưa biết mình tăng huyết áp, nên chọn frequent cho tăng huyết áp đã biết. Không có tỷ lệ trong các nguồn đã mở."
+  - finding: diabetes
+    freq: occasional
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-3312-2024]
+      note: "Đái tháo đường là yếu tố nguy cơ của nhồi máu não. Người soạn ước occasional (tỷ lệ nền 7%)."
+  - finding: known_heart_disease
+    freq: occasional
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [jorgensen-1994-headache-stroke, byt-qd-3312-2024]
+      note: "Bệnh tim (rung nhĩ, bệnh mạch vành) là nguồn gây nhồi máu não do huyết khối; bệnh tim thiếu máu cục bộ liên quan với đau đầu khi đột quỵ (OR 1,5; Jørgensen 1994). Ước occasional."
+  - finding: bp_measured
+    dist: { normal: 0.20, high: 0.30, very_high: 0.28, extreme: 0.22 }
+    evidence:
+      tier: A
+      basis: judgment
+      sources: [runchey-2010-jama-hemorrhagic-stroke, byt-qd-3312-2024]
+      note: "Huyết áp tâm trương trên 110 mmHg làm tăng khả năng xuất huyết (LR 4,3; Runchey 2010); 3312/QĐ-BYT bảng 1: huyết áp tăng cao gợi ý chảy máu não. Phân bố là ước lượng; người dùng thường chỉ biết lần đo trước khi bệnh."
+  - finding: fever
+    freq: rare
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-3312-2024, nhs-stroke-symptoms]
+      note: "Sốt không có trong triệu chứng khởi phát của đột quỵ trong cả hai nguồn. Đau đầu kèm sốt nghiêng về bệnh nhiễm trùng."
+warning_signs: [es_stroke_signs, headache_thunderclap, confusion, drowsy_hard_to_wake, seizure_recent, vision_loss_or_double]
+self_care_vi:
+  - "Gọi 115 ngay và ghi nhớ giờ bắt đầu có triệu chứng."
+  - "Không tự lái xe đến viện."
+  - "Không tự dùng thuốc khi chưa có ý kiến bác sĩ."
+see_doctor_vi:
+  - "Cần đến bệnh viện có khả năng điều trị đột quỵ càng sớm càng tốt."
+  - "Vẫn gọi 115 nếu các dấu hiệu đã tự hết sau vài phút."
+review:
+  status: draft
+  authors: ["agent:pass-b"]
+  updated: "2026-10-24"
+  notes_vi: "Giữ mức xử trí 1 và cant_miss: true: 3312/QĐ-BYT nhấn mạnh 'thời gian là não', cần vận chuyển nhanh đến cơ sở điều trị được đột quỵ; NHS: gọi 999 kể cả khi triệu chứng đã hết. Bệnh này trong doctor-v chỉ có prior cho đau đầu, nên đại diện cho đột quỵ biểu hiện chủ yếu bằng đau đầu (phần lớn là xuất huyết não, đột quỵ tiểu não, tuần hoàn sau). Mã I64 dùng chung cho đột quỵ không xác định thể; xuất huyết não là I61, nhồi máu não là I63. Nguồn 3312/QĐ-BYT đã đọc trên luatvietnam.vn (danh mục còn ghi verified: false). Điểm chưa chắc: (1) tỷ lệ có dấu hiệu FAST trong nhóm biểu hiện bằng đau đầu chưa có số liệu; (2) phần lớn tần suất là ước lượng từ mô tả của 3312/QĐ-BYT và LR của Runchey 2010; (3) chưa có tỷ lệ yếu tố nguy cơ trong người đột quỵ Việt Nam; (4) prior chưa có số liệu lý do đi khám."

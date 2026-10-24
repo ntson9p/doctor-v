@@ -1,0 +1,14 @@
+id: pappas-2008-cold-children
+type: primary_study
+title: "Symptom profile of common colds in school-aged children"
+publisher: "Pediatric Infectious Disease Journal 2008;27(1):8-11 (Pappas DE và cộng sự)"
+date: "2008"
+url: "https://europepmc.org/abstract/MED/18162930"
+doi: "10.1097/INF.0b013e31814847d9"
+pmid: "18162930"
+license_class: L3
+default_tier: B
+accessed: "2026-10-24"
+verified: true
+verified_by: "agent:pass-b"
+notes_vi: "Chỉ đọc tóm tắt (qua API Europe PMC). 81 đợt cảm lạnh ở trẻ tuổi đi học (nhật ký 10 ngày): hay gặp nhất là ho, hắt hơi, nghẹt mũi, sổ mũi; cảm giác sốt và đau đầu mỗi thứ chỉ khoảng 15% lúc khởi phát; 73% trẻ vẫn còn triệu chứng sau 10 ngày."

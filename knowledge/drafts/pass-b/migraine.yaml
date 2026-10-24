@@ -1,0 +1,165 @@
+id: migraine
+names:
+  vi: "Bệnh đau nửa đầu (migraine)"
+  vi_common: ["Đau nửa đầu", "Migraine", "Đau đầu vận mạch"]
+  en: "Migraine"
+codes:
+  icd10: "G43.9"
+  icd10_verified: true
+  mondo: "MONDO:0005277"
+summary_vi:
+  - "Cơn đau đầu tái đi tái lại, thường một bên, giật theo nhịp mạch, mức vừa đến nặng."
+  - "Hay kèm buồn nôn, sợ ánh sáng, sợ tiếng ồn và đau tăng khi đi lại."
+  - "Mỗi cơn kéo dài 4 giờ đến 3 ngày; một số người thấy chớp sáng trước cơn đau."
+urgency: 5
+cant_miss: false
+specialties: [neurology]
+priors:
+  - complaint: headache
+    default: P1
+    by_age: { child_2m_5y: P3, child_5_12: P2, teen_13_17: P2, elder_65_74: P2, elder_75p: P3 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [stovner-2022-headache-prevalence, carlsen-2024-gp-headache, detsky-2006-jama-migraine]
+      locator: "Stovner 2022, bảng 1"
+      note: "Đau nửa đầu đang mắc ở 15,2% người 20–64 tuổi, 13,4% ở 10–19 tuổi, 7,9% từ 65 tuổi và 5,0% ở 0–9 tuổi (Stovner 2022). Bệnh gây mất khả năng làm việc nên người bệnh hay đi khám: 44% người đau đầu kéo dài ở phòng khám đa khoa là đau nửa đầu (Carlsen 2024). Người soạn ước từ 20% trở lên (P1) ở người 18–64 tuổi đau đầu; 10% (P2) ở 5–17 tuổi và 65–74 tuổi (đau do sốt, nhiễm trùng hoặc nguyên nhân khác chiếm phần lớn hơn); P3 ở trẻ dưới 5 tuổi và từ 75 tuổi."
+prior_modifiers:
+  - when: { sex: [female] }
+    factor: 1.25
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [stovner-2022-headache-prevalence]
+      locator: "Stovner 2022, bảng 1"
+      reported: "20–64 tuổi: đau nửa đầu nữ 18,6%, nam 8,7%; đau đầu nói chung nữ 56,5%, nam 41,8%."
+      note: "Tỷ lệ đau nửa đầu nữ/nam khoảng 2,1 nhưng nữ cũng đau đầu nói chung nhiều hơn (1,35 lần), nên trong số người đau đầu, tỷ lệ đau nửa đầu nữ/nam khoảng 1,6. Dùng 1,25 cho nữ và 0,8 cho nam (tỉ số 1,56). Ở trẻ dưới 10 tuổi khác biệt theo giới nhỏ (nữ 5,6%, nam 4,7%)."
+  - when: { sex: [male] }
+    factor: 0.8
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [stovner-2022-headache-prevalence]
+      locator: "Stovner 2022, bảng 1"
+      reported: "20–64 tuổi: đau nửa đầu nam 8,7%, nữ 18,6%."
+      note: "Đi cặp với hệ số 1,25 cho nữ (xem trên)."
+findings:
+  - finding: headache_location
+    dist: { one_side: 0.50, both_sides: 0.15, forehead_face: 0.15, back_neck: 0.05, whole_head: 0.15 }
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [rasmussen-1991-ihs-population, inan-1994-migraine-tth-turkey, ihs-ichd3, nhs-migraine]
+      reported: "Đau một bên 62% (Đan Mạch) và 74% (Thổ Nhĩ Kỳ)."
+      note: "ICHD-3: đau thường ở trán – thái dương; trẻ em và thiếu niên hay đau hai bên hơn; đau vùng chẩm ở trẻ hiếm, cần thận trọng. Đau một bên có thể đổi bên giữa các cơn, nên để 0,50."
+  - finding: headache_character
+    dist: { throbbing: 0.72, pressing: 0.28 }
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [rasmussen-1991-ihs-population, inan-1994-migraine-tth-turkey, nhs-migraine]
+      reported: "Đau theo nhịp mạch 78% (Đan Mạch) và 58% (Thổ Nhĩ Kỳ)."
+  - finding: headache_severity
+    dist: { mild: 0.10, moderate: 0.45, severe: 0.45 }
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [rasmussen-1991-ihs-population, inan-1994-migraine-tth-turkey, ihs-ichd3]
+      reported: "Đau nặng 85% (Đan Mạch) và 88% (Thổ Nhĩ Kỳ); tiêu chuẩn: mức vừa hoặc nặng."
+      note: "'Nặng' trong các nghiên cứu gồm cả mức làm hạn chế sinh hoạt, tương ứng một phần lựa chọn 'Vừa, phải nghỉ ngơi'; chia đều vừa/nặng là ước lượng."
+  - finding: headache_duration
+    dist: { lt_4h: 0.30, h4_72: 0.63, gt_3d: 0.07 }
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [ihs-ichd3, nhs-migraine]
+      note: "Cơn kéo dài 4–72 giờ khi không điều trị (trẻ dưới 18 tuổi 2–72 giờ); dùng thuốc sớm có thể làm cơn ngắn hơn, nên để 0,30 cho dưới 4 giờ. Quá 72 giờ là bất thường (NHS khuyên khám khẩn)."
+  - finding: headache_course
+    dist: { first_time: 0.10, recurrent_similar: 0.85, progressive: 0.05 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [ihs-ichd3]
+      note: "Tiêu chuẩn cần ít nhất 5 cơn (có tiền triệu: ít nhất 2 cơn), nên phần lớn người bệnh đã bị nhiều lần giống nhau. Ước lượng của người soạn."
+  - finding: headache_worse_activity
+    freq: very_frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [rasmussen-1991-ihs-population, inan-1994-migraine-tth-turkey, nhs-migraine]
+      reported: "Tăng khi vận động thường ngày ở 96% (Đan Mạch và Thổ Nhĩ Kỳ)."
+      note: "Số liệu ở người đủ tiêu chuẩn chẩn đoán; người tự kiểm tra có thể nằm nghỉ nên khó nhận ra, vì vậy chọn very_frequent thay vì almost_always."
+  - finding: nausea
+    freq: very_frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [silberstein-1995-migraine-symptoms, smetana-2000-headache-history, ihs-ichd3]
+      reported: "Buồn nôn ở trên 90% người đau nửa đầu (gần 1/3 trong mọi cơn); LR+ 19,2 so với đau đầu căng thẳng."
+      note: "Tỷ lệ 'từng có' cao hơn tỷ lệ trong một cơn cụ thể, nên chọn very_frequent."
+  - finding: vomiting
+    freq: occasional
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [silberstein-1995-migraine-symptoms]
+      reported: "Nôn ở gần 70% người đau nửa đầu; gần 1/3 trong số này nôn ở phần lớn các cơn."
+      note: "Ước tỷ lệ nôn trong một cơn khoảng 20–30%: occasional."
+  - finding: photophobia
+    freq: very_frequent
+    evidence:
+      tier: A
+      basis: verbal
+      sources: [smetana-2000-headache-history, rasmussen-1991-ihs-population, ihs-ichd3]
+      note: "Sợ ánh sáng hay gặp và thường nặng ở đau nửa đầu (Rasmussen 1991); LR+ 5,8 so với đau đầu căng thẳng (Smetana 2000). Với khoảng 10–15% ở đau đầu căng thẳng, LR này tương ứng khoảng 60–85% ở đau nửa đầu; chọn very_frequent."
+  - finding: phonophobia
+    freq: very_frequent
+    evidence:
+      tier: A
+      basis: verbal
+      sources: [smetana-2000-headache-history, rasmussen-1991-ihs-population, ihs-ichd3]
+      note: "Tương tự sợ ánh sáng; LR+ 5,2 (Smetana 2000). Cùng cụm light_sound nên không đếm trùng."
+  - finding: visual_aura
+    freq: occasional
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [rasmussen-1992-migraine-aura, ihs-ichd3, smetana-2000-headache-history]
+      reported: "Tỷ lệ mắc trọn đời: có tiền triệu 5%, không tiền triệu 8%; rối loạn thị giác ở 90% người có tiền triệu."
+      note: "Khoảng 1/3 người đau nửa đầu có tiền triệu, và không phải cơn nào cũng có, nên trong một cơn ước khoảng 20%: occasional. Tỷ lệ nền 1% nên trả lời 'Có' làm tăng mạnh khả năng."
+  - finding: blurred_vision
+    freq: occasional
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [silberstein-1995-migraine-symptoms, nhs-migraine]
+      note: "Vấn đề thị lực nằm trong các triệu chứng hay gặp nhất (Silberstein 1995); NHS mô tả tiền triệu thị giác. Câu hỏi gộp nhìn mờ và thấy đốm sáng; cùng cụm visual với tiền triệu. Ước occasional."
+  - finding: stress_poor_sleep
+    freq: frequent
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [rasmussen-1992-migraine-aura, rasmussen-1993-headache-precipitants, nhs-migraine]
+      note: "Có yếu tố khởi phát ở 90% người đau nửa đầu không tiền triệu, nổi bật nhất là căng thẳng (Rasmussen 1992); kiểu ngủ liên quan với bệnh (Rasmussen 1993). Câu hỏi chỉ hỏi tuần qua; chọn frequent."
+  - finding: fever
+    freq: rare
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [ihs-ichd3, nhs-migraine]
+      note: "Sốt không phải đặc điểm của đau nửa đầu; NHS khuyên gọi cấp cứu khi đau đầu kèm sốt rất cao và dấu hiệu viêm màng não. Ước lượng của người soạn."
+warning_signs: [headache_thunderclap, es_stroke_signs, vision_loss_or_double, confusion, seizure_recent, neck_stiffness]
+self_care_vi:
+  - "Khi lên cơn, nằm nghỉ trong phòng tối, yên tĩnh; ngủ được càng tốt."
+  - "Uống đủ nước, ăn và ngủ đúng giờ."
+  - "Ghi lại các cơn đau và yếu tố khởi phát như căng thẳng, thiếu ngủ, bỏ bữa, kỳ kinh."
+  - "Không dùng thuốc giảm đau quá 2 ngày mỗi tuần, vì dễ gây đau đầu do lạm dụng thuốc."
+see_doctor_vi:
+  - "Đặt lịch khám nếu cơn đau dày hơn, nặng hơn hoặc ảnh hưởng nhiều đến công việc."
+  - "Đi khám trong hôm nay nếu cơn kéo dài quá 3 ngày, hoặc đang có thai hay mới sinh."
+  - "Gọi 115 nếu đau đột ngột dữ dội, yếu một bên người, nói khó, lú lẫn hoặc co giật."
+review:
+  status: draft
+  authors: ["agent:pass-b"]
+  updated: "2026-10-24"
+  notes_vi: "Giữ mức xử trí 5 như gợi ý (NHS: tự chăm sóc khi lên cơn; khám khẩn khi cơn quá 72 giờ, tiền triệu quá 1 giờ, có thai hoặc mới sinh). Tiêu chuẩn theo ICHD-3; tần suất đặc điểm đau từ nghiên cứu dân số Đan Mạch và Thổ Nhĩ Kỳ; LR từ tổng quan JAMA (Detsky 2006: có từ 4/5 đặc điểm POUND thì LR 24) và Smetana 2000. Không dùng NICE CG150 vì trang NICE chặn truy cập trực tiếp. Điểm chưa chắc: (1) chưa có nghiên cứu đặc điểm đau nửa đầu ở người Việt Nam; (2) tần suất buồn nôn, sợ ánh sáng trong một cơn suy ra từ tỷ lệ 'từng có' và LR; (3) không liên kết nghẹt mũi, chảy nước mũi dù có người đau nửa đầu có triệu chứng này, để tránh nhầm với viêm mũi xoang; (4) hệ số theo giới áp dụng cho mọi lứa tuổi dù ở trẻ nhỏ khác biệt ít."

@@ -1,0 +1,14 @@
+id: rothman-2003-aom-rce
+type: systematic_review
+title: "Does this child have acute otitis media?"
+publisher: "JAMA 2003;290(12):1633-1640 (Rothman R, Owens T, Simel DL)"
+date: "2003"
+url: "https://europepmc.org/abstract/MED/14506123"
+doi: "10.1001/jama.290.12.1633"
+pmid: "14506123"
+license_class: L3
+default_tier: A
+accessed: "2026-10-24"
+verified: true
+verified_by: "agent:pass-b"
+notes_vi: "Chỉ đọc tóm tắt (qua API Europe PMC). Đau tai là triệu chứng có giá trị nhất (LR+ 3,0–7,3); sốt, triệu chứng hô hấp trên và quấy khóc ít giá trị. Màng nhĩ đục, phồng hoặc kém di động khi soi tai là dấu hiệu quyết định."

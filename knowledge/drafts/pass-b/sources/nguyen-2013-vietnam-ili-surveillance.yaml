@@ -1,0 +1,14 @@
+id: nguyen-2013-vietnam-ili-surveillance
+type: primary_study
+title: "National surveillance for influenza and influenza-like illness in Vietnam, 2006-2010"
+publisher: "Vaccine 2013;31(40):4368-4374 (Nguyen YT và cộng sự)"
+date: "2013"
+url: "https://europepmc.org/abstract/MED/23911781"
+doi: "10.1016/j.vaccine.2013.07.018"
+pmid: "23911781"
+license_class: L3
+default_tier: B
+accessed: "2026-10-24"
+verified: true
+verified_by: "agent:pass-b"
+notes_vi: "Chỉ đọc tóm tắt (qua API Europe PMC). Hệ thống giám sát cúm quốc gia, 15 điểm canh gác: 29.804 người có hội chứng giống cúm (sốt kèm ho hoặc đau họng, khởi phát trong 3 ngày), 22% dương tính với cúm; trẻ tuổi đi học có tỷ lệ dương tính cao nhất (29%). Cúm lưu hành quanh năm, có thể có nhiều đỉnh trong năm."

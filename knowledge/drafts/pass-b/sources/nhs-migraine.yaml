@@ -1,0 +1,12 @@
+id: "nhs-migraine"
+type: "web_page"
+title: "Migraine"
+publisher: "NHS (UK)"
+url: "https://www.nhs.uk/conditions/migraine/"
+license_class: "L1"
+license_note: "Open Government Licence v3.0; bản chuyển thể không được trình bày như nội dung của NHS."
+default_tier: "C"
+accessed: "2026-10-24"
+verified: true
+verified_by: "agent:pass-b"
+notes_vi: "Đã mở trực tiếp; rà soát lần cuối 10/3/2026. Đau đầu theo nhịp mạch, có thể dữ dội, thường một bên, tăng khi vận động; kèm buồn nôn, nôn, sợ ánh sáng và tiếng ồn; tiền triệu thị giác (đường zíc zắc, chớp sáng) không quá 1 giờ; cơn kéo dài 4 giờ đến 3 ngày. Khi lên cơn nên nằm nghỉ trong phòng tối; không dùng thuốc giảm đau quá 2 ngày mỗi tuần. Yếu tố khởi phát: căng thẳng, mệt mỏi, bỏ bữa, kỳ kinh. Gọi 999 nếu đau đột ngột cực kỳ dữ dội, nói khó, mất thị lực hoặc nhìn đôi, lơ mơ, co giật, yếu một bên; khám khẩn nếu cơn kéo dài quá 72 giờ, tiền triệu quá 1 giờ, đang có thai hoặc mới sinh."

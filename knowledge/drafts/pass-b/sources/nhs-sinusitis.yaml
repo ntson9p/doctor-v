@@ -1,0 +1,12 @@
+id: nhs-sinusitis
+type: web_page
+title: "Sinusitis (sinus infection)"
+publisher: "NHS (UK)"
+url: "https://www.nhs.uk/conditions/sinusitis-sinus-infection/"
+license_class: L1
+license_note: "Open Government Licence v3.0; bản chuyển thể không được trình bày như nội dung của NHS."
+default_tier: C
+accessed: "2026-10-24"
+verified: true
+verified_by: "agent:pass-b"
+notes_vi: "Đã mở trang (rà soát 31/01/2024). Triệu chứng chính: đau, sưng hoặc ấn đau quanh má, mắt, trán; nghẹt hoặc chảy mũi; giảm ngửi; dịch mũi xanh vàng; sốt. Triệu chứng khác: đau đầu, đau răng, hơi thở hôi, ho, cảm giác căng tai. Thường tự khỏi trong 4 tuần. Tự chăm sóc: nghỉ ngơi, uống nhiều nước, rửa mũi bằng nước muối, không hút thuốc. Khám bác sĩ nếu không đỡ sau 3 tuần tự chăm sóc, hay tái phát, hoặc trẻ từ 11 tuổi trở xuống; khám gấp nếu rất mệt, đau tăng, hoặc suy giảm miễn dịch."

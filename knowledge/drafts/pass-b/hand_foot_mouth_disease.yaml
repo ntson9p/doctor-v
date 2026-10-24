@@ -1,0 +1,204 @@
+id: hand_foot_mouth_disease
+names:
+  vi: "Bệnh tay chân miệng"
+  vi_common: ["Tay chân miệng"]
+  en: "Hand, foot and mouth disease"
+codes:
+  icd10: "B08.4"
+  icd10_verified: true
+  mondo: "MONDO:0005779"
+summary_vi:
+  - "Bệnh truyền nhiễm do vi rút đường ruột, hay gặp ở trẻ dưới 5 tuổi, dễ thành dịch."
+  - "Thường sốt nhẹ, loét miệng, nổi phỏng nước ở lòng bàn tay, bàn chân, mông, gối."
+  - "Biến chứng thần kinh, tim, phổi hay xuất hiện từ ngày thứ 2 đến ngày thứ 5 của bệnh."
+urgency: 3
+cant_miss: false
+specialties: [pediatrics, infectious_disease]
+priors:
+  - complaint: fever
+    default: P6
+    by_age:
+      child_2m_5y: P3
+      child_5_12: P4
+      teen_13_17: P5
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-292-2024, hoang-2019-hfmd-southern-vietnam, nhan-2020-hfmd-southern-vietnam]
+      note: "292: bệnh quanh năm, gặp ở mọi tuổi nhưng thường ở trẻ dưới 5 tuổi. Tuổi trung vị của trẻ đến khám khoảng 19–20 tháng. Mỗi đợt dịch lớn có trên 130.000–200.000 ca nhập viện (2011–2012, 2018). Ước 1–5% trẻ dưới 5 tuổi đi khám vì sốt, 0,2–1% trẻ 5–12 tuổi, rất hiếm ở người lớn."
+prior_modifiers:
+  - when: { regions: [south] }
+    factor: 1.5
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [hoang-2019-hfmd-southern-vietnam]
+      note: "Phần lớn ca của đợt dịch 2011–2012 (khoảng 200.000 ca nhập viện) ở miền Nam. Hệ số là ước lượng; chưa có tỷ suất theo vùng."
+  - when: { regions: [south], months: [9, 10, 11, 12] }
+    factor: 1.5
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [nguyen-2017-hfmd-mekong, nhan-2020-hfmd-southern-vietnam]
+      note: "Đồng bằng sông Cửu Long: đỉnh bệnh từ tháng 10 đến tháng 12 (mùa mưa); EV-A71 được phát hiện nhiều hơn vào nửa cuối năm tại TP.HCM. Hệ số là ước lượng."
+  - when: { regions: [highlands], months: [5, 6, 7, 8, 9, 10] }
+    factor: 1.25
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [pham-2019-hfmd-daklak]
+      reported: "mùa mưa 25 ca/tháng so với mùa khô 15 ca/tháng"
+      population: "Đắk Lắk 2012–2013, toàn bộ trạm y tế xã"
+      note: "25/20 = 1,25 so với trung bình năm."
+findings:
+  - finding: mouth_ulcers
+    freq: very_frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [hoang-2019-hfmd-southern-vietnam, byt-qd-292-2024]
+      locator: "Hoang 2019 bảng 1; 292 mục II.1.1"
+      reported: "tổn thương miệng 85,8%"
+      population: "trẻ ngoại trú tại 3 bệnh viện tuyến cuối phía Nam"
+  - finding: hand_foot_blisters
+    freq: very_frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [hoang-2019-hfmd-southern-vietnam, byt-qd-292-2024]
+      reported: "ban da 91,7%; trong số có ban, 39,7% chủ yếu dạng dát (không phỏng nước)"
+      population: "trẻ ngoại trú tại 3 bệnh viện tuyến cuối phía Nam"
+      note: "Câu hỏi hỏi về nốt phỏng nước; nốt dát, sẩn ở lòng bàn tay, bàn chân có thể được cha mẹ trả lời 'có' hoặc 'không'. Người dùng hỏi sớm (ngày 1) có thể chưa có tổn thương. Chọn very_frequent."
+  - finding: rash_any
+    freq: very_frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [hoang-2019-hfmd-southern-vietnam, byt-qd-292-2024]
+      reported: "ban da 91,7%"
+      note: "Hạ xuống very_frequent vì người dùng có thể hỏi trước khi mọc ban (giai đoạn khởi phát 1–2 ngày)."
+  - finding: rash_non_blanching
+    freq: rare
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [byt-qd-292-2024]
+      locator: "mục II.4.2"
+      note: "Tổn thương là hồng ban hoặc bóng nước; câu hỏi của danh mục không tính nốt phỏng nước. Ban xuất huyết, chấm xuất huyết gợi ý não mô cầu, sốt xuất huyết (292, chẩn đoán phân biệt). Tần suất trong số trẻ đã có ban."
+  - finding: rash_spreads_from_face
+    freq: rare
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [byt-qd-292-2024]
+      locator: "mục II.1.1"
+      note: "Tổn thương ở lòng bàn tay, khuỷu tay, lòng bàn chân, gối, mông; không mọc từ mặt lan xuống như sởi. Tần suất trong số trẻ đã có ban."
+  - finding: fever_max_temp
+    dist: { lt_38: 0.40, t38_39: 0.45, ge_39: 0.15 }
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-292-2024, hoang-2019-hfmd-southern-vietnam]
+      note: "292: sốt nhẹ; sốt trên 39°C là dấu hiệu độ 2a, cần tái khám ngay. Nhiệt độ trung vị lúc khám ở trẻ ngoại trú 37,0°C (Hoang 2019). Phân bố trong số trẻ có sốt."
+  - finding: fever_duration
+    dist: { d1_2: 0.70, d3_5: 0.26, d6_7: 0.03, gt_7d: 0.01 }
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-292-2024]
+      locator: "mục II.1.1, II.6.2.1, III.3.1"
+      note: "Giai đoạn khởi phát 1–2 ngày; sốt kéo dài trên 48 giờ là dấu hiệu cần tái khám ngay. Phân bố theo thời điểm người dùng hỏi."
+  - finding: cough
+    freq: frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [hoang-2019-hfmd-southern-vietnam]
+      reported: "35,1% ở ngoại trú (14,7% ở nội trú)"
+  - finding: runny_nose
+    freq: frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [hoang-2019-hfmd-southern-vietnam]
+      reported: "36,3% ở ngoại trú (11,8% ở nội trú)"
+  - finding: vomiting
+    freq: occasional
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [hoang-2019-hfmd-southern-vietnam, byt-qd-292-2024]
+      reported: "24,6% ở ngoại trú"
+      note: "292: nôn nhiều là dấu hiệu cần tái khám ngay."
+  - finding: headache
+    freq: rare
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [hoang-2019-hfmd-southern-vietnam]
+      reported: "5,5% ở ngoại trú"
+      note: "Phần lớn trẻ dưới 3 tuổi, khó tự báo đau đầu."
+  - finding: red_eyes
+    freq: rare
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [hoang-2019-hfmd-southern-vietnam]
+      reported: "viêm kết mạc 2% ở ngoại trú"
+  - finding: startle_myoclonus
+    freq: rare
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [hoang-2019-hfmd-southern-vietnam, byt-qd-292-2024]
+      reported: "giật mình 10,8% ở ngoại trú bệnh viện tuyến cuối (20,6% nội trú)"
+      note: "Dấu hiệu của biến chứng thần kinh (292); số đo ở bệnh viện tuyến cuối nên hạ một mức cho người dùng cộng đồng. Mức rare cao hơn tỷ lệ nền 1% là có chủ ý: giật mình ở trẻ có tổn thương da, miệng gợi ý tay chân miệng biến chứng (quy tắc rf_hfmd_startle quyết định mức xử trí)."
+  - finding: loss_of_appetite
+    freq: frequent
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-292-2024]
+      locator: "mục II.1.1"
+      note: "292 nêu biếng ăn ở giai đoạn khởi phát và ăn, bú kém ở giai đoạn toàn phát (loét miệng gây đau, bỏ ăn). Không có tỷ lệ; ước frequent."
+  - finding: child_unable_to_drink
+    freq: occasional
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-292-2024]
+      locator: "mục II.1.1 và III.3.1"
+      note: "Loét miệng gây đau miệng, bỏ ăn, bỏ bú; không bú hoặc bú quá ít là dấu hiệu cần tái khám ngay. Không có tỷ lệ; ước occasional."
+  - finding: hfmd_contact
+    freq: occasional
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-292-2024]
+      locator: "mục II.3.1"
+      note: "Chẩn đoán ca lâm sàng dựa cả vào yếu tố dịch tễ (mùa, vùng, số trẻ mắc cùng lúc). Nhiều trẻ không rõ nguồn lây; chưa có tỷ lệ, ước occasional."
+warning_signs:
+  - startle_myoclonus
+  - persistent_vomiting
+  - drowsy_hard_to_wake
+  - breathing_difficulty
+  - cold_hands_feet
+  - seizure_recent
+  - child_unable_to_drink
+self_care_vi:
+  - "Cho trẻ ăn thức ăn lỏng, nguội, chia nhiều bữa nhỏ; trẻ còn bú thì tiếp tục cho bú."
+  - "Giữ vệ sinh răng miệng cho trẻ."
+  - "Không làm vỡ các nốt phỏng nước."
+  - "Cho trẻ nghỉ học 7–10 ngày kể từ khi bị bệnh."
+  - "Rửa tay trước và sau khi chăm sóc trẻ, không dùng chung đồ dùng cá nhân."
+  - "Không dùng aspirin cho trẻ."
+see_doctor_vi:
+  - "Đưa trẻ đi khám trong 24 giờ, sau đó khám lại mỗi 1–2 ngày theo hẹn."
+  - "Trẻ còn sốt cần được khám lại mỗi ngày cho đến khi hết sốt ít nhất 48 giờ."
+  - "Đưa trẻ đi khám ngay nếu sốt trên 39°C hoặc quá 48 giờ, nôn nhiều, giật mình, li bì, thở nhanh."
+sources: [byt-qd-292-2024]
+review:
+  status: draft
+  authors: ["agent:pass-b"]
+  updated: "2026-10-24"
+  notes_vi: "Giữ urgency 3 như gợi ý: 292 cho điều trị ngoại trú độ 1 nhưng phải tái khám mỗi 1–2 ngày (mỗi ngày nếu còn sốt), vì biến chứng hay xuất hiện ngày 2–5; trẻ dưới 12 tháng phải chuyển tuyến (quy tắc rf_hfmd_infant). ICD-10 tra trên dữ liệu icd.kcb.vn: B08.4 'Viêm họng có phỏng nước do vi rút Entero có phát ban [Bệnh Tay chân miệng]'. Chưa chắc chắn: (1) tần suất lấy từ trẻ ngoại trú ở bệnh viện tuyến cuối phía Nam (2013–2015), không phải trạm y tế xã; (2) hệ số vùng miền Nam và theo tháng là ước lượng từ các nghiên cứu sinh thái; (3) 'nốt phỏng nước' trong câu hỏi có thể không khớp với ban dạng dát (khoảng 40% trẻ). Liên kết rare của startle_myoclonus cao hơn tỷ lệ nền 1% là có chủ ý (kb:check cảnh báo)."

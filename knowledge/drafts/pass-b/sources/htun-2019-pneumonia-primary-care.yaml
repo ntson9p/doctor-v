@@ -1,0 +1,15 @@
+id: htun-2019-pneumonia-primary-care
+type: systematic_review
+title: "Clinical features for diagnosis of pneumonia among adults in primary care setting: A systematic and meta-review"
+publisher: "Scientific Reports 2019;9:7600 (Htun TP và cộng sự)"
+date: "2019"
+url: "https://doi.org/10.1038/s41598-019-44145-y"
+doi: "10.1038/s41598-019-44145-y"
+pmid: "31110214"
+license_class: L1
+license_note: "CC BY (theo siêu dữ liệu Europe PMC)."
+default_tier: A
+accessed: "2026-10-24"
+verified: true
+verified_by: "agent:pass-b"
+notes_vi: "Đã đọc toàn văn (PMC6527561) qua API Europe PMC. Người lớn ở tuyến ban đầu. Bảng 2 (độ nhạy gộp): ho 0,91; khạc đờm 0,66; khó thở 0,63; sốt (bệnh sử) 0,61; đau ngực 0,49; nhiệt độ đo từ 38°C 0,40."

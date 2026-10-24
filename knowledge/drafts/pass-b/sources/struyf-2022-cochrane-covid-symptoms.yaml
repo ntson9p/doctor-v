@@ -1,0 +1,15 @@
+id: struyf-2022-cochrane-covid-symptoms
+type: systematic_review
+title: "Signs and symptoms to determine if a patient presenting in primary care or hospital outpatient settings has COVID-19"
+publisher: "Cochrane Database of Systematic Reviews 2022, CD013665.pub3 (Struyf T và cộng sự)"
+date: "2022"
+url: "https://doi.org/10.1002/14651858.CD013665.pub3"
+doi: "10.1002/14651858.CD013665.pub3"
+pmid: "35593186"
+license_class: L2
+license_note: "CC BY-NC (theo siêu dữ liệu Europe PMC)."
+default_tier: A
+accessed: "2026-10-24"
+verified: true
+verified_by: "agent:pass-b"
+notes_vi: "Đã đọc toàn văn (PMC9121352) qua API Europe PMC. Dữ liệu đến 6/2021 (trước Omicron), chủ yếu ở khoa cấp cứu và điểm xét nghiệm. Độ nhạy gộp: ho 62,4%; sốt 37,6%; mệt 40,2%; đau cơ 37,5%; đau đầu 35,8%; đau họng 31,0%; chảy nước mũi 30,3%; khó thở 23,3%; tiêu chảy 18,5%; mất ngửi 26,4% (độ đặc hiệu 94,2%); mất ngửi hoặc mất vị 39,2% (độ đặc hiệu 92,1%). Ở trẻ em, đau đầu, đau cơ và mệt có độ nhạy thấp hơn người lớn."
