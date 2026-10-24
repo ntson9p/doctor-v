@@ -18,7 +18,10 @@
     "lint": "eslint .",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
-    "verify": "npm run typecheck && npm run lint && npm run test"
+    "verify": "npm run typecheck && npm run lint && npm run test && npm run kb:check",
+    "kb:check": "node packages/kb/src/cli/check.ts",
+    "kb:build": "node packages/kb/src/cli/build.ts",
+    "eval:check": "node evaluation/src/cli/check.ts"
   },
   "devDependencies": {
     "@eslint/js": "10.0.1",
