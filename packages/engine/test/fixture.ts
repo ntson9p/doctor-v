@@ -149,12 +149,13 @@ export function makeKb(overrides: Partial<CompiledKb> = {}): CompiledKb {
       },
     ],
     rules: [
-      { id: 'r_neck', level: 2, when: { finding: 'neck', is: 'present' }, complaints: null },
+      { id: 'r_neck', level: 2, when: { finding: 'neck', is: 'present' }, complaints: null, conditions: ['mening'] },
       {
         id: 'r_infant',
         level: 3,
         when: { ageGroups: ['infant_0_2m'] },
         complaints: null,
+        conditions: [],
       },
     ],
     emergencyScreen: { items: [{ findingId: 'es_collapse', level: 1 }] },

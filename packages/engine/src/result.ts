@@ -48,10 +48,11 @@ export interface SessionResult {
    */
   emergencyStop: boolean;
   /**
-   * Conditions a doctor should rule out first: level 1–2 conditions still possible, and level 3
-   * conditions whose own warning signs are present (a severe form, e.g. dengue with warning
-   * signs). For level 4–5 conditions a warning sign points to another condition, so they are
-   * left out. Most probable first, at most 3.
+   * Conditions a doctor should rule out first, most probable first, at most 3. Candidates: those
+   * named by the level 1–2 danger rules that hold (meningococcal disease for a purpuric rash,
+   * however rare), level 1–2 conditions still possible, and level 3 conditions whose own warning
+   * signs are present (a severe form, e.g. dengue with warning signs; for level 4–5 conditions a
+   * warning sign points to another condition). At least one rule-named condition is kept.
    */
   urgentConditions: string[];
   /** All candidate conditions, most probable first. */
@@ -127,8 +128,19 @@ export function sessionResult(kb: CompiledKb, state: SessionState): SessionResul
   });
   conditions.sort((a, b) => b.probability - a.probability);
   const pOther = probs[probs.length - 1] ?? 0;
+  const ruleNamed = new Set(
+    triage.reasons.flatMap((r) => (r.kind === 'rule' && r.level <= 2 ? (idx.ruleById.get(r.ruleId)?.conditions ?? []) : [])),
+  );
   const warningSignPresent = (id: string): boolean =>
     (idx.conditionById.get(id)?.warningSigns ?? []).some((f) => env.answers[f] === 'present' || env.implied.has(f));
+  const ruleOut = conditions.filter(
+    (c) =>
+      ruleNamed.has(c.conditionId) ||
+      (c.probability >= params.safetyNetMinProb && (c.urgency <= 2 || (c.urgency === 3 && warningSignPresent(c.conditionId)))),
+  );
+  const urgentConditions = ruleOut.slice(0, 3);
+  const named = ruleOut.find((c) => ruleNamed.has(c.conditionId));
+  if (named && urgentConditions.length === 3 && !urgentConditions.some((c) => ruleNamed.has(c.conditionId))) urgentConditions[2] = named;
 
   // Safety-netting: the complaint's own list, then warning signs of urgent conditions still
   // possible and of any condition that is likely (e.g. dengue, level 3, has warning signs too).
@@ -162,12 +174,7 @@ export function sessionResult(kb: CompiledKb, state: SessionState): SessionResul
     triage,
     rankingSuppressed: params.screenOnlyAgeGroups.includes(env.ageGroup),
     emergencyStop: stopReason === 'emergency',
-    urgentConditions: conditions
-      .filter(
-        (c) => c.probability >= params.safetyNetMinProb && (c.urgency <= 2 || (c.urgency === 3 && warningSignPresent(c.conditionId))),
-      )
-      .slice(0, 3)
-      .map((c) => c.conditionId),
+    urgentConditions: urgentConditions.map((c) => c.conditionId),
     conditions,
     other: { probability: pOther, display: displayPercent(pOther, params.display) },
     safetyNet,

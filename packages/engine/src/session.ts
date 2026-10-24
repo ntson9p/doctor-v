@@ -9,7 +9,7 @@ import type { ExprEnv } from './expr.ts';
 import { indexKb } from './kb-index.ts';
 import type { EngineIndex } from './kb-index.ts';
 import { UNKNOWN } from './model.ts';
-import type { CompiledKb, Complaint, QuestionGroup } from './model.ts';
+import type { CompiledKb, Complaint, Expr, QuestionGroup } from './model.ts';
 import { evidenceItems, hypothesesFor, posterior } from './posterior.ts';
 import { analyze, isConfident, pickQuestion } from './selection.ts';
 import { computeTriage } from './triage.ts';
@@ -139,6 +139,25 @@ export function nextStep(kb: CompiledKb, state: SessionState): Step {
   const urgent = triage.reasons.filter((r) => (r.kind === 'rule' || r.kind === 'emergency_screen') && r.level <= 2);
   if (urgent.length > 0) {
     if (urgent.some((r) => r.level === 1)) return { kind: 'done', reason: 'emergency' };
+    const valuesOf = (id: string): string[] => {
+      const f = idx.findingById.get(id);
+      return f === undefined ? [] : f.type === 'binary' ? ['present'] : f.options;
+    };
+    const holdsWith = (e: Expr, id: string): boolean =>
+      valuesOf(id).some((v) => evalExpr(e, { ...env, answers: { ...answers, [id]: v } }) === 'T');
+    // A sign whose condition is not met yet (the purpuric rash needs "any rash" first) is reached
+    // through the open finding its condition depends on.
+    const askableOrPrerequisite = (id: string): string | null => {
+      if (askable(id)) return id;
+      const f = idx.findingById.get(id);
+      if (!f || !isApplicable(f.appliesTo, state.ctx, ageGroup)) return null;
+      for (const req of f.requires) {
+        if (evalExpr(req, env) === 'T') continue;
+        const dep = exprFindings(req).find((d) => isOpen(d) && askable(d) && holdsWith(req, d));
+        if (dep !== undefined) return dep;
+      }
+      return null;
+    };
     for (const rule of idx.rulesFor(state.complaintId)) {
       if (rule.level !== 1) continue;
       for (const id of exprFindings(rule.when)) {
@@ -148,10 +167,9 @@ export function nextStep(kb: CompiledKb, state: SessionState): Step {
         if (f.altQuestion && answers[id] === UNKNOWN && !altAsked.has(id)) {
           return { kind: 'finding', findingId: id, phase: 'escalation', alt: true };
         }
-        if (!isOpen(id) || !askable(id)) continue;
-        const values = f.type === 'binary' ? ['present'] : f.options;
-        const raises = values.some((v) => evalExpr(rule.when, { ...env, answers: { ...answers, [id]: v } }) === 'T');
-        if (raises) return { kind: 'finding', findingId: id, phase: 'escalation', alt: false };
+        if (!isOpen(id) || !holdsWith(rule.when, id)) continue;
+        const next = askableOrPrerequisite(id);
+        if (next !== null) return { kind: 'finding', findingId: next, phase: 'escalation', alt: false };
       }
     }
     return { kind: 'done', reason: 'emergency' };

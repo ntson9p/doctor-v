@@ -383,6 +383,8 @@ Dấu hiệu **chưa được hỏi** được tính là "không có bằng ch�
 - Muốn "không kèm ho", viết `{ finding: cough, is: absent }` (phải có câu trả lời "không"), **không** viết `not: { finding: cough, is: present }`: dạng sau đúng ngay cả khi chưa hỏi ho. Bộ kiểm tra cảnh báo dạng này trong quy tắc.
 - Với `at_least`, mỗi nhóm dấu hiệu cùng phản ánh một tình trạng (lú lẫn và li bì) nên gộp bằng `any` thành một điều kiện con, để hai câu trả lời về cùng một tình trạng không tự đủ ngưỡng.
 
+**Bệnh mục tiêu `conditions`** (quy tắc mức 1–2): các bệnh mà quy tắc nhằm phát hiện, ví dụ `[bacterial_meningitis, sepsis, dengue]` cho sốt kèm ban xuất huyết. Khi quy tắc thỏa, các bệnh này được đưa vào danh sách "Bác sĩ cần loại trừ" kể cả khi xác suất thấp. Trường này chỉ dùng để hiển thị, không đổi mức xử trí.
+
 **Phạm vi `complaints`:** quy tắc không ghi phạm vi áp dụng cho mọi triệu chứng chính, và dấu hiệu của nó có thể được hỏi thích ứng ở mọi triệu chứng chính (bộ suy luận tính giá trị câu hỏi theo quy tắc). Quy tắc chỉ hợp với một số triệu chứng chính phải ghi phạm vi. Ví dụ khối thoát vị đau chỉ ghi `[abdominal_pain]`, nếu không người sốt cũng bị hỏi về thoát vị.
 
 **Tỷ lệ nền của dấu hiệu nguy hiểm:** dấu hiệu dùng trong quy tắc mức 1–2 được hỏi khi xác suất có dấu hiệu đủ lớn so với trọng số bỏ sót (49). Với `leak: specific` (1%), câu hỏi gần như luôn được hỏi. Nếu dấu hiệu rất hiếm ở người có triệu chứng chính đó mà không mắc bệnh liên kết, ghi `leak` hoặc `leak_by_complaint` thực tế (0,001–0,003) kèm `leak_note`.

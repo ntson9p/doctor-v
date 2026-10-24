@@ -214,7 +214,10 @@ Hiển thị tối đa 5 đóng góp dương ("vì sao gợi ý") và 5 đóng g
 
 **Dừng vì cấp cứu** (`emergencyStop = true`):
 - Lúc dừng mới có vài câu trả lời, nên danh sách xếp hạng chưa đáng tin; bệnh lành tính có thể vẫn đứng đầu.
-- Giao diện **không hiện danh sách xếp hạng và con số %**. Thay vào đó chỉ hiện `urgentConditions`, với tiêu đề "Bác sĩ cần loại trừ": tối đa 3 tình trạng có $P \ge$ `safety_net_min_prob`, là bệnh mức 1–2, **hoặc** bệnh mức 3 đang có dấu hiệu cảnh báo của chính nó (`warning_signs`, tức thể nặng của bệnh), ví dụ sốt xuất huyết có tiểu ít ở ngày thứ 4. Bệnh mức 4–5 không được thêm: với chúng, dấu hiệu cảnh báo (như cứng gáy ở cảm lạnh) chỉ ra một bệnh khác. Sắp theo xác suất.
+- Giao diện **không hiện danh sách xếp hạng và con số %**. Thay vào đó chỉ hiện `urgentConditions`, với tiêu đề "Bác sĩ cần loại trừ": tối đa 3 tình trạng, sắp theo xác suất, chọn từ:
+  - bệnh do quy tắc mức 1–2 đang thỏa nêu tên (`conditions` của quy tắc), dù xác suất thấp. Não mô cầu khi có ban xuất huyết là lý do khiến app khuyên đi cấp cứu, nên phải hiện dù sốt xuất huyết phổ biến hơn nhiều. Luôn giữ ít nhất một bệnh như vậy;
+  - bệnh mức 1–2 có $P \ge$ `safety_net_min_prob`;
+  - bệnh mức 3 có $P \ge$ `safety_net_min_prob` đang có dấu hiệu cảnh báo của chính nó (`warning_signs`, tức thể nặng của bệnh), ví dụ sốt xuất huyết có tiểu ít ở ngày thứ 4. Bệnh mức 4–5 không được thêm: với chúng, dấu hiệu cảnh báo (như cứng gáy ở cảm lạnh) chỉ ra một bệnh khác.
 
 ## 10. Tính tất định và kiểm thử
 

@@ -63,7 +63,7 @@ describe('session flow', () => {
     const kb2 = makeKb({
       rules: [
         ...kb.rules,
-        { id: 'r_neck_rash', level: 1, when: { all: [{ finding: 'neck', is: 'present' }, { finding: 'rash', is: 'present' }] }, complaints: null },
+        { id: 'r_neck_rash', level: 1, when: { all: [{ finding: 'neck', is: 'present' }, { finding: 'rash', is: 'present' }] }, complaints: null, conditions: [] },
       ],
     });
     let s = startSession(kb2, 'fever', ADULT, { es_collapse: 'absent' });

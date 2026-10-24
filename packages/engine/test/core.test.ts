@@ -234,8 +234,8 @@ describe('question selection', () => {
     findings: [...base.findings, sign('bleed', 0.05), sign('hernia', 0.001)],
     rules: [
       ...base.rules,
-      { id: 'r_bleed', level: 2, when: { finding: 'bleed', is: 'present' }, complaints: null },
-      { id: 'r_hernia', level: 2, when: { finding: 'hernia', is: 'present' }, complaints: null },
+      { id: 'r_bleed', level: 2, when: { finding: 'bleed', is: 'present' }, complaints: null, conditions: [] },
+      { id: 'r_hernia', level: 2, when: { finding: 'hernia', is: 'present' }, complaints: null, conditions: [] },
     ],
   });
   const idx2 = indexKb(kb2);

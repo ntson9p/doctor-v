@@ -137,6 +137,8 @@ export interface Rule {
   when: Expr;
   /** `null` means the rule applies to every complaint. */
   complaints: string[] | null;
+  /** Conditions the rule is meant to catch, listed first among those a doctor must rule out. */
+  conditions: string[];
 }
 
 export interface EngineParams {

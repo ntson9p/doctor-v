@@ -229,6 +229,7 @@ export function compileKnowledge(k: RawKnowledge): CompiledKb {
       level: asLevel(r.level),
       when: convertExpr(r.when),
       complaints: r.complaints ? [...r.complaints] : null,
+      conditions: [...(r.conditions ?? [])],
     })),
     emergencyScreen: {
       items: k.emergencyScreen.data.items.map((i) => ({ findingId: i.finding, level: asLevel(i.level) })),

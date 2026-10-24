@@ -5,6 +5,7 @@ export interface EngineIndex {
   kb: CompiledKb;
   findingById: ReadonlyMap<string, Finding>;
   conditionById: ReadonlyMap<string, Condition>;
+  ruleById: ReadonlyMap<string, Rule>;
   complaintById: ReadonlyMap<string, Complaint>;
   groupById: ReadonlyMap<string, QuestionGroup>;
   clusterRho: ReadonlyMap<string, number>;
@@ -36,6 +37,7 @@ export function indexKb(kb: CompiledKb): EngineIndex {
 
   const findingById = new Map(kb.findings.map((f) => [f.id, f]));
   const conditionById = new Map(kb.conditions.map((c) => [c.id, c]));
+  const ruleById = new Map(kb.rules.map((r) => [r.id, r]));
   const complaintById = new Map(kb.complaints.map((c) => [c.id, c]));
   const groupById = new Map(kb.groups.map((g) => [g.id, g]));
   const clusterRho = new Map(kb.clusters.map((c) => [c.id, c.rho]));
@@ -64,6 +66,7 @@ export function indexKb(kb: CompiledKb): EngineIndex {
     kb,
     findingById,
     conditionById,
+    ruleById,
     complaintById,
     groupById,
     clusterRho,

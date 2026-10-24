@@ -418,6 +418,9 @@ export function validateKnowledge(k: RawKnowledge): Issue[] {
       add('warning', file, path, '"not: is present" đúng cả khi câu hỏi chưa được hỏi; dùng "is: absent" nếu cần câu trả lời "không"');
     }
     lint(r.reason_vi, 'sentence', file, `${i}.reason_vi`);
+    for (const id of r.conditions ?? []) {
+      if (!conditionById.has(id)) add('error', file, `${i}.conditions`, `Không có bệnh "${id}"`);
+    }
     for (const id of r.complaints ?? []) {
       if (!complaintById.has(id)) add('error', file, `${i}.complaints`, `Không có triệu chứng chính "${id}"`);
     }

@@ -4,6 +4,9 @@
 # sửa mức, điều kiện, nguồn và thêm quy tắc. Biên bản: knowledge/drafts/review-rules.md.
 # Vẫn cần bác sĩ duyệt trước khi phát hành.
 #
+# `conditions`: bệnh mà quy tắc nhằm phát hiện. Khi quy tắc mức 1–2 thỏa, các bệnh này luôn đứng đầu
+# danh sách "Bác sĩ cần loại trừ", kể cả khi rất hiếm (não mô cầu khi có ban xuất huyết). Chỉ dùng để hiển thị.
+#
 # Quy tắc không ghi `complaints` áp dụng cho mọi triệu chứng chính, và dấu hiệu của nó có thể được
 # hỏi thích ứng ở mọi triệu chứng chính. Quy tắc chỉ hợp với một số triệu chứng chính (thoát vị,
 # phân nhầy máu, dấu hiệu đột quỵ B–E…) phải ghi phạm vi, nếu không người sốt sẽ bị hỏi về khối
@@ -22,6 +25,7 @@
     note: "Chính sách an toàn của doctor-v (docs/plan.md, mục 3.1): trẻ dưới 2 tháng luôn được khuyên đi khám, không xếp hạng bệnh. IMCI cho phép chăm sóc tại nhà khi không có dấu hiệu bệnh rất nặng hay nhiễm khuẩn tại chỗ, nên mức 3 thận trọng hơn nguồn; chờ bác sĩ duyệt."
 - id: rg_young_infant_danger_sign
   level: 2
+  conditions: [sepsis, bacterial_meningitis, pneumonia]
   when:
     all:
       - { age_groups: [infant_0_2m] }
@@ -41,6 +45,7 @@
     note: "IMCI 2014: bú kém, co giật, thở nhanh từ 60 lần/phút hoặc rút lõm lồng ngực nặng, nhiệt độ dưới 35,5°C (đo ở nách), chỉ cử động khi bị kích thích hoặc không cử động là bệnh rất nặng, chuyển viện khẩn. Thóp phồng không có trong danh sách IMCI 2014; lượt R thêm NG143 (thóp phồng: nhóm đỏ). Sốt từ 37,5°C (IMCI) do quy tắc rg_fever_under_3_months xử lý."
 - id: rg_fever_under_3_months
   level: 2
+  conditions: [sepsis, bacterial_meningitis, acute_pyelonephritis]
   when:
     all:
       - { age_months_lt: 3 }
@@ -54,6 +59,7 @@
     note: "NG143 xếp trẻ dưới 3 tháng có nhiệt độ từ 38°C vào nhóm nguy cơ cao (đỏ); khi đánh giá từ xa, trẻ có dấu hiệu đỏ cần được khám trực tiếp trong 2 giờ. IMCI coi sốt từ 37,5°C (đo ở nách) ở trẻ dưới 2 tháng là bệnh rất nặng. doctor-v định nghĩa sốt từ 37,5°C nên với trẻ 2–3 tháng có thể xếp cao hơn NICE một chút (chấp nhận để an toàn)."
 - id: rg_child_general_danger_sign
   level: 2
+  conditions: [sepsis, bacterial_meningitis, pneumonia]
   when:
     all:
       - { age_groups: [child_2m_5y] }
@@ -71,6 +77,7 @@
     note: "Bất kỳ dấu hiệu nguy hiểm toàn thân nào (không uống hoặc không bú được, nôn tất cả, co giật, li bì hoặc hôn mê) cần xử trí khẩn và chuyển viện khẩn."
 - id: rf_bulging_fontanelle
   level: 2
+  conditions: [bacterial_meningitis]
   when: { finding: bulging_fontanelle, is: present }
   reason_vi: "Thóp phồng căng có thể là viêm màng não, cần đưa bé đi cấp cứu ngay."
   evidence:
@@ -99,6 +106,7 @@
     note: "IMCI: 'có mất nước' cần 2 dấu hiệu (vật vã, mắt trũng, uống háo hức, nếp véo da mất chậm) và được bù dịch tại cơ sở y tế (phác đồ B); mất nước nặng kèm li bì hoặc không uống được đã do quy tắc dấu hiệu nguy hiểm bắt (mức 2). Tiểu ít không có trong IMCI, lấy từ NG143 (nhóm vàng). Chỉ cần 1 dấu hiệu là lựa chọn thận trọng; lượt R đổi cơ sở thành judgment, chờ bác sĩ duyệt."
 - id: rf_hfmd_startle
   level: 2
+  conditions: [hand_foot_mouth_disease]
   when:
     all:
       - any:
@@ -114,6 +122,7 @@
     note: "Bệnh sử có giật mình dưới 2 lần/30 phút và không thấy khi khám là độ 2a; từ 2 lần/30 phút hoặc thấy khi khám là độ 2b nhóm 1. Từ độ 2a phải điều trị nội trú; trạm y tế xã và phòng khám tư nhân phải chuyển tuyến. Giật mình là dấu hiệu cần đưa trẻ tái khám ngay."
 - id: rf_hfmd_warning_signs
   level: 2
+  conditions: [hand_foot_mouth_disease]
   when:
     all:
       - { age_groups: [child_2m_5y, child_5_12] }
@@ -151,6 +160,7 @@
 # ---------- Sốt và nhiễm trùng nặng ----------
 - id: rf_neck_stiffness
   level: 2
+  conditions: [bacterial_meningitis, subarachnoid_hemorrhage]
   when: { finding: neck_stiffness, is: present }
   reason_vi: "Cứng gáy có thể là dấu hiệu viêm màng não hoặc chảy máu trong não."
   evidence:
@@ -161,6 +171,7 @@
     note: "Lượt R bỏ CG150 khỏi nguồn vì CG150 không nêu cứng gáy. Cứng gáy là dấu hiệu của viêm màng não (NG240: chuyển viện cấp cứu; IMCI: chuyển viện khẩn) và của xuất huyết dưới nhện (NG228: chuyển ngay đến khoa cấp cứu)."
 - id: rf_fever_non_blanching_rash
   level: 2
+  conditions: [bacterial_meningitis, sepsis, dengue]
   when:
     all:
       - { finding: fever, is: present }
@@ -174,6 +185,7 @@
     note: "NICE: sốt kèm ban không mất khi ấn là nguy cơ cao, nghĩ bệnh não mô cầu, chuyển viện cấp cứu. Theo 2760, chấm xuất huyết dưới da lại là biểu hiện của sốt xuất huyết chưa có dấu hiệu cảnh báo (điều trị ngoại trú); 2760 chỉ hỗ trợ việc nghĩ đến nhiễm khuẩn huyết do não mô cầu, liên cầu lợn trong chẩn đoán phân biệt. Giữ mức 2 để không bỏ sót nhiễm khuẩn huyết, chấp nhận xếp cao hơn cần ở một số ca sốt xuất huyết."
 - id: rf_non_blanching_rash
   level: 2
+  conditions: [bacterial_meningitis, sepsis]
   when: { finding: rash_non_blanching, is: present }
   reason_vi: "Nốt đỏ tím không mất khi ấn cần được khám cấp cứu, kể cả khi không sốt."
   evidence:
@@ -184,6 +196,7 @@
     note: "Quy tắc mới của lượt R. NG240: ban xuất huyết lan nhanh hoặc nốt trên 2 mm thì nghĩ nhiều bệnh não mô cầu và chuyển viện cấp cứu; không loại trừ bệnh chỉ vì chưa sốt. NHS: đau bụng hoặc đau đầu kèm ban không mất khi ấn thì gọi 999 hoặc đến cấp cứu."
 - id: rf_altered_consciousness
   level: 1
+  conditions: [bacterial_meningitis, sepsis, stroke]
   when:
     any:
       - { finding: confusion, is: present }
@@ -197,6 +210,7 @@
     note: "Lượt R thay NG51 (đã bị thay thế) bằng NG253 và NG254: thay đổi ý thức mới là tiêu chí nguy cơ cao. IMCI: li bì hoặc hôn mê là dấu hiệu nguy hiểm toàn thân. 2760: vật vã, lừ đừ, li bì là dấu hiệu cảnh báo; lú lẫn là dấu hiệu cần đến khám lại ngay. Người bảo trì nâng mức 2 lên mức 1 (25/10/2026): NHS khuyên gọi 999 khi lú lẫn, li bì (Sepsis, Meningitis); người lú lẫn, li bì không tự đến viện an toàn được, và hành động của mức 1 gồm cả nhờ người đưa đến cấp cứu. Lần chạy đầu bộ ca giữ kín: 5/8 ca cần mức 1 mà app ra mức 2 có lú lẫn hoặc li bì. Chờ bác sĩ duyệt."
 - id: rf_shock_signs
   level: 2
+  conditions: [sepsis, dengue]
   when:
     any:
       - { finding: cold_hands_feet, is: present }
@@ -210,6 +224,7 @@
     note: "2760: tay chân lạnh, ẩm và mệt lả, bứt rứt là dấu hiệu cần đến khám lại ngay; lạnh đầu chi, da nổi vân tím là biểu hiện sốc. NICE: da loang lổ hoặc xám tái là nguy cơ cao; tay chân lạnh là nguy cơ trung bình–cao ở trẻ dưới 12 tuổi. 3377: suy sụp (không tự ngồi, đứng, đi được) là tiêu chuẩn sốt rét ác tính. Lượt R thay NG51 bằng NG253, NG254."
 - id: rf_shock_multiple_signs
   level: 1
+  conditions: [sepsis, dengue, ectopic_pregnancy]
   when:
     all:
       - { finding: cold_hands_feet, is: present }
@@ -226,6 +241,7 @@
     note: "Người bảo trì thêm (25/10/2026). 2760: lạnh đầu chi, da nổi vân tím là biểu hiện sốc; tiểu ít, mệt lả là dấu hiệu cảnh báo. NICE: da loang lổ hoặc xám tái, không tiểu 18 giờ là nguy cơ cao. Từng dấu hiệu vẫn ở mức 2 (rf_shock_signs); dấu hiệu tuần hoàn kèm một hậu quả (mệt lả, tiểu ít, ngất) được coi là sốc. Câu hỏi tay chân lạnh đã ghi rõ lạnh ngắt, da tái hoặc nổi vân tím, để không tính cảm giác lạnh khi đang rét run. Chờ bác sĩ duyệt."
 - id: rf_sepsis_multiple_signs
   level: 1
+  conditions: [sepsis, bacterial_meningitis]
   when:
     all:
       - { finding: fever, is: present }
@@ -248,6 +264,7 @@
     note: "Lượt C lô 2 đề xuất. NHS khuyên gọi 999 khi có một trong các dấu hiệu: lú lẫn hoặc li bì, thở rất nhanh hoặc khó thở, da tái hoặc loang lổ, ban không mất khi ấn; NICE xếp các dấu hiệu này vào nhóm nguy cơ cao. doctor-v xếp từng dấu hiệu ở mức 2 (các quy tắc riêng) và nâng lên mức 1 khi có từ 2 trong 4 nhóm: ý thức; hô hấp; tuần hoàn hoặc mệt lả; ban xuất huyết, theo cách qSOFA đếm rối loạn ở nhiều cơ quan. Lú lẫn gộp với li bì, tay chân lạnh gộp với mệt lả, để hai câu trả lời về cùng một tình trạng không tự đủ 2 nhóm (người đang rét run cũng thấy lạnh tay chân và mệt). Ngưỡng 2 nhóm là nhận định, chờ bác sĩ duyệt."
 - id: rf_fever_mucosal_bleeding
   level: 2
+  conditions: [dengue]
   when:
     all:
       - { finding: fever, is: present }
@@ -261,6 +278,7 @@
     note: "Xuất huyết niêm mạc là dấu hiệu cảnh báo, người bệnh được cho nhập viện. 2760 cũng ghi chảy máu chân răng, chảy máu mũi có thể gặp ở giai đoạn sốt; giữ mức 2 vì không phân biệt được tại nhà."
 - id: rf_fever_severe_abdominal_pain
   level: 2
+  conditions: [dengue, acute_appendicitis, acute_cholecystitis]
   when:
     all:
       - { finding: fever, is: present }
@@ -273,6 +291,7 @@
     locator: "2760 Phụ lục 2 (đau bụng nhiều và liên tục hoặc tăng cảm giác đau vùng gan); WHO 2025 mục 2.7"
 - id: rf_fever_vomiting_critical_phase
   level: 2
+  conditions: [dengue]
   when:
     all:
       - { finding: fever, is: present }
@@ -287,6 +306,7 @@
     note: "Ngoài ngày 3–7, nôn liên tục vẫn được bắt ở mức 3 (rf_persistent_vomiting), hoặc mức 2 ở trẻ 2 tháng–5 tuổi nôn tất cả."
 - id: rf_fever_critical_phase_signs
   level: 2
+  conditions: [dengue]
   when:
     all:
       - { finding: fever, is: present }
@@ -331,6 +351,7 @@
     note: "Khó thở dữ dội đã được bắt ở màn sàng lọc cấp cứu. Các nguồn không thống nhất: IMCI xếp thở nhanh, rút lõm lồng ngực ở trẻ 2 tháng–5 tuổi là viêm phổi điều trị ngoại trú; NICE xếp thở nhanh là vàng hoặc đỏ tùy mức; 1840 xếp cúm kèm khó thở vào cúm nặng. Câu hỏi hiện gộp nhiều mức độ nên giữ mức 3 cho người chung; nhóm nguy cơ cao và giai đoạn nguy hiểm của sốt xuất huyết được nâng lên mức 2 ở quy tắc riêng. Lượt R thay NG51 bằng NG253, NG254."
 - id: rf_high_risk_fever_breathing
   level: 2
+  conditions: [pneumonia, sepsis]
   when:
     all:
       - { finding: fever, is: present }
@@ -387,6 +408,7 @@
     note: "Người bảo trì thêm theo đề xuất của lượt A lô 2: 3377/QĐ-BYT yêu cầu xét nghiệm mọi trường hợp nghi sốt rét; sốt rét do P. falciparum có thể chuyển nặng nhanh."
 - id: rf_fever_jaundice_malaria_exposure
   level: 2
+  conditions: [malaria]
   when:
     all:
       - { finding: fever, is: present }
@@ -401,6 +423,7 @@
     note: "Lượt C lô 2 đề xuất. 3377 nêu vàng da trong các biểu hiện của sốt rét ác tính, là thể bệnh cần cấp cứu và điều trị tại bệnh viện. Sốt kèm vàng da và đau bụng đã có quy tắc rf_cholangitis_triad."
 - id: rf_fever_obstructing_stone
   level: 2
+  conditions: [acute_pyelonephritis, renal_colic]
   when:
     all:
       - { finding: fever, is: present }
@@ -439,6 +462,7 @@
     note: "Người bảo trì thêm theo đề xuất của lượt A lô 3. Lượt C lô 3 mở trang: NHS khuyên hẹn khám khẩn khi từ 65 tuổi, trẻ từ 15 tuổi trở xuống, nam giới, có thai, đái tháo đường, suy giảm miễn dịch, sốt hoặc run, tiểu ra máu, đau bụng dưới hoặc đau lưng dưới sườn; người bảo trì bổ sung đủ các nhóm (trước chỉ có nam giới, có thai, trẻ dưới 12 tuổi)."
 - id: rf_sudden_balance_loss
   level: 2
+  conditions: [stroke]
   complaints: [headache]
   when: { finding: sudden_loss_of_balance, is: present }
   reason_vi: "Đột ngột mất thăng bằng có thể là dấu hiệu đột quỵ, cần khám cấp cứu."
@@ -449,6 +473,7 @@
     note: "Chữ B trong BE-FAST; 3312/QĐ-BYT (2024) nêu thất điều, chóng mặt ở đột quỵ hệ sau (lượt A lô 4 đề xuất). Nguồn chưa xác minh bản chính thức."
 - id: rf_befast_high_risk
   level: 1
+  conditions: [stroke]
   complaints: [headache]
   when:
     all:
@@ -495,6 +520,7 @@
     note: "Đau đầu dữ dội kèm sốt cần loại trừ viêm màng não, sốt xuất huyết, sốt rét (lượt C lô 1 đề xuất); các dấu hiệu nặng hơn (cứng gáy, lú lẫn, ban xuất huyết) đã có quy tắc mức 2."
 - id: rf_cholangitis_triad
   level: 2
+  conditions: [acute_cholecystitis]
   when:
     all:
       - { finding: fever, is: present }
@@ -508,6 +534,7 @@
     note: "Tam chứng Charcot; MSD: viêm đường mật cấp là cấp cứu (lượt B lô 3 đề xuất). Cần nguồn hướng dẫn chính thức (Tokyo Guidelines 2018)."
 - id: rf_painful_hernia
   level: 2
+  conditions: [bowel_obstruction]
   complaints: [abdominal_pain]
   when: { finding: hernia_lump_painful, is: present }
   reason_vi: "Khối phồng đau ở bẹn hoặc rốn không đẩy lên được có thể là thoát vị nghẹt, cần khám cấp cứu."
@@ -535,6 +562,7 @@
     note: "1840/QĐ-BYT liệt kê người có bệnh mạn tính vào nhóm nguy cơ cúm nặng (lượt R đã ghi nhận, lượt A lô 1 đề xuất quy tắc)."
 - id: rf_swelling_behind_ear
   level: 2
+  conditions: [acute_otitis_media]
   complaints: [fever]
   when: { finding: swelling_behind_ear, is: present }
   reason_vi: "Sưng đỏ, đau sau tai có thể là viêm xương chũm, cần khám cấp cứu."
@@ -545,6 +573,7 @@
     note: "Viêm xương chũm là biến chứng nặng của viêm tai giữa (lượt A lô 1 đề xuất). Nguồn do lượt A thêm; lượt C cần xác minh và chuyển vào sổ đăng ký."
 - id: rf_periorbital_swelling
   level: 2
+  conditions: [acute_sinusitis]
   complaints: [fever, headache]
   when: { finding: periorbital_swelling, is: present }
   reason_vi: "Sưng nề, đỏ quanh mắt có thể là nhiễm trùng hốc mắt, cần khám cấp cứu."
@@ -555,6 +584,7 @@
     note: "Biến chứng hốc mắt của viêm xoang có thể gây mất thị lực (lượt A lô 1 đề xuất). Cần xác minh nguồn."
 - id: rf_child_bilious_vomiting
   level: 2
+  conditions: [bowel_obstruction, intussusception]
   when:
     all:
       - { age_groups: [infant_0_2m, child_2m_5y, child_5_12] }
@@ -568,6 +598,7 @@
     note: "Nôn dịch mật ở trẻ là dấu hiệu tắc ruột cần loại trừ ngay (lượt A lô 3 đề xuất finding). Lượt C lô 3 mở trang NHS: gọi 999 hoặc đến cấp cứu khi nôn dịch xanh (trẻ em: vàng xanh hoặc xanh). Bines 2006: 30% trẻ lồng ruột ở Hà Nội nôn dịch mật. Vẫn cần nguồn nhi khoa Việt Nam."
 - id: rf_fever_3_6_months_high_temp
   level: 2
+  conditions: [sepsis, acute_pyelonephritis, bacterial_meningitis]
   when:
     all:
       - { age_months_lt: 6 }
@@ -594,6 +625,7 @@
     note: "Lượt R thêm nguồn chính thức WHO: đau bụng dữ dội hoặc bụng rất cứng có thể là chảy máu hay nhiễm trùng trong ổ bụng; ở người có thể có thai thì nghĩ chửa ngoài tử cung. NHS: đau bụng đột ngột và dữ dội thì gọi 999 hoặc đến cấp cứu."
 - id: rf_abdomen_hard_swollen
   level: 2
+  conditions: [bowel_obstruction, acute_appendicitis, acute_pancreatitis]
   complaints: [abdominal_pain]
   when: { finding: abdomen_hard_swollen, is: present }
   reason_vi: "Bụng cứng hoặc chướng căng có thể là dấu hiệu bệnh cấp cứu trong ổ bụng."
@@ -605,6 +637,7 @@
     note: "Lượt R thay NHS (trang hiện hành không nêu dấu hiệu này) bằng nguồn chính thức. Câu hỏi gộp hai dấu hiệu: bụng cứng (chảy máu, nhiễm trùng trong ổ bụng theo WHO BEC) và chướng căng (tắc ruột, cấp cứu ngoại khoa theo WSES)."
 - id: rf_gi_bleeding
   level: 2
+  conditions: [peptic_ulcer_gastritis]
   complaints: [abdominal_pain, fever]
   when:
     any:
@@ -619,6 +652,7 @@
     note: "CG141 là hướng dẫn trong bệnh viện: mọi ca xuất huyết tiêu hóa trên cấp cần được đánh giá nguy cơ bằng thang Blatchford, chỉ cân nhắc cho về sớm khi điểm bằng 0. NHS: nôn ra máu hoặc như bã cà phê, phân đen dính thì gọi 999 hoặc đến cấp cứu. 2760: nôn ra máu, phân đen là dấu hiệu cảnh báo sốt xuất huyết."
 - id: rf_fainting_with_pain
   level: 2
+  conditions: [ectopic_pregnancy, acute_coronary_syndrome, subarachnoid_hemorrhage]
   when:
     all:
       - { finding: fainting_or_near_fainting, is: present }
@@ -635,6 +669,7 @@
     note: "Lượt R thay NHS bằng nguồn chính thức. Ngất hoặc choáng kèm đau gợi ý mất máu trong (chửa ngoài tử cung, xuất huyết tiêu hóa), hội chứng vành cấp có rối loạn huyết động, hoặc xuất huyết dưới nhện. Đau ngực kèm ngất được nâng lên mức 1 ở rf_chest_pain_with_features."
 - id: rf_bowel_obstruction_signs
   level: 2
+  conditions: [bowel_obstruction]
   complaints: [abdominal_pain]
   when:
     all:
@@ -652,6 +687,7 @@
     note: "Lượt R thêm hướng dẫn của Hội Phẫu thuật cấp cứu thế giới: tắc ruột non là cấp cứu ngoại khoa."
 - id: rf_no_stool_or_gas
   level: 2
+  conditions: [bowel_obstruction]
   when:
     all:
       - { finding: abdominal_pain, is: present }
@@ -665,6 +701,7 @@
     note: "Lượt R nâng từ mức 3 lên mức 2: trang NHS (rà soát 20/10/2026) xếp đau bụng kèm hoàn toàn không đi ngoài, không xì hơi vào nhóm gọi 999 hoặc đến cấp cứu; WSES coi tắc ruột non là cấp cứu ngoại khoa. Thêm điều kiện có đau bụng vì nguồn chỉ nói về người đau bụng."
 - id: rf_pregnant_pain_bleeding
   level: 2
+  conditions: [ectopic_pregnancy]
   when:
     all:
       - { finding: abdominal_pain, is: present }
@@ -681,6 +718,7 @@
     note: "NG126: thai sớm có đau và ra máu cần chuyển đơn vị cấp cứu thai sớm, chuyển ngay nếu ấn đau bụng hoặc tiểu khung, chuyển thẳng cấp cứu nếu huyết động không ổn định hoặc đau, ra máu nhiều. Ở Việt Nam tương ứng cấp cứu sản."
 - id: rf_ectopic_rupture_signs
   level: 1
+  conditions: [ectopic_pregnancy]
   complaints: [abdominal_pain]
   when:
     all:
@@ -736,6 +774,7 @@
     note: "Quy tắc mới của lượt R. IMCI: phân có máu là lỵ (nhóm vàng), dùng kháng sinh và hẹn khám lại sau 3 ngày. NHS: đau bụng kèm phân có máu thì hẹn khám khẩn hoặc gọi 111. Phân nhầy máu như mứt dâu ở trẻ nhỏ có quy tắc mức 2 riêng."
 - id: rf_red_jelly_stool
   level: 2
+  conditions: [intussusception]
   complaints: [abdominal_pain]
   when: { finding: red_jelly_stool, is: present }
   reason_vi: "Trẻ đi ngoài phân nhầy máu như mứt dâu có thể bị lồng ruột, cần khám cấp cứu."
@@ -747,6 +786,7 @@
     note: "Văn bản không có bài riêng về lồng ruột; bài Xuất huyết tiêu hóa nêu lồng ruột là nguyên nhân xuất huyết tiêu hóa dưới ở trẻ, cần khám bụng loại trừ nguyên nhân ngoại khoa và điều trị phẫu thuật. Hình ảnh 'phân như mứt dâu' và mức 2 là đánh giá của người soạn; cần nguồn ngoại nhi chính thức và bác sĩ duyệt. IMCI xếp phân có máu do lỵ ở mức điều trị ngoại trú; câu hỏi nhấn mạnh 'giống mứt dâu' để phân biệt."
 - id: rf_chest_pain
   level: 2
+  conditions: [acute_coronary_syndrome]
   complaints: [abdominal_pain]
   when: { finding: chest_pain_pressure, is: present }
   reason_vi: "Đau hoặc tức nặng giữa ngực cần được khám cấp cứu để loại trừ bệnh tim."
@@ -758,6 +798,7 @@
     note: "CG95: nghi hội chứng vành cấp và đang đau, hoặc đau trong 12 giờ qua, thì chuyển viện cấp cứu. NHS: đau ngực đột ngột không hết thì gọi 999; đau lúc có lúc không hoặc đã hết nhanh thì khám bác sĩ. Câu hỏi chưa phân biệt đang đau hay đã hết nên giữ mức 2; đau thắt dữ dội kèm vã mồ hôi đã được bắt ở màn sàng lọc cấp cứu (mức 1)."
 - id: rf_chest_pain_with_features
   level: 1
+  conditions: [acute_coronary_syndrome]
   complaints: [abdominal_pain]
   when:
     all:
@@ -780,6 +821,7 @@
 # ---------- Đau đầu, thần kinh ----------
 - id: rf_thunderclap_headache
   level: 1
+  conditions: [subarachnoid_hemorrhage]
   complaints: [headache]
   when: { finding: headache_thunderclap, is: present }
   reason_vi: "Đau đầu đột ngột, dữ dội nhất từ trước tới nay có thể là chảy máu não."
@@ -791,6 +833,7 @@
     note: "NG228: đau đầu sét đánh (đột ngột, dữ dội, thường đạt đỉnh trong 1–5 phút) là dấu hiệu nguy hiểm của xuất huyết dưới nhện; người nghi xuất huyết dưới nhện ở ngoài bệnh viện cần được chuyển ngay đến khoa cấp cứu. NHS: đau đầu đột ngột, cực kỳ dữ dội thì gọi 999 hoặc đến cấp cứu. Chọn mức 1 vì nguy cơ chảy máu lại và diễn biến xấu nhanh."
 - id: rf_new_seizure
   level: 2
+  conditions: [bacterial_meningitis]
   complaints: [fever, headache]
   when: { finding: seizure_recent, is: present }
   reason_vi: "Co giật trong lần bệnh này cần được khám cấp cứu."
@@ -802,6 +845,7 @@
     note: "Lượt R bỏ CG150 khỏi nguồn vì CG150 không nêu co giật. IMCI: co giật trong lần bệnh này là dấu hiệu nguy hiểm toàn thân, chuyển viện khẩn. NHS: đau đầu kèm co giật thì gọi 999 hoặc đến cấp cứu. Đang co giật được bắt ở màn sàng lọc cấp cứu (mức 1)."
 - id: rf_vision_loss
   level: 2
+  conditions: [stroke]
   complaints: [headache]
   when: { finding: vision_loss_or_double, is: present }
   reason_vi: "Đột ngột mất thị lực hoặc nhìn đôi cần được khám cấp cứu."
@@ -842,6 +886,7 @@
     note: "Lượt R nâng từ mức 2 lên mức 1 và sửa điều kiện: NG232 khuyến cáo dịch vụ tư vấn từ xa gọi xe cấp cứu (999) khi người bị chấn thương đầu không tỉnh táo hoàn toàn, có dấu hiệu thần kinh khu trú (kể cả thay đổi thị lực) hoặc co giật từ sau chấn thương. Nôn sau chấn thương được tính ở rf_head_injury (mức 2)."
 - id: rf_pregnancy_hypertension_signs
   level: 2
+  conditions: [preeclampsia]
   when:
     all:
       - { finding: pregnant, is: present }
@@ -877,6 +922,7 @@
     note: "Mức nền cho mọi đau đầu sau sinh. Đau đầu dai dẳng, đau nhiều hoặc rối loạn thị lực được nâng lên mức 2 ở rf_postpartum_severe_headache. Chờ bác sĩ duyệt."
 - id: rf_postpartum_severe_headache
   level: 2
+  conditions: [preeclampsia]
   when:
     all:
       - { finding: recent_childbirth, is: present }
@@ -894,6 +940,7 @@
     note: "Quy tắc mới của lượt R. NG194: người mẹ cần đi khám không chậm trễ khi đau đầu dai dẳng hoặc dữ dội (tăng huyết áp, tiền sản giật, bệnh nội sọ...). doctor-v hiểu 'dai dẳng' là kéo dài từ 4 giờ và 'dữ dội' là mức đau vừa trở lên; chờ bác sĩ duyệt."
 - id: rf_pregnancy_severe_bp
   level: 2
+  conditions: [preeclampsia]
   when:
     all:
       - { finding: pregnant, is: present }
@@ -907,6 +954,7 @@
     note: "NG133 định nghĩa tăng huyết áp nặng là trên 160 mmHg tâm thu hoặc trên 110 mmHg tâm trương và khuyến cáo nhập viện (khi dưới 160/110 thì xử trí như tăng huyết áp thường). Lựa chọn 'từ 160/110' của doctor-v gồm cả đúng 160/110 (thận trọng hơn một chút)."
 - id: rf_extreme_bp_with_symptoms
   level: 2
+  conditions: [stroke]
   when:
     all:
       - { finding: bp_measured, in: [extreme] }

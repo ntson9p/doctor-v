@@ -255,6 +255,7 @@ export const ruleFileSchema = z.array(
     when: exprSchema,
     reason_vi: TEXT,
     complaints: z.array(ID).min(1).optional(),
+    conditions: z.array(ID).min(1).optional(),
     evidence: evidenceSchema,
   }),
 );
