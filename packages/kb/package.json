@@ -1,0 +1,15 @@
+{
+  "name": "@doctor-v/kb",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Knowledge-base schema, linter and compiler (YAML -> engine JSON).",
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "dependencies": {
+    "@doctor-v/engine": "0.0.0",
+    "yaml": "2.9.1",
+    "zod": "4.6.7"
+  }
+}

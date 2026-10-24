@@ -1,0 +1,10 @@
+{
+  "name": "@doctor-v/engine",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Deterministic Bayesian inference engine for doctor-v (no runtime dependencies).",
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  }
+}

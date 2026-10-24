@@ -1,0 +1,14 @@
+{
+  "name": "@doctor-v/evaluation",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Vignette-based evaluation: simulated patients and accuracy/safety metrics.",
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "dependencies": {
+    "@doctor-v/engine": "0.0.0",
+    "@doctor-v/kb": "0.0.0"
+  }
+}
