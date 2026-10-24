@@ -1,0 +1,52 @@
+id: h-fever-048
+set: holdout
+title_vi: "Bé trai 10 tuổi ở Kon Tum, hay chăn bò trên đồi cỏ, sốt 8 ngày, hạch bẹn sưng đau, vết loét vảy đen"
+narrative_vi: "Bé Y., nam, 10 tuổi, ở một xã của tỉnh Kon Tum. Hè này bé hay theo bố đi chăn bò trên đồi cỏ, ngồi nghỉ trên bãi cỏ, nhưng không vào rừng, không ngủ lại ở rẫy. Bé sốt 8 ngày nay, 38,5–39,5°C, có lúc rét run, đau đầu, đau mỏi người, mệt, chán ăn. Mẹ thấy ở bẹn trái có hạch sưng to bằng đầu ngón tay, ấn đau. Khi tắm cho bé, mẹ thấy gần chỗ hạch có một vết loét tròn bằng hạt đậu, đóng vảy đen, bé không thấy đau. Bé không ho, không nổi ban, mắt không đỏ, không vàng da, vẫn tỉnh táo, ăn uống được ít."
+patient:
+  age_years: 10
+  sex: male
+  region: highlands
+  month: 8
+complaint: fever
+answers:
+  fever_max_temp: ge_39
+  fever_duration: gt_7d
+  chills_rigors: present
+  fever_cyclic: absent
+  headache: present
+  headache_severity: moderate
+  myalgia: present
+  fatigue: present
+  loss_of_appetite: present
+  lymph_node_swelling: present
+  eschar: present
+  bush_exposure: present
+  malaria_area_exposure: absent
+  cough: absent
+  rash_any: absent
+  red_eyes: absent
+  jaundice: absent
+  breathing_difficulty: absent
+  confusion: absent
+  drowsy_hard_to_wake: absent
+  severe_weakness: absent
+  vomiting: absent
+  diarrhea: absent
+  abdominal_pain: absent
+  bleeding_gums_nose: absent
+  neck_stiffness: absent
+  dengue_nearby: absent
+  measles_vaccinated: present
+default_unmentioned: absent
+expected:
+  condition: scrub_typhus
+  acceptable: []
+  triage: 3
+source:
+  basis: "Sốt mò ở trẻ: sốt hơn 7 ngày, đau đầu, đau cơ, hạch bẹn sưng đau gần vết loét đóng vảy đen không đau, phơi nhiễm bãi cỏ mùa mưa ở Tây Nguyên. Chưa có dấu hiệu nặng nhưng cần khám trong 24 giờ để được điều trị kháng sinh đặc hiệu (5642/QĐ-BYT)."
+  references:
+    - byt-qd-5642-2015
+    - leviet-emi-2019
+    - hamaguchi-ajtmh-2015
+author: "agent:vignette-holdout"
+notes_vi: "Vết loét thường ở vùng da kín như bẹn, nách nên dễ bị bỏ sót nếu không xem kỹ. Ở Tây Nguyên cũng cần nghĩ đến sốt rét."

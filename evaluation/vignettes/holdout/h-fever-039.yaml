@@ -1,0 +1,49 @@
+id: h-fever-039
+set: holdout
+title_vi: "Bé trai 22 tháng, sốt cao 3 ngày, loét miệng, giật mình liên tục, thở nhanh, vã mồ hôi, chi lạnh"
+narrative_vi: "Bé H., 22 tháng, ở Tây Ninh, đi nhà trẻ; lớp bé có mấy bạn đang nghỉ vì tay chân miệng. Bé sốt 3 ngày nay, 39,5–40°C, uống thuốc hạ sốt gần như không hạ. Trong miệng bé có vết loét, lòng bàn tay, bàn chân có vài nốt phỏng nước nhỏ. Từ đêm qua bé giật mình chới với liên tục, khoảng 4–5 lần trong nửa giờ, nôn 3 lần. Sáng nay bé thở nhanh, bụng phập phồng mạnh khi thở, vã mồ hôi nhiều, tay chân lạnh, da tái. Bé bỏ ăn, không chịu uống nước, lừ đừ, ngủ li bì, gọi mới mở mắt rồi lại ngủ. Môi bé chưa tím, bé không co giật. Bé đã tiêm đủ 2 mũi vắc xin sởi."
+patient:
+  age_months: 22
+  sex: male
+  region: south
+  month: 9
+complaint: fever
+answers:
+  fever_max_temp: ge_39
+  fever_duration: d3_5
+  mouth_ulcers: present
+  hand_foot_blisters: present
+  rash_any: present
+  rash_non_blanching: absent
+  rash_spreads_from_face: absent
+  hfmd_contact: present
+  startle_myoclonus: present
+  vomiting: present
+  persistent_vomiting: absent
+  child_vomits_everything: absent
+  child_unable_to_drink: present
+  drowsy_hard_to_wake: present
+  breathing_difficulty: present
+  es_severe_breathing: absent
+  cold_hands_feet: present
+  loss_of_appetite: present
+  fatigue: present
+  seizure_recent: absent
+  es_unresponsive_or_seizing: absent
+  headache: unknown
+  cough: absent
+  runny_nose: absent
+  diarrhea: absent
+  dengue_nearby: absent
+  measles_vaccinated: present
+default_unmentioned: absent
+expected:
+  condition: hand_foot_mouth_disease
+  acceptable: []
+  triage: 1
+source:
+  basis: "Tay chân miệng độ 3 theo 292/QĐ-BYT: sau giật mình nhiều lần và sốt cao không đáp ứng thuốc hạ sốt, trẻ thở nhanh, thở bụng, vã mồ hôi, chi lạnh, li bì. Đây là biến chứng thần kinh kèm rối loạn hô hấp, tuần hoàn, cần hồi sức cấp cứu ngay."
+  references:
+    - byt-qd-292-2024
+author: "agent:vignette-holdout"
+notes_vi: "Môi chưa tím nên câu khó thở dữ dội trả lời 'không'; mức 1 phải nhận ra từ tổ hợp giật mình, thở nhanh, chi lạnh, li bì. Danh mục chưa có câu hỏi về vã mồ hôi và mạch nhanh."

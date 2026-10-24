@@ -1,0 +1,56 @@
+id: h-head-019
+set: holdout
+title_vi: "Nam 58 tuổi mổ lợn bệnh, ăn tiết canh, sốt cao, đau đầu dữ dội, cứng gáy, nghe kém, lẫn lộn"
+narrative_vi: "Ông Đ., 58 tuổi, nông dân ở Thái Bình, hay uống rượu. Bốn ngày trước nhà có con lợn bị bệnh, ông tự mổ thịt và ăn tiết canh. Từ chiều qua ông sốt cao 39,8°C, rét run, đau đầu dữ dội khắp đầu, đau mỏi người, mệt, nôn nhiều lần, uống nước vào cũng nôn. Sáng nay ông kêu ù tai, nghe kém hẳn cả hai tai, cổ cứng không cúi được. Từ trưa ông lơ mơ, gọi mới mở mắt, nói lẫn lộn, không biết mình đang ở đâu. Ông không co giật, không méo miệng, không yếu tay chân, không bị ngã, trên da không có nốt ban."
+patient:
+  age_years: 58
+  sex: male
+  region: north
+  month: 7
+complaint: headache
+answers:
+  headache_course: first_time
+  headache_duration: h4_72
+  headache_location: whole_head
+  headache_severity: severe
+  headache_thunderclap: absent
+  headache_after_head_injury: absent
+  fever: present
+  fever_max_temp: ge_39
+  fever_duration: d1_2
+  chills_rigors: present
+  myalgia: present
+  fatigue: present
+  nausea: present
+  vomiting: present
+  persistent_vomiting: present
+  neck_stiffness: present
+  confusion: present
+  drowsy_hard_to_wake: present
+  photophobia: unknown
+  pig_pork_exposure: present
+  heavy_alcohol: present
+  seizure_recent: absent
+  es_unresponsive_or_seizing: absent
+  es_stroke_signs: absent
+  vision_loss_or_double: absent
+  rash_any: absent
+  diarrhea: absent
+  cough: absent
+  hypertension_known: absent
+  diabetes: absent
+default_unmentioned: absent
+expected:
+  condition: bacterial_meningitis
+  acceptable: [sepsis]
+  triage: 1
+source:
+  basis: "Viêm màng não do liên cầu lợn (Streptococcus suis) sau mổ lợn bị bệnh và ăn tiết canh: sốt cao, đau đầu, nôn, cứng gáy, nghe kém hai tai, lú lẫn. Viêm màng não nhiễm khuẩn là bệnh cấp cứu; đã lú lẫn, li bì nên phải gọi 115 ngay (5642/QĐ-BYT; NICE NG240; NHS Meningitis)."
+  references:
+    - wertheim-plosone-2009
+    - mai-cid-2008
+    - byt-qd-5642-2015
+    - nice-ng240
+    - nhs-meningitis
+author: "agent:vignette-holdout"
+notes_vi: "Liên cầu lợn là căn nguyên hay gặp nhất của viêm màng não vi khuẩn ở người lớn tại Việt Nam; khoảng hai phần ba người bệnh bị giảm thính lực. Danh mục chưa có câu hỏi về nghe kém, ù tai."

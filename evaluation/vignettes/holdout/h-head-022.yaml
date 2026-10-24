@@ -1,0 +1,54 @@
+id: h-head-022
+set: holdout
+title_vi: "Nam 41 tuổi, đau đầu khắp đầu kèm đau họng, sổ mũi, sốt nhẹ, test nhanh COVID-19 dương tính"
+narrative_vi: "Anh L., 41 tuổi, hướng dẫn viên du lịch ở Nha Trang, khỏe mạnh, đã tiêm 3 mũi vắc xin COVID-19, không hút thuốc. Mấy người trong đoàn khách anh vừa dẫn đang bị sốt, ho. Từ hôm qua anh đau đầu khắp đầu, đau như bó chặt, mức vừa, phải nằm nghỉ, kèm đau họng, sổ mũi, ho ít, đau mỏi người, mệt, sốt nhẹ 37,8°C. Sáng nay anh tự test nhanh COVID-19 thấy 2 vạch. Anh không khó thở, không đau ngực, không cứng gáy, không buồn nôn, vẫn ăn uống được, ngửi và nếm bình thường. Trước đây anh hiếm khi bị đau đầu."
+patient:
+  age_years: 41
+  sex: male
+  region: central
+  month: 8
+complaint: headache
+answers:
+  headache_course: first_time
+  headache_duration: h4_72
+  headache_location: whole_head
+  headache_character: pressing
+  headache_severity: moderate
+  headache_thunderclap: absent
+  headache_worse_activity: absent
+  fever: present
+  fever_max_temp: lt_38
+  fever_duration: d1_2
+  sore_throat: present
+  runny_nose: present
+  cough: present
+  productive_cough: absent
+  myalgia: present
+  fatigue: present
+  covid_self_test: positive
+  sick_contact_respiratory: present
+  loss_of_smell_taste: absent
+  breathing_difficulty: absent
+  chest_pain_pressure: absent
+  neck_stiffness: absent
+  photophobia: absent
+  nausea: absent
+  vomiting: absent
+  confusion: absent
+  rash_any: absent
+  smoker: absent
+  diabetes: absent
+  hypertension_known: absent
+  immunocompromised: absent
+default_unmentioned: absent
+expected:
+  condition: covid19
+  acceptable: []
+  triage: 5
+source:
+  basis: "COVID-19 mức nhẹ ở người trẻ khỏe, đã tiêm vắc xin, không bệnh nền: đau đầu là một trong các triệu chứng hay gặp nhất thời kỳ Omicron, cùng sổ mũi, đau họng (Menni 2022). Chăm sóc tại nhà và theo dõi dấu hiệu nặng (2671/QĐ-BYT)."
+  references:
+    - byt-qd-2671-2023
+    - menni-lancet-2022
+author: "agent:vignette-holdout"
+notes_vi: "Người bệnh chọn triệu chứng chính là đau đầu. Không mất mùi vị, giống phần lớn ca thời kỳ Omicron."

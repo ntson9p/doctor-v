@@ -1,0 +1,52 @@
+id: h-fever-042
+set: holdout
+title_vi: "Nữ 24 tuổi sinh con tại nhà 6 ngày, sốt, đau bụng dưới, sản dịch hôi, thở nhanh, da nổi vân tím, lẫn lộn"
+narrative_vi: "Chị H., 24 tuổi, ở một thôn xa trung tâm xã tại Đắk Lắk. Chị sinh con thứ hai tại nhà cách đây 6 ngày, do người trong thôn đỡ. Ba ngày nay chị sốt, người nóng ran, có lúc rét run, đau âm ỉ bụng dưới, sản dịch có mùi hôi; chị mệt và bỏ ăn. Nhà không có nhiệt kế. Từ sáng nay chị thở nhanh, mệt lả không tự ngồi dậy được, tay chân lạnh, da nổi vân tím. Chị nói năng lẫn lộn, không nhận ra mẹ chồng. Từ sáng đến giờ chị chưa đi tiểu. Chị không ho, không nôn, không đi ngoài lỏng."
+patient:
+  age_years: 24
+  sex: female
+  region: highlands
+  month: 4
+complaint: fever
+answers:
+  fever_duration: d3_5
+  chills_rigors: present
+  recent_childbirth: present
+  pregnant: absent
+  abdominal_pain: present
+  abd_pain_location: suprapubic
+  abd_pain_onset: gradual
+  abd_pain_duration: d1_3
+  abd_pain_severe: absent
+  abnormal_vaginal_discharge: present
+  vaginal_bleeding: absent
+  fatigue: present
+  loss_of_appetite: present
+  breathing_difficulty: present
+  es_severe_breathing: absent
+  severe_weakness: present
+  cold_hands_feet: present
+  confusion: present
+  drowsy_hard_to_wake: absent
+  decreased_urine: present
+  headache: unknown
+  dysuria: unknown
+  cough: absent
+  vomiting: absent
+  diarrhea: absent
+  neck_stiffness: absent
+  rash_any: absent
+  malaria_area_exposure: absent
+default_unmentioned: absent
+expected:
+  condition: sepsis
+  acceptable: []
+  triage: 1
+source:
+  basis: "Nhiễm khuẩn hậu sản sau đẻ tại nhà (sốt, đau bụng dưới, sản dịch hôi) đã thành nhiễm khuẩn huyết: lú lẫn mới, thở nhanh, da nổi vân tím là tiêu chí nguy cơ cao theo NICE NG253. Cần gọi cấp cứu ngay (NHS Sepsis)."
+  references:
+    - nice-ng253
+    - nhs-sepsis
+    - byt-qd-5642-2015
+author: "agent:vignette-holdout"
+notes_vi: "Danh mục chưa có câu hỏi về sản dịch hôi; người nhà trả lời 'có' với câu khí hư bất thường. Nhà không có nhiệt kế nên không ghi nhiệt độ."

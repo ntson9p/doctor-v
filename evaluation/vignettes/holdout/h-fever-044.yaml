@@ -1,0 +1,50 @@
+id: h-fever-044
+set: holdout
+title_vi: "Bé gái 10 tháng chưa tiêm vắc xin sởi, sốt 5 ngày, ban từ mặt lan xuống, thở rút lõm, môi tím, bỏ bú"
+narrative_vi: "Bé gái 10 tháng, ở Bình Dương, chưa được tiêm mũi vắc xin sởi nào. Hai tuần trước anh trai 4 tuổi của bé bị sởi. Bé sốt cao 39–40°C đã 5 ngày, ho nhiều, chảy nước mũi, hai mắt đỏ, chảy nước mắt. Từ 2 ngày nay bé nổi ban đỏ sau tai, lên mặt rồi lan xuống ngực, lưng. Từ đêm qua bé thở rất nhanh, cánh mũi phập phồng, lồng ngực rút lõm khi hít vào, quanh môi tím tái. Bé bỏ bú, lả đi, nằm li bì, lay mới mở mắt. Bé không nôn, không đi ngoài lỏng, không co giật."
+patient:
+  age_months: 10
+  sex: female
+  region: south
+  month: 12
+complaint: fever
+answers:
+  fever_max_temp: ge_39
+  fever_duration: d3_5
+  cough: present
+  productive_cough: unknown
+  runny_nose: present
+  red_eyes: present
+  rash_any: present
+  rash_spreads_from_face: present
+  rash_non_blanching: absent
+  measles_contact: present
+  breathing_difficulty: present
+  es_severe_breathing: present
+  child_unable_to_drink: present
+  child_vomits_everything: absent
+  drowsy_hard_to_wake: present
+  loss_of_appetite: present
+  fatigue: present
+  headache: unknown
+  vomiting: absent
+  diarrhea: absent
+  seizure_recent: absent
+  es_unresponsive_or_seizing: absent
+  mouth_ulcers: absent
+  ear_discharge: absent
+  cold_hands_feet: absent
+  bulging_fontanelle: absent
+default_unmentioned: absent
+expected:
+  condition: measles
+  acceptable: [pneumonia]
+  triage: 1
+source:
+  basis: "Sởi ở trẻ dưới 12 tháng chưa tiêm vắc xin (nhóm nguy cơ cao theo 1019/QĐ-BYT), biến chứng viêm phổi nặng: thở nhanh, rút lõm lồng ngực, tím tái, bỏ bú, li bì. Tím tái, bỏ bú, rối loạn tri giác là dấu hiệu nguy hiểm; theo IMCI đây là bệnh rất nặng, cần chuyển cấp cứu ngay."
+  references:
+    - byt-qd-1019-2025
+    - who-imci-chart-booklet-2014
+    - tran-bmcinfectdis-2024
+author: "agent:vignette-holdout"
+notes_vi: "Viêm phổi là nguyên nhân tử vong hay gặp nhất của sởi; chấp nhận viêm phổi vì là biến chứng đang đe dọa tính mạng."

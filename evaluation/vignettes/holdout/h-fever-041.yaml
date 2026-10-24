@@ -1,0 +1,53 @@
+id: h-fever-041
+set: holdout
+title_vi: "Nam 78 tuổi hút thuốc lào, sốt, ho đờm đặc 4 ngày, thở rất mệt, môi tím, lú lẫn"
+narrative_vi: "Ông T., 78 tuổi, ở Bắc Giang, hút thuốc lào hơn 50 năm, bị tăng huyết áp, mùa lạnh nào cũng hay ho khạc đờm. Bốn ngày nay ông sốt 38,6°C, rét run, ho nhiều hơn hẳn, khạc đờm đặc màu vàng xanh, kêu đau ngực bên phải mỗi khi ho. Từ đêm qua ông thở rất mệt, phải ngồi dậy mới thở được, nói vài tiếng lại phải dừng lấy hơi, môi và đầu ngón tay tím. Sáng nay ông lơ mơ, gọi mới mở mắt, nói lẫn lộn, không nhận ra con dâu. Ông bỏ ăn, mệt lả, không tự đứng dậy được. Ông không nôn, không đi ngoài lỏng."
+patient:
+  age_years: 78
+  sex: male
+  region: north
+  month: 1
+complaint: fever
+answers:
+  fever_max_temp: t38_39
+  fever_duration: d3_5
+  chills_rigors: present
+  cough: present
+  productive_cough: present
+  pleuritic_chest_pain: present
+  breathing_difficulty: present
+  es_severe_breathing: present
+  confusion: present
+  drowsy_hard_to_wake: present
+  loss_of_appetite: present
+  fatigue: present
+  severe_weakness: present
+  smoker: present
+  hypertension_known: present
+  diabetes: absent
+  known_heart_disease: absent
+  chest_pain_pressure: absent
+  headache: unknown
+  myalgia: unknown
+  decreased_urine: unknown
+  cold_hands_feet: absent
+  sore_throat: absent
+  runny_nose: absent
+  vomiting: absent
+  diarrhea: absent
+  rash_any: absent
+  neck_stiffness: absent
+  sick_contact_respiratory: absent
+  es_unresponsive_or_seizing: absent
+default_unmentioned: absent
+expected:
+  condition: pneumonia
+  acceptable: [sepsis]
+  triage: 1
+source:
+  basis: "Viêm phổi cộng đồng nặng ở người cao tuổi hút thuốc: sốt, rét run, ho đờm mủ, đau ngực khi ho, khó thở nặng, tím môi, lú lẫn mới (4235/QĐ-BYT). Lú lẫn mới và tím môi là tiêu chí nguy cơ cao của nhiễm khuẩn huyết theo NICE NG253, cần gọi cấp cứu ngay."
+  references:
+    - byt-qd-4235-2012
+    - nice-ng253
+author: "agent:vignette-holdout"
+notes_vi: "Chấp nhận nhiễm khuẩn huyết vì viêm phổi đã kèm lú lẫn. Danh mục chưa có câu hỏi về bệnh phổi mạn tính (bệnh phổi tắc nghẽn mạn tính)."

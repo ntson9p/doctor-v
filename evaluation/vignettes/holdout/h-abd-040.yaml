@@ -1,0 +1,47 @@
+id: h-abd-040
+set: holdout
+title_vi: "Nam 81 tuổi, khối phồng bẹn phải không đẩy lên được, đau quặn, nôn, bụng chướng, không xì hơi"
+narrative_vi: "Ông S., 81 tuổi, ở Quảng Trị, bị tăng huyết áp. Nhiều năm nay ông có khối phồng ở bẹn phải, đứng lâu thì phồng ra, nằm xuống thì tự lặn hoặc ông tự đẩy lên được, nhưng ông ngại mổ. Chiều qua sau khi khiêng bao lúa, khối phồng đột ngột to ra, căng cứng, rất đau, không đẩy lên được nữa. Từ tối qua ông đau quặn từng cơn ở bụng dưới bên phải và quanh rốn, đau lan xuống bẹn, nôn 3 lần ra thức ăn, bụng chướng căng dần. Từ tối qua đến giờ, khoảng 16 tiếng, ông không đi ngoài, không xì hơi được. Ông không sốt, chưa từng mổ bụng."
+patient:
+  age_years: 81
+  sex: male
+  region: central
+  month: 12
+complaint: abdominal_pain
+answers:
+  abd_pain_location: right_lower
+  abd_pain_onset: sudden
+  abd_pain_duration: h6_24
+  abd_pain_severe: present
+  abd_pain_colicky: present
+  abd_pain_radiates_groin: present
+  hernia_lump_painful: present
+  no_stool_or_gas: present
+  abdomen_hard_swollen: present
+  nausea: present
+  vomiting: present
+  persistent_vomiting: absent
+  vomiting_bilious: absent
+  previous_abdominal_surgery: absent
+  fever: absent
+  diarrhea: absent
+  black_stool: absent
+  vomiting_blood: absent
+  dysuria: absent
+  chest_pain_pressure: absent
+  cold_sweat: absent
+  fainting_or_near_fainting: absent
+  hypertension_known: present
+default_unmentioned: absent
+expected:
+  condition: bowel_obstruction
+  acceptable: []
+  triage: 2
+source:
+  basis: "Tắc ruột do thoát vị bẹn nghẹt: khối phồng bẹn đau, căng, không đẩy lên được, kèm đau quặn, nôn, chướng bụng, bí trung đại tiện. Thoát vị là nguyên nhân hay gặp của tắc ruột, có nguy cơ thắt nghẹt hoại tử ruột nên cần đến cấp cứu ngoại khoa ngay (MSD Intestinal obstruction; NHS Stomach ache)."
+  references:
+    - msd-intestinal-obstruction
+    - jackson-afp-2011
+    - nhs-stomach-ache
+author: "agent:vignette-holdout"
+notes_vi: "Người bệnh chưa từng mổ bụng nên dễ bị bỏ qua nguyên nhân tắc ruột nếu không hỏi về khối phồng ở bẹn."

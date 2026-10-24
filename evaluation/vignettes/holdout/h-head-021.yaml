@@ -1,0 +1,48 @@
+id: h-head-021
+set: holdout
+title_vi: "Nữ 15 tuổi ôn thi, thiếu ngủ, đau đầu bó chặt hai bên gần như hằng ngày 2 tháng"
+narrative_vi: "Em N., nữ, 15 tuổi, học sinh lớp 9 ở Cần Thơ, đang ôn thi vào lớp 10. Hai tháng nay em học thêm đến khuya, mỗi đêm chỉ ngủ khoảng 5 tiếng, ngồi máy tính và điện thoại nhiều. Gần như ngày nào em cũng đau đầu như bị đội mũ chật, bó chặt hai bên trán và thái dương, thường từ chiều đến tối, mức nhẹ, vẫn học được. Em uống paracetamol khoảng 3 lần mỗi tuần. Em không buồn nôn, không sợ ánh sáng hay tiếng ồn, đi lại không làm đau tăng. Sáng ngủ dậy em không đau, đau không làm em thức giấc ban đêm. Em không sốt, nhìn rõ, tay chân bình thường, không bị va đập đầu. Hôm nay em đau từ 3 giờ chiều đến giờ, khoảng 5 tiếng."
+patient:
+  age_years: 15
+  sex: female
+  region: south
+  month: 5
+complaint: headache
+answers:
+  headache_course: recurrent_similar
+  headache_duration: h4_72
+  headache_location: both_sides
+  headache_character: pressing
+  headache_severity: mild
+  headache_thunderclap: absent
+  headache_worse_activity: absent
+  headache_after_head_injury: absent
+  photophobia: absent
+  phonophobia: absent
+  nausea: absent
+  vomiting: absent
+  visual_aura: absent
+  blurred_vision: absent
+  vision_loss_or_double: absent
+  stress_poor_sleep: present
+  regular_painkiller_use: present
+  fever: absent
+  neck_stiffness: absent
+  es_stroke_signs: absent
+  confusion: absent
+  facial_pain_pressure: absent
+  runny_nose: absent
+  pregnant: absent
+default_unmentioned: absent
+expected:
+  condition: tension_type_headache
+  acceptable: []
+  triage: 4
+source:
+  basis: "Đau đầu căng thẳng ở thiếu niên: đau hai bên kiểu bó chặt, mức nhẹ, không buồn nôn, không sợ ánh sáng, không tăng khi vận động (ICHD-3), liên quan học căng thẳng, thiếu ngủ. Đau gần như hằng ngày nên cần đặt lịch khám trong vài ngày tới, không cần đi cấp cứu (NHS Tension headaches)."
+  references:
+    - nhs-tension-headaches
+    - ihs-ichd3-2018
+    - nice-cg150
+author: "agent:vignette-holdout"
+notes_vi: "Không có dấu hiệu báo động ở trẻ vị thành niên (đau làm thức giấc, nôn buổi sáng, đau nặng dần). Dùng thuốc giảm đau khoảng 12 ngày mỗi tháng, cần được tư vấn để tránh đau đầu do lạm dụng thuốc."

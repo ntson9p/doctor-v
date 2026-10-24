@@ -1,0 +1,54 @@
+id: h-fever-047
+set: holdout
+title_vi: "Bé gái 20 tháng, sốt 39,2°C 2 ngày, quấy khóc, nôn 1 lần, nước tiểu hôi, không ho, không sổ mũi"
+narrative_vi: "Bé gái 20 tháng, ở Đà Nẵng. Bé sốt 39,2°C đã 2 ngày, uống thuốc hạ sốt thì hạ rồi lại sốt. Bé quấy khóc, ăn kém hơn, hôm qua nôn 1 lần. Mẹ thấy tã có mùi khai nồng, hôi hơn mọi khi, nước tiểu hơi đục; mẹ không rõ bé có đau khi đi tiểu không. Bé không ho, không sổ mũi, không kéo tai, không tiêu chảy, không nổi ban, trong miệng không có vết loét. Bé vẫn uống nước, bú sữa tốt, tã vẫn ướt như mọi ngày, hạ sốt thì chơi được. Bé đã tiêm đủ 2 mũi vắc xin sởi."
+patient:
+  age_months: 20
+  sex: female
+  region: central
+  month: 5
+complaint: fever
+answers:
+  fever_max_temp: ge_39
+  fever_duration: d1_2
+  vomiting: present
+  persistent_vomiting: absent
+  child_vomits_everything: absent
+  child_unable_to_drink: absent
+  loss_of_appetite: present
+  dysuria: unknown
+  urinary_frequency: unknown
+  hematuria: absent
+  abdominal_pain: unknown
+  headache: unknown
+  sore_throat: unknown
+  cough: absent
+  runny_nose: absent
+  nasal_congestion: absent
+  ear_pain: absent
+  diarrhea: absent
+  rash_any: absent
+  mouth_ulcers: absent
+  hand_foot_blisters: absent
+  drowsy_hard_to_wake: absent
+  breathing_difficulty: absent
+  seizure_recent: absent
+  cold_hands_feet: absent
+  decreased_urine: absent
+  sunken_eyes: absent
+  hfmd_contact: absent
+  dengue_nearby: absent
+  measles_vaccinated: present
+default_unmentioned: absent
+expected:
+  condition: acute_pyelonephritis
+  acceptable: []
+  triage: 3
+source:
+  basis: "Nhiễm khuẩn tiết niệu có sốt (viêm thận – bể thận) ở trẻ dưới 2 tuổi thường chỉ có sốt, quấy, nôn, nước tiểu hôi; trẻ sốt không rõ ổ nhiễm cần được kiểm tra nước tiểu (NICE NG143). Trẻ em có triệu chứng nhiễm khuẩn tiết niệu kèm sốt cần được khám trong ngày (NHS UTIs; NHS Kidney infection)."
+  references:
+    - nice-ng143
+    - nhs-utis
+    - nhs-kidney-infection
+author: "agent:vignette-holdout"
+notes_vi: "Ca khó: không có triệu chứng khu trú, trẻ chưa nói được đau khi đi tiểu. Danh mục chưa có câu hỏi về nước tiểu đục, hôi."

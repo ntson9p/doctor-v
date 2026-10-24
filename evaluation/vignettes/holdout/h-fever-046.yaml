@@ -1,0 +1,51 @@
+id: h-fever-046
+set: holdout
+title_vi: "Nữ 27 tuổi mang thai 28 tuần, sốt cao đột ngột, rét run, đau nhức người, ho, xưởng có nhiều người bị cúm"
+narrative_vi: "Chị M., 27 tuổi, công nhân ở Bắc Ninh, đang mang thai con đầu được 28 tuần. Mấy hôm nay phân xưởng của chị có nhiều người nghỉ vì cúm A. Từ tối qua chị rét run rồi sốt 38,8°C, đau nhức khắp người, đau đầu, ho khan, đau họng, sổ mũi. Chị mệt, ăn kém. Sáng nay chị tự test nhanh COVID-19 thì 1 vạch. Chị không khó thở, không đau ngực, không mất mùi vị. Thai vẫn máy đều, chị không đau bụng, không ra máu, không bị phù."
+patient:
+  age_years: 27
+  sex: female
+  region: north
+  month: 2
+complaint: fever
+answers:
+  fever_max_temp: t38_39
+  fever_duration: d1_2
+  chills_rigors: present
+  myalgia: present
+  headache: present
+  headache_severity: moderate
+  cough: present
+  productive_cough: absent
+  sore_throat: present
+  runny_nose: present
+  fatigue: present
+  loss_of_appetite: present
+  sick_contact_respiratory: present
+  covid_self_test: negative
+  pregnant: present
+  gestational_age: ge_20w
+  breathing_difficulty: absent
+  chest_pain_pressure: absent
+  pleuritic_chest_pain: absent
+  loss_of_smell_taste: absent
+  abdominal_pain: absent
+  vaginal_bleeding: absent
+  edema_face_hands: absent
+  vomiting: absent
+  diarrhea: absent
+  confusion: absent
+  rash_any: absent
+  diabetes: absent
+default_unmentioned: absent
+expected:
+  condition: influenza
+  acceptable: [covid19]
+  triage: 3
+source:
+  basis: "Cúm mùa ở phụ nữ mang thai, thuộc nhóm nguy cơ diễn biến nặng theo 1840/QĐ-BYT: chưa có dấu hiệu nặng nhưng cần khám trong ngày để được dùng thuốc kháng vi rút sớm. Khởi phát đột ngột với sốt, rét run, đau cơ, ho khan, đau họng trong đợt cúm là kiểu điển hình (CDC)."
+  references:
+    - byt-qd-1840-2025
+    - cdc-flu-clinical-signs
+author: "agent:vignette-holdout"
+notes_vi: "Một lần test nhanh COVID-19 âm tính chưa loại trừ được COVID-19 nên chấp nhận COVID-19."

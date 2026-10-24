@@ -1,0 +1,53 @@
+id: h-fever-043
+set: holdout
+title_vi: "Nam 17 tuổi học nội trú, sốt cao đột ngột, đau chân, ban tím ấn không mất lan nhanh, li bì"
+narrative_vi: "Em K., nam, 17 tuổi, học sinh nội trú ở Huế. Sáng nay em sốt cao đột ngột 39,7°C, đau đầu, nôn 2 lần, kêu đau nhức hai chân, rất mệt. Đến chiều, bạn cùng phòng thấy ở cẳng chân, đùi và bụng em nổi nhiều chấm, mảng màu tím, ấn ly thủy tinh lên vẫn thấy rõ, lan thêm nhanh trong 1–2 giờ. Tay chân em lạnh ngắt, da tái, thở nhanh, không tự đứng dậy được. Em lơ mơ, gọi mới mở mắt, trả lời chậm và lẫn lộn. Em không cứng gáy, không co giật, không ho, không đi ngoài lỏng."
+patient:
+  age_years: 17
+  sex: male
+  region: central
+  month: 2
+complaint: fever
+answers:
+  fever_max_temp: ge_39
+  fever_duration: d1_2
+  headache: present
+  nausea: present
+  vomiting: present
+  persistent_vomiting: absent
+  myalgia: present
+  fatigue: present
+  severe_weakness: present
+  rash_any: present
+  rash_non_blanching: present
+  rash_spreads_from_face: absent
+  cold_hands_feet: present
+  breathing_difficulty: present
+  es_severe_breathing: absent
+  drowsy_hard_to_wake: present
+  confusion: present
+  neck_stiffness: absent
+  photophobia: unknown
+  seizure_recent: absent
+  es_unresponsive_or_seizing: absent
+  decreased_urine: unknown
+  bleeding_gums_nose: absent
+  cough: absent
+  sore_throat: absent
+  diarrhea: absent
+  pig_pork_exposure: absent
+  dengue_nearby: absent
+default_unmentioned: absent
+expected:
+  condition: sepsis
+  acceptable: [bacterial_meningitis]
+  triage: 1
+source:
+  basis: "Nhiễm khuẩn huyết do não mô cầu ở thanh thiếu niên sống tập thể: sốt đột ngột, đau chân, chi lạnh, ban xuất huyết không mất khi ấn lan nhanh, li bì, lẫn lộn. NICE NG240 khuyên nghĩ ngay đến bệnh não mô cầu và chuyển viện cấp cứu; ban không mất khi ấn và lú lẫn là dấu hiệu phải gọi cấp cứu (NHS Sepsis; NHS Meningitis)."
+  references:
+    - nice-ng240
+    - nice-ng253
+    - nhs-sepsis
+    - nhs-meningitis
+author: "agent:vignette-holdout"
+notes_vi: "Chưa có cứng gáy; chấp nhận viêm màng não vì cùng là bệnh do não mô cầu."

@@ -1,0 +1,61 @@
+id: h-fever-040
+set: holdout
+title_vi: "Nữ 68 tuổi bị đái tháo đường, sốt 4 ngày, vừa hết sốt thì mệt lả, chân tay lạnh, choáng khi đứng"
+narrative_vi: "Bà N., 68 tuổi, ở Hà Nội, bị đái tháo đường và tăng huyết áp. Khu phố đang có nhiều người bị sốt xuất huyết. Bà sốt 4 ngày, 38,5–39°C, đau đầu nhẹ, mỏi người, mệt, chán ăn. Từ sáng nay bà kêu đau tức dưới sườn phải, nôn 2 lần. Từ trưa bà hết sốt, con cháu tưởng bà đã đỡ, nhưng đến chiều bà mệt lả, không tự đứng dậy được, đứng lên là choáng như sắp ngất. Tay chân bà lạnh, vã mồ hôi lạnh. Từ sáng đến giờ bà chỉ đi tiểu một ít. Ở hai cẳng chân có chấm đỏ li ti, ấn không mất. Bà vẫn tỉnh, trả lời đúng, không khó thở, không chảy máu chân răng."
+patient:
+  age_years: 68
+  sex: female
+  region: north
+  month: 10
+complaint: fever
+answers:
+  fever_max_temp: t38_39
+  fever_duration: d3_5
+  headache: present
+  headache_severity: mild
+  myalgia: present
+  fatigue: present
+  loss_of_appetite: present
+  abdominal_pain: present
+  abd_pain_location: right_upper
+  abd_pain_onset: gradual
+  abd_pain_duration: h6_24
+  abd_pain_severe: absent
+  nausea: present
+  vomiting: present
+  persistent_vomiting: absent
+  severe_weakness: present
+  fainting_or_near_fainting: present
+  cold_hands_feet: present
+  cold_sweat: present
+  decreased_urine: present
+  rash_any: present
+  rash_non_blanching: present
+  rash_spreads_from_face: absent
+  bleeding_gums_nose: absent
+  dengue_nearby: present
+  confusion: absent
+  drowsy_hard_to_wake: absent
+  breathing_difficulty: absent
+  retro_orbital_pain: absent
+  arthralgia: absent
+  chills_rigors: absent
+  cough: absent
+  runny_nose: absent
+  diarrhea: absent
+  black_stool: absent
+  diabetes: present
+  hypertension_known: present
+default_unmentioned: absent
+expected:
+  condition: dengue
+  acceptable: []
+  triage: 1
+source:
+  basis: "Sốt xuất huyết Dengue vào giai đoạn nguy hiểm: ngay khi hết sốt xuất hiện sốc (mệt lả, chi lạnh, vã mồ hôi, choáng khi đứng, tiểu ít) kèm đau vùng gan, nôn, chấm xuất huyết. Sốt xuất huyết Dengue nặng ở người cao tuổi có bệnh nền, cần cấp cứu ngay (2760/QĐ-BYT; WHO 2009)."
+  references:
+    - byt-qd-2760-2023
+    - who-dengue-2009
+    - who-arbovirus-2025
+author: "agent:vignette-holdout"
+notes_vi: "Người nhà dễ hiểu nhầm hết sốt là đã khỏi; giai đoạn nguy hiểm thường từ ngày 3 đến ngày 7 của bệnh. Danh mục chưa có câu hỏi về mạch, huyết áp khi sốc."

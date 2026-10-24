@@ -1,0 +1,50 @@
+id: h-abd-039
+set: holdout
+title_vi: "Nữ 31 tuổi đặt vòng, chậm kinh 10 ngày, đột ngột đau dữ dội bụng dưới phải, ngất, vã mồ hôi lạnh"
+narrative_vi: "Chị L., 31 tuổi, ở Nghệ An, có 2 con, đặt vòng tránh thai 3 năm nay nên không nghĩ mình có thai. Kinh thường đều, lần này chậm khoảng 10 ngày. Mấy hôm nay chị ra ít máu nâu lấm tấm, tưởng sắp có kinh nên chưa thử thai. Khoảng 1 giờ trước, đang phơi quần áo thì chị đột ngột đau dữ dội bụng dưới bên phải, rồi đau lan khắp bụng dưới và lên đầu vai phải; cử động là đau tăng. Chị ngất trong nhà tắm vài giây. Hiện chị nằm, da xanh tái, vã mồ hôi lạnh, tay chân lạnh, ngồi dậy là choáng muốn ngất, buồn nôn. Chị không sốt, chưa từng mổ bụng."
+patient:
+  age_years: 31
+  sex: female
+  region: central
+  month: 6
+complaint: abdominal_pain
+answers:
+  abd_pain_location: right_lower
+  abd_pain_onset: sudden
+  abd_pain_duration: lt_6h
+  abd_pain_severe: present
+  abd_pain_colicky: absent
+  abd_pain_migrated_rlq: absent
+  abd_pain_worse_movement: present
+  abd_pain_radiates_right_shoulder: present
+  fainting_or_near_fainting: present
+  cold_sweat: present
+  cold_hands_feet: present
+  severe_weakness: present
+  missed_period: present
+  pregnant: unknown
+  vaginal_bleeding: present
+  nausea: present
+  vomiting: absent
+  fever: absent
+  diarrhea: absent
+  dysuria: absent
+  abnormal_vaginal_discharge: absent
+  pain_with_menses: absent
+  previous_abdominal_surgery: absent
+  abdomen_hard_swollen: absent
+  chest_pain_pressure: absent
+default_unmentioned: absent
+expected:
+  condition: ectopic_pregnancy
+  acceptable: []
+  triage: 1
+source:
+  basis: "Chửa ngoài tử cung vỡ: chậm kinh, ra ít máu nâu, đột ngột đau dữ dội bụng dưới lan lên vai, ngất, da tái, vã mồ hôi lạnh, chi lạnh là dấu hiệu sốc mất máu; gọi cấp cứu ngay (NHS Ectopic pregnancy; NICE NG126). Có thai khi đang đặt vòng thì khoảng một nửa là thai ngoài tử cung (MSD)."
+  references:
+    - nhs-ectopic-pregnancy
+    - nice-ng126
+    - msd-ectopic-pregnancy
+    - byt-qd-315-2015
+author: "agent:vignette-holdout"
+notes_vi: "Người bệnh tin là không thể có thai vì đang đặt vòng nên trả lời 'không rõ' câu đang mang thai."

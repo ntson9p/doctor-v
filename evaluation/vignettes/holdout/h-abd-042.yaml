@@ -1,0 +1,42 @@
+id: h-abd-042
+set: holdout
+title_vi: "Bé trai 12 tuổi, đau rát vùng trên rốn lúc đói 2 tháng, có đêm đau thức giấc, ăn vào đỡ"
+narrative_vi: "Bé K., nam, 12 tuổi, học sinh lớp 7 ở Thành phố Hồ Chí Minh. Khoảng 2 tháng nay bé hay đau âm ỉ, nóng rát vùng trên rốn, nhất là lúc đói; có đêm bé đau thức giấc lúc nửa đêm, ăn chút bánh hoặc uống sữa thì đỡ. Bé hay ợ chua, đôi khi buồn nôn. Bố bé từng bị loét dạ dày do vi khuẩn HP. Bé không nôn, không nôn ra máu, phân vàng bình thường, không sụt cân, không sốt, vẫn ăn uống và đi học bình thường."
+patient:
+  age_years: 12
+  sex: male
+  region: south
+  month: 10
+complaint: abdominal_pain
+answers:
+  abd_pain_location: epigastric
+  abd_pain_onset: gradual
+  abd_pain_duration: gt_2w
+  abd_pain_severe: absent
+  abd_pain_colicky: absent
+  abd_pain_meal_relation: hungry_relieved_by_food
+  abd_pain_radiates_back: absent
+  pain_after_fatty_meal: absent
+  heartburn: present
+  nausea: present
+  vomiting: absent
+  vomiting_blood: absent
+  black_stool: absent
+  fever: absent
+  loss_of_appetite: absent
+  diarrhea: absent
+  jaundice: absent
+  abdomen_hard_swollen: absent
+default_unmentioned: absent
+expected:
+  condition: peptic_ulcer_gastritis
+  acceptable: []
+  triage: 4
+source:
+  basis: "Viêm dạ dày, loét tá tràng do H. pylori ở trẻ: đau vùng trên rốn lúc đói, đau thức giấc ban đêm, ăn vào đỡ, ợ chua, kéo dài 2 tháng, bố từng bị loét (Nguyen 2023). Không có dấu hiệu báo động (nôn ra máu, phân đen, sụt cân, nôn kéo dài) nên đặt lịch khám trong vài ngày (NHS Stomach ulcer)."
+  references:
+    - nhs-stomach-ulcer
+    - nguyen-healthcare-2023
+    - msd-peptic-ulcer
+author: "agent:vignette-holdout"
+notes_vi: "Đau thức giấc ban đêm gợi ý nguyên nhân thực thể, không nên coi là đau bụng chức năng. Danh mục chưa có câu hỏi về người nhà nhiễm H. pylori."

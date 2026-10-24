@@ -1,0 +1,43 @@
+id: h-abd-041
+set: holdout
+title_vi: "Nữ 72 tuổi, tiểu buốt, tiểu nhiều lần, tức bụng dưới 2 ngày, không sốt"
+narrative_vi: "Bà P., 72 tuổi, ở Vĩnh Long, bị tăng huyết áp, không bị đái tháo đường. Hai ngày nay bà đi tiểu buốt, nóng rát, phải đi tiểu nhiều lần, mỗi lần một ít, đêm dậy đi tiểu 4–5 lần. Bà tức nặng vùng bụng dưới, nước tiểu đục. Bà không sốt, không rét run, không đau hông lưng, không buồn nôn, vẫn ăn uống được và tỉnh táo như mọi ngày. Nước tiểu không đỏ; bà không ra máu hay khí hư bất thường ở âm đạo."
+patient:
+  age_years: 72
+  sex: female
+  region: south
+  month: 4
+complaint: abdominal_pain
+answers:
+  abd_pain_location: suprapubic
+  abd_pain_onset: gradual
+  abd_pain_duration: d1_3
+  abd_pain_severe: absent
+  abd_pain_colicky: absent
+  dysuria: present
+  urinary_frequency: present
+  hematuria: absent
+  flank_pain: absent
+  fever: absent
+  nausea: absent
+  vomiting: absent
+  loss_of_appetite: absent
+  confusion: absent
+  vaginal_bleeding: absent
+  abnormal_vaginal_discharge: absent
+  diarrhea: absent
+  kidney_stones_known: absent
+  diabetes: absent
+  hypertension_known: present
+default_unmentioned: absent
+expected:
+  condition: cystitis
+  acceptable: []
+  triage: 3
+source:
+  basis: "Viêm bàng quang ở người từ 65 tuổi: tiểu buốt, tiểu nhiều lần, tức bụng dưới, không sốt, không đau hông lưng (3931/QĐ-BYT). NHS khuyên người từ 65 tuổi có triệu chứng nhiễm khuẩn tiết niệu cần được khám gấp, không tự xử trí như phụ nữ trẻ (NHS UTIs)."
+  references:
+    - nhs-utis
+    - byt-qd-3931-2015
+author: "agent:vignette-holdout"
+notes_vi: "Cùng bệnh với phụ nữ trẻ nhưng mức khẩn cao hơn vì tuổi; người cao tuổi bị nhiễm khuẩn tiết niệu có thể diễn biến nặng nhanh."

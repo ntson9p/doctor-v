@@ -1,0 +1,48 @@
+id: h-head-020
+set: holdout
+title_vi: "Nữ 79 tuổi uống thuốc chống đông, ngã đập đầu 3 tuần trước, đau đầu tăng dần, nôn"
+narrative_vi: "Bà T., 79 tuổi, ở Nam Định, bị rung nhĩ và tăng huyết áp, đang uống thuốc chống đông máu hằng ngày theo đơn. Khoảng 3 tuần trước bà trượt chân ngã trong nhà tắm, đập đầu vào thành bể nước, lúc đó chỉ sưng đau, không ngất nên không đi khám. Khoảng 10 ngày nay bà đau đầu âm ỉ, nặng nề khắp đầu, mỗi ngày một tăng, uống paracetamol không đỡ. Sáng nay bà buồn nôn, nôn 1 lần. Bà vẫn tỉnh táo, nói chuyện đúng, tự đi lại được, tay chân cử động đều, không méo miệng, nhìn rõ, không sốt. Con gái đo huyết áp sáng nay được 135/80 mmHg."
+patient:
+  age_years: 79
+  sex: female
+  region: north
+  month: 1
+complaint: headache
+answers:
+  headache_course: progressive
+  headache_duration: gt_3d
+  headache_location: whole_head
+  headache_character: pressing
+  headache_severity: moderate
+  headache_thunderclap: absent
+  headache_after_head_injury: present
+  nausea: present
+  vomiting: present
+  persistent_vomiting: absent
+  confusion: absent
+  drowsy_hard_to_wake: absent
+  es_stroke_signs: absent
+  sudden_loss_of_balance: absent
+  vision_loss_or_double: absent
+  blurred_vision: absent
+  seizure_recent: absent
+  fainting_or_near_fainting: absent
+  neck_stiffness: absent
+  photophobia: absent
+  fever: absent
+  bp_measured: normal
+  hypertension_known: present
+  known_heart_disease: present
+  regular_painkiller_use: absent
+default_unmentioned: absent
+expected:
+  condition: other
+  acceptable: []
+  triage: 2
+source:
+  basis: "Nghi máu tụ dưới màng cứng mạn tính: người cao tuổi đang dùng thuốc chống đông, đau đầu tăng dần vài tuần sau ngã đập đầu, có nôn. NICE NG232 khuyên người đau đầu dai dẳng hoặc nôn sau chấn thương đầu, đang dùng thuốc chống đông phải đến khoa cấp cứu; NHS Headaches: đau đầu sau chấn thương đầu trong 3 tháng qua cần đi cấp cứu."
+  references:
+    - nice-ng232
+    - nhs-headaches
+author: "agent:vignette-holdout"
+notes_vi: "Ngoài danh mục bệnh. Người nhà dễ quên cú ngã đã xảy ra nhiều tuần trước. Còn tỉnh táo, không có dấu hiệu thần kinh khu trú nên mức 2, không phải mức 1. Danh mục chưa có câu hỏi về thuốc chống đông."
