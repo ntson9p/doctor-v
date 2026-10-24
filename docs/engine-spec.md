@@ -205,7 +205,7 @@ Hiển thị tối đa 5 đóng góp dương ("vì sao gợi ý") và 5 đóng g
 
 **Dừng vì cấp cứu** (`emergencyStop = true`):
 - Lúc dừng mới có vài câu trả lời, nên danh sách xếp hạng chưa đáng tin; bệnh lành tính có thể vẫn đứng đầu.
-- Giao diện **không hiện danh sách xếp hạng và con số %**. Thay vào đó chỉ hiện `urgentConditions`, với tiêu đề "Bác sĩ cần loại trừ": tối đa 3 tình trạng có $P \ge$ `safety_net_min_prob`, là bệnh mức 1–2, **hoặc** bệnh đang có dấu hiệu cảnh báo của chính nó (`warning_signs`), ví dụ sốt xuất huyết có tiểu ít ở ngày thứ 4. Sắp theo xác suất.
+- Giao diện **không hiện danh sách xếp hạng và con số %**. Thay vào đó chỉ hiện `urgentConditions`, với tiêu đề "Bác sĩ cần loại trừ": tối đa 3 tình trạng có $P \ge$ `safety_net_min_prob`, là bệnh mức 1–2, **hoặc** bệnh mức 3 đang có dấu hiệu cảnh báo của chính nó (`warning_signs`, tức thể nặng của bệnh), ví dụ sốt xuất huyết có tiểu ít ở ngày thứ 4. Bệnh mức 4–5 không được thêm: với chúng, dấu hiệu cảnh báo (như cứng gáy ở cảm lạnh) chỉ ra một bệnh khác. Sắp theo xác suất.
 
 ## 10. Tính tất định và kiểm thử
 
@@ -249,7 +249,7 @@ Hiển thị tối đa 5 đóng góp dương ("vì sao gợi ý") và 5 đóng g
 | Dừng khi top-3 ≥ 0,80, **hoặc** EIG < 0,05, **hoặc** VOI < 0,01 | Dừng khi ổn định **và** VOI < 0,01 **và** (**bệnh đứng đầu ≥ 0,70** hoặc EIG < 0,05) | Với điều kiện "hoặc VOI < 0,01", phiên sẽ dừng ngay khi mức xử trí ổn định, trước khi kịp phân biệt bệnh. Còn với "top-3 ≥ 0,80", các bệnh cùng mức xử trí (cảm lạnh, cúm, COVID-19) chiếm hết top 3, nên câu phân biệt như kết quả tự xét nghiệm không bao giờ được hỏi (lượt C lô 1 phát hiện). Cách mới vừa giữ được câu hỏi an toàn, vừa giữ được câu hỏi phân biệt |
 | Chưa nêu | **Dừng ngay** khi có quy tắc mức 1–2 | Người cần đi cấp cứu không nên phải trả lời thêm câu hỏi |
 | Chưa nêu | Khi mức xử trí chưa ổn định, cộng thêm Pđổi vào điểm câu hỏi | Bảo đảm phiên tiến về trạng thái ổn định |
-| VOI tính trên rủi ro $R(P)$ của xác suất bệnh; Pđổi gồm cả nhánh "Không rõ" | VOI có **quy tắc nguy hiểm** (chặn mức cần thật) và **chi phí của "Không rõ"**; Pđổi bỏ nhánh "Không rõ"; giá trị an toàn chỉ tính phần vượt `min_voi` = 0,1 | Cách cũ làm mọi câu hỏi dấu hiệu nguy hiểm có Pđổi ≥ `unknown_rate` (0,1), nên mức xử trí luôn "chưa ổn định" và phiên hỏi lần lượt từng dấu hiệu nguy hiểm của mọi quy tắc, kể cả khối thoát vị ở người sốt (người bảo trì, lô 2). Trên 72 ca dev (24 bệnh), sau thay đổi này cùng với phạm vi quy tắc: số câu trung vị 15 (thích ứng 7), top-1 84,7%, top-3 94,4%, không bỏ sót ca cấp cứu |
+| VOI tính trên rủi ro $R(P)$ của xác suất bệnh; Pđổi gồm cả nhánh "Không rõ" | VOI có **quy tắc nguy hiểm** (chặn mức cần thật) và **chi phí của "Không rõ"**; Pđổi bỏ nhánh "Không rõ"; giá trị an toàn chỉ tính phần vượt `min_voi` = 0,1 | Cách cũ làm mọi câu hỏi dấu hiệu nguy hiểm có Pđổi ≥ `unknown_rate` (0,1), nên mức xử trí luôn "chưa ổn định" và phiên hỏi lần lượt từng dấu hiệu nguy hiểm của mọi quy tắc, kể cả khối thoát vị ở người sốt (người bảo trì, lô 2). Trên 72 ca dev (24 bệnh), sau thay đổi này cùng với phạm vi quy tắc: số câu trung vị 15 (thích ứng 7), không bỏ sót ca cấp cứu |
 
 ## 13. Hạn chế đã biết
 

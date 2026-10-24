@@ -48,9 +48,10 @@ export interface SessionResult {
    */
   emergencyStop: boolean;
   /**
-   * Conditions a doctor should rule out first: level 1–2 conditions still possible, and
-   * conditions whose own warning signs are present (e.g. dengue with its warning signs);
-   * most probable first, at most 3.
+   * Conditions a doctor should rule out first: level 1–2 conditions still possible, and level 3
+   * conditions whose own warning signs are present (a severe form, e.g. dengue with warning
+   * signs). For level 4–5 conditions a warning sign points to another condition, so they are
+   * left out. Most probable first, at most 3.
    */
   urgentConditions: string[];
   /** All candidate conditions, most probable first. */
@@ -162,7 +163,9 @@ export function sessionResult(kb: CompiledKb, state: SessionState): SessionResul
     rankingSuppressed: params.screenOnlyAgeGroups.includes(env.ageGroup),
     emergencyStop: stopReason === 'emergency',
     urgentConditions: conditions
-      .filter((c) => c.probability >= params.safetyNetMinProb && (c.urgency <= 2 || warningSignPresent(c.conditionId)))
+      .filter(
+        (c) => c.probability >= params.safetyNetMinProb && (c.urgency <= 2 || (c.urgency === 3 && warningSignPresent(c.conditionId))),
+      )
       .slice(0, 3)
       .map((c) => c.conditionId),
     conditions,

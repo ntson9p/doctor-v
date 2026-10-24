@@ -136,14 +136,14 @@ Lô 2–3 đang chạy.
    - quy tắc chỉ hợp với một số triệu chứng chính đã ghi phạm vi;
    - tỷ lệ nền của dấu hiệu nguy hiểm rất hiếm được hạ cho đúng thực tế;
    - giá trị an toàn chỉ tính phần vượt "gánh nặng" 0,1 của một câu hỏi.
-3. Khi dừng khẩn, danh sách "Bác sĩ cần loại trừ" chỉ có bệnh mức 1–2, nên bỏ sót sốt xuất huyết hay tay chân miệng dù chính dấu hiệu cảnh báo của chúng làm dừng. Đã thêm bệnh đang có dấu hiệu cảnh báo của chính nó. Chỉ số top-k của ca dừng khẩn giờ chấm theo danh sách này (danh sách người dùng thực sự thấy).
+3. Khi dừng khẩn, danh sách "Bác sĩ cần loại trừ" chỉ có bệnh mức 1–2, nên bỏ sót sốt xuất huyết dù chính dấu hiệu cảnh báo của nó làm dừng. Đã thêm bệnh mức 3 đang có dấu hiệu cảnh báo của chính nó. Không thêm bệnh mức 4–5: lần thử đầu đưa cả cảm lạnh vào danh sách khi có cứng gáy, vì cứng gáy nằm trong dấu hiệu cảnh báo của cảm lạnh. Chỉ số top-k của ca dừng khẩn giờ chấm theo danh sách này, là danh sách người dùng thực sự thấy.
 
 **Bộ dev, 72 ca của 24 bệnh (chưa có lô 3):**
 
 | | Top-1 | Top-3 | Bỏ sót cấp cứu | Khuyên quá mức |
 |---|---|---|---|---|
-| Trả lời đúng ca | 84,7% | 94,4% | 0/23 | 5/72 |
-| 15% câu trả lời thành "Không rõ" | 80,6% | 91,7% | 1/23 | 11/72 |
+| Trả lời đúng ca | 81,9% | 95,8% | 0/23 | 5/72 |
+| 15% câu trả lời thành "Không rõ" | 77,8% | 93,1% | 1/23 | 11/72 |
 
 Số câu hỏi trung vị 15, trong đó 7 câu thích ứng.
 
@@ -155,4 +155,5 @@ Ca bỏ sót khi nhiễu: chửa ngoài tử cung, khi câu "chậm kinh" bị "
 - tách câu phơi nhiễm sốt rét (đi rừng trong nước / từ nước có sốt rét về);
 - tỷ lệ nền theo tuổi (trẻ nhỏ không tự kể đau đầu, đau cơ; co giật do sốt);
 - câu "phù mặt, bàn tay" chưa hợp với sốt mò (phù mặt và mu chân);
-- quy tắc chung cho sốt kèm vàng da cần nguồn.
+- quy tắc chung cho sốt kèm vàng da cần nguồn;
+- liên kết quy tắc → bệnh, để danh sách "cần loại trừ" hiện tay chân miệng khi quy tắc nặng dựa vào nhiệt độ hoặc số ngày sốt.
