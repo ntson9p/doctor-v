@@ -1,5 +1,5 @@
 import type { CompiledKb, SessionResult } from '@doctor-v/engine';
-import { conditionName, describeReason, findingLabel, percentText } from '../../lib/explain.ts';
+import { conditionName, describeReason, findingLabel, percentText, supportText } from '../../lib/explain.ts';
 
 const LEVEL_ICON: Record<number, string> = { 1: '🚨', 2: '🏥', 3: '🩺', 4: '📅', 5: '🏠' };
 /** Conditions shown on the result: those at 1% or more, at most 5 (docs/plan.md §3.3). */
@@ -18,7 +18,19 @@ interface Props {
 export function Result({ kb, result: r, onReview, onRestart }: Props) {
   const level = r.triage.level;
   const levelText = kb.text.triageLevels[String(level)];
-  const reasons = [...new Set(r.triage.reasons.filter((x) => x.level === level).map((x) => describeReason(kb, x)))].slice(0, 3);
+  // Conditions behind a probability-based level: those at that urgency (or can't-miss), most probable first.
+  const behind = (cantMiss: boolean): string[] =>
+    r.conditions
+      .filter((c) => c.urgency <= level && (!cantMiss || c.cantMiss))
+      .slice(0, 2)
+      .map((c) => conditionName(kb, c.conditionId));
+  const reasons = [
+    ...new Set(
+      r.triage.reasons
+        .filter((x) => x.level === level)
+        .map((x) => describeReason(kb, x, x.kind === 'probability' ? behind(x.cantMiss) : [])),
+    ),
+  ].slice(0, 3);
   const conditions = r.conditions.filter((c) => c.probability >= SHOW_MIN_PROB).slice(0, SHOW_MAX);
   const top = r.conditions[0];
   const selfCare =
@@ -63,7 +75,7 @@ export function Result({ kb, result: r, onReview, onRestart }: Props) {
 
       <div class="section">
         <h2>Nên khám</h2>
-        <p>{r.specialties.map((s) => kb.text.specialties[s] ?? s).join(', ')}.</p>
+        <p>{level <= 2 ? (kb.text.specialties.emergency ?? 'Cấp cứu') : r.specialties.map((s) => kb.text.specialties[s] ?? s).join(', ')}.</p>
       </div>
 
       {r.rankingSuppressed ? (
@@ -85,7 +97,10 @@ export function Result({ kb, result: r, onReview, onRestart }: Props) {
         <div class="section">
           <h2>Tình trạng có thể liên quan</h2>
           {conditions.map((c) => {
-            const why = c.supporting.slice(0, 3).map((x) => findingLabel(kb, x.findingId));
+            const why = c.supporting
+              .map((x) => supportText(kb, x.findingId, x.value))
+              .filter((t): t is string => t !== null)
+              .slice(0, 3);
             const width = Math.max(2, Math.round(c.probability * 100));
             return (
               <div key={c.conditionId} class="condition">

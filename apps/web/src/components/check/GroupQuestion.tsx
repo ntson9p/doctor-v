@@ -32,9 +32,9 @@ export function GroupQuestion({ kb, title, noneLabel, findingIds, allowUnknown, 
           return (
             <label key={id} class="choice">
               <input type="checkbox" checked={checked.includes(id)} onChange={() => toggle(id)} />
-              <span>
-                {kb.text.findings[id]?.label ?? id}
-                {help ? <span class="why"> ({help})</span> : null}
+              <span class="choice__text">
+                <span>{kb.text.findings[id]?.label ?? id}</span>
+                {help ? <span class="choice__help">{help}</span> : null}
               </span>
             </label>
           );

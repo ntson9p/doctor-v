@@ -15,7 +15,7 @@ function answerText(kb: CompiledKb, h: AnsweredStep): string {
     const values = Object.values(h.answers);
     if (values.length > 0 && values.every((v) => v === UNKNOWN)) return 'Không rõ';
     const yes = Object.entries(h.answers).filter(([, v]) => v === 'present');
-    return yes.length === 0 ? 'Không có dấu hiệu nào' : yes.map(([id]) => kb.text.findings[id]?.label ?? id).join('; ');
+    return yes.length === 0 ? 'Không có' : yes.map(([id]) => kb.text.findings[id]?.label ?? id).join('; ');
   }
   const id = h.step.findingId;
   const v = h.answers[id];
@@ -51,6 +51,9 @@ export function Review({ kb, history, forOther, onEdit, onDone }: Props) {
           <div key={i} class="review-item">
             <div>
               <p>{questionText(kb, h, forOther)}</p>
+              {h.step.kind === 'group' ? (
+                <p class="note">{h.step.findingIds.map((id) => kb.text.findings[id]?.label ?? id).join('; ')}</p>
+              ) : null}
               <p>
                 <strong>{answerText(kb, h)}</strong>
               </p>

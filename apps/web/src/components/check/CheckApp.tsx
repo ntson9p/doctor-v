@@ -64,17 +64,11 @@ const fresh = (kb: CompiledKb, view: View = 'intro'): Flow => ({ kbVersion: kb.v
 function Progress({ view, phase }: { view: View; phase: Phase | null }) {
   const stage = STAGE_OF[view];
   if (stage < 0) return null;
+  const label = view === 'ask' && phase ? PHASE_LABEL[phase] : STAGES[stage];
   return (
-    <nav aria-label="Tiến trình">
-      <ol class="progress">
-        {STAGES.map((s, i) => (
-          <li key={s} aria-current={i === stage ? 'step' : undefined}>
-            {i + 1}. {s}
-            {i === stage && phase && view === 'ask' ? ` · ${PHASE_LABEL[phase]}` : ''}
-          </li>
-        ))}
-      </ol>
-    </nav>
+    <p class="progress">
+      Bước {stage + 1}/{STAGES.length} · {label}
+    </p>
   );
 }
 
@@ -228,21 +222,19 @@ export default function CheckApp() {
       const canStop = session.history.length >= kb.params.stop.softMaxQuestions;
       body = (
         <>
+          <button
+            type="button"
+            class="btn btn--link back"
+            onClick={() => (session.history.length > 0 ? set({ session: goBack(session) }) : set({ view: 'complaint' }))}
+          >
+            ‹ Quay lại
+          </button>
           {question}
-          <div class="row" style={{ marginTop: '1.5rem' }}>
-            <button
-              type="button"
-              class="btn"
-              onClick={() => (session.history.length > 0 ? set({ session: goBack(session) }) : set({ view: 'complaint' }))}
-            >
-              Quay lại
+          {canStop ? (
+            <button type="button" class="btn btn--link" style={{ marginTop: '1.5rem' }} onClick={() => advance(stopEarly(session))}>
+              Dừng hỏi và xem kết quả
             </button>
-            {canStop ? (
-              <button type="button" class="btn" onClick={() => advance(stopEarly(session))}>
-                Dừng và xem kết quả
-              </button>
-            ) : null}
-          </div>
+          ) : null}
         </>
       );
     }
