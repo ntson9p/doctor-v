@@ -1,0 +1,40 @@
+id: d-sepsis-1
+set: dev
+title_vi: "Nữ 72 tuổi, đái tháo đường, sốt rét run 2 ngày, nay lú lẫn, thở nhanh"
+narrative_vi: "Bà S., 72 tuổi, ở Nghệ An, bị đái tháo đường. Ba ngày trước tiểu buốt, tiểu rắt. Hai ngày nay sốt cao 39,5°C kèm rét run, hôm nay nói lẫn lộn, không nhận ra con cháu, thở nhanh, đi tiểu rất ít. Không ho, không đau ngực, không nổi ban."
+patient:
+  age_years: 72
+  sex: female
+  region: central
+  month: 5
+complaint: fever
+answers:
+  fever_duration: d1_2
+  fever_max_temp: ge_39
+  chills_rigors: present
+  confusion: present
+  breathing_difficulty: present
+  decreased_urine: present
+  dysuria: present
+  urinary_frequency: present
+  diabetes: present
+  neck_stiffness: absent
+  drowsy_hard_to_wake: absent
+  persistent_vomiting: absent
+  cold_hands_feet: absent
+  severe_weakness: absent
+  cough: absent
+  rash_any: absent
+  hypertension_known: absent
+  known_heart_disease: absent
+  immunocompromised: absent
+default_unmentioned: absent
+expected:
+  condition: sepsis
+  acceptable: [acute_pyelonephritis]
+  triage: 1
+source:
+  basis: "Nhiễm khuẩn huyết từ đường tiết niệu ở người cao tuổi có đái tháo đường (5642 bài Nhiễm khuẩn huyết: yếu tố nguy cơ, sốt rét run, thở nhanh, thay đổi ý thức, thiểu niệu). NHS Sepsis: lú lẫn, thở rất nhanh thì gọi 999 (tương ứng gọi 115)."
+  references: [byt-qd-5642-2015, nhs-sepsis]
+author: "agent:pass-c"
+notes_vi: "Chấp nhận viêm thận – bể thận vì là ổ nhiễm khuẩn khởi điểm; mô hình một bệnh chia xác suất giữa hai tình trạng."

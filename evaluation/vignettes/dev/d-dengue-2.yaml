@@ -1,0 +1,54 @@
+id: d-dengue-2
+set: dev
+title_vi: "Bé gái 4 tuổi ở Cần Thơ, tháng 7, sốt cao 3 ngày, chán ăn, nôn 1 lần, đau bụng nhẹ"
+narrative_vi: "Bé N., 4 tuổi, ở Cần Thơ. Ba ngày nay sốt cao 39,2°C, mệt, bỏ ăn, nôn 1 lần hôm qua, kêu đau bụng quanh rốn nhưng vẫn chơi được. Bé không kể được đau đầu hay đau mỏi. Không ho, không sổ mũi, không tiêu chảy, không nổi ban, không chảy máu chân răng. Vẫn uống nước được, không li bì, không co giật. Anh họ ở cùng xóm đang nằm viện vì sốt xuất huyết. Bé đã tiêm đủ 2 mũi vắc xin sởi."
+patient:
+  age_years: 4
+  sex: female
+  region: south
+  month: 7
+complaint: fever
+answers:
+  fever_max_temp: ge_39
+  fever_duration: d3_5
+  fatigue: present
+  loss_of_appetite: present
+  vomiting: present
+  persistent_vomiting: absent
+  abdominal_pain: present
+  abd_pain_location: periumbilical
+  abd_pain_severe: absent
+  headache: unknown
+  myalgia: unknown
+  arthralgia: unknown
+  retro_orbital_pain: unknown
+  cough: absent
+  runny_nose: absent
+  sore_throat: absent
+  diarrhea: absent
+  rash_any: absent
+  bleeding_gums_nose: absent
+  child_unable_to_drink: absent
+  child_vomits_everything: absent
+  seizure_recent: absent
+  drowsy_hard_to_wake: absent
+  breathing_difficulty: absent
+  decreased_urine: absent
+  dysuria: absent
+  dengue_nearby: present
+  malaria_area_exposure: absent
+  bush_exposure: absent
+  sick_contact_respiratory: absent
+  measles_contact: absent
+  measles_vaccinated: present
+  hand_foot_blisters: absent
+  mouth_ulcers: absent
+default_unmentioned: absent
+expected:
+  condition: dengue
+  acceptable: []
+  triage: 3
+source:
+  basis: "Ca sốt xuất huyết ở trẻ nhỏ, giai đoạn sớm, không kể được đau đầu, đau cơ; có yếu tố dịch tễ (2760 Phụ lục 2, Phụ lục 22: trẻ em gặp nhiều nhất, dịch nhiều vào tháng 7–10). Nôn 1 lần, đau bụng nhẹ chưa phải dấu hiệu cảnh báo (cảnh báo khi nôn từ 3 lần/1 giờ hoặc 4 lần/6 giờ, đau bụng nhiều). Không có dấu hiệu nguy hiểm toàn thân theo IMCI. Theo dõi ngoại trú, khám lại hằng ngày (mục IV.A): đi khám trong 24 giờ."
+  references: [byt-qd-2760-2023, who-imci-chart-booklet-2014]
+author: "agent:pass-c"

@@ -1,0 +1,63 @@
+id: d-typhoid-fever-3
+set: dev
+title_vi: "Nữ 30 tuổi ở Sóc Trăng, tháng 8, sốt 7 ngày, đau bụng, nôn, đau đầu"
+narrative_vi: "Chị L., 30 tuổi, ở Sóc Trăng. Bảy ngày nay sốt tăng dần, nay 39–40°C, đau đầu, mệt lừ, chán ăn, đau bụng âm ỉ vùng bụng dưới bên phải và quanh rốn, bụng hơi chướng, buồn nôn, nôn 1 lần. Đi ngoài phân lỏng 2 ngày nay. Không chảy máu chân răng, không nổi ban, không đau mỏi khớp, không đau sau hốc mắt. Tỉnh táo. Khu phố đang có sốt xuất huyết nhưng nhà không ai bị."
+patient:
+  age_years: 30
+  sex: female
+  region: south
+  month: 8
+complaint: fever
+answers:
+  fever_duration: d6_7
+  fever_max_temp: ge_39
+  headache: present
+  fatigue: present
+  loss_of_appetite: present
+  abdominal_pain: present
+  abd_pain_location: right_lower
+  abd_pain_onset: gradual
+  abd_pain_duration: d4_14
+  abd_pain_severe: absent
+  abd_pain_migrated_rlq: absent
+  abdomen_hard_swollen: absent
+  nausea: present
+  vomiting: present
+  persistent_vomiting: absent
+  diarrhea: present
+  diarrhea_bloody: absent
+  retro_orbital_pain: absent
+  myalgia: absent
+  arthralgia: absent
+  rash_any: absent
+  bleeding_gums_nose: absent
+  cough: absent
+  runny_nose: absent
+  sore_throat: absent
+  chills_rigors: absent
+  decreased_urine: absent
+  dysuria: absent
+  flank_pain: absent
+  vaginal_bleeding: absent
+  abnormal_vaginal_discharge: absent
+  pregnant: absent
+  missed_period: absent
+  confusion: absent
+  dengue_nearby: present
+  malaria_area_exposure: absent
+  bush_exposure: absent
+  sick_contact_respiratory: absent
+  measles_contact: absent
+  diabetes: absent
+  hypertension_known: absent
+  known_heart_disease: absent
+  immunocompromised: absent
+default_unmentioned: absent
+expected:
+  condition: typhoid_fever
+  acceptable: []
+  triage: 3
+source:
+  basis: "Thương hàn tuần thứ 2 (5642: sốt tăng dần rồi cao liên tục, bụng chướng, đau hố chậu phải, tiêu chảy) xảy ra giữa mùa sốt xuất huyết, dễ nhầm với sốt xuất huyết ở giai đoạn nguy hiểm và với bệnh ngoại khoa vùng hố chậu phải. Chưa có biến chứng (không đau bụng dữ dội, bụng không cứng, không đi ngoài phân đen): khám và cấy máu trong ngày."
+  references: [byt-qd-5642-2015, byt-qd-2760-2023, azmatullah-jgh-2015]
+author: "agent:pass-c"

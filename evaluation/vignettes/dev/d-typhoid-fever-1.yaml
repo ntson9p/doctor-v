@@ -1,0 +1,54 @@
+id: d-typhoid-fever-1
+set: dev
+title_vi: "Nam 19 tuổi ở An Giang, sốt tăng dần 9 ngày, đau bụng, tiêu chảy"
+narrative_vi: "Anh V., 19 tuổi, sinh viên ở An Giang, hay ăn hàng rong. Chín ngày nay sốt, lúc đầu nhẹ rồi tăng dần, nay 39,5°C liên tục. Đau đầu, mệt nhiều, chán ăn, đau bụng âm ỉ khắp bụng, mấy ngày nay đi ngoài phân lỏng 3–4 lần mỗi ngày. Không ho, không sổ mũi, không đau họng, không nổi ban, không nôn. Tỉnh táo. Không đi rừng, không làm rẫy."
+patient:
+  age_years: 19
+  sex: male
+  region: south
+  month: 5
+complaint: fever
+answers:
+  fever_duration: gt_7d
+  fever_max_temp: ge_39
+  headache: present
+  fatigue: present
+  loss_of_appetite: present
+  abdominal_pain: present
+  abd_pain_location: whole
+  abd_pain_onset: gradual
+  abd_pain_duration: d4_14
+  abd_pain_severe: absent
+  diarrhea: present
+  diarrhea_bloody: absent
+  vomiting: absent
+  persistent_vomiting: absent
+  nausea: absent
+  cough: absent
+  runny_nose: absent
+  sore_throat: absent
+  rash_any: absent
+  myalgia: absent
+  chills_rigors: absent
+  confusion: absent
+  bleeding_gums_nose: absent
+  dysuria: absent
+  flank_pain: absent
+  malaria_area_exposure: absent
+  bush_exposure: absent
+  dengue_nearby: absent
+  sick_contact_respiratory: absent
+  measles_contact: absent
+  diabetes: absent
+  hypertension_known: absent
+  known_heart_disease: absent
+  immunocompromised: absent
+default_unmentioned: absent
+expected:
+  condition: typhoid_fever
+  acceptable: []
+  triage: 3
+source:
+  basis: "Thể điển hình theo 5642/QĐ-BYT bài Thương hàn (khởi phát từ từ, sốt tăng dần, sang tuần thứ 2 sốt cao liên tục, đau đầu, suy nhược, đau bụng, tiêu chảy; ăn uống không đảm bảo vệ sinh). Chưa có biến chứng: khám và cấy máu trong ngày; sốt hơn 7 ngày cần khám tìm nguyên nhân."
+  references: [byt-qd-5642-2015, azmatullah-jgh-2015]
+author: "agent:pass-c"

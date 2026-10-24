@@ -1,0 +1,13 @@
+id: cdc-dengue-clinical
+type: web_page
+title: "Clinical Features of Dengue"
+publisher: "Centers for Disease Control and Prevention (CDC)"
+date: "2026-02-24"
+url: "https://www.cdc.gov/dengue/hcp/clinical-signs/index.html"
+license_class: L0
+license_note: "Nội dung của chính phủ Hoa Kỳ (public domain); vẫn ghi nguồn."
+default_tier: B
+accessed: "2026-10-25"
+verified: true
+verified_by: "agent:pass-c"
+notes_vi: "Lượt C mở lại trang (ngày hiển thị 24/2/2026). Giai đoạn sốt: sốt 2–7 ngày, có thể hai pha; đau đầu nhiều, đau sau hốc mắt; đau cơ, đau khớp; ban; chảy máu nhẹ (chấm xuất huyết, chảy máu mũi, chân răng, tiểu máu). Dấu hiệu cảnh báo (đau bụng, nôn kéo dài, ứ dịch, chảy máu niêm mạc, li bì, bứt rứt, gan to) thường xuất hiện quanh lúc hết sốt; giai đoạn nguy hiểm bắt đầu khi hết sốt, kéo dài 24–48 giờ. Khoảng 1/4 ca nhiễm có triệu chứng; khoảng 1/20 ca bệnh tiến triển nặng."

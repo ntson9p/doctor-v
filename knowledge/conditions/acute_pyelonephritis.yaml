@@ -1,0 +1,236 @@
+id: acute_pyelonephritis
+names:
+  vi: "Viêm thận – bể thận cấp"
+  vi_common: ["Nhiễm trùng thận", "Viêm đài bể thận"]
+  en: "Acute pyelonephritis"
+codes:
+  icd10: "N10"
+  icd10_verified: false
+  mondo: "MONDO:0003529"
+summary_vi:
+  - "Nhiễm khuẩn cấp tính ở thận, thường do vi khuẩn từ bàng quang đi ngược lên."
+  - "Thường sốt cao, rét run, đau hông lưng một bên, có thể kèm tiểu buốt, tiểu nhiều lần."
+  - "Phụ nữ, người có thai, người có sỏi tiết niệu hoặc đái tháo đường dễ mắc hơn."
+urgency: 3
+cant_miss: false
+specialties: [nephrology, urology]
+priors:
+  - complaint: fever
+    default: P3
+    by_age: { infant_0_2m: P2, elder_65_74: P2, elder_75p: P2 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [shaikh-pidj-2008, kim-jkms-2018, ki-aje-2004, byt-qd-3931-2015]
+      locator: "Shaikh 2008 tóm tắt; Kim 2018 phần Results; Ki 2004 tóm tắt"
+      reported: "Nhiễm khuẩn tiết niệu ở 7,0% trẻ nhũ nhi bị sốt, 2,1% trẻ gái sốt trên 12 tháng; viêm thận – bể thận cấp ở Hàn Quốc 39,1/10.000 người từ 15 tuổi mỗi năm (2010–2014), 35,7/10.000 dân (1997–1999), tăng theo tuổi"
+      note: "Hai lượt trùng mức. Không có số liệu Việt Nam. Ở trẻ nhỏ, nhiễm khuẩn tiết niệu có sốt phần lớn là viêm thận – bể thận; trẻ dưới 2 tháng P2 (chỉ dùng sàng lọc), trẻ 2 tháng–5 tuổi giữ P3. Người lớn P3 (1–5%) là mức chung cho hai giới; khác biệt theo giới tính bằng prior_modifiers. Từ 65 tuổi nhiễm khuẩn tiết niệu là nguồn sốt hay gặp, tỷ lệ mắc tăng theo tuổi: P2."
+  - complaint: abdominal_pain
+    default: P3
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-3931-2015, nhs-kidney-infection, chitu-medicina-2026]
+      locator: "3931 bài Viêm thận bể thận cấp mục 2; NHS (đau bụng dưới hoặc lưng ngay dưới sườn); Chițu 2026 phần Results"
+      reported: "Viêm thận – bể thận chiếm 0,5% trong hơn 205 triệu lượt khám cấp cứu ở Hoa Kỳ"
+      note: "Hai lượt cùng chọn P3; lượt A hạ trẻ 2 tháng–5 tuổi xuống P4, lượt C giữ P3 vì nhiễm khuẩn tiết niệu là nguyên nhân đau bụng có sốt hay gặp ở trẻ nhỏ và chưa có số liệu cho thấy thấp hơn. Ước lượng, chưa có số liệu Việt Nam."
+prior_modifiers:
+  - when: { sex: [female] }
+    factor: 1.7
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [kim-jkms-2018, ki-aje-2004, nhs-kidney-infection]
+      locator: "Kim 2018 phần Results; Ki 2004 tóm tắt"
+      reported: "Nữ 71,3 so với nam 6,5 đợt/10.000 người/năm (gấp khoảng 11 lần, người từ 15 tuổi, 2010–2014); nữ 59,0 so với nam 12,6/10.000 (gấp 4,7 lần, mọi tuổi, 1997–1999)"
+      note: "Chỉ lượt B khai báo; lượt C giữ vì nguồn cho thấy khác biệt rõ. Prior gốc là của cả hai giới; cặp hệ số nữ × 1,7, nam × 0,3 cho tỷ số khoảng 6 (giữa 4,7 và 11) mà vẫn giữ trung bình hai giới bằng 1."
+  - when: { sex: [male] }
+    factor: 0.3
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [kim-jkms-2018, ki-aje-2004, shaikh-pidj-2008]
+      locator: "Kim 2018 phần Results; Ki 2004 tóm tắt; Shaikh 2008 tóm tắt"
+      reported: "Nam 6,5 so với nữ 71,3 đợt/10.000 người/năm; nam 12,6 so với nữ 59,0/10.000"
+      note: "Cặp với hệ số nữ × 1,7. Trẻ trai dưới 3 tháng chưa cắt bao quy đầu có tỷ lệ nhiễm khuẩn tiết niệu cao (Shaikh 2008), nhưng nhóm dưới 2 tháng chỉ dùng sàng lọc."
+findings:
+  - finding: fever
+    freq: very_frequent
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-3931-2015, nhs-kidney-infection, pinson-ajem-1997]
+      locator: "3931 bài Viêm thận bể thận cấp mục 2 (hội chứng nhiễm trùng: sốt cao rét run 39–40°C); NHS; Pinson 1997 tóm tắt"
+      note: "Hai lượt trùng mức. Chỉ có tác dụng khi triệu chứng chính là đau bụng. Không chọn almost_always vì có người bệnh không sốt rõ (Pinson: 201/304 phụ nữ nghi viêm thận – bể thận ở cấp cứu không sốt, nhóm này hay có chẩn đoán khác hơn)."
+  - finding: fever_max_temp
+    dist: { lt_38: 0.09, t38_39: 0.34, ge_39: 0.57 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-3931-2015]
+      locator: "Mục 2 (sốt cao 39–40°C)"
+      note: "Trung bình hai lượt; ước lượng."
+  - finding: fever_duration
+    dist: { d1_2: 0.52, d3_5: 0.34, d6_7: 0.08, gt_7d: 0.06 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-3931-2015]
+      locator: "Mục 2 (bệnh thường xuất hiện đột ngột)"
+      note: "Trung bình hai lượt; bệnh cấp, người bệnh thường đi khám trong vài ngày đầu."
+  - finding: chills_rigors
+    freq: frequent
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-3931-2015, nhs-kidney-infection]
+      locator: "3931 mục 2 (sốt cao rét run); NHS (thấy nóng, lạnh hoặc run)"
+      note: "Hai lượt trùng mức. Nguồn mô tả rét run là biểu hiện điển hình nhưng không nêu tần suất."
+  - finding: flank_pain
+    freq: very_frequent
+    freq_by_age: { infant_0_2m: rare, child_2m_5y: occasional }
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-3931-2015, nhs-kidney-infection, chitu-medicina-2026]
+      locator: "3931 mục 2 (đau hông lưng, mạng sườn, thường một bên; vỗ hông lưng dương tính hay gặp); NHS (đau thắt lưng hoặc hông; trẻ dưới 2 tuổi có thể chỉ sốt); Chițu 2026 (định nghĩa ca bệnh)"
+      note: "Hai lượt trùng mức chung; lượt B thêm mức riêng cho trẻ nhỏ vì trẻ không chỉ được chỗ đau (NHS: trẻ dưới 2 tuổi có thể chỉ có sốt)."
+  - finding: dysuria
+    freq: frequent
+    freq_by_age: { infant_0_2m: rare, child_2m_5y: occasional }
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-3931-2015, nhs-kidney-infection]
+      locator: "3931 mục 2 (hội chứng bàng quang cấp: tiểu buốt, tiểu dắt, tiểu khó là dấu hiệu sớm); NHS"
+      note: "Hai lượt trùng mức chung. Nguồn mô tả là dấu hiệu sớm, thường gặp nhưng không phải ai cũng có; trẻ nhỏ không kể được (lượt B)."
+  - finding: urinary_frequency
+    freq: frequent
+    freq_by_age: { infant_0_2m: rare, child_2m_5y: occasional }
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-3931-2015, nhs-kidney-infection]
+      locator: "3931 mục 2 (tiểu dắt); NHS (tiểu nhiều lần, gấp)"
+      note: "Như tiểu buốt; cùng cụm triệu chứng đường tiểu dưới."
+  - finding: hematuria
+    freq: occasional
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-3931-2015, nhs-kidney-infection]
+      locator: "3931 mục 2 (tiểu máu, tiểu đục, tiểu mủ); NHS (tiểu ra máu: đi khám gấp)"
+      note: "Hai lượt trùng mức; nguồn nói có thể có."
+  - finding: nausea
+    freq: frequent
+    evidence:
+      tier: C
+      basis: verbal
+      sources: [nhs-kidney-infection]
+      locator: "Symptoms (feeling or being sick)"
+      note: "Chỉ lượt B liên kết; lượt C giữ vì nguồn liệt kê. Không có tần suất, ước lượng."
+  - finding: vomiting
+    freq: occasional
+    evidence:
+      tier: C
+      basis: verbal
+      sources: [nhs-kidney-infection]
+      locator: "Symptoms (being sick)"
+      note: "Chỉ lượt B liên kết; ước lượng."
+  - finding: abdominal_pain
+    freq: frequent
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [nhs-kidney-infection, byt-qd-3931-2015]
+      locator: "NHS (đau bụng dưới hoặc lưng ngay dưới sườn); 3931 mục 2 (có thể có cơn đau quặn thận)"
+      note: "Hai lượt trùng mức. Chỉ có tác dụng khi triệu chứng chính là sốt; nhiều người mô tả đau hông lưng là đau bụng. Tỷ lệ nền mới khi sốt là 0,15."
+  - finding: abd_pain_location
+    dist: { epigastric: 0.05, right_upper: 0.19, left_upper: 0.18, periumbilical: 0.04, right_lower: 0.15, left_lower: 0.14, suprapubic: 0.16, whole: 0.09 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-3931-2015, nhs-kidney-infection]
+      locator: "3931 mục 2 (đau hông lưng, mạng sườn một bên); NHS (bụng dưới, lưng dưới sườn)"
+      note: "Trung bình hai lượt. Danh sách vị trí không có 'hông lưng'; người bệnh có thể chọn dưới sườn, bụng dưới một bên hoặc hạ vị (viêm bàng quang đi kèm)."
+  - finding: abd_pain_radiates_back
+    freq: frequent
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-3931-2015, nhs-kidney-infection]
+      locator: "3931 mục 2; NHS"
+      note: "Hai lượt trùng mức. Đau nằm ở hông lưng nên nhiều người trả lời đau lan ra sau lưng; ước lượng."
+  - finding: abd_pain_radiates_groin
+    freq: occasional
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-3931-2015]
+      locator: "Mục 2 (có thể xuất hiện cơn đau quặn thận)"
+      note: "Hai lượt trùng mức. Gợi ý sỏi gây tắc đi kèm; quy tắc rf_fever_obstructing_stone (mức 2) xử lý trường hợp sốt kèm đau quặn."
+  - finding: abd_pain_duration
+    dist: { lt_6h: 0.08, h6_24: 0.28, d1_3: 0.45, d4_14: 0.16, gt_2w: 0.03 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-3931-2015]
+      locator: "Mục 2 (bệnh xuất hiện đột ngột)"
+      note: "Trung bình hai lượt; ước lượng."
+  - finding: decreased_urine
+    freq: occasional
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [chitu-medicina-2026, byt-qd-3931-2015, nhs-kidney-infection]
+      locator: "Chițu 2026 (người cao tuổi: lú lẫn, tiểu ít, mệt mỏi); 3931 mục 2 (có thể mất nước do sốt cao); NHS (cả ngày không đi tiểu: khám gấp)"
+      note: "Chỉ lượt A liên kết; lượt C giữ vì có ba nguồn. Ước khoảng 15–20%."
+  - finding: pregnant
+    freq: occasional
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-3931-2015, nhs-kidney-infection]
+      locator: "3931 mục 1 (yếu tố thuận lợi: tắc nghẽn đường tiết niệu do có thai); NHS (có thai: khám gấp)"
+      note: "Chỉ lượt A liên kết; lượt C giữ. Chỉ hỏi phụ nữ 13–64 tuổi. Ước 10–20% phụ nữ bị bệnh đang có thai; tỷ lệ nền 5%."
+  - finding: diabetes
+    freq: occasional
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [scholes-aim-2005]
+      locator: "Tóm tắt (đái tháo đường: OR 4,1)"
+      note: "Chỉ lượt B liên kết. Nguồn chỉ có tỷ số chênh; với tỷ lệ nền 7%, OR khoảng 4 tương ứng khoảng 20% người bệnh có đái tháo đường. Ước lượng."
+  - finding: kidney_stones_known
+    freq: occasional
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-3931-2015, nhs-kidney-infection]
+      locator: "3931 mục 1 (yếu tố thuận lợi: tắc nghẽn do sỏi); NHS (sỏi thận làm tăng nguy cơ)"
+      note: "Chỉ lượt B liên kết; không có tần suất, ước lượng."
+warning_signs:
+  - confusion
+  - drowsy_hard_to_wake
+  - cold_hands_feet
+  - severe_weakness
+  - persistent_vomiting
+  - decreased_urine
+  - breathing_difficulty
+  - fainting_or_near_fainting
+self_care_vi:
+  - "Uống nhiều nước, nghỉ ngơi."
+  - "Không tự dùng kháng sinh còn thừa ở nhà."
+  - "Hỏi bác sĩ hoặc dược sĩ trước khi dùng thuốc giảm đau, hạ sốt."
+see_doctor_vi:
+  - "Đi khám trong 24 giờ để xét nghiệm nước tiểu và được kê kháng sinh phù hợp."
+  - "Sốt cao, rét run thường cần điều trị tại bệnh viện."
+  - "Người có thai, người cao tuổi hoặc có đái tháo đường nên đi khám ngay trong ngày."
+  - "Đến cơ sở cấp cứu ngay nếu lơ mơ, lú lẫn, nôn liên tục, tiểu rất ít hoặc tay chân lạnh."
+review:
+  status: source_checked
+  authors: ["agent:pass-a", "agent:pass-b"]
+  reconciler: "agent:pass-c"
+  doctor_reviewer: null
+  updated: "2026-10-25"
+  notes_vi: "Mức xử trí 3, không thuộc nhóm không được bỏ sót (kb-guide mục 2.5; NHS: khám gấp trong ngày, gọi 999 khi lú lẫn, lơ mơ). 3931 khuyên điều trị nội trú khi sốt cao rét run, ngoại trú ca nhẹ; doctor-v vẫn để mức 3 vì người bệnh được nhập viện sau khi khám, còn sốc nhiễm khuẩn do quy tắc mức 2 và bệnh nhiễm khuẩn huyết xử lý. Lượt C bỏ: đau đầu, mệt mỏi (lượt A; trung tính khi sốt, còn khi đau bụng sẽ đếm trùng với câu hỏi sốt), lú lẫn ở mức rare (cao hơn tỷ lệ nền 1%; đã có quy tắc mức 2). Điểm cần bác sĩ xem: (1) không có số liệu Việt Nam về tỷ lệ viêm thận – bể thận trong số người sốt hoặc đau bụng; (2) tần suất triệu chứng chủ yếu là mô tả bằng lời (3931, NHS); (3) hệ số giới tính lấy từ Hàn Quốc, áp dụng cho mọi lứa tuổi (ở trẻ nhỏ và người cao tuổi chênh lệch ít hơn); (4) danh sách vị trí đau bụng không có 'hông lưng'; (5) mã N10: 3931 dùng N10 cho viêm ống kẽ thận cấp và 93% ca viêm thận – bể thận ở Hàn Quốc mang mã N10 (Kim 2018), nhưng chưa đối chiếu bảng ICD-10 của Bộ Y tế."

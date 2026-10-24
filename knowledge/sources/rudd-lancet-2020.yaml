@@ -1,0 +1,15 @@
+id: rudd-lancet-2020
+type: statistic
+title: "Global, regional, and national sepsis incidence and mortality, 1990–2017: analysis for the Global Burden of Disease Study"
+publisher: "The Lancet 2020;395:200–211 (Rudd KE, Johnson SC, Agesa KM và cộng sự)"
+date: "2020-01"
+url: "https://europepmc.org/article/MED/31954465"
+doi: "10.1016/S0140-6736(19)32989-7"
+pmid: "31954465"
+license_class: L1
+license_note: "Bài báo CC BY 4.0; số liệu GBD gốc chỉ miễn phí cho mục đích phi thương mại (doctor-v phi lợi nhuận)."
+default_tier: B
+accessed: "2026-10-25"
+verified: true
+verified_by: "agent:pass-c"
+notes_vi: "Lượt C đọc lại toàn văn qua API Europe PMC (PMC6970225). Năm 2017 có khoảng 48,9 triệu ca nhiễm khuẩn huyết và 11,0 triệu ca tử vong liên quan; tỷ lệ mắc chuẩn hóa theo tuổi ở nữ 716,5 và ở nam 642,8/100.000; tỷ lệ mắc cao nhất ở trẻ nhỏ (20,3 triệu ca ở trẻ dưới 5 tuổi), đỉnh thứ hai ở người cao tuổi; gánh nặng cao nhất ở châu Phi cận Sahara, châu Đại Dương, Nam Á, Đông Á và Đông Nam Á. Số liệu riêng Việt Nam nằm trong phụ lục, chưa đọc."

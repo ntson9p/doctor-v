@@ -1,0 +1,52 @@
+id: d-bacterial-meningitis-1
+set: dev
+title_vi: "Nam 52 tuổi ở Hà Nam, ăn tiết canh, sốt cao, đau đầu dữ dội, nôn, cứng gáy"
+narrative_vi: "Ông Đ., 52 tuổi, ở Hà Nam. Bốn ngày trước ăn tiết canh lợn ở đám giỗ. Từ hôm qua sốt cao 39,5°C, đau đầu dữ dội tăng dần, nôn vọt 3 lần, sợ ánh sáng, cổ cứng không cúi được. Vẫn tỉnh, trả lời đúng. Không nổi ban, không co giật."
+patient:
+  age_years: 52
+  sex: male
+  region: north
+  month: 6
+complaint: fever
+answers:
+  pig_pork_exposure: present
+  fever_duration: d1_2
+  fever_max_temp: ge_39
+  headache: present
+  headache_severity: severe
+  headache_course: first_time
+  neck_stiffness: present
+  vomiting: present
+  persistent_vomiting: absent
+  photophobia: present
+  confusion: absent
+  drowsy_hard_to_wake: absent
+  seizure_recent: absent
+  breathing_difficulty: absent
+  cold_hands_feet: absent
+  severe_weakness: absent
+  rash_any: absent
+  cough: absent
+  sore_throat: absent
+  runny_nose: absent
+  abdominal_pain: absent
+  diarrhea: absent
+  malaria_area_exposure: absent
+  bush_exposure: absent
+  dengue_nearby: absent
+  sick_contact_respiratory: absent
+  measles_contact: absent
+  heavy_alcohol: absent
+  diabetes: absent
+  hypertension_known: absent
+  known_heart_disease: absent
+  immunocompromised: absent
+default_unmentioned: absent
+expected:
+  condition: bacterial_meningitis
+  acceptable: []
+  triage: 2
+source:
+  basis: "Viêm màng não do liên cầu lợn điển hình ở người lớn Việt Nam (5642: sốt, hội chứng màng não với nhức đầu, nôn vọt, gáy cứng, sợ ánh sáng; liên cầu lợn là căn nguyên hay gặp ở người trưởng thành). NHS Meningitis và 5642: bệnh cấp cứu, đến cấp cứu ngay."
+  references: [byt-qd-5642-2015, wertheim-plosone-2009, nhs-meningitis]
+author: "agent:pass-c"

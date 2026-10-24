@@ -1,0 +1,15 @@
+id: huong-eid-2014
+type: systematic_review
+title: "Epidemiology, clinical manifestations, and outcomes of Streptococcus suis infection in humans"
+publisher: "Emerging Infectious Diseases 2014;20:1105–1114 (Huong VT, Ha N, Huy NT và cộng sự)"
+date: "2014-07"
+url: "https://europepmc.org/article/MED/24959701"
+doi: "10.3201/eid2007.131594"
+pmid: "24959701"
+license_class: L0
+license_note: "Ấn phẩm của chính phủ Hoa Kỳ, thuộc phạm vi công cộng (theo bài); vẫn ghi nguồn."
+default_tier: B
+accessed: "2026-10-25"
+verified: true
+verified_by: "agent:pass-c"
+notes_vi: "Lượt C đọc lại toàn văn qua API Europe PMC (PMC4073838). Tổng quan hệ thống và phân tích gộp: tỷ lệ gộp người bệnh làm nghề liên quan đến lợn 38,1%, có ăn thực phẩm nguy cơ cao (tiết canh, thịt lợn chưa chín) 37,3%; thể bệnh chính là viêm màng não (68,0%), sau đó là nhiễm khuẩn huyết; 76,6% là nam; tử vong gộp 12,8%."

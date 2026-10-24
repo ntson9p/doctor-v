@@ -1,0 +1,51 @@
+id: d-scrub-typhus-3
+set: dev
+title_vi: "Nam 52 tuổi ở Phú Thọ, sốt 8 ngày, ho, hơi khó thở, có vết loét vảy đen ở nách"
+narrative_vi: "Ông T., 52 tuổi, làm vườn đồi ở Phú Thọ. Tám ngày nay sốt cao, đau đầu, đau mỏi người, ho khan, hai ngày nay thấy hơi khó thở khi đi lại nhưng vẫn nói trọn câu. Vợ thấy ở nách có vết loét đóng vảy đen không đau và hạch nhỏ ở nách. Không đau ngực, không đau họng, không sổ mũi, không đau bụng, không nổi ban. Tỉnh táo, tự đi lại được, tay chân ấm."
+patient:
+  age_years: 52
+  sex: male
+  region: north
+  month: 9
+complaint: fever
+answers:
+  bush_exposure: present
+  malaria_area_exposure: absent
+  dengue_nearby: absent
+  sick_contact_respiratory: absent
+  measles_contact: absent
+  fever_duration: gt_7d
+  fever_max_temp: ge_39
+  chills_rigors: absent
+  headache: present
+  myalgia: present
+  fatigue: present
+  cough: present
+  productive_cough: absent
+  breathing_difficulty: present
+  pleuritic_chest_pain: absent
+  eschar: present
+  lymph_node_swelling: present
+  sore_throat: absent
+  runny_nose: absent
+  abdominal_pain: absent
+  diarrhea: absent
+  rash_any: absent
+  confusion: absent
+  drowsy_hard_to_wake: absent
+  cold_hands_feet: absent
+  severe_weakness: absent
+  decreased_urine: absent
+  diabetes: absent
+  hypertension_known: absent
+  known_heart_disease: absent
+  immunocompromised: absent
+default_unmentioned: absent
+expected:
+  condition: scrub_typhus
+  acceptable: []
+  triage: 3
+source:
+  basis: "Sốt mò có tổn thương phổi (5642: thường có ho; ca nặng có khó thở, suy hô hấp), dễ nhầm với viêm phổi và nhiễm khuẩn huyết. Vết loét ở nách và hạch tại chỗ gợi ý sốt mò. Chưa có dấu hiệu suy hô hấp nặng, sốc, rối loạn ý thức; sốt hơn 7 ngày kèm khó thở cần khám trong ngày."
+  references: [byt-qd-5642-2015, hamaguchi-ajtmh-2015]
+author: "agent:pass-c"

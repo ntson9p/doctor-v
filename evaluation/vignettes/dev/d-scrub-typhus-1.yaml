@@ -1,0 +1,48 @@
+id: d-scrub-typhus-1
+set: dev
+title_vi: "Nữ 48 tuổi ở Thái Nguyên, phát cỏ, sốt 6 ngày, có vết loét vảy đen ở bẹn"
+narrative_vi: "Bà M., 48 tuổi, làm ruộng ở Thái Nguyên. Mười ngày trước đi phát cỏ bờ ruộng. Sáu ngày nay sốt cao 39,5°C, có lúc rét run, đau đầu nhiều, đau mỏi người, ho khan nhẹ. Con gái phát hiện ở bẹn có vết loét tròn đóng vảy đen, không đau, kèm một cục hạch nhỏ gần đó. Không đau họng, không sổ mũi, không đau bụng, không tiêu chảy, không nổi ban. Không khó thở, tỉnh táo."
+patient:
+  age_years: 48
+  sex: female
+  region: north
+  month: 7
+complaint: fever
+answers:
+  bush_exposure: present
+  malaria_area_exposure: absent
+  dengue_nearby: absent
+  sick_contact_respiratory: absent
+  measles_contact: absent
+  fever_duration: d6_7
+  fever_max_temp: ge_39
+  chills_rigors: present
+  headache: present
+  myalgia: present
+  fatigue: present
+  cough: present
+  productive_cough: absent
+  eschar: present
+  lymph_node_swelling: present
+  sore_throat: absent
+  runny_nose: absent
+  abdominal_pain: absent
+  diarrhea: absent
+  rash_any: absent
+  red_eyes: absent
+  breathing_difficulty: absent
+  confusion: absent
+  pregnant: absent
+  diabetes: absent
+  hypertension_known: absent
+  known_heart_disease: absent
+  immunocompromised: absent
+default_unmentioned: absent
+expected:
+  condition: scrub_typhus
+  acceptable: []
+  triage: 3
+source:
+  basis: "Ca điển hình theo 5642/QĐ-BYT bài Sốt mò (sốt cao liên tục, đau đầu, đau mỏi; vết loét đặc hiệu không đau ở vùng da mềm như bẹn; hạch sưng tại chỗ vết loét; phơi nhiễm bụi cỏ; mùa mưa ở miền Bắc). Điều trị kháng sinh uống: đi khám trong 24 giờ."
+  references: [byt-qd-5642-2015, hamaguchi-ajtmh-2015]
+author: "agent:pass-c"

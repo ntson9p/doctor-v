@@ -117,3 +117,42 @@ Lô 2–3 đang chạy.
 3. Điền `cant_miss`.
 4. Hiệu chỉnh hệ số nhiệt.
 5. Chạy bộ giữ kín, viết báo cáo, báo chi phí.
+
+## 2026-10-25 — Giai đoạn 1: lượt C lô 1, 2, 4; sửa cách chọn câu hỏi
+
+**Lượt C (đối chiếu A–B, viết ca phát triển):** xong lô 1, 2, 4 (24 bệnh, 72 ca dev). Lô 3 đang chạy. Lượt C bắt được một trích dẫn bịa trong lượt A (một tỷ lệ không có trong bài báo được dẫn).
+
+**Đề xuất của lượt C lô 2 đã làm:**
+- Toán tử `at_least` cho quy tắc. Quy tắc mức 1 mới: sốt kèm từ 2 trong 4 nhóm dấu hiệu nặng (ý thức; hô hấp; tuần hoàn hoặc mệt lả; ban xuất huyết). Mỗi nhóm gộp các câu về cùng một tình trạng.
+- Quy tắc mức 2: thóp phồng ở trẻ nhỏ; sốt kèm vàng da sau phơi nhiễm sốt rét.
+- Khi có sốt ở đau bụng, đau đầu: hỏi nhóm dấu hiệu nặng và số ngày sốt như với triệu chứng "Sốt".
+- Tỷ lệ nền khi sốt theo các nghiên cứu sốt ở Việt Nam và Singapore: đau đầu 0,7; chán ăn 0,65; đau cơ 0,55; đau sau hốc mắt 0,15.
+- "Nguyên nhân khác" ở mức 2 hạ xuống 0,01; làm trơn dấu hiệu nhiều lựa chọn 0,01; gom cụm "đi rừng, làm rẫy".
+
+**Lỗi tìm ra khi chạy bộ dev, đã sửa:**
+1. Quy tắc "khó thở không kèm ho" viết bằng `not: ho có`, nên đúng ngay cả khi chưa hỏi ho. Ca viêm phổi bị dừng khẩn ở câu 5 với lý do sốt xuất huyết. Đã đổi thành `ho: không`; bộ kiểm tra giờ cảnh báo dạng này.
+2. Chọn câu hỏi: khả năng người dùng trả lời "Không rõ" được tính như dấu hiệu mức xử trí chưa ổn định. Vì vậy app hỏi lần lượt mọi dấu hiệu nguy hiểm, ví dụ hỏi người sốt về khối thoát vị (13/37 ca sốt). Đã sửa:
+   - giá trị câu hỏi tính cả quy tắc nguy hiểm, và coi "Không rõ" là chi phí;
+   - quy tắc chỉ hợp với một số triệu chứng chính đã ghi phạm vi;
+   - tỷ lệ nền của dấu hiệu nguy hiểm rất hiếm được hạ cho đúng thực tế;
+   - giá trị an toàn chỉ tính phần vượt "gánh nặng" 0,1 của một câu hỏi.
+3. Khi dừng khẩn, danh sách "Bác sĩ cần loại trừ" chỉ có bệnh mức 1–2, nên bỏ sót sốt xuất huyết hay tay chân miệng dù chính dấu hiệu cảnh báo của chúng làm dừng. Đã thêm bệnh đang có dấu hiệu cảnh báo của chính nó. Chỉ số top-k của ca dừng khẩn giờ chấm theo danh sách này (danh sách người dùng thực sự thấy).
+
+**Bộ dev, 72 ca của 24 bệnh (chưa có lô 3):**
+
+| | Top-1 | Top-3 | Bỏ sót cấp cứu | Khuyên quá mức |
+|---|---|---|---|---|
+| Trả lời đúng ca | 84,7% | 94,4% | 0/23 | 5/72 |
+| 15% câu trả lời thành "Không rõ" | 80,6% | 91,7% | 1/23 | 11/72 |
+
+Số câu hỏi trung vị 15, trong đó 7 câu thích ứng.
+
+Ca bỏ sót khi nhiễu: chửa ngoài tử cung, khi câu "chậm kinh" bị "Không rõ" (nên thêm câu hỏi thay thế cho chậm kinh).
+
+**Còn tồn (đã ghi để làm):**
+- sốt rét và thương hàn còn bị "nguyên nhân khác" lấn át ở 2 ca;
+- viêm phổi ở người từ 75 tuổi bị xếp "gọi 115" theo xác suất nhiễm khuẩn huyết;
+- tách câu phơi nhiễm sốt rét (đi rừng trong nước / từ nước có sốt rét về);
+- tỷ lệ nền theo tuổi (trẻ nhỏ không tự kể đau đầu, đau cơ; co giật do sốt);
+- câu "phù mặt, bàn tay" chưa hợp với sốt mò (phù mặt và mu chân);
+- quy tắc chung cho sốt kèm vàng da cần nguồn.

@@ -1,0 +1,65 @@
+id: d-acute-pyelonephritis-3
+set: dev
+title_vi: "Nữ 31 tuổi, đau bụng dưới sườn phải lan ra lưng, sốt rét run, nôn, tiểu buốt"
+narrative_vi: "Chị Y., 31 tuổi, ở Quy Nhơn. Hai ngày nay đau âm ỉ dưới sườn phải, lan ra sau lưng, kèm sốt 38,8°C, rét run, buồn nôn, nôn 2 lần. Đi tiểu buốt, nhiều lần. Không đau quặn, không lan xuống bẹn, không tiêu chảy. Không ra máu âm đạo, không chậm kinh, không có khí hư lạ. Không đau sau bữa ăn nhiều mỡ."
+patient:
+  age_years: 31
+  sex: female
+  region: central
+  month: 10
+complaint: abdominal_pain
+answers:
+  abd_pain_location: right_upper
+  abd_pain_duration: d1_3
+  abd_pain_onset: gradual
+  abd_pain_radiates_back: present
+  abd_pain_severe: absent
+  abd_pain_colicky: absent
+  abd_pain_radiates_groin: absent
+  abd_pain_radiates_right_shoulder: absent
+  pain_after_fatty_meal: absent
+  abd_pain_meal_relation: no_relation
+  abdomen_hard_swollen: absent
+  fever: present
+  fever_max_temp: t38_39
+  fever_duration: d1_2
+  chills_rigors: present
+  nausea: present
+  vomiting: present
+  persistent_vomiting: absent
+  dysuria: present
+  urinary_frequency: present
+  flank_pain: present
+  hematuria: absent
+  diarrhea: absent
+  vaginal_bleeding: absent
+  abnormal_vaginal_discharge: absent
+  missed_period: absent
+  pregnant: absent
+  pain_with_menses: absent
+  pain_with_intercourse: absent
+  heartburn: absent
+  headache: absent
+  myalgia: absent
+  decreased_urine: absent
+  jaundice: absent
+  gallstones_known: absent
+  kidney_stones_known: absent
+  malaria_area_exposure: absent
+  bush_exposure: absent
+  dengue_nearby: absent
+  sick_contact_respiratory: absent
+  measles_contact: absent
+  diabetes: absent
+  hypertension_known: absent
+  known_heart_disease: absent
+  immunocompromised: absent
+default_unmentioned: absent
+expected:
+  condition: acute_pyelonephritis
+  acceptable: []
+  triage: 3
+source:
+  basis: "Đau dưới sườn phải lan ra lưng kèm sốt, nôn dễ nhầm với bệnh túi mật và với sốt xuất huyết giai đoạn nguy hiểm; tiểu buốt, tiểu nhiều lần, đau hông lưng và rét run gợi ý viêm thận – bể thận (3931 mục 2). Không có thai, không ra máu âm đạo. NHS Kidney infection: khám gấp trong ngày."
+  references: [byt-qd-3931-2015, nhs-kidney-infection]
+author: "agent:pass-c"

@@ -1,0 +1,185 @@
+id: malaria
+names:
+  vi: "Bệnh sốt rét"
+  vi_common: ["Sốt rét"]
+  en: "Malaria"
+codes:
+  icd10: "B54"
+  icd10_verified: false
+  mondo: "MONDO:0005136"
+summary_vi:
+  - "Bệnh do ký sinh trùng sốt rét, lây khi bị muỗi Anopheles mang mầm bệnh đốt."
+  - "Thường có cơn rét run, sốt cao rồi vã mồ hôi; người mắc lần đầu có thể chỉ sốt liên tục hoặc ớn lạnh."
+  - "Ở Việt Nam hiện nay hầu như chỉ gặp ở người đi rừng, ngủ rẫy hoặc từ vùng có sốt rét về."
+urgency: 3
+cant_miss: false
+specialties: [infectious_disease]
+priors:
+  - complaint: fever
+    default: P6
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [winhanoo-malarj-2023, byt-qd-3377-2023, nguyentien-malarj-2026, hoang-heliyon-2025]
+      locator: "Win Han Oo 2023: phần Background, Results; 3377 mục I; Nguyen-Tien 2026 phần Background, Results; Hoang 2025 bảng 1"
+      reported: "Năm 2020: 1.421 ca trên 1.811.387 xét nghiệm (303 ca ngoại lai); năm 2021: 467 ca; đến 2022 có 42 tỉnh được công nhận loại trừ, 21 tỉnh còn lưu hành; Đắk Lắk gần như không còn ca từ 2021; Cần Thơ 0,03 ca/100.000 dân/năm (2014–2022)"
+      note: "Hai lượt trùng mức. Vài trăm đến hơn một nghìn ca mỗi năm trên hàng chục triệu lượt sốt cả nước, nên dưới 0,02% (P6). Phơi nhiễm (đi rừng, ngủ rẫy, đến vùng sốt rét) được tính bằng dấu hiệu malaria_area_exposure (tỷ lệ nền 0,02), không bằng prior: không có phơi nhiễm thì xác suất gần bằng 0."
+  - complaint: headache
+    default: P6
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [winhanoo-malarj-2023, byt-qd-3377-2023]
+      note: "Hai lượt trùng mức. Bệnh rất hiếm trong cả nước và người bệnh thường chọn 'Sốt'; sốt và phơi nhiễm được hỏi riêng."
+prior_modifiers:
+  - when: { regions: [highlands] }
+    factor: 3
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [nguyentien-malarj-2026, byt-qd-3377-2023]
+      locator: "Nguyen-Tien 2026 phần Background, Results; 3377 mục I"
+      reported: "Lây truyền còn lại chỉ ở một số tỉnh miền Trung, nhất là Đắk Lắk (Tây Nguyên) và Khánh Hòa; năm 2022 còn 21 tỉnh có sốt rét lưu hành"
+      note: "Chỉ lượt A khai báo (lượt B không đặt hệ số vùng). Lượt C giữ hệ số tăng cho Tây Nguyên và miền Trung: người ở đây trả lời 'có' đi rừng, ngủ rẫy thường là phơi nhiễm ngay trong vùng còn lây truyền, còn người ở nơi đã loại trừ có thể chỉ đi rừng không có sốt rét. Bỏ hệ số giảm 0,5 cho miền Bắc, miền Nam của lượt A vì sẽ hạ sai khả năng ở người vừa đi Tây Nguyên hoặc từ châu Phi về. Độ lớn hệ số do người soạn chọn, cần bác sĩ duyệt."
+  - when: { regions: [central] }
+    factor: 1.5
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [nguyentien-malarj-2026, byt-qd-3377-2023]
+      locator: "Nguyen-Tien 2026 phần Background"
+      reported: "Khánh Hòa là một trong hai tỉnh còn lây truyền chính"
+      note: "Như trên; hệ số nhỏ hơn Tây Nguyên vì phần lớn các tỉnh duyên hải miền Trung đã loại trừ sốt rét."
+findings:
+  - finding: malaria_area_exposure
+    freq: almost_always
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [byt-qd-3377-2023, winhanoo-malarj-2023, cdc-malaria-clinical]
+      locator: "3377 mục II.1 (ca nghi sốt rét: có sốt và có yếu tố dịch tễ); Win Han Oo 2023 phần Results; CDC (thời gian ủ bệnh, tái phát)"
+      reported: "72,3% ca sốt rét 2017–2021 có tiền sử đi lại liên quan trong 14 ngày trước khi phát hiện; 62,3% là ca nội địa"
+      note: "Hai lượt trùng mức. Câu hỏi doctor-v rộng hơn 'đi lại trong 14 ngày' (gồm đi rừng, ngủ rẫy trong 1 tháng và người từ nước có sốt rét về), nên tỷ lệ trả lời 'có' cao hơn 72%. Bỏ sót: sốt rét do P. vivax tái phát sau nhiều tháng (CDC) và người sống trong vùng lưu hành nghĩ mình không 'đi' đâu."
+  - finding: fever
+    freq: almost_always
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-3377-2023, cdc-malaria-clinical]
+      locator: "3377 mục II.1.a (đang sốt hoặc có sốt trong 3 ngày gần đây)"
+      note: "Chỉ có tác dụng khi triệu chứng chính là đau đầu."
+  - finding: chills_rigors
+    freq: very_frequent
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-3377-2023, cdc-malaria-clinical]
+      locator: "3377 mục I, II.1.a, II.3.1 (cơn điển hình: rét run – sốt – vã mồ hôi; cơn không điển hình: ớn lạnh, gai rét); CDC (shivering)"
+      note: "Tần suất trong số người đã sốt. Hai lượt trùng mức; hướng dẫn coi rét run hoặc ớn lạnh là biểu hiện thường gặp, không nêu tỷ lệ."
+  - finding: fever_cyclic
+    freq: occasional
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-3377-2023]
+      locator: "Mục II.1.a và II.3.1 (người mắc lần đầu thường sốt không thành cơn, sốt liên tục hoặc dao động)"
+      note: "Hai lượt trùng mức. Cơn sốt có chu kỳ là kiểu điển hình nhưng ít gặp ở người mắc lần đầu và trẻ em, và người bệnh thường đi khám trước khi nhận ra chu kỳ."
+  - finding: fever_duration
+    dist: { d1_2: 0.35, d3_5: 0.39, d6_7: 0.14, gt_7d: 0.12 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-3377-2023]
+      locator: "Mục II.1.a"
+      note: "Trung bình hai lượt. Ở vùng lưu hành người dân đi xét nghiệm sớm, nhưng ca ngoại lai hoặc chưa điều trị có thể sốt nhiều ngày."
+  - finding: fever_max_temp
+    dist: { lt_38: 0.08, t38_39: 0.32, ge_39: 0.60 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-3377-2023, taylor-jama-2010]
+      locator: "3377 mục II.3.1, II.3.2.1 (sốt cao liên tục là dấu hiệu cảnh báo); Taylor 2010 tóm tắt"
+      note: "Hai lượt trùng phân bố; lệch về sốt cao. Ước lượng."
+  - finding: headache
+    freq: very_frequent
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [cdc-malaria-clinical, byt-qd-3377-2023]
+      locator: "CDC: Uncomplicated malaria; 3377 mục II.3.2.1 (đau đầu dữ dội là dấu hiệu cảnh báo)"
+      note: "Hai lượt trùng mức. Nguồn liệt kê đau đầu trong triệu chứng chính nhưng không nêu tần suất; ước khoảng 80%."
+  - finding: myalgia
+    freq: frequent
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [cdc-malaria-clinical]
+      locator: "Uncomplicated malaria (body aches)"
+      note: "Hai lượt trùng mức; không có tần suất, ước khoảng một nửa."
+  - finding: vomiting
+    freq: occasional
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [cdc-malaria-clinical, byt-qd-3377-2023]
+      locator: "CDC: nausea and vomiting; 3377 mục II.3.2.1 (nôn nhiều là dấu hiệu cảnh báo)"
+      note: "Hai lượt trùng mức; ước khoảng 20%."
+  - finding: jaundice
+    freq: occasional
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [cdc-malaria-clinical, byt-qd-3377-2023, taylor-jama-2010]
+      locator: "CDC: physical findings (vàng da nhẹ); 3377 mục II.3.2.2 (tổn thương gan: vàng da); Taylor 2010 tóm tắt (người đi về từ vùng sốt rét: tăng bilirubin LR 7,3)"
+      note: "Hai lượt trùng mức. Vàng da nhẹ có thể gặp ở sốt rét chưa biến chứng; vàng da rõ gợi ý sốt rét ác tính. Ước 10–20%."
+  - finding: rash_any
+    freq: rare
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [cdc-malaria-clinical, byt-qd-3377-2023]
+      locator: "CDC: Uncomplicated malaria; 3377 mục II.3"
+      note: "Chỉ lượt B liên kết. Cả hai nguồn không nêu phát ban trong biểu hiện sốt rét; ban gợi ý sốt xuất huyết, sởi, sốt mò hơn. Thấp hơn tỷ lệ nền (5%) để trả lời 'Có' làm giảm khả năng sốt rét."
+  - finding: headache_severity
+    dist: { mild: 0.20, moderate: 0.45, severe: 0.35 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-3377-2023, cdc-malaria-clinical]
+      locator: "3377 mục II.3.2.1 (đau đầu dữ dội là dấu hiệu cảnh báo sốt rét ác tính)"
+      note: "Chỉ lượt A khai báo; phân bố ước lượng."
+  - finding: headache_course
+    dist: { first_time: 0.70, recurrent_similar: 0.25, progressive: 0.05 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [cdc-malaria-clinical]
+      note: "Chỉ lượt A khai báo. Đau đầu cấp cùng đợt sốt; người từng mắc sốt rét có thể thấy giống lần trước. Ước lượng."
+warning_signs:
+  - confusion
+  - drowsy_hard_to_wake
+  - seizure_recent
+  - severe_weakness
+  - persistent_vomiting
+  - breathing_difficulty
+  - cold_hands_feet
+  - jaundice
+  - decreased_urine
+  - bleeding_gums_nose
+  - black_stool
+self_care_vi:
+  - "Không tự mua thuốc sốt rét để uống khi chưa được xét nghiệm."
+  - "Uống đủ nước, nghỉ ngơi trong lúc chờ đi khám."
+  - "Hỏi bác sĩ hoặc dược sĩ trước khi dùng thuốc hạ sốt."
+see_doctor_vi:
+  - "Đi khám trong ngày để xét nghiệm máu tìm ký sinh trùng sốt rét; trạm y tế xã ở vùng sốt rét có làm."
+  - "Nói rõ với nhân viên y tế nơi đã đi rừng, ngủ rẫy hoặc nước đã đến."
+  - "Nếu lần xét nghiệm đầu âm tính mà vẫn còn sốt, cần xét nghiệm lại theo hẹn."
+  - "Đến cơ sở cấp cứu ngay nếu li bì, lú lẫn, co giật, khó thở, vàng da, tiểu ít hoặc mệt lả."
+review:
+  status: source_checked
+  authors: ["agent:pass-a", "agent:pass-b"]
+  reconciler: "agent:pass-c"
+  doctor_reviewer: null
+  updated: "2026-10-25"
+  notes_vi: "Mức xử trí 3, không thuộc nhóm không được bỏ sót (3377 mục III: sốt rét chưa biến chứng điều trị thuốc uống; mọi ca nghi phải xét nghiệm trong ngày, đã có quy tắc rf_fever_malaria_exposure mức 3; sốt rét ác tính do quy tắc mức 2 xử lý). Lượt C giữ hệ số tăng của lượt A cho Tây Nguyên (× 3) và miền Trung (× 1,5) nhưng bỏ hệ số giảm cho miền Bắc, miền Nam (× 0,5), vì hệ số giảm theo nơi ở sẽ hạ sai khả năng ở người vừa đi Tây Nguyên hoặc từ châu Phi về. Bỏ liên kết làm rẫy, phát cỏ (đếm trùng với câu hỏi phơi nhiễm), mệt lả và li bì (không có tần suất; đã có quy tắc mức 2). Điểm cần bác sĩ xem: (1) với phơi nhiễm 'có', xác suất ban đầu khoảng 0,5%, có thể cao cho người đi rừng trong nước (tỷ lệ dương tính 2020 khoảng 0,08% số xét nghiệm) nhưng thấp cho người từ châu Phi về; (2) tỷ lệ nền 0,02 của câu hỏi phơi nhiễm có thể thấp ở người dân Tây Nguyên; (3) tần suất triệu chứng chủ yếu là ước lượng từ mô tả của 3377 và CDC; (4) B54 là mã sốt rét không đặc hiệu (các loài có mã B50–B53), chưa đối chiếu bảng ICD-10 của Bộ Y tế."

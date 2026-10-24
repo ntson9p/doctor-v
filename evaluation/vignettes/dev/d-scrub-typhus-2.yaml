@@ -1,0 +1,50 @@
+id: d-scrub-typhus-2
+set: dev
+title_vi: "Nam 35 tuổi ở Quảng Nam, đi rừng lấy măng, sốt 5 ngày, không thấy vết loét"
+narrative_vi: "Anh D., 35 tuổi, ở Quảng Nam. Hai tuần trước vào rừng lấy măng, không phát cỏ. Năm ngày nay sốt cao 39°C, đau đầu, đau mỏi người, ho khan, hai mắt đỏ. Đã tự xem nhưng không thấy vết loét nào, chưa nhờ ai xem lưng và bẹn. Không rét run thành cơn, không đau họng, không sổ mũi, không đau bụng, không tiêu chảy, không nổi ban. Không khó thở."
+patient:
+  age_years: 35
+  sex: male
+  region: central
+  month: 7
+complaint: fever
+answers:
+  malaria_area_exposure: present
+  bush_exposure: absent
+  dengue_nearby: absent
+  sick_contact_respiratory: absent
+  measles_contact: absent
+  fever_duration: d3_5
+  fever_max_temp: ge_39
+  chills_rigors: absent
+  fever_cyclic: absent
+  headache: present
+  myalgia: present
+  fatigue: present
+  cough: present
+  productive_cough: absent
+  red_eyes: present
+  eschar: unknown
+  lymph_node_swelling: unknown
+  sore_throat: absent
+  runny_nose: absent
+  abdominal_pain: absent
+  diarrhea: absent
+  rash_any: absent
+  retro_orbital_pain: absent
+  jaundice: absent
+  breathing_difficulty: absent
+  confusion: absent
+  diabetes: absent
+  hypertension_known: absent
+  known_heart_disease: absent
+  immunocompromised: absent
+default_unmentioned: absent
+expected:
+  condition: scrub_typhus
+  acceptable: []
+  triage: 3
+source:
+  basis: "Ca không điển hình: không tìm thấy vết loét (5642: khi không có vết loét, chẩn đoán khó, dễ nhầm với nhiều bệnh sốt cấp), phơi nhiễm là đi rừng thay vì phát cỏ (Le-Viet 2019: 47% người sốt mò ở Quảng Nam có đi rừng). Sốt kèm phơi nhiễm vùng rừng cần xét nghiệm sốt rét trong ngày (3377); sốt mò điều trị kháng sinh uống: đi khám trong 24 giờ."
+  references: [byt-qd-5642-2015, leviet-emi-2019, byt-qd-3377-2023]
+author: "agent:pass-c"

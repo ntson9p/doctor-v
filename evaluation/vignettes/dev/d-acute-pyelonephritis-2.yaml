@@ -1,0 +1,57 @@
+id: d-acute-pyelonephritis-2
+set: dev
+title_vi: "Nữ 78 tuổi, đái tháo đường, sốt vừa, mệt, nôn, tiểu ít, không tiểu buốt"
+narrative_vi: "Bà G., 78 tuổi, ở Huế, bị đái tháo đường. Hai ngày nay sốt 38,5°C, mệt, chán ăn, buồn nôn, nôn 1 lần, đi tiểu nhiều lần hơn nhưng không buốt, tức bụng dưới. Từ sáng đến giờ tiểu ít. Không kêu đau lưng. Vẫn tỉnh táo, nói chuyện bình thường, tự đi lại được. Không ho, không tiêu chảy."
+patient:
+  age_years: 78
+  sex: female
+  region: central
+  month: 4
+complaint: fever
+answers:
+  fever_duration: d1_2
+  fever_max_temp: t38_39
+  fatigue: present
+  loss_of_appetite: present
+  nausea: present
+  vomiting: present
+  persistent_vomiting: absent
+  urinary_frequency: present
+  dysuria: absent
+  abdominal_pain: present
+  abd_pain_location: suprapubic
+  abd_pain_severe: absent
+  flank_pain: absent
+  decreased_urine: present
+  diabetes: present
+  hematuria: absent
+  chills_rigors: absent
+  confusion: absent
+  drowsy_hard_to_wake: absent
+  severe_weakness: absent
+  cold_hands_feet: absent
+  breathing_difficulty: absent
+  headache: absent
+  cough: absent
+  runny_nose: absent
+  sore_throat: absent
+  diarrhea: absent
+  rash_any: absent
+  kidney_stones_known: absent
+  hypertension_known: present
+  known_heart_disease: absent
+  immunocompromised: absent
+  malaria_area_exposure: absent
+  bush_exposure: absent
+  dengue_nearby: absent
+  sick_contact_respiratory: absent
+  measles_contact: absent
+default_unmentioned: absent
+expected:
+  condition: acute_pyelonephritis
+  acceptable: []
+  triage: 3
+source:
+  basis: "Biểu hiện không điển hình ở người cao tuổi có đái tháo đường: không tiểu buốt, không đau hông lưng rõ, chỉ sốt, mệt, nôn, tiểu nhiều lần, tiểu ít (Chițu 2026; Scholes 2005: đái tháo đường là yếu tố nguy cơ). NHS Kidney infection: nôn, tiểu ít thì khám gấp trong ngày; chưa có lú lẫn, lơ mơ."
+  references: [chitu-medicina-2026, nhs-kidney-infection, byt-qd-3931-2015]
+author: "agent:pass-c"

@@ -1,0 +1,42 @@
+id: d-sepsis-2
+set: dev
+title_vi: "Nữ 81 tuổi, sốt nhẹ, ngủ li bì, mệt lả, tiểu ít, không rõ ổ nhiễm"
+narrative_vi: "Bà H., 81 tuổi, ở Hải Phòng. Từ hôm qua người hâm hấp sốt 37,8°C, hôm nay ngủ li bì, gọi mới mở mắt, mệt lả không tự đứng dậy được, bỏ ăn, cả buổi sáng đi tiểu rất ít. Không ho, không kêu đau, không tiểu buốt, không nôn, không tiêu chảy, không nổi ban."
+patient:
+  age_years: 81
+  sex: female
+  region: north
+  month: 12
+complaint: fever
+answers:
+  fever_duration: d1_2
+  fever_max_temp: lt_38
+  drowsy_hard_to_wake: present
+  severe_weakness: present
+  decreased_urine: present
+  loss_of_appetite: present
+  confusion: unknown
+  neck_stiffness: absent
+  breathing_difficulty: absent
+  persistent_vomiting: absent
+  cold_hands_feet: absent
+  cough: absent
+  dysuria: absent
+  abdominal_pain: absent
+  diarrhea: absent
+  vomiting: absent
+  rash_any: absent
+  chills_rigors: absent
+  diabetes: absent
+  hypertension_known: present
+  known_heart_disease: absent
+  immunocompromised: absent
+default_unmentioned: absent
+expected:
+  condition: sepsis
+  acceptable: []
+  triage: 1
+source:
+  basis: "Biểu hiện không điển hình ở người rất cao tuổi: sốt nhẹ nhưng li bì, suy sụp, tiểu ít (5642: người già là yếu tố nguy cơ, có thể thay đổi ý thức, thiểu niệu; NHS Sepsis: người trên 75 tuổi là nhóm nguy cơ cao, lơ mơ, lú lẫn thì gọi 999)."
+  references: [byt-qd-5642-2015, nhs-sepsis]
+author: "agent:pass-c"

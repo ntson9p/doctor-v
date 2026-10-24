@@ -1,0 +1,50 @@
+id: d-dengue-1
+set: dev
+title_vi: "Nữ 24 tuổi ở TP.HCM, tháng 9, sốt cao 3 ngày, đau đầu, đau sau hốc mắt"
+narrative_vi: "Chị H., 24 tuổi, sống ở TP.HCM. Ba ngày nay sốt cao đột ngột, đo được 39,5°C, đau đầu nhiều, đau nhức sau hốc mắt, đau mỏi người, mệt, chán ăn, hơi buồn nôn. Không ho, không sổ mũi, không đau họng, không đau bụng, không nôn, không tiêu chảy. Chưa thấy nổi ban hay chảy máu. Hàng xóm vừa bị sốt xuất huyết tuần trước. Không đi rừng, không làm rẫy."
+patient:
+  age_years: 24
+  sex: female
+  region: south
+  month: 9
+complaint: fever
+answers:
+  fever_max_temp: ge_39
+  fever_duration: d3_5
+  headache: present
+  retro_orbital_pain: present
+  myalgia: present
+  fatigue: present
+  loss_of_appetite: present
+  nausea: present
+  vomiting: absent
+  persistent_vomiting: absent
+  cough: absent
+  runny_nose: absent
+  sore_throat: absent
+  abdominal_pain: absent
+  diarrhea: absent
+  rash_any: absent
+  bleeding_gums_nose: absent
+  breathing_difficulty: absent
+  decreased_urine: absent
+  chills_rigors: absent
+  dengue_nearby: present
+  malaria_area_exposure: absent
+  bush_exposure: absent
+  sick_contact_respiratory: absent
+  measles_contact: absent
+  pregnant: absent
+  diabetes: absent
+  hypertension_known: absent
+  known_heart_disease: absent
+  immunocompromised: absent
+default_unmentioned: absent
+expected:
+  condition: dengue
+  acceptable: []
+  triage: 3
+source:
+  basis: "Ca điển hình giai đoạn sốt theo 2760/QĐ-BYT mục II.1.1 (sốt cao đột ngột, nhức đầu, chán ăn, buồn nôn, đau cơ, nhức hai hố mắt) và Phụ lục 2 (sống ở vùng có dịch, sốt không quá 7 ngày). Chưa có dấu hiệu cảnh báo nên điều trị ngoại trú, khám và xét nghiệm lại hằng ngày (mục IV.A): đi khám trong 24 giờ."
+  references: [byt-qd-2760-2023, low-plosntd-2011]
+author: "agent:pass-c"

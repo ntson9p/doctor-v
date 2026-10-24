@@ -1,0 +1,54 @@
+id: d-acute-pyelonephritis-1
+set: dev
+title_vi: "Nữ 28 tuổi, sốt cao rét run 2 ngày, đau hông lưng phải, tiểu buốt, tiểu nhiều lần"
+narrative_vi: "Chị A., 28 tuổi, ở Hà Nội. Ba ngày trước tiểu buốt, tiểu rắt. Hai ngày nay sốt cao 39,5°C kèm rét run, đau âm ỉ hông lưng bên phải, buồn nôn. Không nôn, không đau quặn, không lan xuống bẹn. Không ho, không sổ mũi, không đau họng, không tiêu chảy. Không có thai, kinh nguyệt đều."
+patient:
+  age_years: 28
+  sex: female
+  region: north
+  month: 6
+complaint: fever
+answers:
+  fever_duration: d1_2
+  fever_max_temp: ge_39
+  chills_rigors: present
+  flank_pain: present
+  dysuria: present
+  urinary_frequency: present
+  nausea: present
+  vomiting: absent
+  persistent_vomiting: absent
+  abdominal_pain: absent
+  abd_pain_colicky: absent
+  abd_pain_radiates_groin: absent
+  hematuria: absent
+  headache: absent
+  myalgia: absent
+  cough: absent
+  runny_nose: absent
+  sore_throat: absent
+  diarrhea: absent
+  rash_any: absent
+  pregnant: absent
+  kidney_stones_known: absent
+  abnormal_vaginal_discharge: absent
+  confusion: absent
+  decreased_urine: absent
+  malaria_area_exposure: absent
+  bush_exposure: absent
+  dengue_nearby: absent
+  sick_contact_respiratory: absent
+  measles_contact: absent
+  diabetes: absent
+  hypertension_known: absent
+  known_heart_disease: absent
+  immunocompromised: absent
+default_unmentioned: absent
+expected:
+  condition: acute_pyelonephritis
+  acceptable: []
+  triage: 3
+source:
+  basis: "Ca điển hình theo 3931/QĐ-BYT bài Viêm thận bể thận cấp (hội chứng bàng quang cấp là dấu hiệu sớm, rồi sốt cao rét run, đau hông lưng một bên). NHS Kidney infection: sốt cao, rét run, đau lưng dưới sườn thì khám gấp trong ngày."
+  references: [byt-qd-3931-2015, nhs-kidney-infection]
+author: "agent:pass-c"

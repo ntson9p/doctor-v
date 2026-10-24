@@ -1,0 +1,54 @@
+id: d-malaria-1
+set: dev
+title_vi: "Nam 32 tuổi ở Gia Lai, ngủ rẫy trong rừng, sốt thành cơn kèm rét run"
+narrative_vi: "Anh K., 32 tuổi, ở Gia Lai, tuần trước ngủ lại rẫy trong rừng nhiều đêm để phát cỏ. Bốn ngày nay có cơn rét run cầm cập, sau đó sốt cao 39,5°C rồi vã mồ hôi, cách ngày lại lên cơn. Đau đầu, đau mỏi người, mệt, chán ăn, buồn nôn. Không ho, không sổ mũi, không đau họng, không đau bụng, không tiêu chảy, không nổi ban. Đã xem khắp người, không thấy vết loét đóng vảy đen. Không vàng da."
+patient:
+  age_years: 32
+  sex: male
+  region: highlands
+  month: 10
+complaint: fever
+answers:
+  malaria_area_exposure: present
+  bush_exposure: present
+  dengue_nearby: absent
+  sick_contact_respiratory: absent
+  measles_contact: absent
+  fever_duration: d3_5
+  fever_max_temp: ge_39
+  chills_rigors: present
+  fever_cyclic: present
+  headache: present
+  myalgia: present
+  fatigue: present
+  loss_of_appetite: present
+  nausea: present
+  vomiting: absent
+  persistent_vomiting: absent
+  cough: absent
+  runny_nose: absent
+  sore_throat: absent
+  abdominal_pain: absent
+  diarrhea: absent
+  rash_any: absent
+  eschar: absent
+  lymph_node_swelling: absent
+  jaundice: absent
+  retro_orbital_pain: absent
+  bleeding_gums_nose: absent
+  breathing_difficulty: absent
+  confusion: absent
+  severe_weakness: absent
+  diabetes: absent
+  hypertension_known: absent
+  known_heart_disease: absent
+  immunocompromised: absent
+default_unmentioned: absent
+expected:
+  condition: malaria
+  acceptable: []
+  triage: 3
+source:
+  basis: "Ca nghi sốt rét theo 3377/QĐ-BYT mục II.1 (sốt kèm yếu tố dịch tễ: ngủ rẫy trong rừng ở Tây Nguyên) với cơn sốt điển hình rét run – sốt – vã mồ hôi có chu kỳ (mục II.3.1). Không có dấu hiệu sốt rét ác tính (mục II.3.2): xét nghiệm và điều trị trong ngày."
+  references: [byt-qd-3377-2023, nguyentien-malarj-2026]
+author: "agent:pass-c"

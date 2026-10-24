@@ -1,0 +1,15 @@
+id: ki-aje-2004
+type: statistic
+title: "The epidemiology of acute pyelonephritis in South Korea, 1997–1999"
+publisher: "American Journal of Epidemiology 2004;160:985–993 (Ki M, Park T, Choi B, Foxman B)"
+date: "2004-11"
+url: "https://europepmc.org/article/MED/15522855"
+doi: "10.1093/aje/kwh308"
+pmid: "15522855"
+license_class: L3
+license_note: "Bản quyền nhà xuất bản: chỉ dùng dữ kiện kèm trích dẫn, không sao chép câu chữ."
+default_tier: B
+accessed: "2026-10-25"
+verified: true
+verified_by: "agent:pass-c"
+notes_vi: "Lượt C chỉ đọc tóm tắt qua API Europe PMC. Dữ liệu bảo hiểm y tế toàn quốc Hàn Quốc 1997–1999: tỷ suất mắc viêm thận – bể thận cấp 35,7/10.000 dân/năm (nữ 59,0; nam 12,6); khoảng 1/7 phải nằm viện; thay đổi theo tuổi, cao hơn vào mùa hè."

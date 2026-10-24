@@ -1,0 +1,15 @@
+id: hoang-heliyon-2025
+type: statistic
+title: "Identification of climate-sensitive disease incidences in Vietnam: a longitudinal retrospective analysis of infectious disease rates between 2014 and 2022"
+publisher: "Heliyon 2025;11:e41902 (Hoang CQ, Huynh Nguyen QP, Huynh Nguyen TP và cộng sự)"
+date: "2025-01"
+url: "https://europepmc.org/article/MED/39897828"
+doi: "10.1016/j.heliyon.2025.e41902"
+pmid: "39897828"
+license_class: L2
+license_note: "CC BY-NC-ND 4.0: chỉ dùng dữ kiện kèm trích dẫn."
+default_tier: B
+accessed: "2026-10-25"
+verified: true
+verified_by: "agent:pass-c"
+notes_vi: "Lượt C đọc lại toàn văn qua API Europe PMC (PMC11786872). Bảng 1: số liệu bệnh truyền nhiễm báo cáo ở Cần Thơ 2014–2022 (theo Thông tư 54/2015/TT-BYT); tỷ suất mắc trung bình mỗi năm trên 100.000 dân: sốt xuất huyết Dengue (mã A90/A91) 176,84; thương hàn 0,36 (41 ca trong 9 năm); sốt rét 0,03 (3 ca)."

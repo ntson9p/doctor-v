@@ -1,0 +1,13 @@
+id: cdc-malaria-clinical
+type: web_page
+title: "Clinical Features of Malaria"
+publisher: "Centers for Disease Control and Prevention (CDC)"
+date: "2024-03-20"
+url: "https://www.cdc.gov/malaria/hcp/clinical-features/index.html"
+license_class: L0
+license_note: "Nội dung của chính phủ Hoa Kỳ (public domain); vẫn ghi nguồn."
+default_tier: B
+accessed: "2026-10-25"
+verified: true
+verified_by: "agent:pass-c"
+notes_vi: "Lượt C mở lại trang (cập nhật 20/3/2024). Sốt rét chưa biến chứng: sốt, run, vã mồ hôi, đau đầu, buồn nôn và nôn, đau mỏi người, mệt; khám có thể thấy vàng da nhẹ, gan lách to, thở nhanh. Ủ bệnh thường 7–30 ngày; P. vivax, P. ovale có thể tái phát nhiều tháng đến nhiều năm sau. Có tiêu chuẩn sốt rét nặng. Trang không nêu tần suất từng triệu chứng."

@@ -1,0 +1,47 @@
+id: d-typhoid-fever-2
+set: dev
+title_vi: "Bé trai 7 tuổi ở Đồng Tháp, chỉ sốt kéo dài 9 ngày, đau đầu, mệt"
+narrative_vi: "Bé K., 7 tuổi, ở Đồng Tháp, nhà dùng nước giếng. Chín ngày nay sốt mỗi ngày, có hôm 39°C, đau đầu, mệt, ăn kém. Không đau bụng, không tiêu chảy, không nôn, không ho, không sổ mũi, không đau họng, không nổi ban. Vẫn uống được, tỉnh táo, chơi ít hơn. Bé đã tiêm đủ 2 mũi vắc xin sởi."
+patient:
+  age_years: 7
+  sex: male
+  region: south
+  month: 4
+complaint: fever
+answers:
+  fever_duration: gt_7d
+  fever_max_temp: ge_39
+  headache: present
+  fatigue: present
+  loss_of_appetite: present
+  abdominal_pain: absent
+  diarrhea: absent
+  vomiting: absent
+  persistent_vomiting: absent
+  nausea: absent
+  cough: absent
+  runny_nose: absent
+  sore_throat: absent
+  rash_any: absent
+  myalgia: absent
+  chills_rigors: absent
+  confusion: absent
+  drowsy_hard_to_wake: absent
+  ear_pain: absent
+  dysuria: absent
+  measles_vaccinated: present
+  malaria_area_exposure: absent
+  bush_exposure: absent
+  dengue_nearby: absent
+  sick_contact_respiratory: absent
+  measles_contact: absent
+default_unmentioned: absent
+expected:
+  condition: typhoid_fever
+  acceptable: []
+  triage: 3
+source:
+  basis: "Thể không điển hình theo 5642/QĐ-BYT bài Thương hàn mục 3.4 (chỉ sốt kéo dài đơn thuần, rối loạn tiêu hóa thoáng qua hoặc không có). Ở trẻ khám ngoại trú, đau bụng chỉ có ở khoảng một nửa (Azmatullah 2015). Sốt mỗi ngày quá 7 ngày cần đi khám tìm nguyên nhân (IMCI)."
+  references: [byt-qd-5642-2015, azmatullah-jgh-2015, who-imci-chart-booklet-2014]
+author: "agent:pass-c"
+notes_vi: "Ca khó: thương hàn hiện rất hiếm ở Việt Nam (prior P6) và ca chỉ có sốt kéo dài; mục tiêu chính là mức xử trí an toàn (mức 3), không kỳ vọng thương hàn đứng đầu."

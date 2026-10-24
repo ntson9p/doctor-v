@@ -1,0 +1,395 @@
+id: dengue
+names:
+  vi: "Sốt xuất huyết Dengue"
+  vi_common: ["Sốt xuất huyết"]
+  en: "Dengue"
+codes:
+  icd10: "A97"
+  icd10_verified: false
+  mondo: "MONDO:0005502"
+summary_vi:
+  - "Bệnh do vi rút Dengue, lây khi bị muỗi vằn mang vi rút đốt."
+  - "Thường sốt cao đột ngột 2–7 ngày, đau đầu, đau nhức người, chán ăn; có thể nổi chấm đỏ dưới da."
+  - "Giai đoạn nguy hiểm thường vào ngày thứ 3–7 của bệnh, kể cả khi đã hết sốt."
+urgency: 3
+cant_miss: false
+specialties: [infectious_disease, general_medicine]
+priors:
+  - complaint: fever
+    default: P2
+    by_age: { infant_0_2m: P4, child_2m_5y: P3, elder_65_74: P3, elder_75p: P3 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [phuong-bmcinfectdis-2006, leviet-emi-2019, low-plosntd-2011, hoang-heliyon-2025, byt-qd-2760-2023]
+      locator: "Phuong 2006 bảng 1–3; Le-Viet 2019 bảng 2; Low 2011 phần Kết quả; Hoang 2025 bảng 1; 2760 mục I"
+      reported: "Dengue cấp ở 33,6% người sốt cấp không rõ ổ tại trạm y tế xã Bình Thuận (2001–2002); 7,7% người lớn sốt cấp không rõ ổ nằm viện ở Quảng Nam (tháng 5–8/2016); 11,7% người lớn sốt dưới 72 giờ ở phòng khám ban đầu Singapore; Cần Thơ 2014–2022: 176,8 ca/100.000 dân/năm"
+      note: "Hai lượt cùng chọn P2 (5–20%) làm mức trung bình cả năm, cả nước cho người chọn 'Sốt'. Phuong 2006 chỉ gồm sốt không rõ ổ, đã loại sốt rét, ở tỉnh lưu hành cao phía Nam; người dùng doctor-v gồm cả người sốt có triệu chứng hô hấp rõ và người ở miền Bắc, nên thấp hơn 33,6%. Mùa và vùng điều chỉnh bằng prior_modifiers. Trẻ 2 tháng–5 tuổi và người từ 65 tuổi có nhiều nguyên nhân sốt khác hơn: hạ một mức (P3); dưới 2 tháng: P4 (nhóm này chỉ sàng lọc). Chưa có số liệu Việt Nam về tỷ lệ dengue trên mọi người sốt ở tuyến đầu; cần đối chiếu khi cân chỉnh prior giữa các lô."
+  - complaint: headache
+    default: P4
+    by_age: { child_2m_5y: P5 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [phuong-bmcinfectdis-2006, low-plosntd-2011, byt-qd-2760-2023]
+      note: "Đau đầu có ở 80–98% người dengue khám ban đầu, nhưng phần lớn chọn 'Sốt' làm triệu chứng chính; người chọn 'Đau đầu' chủ yếu là đau đầu nguyên phát. Hai lượt cùng ước 0,2–1% (P4). Trẻ dưới 5 tuổi hiếm khi được chọn triệu chứng chính là đau đầu: P5 (lượt B). Ước lượng, chưa có số liệu lý do đi khám."
+  - complaint: abdominal_pain
+    default: P4
+    by_age: { child_2m_5y: P5, elder_65_74: P5, elder_75p: P5 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-2760-2023, phuong-bmcinfectdis-2006, leviet-emi-2019]
+      locator: "2760 mục II.2 (đau bụng nhiều ở giai đoạn nguy hiểm), Phụ lục 22 (trẻ em gặp nhiều nhất); Phuong 2006 bảng 2; Le-Viet 2019 bảng 4"
+      reported: "Đau bụng ở 16,3% (Bình Thuận) và 17,9% (Quảng Nam) người dengue khi khám sớm"
+      note: "Lượt A chọn P4, lượt B chọn P5 (P4 cho 5–17 tuổi). Lượt C chọn P4: đau bụng nhiều là dấu hiệu cảnh báo của giai đoạn nguy hiểm, người bệnh lúc này có thể chọn 'Đau bụng'; giữ mức cao hơn để không bỏ sót (bệnh có dấu hiệu cảnh báo cần nhập viện). Trẻ dưới 5 tuổi và người từ 65 tuổi hạ một mức như với 'Sốt'. Ước lượng, chưa có số liệu."
+prior_modifiers:
+  - when: { months: [8, 9, 10, 11] }
+    factor: 1.5
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [lee-bmcinfectdis-2017, byt-qd-2760-2023]
+      locator: "Lee 2017 bảng 2; 2760 mục I và Phụ lục 22"
+      reported: "So với trung bình năm (tính từ tỷ số tỷ lệ mắc theo tháng, bảng 2): tháng 8–11 gấp 1,24–1,51 lần ở Khánh Hòa, 1,29–1,62 lần ở TP.HCM, 1,16–1,75 lần ở An Giang, 1,3–3,2 lần ở Hà Nội"
+      note: "Áp dụng cả khi không biết vùng. 2760: bệnh xảy ra quanh năm, thường gia tăng vào mùa mưa, nhất là tháng 7–10."
+  - when: { months: [2, 3, 4] }
+    factor: 0.5
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [lee-bmcinfectdis-2017]
+      locator: "Bảng 2"
+      reported: "Tháng 2–4 so với trung bình năm: Khánh Hòa 0,50–0,63; TP.HCM 0,48–0,67; An Giang 0,33–0,56; Hà Nội 0,06–0,08"
+  - when: { regions: [north] }
+    factor: 0.5
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [lee-bmcinfectdis-2017]
+      locator: "Phần Kết quả"
+      reported: "Tỷ suất mắc trung bình mỗi tháng 1994–2013: Hà Nội 3,4/100.000, thấp hơn 3–7 lần so với Khánh Hòa, TP.HCM, An Giang"
+      note: "Hai lượt cùng chọn 0,5 (không giảm hết 3–7 lần vì Hà Nội chỉ đại diện một phần miền Bắc và các đợt dịch lớn ở Hà Nội sau năm 2013)."
+  - when: { regions: [central] }
+    factor: 1.2
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [lee-bmcinfectdis-2017]
+      reported: "Khánh Hòa 23,5 ca/100.000/tháng, cao nhất trong 4 tỉnh"
+      note: "Chỉ có số liệu Khánh Hòa (Nam Trung Bộ); chọn hệ số vừa phải vì Bắc Trung Bộ có thể thấp hơn. Tây Nguyên chưa có số liệu nên không khai báo."
+  - when: { regions: [south] }
+    factor: 1.3
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [lee-bmcinfectdis-2017, hoang-heliyon-2025]
+      reported: "TP.HCM 10,3 và An Giang 15,4 ca/100.000/tháng (1994–2013); Cần Thơ 176,8 ca/100.000/năm (2014–2022)"
+      note: "Với miền Bắc 0,5, miền Trung 1,2, miền Nam 1,3, trung bình cả nước theo dân số xấp xỉ 1, giữ prior gốc là mức trung bình cả nước."
+  - when: { regions: [north], months: [8, 9, 10, 11] }
+    factor: 1.5
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [lee-bmcinfectdis-2017]
+      locator: "Bảng 2 (Hà Nội)"
+      reported: "Hà Nội: tháng 8–11 gấp trung bình khoảng 2,3 lần trung bình năm (tỷ số so với tháng 2 từ 22 đến 55)"
+      note: "Cộng với hệ số tháng chung (1,5): miền Bắc tháng 8–11 khoảng 2,3 lần mức trung bình năm của miền."
+  - when: { regions: [north], months: [1, 5, 6] }
+    factor: 0.3
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [lee-bmcinfectdis-2017]
+      locator: "Bảng 2 (Hà Nội)"
+      reported: "Hà Nội: tháng 1, 5, 6 bằng 0,16–0,38 lần trung bình năm"
+  - when: { regions: [north], months: [2, 3, 4] }
+    factor: 0.15
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [lee-bmcinfectdis-2017]
+      locator: "Bảng 2 (Hà Nội)"
+      reported: "Hà Nội: tháng 2–4 bằng 0,06–0,08 lần trung bình năm"
+      note: "Cộng với hệ số tháng chung (0,5): miền Bắc tháng 2–4 khoảng 0,075 lần mức trung bình năm của miền."
+findings:
+  - finding: fever
+    freq: very_frequent
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-2760-2023]
+      locator: "Mục II.1.1 (sốt cao đột ngột, liên tục); mục II.2 (giai đoạn nguy hiểm có thể đã giảm sốt); Phụ lục 2 (sốt không quá 7 ngày)"
+      note: "Chỉ có tác dụng khi triệu chứng chính là đau đầu hoặc đau bụng. Lượt A chọn almost_always, lượt B very_frequent; lượt C chọn very_frequent để người đau bụng ở giai đoạn nguy hiểm, đã hết sốt, không bị loại gần hết khả năng sốt xuất huyết."
+  - finding: fever_duration
+    dist: { d1_2: 0.38, d3_5: 0.46, d6_7: 0.14, gt_7d: 0.02 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-2760-2023, phuong-bmcinfectdis-2006, trung-plosntd-2012]
+      locator: "2760 Phụ lục 2 (sốt không quá 7 ngày), mục II (giai đoạn sốt, nguy hiểm, hồi phục); Phuong 2006 bảng 2; Trung 2012 bảng 3"
+      reported: "Số ngày sốt khi đến trạm y tế: trung vị 1–2 ngày; hết sốt trung vị ngày thứ 6 (người nằm viện)"
+      note: "Phân bố số ngày đã sốt tại thời điểm hỏi. Định nghĩa ca bệnh của 2760 yêu cầu sốt không quá 7 ngày, nên 'hơn 7 ngày' chỉ để 2% (người đếm ngày không chính xác). Trung bình hai lượt cho các lựa chọn còn lại."
+  - finding: fever_max_temp
+    dist: { lt_38: 0.07, t38_39: 0.34, ge_39: 0.59 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-2760-2023, leviet-emi-2019, low-plosntd-2011]
+      locator: "2760 Phụ lục 25 (sốt cao 39–41°C); Le-Viet 2019 bảng 4; Low 2011 bảng 3"
+      reported: "Nhiệt độ cao nhất trung bình 39,6°C (độ lệch chuẩn 0,7) ở người lớn nằm viện Quảng Nam; nhiệt độ lúc khám trung vị 38,3°C ở phòng khám ban đầu"
+      note: "Trung bình hai lượt. Nhiệt độ cao nhất ở nhà thường cao hơn lúc khám."
+  - finding: headache
+    freq: very_frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [phuong-bmcinfectdis-2006, low-plosntd-2011, trung-plosntd-2012, leviet-emi-2019]
+      locator: "Phuong 2006 bảng 2; Low 2011 bảng 3; Trung 2012 bảng 3; Le-Viet 2019 bảng 4"
+      reported: "98,0% (Bình Thuận; bệnh sốt khác 96,3%); 80,0% (Singapore; bệnh sốt khác 68,7%); 69% trẻ em, 93% người lớn nằm viện; 64,3% (Quảng Nam)"
+      note: "Hai lượt trùng mức. Tỷ lệ nền khi sốt là 0,5, nên trả lời 'Có' chỉ làm tăng nhẹ (khoảng 1,6 lần)."
+  - finding: retro_orbital_pain
+    freq: occasional
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [low-plosntd-2011, byt-qd-2760-2023, halsey-plosntd-2012]
+      locator: "Low 2011 bảng 3 và bảng 7; 2760 mục II.1.1 (nhức hai hố mắt); Halsey 2012 bảng 3"
+      reported: "26,0% ở người lớn sốt dưới 72 giờ (bệnh sốt khác 15,9%); 18–35 tuổi 38–45%, từ 56 tuổi 10,5%; 68% ở người bệnh ngoại trú Nam Mỹ"
+      population: "Người lớn khám ban đầu ở Singapore"
+      note: "Lượt A chọn frequent (số liệu Nam Mỹ), lượt B occasional (số liệu châu Á, khám sớm). Lượt C chọn occasional vì nguồn châu Á ở tuyến ban đầu sát với người dùng hơn. Tỷ lệ nền 5% của danh mục thấp hơn thực tế ở người sốt (15,9%), nên mức này đã làm tăng khoảng 4 lần, cao hơn tỷ số thật (1,6)."
+  - finding: myalgia
+    freq: frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [low-plosntd-2011, phuong-bmcinfectdis-2006, trung-plosntd-2012]
+      locator: "Low 2011 bảng 3; Phuong 2006 bảng 2; Trung 2012 bảng 3"
+      reported: "69,2% (bệnh sốt khác 63,7%); 62,4% (bệnh sốt khác 58,7%); 19% trẻ em, 70% người lớn nằm viện"
+      note: "Hai lượt trùng mức. Trẻ em kể đau cơ ít hơn nhiều (19%), nhưng tỷ lệ nền của danh mục không theo tuổi nên không dùng freq_by_age."
+  - finding: arthralgia
+    freq: occasional
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [phuong-bmcinfectdis-2006, low-plosntd-2011, leviet-emi-2019]
+      locator: "Phuong 2006 bảng 2; Low 2011 bảng 3; Le-Viet 2019 bảng 4"
+      reported: "12,4% (Bình Thuận; bệnh sốt khác 14,5%); 60,8% (Singapore; bệnh sốt khác 42,6%); 14,3% (Quảng Nam)"
+      note: "Hai lượt trùng mức. Với tỷ lệ nền mới 0,2 khi sốt, liên kết này trung tính, phù hợp với số liệu Việt Nam (không khác bệnh sốt khác)."
+  - finding: loss_of_appetite
+    freq: very_frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [phuong-bmcinfectdis-2006, low-plosntd-2011, rosenberger-lancetgh-2023, byt-qd-2760-2023]
+      locator: "Phuong 2006 bảng 2; Low 2011 bảng 3; Rosenberger 2023 tóm tắt; 2760 mục II.1.1"
+      reported: "79,7% (Bình Thuận; bệnh sốt khác 83,6%); 81,2% (Singapore; bệnh sốt khác 59,9%); IDAMS: chán ăn liên quan với dengue"
+      note: "Hai lượt trùng mức. Tỷ lệ nền 0,4 của danh mục thấp hơn tỷ lệ ở bệnh sốt khác (60–84%), nên liên kết này làm tăng dengue nhiều hơn thực tế; đã đề xuất người bảo trì xem lại."
+  - finding: vomiting
+    freq: occasional
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [phuong-bmcinfectdis-2006, low-plosntd-2011, leviet-emi-2019]
+      locator: "Phuong 2006 bảng 2; Low 2011 bảng 3; Le-Viet 2019 bảng 4"
+      reported: "11,9% (Bình Thuận); 16,4% (Singapore; bệnh sốt khác 8,4%); 7,1% (Quảng Nam)"
+  - finding: persistent_vomiting
+    freq: occasional
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-2760-2023]
+      locator: "Phụ lục 2 (nôn ói nhiều từ 3 lần/1 giờ hoặc 4 lần/6 giờ là dấu hiệu cảnh báo); mục IV.A.3.b"
+      note: "Dấu hiệu cảnh báo, chủ yếu ở ngày 3–7. Không có số liệu cộng đồng; hai lượt cùng ước khoảng 10–20% người dùng (gồm người đang ở giai đoạn nguy hiểm)."
+  - finding: abdominal_pain
+    freq: occasional
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [phuong-bmcinfectdis-2006, low-plosntd-2011, leviet-emi-2019, trung-plosntd-2012]
+      locator: "Phuong 2006 bảng 2; Low 2011 bảng 3; Le-Viet 2019 bảng 4; Trung 2012 bảng 3"
+      reported: "16,3% (Bình Thuận; bệnh sốt khác 14,3%); 11,6% (Singapore; 14,7%); 17,9% (Quảng Nam); 20% trẻ em, 41% người lớn nằm viện"
+      note: "Đo ở ngày đầu; đau bụng tăng ở giai đoạn nguy hiểm."
+  - finding: abd_pain_location
+    dist: { epigastric: 0.30, right_upper: 0.27, left_upper: 0.04, periumbilical: 0.10, right_lower: 0.05, left_lower: 0.03, suprapubic: 0.03, whole: 0.18 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-2760-2023]
+      locator: "Mục II.2 (đau bụng nhiều, nhất là ở vùng gan; gan to, có thể đau)"
+      note: "Trung bình hai lượt; dồn vào vùng trên rốn và dưới sườn phải. Ước lượng, cần bác sĩ duyệt."
+  - finding: abd_pain_severe
+    freq: occasional
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-2760-2023]
+      locator: "Mục II.2; Phụ lục 2 (đau bụng nhiều và liên tục hoặc tăng cảm giác đau vùng gan)"
+      note: "Tần suất trong số người dengue đã có đau bụng. Hai lượt cùng ước khoảng 20%."
+  - finding: abd_pain_duration
+    dist: { lt_6h: 0.10, h6_24: 0.30, d1_3: 0.45, d4_14: 0.14, gt_2w: 0.01 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-2760-2023]
+      locator: "Mục II.2 (giai đoạn nguy hiểm ngày 3–7)"
+      note: "Chỉ lượt B khai báo. Đau bụng xuất hiện trong giai đoạn nguy hiểm, kéo dài vài ngày; đau trên 2 tuần gần như không phải dengue. Ước lượng."
+  - finding: cough
+    freq: occasional
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [phuong-bmcinfectdis-2006, leviet-emi-2019, rosenberger-lancetgh-2023]
+      locator: "Phuong 2006 bảng 2; Le-Viet 2019 bảng 4; Rosenberger 2023 tóm tắt"
+      reported: "30,7% (Bình Thuận; bệnh sốt khác 28,7%); 10,7% (Quảng Nam); IDAMS: ho liên quan với bệnh sốt khác hơn là dengue"
+      note: "Chỉ lượt A liên kết. Mức occasional bằng tỷ lệ nền 0,2 nên trung tính; giữ để ghi nhận số liệu."
+  - finding: runny_nose
+    freq: occasional
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [phuong-bmcinfectdis-2006, rosenberger-lancetgh-2023]
+      locator: "Phuong 2006 bảng 2; Rosenberger 2023 tóm tắt"
+      reported: "15,3% (Bình Thuận; bệnh sốt khác 25,5%); IDAMS: sổ mũi liên quan với bệnh sốt khác"
+      note: "Chỉ lượt A liên kết. Trung tính với tỷ lệ nền 0,2 (thang 6 mức không có mức giữa 2,5% và 20%)."
+  - finding: sore_throat
+    freq: occasional
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [phuong-bmcinfectdis-2006, leviet-emi-2019]
+      locator: "Phuong 2006 bảng 2; Le-Viet 2019 bảng 4"
+      reported: "40,1% (Bình Thuận; bệnh sốt khác 42,3%); 14,3% (Quảng Nam)"
+      note: "Chỉ lượt A liên kết. Không phân biệt được với bệnh sốt khác nên để mức trung tính (bằng tỷ lệ nền 0,2)."
+  - finding: rash_any
+    freq: occasional
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [low-plosntd-2011, phuong-bmcinfectdis-2006, trung-plosntd-2012, byt-qd-2760-2023]
+      locator: "Low 2011 bảng 3; Phuong 2006 phần Kết quả; Trung 2012 bảng 3; 2760 mục II.1.1 và II.3.1"
+      reported: "9,6% (Singapore; bệnh sốt khác 3,6%); 4,0% (Bình Thuận; 4,3%); 7–13% lúc vào viện"
+      note: "Ban và chấm xuất huyết rõ hơn sau vài ngày; 2760 có 'phát ban' trong tiêu chuẩn ca bệnh và ban hồi phục."
+  - finding: rash_non_blanching
+    freq: frequent
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-2760-2023, trung-plosntd-2012]
+      locator: "2760 mục II.1.1 (thường có chấm xuất huyết dưới da), II.2.1; Trung 2012 bảng 3"
+      reported: "Chỉ xuất huyết dưới da: 44% trẻ em, 38% người lớn nằm viện (cả đợt bệnh)"
+      note: "Tần suất trong số người dengue đã có ban hoặc nốt đỏ: chấm xuất huyết là biểu hiện da hay gặp nhất, nhưng ban hồi phục thì mất khi ấn. Hai lượt cùng ước khoảng một nửa. Chấm xuất huyết đơn thuần chưa là dấu hiệu cảnh báo theo 2760, nhưng quy tắc chung rf_fever_non_blanching_rash vẫn xếp mức 2."
+  - finding: bleeding_gums_nose
+    freq: occasional
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [low-plosntd-2011, phuong-bmcinfectdis-2006, trung-plosntd-2012, byt-qd-2760-2023]
+      locator: "Low 2011 bảng 3; Phuong 2006 phần Kết quả; Trung 2012 bảng 3; 2760 mục II.1.1, Phụ lục 2"
+      reported: "Chảy máu 5,2% ở ngày 1–3 (bệnh sốt khác 1,8%); chảy máu tự nhiên 3,0% (0,4%); chảy máu niêm mạc nhẹ–vừa 10% trẻ em, 46% người lớn nằm viện (cả đợt bệnh)"
+      note: "Hai lượt trùng mức: số liệu ngày đầu ở mức rare, nhưng người dùng thường kiểm tra ở ngày 3–7. Dấu hiệu cảnh báo theo 2760."
+  - finding: decreased_urine
+    freq: occasional
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-2760-2023]
+      locator: "Phụ lục 2 (tiểu ít là dấu hiệu cảnh báo); mục IV.A.3.b (không tiểu trên 6 giờ)"
+      note: "Hai lượt cùng ước 10–20%; người sốt ăn uống kém cũng hay tiểu ít. Cần bác sĩ duyệt."
+  - finding: breathing_difficulty
+    freq: rare
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [halsey-plosntd-2012, byt-qd-2760-2023]
+      locator: "Halsey 2012 bảng 3; 2760 mục II.2 (tràn dịch có thể gây suy hô hấp), Phụ lục 2"
+      reported: "Khó thở 1,3% ở người bệnh ngoại trú"
+      note: "Hai lượt trùng mức. Thấp hơn tỷ lệ nền (5%) nên trả lời 'Có' làm giảm khả năng dengue so với bệnh hô hấp; khó thở ở giai đoạn nguy hiểm đã có quy tắc mức 2."
+  - finding: fever_cyclic
+    freq: rare
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-2760-2023, cdc-dengue-clinical]
+      locator: "2760 mục II.1.1 (sốt cao đột ngột, liên tục); CDC (sốt có thể hai pha)"
+      note: "Chỉ lượt A liên kết. Sốt dengue liên tục, có khi hai pha, không thành cơn cách 1–2 ngày như sốt rét. Thấp hơn tỷ lệ nền (5%)."
+  - finding: dengue_nearby
+    freq: occasional
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-2760-2023]
+      locator: "Phụ lục 2 (sống hoặc đi đến vùng có dịch)"
+      note: "Lượt A chọn occasional, lượt B frequent; đều không có số liệu. Lượt C chọn occasional: người bệnh thường không biết ca bệnh quanh nhà, và mùa, vùng dịch đã được tính trong prior_modifiers (tránh đếm trùng). Cần bác sĩ duyệt."
+  - finding: symptoms_worsen_after_improving
+    freq: occasional
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-2760-2023]
+      locator: "Mục II.2 (giai đoạn nguy hiểm, có thể đã giảm sốt); IV.A.3.b (khó chịu hơn dù sốt giảm hoặc hết sốt: đến khám lại ngay)"
+      note: "Chỉ lượt B liên kết; lượt C giữ vì có trong hướng dẫn. Không có số liệu tần suất, ước lượng."
+  - finding: headache_location
+    dist: { one_side: 0.05, both_sides: 0.15, forehead_face: 0.43, back_neck: 0.07, whole_head: 0.30 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-2760-2023, cdc-dengue-clinical]
+      locator: "2760 mục II.1.1 (nhức đầu, nhức hai hố mắt); CDC (đau đầu nhiều, đau sau hốc mắt)"
+      note: "Trung bình hai lượt: vùng trán, quanh mắt hoặc khắp đầu. Ước lượng."
+  - finding: headache_severity
+    dist: { mild: 0.15, moderate: 0.45, severe: 0.40 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [cdc-dengue-clinical]
+      locator: "Febrile phase (severe headache)"
+      note: "Chỉ lượt A khai báo. CDC mô tả đau đầu nhiều; phân bố ước lượng."
+  - finding: headache_course
+    dist: { first_time: 0.80, recurrent_similar: 0.17, progressive: 0.03 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-2760-2023]
+      locator: "Mục II.1"
+      note: "Trung bình hai lượt. Bệnh cấp, đau đầu kiểu mới; người có đau đầu từ trước có thể chọn 'đã bị nhiều lần'."
+  - finding: headache_duration
+    dist: { lt_4h: 0.06, h4_72: 0.64, gt_3d: 0.30 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-2760-2023]
+      locator: "Mục II.1 (giai đoạn sốt)"
+      note: "Trung bình hai lượt; đau đầu kéo dài theo những ngày sốt."
+warning_signs:
+  - abd_pain_severe
+  - persistent_vomiting
+  - bleeding_gums_nose
+  - vomiting_blood
+  - black_stool
+  - vaginal_bleeding
+  - hematuria
+  - drowsy_hard_to_wake
+  - confusion
+  - severe_weakness
+  - cold_hands_feet
+  - decreased_urine
+  - breathing_difficulty
+  - symptoms_worsen_after_improving
+self_care_vi:
+  - "Nghỉ ngơi, uống nhiều nước như oresol, nước trái cây, nước cháo loãng có chút muối."
+  - "Khi sốt cao, nới lỏng quần áo và lau người bằng nước ấm."
+  - "Khi nghi sốt xuất huyết, không tự dùng aspirin hoặc ibuprofen vì dễ gây chảy máu."
+  - "Hỏi bác sĩ hoặc dược sĩ trước khi dùng bất kỳ thuốc hạ sốt nào."
+  - "Tránh đồ ăn, uống màu đỏ hoặc nâu để dễ nhận ra nếu nôn ra máu."
+see_doctor_vi:
+  - "Đi khám trong 24 giờ để được xét nghiệm máu và hẹn khám lại hằng ngày."
+  - "Ngày thứ 3–7 của bệnh cần theo dõi sát, kể cả khi đã hết sốt."
+  - "Đến cơ sở cấp cứu ngay nếu đau bụng nhiều, nôn nhiều, chảy máu, li bì, tay chân lạnh hoặc tiểu ít."
+review:
+  status: source_checked
+  authors: ["agent:pass-a", "agent:pass-b"]
+  reconciler: "agent:pass-c"
+  doctor_reviewer: null
+  updated: "2026-10-25"
+  notes_vi: "Mức xử trí 3, không thuộc nhóm không được bỏ sót (2760 mục IV.A: phần lớn điều trị ngoại trú, khám lại hằng ngày); dấu hiệu cảnh báo và sốc do quy tắc mức 2 xử lý, và hiện trong danh sách 'Đi cấp cứu ngay nếu…' khi xác suất từ 10%. Lượt C bỏ các liên kết của lượt A: mệt mỏi (gặp ở hầu hết bệnh sốt, không có số liệu so sánh), tiêu chảy (Phuong 2006: 4,5% ở dengue so với 7,6% ở bệnh sốt khác), đi ngoài phân đen, li bì, tay chân lạnh ở mức rare (cao hơn tỷ lệ nền 1%; đã có quy tắc mức 2 và có trong dấu hiệu cảnh báo). Điểm cần bác sĩ xem: (1) prior 'Sốt' P2 suy từ nghiên cứu sốt không rõ ổ ở Bình Thuận 2001–2002 và Quảng Nam 2016; chưa có số liệu theo tuổi; (2) hệ số mùa, vùng lấy từ 4 tỉnh 1994–2013, chưa có số liệu Tây Nguyên, Bắc Trung Bộ, và các đợt dịch lớn ở miền Bắc sau 2013; (3) tỷ lệ nền khi sốt của chán ăn (0,4), đau sau hốc mắt (0,05), đau khớp, đau cơ thấp hơn tỷ lệ ở bệnh sốt khác trong Phuong 2006 và Low 2011, nên các liên kết này phóng đại giá trị phân biệt; (4) tần suất dấu hiệu cảnh báo ở cộng đồng (nôn nhiều, tiểu ít, đau bụng nhiều) là ước lượng; (5) chấm xuất huyết đơn thuần không là dấu hiệu cảnh báo theo 2760 nhưng quy tắc chung xếp mức 2; (6) mã ICD-10: A97 theo bản ICD-10 của WHO 2016, báo cáo giám sát của Bộ Y tế dùng A90/A91 (Hoang 2025); chưa đối chiếu bảng ICD-10 của Bộ Y tế."

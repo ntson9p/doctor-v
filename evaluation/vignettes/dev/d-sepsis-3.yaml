@@ -1,0 +1,50 @@
+id: d-sepsis-3
+set: dev
+title_vi: "Nam 35 tuổi ở Bình Dương, tháng 9, sốt rét run 2 ngày như cúm, nay tay chân lạnh, da nổi vân"
+narrative_vi: "Anh B., 35 tuổi, ở Bình Dương. Hai ngày nay sốt cao 39,8°C, rét run, đau đầu, đau mỏi khắp người như cúm, nôn 2 lần. Chiều nay tay chân lạnh, da tay chân nổi vân tím, thở nhanh, vẫn tỉnh và trả lời được. Không ho, không đau họng, không sổ mũi, không đau bụng, không tiêu chảy. Không nổi chấm đỏ, không chảy máu chân răng. Khu phố đang có sốt xuất huyết."
+patient:
+  age_years: 35
+  sex: male
+  region: south
+  month: 9
+complaint: fever
+answers:
+  fever_duration: d1_2
+  fever_max_temp: ge_39
+  chills_rigors: present
+  myalgia: present
+  vomiting: present
+  persistent_vomiting: absent
+  cold_hands_feet: present
+  breathing_difficulty: present
+  confusion: absent
+  drowsy_hard_to_wake: absent
+  severe_weakness: absent
+  neck_stiffness: absent
+  headache: present
+  cough: absent
+  sore_throat: absent
+  runny_nose: absent
+  abdominal_pain: absent
+  diarrhea: absent
+  rash_any: absent
+  bleeding_gums_nose: absent
+  decreased_urine: unknown
+  dengue_nearby: present
+  malaria_area_exposure: absent
+  bush_exposure: absent
+  sick_contact_respiratory: absent
+  measles_contact: absent
+  diabetes: absent
+  hypertension_known: absent
+  known_heart_disease: absent
+  immunocompromised: absent
+default_unmentioned: absent
+expected:
+  condition: sepsis
+  acceptable: []
+  triage: 1
+source:
+  basis: "Nhiễm khuẩn huyết có dấu hiệu giảm tưới máu (tay chân lạnh, da nổi vân) và thở nhanh ngay ngày thứ 2 của sốt; dễ nhầm với sốc sốt xuất huyết (thường ngày 3–7, 2760 mục II.2) giữa mùa dịch. NHS Sepsis: da tái, xám hoặc loang lổ, thở rất nhanh thì gọi 999; 5642: sốc nhiễm khuẩn, tử vong 20–50%."
+  references: [nhs-sepsis, byt-qd-5642-2015, byt-qd-2760-2023]
+author: "agent:pass-c"

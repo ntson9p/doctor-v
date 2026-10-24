@@ -1,0 +1,52 @@
+id: d-malaria-2
+set: dev
+title_vi: "Nam 41 tuổi ở Hà Nội, vừa đi làm ở châu Phi về, sốt cao liên tục 2 ngày"
+narrative_vi: "Anh Q., 41 tuổi, ở Hà Nội, vừa về nước 10 ngày sau 2 năm làm việc ở Angola. Hai ngày nay sốt cao liên tục 39,5°C, chỉ thấy ớn lạnh chứ không rét run, không thành cơn. Đau đầu, đau mỏi người, mệt, buồn nôn, nôn 2 lần. Không ho, không sổ mũi, không đau họng, không đau bụng, không tiêu chảy, không nổi ban. Không vàng da, không khó thở, tỉnh táo."
+patient:
+  age_years: 41
+  sex: male
+  region: north
+  month: 3
+complaint: fever
+answers:
+  malaria_area_exposure: present
+  bush_exposure: absent
+  dengue_nearby: absent
+  sick_contact_respiratory: absent
+  measles_contact: absent
+  fever_duration: d1_2
+  fever_max_temp: ge_39
+  chills_rigors: absent
+  fever_cyclic: absent
+  headache: present
+  myalgia: present
+  fatigue: present
+  nausea: present
+  vomiting: present
+  persistent_vomiting: absent
+  loss_of_appetite: present
+  cough: absent
+  runny_nose: absent
+  sore_throat: absent
+  abdominal_pain: absent
+  diarrhea: absent
+  rash_any: absent
+  jaundice: absent
+  breathing_difficulty: absent
+  confusion: absent
+  severe_weakness: absent
+  retro_orbital_pain: absent
+  diabetes: absent
+  hypertension_known: absent
+  known_heart_disease: absent
+  immunocompromised: absent
+default_unmentioned: absent
+expected:
+  condition: malaria
+  acceptable: []
+  triage: 3
+source:
+  basis: "Sốt rét ngoại lai: 3377/QĐ-BYT mục I (ca mắc do đi làm việc ở quốc gia có sốt rét lưu hành trở về) và mục II.1 (người mắc lần đầu thường sốt không thành cơn, sốt cao liên tục, ớn lạnh). CDC: ủ bệnh thường 7–30 ngày. Chưa có dấu hiệu ác tính: xét nghiệm tìm ký sinh trùng sốt rét trong ngày."
+  references: [byt-qd-3377-2023, cdc-malaria-clinical, winhanoo-malarj-2023]
+author: "agent:pass-c"
+notes_vi: "Ca không điển hình: không rét run, không sốt thành cơn, người ở miền Bắc. Câu hỏi phơi nhiễm gộp người đi rừng trong nước (nguy cơ thấp) với người từ châu Phi về (nguy cơ cao), nên khả năng sốt rét có thể bị đánh giá thấp."

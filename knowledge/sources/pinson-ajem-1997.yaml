@@ -1,0 +1,15 @@
+id: pinson-ajem-1997
+type: primary_study
+title: "Fever in the clinical diagnosis of acute pyelonephritis"
+publisher: "American Journal of Emergency Medicine 1997;15:148–151 (Pinson AG, Philbrick JT, Lindbeck GH, Schorling JB)"
+date: "1997-03"
+url: "https://europepmc.org/article/MED/9115515"
+doi: "10.1016/S0735-6757(97)90087-5"
+pmid: "9115515"
+license_class: L3
+license_note: "Bản quyền nhà xuất bản: chỉ dùng dữ kiện kèm trích dẫn, không sao chép câu chữ."
+default_tier: B
+accessed: "2026-10-25"
+verified: true
+verified_by: "agent:pass-c"
+notes_vi: "Lượt C chỉ đọc tóm tắt qua API Europe PMC. Hồi cứu phụ nữ từ 15 tuổi đến cấp cứu có bạch cầu niệu, nghi viêm thận – bể thận: 103 người có sốt (từ 37,8°C) và 201 người không sốt; nhóm không sốt hay có chẩn đoán khác hơn (viêm túi mật, viêm vùng chậu, viêm túi thừa); giá trị dự báo dương của định nghĩa lâm sàng là 0,98 khi có sốt và 0,84 khi không sốt."

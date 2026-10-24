@@ -1,0 +1,240 @@
+id: scrub_typhus
+names:
+  vi: "Bệnh sốt mò"
+  vi_common: ["Sốt mò"]
+  en: "Scrub typhus"
+codes:
+  icd10: "A75.3"
+  icd10_verified: false
+  mondo: "MONDO:0019365"
+summary_vi:
+  - "Bệnh do vi khuẩn lây khi bị ấu trùng mò sống ở bụi rậm, bãi cỏ đốt."
+  - "Thường sốt cao, đau đầu, đau mỏi người; có thể có vết loét đóng vảy đen không đau ở vùng da kín."
+  - "Dùng đúng kháng sinh thường hết sốt sau 1–3 ngày; nếu chậm điều trị, bệnh có thể biến chứng nặng ở phổi, tim."
+urgency: 3
+cant_miss: false
+specialties: [infectious_disease]
+priors:
+  - complaint: fever
+    default: P4
+    by_age: { infant_0_2m: P6, child_2m_5y: P5, child_5_12: P5 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [leviet-emi-2019, katoh-plosntd-2019, hamaguchi-ajtmh-2015, bonell-plosntd-2017, byt-qd-5642-2015]
+      locator: "Le-Viet 2019 bảng 2; Katoh 2019 tóm tắt; Hamaguchi 2015 bảng 1; Bonell 2017 bảng tổng hợp (Nadjm); 5642 bài Sốt mò mục 1–2"
+      reported: "O. tsutsugamushi ở 5,5% người lớn sốt cấp không rõ ổ nằm viện ở Quảng Nam (tháng 5–8/2016); 2,9% người lớn nằm viện vì sốt tại Bạch Mai (2012–2013); 3,5% ca nhập Bệnh viện Nhiệt đới Trung ương không có chẩn đoán ngay (2001–2003)"
+      note: "Hai lượt cùng chọn P4 (0,2–1%) cho người lớn: tỷ lệ ở bệnh viện là 3–6%, ở cộng đồng (gồm cả thành thị, phần lớn sốt do vi rút) thấp hơn nhiều. 5642: bệnh lưu hành, thường ở nông thôn, gặp lẻ tẻ quanh năm. Trẻ dưới 13 tuổi ít được báo cáo (các nghiên cứu Việt Nam chỉ gồm người lớn): P5; dưới 2 tháng P6. Lượt B hạ cả 13–17 tuổi xuống P5; lượt C giữ P4 vì thiếu niên nông thôn cũng làm rẫy, phát cỏ, và không có số liệu cho thấy ít mắc hơn người lớn."
+  - complaint: headache
+    default: P5
+    by_age: { child_2m_5y: P6, child_5_12: P6 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [hamaguchi-ajtmh-2015, katoh-plosntd-2019, leviet-emi-2019]
+      note: "Đau đầu có ở 67–95% người sốt mò nhưng người bệnh thường chọn 'Sốt'; hai lượt cùng ước P5 cho người lớn. Trẻ em hạ một mức như với 'Sốt' (lượt B)."
+prior_modifiers:
+  - when: { regions: [north], months: [5, 6, 7, 8, 9, 10] }
+    factor: 1.5
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [hamaguchi-ajtmh-2015, byt-qd-5642-2015]
+      locator: "Hamaguchi bảng 1; 5642 bài Sốt mò mục 2"
+      reported: "74,7% ca sốt mò nhập viện vào mùa mưa tháng 5–10, so với 49,0% ở nhóm sốt không do rickettsia"
+      note: "Hai lượt trùng. 74,7/49 ≈ 1,5. Số liệu Bạch Mai (người bệnh các tỉnh phía Bắc); 5642: cao điểm xuân – hè – thu. Chưa có số liệu mùa cho các miền khác."
+  - when: { regions: [north], months: [11, 12, 1, 2, 3, 4] }
+    factor: 0.5
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [hamaguchi-ajtmh-2015]
+      locator: "Bảng 1"
+      reported: "25,3% ca sốt mò vào mùa khô tháng 11–4, so với 51,0% ở nhóm sốt không do rickettsia"
+      note: "Hai lượt trùng. 25,3/51 ≈ 0,5."
+findings:
+  - finding: eschar
+    freq: frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [leviet-emi-2019, hamaguchi-ajtmh-2015, katoh-plosntd-2019, byt-qd-5642-2015]
+      locator: "Le-Viet 2019 bảng 4; Hamaguchi 2015 bảng 1; Katoh 2019 bảng 1 và phần Introduction, Discussion; 5642 bài Sốt mò mục 3.1"
+      reported: "47,4% (Quảng Nam, bệnh viện tỉnh, xác định bằng PCR); 62,9% (Bạch Mai 2001–2003); 18,2% (Bạch Mai 2012–2013); các nghiên cứu Việt Nam trước 46–94%. Ở nhóm sốt khác: 0–5,4%"
+      population: "Người lớn nằm viện, bác sĩ khám tìm vết loét"
+      note: "Hai lượt cùng chọn frequent. Con số 18% của Katoh là ở bệnh viện tuyến cuối, nơi ca điển hình đã được chữa ở tuyến dưới (chính tác giả nhận định), nên không đại diện cho cộng đồng. Ở tuyến tỉnh và trong các nghiên cứu trước, khoảng một nửa đến hai phần ba có vết loét; người dân tự tìm sẽ bỏ sót vết loét ở nách, bẹn, nên chọn mức giữa (khoảng 50%). Câu hỏi có tỷ lệ 'không rõ' 30%."
+  - finding: bush_exposure
+    freq: frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [hamaguchi-ajtmh-2015, katoh-plosntd-2019, leviet-emi-2019, byt-qd-5642-2015]
+      locator: "Hamaguchi bảng 1; Katoh bảng 1; Le-Viet bảng 4; 5642 bài Sốt mò mục 2"
+      reported: "Nghề tiếp xúc thiên nhiên 61,2% (Hamaguchi); nông dân 60,6% so với 32,7% ở nhóm khác (Katoh); đi rừng 47,4% (Le-Viet)"
+      note: "Hai lượt trùng mức. Thời gian ủ bệnh 6–21 ngày dài hơn khoảng 2 tuần của câu hỏi, và nhiều người không nhớ đã tiếp xúc cỏ. Tỷ lệ nền mới 0,10."
+  - finding: malaria_area_exposure
+    freq: occasional
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [leviet-emi-2019]
+      locator: "Bảng 1 và bảng 4"
+      reported: "Đi rừng 47,4% ở người sốt mò (Quảng Nam), so với 11,1% ở toàn bộ người sốt cấp không rõ ổ và 11,1% ở dengue"
+      note: "Chỉ lượt A liên kết. Lượt C giữ: đi rừng, ngủ rẫy cũng là phơi nhiễm của sốt mò, và ở Việt Nam hiện nay sốt mò gặp nhiều hơn sốt rét ở người đi rừng bị sốt. Chọn occasional (thấp hơn 47%) vì mẫu nhỏ (19 ca), ở miền Bắc phơi nhiễm chủ yếu là đồng ruộng, và câu hỏi này tương quan với câu làm rẫy, phát cỏ (đếm trùng)."
+  - finding: fever
+    freq: almost_always
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-5642-2015]
+      locator: "Bài Sốt mò mục 3.1 (sốt cao liên tục)"
+      note: "Chỉ có tác dụng khi triệu chứng chính là đau đầu."
+  - finding: fever_duration
+    dist: { d1_2: 0.10, d3_5: 0.34, d6_7: 0.26, gt_7d: 0.30 }
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [leviet-emi-2019, katoh-plosntd-2019, hamaguchi-ajtmh-2015, byt-qd-5642-2015]
+      locator: "Le-Viet bảng 4; Katoh bảng 1; Hamaguchi bảng 1; 5642 bài Sốt mò mục 3.1"
+      reported: "Tổng số ngày sốt trung vị 7,5 (5–9,5) ở Quảng Nam; 76% sốt hơn 7 ngày khi nhập viện tuyến cuối"
+      note: "Trung bình hai lượt. Phân bố số ngày đã sốt tại thời điểm hỏi; người dùng cộng đồng kiểm tra sớm hơn lúc nhập viện. Ca nhẹ không điều trị có thể sốt 3–4 tuần (5642)."
+  - finding: fever_max_temp
+    dist: { lt_38: 0.08, t38_39: 0.39, ge_39: 0.53 }
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [leviet-emi-2019, byt-qd-5642-2015]
+      locator: "Le-Viet bảng 4; 5642 bài Sốt mò mục 3.1"
+      reported: "Nhiệt độ cao nhất trung bình 39,2°C (độ lệch chuẩn 0,7) ở người lớn Quảng Nam"
+      note: "Trung bình hai lượt."
+  - finding: chills_rigors
+    freq: frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [hamaguchi-ajtmh-2015, katoh-plosntd-2019, byt-qd-5642-2015]
+      locator: "Hamaguchi bảng 1; Katoh bảng 1; 5642 bài Sốt mò mục 3.1 (có thể kèm theo rét run)"
+      reported: "Rét run, ớn lạnh 82,3% (nhóm sốt khác 72,5–75,8%); 24,2% (Katoh)"
+      note: "Lượt A chọn very_frequent, lượt B frequent. Lượt C chọn frequent: câu hỏi hỏi 'rét run, lạnh run cầm cập', chặt hơn 'ớn lạnh' trong Hamaguchi; hai nghiên cứu lệch nhau; ở Hamaguchi các bệnh sốt khác cũng rét run 73–76% nên dấu hiệu gần như không phân biệt."
+  - finding: headache
+    freq: very_frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [leviet-emi-2019, hamaguchi-ajtmh-2015, katoh-plosntd-2019]
+      locator: "Le-Viet bảng 4; Hamaguchi bảng 1; Katoh bảng 1"
+      reported: "94,8% (Quảng Nam); 70,5% (Bạch Mai 2001–2003); 66,7% so với 46,5% ở nhóm khác (Bạch Mai 2012–2013)"
+      note: "Hai lượt trùng mức."
+  - finding: myalgia
+    freq: frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [hamaguchi-ajtmh-2015, leviet-emi-2019, katoh-plosntd-2019]
+      locator: "Hamaguchi bảng 1; Le-Viet bảng 4; Katoh bảng 1"
+      reported: "67,9% (Bạch Mai 2001–2003); 57,9% (Quảng Nam); 21,2% (Katoh)"
+      note: "Hai lượt trùng mức."
+  - finding: arthralgia
+    freq: occasional
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [leviet-emi-2019]
+      locator: "Bảng 4"
+      reported: "36,8% (7/19 ca, Quảng Nam), so với 14,3% ở dengue"
+      note: "Chỉ lượt A liên kết. Mẫu nhỏ nên chọn occasional; với tỷ lệ nền 0,2 khi sốt, liên kết này trung tính."
+  - finding: cough
+    freq: frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [hamaguchi-ajtmh-2015, katoh-plosntd-2019, leviet-emi-2019, byt-qd-5642-2015]
+      locator: "Hamaguchi bảng 1; Katoh bảng 1; Le-Viet bảng 4; 5642 mục 3.1 (tổn thương phổi: thường có ho)"
+      reported: "43,9% (Hamaguchi); 42,4% (Katoh); 31,6% (Le-Viet)"
+      note: "Hai lượt trùng mức."
+  - finding: sore_throat
+    freq: rare
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [katoh-plosntd-2019, leviet-emi-2019]
+      locator: "Katoh bảng 1; Le-Viet bảng 4"
+      reported: "6,1% (nhóm khác 7,3%); 5,3% (Quảng Nam, so với 14–29% ở dengue, cúm, nhiễm vi rút hô hấp)"
+      note: "Chỉ lượt B liên kết; lượt C giữ vì hai nguồn Việt Nam cùng cho 5–6%. Thấp hơn tỷ lệ nền 0,2 nên đau họng làm giảm khả năng sốt mò so với sốt do vi rút đường hô hấp."
+  - finding: rash_any
+    freq: occasional
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [hamaguchi-ajtmh-2015, katoh-plosntd-2019, leviet-emi-2019, byt-qd-5642-2015]
+      locator: "Hamaguchi bảng 1; Katoh bảng 1; Le-Viet bảng 4; 5642 mục 3.1 (ban dát sẩn cuối tuần đầu)"
+      reported: "31,2% (Hamaguchi); 9,1% (Katoh); 5,3% (Le-Viet)"
+      note: "Hai lượt trùng mức."
+  - finding: red_eyes
+    freq: occasional
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [katoh-plosntd-2019, byt-qd-5642-2015]
+      locator: "Katoh bảng 1; 5642 mục 3.1 (xung huyết kết mạc mắt)"
+      reported: "Xung huyết kết mạc 39,4% so với 16,6% ở nhóm khác (bác sĩ khám)"
+      note: "Hai lượt trùng mức; hạ một mức vì người dùng tự nhận biết đỏ mắt kém hơn bác sĩ khám."
+  - finding: edema_face_hands
+    freq: occasional
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [hamaguchi-ajtmh-2015, byt-qd-5642-2015]
+      locator: "Hamaguchi bảng 1; 5642 mục 3.1 (có thể phù nhẹ dưới da vùng mặt và mu chân)"
+      reported: "Phù 27,9% ở sốt mò, so với 6,7–8,8% ở nhóm sốt khác (bệnh viện tuyến cuối)"
+      note: "Chỉ lượt A liên kết; lượt C giữ vì hai nguồn cùng ghi nhận. Câu hỏi của danh mục hỏi phù mặt hoặc bàn tay, còn 5642 nói mặt và mu chân, nên chỉ khớp một phần."
+  - finding: lymph_node_swelling
+    freq: occasional
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [hamaguchi-ajtmh-2015, leviet-emi-2019, katoh-plosntd-2019, byt-qd-5642-2015]
+      locator: "Hamaguchi bảng 1; Le-Viet bảng 4; Katoh bảng 1; 5642 mục 3.1 (hạch sưng tại chỗ vết loét và hạch toàn thân, mềm, không đau)"
+      reported: "Nổi hạch 64,1% (Hamaguchi; nhóm khác 16,8–19,7%); 42,1% (Le-Viet; nhóm khác 0–8,3%); nhiều hạch 12,1% (Katoh)"
+      note: "Lượt A chọn frequent, lượt B occasional. Lượt C chọn occasional: số liệu là bác sĩ khám; hạch sốt mò mềm, không đau nên người bệnh tự sờ thấy ít hơn nhiều; trẻ viêm họng cũng hay có hạch cổ."
+  - finding: headache_course
+    dist: { first_time: 0.75, recurrent_similar: 0.20, progressive: 0.05 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-5642-2015]
+      note: "Chỉ lượt A khai báo. Đau đầu cấp cùng đợt sốt, phần lớn là kiểu đau mới. Ước lượng."
+  - finding: headache_duration
+    dist: { lt_4h: 0.05, h4_72: 0.50, gt_3d: 0.45 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [katoh-plosntd-2019, byt-qd-5642-2015]
+      locator: "Katoh bảng 1 (sốt trung vị 7 ngày trước nhập viện); 5642 mục 3.1"
+      note: "Chỉ lượt B khai báo. Đau đầu đi cùng đợt sốt kéo dài nhiều ngày; ước lượng."
+warning_signs:
+  - breathing_difficulty
+  - confusion
+  - drowsy_hard_to_wake
+  - seizure_recent
+  - cold_hands_feet
+  - severe_weakness
+  - decreased_urine
+  - jaundice
+self_care_vi:
+  - "Xem kỹ khắp người, nhất là nách, bẹn, thắt lưng, để tìm vết loét đóng vảy đen."
+  - "Uống đủ nước, nghỉ ngơi; chườm mát khi sốt cao."
+  - "Hỏi bác sĩ hoặc dược sĩ trước khi dùng thuốc hạ sốt."
+  - "Khi làm rẫy, phát cỏ, nên mặc quần áo kín và bôi thuốc xua côn trùng lên da hở."
+see_doctor_vi:
+  - "Đi khám trong 24 giờ, nhất là khi sốt sau làm rẫy, phát cỏ hoặc có vết loét đóng vảy đen."
+  - "Báo cho nhân viên y tế nếu đã đi rừng, làm rẫy hoặc ngồi nằm trên cỏ."
+  - "Sốt mò cần đúng loại kháng sinh do bác sĩ chỉ định."
+  - "Đến cơ sở cấp cứu ngay nếu khó thở, lơ mơ, co giật, tiểu rất ít hoặc tay chân lạnh."
+review:
+  status: source_checked
+  authors: ["agent:pass-a", "agent:pass-b"]
+  reconciler: "agent:pass-c"
+  doctor_reviewer: null
+  updated: "2026-10-25"
+  notes_vi: "Mức xử trí 3, không thuộc nhóm không được bỏ sót (5642: kháng sinh uống, thường hết sốt sau 1–3 ngày); biến chứng hô hấp, tuần hoàn, não do quy tắc mức 2 xử lý. Tên theo bài 'Bệnh sốt mò' của 5642. Điểm cần bác sĩ xem: (1) toàn bộ số liệu triệu chứng lấy từ người lớn nằm viện (Bạch Mai, Quảng Nam); chưa có số liệu ở trẻ em, ở tuyến cơ sở và ở miền Nam; (2) tần suất vết loét khi người dân tự tìm chưa có số liệu, đã chọn khoảng 50%; (3) prior cộng đồng (P4) suy từ tỷ lệ ở bệnh viện; (4) hai câu hỏi phơi nhiễm (làm rẫy, phát cỏ và đi rừng, ngủ rẫy) tương quan với nhau nhưng không cùng cụm: đề nghị người bảo trì gom vào một cụm; (5) hệ số mùa chỉ có cho miền Bắc."

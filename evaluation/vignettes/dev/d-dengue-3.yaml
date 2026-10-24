@@ -1,0 +1,61 @@
+id: d-dengue-3
+set: dev
+title_vi: "Nữ 27 tuổi ở Đà Nẵng, tháng 10, đau dưới sườn phải, sốt ngày thứ 5, nôn, tiểu ít"
+narrative_vi: "Chị T., 27 tuổi, ở Đà Nẵng. Sốt cao 39°C từ 5 ngày nay, đau đầu, đau mỏi người, chán ăn. Hai ngày nay đau âm ỉ liên tục dưới sườn phải và vùng trên rốn, buồn nôn, nôn 3 lần trong ngày nhưng vẫn uống được nước. Từ sáng đến chiều chỉ đi tiểu một ít. Không tiểu buốt, không đau hông lưng, không tiêu chảy. Không ra máu âm đạo, không chậm kinh. Chưa thấy chảy máu chân răng hay nổi chấm đỏ. Không rõ quanh nhà có ai bị sốt xuất huyết không."
+patient:
+  age_years: 27
+  sex: female
+  region: central
+  month: 10
+complaint: abdominal_pain
+answers:
+  abd_pain_location: right_upper
+  abd_pain_duration: d1_3
+  abd_pain_onset: gradual
+  abd_pain_severe: absent
+  abd_pain_colicky: absent
+  abd_pain_radiates_back: absent
+  abd_pain_radiates_right_shoulder: absent
+  abd_pain_meal_relation: no_relation
+  pain_after_fatty_meal: absent
+  abdomen_hard_swollen: absent
+  fever: present
+  fever_duration: d3_5
+  fever_max_temp: ge_39
+  headache: present
+  myalgia: present
+  loss_of_appetite: present
+  fatigue: present
+  nausea: present
+  vomiting: present
+  persistent_vomiting: absent
+  decreased_urine: present
+  diarrhea: absent
+  dysuria: absent
+  urinary_frequency: absent
+  flank_pain: absent
+  hematuria: absent
+  vaginal_bleeding: absent
+  abnormal_vaginal_discharge: absent
+  missed_period: absent
+  pregnant: absent
+  pain_with_menses: absent
+  heartburn: absent
+  jaundice: absent
+  bleeding_gums_nose: absent
+  rash_any: absent
+  chills_rigors: absent
+  cough: absent
+  dengue_nearby: unknown
+  malaria_area_exposure: absent
+  bush_exposure: absent
+  gallstones_known: absent
+default_unmentioned: absent
+expected:
+  condition: dengue
+  acceptable: []
+  triage: 2
+source:
+  basis: "Sốt xuất huyết ở giai đoạn nguy hiểm (ngày 3–7) có dấu hiệu cảnh báo: đau tăng vùng gan, tiểu ít (2760 mục II.2, Phụ lục 2). Theo 2760 mục IV.B2, người lớn có dấu hiệu cảnh báo được cho nhập viện: đến cơ sở cấp cứu ngay. Dễ nhầm với viêm thận – bể thận (sốt, đau dưới sườn, nôn, tiểu ít) và bệnh gan mật."
+  references: [byt-qd-2760-2023, who-arbovirus-2025]
+author: "agent:pass-c"

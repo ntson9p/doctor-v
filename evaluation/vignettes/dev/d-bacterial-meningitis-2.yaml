@@ -1,0 +1,49 @@
+id: d-bacterial-meningitis-2
+set: dev
+title_vi: "Bé trai 11 tháng, sốt cao 1 ngày, quấy khóc, nôn, thóp phồng, chưa cứng gáy"
+narrative_vi: "Bé T., 11 tháng tuổi, ở TP.HCM. Từ sáng hôm qua sốt cao 39,5°C, quấy khóc, ôm vào lại khóc nhiều hơn, nôn 2 lần, bú ít hơn nhưng vẫn bú được. Mẹ sờ thấy thóp căng phồng. Bé vẫn thức, nhìn theo mẹ, không li bì, không co giật. Cổ vẫn cúi được. Không ho, không sổ mũi, không tiêu chảy, không nổi ban."
+patient:
+  age_months: 11
+  sex: male
+  region: south
+  month: 3
+complaint: fever
+answers:
+  fever_duration: d1_2
+  fever_max_temp: ge_39
+  bulging_fontanelle: present
+  vomiting: present
+  persistent_vomiting: absent
+  child_vomits_everything: absent
+  child_unable_to_drink: absent
+  drowsy_hard_to_wake: absent
+  seizure_recent: absent
+  neck_stiffness: absent
+  breathing_difficulty: absent
+  cold_hands_feet: absent
+  severe_weakness: absent
+  headache: unknown
+  cough: absent
+  runny_nose: absent
+  sore_throat: absent
+  diarrhea: absent
+  abdominal_pain: absent
+  rash_any: absent
+  ear_pain: absent
+  hand_foot_blisters: absent
+  mouth_ulcers: absent
+  sick_contact_respiratory: absent
+  dengue_nearby: absent
+  malaria_area_exposure: absent
+  bush_exposure: absent
+  measles_contact: absent
+default_unmentioned: absent
+expected:
+  condition: bacterial_meningitis
+  acceptable: []
+  triage: 2
+source:
+  basis: "Ở trẻ nhỏ, viêm màng não thường không có cứng gáy rõ; thóp phồng là dấu hiệu gợi ý mạnh (Curtis 2010: bệnh sử thóp phồng LR 8,0; Nguyen-Huu 2022: thóp phồng 21%, cứng gáy 42%). NHS Meningitis: trẻ dưới 5 tuổi có thóp phồng thì gọi 999 hoặc đến cấp cứu; 5642: bệnh cấp cứu."
+  references: [curtis-pediatrics-2010, nguyenhuu-phmt-2022, nhs-meningitis, byt-qd-5642-2015]
+author: "agent:pass-c"
+notes_vi: "Trẻ dưới 18 tháng nên không hỏi tiêm vắc xin sởi. Chưa có quy tắc riêng cho thóp phồng ở trẻ từ 2 tháng; mức xử trí phải đến từ xác suất của bệnh không được bỏ sót."

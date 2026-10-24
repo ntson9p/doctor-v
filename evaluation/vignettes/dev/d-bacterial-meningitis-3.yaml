@@ -1,0 +1,56 @@
+id: d-bacterial-meningitis-3
+set: dev
+title_vi: "Nữ 38 tuổi, đau đầu tăng dần từ hôm qua, sốt, nôn, sợ ánh sáng, cứng gáy"
+narrative_vi: "Chị P., 38 tuổi, ở Bắc Ninh. Đau đầu từ chiều hôm qua, tăng dần chứ không đột ngột, nay rất đau khắp đầu và gáy. Sốt 38,8°C, buồn nôn, nôn 2 lần, sợ ánh sáng, cổ cứng khó cúi. Chưa từng đau đầu kiểu này. Tỉnh táo, không co giật, không yếu tay chân, không nhìn mờ, không bị va đập đầu. Không nổi ban."
+patient:
+  age_years: 38
+  sex: female
+  region: north
+  month: 11
+complaint: headache
+answers:
+  headache_thunderclap: absent
+  neck_stiffness: present
+  confusion: absent
+  seizure_recent: absent
+  vision_loss_or_double: absent
+  sudden_loss_of_balance: absent
+  headache_after_head_injury: absent
+  fever: present
+  fever_max_temp: t38_39
+  fever_duration: d1_2
+  nausea: present
+  vomiting: present
+  persistent_vomiting: absent
+  photophobia: present
+  phonophobia: absent
+  headache_course: first_time
+  headache_severity: severe
+  headache_duration: h4_72
+  headache_location: whole_head
+  rash_any: absent
+  drowsy_hard_to_wake: absent
+  pregnant: absent
+  recent_childbirth: absent
+  visual_aura: absent
+  nasal_congestion: absent
+  stress_poor_sleep: absent
+  pig_pork_exposure: absent
+  malaria_area_exposure: absent
+  bush_exposure: absent
+  dengue_nearby: absent
+  sick_contact_respiratory: absent
+  measles_contact: absent
+  hypertension_known: absent
+  diabetes: absent
+  known_heart_disease: absent
+  immunocompromised: absent
+default_unmentioned: absent
+expected:
+  condition: bacterial_meningitis
+  acceptable: []
+  triage: 2
+source:
+  basis: "Đau đầu tăng dần trong một ngày kèm sốt, nôn, sợ ánh sáng, cứng gáy là hội chứng màng não (5642). Dễ nhầm với xuất huyết dưới nhện (cũng cứng gáy, nôn) nhưng không có kiểu khởi phát sét đánh. Cứng gáy cần chuyển cấp cứu (5642: bệnh cấp cứu; NHS Meningitis)."
+  references: [byt-qd-5642-2015, nhs-meningitis, attia-jama-1999]
+author: "agent:pass-c"

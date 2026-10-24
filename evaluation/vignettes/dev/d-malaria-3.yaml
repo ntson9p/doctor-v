@@ -1,0 +1,58 @@
+id: d-malaria-3
+set: dev
+title_vi: "Nam 58 tuổi ở Khánh Hòa, sốt 2 ngày, rét run dữ dội, nôn, đau mỏi"
+narrative_vi: "Ông P., 58 tuổi, ở Khánh Hòa, làm rẫy và ngủ lại lán trong rừng hai tuần trước. Hai ngày nay rét run dữ dội rồi sốt cao 40°C, vã mồ hôi, đau đầu, đau mỏi người, buồn nôn, nôn 2 lần, mệt. Không đau hông lưng, không tiểu buốt, không ho, không đau bụng, không tiêu chảy. Không vàng da, không lú lẫn, vẫn tự đi lại được. Không có vết loét đóng vảy đen."
+patient:
+  age_years: 58
+  sex: male
+  region: central
+  month: 11
+complaint: fever
+answers:
+  malaria_area_exposure: present
+  bush_exposure: present
+  dengue_nearby: absent
+  sick_contact_respiratory: absent
+  measles_contact: absent
+  fever_duration: d1_2
+  fever_max_temp: ge_39
+  chills_rigors: present
+  fever_cyclic: unknown
+  headache: present
+  myalgia: present
+  fatigue: present
+  nausea: present
+  vomiting: present
+  persistent_vomiting: absent
+  loss_of_appetite: present
+  flank_pain: absent
+  dysuria: absent
+  urinary_frequency: absent
+  cough: absent
+  runny_nose: absent
+  sore_throat: absent
+  abdominal_pain: absent
+  diarrhea: absent
+  rash_any: absent
+  eschar: absent
+  lymph_node_swelling: absent
+  jaundice: absent
+  confusion: absent
+  drowsy_hard_to_wake: absent
+  severe_weakness: absent
+  cold_hands_feet: absent
+  breathing_difficulty: absent
+  decreased_urine: absent
+  diabetes: absent
+  hypertension_known: absent
+  known_heart_disease: absent
+  immunocompromised: absent
+default_unmentioned: absent
+expected:
+  condition: malaria
+  acceptable: []
+  triage: 3
+source:
+  basis: "Sốt kèm rét run dữ dội sau ngủ lán trong rừng ở Khánh Hòa (vùng còn lây truyền) là ca nghi sốt rét (3377 mục II.1). Dễ nhầm với nhiễm khuẩn huyết và viêm thận – bể thận (sốt cao rét run, nôn) và với sốt mò (cùng phơi nhiễm). Chưa có dấu hiệu ác tính: xét nghiệm trong ngày."
+  references: [byt-qd-3377-2023, nguyentien-malarj-2026, byt-qd-5642-2015]
+author: "agent:pass-c"
