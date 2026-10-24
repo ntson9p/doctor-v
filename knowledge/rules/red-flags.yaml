@@ -386,14 +386,14 @@
     note: "Lượt R hạ mốc tuổi từ 75 xuống 65 theo 1840 (yếu tố nguy cơ cúm nặng: trên 65 tuổi) và thêm người mới sinh (1840: mới sinh 2 tuần; câu hỏi doctor-v hỏi 6 tuần). Thay NG51 bằng NG253. 1840 còn nêu trẻ dưới 5 tuổi và người có bệnh nền; chưa đưa vào quy tắc (xem báo cáo)."
 - id: rf_prolonged_fever
   level: 3
-  when: { finding: fever_duration, in: [gt_7d] }
-  reason_vi: "Sốt kéo dài hơn 7 ngày cần đi khám để tìm nguyên nhân."
+  when: { finding: fever_duration, in: [d6_7, gt_7d] }
+  reason_vi: "Sốt từ 6 ngày trở lên cần đi khám để tìm nguyên nhân."
   evidence:
     tier: B
     basis: judgment
     sources: [nice-ng143, who-imci-chart-booklet-2014]
     locator: "NG143 khuyến cáo 1.2.14, bảng 2; IMCI: Fever (sốt mỗi ngày quá 7 ngày thì chuyển khám)"
-    note: "NICE NG143 coi sốt từ 5 ngày ở trẻ là dấu hiệu vàng, cần đánh giá bệnh Kawasaki. IMCI: sốt mỗi ngày quá 7 ngày thì chuyển khám. doctor-v dùng mốc 7 ngày cho mọi lứa tuổi."
+    note: "NICE NG143 coi sốt từ 5 ngày ở trẻ là dấu hiệu vàng, cần đánh giá bệnh Kawasaki. IMCI: sốt mỗi ngày quá 7 ngày thì chuyển khám. Người bảo trì hạ mốc từ hơn 7 ngày xuống từ 6 ngày cho mọi lứa tuổi (25/10/2026): lựa chọn số ngày sốt không tách được mốc 5 ngày; sốt xuất huyết ngày 3–7 cũng cần được khám theo dõi (2760); cúm thường hết sốt trong 3–5 ngày. Chờ bác sĩ duyệt."
 - id: rf_fever_malaria_exposure
   level: 3
   when:
@@ -612,7 +612,63 @@
     locator: "NG143 khuyến cáo 1.2.13, bảng 2; NG254 bảng 1; NHS Sepsis (Call 999 or go to A&E)"
     note: "Quy tắc mới của lượt R. NICE xếp trẻ 3–6 tháng có nhiệt độ từ 39°C vào nhóm vàng (NG143) hoặc nguy cơ trung bình–cao (NG254): cần khám trực tiếp, mức khẩn do nhân viên y tế quyết định. NHS khuyên gọi 999 hoặc đến cấp cứu. Chọn mức 2 vì không khám trực tiếp được; trẻ dưới 3 tháng đã có quy tắc riêng. Chờ bác sĩ duyệt."
 
+- id: rf_nasal_over_10_days
+  level: 4
+  when: { finding: nasal_symptoms_over_10_days, is: present }
+  reason_vi: "Sổ mũi, nghẹt mũi hơn 10 ngày không đỡ nên đi khám."
+  evidence:
+    tier: C
+    basis: verbal
+    sources: [cdc-sinus-infection, nhs-sinusitis]
+    locator: "CDC Sinus Infection (When to seek medical care); NHS Sinusitis"
+    note: "Người bảo trì thêm (25/10/2026). CDC: đi khám khi triệu chứng kéo dài hơn 10 ngày không đỡ. NHS: khám khi không đỡ sau 3 tuần, hay tái phát, hoặc trẻ từ 11 tuổi trở xuống."
+- id: rf_frequent_headache
+  level: 4
+  when: { finding: headache_frequent, is: present }
+  reason_vi: "Đau đầu nhiều lần mỗi tuần nên đi khám để tìm nguyên nhân và cách phòng cơn đau."
+  evidence:
+    tier: C
+    basis: verbal
+    sources: [nhs-tension-headaches, nice-cg150]
+    locator: "NHS Tension-type headaches (See a GP); NICE CG150 (đau đầu do lạm dụng thuốc)"
+    note: "Người bảo trì thêm (25/10/2026). NHS: khám bác sĩ nếu đau nhiều lần mỗi tuần; dùng thuốc giảm đau quá thường xuyên có thể gây đau đầu do lạm dụng thuốc."
+
 # ---------- Đau bụng ----------
+- id: rf_peritoneal_irritation
+  level: 3
+  conditions: [acute_appendicitis]
+  when:
+    all:
+      - { finding: abdominal_pain, is: present }
+      - { finding: abd_pain_worse_movement, is: present }
+      - any:
+          - { finding: fever, is: present }
+          - { finding: vomiting, is: present }
+  reason_vi: "Đau bụng tăng khi đi lại hoặc khi ho, kèm sốt hoặc nôn, cần khám trong hôm nay để loại trừ viêm ruột thừa."
+  evidence:
+    tier: B
+    basis: judgment
+    sources: [nhs-appendicitis, benabbas-aem-2017, reust-afp-2016]
+    locator: "NHS Appendicitis (urgent GP appointment or NHS 111); Benabbas 2017 (tóm tắt); Reust 2016"
+    note: "Người bảo trì thêm (25/10/2026). Đau tăng khi cử động, ho là dấu hiệu kích thích phúc mạc: Benabbas 2017, trẻ đau bụng chưa phân loại, đau khi ho hoặc nhảy LR+ 7,64. NHS mô tả đau viêm ruột thừa tăng khi cử động, ho; khuyên hẹn khám khẩn khi đau tăng dần hoặc không hết. Tiêu chảy hay làm viêm ruột thừa bị nhầm với viêm dạ dày – ruột, nên quy tắc không dựa vào xác suất."
+- id: rf_child_peritoneal_irritation
+  level: 2
+  conditions: [acute_appendicitis, intussusception]
+  when:
+    all:
+      - { age_months_lt: 60 }
+      - { finding: abdominal_pain, is: present }
+      - { finding: abd_pain_worse_movement, is: present }
+      - any:
+          - { finding: fever, is: present }
+          - { finding: vomiting, is: present }
+  reason_vi: "Trẻ dưới 5 tuổi đau bụng tăng khi đi lại, kèm sốt hoặc nôn, cần được khám cấp cứu."
+  evidence:
+    tier: B
+    basis: judgment
+    sources: [reust-afp-2016, nhs-appendicitis, benabbas-aem-2017]
+    locator: "Reust 2016; NHS Appendicitis (trẻ nhỏ hay không điển hình); Benabbas 2017"
+    note: "Người bảo trì thêm (25/10/2026). Reust 2016: sốt xuất hiện sau khi đau hoặc nôn phù hợp với viêm phúc mạc đang tiến triển. NHS: trẻ nhỏ hay có biểu hiện không điển hình. Trẻ nhỏ không tả được vị trí đau, và ruột thừa thủng sớm hơn người lớn, nên chọn mức 2. Đây là nhận định, chờ bác sĩ duyệt."
 - id: rf_severe_abdominal_pain
   level: 2
   when: { finding: abd_pain_severe, is: present }
@@ -736,6 +792,20 @@
     sources: [nhs-ectopic-pregnancy]
     locator: "NHS Ectopic pregnancy: symptoms of a ruptured ectopic pregnancy"
     note: "Người bảo trì thêm (25/10/2026). NHS: dấu hiệu vỡ gồm đau bụng đột ngột, dữ dội, chóng mặt nhiều hoặc ngất, da rất tái; gọi 999 hoặc đến cấp cứu ngay. Đòi thêm đau dữ dội hoặc da tái vì choáng váng đơn thuần hay gặp khi có thai. Ngất kèm đau bụng đã ở mức 2 (rf_fainting_with_pain); mức 1 vì chảy máu trong ổ bụng có thể gây sốc nhanh. Cần nguồn sản khoa Việt Nam."
+- id: rf_dysmenorrhea_dyspareunia
+  level: 4
+  complaints: [abdominal_pain]
+  when:
+    all:
+      - { finding: pain_with_menses, is: present }
+      - { finding: pain_with_intercourse, is: present }
+  reason_vi: "Đau bụng kinh kèm đau khi quan hệ nên đi khám phụ khoa."
+  evidence:
+    tier: C
+    basis: verbal
+    sources: [nhs-period-pain]
+    locator: "NHS Period pain (See a GP)"
+    note: "Người bảo trì thêm (25/10/2026). NHS: khám bác sĩ khi đau bụng kinh tăng, ảnh hưởng sinh hoạt, đau khi quan hệ, khi đi tiểu, đi ngoài, hoặc ra máu giữa kỳ kinh; có thể là đau bụng kinh thứ phát (lạc nội mạc tử cung, viêm vùng chậu)."
 - id: rf_pregnant_abdominal_pain
   level: 3
   when:

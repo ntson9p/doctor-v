@@ -52,6 +52,9 @@
   type: binary
   label_vi: "Vừa sinh con trong 6 tuần"
   question_vi: "Có sinh con trong vòng 6 tuần qua không?"
+  # Hỏi lại khi "Không rõ": sau sinh là dữ kiện then chốt của tiền sản giật sau sinh (người bảo trì, 25/10/2026).
+  alt_question:
+    text_vi: "Trong khoảng một tháng rưỡi qua, có sinh em bé không?"
   applies_to:
     sex: [female]
     age_groups: [teen_13_17, adult_18_44, adult_45_64]

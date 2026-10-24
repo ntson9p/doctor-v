@@ -31,6 +31,15 @@
   baseline: { first_time: 0.35, recurrent_similar: 0.55, progressive: 0.10 }
   requires:
     - { finding: headache, is: present }
+- id: headache_frequent
+  kind: history
+  type: binary
+  label_vi: "Đau đầu nhiều lần mỗi tuần"
+  question_vi: "Mấy tuần nay có bị đau đầu nhiều lần mỗi tuần không?"
+  requires:
+    - { finding: headache, is: present }
+  leak: nonspecific
+  leak_note: "Người đi khám vì đau đầu hay có đau đầu tái diễn. Câu này chỉ dùng cho quy tắc khám (NHS: đau nhiều lần mỗi tuần thì khám bác sĩ), chưa liên kết với bệnh nào (người bảo trì, 25/10/2026). Ước lượng."
 - id: headache_duration
   kind: history
   type: categorical
@@ -137,6 +146,8 @@
     text_vi: "Có cúi đầu cho cằm chạm ngực được không?"
     inverted: true
   leak: specific
+  leak_by_complaint: { abdominal_pain: 0.001 }
+  leak_note: "Cứng gáy rất hiếm ở người đau bụng và không phải dấu hiệu nguy hiểm của đau bụng; với 1%, câu này bị hỏi ở người đau bụng (người bảo trì, 25/10/2026). Ước lượng."
 - id: headache_after_head_injury
   kind: history
   type: binary

@@ -17,6 +17,7 @@ red_flags:
   - group: young_infant_danger_signs
   - group: child_danger_signs
   - group: abdominal_red_flags
+  - group: general_danger_signs
   - finding: red_jelly_stool
   - finding: pregnant
   # Chậm kinh là câu then chốt cho chửa ngoài tử cung khi người bệnh chưa biết mình có thai (lượt C lô 4).

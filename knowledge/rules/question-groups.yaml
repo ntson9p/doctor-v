@@ -39,6 +39,22 @@
   # mật, viêm thận – bể thận) hoặc đau đầu (viêm màng não) (lượt C lô 2).
   requires:
     - { finding: fever, is: present }
+# Dấu hiệu nguy hiểm toàn thân cho đau bụng và đau đầu (sốt đã có nhóm fever_red_flags). Hỏi một lần
+# ở đầu phiên: khi lú lẫn, li bì và dấu hiệu sốc là quy tắc mức 1, chúng có giá trị câu hỏi rất cao, nên
+# nếu không hỏi trước thì bị hỏi lẻ từng câu giữa phiên ở mọi ca, kể cả đau bụng kinh (người bảo trì,
+# 25/10/2026).
+- id: general_danger_signs
+  title_vi: "Có dấu hiệu nào sau đây không?"
+  findings:
+    - confusion
+    - drowsy_hard_to_wake
+    - breathing_difficulty
+    - cold_hands_feet
+    - severe_weakness
+  none_label_vi: "Không có dấu hiệu nào ở trên"
+  allow_unknown: true
+  applies_to:
+    age_groups: [child_2m_5y, child_5_12, teen_13_17, adult_18_44, adult_45_64, elder_65_74, elder_75p]
 - id: fever_associated
   title_vi: "Ngoài sốt, còn có triệu chứng nào sau đây không?"
   findings: [cough, sore_throat, runny_nose, headache, abdominal_pain, diarrhea, rash_any]
@@ -55,6 +71,9 @@
     - persistent_vomiting
   none_label_vi: "Không có dấu hiệu nào ở trên"
   allow_unknown: true
+  # Hỏi cả khi triệu chứng chính là sốt mà có đau bụng (viêm ruột thừa ở trẻ hay khởi đầu bằng sốt).
+  requires:
+    - { finding: abdominal_pain, is: present }
 - id: abdominal_associated
   title_vi: "Ngoài đau bụng, còn có triệu chứng nào sau đây không?"
   findings: [fever, nausea, vomiting, diarrhea, dysuria, vaginal_bleeding, heartburn]
