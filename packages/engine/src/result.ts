@@ -42,6 +42,13 @@ export interface SessionResult {
   triage: Triage;
   /** True for young infants: no condition list is shown. */
   rankingSuppressed: boolean;
+  /**
+   * True when the session stopped early because a danger rule demands emergency care. The
+   * ranking then rests on very few answers, so UIs show `urgentConditions` instead of it.
+   */
+  emergencyStop: boolean;
+  /** Urgent (level 1–2) conditions still possible, most probable first, at most 3. */
+  urgentConditions: string[];
   /** All candidate conditions, most probable first. */
   conditions: ConditionScore[];
   other: { probability: number; display: DisplayPercent };
@@ -145,6 +152,11 @@ export function sessionResult(kb: CompiledKb, state: SessionState): SessionResul
     questionsAsked: state.history.length,
     triage,
     rankingSuppressed: params.screenOnlyAgeGroups.includes(env.ageGroup),
+    emergencyStop: stopReason === 'emergency',
+    urgentConditions: conditions
+      .filter((c) => c.urgency <= 2 && c.probability >= params.safetyNetMinProb)
+      .slice(0, 3)
+      .map((c) => c.conditionId),
     conditions,
     other: { probability: pOther, display: displayPercent(pOther, params.display) },
     safetyNet,

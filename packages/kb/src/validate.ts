@@ -22,6 +22,7 @@ export function findingsInExpr(expr: ExprYaml, out: Set<string> = new Set()): Se
 
 export function validateKnowledge(k: RawKnowledge): Issue[] {
   const issues: Issue[] = [];
+  const params = k.params.data;
   const add = (severity: Severity, file: string, path: string, message: string): void => {
     issues.push({ severity, file, path, message });
   };
@@ -121,7 +122,7 @@ export function validateKnowledge(k: RawKnowledge): Issue[] {
   {
     const p = k.params.data;
     const f = p.frequency_levels;
-    const freq = [f.rare, f.occasional, f.frequent, f.very_frequent, f.almost_always];
+    const freq = [f.very_rare, f.rare, f.occasional, f.frequent, f.very_frequent, f.almost_always];
     if (!freq.every((v, i) => i === 0 || v > (freq[i - 1] ?? 0)) || freq.some((v) => v <= 0 || v >= 1)) {
       add('error', k.params.file, 'frequency_levels', 'Các mức tần suất phải tăng dần và nằm trong (0, 1)');
     }
@@ -355,6 +356,25 @@ export function validateKnowledge(k: RawKnowledge): Issue[] {
       if ('freq' in link) {
         if (f.type !== 'binary') add('error', file, path, `"${link.finding}" là dấu hiệu nhiều lựa chọn: dùng "dist"`);
         checkAgeGroups(Object.keys(link.freq_by_age ?? {}), file, `${path}.freq_by_age`);
+        // "Uncommon in this condition" must sit below the background rate, or a "yes" raises the condition.
+        if (f.type === 'binary' && (link.freq === 'very_rare' || link.freq === 'rare')) {
+          const value = params.frequency_levels[link.freq];
+          for (const prior of c.priors) {
+            const raw = f.leak_by_complaint?.[prior.complaint] ?? f.leak;
+            const leak = typeof raw === 'number' ? raw : params.leak_levels[raw];
+            if (value > leak) {
+              add(
+                'warning',
+                file,
+                path,
+                `Mức "${link.freq}" (${value}) cao hơn tỷ lệ nền ${leak} của "${link.finding}" khi triệu chứng chính là ` +
+                  `"${prior.complaint}": trả lời "Có" sẽ làm TĂNG khả năng bệnh. Nếu ý là "ít gặp hơn bình thường", ` +
+                  'dùng mức thấp hơn tỷ lệ nền hoặc bỏ liên kết',
+              );
+              break;
+            }
+          }
+        }
         checkEvidence(link.evidence, file, `${path}.evidence`, {
           keyFinding: link.freq === 'very_frequent' || link.freq === 'almost_always',
         });

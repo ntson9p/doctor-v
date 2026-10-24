@@ -59,7 +59,7 @@ Với dấu hiệu $f$ có câu trả lời $v$ (bỏ qua câu "Không rõ" và 
 
 $$P(f{=}\text{có} \mid h) = \begin{cases} p_{hf} & \text{nếu bệnh } h \text{ có liên kết với } f \\ \ell_{f,c} & \text{nếu không (kể cả "other")} \end{cases}, \qquad P(f{=}\text{không} \mid h) = 1 - P(f{=}\text{có}\mid h)$$
 
-- $p_{hf}$ là **tần suất quan sát** của dấu hiệu trong bệnh: 5 mức `frequency_levels` 0,025 / 0,20 / 0,50 / 0,80 / 0,95. Nếu liên kết có `freq_by_age` cho nhóm tuổi của người bệnh, giá trị đó thay cho giá trị chung.
+- $p_{hf}$ là **tần suất quan sát** của dấu hiệu trong bệnh: 6 mức `frequency_levels` 0,005 / 0,025 / 0,20 / 0,50 / 0,80 / 0,95. Mức 0,005 (`very_rare`) dùng khi dấu hiệu ít gặp ở bệnh này hơn cả tỷ lệ nền 1% của dấu hiệu đặc hiệu. Nếu liên kết có `freq_by_age` cho nhóm tuổi của người bệnh, giá trị đó thay cho giá trị chung.
 - $\ell_{f,c}$ là tỷ lệ nền (`leak`) của dấu hiệu, có thể khác theo triệu chứng chính (`leak_by_complaint`), tối thiểu `leak_floor`.
 - Dấu hiệu có điều kiện (`requires`) dùng **tần suất có điều kiện** (kb-guide §2.1). Vì điều kiện luôn được thỏa trước khi hỏi, tích các likelihood chính là xác suất đồng thời.
 
@@ -194,6 +194,10 @@ Hiển thị tối đa 5 đóng góp dương ("vì sao gợi ý") và 5 đóng g
 
 **Trẻ dưới 2 tháng:** `rankingSuppressed = true`, giao diện không hiện danh sách bệnh.
 
+**Dừng vì cấp cứu** (`emergencyStop = true`):
+- Lúc dừng mới có vài câu trả lời, nên danh sách xếp hạng chưa đáng tin; bệnh lành tính có thể vẫn đứng đầu.
+- Giao diện **không hiện danh sách xếp hạng và con số %**. Thay vào đó chỉ hiện `urgentConditions`: tối đa 3 tình trạng mức 1–2 còn khả năng ($P \ge$ `safety_net_min_prob`), với tiêu đề "Bác sĩ cần loại trừ".
+
 ## 10. Tính tất định và kiểm thử
 
 - **Thứ tự cố định:** mọi phép cộng dồn duyệt theo thứ tự trong cơ sở tri thức, không theo thứ tự trả lời. Đã kiểm thử: đổi thứ tự trả lời không đổi kết quả.
@@ -208,7 +212,7 @@ Hiển thị tối đa 5 đóng góp dương ("vì sao gợi ý") và 5 đóng g
 
 | Tham số | Giá trị | Ghi chú |
 |---|---|---|
-| `frequency_levels` | 0,025 / 0,20 / 0,50 / 0,80 / 0,95 | Theo ánh xạ của QMR-DT; trần 0,95 |
+| `frequency_levels` | 0,005 / 0,025 / 0,20 / 0,50 / 0,80 / 0,95 | Theo ánh xạ của QMR-DT, thêm mức 0,005 dưới tỷ lệ nền đặc hiệu; trần 0,95 |
 | `leak_levels` | 0,01 / 0,05 / 0,20; sàn 0,001 | Theo dấu hiệu, có thể theo triệu chứng chính |
 | `prior_levels` | 0,30 / 0,10 / 0,02 / 0,005 / 0,0006 / 0,0001 | Thang log 6 mức |
 | `cluster_rho` | 0,2 / 0,5 / 0,8 | |

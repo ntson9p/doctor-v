@@ -49,11 +49,14 @@ describe('session flow', () => {
     expect(intake.kind === 'group' && intake.findingIds).toEqual(['cough', 'runny', 'rash']);
   });
 
-  it('stops at once with "emergency" when a level 1–2 rule applies', () => {
+  it('stops at once with "emergency" when a level 1–2 rule applies, listing urgent conditions only', () => {
     let s = startSession(kb, 'fever', ADULT, { es_collapse: 'absent' });
     s = answerStep(kb, s, ask(nextStep(kb, s)), { neck: 'present' });
     expect(nextStep(kb, s)).toEqual({ kind: 'done', reason: 'emergency' });
-    expect(sessionResult(kb, s).triage.level).toBe(2);
+    const result = sessionResult(kb, s);
+    expect(result.triage.level).toBe(2);
+    expect(result.emergencyStop).toBe(true);
+    expect(result.urgentConditions).toEqual(['mening']);
   });
 
   it('asks an unknown danger sign again with the alternative wording, inverting the answer', () => {

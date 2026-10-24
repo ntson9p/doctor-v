@@ -18,7 +18,7 @@ const DATE = z
   .regex(/^\d{4}(-\d{2}(-\d{2})?)?$/, 'Ngày phải có dạng YYYY, YYYY-MM hoặc YYYY-MM-DD');
 const DAY = z.string().regex(/^\d{4}-\d{2}-\d{2}$/, 'Ngày phải có dạng YYYY-MM-DD');
 
-export const FREQ_LEVELS = ['rare', 'occasional', 'frequent', 'very_frequent', 'almost_always'] as const;
+export const FREQ_LEVELS = ['very_rare', 'rare', 'occasional', 'frequent', 'very_frequent', 'almost_always'] as const;
 export const LEAK_LEVELS = ['specific', 'moderate', 'nonspecific'] as const;
 export const PRIOR_LEVELS = ['P1', 'P2', 'P3', 'P4', 'P5', 'P6'] as const;
 export const RHO_LEVELS = ['low', 'medium', 'high'] as const;
@@ -311,6 +311,7 @@ const probability = z.number().min(0).max(1);
 
 export const engineParamsSchema = z.strictObject({
   frequency_levels: z.strictObject({
+    very_rare: probability,
     rare: probability,
     occasional: probability,
     frequent: probability,

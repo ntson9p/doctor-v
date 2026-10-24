@@ -121,6 +121,9 @@ function printResult(state: SessionState): void {
   say(`Nên khám: ${r.specialties.map((s) => t.specialties[s] ?? s).join(', ')}.`);
   if (r.rankingSuppressed) {
     say('\nTrẻ dưới 2 tháng tuổi: app không xếp hạng bệnh, hãy cho bé đi khám.');
+  } else if (r.emergencyStop) {
+    const urgent = r.urgentConditions.map((id) => t.conditions[id]?.name ?? id);
+    if (urgent.length > 0) say(`\nBác sĩ cần loại trừ: ${urgent.join('; ')}.`);
   } else {
     say(`\nTình trạng có thể liên quan${kb.params.calibrated ? '' : ' (con số chưa hiệu chuẩn)'}:`);
     for (const c of r.conditions.filter((x) => x.probability >= 0.01).slice(0, 5)) {

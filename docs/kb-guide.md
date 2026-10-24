@@ -43,7 +43,8 @@ Câu hỏi cho người soạn: **"Trong 100 người mắc bệnh này (ở b�
 
 | Mức | Giá trị dùng | Khi nguồn có số liệu | Khi nguồn chỉ mô tả bằng lời |
 |---|---|---|---|
-| `rare` | 2,5% | dưới 7,5% | "hiếm", "ít khi", "rare", "uncommon" |
+| `very_rare` | 0,5% | dưới 1% | "rất hiếm", "hầu như không bao giờ"; hoặc "ít gặp hơn hẳn bình thường" với dấu hiệu đặc hiệu |
+| `rare` | 2,5% | 1% – dưới 7,5% | "hiếm", "ít khi", "rare", "uncommon" |
 | `occasional` | 20% | 7,5% – dưới 33% | "đôi khi", "có thể có", "sometimes", "may occur" |
 | `frequent` | 50% | 33% – dưới 67% | "khoảng một nửa", "khá thường gặp", "often" |
 | `very_frequent` | 80% | 67% – dưới 90% | "thường gặp", "phần lớn", "common", "usually" |
@@ -53,6 +54,7 @@ Câu hỏi cho người soạn: **"Trong 100 người mắc bệnh này (ở b�
 - **Không có mức 0% hay 100%.** Nếu một dấu hiệu "luôn luôn" có, vẫn dùng `almost_always`.
 - Nếu nguồn đo ở bệnh viện, cấp cứu hoặc ca nặng, còn người dùng doctor-v là cộng đồng, thì **hạ một mức** đối với dấu hiệu của bệnh nặng, và ghi rõ trong `note`.
 - Dấu hiệu thường **ít gặp hơn** ở bệnh này so với nền chung vẫn được khai báo, ví dụ ho trong viêm ruột thừa: `rare`. Khi đó trả lời "Có" sẽ làm giảm khả năng bệnh.
+- **Chú ý:** mức đó phải **thấp hơn tỷ lệ nền** của dấu hiệu (mục 2.2). Ví dụ đau đầu kiểu sét đánh có tỷ lệ nền 1% (`specific`): nếu ghi `rare` (2,5%) cho đau đầu căng thẳng, trả lời "Có" lại làm **tăng** khả năng đau đầu căng thẳng. Trường hợp này dùng `very_rare` (0,5%). Bộ kiểm tra cảnh báo khi gặp lỗi này.
 - **Tần suất có điều kiện.** Nếu dấu hiệu chỉ được hỏi khi một dấu hiệu khác là "có" (trường `requires`), thì tần suất là **tần suất trong số người bệnh đã có dấu hiệu kia**. Ví dụ "nốt đỏ không mất khi ấn" có `requires: rash_any`: câu hỏi cho người soạn là "Trong 100 người bệnh X **đã có phát ban**, bao nhiêu người có nốt không mất khi ấn?". Tỷ lệ nền (`leak`) cũng hiểu theo cách đó. Nhờ vậy hai câu hỏi lồng nhau không bị đếm trùng.
 - Tương tự, dấu hiệu nhiều lựa chọn có `requires` (ví dụ "số ngày sốt" cần "có sốt") được khai báo phân bố trong số người đã có dấu hiệu kia.
 

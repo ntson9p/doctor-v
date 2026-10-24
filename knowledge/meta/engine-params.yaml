@@ -4,6 +4,7 @@
 
 # "Trong 100 người bệnh, bao nhiêu người có dấu hiệu này" (docs/kb-guide.md, mục 2.1)
 frequency_levels:
+  very_rare: 0.005
   rare: 0.025
   occasional: 0.20
   frequent: 0.50
