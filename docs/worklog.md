@@ -219,3 +219,21 @@ Hai nguyên nhân có tính hệ thống, đã sửa:
 Ở các ca khác của báo cáo, tôi chỉ xem tiêu đề và mức xử trí, không dùng để sửa dữ liệu.
 
 **Sau khi sửa (dev, 107 ca, sạch):** top-1 75,2%, top-3 94,3%, an toàn 100%, bỏ sót 0/46.
+
+### Lần chấm thứ hai bộ ca giữ kín (106 ca, phiên bản dữ liệu 961e389d3c45)
+
+Bộ giữ kín gồm 86 ca cũ và 20 ca mới do agent độc lập viết. Agent không được đọc dữ liệu bệnh, quy tắc, bộ dev, báo cáo hay nhật ký, và không chạy engine trên ca của mình.
+
+**Kết quả (sạch):**
+- top-1 74,4%, top-3 88,9%;
+- an toàn 94,3% (chưa đạt 97%);
+- bỏ sót cấp cứu 1/50 (đạt ≤ 5%; nhiễu: 10/250);
+- khuyên quá mức 12,3%; ECE 0,095.
+
+**6 ca bị xếp thấp:**
+- 1 ca nghiêm trọng: trẻ 4 tuổi viêm ruột thừa có tiêu chảy, chọn triệu chứng chính "sốt", app ra mức 5. App không hỏi dấu hiệu "đau tăng khi đi lại".
+- 5 ca không cấp cứu, triệu chứng kéo dài: sốt 6 ngày ở trẻ, sổ mũi 12 ngày, đau đầu hằng ngày nhiều tháng (2 ca), đau bụng kinh nặng dần.
+
+**Việc tồn từ ghi chú của agent viết ca:** danh mục thiếu câu hỏi mạch nhanh, nghe kém, sản dịch hôi, nước tiểu hôi, bệnh phổi mạn tính, thuốc chống đông. Chưa sửa: các ghi chú này đến từ ca giữ kín, nên nếu dùng để sửa thì phải theo quy tắc giữ kín.
+
+Báo cáo Giai đoạn 1: `docs/reports/phase-1.md`.
