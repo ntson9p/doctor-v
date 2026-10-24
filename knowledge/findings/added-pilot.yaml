@@ -51,12 +51,16 @@
   type: binary
   label_vi: "Sưng đỏ, đau sau tai"
   question_vi: "Sau tai có sưng đỏ, đau, làm vành tai bị đẩy ra không?"
+  alt_question:
+    text_vi: "Nhìn từ phía sau, một bên vành tai có chìa ra hơn bên kia không?"
   leak: specific
 - id: periorbital_swelling
   kind: sign
   type: binary
   label_vi: "Sưng nề, đỏ quanh mắt"
   question_vi: "Có sưng nề, đỏ quanh một bên mắt không?"
+  alt_question:
+    text_vi: "Mi mắt có sưng đến mức khó mở mắt không?"
   leak: specific
 - id: sudden_loss_of_balance
   kind: sign
