@@ -1,0 +1,57 @@
+id: h-fever-051
+set: holdout
+title_vi: "Nam 49 tuổi hút thuốc, ho khạc đờm 6 tuần, sốt nhẹ về chiều, đổ mồ hôi đêm, sụt 5 kg"
+narrative_vi: "Anh P., 49 tuổi, thợ xây ở Quảng Trị, hút gần 1 bao thuốc lá mỗi ngày, tối nào cũng uống 3–4 lon bia. Khoảng 6 tuần nay anh ho, lúc đầu ho khan, sau ho khạc đờm trắng đục, ho nhiều về sáng. Chiều tối nào anh cũng thấy người hâm hấp, đo được 37,6–37,9°C, đêm đổ mồ hôi ướt áo. Anh ăn kém, mệt, 2 tháng nay sụt khoảng 5 kg. Anh đã tự mua thuốc ho và kháng sinh uống 1 tuần nhưng không đỡ. Anh không ho ra máu, không khó thở, không đau ngực, không đau họng, không sổ mũi, không nổi hạch. Trong nhà không ai ho, sốt. Anh chưa từng được nói là bị tiểu đường."
+patient:
+  age_years: 49
+  sex: male
+  region: central
+  month: 4
+complaint: fever
+answers:
+  fever_max_temp: lt_38
+  fever_duration: gt_7d
+  chills_rigors: absent
+  fever_cyclic: absent
+  cough: present
+  productive_cough: present
+  fatigue: present
+  loss_of_appetite: present
+  breathing_difficulty: absent
+  pleuritic_chest_pain: absent
+  chest_pain_pressure: absent
+  sore_throat: absent
+  runny_nose: absent
+  nasal_congestion: absent
+  loss_of_smell_taste: absent
+  myalgia: absent
+  headache: absent
+  lymph_node_swelling: absent
+  rash_any: absent
+  jaundice: absent
+  abdominal_pain: absent
+  diarrhea: absent
+  dysuria: absent
+  confusion: absent
+  symptoms_worsen_after_improving: absent
+  sick_contact_respiratory: absent
+  smoker: present
+  heavy_alcohol: present
+  diabetes: absent
+  immunocompromised: absent
+  covid_self_test: not_tested
+  malaria_area_exposure: absent
+  bush_exposure: absent
+  dengue_nearby: absent
+default_unmentioned: absent
+expected:
+  condition: other
+  acceptable: []
+  triage: 4
+source:
+  basis: "Nghi lao phổi: ho khạc đờm kéo dài 6 tuần, sốt nhẹ về chiều, đổ mồ hôi đêm, sụt cân, đã dùng kháng sinh không đỡ, đúng mô tả lao phổi và nguyên nhân ho kéo dài trên 3 tuần trong 4235/QĐ-BYT. Không ho ra máu, không khó thở nên đặt lịch khám trong vài ngày để chụp X-quang phổi và xét nghiệm đờm (NHS Common cold: ho quá 3 tuần là lý do đi khám bác sĩ, không cần khám khẩn)."
+  references:
+    - byt-qd-4235-2012
+    - nhs-common-cold
+author: "agent:vignette-holdout"
+notes_vi: "Ngoài danh mục bệnh. Không nên coi là viêm phổi cấp vì bệnh kéo dài nhiều tuần, sốt nhẹ, đã dùng kháng sinh không đỡ. Có ho ra máu hoặc khó thở thì cần khám sớm hơn. Danh mục chưa có câu hỏi về ho trên 3 tuần, ho ra máu, đổ mồ hôi đêm, sụt cân, tiếp xúc người bị lao."

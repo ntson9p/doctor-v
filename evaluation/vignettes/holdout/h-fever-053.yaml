@@ -1,0 +1,64 @@
+id: h-fever-053
+set: holdout
+title_vi: "Bé trai 4 tuổi, đau bụng, nôn rồi sốt 38,6°C, không chịu đi lại, khóc khi xe xóc"
+narrative_vi: "Bé Đ., trai, 4 tuổi, ở Buôn Ma Thuột (Đắk Lắk), đã tiêm đủ 2 mũi vắc xin sởi. Chiều qua bé kêu đau bụng, bỏ bữa tối, buổi tối nôn 2 lần. Đêm qua bé sốt, mẹ đo 38,6°C, mẹ nghĩ bé bị viêm dạ dày ruột. Sáng nay bé nôn thêm 1 lần, đi ngoài 1 lần phân hơi nhão, kêu buồn nôn. Hỏi đau ở đâu thì bé chỉ quanh rốn, nhưng mẹ ấn bụng dưới bên phải thì bé khóc, gạt tay mẹ ra. Bé nằm co người, không chịu đứng dậy đi; bế lên xe máy đi qua ổ gà là bé khóc thét kêu đau bụng. Bé vẫn tỉnh, uống được ít nước, đi tiểu bình thường. Bé không ho, không sổ mũi, không nổi ban, trong miệng không loét, bụng không chướng."
+patient:
+  age_years: 4
+  sex: male
+  region: highlands
+  month: 5
+complaint: fever
+answers:
+  fever_max_temp: t38_39
+  fever_duration: d1_2
+  chills_rigors: absent
+  abdominal_pain: present
+  abd_pain_location: periumbilical
+  abd_pain_onset: gradual
+  abd_pain_duration: h6_24
+  abd_pain_severe: present
+  abd_pain_colicky: absent
+  abd_pain_worse_movement: present
+  abd_pain_migrated_rlq: unknown
+  nausea: present
+  vomiting: present
+  persistent_vomiting: absent
+  child_vomits_everything: absent
+  child_unable_to_drink: absent
+  loss_of_appetite: present
+  diarrhea: absent
+  no_stool_or_gas: absent
+  abdomen_hard_swollen: absent
+  episodic_crying_legs_drawn: absent
+  red_jelly_stool: absent
+  drowsy_hard_to_wake: absent
+  seizure_recent: absent
+  breathing_difficulty: absent
+  cold_hands_feet: absent
+  decreased_urine: absent
+  sunken_eyes: absent
+  cough: absent
+  runny_nose: absent
+  sore_throat: absent
+  headache: absent
+  dysuria: absent
+  urinary_frequency: absent
+  rash_any: absent
+  mouth_ulcers: absent
+  hand_foot_blisters: absent
+  hfmd_contact: absent
+  dengue_nearby: absent
+  measles_vaccinated: present
+default_unmentioned: absent
+expected:
+  condition: acute_appendicitis
+  acceptable: []
+  triage: 2
+source:
+  basis: "Viêm ruột thừa ở trẻ nhỏ biểu hiện không điển hình: đau bụng, bỏ ăn, nôn rồi mới sốt, đau tăng khi xe xóc, không chịu đi lại, ấn bụng dưới phải đau (Bundy 2007: đi lại khó, đau khi nhảy hoặc gõ gợi ý viêm ruột thừa, trẻ càng nhỏ càng dễ thủng; Reust 2016: sốt xuất hiện sau đau và nôn phù hợp viêm phúc mạc đang tiến triển). NHS Appendicitis: đau bụng dữ dội cần đến cấp cứu ngay."
+  references:
+    - nhs-appendicitis
+    - bundy-jama-2007
+    - reust-afp-2016
+author: "agent:vignette-holdout"
+notes_vi: "Người nhà chọn 'Sốt' và nghĩ là viêm dạ dày – ruột; trình tự đau bụng, nôn rồi mới sốt và đau khi xe xóc là điểm phân biệt. Danh mục chưa có câu hỏi về thứ tự xuất hiện đau bụng và sốt."

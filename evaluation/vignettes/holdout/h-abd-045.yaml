@@ -1,0 +1,56 @@
+id: h-abd-045
+set: holdout
+title_vi: "Nữ 68 tuổi uống thuốc giảm đau xương khớp hằng ngày 2 tháng, đau rát vùng trên rốn tăng sau ăn 3 tuần"
+narrative_vi: "Bà S., 68 tuổi, ở Vĩnh Long, bị thoái hóa khớp gối và tăng huyết áp, uống thuốc huyết áp đều. Hai tháng nay gối đau nhiều, bà mua thuốc giảm đau xương khớp ở tiệm thuốc về uống mỗi ngày. Khoảng 3 tuần nay bà hay đau rát, cồn cào vùng trên rốn, đau tăng sau khi ăn no hoặc ăn chua cay, kèm đầy bụng, ợ chua, đôi khi buồn nôn. Đau âm ỉ, không lan ra sau lưng, bà vẫn làm việc nhà được và đau không nặng thêm. Bà không nôn, không nôn ra máu, đi ngoài phân vàng, không đen. Bà vẫn ăn được như thường, không sụt cân, không mệt hơn mọi khi, không sốt. Bà không đau ngực, không khó thở, không vã mồ hôi khi đau."
+patient:
+  age_years: 68
+  sex: female
+  region: south
+  month: 3
+complaint: abdominal_pain
+answers:
+  abd_pain_location: epigastric
+  abd_pain_onset: gradual
+  abd_pain_duration: gt_2w
+  abd_pain_severe: absent
+  abd_pain_colicky: absent
+  abd_pain_meal_relation: worse_after_meal
+  pain_after_fatty_meal: absent
+  abd_pain_radiates_back: absent
+  abd_pain_radiates_right_shoulder: absent
+  pain_radiates_arm_jaw: absent
+  abd_pain_worse_movement: absent
+  heartburn: present
+  nausea: present
+  vomiting: absent
+  vomiting_blood: absent
+  black_stool: absent
+  loss_of_appetite: absent
+  fatigue: absent
+  fever: absent
+  jaundice: absent
+  diarrhea: absent
+  abdomen_hard_swollen: absent
+  chest_pain_pressure: absent
+  cold_sweat: absent
+  breathing_difficulty: absent
+  fainting_or_near_fainting: absent
+  regular_painkiller_use: present
+  hypertension_known: present
+  known_heart_disease: absent
+  diabetes: absent
+  smoker: absent
+  heavy_alcohol: absent
+  gallstones_known: absent
+default_unmentioned: absent
+expected:
+  condition: peptic_ulcer_gastritis
+  acceptable: []
+  triage: 4
+source:
+  basis: "Viêm, loét dạ dày do thuốc chống viêm không steroid ở người cao tuổi: đau rát vùng trên rốn tăng sau ăn, ợ chua, buồn nôn 3 tuần khi đang uống thuốc giảm đau xương khớp hằng ngày (MSD: thuốc chống viêm không steroid gây trên một nửa số ổ loét; loét dạ dày có khi đau tăng khi ăn). Không nôn ra máu, không phân đen, không sụt cân, không chán ăn, đau không nặng thêm nên theo NHS Stomach ulcer chỉ cần đặt lịch khám, không cần khám khẩn."
+  references:
+    - msd-peptic-ulcer
+    - nhs-stomach-ulcer
+author: "agent:vignette-holdout"
+notes_vi: "Người cao tuổi đang dùng thuốc chống viêm nhưng chưa có dấu hiệu báo động; tuổi cao đơn thuần không phải lý do khám khẩn. Danh mục chưa có câu hỏi về no sớm, sụt cân."

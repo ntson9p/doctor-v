@@ -1,0 +1,58 @@
+id: h-head-025
+set: holdout
+title_vi: "Nam 69 tuổi tăng huyết áp, tự ngừng thuốc 10 ngày, đau nặng sau gáy 2 ngày, huyết áp đo được 192/112"
+narrative_vi: "Ông H., 69 tuổi, ở Ninh Bình, bị tăng huyết áp 8 năm, hút thuốc lào. Mười ngày trước ông uống hết thuốc huyết áp, thấy trong người vẫn khỏe nên chưa đi lấy thuốc. Hai ngày nay trời trở rét, ông đau đầu âm ỉ, nặng tức vùng sau gáy, mức vừa, phải nằm nghỉ. Trước giờ ông ít khi đau đầu, đây là lần đầu đau kéo dài như vậy. Sáng nay con trai đo huyết áp ở nhà 2 lần được 192/112 và 188/110 mmHg. Cơn đau đến từ từ, không phải đột ngột dữ dội. Ông không buồn nôn, không nôn, không nhìn mờ, không đau ngực, không khó thở, không tê hay yếu tay chân, không méo miệng, nói rõ, đi lại vững, tỉnh táo, cổ cúi được bình thường. Không sốt. Ông không bị tiểu đường, chưa từng được nói là có bệnh tim."
+patient:
+  age_years: 69
+  sex: male
+  region: north
+  month: 12
+complaint: headache
+answers:
+  headache_course: first_time
+  headache_duration: h4_72
+  headache_location: back_neck
+  headache_character: pressing
+  headache_severity: moderate
+  headache_thunderclap: absent
+  headache_frequent: absent
+  headache_worse_activity: absent
+  bp_measured: extreme
+  hypertension_known: present
+  smoker: present
+  diabetes: absent
+  known_heart_disease: absent
+  heavy_alcohol: absent
+  regular_painkiller_use: absent
+  nausea: absent
+  vomiting: absent
+  blurred_vision: absent
+  vision_loss_or_double: absent
+  visual_aura: absent
+  photophobia: absent
+  phonophobia: absent
+  es_stroke_signs: absent
+  sudden_loss_of_balance: absent
+  confusion: absent
+  drowsy_hard_to_wake: absent
+  seizure_recent: absent
+  chest_pain_pressure: absent
+  breathing_difficulty: absent
+  edema_face_hands: absent
+  fainting_or_near_fainting: absent
+  neck_stiffness: absent
+  fever: absent
+  headache_after_head_injury: absent
+  stress_poor_sleep: absent
+default_unmentioned: absent
+expected:
+  condition: other
+  acceptable: []
+  triage: 3
+source:
+  basis: "Đau đầu do tăng huyết áp nặng không kiểm soát sau khi tự ngừng thuốc (huyết áp tâm thu từ 180 mmHg; ICHD-3 mục 10.3.2: đau đầu do cơn tăng huyết áp chưa có bệnh não), chưa có dấu hiệu tổn thương cơ quan đích cấp như lú lẫn, đau ngực, khó thở, yếu liệt, nhìn mờ. NICE NG136: huyết áp từ 180/120 mà không có triệu chứng đe dọa tính mạng thì cần thăm dò tổn thương cơ quan đích càng sớm càng tốt, nên đi khám trong hôm nay hoặc ngày mai, chưa phải cấp cứu ngay."
+  references:
+    - nice-ng136
+    - ihs-ichd3-2018
+author: "agent:vignette-holdout"
+notes_vi: "Ngoài danh mục bệnh. Không có dấu hiệu thần kinh khu trú nên không nghĩ đột quỵ, nhưng cũng không để tự theo dõi tại nhà. Có lú lẫn, đau ngực, khó thở, nhìn mờ, nôn hoặc yếu liệt thì chuyển mức 1–2. Danh mục chưa có câu hỏi về tự ngừng thuốc huyết áp."

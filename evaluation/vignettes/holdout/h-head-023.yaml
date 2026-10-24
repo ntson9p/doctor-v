@@ -1,0 +1,53 @@
+id: h-head-023
+set: holdout
+title_vi: "Bé gái 10 tuổi, đau đầu giật hai bên thái dương từng cơn, 2 cơn mỗi tuần, buồn nôn, chói mắt"
+narrative_vi: "Bé H., gái, 10 tuổi, học lớp 5 ở Hà Nội. Khoảng 3 tháng nay bé hay lên cơn đau đầu, tháng gần đây tuần nào cũng 2 cơn, thường vào buổi chiều sau giờ học, nhất là hôm bỏ bữa sáng hoặc xem điện thoại lâu; dạo này bé đi học thêm buổi tối, ngủ muộn. Bé đau giật giật hai bên thái dương và trán, phải bỏ dở việc đang làm để nằm nghỉ; chạy nhảy, leo cầu thang thì đau hơn. Lúc đau bé buồn nôn nhưng không nôn, kêu chói mắt, ồn ào thì khó chịu. Mỗi cơn kéo dài 2–3 giờ, bé ngủ một giấc trong phòng tối dậy thì hết. Chiều nay bé lại đau như mọi lần, mới được khoảng 1 giờ. Mẹ bé cũng bị đau nửa đầu. Bé không đau đầu lúc mới ngủ dậy, không đau thức giấc ban đêm, các cơn không nặng dần lên. Bé không sốt, không cứng gáy, không nhìn mờ, không lác mắt, không yếu tay chân, không bị ngã đập đầu. Giữa các cơn bé học và chơi bình thường."
+patient:
+  age_years: 10
+  sex: female
+  region: north
+  month: 11
+complaint: headache
+answers:
+  headache_course: recurrent_similar
+  headache_frequent: present
+  headache_duration: lt_4h
+  headache_location: both_sides
+  headache_character: throbbing
+  headache_severity: moderate
+  headache_thunderclap: absent
+  headache_worse_activity: present
+  photophobia: present
+  phonophobia: present
+  nausea: present
+  vomiting: absent
+  visual_aura: absent
+  blurred_vision: absent
+  vision_loss_or_double: absent
+  neck_stiffness: absent
+  fever: absent
+  confusion: absent
+  drowsy_hard_to_wake: absent
+  seizure_recent: absent
+  es_stroke_signs: absent
+  sudden_loss_of_balance: absent
+  headache_after_head_injury: absent
+  stress_poor_sleep: present
+  facial_pain_pressure: absent
+  runny_nose: absent
+  nasal_congestion: absent
+  rash_any: absent
+default_unmentioned: absent
+expected:
+  condition: migraine
+  acceptable: []
+  triage: 4
+source:
+  basis: "Đau nửa đầu không tiền triệu ở trẻ: cơn 2–3 giờ, đau giật hai bên trán thái dương (trẻ hay đau hai bên theo ICHD-3 và Chakravarty 2008), tăng khi vận động, buồn nôn, sợ ánh sáng và tiếng ồn, mẹ cũng bị. Cơn nhiều hơn 1 lần mỗi tuần nên cần đặt lịch khám (NHS Migraine), nhưng không có dấu hiệu cần khám khẩn ở trẻ (không nôn, không đau lúc mới ngủ dậy hay thức giấc ban đêm, không nặng dần, không có vấn đề về mắt; NHS Headaches)."
+  references:
+    - nhs-migraine
+    - ihs-ichd3-2018
+    - chakravarty-jhp-2008
+    - nhs-headaches
+author: "agent:vignette-holdout"
+notes_vi: "Đau tăng khi đi lại, leo cầu thang trong cơn là đặc điểm của đau nửa đầu, khác với đau đầu khởi phát do ho, rặn hay gắng sức. Danh mục chưa có câu hỏi về đau đầu lúc mới ngủ dậy, lác mắt ở trẻ."

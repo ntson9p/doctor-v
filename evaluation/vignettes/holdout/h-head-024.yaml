@@ -1,0 +1,53 @@
+id: h-head-024
+set: holdout
+title_vi: "Nam 41 tuổi, đau đầu bó chặt hai bên 3–4 ngày mỗi tuần đã 2 tháng, làm việc căng thẳng, thiếu ngủ"
+narrative_vi: "Anh Q., 41 tuổi, kế toán ở Thành phố Hồ Chí Minh. Hai tháng nay công ty dồn việc, anh thường làm đến khuya, mỗi đêm chỉ ngủ 4–5 tiếng. Tuần nào anh cũng đau đầu 3–4 ngày, thường từ giữa buổi chiều, cảm giác như bị bó chặt quanh đầu, nặng hai bên thái dương lan ra sau gáy, mức nhẹ, vẫn làm việc được. Mỗi đợt kéo dài vài giờ, có hôm đến tối mới hết; hôm nay đau từ trưa, đã khoảng 5 giờ. Cổ vai hay mỏi cứng nhưng vẫn cúi đầu bình thường. Anh uống paracetamol khoảng 2 ngày mỗi tuần, đỡ một phần. Đi lại, leo cầu thang không làm đau hơn. Anh không buồn nôn, không nôn, ánh sáng hay tiếng ồn không làm khó chịu thêm, không nhìn mờ, không yếu tay chân, không sốt. Trước đây anh chỉ thỉnh thoảng đau kiểu này vài lần mỗi năm. Huyết áp đo ở công ty tháng trước 125/80 mmHg."
+patient:
+  age_years: 41
+  sex: male
+  region: south
+  month: 9
+complaint: headache
+answers:
+  headache_course: recurrent_similar
+  headache_frequent: present
+  headache_duration: h4_72
+  headache_location: both_sides
+  headache_character: pressing
+  headache_severity: mild
+  headache_thunderclap: absent
+  headache_worse_activity: absent
+  photophobia: absent
+  phonophobia: absent
+  nausea: absent
+  vomiting: absent
+  visual_aura: absent
+  blurred_vision: absent
+  vision_loss_or_double: absent
+  neck_stiffness: absent
+  fever: absent
+  confusion: absent
+  es_stroke_signs: absent
+  seizure_recent: absent
+  headache_after_head_injury: absent
+  stress_poor_sleep: present
+  regular_painkiller_use: present
+  bp_measured: normal
+  hypertension_known: absent
+  facial_pain_pressure: absent
+  nasal_congestion: absent
+  runny_nose: absent
+  smoker: absent
+  heavy_alcohol: absent
+default_unmentioned: absent
+expected:
+  condition: tension_type_headache
+  acceptable: []
+  triage: 4
+source:
+  basis: "Đau đầu kiểu căng thẳng: đau hai bên, cảm giác bó chặt, mức nhẹ, không tăng khi vận động, không buồn nôn, không sợ ánh sáng hay tiếng ồn (ICHD-3), liên quan căng thẳng và thiếu ngủ. Đau nhiều ngày mỗi tuần nên theo NHS Tension headaches cần đi khám bác sĩ (không khẩn), không chỉ tự dùng thuốc giảm đau."
+  references:
+    - nhs-tension-headaches
+    - ihs-ichd3-2018
+author: "agent:vignette-holdout"
+notes_vi: "Mức 4 vì đau nhiều lần mỗi tuần; đau thưa vài lần mỗi năm thì tự theo dõi được. Thuốc giảm đau dùng dưới 15 ngày mỗi tháng nên chưa nghĩ đau đầu do lạm dụng thuốc. Danh mục chưa có câu hỏi về số ngày dùng thuốc giảm đau mỗi tháng."

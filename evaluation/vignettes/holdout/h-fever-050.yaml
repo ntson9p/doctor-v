@@ -1,0 +1,65 @@
+id: h-fever-050
+set: holdout
+title_vi: "Nữ 74 tuổi có sỏi mật, sốt cao rét run, vàng mắt, nước tiểu sẫm, đau tức dưới sườn phải"
+narrative_vi: "Bà T., 74 tuổi, ở Hưng Yên, bị tăng huyết áp, uống thuốc đều. Ba năm trước đi siêu âm, bác sĩ nói bà có sỏi mật nhưng bà chưa điều trị. Hai ngày nay bà đau tức âm ỉ dưới sườn phải, chán ăn, buồn nôn, mệt. Từ chiều qua bà lên cơn rét run cầm cập rồi sốt cao, con gái đo được 39,4°C. Sáng nay con gái thấy lòng trắng mắt bà vàng, nước tiểu sẫm như nước chè đặc. Bà nôn 1 lần ra thức ăn. Bà vẫn tỉnh táo, nói chuyện bình thường, tự đi lại trong nhà được, thở bình thường, tay chân ấm. Bà không ho, không đau buốt khi đi tiểu, không đi ngoài phân đen. Bà không bị tiểu đường, không uống rượu."
+patient:
+  age_years: 74
+  sex: female
+  region: north
+  month: 10
+complaint: fever
+answers:
+  fever_max_temp: ge_39
+  fever_duration: d1_2
+  chills_rigors: present
+  abdominal_pain: present
+  abd_pain_location: right_upper
+  abd_pain_onset: gradual
+  abd_pain_duration: d1_3
+  abd_pain_severe: absent
+  abd_pain_colicky: absent
+  abd_pain_radiates_back: absent
+  abd_pain_radiates_right_shoulder: absent
+  pain_after_fatty_meal: absent
+  abd_pain_worse_movement: absent
+  jaundice: present
+  nausea: present
+  vomiting: present
+  persistent_vomiting: absent
+  loss_of_appetite: present
+  fatigue: present
+  gallstones_known: present
+  hypertension_known: present
+  diabetes: absent
+  heavy_alcohol: absent
+  immunocompromised: absent
+  confusion: absent
+  drowsy_hard_to_wake: absent
+  severe_weakness: absent
+  cold_hands_feet: absent
+  breathing_difficulty: absent
+  decreased_urine: absent
+  fainting_or_near_fainting: absent
+  abdomen_hard_swollen: absent
+  cough: absent
+  dysuria: absent
+  urinary_frequency: absent
+  flank_pain: absent
+  diarrhea: absent
+  black_stool: absent
+  rash_any: absent
+  headache: absent
+  myalgia: absent
+default_unmentioned: absent
+expected:
+  condition: other
+  acceptable: [acute_cholecystitis]
+  triage: 2
+source:
+  basis: "Viêm đường mật cấp do sỏi ở người cao tuổi có sỏi mật: sốt cao rét run, vàng da và đau dưới sườn phải (tam chứng Charcot), nước tiểu sẫm; đây là cấp cứu, cần hồi sức và dẫn lưu đường mật khẩn (MSD). Chưa có lú lẫn, khó thở, tay chân lạnh hay tiêu chí nguy cơ cao khác của NICE NG253 nên đến cấp cứu ngay (mức 2), chưa đến mức gọi 115."
+  references:
+    - msd-choledocholithiasis-cholangitis
+    - nice-ng253
+    - nhs-acute-cholecystitis
+author: "agent:vignette-holdout"
+notes_vi: "Ngoài danh mục bệnh. Viêm túi mật cấp được chấp nhận vì cùng do sỏi mật, cùng phải nhập viện ngay. Người cao tuổi có thể nhanh chóng chuyển sang sốc nhiễm khuẩn; có lú lẫn hoặc tụt huyết áp thì chuyển mức 1. Danh mục chưa có câu hỏi về nước tiểu sẫm màu, phân bạc màu."

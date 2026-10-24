@@ -1,0 +1,51 @@
+id: h-fever-052
+set: holdout
+title_vi: "Bé gái 7 tháng, sốt cao 2 ngày, khóc thét khi bế, nôn, bỏ bú, thóp phồng, nay li bì"
+narrative_vi: "Bé L., gái, 7 tháng, ở Hà Tĩnh, được tiêm chủng theo lịch. Tuần trước bé sổ mũi, ho nhẹ, nay đã hết. Từ sáng hôm qua bé sốt cao, mẹ đo 39,3°C, uống thuốc hạ sốt chỉ hạ được một lúc. Bé quấy khóc, khóc thét như đau mỗi khi bế lên, nôn 3 lần, bú kém hẳn, từ trưa nay gần như không chịu bú. Chiều nay bé li bì, gọi phải lay mới mở mắt rồi lại lịm đi. Mẹ sờ thấy thóp trên đỉnh đầu phồng căng hơn mọi ngày. Tã ướt ít hơn mọi ngày. Bé chưa co giật, không nổi ban, không thở gấp, không tiêu chảy, tay chân không lạnh."
+patient:
+  age_months: 7
+  sex: female
+  region: central
+  month: 2
+complaint: fever
+answers:
+  fever_max_temp: ge_39
+  fever_duration: d1_2
+  drowsy_hard_to_wake: present
+  bulging_fontanelle: present
+  vomiting: present
+  child_vomits_everything: absent
+  child_unable_to_drink: present
+  loss_of_appetite: present
+  decreased_urine: present
+  neck_stiffness: unknown
+  seizure_recent: absent
+  rash_any: absent
+  cold_hands_feet: absent
+  breathing_difficulty: absent
+  cough: absent
+  runny_nose: absent
+  diarrhea: absent
+  sunken_eyes: absent
+  ear_pain: absent
+  mouth_ulcers: absent
+  hand_foot_blisters: absent
+  startle_myoclonus: absent
+  red_eyes: absent
+  hfmd_contact: absent
+  dengue_nearby: absent
+  measles_contact: absent
+default_unmentioned: absent
+expected:
+  condition: bacterial_meningitis
+  acceptable: [sepsis]
+  triage: 1
+source:
+  basis: "Viêm màng não mủ ở nhũ nhi: sốt cao, khóc thét khi bế, nôn, bỏ bú, thóp phồng, li bì (NHS Meningitis; bệnh sử thóp phồng có LR khoảng 8 theo Curtis 2010). Li bì và không bú được là dấu hiệu nguy hiểm toàn thân theo IMCI, và NICE NG240 yêu cầu chuyển viện cấp cứu khi nghi viêm màng não vi khuẩn, nên gọi 115 ngay."
+  references:
+    - nice-ng240
+    - nhs-meningitis
+    - who-imci-chart-booklet-2014
+    - curtis-pediatrics-2010
+author: "agent:vignette-holdout"
+notes_vi: "Ở nhũ nhi thường không đánh giá được cứng gáy; thóp phồng và li bì là dấu hiệu chính. Nhiễm khuẩn huyết được chấp nhận vì hai bệnh hay đi cùng nhau ở trẻ nhỏ."

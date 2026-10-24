@@ -1,0 +1,72 @@
+id: h-head-026
+set: holdout
+title_vi: "Nam 26 tuổi, đột ngột sốt 38,6°C, đau đầu, đau mỏi người, ho khan, đồng nghiệp bị cúm A"
+narrative_vi: "Anh T., 26 tuổi, nhân viên khách sạn ở Đà Lạt (Lâm Đồng), khỏe mạnh, không có bệnh nền, không hút thuốc. Tuần này ở chỗ làm có 3 đồng nghiệp đi khám được xét nghiệm dương tính cúm A. Từ chiều qua anh đột ngột ớn lạnh, run, rồi sốt 38,6°C, nhức khắp đầu, đau mỏi khắp người, mệt, ăn không ngon, ho khan, đau họng nhẹ. Đau đầu mức vừa, phải nằm nghỉ, uống paracetamol thì đỡ. Sáng nay anh tự xét nghiệm nhanh COVID-19, kết quả 1 vạch. Anh tỉnh táo, cúi đầu cằm chạm ngực được, không sợ ánh sáng, không nôn, không nổi ban, không khó thở, không đau ngực, không sổ mũi. Tuần qua anh không ăn tiết canh, không đi rừng."
+patient:
+  age_years: 26
+  sex: male
+  region: highlands
+  month: 7
+complaint: headache
+answers:
+  headache_course: first_time
+  headache_duration: h4_72
+  headache_location: whole_head
+  headache_character: pressing
+  headache_severity: moderate
+  headache_thunderclap: absent
+  headache_frequent: absent
+  headache_worse_activity: absent
+  fever: present
+  fever_max_temp: t38_39
+  fever_duration: d1_2
+  chills_rigors: present
+  myalgia: present
+  fatigue: present
+  loss_of_appetite: present
+  cough: present
+  productive_cough: absent
+  sore_throat: present
+  runny_nose: absent
+  nasal_congestion: absent
+  loss_of_smell_taste: absent
+  sick_contact_respiratory: present
+  covid_self_test: negative
+  neck_stiffness: absent
+  photophobia: absent
+  phonophobia: absent
+  nausea: absent
+  vomiting: absent
+  rash_any: absent
+  confusion: absent
+  drowsy_hard_to_wake: absent
+  seizure_recent: absent
+  es_stroke_signs: absent
+  breathing_difficulty: absent
+  chest_pain_pressure: absent
+  pleuritic_chest_pain: absent
+  blurred_vision: absent
+  vision_loss_or_double: absent
+  retro_orbital_pain: absent
+  arthralgia: absent
+  headache_after_head_injury: absent
+  pig_pork_exposure: absent
+  malaria_area_exposure: absent
+  bush_exposure: absent
+  dengue_nearby: absent
+  immunocompromised: absent
+  diabetes: absent
+  smoker: absent
+default_unmentioned: absent
+expected:
+  condition: influenza
+  acceptable: [covid19]
+  triage: 5
+source:
+  basis: "Cúm mùa chưa biến chứng ở người trẻ khỏe: khởi phát đột ngột sốt, ớn lạnh, đau đầu, đau cơ, mệt, ho khan, đau họng, có đồng nghiệp xác định cúm A (CDC; ở phòng khám tuyến ban đầu tại Thành phố Hồ Chí Minh, khoảng 93% người cúm A có đau đầu theo Todd 2018). Không thuộc nhóm nguy cơ diễn biến nặng theo 1840/QĐ-BYT, không cứng gáy, không lú lẫn, không ban, không khó thở nên chăm sóc tại nhà và theo dõi dấu hiệu cần đi khám."
+  references:
+    - byt-qd-1840-2025
+    - cdc-flu-clinical-signs
+    - todd-irv-2018
+author: "agent:vignette-holdout"
+notes_vi: "Sốt kèm đau đầu nhưng không có dấu hiệu màng não, không ăn tiết canh hay giết mổ lợn, nên không cần xếp mức cấp cứu. Xét nghiệm nhanh âm tính chưa loại trừ COVID-19 nên COVID-19 cũng được chấp nhận."

@@ -1,0 +1,51 @@
+id: h-abd-047
+set: holdout
+title_vi: "Bé trai 5 tháng sinh non, khóc không dỗ được, nôn dịch xanh, khối phồng căng cứng ở bẹn phải không đẩy lên được"
+narrative_vi: "Bé K., trai, 5 tháng, ở Bắc Ninh, sinh non lúc 35 tuần. Mấy tuần nay mẹ thấy bẹn phải của bé thỉnh thoảng phồng lên khi bé khóc, rặn, nằm yên thì tự lặn, nên chưa đi khám. Khoảng 8 giờ trước bé đột ngột khóc thét, ưỡn người, dỗ thế nào cũng không nín, bú được vài ngụm lại khóc. Bẹn phải phồng thành một cục to, căng cứng, hơi đỏ, chạm vào là bé khóc thét; mẹ ấn nhẹ không lên như mọi khi. Bé nôn 4 lần, lúc đầu ra sữa, lần gần nhất ra nước màu xanh lá. Từ lúc khóc đến giờ bé chưa đi ngoài, mẹ không để ý bé có xì hơi không. Bụng bé hơi chướng nhưng không căng cứng. Bé không sốt, vẫn tỉnh, không li bì, tã vẫn ướt."
+patient:
+  age_months: 5
+  sex: male
+  region: north
+  month: 1
+complaint: abdominal_pain
+answers:
+  abd_pain_onset: sudden
+  abd_pain_duration: h6_24
+  abd_pain_severe: present
+  abd_pain_colicky: absent
+  episodic_crying_legs_drawn: absent
+  hernia_lump_painful: present
+  vomiting: present
+  vomiting_bilious: present
+  persistent_vomiting: absent
+  child_vomits_everything: absent
+  child_unable_to_drink: absent
+  loss_of_appetite: present
+  no_stool_or_gas: unknown
+  abdomen_hard_swollen: absent
+  red_jelly_stool: absent
+  diarrhea: absent
+  fever: absent
+  drowsy_hard_to_wake: absent
+  bulging_fontanelle: absent
+  seizure_recent: absent
+  breathing_difficulty: absent
+  decreased_urine: absent
+  cold_hands_feet: absent
+  previous_abdominal_surgery: absent
+  cough: absent
+  runny_nose: absent
+  rash_any: absent
+default_unmentioned: absent
+expected:
+  condition: bowel_obstruction
+  acceptable: []
+  triage: 2
+source:
+  basis: "Thoát vị bẹn nghẹt ở nhũ nhi trai sinh non gây tắc ruột: khối phồng bẹn căng cứng, đau, không đẩy lên được, khóc không dỗ được, nôn dịch xanh, chưa đi ngoài (Jackson 2011: thoát vị là nguyên nhân tắc ruột; MSD: ruột bị thắt nghẹt có thể hoại tử sau 6 giờ, người nghi tắc ruột cần nhập viện). NHS Stomach ache: nôn dịch xanh là lý do đến cấp cứu; chưa có dấu hiệu sốc nên mức 2."
+  references:
+    - msd-intestinal-obstruction
+    - jackson-afp-2011
+    - nhs-stomach-ache
+author: "agent:vignette-holdout"
+notes_vi: "Triệu chứng chính 'Đau bụng' bao gồm cả vùng bẹn. Trẻ chưa biết nói nên vị trí đau bụng để 'không rõ'. Danh mục chưa có câu hỏi về sinh non, khối phồng ở bẹn từng tự lên xuống."

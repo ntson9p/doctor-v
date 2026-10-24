@@ -1,0 +1,46 @@
+id: h-abd-044
+set: holdout
+title_vi: "Bé gái 6 tuổi, đau bụng dưới, đau buốt khi tiểu, tiểu nhiều lần 2 ngày, mới bị đái dầm, không sốt"
+narrative_vi: "Bé M., gái, 6 tuổi, học lớp 1 ở Đà Nẵng. Ở trường bé ít uống nước, hay nhịn tiểu. Hai ngày nay bé kêu đau âm ỉ bụng dưới, mỗi lần đi tiểu thì kêu rát, có lúc khóc. Bé đi tiểu rất nhiều lần, mỗi lần chỉ được một ít, có lúc chạy không kịp nên són ra quần; đêm qua bé đái dầm, dù đã hết đái dầm từ năm 4 tuổi. Nước tiểu hơi đục, không đỏ. Mẹ đo nhiệt độ 37,2°C. Bé không kêu đau lưng, không nôn, không tiêu chảy, vẫn ăn uống và chơi bình thường."
+patient:
+  age_years: 6
+  sex: female
+  region: central
+  month: 6
+complaint: abdominal_pain
+answers:
+  abd_pain_location: suprapubic
+  abd_pain_onset: gradual
+  abd_pain_duration: d1_3
+  abd_pain_severe: absent
+  abd_pain_colicky: absent
+  abd_pain_meal_relation: no_relation
+  abd_pain_worse_movement: absent
+  dysuria: present
+  urinary_frequency: present
+  hematuria: absent
+  flank_pain: absent
+  fever: absent
+  nausea: absent
+  vomiting: absent
+  diarrhea: absent
+  loss_of_appetite: absent
+  abdomen_hard_swollen: absent
+  red_jelly_stool: absent
+  sunken_eyes: absent
+  drowsy_hard_to_wake: absent
+  confusion: absent
+  rash_any: absent
+  cough: absent
+  sore_throat: absent
+default_unmentioned: absent
+expected:
+  condition: cystitis
+  acceptable: []
+  triage: 3
+source:
+  basis: "Nhiễm khuẩn tiết niệu dưới (viêm bàng quang) ở trẻ gái: đau bụng dưới, đau buốt khi tiểu, tiểu nhiều lần, són tiểu, đái dầm mới xuất hiện, không sốt, không đau hông lưng. NHS UTIs: trẻ từ 15 tuổi trở xuống có triệu chứng nhiễm khuẩn tiết niệu cần hẹn khám khẩn (trong ngày hoặc hôm sau) để xét nghiệm nước tiểu và điều trị."
+  references:
+    - nhs-utis
+author: "agent:vignette-holdout"
+notes_vi: "Không sốt, không đau hông lưng nên nghĩ nhiễm khuẩn tiết niệu dưới, không phải viêm thận – bể thận. Danh mục chưa có câu hỏi về són tiểu, đái dầm mới xuất hiện, nước tiểu đục."

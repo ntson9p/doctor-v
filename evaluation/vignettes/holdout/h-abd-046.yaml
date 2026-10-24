@@ -1,0 +1,63 @@
+id: h-abd-046
+set: holdout
+title_vi: "Nữ 23 tuổi, sốt cao 4 ngày vừa hạ, nay đau bụng, nôn liên tục, chảy máu chân răng, tay chân lạnh, choáng"
+narrative_vi: "Chị V., 23 tuổi, công nhân ở Cần Thơ; xóm trọ đang có mấy người bị sốt xuất huyết. Chị sốt cao 39,5–40°C liên tục 4 ngày, nhức đầu, đau sau hốc mắt, đau nhức cơ khớp. Từ chiều qua chị hết sốt, tưởng đã khỏi, nhưng từ đêm qua chị đau bụng vùng dưới sườn phải và trên rốn, ngày càng đau nhiều. Sáng nay chị nôn 5 lần, uống nước vào lại nôn ra. Đánh răng thì chảy máu chân răng. Chị mệt lả, chỉ nằm, ngồi dậy là choáng váng tối sầm mắt; bạn cùng phòng sờ thấy tay chân chị lạnh, rịn mồ hôi. Từ sáng đến giờ chị mới đi tiểu 1 lần, rất ít. Chị vẫn trả lời đúng câu hỏi, không khó thở. Chị không có thai, không nôn ra máu, không đi ngoài phân đen, không tiêu chảy."
+patient:
+  age_years: 23
+  sex: female
+  region: south
+  month: 8
+complaint: abdominal_pain
+answers:
+  abd_pain_location: right_upper
+  abd_pain_onset: gradual
+  abd_pain_duration: h6_24
+  abd_pain_severe: present
+  abd_pain_colicky: absent
+  fever: present
+  fever_max_temp: ge_39
+  fever_duration: d3_5
+  headache: present
+  retro_orbital_pain: present
+  myalgia: present
+  arthralgia: present
+  nausea: present
+  vomiting: present
+  persistent_vomiting: present
+  bleeding_gums_nose: present
+  severe_weakness: present
+  cold_hands_feet: present
+  cold_sweat: present
+  fainting_or_near_fainting: present
+  decreased_urine: present
+  fatigue: present
+  loss_of_appetite: present
+  dengue_nearby: present
+  confusion: absent
+  drowsy_hard_to_wake: absent
+  breathing_difficulty: absent
+  vomiting_blood: absent
+  black_stool: absent
+  diarrhea: absent
+  rash_any: absent
+  jaundice: absent
+  abdomen_hard_swollen: absent
+  chest_pain_pressure: absent
+  pregnant: absent
+  missed_period: absent
+  vaginal_bleeding: absent
+  cough: absent
+  dysuria: absent
+default_unmentioned: absent
+expected:
+  condition: dengue
+  acceptable: []
+  triage: 1
+source:
+  basis: "Sốt xuất huyết Dengue ở giai đoạn nguy hiểm, ngay khi vừa hết sốt (ngày 4–5): đau bụng vùng gan, nôn liên tục, chảy máu chân răng, mệt lả, kèm dấu hiệu sốc như tay chân lạnh ẩm, choáng khi ngồi dậy, tiểu ít (2760/QĐ-BYT; CDC: giai đoạn nguy hiểm bắt đầu khi hết sốt). Sốc sốt xuất huyết cần cấp cứu ngay nên gọi 115 hoặc nhờ người đưa đến cấp cứu."
+  references:
+    - byt-qd-2760-2023
+    - cdc-dengue-clinical
+    - who-arbovirus-2025
+author: "agent:vignette-holdout"
+notes_vi: "Người bệnh chọn 'Đau bụng' vì đã hết sốt, dễ tưởng là đau dạ dày. Câu 'Có sốt không?' được trả lời 'có' vì đã sốt 4 ngày trong đợt bệnh này."
