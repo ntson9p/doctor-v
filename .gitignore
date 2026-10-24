@@ -9,3 +9,6 @@ Thumbs.db
 evaluation/.out/
 # Copied from @fontsource/be-vietnam-pro before dev and build (apps/web/scripts/copy-fonts.mjs)
 apps/web/public/fonts/
+# Playwright output
+test-results/
+playwright-report/

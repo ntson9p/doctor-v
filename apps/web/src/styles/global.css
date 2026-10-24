@@ -165,9 +165,11 @@ strong {
   z-index: 10;
   background: var(--bg);
   border-bottom: 1px solid var(--bar-track);
+  container: header / inline-size;
 }
 .site-header__inner {
   display: flex;
+  flex-wrap: wrap; /* fallback where container queries are missing (iOS 15) */
   align-items: center;
   gap: 0.5rem;
   max-width: var(--measure);
@@ -182,6 +184,23 @@ strong {
   min-height: var(--tap);
   display: inline-flex;
   align-items: center;
+  gap: 0.5rem;
+}
+.site-header__brand svg {
+  width: 1.75rem;
+  height: 1.75rem;
+  flex: none;
+}
+/* Measured in em, so these follow the chosen text size as well as the screen width. */
+@container header (max-width: 17em) {
+  .site-header__brand-text {
+    display: none;
+  }
+}
+@container header (max-width: 12.5em) {
+  .btn-115__verb {
+    display: none;
+  }
 }
 
 .page {
@@ -278,6 +297,9 @@ strong {
 }
 .row > .btn {
   flex: 1 1 10rem;
+}
+.row > * {
+  min-width: 0;
 }
 
 /* ---------- Font size panel ---------- */
@@ -376,8 +398,12 @@ strong {
 .field legend {
   font-weight: 600;
 }
+/* Inputs default to about 20 characters wide and flex items do not shrink below that, which
+   overflowed a 320 px screen at the largest text size. */
 .field input,
 .field select {
+  width: 100%;
+  min-width: 0;
   min-height: var(--tap);
   padding: 0.5rem 0.75rem;
   border: 0.125rem solid var(--border);
