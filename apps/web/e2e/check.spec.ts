@@ -54,6 +54,13 @@ async function answerNoToEverything(page: Page, eachScreen?: () => Promise<void>
   throw new Error('The check did not reach the review screen');
 }
 
+test('the terms and privacy page is reachable from every page and marked as a draft', async ({ page }) => {
+  await page.goto('/');
+  await page.getByRole('link', { name: 'Điều khoản và quyền riêng tư' }).click();
+  await expect(page.getByText(/Bản nháp, chưa qua luật sư rà soát/)).toBeVisible();
+  await expectNoAxeViolations(page);
+});
+
 test('home shows the start button and a call link to 115', async ({ page }) => {
   await page.goto('/');
   await expect(page.getByRole('link', { name: 'Bắt đầu kiểm tra' })).toBeVisible();

@@ -88,12 +88,29 @@ function Intro({ onDone }: { onDone: () => void }) {
       <h1 tabIndex={-1} data-autofocus>
         Trước khi bắt đầu
       </h1>
+      {/* Wording from docs/legal/disclaimers.md §2 (draft, pending legal review). */}
       <ul>
-        <li>Ứng dụng gợi ý nên đi khám ở đâu, khi nào. Ứng dụng không chẩn đoán bệnh.</li>
-        <li>Nếu có dấu hiệu nguy kịch, hãy gọi 115 ngay, không cần trả lời câu hỏi.</li>
-        <li>Câu trả lời chỉ được xử lý trên máy của bạn, không gửi đi đâu.</li>
-        <li>Đây là bản thử nghiệm. Nội dung chưa được bác sĩ thẩm định.</li>
+        <li>
+          doctor-v giúp bạn sắp xếp thông tin triệu chứng và gợi ý mức độ cần đi khám. Công cụ{' '}
+          <strong>không khám bệnh, không chẩn đoán, không kê đơn</strong>.
+        </li>
+        <li>
+          Kết quả chỉ dựa trên câu trả lời của bạn và <strong>có thể sai hoặc thiếu</strong>. Chỉ nhân viên y tế, sau khi
+          thăm khám, mới kết luận được bạn bị bệnh gì.
+        </li>
+        <li>
+          Nếu bạn hoặc người bên cạnh khó thở, đau ngực, ngất, co giật, yếu hoặc liệt một bên người, nói khó, chảy máu
+          nhiều, lơ mơ: hãy <strong>gọi 115</strong> hoặc đến cơ sở cấp cứu gần nhất ngay, đừng chờ kết quả.
+        </li>
+        <li>
+          Với trẻ nhỏ, phụ nữ mang thai, người cao tuổi hoặc người có bệnh mạn tính, hãy liên hệ nhân viên y tế{' '}
+          <strong>sớm hơn</strong> mức gợi ý.
+        </li>
+        <li>
+          Câu trả lời của bạn được xử lý <strong>ngay trên thiết bị này</strong> và không được gửi về máy chủ nào.
+        </li>
       </ul>
+      <p class="note">Bản thử nghiệm: nội dung chưa được bác sĩ thẩm định.</p>
       <button type="button" class="btn btn--primary btn--block" onClick={onDone}>
         Tôi đã hiểu
       </button>

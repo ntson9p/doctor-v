@@ -62,6 +62,20 @@ export function Result({ kb, result: r, onReview, onRestart }: Props) {
         ) : null}
       </div>
 
+      <p class="note">
+        {level <= 2
+          ? 'Dấu hiệu bạn mô tả có thể là tình trạng cấp cứu. Không tự lái xe nếu bạn thấy choáng, đau ngực hoặc khó thở.'
+          : 'doctor-v cung cấp thông tin sức khỏe tham khảo, không phải chẩn đoán, và không thay thế việc khám bệnh. Nếu có dấu hiệu nguy hiểm, gọi 115 ngay.'}
+      </p>
+
+      {level === 5 ? (
+        <p>
+          Bạn có thể theo dõi tại nhà, nhưng <strong>hãy đi khám</strong> nếu sau 48 giờ triệu chứng không đỡ, nặng thêm,
+          hoặc xuất hiện một trong các dấu hiệu dưới đây. Không tự ý dùng thuốc kê đơn; hãy hỏi dược sĩ hoặc bác sĩ trước
+          khi dùng thuốc.
+        </p>
+      ) : null}
+
       {r.safetyNet.length > 0 && level > 1 ? (
         <div class="section">
           <h2>Đi cấp cứu ngay nếu có</h2>
@@ -96,6 +110,10 @@ export function Result({ kb, result: r, onReview, onRestart }: Props) {
       ) : (
         <div class="section">
           <h2>Tình trạng có thể liên quan</h2>
+          <p class="note">
+            Đây là một số tình trạng có thể liên quan đến triệu chứng bạn mô tả, không phải kết luận bạn mắc bệnh. Con số là
+            ước tính, chưa được kiểm chứng trên người bệnh thật. Hãy mang danh sách này khi đi khám để trao đổi với bác sĩ.
+          </p>
           {conditions.map((c) => {
             const why = c.supporting
               .map((x) => supportText(kb, x.findingId, x.value))
@@ -125,8 +143,9 @@ export function Result({ kb, result: r, onReview, onRestart }: Props) {
           <details class="more">
             <summary>Con số này nghĩa là gì?</summary>
             <p>
-              "Khoảng 65%" nghĩa là: trong 100 người trả lời giống như vậy, ước tính khoảng 65 người là do tình trạng
-              này. Đây là ước tính, không phải kết luận.
+              Ví dụ, "khoảng 65%" nghĩa là: trong 100 người trả lời giống bạn, ước tính khoảng 65 người là do tình trạng
+              này. Đây là ước tính từ dữ liệu y khoa, không phải kết luận. Mức cần đi khám ở phía trên mới là điều quan
+              trọng nhất.
             </p>
             {r.calibrated ? null : <p>Con số chưa được hiệu chuẩn trên dữ liệu người bệnh thật.</p>}
           </details>
