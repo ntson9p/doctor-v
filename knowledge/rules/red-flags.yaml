@@ -366,6 +366,24 @@
     basis: verbal
     sources: [byt-qd-3312-2024]
     note: "Chữ B trong BE-FAST; 3312/QĐ-BYT (2024) nêu thất điều, chóng mặt ở đột quỵ hệ sau (lượt A lô 4 đề xuất). Nguồn chưa xác minh bản chính thức."
+- id: rf_befast_high_risk
+  level: 1
+  when:
+    all:
+      - any:
+          - { finding: sudden_loss_of_balance, is: present }
+          - { finding: vision_loss_or_double, is: present }
+      - any:
+          - { age_years_gte: 50 }
+          - { finding: hypertension_known, is: present }
+          - { finding: diabetes, is: present }
+          - { finding: known_heart_disease, is: present }
+  reason_vi: "Đột ngột mất thăng bằng hoặc mất thị lực ở người có nguy cơ đột quỵ: gọi 115 ngay."
+  evidence:
+    tier: B
+    basis: verbal
+    sources: [byt-qd-3312-2024]
+    note: "BE-FAST (Balance, Eyes): dấu hiệu đột quỵ cần gọi cấp cứu. 3312/QĐ-BYT (2024): yếu tố nguy cơ tuổi cao, tăng huyết áp, đái tháo đường, bệnh tim. Lượt C lô 4 đề xuất vì 2 ca đột quỵ chỉ được xếp mức 2."
 - id: rf_flu_risk_chronic_disease
   level: 3
   when:

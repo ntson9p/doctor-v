@@ -1,0 +1,33 @@
+id: d-primary-dysmenorrhea-1
+set: dev
+title_vi: "Nữ 20 tuổi, đau quặn bụng dưới ngày đầu có kinh, lan ra thắt lưng"
+narrative_vi: "Em M., 20 tuổi, sinh viên. Sáng nay bắt đầu có kinh, đau quặn từng cơn ở bụng dưới, lan ra thắt lưng, người mệt. Tháng nào cũng đau như vậy 1–2 ngày. Không sốt, không ra máu bất thường, không có thai, đau không tăng khi đi lại."
+patient:
+  age_years: 20
+  sex: female
+complaint: abdominal_pain
+answers:
+  pain_with_menses: present
+  abd_pain_location: suprapubic
+  abd_pain_colicky: present
+  abd_pain_radiates_back: present
+  abd_pain_duration: h6_24
+  abd_pain_onset: gradual
+  fatigue: present
+  abd_pain_severe: absent
+  fever: absent
+  nausea: absent
+  diarrhea: absent
+  pregnant: absent
+  missed_period: absent
+  vaginal_bleeding: absent
+  abd_pain_worse_movement: absent
+default_unmentioned: absent
+expected:
+  condition: primary_dysmenorrhea
+  acceptable: []
+  triage: 5
+source:
+  basis: "Ca điển hình theo MSD (đau quặn bụng dưới khi bắt đầu hành kinh, lan ra lưng) và NHS Period pain (tự chăm sóc tại nhà); số liệu Pham 2025 ở nữ sinh viên Việt Nam."
+  references: [nhs-period-pain, msd-dysmenorrhea, pham-fgwh-2025]
+author: "agent:pass-c"

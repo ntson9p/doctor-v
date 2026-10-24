@@ -1,0 +1,32 @@
+id: d-stroke-2
+set: dev
+title_vi: "Nữ 66 tuổi, đau vùng gáy tăng nhanh, chóng mặt, đứng không vững, nôn, không yếu liệt"
+narrative_vi: "Bà Đ., 66 tuổi, bị tăng huyết áp. Hai giờ trước bắt đầu đau đầu vùng sau gáy, tăng dần trong khoảng nửa giờ thành rất đau, chóng mặt, đứng không vững, đi bị xiêu sang một bên, buồn nôn và nôn. Không méo miệng, không yếu tay chân, nói rõ, không cứng gáy."
+patient:
+  age_years: 66
+  sex: female
+complaint: headache
+answers:
+  es_stroke_signs: absent
+  sudden_loss_of_balance: present
+  headache_thunderclap: absent
+  vomiting: present
+  nausea: present
+  headache_location: back_neck
+  headache_severity: severe
+  headache_duration: lt_4h
+  headache_course: first_time
+  hypertension_known: present
+  neck_stiffness: absent
+  confusion: absent
+  fainting_or_near_fainting: absent
+default_unmentioned: absent
+expected:
+  condition: stroke
+  acceptable: []
+  triage: 1
+source:
+  basis: "Chảy máu hoặc nhồi máu tiểu não: 3312/QĐ-BYT (2024) (nhức đầu dữ dội vùng chẩm, thất điều, nôn); Aroor 2017 (mất thăng bằng ở người không có dấu hiệu FAST); NHS Stroke (chóng mặt, ngã, đau đầu dữ dội, nôn: gọi cấp cứu)."
+  references: [byt-qd-3312-2024, aroor-stroke-2017, nhs-stroke-symptoms]
+author: "agent:pass-c"
+notes_vi: "Ca không điển hình: không có dấu hiệu FAST, biểu hiện bằng mất thăng bằng."

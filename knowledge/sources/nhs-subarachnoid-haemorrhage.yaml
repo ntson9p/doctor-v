@@ -1,0 +1,12 @@
+id: nhs-subarachnoid-haemorrhage
+type: web_page
+title: "Subarachnoid haemorrhage"
+publisher: "NHS (UK)"
+url: "https://www.nhs.uk/conditions/subarachnoid-haemorrhage/"
+license_class: L1
+license_note: "Open Government Licence v3.0; bản chuyển thể không được trình bày như nội dung của NHS."
+default_tier: C
+accessed: "2026-10-25"
+verified: true
+verified_by: "agent:pass-c"
+notes_vi: "Lượt C mở trang (rà soát lần cuối 04/9/2025). Triệu chứng: đau đầu cực kỳ dữ dội, bắt đầu đột ngột và không hết (đau đầu sét đánh); đau cổ hoặc cứng gáy; buồn nôn, nôn; rất sợ ánh sáng; co giật; ngất, li bì hoặc lú lẫn; méo một bên mặt, nói ngọng, yếu một bên người; nhìn mờ hoặc mất thị lực. Gọi 999; không tự lái xe đến cấp cứu."

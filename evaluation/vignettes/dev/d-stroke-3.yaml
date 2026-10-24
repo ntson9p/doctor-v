@@ -1,0 +1,31 @@
+id: d-stroke-3
+set: dev
+title_vi: "Nam 72 tuổi, rung nhĩ, đột ngột không nhìn thấy nửa bên trái, đau đầu vùng gáy, buồn nôn"
+narrative_vi: "Ông Ph., 72 tuổi, bị tăng huyết áp và rung nhĩ. Sáng nay đột ngột không nhìn thấy nửa bên trái, kèm đau đầu vùng sau gáy mức vừa, buồn nôn. Ông chưa từng bị đau đầu kiểu này, trước đó không thấy chớp sáng. Không yếu tay chân, nói rõ, đi lại vững."
+patient:
+  age_years: 72
+  sex: male
+complaint: headache
+answers:
+  vision_loss_or_double: present
+  es_stroke_signs: absent
+  headache_location: back_neck
+  headache_severity: moderate
+  headache_course: first_time
+  headache_duration: lt_4h
+  nausea: present
+  hypertension_known: present
+  known_heart_disease: present
+  visual_aura: absent
+  sudden_loss_of_balance: absent
+  headache_thunderclap: absent
+default_unmentioned: absent
+expected:
+  condition: stroke
+  acceptable: []
+  triage: 1
+source:
+  basis: "Nhồi máu não tuần hoàn sau: 3312/QĐ-BYT (2024) (mất thị lực, rối loạn thị trường khởi phát đột ngột); MSD (rung nhĩ là nguồn huyết khối); NHS Stroke (mất thị lực đột ngột: gọi cấp cứu). Dễ nhầm với đau nửa đầu có tiền triệu thị giác."
+  references: [byt-qd-3312-2024, msd-stroke-overview, nhs-stroke-symptoms]
+author: "agent:pass-c"
+notes_vi: "Ca dễ nhầm với đau nửa đầu có tiền triệu."

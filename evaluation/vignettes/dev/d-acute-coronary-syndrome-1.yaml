@@ -1,0 +1,32 @@
+id: d-acute-coronary-syndrome-1
+set: dev
+title_vi: "Nam 68 tuổi, đái tháo đường, đau tức vùng trên rốn 2 giờ, tức nhẹ ngực, vã mồ hôi"
+narrative_vi: "Ông T., 68 tuổi, bị đái tháo đường và tăng huyết áp. Hai giờ nay đau tức vùng trên rốn, kèm tức nhẹ giữa ngực, vã mồ hôi lạnh, buồn nôn, hơi khó thở. Cơn đau không liên quan bữa ăn. Không sốt, không tiêu chảy, không nôn."
+patient:
+  age_years: 68
+  sex: male
+complaint: abdominal_pain
+answers:
+  abd_pain_location: epigastric
+  abd_pain_duration: lt_6h
+  abd_pain_onset: gradual
+  chest_pain_pressure: present
+  cold_sweat: present
+  nausea: present
+  breathing_difficulty: present
+  diabetes: present
+  hypertension_known: present
+  abd_pain_meal_relation: no_relation
+  fever: absent
+  vomiting: absent
+  diarrhea: absent
+  heartburn: absent
+default_unmentioned: absent
+expected:
+  condition: acute_coronary_syndrome
+  acceptable: []
+  triage: 1
+source:
+  basis: "2187/QĐ-BYT: đau có thể lan xuống thượng vị; đau kèm vã mồ hôi gợi ý nhồi máu cơ tim; nghi hội chứng mạch vành cấp thì gọi 115. NICE CG95 khuyến cáo 1.2.1.3."
+  references: [byt-qd-2187-2019, nice-cg95, nhs-chest-pain]
+author: "agent:pass-c"

@@ -1,0 +1,13 @@
+id: cdc-flu-clinical-signs
+type: web_page
+title: "Clinical Signs and Symptoms of Influenza"
+publisher: "Centers for Disease Control and Prevention (CDC)"
+date: "2026-02-04"
+url: "https://www.cdc.gov/flu/hcp/clinical-signs/index.html"
+license_class: L0
+license_note: "Nội dung của cơ quan liên bang Hoa Kỳ, thuộc phạm vi công cộng."
+default_tier: B
+accessed: "2026-10-25"
+verified: true
+verified_by: "agent:pass-c"
+notes_vi: "Lượt C mở lại trang dành cho nhân viên y tế (ngày trên trang 04/02/2026). Cúm chưa biến chứng: khởi phát đột ngột với sốt, ớn lạnh, đau cơ, đau đầu, mệt, ho khan, đau họng, viêm mũi. Nhiều người, nhất là người cao tuổi và người suy giảm miễn dịch, không sốt. Trẻ nhỏ có thể buồn nôn, nôn, tiêu chảy. Người cao tuổi có thể biểu hiện thay đổi tri giác, chán ăn. Triệu chứng thường hết sau 3–7 ngày; ho, mệt có thể kéo dài hơn 2 tuần."

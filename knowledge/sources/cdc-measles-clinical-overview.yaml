@@ -1,0 +1,13 @@
+id: cdc-measles-clinical-overview
+type: web_page
+title: "Clinical Overview of Measles"
+publisher: "Centers for Disease Control and Prevention (CDC)"
+date: "2026-08-05"
+url: "https://www.cdc.gov/measles/hcp/clinical-overview/index.html"
+license_class: L0
+license_note: "Nội dung của cơ quan liên bang Hoa Kỳ, thuộc phạm vi công cộng."
+default_tier: B
+accessed: "2026-10-25"
+verified: true
+verified_by: "agent:pass-c"
+notes_vi: "Lượt C mở lại trang dành cho nhân viên y tế (cập nhật 05/08/2026). Tiền triệu: sốt có thể tới 40,5°C, mệt, ho, sổ mũi, viêm kết mạc; hạt Koplik đặc trưng. Ban dát sẩn xuất hiện khoảng 14 ngày sau phơi nhiễm, lan từ đầu xuống thân rồi chân. Lây từ 4 ngày trước đến 4 ngày sau khi phát ban. Biến chứng hay gặp: viêm tai giữa, viêm phế quản phổi, viêm thanh khí quản, tiêu chảy; viêm não khoảng 1/1.000 ca. Nhóm nguy cơ cao: trẻ dưới 5 tuổi, người lớn trên 20 tuổi, phụ nữ có thai, người suy giảm miễn dịch."

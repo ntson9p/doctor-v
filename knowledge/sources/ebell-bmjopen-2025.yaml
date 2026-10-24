@@ -1,0 +1,15 @@
+id: ebell-bmjopen-2025
+type: systematic_review
+title: "Accuracy of individual signs and symptoms and case definitions for the diagnosis of influenza in different age groups: a systematic review with meta-analysis"
+publisher: "BMJ Open 2025;15(3):e067574 (Ebell MH và cs.)"
+date: "2025-03"
+url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC11877276/"
+doi: "10.1136/bmjopen-2022-067574"
+pmid: "40032401"
+license_class: L2
+license_note: "CC BY-NC 4.0: dùng phi thương mại, ghi công."
+default_tier: A
+accessed: "2026-10-25"
+verified: true
+verified_by: "agent:pass-c"
+notes_vi: "Lượt C đọc toàn văn (PMC11877276) qua API Europe PMC (www.ebi.ac.uk/europepmc/webservices/rest). 67 nghiên cứu, phần lớn tuyển người có triệu chứng hô hấp cấp hoặc nghi cúm. Bảng 3 (độ nhạy): sốt tự cảm thấy hoặc đo 0,87; viêm mũi (coryza) 0,76; chảy nước mũi 0,70; rét run 0,61; ho 0,92; nghẹt mũi 0,69; mệt 0,69; đau cơ 0,59; chán ăn 0,51; đau đầu 0,65; đau khớp 0,29; đau ngực 0,25; đau họng 0,57 (độ đặc hiệu 0,48); phát ban 0,04; tiêu chảy 0,14. Mệt nhạy hơn nhiều ở người lớn so với trẻ dưới 5 tuổi (0,82 và 0,27); mệt và đau cơ kém nhạy ở trẻ dưới 5 tuổi."

@@ -1,0 +1,15 @@
+id: fortanier-plosone-2015
+type: primary_study
+title: "Parent-reported symptoms of acute otitis media during the first year of life: what is beneath the surface?"
+publisher: "PLoS One 2015;10(4):e0121572 (Fortanier AC, Venekamp RP, de Hoog ML và cs.)"
+date: "2015-04"
+url: "https://europepmc.org/article/MED/25849847"
+doi: "10.1371/journal.pone.0121572"
+pmid: "25849847"
+license_class: L1
+license_note: "CC BY (theo siêu dữ liệu Europe PMC)."
+default_tier: B
+accessed: "2026-10-25"
+verified: true
+verified_by: "agent:pass-c"
+notes_vi: "Lượt C đọc lại tóm tắt qua API Europe PMC (www.ebi.ac.uk/europepmc/webservices/rest). Đoàn hệ 1.260 trẻ ở Hà Lan theo dõi năm đầu đời: 624 đợt sốt (từ 38°C) kèm đau tai hoặc chảy tai trên 1.000 trẻ-năm; chỉ một nửa đi khám bác sĩ gia đình, 49% lần khám được xác định viêm tai giữa cấp."

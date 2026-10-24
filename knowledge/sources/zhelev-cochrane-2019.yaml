@@ -1,0 +1,15 @@
+id: zhelev-cochrane-2019
+type: systematic_review
+title: "Prehospital stroke scales as screening tools for early identification of stroke and transient ischemic attack"
+publisher: "Cochrane Database of Systematic Reviews 2019;4:CD011427 (Zhelev Z và cộng sự)"
+date: "2019"
+url: "https://europepmc.org/article/MED/30964558"
+doi: "10.1002/14651858.cd011427.pub2"
+pmid: "30964558"
+license_class: L3
+license_note: "Bản quyền nhà xuất bản: chỉ dùng dữ kiện kèm trích dẫn, không sao chép câu chữ."
+default_tier: A
+accessed: "2026-10-25"
+verified: true
+verified_by: "agent:pass-c"
+notes_vi: "Lượt C đọc tóm tắt qua API Europe PMC (lượt B đặt ID 'zhelev-2019-cochrane-stroke-scales'). 23 nghiên cứu: ROSIER dùng ở khoa cấp cứu có độ nhạy gộp 0,88 (khoảng dự báo khoảng 0,75–0,95), tức bỏ sót trung bình 12% người đột quỵ hoặc cơn thiếu máu não thoáng qua; FAST có độ chính xác tương tự ROSIER ở khoa cấp cứu; LAPSS trước viện độ nhạy 0,83."

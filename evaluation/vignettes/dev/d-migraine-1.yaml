@@ -1,0 +1,30 @@
+id: d-migraine-1
+set: dev
+title_vi: "Nữ 26 tuổi, đau nửa đầu phải giật giật, buồn nôn, sợ ánh sáng và tiếng ồn"
+narrative_vi: "Chị Y., 26 tuổi. Từ sáng đau nửa đầu bên phải, giật giật theo nhịp mạch, phải nằm nghỉ, đau tăng khi đi lại, buồn nôn, khó chịu với ánh sáng và tiếng ồn. Đã bị những cơn giống vậy vài lần mỗi năm, thường trước kỳ kinh. Không sốt, không nôn."
+patient:
+  age_years: 26
+  sex: female
+complaint: headache
+answers:
+  headache_location: one_side
+  headache_character: throbbing
+  headache_severity: moderate
+  headache_duration: h4_72
+  headache_course: recurrent_similar
+  headache_worse_activity: present
+  nausea: present
+  photophobia: present
+  phonophobia: present
+  vomiting: absent
+  visual_aura: absent
+  fever: absent
+default_unmentioned: absent
+expected:
+  condition: migraine
+  acceptable: []
+  triage: 5
+source:
+  basis: "Ca điển hình theo ICHD-3 mục 1.1 và NHS Migraine (cơn quen thuộc: nằm nghỉ phòng tối, tự chăm sóc)."
+  references: [ihs-ichd3-2018, nhs-migraine]
+author: "agent:pass-c"

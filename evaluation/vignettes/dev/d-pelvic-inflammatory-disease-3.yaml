@@ -1,0 +1,32 @@
+id: d-pelvic-inflammatory-disease-3
+set: dev
+title_vi: "Nữ 28 tuổi, đau bụng dưới hai bên 4 ngày, ra ít máu âm đạo, sốt nhẹ"
+narrative_vi: "Chị Q., 28 tuổi. Bốn ngày nay đau bụng dưới hai bên, đau tăng khi đi lại, sốt nhẹ 37,8°C, ra ít máu âm đạo ngoài kỳ kinh, khí hư vàng. Kinh nguyệt đều, vừa hết kỳ kinh 1 tuần trước, không có thai. Không đau dữ dội, không ngất."
+patient:
+  age_years: 28
+  sex: female
+complaint: abdominal_pain
+answers:
+  fever: present
+  fever_max_temp: lt_38
+  abd_pain_location: suprapubic
+  abd_pain_duration: d4_14
+  abd_pain_onset: gradual
+  abd_pain_worse_movement: present
+  vaginal_bleeding: present
+  abnormal_vaginal_discharge: present
+  pregnant: absent
+  missed_period: absent
+  pain_with_menses: absent
+  abd_pain_severe: absent
+  fainting_or_near_fainting: absent
+default_unmentioned: absent
+expected:
+  condition: pelvic_inflammatory_disease
+  acceptable: []
+  triage: 3
+source:
+  basis: "Dễ nhầm với thai ngoài tử cung (đau bụng dưới kèm ra máu); 315/QĐ-BYT mục 3 phân biệt bằng tình trạng nhiễm khuẩn và không có dấu hiệu có thai. Mức 3: CDC (ngoại trú thể nhẹ – vừa), NHS (khám khẩn khi đau bụng kèm ra máu bất thường)."
+  references: [byt-qd-315-2015, cdc-sti-pid, nhs-pid, nhs-stomach-ache]
+author: "agent:pass-c"
+notes_vi: "Ca dễ nhầm với thai ngoài tử cung (bệnh nguy hiểm)."

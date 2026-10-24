@@ -1,0 +1,15 @@
+id: canto-jama-2000
+type: primary_study
+title: "Prevalence, clinical characteristics, and mortality among patients with myocardial infarction presenting without chest pain"
+publisher: "JAMA 2000;283(24):3223–3229 (Canto JG và cộng sự)"
+date: "2000"
+url: "https://europepmc.org/article/MED/10866870"
+doi: "10.1001/jama.283.24.3223"
+pmid: "10866870"
+license_class: L3
+license_note: "Bản quyền nhà xuất bản: chỉ dùng dữ kiện kèm trích dẫn, không sao chép câu chữ."
+default_tier: B
+accessed: "2026-10-25"
+verified: true
+verified_by: "agent:pass-c"
+notes_vi: "Lượt C đọc tóm tắt qua API Europe PMC. Sổ bộ NRMI-2 (434.877 người nhồi máu cơ tim, Mỹ, 1994–1998): 33% không đau ngực khi đến viện; nhóm này lớn tuổi hơn (74,2 so với 66,9), nhiều nữ hơn (49,0% so với 38,0%), nhiều đái tháo đường hơn (32,6% so với 25,4%), từng suy tim nhiều hơn (26,4% so với 12,3%), đến viện muộn hơn (7,9 so với 5,3 giờ), tử vong trong viện cao hơn (23,3% so với 9,3%)."

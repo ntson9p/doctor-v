@@ -1,0 +1,12 @@
+id: nhs-pre-eclampsia
+type: web_page
+title: "Pre-eclampsia"
+publisher: "NHS (UK)"
+url: "https://www.nhs.uk/conditions/pre-eclampsia/"
+license_class: L1
+license_note: "Open Government Licence v3.0; bản chuyển thể không được trình bày như nội dung của NHS."
+default_tier: C
+accessed: "2026-10-25"
+verified: true
+verified_by: "agent:pass-c"
+notes_vi: "Lượt C mở trang (rà soát lần cuối 23/3/2026). Hay gặp từ tuần 20 của thai kỳ, có thể xảy ra bất kỳ lúc nào khi có thai, đôi khi trong vài ngày hoặc vài tuần sau sinh. Dấu hiệu sớm (huyết áp cao, đạm niệu) thường không tự nhận ra. Triệu chứng: đau đầu dữ dội không đỡ khi dùng thuốc giảm đau thông thường, nhìn mờ hoặc thấy chớp sáng, đau dưới sườn, phù mặt, tay hoặc chân đột ngột, thấy rất mệt, ợ nóng không đỡ khi dùng thuốc, nôn; các triệu chứng này cần được kiểm tra ngay (gọi khoa sản hoặc 111). Yếu tố nguy cơ: đái tháo đường, tăng huyết áp, bệnh thận, bệnh tự miễn, từng bị tiền sản giật, mang thai lần đầu, từ 40 tuổi, đa thai, người thân từng bị, cách lần có thai trước từ 10 năm, chỉ số khối cơ thể từ 35."

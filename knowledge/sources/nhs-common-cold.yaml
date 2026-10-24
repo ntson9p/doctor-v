@@ -1,0 +1,13 @@
+id: nhs-common-cold
+type: web_page
+title: "Common cold"
+publisher: "NHS (UK)"
+date: "2024-03-22"
+url: "https://www.nhs.uk/conditions/common-cold/"
+license_class: L1
+license_note: "Open Government Licence v3.0; bản chuyển thể không được trình bày như nội dung của NHS."
+default_tier: C
+accessed: "2026-10-25"
+verified: true
+verified_by: "agent:pass-c"
+notes_vi: "Lượt C mở lại trang (rà soát 22/03/2024, hạn rà soát 22/03/2027). Triệu chứng chính: nghẹt hoặc sổ mũi, hắt hơi, đau họng, khàn tiếng, ho, mệt và khó chịu; có thể có sốt, đau cơ, mất vị và ngửi, cảm giác căng tai, mặt. Triệu chứng tăng dần trong 2–3 ngày; người lớn đỡ sau 1–2 tuần, trẻ nhỏ có thể lâu hơn. Đi khám nếu sốt cao hơn 3 ngày, triệu chứng nặng lên, khó thở hoặc đau ngực, không đỡ sau 10 ngày, ho quá 3 tuần, có bệnh nền hoặc suy giảm miễn dịch. Không dùng aspirin cho trẻ dưới 16 tuổi; kháng sinh không được khuyên dùng."

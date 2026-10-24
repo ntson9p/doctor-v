@@ -1,0 +1,15 @@
+id: tu-eid-2007
+type: primary_study
+title: "Epidemiologic and virologic investigation of hand, foot, and mouth disease, southern Vietnam, 2005"
+publisher: "Emerging Infectious Diseases 2007;13(11):1733-1741 (Van Tu P, Thao NTT, Perera D và cs.)"
+date: "2007-11"
+url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC3375788/"
+doi: "10.3201/eid1311.070632"
+pmid: "18217559"
+license_class: L1
+license_note: "CC BY 4.0 (theo bản trên PMC); tạp chí của CDC."
+default_tier: B
+accessed: "2026-10-25"
+verified: true
+verified_by: "agent:pass-c"
+notes_vi: "Lượt C đọc toàn văn (PMC3375788) qua API Europe PMC (www.ebi.ac.uk/europepmc/webservices/rest). 764 trẻ nhập viện vì tay chân miệng ở TP.HCM năm 2005. Bệnh có quanh năm, tăng vào tháng 3–5 và tháng 9–12 (giai đoạn chuyển giữa mùa khô và mùa mưa). Chủ yếu dưới 5 tuổi, nhiều nhất 1–2 tuổi. Đau họng 43,1% (EV71) và 38,7% (CVA16); sổ mũi khoảng 42%; tiêu chảy 8–9%; co giật 10,4% và 1,9%; nôn 36,4% và 14,0%."

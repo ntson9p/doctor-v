@@ -1,0 +1,15 @@
+id: linn-lancet-1994
+type: primary_study
+title: "Prospective study of sentinel headache in aneurysmal subarachnoid haemorrhage"
+publisher: "Lancet 1994;344(8922):590–593 (Linn FH và cộng sự)"
+date: "1994"
+url: "https://europepmc.org/article/MED/7914965"
+doi: "10.1016/s0140-6736(94)91970-4"
+pmid: "7914965"
+license_class: L3
+license_note: "Bản quyền nhà xuất bản: chỉ dùng dữ kiện kèm trích dẫn, không sao chép câu chữ."
+default_tier: B
+accessed: "2026-10-25"
+verified: true
+verified_by: "agent:pass-c"
+notes_vi: "Lượt C đọc tóm tắt qua API Europe PMC (lượt B đặt ID 'linn-1994-sentinel-headache-gp'). 148 người đau đầu đột ngột, dữ dội do 252 bác sĩ đa khoa ở Hà Lan gặp trong 5 năm: 37 người (25%) xuất huyết dưới nhện; trong 103 người chỉ có đau đầu đơn thuần, 12 người (12%) xuất huyết dưới nhện; chỉ 2 người từng có cơn đau đầu đột ngột trước đó; 37% có bệnh thần kinh nặng."

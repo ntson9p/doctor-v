@@ -1,0 +1,30 @@
+id: d-subarachnoid-hemorrhage-3
+set: dev
+title_vi: "Nữ 29 tuổi, có bệnh đau nửa đầu, nay đột ngột đau đầu khác hẳn mọi lần, buồn nôn, sợ ánh sáng"
+narrative_vi: "Chị R., 29 tuổi, bị đau nửa đầu từ nhỏ. Tối nay đột ngột đau đầu dữ dội nhất từ trước tới nay, lên đỉnh chỉ trong vài giây, khác hẳn các cơn cũ; kèm buồn nôn, khó chịu với ánh sáng. Không cứng gáy, không yếu tay chân, không sốt, không nôn."
+patient:
+  age_years: 29
+  sex: female
+complaint: headache
+answers:
+  headache_thunderclap: present
+  headache_course: first_time
+  headache_severity: severe
+  headache_location: whole_head
+  headache_character: throbbing
+  headache_duration: lt_4h
+  nausea: present
+  photophobia: present
+  neck_stiffness: absent
+  vomiting: absent
+  fever: absent
+default_unmentioned: absent
+expected:
+  condition: subarachnoid_hemorrhage
+  acceptable: []
+  triage: 1
+source:
+  basis: "ICHD-3 mục 6.2.2: chẩn đoán nhầm hay gặp nhất là đau nửa đầu; khởi phát đột ngột là đặc điểm then chốt. NICE NG228; 3312/QĐ-BYT (2024)."
+  references: [ihs-ichd3-2018, nice-ng228, byt-qd-3312-2024]
+author: "agent:pass-c"
+notes_vi: "Ca dễ nhầm với đau nửa đầu."

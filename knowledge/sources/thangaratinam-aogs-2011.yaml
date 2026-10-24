@@ -1,0 +1,15 @@
+id: thangaratinam-aogs-2011
+type: systematic_review
+title: "How accurate are maternal symptoms in predicting impending complications in women with preeclampsia? A systematic review and meta-analysis"
+publisher: "Acta Obstetricia et Gynecologica Scandinavica 2011;90(6):564–573 (Thangaratinam S và cộng sự)"
+date: "2011"
+url: "https://europepmc.org/article/MED/21355860"
+doi: "10.1111/j.1600-0412.2011.01111.x"
+pmid: "21355860"
+license_class: L3
+license_note: "Bản quyền nhà xuất bản: chỉ dùng dữ kiện kèm trích dẫn, không sao chép câu chữ."
+default_tier: A
+accessed: "2026-10-25"
+verified: true
+verified_by: "agent:pass-c"
+notes_vi: "Lượt C đọc tóm tắt qua API Europe PMC (lượt B đặt ID 'thangaratinam-2011-pe-symptoms'). 6 nghiên cứu, 2.573 phụ nữ tiền sản giật: độ nhạy dự báo biến chứng mẹ của đau đầu 0,54, đau thượng vị 0,34, rối loạn thị giác 0,27, buồn nôn và nôn 0,24 (độ đặc hiệu 0,59; 0,83; 0,81; 0,87). Tổng quan đánh giá khả năng dự báo biến chứng, không cho tần suất triệu chứng chung."

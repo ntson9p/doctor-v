@@ -1,0 +1,15 @@
+id: dinnes-cochrane-2022
+type: systematic_review
+title: "Rapid, point-of-care antigen tests for diagnosis of SARS-CoV-2 infection"
+publisher: "Cochrane Database of Systematic Reviews 2022, CD013705.pub3 (Dinnes J và cs.)"
+date: "2022-07"
+url: "https://europepmc.org/article/MED/35866452"
+doi: "10.1002/14651858.CD013705.pub3"
+pmid: "35866452"
+license_class: L2
+license_note: "CC BY-NC (theo siêu dữ liệu Europe PMC)."
+default_tier: A
+accessed: "2026-10-25"
+verified: true
+verified_by: "agent:pass-c"
+notes_vi: "Lượt C đọc lại tóm tắt qua API Europe PMC (www.ebi.ac.uk/europepmc/webservices/rest). Ở người có triệu chứng: độ nhạy trung bình 73,0% (KTC 95% 69,3–76,4%), tuần đầu sau khởi phát 80,9%, tuần thứ hai 53,8%; độ đặc hiệu 99,1%. Độ nhạy khác nhau nhiều giữa các loại que (34,3–91,3% khi dùng đúng hướng dẫn)."

@@ -1,0 +1,30 @@
+id: d-migraine-2
+set: dev
+title_vi: "Nam 15 tuổi, đau đầu hai bên từng cơn 2–3 giờ, nôn, sợ ánh sáng"
+narrative_vi: "Em Đ., 15 tuổi. Mấy tháng nay có những cơn đau đầu cả hai bên, giật giật, kèm buồn nôn và nôn, phải vào phòng tối nằm; mỗi cơn khoảng 2–3 giờ. Cơn hôm nay giống các lần trước. Không sốt, không cứng gáy, không va đập đầu."
+patient:
+  age_years: 15
+  sex: male
+complaint: headache
+answers:
+  headache_location: both_sides
+  headache_character: throbbing
+  headache_severity: moderate
+  headache_duration: lt_4h
+  headache_course: recurrent_similar
+  nausea: present
+  vomiting: present
+  photophobia: present
+  phonophobia: absent
+  headache_worse_activity: present
+  fever: absent
+default_unmentioned: absent
+expected:
+  condition: migraine
+  acceptable: []
+  triage: 5
+source:
+  basis: "ICHD-3 mục 1.1: ở trẻ em và thiếu niên cơn có thể 2–72 giờ và hay đau hai bên. NHS Migraine: cơn quen thuộc tự chăm sóc."
+  references: [ihs-ichd3-2018, nhs-migraine, chakravarty-jhp-2008]
+author: "agent:pass-c"
+notes_vi: "Ca không điển hình: nam vị thành niên, đau hai bên, cơn ngắn dưới 4 giờ, có nôn."

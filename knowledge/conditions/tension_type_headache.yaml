@@ -1,0 +1,171 @@
+id: tension_type_headache
+names:
+  vi: "Đau đầu do căng thẳng"
+  vi_common: ["Đau đầu do căng thẳng", "Đau đầu căng cơ", "Đau đầu kiểu căng thẳng"]
+  en: "Tension-type headache"
+codes:
+  icd10: "G44.2"
+  icd10_verified: true
+summary_vi:
+  - "Loại đau đầu hay gặp nhất, cảm giác như bị bó chặt hoặc đè nặng ở hai bên đầu."
+  - "Thường đau nhẹ đến vừa, không buồn nôn, không tăng khi đi lại."
+  - "Hay liên quan đến căng thẳng, thiếu ngủ và thường tự hết trong vài giờ đến vài ngày."
+urgency: 5
+cant_miss: false
+specialties: [neurology, general_medicine]
+priors:
+  - complaint: headache
+    default: P1
+    by_age: { child_2m_5y: P3, child_5_12: P2, elder_75p: P2 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [stovner-jhp-2022, vo-jhp-2024, carlsen-fampract-2024, rasmussen-archneurol-1992, ihs-ichd3-2018, goldstein-cephalalgia-2006]
+      locator: "Stovner 2022, bảng 1; Vo 2024, bảng 2"
+      note: "Đau đầu căng thẳng là bệnh đau đầu phổ biến nhất: đang mắc ở 26% dân số (Stovner 2022; 0–9 tuổi 5,9%, 10–19 tuổi 25,1%, 20–64 tuổi 27,6%, từ 65 tuổi 32,2% nhưng nhóm này chỉ có 1 nghiên cứu); 54% sinh viên y Việt Nam trong 1 năm (Vo 2024); 63% dân số Đan Mạch bị thể từng đợt trong năm trước (Rasmussen 1992). Phần lớn thể thưa không cần đi khám (ICHD-3), nhưng vẫn là nguyên nhân hàng đầu khi người lớn tự tìm hiểu về đau đầu; ở phòng khám đa khoa 38% người đau đầu kéo dài là đau đầu căng thẳng (Carlsen 2024). Lượt C: P1 từ 13 đến 74 tuổi (lượt A hạ P2 từ 65 tuổi; lượt B giữ P1, có số liệu tỷ lệ mắc theo tuổi nên được chọn cho 65–74 tuổi); từ 75 tuổi lấy P2 của lượt A vì người lớn tuổi đau đầu có khả năng bệnh thực thể cao hơn (trên 50 tuổi, OR 3,3, Goldstein 2006) và doctor-v coi người từ 75 tuổi là nhóm nguy cơ cao. Trẻ 5–12 tuổi P2 (đau đầu do sốt, nhiễm vi rút chiếm phần lớn); trẻ dưới 5 tuổi P3 theo lượt B (Stovner: 0–9 tuổi vẫn có 5,9%), lượt A để P4. Không dùng hệ số theo giới: trong số người đau đầu, tỷ lệ đau đầu căng thẳng ở nữ chỉ bằng khoảng 0,9 lần nam (Stovner 2022; Vo 2024)."
+findings:
+  - finding: headache_location
+    dist: { one_side: 0.13, both_sides: 0.33, forehead_face: 0.18, back_neck: 0.15, whole_head: 0.21 }
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [rasmussen-cephalalgia-1991, inan-cephalalgia-1994, lee-headache-2025, ihs-ichd3-2018]
+      reported: "Đau hai bên 90% (Đan Mạch) và 82% (Thổ Nhĩ Kỳ); khảo sát trực tuyến ở Hàn Quốc ghi 51,4% có đau một bên."
+      note: "Lượt C lấy trung bình hai lượt (lệch 0,15): nguồn châu Âu cho rất ít đau một bên, khảo sát châu Á tự trả lời cho tỷ lệ cao hơn nhiều, nên để 'một bên' 0,13, thấp hơn nền 0,20 nhưng không quá thấp."
+  - finding: headache_character
+    dist: { throbbing: 0.24, pressing: 0.76 }
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [rasmussen-cephalalgia-1991, inan-cephalalgia-1994, lee-headache-2025, nhs-tension-headaches]
+      reported: "Đau kiểu ép chặt 78% (Đan Mạch), 52% (Thổ Nhĩ Kỳ); 53,3% không theo nhịp mạch ở nhóm điển hình (Hàn Quốc)."
+  - finding: headache_severity
+    dist: { mild: 0.55, moderate: 0.42, severe: 0.03 }
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [rasmussen-cephalalgia-1991, ihs-ichd3-2018]
+      reported: "Mức nhẹ hoặc vừa ở 99%."
+      note: "Tách nhẹ và vừa là ước lượng; hai lượt cùng chọn phân bố này."
+  - finding: headache_worse_activity
+    freq: occasional
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [rasmussen-cephalalgia-1991, inan-cephalalgia-1994, smetana-archintmed-2000]
+      reported: "72% không tăng khi vận động (tức khoảng 28% có tăng) trong dân số Đan Mạch; tăng ở 16% (Thổ Nhĩ Kỳ)."
+      note: "LR+ của dấu hiệu này cho đau nửa đầu so với đau đầu căng thẳng là 3,7 (Smetana 2000), phù hợp với cặp mức very_frequent/occasional."
+  - finding: headache_duration
+    dist: { lt_4h: 0.47, h4_72: 0.40, gt_3d: 0.13 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [ihs-ichd3-2018, nhs-tension-headaches]
+      note: "Mỗi đợt kéo dài 30 phút đến 7 ngày (ICHD-3), có khi vài ngày (NHS). Phân bố là ước lượng (trung bình hai lượt)."
+  - finding: headache_course
+    dist: { first_time: 0.15, recurrent_similar: 0.80, progressive: 0.05 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [ihs-ichd3-2018]
+      note: "Tiêu chuẩn cần ít nhất 10 đợt (ICHD-3) nên phần lớn đã bị nhiều lần giống vậy; đau nặng dần trong vài tuần không phải kiểu của bệnh này. Hai lượt cùng ước phân bố này."
+  - finding: nausea
+    freq: rare
+    evidence:
+      tier: A
+      basis: numeric
+      sources: [smetana-archintmed-2000, ihs-ichd3-2018]
+      reported: "LR+ của buồn nôn cho đau nửa đầu so với đau đầu căng thẳng là 19,2."
+      note: "Tiêu chuẩn ICHD-3 yêu cầu không buồn nôn. Với tần suất khoảng 80% ở đau nửa đầu, LR 19 tương ứng khoảng 4% ở đau đầu căng thẳng."
+  - finding: vomiting
+    freq: rare
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [ihs-ichd3-2018]
+      note: "Tiêu chuẩn ICHD-3: không nôn."
+  - finding: photophobia
+    freq: occasional
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [lee-headache-2025, ihs-ichd3-2018, smetana-archintmed-2000]
+      reported: "Nhóm đau đầu căng thẳng có sợ ánh sáng chiếm 10,4% (Hàn Quốc); ICHD-3 cho phép có một trong sợ ánh sáng hoặc sợ tiếng ồn."
+      note: "LR+ của sợ ánh sáng cho đau nửa đầu so với đau đầu căng thẳng là 5,8 (Smetana 2000)."
+  - finding: phonophobia
+    freq: occasional
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [ihs-ichd3-2018, smetana-archintmed-2000]
+      note: "ICHD-3 cho phép có một trong hai; LR+ 5,2 cho đau nửa đầu (Smetana 2000) tương ứng khoảng 15% ở đau đầu căng thẳng."
+  - finding: stress_poor_sleep
+    freq: frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [guruswamy-neurolindia-2022, rasmussen-pain-1993, nhs-tension-headaches]
+      reported: "Yếu tố khởi phát: căng thẳng 72,1%, ngủ ít 49,4% (Guruswamy 2022)."
+      note: "Căng thẳng tinh thần là yếu tố khởi phát nổi bật nhất (Rasmussen 1993). Câu hỏi chỉ hỏi tuần qua và tỷ lệ nền 20% có thể thấp so với thực tế, nên chọn frequent thay vì very_frequent. Cũng hay gặp ở đau nửa đầu nên giúp phân biệt với đau đầu do nhiễm trùng hơn là với đau nửa đầu."
+  - finding: visual_aura
+    freq: very_rare
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [ihs-ichd3-2018, smetana-archintmed-2000]
+      note: "Chỉ lượt B có; lượt C giữ vì tiền triệu thị giác thuộc về đau nửa đầu (ICHD-3; Smetana 2000: có ở 84% người đau nửa đầu có tiền triệu), không có trong đau đầu căng thẳng. Mức very_rare thấp hơn tỷ lệ nền 1% của câu hỏi."
+  - finding: blurred_vision
+    freq: rare
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [nhs-tension-headaches]
+      note: "Chỉ lượt B có; lượt C giữ. NHS khuyên khám khẩn khi đau đầu dữ dội kèm nhìn mờ hoặc nhìn đôi (gợi ý nguyên nhân khác). Mức rare thấp hơn tỷ lệ nền 5%."
+  - finding: neck_stiffness
+    freq: very_rare
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [ihs-ichd3-2018]
+      note: "Chỉ lượt A có (để rare). Mức rare cao hơn tỷ lệ nền 1% của câu hỏi, sẽ làm câu trả lời 'Có' tăng khả năng bệnh này, ngược với ý của lượt A; lượt C đổi thành very_rare. Có thể căng, mỏi cơ cổ vai (tăng nhạy cảm cơ quanh sọ theo ICHD-3), nhưng cứng gáy thật (không cúi được cằm chạm ngực) không phải đặc điểm của bệnh; quy tắc cứng gáy vẫn khuyên đi cấp cứu."
+  - finding: vision_loss_or_double
+    freq: very_rare
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [ihs-ichd3-2018, nhs-tension-headaches]
+      locator: "ICHD-3 mục 2.1–2.2; NHS Tension headaches (urgent GP, Call 999)"
+      note: "Lượt C thêm khi kiểm tra ca phát triển d-stroke-3: đau đầu căng thẳng không có triệu chứng thần kinh (ICHD-3), còn NHS xếp nhìn đôi vào lý do khám khẩn và mất thị lực vào lý do gọi 999. Mức very_rare thấp hơn tỷ lệ nền 1%, nên trả lời 'Có' làm giảm khả năng bệnh này; quy tắc rf_vision_loss vẫn xếp mức 2."
+  - finding: sudden_loss_of_balance
+    freq: very_rare
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [ihs-ichd3-2018, nhs-tension-headaches, nhs-headaches]
+      locator: "ICHD-3 mục 2.1–2.2; NHS Tension headaches và Headaches (Call 999: khó giữ thăng bằng, khó đi)"
+      note: "Lượt C thêm khi kiểm tra ca phát triển d-stroke-2: đột ngột mất thăng bằng không phải đặc điểm của đau đầu căng thẳng (ICHD-3); NHS xếp khó giữ thăng bằng, khó đi kèm đau đầu vào nhóm gọi 999 hoặc đến cấp cứu. Mức very_rare thấp hơn tỷ lệ nền 1%; quy tắc rf_sudden_balance_loss vẫn xếp mức 2."
+  - finding: fever
+    freq: rare
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [ihs-ichd3-2018, nhs-tension-headaches]
+      note: "Đau đầu kiểu căng thẳng xuất hiện cùng lúc với một bệnh khác như sốt do nhiễm trùng được xếp là đau đầu thứ phát (ICHD-3). Mức rare thấp hơn tỷ lệ nền 5%."
+warning_signs: [headache_thunderclap, es_stroke_signs, neck_stiffness, confusion, vision_loss_or_double, seizure_recent]
+self_care_vi:
+  - "Nghỉ ngơi ở nơi yên tĩnh, ngủ đủ giấc."
+  - "Thư giãn, vận động nhẹ, xoa bóp vùng cổ vai."
+  - "Bớt uống cà phê, trà đặc nếu đang uống nhiều."
+  - "Hỏi dược sĩ về thuốc giảm đau không kê đơn phù hợp."
+  - "Không dùng thuốc giảm đau quá thường xuyên, vì có thể làm đau đầu kéo dài hơn."
+see_doctor_vi:
+  - "Đặt lịch khám nếu đau đầu nhiều lần mỗi tuần, đau nặng hơn hoặc tự chăm sóc không đỡ."
+  - "Đi khám ngay nếu đau đầu kiểu mới, nặng dần, hoặc kèm sốt, nôn."
+  - "Gọi 115 nếu đau đầu đột ngột dữ dội, yếu tay chân, nói khó hoặc lú lẫn."
+review:
+  status: source_checked
+  authors: ["agent:pass-a", "agent:pass-b"]
+  reconciler: "agent:pass-c"
+  doctor_reviewer: null
+  updated: "2026-10-24"
+  notes_vi: "Lượt C đã đối chiếu 15 liên kết và mở lại mọi nguồn được trích; thêm 3 liên kết very_rare (đau đầu sét đánh theo ghi chú lô 4; đột ngột mất thị lực và mất thăng bằng sau khi chạy ca phát triển), tổng 18 liên kết; đổi cứng gáy từ rare thành very_rare. Bác sĩ cần xem: (1) prior P1 ngang đau nửa đầu: đau đầu căng thẳng phổ biến hơn trong dân số nhưng đau nửa đầu làm người bệnh đi khám nhiều hơn; (2) số liệu đặc điểm cơn đau chủ yếu từ Đan Mạch, Thổ Nhĩ Kỳ, Hàn Quốc; chưa có nghiên cứu đặc điểm cơn đau ở người Việt; (3) tỷ lệ đau một bên khác nhiều giữa các nghiên cứu; (4) tỷ lệ sợ ánh sáng, sợ tiếng ồn suy từ tiêu chuẩn ICHD-3 và LR, chưa có tần suất trực tiếp."

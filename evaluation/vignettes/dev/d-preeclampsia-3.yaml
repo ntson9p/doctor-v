@@ -1,0 +1,34 @@
+id: d-preeclampsia-3
+set: dev
+title_vi: "Thai phụ 36 tuổi, thai 35 tuần, đau vùng trên rốn lan dưới sườn phải, nôn, ợ nóng"
+narrative_vi: "Chị D., 36 tuổi, mang thai 35 tuần. Từ tối qua đau tức vùng trên rốn lan sang dưới sườn phải, nôn 2 lần, ợ nóng uống thuốc dạ dày không đỡ, hơi nhức đầu. Chưa đo huyết áp. Không sốt, không tiêu chảy, không ra máu âm đạo."
+patient:
+  age_years: 36
+  sex: female
+complaint: abdominal_pain
+answers:
+  pregnant: present
+  gestational_age: ge_20w
+  abd_pain_location: epigastric
+  abd_pain_duration: h6_24
+  abd_pain_onset: gradual
+  vomiting: present
+  nausea: present
+  heartburn: present
+  headache: present
+  fever: absent
+  diarrhea: absent
+  vaginal_bleeding: absent
+  abd_pain_severe: absent
+  persistent_vomiting: absent
+  bp_measured: unknown
+default_unmentioned: absent
+expected:
+  condition: preeclampsia
+  acceptable: []
+  triage: 2
+source:
+  basis: "315/QĐ-BYT xếp đau vùng thượng vị hoặc hạ sườn phải và nhức đầu vào tiêu chuẩn tiền sản giật nặng; NICE NG133 khuyến cáo 1.1.1 và NHS Pre-eclampsia (đau dưới sườn, nôn, ợ nóng không đỡ khi dùng thuốc: kiểm tra ngay). Dễ nhầm với bệnh dạ dày, túi mật."
+  references: [byt-qd-315-2015, nice-ng133, nhs-pre-eclampsia]
+author: "agent:pass-c"
+notes_vi: "Ca dễ nhầm với viêm loét dạ dày, viêm túi mật (lô 3)."

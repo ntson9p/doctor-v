@@ -1,0 +1,15 @@
+id: le-fcvm-2025
+type: primary_study
+title: "Outcomes of percutaneous coronary intervention in COVID-19-positive acute coronary syndrome patients: a retrospective study in Vietnam"
+publisher: "Frontiers in Cardiovascular Medicine 2025;12:1563415 (Le DCP, Nguyen NTM, Vo QD)"
+date: "2025"
+url: "https://europepmc.org/article/MED/40709202"
+doi: "10.3389/fcvm.2025.1563415"
+pmid: "40709202"
+license_class: L1
+license_note: "CC BY 4.0 (theo Europe PMC): được dùng và chuyển thể, ghi công và nêu thay đổi."
+default_tier: B
+accessed: "2026-10-25"
+verified: true
+verified_by: "agent:pass-c"
+notes_vi: "Lượt C đọc toàn văn PMC12286974 qua API Europe PMC (lượt B đặt ID 'le-2025-acs-pci-vietnam'). 118 người hội chứng mạch vành cấp được can thiệp tại một bệnh viện tuyến cuối ở TP. Hồ Chí Minh (2019–2022): tuổi trung bình khoảng 64; nam khoảng 59%; tăng huyết áp khoảng 45%; đái tháo đường khoảng 33%; hút thuốc khoảng 20%."

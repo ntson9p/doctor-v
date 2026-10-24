@@ -1,0 +1,15 @@
+id: canto-jama-2012
+type: primary_study
+title: "Association of age and sex with myocardial infarction symptom presentation and in-hospital mortality"
+publisher: "JAMA 2012;307(8):813–822 (Canto JG và cộng sự)"
+date: "2012"
+url: "https://europepmc.org/article/MED/22357832"
+doi: "10.1001/jama.2012.199"
+pmid: "22357832"
+license_class: L3
+license_note: "Bản quyền nhà xuất bản: chỉ dùng dữ kiện kèm trích dẫn, không sao chép câu chữ."
+default_tier: B
+accessed: "2026-10-25"
+verified: true
+verified_by: "agent:pass-c"
+notes_vi: "Lượt C đọc tóm tắt qua API Europe PMC (chưa mở được toàn văn). 1.143.513 người nhồi máu cơ tim (NRMI, 1994–2006): không đau ngực ở 42,0% nữ và 30,7% nam; nữ nhập viện ở tuổi cao hơn; khác biệt theo giới về biểu hiện và tử vong giảm dần khi tuổi tăng."

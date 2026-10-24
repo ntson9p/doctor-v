@@ -1,0 +1,30 @@
+id: d-tension-type-headache-2
+set: dev
+title_vi: "Bé gái 10 tuổi, đau đầu nhẹ vùng trán sau giờ học, đã bị nhiều lần"
+narrative_vi: "Bé N., 10 tuổi. Mấy tháng nay thỉnh thoảng đau đầu nhẹ vùng trán sau giờ học, như bị đè nặng, nghỉ ngơi khoảng 1–2 giờ thì hết. Gần đây bé lo lắng vì sắp thi. Không sốt, không nôn, không đau về đêm, vẫn chơi bình thường."
+patient:
+  age_years: 10
+  sex: female
+complaint: headache
+answers:
+  headache_location: forehead_face
+  headache_character: pressing
+  headache_severity: mild
+  headache_duration: lt_4h
+  headache_course: recurrent_similar
+  stress_poor_sleep: present
+  fever: absent
+  vomiting: absent
+  nausea: absent
+  photophobia: absent
+  headache_worse_activity: absent
+default_unmentioned: absent
+expected:
+  condition: tension_type_headache
+  acceptable: []
+  triage: 5
+source:
+  basis: "ICHD-3 mục 2.1–2.2; NHS Tension headaches: ở trẻ dưới 12 tuổi chỉ cần khám khẩn khi đau làm thức giấc ban đêm, có ngay khi thức dậy, nặng dần, do ho, hắt hơi, cúi, hoặc kèm nôn; ca này không có các dấu hiệu đó."
+  references: [ihs-ichd3-2018, nhs-tension-headaches, stovner-jhp-2022]
+author: "agent:pass-c"
+notes_vi: "Ca không điển hình: trẻ em (prior thấp hơn người lớn), đau vùng trán."

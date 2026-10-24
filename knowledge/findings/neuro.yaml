@@ -17,7 +17,8 @@
     text_vi: "Cơn đau có bùng lên rất mạnh chỉ trong vài phút không?"
   requires:
     - { finding: headache, is: present }
-  leak: specific
+  leak: 0.002
+  leak_note: "Ở tuyến cơ sở, 25% người đau đầu đột ngột, dữ dội là xuất huyết dưới nhện (Linn 1994), nên kiểu đau này rất hiếm ở người không có bệnh liên kết; 1% làm xuất huyết dưới nhện tụt hạng (lượt C lô 4). Bệnh lành tính không cần liên kết với dấu hiệu này."
 - id: headache_course
   kind: history
   type: categorical

@@ -1,0 +1,15 @@
+id: goldstein-cephalalgia-2006
+type: primary_study
+title: "Headache in United States emergency departments: demographics, work-up and frequency of pathological diagnoses"
+publisher: "Cephalalgia 2006;26(6):684–690 (Goldstein JN, Camargo CA, Pelletier AJ, Edlow JA)"
+date: "2006"
+url: "https://europepmc.org/article/MED/16686907"
+doi: "10.1111/j.1468-2982.2006.01093.x"
+pmid: "16686907"
+license_class: L3
+license_note: "Bản quyền nhà xuất bản: chỉ dùng dữ kiện kèm trích dẫn, không sao chép câu chữ."
+default_tier: B
+accessed: "2026-10-25"
+verified: true
+verified_by: "agent:pass-c"
+notes_vi: "Lượt C đọc tóm tắt qua API Europe PMC (lượt B đặt ID 'goldstein-2006-ed-headache'). Mẫu đại diện lượt khám cấp cứu người lớn ở Mỹ (1992–2001): đau đầu chiếm 2,2% lượt khám; người trên 50 tuổi có khả năng được chẩn đoán bệnh thực thể cao hơn (OR 3,3)."

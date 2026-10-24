@@ -1,0 +1,15 @@
+id: hoangvu-ccd-2025
+type: primary_study
+title: "An Euroheart-Based Percutaneous Coronary Intervention Registry in Vietnam: Design, Rationale, and Preliminary Results"
+publisher: "Catheterization and Cardiovascular Interventions 2025;106(2):1425–1432 (Hoang Vu V và cộng sự)"
+date: "2025"
+url: "https://europepmc.org/article/MED/40536053"
+doi: "10.1002/ccd.31700"
+pmid: "40536053"
+license_class: L2
+license_note: "CC BY-NC (theo Europe PMC): chỉ dùng dữ kiện kèm trích dẫn, phi thương mại."
+default_tier: B
+accessed: "2026-10-25"
+verified: true
+verified_by: "agent:pass-c"
+notes_vi: "Lượt C đọc toàn văn PMC12336756 qua API Europe PMC. Sổ đăng ký can thiệp mạch vành theo chuẩn EuroHeart tại Bệnh viện Đại học Y Dược TP. Hồ Chí Minh (12/2023–10/2024): 1.168 người, tuổi trung bình 64,1, nam 68,8%; tăng huyết áp 73,1%, đái tháo đường týp 2 37,2%, đang hút thuốc 27,3% (đã bỏ 26,2%); lý do vào viện: đau ngực 83,5%, khó thở 7,4%; 27,8% nhồi máu cơ tim ST chênh lên."

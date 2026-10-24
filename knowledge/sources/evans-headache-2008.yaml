@@ -1,0 +1,15 @@
+id: evans-headache-2008
+type: primary_study
+title: "The use of questions to determine the presence of photophobia and phonophobia during migraine"
+publisher: "Headache 2008;48(3):395–397 (Evans RW, Seifert T, Kailasam J, Mathew NT)"
+date: "2008"
+url: "https://europepmc.org/article/MED/17868350"
+doi: "10.1111/j.1526-4610.2007.00920.x"
+pmid: "17868350"
+license_class: L3
+license_note: "Bản quyền nhà xuất bản: chỉ dùng dữ kiện kèm trích dẫn, không sao chép câu chữ."
+default_tier: B
+accessed: "2026-10-25"
+verified: true
+verified_by: "agent:pass-c"
+notes_vi: "Lượt C đọc tóm tắt qua API Europe PMC. 85 người đau nửa đầu ở phòng khám đau đầu và thần kinh: 24% phủ nhận nhạy cảm với ánh sáng và tiếng ồn khi hỏi thông thường; khi hỏi thêm câu cụ thể, 93% nhận có nhạy cảm."

@@ -1,0 +1,15 @@
+id: yen-jogc-2011
+type: primary_study
+title: "Using clinical symptoms to predict adverse maternal and perinatal outcomes in women with preeclampsia: data from the PIERS (Pre-eclampsia Integrated Estimate of RiSk) study"
+publisher: "Journal of Obstetrics and Gynaecology Canada 2011;33(8):803–809 (Yen TW và cộng sự)"
+date: "2011"
+url: "https://europepmc.org/article/MED/21846435"
+doi: "10.1016/s1701-2163(16)34983-0"
+pmid: "21846435"
+license_class: L3
+license_note: "Bản quyền nhà xuất bản: chỉ dùng dữ kiện kèm trích dẫn, không sao chép câu chữ."
+default_tier: B
+accessed: "2026-10-25"
+verified: true
+verified_by: "agent:pass-c"
+notes_vi: "Lượt C đọc tóm tắt qua API Europe PMC (lượt B đặt ID 'yen-2011-piers-symptoms'). Nghiên cứu PIERS đa trung tâm, 2.023 phụ nữ tiền sản giật: 52% có ít nhất một triệu chứng (buồn nôn hoặc nôn nặng, đau đầu, rối loạn thị giác, đau hạ sườn phải hoặc thượng vị, đau bụng hoặc ra máu âm đạo, đau ngực hoặc khó thở); không triệu chứng đơn lẻ nào dự báo tốt biến chứng."

@@ -1,0 +1,12 @@
+id: nhs-tension-headaches
+type: web_page
+title: "Tension headaches"
+publisher: "NHS (UK)"
+url: "https://www.nhs.uk/conditions/tension-headaches/"
+license_class: L1
+license_note: "Open Government Licence v3.0; bản chuyển thể không được trình bày như nội dung của NHS."
+default_tier: C
+accessed: "2026-10-25"
+verified: true
+verified_by: "agent:pass-c"
+notes_vi: "Lượt C mở trang (rà soát lần cuối 01/8/2025). Đau hai bên đầu, mặt hoặc cổ, cảm giác bị ép hoặc thắt chặt quanh đầu, vẫn sinh hoạt được; thường kéo dài ít nhất 30 phút, có khi vài ngày. Liên quan căng thẳng, rối loạn giấc ngủ, cà phê; dùng thuốc giảm đau quá thường xuyên có thể gây đau đầu do lạm dụng thuốc. Khám bác sĩ nếu đau nhiều lần mỗi tuần hoặc nặng, đau theo nhịp mạch một bên, kèm buồn nôn, nôn, sợ ánh sáng, tiếng ồn; khám khẩn hoặc 111 nếu đau dữ dội kèm đau hàm khi nhai, nhìn mờ hoặc nhìn đôi, đau da đầu, tê yếu tay chân; gọi 999 nếu đau đột ngột cực kỳ dữ dội, hoặc kèm nói khó, mất thị lực, li bì, lú lẫn, sốt rất cao."

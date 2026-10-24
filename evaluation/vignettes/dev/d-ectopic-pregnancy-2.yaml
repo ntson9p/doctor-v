@@ -1,0 +1,28 @@
+id: d-ectopic-pregnancy-2
+set: dev
+title_vi: "Nữ 16 tuổi, chậm kinh 3 tuần, đau âm ỉ bụng dưới bên phải, chưa thử thai"
+narrative_vi: "Em L., 16 tuổi, đã có quan hệ tình dục với bạn trai. Kinh nguyệt vốn không đều, lần này chậm khoảng 3 tuần nhưng chưa thử thai. Từ sáng nay đau âm ỉ bụng dưới bên phải, vẫn đi lại được. Không ra máu âm đạo, không sốt, không buồn nôn."
+patient:
+  age_years: 16
+  sex: female
+complaint: abdominal_pain
+answers:
+  pregnant: unknown
+  missed_period: present
+  vaginal_bleeding: absent
+  abd_pain_location: right_lower
+  abd_pain_onset: gradual
+  abd_pain_duration: h6_24
+  abd_pain_severe: absent
+  fever: absent
+  nausea: absent
+default_unmentioned: absent
+expected:
+  condition: ectopic_pregnancy
+  acceptable: []
+  triage: 2
+source:
+  basis: "Biểu hiện sớm ở người chưa biết mình có thai: 315/QĐ-BYT (chậm kinh nhiều khi không rõ, là cấp cứu sản khoa); NHS (có triệu chứng và có thể có thai thì đi khám ngay, kể cả khi chưa thử thai); NICE NG126 khuyến cáo 1.4.5 (nghĩ đến có thai ở mọi phụ nữ tuổi sinh đẻ)."
+  references: [byt-qd-315-2015, nhs-ectopic-pregnancy, nice-ng126]
+author: "agent:pass-c"
+notes_vi: "Ca không điển hình: tuổi vị thành niên, chưa thử thai, chưa ra máu."

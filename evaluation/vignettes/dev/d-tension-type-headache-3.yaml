@@ -1,0 +1,32 @@
+id: d-tension-type-headache-3
+set: dev
+title_vi: "Nam 62 tuổi, tăng huyết áp, đau đầu ê ẩm hai bên như mọi lần, huyết áp 150/95"
+narrative_vi: "Ông C., 62 tuổi, bị tăng huyết áp đang uống thuốc. Nhiều năm nay thỉnh thoảng đau đầu ê ẩm hai bên, như đè nặng, nhất là khi mất ngủ. Hôm nay đau như mọi lần, mức vừa, đo huyết áp 150/95. Không yếu tay chân, không nói khó, không đi loạng choạng, không nôn."
+patient:
+  age_years: 62
+  sex: male
+complaint: headache
+answers:
+  hypertension_known: present
+  bp_measured: high
+  headache_location: both_sides
+  headache_character: pressing
+  headache_severity: moderate
+  headache_duration: h4_72
+  headache_course: recurrent_similar
+  stress_poor_sleep: present
+  headache_worse_activity: absent
+  nausea: absent
+  vomiting: absent
+  photophobia: absent
+  fever: absent
+default_unmentioned: absent
+expected:
+  condition: tension_type_headache
+  acceptable: []
+  triage: 5
+source:
+  basis: "Đau đầu cũ, giống mọi lần, đặc điểm đau đầu căng thẳng (ICHD-3; NHS: tự chăm sóc); huyết áp 150/95 ở người đang điều trị không phải tình trạng cấp (NICE NG136: chỉ cần khám trong ngày khi từ 180/120 kèm triệu chứng). Dễ nhầm với đột quỵ hoặc cơn tăng huyết áp."
+  references: [ihs-ichd3-2018, nhs-tension-headaches, nice-ng136]
+author: "agent:pass-c"
+notes_vi: "Ca dễ nhầm với đột quỵ (bệnh nguy hiểm). Nên hẹn khám định kỳ để chỉnh thuốc huyết áp, không cần khám gấp."

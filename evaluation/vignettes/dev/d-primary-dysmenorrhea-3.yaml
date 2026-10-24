@@ -1,0 +1,34 @@
+id: d-primary-dysmenorrhea-3
+set: dev
+title_vi: "Nữ 19 tuổi, đau quặn bụng dưới bên phải ngày đầu có kinh, buồn nôn nhẹ"
+narrative_vi: "Em K., 19 tuổi, tháng nào cũng đau bụng khi có kinh. Hôm nay là ngày thứ nhất của kỳ kinh, đau quặn nhiều ở bụng dưới bên phải, buồn nôn nhẹ. Không sốt, đau không tăng khi đi lại, không bắt đầu từ quanh rốn, vẫn ăn uống được."
+patient:
+  age_years: 19
+  sex: female
+complaint: abdominal_pain
+answers:
+  pain_with_menses: present
+  abd_pain_location: right_lower
+  abd_pain_colicky: present
+  abd_pain_duration: gt_2w
+  abd_pain_onset: gradual
+  nausea: present
+  fever: absent
+  abd_pain_worse_movement: absent
+  abd_pain_migrated_rlq: absent
+  abd_pain_severe: absent
+  vomiting: absent
+  pregnant: absent
+  missed_period: absent
+  vaginal_bleeding: absent
+  loss_of_appetite: absent
+default_unmentioned: absent
+expected:
+  condition: primary_dysmenorrhea
+  acceptable: []
+  triage: 5
+source:
+  basis: "Đau trùng kỳ kinh, lặp lại mỗi tháng, không sốt, không có dấu hiệu kích thích phúc mạc (MSD; NHS Period pain: tự chăm sóc). Dễ nhầm với viêm ruột thừa vì đau hố chậu phải kèm buồn nôn."
+  references: [msd-dysmenorrhea, nhs-period-pain]
+author: "agent:pass-c"
+notes_vi: "Ca dễ nhầm với viêm ruột thừa cấp (bệnh nguy hiểm, lô 3). Thời gian đau chọn 'đau tái đi tái lại'."

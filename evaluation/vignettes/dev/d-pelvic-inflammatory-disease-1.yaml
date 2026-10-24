@@ -1,0 +1,33 @@
+id: d-pelvic-inflammatory-disease-1
+set: dev
+title_vi: "Nữ 23 tuổi, đau bụng dưới hai bên 3 ngày, sốt, khí hư hôi"
+narrative_vi: "Chị N., 23 tuổi, có bạn tình mới khoảng 2 tháng nay. Ba ngày nay đau bụng dưới cả hai bên, đau tăng khi đi lại, sốt 38,5°C, khí hư nhiều, có mùi hôi. Không chậm kinh, không có thai, không ra máu âm đạo, đau không dữ dội."
+patient:
+  age_years: 23
+  sex: female
+complaint: abdominal_pain
+answers:
+  fever: present
+  fever_max_temp: t38_39
+  fever_duration: d3_5
+  abd_pain_location: suprapubic
+  abd_pain_duration: d1_3
+  abd_pain_onset: gradual
+  abd_pain_worse_movement: present
+  abnormal_vaginal_discharge: present
+  new_sexual_partner: present
+  pregnant: absent
+  missed_period: absent
+  vaginal_bleeding: absent
+  dysuria: absent
+  abd_pain_severe: absent
+  nausea: absent
+default_unmentioned: absent
+expected:
+  condition: pelvic_inflammatory_disease
+  acceptable: []
+  triage: 3
+source:
+  basis: "Ca điển hình theo 315/QĐ-BYT (viêm phần phụ cấp: đau bụng dưới hai bên, tăng khi đi lại, sốt, khí hư nhiều) và CDC 2021 (thể nhẹ – vừa điều trị ngoại trú, bắt đầu điều trị ngay); NHS: khám khẩn trong ngày."
+  references: [byt-qd-315-2015, cdc-sti-pid, nhs-pid]
+author: "agent:pass-c"

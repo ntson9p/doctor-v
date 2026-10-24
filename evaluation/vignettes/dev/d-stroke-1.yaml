@@ -1,0 +1,23 @@
+id: d-stroke-1
+set: dev
+title_vi: "Nam 70 tuổi, tăng huyết áp, đột ngột đau đầu, nôn, yếu nửa người phải, nói ngọng"
+narrative_vi: "Ông M., 70 tuổi, tăng huyết áp nhiều năm, hay quên uống thuốc. Một giờ trước đột ngột đau đầu, nôn, tay chân phải yếu, nói ngọng, méo miệng. Con trai dùng ứng dụng để kiểm tra cho ông."
+patient:
+  age_years: 70
+  sex: male
+complaint: headache
+answers:
+  es_stroke_signs: present
+  vomiting: present
+  hypertension_known: present
+  headache_duration: lt_4h
+  headache_course: first_time
+default_unmentioned: absent
+expected:
+  condition: stroke
+  acceptable: []
+  triage: 1
+source:
+  basis: "Ca điển hình theo 3312/QĐ-BYT (2024) (khởi phát đột ngột, liệt nửa người, rối loạn ngôn ngữ; đau đầu, nôn gợi ý chảy máu não) và NHS Stroke (FAST: gọi cấp cứu ngay)."
+  references: [byt-qd-3312-2024, nhs-stroke-symptoms]
+author: "agent:pass-c"

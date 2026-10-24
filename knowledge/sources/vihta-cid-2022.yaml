@@ -1,0 +1,15 @@
+id: vihta-cid-2022
+type: primary_study
+title: "Omicron-associated changes in SARS-CoV-2 symptoms in the United Kingdom"
+publisher: "Clinical Infectious Diseases 2022 (Vihta KD, Pouwels KB, Peto TE và cs.)"
+date: "2022-08"
+url: "https://europepmc.org/article/MED/35917440"
+doi: "10.1093/cid/ciac613"
+pmid: "35917440"
+license_class: L1
+license_note: "CC BY (theo siêu dữ liệu Europe PMC)."
+default_tier: B
+accessed: "2026-10-25"
+verified: true
+verified_by: "agent:pass-c"
+notes_vi: "Lượt C đọc lại tóm tắt qua API Europe PMC (www.ebi.ac.uk/europepmc/webservices/rest). Khảo sát cộng đồng đại diện toàn quốc ở Anh. Ở người dương tính có triệu chứng, mất vị hoặc mất ngửi giảm từ 44%/45% (17/10/2021) xuống 16%/13% (02/01/2022) và 15%/12% (27/03/2022). Ho, sốt, khó thở, đau cơ, mệt, đau đầu giảm khi Omicron chiếm ưu thế; đau họng tăng. Triệu chứng gặp ở người 18–65 tuổi nhiều hơn ở trẻ em và người cao tuổi."

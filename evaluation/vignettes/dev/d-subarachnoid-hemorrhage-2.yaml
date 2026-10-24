@@ -1,0 +1,30 @@
+id: d-subarachnoid-hemorrhage-2
+set: dev
+title_vi: "Nam 38 tuổi, 2 ngày trước đột ngột đau đầu dữ dội khi tập tạ, nay còn đau vừa"
+narrative_vi: "Anh K., 38 tuổi. Hai ngày trước đang tập tạ thì đột ngột đau đầu rất dữ dội, đạt mức mạnh nhất trong vài phút. Từ đó vẫn đau đầu âm ỉ khắp đầu, mức vừa, hơi mỏi gáy nhưng vẫn cúi đầu được. Không nôn, không ngất, không sốt."
+patient:
+  age_years: 38
+  sex: male
+complaint: headache
+answers:
+  headache_thunderclap: present
+  neck_stiffness: absent
+  vomiting: absent
+  nausea: absent
+  headache_severity: moderate
+  headache_duration: h4_72
+  headache_course: first_time
+  headache_location: whole_head
+  fainting_or_near_fainting: absent
+  fever: absent
+  photophobia: absent
+default_unmentioned: absent
+expected:
+  condition: subarachnoid_hemorrhage
+  acceptable: []
+  triage: 1
+source:
+  basis: "ICHD-3 mục 6.2.2: xuất huyết dưới nhện có thể chỉ đau vừa và không kèm dấu hiệu khác, mọi đau đầu khởi phát đột ngột cần được đánh giá; Perry 2010: khởi phát khi gắng sức; NICE NG228: chuyển ngay đến cấp cứu."
+  references: [ihs-ichd3-2018, perry-bmj-2010, nice-ng228]
+author: "agent:pass-c"
+notes_vi: "Ca không điển hình: đến muộn sau 2 ngày, ít triệu chứng kèm."

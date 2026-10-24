@@ -1,0 +1,15 @@
+id: carpenter-aem-2016
+type: systematic_review
+title: "Spontaneous Subarachnoid Hemorrhage: A Systematic Review and Meta-analysis Describing the Diagnostic Accuracy of History, Physical Examination, Imaging, and Lumbar Puncture With an Exploration of Test Thresholds"
+publisher: "Academic Emergency Medicine 2016;23(9):963–1003 (Carpenter CR và cộng sự)"
+date: "2016"
+url: "https://europepmc.org/article/MED/27306497"
+doi: "10.1111/acem.12984"
+pmid: "27306497"
+license_class: L3
+license_note: "Bản quyền nhà xuất bản: chỉ dùng dữ kiện kèm trích dẫn, không sao chép câu chữ."
+default_tier: A
+accessed: "2026-10-25"
+verified: true
+verified_by: "agent:pass-c"
+notes_vi: "Lượt C đọc tóm tắt qua API Europe PMC (lượt B đặt ID 'carpenter-2016-sah-dta'). 22 nghiên cứu ở khoa cấp cứu (tỷ lệ xuất huyết dưới nhện trung bình 7,5%): tiền sử đau cổ LR+ 4,1; cứng gáy khi khám LR+ 6,6; chụp cắt lớp không cản quang trong 6 giờ đầu LR+ 230, LR− 0,01; sau 6 giờ LR− 0,07."

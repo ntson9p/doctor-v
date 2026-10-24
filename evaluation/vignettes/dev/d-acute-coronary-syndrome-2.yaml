@@ -1,0 +1,33 @@
+id: d-acute-coronary-syndrome-2
+set: dev
+title_vi: "Nữ 78 tuổi, đái tháo đường, đau tức vùng trên rốn 8 giờ, buồn nôn, khó thở, không đau ngực"
+narrative_vi: "Bà L., 78 tuổi, bị đái tháo đường nhiều năm. Từ sáng, khoảng 8 giờ trước, thấy khó chịu, đau tức vùng trên rốn, buồn nôn, mệt, hơi khó thở khi đi lại. Không đau ngực, không vã mồ hôi, không sốt, không nôn."
+patient:
+  age_years: 78
+  sex: female
+complaint: abdominal_pain
+answers:
+  abd_pain_location: epigastric
+  abd_pain_duration: h6_24
+  abd_pain_onset: gradual
+  nausea: present
+  breathing_difficulty: present
+  fatigue: present
+  diabetes: present
+  chest_pain_pressure: absent
+  cold_sweat: absent
+  fever: absent
+  vomiting: absent
+  diarrhea: absent
+  heartburn: absent
+  abd_pain_meal_relation: no_relation
+default_unmentioned: absent
+expected:
+  condition: acute_coronary_syndrome
+  acceptable: []
+  triage: 1
+source:
+  basis: "2187/QĐ-BYT: người lớn tuổi, đái tháo đường có thể không đau ngực; triệu chứng không điển hình gồm mệt, khó thở, đau thượng vị, buồn nôn; nghi hội chứng mạch vành cấp thì gọi 115. Canto 2000: nhóm không đau ngực lớn tuổi hơn, nhiều đái tháo đường hơn."
+  references: [byt-qd-2187-2019, canto-jama-2000, msd-acute-mi]
+author: "agent:pass-c"
+notes_vi: "Ca không điển hình: nữ cao tuổi, đái tháo đường, không đau ngực."

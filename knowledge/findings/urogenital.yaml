@@ -55,6 +55,9 @@
   applies_to:
     sex: [female]
     age_groups: [teen_13_17, adult_18_44, adult_45_64]
+  # Không hỏi khi đang mang thai (lượt C lô 4).
+  requires:
+    - { not: { finding: pregnant, is: present } }
   leak: specific
 - id: missed_period
   kind: history

@@ -1,0 +1,15 @@
+id: aroor-stroke-2017
+type: primary_study
+title: "BE-FAST (Balance, Eyes, Face, Arm, Speech, Time): Reducing the Proportion of Strokes Missed Using the FAST Mnemonic"
+publisher: "Stroke 2017;48(2):479–481 (Aroor S, Singh R, Goldstein LB)"
+date: "2017"
+url: "https://europepmc.org/article/MED/28082668"
+doi: "10.1161/strokeaha.116.015169"
+pmid: "28082668"
+license_class: L3
+license_note: "Bản quyền nhà xuất bản: chỉ dùng dữ kiện kèm trích dẫn, không sao chép câu chữ."
+default_tier: B
+accessed: "2026-10-25"
+verified: true
+verified_by: "agent:pass-c"
+notes_vi: "Lượt C đọc tóm tắt qua API Europe PMC. 736 người nhồi máu não nhập Trung tâm Đột quỵ Đại học Kentucky (2014): 14,1% không có triệu chứng FAST (méo mặt, yếu tay, nói khó) khi đến viện; trong số này 42% có mất thăng bằng khi đi hoặc yếu chân, 40% có triệu chứng thị giác, 70% có ít nhất một trong hai; thêm hai nhóm này (BE-FAST) giảm tỷ lệ bỏ sót còn 4,4%."

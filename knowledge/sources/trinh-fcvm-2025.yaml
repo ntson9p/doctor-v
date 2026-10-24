@@ -1,0 +1,15 @@
+id: trinh-fcvm-2025
+type: primary_study
+title: "Short-term outcomes of non-ST segment elevation acute coronary syndrome after percutaneous coronary intervention: a single-center speckle tracking echocardiographic study in Vietnam"
+publisher: "Frontiers in Cardiovascular Medicine 2025;12:1619262 (Trinh HV và cộng sự)"
+date: "2025"
+url: "https://europepmc.org/article/MED/41200367"
+doi: "10.3389/fcvm.2025.1619262"
+pmid: "41200367"
+license_class: L1
+license_note: "CC BY 4.0 (theo Europe PMC): được dùng và chuyển thể, ghi công và nêu thay đổi."
+default_tier: B
+accessed: "2026-10-25"
+verified: true
+verified_by: "agent:pass-c"
+notes_vi: "Lượt C đọc toàn văn PMC12587297 qua API Europe PMC (lượt B đặt ID 'trinh-2025-nste-acs-vietnam'). 127 người hội chứng mạch vành cấp không ST chênh lên được can thiệp tại một trung tâm ở Việt Nam: tuổi trung bình 65,5; nam 71,3%; tăng huyết áp 74,0%; đái tháo đường 27,6%; rối loạn mỡ máu 29,9%; hút thuốc 42,5%."

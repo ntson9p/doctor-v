@@ -1,0 +1,12 @@
+id: nhs-period-pain
+type: web_page
+title: "Period pain"
+publisher: "NHS (UK)"
+url: "https://www.nhs.uk/conditions/period-pain/"
+license_class: L1
+license_note: "Open Government Licence v3.0; bản chuyển thể không được trình bày như nội dung của NHS."
+default_tier: C
+accessed: "2026-10-25"
+verified: true
+verified_by: "agent:pass-c"
+notes_vi: "Lượt C mở trang (rà soát lần cuối 18/3/2026). Đau hoặc khó chịu ở bụng ngay trước hoặc khi bắt đầu có kinh; đau quặn có thể lan ra lưng, đùi; đau nhói hoặc âm ỉ; thường kéo dài tối đa 3 ngày. Tự chăm sóc: tắm ấm, chườm ấm, xoa bụng và lưng, vận động nhẹ, thuốc giảm đau không kê đơn. Khám bác sĩ khi đau tăng, kinh nhiều hoặc không đều, đau ảnh hưởng sinh hoạt, đau khi quan hệ hoặc khi đi tiểu, đi ngoài, ra máu giữa kỳ kinh; khám khẩn hoặc gọi 111 khi đau dữ dội hơn thường lệ mà thuốc giảm đau không đỡ."

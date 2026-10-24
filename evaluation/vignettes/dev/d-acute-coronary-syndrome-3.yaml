@@ -1,0 +1,33 @@
+id: d-acute-coronary-syndrome-3
+set: dev
+title_vi: "Nam 58 tuổi, hút thuốc, đau rát vùng trên rốn và sau xương ức 1 giờ, vã mồ hôi"
+narrative_vi: "Ông H., 58 tuổi, hút thuốc lá, bị tăng huyết áp. Một giờ nay đau rát vùng trên rốn và nóng rát sau xương ức, tưởng đau dạ dày nên uống thuốc dạ dày nhưng không đỡ; buồn nôn, vã mồ hôi lạnh. Không thấy đè ép ngực, không sốt, không nôn ra máu, không đi ngoài phân đen."
+patient:
+  age_years: 58
+  sex: male
+complaint: abdominal_pain
+answers:
+  abd_pain_location: epigastric
+  abd_pain_duration: lt_6h
+  abd_pain_onset: gradual
+  heartburn: present
+  nausea: present
+  cold_sweat: present
+  smoker: present
+  hypertension_known: present
+  chest_pain_pressure: absent
+  fever: absent
+  vomiting: absent
+  abd_pain_meal_relation: no_relation
+  black_stool: absent
+  vomiting_blood: absent
+default_unmentioned: absent
+expected:
+  condition: acute_coronary_syndrome
+  acceptable: []
+  triage: 1
+source:
+  basis: "MSD: người bệnh hay tưởng cơn đau là khó tiêu; 2187/QĐ-BYT: đau thượng vị là biểu hiện không điển hình, vã mồ hôi gợi ý nhồi máu cơ tim, gọi 115. Dễ nhầm với viêm loét dạ dày – tá tràng."
+  references: [byt-qd-2187-2019, msd-acute-mi]
+author: "agent:pass-c"
+notes_vi: "Ca dễ nhầm với viêm loét dạ dày – tá tràng (lô 3)."

@@ -1,0 +1,15 @@
+id: derooij-jnnp-2007
+type: systematic_review
+title: "Incidence of subarachnoid haemorrhage: a systematic review with emphasis on region, age, gender and time trends"
+publisher: "Journal of Neurology, Neurosurgery and Psychiatry 2007;78(12):1365–1372 (de Rooij NK và cộng sự)"
+date: "2007"
+url: "https://europepmc.org/article/MED/17470467"
+doi: "10.1136/jnnp.2007.117655"
+pmid: "17470467"
+license_class: L3
+license_note: "Bản quyền nhà xuất bản: chỉ dùng dữ kiện kèm trích dẫn, không sao chép câu chữ."
+default_tier: B
+accessed: "2026-10-25"
+verified: true
+verified_by: "agent:pass-c"
+notes_vi: "Lượt C đọc tóm tắt qua API Europe PMC (lượt B đặt ID 'derooij-2007-sah-incidence'). 51 nghiên cứu, 58 quần thể ở 21 nước: tỷ suất mới mắc khoảng 9,1/100.000 người-năm (Nhật Bản 22,7; Phần Lan 19,7; Nam và Trung Mỹ 4,2); so với nhóm 45–55 tuổi, dưới 25 tuổi bằng 0,10 lần, trên 85 tuổi 1,61 lần; nữ cao hơn nam 1,24 lần, khác biệt bắt đầu từ khoảng 55 tuổi."

@@ -1,0 +1,30 @@
+id: d-pelvic-inflammatory-disease-2
+set: dev
+title_vi: "Nữ 35 tuổi, mới đặt vòng, đau âm ỉ bụng dưới 10 ngày, ra máu lấm tấm, đau khi quan hệ"
+narrative_vi: "Chị V., 35 tuổi, đặt vòng tránh thai cách đây 1 tháng. Mười ngày nay đau âm ỉ vùng bụng dưới, ra máu lấm tấm ngoài kỳ kinh, đau khi quan hệ, khí hư hơi nhiều. Không sốt, không chậm kinh, đau không tăng khi đi lại."
+patient:
+  age_years: 35
+  sex: female
+complaint: abdominal_pain
+answers:
+  abd_pain_location: suprapubic
+  abd_pain_duration: d4_14
+  abd_pain_onset: gradual
+  vaginal_bleeding: present
+  pain_with_intercourse: present
+  abnormal_vaginal_discharge: present
+  fever: absent
+  pregnant: absent
+  missed_period: absent
+  abd_pain_worse_movement: absent
+  abd_pain_severe: absent
+default_unmentioned: absent
+expected:
+  condition: pelvic_inflammatory_disease
+  acceptable: []
+  triage: 3
+source:
+  basis: "Thể bán cấp, không sốt, sau thủ thuật đặt vòng (315/QĐ-BYT mục 2.1 và 2.2: đau âm ỉ hạ vị, rong huyết, khí hư không đặc hiệu); CDC: triệu chứng kín đáo (ra máu bất thường, đau khi giao hợp); NHS: khám khẩn khi nghi viêm vùng chậu."
+  references: [byt-qd-315-2015, cdc-sti-pid, nhs-pid]
+author: "agent:pass-c"
+notes_vi: "Ca không điển hình: không sốt, kéo dài, triệu chứng kín đáo."

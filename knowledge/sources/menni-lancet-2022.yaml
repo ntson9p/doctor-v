@@ -1,0 +1,15 @@
+id: menni-lancet-2022
+type: primary_study
+title: "Symptom prevalence, duration, and risk of hospital admission in individuals infected with SARS-CoV-2 during periods of omicron and delta variant dominance: a prospective observational study from the ZOE COVID Study"
+publisher: "Lancet 2022;399(10335):1618-1624 (Menni C, Valdes AM, Polidori L và cs.)"
+date: "2022-04"
+url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC8989396/"
+doi: "10.1016/S0140-6736(22)00327-0"
+pmid: "35397851"
+license_class: L1
+license_note: "CC BY 4.0: dùng và chuyển thể, ghi công."
+default_tier: B
+accessed: "2026-10-25"
+verified: true
+verified_by: "agent:pass-c"
+notes_vi: "Lượt C đọc toàn văn (PMC8989396) qua API Europe PMC (www.ebi.ac.uk/europepmc/webservices/rest). Người 16–99 tuổi ở Anh, đã tiêm ít nhất 2 mũi vắc xin, tự báo triệu chứng trong 7 ngày trước và sau xét nghiệm. Giai đoạn Omicron (n = 4.990): chảy nước mũi 76,5%, đau đầu 74,7%, đau họng 70,5%, hắt hơi 63,0%, ho kéo dài 49,8%, khàn tiếng 42,6%; mất ngửi 16,7% (giai đoạn Delta 52,7%). Nhập viện 1,9%. Thời gian có triệu chứng trung bình 6,87 ngày."

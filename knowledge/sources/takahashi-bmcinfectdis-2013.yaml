@@ -1,0 +1,15 @@
+id: takahashi-bmcinfectdis-2013
+type: primary_study
+title: "The incidence and aetiology of hospitalised community-acquired pneumonia among Vietnamese adults: a prospective surveillance in Central Vietnam"
+publisher: "BMC Infectious Diseases 2013;13:296 (Takahashi K và cs.)"
+date: "2013-07"
+url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC3702433/"
+doi: "10.1186/1471-2334-13-296"
+pmid: "23815298"
+license_class: L2
+license_note: "Bài truy cập mở (© Takahashi và cs.; BioMed Central); bản trên PMC không ghi rõ giấy phép CC. Tạm xếp L2, chỉ dùng dữ kiện."
+default_tier: B
+accessed: "2026-10-25"
+verified: true
+verified_by: "agent:pass-c"
+notes_vi: "Lượt C đọc toàn văn (PMC3702433) qua API Europe PMC (www.ebi.ac.uk/europepmc/webservices/rest). Nha Trang 2009–2010, người từ 15 tuổi nhập viện: tỷ suất viêm phổi cộng đồng nhập viện 0,81/1.000 người-năm; nhóm từ 65 tuổi 4,6/1.000, gấp khoảng 10 lần nhóm trẻ hơn (0,48/1.000). Thời gian từ khởi phát đến nhập viện trung bình 4,2 ngày (có vi khuẩn) và 2,7 ngày (không có vi khuẩn)."

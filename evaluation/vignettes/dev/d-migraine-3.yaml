@@ -1,0 +1,32 @@
+id: d-migraine-3
+set: dev
+title_vi: "Nữ 32 tuổi, thấy chớp sáng gợn sóng 20 phút rồi đau nửa đầu trái"
+narrative_vi: "Chị X., 32 tuổi. Sáng nay thấy những đường chớp sáng gợn sóng trước mắt khoảng 20 phút, sau đó đau giật giật nửa đầu trái, buồn nôn, khó chịu với ánh sáng và tiếng ồn. Chị từng bị vài cơn giống vậy. Chớp sáng đã hết hẳn; không yếu tay chân, không nói khó, không mất thị lực."
+patient:
+  age_years: 32
+  sex: female
+complaint: headache
+answers:
+  visual_aura: present
+  blurred_vision: present
+  vision_loss_or_double: absent
+  headache_location: one_side
+  headache_character: throbbing
+  headache_severity: moderate
+  headache_duration: lt_4h
+  headache_course: recurrent_similar
+  nausea: present
+  photophobia: present
+  phonophobia: present
+  headache_worse_activity: present
+  fever: absent
+default_unmentioned: absent
+expected:
+  condition: migraine
+  acceptable: []
+  triage: 5
+source:
+  basis: "Đau nửa đầu có tiền triệu thị giác dưới 1 giờ, cơn quen thuộc (ICHD-3 mục 1.2; NHS Migraine: khám khẩn chỉ khi tiền triệu quá 1 giờ). Dễ nhầm với đột quỵ hoặc cơn thiếu máu não thoáng qua vì có rối loạn thị giác."
+  references: [ihs-ichd3-2018, nhs-migraine]
+author: "agent:pass-c"
+notes_vi: "Ca dễ nhầm với đột quỵ (bệnh nguy hiểm)."

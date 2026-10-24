@@ -1,0 +1,33 @@
+id: d-preeclampsia-1
+set: dev
+title_vi: "Thai phụ 30 tuổi, thai 34 tuần, đau đầu dữ dội, nhìn mờ, phù mặt, huyết áp 165/110"
+narrative_vi: "Chị P., 30 tuổi, mang thai con so 34 tuần. Từ chiều qua đau đầu nhiều cả hai bên, giật giật, uống thuốc giảm đau không đỡ, nhìn mờ, mặt và tay sưng phù. Đo huyết áp ở trạm y tế 165/110 mmHg. Không co giật, không đau bụng, không nôn."
+patient:
+  age_years: 30
+  sex: female
+complaint: headache
+answers:
+  pregnant: present
+  gestational_age: ge_20w
+  recent_childbirth: absent
+  headache_course: first_time
+  headache_location: both_sides
+  headache_character: throbbing
+  headache_severity: severe
+  headache_duration: h4_72
+  blurred_vision: present
+  edema_face_hands: present
+  bp_measured: very_high
+  seizure_recent: absent
+  abdominal_pain: absent
+  vomiting: absent
+  nausea: absent
+default_unmentioned: absent
+expected:
+  condition: preeclampsia
+  acceptable: []
+  triage: 2
+source:
+  basis: "Tiền sản giật nặng theo 315/QĐ-BYT (huyết áp từ 160/110, nhức đầu, nhìn mờ); NICE NG133 khuyến cáo 1.1.1 (gặp nhân viên y tế ngay khi đau đầu dữ dội, nhìn mờ, phù mặt, tay đột ngột); NHS Pre-eclampsia."
+  references: [byt-qd-315-2015, nice-ng133, nhs-pre-eclampsia]
+author: "agent:pass-c"

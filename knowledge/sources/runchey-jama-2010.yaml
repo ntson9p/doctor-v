@@ -1,0 +1,15 @@
+id: runchey-jama-2010
+type: systematic_review
+title: "Does this patient have a hemorrhagic stroke?: clinical findings distinguishing hemorrhagic stroke from ischemic stroke"
+publisher: "JAMA 2010;303(22):2280–2286 (Runchey S, McGee S)"
+date: "2010"
+url: "https://europepmc.org/article/MED/20530782"
+doi: "10.1001/jama.2010.754"
+pmid: "20530782"
+license_class: L3
+license_note: "Bản quyền nhà xuất bản: chỉ dùng dữ kiện kèm trích dẫn, không sao chép câu chữ."
+default_tier: A
+accessed: "2026-10-25"
+verified: true
+verified_by: "agent:pass-c"
+notes_vi: "Lượt C đọc tóm tắt qua API Europe PMC (lượt B đặt ID 'runchey-2010-jama-hemorrhagic-stroke'). 19 nghiên cứu, 6.438 người đột quỵ (24% xuất huyết): làm tăng khả năng xuất huyết so với nhồi máu: hôn mê LR 6,2; cứng gáy 5,0; co giật kèm thiếu hụt thần kinh 4,7; huyết áp tâm trương trên 110 mmHg 4,3; nôn 3,0; đau đầu 2,9."

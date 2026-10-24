@@ -1,0 +1,15 @@
+id: shah-jama-2017
+type: systematic_review
+title: "Does This Child Have Pneumonia?: The Rational Clinical Examination Systematic Review"
+publisher: "JAMA 2017;318(5):462-471 (Shah SN, Bachur RG, Simel DL, Neuman MI)"
+date: "2017-08"
+url: "https://europepmc.org/article/MED/28763554"
+doi: "10.1001/jama.2017.9039"
+pmid: "28763554"
+license_class: L3
+license_note: "Bản quyền nhà xuất bản: chỉ dùng dữ kiện kèm trích dẫn."
+default_tier: A
+accessed: "2026-10-25"
+verified: true
+verified_by: "agent:pass-c"
+notes_vi: "Lượt C đọc lại tóm tắt qua API Europe PMC (www.ebi.ac.uk/europepmc/webservices/rest). 23 nghiên cứu ở trẻ có thể bị viêm phổi (13.833 trẻ). Sốt trên 37,5°C: độ nhạy 80–92%; thở nhanh trên 40 lần/phút: độ nhạy 79%; đau ngực (2 nghiên cứu có trẻ vị thành niên): độ nhạy 8–14%. Thiếu oxy và thở gắng sức có giá trị nhất."

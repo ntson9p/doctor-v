@@ -1,0 +1,15 @@
+id: do-jcv-2021
+type: primary_study
+title: "Epidemiological and molecular characteristics of a measles outbreak in northern Vietnam, 2013-2014"
+publisher: "Journal of Clinical Virology 2021;139:104840 (Do LP và cs.)"
+date: "2021"
+url: "https://europepmc.org/article/MED/33962181"
+doi: "10.1016/j.jcv.2021.104840"
+pmid: "33962181"
+license_class: L3
+license_note: "Bản quyền nhà xuất bản: chỉ dùng dữ kiện kèm trích dẫn."
+default_tier: B
+accessed: "2026-10-25"
+verified: true
+verified_by: "agent:pass-c"
+notes_vi: "Lượt C đọc lại tóm tắt qua API Europe PMC (www.ebi.ac.uk/europepmc/webservices/rest). Miền Bắc 2013–2014: 9.577 ca sởi xác định (116,4/1.000.000 dân); khoảng 76,3% chưa tiêm hoặc không rõ tiền sử tiêm vắc xin; 55,7% dưới 5 tuổi."

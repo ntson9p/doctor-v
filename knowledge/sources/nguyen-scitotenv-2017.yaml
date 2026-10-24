@@ -1,0 +1,15 @@
+id: nguyen-scitotenv-2017
+type: primary_study
+title: "Temporal and spatial analysis of hand, foot, and mouth disease in relation to climate factors: A study in the Mekong Delta region, Vietnam"
+publisher: "Science of the Total Environment 2017;581-582:766-772 (Nguyen HX và cs.)"
+date: "2017"
+url: "https://europepmc.org/article/MED/28063653"
+doi: "10.1016/j.scitotenv.2017.01.006"
+pmid: "28063653"
+license_class: L3
+license_note: "Bản quyền nhà xuất bản: chỉ dùng dữ kiện kèm trích dẫn."
+default_tier: B
+accessed: "2026-10-25"
+verified: true
+verified_by: "agent:pass-c"
+notes_vi: "Lượt C đọc lại tóm tắt qua API Europe PMC (www.ebi.ac.uk/europepmc/webservices/rest). Đồng bằng sông Cửu Long: mô hình dự báo cho thấy đỉnh bệnh tay chân miệng từ tháng 10 đến tháng 12 (mùa mưa); nhiệt độ, độ ẩm, lượng mưa tăng đi kèm số ca tăng."

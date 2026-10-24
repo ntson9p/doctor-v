@@ -1,0 +1,29 @@
+id: d-ectopic-pregnancy-1
+set: dev
+title_vi: "Nữ 27 tuổi, chậm kinh 2 tuần, đau bụng dưới bên trái, ra máu âm đạo ít"
+narrative_vi: "Chị H., 27 tuổi, ở Hà Nội. Chậm kinh 2 tuần, thử thai tại nhà thấy 2 vạch. Hai ngày nay đau âm ỉ bụng dưới bên trái, tăng dần, kèm ra ít máu âm đạo màu nâu sẫm. Không sốt, không ngất, không đau dữ dội."
+patient:
+  age_years: 27
+  sex: female
+  region: north
+complaint: abdominal_pain
+answers:
+  pregnant: present
+  gestational_age: lt_20w
+  missed_period: present
+  vaginal_bleeding: present
+  abd_pain_location: left_lower
+  abd_pain_onset: gradual
+  abd_pain_duration: d1_3
+  abd_pain_severe: absent
+  fainting_or_near_fainting: absent
+  fever: absent
+default_unmentioned: absent
+expected:
+  condition: ectopic_pregnancy
+  acceptable: []
+  triage: 2
+source:
+  basis: "Ca điển hình theo 315/QĐ-BYT (chậm kinh, đau bụng dưới, ra máu âm đạo; cấp cứu sản khoa) và NICE NG126 (có thai kèm đau và ra máu: chuyển đơn vị cấp cứu sản)."
+  references: [byt-qd-315-2015, nice-ng126, nhs-ectopic-pregnancy]
+author: "agent:pass-c"

@@ -1,0 +1,15 @@
+id: vanoosterhout-jaha-2020
+type: systematic_review
+title: "Sex Differences in Symptom Presentation in Acute Coronary Syndromes: A Systematic Review and Meta-analysis"
+publisher: "Journal of the American Heart Association 2020;9(9):e014733 (van Oosterhout REM và cộng sự)"
+date: "2020"
+url: "https://europepmc.org/article/MED/32363989"
+doi: "10.1161/jaha.119.014733"
+pmid: "32363989"
+license_class: L2
+license_note: "CC BY-NC-ND (theo Europe PMC): chỉ dùng dữ kiện kèm trích dẫn, không chuyển thể câu chữ."
+default_tier: A
+accessed: "2026-10-25"
+verified: true
+verified_by: "agent:pass-c"
+notes_vi: "Lượt C đọc toàn văn PMC7428564 qua API Europe PMC (lượt B đặt ID 'vanoosterhout-2020-jaha-acs-symptoms'). 27 nghiên cứu, hơn 1 triệu người hội chứng mạch vành cấp đã xác định, chủ yếu tại bệnh viện. Tỷ lệ gộp nam/nữ: đau ngực 79%/74%, vã mồ hôi 47%/44%, khó thở 40%/48%, đau tay hoặc vai trái 37%/38%, buồn nôn hoặc nôn 28%/39%. So với nam, nữ hay đau giữa hai bả vai (OR 2,15), buồn nôn hoặc nôn (1,64), khó thở (1,34) hơn, ít đau ngực (0,70) và vã mồ hôi (0,84) hơn; đau dạ dày hoặc thượng vị, khó tiêu, ngất cũng được tổng hợp."

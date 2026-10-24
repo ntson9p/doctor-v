@@ -1,0 +1,15 @@
+id: swap-jama-2005
+type: systematic_review
+title: "Value and limitations of chest pain history in the evaluation of patients with suspected acute coronary syndromes"
+publisher: "JAMA 2005;294(20):2623–2629 (Swap CJ, Nagurney JT)"
+date: "2005"
+url: "https://europepmc.org/article/MED/16304077"
+doi: "10.1001/jama.294.20.2623"
+pmid: "16304077"
+license_class: L3
+license_note: "Bản quyền nhà xuất bản: chỉ dùng dữ kiện kèm trích dẫn, không sao chép câu chữ."
+default_tier: A
+accessed: "2026-10-25"
+verified: true
+verified_by: "agent:pass-c"
+notes_vi: "Lượt C đọc tóm tắt qua API Europe PMC (lượt B đặt ID 'swap-2005-jama-chest-pain-history'). Ở người đau ngực nghi hội chứng mạch vành cấp: đau như dao đâm, đau khi hít thở, thay đổi theo tư thế hoặc ấn vào đau thì LR 0,2–0,3; đau lan một hoặc hai vai, cánh tay, hoặc khởi phát khi gắng sức thì LR 2,3–4,7."

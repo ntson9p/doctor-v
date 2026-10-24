@@ -1,0 +1,15 @@
+id: stovner-jhp-2022
+type: systematic_review
+title: "The global prevalence of headache: an update, with analysis of the influences of methodological factors on prevalence estimates"
+publisher: "The Journal of Headache and Pain 2022;23(1):34 (Stovner LJ, Hagen K, Linde M, Steiner TJ)"
+date: "2022"
+url: "https://europepmc.org/article/MED/35410119"
+doi: "10.1186/s10194-022-01402-2"
+pmid: "35410119"
+license_class: L1
+license_note: "CC BY 4.0 (theo Europe PMC): được dùng và chuyển thể, ghi công và nêu thay đổi."
+default_tier: B
+accessed: "2026-10-25"
+verified: true
+verified_by: "agent:pass-c"
+notes_vi: "Lượt C đọc toàn văn PMC9004186 qua API Europe PMC (lượt B đặt ID 'stovner-2022-headache-prevalence'). Tổng hợp 357 công bố (không gồm quần thể phòng khám): đang mắc đau đầu nói chung 52,0%, đau nửa đầu 14,0%, đau đầu căng thẳng 26,0%; mỗi ngày 15,8% dân số bị đau đầu. Bảng 1 (cả hai giới) theo tuổi 0–9, 10–19, 20–64, từ 65: đau nửa đầu 5,0%, 13,4%, 15,2%, 7,9%; đau đầu căng thẳng 5,9%, 25,1%, 27,6%, 32,2% (nhóm từ 65 tuổi chỉ 1 nghiên cứu); đau đầu nói chung 42,7%, 57,9%, 50,2%, 40,2%. Nhóm 20–64 tuổi: đau nửa đầu nam 8,7%, nữ 18,6%; đau đầu căng thẳng nam 24,2%, nữ 28,8%; đau đầu nói chung nam 41,8%, nữ 56,5%."

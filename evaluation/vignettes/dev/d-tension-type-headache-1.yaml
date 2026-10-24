@@ -1,0 +1,30 @@
+id: d-tension-type-headache-1
+set: dev
+title_vi: "Nữ 35 tuổi, đau đầu như bó chặt hai bên sau tuần làm việc căng thẳng"
+narrative_vi: "Chị B., 35 tuổi, nhân viên văn phòng. Tuần này nhiều việc, ngủ ít. Từ trưa đau đầu như bị bó chặt hai bên thái dương, mức nhẹ, vẫn làm việc được. Không buồn nôn, không sợ ánh sáng, đi lại không đau thêm. Thỉnh thoảng vẫn bị kiểu đau này."
+patient:
+  age_years: 35
+  sex: female
+complaint: headache
+answers:
+  headache_location: both_sides
+  headache_character: pressing
+  headache_severity: mild
+  headache_duration: lt_4h
+  headache_course: recurrent_similar
+  headache_worse_activity: absent
+  stress_poor_sleep: present
+  nausea: absent
+  vomiting: absent
+  photophobia: absent
+  phonophobia: absent
+  fever: absent
+default_unmentioned: absent
+expected:
+  condition: tension_type_headache
+  acceptable: []
+  triage: 5
+source:
+  basis: "Ca điển hình theo ICHD-3 mục 2.1–2.2 (hai bên, ép chặt, nhẹ hoặc vừa, không tăng khi vận động, không buồn nôn) và NHS Tension headaches (tự chăm sóc)."
+  references: [ihs-ichd3-2018, nhs-tension-headaches]
+author: "agent:pass-c"

@@ -1,0 +1,186 @@
+id: subarachnoid_hemorrhage
+names:
+  vi: "Xuất huyết dưới nhện"
+  vi_common: ["Xuất huyết dưới nhện", "Chảy máu dưới nhện", "Vỡ phình mạch máu não"]
+  en: "Subarachnoid hemorrhage"
+codes:
+  icd10: "I60"
+  icd10_verified: true
+  mondo: "MONDO:0005099"
+summary_vi:
+  - "Chảy máu vào khoang quanh não, phần lớn do vỡ túi phình động mạch não."
+  - "Điển hình là đau đầu đột ngột, dữ dội nhất từ trước tới nay, có thể kèm nôn, cứng gáy hoặc ngất."
+  - "Cần gọi 115 ngay vì có thể chảy máu lại và tử vong nhanh."
+urgency: 1
+cant_miss: true
+specialties: [neurology, emergency]
+priors:
+  - complaint: headache
+    default: P5
+    by_age: { child_2m_5y: P6, child_5_12: P6, teen_13_17: P6, adult_45_64: P4, elder_65_74: P4, elder_75p: P4 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [derooij-jnnp-2007, linn-lancet-1994, perry-jama-2013, perry-bmj-2010, stovner-jhp-2022, byt-qd-3312-2024]
+      note: "Tỷ suất mới mắc khoảng 9/100.000 người-năm và tăng theo tuổi: so với nhóm 45–55 tuổi, dưới 25 tuổi chỉ bằng 0,1 lần, trên 85 tuổi 1,6 lần (de Rooij 2007); 3312/QĐ-BYT: tuổi thường gặp 40–65. Trong khi đó mỗi ngày 15,8% dân số bị đau đầu (Stovner 2022). Ở phòng khám đa khoa Hà Lan, 25% người đau đầu đột ngột, dữ dội là xuất huyết dưới nhện (Linn 1994); ở khoa cấp cứu, 6,2–6,5% người đau đầu đạt đỉnh trong 1 giờ (Perry 2010, 2013). Lượt C: hai lượt cùng P5 cho 18–44 tuổi và P6 dưới 18 tuổi; từ 45 tuổi chọn P4 của lượt B (có số liệu tỷ suất theo tuổi; lượt A để P5), vì tỷ suất ở 45–64 tuổi cao gấp 2–3 lần người trẻ trong khi đau đầu lành tính giảm dần theo tuổi. Prior tính trên mọi người đau đầu; câu hỏi đau đầu sét đánh (bắt buộc) tách nhóm nguy cơ. Không dùng hệ số theo giới: nữ cao hơn nam 1,24 lần (de Rooij 2007) đến 1,6 lần (3312/QĐ-BYT), nhưng nữ cũng đau đầu nhiều hơn khoảng 1,35 lần. Chưa có số liệu Việt Nam; cần bác sĩ duyệt."
+findings:
+  - finding: headache_thunderclap
+    freq: very_frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [perry-bmj-2010, byt-qd-3312-2024, ihs-ichd3-2018, msd-sah, nhs-subarachnoid-haemorrhage]
+      locator: "Perry 2010, bảng 2; 3312/QĐ-BYT, bài phình động mạch não vỡ"
+      reported: "Đau đầu dữ dội nhất đời 93,1%; thời gian từ khởi phát đến đỉnh trung bình 3,4 phút."
+      population: "130 người xuất huyết dưới nhện tỉnh táo, không có dấu hiệu khu trú, ở khoa cấp cứu (đã chọn người đau đạt đỉnh trong 1 giờ)"
+      note: "Khởi phát đột ngột là đặc điểm then chốt (ICHD-3; 3312/QĐ-BYT: đau đầu như 'sét đánh', như muốn vỡ tung đầu). Hai lượt cùng hạ một mức thành very_frequent vì nghiên cứu ở khoa cấp cứu đã chọn người đau đạt đỉnh trong 1 giờ, và ICHD-3 lưu ý đau có thể chỉ ở mức vừa; nhờ vậy trả lời 'Không' chỉ giảm khả năng khoảng 5 lần."
+  - finding: neck_stiffness
+    freq: frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [perry-bmj-2010, carpenter-aem-2016, byt-qd-3312-2024, msd-sah]
+      reported: "Than đau hoặc cứng cổ 71,1% (so với 30,9% ở người không bệnh); cứng gáy khi khám 30,4%; LR+ của đau cổ 4,1 và cứng gáy 6,6 (Carpenter 2016)."
+      note: "Câu hỏi (cổ cứng, khó cúi xuống) nằm giữa hai số đo; lúc mới khởi phát cổ thường chưa cứng, dấu hiệu màng não xuất hiện trong 24 giờ (MSD); 3312/QĐ-BYT: cứng gáy thường gặp, có giá trị chẩn đoán cao. Hai lượt cùng chọn frequent."
+  - finding: vomiting
+    freq: frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [perry-bmj-2010, byt-qd-3312-2024]
+      reported: "Nôn 58,6% (so với 26,3%)."
+      note: "3312/QĐ-BYT: nôn là triệu chứng thường gặp."
+  - finding: nausea
+    freq: frequent
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [perry-bmj-2010, nhs-subarachnoid-haemorrhage]
+      note: "Chỉ lượt B có; lượt C giữ. Buồn nôn ít nhất cũng thường gặp như nôn (58,6%) và có trong danh sách triệu chứng của NHS. Cùng cụm vomiting nên không đếm trùng hoàn toàn."
+  - finding: fainting_or_near_fainting
+    freq: occasional
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [perry-bmj-2010, msd-sah, nhs-subarachnoid-haemorrhage]
+      reported: "Mất ý thức 16,9% (có người chứng kiến 11,5%)."
+      population: "130 người xuất huyết dưới nhện tỉnh táo khi đến khoa cấp cứu"
+  - finding: seizure_recent
+    freq: occasional
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-3312-2024, msd-sah, nhs-subarachnoid-haemorrhage]
+      note: "Cả ba nguồn liệt kê co giật trong triệu chứng có thể gặp (3312/QĐ-BYT: ít giá trị chẩn đoán), không cho tỷ lệ; 'có thể có' tương ứng occasional, cao hơn tỷ lệ nền 1%."
+  - finding: confusion
+    freq: occasional
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-3312-2024, msd-sah, nhs-subarachnoid-haemorrhage]
+      note: "Có thể rối loạn ý thức, chảy máu ít thì hồi phục nhanh (3312/QĐ-BYT); lú lẫn hay gặp trong 5–10 ngày đầu (MSD); NHS: ngất, li bì hoặc lú lẫn. Người còn tự kiểm tra được thường tỉnh táo, nên chọn occasional."
+  - finding: drowsy_hard_to_wake
+    freq: occasional
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-3312-2024, nhs-subarachnoid-haemorrhage]
+      note: "Chỉ lượt B có; lượt C giữ. Như lú lẫn; cùng cụm rối loạn tri giác."
+  - finding: es_stroke_signs
+    freq: occasional
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [ihs-ichd3-2018, msd-sah, nhs-subarachnoid-haemorrhage]
+      note: "Đau đầu do chảy máu nội sọ có thể đơn độc hoặc kèm dấu hiệu thần kinh khu trú (ICHD-3 mục 6.2); khoảng 25% về sau có dấu hiệu thiếu máu não do co thắt mạch (MSD); NHS: méo mặt, nói ngọng, yếu một bên. Người có dấu hiệu đột quỵ đã dừng ở màn sàng lọc, nên ở bước xếp hạng liên kết này chỉ làm khả năng giảm khoảng 1,2 lần."
+  - finding: vision_loss_or_double
+    freq: occasional
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-3312-2024, nhs-subarachnoid-haemorrhage]
+      note: "3312/QĐ-BYT liệt kê giảm thị lực trong các triệu chứng khác (ít giá trị chẩn đoán); NHS: nhìn mờ hoặc mất thị lực. Không có tỷ lệ."
+  - finding: sudden_loss_of_balance
+    freq: occasional
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-3312-2024]
+      locator: "3312/QĐ-BYT, bài phình động mạch não vỡ: triệu chứng khác (co giật, mất thăng bằng, giảm thị lực)"
+      note: "Chỉ lượt A có (dấu hiệu nay đã có trong danh mục). Lượt C giữ vì 3312/QĐ-BYT liệt kê mất thăng bằng trong các triệu chứng có thể gặp (ít giá trị chẩn đoán); 'có thể có' tương ứng occasional."
+  - finding: photophobia
+    freq: occasional
+    evidence:
+      tier: C
+      basis: verbal
+      sources: [nhs-subarachnoid-haemorrhage]
+      note: "Chỉ lượt B có; lượt C giữ. NHS: rất sợ ánh sáng. Không có tỷ lệ; chọn occasional. Liên kết này giữ cho bệnh không bị lấn át quá mức bởi đau nửa đầu khi người dùng trả lời có sợ ánh sáng (ICHD-3: chẩn đoán nhầm hay gặp nhất là đau nửa đầu)."
+  - finding: headache_severity
+    dist: { mild: 0.03, moderate: 0.12, severe: 0.85 }
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [perry-bmj-2010, ihs-ichd3-2018]
+      reported: "Mức đau tối đa trung bình 9,3/10."
+      note: "ICHD-3 lưu ý đau có thể chỉ ở mức vừa, nên giữ 15% cho mức nhẹ và vừa. Hai lượt cùng chọn phân bố này."
+  - finding: headache_course
+    dist: { first_time: 0.90, recurrent_similar: 0.05, progressive: 0.05 }
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [linn-lancet-1994, perry-bmj-2010, ihs-ichd3-2018]
+      reported: "Chỉ 2/37 người xuất huyết dưới nhện từng có cơn đau đầu đột ngột trước đó (Linn 1994)."
+      note: "Đau đầu mới, khởi phát đột ngột (ICHD-3); người có bệnh đau đầu từ trước vẫn thấy cơn này khác hẳn."
+  - finding: headache_location
+    dist: { one_side: 0.09, both_sides: 0.10, forehead_face: 0.11, back_neck: 0.35, whole_head: 0.35 }
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-3312-2024]
+      note: "3312/QĐ-BYT: đau đầu dữ dội lan xuống vùng gáy chẩm. Tỷ lệ từng vùng là ước lượng (trung bình hai lượt, lệch 0,10)."
+  - finding: headache_duration
+    dist: { lt_4h: 0.55, h4_72: 0.36, gt_3d: 0.09 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [perry-bmj-2010, carpenter-aem-2016, nhs-subarachnoid-haemorrhage]
+      note: "Đau đột ngột và không hết (NHS); phần lớn tìm trợ giúp sớm, một phần đến muộn sau vài ngày (Perry 2010 nhận người đến trong 14 ngày; Carpenter 2016 phân tích riêng người đến sau 6 giờ). Phân bố là ước lượng (trung bình hai lượt)."
+  - finding: bp_measured
+    dist: { normal: 0.25, high: 0.29, very_high: 0.25, extreme: 0.21 }
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [perry-bmj-2010]
+      reported: "Huyết áp trung bình 159/88 mmHg (độ lệch chuẩn tâm thu 29,3), so với 141/81 mmHg ở người không xuất huyết dưới nhện."
+      population: "Khoa cấp cứu, lúc đến viện"
+      note: "Phân bố suy từ trung bình và độ lệch chuẩn huyết áp tâm thu, giả định phân phối chuẩn; người dùng tự đo có thể khác."
+  - finding: hypertension_known
+    freq: occasional
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-3312-2024, perry-bmj-2010]
+      note: "Lượt C: hai lượt lệch một mức (A occasional, B frequent), đều không có tỷ lệ tăng huyết áp đã biết. Tăng huyết áp là yếu tố nguy cơ vỡ phình mạch (3312/QĐ-BYT) và huyết áp lúc đến viện cao hơn (Perry 2010). Ước tỷ lệ tăng huyết áp đã biết ở người bệnh khoảng 25–35%, nằm trong khoảng occasional; mức này cũng tránh làm câu trả lời 'Không' giảm khả năng một bệnh không được bỏ sót."
+  - finding: fever
+    freq: rare
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [perry-bmj-2010, msd-sah]
+      reported: "Nhiệt độ trung bình 36,3°C, không khác người không bệnh (36,4°C)."
+      note: "Sốt chỉ hay gặp từ ngày 5–10 (MSD). Lúc mới khởi phát không sốt, giúp phân biệt với viêm màng não. Mức rare thấp hơn tỷ lệ nền 5%."
+warning_signs: [headache_thunderclap, neck_stiffness, confusion, drowsy_hard_to_wake, seizure_recent, persistent_vomiting, fainting_or_near_fainting, es_stroke_signs]
+self_care_vi:
+  - "Gọi 115 ngay. Không tự lái xe đến viện."
+  - "Nằm yên, nhờ người ở bên cạnh trong lúc chờ xe cấp cứu."
+  - "Không tự uống thuốc khi chưa có ý kiến bác sĩ."
+see_doctor_vi:
+  - "Gọi 115 ngay nếu đau đầu đột ngột, dữ dội nhất từ trước tới nay, kể cả khi cơn đau đã giảm."
+  - "Cần được chụp cắt lớp sọ não càng sớm càng tốt, chính xác nhất trong 6 giờ đầu."
+review:
+  status: source_checked
+  authors: ["agent:pass-a", "agent:pass-b"]
+  reconciler: "agent:pass-c"
+  doctor_reviewer: null
+  updated: "2026-10-24"
+  notes_vi: "Lượt C đã đối chiếu 21 liên kết và mở lại mọi nguồn được trích, kể cả 3312/QĐ-BYT (2024) trên luatvietnam.vn. Bỏ hai liên kết chỉ có ở lượt B: 'hút thuốc' (frequent) và 'uống nhiều rượu bia' (occasional), vì nguồn không cho tần suất và tỷ lệ nền của danh mục gộp cả nam và nữ, trong khi bệnh gặp ở nữ nhiều hơn: câu trả lời 'Không hút thuốc' của phụ nữ sẽ làm giảm sai khả năng bệnh. Bác sĩ cần xem: (1) prior chưa có số liệu Việt Nam; từ 45 tuổi chọn P4; (2) số liệu Perry chỉ gồm người tỉnh táo, không có dấu hiệu khu trú, ở khoa cấp cứu; (3) tỷ lệ co giật, rối loạn ý thức, dấu hiệu khu trú, mất thăng bằng, sợ ánh sáng chỉ có mô tả bằng lời; (4) câu hỏi cứng gáy do người dùng tự trả lời, khác với khám thực thể."

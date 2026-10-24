@@ -1,0 +1,15 @@
+id: rasmussen-cephalalgia-1992
+type: primary_study
+title: "Migraine with aura and migraine without aura: an epidemiological study"
+publisher: "Cephalalgia 1992;12(4):221–8; discussion 186 (Rasmussen BK, Olesen J)"
+date: "1992"
+url: "https://europepmc.org/article/MED/1525797"
+doi: "10.1046/j.1468-2982.1992.1204221.x"
+pmid: "1525797"
+license_class: L3
+license_note: "Bản quyền nhà xuất bản: chỉ dùng dữ kiện kèm trích dẫn, không sao chép câu chữ."
+default_tier: B
+accessed: "2026-10-25"
+verified: true
+verified_by: "agent:pass-c"
+notes_vi: "Lượt C đọc tóm tắt qua API Europe PMC (lượt B đặt ID 'rasmussen-1992-migraine-aura'). 1.000 người dân 25–64 tuổi: tỷ lệ mắc trọn đời đau nửa đầu có tiền triệu 5%, không tiền triệu 8% (nam:nữ 1:7); có yếu tố khởi phát ở 61% (có tiền triệu) và 90% (không tiền triệu), nổi bật nhất là căng thẳng; rối loạn thị giác ở 90% người có tiền triệu."

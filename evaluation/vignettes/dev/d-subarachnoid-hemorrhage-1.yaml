@@ -1,0 +1,30 @@
+id: d-subarachnoid-hemorrhage-1
+set: dev
+title_vi: "Nữ 52 tuổi, đột ngột đau đầu dữ dội nhất từ trước tới nay khi bê đồ nặng, nôn, cứng gáy"
+narrative_vi: "Bà G., 52 tuổi, bị tăng huyết áp. Đang bê chậu nước nặng thì đột ngột đau đầu như búa bổ, lên mức mạnh nhất chỉ trong 1–2 phút, đau lan xuống gáy, nôn 2 lần, cổ cứng khó cúi, khó chịu với ánh sáng. Vẫn tỉnh, không yếu tay chân."
+patient:
+  age_years: 52
+  sex: female
+complaint: headache
+answers:
+  headache_thunderclap: present
+  neck_stiffness: present
+  vomiting: present
+  nausea: present
+  photophobia: present
+  headache_severity: severe
+  headache_location: back_neck
+  headache_course: first_time
+  headache_duration: lt_4h
+  hypertension_known: present
+  confusion: absent
+  fainting_or_near_fainting: absent
+default_unmentioned: absent
+expected:
+  condition: subarachnoid_hemorrhage
+  acceptable: []
+  triage: 1
+source:
+  basis: "Ca điển hình theo 3312/QĐ-BYT (2024) (đau đầu 'sét đánh' lan xuống gáy, nôn, cứng gáy) và NICE NG228 khuyến cáo 1.1.3, 1.1.5 (đau đầu sét đánh: chuyển ngay đến cấp cứu)."
+  references: [byt-qd-3312-2024, nice-ng228, perry-bmj-2010]
+author: "agent:pass-c"

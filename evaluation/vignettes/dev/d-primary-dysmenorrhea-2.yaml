@@ -1,0 +1,34 @@
+id: d-primary-dysmenorrhea-2
+set: dev
+title_vi: "Nữ 14 tuổi, đau quặn quanh rốn trước kỳ kinh 1 ngày, buồn nôn, đi ngoài phân lỏng"
+narrative_vi: "Em A., 14 tuổi, có kinh lần đầu năm 12 tuổi. Từ chiều qua, trước ngày có kinh 1 ngày, đau quặn vùng quanh rốn và bụng dưới, buồn nôn, đi ngoài phân lỏng 3 lần, hơi nhức đầu. Không sốt, không nôn, không ai ăn cùng bị đau bụng."
+patient:
+  age_years: 14
+  sex: female
+complaint: abdominal_pain
+answers:
+  pain_with_menses: present
+  abd_pain_location: periumbilical
+  abd_pain_colicky: present
+  abd_pain_duration: h6_24
+  abd_pain_onset: gradual
+  nausea: present
+  diarrhea: present
+  headache: present
+  fever: absent
+  vomiting: absent
+  abd_pain_severe: absent
+  pregnant: absent
+  missed_period: absent
+  vaginal_bleeding: absent
+  unsafe_food_shared: absent
+default_unmentioned: absent
+expected:
+  condition: primary_dysmenorrhea
+  acceptable: []
+  triage: 5
+source:
+  basis: "Ca không điển hình: đau quanh rốn, kèm buồn nôn, tiêu chảy, đau đầu (MSD: các triệu chứng kèm hay gặp; Pham 2025: tiêu chảy 13,1%, buồn nôn 12,0%, đau đầu 12,7%). NHS Period pain: tự chăm sóc tại nhà."
+  references: [msd-dysmenorrhea, pham-fgwh-2025, nhs-period-pain]
+author: "agent:pass-c"
+notes_vi: "Ca không điển hình: tuổi nhỏ, triệu chứng tiêu hóa nổi bật, dễ nhầm với viêm dạ dày – ruột."

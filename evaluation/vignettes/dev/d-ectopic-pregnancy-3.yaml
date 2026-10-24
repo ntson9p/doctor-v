@@ -1,0 +1,33 @@
+id: d-ectopic-pregnancy-3
+set: dev
+title_vi: "Nữ 24 tuổi, đột ngột đau bụng dưới bên phải, đau tăng khi đi lại, chậm kinh 10 ngày"
+narrative_vi: "Chị T., 24 tuổi. Sáng nay đột ngột đau bụng dưới bên phải, đau tăng khi đi lại và khi ho, buồn nôn. Kinh chậm khoảng 10 ngày, chưa thử thai. Không sốt, không ra máu âm đạo, không đau vai, không ngất. Cơn đau không bắt đầu từ quanh rốn."
+patient:
+  age_years: 24
+  sex: female
+complaint: abdominal_pain
+answers:
+  pregnant: unknown
+  missed_period: present
+  abd_pain_location: right_lower
+  abd_pain_onset: sudden
+  abd_pain_duration: lt_6h
+  abd_pain_worse_movement: present
+  nausea: present
+  vomiting: absent
+  fever: absent
+  vaginal_bleeding: absent
+  abd_pain_radiates_right_shoulder: absent
+  abd_pain_migrated_rlq: absent
+  abd_pain_severe: absent
+  fainting_or_near_fainting: absent
+default_unmentioned: absent
+expected:
+  condition: ectopic_pregnancy
+  acceptable: []
+  triage: 2
+source:
+  basis: "Dễ nhầm với viêm ruột thừa (đau hố chậu phải, tăng khi đi lại, buồn nôn); 315/QĐ-BYT mục 3 phân biệt bằng dấu hiệu có thai và không có biểu hiện nhiễm trùng. Thai ngoài tử cung là cấp cứu sản khoa."
+  references: [byt-qd-315-2015, nice-ng126, nhs-ectopic-pregnancy]
+author: "agent:pass-c"
+notes_vi: "Ca dễ nhầm với viêm ruột thừa cấp (bệnh nguy hiểm, lô 3)."

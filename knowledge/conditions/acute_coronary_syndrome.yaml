@@ -1,0 +1,183 @@
+id: acute_coronary_syndrome
+names:
+  vi: "Hội chứng mạch vành cấp"
+  vi_common: ["Nhồi máu cơ tim", "Hội chứng vành cấp", "Cơn đau tim"]
+  en: "Acute coronary syndrome"
+codes:
+  icd10: "I24.9"
+  icd10_verified: true
+  mondo: "MONDO:0005542"
+summary_vi:
+  - "Mạch máu nuôi tim bị hẹp hoặc tắc đột ngột, làm cơ tim thiếu máu."
+  - "Thường đau tức giữa ngực, nhưng người cao tuổi, người đái tháo đường có thể chỉ đau vùng trên rốn, buồn nôn hoặc khó thở."
+  - "Cần gọi 115 ngay vì bệnh có thể đe dọa tính mạng trong vài giờ đầu."
+urgency: 1
+cant_miss: true
+specialties: [cardiology, emergency]
+priors:
+  - complaint: abdominal_pain
+    default: P6
+    by_age: { adult_45_64: P5, elder_65_74: P4, elder_75p: P4 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [canto-jama-2000, canto-jama-2012, byt-qd-2187-2019, viniol-fampract-2014, nguyen-ijc-2022, hoangvu-ccd-2025]
+      locator: "2187/QĐ-BYT, phần nhồi máu cơ tim ST chênh lên: triệu chứng không điển hình"
+      note: "Trong đợt thử nghiệm bệnh này chỉ có prior cho đau bụng (biểu hiện đau thượng vị). 33% người nhồi máu cơ tim không đau ngực khi đến viện; nhóm này lớn tuổi hơn (trung bình 74 tuổi) và nhiều đái tháo đường hơn (Canto 2000); nữ không đau ngực nhiều hơn nam (Canto 2012); 2187/QĐ-BYT nêu đau thượng vị là biểu hiện không điển hình và người già, người đái tháo đường có thể không đau ngực. Tổng quan đau bụng ở chăm sóc ban đầu (Viniol 2014) không có bệnh tim trong các nguyên nhân thường gặp, nên tỷ lệ chắc dưới 1% kể cả ở người cao tuổi. Ở Việt Nam, người nhồi máu cơ tim nhập viện có tuổi trung bình 71,2 (Nguyen 2022), người can thiệp mạch vành 64,1 (Hoang Vu 2025). Hai lượt cùng ước: dưới 45 tuổi dưới 0,02% (P6), 45–64 tuổi P5, từ 65 tuổi P4. Không thêm hệ số theo giới dù khoảng 65–70% người bệnh là nam, vì nữ hay biểu hiện không đau ngực hơn (Canto 2012) và hay chọn đau bụng hơn; cần bác sĩ duyệt."
+findings:
+  - finding: chest_pain_pressure
+    freq: frequent
+    freq_by_age: { elder_75p: occasional }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [vanoosterhout-jaha-2020, canto-jama-2000, canto-jama-2012, msd-acute-mi, byt-qd-2187-2019]
+      note: "Trong hội chứng mạch vành cấp nói chung, đau ngực gặp ở 74–79% (van Oosterhout 2020); 2187/QĐ-BYT ghi đau ngực có thể lan xuống thượng vị. Ở người chọn đau bụng là triệu chứng chính, hai lượt cùng ước khoảng một nửa vẫn có tức ngực kèm theo. Chỉ lượt B hạ còn occasional ở người từ 75 tuổi; lượt C giữ vì nguồn cho thấy rõ xu hướng theo tuổi: nhóm không đau ngực già hơn trung bình 7 tuổi (74,2 so với 66,9, Canto 2000) và MSD ghi người cao tuổi hay than khó thở hơn đau ngực. Nhờ vậy câu trả lời 'Không đau ngực' ít làm giảm khả năng bệnh ở người từ 75 tuổi."
+  - finding: es_crushing_chest_pain
+    freq: occasional
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-2187-2019, canto-jama-2000]
+      note: "Chỉ lượt A có; lượt C giữ. Người đau thắt ngực dữ dội kèm vã mồ hôi dừng ở màn sàng lọc cấp cứu; khi đó liên kết này đưa bệnh lên đầu danh sách cần loại trừ. Ở người biểu hiện chủ yếu bằng đau bụng, chỉ một phần nhỏ có kiểu đau này; occasional làm câu trả lời 'Không' chỉ giảm khả năng khoảng 1,2 lần. Cùng cụm chest_pain với 'chest_pain_pressure'."
+  - finding: pain_radiates_arm_jaw
+    freq: occasional
+    evidence:
+      tier: A
+      basis: numeric
+      sources: [vanoosterhout-jaha-2020, swap-jama-2005, byt-qd-2187-2019]
+      reported: "Đau tay hoặc vai trái 37–38% (van Oosterhout 2020); đau lan vai, cánh tay có LR+ 2,3–4,7 (Swap 2005)."
+      population: "Người hội chứng mạch vành cấp tại bệnh viện, mọi kiểu biểu hiện"
+      note: "Với người chủ yếu đau bụng, hai lượt cùng hạ một mức thành occasional (kb-guide mục 2.1). Tỷ lệ nền của dấu hiệu là 1% nên trả lời 'Có' làm tăng mạnh khả năng bệnh."
+  - finding: cold_sweat
+    freq: occasional
+    evidence:
+      tier: A
+      basis: numeric
+      sources: [vanoosterhout-jaha-2020, byt-qd-2187-2019, msd-acute-mi]
+      reported: "Vã mồ hôi 47% ở nam, 44% ở nữ."
+      population: "Người hội chứng mạch vành cấp tại bệnh viện, phần lớn có đau ngực"
+      note: "Lượt C: hai lượt lệch một mức (A occasional, B frequent). Số liệu tốt nhất là của van Oosterhout (bậc A), nhưng đo ở bệnh viện và chủ yếu ở người đau ngực; vã mồ hôi thường đi kèm cơn đau ngực điển hình (MSD; 2187/QĐ-BYT: đau ngực kéo dài kèm vã mồ hôi gợi ý nhồi máu cơ tim), và người đau thắt ngực kèm vã mồ hôi đã dừng ở màn sàng lọc cấp cứu. Vì vậy hạ một mức theo kb-guide mục 2.1, giống cách lượt B làm với đau lan tay."
+  - finding: breathing_difficulty
+    freq: frequent
+    evidence:
+      tier: A
+      basis: numeric
+      sources: [vanoosterhout-jaha-2020, msd-acute-mi, byt-qd-2187-2019]
+      reported: "Khó thở 40% ở nam, 48% ở nữ."
+      population: "Người hội chứng mạch vành cấp tại bệnh viện"
+      note: "Lượt C: hai lượt lệch một mức (A occasional, B frequent). Chọn frequent theo số liệu bậc A và không hạ mức, vì khó thở là triệu chứng nổi bật ở người biểu hiện không điển hình: 2187/QĐ-BYT xếp khó thở vào triệu chứng không điển hình, MSD ghi người cao tuổi hay than khó thở hơn đau ngực."
+  - finding: nausea
+    freq: frequent
+    evidence:
+      tier: A
+      basis: numeric
+      sources: [vanoosterhout-jaha-2020, msd-acute-mi, byt-qd-2187-2019]
+      reported: "Buồn nôn hoặc nôn 28% ở nam, 39% ở nữ."
+      population: "Người hội chứng mạch vành cấp tại bệnh viện"
+      note: "Buồn nôn, nôn hay gặp hơn ở nhồi máu thành dưới (MSD) và là triệu chứng không điển hình (2187/QĐ-BYT); ở biểu hiện đau thượng vị có thể nhiều hơn, hai lượt cùng chọn frequent. Tỷ lệ nền của buồn nôn ở người đau bụng là 35% nên dấu hiệu này phân biệt kém."
+  - finding: fainting_or_near_fainting
+    freq: occasional
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [vanoosterhout-jaha-2020, msd-acute-mi, byt-qd-2187-2019]
+      note: "Choáng váng và ngất được báo cáo trong các nghiên cứu gộp (van Oosterhout 2020); một số người đến khám vì ngất (MSD); 2187/QĐ-BYT yêu cầu chuyển ngay khi có cơn ngất. Hai lượt cùng chọn occasional."
+  - finding: heartburn
+    freq: occasional
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [msd-acute-mi, vanoosterhout-jaha-2020]
+      note: "Chỉ lượt A có; lượt C giữ. Người bệnh hay tưởng cơn đau là khó tiêu và có khi thấy đỡ sau ợ hơi hoặc uống thuốc dạ dày (MSD); 'khó tiêu' là một triệu chứng khi đến viện được van Oosterhout 2020 tổng hợp. Liên kết để câu trả lời 'có ợ chua, nóng rát sau xương ức' không làm giảm khả năng bệnh tim. Tần suất là ước lượng."
+  - finding: abd_pain_radiates_back
+    freq: occasional
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [vanoosterhout-jaha-2020, msd-acute-mi]
+      note: "Chỉ lượt B có; lượt C giữ. Đau giữa hai bả vai là triệu chứng được báo cáo, hay gặp ở nữ hơn (OR 2,15, van Oosterhout 2020); MSD: đau có thể lan ra lưng. Tần suất là ước lượng."
+  - finding: abd_pain_severe
+    freq: occasional
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-2187-2019]
+      note: "Chỉ lượt B có; lượt C giữ. Biểu hiện đau thượng vị thường là tức, đè nặng hơn là đau dữ dội. Ước lượng của người soạn."
+  - finding: abd_pain_location
+    dist: { epigastric: 0.71, right_upper: 0.05, left_upper: 0.07, periumbilical: 0.05, right_lower: 0.01, left_lower: 0.01, suprapubic: 0.01, whole: 0.09 }
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-2187-2019, vanoosterhout-jaha-2020]
+      locator: "2187/QĐ-BYT: đau có thể lan xuống vùng thượng vị nhưng không bao giờ quá rốn"
+      note: "Khi biểu hiện bằng đau bụng, vị trí điển hình là thượng vị. Tỷ lệ từng vùng là ước lượng (trung bình hai lượt); để rất thấp cho bụng dưới vì cơn đau không lan quá rốn."
+  - finding: abd_pain_duration
+    dist: { lt_6h: 0.43, h6_24: 0.25, d1_3: 0.16, d4_14: 0.09, gt_2w: 0.07 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [canto-jama-2000, byt-qd-2187-2019, nguyen-ijc-2022]
+      note: "Cơn đau do thiếu máu cơ tim kéo dài trên 20–30 phút (2187/QĐ-BYT); người không đau ngực đến viện muộn hơn (trung bình 7,9 giờ, Canto 2000); ở Việt Nam người ở nông thôn hay đến viện muộn (Nguyen 2022). Giữ một phần cho đau tái đi tái lại vì cơn đau thắt ngực không ổn định có thể tái diễn nhiều ngày. Lượt C lấy trung bình hai lượt (lệch 0,15)."
+  - finding: abd_pain_meal_relation
+    dist: { hungry_relieved_by_food: 0.05, worse_after_meal: 0.15, no_relation: 0.80 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-2187-2019]
+      note: "Chỉ lượt B có; lượt C giữ vì giúp phân biệt với loét dạ dày – tá tràng. Đau do thiếu máu cơ tim thường không liên quan bữa ăn; đau lúc đói, ăn vào đỡ gợi ý loét. Ước lượng của người soạn."
+  - finding: diabetes
+    freq: occasional
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [canto-jama-2000, hoangvu-ccd-2025, trinh-fcvm-2025, le-fcvm-2025]
+      reported: "Đái tháo đường 32,6% ở nhồi máu cơ tim không đau ngực (Canto 2000); 37,2%, 27,6% và khoảng 33% ở ba nhóm người bệnh Việt Nam."
+      note: "Số liệu nằm ở ranh giới occasional/frequent; hai lượt cùng chọn occasional vì tỷ lệ nền của danh mục (7%, người 18–69 tuổi) thấp hơn tỷ lệ ở người cao tuổi."
+  - finding: hypertension_known
+    freq: frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [hoangvu-ccd-2025, trinh-fcvm-2025, le-fcvm-2025]
+      reported: "Tăng huyết áp 73,1% (Hoang Vu 2025), 74,0% (Trinh 2025), khoảng 45% (Le 2025)."
+      note: "Câu hỏi hỏi tăng huyết áp đã biết; số liệu gồm cả người mới phát hiện khi nằm viện và nhiều người Việt Nam chưa biết mình tăng huyết áp, nên hai lượt cùng chọn frequent."
+  - finding: known_heart_disease
+    freq: occasional
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [canto-jama-2000, hoangvu-ccd-2025]
+      reported: "Từng suy tim 26,4% ở nhồi máu cơ tim không đau ngực (Canto 2000)."
+      note: "Thêm người đã biết bệnh mạch vành. Hai lượt cùng chọn occasional."
+  - finding: smoker
+    freq: occasional
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [hoangvu-ccd-2025, trinh-fcvm-2025, le-fcvm-2025]
+      reported: "Đang hút thuốc 27,3% (Hoang Vu 2025, n = 1.168), 42,5% (Trinh 2025, n = 127), khoảng 20% (Le 2025, n = 118)."
+      population: "Người hội chứng mạch vành cấp được can thiệp ở Việt Nam"
+      note: "Lượt C: hai lượt lệch một mức (A occasional, B frequent). Trung bình theo cỡ mẫu khoảng 28%, nằm trong khoảng occasional; chọn mức có nguồn lớn nhất. Mức này gần tỷ lệ nền 20% (gồm cả nữ rất ít hút thuốc) nên liên kết gần như không đổi kết quả."
+  - finding: fever
+    freq: rare
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-2187-2019]
+      note: "Chỉ lượt B có; lượt C giữ. Sốt không có trong các triệu chứng khởi phát (2187/QĐ-BYT). Đau bụng kèm sốt nghiêng về bệnh nhiễm trùng ổ bụng. Mức rare thấp hơn tỷ lệ nền 5%."
+warning_signs: [es_crushing_chest_pain, chest_pain_pressure, cold_sweat, breathing_difficulty, fainting_or_near_fainting, pain_radiates_arm_jaw]
+self_care_vi:
+  - "Gọi 115 ngay. Không tự lái xe đến bệnh viện."
+  - "Ngừng mọi việc đang làm, ngồi hoặc nằm nghỉ trong lúc chờ xe cấp cứu."
+see_doctor_vi:
+  - "Cần được làm điện tim và xét nghiệm máu càng sớm càng tốt."
+  - "Gọi 115 cả khi cơn đau đã giảm, nếu kèm vã mồ hôi, khó thở hoặc choáng."
+  - "Người cao tuổi, người đái tháo đường có thể bị nhồi máu cơ tim mà chỉ đau vùng trên rốn."
+review:
+  status: source_checked
+  authors: ["agent:pass-a", "agent:pass-b"]
+  reconciler: "agent:pass-c"
+  doctor_reviewer: null
+  updated: "2026-10-24"
+  notes_vi: "Lượt C đã đối chiếu 20 liên kết và mở lại mọi nguồn được trích. Bỏ hai liên kết chỉ có ở lượt A: 'nôn' (mức occasional bằng đúng tỷ lệ nền 20% khi đau bụng, không mang thông tin) và 'mệt mỏi' (nguồn chỉ mô tả bằng lời, câu trả lời 'Không' sẽ làm giảm một bệnh không được bỏ sót). Bác sĩ cần xem: (1) prior là ước lượng, chưa có số liệu tỷ lệ hội chứng mạch vành cấp trong người đau bụng ở tuyến ban đầu; (2) tần suất triệu chứng kèm lấy từ người bệnh tại viện ở mọi kiểu biểu hiện, chưa có số liệu riêng cho biểu hiện đau thượng vị (vã mồ hôi hạ một mức, khó thở giữ mức); (3) không dùng hệ số theo giới; (4) tỷ lệ nền của đái tháo đường, tăng huyết áp, hút thuốc trong danh mục không đổi theo tuổi và giới, làm các liên kết yếu tố nguy cơ kém chính xác."

@@ -19,6 +19,8 @@ red_flags:
   - group: abdominal_red_flags
   - finding: red_jelly_stool
   - finding: pregnant
+  # Chậm kinh là câu then chốt cho chửa ngoài tử cung khi người bệnh chưa biết mình có thai (lượt C lô 4).
+  - finding: missed_period
 intake: [abdominal_associated, fever_exposures, chronic_conditions]
 # Điền sau khi các bệnh của đợt thử nghiệm đã có trong knowledge/conditions/.
 cant_miss: []
