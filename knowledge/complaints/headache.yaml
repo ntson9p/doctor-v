@@ -20,7 +20,7 @@ red_flags:
   - finding: pregnant
   - finding: gestational_age
   - finding: recent_childbirth
-intake: [headache_associated, chronic_conditions]
+intake: [headache_associated, fever_exposures, chronic_conditions]
 # Điền sau khi các bệnh của đợt thử nghiệm đã có trong knowledge/conditions/.
 cant_miss: []
 safety_net:

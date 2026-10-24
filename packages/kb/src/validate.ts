@@ -255,6 +255,7 @@ export function validateKnowledge(k: RawKnowledge): Issue[] {
     lint(g.title_vi, 'question', file, `${i}.title_vi`);
     lint(g.none_label_vi, 'label', file, `${i}.none_label_vi`);
     checkAgeGroups(g.applies_to?.age_groups, file, `${i}.applies_to.age_groups`);
+    g.requires?.forEach((e, j) => checkExpr(e, file, `${i}.requires.${j}`));
     for (const id of g.findings) {
       const f = findingById.get(id)?.data;
       if (!f) add('error', file, `${i}.findings`, `Không có dấu hiệu "${id}"`);

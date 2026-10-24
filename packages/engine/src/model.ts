@@ -125,6 +125,8 @@ export interface QuestionGroup {
   findings: string[];
   allowUnknown: boolean;
   appliesTo: Applicability | null;
+  /** All expressions must be true before the group is asked. */
+  requires: Expr[];
 }
 
 export interface Rule {

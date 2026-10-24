@@ -219,6 +219,7 @@ export function compileKnowledge(k: RawKnowledge): CompiledKb {
       findings: [...g.findings],
       allowUnknown: g.allow_unknown ?? false,
       appliesTo: convertApplicability(g.applies_to),
+      requires: (g.requires ?? []).map(convertExpr),
     })),
     rules: k.rules.data.map((r) => ({
       id: r.id,

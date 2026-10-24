@@ -1,0 +1,11 @@
+id: nhs-utis
+type: web_page
+title: "Urinary tract infections (UTIs)"
+publisher: "NHS (UK)"
+url: "https://www.nhs.uk/conditions/urinary-tract-infections-utis/"
+license_class: L1
+license_note: "Open Government Licence v3.0; bản chuyển thể không được trình bày như nội dung của NHS."
+default_tier: C
+accessed: "2026-10-24"
+verified: false
+notes_vi: "Thêm bởi người bảo trì; chưa mở để xác minh."

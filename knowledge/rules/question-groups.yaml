@@ -70,6 +70,18 @@
   title_vi: "Ngoài đau đầu, còn có triệu chứng nào sau đây không?"
   findings: [fever, nausea, vomiting, photophobia, nasal_congestion, stress_poor_sleep]
   none_label_vi: "Không có triệu chứng nào ở trên"
+- id: fever_exposures
+  title_vi: "Có điều nào sau đây không?"
+  findings:
+    - malaria_area_exposure
+    - bush_exposure
+    - dengue_nearby
+    - sick_contact_respiratory
+    - measles_contact
+  none_label_vi: "Không có điều nào ở trên"
+  # Tiền sử dịch tễ khi có sốt (sốt rét, sốt mò, sốt xuất huyết, cúm, sởi): hỏi cho mọi triệu chứng chính.
+  requires:
+    - { finding: fever, is: present }
 - id: chronic_conditions
   title_vi: "Có bệnh nền hoặc tình trạng nào sau đây không?"
   findings: [diabetes, hypertension_known, known_heart_disease, immunocompromised]

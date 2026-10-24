@@ -151,6 +151,8 @@ export const questionGroupFileSchema = z.array(
     none_label_vi: TEXT,
     allow_unknown: z.boolean().optional(),
     applies_to: applicabilitySchema.optional(),
+    /** The group is asked only when every expression holds (e.g. exposures only with fever). */
+    requires: z.array(exprSchema).optional(),
   }),
 );
 

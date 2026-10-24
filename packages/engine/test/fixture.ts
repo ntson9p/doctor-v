@@ -127,14 +127,23 @@ export function makeKb(overrides: Partial<CompiledKb> = {}): CompiledKb {
         id: 'fever',
         implies: ['fever'],
         redFlags: [{ finding: 'neck' }],
-        intake: ['assoc'],
+        intake: ['assoc', 'only_with_rash'],
         cantMiss: ['mening'],
         safetyNet: ['neck'],
         otherPrior: null,
         ageGroups: null,
       },
     ],
-    groups: [{ id: 'assoc', findings: ['cough', 'runny', 'rash'], allowUnknown: true, appliesTo: null }],
+    groups: [
+      { id: 'assoc', findings: ['cough', 'runny', 'rash'], allowUnknown: true, appliesTo: null, requires: [] },
+      {
+        id: 'only_with_rash',
+        findings: ['pregnant'],
+        allowUnknown: false,
+        appliesTo: null,
+        requires: [{ finding: 'rash', is: 'present' }],
+      },
+    ],
     rules: [
       { id: 'r_neck', level: 2, when: { finding: 'neck', is: 'present' }, complaints: null },
       {

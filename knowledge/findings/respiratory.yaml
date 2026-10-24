@@ -98,6 +98,6 @@
 - id: sick_contact_respiratory
   kind: exposure
   type: binary
-  label_vi: "Tiếp xúc người đang sốt, ho"
+  label_vi: "7 ngày qua tiếp xúc gần người đang sốt, ho"
   question_vi: "Trong 7 ngày qua, có tiếp xúc gần người đang sốt hoặc ho không?"
   leak: nonspecific

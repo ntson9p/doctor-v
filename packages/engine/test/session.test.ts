@@ -20,14 +20,15 @@ function ask(step: Step): AskStep {
   return step;
 }
 
-/** Answers every question from a fixed table (absent when missing); returns the final state. */
+/** Answers every question from a fixed table (absent / unknown when missing); returns the final state. */
 function runToEnd(state: SessionState, table: Record<string, string>): SessionState {
+  const fallback = (id: string): string => (kb.findings.find((f) => f.id === id)?.type === 'categorical' ? 'unknown' : 'absent');
   let s = state;
   for (let i = 0; i < 50; i++) {
     const step = nextStep(kb, s);
     if (step.kind === 'done') return s;
     const ids = step.kind === 'finding' ? [step.findingId] : step.findingIds;
-    s = answerStep(kb, s, step, Object.fromEntries(ids.map((id) => [id, table[id] ?? 'absent'])));
+    s = answerStep(kb, s, step, Object.fromEntries(ids.map((id) => [id, table[id] ?? fallback(id)])));
   }
   throw new Error('Session did not end');
 }
@@ -83,6 +84,14 @@ describe('session flow', () => {
     expect(new Set(asked).size).toBe(asked.length);
     expect(sessionResult(kb, a)).toEqual(sessionResult(kb, b));
     expect(sessionResult(kb, a).conditions[0]?.conditionId).toBe('cold');
+  });
+
+  it('asks a group only when its condition holds', () => {
+    const woman = { ...ADULT, sex: 'female' as const };
+    const askedGroup = (s: SessionState): boolean =>
+      s.history.some((h) => h.step.kind === 'group' && h.step.groupId === 'only_with_rash');
+    expect(askedGroup(runToEnd(startSession(kb, 'fever', woman), { rash: 'present' }))).toBe(true);
+    expect(askedGroup(runToEnd(startSession(kb, 'fever', woman), {}))).toBe(false);
   });
 
   it('goes back by dropping the last step', () => {

@@ -116,6 +116,7 @@ export function nextStep(kb: CompiledKb, state: SessionState): Step {
   };
   const groupStep = (g: QuestionGroup | undefined, phase: Phase): AskStep | null => {
     if (!g || !isApplicable(g.appliesTo, state.ctx, ageGroup)) return null;
+    if (!g.requires.every((e) => evalExpr(e, env) === 'T')) return null;
     const open = g.findings.filter((id) => isOpen(id) && askable(id));
     return open.length > 0 ? { kind: 'group', groupId: g.id, findingIds: open, phase, allowUnknown: g.allowUnknown } : null;
   };

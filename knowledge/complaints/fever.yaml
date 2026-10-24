@@ -23,7 +23,7 @@ red_flags:
   - finding: bleeding_gums_nose
   - finding: fever_duration
   - finding: pregnant
-intake: [fever_associated, chronic_conditions]
+intake: [fever_associated, fever_exposures, chronic_conditions]
 # Điền sau khi các bệnh của đợt thử nghiệm đã có trong knowledge/conditions/.
 cant_miss: []
 safety_net:

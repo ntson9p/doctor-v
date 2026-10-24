@@ -80,7 +80,8 @@
   question_vi: "Đau bắt đầu quanh rốn, rồi chuyển xuống bụng dưới bên phải không?"
   requires:
     - { finding: abdominal_pain, is: present }
-  leak: specific
+  leak: 0.1
+  leak_note: "Tổng quan JAMA RCE (Wagner 1996) cho LR+ của đau di chuyển khoảng 3–7; tỷ lệ nền 1% làm LR quá cao (khoảng 50). Lượt A lô 3 đề xuất."
 - id: abd_pain_radiates_back
   kind: symptom
   type: binary
@@ -151,6 +152,8 @@
   question_vi: "Có buồn nôn không?"
   cluster: vomiting
   leak: nonspecific
+  leak_by_complaint: { abdominal_pain: 0.35 }
+  leak_note: "Người đau bụng do nguyên nhân bất kỳ thường buồn nôn; 20% là thấp (lượt A lô 3). Ước lượng, cần bác sĩ duyệt."
 - id: vomiting
   kind: symptom
   type: binary

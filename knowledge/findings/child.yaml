@@ -125,7 +125,7 @@
 - id: measles_contact
   kind: exposure
   type: binary
-  label_vi: "Tiếp xúc người bị sởi"
+  label_vi: "3 tuần qua tiếp xúc người bị sởi"
   question_vi: "Trong 3 tuần qua, có tiếp xúc người bị sởi không?"
   leak: specific
 - id: hfmd_contact

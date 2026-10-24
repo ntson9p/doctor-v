@@ -85,7 +85,8 @@
   applies_to:
     sex: [female]
     age_groups: [teen_13_17, adult_18_44, adult_45_64, elder_65_74, elder_75p]
-  leak: moderate
+  leak: 0.15
+  leak_note: "Khí hư bất thường khá phổ biến ở phụ nữ (viêm âm đạo do nấm, vi khuẩn); 5% là thấp. Ước lượng, cần bác sĩ duyệt."
 - id: pain_with_menses
   kind: history
   type: binary
@@ -96,7 +97,8 @@
   applies_to:
     sex: [female]
     age_groups: [teen_13_17, adult_18_44, adult_45_64]
-  leak: moderate
+  leak: 0.18
+  leak_note: "Kỳ kinh chiếm khoảng 5/28 ngày, nên cơn đau do nguyên nhân khác vẫn trùng kỳ kinh khoảng 18% (lượt A lô 3)."
 - id: pain_with_intercourse
   kind: symptom
   type: binary

@@ -71,4 +71,5 @@
   type: binary
   label_vi: "Đã từng mổ bụng"
   question_vi: "Đã từng mổ bụng (kể cả mổ đẻ) không?"
-  leak: moderate
+  leak: 0.15
+  leak_note: "Người trưởng thành từng mổ bụng (kể cả mổ đẻ, mổ ruột thừa) khá phổ biến; 5% là thấp (lượt A lô 3). Ước lượng, cần số liệu."

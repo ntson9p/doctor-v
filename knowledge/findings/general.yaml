@@ -96,6 +96,8 @@
   label_vi: "Chán ăn"
   question_vi: "Có chán ăn, ăn ít hơn hẳn bình thường không?"
   leak: nonspecific
+  leak_by_complaint: { abdominal_pain: 0.3 }
+  leak_note: "Chán ăn rất thường gặp khi đau bụng do bất kỳ nguyên nhân nào (lượt A lô 3). Ước lượng, cần bác sĩ duyệt."
 - id: rash_any
   kind: sign
   type: binary

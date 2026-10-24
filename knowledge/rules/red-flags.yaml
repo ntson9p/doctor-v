@@ -315,6 +315,48 @@
     sources: [nice-ng143, who-imci-chart-booklet-2014]
     locator: "NG143 khuyến cáo 1.2.14, bảng 2; IMCI: Fever (sốt mỗi ngày quá 7 ngày thì chuyển khám)"
     note: "NICE NG143 coi sốt từ 5 ngày ở trẻ là dấu hiệu vàng, cần đánh giá bệnh Kawasaki. IMCI: sốt mỗi ngày quá 7 ngày thì chuyển khám. doctor-v dùng mốc 7 ngày cho mọi lứa tuổi."
+- id: rf_fever_malaria_exposure
+  level: 3
+  when:
+    all:
+      - { finding: fever, is: present }
+      - { finding: malaria_area_exposure, is: present }
+  reason_vi: "Sốt sau khi đi rừng, ngủ rẫy hoặc đến vùng sốt rét cần xét nghiệm sốt rét trong ngày."
+  evidence:
+    tier: B
+    basis: verbal
+    sources: [byt-qd-3377-2023]
+    note: "Người bảo trì thêm theo đề xuất của lượt A lô 2: 3377/QĐ-BYT yêu cầu xét nghiệm mọi trường hợp nghi sốt rét; sốt rét do P. falciparum có thể chuyển nặng nhanh."
+- id: rf_fever_obstructing_stone
+  level: 2
+  when:
+    all:
+      - { finding: fever, is: present }
+      - { finding: flank_pain, is: present }
+      - any:
+          - { finding: abd_pain_radiates_groin, is: present }
+          - { finding: abd_pain_colicky, is: present }
+  reason_vi: "Sốt kèm cơn đau quặn hông lưng có thể là sỏi gây tắc và nhiễm khuẩn, cần khám cấp cứu."
+  evidence:
+    tier: B
+    basis: judgment
+    sources: [byt-qd-3931-2015]
+    note: "Người bảo trì thêm theo đề xuất của lượt A lô 3: thận ứ nước nhiễm khuẩn do sỏi là cấp cứu tiết niệu. Nguồn byt-qd-3931-2015 do lượt A thêm; cần lượt C xác minh và chuyển vào sổ đăng ký."
+- id: rf_uti_high_risk
+  level: 3
+  when:
+    all:
+      - { finding: dysuria, is: present }
+      - any:
+          - { sex: male }
+          - { finding: pregnant, is: present }
+          - { age_groups: [child_2m_5y, child_5_12] }
+  reason_vi: "Tiểu buốt ở nam giới, phụ nữ có thai hoặc trẻ em cần được khám trong hôm nay."
+  evidence:
+    tier: C
+    basis: verbal
+    sources: [nhs-utis]
+    note: "Người bảo trì thêm theo đề xuất của lượt A lô 3: NHS khuyên nhóm này đi khám sớm (nguy cơ biến chứng cao hơn)."
 - id: rf_fever_3_6_months_high_temp
   level: 2
   when:
