@@ -268,3 +268,21 @@ Ca còn sai: đau bụng kinh thứ phát (cần thêm câu hỏi đau nặng d�
 - **Kiểm tra:** `astro check` và ESLint không lỗi. Bộ kiểm thử Playwright cùng axe đã viết; sẽ chạy sau khi cài trình duyệt kiểm thử.
 - **Để Giai đoạn 4:** tra cứu bệnh, hình cơ thể, nút Nghe, chia sẻ/in, offline, chế độ tối.
 - **Lưu ý:** Astro gửi thống kê sử dụng ẩn danh khi build; tắt bằng `npx astro telemetry disable`, đây là thiết lập chung của máy.
+
+### Lần chấm thứ ba bộ ca giữ kín (112 ca, phiên bản dữ liệu 7f751b806e58)
+
+Sau vòng sửa thứ hai. Bộ giữ kín có thêm 12 ca mới do agent độc lập viết.
+
+**Đạt mọi chỉ tiêu an toàn.**
+- Sạch: an toàn 99,1%, bỏ sót cấp cứu 0/54, top-1 74,7%, top-3 89,5%, khuyên quá mức 12,5%, ECE 0,078, trung vị 11 câu.
+- Nhiễu, 5 hạt giống: an toàn 97,3%, bỏ sót 8/270 (3%).
+
+Ca duy nhất bị xếp thấp: sởi giai đoạn khởi phát, chưa nổi ban, có tiếp xúc người bệnh (cần mức 3, app ra mức 5). Mô hình loại sởi vì chưa có ban; chưa mô hình hóa diễn tiến theo ngày bệnh. Để vòng sau, theo quy tắc giữ kín.
+
+**Việc tồn từ ghi chú của agent viết ca:** thêm hướng dẫn lao của Bộ Y tế vào sổ nguồn (ho kéo dài).
+
+### Giai đoạn 2: kiểm thử đầu cuối
+
+14 kiểm thử Playwright và axe đều đạt, trên Pixel 5 và trên màn 320 px. Các kiểm thử đã tìm ra và sửa 2 lỗi tràn ngang ở cỡ chữ lớn nhất:
+- đầu trang chật: giờ tự rút gọn theo cỡ chữ (container query tính bằng em);
+- ô nhập liệu không co lại trong hàng.

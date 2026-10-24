@@ -8,6 +8,7 @@
 - **Độ chính xác chẩn đoán đạt chỉ tiêu.** Trên bộ ca giữ kín do agent độc lập viết: bệnh đúng đứng đầu 75,9%, nằm trong 3 bệnh đầu 88,6% (chỉ tiêu 45% và 65%).
 - **Lần chấm đầu không đạt chỉ tiêu an toàn:** 8/47 ca cấp cứu bị xếp thấp hơn mức cần. Cả 8 ca cần "gọi 115" nhưng app khuyên "đến cấp cứu ngay"; không ca nào bị khuyên ở nhà hay khám muộn. Đã tìm ra và sửa 2 nguyên nhân có tính hệ thống (mục 5).
 - **Lần chấm thứ hai** (106 ca, gồm 20 ca mới): bỏ sót cấp cứu còn 1/50 (2%), đạt chỉ tiêu ≤ 5%. Mức xử trí an toàn chung đạt 94,3%, **chưa đạt** chỉ tiêu 97%: còn 6 ca bị xếp thấp, 5 trong số đó là ca không cấp cứu có triệu chứng kéo dài (mục 5.2).
+- **Lần chấm thứ ba** (112 ca, sau vòng sửa thứ hai, gồm 12 ca mới): **đạt mọi chỉ tiêu an toàn**. An toàn 99,1% (≥ 97%), bỏ sót cấp cứu 0/54. Khi có nhiễu: an toàn 97,3%, bỏ sót 3%. Còn 1 ca bị xếp thấp: giai đoạn khởi phát của sởi (mục 5.3).
 - **Chi phí soạn dữ liệu:** khoảng 270 nghìn token và 20 phút chạy agent cho mỗi bệnh. 150 bệnh cần khoảng 50 triệu token.
 - **Cần bác sĩ quyết định** một số ngưỡng an toàn (mục 8) trước khi mở rộng.
 
@@ -81,7 +82,17 @@ Báo cáo chi tiết: `evaluation/reports/2026-10-24-holdout-7ab307c94b37.md`.
 
 Theo triệu chứng chính (trả lời đúng ca): đau bụng 32/35 ca có bệnh đúng trong top 3, an toàn 40/42; sốt 31/38 và 41/43; đau đầu 17/17 và 19/21. Báo cáo chi tiết: `evaluation/reports/2026-10-25-holdout-961e389d3c45.md`.
 
-### 4.3 Bộ dev (107 ca, sau mọi sửa đổi)
+### 4.3 Bộ ca giữ kín, lần chấm thứ ba (112 ca: 80 ca gốc + 32 ca viết thêm)
+
+| | Top-1 | Top-3 | Top-10 | An toàn | Bỏ sót cấp cứu | Khuyên quá mức | Tự chăm sóc nhận đúng | ECE | Số câu hỏi (trung vị) |
+|---|---|---|---|---|---|---|---|---|---|
+| Chỉ tiêu | ≥ 45% | ≥ 65% | ≥ 85% | ≥ 97% | ≤ 5% | ≤ 35% | ≥ 50% | ≤ 0,10 | ≤ 20 |
+| Trả lời đúng ca | 74,7% | 89,5% | 92,6% | **99,1%** ✓ | **0/54** ✓ | 12,5% | 81% | 0,078 | 11 |
+| 15% "Không rõ" | 76,0% | 88,0% | 92,2% | 97,3% ✓ | 8/270 (3%) ✓ | 18,2% | 60% | 0,055 | 14 |
+
+Theo triệu chứng chính (trả lời đúng ca): đau bụng 35/38 ca có bệnh đúng trong top 3, an toàn 44/44; sốt 31/38 và 44/45; đau đầu 19/19 và 23/23. Báo cáo chi tiết: `evaluation/reports/2026-10-25-holdout-7f751b806e58.md`.
+
+### 4.4 Bộ dev (107 ca, trước vòng sửa thứ hai)
 
 | | Top-1 | Top-3 | An toàn | Bỏ sót cấp cứu | Khuyên quá mức |
 |---|---|---|---|---|---|
@@ -123,6 +134,25 @@ Chi tiết: `docs/worklog.md`.
 | Đau bụng kinh nặng dần, đau khi quan hệ (nghi lạc nội mạc tử cung, ngoài hệ thống) | 4 → 5 | Chưa có quy tắc cho đau bụng kinh có dấu hiệu bất thường |
 
 Năm trong sáu ca có chung một nguyên nhân: thiếu các quy tắc "triệu chứng kéo dài hoặc nặng dần thì đi khám", vốn có trong mọi bộ quy trình phân loại. Việc bổ sung các quy tắc này, cùng dấu hiệu kích thích phúc mạc, sẽ làm theo quy tắc giữ kín: chuyển các ca đã dùng sang dev, viết ca thay thế, và chấm lại ở mốc sau.
+
+**Đã làm (vòng sửa thứ hai):**
+- quy tắc sốt từ 6 ngày, sổ mũi hơn 10 ngày, đau đầu nhiều lần mỗi tuần, đau bụng kinh kèm đau khi quan hệ;
+- dấu hiệu kích thích phúc mạc: đau tăng khi đi lại hoặc ho, kèm sốt hoặc nôn (trẻ dưới 5 tuổi: đi cấp cứu);
+- nhóm câu hỏi dấu hiệu nguy hiểm toàn thân hỏi một lần ở đầu phiên.
+
+5/6 ca đạt đúng mức sau khi sửa. Ca còn sai là đau bụng kinh thứ phát: thiếu câu hỏi về đau nặng dần qua nhiều năm và khó có thai.
+
+### 5.3 Lần chấm thứ ba: 1 ca còn bị xếp thấp
+
+Ca khởi phát sởi: thiếu niên sốt 4 ngày, ho, mắt đỏ, chưa nổi ban, bạn cùng lớp bị sởi. Cần khám trong 24 giờ, app khuyên theo dõi tại nhà.
+
+Nguyên nhân là giới hạn của mô hình: sởi gắn với dấu hiệu "phát ban: gần như luôn có", nên chưa có ban thì sởi bị loại. Mô hình chưa biết ban chỉ mọc sau vài ngày sốt.
+
+Hướng sửa:
+- quy tắc "sốt kèm tiếp xúc người bị sởi thì đi khám";
+- về lâu dài, cho tần suất dấu hiệu thay đổi theo số ngày bệnh.
+
+Chưa sửa: làm theo quy tắc giữ kín ở vòng sau.
 ## 6. Chi phí
 
 Token do các agent dùng, gồm cả phần đọc lại ngữ cảnh. Chi phí tiền thực tế phụ thuộc giá và tỷ lệ dùng bộ nhớ đệm.
@@ -142,7 +172,7 @@ Số liệu lượt A lấy từ 3 lô, lượt B từ 2 lô; các lô còn lạ
 ## 7. Hạn chế đã biết
 
 - **Chưa thử với người thật.** Người bệnh mô phỏng trả lời rất chuẩn, nên độ chính xác ngoài đời sẽ thấp hơn.
-- **Bộ ca giữ kín còn nhỏ:** 106 ca, trong khi chỉ tiêu cuối là từ 300 ca, trong đó từ 150 ca cấp cứu.
+- **Bộ ca giữ kín còn nhỏ:** 112 ca, trong khi chỉ tiêu cuối là từ 300 ca, trong đó từ 150 ca cấp cứu.
 - **Mỗi lần chỉ xét một bệnh:** chưa xử lý người mắc nhiều bệnh cùng lúc (người già đa bệnh).
 - **Đau bụng:** 33 bệnh thí điểm mới bao phủ một phần nguyên nhân đau bụng (chưa có đau bụng không đặc hiệu, táo bón, hội chứng ruột kích thích…). Vì vậy con số % của các bệnh đau bụng có thể cao hơn thực tế.
 - **Sốt rét ở người từ nước ngoài về:** câu phơi nhiễm đang gộp "đi rừng trong nước" (nguy cơ thấp) với "từ châu Phi về" (nguy cơ cao). Mức xử trí vẫn đúng (khuyên xét nghiệm trong ngày), nhưng sốt rét chưa lên đầu danh sách.
