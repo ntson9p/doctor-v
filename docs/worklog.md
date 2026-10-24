@@ -237,3 +237,34 @@ Bộ giữ kín gồm 86 ca cũ và 20 ca mới do agent độc lập viết. Ag
 **Việc tồn từ ghi chú của agent viết ca:** danh mục thiếu câu hỏi mạch nhanh, nghe kém, sản dịch hôi, nước tiểu hôi, bệnh phổi mạn tính, thuốc chống đông. Chưa sửa: các ghi chú này đến từ ca giữ kín, nên nếu dùng để sửa thì phải theo quy tắc giữ kín.
 
 Báo cáo Giai đoạn 1: `docs/reports/phase-1.md`.
+
+### Vòng sửa thứ hai (sau lần chấm thứ hai)
+
+Từ các ca bị xếp thấp ở lần chấm thứ hai. Theo quy tắc giữ kín, các ca đã dùng chuyển sang dev; agent độc lập đang viết 12 ca thay thế.
+
+**Quy tắc mới, có nguồn:**
+- sốt từ 6 ngày → khám trong ngày (trước là hơn 7 ngày);
+- sổ mũi hơn 10 ngày → khám trong vài ngày (CDC);
+- đau đầu nhiều lần mỗi tuần → khám trong vài ngày (NHS; câu hỏi mới `headache_frequent`);
+- đau bụng kinh kèm đau khi quan hệ → khám trong vài ngày (NHS);
+- đau bụng tăng khi đi lại hoặc khi ho, kèm sốt hoặc nôn → khám trong ngày; trẻ dưới 5 tuổi → đi cấp cứu (Benabbas 2017, Reust 2016).
+
+**Thay đổi luồng hỏi:**
+- Sốt có đau bụng: hỏi nhóm dấu hiệu nặng ở bụng.
+- Nhóm mới "dấu hiệu nguy hiểm toàn thân", hỏi một lần ở đầu phiên cho đau bụng và đau đầu. Vì lú lẫn, li bì và sốc giờ là quy tắc mức 1, các câu này có giá trị câu hỏi rất cao; nếu không hỏi trước, chúng bị hỏi lẻ từng câu giữa phiên, kể cả với ca đau bụng kinh.
+- Câu thay thế cho "mới sinh con".
+
+**Kết quả trên bộ dev (113 ca):**
+- trả lời đúng ca: an toàn 99,1%, bỏ sót cấp cứu 0/47;
+- nhiễu, 10 hạt giống: bỏ sót 9/460 (2,0%), khuyên quá mức 15,6%.
+
+Ca còn sai: đau bụng kinh thứ phát (cần thêm câu hỏi đau nặng dần qua nhiều năm, khó có thai).
+
+## 2026-10-25 — Giai đoạn 2: giao diện bản đầu
+
+- **Công nghệ:** `apps/web` dùng Astro 7.4.2, `@astrojs/preact` 6.1.1, Preact 10.29.8. Không dùng Preact 11 vì bản này ra ngày 23/10, mới 2 ngày.
+- **Kích thước:** trang kiểm tra 52 KB JavaScript (19 KB nén); dữ liệu `/data/kb.json` sinh lúc build, 176 KB (32 KB nén); CSS 8 KB.
+- **Luồng hoàn chỉnh theo kế hoạch mục 3.1:** cảnh báo, sàng lọc cấp cứu, thông tin cơ bản, chọn triệu chứng, câu hỏi, xem lại, kết quả. Kèm cỡ chữ 4 bước và nút Gọi 115 trên mọi trang.
+- **Kiểm tra:** `astro check` và ESLint không lỗi. Bộ kiểm thử Playwright cùng axe đã viết; sẽ chạy sau khi cài trình duyệt kiểm thử.
+- **Để Giai đoạn 4:** tra cứu bệnh, hình cơ thể, nút Nghe, chia sẻ/in, offline, chế độ tối.
+- **Lưu ý:** Astro gửi thống kê sử dụng ẩn danh khi build; tắt bằng `npx astro telemetry disable`, đây là thiết lập chung của máy.

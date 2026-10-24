@@ -38,6 +38,8 @@ knowledge/     nội dung y khoa (YAML): nguồn, dấu hiệu, triệu chứng 
 packages/
   engine/      bộ suy luận (TypeScript thuần, không phụ thuộc)
   kb/          schema, kiểm lỗi, biên dịch knowledge/ → JSON
+apps/
+  web/         ứng dụng web (Astro + Preact), chạy hoàn toàn trên máy người dùng
 evaluation/    bộ ca kiểm thử, bệnh nhân mô phỏng, báo cáo
 ```
 
@@ -55,6 +57,8 @@ Cần Node.js 24 trở lên. Cài đặt: `npm install`.
 | `npm run eval -- --set dev --report` | Chạy bộ ca phát triển và ghi báo cáo vào `evaluation/reports/` |
 | `npm run eval:tune` | Thử các hệ số nhiệt trên bộ ca phát triển |
 | `npm run play` | Chạy thử một phiên hỏi đáp ngay trong terminal |
+| `npm run web:dev` | Chạy ứng dụng web ở chế độ phát triển (mặc định http://localhost:4321) |
+| `npm run web:build` | Build ứng dụng web thành trang tĩnh trong `apps/web/dist/` |
 
 Trên Windows, nên dùng Windows Terminal để hiển thị đúng tiếng Việt.
 
