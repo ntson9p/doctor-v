@@ -6,7 +6,7 @@ import type { PatientContext } from './context.ts';
 import type { EngineIndex } from './kb-index.ts';
 import { clamp, normalizeLog } from './math.ts';
 import { UNKNOWN } from './model.ts';
-import type { Condition, Finding } from './model.ts';
+import type { Condition, Finding, Link } from './model.ts';
 
 /** Hypothesis id for "a condition not in the knowledge base". */
 export const OTHER = 'other';
@@ -19,7 +19,15 @@ export interface Hypotheses {
   ids: string[];
   /** Aligned with `ids`; `null` for OTHER. */
   conditions: (Condition | null)[];
+  /** Effective links for the patient's age group, aligned with `ids`; `null` for OTHER. */
+  links: (Readonly<Record<string, Link>> | null)[];
   logPrior: number[];
+}
+
+/** A condition's links with the overrides of one age group applied. */
+export function linksFor(c: Condition, ageGroup: string): Readonly<Record<string, Link>> {
+  const overrides = c.linksByAge[ageGroup];
+  return overrides ? { ...c.links, ...overrides } : c.links;
 }
 
 /** Unnormalized prior of a condition for a complaint, age group and context. */
@@ -31,7 +39,8 @@ export function conditionPrior(c: Condition, complaintId: string, ctx: PatientCo
   for (const m of c.priorModifiers) {
     const monthOk = m.months === null || (ctx.month !== null && m.months.includes(ctx.month));
     const regionOk = m.regions === null || (ctx.regionId !== null && m.regions.includes(ctx.regionId));
-    if (monthOk && regionOk) product *= clamp(m.factor, FACTOR_RANGE[0], FACTOR_RANGE[1]);
+    const sexOk = m.sex === null || m.sex.includes(ctx.sex);
+    if (monthOk && regionOk && sexOk) product *= clamp(m.factor, FACTOR_RANGE[0], FACTOR_RANGE[1]);
   }
   return base * clamp(product, PRODUCT_RANGE[0], PRODUCT_RANGE[1]);
 }
@@ -45,21 +54,26 @@ export function hypothesesFor(idx: EngineIndex, complaintId: string, ctx: Patien
   );
   const raw = conditions.map((c) => conditionPrior(c, complaintId, ctx, ageGroup));
   const total = raw.reduce((a, b) => a + b, 0);
-  if (conditions.length === 0 || total <= 0) return { ids: [OTHER], conditions: [null], logPrior: [0] };
+  if (conditions.length === 0 || total <= 0) return { ids: [OTHER], conditions: [null], links: [null], logPrior: [0] };
 
   const otherPrior = complaint.otherPrior ?? idx.kb.params.otherPrior;
   const logPrior = raw.map((r) => Math.log(((1 - otherPrior) * r) / total));
   logPrior.push(Math.log(otherPrior));
-  return { ids: [...conditions.map((c) => c.id), OTHER], conditions: [...conditions, null], logPrior };
+  return {
+    ids: [...conditions.map((c) => c.id), OTHER],
+    conditions: [...conditions, null],
+    links: [...conditions.map((c) => linksFor(c, ageGroup)), null],
+    logPrior,
+  };
 }
 
 /**
- * P(answer | hypothesis). Unlinked hypotheses (and OTHER) use the finding's leak or
- * baseline distribution. "unknown" carries no evidence.
+ * P(answer | hypothesis), given the hypothesis' link for the finding (undefined when not
+ * linked, and always for OTHER): unlinked hypotheses use the finding's leak or baseline
+ * distribution. "unknown" carries no evidence.
  */
-export function likelihood(f: Finding, value: string, condition: Condition | null, complaintId: string, alpha: number): number {
+export function likelihood(f: Finding, value: string, link: Link | undefined, complaintId: string, alpha: number): number {
   if (value === UNKNOWN) return 1;
-  const link = condition?.links[f.id];
   if (f.type === 'binary') {
     const p = typeof link === 'number' ? link : (f.leakByComplaint[complaintId] ?? f.leak);
     return value === 'present' ? p : 1 - p;
@@ -100,10 +114,15 @@ export function evidenceItems(
   return items;
 }
 
-export function logEvidence(items: readonly EvidenceItem[], condition: Condition | null, complaintId: string, alpha: number): number {
+export function logEvidence(
+  items: readonly EvidenceItem[],
+  links: Readonly<Record<string, Link>> | null,
+  complaintId: string,
+  alpha: number,
+): number {
   let total = 0;
   for (const item of items) {
-    total += item.weight * Math.log(likelihood(item.finding, item.value, condition, complaintId, alpha));
+    total += item.weight * Math.log(likelihood(item.finding, item.value, links?.[item.finding.id], complaintId, alpha));
   }
   return total;
 }
@@ -113,7 +132,7 @@ export function posterior(idx: EngineIndex, hyps: Hypotheses, items: readonly Ev
   const { temperature, categoricalSmoothing } = idx.kb.params;
   return normalizeLog(
     hyps.logPrior.map(
-      (lp, h) => lp + temperature * logEvidence(items, hyps.conditions[h] ?? null, complaintId, categoricalSmoothing),
+      (lp, h) => lp + temperature * logEvidence(items, hyps.links[h] ?? null, complaintId, categoricalSmoothing),
     ),
   );
 }

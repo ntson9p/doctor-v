@@ -60,6 +60,7 @@ const condition = (c: Partial<Condition> & Pick<Condition, 'id' | 'urgency' | 'p
   cantMiss: false,
   applicability: null,
   priorModifiers: [],
+  linksByAge: {},
   warningSigns: [],
   specialties: ['general_medicine'],
   ...c,
@@ -105,6 +106,8 @@ export function makeKb(overrides: Partial<CompiledKb> = {}): CompiledKb {
         cantMiss: true,
         priors: { fever: { default: 0.002, byAge: { child_2m_5y: 0.02 } } },
         links: { neck: 0.8, rash: 0.3, cough: 0.05, duration: [0.7, 0.3] },
+        // Neck stiffness is a less reliable sign in small children.
+        linksByAge: { child_2m_5y: { neck: 0.5 } },
         warningSigns: ['neck', 'rash'],
         specialties: ['infectious_disease'],
       }),
@@ -113,7 +116,10 @@ export function makeKb(overrides: Partial<CompiledKb> = {}): CompiledKb {
         urgency: 3,
         priors: { fever: { default: 0.02, byAge: {} } },
         links: { rash: 0.95, cough: 0.8, runny: 0.8, duration: [0.4, 0.6] },
-        priorModifiers: [{ months: [1, 2, 3], regions: null, factor: 3 }],
+        priorModifiers: [
+          { months: [1, 2, 3], regions: null, sex: null, factor: 3 },
+          { months: null, regions: null, sex: ['female'], factor: 2 },
+        ],
       }),
     ],
     complaints: [

@@ -88,7 +88,7 @@ Câu hỏi cho người soạn: **"Trong 100 người ở nhóm tuổi này, có
 
 ### 2.4 Hệ số điều chỉnh prior: `prior_modifiers`
 
-Chỉ dùng cho bối cảnh **biết sẵn mà không cần hỏi**: tháng trong năm (`months`) và vùng miền (`regions`).
+Chỉ dùng cho bối cảnh **biết sẵn mà không cần hỏi**: tháng trong năm (`months`), vùng miền (`regions`) và giới tính (`sex`, ví dụ viêm thận – bể thận gặp ở nữ nhiều hơn: `when: { sex: [female] }, factor: 3`).
 - Mỗi hệ số trong khoảng 0,1–10 lần. Tích các hệ số bị chặn trong 0,01–100 lần.
 - Phơi nhiễm, yếu tố nguy cơ, bệnh nền **không** dùng hệ số. Chúng là dấu hiệu (finding) có câu hỏi riêng, để người dùng trả lời.
 
@@ -322,6 +322,12 @@ findings:
       locator: "History and Physical"
       reported: "khoảng 50–60%"
       population: "người lớn"
+  - finding: neck_stiffness
+    freq: very_frequent
+    freq_by_age:                     # chỉ khi tần suất khác rõ ở một nhóm tuổi (có nguồn)
+      infant_0_2m: occasional
+      child_2m_5y: frequent
+    evidence: { tier: B, basis: numeric, sources: [nice-ng240], note: "Trẻ nhỏ ít có cứng gáy." }
   - finding: fever_duration          # dấu hiệu nhiều lựa chọn: khai báo phân bố
     dist: { d1_2: 0.35, d3_5: 0.5, d6_7: 0.13, gt_7d: 0.02 }
     evidence: { tier: B, basis: verbal, sources: [byt-qd-2760-2023], note: "Sốt 2–7 ngày." }
@@ -415,7 +421,7 @@ proposed_findings:
     label_vi: "Đau bắp chân"
     question_vi: "Có đau nhức bắp chân không?"
     leak: moderate
-    why: "Đặc trưng của bệnh do Leptospira; giúp phân biệt với sốt xuất huyết."
+    notes_vi: "Đặc trưng của bệnh do Leptospira; giúp phân biệt với sốt xuất huyết."
 ```
 
 Người đối chiếu (lượt C) hoặc người bảo trì quyết định thêm vào danh mục chung, để mọi bệnh dùng cùng một dấu hiệu.

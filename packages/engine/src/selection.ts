@@ -98,6 +98,7 @@ export function candidateFindings(input: SelectionInput, probs: readonly number[
     if (env.answers[f.id] !== undefined || env.implied.has(f.id) || screenItems.has(f.id)) return false;
     if (!isApplicable(f.appliesTo, input.ctx, env.ageGroup)) return false;
     if (!f.requires.every((e) => evalExpr(e, env) === 'T')) return false;
+    // Age overrides only change values, never add links, so the base links decide relevance.
     return relevant.some((c) => c.links[f.id] !== undefined) || ruleFindings.has(f.id);
   });
 }
@@ -119,8 +120,8 @@ export function analyze(input: SelectionInput): Analysis {
     let changeProb = 0;
     for (const value of answerSpace(f)) {
       let pv = 0;
-      hyps.conditions.forEach((c, h) => {
-        pv += (probs[h] ?? 0) * likelihood(f, value, c, complaintId, alpha);
+      hyps.links.forEach((links, h) => {
+        pv += (probs[h] ?? 0) * likelihood(f, value, links?.[f.id], complaintId, alpha);
       });
       if (pv <= 0) continue;
       const answers = { ...env.answers, [f.id]: value };

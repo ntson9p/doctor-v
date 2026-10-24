@@ -42,7 +42,7 @@ Với triệu chứng chính $c$, nhóm tuổi $a$ và ngữ cảnh $x$ (tháng,
 $$\tilde\pi(d) = \text{base}(d \mid c, a)\cdot \operatorname{clamp}\Big(\prod_k \operatorname{clamp}(m_k, 0{,}1, 10),\ 0{,}01,\ 100\Big)$$
 
 - $\text{base}$ lấy từ `by_age` nếu có, nếu không thì `default`. Các mức `P1`…`P6` đổi sang số theo `prior_levels`.
-- $m_k$ là hệ số `prior_modifiers` có điều kiện (tháng, vùng) khớp ngữ cảnh. Khi không biết tháng hoặc vùng, hệ số phụ thuộc thông tin đó không được áp dụng.
+- $m_k$ là hệ số `prior_modifiers` có điều kiện (tháng, vùng, giới) khớp ngữ cảnh. Khi không biết tháng hoặc vùng, hệ số phụ thuộc thông tin đó không được áp dụng.
 - Chỉ xét bệnh có prior cho $c$ và thỏa `applicability`. Loại trừ cứng chỉ dùng khi bất khả về sinh học.
 
 **Chuẩn hóa:**
@@ -59,7 +59,7 @@ Với dấu hiệu $f$ có câu trả lời $v$ (bỏ qua câu "Không rõ" và 
 
 $$P(f{=}\text{có} \mid h) = \begin{cases} p_{hf} & \text{nếu bệnh } h \text{ có liên kết với } f \\ \ell_{f,c} & \text{nếu không (kể cả "other")} \end{cases}, \qquad P(f{=}\text{không} \mid h) = 1 - P(f{=}\text{có}\mid h)$$
 
-- $p_{hf}$ là **tần suất quan sát** của dấu hiệu trong bệnh: 5 mức `frequency_levels` 0,025 / 0,20 / 0,50 / 0,80 / 0,95.
+- $p_{hf}$ là **tần suất quan sát** của dấu hiệu trong bệnh: 5 mức `frequency_levels` 0,025 / 0,20 / 0,50 / 0,80 / 0,95. Nếu liên kết có `freq_by_age` cho nhóm tuổi của người bệnh, giá trị đó thay cho giá trị chung.
 - $\ell_{f,c}$ là tỷ lệ nền (`leak`) của dấu hiệu, có thể khác theo triệu chứng chính (`leak_by_complaint`), tối thiểu `leak_floor`.
 - Dấu hiệu có điều kiện (`requires`) dùng **tần suất có điều kiện** (kb-guide §2.1). Vì điều kiện luôn được thỏa trước khi hỏi, tích các likelihood chính là xác suất đồng thời.
 

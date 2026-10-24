@@ -181,6 +181,7 @@ const priorModifierSchema = z.strictObject({
   when: z.strictObject({
     months: z.array(z.number().int().min(1).max(12)).min(1).optional(),
     regions: z.array(ID).min(1).optional(),
+    sex: z.array(SEX).min(1).optional(),
   }),
   factor: z.number().min(0.1).max(10),
   evidence: evidenceSchema,
@@ -189,6 +190,8 @@ const priorModifierSchema = z.strictObject({
 export const binaryLinkSchema = z.strictObject({
   finding: ID,
   freq: z.enum(FREQ_LEVELS),
+  /** Overrides for age groups where the frequency clearly differs (e.g. neck stiffness in infants). */
+  freq_by_age: z.record(ID, z.enum(FREQ_LEVELS)).optional(),
   evidence: evidenceSchema,
 });
 

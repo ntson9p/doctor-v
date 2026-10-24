@@ -77,6 +77,18 @@ describe('priors and posteriors', () => {
     const winter = { ...ADULT, month: 2 };
     expect(prob(probsFor({}, winter), 'measles')).toBeGreaterThan(prob(probsFor({}), 'measles'));
   });
+  it('applies sex-specific prior modifiers', () => {
+    const female = { ...ADULT, sex: 'female' as const };
+    expect(prob(probsFor({}, female), 'measles')).toBeGreaterThan(prob(probsFor({}), 'measles'));
+  });
+  it('uses age-specific link overrides', () => {
+    const child = { ...ADULT, ageMonths: 24 };
+    const adultLinks = hypothesesFor(idx, 'fever', ADULT, 'adult_18_44');
+    const childLinks = hypothesesFor(idx, 'fever', child, 'child_2m_5y');
+    const at = (h: ReturnType<typeof hypothesesFor>) => h.links[h.ids.indexOf('mening')]?.neck;
+    expect(at(adultLinks)).toBe(0.8);
+    expect(at(childLinks)).toBe(0.5);
+  });
   it('ignores unknown answers and implied findings', () => {
     const base = probsFor({});
     expect(probsFor({ neck: 'unknown', rash: 'unknown' }).probs).toEqual(base.probs);

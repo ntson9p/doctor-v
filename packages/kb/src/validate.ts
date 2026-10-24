@@ -335,8 +335,8 @@ export function validateKnowledge(k: RawKnowledge): Issue[] {
     });
     c.prior_modifiers?.forEach((m, i) => {
       for (const r of m.when.regions ?? []) if (!regionIds.has(r)) add('error', file, `prior_modifiers.${i}`, `Không có vùng "${r}"`);
-      if (m.when.months === undefined && m.when.regions === undefined) {
-        add('error', file, `prior_modifiers.${i}.when`, 'Cần "months" hoặc "regions"');
+      if (m.when.months === undefined && m.when.regions === undefined && m.when.sex === undefined) {
+        add('error', file, `prior_modifiers.${i}.when`, 'Cần "months", "regions" hoặc "sex"');
       }
       checkEvidence(m.evidence, file, `prior_modifiers.${i}.evidence`);
     });
@@ -353,6 +353,7 @@ export function validateKnowledge(k: RawKnowledge): Issue[] {
       }
       if ('freq' in link) {
         if (f.type !== 'binary') add('error', file, path, `"${link.finding}" là dấu hiệu nhiều lựa chọn: dùng "dist"`);
+        checkAgeGroups(Object.keys(link.freq_by_age ?? {}), file, `${path}.freq_by_age`);
         checkEvidence(link.evidence, file, `${path}.evidence`, {
           keyFinding: link.freq === 'very_frequent' || link.freq === 'almost_always',
         });

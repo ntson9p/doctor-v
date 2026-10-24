@@ -113,9 +113,13 @@ export function compileKnowledge(k: RawKnowledge): CompiledKb {
       priors[entry.complaint] = { default: p.prior_levels[entry.default], byAge };
     }
     const links: Condition['links'] = {};
+    const linksByAge: Condition['linksByAge'] = {};
     for (const link of c.findings) {
       if ('freq' in link) {
         links[link.finding] = p.frequency_levels[link.freq];
+        for (const [ageGroup, level] of Object.entries(link.freq_by_age ?? {})) {
+          linksByAge[ageGroup] = { ...linksByAge[ageGroup], [link.finding]: p.frequency_levels[level] };
+        }
       } else {
         const f = findingById.get(link.finding);
         const options = f?.type === 'categorical' ? f.options : Object.keys(link.dist);
@@ -131,9 +135,11 @@ export function compileKnowledge(k: RawKnowledge): CompiledKb {
       priorModifiers: (c.prior_modifiers ?? []).map((m) => ({
         months: m.when.months ? [...m.when.months] : null,
         regions: m.when.regions ? [...m.when.regions] : null,
+        sex: m.when.sex ? [...m.when.sex] : null,
         factor: m.factor,
       })),
       links,
+      linksByAge,
       warningSigns: [...(c.warning_signs ?? [])],
       specialties: [...c.specialties],
     };

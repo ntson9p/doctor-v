@@ -84,8 +84,12 @@ export interface ComplaintPrior {
 export interface PriorModifier {
   months: number[] | null;
   regions: string[] | null;
+  sex: Sex[] | null;
   factor: number;
 }
+
+/** Binary link: P(present | condition). Categorical link: distribution aligned to options. */
+export type Link = number | number[];
 
 export interface Condition {
   id: string;
@@ -95,8 +99,9 @@ export interface Condition {
   /** Keyed by complaint id; a condition is a hypothesis only for complaints listed here. */
   priors: Record<string, ComplaintPrior>;
   priorModifiers: PriorModifier[];
-  /** Binary links: P(present | condition). Categorical links: distribution aligned to options. */
-  links: Record<string, number | number[]>;
+  links: Record<string, Link>;
+  /** Per age group: binary link values that replace `links` for that group. */
+  linksByAge: Record<string, Record<string, number>>;
   warningSigns: string[];
   specialties: string[];
 }

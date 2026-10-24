@@ -5,7 +5,7 @@
 import { isApplicable } from './context.ts';
 import { indexKb } from './kb-index.ts';
 import type { EngineIndex } from './kb-index.ts';
-import type { CompiledKb, Condition, EngineParams, TriageLevel } from './model.ts';
+import type { CompiledKb, EngineParams, Link, TriageLevel } from './model.ts';
 import { evidenceItems, hypothesesFor, likelihood, posterior } from './posterior.ts';
 import type { EvidenceItem } from './posterior.ts';
 import { envOf, nextStep } from './session.ts';
@@ -61,10 +61,11 @@ export function displayPercent(probability: number, display: EngineParams['displ
   return { kind: 'about', percent: Math.min(rounded, display.maxShown) };
 }
 
+/** Explanation of one condition: `links` are its effective links for the patient's age group. */
 export function contributions(
   idx: EngineIndex,
   items: readonly EvidenceItem[],
-  condition: Condition,
+  links: Readonly<Record<string, Link>>,
   complaintId: string,
 ): { supporting: Contribution[]; opposing: Contribution[] } {
   const { temperature, categoricalSmoothing: alpha } = idx.kb.params;
@@ -75,8 +76,8 @@ export function contributions(
       logRatio:
         temperature *
         item.weight *
-        (Math.log(likelihood(item.finding, item.value, condition, complaintId, alpha)) -
-          Math.log(likelihood(item.finding, item.value, null, complaintId, alpha))),
+        (Math.log(likelihood(item.finding, item.value, links[item.finding.id], complaintId, alpha)) -
+          Math.log(likelihood(item.finding, item.value, undefined, complaintId, alpha))),
     }))
     .filter((c) => Math.abs(c.logRatio) > 1e-9);
   return {
@@ -100,7 +101,8 @@ export function sessionResult(kb: CompiledKb, state: SessionState): SessionResul
 
   const conditions: ConditionScore[] = [];
   hyps.conditions.forEach((c, h) => {
-    if (c === null) return;
+    const links = hyps.links[h];
+    if (c === null || !links) return;
     const probability = probs[h] ?? 0;
     conditions.push({
       conditionId: c.id,
@@ -108,7 +110,7 @@ export function sessionResult(kb: CompiledKb, state: SessionState): SessionResul
       display: displayPercent(probability, params.display),
       urgency: c.urgency,
       cantMiss: c.cantMiss,
-      ...contributions(idx, items, c, state.complaintId),
+      ...contributions(idx, items, links, state.complaintId),
     });
   });
   conditions.sort((a, b) => b.probability - a.probability);
