@@ -60,6 +60,7 @@ export function compileKnowledge(k: RawKnowledge): CompiledKb {
     cantMissWeight: p.cant_miss_weight,
     lambdaBeforeStable: p.lambda_before_stable,
     lambdaAfterStable: p.lambda_after_stable,
+    urgentFocusWeight: p.urgent_focus_weight,
     stop: {
       triageChangeProb: p.stop.triage_change_prob,
       top1Mass: p.stop.top1_mass,

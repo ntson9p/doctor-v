@@ -46,7 +46,10 @@ if (errors.length > 0) {
 const only = option('--case');
 const vignettes = loaded.map((l) => l.vignette).filter((v) => only === undefined || v.id === only);
 const clean = vignettes.map((v) => runVignette(kb, v));
-const noisy = vignettes.map((v) => runVignette(kb, v, { noise: 0.15, seed: 7 }));
+// One seed decides which answers turn "unknown", and a single draw varies too much: a change of
+// question order alone moved the missed-emergency count by one case. Five fixed seeds, pooled.
+const NOISE_SEEDS = [1, 2, 3, 4, 5];
+const noisy = NOISE_SEEDS.flatMap((seed) => vignettes.map((v) => runVignette(kb, v, { noise: 0.15, seed })));
 
 if (only !== undefined) {
   const r = clean[0];

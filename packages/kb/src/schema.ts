@@ -349,6 +349,7 @@ export const engineParamsSchema = z.strictObject({
   cant_miss_weight: z.number().positive(),
   lambda_before_stable: z.number().nonnegative(),
   lambda_after_stable: z.number().nonnegative(),
+  urgent_focus_weight: z.number().nonnegative(),
   stop: z.strictObject({
     triage_change_prob: probability,
     top1_mass: probability,

@@ -70,6 +70,11 @@ cant_miss_weight: 99
 # Trọng số thông tin chẩn đoán khi chọn câu hỏi: trước / sau khi mức xử trí ổn định
 lambda_before_stable: 0.1
 lambda_after_stable: 1.0
+# Khi mức 1–2 chỉ dựa vào xác suất của nhóm bệnh khẩn (không có quy tắc giữ mức đó), cộng thêm
+# thông tin về nhóm bệnh này (nhân hệ số dưới) vào điểm câu hỏi, và chưa dừng khi còn câu hỏi
+# mang ít nhất min_eig_bits về nhóm đó. Lý do: không câu đơn lẻ nào kéo được viêm ruột thừa
+# dưới ngưỡng 1%, nên phiên dừng trước khi hỏi vị trí đau (lượt C lô 3).
+urgent_focus_weight: 2.0
 
 stop:
   triage_change_prob: 0.05

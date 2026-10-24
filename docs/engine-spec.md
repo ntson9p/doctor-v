@@ -161,15 +161,22 @@ $H$ là entropy (bit) trên mọi giả thuyết. Pđổi **không** tính nhán
 - Khi **chưa ổn định**: chỉ xét ứng viên có Pđổi ≥ 0,05, điểm = ($V^+$ + λ₁·EIG + Pđổi) / cost, với λ₁ = `lambda_before_stable` (0,1).
 - Khi **đã ổn định**: điểm = ($V^+$ + λ₂·EIG) / cost, với λ₂ = `lambda_after_stable` (1).
 
+**Ưu tiên loại trừ nhóm bệnh khẩn:** khi mức 1–2 chỉ dựa vào xác suất (không có quy tắc, mục sàng lọc hay dấu hiệu nguy hiểm "Không rõ" nào giữ mức đó), gọi $m$ là xác suất của nhóm đã đặt mức: các bệnh "không được bỏ sót" (nếu mức do ngưỡng `cant_miss_threshold`), hoặc mọi bệnh có mức cần từ mức đó trở lên, kể cả phần tương ứng của "nguyên nhân khác". Với mỗi ứng viên:
+
+$$\text{EIG}_m(q) = (1-u_q)\Big[H_b(m) - \sum_a P(a)\, H_b(m \mid a)\Big]$$
+
+với $H_b$ là entropy nhị phân. Điểm khi đã ổn định dùng EIG + `urgent_focus_weight` · EIG$_m$ thay cho EIG. Lý do: thường không câu đơn lẻ nào kéo được nhóm bệnh khẩn xuống dưới ngưỡng (viêm ruột thừa ở người đau quanh rốn kèm tiêu chảy), nên VOI một bước bằng 0. Muốn loại trừ hay xác nhận, phải hỏi vài câu liên tiếp như vị trí đau, đau có chuyển xuống hố chậu phải, đau tăng khi cử động.
+
 Điểm bằng nhau thì chọn dấu hiệu đứng trước trong danh mục. Không câu nào có điểm dương thì dừng ("no_more_questions").
 
 ## 8. Điều kiện dừng
 
 Phiên thích ứng dừng khi:
-- **"confident":** đủ cả ba điều kiện:
+- **"confident":** đủ cả bốn điều kiện:
   1. mức xử trí ổn định;
   2. max VOI < `min_voi` (0,1);
-  3. xác suất bệnh đứng đầu ≥ `top1_mass` (0,70), **hoặc** max EIG < `min_eig_bits` (0,05 bit);
+  3. khi đang ưu tiên loại trừ nhóm bệnh khẩn (mục 7): max EIG$_m$ < `min_eig_bits`;
+  4. xác suất bệnh đứng đầu ≥ `top1_mass` (0,70), **hoặc** max EIG < `min_eig_bits` (0,05 bit);
 - **"no_more_questions":** không còn ứng viên;
 - **"max_questions":** đã hỏi `max_questions` (30) bước. Trần mềm `soft_max_questions` (20) chỉ để giao diện cho phép dừng sớm.
 
@@ -236,6 +243,7 @@ Hiển thị tối đa 5 đóng góp dương ("vì sao gợi ý") và 5 đóng g
 | `self_care_block_other` | 0,30 | |
 | `under_triage_weights` / `cant_miss_weight` | 49 / 49 / 9 / 3; 99 | |
 | `lambda_before_stable` / `lambda_after_stable` | 0,1 / 1 | |
+| `urgent_focus_weight` | 2 | Trọng số thông tin về nhóm bệnh khẩn khi mức 1–2 chỉ dựa vào xác suất (mục 7) |
 | `stop` | Pđổi 0,05; bệnh đầu 0,70; EIG 0,05 bit; VOI 0,1; trần 30 (mềm 20) | `min_voi` cũng là "gánh nặng" trừ vào giá trị an toàn khi chọn câu (mục 7) |
 | `safety_net_min_prob` | 0,005 | |
 | `display` | làm tròn 5%; tối thiểu 5%; tối đa 95% | |
@@ -249,6 +257,7 @@ Hiển thị tối đa 5 đóng góp dương ("vì sao gợi ý") và 5 đóng g
 | Dừng khi top-3 ≥ 0,80, **hoặc** EIG < 0,05, **hoặc** VOI < 0,01 | Dừng khi ổn định **và** VOI < 0,01 **và** (**bệnh đứng đầu ≥ 0,70** hoặc EIG < 0,05) | Với điều kiện "hoặc VOI < 0,01", phiên sẽ dừng ngay khi mức xử trí ổn định, trước khi kịp phân biệt bệnh. Còn với "top-3 ≥ 0,80", các bệnh cùng mức xử trí (cảm lạnh, cúm, COVID-19) chiếm hết top 3, nên câu phân biệt như kết quả tự xét nghiệm không bao giờ được hỏi (lượt C lô 1 phát hiện). Cách mới vừa giữ được câu hỏi an toàn, vừa giữ được câu hỏi phân biệt |
 | Chưa nêu | **Dừng ngay** khi có quy tắc mức 1–2 | Người cần đi cấp cứu không nên phải trả lời thêm câu hỏi |
 | Chưa nêu | Khi mức xử trí chưa ổn định, cộng thêm Pđổi vào điểm câu hỏi | Bảo đảm phiên tiến về trạng thái ổn định |
+| Chưa nêu | Khi mức 1–2 chỉ dựa vào xác suất, ưu tiên câu hỏi về nhóm bệnh khẩn (EIG$_m$) và chưa dừng khi các câu đó còn mang thông tin | VOI một bước không thấy giá trị của chuỗi câu loại trừ (lượt C lô 3). Trên 99 ca dev: Brier 0,494 → 0,477, log loss 1,242 → 1,209, khuyên quá mức 9 → 8; số câu trung vị không đổi. Đã thử thêm câu bắt buộc "vị trí đau" cho đau bụng: chính xác hơn chút, nhưng qua 10 hạt giống nhiễu số ca cấp cứu bị bỏ sót tăng 8 → 11/380, nên không dùng |
 | VOI tính trên rủi ro $R(P)$ của xác suất bệnh; Pđổi gồm cả nhánh "Không rõ" | VOI có **quy tắc nguy hiểm** (chặn mức cần thật) và **chi phí của "Không rõ"**; Pđổi bỏ nhánh "Không rõ"; giá trị an toàn chỉ tính phần vượt `min_voi` = 0,1 | Cách cũ làm mọi câu hỏi dấu hiệu nguy hiểm có Pđổi ≥ `unknown_rate` (0,1), nên mức xử trí luôn "chưa ổn định" và phiên hỏi lần lượt từng dấu hiệu nguy hiểm của mọi quy tắc, kể cả khối thoát vị ở người sốt (người bảo trì, lô 2). Trên 72 ca dev (24 bệnh), sau thay đổi này cùng với phạm vi quy tắc: số câu trung vị 15 (thích ứng 7), không bỏ sót ca cấp cứu |
 
 ## 13. Hạn chế đã biết

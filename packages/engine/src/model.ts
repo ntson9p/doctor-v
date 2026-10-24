@@ -159,6 +159,8 @@ export interface EngineParams {
   cantMissWeight: number;
   lambdaBeforeStable: number;
   lambdaAfterStable: number;
+  /** Weight of information about the urgent group while the level rests on its probability. */
+  urgentFocusWeight: number;
   stop: {
     triageChangeProb: number;
     top1Mass: number;

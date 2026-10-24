@@ -66,7 +66,7 @@ Bộ chạy (`evaluation/src/`) chạy toàn bộ phiên hỏi đáp của bộ 
 - dấu hiệu nhiều lựa chọn không có trong `answers`: "không rõ";
 - câu hỏi nhóm: từng mục trả lời như trên.
 
-**Biến thể nhiễu:** mỗi ca chạy thêm phiên bản đổi ngẫu nhiên (có hạt giống cố định) 15% câu trả lời thành "không rõ", để kiểm tra mức xử trí vẫn an toàn khi người dùng không chắc.
+**Biến thể nhiễu:** mỗi ca chạy thêm 5 phiên bản (hạt giống cố định 1–5), mỗi phiên bản đổi ngẫu nhiên 15% câu trả lời thành "không rõ", để kiểm tra mức xử trí vẫn an toàn khi người dùng không chắc. Chỉ số nhiễu cộng dồn cả 5 phiên bản. Một hạt giống không đủ: chỉ riêng việc đổi thứ tự câu hỏi đã làm số ca cấp cứu bị bỏ sót thay đổi một ca, vì hạt giống quyết định câu nào bị đổi.
 
 ## 4. Chỉ số
 

@@ -26,6 +26,8 @@ export interface QuestionScore {
   eig: number;
   /** Probability that a real answer (not "unknown") changes the triage level. */
   changeProb: number;
+  /** Expected information gain, in bits, about the urgent group in focus (0 without focus). */
+  eigFocus: number;
 }
 
 export interface Analysis {
@@ -35,6 +37,8 @@ export interface Analysis {
   stable: boolean;
   /** Probability of the most likely condition (OTHER excluded). */
   top1Mass: number;
+  /** The level 1–2 rests only on the probability of an urgent group (see `urgentFocus`). */
+  focus: boolean;
 }
 
 /** Answer values whose probabilities sum to 1 for every hypothesis ("unknown" handled apart). */
@@ -72,6 +76,44 @@ export function dangerCap(triage: Triage): number {
     if ((r.kind === 'rule' || r.kind === 'emergency_screen') && r.level < cap) cap = r.level;
   }
   return cap;
+}
+
+export interface UrgentFocus {
+  level: number;
+  /** The level was set by the can't-miss threshold: the group is the can't-miss conditions. */
+  cantMiss: boolean;
+}
+
+/**
+ * The urgent group whose probability alone sets a level 1–2 (no rule, screen item or
+ * "unknown" danger sign holds that level), or null. Questions about this group can lower the
+ * level by ruling it out, or confirm it; one question rarely does either alone.
+ */
+export function urgentFocus(triage: Triage): UrgentFocus | null {
+  const prob = triage.reasons.find((r) => r.kind === 'probability');
+  if (!prob || prob.kind !== 'probability' || prob.level > 2 || prob.level !== triage.level) return null;
+  if (triage.reasons.some((r) => r.kind !== 'probability' && r.level <= prob.level)) return null;
+  return { level: prob.level, cantMiss: prob.cantMiss };
+}
+
+/** Probability of the urgent group in focus (OTHER counts with its share of that urgency). */
+export function focusMass(idx: EngineIndex, hyps: Hypotheses, probs: readonly number[], focus: UrgentFocus): number {
+  const q = idx.kb.params.otherUrgencyCumulative;
+  let mass = 0;
+  hyps.conditions.forEach((c: Condition | null, h) => {
+    const ph = probs[h] ?? 0;
+    if (c === null) {
+      if (!focus.cantMiss) mass += ph * (q[focus.level - 1] ?? 0);
+    } else if (c.urgency <= focus.level && (!focus.cantMiss || c.cantMiss)) {
+      mass += ph;
+    }
+  });
+  return mass;
+}
+
+function binaryEntropy(p: number): number {
+  if (p <= 0 || p >= 1) return 0;
+  return -(p * Math.log2(p) + (1 - p) * Math.log2(1 - p));
 }
 
 /** Expected loss of triage level k under the posterior, urgencies capped by danger rules. */
@@ -129,8 +171,11 @@ export function analyze(input: SelectionInput): Analysis {
   const alpha = params.categoricalSmoothing;
   const elder = isElder(idx, env.ageGroup);
   const probs = posterior(idx, hyps, evidenceItems(idx, env.answers, env.implied), complaintId);
-  const triageLevel = computeTriage({ idx, complaintId, env, hyps, probs }).level;
+  const triage = computeTriage({ idx, complaintId, env, hyps, probs });
+  const triageLevel = triage.level;
   const entropyNow = entropyBits(probs);
+  const focus = urgentFocus(triage);
+  const focusEntropyNow = focus ? binaryEntropy(focusMass(idx, hyps, probs, focus)) : 0;
 
   const scores: QuestionScore[] = [];
   for (const f of candidateFindings(input, probs)) {
@@ -143,6 +188,7 @@ export function analyze(input: SelectionInput): Analysis {
     let riskAnswered = 0;
     let riskUnknown = 0;
     let expEntropy = 0;
+    let expFocusEntropy = 0;
     let changeProb = 0;
     for (const value of answerSpace(f)) {
       let pv = 0;
@@ -159,6 +205,7 @@ export function analyze(input: SelectionInput): Analysis {
       riskAnswered += pv * expectedLoss(idx, hyps, probs2, triage2.level, cap, elder);
       riskUnknown += pv * expectedLoss(idx, hyps, probs2, levelUnknown, cap, elder);
       expEntropy += pv * entropyBits(probs2);
+      if (focus) expFocusEntropy += pv * binaryEntropy(focusMass(idx, hyps, probs2, focus));
       if (triage2.level !== triageLevel) changeProb += (1 - u) * pv;
     }
     scores.push({
@@ -166,19 +213,21 @@ export function analyze(input: SelectionInput): Analysis {
       voi: riskNotAsked - ((1 - u) * riskAnswered + u * riskUnknown),
       eig: Math.max(0, (1 - u) * (entropyNow - expEntropy)),
       changeProb,
+      eigFocus: focus ? Math.max(0, (1 - u) * (focusEntropyNow - expFocusEntropy)) : 0,
     });
   }
 
   const stable = scores.every((s) => s.changeProb < params.stop.triageChangeProb);
   const top1Mass = Math.max(0, ...probs.slice(0, -1));
-  return { probs, triageLevel, scores, stable, top1Mass };
+  return { probs, triageLevel, scores, stable, top1Mass, focus: focus !== null };
 }
 
 /**
  * Picks the next question. While the triage level is unstable, only questions that could
  * change it are considered, and the probability of changing it is added to the score.
- * Safety value counts only above `min_voi`, the burden of one more question. Returns null
- * when no question has a positive score.
+ * Safety value counts only above `min_voi`, the burden of one more question. With an urgent
+ * focus, information about that group is added with `urgent_focus_weight`. Returns null when
+ * no question has a positive score.
  */
 export function pickQuestion(idx: EngineIndex, analysis: Analysis): QuestionScore | null {
   const params = idx.kb.params;
@@ -191,7 +240,8 @@ export function pickQuestion(idx: EngineIndex, analysis: Analysis): QuestionScor
   for (const s of pool) {
     const cost = idx.findingById.get(s.findingId)?.cost ?? 1;
     const safety = Math.max(0, s.voi - params.stop.minVoi);
-    const score = (safety + lambda * s.eig + (analysis.stable ? 0 : s.changeProb)) / cost;
+    const info = s.eig + (analysis.focus ? params.urgentFocusWeight * s.eigFocus : 0);
+    const score = (safety + lambda * info + (analysis.stable ? 0 : s.changeProb)) / cost;
     if (score > bestScore) {
       best = s;
       bestScore = score;
@@ -202,14 +252,16 @@ export function pickQuestion(idx: EngineIndex, analysis: Analysis): QuestionScor
 
 /**
  * True when the adaptive phase should end (docs/engine-spec.md §8): the triage level is
- * stable, no question is still worth asking for safety (VOI), and the diagnosis is either
- * concentrated on one condition (top-1 mass) or cannot be refined further (EIG).
+ * stable, no question is still worth asking for safety (VOI), no question still informs about
+ * an urgent group in focus, and the diagnosis is either concentrated on one condition (top-1
+ * mass) or cannot be refined further (EIG).
  */
 export function isConfident(idx: EngineIndex, analysis: Analysis): boolean {
   const stop = idx.kb.params.stop;
   if (!analysis.stable) return false;
   const maxVoi = Math.max(0, ...analysis.scores.map((s) => s.voi));
   if (maxVoi >= stop.minVoi) return false;
+  if (analysis.focus && Math.max(0, ...analysis.scores.map((s) => s.eigFocus)) >= stop.minEigBits) return false;
   const maxEig = Math.max(0, ...analysis.scores.map((s) => s.eig));
   return analysis.top1Mass >= stop.top1Mass || maxEig < stop.minEigBits;
 }
