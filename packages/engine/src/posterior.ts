@@ -19,15 +19,16 @@ export interface Hypotheses {
   ids: string[];
   /** Aligned with `ids`; `null` for OTHER. */
   conditions: (Condition | null)[];
-  /** Effective links for the patient's age group, aligned with `ids`; `null` for OTHER. */
+  /** Effective links for the patient's age group and complaint, aligned with `ids`; `null` for OTHER. */
   links: (Readonly<Record<string, Link>> | null)[];
   logPrior: number[];
 }
 
-/** A condition's links with the overrides of one age group applied. */
-export function linksFor(c: Condition, ageGroup: string): Readonly<Record<string, Link>> {
-  const overrides = c.linksByAge[ageGroup];
-  return overrides ? { ...c.links, ...overrides } : c.links;
+/** A condition's links with the overrides of one age group, then of one complaint, applied. */
+export function linksFor(c: Condition, ageGroup: string, complaintId: string): Readonly<Record<string, Link>> {
+  const byAge = c.linksByAge[ageGroup];
+  const byComplaint = c.linksByComplaint[complaintId];
+  return byAge || byComplaint ? { ...c.links, ...byAge, ...byComplaint } : c.links;
 }
 
 /** Unnormalized prior of a condition for a complaint, age group and context. */
@@ -62,7 +63,7 @@ export function hypothesesFor(idx: EngineIndex, complaintId: string, ctx: Patien
   return {
     ids: [...conditions.map((c) => c.id), OTHER],
     conditions: [...conditions, null],
-    links: [...conditions.map((c) => linksFor(c, ageGroup)), null],
+    links: [...conditions.map((c) => linksFor(c, ageGroup, complaintId)), null],
     logPrior,
   };
 }

@@ -5,9 +5,11 @@ publisher: "National Institute for Health and Care Excellence (NICE)"
 doc_number: "CG109"
 date: "2010-08-25"
 url: "https://www.nice.org.uk/guidance/cg109"
+pmid: "32207891"
 license_class: L3
 license_note: "Nội dung có bản quyền NICE (© NICE, All rights reserved): chỉ dùng dữ kiện kèm trích dẫn, không sao chép câu chữ."
 default_tier: B
 accessed: "2026-10-25"
 verified: false
-notes_vi: "Người bảo trì thêm cho các quy tắc ngất (lô 1, Giai đoạn 3). Lượt R cần mở, xác nhận ngày cập nhật gần nhất và các tiêu chí chuyển khám cấp."
+verified_by: "agent:pass-r"
+notes_vi: "Lượt R (Giai đoạn 3, lô 1) chưa mở được văn bản: nice.org.uk, cks.nice.org.uk và api.nice.org.uk trả lỗi 403 với truy cập tự động; bản trên NCBI Bookshelf (NBK555202) bị chặn bằng reCAPTCHA, trang Europe PMC trả lỗi 403. Không dùng dịch vụ đọc hộ. Siêu dữ liệu Europe PMC (PMID 32207891) xác nhận tên hiện hành và bản cập nhật tháng 11/2023 (sửa phần đánh giá và chuyển khám khi nghi hạ huyết áp tư thế); xuất bản lần đầu 25/8/2010. Bản tóm tắt của Hội Y học cấp cứu Anh (RCEM, 01/2012, theo bản 2010; nguồn thứ cấp) ghi khuyến cáo 1.1.4.2: chuyển khám chuyên khoa tim mạch trong 24 giờ khi mất ý thức thoáng qua kèm điện tim bất thường, suy tim, mất ý thức khi gắng sức, gia đình có người đột tử do tim dưới 40 tuổi hoặc có bệnh tim di truyền, khó thở mới hoặc không rõ nguyên nhân, hoặc tiếng thổi ở tim; cân nhắc chuyển trong 24 giờ người trên 65 tuổi ngất không có triệu chứng báo trước; người ngất khi gắng sức cần làm nghiệm pháp gắng sức khẩn (trong 7 ngày) và tạm ngừng tập luyện. Chưa đối chiếu được với bản hiện hành nên lượt R bỏ nguồn này khỏi các quy tắc và khỏi triệu chứng chính Ngất; cần mở lại bằng trình duyệt."

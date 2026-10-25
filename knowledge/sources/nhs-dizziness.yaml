@@ -7,5 +7,6 @@ license_class: L1
 license_note: "Open Government Licence v3.0; bản chuyển thể không được trình bày như nội dung của NHS."
 default_tier: C
 accessed: "2026-10-25"
-verified: false
-notes_vi: "Người bảo trì thêm cho các quy tắc chóng mặt (lô 1, Giai đoạn 3). Lượt R cần mở và ghi lại các mục 'Call 999' và 'Go to A&E'."
+verified: true
+verified_by: "agent:pass-r"
+notes_vi: "Lượt R mở trang (rà soát lần cuối 21/4/2023, hạn rà soát 21/4/2026, chưa có bản mới). Trang không có mục 'Call 999' hay 'Go to A&E', chỉ có 'See a GP' (không khẩn): lo lắng về chóng mặt; không hết hoặc hay tái lại; nghe hoặc nói khó hơn; ù tai; nhìn đôi, nhìn mờ hoặc thay đổi thị lực khác; mặt, tay hoặc chân tê, yếu; triệu chứng khác như mạch thay đổi, ngất hoặc ngã quỵ, đau đầu, buồn nôn hoặc nôn. Tự chăm sóc: nằm đến khi hết rồi từ từ đứng dậy; cử động chậm; nghỉ ngơi; uống nhiều nước; tránh cà phê, thuốc lá, rượu; không cúi hoặc đứng dậy đột ngột; không lái xe, leo thang, vận hành máy khi đang chóng mặt. Nguyên nhân nêu trên trang: nhiễm trùng tai, đau nửa đầu, mất nước hoặc kiệt sức do nóng, căng thẳng, lo âu, hạ đường huyết do đái tháo đường, thiếu máu thiếu sắt, say tàu xe; choáng khi đứng hoặc ngồi dậy đột ngột (hạ huyết áp tư thế); mất thăng bằng kèm nghe kém, ù tai (bệnh tai trong); chóng mặt quay hoặc mất thăng bằng kèm buồn nôn, có khi sau cảm cúm (viêm mê đạo); tác dụng phụ của thuốc mới. Lưu ý: trang này xếp nhìn đôi, tê yếu tay chân vào nhóm khám không khẩn, nhẹ hơn trang Vertigo và trang Symptoms of a stroke của NHS; quy tắc của doctor-v theo hai trang sau, không trích trang này làm căn cứ cho mức cấp cứu."

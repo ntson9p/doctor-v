@@ -100,7 +100,7 @@
   options:
     - { id: positive, label_vi: "Dương tính (2 vạch)" }
     - { id: negative, label_vi: "Âm tính (1 vạch)" }
-    - { id: not_tested, label_vi: "Chưa xét nghiệm" }
+    - { id: not_tested, label_vi: "Chưa xét nghiệm", neutral: true }
   # "Chưa xét nghiệm" phải có cùng tỷ lệ (0,70) trong mọi phân bố để không mang thông tin.
   baseline: { positive: 0.01, negative: 0.29, not_tested: 0.70 }
   requires:

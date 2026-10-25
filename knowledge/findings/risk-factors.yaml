@@ -99,3 +99,32 @@
   help_vi: "Nằm lâu là nằm một chỗ nhiều ngày; đi xe hoặc máy bay trên 4 giờ liền."
   leak: 0.08
   leak_note: "Yếu tố nguy cơ huyết khối; người bảo trì ước lượng tỷ lệ ở người không có bệnh liên kết."
+- id: previous_clot
+  kind: history
+  type: binary
+  label_vi: "Từng bị cục máu đông ở chân hoặc tắc mạch phổi"
+  question_vi: "Đã từng bị cục máu đông ở chân hoặc tắc mạch phổi chưa?"
+  leak: 0.01
+  leak_note: "Ít gặp; người bảo trì ước lượng (lượt A lô 1 phần b đề xuất)."
+- id: active_cancer
+  kind: risk_factor
+  type: binary
+  label_vi: "Đang mắc ung thư"
+  question_vi: "Có đang mắc ung thư hoặc đang điều trị ung thư không?"
+  cost: 3
+  leak: 0.02
+  leak_note: "Người bảo trì ước lượng (lượt A lô 1 phần b đề xuất)."
+- id: antithrombotic_use
+  kind: risk_factor
+  type: binary
+  label_vi: "Đang uống thuốc chống đông hoặc aspirin"
+  question_vi: "Có đang uống thuốc chống đông máu hoặc aspirin hằng ngày không?"
+  leak: 0.05
+  leak_note: "Người cao tuổi bị bệnh tim mạch hay dùng; người bảo trì ước lượng (lượt A lô 1 phần b đề xuất)."
+- id: chronic_liver_disease
+  kind: risk_factor
+  type: binary
+  label_vi: "Bị xơ gan hoặc viêm gan mạn"
+  question_vi: "Có bị xơ gan hoặc viêm gan B, viêm gan C mạn tính không?"
+  leak: 0.06
+  leak_note: "Viêm gan B lưu hành cao ở Việt Nam; người bảo trì ước lượng (lượt A lô 1 phần b đề xuất)."

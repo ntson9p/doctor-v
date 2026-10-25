@@ -254,6 +254,7 @@
   label_vi: "Run tay"
   question_vi: "Có bị run tay không?"
   help_vi: "Tay run khi cầm đồ vật hoặc khi duỗi thẳng tay ra trước."
+  cluster: adrenergic
   leak: moderate
 - id: pallor
   kind: sign
@@ -261,7 +262,9 @@
   label_vi: "Da xanh, môi và mí mắt nhợt"
   question_vi: "Da có xanh xao, môi và mí mắt có nhợt nhạt không?"
   help_vi: "Nhìn mặt trong mí mắt dưới: bình thường màu hồng đỏ, khi thiếu máu thì nhợt."
-  leak: moderate
+  cluster: anemia_signs
+  leak: 0.15
+  leak_note: "Người dùng tự nhận xét da xanh, nhợt không chính xác, nên nhiều người không thiếu máu vẫn trả lời có; 5% là quá thấp (lượt A lô 1 phần a). Người bảo trì ước lượng."
 - id: weight_loss_unintended
   kind: symptom
   type: binary
@@ -315,3 +318,32 @@
   label_vi: "Bị cảm, đau họng trong 2 tuần trước"
   question_vi: "Trong 2 tuần trước đó có bị cảm, sổ mũi hoặc đau họng không?"
   leak: nonspecific
+- id: glucose_measured
+  kind: measurement
+  type: categorical
+  label_vi: "Đường huyết đo được"
+  question_vi: "Đường huyết đo bằng máy ở nhà lúc có triệu chứng là bao nhiêu?"
+  help_vi: "Máy đo đường huyết hiện số theo mmol/L hoặc mg/dL: 4 mmol/L bằng 70 mg/dL, 11 mmol/L bằng 200 mg/dL."
+  options:
+    - { id: low, label_vi: "Dưới 4 mmol/L (dưới 70 mg/dL)" }
+    - { id: normal, label_vi: "Từ 4 đến 11 mmol/L (70–200 mg/dL)" }
+    - { id: high, label_vi: "Trên 11 mmol/L (trên 200 mg/dL)" }
+    - { id: not_measured, label_vi: "Chưa đo", neutral: true }
+  # "Chưa đo" là lựa chọn trung tính: mọi phân bố phải ghi 0,6 như tỷ lệ nền.
+  baseline: { low: 0.02, normal: 0.28, high: 0.1, not_measured: 0.6 }
+  requires:
+    - { finding: diabetes, is: present }
+  cost: 2
+- id: anemia_known
+  kind: history
+  type: binary
+  label_vi: "Đã từng được nói là bị thiếu máu"
+  question_vi: "Đã từng được bác sĩ nói là bị thiếu máu chưa?"
+  leak: 0.08
+  leak_note: "Thiếu máu hay gặp ở phụ nữ và trẻ em Việt Nam; người bảo trì ước lượng tỷ lệ người từng được nói là thiếu máu."
+- id: eyes_bulging
+  kind: sign
+  type: binary
+  label_vi: "Mắt lồi"
+  question_vi: "Mắt có lồi ra hơn trước không?"
+  leak: specific

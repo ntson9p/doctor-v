@@ -15,21 +15,30 @@ synonyms_vi:
 description_vi: "Cảm giác quay cuồng, chòng chành, mất thăng bằng hoặc choáng váng."
 implies: [dizziness]
 age_groups: [child_5_12, teen_13_17, adult_18_44, adult_45_64, elder_65_74, elder_75p]
+# Lượt R (25/10/2026): hỏi kiểu chóng mặt trước tiên (GRACE-3 phân loại theo thời gian và yếu tố khởi phát;
+# quy tắc "không tự đi được" cần biết kiểu chóng mặt). Hỏi đau đầu và đau đầu đột ngột, dữ dội ngay trong phần
+# này để không bỏ sót chảy máu tiểu não, xuất huyết dưới nhện (rf_thunderclap_headache).
 red_flags:
+  - finding: dizziness_pattern
   - group: dizziness_red_flags
   - group: general_danger_signs
-  - finding: dizziness_pattern
+  - finding: headache
+  - finding: headache_thunderclap
   - finding: pregnant
   - finding: missed_period
+  # Lượt R: hỏi ngay sau khi biết có đái tháo đường (câu này cần "có đái tháo đường", hỏi ở nhóm bệnh nền):
+  # hạ đường huyết do thuốc là nguyên nhân cần nhận ra sớm (NHS: chóng mặt, hồi hộp, bất tỉnh là triệu chứng).
+  - finding: on_glucose_lowering_meds
 intake: [dizziness_associated, chronic_conditions]
 # Điền sau lượt C: một bệnh chỉ vào được danh sách này khi đã có prior cho triệu chứng chính này.
 cant_miss: []
 safety_net:
-  - cannot_walk_unaided
   - vision_loss_or_double
+  - cannot_walk_unaided
   - transient_neuro_symptoms
+  - headache_thunderclap
   - chest_pain_pressure
   - breathing_difficulty
   - fainting_or_near_fainting
   - confusion
-sources: [nhs-dizziness, grace3-dizziness-2023, byt-qd-3312-2024]
+sources: [grace3-dizziness-2023, byt-qd-3312-2024, nhs-vertigo, nhs-dizziness, nhs-stroke-symptoms]

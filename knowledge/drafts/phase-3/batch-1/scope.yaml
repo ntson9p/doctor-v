@@ -9,6 +9,10 @@ new:
   - { id: vestibular_neuritis, name_vi: "Viêm dây thần kinh tiền đình", complaints: [dizziness], suggested_urgency: 3, suggested_cant_miss: false }
   - { id: reflex_orthostatic_syncope, name_vi: "Ngất do phản xạ, hạ huyết áp tư thế (kể cả do thuốc hạ áp)", complaints: [syncope, dizziness], suggested_urgency: 4, suggested_cant_miss: false }
   - { id: cardiac_arrhythmia, name_vi: "Rối loạn nhịp tim (nhanh hoặc chậm)", complaints: [palpitations, syncope, dizziness], suggested_urgency: 3, suggested_cant_miss: false }
+  # Thêm sau lượt A (đề xuất của lượt A phần b): ngoại tâm thu lành tính là nguyên nhân hồi hộp rất hay gặp;
+  # gộp vào cardiac_arrhythmia (mức 3) thì người chỉ thấy "tim hẫng nhịp" bị khuyên khám trong 24 giờ.
+  # cardiac_arrhythmia từ đây không gồm ngoại tâm thu đơn thuần.
+  - { id: premature_beats, name_vi: "Ngoại tâm thu (nhịp tim đến sớm)", complaints: [palpitations], suggested_urgency: 4, suggested_cant_miss: false }
   - { id: hypoglycemia, name_vi: "Hạ đường huyết", complaints: [dizziness, syncope, palpitations], suggested_urgency: 2, suggested_cant_miss: true }
   - { id: anemia, name_vi: "Thiếu máu", complaints: [dizziness, palpitations, syncope], suggested_urgency: 4, suggested_cant_miss: false }
   - { id: transient_ischemic_attack, name_vi: "Cơn thiếu máu não thoáng qua", complaints: [dizziness], suggested_urgency: 2, suggested_cant_miss: true }

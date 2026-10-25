@@ -1,0 +1,12 @@
+id: nhs-tia
+type: web_page
+title: "Transient ischaemic attack (TIA)"
+publisher: "NHS (UK)"
+url: "https://www.nhs.uk/conditions/transient-ischaemic-attack-tia/"
+license_class: L1
+license_note: "Open Government Licence v3.0; bản chuyển thể không được trình bày như nội dung của NHS."
+default_tier: C
+accessed: "2026-10-25"
+verified: true
+verified_by: "agent:pass-r"
+notes_vi: "Lượt R (Giai đoạn 3, lô 1) thêm và mở trang (rà soát lần cuối 28/6/2023, hạn rà soát 28/6/2026, chưa có bản mới). Cơn thiếu máu não thoáng qua do mạch máu não tắc tạm thời; triệu chứng giống đột quỵ (rối loạn lời nói, thị giác, tê hoặc yếu mặt, tay, chân), kéo dài vài phút đến vài giờ và hết hoàn toàn trong 24 giờ. Dấu hiệu FAST: méo mặt, yếu tay, nói khó; thấy bất kỳ dấu hiệu nào thì gọi 999 ngay. Giai đoạn đầu không phân biệt được với đột quỵ: gọi 999 ngay; kể cả khi triệu chứng hết trong lúc chờ xe vẫn cần được đánh giá ở bệnh viện; cần được chuyển khám chuyên khoa trong 24 giờ kể từ khi khởi phát. Nếu nghĩ trước đây đã từng bị mà triệu chứng đã qua và chưa đi khám: hẹn khám khẩn với bác sĩ gia đình. Đây là dấu hiệu báo trước nguy cơ đột quỵ trong thời gian tới. Yếu tố nguy cơ: hút thuốc, tăng huyết áp, béo phì, mỡ máu cao, uống nhiều rượu, rung nhĩ, đái tháo đường; người trên 55 tuổi, người gốc châu Á, châu Phi, Caribê."

@@ -187,6 +187,7 @@
   type: binary
   label_vi: "Chóng mặt khi trở mình, nằm xuống hoặc ngửa cổ"
   question_vi: "Có chóng mặt ngay khi trở mình, nằm xuống hoặc ngửa cổ không?"
+  help_vi: "Thường là cơn quay cuồng ngắn khi đổi tư thế đầu. Không tính choáng, tối sầm mắt khi vừa đứng dậy."
   requires:
     - { finding: dizziness, is: present }
   leak: 0.1
@@ -210,12 +211,23 @@
   label_vi: "Ù tai hoặc nghe kém một bên"
   question_vi: "Có ù tai, nghe kém hoặc đầy tức ở một bên tai không?"
   leak: moderate
+- id: hearing_loss_sudden
+  kind: symptom
+  type: binary
+  label_vi: "Đột ngột nghe kém hẳn một bên tai"
+  question_vi: "Tai đó có đột ngột nghe kém hẳn đi trong mấy ngày nay không?"
+  alt_question:
+    text_vi: "So với tai kia, tai đó có nghe kém hẳn từ mấy ngày nay không?"
+  requires:
+    - { finding: hearing_loss_tinnitus, is: present }
+  leak: 0.2
+  leak_note: "Tính trong số người đã có ù tai, nghe kém hoặc đầy tai. Người bảo trì ước lượng."
 - id: cannot_walk_unaided
   kind: sign
   type: binary
   label_vi: "Không tự đứng vững hoặc tự đi được"
   question_vi: "Có mất thăng bằng đến mức không tự đứng hoặc đi được không?"
-  help_vi: "Nghĩa là phải có người đỡ hoặc phải vịn mới đứng, đi được, kể cả khi mở mắt nhìn."
+  help_vi: "Nghĩa là phải có người đỡ hoặc phải vịn mới đứng, đi được, kể cả khi mở mắt nhìn. Không tính lúc đang trong cơn quay cuồng ngắn dưới 1 phút."
   alt_question:
     text_vi: "Có tự đi được vài bước mà không cần vịn hay người đỡ không?"
     inverted: true
@@ -224,8 +236,9 @@
 - id: transient_neuro_symptoms
   kind: history
   type: binary
-  label_vi: "Có lúc yếu, tê, nói khó, mất thị lực rồi tự hết"
-  question_vi: "Trong 7 ngày qua, có lúc nào bỗng yếu hoặc tê một bên người, méo miệng, nói khó, mất thị lực rồi tự hết không?"
+  label_vi: "Yếu, tê nửa người hoặc nói khó, dù đã tự hết"
+  question_vi: "7 ngày qua, có lúc yếu, tê nửa người, nói khó rồi tự hết không?"
+  help_vi: "Tính các lần trong 7 ngày qua, kể cả khi chỉ kéo dài vài phút. Gồm cả méo miệng, mất thị lực một mắt hoặc nhìn đôi rồi tự hết. Không tính lúc tối sầm mắt khi sắp ngất."
   leak: specific
 - id: perioral_tingling
   kind: symptom

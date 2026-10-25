@@ -124,7 +124,9 @@ export const categoricalFindingSchema = z.strictObject({
   ...findingCommon,
   type: z.literal('categorical'),
   options: z
-    .array(z.strictObject({ id: ID, label_vi: TEXT }))
+    // neutral: an answer that carries no information ("not measured"): every distribution must give it
+    // the baseline's weight, so it is not an "unknown" that triage rules must treat as possibly present.
+    .array(z.strictObject({ id: ID, label_vi: TEXT, neutral: z.boolean().optional() }))
     .min(2)
     .max(8),
   baseline: z.record(ID, z.number().min(0).max(1)).optional(),
@@ -198,6 +200,12 @@ export const binaryLinkSchema = z.strictObject({
   freq: z.enum(FREQ_LEVELS),
   /** Overrides for age groups where the frequency clearly differs (e.g. neck stiffness in infants). */
   freq_by_age: z.record(ID, z.enum(FREQ_LEVELS)).optional(),
+  /**
+   * Overrides for chief complaints where the frequency clearly differs, because people who choose that
+   * complaint are a different subset (e.g. strokes that present as dizziness rarely show face or arm
+   * weakness). They take precedence over freq_by_age.
+   */
+  freq_by_complaint: z.record(ID, z.enum(FREQ_LEVELS)).optional(),
   /** The author confirms that a rare/very_rare value above the finding's leak is intended. */
   above_leak_ok: z.literal(true).optional(),
   evidence: evidenceSchema,

@@ -7,5 +7,6 @@ license_class: L1
 license_note: "Open Government Licence v3.0; bản chuyển thể không được trình bày như nội dung của NHS."
 default_tier: C
 accessed: "2026-10-25"
-verified: false
-notes_vi: "Người bảo trì thêm cho quy tắc ngộ độc khí CO (lô 1, Giai đoạn 3). Lượt R cần mở và đối chiếu mức xử trí."
+verified: true
+verified_by: "agent:pass-r"
+notes_vi: "Lượt R mở trang (rà soát lần cuối 16/12/2025, hạn rà soát 16/12/2028). Triệu chứng: đau đầu, chóng mặt, buồn nôn hoặc nôn, mệt yếu, lú lẫn, đau ngực, đau cơ, khó thở, mặt đỏ bừng, mất thị lực; có thể lúc có lúc không, nặng hơn khi ở trong phòng bị nhiễm khí và đỡ khi ra ngoài. Nguồn khí: nồi hơi, bếp gas, lò sưởi gas hoặc dầu, bếp củi, gas, than, máy phát điện; dùng bếp nướng, bếp dã ngoại trong nhà; nổ máy xe trong chỗ kín như gara. Khi nghi ngộ độc: ngừng dùng thiết bị nghi phát khí nếu được, ra ngoài, xin tư vấn y tế càng sớm càng tốt, không quay lại tòa nhà đó trước khi được tư vấn. 'Urgent advice: Call NHS 111' khi nghĩ mình có triệu chứng ngộ độc. 'Call 999 or go to A&E' khi đã phơi nhiễm và: khó thở, đột ngột lú lẫn, mất ý thức, mệt yếu, đau ngực hoặc đau cơ. Không tự lái xe đến cấp cứu. Người ngộ độc khí CO cần được kiểm tra ở bệnh viện (đo nồng độ CO trong máu, có thể thở oxy qua mặt nạ)."

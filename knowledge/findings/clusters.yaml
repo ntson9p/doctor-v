@@ -73,3 +73,11 @@
   rho: medium
   label_vi: "Nguồn khí CO"
   rationale_vi: "Ở phòng kín có đốt than và người ở cùng cũng có triệu chứng cùng phản ánh một nguồn khí CO."
+- id: adrenergic
+  rho: medium
+  label_vi: "Run tay, vã mồ hôi"
+  rationale_vi: "Run tay và vã mồ hôi cùng do phản ứng giao cảm (hạ đường huyết, cường giáp, cơn hoảng sợ), nên hay đi cùng nhau."
+- id: anemia_signs
+  rho: low
+  label_vi: "Dấu hiệu thiếu máu"
+  rationale_vi: "Da xanh và hụt hơi khi gắng sức cùng phản ánh tình trạng thiếu máu."

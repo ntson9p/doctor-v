@@ -103,8 +103,9 @@ export function compileKnowledge(k: RawKnowledge): CompiledKb {
     const baseline = f.baseline
       ? normalize(options.map((o) => f.baseline?.[o] ?? 0))
       : options.map(() => 1 / options.length);
+    const neutralOption = f.options.find((o) => o.neutral)?.id ?? null;
     // Categorical findings carry no leak; the baseline distribution plays that role.
-    return { ...common, type: 'categorical', options, baseline, leak: 0, leakByComplaint: {} };
+    return { ...common, type: 'categorical', options, baseline, neutralOption, leak: 0, leakByComplaint: {} };
   });
   const findingById = new Map(findings.map((f) => [f.id, f]));
 
@@ -117,11 +118,15 @@ export function compileKnowledge(k: RawKnowledge): CompiledKb {
     }
     const links: Condition['links'] = {};
     const linksByAge: Condition['linksByAge'] = {};
+    const linksByComplaint: Condition['linksByComplaint'] = {};
     for (const link of c.findings) {
       if ('freq' in link) {
         links[link.finding] = p.frequency_levels[link.freq];
         for (const [ageGroup, level] of Object.entries(link.freq_by_age ?? {})) {
           linksByAge[ageGroup] = { ...linksByAge[ageGroup], [link.finding]: p.frequency_levels[level] };
+        }
+        for (const [complaintId, level] of Object.entries(link.freq_by_complaint ?? {})) {
+          linksByComplaint[complaintId] = { ...linksByComplaint[complaintId], [link.finding]: p.frequency_levels[level] };
         }
       } else {
         const f = findingById.get(link.finding);
@@ -143,6 +148,7 @@ export function compileKnowledge(k: RawKnowledge): CompiledKb {
       })),
       links,
       linksByAge,
+      linksByComplaint,
       warningSigns: [...(c.warning_signs ?? [])],
       specialties: [...c.specialties],
     };

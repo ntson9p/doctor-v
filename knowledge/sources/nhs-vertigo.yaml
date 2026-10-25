@@ -1,0 +1,12 @@
+id: nhs-vertigo
+type: web_page
+title: "Vertigo"
+publisher: "NHS (UK)"
+url: "https://www.nhs.uk/conditions/vertigo/"
+license_class: L1
+license_note: "Open Government Licence v3.0; bản chuyển thể không được trình bày như nội dung của NHS."
+default_tier: C
+accessed: "2026-10-25"
+verified: true
+verified_by: "agent:pass-r"
+notes_vi: "Lượt R (Giai đoạn 3, lô 1) thêm và mở trang (rà soát lần cuối 02/5/2023, hạn rà soát 02/5/2026, chưa có bản mới). Chóng mặt quay (vertigo) là cảm giác mình hoặc mọi vật quay tròn đến mức mất thăng bằng; cơn kéo dài vài giây đến vài giờ, nặng thì nhiều ngày hoặc nhiều tháng. 'Call 999 or go to A&E' (gọi 999 hoặc đến cấp cứu) khi chóng mặt quay kèm: nhìn đôi hoặc mất thị lực; nghe kém; khó nói; yếu, tê hoặc châm chích tay hoặc chân. Người không đánh thức được: luôn đưa đến cấp cứu hoặc gọi 999. Không tự lái xe đến cấp cứu. 'Urgent advice: urgent GP / NHS 111' (khám khẩn) khi chóng mặt quay kèm: đau đầu dữ dội; nôn hoặc rất buồn nôn; sốt rất cao, hoặc thấy nóng, lạnh, rét run. 'See a GP' (không khẩn): chóng mặt quay không hết hoặc hay tái lại. Nguyên nhân hay gặp là bệnh tai trong: chóng mặt tư thế kịch phát lành tính (do một số cử động đầu nhất định), viêm mê đạo (sau cảm cúm), viêm dây thần kinh tiền đình, bệnh Ménière; ngoài ra đau nửa đầu, thuốc."

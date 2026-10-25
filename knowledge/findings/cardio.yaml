@@ -23,6 +23,7 @@
   type: binary
   label_vi: "Vã mồ hôi lạnh"
   question_vi: "Có vã mồ hôi lạnh không?"
+  cluster: adrenergic
   leak: moderate
 - id: bp_measured
   kind: measurement
@@ -53,6 +54,8 @@
   type: binary
   label_vi: "Tim đập nhanh, mạnh hoặc không đều"
   question_vi: "Có thấy tim đập nhanh, mạnh hoặc không đều (hồi hộp) không?"
+  alt_question:
+    text_vi: "Có thấy tim đập thình thịch trong ngực, ở cổ hoặc họng không?"
   leak: moderate
 - id: palpitation_rhythm
   kind: symptom
@@ -81,15 +84,17 @@
   type: categorical
   label_vi: "Mạch đo được"
   question_vi: "Mạch (nhịp tim) đo được lúc có triệu chứng là bao nhiêu lần mỗi phút?"
-  help_vi: "Có thể đọc trên máy đo huyết áp, đồng hồ thông minh, hoặc đếm mạch ở cổ tay trong 1 phút. Chọn 'Không rõ' nếu chưa đo."
+  help_vi: "Có thể đọc trên máy đo huyết áp, đồng hồ thông minh, hoặc đếm mạch ở cổ tay trong 1 phút. Đo lúc đang ngồi hoặc nằm nghỉ, không đo ngay sau khi vận động."
   options:
     - { id: lt_40, label_vi: "Dưới 40 lần" }
     - { id: n40_100, label_vi: "Từ 40 đến 100 lần" }
     - { id: n100_150, label_vi: "Trên 100 đến 150 lần" }
     - { id: gt_150, label_vi: "Trên 150 lần" }
-  baseline: { lt_40: 0.01, n40_100: 0.79, n100_150: 0.17, gt_150: 0.03 }
+    - { id: not_measured, label_vi: "Chưa đo", neutral: true }
+  # Phần lớn người dùng chưa đo mạch. "Chưa đo" là lựa chọn trung tính: mọi phân bố phải ghi 0,6 như tỷ lệ nền,
+  # nên câu trả lời này không mang thông tin và không bị coi là "không rõ" ở quy tắc rf_pulse_extreme.
+  baseline: { lt_40: 0.004, n40_100: 0.316, n100_150: 0.068, gt_150: 0.012, not_measured: 0.6 }
   cost: 2
-  unknown_rate: 0.6
 - id: dizziness_on_standing
   kind: symptom
   type: binary
@@ -125,12 +130,25 @@
   baseline: { prodrome: 0.6, palpitations_first: 0.1, no_warning: 0.3 }
   requires:
     - { finding: fainting_or_near_fainting, is: present }
+- id: not_recovered_after_faint
+  kind: symptom
+  type: binary
+  label_vi: "Chưa hồi phục hẳn sau khi ngất"
+  question_vi: "Đến giờ vẫn chưa tỉnh táo hẳn hoặc chưa đứng dậy được như bình thường?"
+  help_vi: "Sau ngất thông thường, người bệnh tỉnh lại trong vòng 1 phút và hồi phục hẳn sau vài phút đến nửa giờ."
+  alt_question:
+    text_vi: "Đến giờ đã tự đi lại, nói chuyện được như trước khi ngất chưa?"
+    inverted: true
+  requires:
+    - { finding: fainting_or_near_fainting, is: present }
+  leak: 0.05
+  leak_note: "Tính trong số người đã ngất hoặc suýt ngất. Phần lớn người ngất phản xạ hồi phục hẳn trong vài phút; người bảo trì ước lượng."
 - id: family_sudden_death
   kind: history
   type: binary
-  label_vi: "Người thân chết đột ngột khi còn trẻ"
-  question_vi: "Bố mẹ, anh chị em hay con có ai chết đột ngột trước 40 tuổi không?"
-  help_vi: "Chết đột ngột không rõ lý do, không phải do tai nạn."
+  label_vi: "Bố mẹ, anh chị em hoặc con đột tử trước 40 tuổi"
+  question_vi: "Bố mẹ, anh chị em hoặc con có ai đột tử trước 40 tuổi không?"
+  help_vi: "Đột tử là chết đột ngột không rõ lý do, không phải do tai nạn."
   leak: 0.02
   leak_note: "Hiếm; người bảo trì ước lượng. Là dấu hiệu nguy cơ của ngất do tim (lượt R đối chiếu với hướng dẫn về ngất)."
   cost: 1.5
@@ -146,4 +164,15 @@
   type: binary
   label_vi: "Mệt, hụt hơi khi gắng sức nhẹ"
   question_vi: "Gần đây có hụt hơi khi làm việc nhẹ hoặc leo vài bậc thang không?"
-  leak: moderate
+  cluster: anemia_signs
+  leak: 0.15
+  leak_note: "Người cao tuổi, người ít vận động hay hụt hơi khi gắng sức dù không có bệnh liên kết; 5% là quá thấp (lượt A lô 1 phần a). Người bảo trì ước lượng."
+- id: neck_pounding
+  kind: symptom
+  type: binary
+  label_vi: "Mạch ở cổ đập thình thịch khi hồi hộp"
+  question_vi: "Khi hồi hộp, có thấy mạch ở cổ đập thình thịch không?"
+  requires:
+    - { finding: palpitations, is: present }
+  leak: 0.1
+  leak_note: "Tính trong số người đã hồi hộp. Gợi ý nhịp nhanh kịch phát trên thất (lượt A lô 1 phần b đề xuất); người bảo trì ước lượng."

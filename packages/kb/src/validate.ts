@@ -239,6 +239,9 @@ export function validateKnowledge(k: RawKnowledge): Issue[] {
       if (ids.includes('unknown')) add('error', file, at('options'), '"unknown" là ID dành riêng cho "Không rõ"');
       f.options.forEach((o, i) => lint(o.label_vi, 'label', file, at(`options.${i}.label_vi`)));
       if (f.baseline) checkDistribution(f.baseline, ids, file, at('baseline'));
+      if (f.options.some((o) => o.neutral) && !f.baseline) {
+        add('error', file, at('baseline'), 'Dấu hiệu có lựa chọn trung tính phải có tỷ lệ nền (baseline)');
+      }
     }
   }
 
@@ -361,10 +364,19 @@ export function validateKnowledge(k: RawKnowledge): Issue[] {
       if ('freq' in link) {
         if (f.type !== 'binary') add('error', file, path, `"${link.finding}" là dấu hiệu nhiều lựa chọn: dùng "dist"`);
         checkAgeGroups(Object.keys(link.freq_by_age ?? {}), file, `${path}.freq_by_age`);
+        for (const complaintId of Object.keys(link.freq_by_complaint ?? {})) {
+          if (!complaintById.has(complaintId)) {
+            add('error', file, `${path}.freq_by_complaint`, `Không có triệu chứng chính "${complaintId}"`);
+          } else if (!c.priors.some((prior) => prior.complaint === complaintId)) {
+            add('warning', file, `${path}.freq_by_complaint`, `Bệnh chưa có prior cho "${complaintId}": tần suất này không được dùng`);
+          }
+        }
         // "Uncommon in this condition" must sit below the background rate, or a "yes" raises the condition.
-        if (f.type === 'binary' && (link.freq === 'very_rare' || link.freq === 'rare') && link.above_leak_ok !== true) {
-          const value = params.frequency_levels[link.freq];
+        if (f.type === 'binary' && link.above_leak_ok !== true) {
           for (const prior of c.priors) {
+            const level = link.freq_by_complaint?.[prior.complaint] ?? link.freq;
+            if (level !== 'very_rare' && level !== 'rare') continue;
+            const value = params.frequency_levels[level];
             const raw = f.leak_by_complaint?.[prior.complaint] ?? f.leak;
             const leak = typeof raw === 'number' ? raw : params.leak_levels[raw];
             if (value > leak) {
@@ -372,7 +384,7 @@ export function validateKnowledge(k: RawKnowledge): Issue[] {
                 'warning',
                 file,
                 path,
-                `Mức "${link.freq}" (${value}) cao hơn tỷ lệ nền ${leak} của "${link.finding}" khi triệu chứng chính là ` +
+                `Mức "${level}" (${value}) cao hơn tỷ lệ nền ${leak} của "${link.finding}" khi triệu chứng chính là ` +
                   `"${prior.complaint}": trả lời "Có" sẽ làm TĂNG khả năng bệnh. Nếu ý là "ít gặp hơn bình thường", ` +
                   'dùng mức thấp hơn tỷ lệ nền hoặc bỏ liên kết',
               );
@@ -385,7 +397,16 @@ export function validateKnowledge(k: RawKnowledge): Issue[] {
         });
       } else {
         if (f.type !== 'categorical') add('error', file, path, `"${link.finding}" là dấu hiệu có/không: dùng "freq"`);
-        else checkDistribution(link.dist, f.options.map((o) => o.id), file, `${path}.dist`);
+        else {
+          checkDistribution(link.dist, f.options.map((o) => o.id), file, `${path}.dist`);
+          for (const o of f.options) {
+            const expected = f.baseline?.[o.id];
+            const got = link.dist[o.id];
+            if (o.neutral && expected !== undefined && got !== undefined && Math.abs(got - expected) > 0.005) {
+              add('error', file, `${path}.dist.${o.id}`, `Lựa chọn trung tính "${o.id}" phải bằng tỷ lệ nền ${expected}`);
+            }
+          }
+        }
         checkEvidence(link.evidence, file, `${path}.evidence`);
       }
     });

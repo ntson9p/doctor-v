@@ -66,12 +66,14 @@ export function contextOf(v: Vignette): PatientContext {
 /**
  * The vignette's true value for a finding. Unmentioned binary findings follow
  * `default_unmentioned`, except findings that most people have (leak ≥ 0.5, e.g. "fully
- * vaccinated"): for those, silence says nothing, so the answer is "unknown".
+ * vaccinated"): for those, silence says nothing, so the answer is "unknown". An unmentioned
+ * categorical finding is "unknown", or its neutral option when it has one ("not measured").
  */
 export function trueValue(f: Finding, v: Vignette): string {
   const given = v.answers[f.id];
   if (given !== undefined) return given;
-  if (f.type !== 'binary' || f.leak >= 0.5) return UNKNOWN;
+  if (f.type === 'categorical') return f.neutralOption ?? UNKNOWN;
+  if (f.leak >= 0.5) return UNKNOWN;
   return v.default_unmentioned ?? 'absent';
 }
 

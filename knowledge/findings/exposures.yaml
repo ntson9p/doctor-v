@@ -29,8 +29,8 @@
   kind: exposure
   type: binary
   label_vi: "Ở phòng kín có đốt than, củi hoặc chạy máy nổ"
-  question_vi: "Gần đây có ở phòng kín đốt than, củi hoặc chạy máy nổ không?"
-  help_vi: "Ví dụ đốt than sưởi, bếp củi, lò sưởi hoặc máy phát điện trong phòng đóng kín cửa."
+  question_vi: "24 giờ qua, có ở phòng kín đốt than, củi hoặc chạy máy nổ không?"
+  help_vi: "Ví dụ đốt than sưởi, bếp củi, chạy máy phát điện hoặc nổ máy xe trong phòng kín. Bình nóng lạnh chạy gas và đám cháy cũng sinh ra khí độc này."
   cluster: co_source
   leak: 0.02
   leak_note: "Ít gặp nhưng có ở miền Bắc mùa lạnh (đốt than sưởi) và khi chạy máy phát điện trong nhà; người bảo trì ước lượng."

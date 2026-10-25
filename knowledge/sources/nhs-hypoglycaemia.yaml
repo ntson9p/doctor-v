@@ -7,5 +7,6 @@ license_class: L1
 license_note: "Open Government Licence v3.0; bản chuyển thể không được trình bày như nội dung của NHS."
 default_tier: C
 accessed: "2026-10-25"
-verified: false
-notes_vi: "Người bảo trì thêm cho quy tắc hạ đường huyết (lô 1, Giai đoạn 3). Lượt R cần mở và đối chiếu cách xử trí ban đầu và mức xử trí."
+verified: true
+verified_by: "agent:pass-r"
+notes_vi: "Lượt R mở trang (rà soát lần cuối 03/8/2023, hạn rà soát 03/8/2026, chưa có bản mới). Hạ đường huyết thường là dưới 4 mmol/L; hay gặp ở người dùng insulin hoặc một số thuốc tiểu đường khác (trang nêu gliclazide, glimepiride); hiếm ở người không bị đái tháo đường. Triệu chứng: đói, chóng mặt, lo lắng hoặc cáu gắt, vã mồ hôi, run, tê môi, hồi hộp, mệt hoặc yếu, nhìn mờ, lú lẫn; nặng thì co giật, bất tỉnh. Tự xử trí khi có triệu chứng hoặc đường huyết dưới 4 mmol/L: ăn hoặc uống ngay thứ làm tăng đường huyết nhanh (một cốc nhỏ nước hoa quả hoặc nước ngọt có ga có đường, 5 viên glucose, 4 viên kẹo dẻo lớn hoặc 2 tuýp gel glucose); đo lại sau 10–15 phút; nếu vẫn dưới 4 mmol/L thì ăn uống đồ ngọt lần nữa và đo lại sau 10 phút; khi đã đỡ thì ăn thêm thứ giữ đường huyết lâu hơn (bánh quy, bánh mì kẹp hoặc bữa ăn kế tiếp). Hạ đường huyết nặng, bất tỉnh: không cho ăn uống, đặt tư thế nằm nghiêng an toàn, tiêm glucagon nếu có. 'Call 999' khi nghĩ người đó hạ đường huyết nặng, đáp ứng không bình thường hoặc bất tỉnh, và: không có hoặc không biết tiêm glucagon; đã tiêm mà không hồi phục trong 10 phút; hoặc đã uống rượu. 'See a GP' (không khẩn): hay bị hạ đường huyết, từng bị nặng hoặc bị về đêm; không nhận ra triệu chứng; không bị đái tháo đường mà có triệu chứng hạ đường huyết. Người lái xe không được lái trong ít nhất 45 phút sau khi đường huyết trở lại bình thường."

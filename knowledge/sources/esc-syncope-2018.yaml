@@ -3,11 +3,15 @@ type: guideline_intl
 title: "2018 ESC Guidelines for the diagnosis and management of syncope"
 publisher: "European Society of Cardiology (ESC)"
 date: "2018-03-19"
+supersedes:
+  - "ESC Guidelines for the diagnosis and management of syncope (2009)"
 url: "https://academic.oup.com/eurheartj/article/39/21/1883/4939241"
 doi: "10.1093/eurheartj/ehy037"
+pmid: "29562304"
 license_class: L3
-license_note: "© ESC: chỉ dùng dữ kiện kèm trích dẫn, không sao chép câu chữ hay bảng."
+license_note: "© ESC 2018, bảo lưu mọi quyền: chỉ dùng dữ kiện kèm trích dẫn, không sao chép câu chữ hay bảng. Trang ESC (xem 25/10/2026) ghi thêm: dùng nội dung hướng dẫn ESC trong phần mềm, mô hình tính toán hoặc thuật toán, kể cả khi chỉ trích dẫn, cần thỏa thuận cấp phép chính thức. Người bảo trì cần xem xét điều này trước khi phát hành."
 default_tier: B
 accessed: "2026-10-25"
-verified: false
-notes_vi: "Người bảo trì thêm cho các quy tắc ngất (lô 1, Giai đoạn 3): đặc điểm nguy cơ cao như ngất khi gắng sức hoặc khi nằm, hồi hộp ngay trước khi ngất, ngất kèm đau ngực, khó thở, đau bụng, đau đầu, bệnh tim nặng. Lượt R cần mở và đối chiếu."
+verified: true
+verified_by: "agent:pass-r"
+notes_vi: "Lượt R (Giai đoạn 3, lô 1) đã mở trang bài trên OUP: xuất bản trực tuyến 19/3/2018, Eur Heart J 39(21):1883–1948, số ra 01/6/2018, có một đính chính (doi 10.1093/eurheartj/ehy306). Trang ESC (25/10/2026) vẫn ghi bản 2018 là hướng dẫn ngất hiện hành; các hướng dẫn ESC năm 2026 là suy tim, phục hồi chức năng tim, bệnh tim mạch và bệnh thận mạn, định nghĩa nhồi máu cơ tim. Bảng trên OUP là ảnh nên không đọc được; bảng 6, bảng 7 và khuyến cáo xử trí ở khoa cấp cứu được đọc trong bản dịch chính thức tiếng Tây Ban Nha (Rev Esp Cardiol 2018;71(10):837.e1–e92, doi 10.1016/j.recesp.2018.08.018, tr. 11–13; bản tiếng Anh đăng lại trên Rev Esp Cardiol chỉ có trang đầu). Bảng 6, đặc điểm nguy cơ cao loại nặng: mới xuất hiện đau ngực, khó thở, đau bụng hoặc đau đầu; ngất khi gắng sức hoặc khi đang nằm; hồi hộp đột ngột rồi ngất ngay sau đó; bệnh tim cấu trúc hoặc bệnh mạch vành nặng (suy tim, phân suất tống máu thấp, nhồi máu cơ tim cũ); huyết áp tâm thu dưới 90 mmHg không rõ lý do; nghi chảy máu tiêu hóa khi thăm trực tràng; nhịp chậm dai dẳng dưới 40 lần/phút lúc thức, không do luyện tập thể thao; tiếng thổi tâm thu chưa rõ nguyên nhân; các bất thường điện tim. Loại nhẹ (chỉ là nguy cơ cao khi kèm bệnh tim cấu trúc hoặc điện tim bất thường): không có triệu chứng báo trước hoặc báo trước dưới 10 giây; gia đình có người đột tử do tim khi còn trẻ; ngất khi đang ngồi. Nguy cơ thấp: có tiền triệu điển hình của ngất phản xạ (choáng, nóng người, vã mồ hôi, buồn nôn, nôn); sau cảnh, tiếng, mùi khó chịu hoặc đau đột ngột; đứng lâu, nơi đông người hoặc nóng; trong hoặc sau bữa ăn; khi ho, đi ngoài, đi tiểu; khi xoay đầu; khi vừa đứng dậy. Khuyến cáo I, B: người có bất kỳ đặc điểm nguy cơ cao nào cần được đánh giá sớm và tích cực ở đơn vị ngất, đơn vị theo dõi của khoa cấp cứu hoặc nhập viện, không cho về thẳng từ khoa cấp cứu (hình 6). Lời khuyên kèm: tiền ngất (suýt ngất) được xử trí như ngất vì tiên lượng tương tự; khoảng 10% người ngất đến cấp cứu có biến cố nặng trong 7–30 ngày. Bảng 7: ngất khi gắng sức, khi nằm hoặc ngồi, không báo trước, hồi hộp lúc ngất thuộc nhóm có thể theo dõi ở khoa cấp cứu hoặc chuyển nhanh đến đơn vị ngất. Mục 4.2.9: ngất trong lúc gắng sức thường do tim; ngất sau khi gắng sức hầu như luôn do phản xạ. Hướng dẫn chỉ nói về xử trí tại khoa cấp cứu, không nói về gọi xe cấp cứu trước viện."

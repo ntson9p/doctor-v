@@ -1,6 +1,7 @@
 import fc from 'fast-check';
 import { describe, expect, it } from 'vitest';
 import { entropyBits, logSumExp, normalizeLog } from '../src/math.ts';
+import { linksFor } from '../src/posterior.ts';
 import {
   OTHER,
   analyze,
@@ -103,6 +104,15 @@ describe('priors and posteriors', () => {
     const at = (h: ReturnType<typeof hypothesesFor>) => h.links[h.ids.indexOf('mening')]?.neck;
     expect(at(adultLinks)).toBe(0.8);
     expect(at(childLinks)).toBe(0.5);
+  });
+  it('uses complaint-specific link overrides, which win over age-specific ones', () => {
+    const mening = kb.conditions.find((c) => c.id === 'mening');
+    if (!mening) throw new Error('fixture without mening');
+    const both = { ...mening, linksByComplaint: { fever: { neck: 0.2 } } };
+    expect(linksFor(both, 'adult_18_44', 'fever').neck).toBe(0.2);
+    expect(linksFor(both, 'child_2m_5y', 'fever').neck).toBe(0.2);
+    expect(linksFor(both, 'child_2m_5y', 'headache').neck).toBe(0.5);
+    expect(linksFor(both, 'adult_18_44', 'headache')).toBe(mening.links);
   });
   it('ignores unknown answers and implied findings', () => {
     const base = probsFor({});

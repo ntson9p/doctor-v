@@ -7,5 +7,6 @@ license_class: L1
 license_note: "Open Government Licence v3.0; bản chuyển thể không được trình bày như nội dung của NHS."
 default_tier: C
 accessed: "2026-10-25"
-verified: false
-notes_vi: "Người bảo trì thêm cho các quy tắc ngất (lô 1, Giai đoạn 3). Lượt R cần mở và ghi lại các mục 'Call 999' và 'Go to A&E'."
+verified: true
+verified_by: "agent:pass-r"
+notes_vi: "Lượt R mở trang (rà soát lần cuối 17/8/2026, hạn rà soát 17/8/2029). 'Call 999 if someone' (gọi 999 nếu người đó): không thở; không đánh thức được trong 1 phút; chưa hồi phục hoàn toàn, hoặc khó nói, khó cử động; đau ngực hoặc tim đập thình thịch, rung, không đều (hồi hộp); bị thương nặng trước hoặc sau khi ngất; run giật (co giật); ngất khi đang tập luyện, gắng sức; ngất khi đang nằm. Trang không có mục 'Go to A&E' riêng và ghi: không tự lái xe đến cấp cứu. 'See a GP' (không khẩn): mọi người đã ngất, để tìm nguyên nhân. Nguyên nhân: đứng dậy quá nhanh (có thể do huyết áp thấp), ăn uống không đủ, quá nóng, xúc động mạnh hoặc đau dữ dội, bệnh tim, dùng chất gây nghiện hoặc uống nhiều rượu. Triệu chứng trước ngất: chóng mặt, vã mồ hôi, nóng người, buồn nôn, thay đổi thị lực. Khi sắp ngất: nằm, kê cao chân (hoặc ngồi cúi đầu giữa hai gối), uống nước, bắt chéo chân, nắm chặt tay. Sơ cứu: gọi to, lay nhẹ vai; không đáp ứng thì gọi người giúp, ngửa đầu nâng cằm; thở bình thường thì cho nằm ngửa, kê cao chân; người có thai trên 28 tuần thì cho nằm nghiêng; thường tỉnh lại trong 30 giây. Người được chuyển khám chuyên khoa vì ngất không được lái xe trong lúc chờ."

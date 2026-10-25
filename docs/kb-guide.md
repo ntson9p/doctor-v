@@ -57,6 +57,10 @@ Câu hỏi cho người soạn: **"Trong 100 người mắc bệnh này (ở b�
 - **Chú ý:** mức đó phải **thấp hơn tỷ lệ nền** của dấu hiệu (mục 2.2). Ví dụ đau đầu kiểu sét đánh có tỷ lệ nền 1% (`specific`): nếu ghi `rare` (2,5%) cho đau đầu căng thẳng, trả lời "Có" lại làm **tăng** khả năng đau đầu căng thẳng. Trường hợp này dùng `very_rare` (0,5%). Bộ kiểm tra cảnh báo khi gặp lỗi này. Nếu thật sự muốn mức hiếm vẫn cao hơn tỷ lệ nền (ví dụ mất khứu giác gặp ở cảm lạnh nhiều hơn nền một chút), ghi thêm `above_leak_ok: true` vào liên kết và giải thích trong `note`.
 - **Tần suất có điều kiện.** Nếu dấu hiệu chỉ được hỏi khi một dấu hiệu khác là "có" (trường `requires`), thì tần suất là **tần suất trong số người bệnh đã có dấu hiệu kia**. Ví dụ "nốt đỏ không mất khi ấn" có `requires: rash_any`: câu hỏi cho người soạn là "Trong 100 người bệnh X **đã có phát ban**, bao nhiêu người có nốt không mất khi ấn?". Tỷ lệ nền (`leak`) cũng hiểu theo cách đó. Nhờ vậy hai câu hỏi lồng nhau không bị đếm trùng.
 - Tương tự, dấu hiệu nhiều lựa chọn có `requires` (ví dụ "số ngày sốt" cần "có sốt") được khai báo phân bố trong số người đã có dấu hiệu kia.
+- **Tần suất theo triệu chứng chính** (`freq_by_complaint`): người chọn một triệu chứng chính là một nhóm con riêng của người bệnh.
+  - Ví dụ: đột quỵ biểu hiện bằng chóng mặt (thường là tuần hoàn sau) hiếm khi có méo miệng, yếu tay, nên tần suất "dấu hiệu đột quỵ" khi triệu chứng chính là Chóng mặt thấp hơn hẳn khi là Đau đầu.
+  - Chỉ dùng khi nguồn cho thấy khác biệt rõ, và ghi lý do trong `note`.
+  - Giá trị theo triệu chứng chính được ưu tiên hơn `freq_by_age`.
 
 ### 2.2 Tỷ lệ nền của dấu hiệu: `leak`
 
@@ -229,6 +233,11 @@ Mỗi file là một danh sách. "Dấu hiệu" (finding) bao gồm triệu ch�
 ```
 
 Người dùng luôn có lựa chọn "Không rõ"; không cần khai báo lựa chọn này.
+
+**Lựa chọn trung tính** (`neutral: true`): câu trả lời không mang thông tin, ví dụ "Chưa đo" ở câu mạch, đường huyết, hay "Chưa xét nghiệm".
+- Mọi phân bố của bệnh phải ghi lựa chọn này đúng bằng tỷ lệ nền; bộ kiểm tra báo lỗi nếu khác.
+- Khác với "Không rõ", lựa chọn trung tính không bị quy tắc nguy hiểm coi là "có thể có". Vì vậy câu hỏi cần đo đạc (phần lớn người dùng chưa đo) nên có lựa chọn này.
+- Trong ca kiểm thử, dấu hiệu nhiều lựa chọn không ghi sẽ được trả lời bằng lựa chọn trung tính (nếu có).
 
 ### 4.3 Cụm dấu hiệu: `knowledge/findings/clusters.yaml`
 

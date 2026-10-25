@@ -61,7 +61,7 @@ Với dấu hiệu $f$ có câu trả lời $v$ (bỏ qua câu "Không rõ" và 
 
 $$P(f{=}\text{có} \mid h) = \begin{cases} p_{hf} & \text{nếu bệnh } h \text{ có liên kết với } f \\ \ell_{f,c} & \text{nếu không (kể cả "other")} \end{cases}, \qquad P(f{=}\text{không} \mid h) = 1 - P(f{=}\text{có}\mid h)$$
 
-- $p_{hf}$ là **tần suất quan sát** của dấu hiệu trong bệnh: 6 mức `frequency_levels` 0,005 / 0,025 / 0,20 / 0,50 / 0,80 / 0,95. Mức 0,005 (`very_rare`) dùng khi dấu hiệu ít gặp ở bệnh này hơn cả tỷ lệ nền 1% của dấu hiệu đặc hiệu. Nếu liên kết có `freq_by_age` cho nhóm tuổi của người bệnh, giá trị đó thay cho giá trị chung.
+- $p_{hf}$ là **tần suất quan sát** của dấu hiệu trong bệnh: 6 mức `frequency_levels` 0,005 / 0,025 / 0,20 / 0,50 / 0,80 / 0,95. Mức 0,005 (`very_rare`) dùng khi dấu hiệu ít gặp ở bệnh này hơn cả tỷ lệ nền 1% của dấu hiệu đặc hiệu. Nếu liên kết có `freq_by_age` cho nhóm tuổi của người bệnh, giá trị đó thay cho giá trị chung. Nếu liên kết có `freq_by_complaint` cho triệu chứng chính đang hỏi, giá trị đó được ưu tiên hơn cả hai: người chọn một triệu chứng chính là một nhóm con riêng của người bệnh.
 - $\ell_{f,c}$ là tỷ lệ nền (`leak`) của dấu hiệu, có thể khác theo triệu chứng chính (`leak_by_complaint`), tối thiểu `leak_floor`.
 - Dấu hiệu có điều kiện (`requires`) dùng **tần suất có điều kiện** (kb-guide §2.1). Vì điều kiện luôn được thỏa trước khi hỏi, tích các likelihood chính là xác suất đồng thời.
 

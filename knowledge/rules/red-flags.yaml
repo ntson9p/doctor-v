@@ -225,6 +225,9 @@
 - id: rf_shock_multiple_signs
   level: 1
   conditions: [sepsis, dengue, ectopic_pregnancy]
+  # Chóng mặt, Ngất, Hồi hộp dùng rf_shock_cold_and_weak: ở đó ngất hoặc choáng luôn có hoặc rất hay gặp,
+  # nên nhánh "ngất" sẽ đẩy người còn tái sau một lần ngất thông thường lên mức 1 (lượt R lô 1).
+  complaints: [abdominal_pain, fever, headache]
   when:
     all:
       - { finding: cold_hands_feet, is: present }
@@ -703,26 +706,40 @@
   evidence:
     tier: B
     basis: verbal
-    sources: [nice-cg141, who-bec-2018, nhs-stomach-ache, byt-qd-2760-2023]
-    locator: "CG141 khuyến cáo 1.1.1–1.1.2; WHO BEC: Shock (bleeding in the stomach or intestines); NHS Stomach ache; 2760 Phụ lục 2"
-    note: "CG141 là hướng dẫn trong bệnh viện: mọi ca xuất huyết tiêu hóa trên cấp cần được đánh giá nguy cơ bằng thang Blatchford, chỉ cân nhắc cho về sớm khi điểm bằng 0. NHS: nôn ra máu hoặc như bã cà phê, phân đen dính thì gọi 999 hoặc đến cấp cứu. 2760: nôn ra máu, phân đen là dấu hiệu cảnh báo sốt xuất huyết."
+    sources: [nice-cg141, who-bec-2018, nhs-stomach-ache, byt-qd-2760-2023, esc-syncope-2018]
+    locator: "CG141 khuyến cáo 1.1.1–1.1.2; WHO BEC: Shock (bleeding in the stomach or intestines); NHS Stomach ache; 2760 Phụ lục 2; ESC 2018 bảng 6"
+    note: "CG141 là hướng dẫn trong bệnh viện: mọi ca xuất huyết tiêu hóa trên cấp cần được đánh giá nguy cơ bằng thang Blatchford, chỉ cân nhắc cho về sớm khi điểm bằng 0. NHS: nôn ra máu hoặc như bã cà phê, phân đen dính thì gọi 999 hoặc đến cấp cứu. 2760: nôn ra máu, phân đen là dấu hiệu cảnh báo sốt xuất huyết. Giai đoạn 3 lô 1 mở rộng phạm vi cho Chóng mặt, Ngất, Hồi hộp; lượt R đối chiếu: ESC 2018 xếp nghi chảy máu tiêu hóa vào đặc điểm nguy cơ cao của ngất. Kèm ngất hoặc choáng thì lên mức 1 (rf_syncope_gi_bleeding). Người đang uống viên sắt (hay gặp ở người thiếu máu) có thể đi ngoài phân đen nhưng không dính như hắc ín; câu hỏi đã nêu 'như hắc ín'."
 - id: rf_fainting_with_pain
   level: 2
-  conditions: [ectopic_pregnancy, acute_coronary_syndrome, subarachnoid_hemorrhage]
+  conditions: [ectopic_pregnancy, acute_coronary_syndrome]
   when:
     all:
       - { finding: fainting_or_near_fainting, is: present }
       - any:
           - { finding: abdominal_pain, is: present }
-          - { finding: headache, is: present }
           - { finding: chest_pain_pressure, is: present }
-  reason_vi: "Ngất hoặc choáng kèm đau cần được khám cấp cứu."
+  reason_vi: "Ngất hoặc choáng kèm đau bụng hoặc đau ngực cần được khám cấp cứu."
   evidence:
     tier: B
     basis: judgment
-    sources: [nice-cg95, nice-ng126, nice-ng228, who-bec-2018]
-    locator: "CG95 khuyến cáo 1.2.1.3; NG126 khuyến cáo 1.4.1, 1.4.3; NG228 khuyến cáo 1.1.3; WHO BEC: Shock"
-    note: "Lượt R thay NHS bằng nguồn chính thức. Ngất hoặc choáng kèm đau gợi ý mất máu trong (chửa ngoài tử cung, xuất huyết tiêu hóa), hội chứng vành cấp có rối loạn huyết động, hoặc xuất huyết dưới nhện. Đau ngực kèm ngất được nâng lên mức 1 ở rf_chest_pain_with_features."
+    sources: [nice-cg95, nice-ng126, who-bec-2018, esc-syncope-2018]
+    locator: "CG95 khuyến cáo 1.2.1.3; NG126 khuyến cáo 1.4.1, 1.4.3; WHO BEC: Shock; ESC 2018 bảng 6 (nguy cơ cao loại nặng: mới xuất hiện đau ngực, đau bụng)"
+    note: "Lượt R thay NHS bằng nguồn chính thức. Ngất hoặc choáng kèm đau gợi ý mất máu trong (chửa ngoài tử cung, xuất huyết tiêu hóa) hoặc hội chứng vành cấp có rối loạn huyết động. Đau ngực kèm ngất được nâng lên mức 1 ở rf_chest_pain_with_features. Lượt R Giai đoạn 3 lô 1 tách phần đau đầu sang rf_fainting_with_headache (giữ nguyên tác dụng với Đau bụng, Sốt, Đau đầu) để phần đau đầu không áp dụng cho Chóng mặt và Hồi hộp, và thêm ESC 2018: ngất kèm đau ngực hoặc đau bụng mới xuất hiện là đặc điểm nguy cơ cao, cần đánh giá tại khoa cấp cứu (tiền ngất xử trí như ngất). Quy tắc vẫn không ghi phạm vi nên áp dụng cho mọi triệu chứng chính."
+- id: rf_fainting_with_headache
+  level: 2
+  conditions: [subarachnoid_hemorrhage]
+  complaints: [abdominal_pain, fever, headache, syncope]
+  when:
+    all:
+      - { finding: fainting_or_near_fainting, is: present }
+      - { finding: headache, is: present }
+  reason_vi: "Ngất hoặc choáng kèm đau đầu cần được khám cấp cứu."
+  evidence:
+    tier: B
+    basis: judgment
+    sources: [nice-ng228, esc-syncope-2018]
+    locator: "NG228 khuyến cáo 1.1.3; ESC 2018 bảng 6 (nguy cơ cao loại nặng: mới xuất hiện đau đầu)"
+    note: "Lượt R Giai đoạn 3 lô 1 tách từ rf_fainting_with_pain: cùng mức, cùng điều kiện như phần đau đầu của quy tắc gốc. NG228 là căn cứ của quy tắc gốc cho xuất huyết dưới nhện (lượt R trước đã đối chiếu; lần này nice.org.uk chặn truy cập tự động nên chưa mở lại). ESC 2018: ngất kèm đau đầu mới xuất hiện là đặc điểm nguy cơ cao. Phạm vi gồm 3 triệu chứng chính cũ và Ngất. Không áp dụng cho Chóng mặt và Hồi hộp: ở đó 'choáng như sắp ngất' gần như là chính triệu chứng chính, còn đau đầu kèm chóng mặt rất hay gặp; NHS Vertigo chỉ khuyên khám khẩn (mức 3) khi chóng mặt kèm đau đầu dữ dội (rf_dizziness_fever_or_severe_headache), và đau đầu đột ngột, dữ dội vẫn ở mức 1 (rf_thunderclap_headache). Khi thêm triệu chứng chính mới, cân nhắc thêm vào phạm vi."
 - id: rf_bowel_obstruction_signs
   level: 2
   conditions: [bowel_obstruction]
@@ -865,7 +882,7 @@
     basis: verbal
     sources: [nice-cg95, nhs-chest-pain]
     locator: "CG95 khuyến cáo 1.2.1.3, 1.2.1.7; NHS Chest pain"
-    note: "CG95: nghi hội chứng vành cấp và đang đau, hoặc đau trong 12 giờ qua, thì chuyển viện cấp cứu. NHS: đau ngực đột ngột không hết thì gọi 999; đau lúc có lúc không hoặc đã hết nhanh thì khám bác sĩ. Câu hỏi chưa phân biệt đang đau hay đã hết nên giữ mức 2; đau thắt dữ dội kèm vã mồ hôi đã được bắt ở màn sàng lọc cấp cứu (mức 1)."
+    note: "CG95: nghi hội chứng vành cấp và đang đau, hoặc đau trong 12 giờ qua, thì chuyển viện cấp cứu. NHS: đau ngực đột ngột không hết thì gọi 999; đau lúc có lúc không hoặc đã hết nhanh thì khám bác sĩ. Câu hỏi chưa phân biệt đang đau hay đã hết nên giữ mức 2; đau thắt dữ dội kèm vã mồ hôi đã được bắt ở màn sàng lọc cấp cứu (mức 1). Giai đoạn 3 lô 1 mở rộng phạm vi cho Chóng mặt, Ngất, Hồi hộp; lượt R đối chiếu: NHS Heart palpitations (hồi hộp kèm đau ngực: gọi 999 hoặc đến cấp cứu), ESC 2018 bảng 6 (ngất kèm đau ngực mới: nguy cơ cao). Với Ngất và Chóng mặt, mức 1 đến từ rf_chest_pain_with_features và rf_dizziness_chest_pain."
 - id: rf_chest_pain_with_features
   level: 1
   conditions: [acute_coronary_syndrome]
@@ -886,7 +903,7 @@
     basis: verbal
     sources: [nice-cg95, nhs-chest-pain]
     locator: "CG95 khuyến cáo 1.2.1.3, 1.2.1.7; NHS Chest pain (Call 999)"
-    note: "CG95: đau lan ra tay, lưng, hàm; đau kèm buồn nôn, nôn, vã mồ hôi, khó thở; đau kèm rối loạn huyết động gợi ý hội chứng vành cấp. NHS: đau ngực kèm vã mồ hôi, buồn nôn, choáng váng hoặc khó thở thì gọi 999. Lượt R thêm buồn nôn, nôn, ngất hoặc choáng theo hai nguồn này."
+    note: "CG95: đau lan ra tay, lưng, hàm; đau kèm buồn nôn, nôn, vã mồ hôi, khó thở; đau kèm rối loạn huyết động gợi ý hội chứng vành cấp. NHS: đau ngực kèm vã mồ hôi, buồn nôn, choáng váng hoặc khó thở thì gọi 999. Lượt R thêm buồn nôn, nôn, ngất hoặc choáng theo hai nguồn này. Giai đoạn 3 lô 1 mở rộng phạm vi cho Chóng mặt, Ngất, Hồi hộp; lượt R đối chiếu NHS Fainting (người ngất bị đau ngực: gọi 999): với Ngất, ngất được ngầm định nên mọi đau ngực đều thành mức 1."
 
 # ---------- Đau đầu, thần kinh ----------
 - id: rf_thunderclap_headache
@@ -900,7 +917,7 @@
     basis: verbal
     sources: [nice-ng228, nice-cg150, nhs-headaches]
     locator: "NG228 khuyến cáo 1.1.3, 1.1.5; CG150 khuyến cáo 1.1.1; NHS Headaches"
-    note: "NG228: đau đầu sét đánh (đột ngột, dữ dội, thường đạt đỉnh trong 1–5 phút) là dấu hiệu nguy hiểm của xuất huyết dưới nhện; người nghi xuất huyết dưới nhện ở ngoài bệnh viện cần được chuyển ngay đến khoa cấp cứu. NHS: đau đầu đột ngột, cực kỳ dữ dội thì gọi 999 hoặc đến cấp cứu. Chọn mức 1 vì nguy cơ chảy máu lại và diễn biến xấu nhanh."
+    note: "NG228: đau đầu sét đánh (đột ngột, dữ dội, thường đạt đỉnh trong 1–5 phút) là dấu hiệu nguy hiểm của xuất huyết dưới nhện; người nghi xuất huyết dưới nhện ở ngoài bệnh viện cần được chuyển ngay đến khoa cấp cứu. NHS: đau đầu đột ngột, cực kỳ dữ dội thì gọi 999 hoặc đến cấp cứu. Chọn mức 1 vì nguy cơ chảy máu lại và diễn biến xấu nhanh. Giai đoạn 3 lô 1 mở rộng phạm vi cho Chóng mặt và Ngất; lượt R đối chiếu: 3312/QĐ-BYT (2024) nêu chảy máu tiểu não gây nhức đầu dữ dội vùng chẩm, thất điều, nôn; ESC 2018 xếp ngất kèm đau đầu mới vào nguy cơ cao. Với Chóng mặt, câu đau đầu được hỏi ngay trong phần dấu hiệu nguy hiểm để câu này được hỏi khi có đau đầu."
 - id: rf_new_seizure
   level: 2
   conditions: [bacterial_meningitis]
@@ -1103,7 +1120,11 @@
     note: "Quy tắc mới của lượt R. CG150: đau đầu mới xuất hiện kèm nôn không rõ nguyên nhân khác thì cân nhắc thăm dò hoặc chuyển tuyến. NHS: đau đầu kèm nôn thì hẹn khám khẩn hoặc gọi 111. Giới hạn ở đau đầu lần đầu hoặc nặng dần để không xếp cao cơn đau nửa đầu quen thuộc."
 
 # ---------- Chóng mặt, ngất, hồi hộp (Giai đoạn 3, lô 1) ----------
-# Người bảo trì soạn; lượt R đối chiếu từng quy tắc với văn bản gốc.
+# Người bảo trì soạn; lượt R (agent:pass-r, 25/10/2026) đối chiếu từng quy tắc với văn bản gốc, sửa mức,
+# điều kiện, phạm vi, nguồn và thêm 5 quy tắc (4 trong khối này và rf_fainting_with_headache, tách từ
+# rf_fainting_with_pain). Biên bản: knowledge/drafts/phase-3/batch-1/review-rules.md.
+# Mức theo nguồn: NHS "Call 999" (chỉ gọi 999) tương ứng mức 1; NHS "Call 999 or go to A&E" và ESC 2018
+# "đánh giá tại khoa cấp cứu" tương ứng mức 2. Ngoại lệ ghi rõ trong note.
 # Sau lượt C, thêm các bệnh mới vào `conditions` (danh sách ở knowledge/drafts/phase-3/batch-1/scope.yaml).
 
 - id: rf_dizziness_central_signs
@@ -1113,13 +1134,16 @@
   when:
     any:
       - { finding: vision_loss_or_double, is: present }
-      - { finding: cannot_walk_unaided, is: present }
-  reason_vi: "Chóng mặt kèm nhìn đôi hoặc không tự đi được có thể do đột quỵ, cần khám cấp cứu."
+      - all:
+          - { finding: cannot_walk_unaided, is: present }
+          - { finding: dizziness_pattern, in: [long_episodes, continuous] }
+  reason_vi: "Chóng mặt kèm nhìn đôi, mất thị lực hoặc mất thăng bằng không tự đi được có thể do đột quỵ. Cần khám cấp cứu ngay."
   evidence:
     tier: B
     basis: verbal
-    sources: [grace3-dizziness-2023, byt-qd-3312-2024, nhs-dizziness]
-    note: "GRACE-3: ở người chóng mặt cấp, không tự đi được gợi ý nguyên nhân trung ương. 3312/QĐ-BYT: đột quỵ hệ sau gây chóng mặt, nhìn đôi, thất điều."
+    sources: [grace3-dizziness-2023, byt-qd-3312-2024, nhs-vertigo, nhs-stroke-symptoms]
+    locator: "GRACE-3 khuyến cáo 2, 4 (trang SAEM); 3312/QĐ-BYT (2024) bài 2 mục 3.1, 3.4; NHS Vertigo (Call 999 or go to A&E); NHS Symptoms of a stroke"
+    note: "GRACE-3: ở hội chứng tiền đình cấp, mức độ đi không vững giúp phân biệt nguyên nhân trung ương (đột quỵ) với ngoại biên (khuyến cáo 4); HINTS cần người được đào tạo. 3312/QĐ-BYT (2024): nhồi máu não khởi phát đột ngột với mất thị lực, nhìn đôi, thất điều, chóng mặt (chóng mặt hiếm khi đơn độc); viêm mê đạo có thể nhầm với đột quỵ tiểu não. NHS Vertigo: chóng mặt quay kèm nhìn đôi hoặc mất thị lực thì gọi 999 hoặc đến cấp cứu (mức 2). Lượt R sửa điều kiện: 'không tự đi được' chỉ tính khi chóng mặt liên tục hoặc thành cơn vài phút đến vài giờ, không tính cơn ngắn dưới 1 phút, vì trong cơn chóng mặt tư thế kịch phát lành tính người bệnh có thể không đứng được vài giây rồi hết; kiểu chóng mặt 'không rõ' thì quy tắc ở trạng thái không rõ (ít nhất mức 3); chóng mặt âm ỉ nhiều tuần không tính (không phải cấp cứu). Bỏ nguồn NHS Dizziness: trang này chỉ khuyên khám không khẩn khi nhìn đôi, tê yếu tay chân."
 
 - id: rf_dizziness_central_signs_high_risk
   level: 1
@@ -1129,18 +1153,21 @@
     all:
       - any:
           - { finding: vision_loss_or_double, is: present }
-          - { finding: cannot_walk_unaided, is: present }
+          - all:
+              - { finding: cannot_walk_unaided, is: present }
+              - { finding: dizziness_pattern, in: [long_episodes, continuous] }
       - any:
           - { age_years_gte: 50 }
           - { finding: hypertension_known, is: present }
           - { finding: diabetes, is: present }
           - { finding: known_heart_disease, is: present }
-  reason_vi: "Chóng mặt kèm nhìn đôi hoặc không tự đi được ở người có nguy cơ đột quỵ: gọi 115 ngay."
+  reason_vi: "Chóng mặt kèm nhìn đôi, mất thị lực hoặc không tự đi được ở người có nguy cơ đột quỵ: gọi 115 ngay."
   evidence:
     tier: B
-    basis: verbal
-    sources: [grace3-dizziness-2023, byt-qd-3312-2024]
-    note: "Cùng cấu trúc với rf_befast_high_risk của triệu chứng đau đầu."
+    basis: judgment
+    sources: [byt-qd-3312-2024, grace3-dizziness-2023, nhs-stroke-symptoms]
+    locator: "3312/QĐ-BYT (2024) bài 2 mục 3.1, 4.1; GRACE-3 khuyến cáo 2, 4; NHS Symptoms of a stroke (Call 999 now if)"
+    note: "Cùng cấu trúc với rf_befast_high_risk (Đau đầu): dấu hiệu B (thăng bằng) và E (mắt) của BE-FAST ở người từ 50 tuổi hoặc có tăng huyết áp, đái tháo đường, bệnh tim. 3312/QĐ-BYT (2024): khi phát hiện đột quỵ cấp cần vận chuyển nhanh, an toàn đến cơ sở điều trị được đột quỵ. NHS: nghĩ đang bị đột quỵ thì gọi 999; dấu hiệu gồm chóng mặt hoặc ngã, nhìn mờ hoặc mất thị lực. Cùng giới hạn kiểu chóng mặt như rf_dizziness_central_signs. Mức 1 và ngưỡng 50 tuổi là nhận định (như quy tắc của Đau đầu), chờ bác sĩ duyệt."
 
 - id: rf_acute_vertigo_vascular_risk
   level: 2
@@ -1158,43 +1185,60 @@
   evidence:
     tier: B
     basis: judgment
-    sources: [grace3-dizziness-2023]
-    note: "Hội chứng tiền đình cấp: một phần là đột quỵ hệ sau, nhất là ở người có yếu tố nguy cơ mạch máu; cần thăm khám chuyên môn để phân biệt. Ngưỡng tuổi 60 do người bảo trì chọn; lượt R đối chiếu."
+    sources: [grace3-dizziness-2023, byt-qd-3312-2024]
+    locator: "GRACE-3: định nghĩa hội chứng tiền đình cấp, khuyến cáo 2–7 (trang SAEM); 3312/QĐ-BYT (2024) bài 2 mục 3.4"
+    note: "GRACE-3: chóng mặt liên tục, khởi phát cấp, kéo dài trên 24 giờ là hội chứng tiền đình cấp; cần người được đào tạo khám HINTS hoặc chụp cộng hưởng từ để phân biệt đột quỵ với viêm dây thần kinh tiền đình, chụp cắt lớp vi tính không dùng để phân biệt. GRACE-3 phân loại theo thời gian và yếu tố khởi phát, không theo cảm giác, nên lựa chọn 'liên tục không dứt, mới bắt đầu vài ngày nay' tương ứng định nghĩa này dù là chóng mặt quay hay choáng váng. 3312/QĐ-BYT (2024): viêm mê đạo có thể nhầm với đột quỵ tiểu não. Ở Việt Nam ít nơi khám được HINTS, nên người có nguy cơ mạch máu được khuyên đi cấp cứu ở bệnh viện điều trị được đột quỵ. Ngưỡng 60 tuổi do người bảo trì chọn (phần GRACE-3 đọc được không nêu ngưỡng tuổi); chờ bác sĩ duyệt."
 
 - id: rf_transient_neuro
   level: 2
   conditions: [stroke]
   complaints: [dizziness, syncope, palpitations]
   when: { finding: transient_neuro_symptoms, is: present }
-  reason_vi: "Vừa có lúc yếu, tê, nói khó hoặc mất thị lực rồi tự hết có thể là cơn thiếu máu não thoáng qua. Đây là dấu hiệu báo trước đột quỵ: cần khám cấp cứu ngay."
+  reason_vi: "Yếu, tê nửa người hoặc nói khó rồi tự hết có thể là cơn thiếu máu não thoáng qua. Đây là dấu hiệu báo trước đột quỵ: cần khám cấp cứu ngay. Nếu mới xảy ra trong 24 giờ qua hoặc đang tái lại, gọi 115."
   evidence:
     tier: B
     basis: verbal
-    sources: [nice-ng128, nhs-stroke-symptoms]
-    note: "NHS: gọi cấp cứu kể cả khi triệu chứng đã tự hết. NICE NG128: người nghi cơn thiếu máu não thoáng qua cần được chuyên khoa đánh giá trong 24 giờ. Lượt R cân nhắc mức 1 hay 2."
+    sources: [byt-qd-3312-2024, nhs-tia, nhs-stroke-symptoms]
+    locator: "3312/QĐ-BYT (2024) bài 1 mục 1.1.2, 3.1, 3.4, 4.2, 4.3.1; NHS TIA (When to get medical advice); NHS Symptoms of a stroke (Call 999 now if)"
+    note: "3312/QĐ-BYT (2024): cơn thiếu máu não thoáng qua là triệu chứng thần kinh khu trú khởi phát đột ngột do thiếu máu não hoặc võng mạc, kéo dài không quá 24 giờ; nguy cơ tái phát sớm rất cao; điều trị dự phòng ngay, tối ưu trong 24 giờ đầu, có thể đến 7 ngày đầu; cần phân biệt với ngất, đau nửa đầu, động kinh, hạ đường huyết. NHS: có dấu hiệu thì gọi 999 ngay, kể cả khi đã hết trong lúc chờ xe; dấu hiệu đột quỵ trong 24 giờ qua dù đã hết cũng gọi 999; cần khám chuyên khoa trong 24 giờ kể từ khi khởi phát; từng bị mà đã qua, chưa đi khám thì hẹn khám khẩn. Câu hỏi gộp cả 7 ngày qua (khoảng có nguy cơ tái phát cao nhất theo 3312), nên giữ mức 2 cho cả nhóm và dặn gọi 115 trong câu lý do khi triệu chứng trong 24 giờ qua; cần thêm câu hỏi về thời điểm (xem biên bản). Lượt R bỏ NICE NG128 khỏi nguồn vì chưa mở được, và sửa câu hỏi để không tính lúc tối sầm mắt khi sắp ngất."
 
 - id: rf_syncope_exertion_or_lying
   level: 2
   conditions: [acute_coronary_syndrome]
-  complaints: [syncope, dizziness, palpitations]
+  complaints: [syncope]
   when: { finding: syncope_trigger, in: [exertion, lying] }
-  reason_vi: "Ngất khi đang gắng sức hoặc đang nằm có thể do bệnh tim, cần khám cấp cứu."
+  reason_vi: "Ngất khi đang gắng sức hoặc đang nằm có thể do bệnh tim, cần khám cấp cứu ngay. Nhờ người đưa đi, không tự lái xe."
   evidence:
     tier: B
     basis: verbal
-    sources: [esc-syncope-2018, nice-cg109]
-    note: "ESC 2018: ngất khi gắng sức hoặc khi nằm là đặc điểm nguy cơ cao."
+    sources: [esc-syncope-2018, nhs-fainting]
+    locator: "ESC 2018 bảng 6 (nguy cơ cao loại nặng), hình 6, khuyến cáo xử trí ngất tại khoa cấp cứu (I, B), mục 4.2.9; NHS Fainting (Call 999 if someone)"
+    note: "ESC 2018: ngất khi gắng sức hoặc khi nằm là đặc điểm nguy cơ cao loại nặng; người có đặc điểm này cần được đánh giá sớm, tích cực tại khoa cấp cứu hoặc đơn vị ngất, không cho về thẳng; tiền ngất xử trí như ngất. NHS Fainting: ngất khi tập luyện hoặc khi đang nằm thì gọi 999, không tự lái xe đến cấp cứu. Lượt R giữ mức 2 theo ESC vì người dùng app thường đã tỉnh lại, và câu hỏi gộp cả suýt ngất; câu lý do nhắc nhờ người đưa đi như NHS. Ngất sau khi đã dừng gắng sức thường do phản xạ (ESC mục 4.2.9) nhưng câu hỏi không tách được; chấp nhận xếp cao hơn cần. Lượt R thu hẹp phạm vi về Ngất: với Chóng mặt, lựa chọn 'khi đang nằm' dễ bị chọn khi chóng mặt tư thế kịch phát lành tính lúc trở mình, nên dùng rf_dizziness_faint_on_exertion (chỉ gắng sức); với Hồi hộp, rf_palpitations_danger đã ở mức 2 khi có choáng hoặc ngất. Bỏ NICE CG109 khỏi nguồn vì chưa mở được (theo bản tóm tắt RCEM 2012, CG109 chuyển khám tim mạch trong 24 giờ người mất ý thức khi gắng sức). Chờ bác sĩ duyệt mức 1 hay 2."
+
+- id: rf_dizziness_faint_on_exertion
+  level: 2
+  conditions: [acute_coronary_syndrome]
+  complaints: [dizziness]
+  when: { finding: syncope_trigger, in: [exertion] }
+  reason_vi: "Choáng như sắp ngất hoặc ngất khi đang gắng sức có thể do bệnh tim, cần khám cấp cứu ngay. Nhờ người đưa đi, không tự lái xe."
+  evidence:
+    tier: B
+    basis: verbal
+    sources: [esc-syncope-2018, nhs-fainting]
+    locator: "ESC 2018 bảng 6, khuyến cáo xử trí ngất tại khoa cấp cứu, mục 4.2.9; NHS Fainting (Call 999 if someone)"
+    note: "Quy tắc mới của lượt R, tách từ rf_syncope_exertion_or_lying cho triệu chứng chính Chóng mặt và chỉ giữ lựa chọn gắng sức. ESC 2018: ngất khi gắng sức là đặc điểm nguy cơ cao loại nặng, ngất trong lúc gắng sức thường do tim; tiền ngất xử trí như ngất. Bỏ lựa chọn 'khi đang nằm' vì ở người chóng mặt, chóng mặt tư thế kịch phát lành tính khi nằm, trở mình rất hay gặp và dễ được trả lời là 'choáng như sắp ngất khi đang nằm'."
 
 - id: rf_syncope_palpitations_first
   level: 2
   complaints: [syncope, dizziness, palpitations]
   when: { finding: syncope_warning, in: [palpitations_first] }
-  reason_vi: "Tim đập nhanh hoặc loạn ngay trước khi ngất có thể do rối loạn nhịp tim, cần khám cấp cứu."
+  reason_vi: "Tim đập nhanh hoặc loạn ngay trước khi ngất có thể do rối loạn nhịp tim, cần khám cấp cứu ngay. Nhờ người đưa đi, không tự lái xe."
   evidence:
     tier: B
     basis: verbal
-    sources: [esc-syncope-2018]
-    note: "ESC 2018: hồi hộp đột ngột ngay trước khi ngất là đặc điểm nguy cơ cao."
+    sources: [esc-syncope-2018, nhs-fainting]
+    locator: "ESC 2018 bảng 6 (hồi hộp đột ngột rồi ngất ngay), bảng 7; NHS Fainting (Call 999 if someone)"
+    note: "ESC 2018: hồi hộp xuất hiện đột ngột rồi ngất ngay sau đó là đặc điểm nguy cơ cao loại nặng, cần đánh giá tại khoa cấp cứu. NHS Fainting: người ngất có tim đập thình thịch, rung hoặc không đều thì gọi 999. Giữ mức 2 theo ESC vì 'tim đập nhanh' cũng gặp trong tiền triệu của ngất phản xạ; câu lý do nhắc nhờ người đưa đi. Chờ bác sĩ duyệt."
 
 - id: rf_syncope_heart_disease
   level: 2
@@ -1204,27 +1248,58 @@
     all:
       - { finding: fainting_or_near_fainting, is: present }
       - { finding: known_heart_disease, is: present }
-  reason_vi: "Ngất hoặc suýt ngất ở người có bệnh tim cần khám cấp cứu."
+  reason_vi: "Ngất hoặc suýt ngất ở người có bệnh tim cần khám cấp cứu. Nhờ người đưa đi, không tự lái xe."
   evidence:
     tier: B
     basis: verbal
-    sources: [esc-syncope-2018, nice-cg109]
-    note: "ESC 2018: bệnh tim cấu trúc hoặc bệnh mạch vành nặng là đặc điểm nguy cơ cao."
+    sources: [esc-syncope-2018]
+    locator: "ESC 2018 bảng 6 (tiền sử: bệnh tim cấu trúc hoặc bệnh mạch vành nặng), khuyến cáo xử trí ngất tại khoa cấp cứu (I, B)"
+    note: "ESC 2018: bệnh tim cấu trúc hoặc bệnh mạch vành nặng (suy tim, phân suất tống máu thấp, nhồi máu cơ tim cũ) là đặc điểm nguy cơ cao loại nặng. Câu hỏi 'bệnh tim đã biết, như bệnh mạch vành hoặc suy tim' gần với tiêu chí này nhưng rộng hơn (có thể gồm bệnh tim nhẹ); chấp nhận. Lượt R bỏ NICE CG109 khỏi nguồn vì chưa mở được."
 
 - id: rf_syncope_breathing
   level: 1
   conditions: [acute_coronary_syndrome]
-  complaints: [syncope, dizziness, palpitations]
+  complaints: [syncope]
   when:
     all:
       - { finding: fainting_or_near_fainting, is: present }
       - { finding: breathing_difficulty, is: present }
-  reason_vi: "Ngất hoặc choáng kèm khó thở có thể do bệnh tim, phổi nguy hiểm: gọi 115 ngay."
+  reason_vi: "Ngất hoặc suýt ngất kèm khó thở có thể do bệnh tim, phổi nguy hiểm: gọi 115 ngay."
+  evidence:
+    tier: B
+    basis: judgment
+    sources: [esc-syncope-2018, nhs-fainting]
+    locator: "ESC 2018 bảng 6 (mới xuất hiện khó thở), hình 5; NHS Fainting (Call 999 if someone: chưa hồi phục hoàn toàn)"
+    note: "ESC 2018: ngất kèm khó thở mới xuất hiện là đặc điểm nguy cơ cao loại nặng; hình 5 lấy thuyên tắc phổi (khó thở, đau ngực kiểu màng phổi, ngất) làm ví dụ ngất là triệu chứng của một bệnh cấp nặng hơn. NHS Fainting không nêu riêng khó thở, nhưng gọi 999 khi người ngất chưa hồi phục hoàn toàn; khó thở còn kéo dài sau ngất thuộc nhóm này. ESC chỉ nói đánh giá tại khoa cấp cứu; mức 1 là nhận định của người bảo trì, lượt R giữ vì thuyên tắc phổi và hội chứng vành cấp có ngất có thể xấu đi rất nhanh. Lượt R thu hẹp phạm vi về Ngất: với Chóng mặt dùng rf_dizziness_near_syncope_breathing (mức 2) vì choáng kèm thở nhanh hay gặp trong cơn hoảng sợ; với Hồi hộp dùng rf_palpitations_danger (mức 2, theo NHS). Khó thở dữ dội đã được bắt ở màn sàng lọc cấp cứu. Chờ bác sĩ duyệt."
+
+- id: rf_dizziness_near_syncope_breathing
+  level: 2
+  conditions: [acute_coronary_syndrome]
+  complaints: [dizziness]
+  when:
+    all:
+      - { finding: fainting_or_near_fainting, is: present }
+      - { finding: breathing_difficulty, is: present }
+  reason_vi: "Chóng mặt, choáng như sắp ngất kèm khó thở cần được khám cấp cứu. Nếu khó thở nặng lên, đau ngực hoặc ngất: gọi 115."
+  evidence:
+    tier: B
+    basis: judgment
+    sources: [esc-syncope-2018]
+    locator: "ESC 2018 bảng 6 (mới xuất hiện khó thở), lời khuyên kèm khuyến cáo xử trí tại khoa cấp cứu (tiền ngất)"
+    note: "Quy tắc mới của lượt R, thay cho rf_syncope_breathing (mức 1) ở triệu chứng chính Chóng mặt. ESC 2018: tiền ngất xử trí như ngất; ngất kèm khó thở mới xuất hiện là đặc điểm nguy cơ cao loại nặng, cần đánh giá tại khoa cấp cứu. Chọn mức 2 vì ở người chọn Chóng mặt, choáng kèm thở nhanh hay gặp trong cơn hoảng sợ; khó thở dữ dội vẫn ở mức 1 qua màn sàng lọc cấp cứu, đau ngực qua rf_chest_pain_with_features và rf_dizziness_chest_pain. Chờ bác sĩ duyệt."
+
+- id: rf_dizziness_chest_pain
+  level: 1
+  conditions: [acute_coronary_syndrome]
+  complaints: [dizziness]
+  when: { finding: chest_pain_pressure, is: present }
+  reason_vi: "Đau, tức ngực kèm chóng mặt, choáng váng có thể là nhồi máu cơ tim: gọi 115 ngay."
   evidence:
     tier: B
     basis: verbal
-    sources: [esc-syncope-2018, nhs-fainting]
-    note: "ESC 2018: ngất kèm khó thở mới xuất hiện là đặc điểm nguy cơ cao. Lượt R đối chiếu mức với trang NHS."
+    sources: [nice-cg95, nhs-chest-pain]
+    locator: "CG95 khuyến cáo 1.2.1.3; NHS Chest pain (Call 999)"
+    note: "Quy tắc mới của lượt R. NHS Chest pain: đau ngực kèm vã mồ hôi, buồn nôn, choáng váng hoặc khó thở thì gọi 999 (lượt R mở lại trang ngày 25/10/2026). Với triệu chứng chính Chóng mặt, choáng váng là chính triệu chứng chính nên mọi đau ngực đều lên mức 1, như rf_chest_pain_with_features đã làm với ngất hoặc choáng. CG95: đau ngực kèm rối loạn huyết động gợi ý hội chứng vành cấp. Viết thành quy tắc riêng thay vì thêm 'chóng mặt' vào rf_chest_pain_with_features, để không làm thay đổi cách hỏi ở triệu chứng chính Đau bụng."
 
 - id: rf_syncope_gi_bleeding
   level: 1
@@ -1239,9 +1314,10 @@
   reason_vi: "Ngất hoặc choáng kèm nôn ra máu, đi ngoài phân đen là dấu hiệu mất máu nhiều: gọi 115 ngay."
   evidence:
     tier: B
-    basis: verbal
-    sources: [nice-cg141, esc-syncope-2018]
-    note: "Ngất trong chảy máu tiêu hóa phản ánh mất máu nhiều (NICE CG141 dùng thang Blatchford, trong đó có ngất)."
+    basis: judgment
+    sources: [nice-cg141, esc-syncope-2018, who-bec-2018]
+    locator: "CG141 khuyến cáo 1.1.1–1.1.2; ESC 2018 bảng 6 (nghi chảy máu tiêu hóa); WHO BEC: Shock"
+    note: "ESC 2018: nghi chảy máu tiêu hóa là đặc điểm nguy cơ cao loại nặng của ngất. WHO BEC: nôn ra máu, phân đen là chảy máu đường tiêu hóa, một nguyên nhân gây sốc. CG141 (lượt R trước đã đối chiếu) khuyến cáo đánh giá nguy cơ mọi ca xuất huyết tiêu hóa trên bằng thang Blatchford; lần này không mở được nội dung thang. Riêng xuất huyết tiêu hóa đã ở mức 2 (rf_gi_bleeding); mức 1 khi kèm ngất hoặc choáng là nhận định (nguy cơ sốc mất máu), chờ bác sĩ duyệt."
 
 - id: rf_syncope_family_sudden_death
   level: 3
@@ -1250,12 +1326,13 @@
     all:
       - { finding: fainting_or_near_fainting, is: present }
       - { finding: family_sudden_death, is: present }
-  reason_vi: "Ngất ở người có người thân chết đột ngột khi còn trẻ cần được khám tim trong 24 giờ."
+  reason_vi: "Ngất ở người có bố mẹ, anh chị em hoặc con đột tử trước 40 tuổi cần được khám tim trong 24 giờ."
   evidence:
     tier: B
-    basis: verbal
-    sources: [esc-syncope-2018]
-    note: "ESC 2018: tiền sử gia đình đột tử khi trẻ là đặc điểm nguy cơ. Mức 3 do người bảo trì chọn."
+    basis: judgment
+    sources: [esc-syncope-2018, nhs-heart-palpitations]
+    locator: "ESC 2018 bảng 6 (nguy cơ cao loại nhẹ: gia đình có người đột tử do tim khi còn trẻ); NHS Heart palpitations (See a GP)"
+    note: "ESC 2018: đây là đặc điểm nguy cơ cao loại nhẹ, chỉ thành nguy cơ cao khi kèm bệnh tim cấu trúc hoặc điện tim bất thường, nên cần đo điện tim sớm. NHS Heart palpitations: gia đình có bệnh tim thì khám bác sĩ (không khẩn). NICE CG109 chưa mở được; theo bản tóm tắt RCEM 2012, CG109 chuyển khám tim mạch trong 24 giờ người mất ý thức thoáng qua có người nhà đột tử do tim dưới 40 tuổi. Mức 3 do người bảo trì chọn, phù hợp các nguồn trên; chờ bác sĩ duyệt."
 
 - id: rf_syncope_pregnancy
   level: 3
@@ -1272,34 +1349,39 @@
     tier: B
     basis: verbal
     sources: [nice-ng126, nhs-ectopic-pregnancy]
-    note: "Choáng, ngất là một biểu hiện của chửa ngoài tử cung. Khi kèm đau bụng, rf_fainting_with_pain đã ở mức 2."
+    locator: "NG126 khuyến cáo 1.4.1, 1.4.3; NHS Ectopic pregnancy (When to get medical advice; When to get emergency help)"
+    note: "NHS (lượt R mở lại ngày 25/10/2026): gọi 999 hoặc đến cấp cứu khi có kết hợp đau bụng đột ngột dữ dội, chóng mặt nhiều hoặc ngất, buồn nôn, da rất tái; có các triệu chứng chửa ngoài tử cung khác và có thể đang có thai thì khám bác sĩ gia đình hoặc gọi 111, kể cả khi chưa thử thai dương tính. Ngất hoặc choáng đơn thuần khi có thai chưa đủ tiêu chí cấp cứu nên giữ mức 3. Kèm đau bụng đã có rf_fainting_with_pain (mức 2); kèm da tái, tay chân lạnh đã có rf_shock_signs (mức 2) và rf_shock_multiple_signs (mức 1)."
 
 - id: rf_palpitations_danger
-  level: 1
+  level: 2
   conditions: [acute_coronary_syndrome]
-  complaints: [palpitations]
+  complaints: [palpitations, dizziness, syncope]
   when:
-    any:
-      - { finding: chest_pain_pressure, is: present }
-      - { finding: breathing_difficulty, is: present }
-      - { finding: fainting_or_near_fainting, is: present }
-  reason_vi: "Tim đập nhanh kèm đau ngực, khó thở hoặc choáng ngất có thể nguy hiểm: gọi 115 ngay."
+    all:
+      - { finding: palpitations, is: present }
+      - any:
+          - { finding: chest_pain_pressure, is: present }
+          - { finding: breathing_difficulty, is: present }
+          - { finding: fainting_or_near_fainting, is: present }
+  reason_vi: "Hồi hộp kèm đau ngực, khó thở, choáng hoặc ngất cần khám cấp cứu ngay. Nhờ người đưa đi hoặc gọi 115, không tự lái xe."
   evidence:
     tier: B
     basis: verbal
-    sources: [nhs-heart-palpitations, esc-syncope-2018]
-    note: "NHS (Heart palpitations): hồi hộp kèm đau ngực, khó thở hoặc ngất là lý do gọi cấp cứu. Lượt R đối chiếu."
+    sources: [nhs-heart-palpitations, esc-syncope-2018, nhs-fainting]
+    locator: "NHS Heart palpitations (Call 999 or go to A&E); ESC 2018 bảng 6, bảng 7; NHS Fainting (Call 999 if someone)"
+    note: "Lượt R hạ từ mức 1 xuống mức 2 và thêm điều kiện 'có hồi hộp' để dùng chung cho Chóng mặt và Ngất. NHS: đang hồi hộp mà cơn không hết, hoặc kèm đau ngực, khó thở, choáng hoặc ngất thì gọi 999 hoặc đến cấp cứu (quy ước doctor-v: mức 2); nếu các triệu chứng đó đã hết thì hẹn khám khẩn hoặc gọi 111; không tự lái xe, nhờ người chở hoặc gọi xe cấp cứu. Câu hỏi không phân biệt cơn đang có hay đã hết nên giữ mức 2. ESC 2018: hồi hộp lúc ngất, ngất kèm đau ngực hoặc khó thở mới là đặc điểm nguy cơ cao (đánh giá tại khoa cấp cứu). Đau ngực kèm khó thở, vã mồ hôi, buồn nôn hoặc choáng vẫn ở mức 1 qua rf_chest_pain_with_features. Với Ngất, NHS Fainting khuyên gọi 999 khi người ngất có hồi hộp; giữ mức 2 vì tim đập nhanh còn gặp trong tiền triệu của ngất phản xạ. Mức 1 cũ làm mọi cơn hoảng sợ có khó thở hoặc choáng thành 'gọi 115'. Chờ bác sĩ duyệt."
 
 - id: rf_pulse_extreme
   level: 2
   complaints: [palpitations, dizziness, syncope]
   when: { finding: pulse_measured, in: [lt_40, gt_150] }
-  reason_vi: "Mạch dưới 40 hoặc trên 150 lần mỗi phút khi đang có triệu chứng cần khám cấp cứu."
+  reason_vi: "Mạch dưới 40 hoặc trên 150 lần mỗi phút lúc nghỉ, khi đang có triệu chứng, cần khám cấp cứu."
   evidence:
     tier: B
     basis: judgment
     sources: [esc-syncope-2018]
-    note: "Ngưỡng do người bảo trì chọn: nhịp chậm dưới 40 khi thức và nhịp nhanh trên 150 thường cần xử trí cấp cứu. Lượt R đối chiếu."
+    locator: "ESC 2018 bảng 6 (khám thực thể: nhịp chậm dai dẳng dưới 40 lần/phút lúc thức, không do luyện tập; điện tim: nhịp xoang chậm hoặc rung nhĩ chậm dưới 40 lần/phút)"
+    note: "Ngưỡng dưới 40 lần/phút theo ESC 2018 (nguy cơ cao loại nặng; ESC không tính người luyện tập thể thao). Ngưỡng trên 150 lần/phút không có trong các nguồn đã mở; người bảo trì chọn vì nhịp nhanh như vậy lúc nghỉ thường là cơn nhịp nhanh cần làm điện tim ngay (nhận định, chờ bác sĩ duyệt). Lượt R sửa câu gợi ý của pulse_measured: đo lúc ngồi hoặc nằm nghỉ, không đo ngay sau vận động. Trẻ 5–12 tuổi có nhịp tim lúc nghỉ cao hơn người lớn; ngưỡng 150 vẫn là bất thường khi nghỉ. Lưu ý: khoảng 60% người dùng chưa đo mạch sẽ chọn 'Không rõ'; khi đó quy tắc ở trạng thái 'không rõ' nên mức xử trí ít nhất là 3, và là 2 nếu từ 75 tuổi, có thai hoặc suy giảm miễn dịch. Ngôn ngữ quy tắc hiện không cho viết 'không rõ thì bỏ qua' với dấu hiệu nhiều lựa chọn (xem biên bản)."
 
 - id: rf_hypoglycemia_suspected
   level: 3
@@ -1311,20 +1393,86 @@
           - { finding: tremor, is: present }
           - { finding: cold_sweat, is: present }
           - { finding: missed_meal, is: present }
-  reason_vi: "Người đang dùng thuốc tiểu đường bị run tay, vã mồ hôi hoặc bỏ bữa có thể đang hạ đường huyết. Nếu còn tỉnh và nuốt được, ăn hoặc uống ngay đồ ngọt. Nếu không đỡ sau 15 phút hoặc lơ mơ, gọi 115."
+          - { finding: glucose_measured, in: [low] }
+          - { finding: better_after_sugar, is: present }
+  reason_vi: "Đang dùng thuốc tiểu đường mà run tay, vã mồ hôi hoặc bỏ bữa có thể là hạ đường huyết. Nếu còn tỉnh và nuốt được, ăn hoặc uống ngay đồ ngọt, ví dụ một cốc nhỏ nước hoa quả hoặc nước ngọt có đường. Sau 10–15 phút chưa đỡ thì ăn, uống đồ ngọt lần nữa; đỡ rồi thì ăn thêm bữa nhẹ. Nếu lơ mơ hoặc không nuốt được, không cho ăn uống và gọi 115. Nên đi khám trong 24 giờ để xem lại thuốc."
   evidence:
     tier: C
-    basis: verbal
-    sources: [nhs-hypoglycaemia]
-    note: "Lú lẫn, li bì đã có rf_altered_consciousness ở mức 1. Lượt R đối chiếu mức 2 hay 3 và cách sơ cứu."
+    basis: judgment
+    sources: [nhs-hypoglycaemia, who-bec-2018]
+    locator: "NHS Low blood sugar (How to treat low blood sugar yourself; How to treat severe low blood sugar; Call 999 if; See a GP if); WHO BEC: Altered mental status (disposition)"
+    note: "NHS: người dùng insulin hoặc một số thuốc tiểu đường dễ hạ đường huyết; còn tỉnh thì tự xử trí: ăn uống ngay thứ làm tăng đường huyết nhanh (một cốc nhỏ nước hoa quả hoặc nước ngọt có đường), đo lại sau 10–15 phút, chưa lên thì lặp lại và đo lại sau 10 phút, đỡ rồi ăn thêm bánh hoặc bữa ăn; bất tỉnh thì không cho ăn uống; gọi 999 khi đáp ứng không bình thường hoặc bất tỉnh mà không có glucagon, đã tiêm mà không hồi phục trong 10 phút, hoặc đã uống rượu; khám không khẩn khi hay bị, từng bị nặng hoặc bị về đêm. Như vậy NHS cho người còn tỉnh tự xử trí; doctor-v giữ mức 3 (không nâng lên mức 2) để không làm chậm việc ăn đồ ngọt ngay, và khuyên khám trong 24 giờ vì nhiều người không có máy đo đường huyết và hạ đường huyết có thể tái lại (WHO BEC: hạ đường huyết hay tái phát). Lú lẫn, li bì đã ở mức 1 (rf_altered_consciousness). Lượt R thêm 'đỡ hẳn sau khi ăn đồ ngọt' vào điều kiện và sửa câu lý do theo NHS (bản trước khuyên gọi 115 khi không đỡ sau 15 phút; NHS khuyên ăn đồ ngọt lần nữa). Lưu ý cho lượt C: nếu bệnh hạ đường huyết được khai báo mức 2 và 'không được bỏ sót', xác suất sẽ đẩy người tiểu đường có chóng mặt lên mức 2, lệch với NHS."
 
 - id: rf_co_exposure
   level: 2
   complaints: [dizziness, syncope]
   when: { finding: co_exposure, is: present }
-  reason_vi: "Chóng mặt hoặc ngất khi ở phòng kín có đốt than, chạy máy nổ có thể là ngộ độc khí CO. Ra ngay chỗ thoáng khí và đến cơ sở cấp cứu."
+  reason_vi: "Chóng mặt hoặc ngất khi ở phòng kín có đốt than, củi hoặc chạy máy nổ có thể là ngộ độc khí CO. Đưa mọi người ra chỗ thoáng khí ngay, rồi đến cơ sở cấp cứu. Không quay lại phòng đó và không tự lái xe."
+  evidence:
+    tier: C
+    basis: judgment
+    sources: [nhs-carbon-monoxide-poisoning, who-bec-2018]
+    locator: "NHS Carbon monoxide poisoning (What to do; Urgent advice: Call NHS 111; Call 999 or go to A&E; Treatments); WHO BEC: Altered mental status (ngộ độc khí ở nhiều người)"
+    note: "NHS: nghi ngộ độc thì ra ngoài, ngừng thiết bị phát khí nếu được, xin tư vấn y tế càng sớm càng tốt, không quay lại trước khi được tư vấn; có triệu chứng thì gọi 111; kèm khó thở, đột ngột lú lẫn, mất ý thức, mệt yếu, đau ngực hoặc đau cơ thì gọi 999 hoặc đến cấp cứu; người ngộ độc khí CO cần được kiểm tra ở bệnh viện (đo CO trong máu, thở oxy); không tự lái xe. WHO BEC: ngộ độc khí như CO gây rối loạn ý thức ở nhiều người cùng nơi, hay gặp khi sưởi trong nhà. Với Ngất (mất ý thức), mức 2 đúng theo NHS. Với Chóng mặt, NHS chỉ khuyên gọi 111 (tương ứng mức 3); doctor-v chọn mức 2 vì Việt Nam không có dịch vụ 111, đo CO trong máu và thở oxy chỉ làm được ở bệnh viện, và người ở cùng có thể đang nhiễm độc. Lú lẫn, li bì đã ở mức 1 (rf_altered_consciousness). Chưa có nguồn bậc A/B về mức xử trí (chưa tìm thấy hướng dẫn của Bộ Y tế về ngộ độc khí CO); chờ bác sĩ duyệt. Triệu chứng chính Đau đầu sẽ được thêm ở lô 2."
+
+- id: rf_dizziness_fever_or_severe_headache
+  level: 3
+  complaints: [dizziness]
+  when:
+    any:
+      - { finding: fever, is: present }
+      - { finding: headache_severity, in: [severe] }
+  reason_vi: "Chóng mặt kèm sốt hoặc đau đầu rất nặng cần được khám trong 24 giờ."
   evidence:
     tier: C
     basis: verbal
-    sources: [nhs-carbon-monoxide-poisoning]
-    note: "Triệu chứng chính Đau đầu sẽ được thêm ở lô 2. Lượt R đối chiếu mức."
+    sources: [nhs-vertigo]
+    locator: "NHS Vertigo (Urgent advice: ask for an urgent GP appointment or get help from NHS 111)"
+    note: "Quy tắc mới của lượt R. NHS Vertigo: chóng mặt quay kèm đau đầu dữ dội, nôn hoặc rất buồn nôn, sốt rất cao hoặc thấy nóng, lạnh, rét run thì hẹn khám khẩn hoặc gọi 111 (tương ứng mức 3). Nôn liên tục đã có rf_persistent_vomiting (mức 3); nôn thường không đưa vào vì hay gặp trong cơn chóng mặt tư thế kịch phát lành tính. Đau đầu đột ngột, dữ dội đã ở mức 1 (rf_thunderclap_headache). Áp dụng cho mọi kiểu chóng mặt, không chỉ chóng mặt quay."
+
+- id: rf_shock_cold_and_weak
+  level: 1
+  conditions: [sepsis, dengue, ectopic_pregnancy]
+  complaints: [dizziness, syncope, palpitations]
+  when:
+    all:
+      - { finding: cold_hands_feet, is: present }
+      - any:
+          - { finding: severe_weakness, is: present }
+          - { finding: decreased_urine, is: present }
+  reason_vi: "Tay chân lạnh, da tái kèm mệt lả hoặc tiểu ít là dấu hiệu sốc: gọi 115 ngay."
+  evidence:
+    tier: B
+    basis: judgment
+    sources: [byt-qd-2760-2023, nice-ng253, nice-ng254, nhs-sepsis]
+    note: "Như rf_shock_multiple_signs nhưng bỏ nhánh ngất, choáng: với ba triệu chứng chính này, ngất hoặc choáng luôn có hoặc rất hay gặp, còn da tái thoáng qua sau một lần ngất thông thường không phải là sốc (người bảo trì, theo đề xuất của lượt R lô 1)."
+
+- id: rf_syncope_not_recovered
+  level: 2
+  conditions: [acute_coronary_syndrome, ectopic_pregnancy]
+  complaints: [syncope]
+  when:
+    all:
+      - { finding: fainting_or_near_fainting, is: present }
+      - { finding: not_recovered_after_faint, is: present }
+  reason_vi: "Ngất mà đến giờ vẫn chưa tỉnh táo, chưa đứng dậy được như bình thường cần khám cấp cứu ngay."
+  evidence:
+    tier: B
+    basis: verbal
+    sources: [esc-syncope-2018, nhs-fainting]
+    note: "ESC 2018: ngất là mất ý thức thoáng qua và tự hồi phục hoàn toàn; không hồi phục hẳn thì phải tìm nguyên nhân khác, nặng hơn. Người bảo trì thêm theo đề xuất của lượt R lô 1 (dấu hiệu 'hồi phục hoàn toàn sau ngất')."
+
+- id: rf_vertigo_sudden_hearing_loss
+  level: 2
+  conditions: [stroke]
+  complaints: [dizziness]
+  when:
+    all:
+      - { finding: dizziness, is: present }
+      - { finding: hearing_loss_sudden, is: present }
+  reason_vi: "Chóng mặt kèm đột ngột nghe kém một bên tai cần khám cấp cứu ngay. Có thể do đột quỵ hoặc tổn thương tai trong cần điều trị sớm."
+  evidence:
+    tier: C
+    basis: verbal
+    sources: [nhs-vertigo]
+    note: "NHS Vertigo: chóng mặt quay kèm nghe kém thì gọi 999 hoặc đến cấp cứu. Người bảo trì thêm theo đề xuất của lượt A và lượt R lô 1; cần nguồn bậc B (ví dụ hướng dẫn điếc đột ngột)."

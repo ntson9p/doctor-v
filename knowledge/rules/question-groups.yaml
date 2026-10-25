@@ -115,6 +115,9 @@
     age_groups: [teen_13_17, adult_18_44, adult_45_64, elder_65_74, elder_75p]
 
 # ---------- Giai đoạn 3, lô 1: chóng mặt, ngất, hồi hộp ----------
+# Lượt R (25/10/2026): thêm "ngất hoặc choáng như sắp ngất" vào nhóm của Chóng mặt (NHS Dizziness, ESC 2018:
+# tiền ngất xử trí như ngất; là điều kiện của nhiều quy tắc ngất) và "hồi hộp" vào nhóm của Ngất (NHS Fainting:
+# người ngất có hồi hộp thì gọi 999; ESC 2018: hồi hộp lúc ngất là nguy cơ cao).
 - id: dizziness_red_flags
   title_vi: "Cùng với chóng mặt, có dấu hiệu nào sau đây không?"
   findings:
@@ -123,6 +126,8 @@
     - transient_neuro_symptoms
     - chest_pain_pressure
     - breathing_difficulty
+    - fainting_or_near_fainting
+    - black_stool
   none_label_vi: "Không có dấu hiệu nào ở trên"
   allow_unknown: true
 - id: syncope_red_flags
@@ -130,6 +135,7 @@
   findings:
     - chest_pain_pressure
     - breathing_difficulty
+    - palpitations
     - abdominal_pain
     - headache
     - black_stool

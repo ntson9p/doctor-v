@@ -15,9 +15,15 @@ synonyms_vi:
 description_vi: "Cảm giác tim đập nhanh, đập mạnh, đập không đều hoặc hẫng nhịp."
 implies: [palpitations]
 age_groups: [child_5_12, teen_13_17, adult_18_44, adult_45_64, elder_65_74, elder_75p]
+# Lượt R (25/10/2026): thêm nhóm dấu hiệu nguy hiểm toàn thân (lú lẫn, li bì, tay chân lạnh, mệt lả): nhịp
+# nhanh hoặc chậm gây tụt huyết áp cần cấp cứu; hỏi một lần ở đầu thay vì hỏi lẻ từng câu giữa phiên.
 red_flags:
   - group: palpitations_red_flags
+  - group: general_danger_signs
   - finding: pulse_measured
+  # Lượt R: hỏi ngay sau khi biết có đái tháo đường (câu này cần "có đái tháo đường", hỏi ở nhóm bệnh nền):
+  # hạ đường huyết do thuốc là nguyên nhân cần nhận ra sớm (NHS: chóng mặt, hồi hộp, bất tỉnh là triệu chứng).
+  - finding: on_glucose_lowering_meds
 intake: [palpitations_associated, chronic_conditions]
 # Điền sau lượt C: một bệnh chỉ vào được danh sách này khi đã có prior cho triệu chứng chính này.
 cant_miss: []

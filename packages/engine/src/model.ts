@@ -68,6 +68,8 @@ export interface CategoricalFinding extends FindingBase {
   options: string[];
   /** Distribution over `options` for hypotheses without a link; sums to 1. */
   baseline: number[];
+  /** An option that carries no information (e.g. "not measured"), or null. */
+  neutralOption: string | null;
 }
 
 export type Finding = BinaryFinding | CategoricalFinding;
@@ -104,6 +106,8 @@ export interface Condition {
   links: Record<string, Link>;
   /** Per age group: binary link values that replace `links` for that group. */
   linksByAge: Record<string, Record<string, number>>;
+  /** Per chief complaint: binary link values that replace `links` (and `linksByAge`) for that complaint. */
+  linksByComplaint: Record<string, Record<string, number>>;
   warningSigns: string[];
   specialties: string[];
 }

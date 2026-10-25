@@ -18,18 +18,26 @@ age_groups: [child_5_12, teen_13_17, adult_18_44, adult_45_64, elder_65_74, elde
 red_flags:
   - group: syncope_red_flags
   - group: general_danger_signs
+  - finding: not_recovered_after_faint
   - finding: syncope_trigger
   - finding: syncope_warning
   - finding: pregnant
   - finding: missed_period
+  # Lượt R: hỏi ngay sau khi biết có đái tháo đường (câu này cần "có đái tháo đường", hỏi ở nhóm bệnh nền):
+  # hạ đường huyết do thuốc là nguyên nhân cần nhận ra sớm (NHS: chóng mặt, hồi hộp, bất tỉnh là triệu chứng).
+  - finding: on_glucose_lowering_meds
 intake: [syncope_associated, chronic_conditions]
 # Điền sau lượt C: một bệnh chỉ vào được danh sách này khi đã có prior cho triệu chứng chính này.
 cant_miss: []
+# Lượt R (25/10/2026): thêm bất tỉnh hoặc co giật, đau đầu đột ngột dữ dội (NHS Fainting: gọi 999 khi không
+# đánh thức được, co giật; ESC 2018: ngất kèm đau đầu mới là nguy cơ cao). Bỏ NICE CG109 khỏi nguồn vì chưa mở được.
 safety_net:
+  - es_unresponsive_or_seizing
   - chest_pain_pressure
-  - breathing_difficulty
   - palpitations
+  - breathing_difficulty
+  - headache_thunderclap
   - black_stool
   - vomiting_blood
   - confusion
-sources: [esc-syncope-2018, nice-cg109, nhs-fainting]
+sources: [esc-syncope-2018, nhs-fainting]

@@ -5,9 +5,11 @@ publisher: "Society for Academic Emergency Medicine (Academic Emergency Medicine
 date: "2023-05"
 url: "https://onlinelibrary.wiley.com/doi/10.1111/acem.14728"
 doi: "10.1111/acem.14728"
-license_class: L2
-license_note: "Kiểm tra giấy phép bài báo khi mở; chỉ dùng dữ kiện kèm trích dẫn."
+pmid: "37166022"
+license_class: L3
+license_note: "Bài đọc miễn phí nhưng không có giấy phép mở (Europe PMC không ghi giấy phép nào): coi như bảo lưu mọi quyền, chỉ dùng dữ kiện kèm trích dẫn. Lượt R đổi từ L2 sang L3."
 default_tier: B
 accessed: "2026-10-25"
-verified: false
-notes_vi: "Người bảo trì thêm cho các quy tắc chóng mặt (lô 1, Giai đoạn 3): hội chứng tiền đình cấp, dấu hiệu gợi ý nguyên nhân trung ương như không tự đi được. Lượt R cần mở và đối chiếu."
+verified: true
+verified_by: "agent:pass-r"
+notes_vi: "Acad Emerg Med 2023;30(5):442–486. Lượt R (Giai đoạn 3, lô 1): toàn văn trên Wiley trả lỗi 403 (Cloudflare) và bài không có trong PMC. Đã đối chiếu nguyên văn 15 khuyến cáo trên trang chính thức của SAEM (https://www.saem.org/publications/grace/grace-3) và tờ tóm tắt của SAEM. Phạm vi: người lớn đến khoa cấp cứu vì chóng mặt dưới 2 tuần. Ba kiểu theo thời gian và yếu tố khởi phát: hội chứng tiền đình cấp (chóng mặt liên tục, khởi phát cấp, kéo dài trên 24 giờ); cơn chóng mặt tự phát (không có yếu tố khởi phát rõ); cơn chóng mặt có yếu tố khởi phát (cơn ngắn, ví dụ do cử động đầu). Hội chứng tiền đình cấp: có rung giật nhãn cầu thì người được đào tạo dùng nghiệm pháp HINTS để phân biệt đột quỵ với nguyên nhân ở tai trong, thường là viêm dây thần kinh tiền đình (khuyến cáo 2); không có rung giật nhãn cầu thì đánh giá mức độ đi không vững để phân biệt nguyên nhân trung ương với ngoại biên (khuyến cáo 4, mức chắc chắn vừa); không chụp cắt lớp vi tính thường quy (khuyến cáo 5); chụp cộng hưởng từ khi HINTS gợi ý trung ương hoặc không rõ (khuyến cáo 7). Cơn tự phát: khám kỹ dây thần kinh sọ, thị trường, vận nhãn, phối hợp động tác và dáng đi để phân biệt cơn thiếu máu não thoáng qua với migraine tiền đình, bệnh Ménière; nếu lo cơn thiếu máu não thoáng qua thì chụp mạch (khuyến cáo 8–10). Cơn có yếu tố khởi phát: nghiệm pháp Dix–Hallpike để chẩn đoán chóng mặt tư thế kịch phát lành tính ống sau, không chụp thường quy, điều trị bằng nghiệm pháp Epley (khuyến cáo 11–15). Chưa đọc được phần thân bài (tỷ lệ đột quỵ trong hội chứng tiền đình cấp, cách phân độ đi không vững)."

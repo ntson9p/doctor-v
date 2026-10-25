@@ -7,5 +7,6 @@ license_class: L1
 license_note: "Open Government Licence v3.0; bản chuyển thể không được trình bày như nội dung của NHS."
 default_tier: C
 accessed: "2026-10-25"
-verified: false
-notes_vi: "Người bảo trì thêm cho các quy tắc hồi hộp (lô 1, Giai đoạn 3). Lượt R cần mở và ghi lại các mục 'Call 999' và 'Go to A&E'."
+verified: true
+verified_by: "agent:pass-r"
+notes_vi: "Lượt R mở trang (rà soát lần cuối 17/3/2026, hạn rà soát 17/3/2029). 'Call 999 or go to A&E' (gọi 999 hoặc đến cấp cứu): đang hồi hộp và cơn không hết, hoặc kèm đau ngực, khó thở, choáng như sắp ngất hoặc ngất. Nếu các triệu chứng đó đã hết: hẹn khám khẩn với bác sĩ gia đình hoặc gọi 111. Không tự lái xe đến cấp cứu; nhờ người chở hoặc gọi xe cấp cứu; mang theo thuốc đang dùng. 'See a GP' (không khẩn), khi đã hồi hộp nhưng vẫn khỏe: cơn hay tái lại hoặc dày hơn; kéo dài hơn vài phút; có bệnh tim; gia đình có người bệnh tim. Cảm giác: tim đập nhanh, không đều, hẫng hoặc thêm nhịp, đập mạnh, rung; cảm thấy ở ngực, cổ hoặc họng; kéo dài vài giây đến vài phút hoặc lâu hơn. Nguyên nhân thường gặp, lành tính: gắng sức nặng, thiếu ngủ, căng thẳng, lo âu, thuốc, rượu, cà phê, nicotin, chất gây nghiện; mãn kinh, có thai. Nguyên nhân bệnh lý: thiếu máu thiếu sắt, cường giáp, rối loạn nhịp tim, bệnh van tim."

@@ -51,7 +51,7 @@ author: "agent:vignette-holdout"
 **Lưu ý khi viết ca:**
 - Ghi **mọi dấu hiệu người bệnh thật sẽ trả lời "có"**. Dấu hiệu bỏ sót sẽ bị trả lời "không" (theo `default_unmentioned: absent`), giống người bệnh thật.
 - Ghi rõ các dấu hiệu **"không"** quan trọng để phân biệt (ví dụ không ho, không tiêu chảy).
-- Dấu hiệu cần đo (nhiệt độ, huyết áp) nếu không ghi sẽ được coi là "không rõ".
+- Dấu hiệu cần đo (nhiệt độ, huyết áp) nếu không ghi sẽ được coi là "không rõ". Riêng dấu hiệu có lựa chọn trung tính ("Chưa đo" ở câu mạch, đường huyết) thì lấy lựa chọn đó, giống người bệnh thật chưa đo.
 - Không ghi dấu hiệu không áp dụng cho đối tượng (ví dụ `pregnant` cho nam).
 - Không ghi dấu hiệu mà triệu chứng chính đã ngầm định ("fever" khi chọn triệu chứng chính "fever").
 - Mức xử trí đúng (`expected.triage`) dựa trên hướng dẫn chính thức, theo định nghĩa 5 mức trong `knowledge/meta/triage-levels.yaml`.
