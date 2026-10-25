@@ -427,3 +427,25 @@ Chủ dự án đã duyệt phạm vi, kèm 4 quyết định (`docs/phase-3/sco
 Bộ dev cho kết quả giống hệt sau mọi thay đổi.
 
 **Đang chạy:** lượt B (2 agent), agent viết ca giữ kín. Còn chờ: lượt A riêng cho ngoại tâm thu.
+
+### Lô 1: bộ ca giữ kín; giới hạn sử dụng
+
+**Bộ ca giữ kín** (commit 3bf2985):
+- 44 ca, do agent độc lập viết: 19 Chóng mặt, 15 Ngất, 10 Hồi hộp.
+- 24 ca mức 1–2; 18 ca từ 65 tuổi; 7 ca trẻ em, vị thành niên.
+- 5 ca bệnh ngoài danh mục.
+- Tổng bộ giữ kín: 156 ca.
+
+**Việc tồn** từ ghi chú của agent viết ca:
+- các dấu hiệu còn thiếu:
+  - ở nơi nóng lâu;
+  - cắn lưỡi, tiểu không tự chủ (phân biệt ngất với co giật);
+  - bệnh van tim;
+  - thuốc mới bắt đầu dùng;
+  - đỏ bừng mặt;
+  - phù hai chân;
+  - thuốc tránh thai;
+- trẻ 5–12 tuổi không được hỏi "đái tháo đường", nên chưa diễn đạt được hạ đường huyết ở trẻ tiêm insulin;
+- dưới 18 tuổi không được hỏi bệnh tim, tăng huyết áp.
+
+**Giới hạn sử dụng:** các agent bị dừng hai lần (10:40 và 15:30). Mỗi lần đều làm tiếp được từ chỗ dừng, không phải chạy lại.
