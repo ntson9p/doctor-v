@@ -113,19 +113,31 @@ test('search respects the accents typed and reads a sentence', async ({ page }) 
   await expect(page.locator('.search-status')).toContainText('Chưa tìm thấy "nôn"');
 });
 
-test('a symptom the pilot does not cover gets advice, and every complaint stays on screen', async ({ page }) => {
+/** The parts of the built knowledge base these tests read, so that they follow each batch's release. */
+interface KbForTests {
+  complaints: { id: string; ageGroups: string[] | null; released: boolean }[];
+  text: { complaints: Record<string, { label: string } | undefined> };
+}
+
+test('a symptom the app does not cover yet gets advice, and every complaint stays on screen', async ({ page }) => {
+  const kb = (await (await page.request.get('/data/kb.json')).json()) as KbForTests;
+  const forAge = kb.complaints.filter((c) => c.ageGroups === null || c.ageGroups.includes('elder_65_74'));
   await startCheck(page, '70', 'Nữ');
   const search = page.getByLabel(/Tìm triệu chứng/);
   const status = page.locator('.search-status');
-  // A complaint whose batch is still being authored is named, but not offered.
-  await search.fill('chóng mặt');
-  await expect(status).toContainText('Triệu chứng "Chóng mặt" đang được soạn, chưa dùng được.');
-  await search.fill('đau lưng');
+  // A complaint whose batch is still being authored, if there is one, is named but not offered.
+  const upcoming = forAge.find((c) => !c.released);
+  if (upcoming) {
+    const label = kb.text.complaints[upcoming.id]?.label ?? upcoming.id;
+    await search.fill(label);
+    await expect(status).toContainText(`Triệu chứng "${label}" đang được soạn, chưa dùng được.`);
+  }
+  await search.fill('rụng tóc');
   await expect(status).toHaveAttribute('role', 'status');
-  await expect(status).toContainText('Chưa tìm thấy "đau lưng"');
+  await expect(status).toContainText('Chưa tìm thấy "rụng tóc"');
   await expect(status).toContainText('gọi 115');
-  await expect(status).toContainText('Kết quả sẽ chưa tính đến "đau lưng"');
-  await expect(page.locator('.complaint')).toHaveCount(3);
+  await expect(status).toContainText('Kết quả sẽ chưa tính đến "rụng tóc"');
+  await expect(page.locator('.complaint')).toHaveCount(forAge.filter((c) => c.released).length);
   await expectNoAxeViolations(page);
   await expectNoHorizontalScroll(page);
   await page.locator('.complaint', { hasText: 'Đau đầu' }).click();
