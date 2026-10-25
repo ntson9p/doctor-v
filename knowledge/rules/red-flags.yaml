@@ -196,7 +196,7 @@
     note: "Quy tắc mới của lượt R. NG240: ban xuất huyết lan nhanh hoặc nốt trên 2 mm thì nghĩ nhiều bệnh não mô cầu và chuyển viện cấp cứu; không loại trừ bệnh chỉ vì chưa sốt. NHS: đau bụng hoặc đau đầu kèm ban không mất khi ấn thì gọi 999 hoặc đến cấp cứu."
 - id: rf_altered_consciousness
   level: 1
-  conditions: [bacterial_meningitis, sepsis, stroke]
+  conditions: [bacterial_meningitis, sepsis, stroke, hypoglycemia, carbon_monoxide_poisoning]
   when:
     any:
       - { finding: confusion, is: present }
@@ -696,7 +696,7 @@
     note: "Lượt R thay NHS (trang hiện hành không nêu dấu hiệu này) bằng nguồn chính thức. Câu hỏi gộp hai dấu hiệu: bụng cứng (chảy máu, nhiễm trùng trong ổ bụng theo WHO BEC) và chướng căng (tắc ruột, cấp cứu ngoại khoa theo WSES)."
 - id: rf_gi_bleeding
   level: 2
-  conditions: [peptic_ulcer_gastritis]
+  conditions: [upper_gi_bleeding, peptic_ulcer_gastritis]
   complaints: [abdominal_pain, fever, dizziness, syncope, palpitations]
   when:
     any:
@@ -1191,7 +1191,7 @@
 
 - id: rf_transient_neuro
   level: 2
-  conditions: [stroke]
+  conditions: [transient_ischemic_attack, stroke]
   complaints: [dizziness, syncope, palpitations]
   when: { finding: transient_neuro_symptoms, is: present }
   reason_vi: "Yếu, tê nửa người hoặc nói khó rồi tự hết có thể là cơn thiếu máu não thoáng qua. Đây là dấu hiệu báo trước đột quỵ: cần khám cấp cứu ngay. Nếu mới xảy ra trong 24 giờ qua hoặc đang tái lại, gọi 115."
@@ -1204,7 +1204,7 @@
 
 - id: rf_syncope_exertion_or_lying
   level: 2
-  conditions: [acute_coronary_syndrome]
+  conditions: [cardiac_arrhythmia, acute_coronary_syndrome]
   complaints: [syncope]
   when: { finding: syncope_trigger, in: [exertion, lying] }
   reason_vi: "Ngất khi đang gắng sức hoặc đang nằm có thể do bệnh tim, cần khám cấp cứu ngay. Nhờ người đưa đi, không tự lái xe."
@@ -1217,7 +1217,7 @@
 
 - id: rf_dizziness_faint_on_exertion
   level: 2
-  conditions: [acute_coronary_syndrome]
+  conditions: [cardiac_arrhythmia, acute_coronary_syndrome]
   complaints: [dizziness]
   when: { finding: syncope_trigger, in: [exertion] }
   reason_vi: "Choáng như sắp ngất hoặc ngất khi đang gắng sức có thể do bệnh tim, cần khám cấp cứu ngay. Nhờ người đưa đi, không tự lái xe."
@@ -1230,6 +1230,7 @@
 
 - id: rf_syncope_palpitations_first
   level: 2
+  conditions: [cardiac_arrhythmia]
   complaints: [syncope, dizziness, palpitations]
   when: { finding: syncope_warning, in: [palpitations_first] }
   reason_vi: "Tim đập nhanh hoặc loạn ngay trước khi ngất có thể do rối loạn nhịp tim, cần khám cấp cứu ngay. Nhờ người đưa đi, không tự lái xe."
@@ -1242,7 +1243,7 @@
 
 - id: rf_syncope_heart_disease
   level: 2
-  conditions: [acute_coronary_syndrome]
+  conditions: [cardiac_arrhythmia, acute_coronary_syndrome]
   complaints: [syncope]
   when:
     all:
@@ -1258,7 +1259,7 @@
 
 - id: rf_syncope_breathing
   level: 1
-  conditions: [acute_coronary_syndrome]
+  conditions: [pulmonary_embolism, acute_coronary_syndrome, cardiac_arrhythmia]
   complaints: [syncope]
   when:
     all:
@@ -1274,7 +1275,7 @@
 
 - id: rf_dizziness_near_syncope_breathing
   level: 2
-  conditions: [acute_coronary_syndrome]
+  conditions: [pulmonary_embolism, acute_coronary_syndrome, cardiac_arrhythmia]
   complaints: [dizziness]
   when:
     all:
@@ -1290,7 +1291,7 @@
 
 - id: rf_dizziness_chest_pain
   level: 1
-  conditions: [acute_coronary_syndrome]
+  conditions: [acute_coronary_syndrome, pulmonary_embolism]
   complaints: [dizziness]
   when: { finding: chest_pain_pressure, is: present }
   reason_vi: "Đau, tức ngực kèm chóng mặt, choáng váng có thể là nhồi máu cơ tim: gọi 115 ngay."
@@ -1303,7 +1304,7 @@
 
 - id: rf_syncope_gi_bleeding
   level: 1
-  conditions: [peptic_ulcer_gastritis]
+  conditions: [upper_gi_bleeding, peptic_ulcer_gastritis]
   complaints: [syncope, dizziness, palpitations]
   when:
     all:
@@ -1354,7 +1355,7 @@
 
 - id: rf_palpitations_danger
   level: 2
-  conditions: [acute_coronary_syndrome]
+  conditions: [cardiac_arrhythmia, acute_coronary_syndrome, pulmonary_embolism]
   complaints: [palpitations, dizziness, syncope]
   when:
     all:
@@ -1373,6 +1374,7 @@
 
 - id: rf_pulse_extreme
   level: 2
+  conditions: [cardiac_arrhythmia]
   complaints: [palpitations, dizziness, syncope]
   when: { finding: pulse_measured, in: [lt_40, gt_150] }
   reason_vi: "Mạch dưới 40 hoặc trên 150 lần mỗi phút lúc nghỉ, khi đang có triệu chứng, cần khám cấp cứu."
@@ -1405,6 +1407,7 @@
 
 - id: rf_co_exposure
   level: 2
+  conditions: [carbon_monoxide_poisoning]
   complaints: [dizziness, syncope]
   when: { finding: co_exposure, is: present }
   reason_vi: "Chóng mặt hoặc ngất khi ở phòng kín có đốt than, củi hoặc chạy máy nổ có thể là ngộ độc khí CO. Đưa mọi người ra chỗ thoáng khí ngay, rồi đến cơ sở cấp cứu. Không quay lại phòng đó và không tự lái xe."
@@ -1432,7 +1435,7 @@
 
 - id: rf_shock_cold_and_weak
   level: 1
-  conditions: [sepsis, dengue, ectopic_pregnancy]
+  conditions: [sepsis, dengue, ectopic_pregnancy, upper_gi_bleeding]
   complaints: [dizziness, syncope, palpitations]
   when:
     all:
@@ -1464,7 +1467,7 @@
 
 - id: rf_vertigo_sudden_hearing_loss
   level: 2
-  conditions: [stroke]
+  conditions: [stroke, vestibular_neuritis]
   complaints: [dizziness]
   when:
     all:
@@ -1476,3 +1479,86 @@
     basis: verbal
     sources: [nhs-vertigo]
     note: "NHS Vertigo: chóng mặt quay kèm nghe kém thì gọi 999 hoặc đến cấp cứu. Người bảo trì thêm theo đề xuất của lượt A và lượt R lô 1; cần nguồn bậc B (ví dụ hướng dẫn điếc đột ngột)."
+
+- id: rf_dengue_fainting_defervescence
+  level: 2
+  conditions: [dengue]
+  complaints: [dizziness, syncope]
+  when:
+    all:
+      - { finding: fever, is: present }
+      - { finding: fever_duration, in: [d3_5, d6_7] }
+      - any:
+          - { finding: fainting_or_near_fainting, is: present }
+          - { finding: dizziness_on_standing, is: present }
+  reason_vi: "Sốt ngày thứ 3–7 mà choáng, tối sầm mắt khi đứng dậy hoặc ngất có thể là giai đoạn nguy hiểm của sốt xuất huyết. Cần đến cơ sở y tế ngay."
+  evidence:
+    tier: B
+    basis: verbal
+    sources: [who-dengue-2009, byt-qd-2760-2023]
+    locator: "WHO 2009, Textbox D (hạ huyết áp tư thế là dấu hiệu sốc còn bù) và Textbox E (tiêu chí nhập viện)"
+    note: "WHO 2009 Textbox E: choáng váng hoặc hạ huyết áp tư thế; vã mồ hôi, ngất, lả khi hết sốt là tiêu chí nhập viện. Người bảo trì thêm theo đề xuất của lượt C lô 1 phần a; triệu chứng chính Sốt sẽ được xét ở lô 2."
+
+- id: rf_dehydration_dizzy
+  level: 3
+  complaints: [dizziness, syncope]
+  when:
+    all:
+      - any:
+          - { finding: diarrhea, is: present }
+          - { finding: vomiting, is: present }
+      - any:
+          - { finding: decreased_urine, is: present }
+          - { finding: fainting_or_near_fainting, is: present }
+  reason_vi: "Tiêu chảy hoặc nôn kèm tiểu ít hoặc ngất là dấu hiệu mất nước. Uống bù nước từng ngụm nhỏ và đi khám trong 24 giờ."
+  evidence:
+    tier: C
+    basis: judgment
+    sources: [nhs-diarrhoea-vomiting, who-dengue-2009]
+    note: "NHS Diarrhoea and vomiting: cần tư vấn khẩn (gọi 111) khi nôn liên tục không giữ được nước; với người lớn, NHS không nêu choáng khi đứng dậy là lý do khám khẩn, nên quy tắc chỉ dùng tiểu ít hoặc ngất. Người bảo trì thêm theo đề xuất của lượt C lô 1 phần a; ước lượng mức 3."
+
+- id: rf_breathless_leg_swelling
+  level: 1
+  conditions: [pulmonary_embolism]
+  complaints: [palpitations, dizziness, syncope]
+  when:
+    all:
+      - { finding: breathing_difficulty, is: present }
+      - { finding: leg_swelling_one_side, is: present }
+  reason_vi: "Khó thở kèm sưng đau một bên bắp chân có thể là cục máu đông trôi lên phổi: gọi 115 ngay."
+  evidence:
+    tier: B
+    basis: judgment
+    sources: [nhs-pulmonary-embolism, esc-pe-2019]
+    note: "NHS: khó thở đột ngột (có thể kèm sưng đau bắp chân) thì gọi 999 hoặc đến cấp cứu. ESC 2019: dấu hiệu huyết khối tĩnh mạch sâu kèm khó thở là khả năng thuyên tắc phổi cao. Chọn mức gọi 115 (phương án 999 của NHS) theo nguyên tắc an toàn trước hết, vì có cả hai dấu hiệu. Người bảo trì thêm theo đề xuất của lượt C lô 1 phần b; khi đã ở mức 2, bộ suy luận hỏi tiếp câu sưng chân."
+
+- id: rf_palpitations_ongoing
+  level: 2
+  conditions: [cardiac_arrhythmia]
+  complaints: [palpitations]
+  when:
+    all:
+      - { finding: palpitation_duration, in: [ongoing] }
+      - { finding: palpitation_abrupt_onset, is: present }
+  reason_vi: "Cơn hồi hộp đến đột ngột mà chưa hết cần đến cấp cứu để đo điện tim ngay lúc đang có cơn. Nhờ người đưa đi, không tự lái xe."
+  evidence:
+    tier: C
+    basis: verbal
+    sources: [nhs-heart-palpitations]
+    note: "NHS Heart palpitations (lượt R đã mở): đang hồi hộp và cơn không hết thì gọi 999 hoặc đến cấp cứu (mức 2 theo quy ước của lượt R). Người bảo trì thêm theo đề xuất của lượt C lô 1 phần b. Cần thêm 'cơn đến đột ngột': người tim nhanh âm ỉ nhiều tuần (cường giáp, thiếu máu) cũng trả lời 'đến giờ vẫn còn', nhưng đó không phải một cơn chưa dứt (lần chạy dev đầu tiên của lô 1)."
+
+- id: rf_recurrent_vertigo
+  level: 4
+  complaints: [dizziness]
+  when:
+    all:
+      - { finding: vertigo_spinning, is: present }
+      - any:
+          - { finding: similar_episodes_before, is: present }
+          - { finding: dizziness_pattern, in: [chronic] }
+  reason_vi: "Chóng mặt quay cuồng hay tái lại hoặc kéo dài cần đi khám để tìm nguyên nhân."
+  evidence:
+    tier: C
+    basis: verbal
+    sources: [nhs-vertigo]
+    note: "NHS Vertigo (lượt R đã mở): đi khám (không khẩn) khi chóng mặt quay không hết hoặc hay tái lại. Người bảo trì thêm theo đề xuất của lượt C lô 1 phần a."

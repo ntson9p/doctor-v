@@ -16,8 +16,12 @@ description_vi: "Đột ngột mất ý thức trong thời gian ngắn rồi t�
 implies: [fainting_or_near_fainting]
 age_groups: [child_5_12, teen_13_17, adult_18_44, adult_45_64, elder_65_74, elder_75p]
 red_flags:
+  # Hỏi đầu tiên (xem dizziness.yaml).
+  - finding: co_exposure
   - group: syncope_red_flags
   - group: general_danger_signs
+  - group: fever_red_flags
+  - finding: fever_duration
   - finding: not_recovered_after_faint
   - finding: syncope_trigger
   - finding: syncope_warning
@@ -27,8 +31,14 @@ red_flags:
   # hạ đường huyết do thuốc là nguyên nhân cần nhận ra sớm (NHS: chóng mặt, hồi hộp, bất tỉnh là triệu chứng).
   - finding: on_glucose_lowering_meds
 intake: [syncope_associated, chronic_conditions]
-# Điền sau lượt C: một bệnh chỉ vào được danh sách này khi đã có prior cho triệu chứng chính này.
-cant_miss: []
+# Bệnh "không được bỏ sót" (mức 1–2) có prior cho triệu chứng chính này; danh sách để kiểm tra an toàn.
+cant_miss:
+  - acute_coronary_syndrome
+  - pulmonary_embolism
+  - upper_gi_bleeding
+  - ectopic_pregnancy
+  - carbon_monoxide_poisoning
+  - sepsis
 # Lượt R (25/10/2026): thêm bất tỉnh hoặc co giật, đau đầu đột ngột dữ dội (NHS Fainting: gọi 999 khi không
 # đánh thức được, co giật; ESC 2018: ngất kèm đau đầu mới là nguy cơ cao). Bỏ NICE CG109 khỏi nguồn vì chưa mở được.
 safety_net:

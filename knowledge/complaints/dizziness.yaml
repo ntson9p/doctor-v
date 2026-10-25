@@ -19,9 +19,15 @@ age_groups: [child_5_12, teen_13_17, adult_18_44, adult_45_64, elder_65_74, elde
 # quy tắc "không tự đi được" cần biết kiểu chóng mặt). Hỏi đau đầu và đau đầu đột ngột, dữ dội ngay trong phần
 # này để không bỏ sót chảy máu tiểu não, xuất huyết dưới nhện (rf_thunderclap_headache).
 red_flags:
+  # Hỏi đầu tiên: khi một dấu hiệu nguy hiểm đã đưa mức xử trí lên 2, bộ suy luận chỉ hỏi tiếp dấu hiệu có thể
+  # dẫn tới mức 1, nên câu phơi nhiễm hỏi sau sẽ bị bỏ qua và ngộ độc khí CO không vào danh sách cần loại trừ.
+  - finding: co_exposure
   - finding: dizziness_pattern
   - group: dizziness_red_flags
   - group: general_danger_signs
+  # Khi có sốt: như đau bụng, đau đầu (sốt xuất huyết giai đoạn nguy hiểm, nhiễm khuẩn huyết).
+  - group: fever_red_flags
+  - finding: fever_duration
   - finding: headache
   - finding: headache_thunderclap
   - finding: pregnant
@@ -30,8 +36,16 @@ red_flags:
   # hạ đường huyết do thuốc là nguyên nhân cần nhận ra sớm (NHS: chóng mặt, hồi hộp, bất tỉnh là triệu chứng).
   - finding: on_glucose_lowering_meds
 intake: [dizziness_associated, chronic_conditions]
-# Điền sau lượt C: một bệnh chỉ vào được danh sách này khi đã có prior cho triệu chứng chính này.
-cant_miss: []
+# Bệnh "không được bỏ sót" (mức 1–2) có prior cho triệu chứng chính này; danh sách để kiểm tra an toàn.
+cant_miss:
+  - stroke
+  - transient_ischemic_attack
+  - carbon_monoxide_poisoning
+  - pulmonary_embolism
+  - upper_gi_bleeding
+  - acute_coronary_syndrome
+  - ectopic_pregnancy
+  - sepsis
 safety_net:
   - vision_loss_or_double
   - cannot_walk_unaided
