@@ -393,3 +393,37 @@ Chủ dự án đã duyệt phạm vi, kèm 4 quyết định (`docs/phase-3/sco
 3. Lượt C, viết ca dev.
 4. Điền danh sách "không được bỏ sót" và bệnh mục tiêu của các quy tắc.
 5. Chấm điểm.
+
+### Lô 1: lượt R, lượt A xong; lượt B đang chạy
+
+**Lượt R** (`knowledge/drafts/phase-3/batch-1/review-rules.md`):
+- Xác minh 7/9 nguồn. NICE CG109 và NG128 bị chặn truy cập tự động; không dùng proxy, nên đã gỡ khỏi các quy tắc.
+- Thêm nguồn NHS Vertigo, NHS TIA.
+- Sửa mức một số quy tắc, có lý do. Ví dụ: hồi hộp kèm đau ngực, khó thở hoặc choáng từ mức 1 xuống mức 2, theo NHS ("gọi 999 hoặc đến cấp cứu"); nếu để mức 1, mọi cơn hoảng sợ đều bị khuyên gọi 115.
+- Thêm 5 quy tắc.
+- Lưu ý pháp lý: trang ESC ghi rằng dùng nội dung hướng dẫn trong phần mềm hoặc thuật toán cần giấy phép. Đã thêm vào danh sách cần luật sư xem.
+
+**Hai lỗi lượt R phát hiện, đã sửa:**
+1. Khoảng 60% người dùng sẽ trả lời "Không rõ" ở câu mạch. Quy tắc nguy hiểm coi "Không rõ" là "có thể có", nên đẩy rất nhiều người lên ít nhất mức 3.
+   - Danh mục có thêm **lựa chọn trung tính** (`neutral`): "Chưa đo" có cùng tỷ lệ ở mọi bệnh, nên không mang thông tin và không bị coi là "không rõ". Bộ kiểm tra bắt lỗi khi một bản nháp ghi lệch tỷ lệ này.
+   - Bộ mô phỏng bệnh nhân trả lời lựa chọn trung tính khi ca không ghi.
+   - Câu "Chưa xét nghiệm" (COVID) dùng cùng cơ chế.
+2. Quy tắc sốc tính "ngất" như một dấu hiệu sốc. Với triệu chứng Ngất, người còn tái sau một lần ngất thông thường sẽ bị xếp mức 1.
+   - Đã tách quy tắc: 3 triệu chứng cũ giữ nguyên; triệu chứng mới cần tay chân lạnh kèm mệt lả hoặc tiểu ít.
+   - Thêm câu "đến giờ đã hồi phục hẳn sau khi ngất chưa": hồi phục hoàn toàn là dấu hiệu yên tâm theo ESC; chưa hồi phục thì đi cấp cứu.
+
+**Lượt A** (2 agent, 12 bệnh mới, 7 bệnh mở rộng):
+- 0 lỗi; mã ICD-10 tự kiểm qua icd.kcb.vn.
+- Hai đề xuất đổi mức, để lượt C quyết:
+  - xuất huyết tiêu hóa trên: mức 1 xuống mức 2, vì các quy tắc đã nâng ca ngất, sốc lên mức 1;
+  - hạ đường huyết: mức 2 xuống mức 3, không còn "không được bỏ sót". Ca điển hình tự xử trí bằng đồ ngọt rồi đi khám xem lại thuốc.
+
+**Thay đổi theo góp ý của lượt A:**
+- **Tần suất theo triệu chứng chính** (`freq_by_complaint`). Người chọn một triệu chứng chính là một nhóm con riêng của người bệnh. Ví dụ: đột quỵ biểu hiện bằng chóng mặt hiếm khi có méo miệng, yếu tay, nên câu trả lời "không" ở màn sàng lọc không được hạ đột quỵ 5 lần như dưới Đau đầu.
+- **Ngoại tâm thu** tách khỏi "rối loạn nhịp tim" thành bệnh riêng, mức nhẹ.
+- **9 dấu hiệu mới:** đường huyết đo ở nhà (có "Chưa đo"); điếc đột ngột (kèm quy tắc mức 2 theo NHS); từng bị thiếu máu; mạch cổ đập thình thịch; mắt lồi; từng bị huyết khối; đang mắc ung thư; đang dùng thuốc chống đông hoặc aspirin; bệnh gan mạn.
+- **Cụm và tỷ lệ nền:** 2 cụm dấu hiệu, để tránh đếm trùng; tỷ lệ nền thực tế hơn cho "da xanh" và "hụt hơi khi gắng sức".
+
+Bộ dev cho kết quả giống hệt sau mọi thay đổi.
+
+**Đang chạy:** lượt B (2 agent), agent viết ca giữ kín. Còn chờ: lượt A riêng cho ngoại tâm thu.
