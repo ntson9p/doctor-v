@@ -1,0 +1,52 @@
+id: h-syncope-006
+set: holdout
+title_vi: "Nữ 27 tuổi chậm kinh 2 tuần, ra máu nâu, đột ngột đau dữ dội bụng dưới lan lên vai phải rồi ngất; da tái, vã mồ hôi lạnh"
+narrative_vi: "Chị Y., 27 tuổi, ở Biên Hòa (Đồng Nai), đã sinh thường một con. Kinh nguyệt chậm khoảng 2 tuần, chị chưa thử thai. Hai ngày nay chị ra ít máu nâu ở âm đạo và đau âm ỉ bụng dưới bên phải. Chiều nay đang nấu cơm, chị đột ngột đau nhói dữ dội bụng dưới bên phải, đau lan lên vai phải, rồi choáng, tối sầm mắt và ngã xuống; chồng thấy chị lịm đi khoảng nửa phút. Hiện chị tỉnh, trả lời được, nhưng da tái nhợt, vã mồ hôi lạnh, tay chân lạnh, buồn nôn, đứng dậy là choáng muốn ngất, vẫn đau bụng nhiều. Chị không sốt, không tiêu chảy, không đau khi đi tiểu, không khó thở, không đau ngực."
+patient:
+  age_years: 27
+  sex: female
+  region: south
+  month: 9
+complaint: syncope
+answers:
+  syncope_trigger: emotion_pain
+  syncope_warning: prodrome
+  not_recovered_after_faint: present
+  missed_period: present
+  pregnant: unknown
+  vaginal_bleeding: present
+  abdominal_pain: present
+  abd_pain_location: right_lower
+  abd_pain_onset: sudden
+  abd_pain_duration: d1_3
+  abd_pain_severe: present
+  abd_pain_colicky: absent
+  abd_pain_radiates_right_shoulder: present
+  cold_sweat: present
+  cold_hands_feet: present
+  pallor: present
+  dizziness_on_standing: present
+  nausea: present
+  vomiting: absent
+  fever: absent
+  diarrhea: absent
+  dysuria: absent
+  es_unresponsive_or_seizing: absent
+  confusion: absent
+  breathing_difficulty: absent
+  chest_pain_pressure: absent
+  recent_childbirth: absent
+  previous_abdominal_surgery: absent
+default_unmentioned: absent
+expected:
+  condition: ectopic_pregnancy
+  acceptable: []
+  triage: 1
+source:
+  basis: "Chửa ngoài tử cung vỡ: chậm kinh, ra máu âm đạo ít, đau bụng dưới một bên vài ngày, rồi đột ngột đau dữ dội, đau lan lên vai, ngất; sau đó da tái, vã mồ hôi lạnh, tay chân lạnh, choáng khi đứng (dấu hiệu chảy máu trong ổ bụng). NHS Ectopic pregnancy: đau bụng đột ngột dữ dội, chóng mặt nhiều hoặc ngất, buồn nôn, da rất tái là dấu hiệu vỡ, gọi 999 hoặc đến cấp cứu ngay; đau ở đầu vai là triệu chứng gợi ý. MSD Ectopic pregnancy; NICE NG126. Mức 1."
+  references:
+    - nhs-ectopic-pregnancy
+    - msd-ectopic-pregnancy
+    - nice-ng126
+author: "agent:vignette-holdout"
+notes_vi: "Bệnh đã có trong danh mục, nay thêm triệu chứng chính 'Ngất'. Ca khó: ngất ngay sau cơn đau dữ dội nên người bệnh chọn hoàn cảnh 'đang đau', dễ bị coi là ngất phản xạ. Chưa thử thai nên câu có thai trả lời 'không rõ'."

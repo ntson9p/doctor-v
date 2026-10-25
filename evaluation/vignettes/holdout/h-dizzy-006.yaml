@@ -1,0 +1,47 @@
+id: h-dizzy-006
+set: holdout
+title_vi: "Nữ 79 tuổi rung nhĩ tự bỏ thuốc chống đông, chiều qua 15 phút chòng chành, không ngồi vững, nói ngọng rồi tự hết"
+narrative_vi: "Bà Kh., 79 tuổi, ở Vĩnh Phúc, bị rung nhĩ (bác sĩ nói tim đập không đều) và tăng huyết áp; bà có đơn thuốc chống đông nhưng tự bỏ uống từ 2 tháng nay vì sợ chảy máu, vẫn uống thuốc huyết áp. Chiều qua khoảng 4 giờ, đang ngồi nhặt rau, bà đột ngột thấy chòng chành, chao đảo, không ngồi vững, nói ngọng líu lưỡi khoảng 15 phút rồi tự hết. Bà nghĩ do mệt nên không nói với ai. Sáng nay con gái về chơi, bà mới kể là chiều qua bị chóng mặt. Hiện bà nói rõ, cười hai bên miệng đều, giơ hai tay đều, tự đi lại vững, không còn chóng mặt. Bà không đau đầu, không buồn nôn, không nhìn đôi, không ù tai, không ngất, không đau ngực, không thấy tim đập nhanh. Con gái đo huyết áp được 150/85 mmHg, máy báo nhịp tim không đều."
+patient:
+  age_years: 79
+  sex: female
+  region: north
+  month: 2
+complaint: dizziness
+answers:
+  dizziness_pattern: long_episodes
+  vertigo_spinning: absent
+  dizziness_positional: absent
+  transient_neuro_symptoms: present
+  es_stroke_signs: absent
+  vision_loss_or_double: absent
+  sudden_loss_of_balance: absent
+  cannot_walk_unaided: absent
+  confusion: absent
+  headache: absent
+  nausea: absent
+  hearing_loss_tinnitus: absent
+  fainting_or_near_fainting: absent
+  chest_pain_pressure: absent
+  palpitations: absent
+  similar_episodes_before: absent
+  hypertension_known: present
+  bp_lowering_meds: present
+  bp_measured: high
+  known_heart_disease: present
+  antithrombotic_use: absent
+  diabetes: absent
+  smoker: absent
+default_unmentioned: absent
+expected:
+  condition: transient_ischemic_attack
+  acceptable: []
+  triage: 2
+source:
+  basis: "Cơn thiếu máu não thoáng qua tuần hoàn sau, biểu hiện chủ yếu là chóng mặt: đột ngột chòng chành, không ngồi vững (thất điều) kèm nói khó khoảng 15 phút rồi hết, ở người 79 tuổi có rung nhĩ đã bỏ thuốc chống đông và tăng huyết áp; người bệnh chỉ kể là 'chóng mặt' và đến sáng hôm sau mới kể. 3312/QĐ-BYT (2024): dấu hiệu dễ bị bỏ qua của cơn thiếu máu não thoáng qua gồm chóng mặt, thất điều, nói khó; nguy cơ tái phát sớm rất cao; điều trị dự phòng ngay, tối ưu trong 24 giờ đầu. NHS TIA: rung nhĩ, tăng huyết áp, tuổi cao là yếu tố nguy cơ; cần khám chuyên khoa trong 24 giờ kể từ khi khởi phát. Khởi phát khoảng 18 giờ trước, triệu chứng đã hết: đến cấp cứu ngay (mức 2)."
+  references:
+    - byt-qd-3312-2024
+    - nhs-tia
+    - grace3-dizziness-2023
+author: "agent:vignette-holdout"
+notes_vi: "Ca khó: biểu hiện không điển hình, kể muộn. Mất thăng bằng chiều qua đã hết nên câu 'đột ngột mất thăng bằng' (hỏi tình trạng hiện tại) trả lời 'không'; triệu chứng đã hết ghi ở câu 'yếu, tê nửa người hoặc nói khó, dù đã tự hết'. Đã tự bỏ thuốc chống đông 2 tháng nên câu đang uống thuốc chống đông trả lời 'không'."

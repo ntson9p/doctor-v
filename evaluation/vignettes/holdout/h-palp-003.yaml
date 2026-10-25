@@ -1,0 +1,47 @@
+id: h-palp-003
+set: holdout
+title_vi: "Nữ 26 tuổi, 40 phút nay tim đập rất nhanh và đều, bắt đầu đột ngột như bật công tắc, đồng hồ báo 182 lần/phút, chưa dừng"
+narrative_vi: "Chị V., 26 tuổi, nhân viên ngân hàng ở Hà Nội, không có bệnh tim đã biết. Khoảng 40 phút trước, đang ngồi làm việc, chị đột ngột thấy tim đập rất nhanh và đều, đập thình thịch trong ngực và lên cả cổ, như vừa bật công tắc. Đến giờ cơn vẫn chưa dừng; đồng hồ thông minh báo nhịp tim 182 lần/phút. Chị hơi lo, hơi mệt nhưng không đau ngực, không khó thở, không choáng, không thấy sắp ngất. Trước đây chị đã có 3–4 cơn giống vậy, mỗi cơn vài phút rồi tự dừng đột ngột, chưa đi khám. Hôm nay chị không uống cà phê, không dùng thuốc gì, không có thai. Chị không sụt cân, không run tay, không sợ nóng; trong nhà không ai đột tử."
+patient:
+  age_years: 26
+  sex: female
+  region: north
+  month: 4
+complaint: palpitations
+answers:
+  palpitation_rhythm: fast_regular
+  palpitation_abrupt_onset: present
+  neck_pounding: present
+  pulse_measured: gt_150
+  similar_episodes_before: present
+  chest_pain_pressure: absent
+  breathing_difficulty: absent
+  fainting_or_near_fainting: absent
+  dizziness: absent
+  panic_fear: absent
+  perioral_tingling: absent
+  tremor: absent
+  heat_intolerance: absent
+  weight_loss_unintended: absent
+  goiter_visible: absent
+  known_heart_disease: absent
+  family_sudden_death: absent
+  stress_poor_sleep: absent
+  pregnant: absent
+  missed_period: absent
+  heavy_periods: absent
+  pallor: absent
+  cold_sweat: absent
+  heavy_alcohol: absent
+default_unmentioned: absent
+expected:
+  condition: cardiac_arrhythmia
+  acceptable: []
+  triage: 2
+source:
+  basis: "Nhịp nhanh kịch phát trên thất: cơn tim nhanh đều, bắt đầu đột ngột như bật công tắc, đập lên cổ, nhịp 182 lần/phút, đã kéo dài 40 phút chưa dừng; trước đây nhiều cơn ngắn tự dừng đột ngột; người trẻ, không bệnh tim. NHS Supraventricular tachycardia: tim đập nhanh đột ngột, thường trên 100 lần/phút, cơn vài phút đến vài giờ; kèm khó thở, đau ngực hoặc choáng thì gọi 999. NHS Heart palpitations: đang hồi hộp mà cơn không dứt thì gọi 999 hoặc đến cấp cứu. Ổn định, không khó thở, không đau ngực, không choáng nên mức 2 (đến cấp cứu ngay để ghi điện tim và cắt cơn)."
+  references:
+    - nhs-heart-palpitations
+    - "https://www.nhs.uk/conditions/supraventricular-tachycardia-svt/"
+author: "agent:vignette-holdout"
+notes_vi: "Ca điển hình, cơn đang diễn ra."

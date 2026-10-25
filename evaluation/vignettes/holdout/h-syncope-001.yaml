@@ -1,0 +1,57 @@
+id: h-syncope-001
+set: holdout
+title_vi: "Nữ 24 tuổi sinh con 8 ngày, đêm sưởi than dưới gầm giường trong phòng kín, dậy đi vệ sinh thì ngất; mẹ ngủ cùng phòng nhức đầu"
+narrative_vi: "Chị H., 24 tuổi, ở Nghệ An, sinh thường con thứ hai được 8 ngày. Theo phong tục, mấy đêm nay gia đình đặt chậu than hồng dưới gầm giường để sưởi cho hai mẹ con, cửa phòng đóng kín vì trời rét. Khoảng 3 giờ sáng chị dậy cho con bú rồi đứng lên đi vệ sinh thì choáng, tối sầm mắt và ngã xuống chiếu, không đập đầu; mẹ chị ngủ cùng phòng thấy chị nằm im khoảng 1 phút rồi tỉnh lại. Hiện chị tỉnh, trả lời được, nhưng đau đầu, chóng mặt suốt từ lúc dậy, buồn nôn, người rất mệt, đứng dậy là choáng. Mẹ chị cũng kêu nhức đầu, buồn nôn từ đêm. Em bé ngủ li bì hơn mọi khi, bú yếu. Sau sinh chị ra huyết ít dần như bình thường; chị không sốt, không đau bụng, không khó thở, không đau ngực, không đau bắp chân, không co giật, không thấy tim đập nhanh."
+patient:
+  age_years: 24
+  sex: female
+  region: central
+  month: 12
+complaint: syncope
+answers:
+  syncope_trigger: standing_up
+  syncope_warning: prodrome
+  not_recovered_after_faint: present
+  co_exposure: present
+  others_same_symptoms: present
+  recent_childbirth: present
+  pregnant: absent
+  headache: present
+  headache_course: first_time
+  headache_duration: lt_4h
+  headache_location: whole_head
+  headache_severity: moderate
+  headache_thunderclap: absent
+  headache_after_head_injury: absent
+  dizziness: present
+  dizziness_pattern: continuous
+  vertigo_spinning: absent
+  dizziness_positional: absent
+  dizziness_on_standing: present
+  nausea: present
+  vomiting: absent
+  fatigue: present
+  confusion: absent
+  drowsy_hard_to_wake: absent
+  es_unresponsive_or_seizing: absent
+  seizure_recent: absent
+  vaginal_bleeding: absent
+  breathing_difficulty: absent
+  chest_pain_pressure: absent
+  palpitations: absent
+  leg_swelling_one_side: absent
+  fever: absent
+  abdominal_pain: absent
+  pallor: absent
+default_unmentioned: absent
+expected:
+  condition: carbon_monoxide_poisoning
+  acceptable: []
+  triage: 1
+source:
+  basis: "Ngộ độc khí CO do tục sưởi than cho sản phụ trong phòng kín: sản phụ ngất khi đứng dậy lúc nửa đêm, sau đó đau đầu, chóng mặt, buồn nôn, rất mệt; người ngủ cùng phòng nhức đầu, buồn nôn; trẻ sơ sinh li bì, bú yếu. NHS Carbon monoxide poisoning: đã phơi nhiễm mà mất ý thức thì gọi 999 hoặc đến cấp cứu; không tự lái xe. Báo Pháp Luật (01/2016): ở Nghệ An, gia đình đốt than sưởi cho sản phụ mới sinh trong phòng kín khoảng 15 m², cả 5 người ngộ độc, một trẻ 18 tháng tử vong. Đã mất ý thức, trẻ sơ sinh cùng phơi nhiễm nên gọi 115 (mức 1)."
+  references:
+    - nhs-carbon-monoxide-poisoning
+    - "https://baophapluat.vn/suoi-am-bang-than-cui-be-gai-18-thang-tuoi-tu-vong-post211573.html"
+author: "agent:vignette-holdout"
+notes_vi: "Ca khó: ngất khi đứng dậy ban đêm ở sản phụ dễ bị coi là ngất tư thế hoặc thiếu máu sau sinh; manh mối là chậu than trong phòng kín và người cùng phòng cũng có triệu chứng. Sản dịch sau sinh bình thường nên câu ra máu âm đạo bất thường trả lời 'không'."

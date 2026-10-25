@@ -1,0 +1,44 @@
+id: h-palp-009
+set: holdout
+title_vi: "Nam 22 tuổi, tối qua sau 2 ly cà phê đậm để thức khuya, tim hẫng nhịp vài lần trong nửa giờ, sáng nay hết, vẫn khỏe"
+narrative_vi: "Anh B., 22 tuổi, sinh viên ở Cần Thơ, đang mùa thi, mấy hôm nay ngủ ít. Tối qua anh uống 2 ly cà phê đen đậm để thức đến 2 giờ sáng ôn bài. Khoảng 11 giờ đêm, lúc đang ngồi học, anh thấy tim như hẫng một nhịp rồi đập thịch mạnh một cái, mỗi lần chỉ 1–2 giây, bị vài lần trong khoảng nửa giờ rồi thôi. Sáng nay không còn bị. Anh vẫn khỏe, đi lại, chơi thể thao bình thường không mệt, không đau ngực, không khó thở, không choáng, không ngất. Trước đây anh chưa bị như vậy. Trong nhà không ai bị bệnh tim hay đột tử. Anh không sụt cân, không run tay, không sợ nóng, không uống rượu, không hút thuốc, không dùng thuốc gì. Anh chưa đo mạch."
+patient:
+  age_years: 22
+  sex: male
+  region: south
+  month: 6
+complaint: palpitations
+answers:
+  palpitation_rhythm: skipped_beats
+  palpitation_abrupt_onset: absent
+  neck_pounding: absent
+  pulse_measured: not_measured
+  stress_poor_sleep: present
+  similar_episodes_before: absent
+  chest_pain_pressure: absent
+  breathing_difficulty: absent
+  fainting_or_near_fainting: absent
+  dizziness: absent
+  breathless_on_exertion: absent
+  family_sudden_death: absent
+  known_heart_disease: absent
+  weight_loss_unintended: absent
+  tremor: absent
+  heat_intolerance: absent
+  goiter_visible: absent
+  panic_fear: absent
+  perioral_tingling: absent
+  pallor: absent
+  heavy_alcohol: absent
+  smoker: absent
+default_unmentioned: absent
+expected:
+  condition: premature_beats
+  acceptable: []
+  triage: 5
+source:
+  basis: "Ngoại tâm thu lành tính do cà phê và thiếu ngủ, mới bị một lần: vài lần tim hẫng một nhịp rồi đập mạnh một cái, mỗi lần 1–2 giây, chỉ trong một buổi tối sau khi uống cà phê đậm và thức khuya; người trẻ khỏe, không có triệu chứng kèm, không bệnh tim, gia đình không có người bệnh tim hay đột tử. NHS Heart palpitations: hồi hộp thường vô hại, hay do cà phê, thiếu ngủ, căng thẳng; chỉ cần đi khám bác sĩ khi hay tái lại, kéo dài hơn vài phút, có bệnh tim hoặc gia đình có người bệnh tim; gọi cấp cứu khi kèm đau ngực, khó thở, choáng, ngất. Không có các dấu hiệu đó nên tự theo dõi, giảm cà phê, ngủ đủ (mức 5)."
+  references:
+    - nhs-heart-palpitations
+author: "agent:vignette-holdout"
+notes_vi: "Ca nhẹ, mới bị một lần, có yếu tố khởi phát rõ (cà phê đậm, thức khuya) và đã hết: mức tự theo dõi. Khác h-palp-010 là ngoại tâm thu tái diễn nhiều tuần cần đi khám."

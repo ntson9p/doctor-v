@@ -1,0 +1,58 @@
+id: h-syncope-007
+set: holdout
+title_vi: "Nữ 78 tuổi đái tháo đường, tăng huyết áp, đang xách nước thì choáng như sắp ngất, vã mồ hôi lạnh, khó thở, nặng nhẹ ngực và thượng vị"
+narrative_vi: "Bà C., 78 tuổi, ở Nam Định, bị đái tháo đường và tăng huyết áp nhiều năm, uống thuốc đều; sáng nay bà ăn sáng bình thường rồi mới uống thuốc. Khoảng 40 phút trước, đang xách hai xô nước tưới rau, bà đột ngột choáng váng, tối sầm mắt như sắp ngất, phải ngồi bệt xuống đất, vã mồ hôi lạnh, buồn nôn, khó thở, người rã rời. Bà kêu khó chịu, nặng nặng vùng trên rốn và giữa ngực, không đau nhiều, không lan lên vai, hàm. Đến giờ bà vẫn mệt, thở mệt, vã mồ hôi. Bà không ngất hẳn, không co giật, không nói khó, không yếu tay chân, không thấy tim đập nhanh, không đau đầu. Bà không nôn ra máu, không đi ngoài phân đen. Con trai đo đường huyết bằng máy ở nhà được 9,2 mmol/L. Trước đây chưa được nói là có bệnh tim."
+patient:
+  age_years: 78
+  sex: female
+  region: north
+  month: 12
+complaint: syncope
+answers:
+  syncope_trigger: exertion
+  syncope_warning: prodrome
+  not_recovered_after_faint: present
+  cold_sweat: present
+  nausea: present
+  vomiting: absent
+  breathing_difficulty: present
+  chest_pain_pressure: present
+  es_crushing_chest_pain: absent
+  pain_radiates_arm_jaw: absent
+  abdominal_pain: present
+  abd_pain_location: epigastric
+  abd_pain_onset: sudden
+  abd_pain_duration: lt_6h
+  abd_pain_severe: absent
+  fatigue: present
+  dizziness: present
+  dizziness_pattern: unknown
+  vertigo_spinning: absent
+  diabetes: present
+  on_glucose_lowering_meds: present
+  glucose_measured: normal
+  missed_meal: absent
+  better_after_sugar: unknown
+  hypertension_known: present
+  bp_lowering_meds: present
+  known_heart_disease: absent
+  palpitations: absent
+  es_stroke_signs: absent
+  confusion: absent
+  seizure_recent: absent
+  black_stool: absent
+  vomiting_blood: absent
+  headache: absent
+default_unmentioned: absent
+expected:
+  condition: acute_coronary_syndrome
+  acceptable: []
+  triage: 1
+source:
+  basis: "Hội chứng vành cấp không điển hình ở phụ nữ cao tuổi đái tháo đường: suýt ngất khi gắng sức, vã mồ hôi lạnh, buồn nôn, khó thở, chỉ nặng nhẹ vùng thượng vị và giữa ngực, kéo dài 40 phút. MSD Acute myocardial infarction: người cao tuổi hay than khó thở hơn đau ngực, một số đến khám vì ngất; người đái tháo đường hay không có triệu chứng rõ; đau có thể giống khó tiêu. NHS Chest pain: khó chịu ở ngực kèm vã mồ hôi, buồn nôn, choáng váng hoặc khó thở thì gọi 999. ESC 2018: ngất, suýt ngất kèm khó thở hoặc đau ngực mới, xảy ra khi gắng sức là đặc điểm nguy cơ cao. Mức 1."
+  references:
+    - msd-acute-mi
+    - nhs-chest-pain
+    - esc-syncope-2018
+author: "agent:vignette-holdout"
+notes_vi: "Bệnh đã có trong danh mục, nay thêm triệu chứng chính 'Ngất'. Ca khó: tiền triệu vã mồ hôi, buồn nôn, tối sầm mắt giống ngất phản xạ; đau ngực nhẹ nên câu đau thắt ngực dữ dội trả lời 'không'. Đã ăn sáng, đường huyết đo được bình thường nên không phải hạ đường huyết; chưa thử ăn đồ ngọt. Vẫn mệt, khó thở, vã mồ hôi nên câu chưa hồi phục hẳn trả lời 'có'."

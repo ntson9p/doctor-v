@@ -1,0 +1,52 @@
+id: h-dizzy-013
+set: holdout
+title_vi: "Nam 66 tuổi tăng huyết áp hay quên thuốc, 1 giờ nay đột ngột chóng mặt quay, nôn, nhìn đôi, nói ngọng, không tự đi được"
+narrative_vi: "Ông Ph., 66 tuổi, ở Quảng Ngãi, bị tăng huyết áp nhưng hay quên uống thuốc, hút thuốc lá nhiều năm. Khoảng 1 giờ trước, đang ngồi xem ti vi, ông đột ngột chóng mặt quay cuồng, nôn 2 lần, nhìn một thành hai. Con trai thấy ông nói ngọng, líu lưỡi; đứng dậy thì xiêu sang phải, phải có người đỡ mới đi được. Ông vẫn tỉnh, nhận ra người nhà. Hai tay giơ lên vẫn đều, miệng không méo. Ông hơi đau đầu vùng gáy, không phải kiểu đau đột ngột dữ dội. Ông không ù tai, không nghe kém, không đau ngực, không hồi hộp. Con trai đo huyết áp được 185/100 mmHg."
+patient:
+  age_years: 66
+  sex: male
+  region: central
+  month: 7
+complaint: dizziness
+answers:
+  dizziness_pattern: continuous
+  vertigo_spinning: present
+  dizziness_positional: absent
+  nausea: present
+  vomiting: present
+  persistent_vomiting: absent
+  vision_loss_or_double: present
+  es_stroke_signs: present
+  cannot_walk_unaided: present
+  sudden_loss_of_balance: present
+  headache: present
+  headache_thunderclap: absent
+  headache_course: first_time
+  headache_duration: lt_4h
+  headache_location: back_neck
+  headache_severity: mild
+  confusion: absent
+  drowsy_hard_to_wake: absent
+  hearing_loss_tinnitus: absent
+  neck_stiffness: absent
+  fainting_or_near_fainting: absent
+  chest_pain_pressure: absent
+  palpitations: absent
+  hypertension_known: present
+  bp_lowering_meds: present
+  bp_measured: extreme
+  smoker: present
+  diabetes: absent
+default_unmentioned: absent
+expected:
+  condition: stroke
+  acceptable: []
+  triage: 1
+source:
+  basis: "Đột quỵ tuần hoàn sau đang diễn ra: đột ngột chóng mặt quay, nôn, nhìn đôi, nói khó, đi không vững đến mức phải có người đỡ, ở người tăng huyết áp không kiểm soát, hút thuốc. 3312/QĐ-BYT (2024): nhồi máu não khởi phát đột ngột với nhìn đôi, rối loạn ngôn ngữ, thất điều, chóng mặt; cần vận chuyển nhanh, an toàn đến cơ sở điều trị được đột quỵ. NHS Vertigo: chóng mặt quay kèm nhìn đôi hoặc khó nói thì gọi 999 hoặc đến cấp cứu. NHS Symptoms of a stroke: chóng mặt hoặc ngã, khó nói là triệu chứng đột quỵ, gọi 999. Mức 1."
+  references:
+    - byt-qd-3312-2024
+    - nhs-vertigo
+    - nhs-stroke-symptoms
+author: "agent:vignette-holdout"
+notes_vi: "Bệnh đã có trong danh mục (đột quỵ), nay thêm triệu chứng chính 'Chóng mặt'. Không yếu liệt tay, không méo miệng; dấu hiệu đột quỵ ở câu sàng lọc là nói khó."

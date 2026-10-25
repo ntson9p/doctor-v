@@ -1,0 +1,48 @@
+id: h-dizzy-017
+set: holdout
+title_vi: "Nữ 45 tuổi, nửa năm 4 cơn chóng mặt quay 2–4 giờ kèm ù tai, nghe kém, đầy tức tai trái, nôn; hết cơn tai nghe gần như cũ"
+narrative_vi: "Chị Ph., 45 tuổi, buôn bán ở Hải Dương. Nửa năm nay chị có 4 cơn chóng mặt quay cuồng tự nhiên xuất hiện, mỗi cơn kéo dài 2–4 giờ, kèm buồn nôn, nôn. Trước và trong cơn, tai trái ù như tiếng ve, nghe kém đi và đầy tức trong tai; hết cơn thì tai nghe gần như cũ nhưng lần sau kém hơn lần trước một chút. Hôm qua chị vừa bị một cơn, nằm nghỉ thì hết sau 3 giờ. Hôm nay chị đi lại bình thường, chỉ còn ù tai nhẹ. Trong cơn chị không nhìn đôi, không nói khó, không tê yếu tay chân, không đau đầu, không sốt, không đau tai, tai không chảy dịch. Chị không bị tăng huyết áp, không bị đau nửa đầu, không có thai, trước cơn đầu tiên không bị cảm."
+patient:
+  age_years: 45
+  sex: female
+  region: north
+  month: 9
+complaint: dizziness
+answers:
+  dizziness_pattern: long_episodes
+  vertigo_spinning: present
+  dizziness_positional: absent
+  hearing_loss_tinnitus: present
+  hearing_loss_sudden: absent
+  nausea: present
+  vomiting: present
+  persistent_vomiting: absent
+  similar_episodes_before: present
+  headache: absent
+  photophobia: absent
+  vision_loss_or_double: absent
+  transient_neuro_symptoms: absent
+  es_stroke_signs: absent
+  cannot_walk_unaided: absent
+  sudden_loss_of_balance: absent
+  ear_pain: absent
+  ear_discharge: absent
+  fever: absent
+  recent_viral_illness: absent
+  fainting_or_near_fainting: absent
+  pregnant: absent
+  missed_period: absent
+  hypertension_known: absent
+default_unmentioned: absent
+expected:
+  condition: other
+  acceptable: []
+  triage: 4
+source:
+  basis: "Bệnh Ménière (không có trong danh mục): các cơn chóng mặt quay tự phát 2–4 giờ, kèm ù tai, nghe kém, đầy tức tai trái dao động theo cơn, buồn nôn, nôn; đã nhiều cơn; giữa cơn đi lại bình thường. NHS Ménière's disease: cơn quay cuồng đột ngột kéo dài vài phút đến 24 giờ, ù tai, nghe kém, cảm giác áp lực trong tai, buồn nôn, nôn; có triệu chứng thì đi khám bác sĩ (không khẩn); gọi 999 khi chóng mặt kèm méo mặt, yếu tay, nói khó, mất thị lực đột ngột hoặc mất thăng bằng nhiều. GRACE-3: cơn chóng mặt tự phát cần phân biệt Ménière với cơn thiếu máu não thoáng qua, migraine tiền đình. Nghe kém dao động theo cơn, tái diễn nhiều lần, không phải nghe kém đột ngột lần đầu; cơn đã hết nên mức 4."
+  references:
+    - "https://www.nhs.uk/conditions/menieres-disease/"
+    - grace3-dizziness-2023
+    - "https://www.nhs.uk/conditions/labyrinthitis/"
+author: "agent:vignette-holdout"
+notes_vi: "Ngoài danh mục. Nghe kém dao động theo cơn, nay đã gần như cũ, nên câu đột ngột nghe kém hẳn mấy ngày nay trả lời 'không'; nếu là nghe kém đột ngột kéo dài thì cần khám khẩn (NHS Labyrinthitis)."

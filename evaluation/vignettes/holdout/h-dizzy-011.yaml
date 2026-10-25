@@ -1,0 +1,60 @@
+id: h-dizzy-011
+set: holdout
+title_vi: "Nam 48 tuổi uống nhiều rượu, uống thuốc giảm đau hằng ngày, nôn ra chất nâu đen, phân đen, đứng dậy là choáng, vã mồ hôi lạnh"
+narrative_vi: "Anh H., 48 tuổi, thợ xây ở TP. Vinh (Nghệ An), uống rượu nhiều hằng ngày; ba tuần nay đau khớp gối nên mua thuốc giảm đau uống mỗi ngày. Khoảng 5 ngày nay anh đau âm ỉ vùng trên rốn. Từ hôm qua anh đi ngoài 2 lần phân đen như bã cà phê, mùi rất khắm. Sáng nay anh nôn 2 lần ra chất nâu đen lẫn máu. Từ trưa anh chóng mặt: ngồi yên thì đỡ, đứng dậy là choáng, tối sầm mắt, phải ngồi xuống ngay. Vợ thấy da anh tái, vã mồ hôi lạnh, tay chân lạnh. Anh vẫn tỉnh, nói chuyện được, chưa ngất, không thấy mọi vật quay tròn, không khó thở, không đau ngực, không sốt, không vàng da. Anh chưa từng được nói là bị xơ gan hay viêm gan, không uống aspirin hay thuốc chống đông."
+patient:
+  age_years: 48
+  sex: male
+  region: central
+  month: 8
+complaint: dizziness
+answers:
+  dizziness_pattern: brief_episodes
+  vertigo_spinning: absent
+  dizziness_positional: absent
+  dizziness_on_standing: present
+  fainting_or_near_fainting: present
+  syncope_trigger: standing_up
+  syncope_warning: prodrome
+  not_recovered_after_faint: present
+  black_stool: present
+  vomiting_blood: present
+  nausea: present
+  vomiting: present
+  persistent_vomiting: absent
+  abdominal_pain: present
+  abd_pain_location: epigastric
+  abd_pain_onset: gradual
+  abd_pain_duration: d4_14
+  abd_pain_severe: absent
+  abd_pain_colicky: absent
+  cold_sweat: present
+  cold_hands_feet: present
+  pallor: present
+  fatigue: present
+  severe_weakness: absent
+  confusion: absent
+  breathing_difficulty: absent
+  chest_pain_pressure: absent
+  fever: absent
+  diarrhea: absent
+  jaundice: absent
+  es_severe_bleeding: absent
+  es_stroke_signs: absent
+  regular_painkiller_use: present
+  heavy_alcohol: present
+  antithrombotic_use: absent
+  chronic_liver_disease: absent
+default_unmentioned: absent
+expected:
+  condition: upper_gi_bleeding
+  acceptable: []
+  triage: 1
+source:
+  basis: "Xuất huyết tiêu hóa trên (nghi loét dạ dày tá tràng do thuốc giảm đau chống viêm và rượu): nôn ra chất nâu đen lẫn máu, đi ngoài phân đen, kèm choáng khi đứng dậy, da tái, vã mồ hôi lạnh, tay chân lạnh (dấu hiệu mất máu nhiều). NHS Vomiting blood: nôn ra máu kèm choáng hoặc chóng mặt, da lạnh ẩm, phân đen thì gọi 999 hoặc đến cấp cứu, không tự lái xe. NHS Stomach ulcer: dùng thường xuyên thuốc giảm đau chống viêm là nguyên nhân; nôn ra máu, phân đen thì gọi cấp cứu. NICE CG141: mọi người xuất huyết tiêu hóa trên cấp cần được đánh giá nguy cơ ngay khi đến viện. Có dấu hiệu sốc nên gọi 115 (mức 1)."
+  references:
+    - "https://www.nhs.uk/symptoms/vomiting-blood/"
+    - nhs-stomach-ulcer
+    - nice-cg141
+author: "agent:vignette-holdout"
+notes_vi: "Ca điển hình. 'Tối sầm mắt, phải ngồi xuống ngay' khớp với câu hỏi thay thế của câu ngất, suýt ngất nên trả lời 'có'; cứ đứng dậy là choáng nên câu chưa đứng dậy được như bình thường trả lời 'có'."

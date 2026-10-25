@@ -1,0 +1,53 @@
+id: h-dizzy-009
+set: holdout
+title_vi: "Nữ 80 tuổi, 3 ngày nay từng lúc choáng váng, tối sầm mắt cả khi ngồi, mệt, hụt hơi; máy đo báo mạch 36 lần/phút"
+narrative_vi: "Bà N., 80 tuổi, ở Thủ Dầu Một (Bình Dương), bị tăng huyết áp, uống một loại thuốc huyết áp mỗi sáng đã nhiều năm. Ba ngày nay bà hay choáng váng, người lả đi; từng lúc mắt tối sầm, phải ngồi hoặc nằm xuống ngay, mỗi lần vài phút, có lúc đang ngồi xem ti vi cũng bị. Cơn đến đột ngột, trước đó không nóng người, không vã mồ hôi, không buồn nôn. Bà không thấy mọi vật quay tròn; đứng dậy thì choáng nhiều hơn. Đi vài bước trong nhà đã mệt, hụt hơi. Sáng nay con trai đo bằng máy đo huyết áp điện tử: mạch 36 lần/phút, huyết áp 150/70 mmHg. Bà không đau ngực, ngồi nghỉ không khó thở, không thấy tim đập nhanh, không nói khó, không méo miệng, không yếu tay chân, vẫn tỉnh táo. Bà không bị đái tháo đường, chưa được nói là có bệnh tim, chưa từng bị như vậy."
+patient:
+  age_years: 80
+  sex: female
+  region: south
+  month: 6
+complaint: dizziness
+answers:
+  dizziness_pattern: long_episodes
+  vertigo_spinning: absent
+  dizziness_positional: absent
+  dizziness_on_standing: present
+  fainting_or_near_fainting: present
+  syncope_trigger: no_trigger
+  syncope_warning: no_warning
+  not_recovered_after_faint: absent
+  pulse_measured: lt_40
+  bp_measured: high
+  fatigue: present
+  breathless_on_exertion: present
+  severe_weakness: absent
+  breathing_difficulty: absent
+  chest_pain_pressure: absent
+  palpitations: absent
+  cold_sweat: absent
+  confusion: absent
+  es_stroke_signs: absent
+  transient_neuro_symptoms: absent
+  vision_loss_or_double: absent
+  cannot_walk_unaided: absent
+  sudden_loss_of_balance: absent
+  headache: absent
+  nausea: absent
+  hearing_loss_tinnitus: absent
+  similar_episodes_before: absent
+  hypertension_known: present
+  bp_lowering_meds: present
+  known_heart_disease: absent
+  diabetes: absent
+default_unmentioned: absent
+expected:
+  condition: cardiac_arrhythmia
+  acceptable: []
+  triage: 1
+source:
+  basis: "Nhịp chậm nặng (nghi block nhĩ thất hoàn toàn) ở người cao tuổi: các cơn choáng, tối sầm mắt suýt ngất xảy ra đột ngột cả khi đang ngồi, không có tiền triệu, mệt và hụt hơi khi gắng sức nhẹ, mạch đo được 36 lần/phút. ESC 2018: nhịp chậm dai dẳng dưới 40 lần/phút lúc thức (không do luyện tập thể thao) là đặc điểm nguy cơ cao loại nặng; ngất khi đang ngồi, không có triệu chứng báo trước cũng là đặc điểm nguy cơ; suýt ngất được xử trí như ngất; người có đặc điểm nguy cơ cao cần được đánh giá tích cực ở bệnh viện. Có thể ngất, ngừng tim trên đường đi nên gọi 115 (mức 1)."
+  references:
+    - esc-syncope-2018
+author: "agent:vignette-holdout"
+notes_vi: "Ca khó: người bệnh chọn 'Chóng mặt', đang uống thuốc hạ áp và choáng hơn khi đứng dậy nên dễ nghĩ là hạ huyết áp tư thế; mạch dưới 40 là dấu hiệu then chốt. 'Tối sầm mắt' ở đây là chính cơn suýt ngất, đến đột ngột, không có nóng người, vã mồ hôi, buồn nôn trước đó, nên câu dấu hiệu báo trước chọn 'Không thấy gì'."

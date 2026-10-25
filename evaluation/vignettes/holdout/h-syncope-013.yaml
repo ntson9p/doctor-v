@@ -1,0 +1,42 @@
+id: h-syncope-013
+set: holdout
+title_vi: "Nam 70 tuổi tiêm insulin, tối qua ăn rất ít; 5 giờ sáng vợ thấy vã mồ hôi đầm đìa, run, ú ớ nói không rõ, lúc mở mắt lúc lịm đi"
+narrative_vi: "Ông L., 70 tuổi, ở Hạ Long (Quảng Ninh), bị đái tháo đường típ 2, tiêm insulin hai lần mỗi ngày. Tối qua ông mệt, ăn rất ít, nhưng vẫn tiêm đủ liều insulin buổi tối. Khoảng 5 giờ sáng nay, vợ thấy ông nằm vã mồ hôi đầm đìa, người run, gọi thì ông ú ớ, nói không rõ, lẫn lộn, không tự ngồi dậy được, lúc mở mắt lúc lịm đi. Bà lo ông bị đột quỵ. Nhà không có máy đo đường huyết, cũng không có thuốc tiêm glucagon. Ông không co giật, vẫn thở đều, không sốt."
+patient:
+  age_years: 70
+  sex: male
+  region: north
+  month: 11
+complaint: syncope
+answers:
+  syncope_trigger: lying
+  syncope_warning: unknown
+  not_recovered_after_faint: present
+  diabetes: present
+  on_glucose_lowering_meds: present
+  glucose_measured: not_measured
+  missed_meal: present
+  better_after_sugar: unknown
+  cold_sweat: present
+  tremor: present
+  confusion: present
+  drowsy_hard_to_wake: present
+  severe_weakness: present
+  es_stroke_signs: present
+  es_unresponsive_or_seizing: absent
+  es_severe_breathing: absent
+  seizure_recent: absent
+  breathing_difficulty: absent
+  chest_pain_pressure: absent
+  fever: absent
+default_unmentioned: absent
+expected:
+  condition: hypoglycemia
+  acceptable: []
+  triage: 1
+source:
+  basis: "Hạ đường huyết nặng ở người cao tuổi tiêm insulin sau bữa tối ăn rất ít: vã mồ hôi đầm đìa, run, lú lẫn, nói không rõ, lơ mơ lúc sáng sớm, không tự ngồi dậy được. NHS Low blood sugar: hạ đường huyết nặng, đáp ứng không bình thường hoặc bất tỉnh mà không có hoặc không biết tiêm glucagon thì gọi 999; người không tỉnh táo thì không cho ăn uống, đặt nằm nghiêng an toàn. Mức 1."
+  references:
+    - nhs-hypoglycaemia
+author: "agent:vignette-holdout"
+notes_vi: "Ca cấp cứu khó: người nhà trả lời 'có' câu dấu hiệu đột quỵ vì ông nói không rõ; hạ đường huyết có thể giống đột quỵ. Người bệnh đang lơ mơ nên không kể được dấu hiệu trước khi lịm đi. Ông vẫn mở mắt khi gọi nên câu bất tỉnh trả lời 'không'."

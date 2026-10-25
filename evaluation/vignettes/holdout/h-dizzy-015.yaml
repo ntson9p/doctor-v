@@ -1,0 +1,54 @@
+id: h-dizzy-015
+set: holdout
+title_vi: "Nữ 38 tuổi đau nửa đầu từ trẻ, 1 năm nay nhiều cơn chóng mặt quay 2–6 giờ kèm đau đầu một bên, sợ ánh sáng, sợ tiếng ồn"
+narrative_vi: "Chị Q., 38 tuổi, kế toán ở TP.HCM, bị đau nửa đầu từ thời sinh viên. Khoảng một năm nay chị có những cơn chóng mặt quay cuồng tự nhiên xuất hiện, đến nay khoảng 8–10 cơn, mỗi cơn kéo dài 2–6 tiếng; phần lớn các cơn kèm đau đầu giật giật một bên, đi lại thì đau tăng, sợ ánh sáng, sợ tiếng ồn, buồn nôn; hay bị khi thiếu ngủ hoặc sắp có kinh. Sáng nay chị lại bị một cơn sau một đêm thức khuya làm báo cáo; nằm trong phòng tối nghỉ thì đến trưa đỡ dần, vẫn còn nhức đầu. Trong cơn chị đi lại chậm nhưng tự đi được. Chị không ù tai, không nghe kém, không nhìn đôi, không thấy chớp sáng, không nói khó, không tê yếu tay chân. Giữa các cơn chị hoàn toàn bình thường. Chị không có thai, không bị tăng huyết áp."
+patient:
+  age_years: 38
+  sex: female
+  region: south
+  month: 11
+complaint: dizziness
+answers:
+  dizziness_pattern: long_episodes
+  vertigo_spinning: present
+  dizziness_positional: absent
+  similar_episodes_before: present
+  headache: present
+  headache_course: recurrent_similar
+  headache_duration: h4_72
+  headache_location: one_side
+  headache_character: throbbing
+  headache_severity: moderate
+  headache_worse_activity: present
+  headache_thunderclap: absent
+  headache_frequent: absent
+  photophobia: present
+  phonophobia: present
+  visual_aura: absent
+  nausea: present
+  vomiting: absent
+  stress_poor_sleep: present
+  hearing_loss_tinnitus: absent
+  vision_loss_or_double: absent
+  transient_neuro_symptoms: absent
+  es_stroke_signs: absent
+  cannot_walk_unaided: absent
+  sudden_loss_of_balance: absent
+  fainting_or_near_fainting: absent
+  pregnant: absent
+  missed_period: absent
+  hypertension_known: absent
+default_unmentioned: absent
+expected:
+  condition: migraine
+  acceptable: []
+  triage: 4
+source:
+  basis: "Đau nửa đầu thể chóng mặt (migraine tiền đình): tiền sử đau nửa đầu, nhiều cơn chóng mặt quay tự phát kéo dài vài giờ, phần lớn kèm đau đầu một bên theo nhịp mạch, tăng khi vận động, sợ ánh sáng, sợ tiếng ồn, buồn nôn; khởi phát khi thiếu ngủ, sắp có kinh; giữa cơn bình thường, không nghe kém. ICHD-3 (phụ lục, chóng mặt do đau nửa đầu): ít nhất 5 cơn chóng mặt vừa–nặng kéo dài 5 phút đến 72 giờ ở người có tiền sử đau nửa đầu, ít nhất một nửa số cơn kèm đặc điểm đau nửa đầu. GRACE-3: cơn chóng mặt tự phát cần phân biệt migraine tiền đình với cơn thiếu máu não thoáng qua, bệnh Ménière (ở đây người trẻ, nhiều cơn giống hệt, không nghe kém). NHS Vertigo: chóng mặt hay tái lại thì đi khám bác sĩ (không khẩn). Mức 4."
+  references:
+    - ihs-ichd3-2018
+    - grace3-dizziness-2023
+    - nhs-vertigo
+    - nhs-migraine
+author: "agent:vignette-holdout"
+notes_vi: "Bệnh đã có trong danh mục (đau nửa đầu), nay thêm triệu chứng chính 'Chóng mặt'."

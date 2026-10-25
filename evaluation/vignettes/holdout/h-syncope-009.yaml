@@ -1,0 +1,53 @@
+id: h-syncope-009
+set: holdout
+title_vi: "Nữ 82 tuổi đái tháo đường, 2 ngày sốt, rét run, tiểu buốt; sáng nay ngồi dậy thì lả đi, lơ mơ, nói lẫn lộn, thở nhanh, tay chân lạnh"
+narrative_vi: "Bà V., 82 tuổi, ở Tây Ninh, bị đái tháo đường, uống thuốc tiểu đường hằng ngày. Hai ngày nay bà tiểu buốt, tiểu nhiều lần, sốt, rét run, ăn uống rất kém. Sáng nay bà ngồi dậy thì choáng, lả đi, con gái đỡ kịp. Từ đó bà lơ mơ, gọi mới mở mắt, nói lẫn lộn, không nhận ra cháu, khác hẳn mọi ngày. Bà thở nhanh, tay chân lạnh, mệt lả không tự đi lại được. Con gái đo nhiệt độ 39,2°C, đo đường huyết bằng máy ở nhà được 15 mmol/L. Từ tối qua đến giờ bà chưa đi tiểu. Bà không ho, không đau ngực, không co giật, không méo miệng, không yếu một bên người."
+patient:
+  age_years: 82
+  sex: female
+  region: south
+  month: 5
+complaint: syncope
+answers:
+  syncope_trigger: standing_up
+  syncope_warning: prodrome
+  not_recovered_after_faint: present
+  fever: present
+  fever_max_temp: ge_39
+  fever_duration: d1_2
+  chills_rigors: present
+  dysuria: present
+  urinary_frequency: present
+  flank_pain: unknown
+  confusion: present
+  drowsy_hard_to_wake: present
+  cold_hands_feet: present
+  breathing_difficulty: present
+  decreased_urine: present
+  loss_of_appetite: present
+  severe_weakness: present
+  diabetes: present
+  on_glucose_lowering_meds: present
+  glucose_measured: high
+  missed_meal: present
+  better_after_sugar: unknown
+  es_unresponsive_or_seizing: absent
+  es_stroke_signs: absent
+  seizure_recent: absent
+  cough: absent
+  chest_pain_pressure: absent
+  vaginal_bleeding: absent
+  hypertension_known: absent
+default_unmentioned: absent
+expected:
+  condition: sepsis
+  acceptable: [acute_pyelonephritis]
+  triage: 1
+source:
+  basis: "Nhiễm khuẩn huyết từ đường tiết niệu ở người rất cao tuổi đái tháo đường: sốt cao, rét run, tiểu buốt, tiểu nhiều lần, rồi lả đi khi ngồi dậy, lơ mơ, lú lẫn mới, thở nhanh, tay chân lạnh, không tiểu từ tối qua. NICE NG253: thay đổi ý thức mới, thở nhanh, không tiểu nhiều giờ là tiêu chí nguy cơ cao. NHS Sepsis: ở người từ 5 tuổi, lú lẫn, nói lẫn lộn, thở rất nhanh thì gọi 999. NHS UTIs: người già nhiễm khuẩn tiết niệu có thể lú lẫn; lú lẫn, lơ mơ thì gọi 999. Mức 1."
+  references:
+    - nice-ng253
+    - nhs-sepsis
+    - nhs-utis
+author: "agent:vignette-holdout"
+notes_vi: "Bệnh đã có trong danh mục, nay thêm triệu chứng chính 'Ngất'. Người nhà chọn 'Ngất, suýt ngất' vì bà lả đi khi ngồi dậy. Viêm thận bể thận là nguồn nhiễm khuẩn nên được chấp nhận. Bà đang lú lẫn nên không trả lời được câu đau hông lưng."

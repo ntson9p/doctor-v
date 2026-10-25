@@ -1,0 +1,46 @@
+id: h-palp-008
+set: holdout
+title_vi: "Nam 66 tuổi tăng huyết áp, sau bữa nhậu tim đập rất nhanh, lộn xộn 2 giờ, tức nặng giữa ngực, khó thở, vã mồ hôi; mạch 156"
+narrative_vi: "Ông S., 66 tuổi, ở Buôn Ma Thuột (Đắk Lắk), bị tăng huyết áp uống thuốc đều, hay uống rượu. Khoảng 2 giờ trước, sau bữa nhậu tối, ông thấy tim đập rất nhanh, lộn xộn, không đều, kèm tức nặng giữa ngực, hơi khó thở, vã mồ hôi. Đến giờ vẫn chưa hết. Con trai đo bằng máy đo huyết áp điện tử: mạch 156 lần/phút, máy báo nhịp không đều, huyết áp 105/70 mmHg. Ông vẫn tỉnh, nói chuyện được trọn câu, không ngất, không choáng, không yếu tay chân, không méo miệng. Trước đây ông chưa bị như vậy, chưa được nói là có bệnh tim, không uống aspirin hay thuốc chống đông, không bị đái tháo đường."
+patient:
+  age_years: 66
+  sex: male
+  region: highlands
+  month: 12
+complaint: palpitations
+answers:
+  palpitation_rhythm: irregular
+  palpitation_abrupt_onset: absent
+  neck_pounding: absent
+  pulse_measured: gt_150
+  bp_measured: normal
+  chest_pain_pressure: present
+  es_crushing_chest_pain: present
+  cold_sweat: present
+  breathing_difficulty: present
+  es_severe_breathing: absent
+  pain_radiates_arm_jaw: absent
+  fainting_or_near_fainting: absent
+  dizziness: absent
+  es_stroke_signs: absent
+  heavy_alcohol: present
+  hypertension_known: present
+  bp_lowering_meds: present
+  known_heart_disease: absent
+  antithrombotic_use: absent
+  diabetes: absent
+  similar_episodes_before: absent
+  family_sudden_death: absent
+default_unmentioned: absent
+expected:
+  condition: cardiac_arrhythmia
+  acceptable: [acute_coronary_syndrome]
+  triage: 1
+source:
+  basis: "Rung nhĩ đáp ứng thất nhanh sau uống nhiều rượu, kèm tức ngực, khó thở, vã mồ hôi: tim nhanh lộn xộn 156 lần/phút kéo dài 2 giờ, huyết áp hơi thấp. NHS Atrial fibrillation: đang tim nhanh hoặc không đều kèm đau ngực, khó thở hoặc ngất thì gọi 999; không tự lái xe. NHS Heart palpitations: đang hồi hộp không dứt kèm đau ngực, khó thở thì gọi 999 hoặc đến cấp cứu. NHS Chest pain: đau ngực kèm vã mồ hôi, khó thở thì gọi 999. Chưa loại trừ được hội chứng vành cấp nên chấp nhận cả bệnh này. Mức 1."
+  references:
+    - "https://www.nhs.uk/conditions/atrial-fibrillation/symptoms/"
+    - nhs-heart-palpitations
+    - nhs-chest-pain
+author: "agent:vignette-holdout"
+notes_vi: "Ca cấp cứu. Tức nặng ngực kéo dài 2 giờ kèm vã mồ hôi nên câu sàng lọc đau thắt ngực dữ dội trả lời 'có'."

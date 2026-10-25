@@ -1,0 +1,55 @@
+id: h-syncope-011
+set: holdout
+title_vi: "Nam 67 tuổi uống thuốc giảm đau chống viêm 2 tuần, phân đen 3 ngày, ngất khi vừa đi ngoài xong; da tái, vã mồ hôi lạnh, tim nhanh"
+narrative_vi: "Ông Đ., 67 tuổi, ở Hải Phòng, đau lưng nên 2 tuần nay uống thuốc giảm đau chống viêm mua ở hiệu thuốc, ngày 2–3 lần. Mấy hôm nay ông hơi đau tức vùng trên rốn. Ba ngày nay mỗi ngày ông đi ngoài 1–2 lần phân đen, nhão, mùi khắm, ông không để ý. Sáng nay ông đi ngoài nhiều phân đen, vừa đứng dậy khỏi bồn cầu thì choáng, vã mồ hôi, tối sầm mắt rồi ngất; vợ nghe tiếng động chạy vào thấy ông ngồi gục bên bồn cầu, khoảng 1 phút sau ông tỉnh, không đập đầu. Hiện ông nằm trên giường, tỉnh, nói chuyện được nhưng da xanh tái, vã mồ hôi lạnh, tay chân lạnh, tim đập nhanh, khát nước; ngồi dậy là choáng, không tự đứng lên được. Ông không nôn, không nôn ra máu, không đau ngực, không khó thở, không co giật. Ông không uống aspirin hay thuốc chống đông, không bị bệnh gan."
+patient:
+  age_years: 67
+  sex: male
+  region: north
+  month: 2
+complaint: syncope
+answers:
+  syncope_trigger: toilet_cough
+  syncope_warning: prodrome
+  not_recovered_after_faint: present
+  black_stool: present
+  vomiting_blood: absent
+  vomiting: absent
+  regular_painkiller_use: present
+  antithrombotic_use: absent
+  chronic_liver_disease: absent
+  abdominal_pain: present
+  abd_pain_location: epigastric
+  abd_pain_onset: gradual
+  abd_pain_duration: d1_3
+  abd_pain_severe: absent
+  cold_sweat: present
+  cold_hands_feet: present
+  pallor: present
+  palpitations: present
+  palpitation_rhythm: fast_regular
+  dizziness_on_standing: present
+  severe_weakness: present
+  confusion: absent
+  es_unresponsive_or_seizing: absent
+  seizure_recent: absent
+  chest_pain_pressure: absent
+  breathing_difficulty: absent
+  headache: absent
+  diarrhea: absent
+  heavy_alcohol: absent
+  hypertension_known: absent
+  known_heart_disease: absent
+default_unmentioned: absent
+expected:
+  condition: upper_gi_bleeding
+  acceptable: []
+  triage: 1
+source:
+  basis: "Xuất huyết tiêu hóa trên (nghi loét do thuốc giảm đau chống viêm) gây ngất: phân đen nhiều ngày, ngất khi đi ngoài, sau đó da tái, vã mồ hôi lạnh, tay chân lạnh, tim nhanh, khát, không tự đứng dậy được (dấu hiệu mất máu nhiều, sốc). ESC 2018: nghi chảy máu tiêu hóa là đặc điểm nguy cơ cao loại nặng ở người ngất. NHS Stomach ulcer: phân đen thì gọi 999 hoặc đến cấp cứu; thuốc giảm đau chống viêm là nguyên nhân. NICE CG141: đánh giá nguy cơ ngay khi đến viện. Mức 1."
+  references:
+    - esc-syncope-2018
+    - nhs-stomach-ulcer
+    - nice-cg141
+author: "agent:vignette-holdout"
+notes_vi: "Ca cấp cứu khó: ngất khi đi ngoài dễ bị coi là ngất tình huống (nguy cơ thấp); phân đen là dấu hiệu then chốt. Đi ngoài 1–2 lần mỗi ngày nên câu tiêu chảy trả lời 'không'."

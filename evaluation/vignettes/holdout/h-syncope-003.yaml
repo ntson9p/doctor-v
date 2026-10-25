@@ -1,0 +1,45 @@
+id: h-syncope-003
+set: holdout
+title_vi: "Nữ 14 tuổi ngất khi đứng chào cờ lâu dưới nắng, trước đó nóng bừng, vã mồ hôi, tối sầm mắt; tỉnh lại dưới 1 phút"
+narrative_vi: "Em N., nữ, 14 tuổi, học lớp 8 ở TP.HCM. Sáng thứ Hai, em đứng chào cờ ngoài sân trường khoảng 30 phút dưới nắng; sáng đó em đã ăn sáng. Em thấy nóng bừng người, vã mồ hôi, buồn nôn, mắt tối sầm rồi ngã xuống. Cô giáo kể em bất tỉnh chưa đến 1 phút, không co giật, rồi tỉnh lại, nói chuyện bình thường ngay. Em được đưa vào phòng y tế nằm nghỉ, uống nước lọc, giờ đã hết mệt, không bị thương. Em không đau ngực, không đau đầu, không thấy tim đập nhanh trước khi ngất, không khó thở. Năm ngoái em từng một lần choáng, tối sầm mắt khi xếp hàng lâu. Kinh nguyệt đều, không ra nhiều. Trong gia đình không có ai đột tử."
+patient:
+  age_years: 14
+  sex: female
+  region: south
+  month: 4
+complaint: syncope
+answers:
+  syncope_trigger: standing_heat
+  syncope_warning: prodrome
+  not_recovered_after_faint: absent
+  similar_episodes_before: present
+  missed_meal: absent
+  better_after_sugar: unknown
+  es_unresponsive_or_seizing: absent
+  seizure_recent: absent
+  confusion: absent
+  chest_pain_pressure: absent
+  palpitations: absent
+  breathing_difficulty: absent
+  family_sudden_death: absent
+  headache: absent
+  dizziness: absent
+  dizziness_on_standing: absent
+  heavy_periods: absent
+  pallor: absent
+  pregnant: absent
+  missed_period: absent
+  black_stool: absent
+  fever: absent
+default_unmentioned: absent
+expected:
+  condition: reflex_orthostatic_syncope
+  acceptable: []
+  triage: 4
+source:
+  basis: "Ngất phản xạ (phế vị) điển hình ở thiếu niên: đứng lâu ngoài nắng, có tiền triệu nóng bừng, vã mồ hôi, buồn nôn, tối sầm mắt; mất ý thức dưới 1 phút, tỉnh hoàn toàn ngay, không co giật, không đau ngực, không hồi hộp trước ngất, gia đình không có người đột tử. ESC 2018: tiền triệu điển hình, ngất khi đứng lâu nơi nóng hoặc đông người là đặc điểm nguy cơ thấp; ca này không có đặc điểm nguy cơ cao. NHS Fainting: người đã ngất nên đi khám bác sĩ (không khẩn) để tìm nguyên nhân; không có dấu hiệu cần gọi 999. Mức 4."
+  references:
+    - esc-syncope-2018
+    - nhs-fainting
+author: "agent:vignette-holdout"
+notes_vi: "Ca điển hình. Chưa thử ăn đồ ngọt (chỉ uống nước lọc) nên câu đỡ sau khi ăn đồ ngọt trả lời 'không rõ'."

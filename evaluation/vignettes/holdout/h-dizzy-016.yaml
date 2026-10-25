@@ -1,0 +1,55 @@
+id: h-dizzy-016
+set: holdout
+title_vi: "Nữ 70 tuổi tăng huyết áp, ngủ dậy chóng mặt quay liên tục, nôn, không tự ngồi vững, không tự đi được; không liệt, không nói khó"
+narrative_vi: "Bà Đ., 70 tuổi, ở Thái Nguyên, bị tăng huyết áp 10 năm, uống thuốc hằng ngày. Tối qua đi ngủ bà vẫn bình thường. Sáng nay khoảng 6 giờ, vừa ngủ dậy bà thấy chóng mặt quay cuồng liên tục, buồn nôn, nôn 3 lần. Bà không tự ngồi vững, đứng dậy là ngã sang trái, phải có hai người dìu mới vào được nhà vệ sinh, kể cả khi mở mắt. Đến giờ (9 giờ) bà vẫn chóng mặt liên tục. Bà vẫn tỉnh, nói rõ, không méo miệng, hai tay vẫn giơ đều, không nhìn đôi, không ù tai, không nghe kém. Bà hơi nhức đầu vùng sau gáy, không phải kiểu đau đột ngột dữ dội. Tuần qua bà không bị cảm. Con trai đo huyết áp được 170/95 mmHg."
+patient:
+  age_years: 70
+  sex: female
+  region: north
+  month: 1
+complaint: dizziness
+answers:
+  dizziness_pattern: continuous
+  vertigo_spinning: present
+  dizziness_positional: absent
+  nausea: present
+  vomiting: present
+  persistent_vomiting: absent
+  cannot_walk_unaided: present
+  sudden_loss_of_balance: present
+  headache: present
+  headache_thunderclap: absent
+  headache_course: first_time
+  headache_duration: lt_4h
+  headache_location: back_neck
+  headache_severity: mild
+  vision_loss_or_double: absent
+  es_stroke_signs: absent
+  hearing_loss_tinnitus: absent
+  transient_neuro_symptoms: absent
+  confusion: absent
+  drowsy_hard_to_wake: absent
+  neck_stiffness: absent
+  recent_viral_illness: absent
+  fainting_or_near_fainting: absent
+  chest_pain_pressure: absent
+  palpitations: absent
+  hypertension_known: present
+  bp_lowering_meds: present
+  bp_measured: very_high
+  diabetes: absent
+  smoker: absent
+default_unmentioned: absent
+expected:
+  condition: stroke
+  acceptable: []
+  triage: 1
+source:
+  basis: "Đột quỵ tiểu não biểu hiện bằng hội chứng tiền đình cấp mà không có liệt, nói khó hay nhìn đôi: chóng mặt quay liên tục từ lúc ngủ dậy, nôn, không tự ngồi vững, không tự đi được kể cả khi mở mắt, nhức đầu vùng gáy, ở người 70 tuổi tăng huyết áp, không có nhiễm vi rút trước đó. GRACE-3: ở hội chứng tiền đình cấp, đánh giá mức độ đi không vững để phân biệt nguyên nhân trung ương với ngoại biên; đi không vững nặng, không tự đi được gợi ý nguyên nhân trung ương. 3312/QĐ-BYT (2024): nhồi máu não có thể biểu hiện thất điều, chóng mặt; chảy máu tiểu não gây nhức đầu vùng chẩm, thất điều, nôn; cần vận chuyển nhanh đến cơ sở điều trị được đột quỵ. NHS Ménière's disease: chóng mặt quay kèm mất thăng bằng nhiều có thể là dấu hiệu đột quỵ, gọi 999. Mức 1."
+  references:
+    - grace3-dizziness-2023
+    - byt-qd-3312-2024
+    - nhs-stroke-symptoms
+    - "https://www.nhs.uk/conditions/menieres-disease/"
+author: "agent:vignette-holdout"
+notes_vi: "Ca cấp cứu khó: các câu sàng lọc đột quỵ (méo miệng, yếu tay, nói khó, nhìn đôi) đều 'không'; dấu hiệu then chốt là không tự đi được. Thời điểm còn bình thường cuối cùng là tối qua (đột quỵ lúc ngủ)."

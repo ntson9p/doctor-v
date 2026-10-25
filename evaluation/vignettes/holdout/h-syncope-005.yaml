@@ -1,0 +1,49 @@
+id: h-syncope-005
+set: holdout
+title_vi: "Nữ 58 tuổi 3 tuần sau mổ gãy xương cẳng chân, bắp chân trái sưng đau, đột ngột khó thở, đau ngực khi hít sâu, tim nhanh rồi ngất"
+narrative_vi: "Bà Ng., 58 tuổi, ở Bắc Giang, đã mãn kinh. Ba tuần trước bà bị gãy xương cẳng chân trái, được mổ kết hợp xương, từ đó chủ yếu nằm ở nhà, ít đi lại. Hai ngày nay bắp chân trái sưng to và đau hơn. Sáng nay khi đang ngồi ăn, bà đột ngột khó thở, thở dốc, đau nhói ngực bên phải, đau tăng khi hít sâu, tim đập nhanh dồn dập, rồi lịm đi, mất ý thức khoảng 1 phút. Hiện bà đã tỉnh, trả lời được, nói được câu ngắn, nhưng vẫn thở nhanh, mệt, vã mồ hôi lạnh. Bà không ho, không ho ra máu, không sốt, không co giật, không có bệnh tim hay tăng huyết áp."
+patient:
+  age_years: 58
+  sex: female
+  region: north
+  month: 8
+complaint: syncope
+answers:
+  syncope_trigger: no_trigger
+  syncope_warning: palpitations_first
+  not_recovered_after_faint: present
+  breathing_difficulty: present
+  pleuritic_chest_pain: present
+  chest_pain_pressure: absent
+  palpitations: present
+  palpitation_rhythm: fast_regular
+  leg_swelling_one_side: present
+  recent_immobility: present
+  previous_clot: absent
+  active_cancer: absent
+  cold_sweat: present
+  fatigue: present
+  hemoptysis: absent
+  cough: absent
+  fever: absent
+  es_unresponsive_or_seizing: absent
+  es_severe_breathing: absent
+  seizure_recent: absent
+  confusion: absent
+  known_heart_disease: absent
+  hypertension_known: absent
+  pregnant: absent
+  missed_period: absent
+default_unmentioned: absent
+expected:
+  condition: pulmonary_embolism
+  acceptable: []
+  triage: 1
+source:
+  basis: "Thuyên tắc phổi điển hình: sau mổ xương chân, nằm nhiều, sưng đau một bên bắp chân, rồi đột ngột khó thở, đau ngực khi hít sâu, tim nhanh và ngất. NHS Pulmonary embolism: khó thở đột ngột, đau ngực tăng khi hít vào, tim đập rất nhanh, ngất thì gọi 999 hoặc đến cấp cứu. NHS DVT: đang hoặc mới phẫu thuật là yếu tố nguy cơ; triệu chứng huyết khối kèm khó thở, đau ngực thì gọi 999. ESC 2018: ngất kèm khó thở mới, hồi hộp đột ngột rồi ngất là đặc điểm nguy cơ cao. Vẫn thở nhanh, vã mồ hôi sau ngất nên gọi 115 (mức 1)."
+  references:
+    - "https://www.nhs.uk/conditions/pulmonary-embolism/"
+    - "https://www.nhs.uk/conditions/deep-vein-thrombosis-dvt/"
+    - esc-syncope-2018
+author: "agent:vignette-holdout"
+notes_vi: "Ca điển hình. Đau ngực một bên khi hít sâu, không phải tức nặng giữa ngực."

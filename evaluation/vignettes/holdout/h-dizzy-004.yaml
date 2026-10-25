@@ -1,0 +1,52 @@
+id: h-dizzy-004
+set: holdout
+title_vi: "Nữ 67 tuổi tăng huyết áp, đái tháo đường, sau cảm chóng mặt quay liên tục từ chiều qua, nôn, vẫn tự đi được"
+narrative_vi: "Bà L., 67 tuổi, ở Cần Thơ, bị tăng huyết áp và đái tháo đường, uống thuốc huyết áp và metformin đều. Tuần trước bà bị sổ mũi, ho nhẹ vài ngày rồi khỏi. Từ chiều hôm qua bà chóng mặt quay cuồng liên tục; quay đầu thì càng chóng mặt, nằm yên vẫn còn quay. Bà buồn nôn, nôn 2 lần, từ hôm qua chỉ ăn được ít cháo, vẫn uống được nước. Bà đi chậm, hơi xiêu vẹo nhưng vẫn tự đứng dậy và tự đi được vào nhà vệ sinh, không cần vịn hay người đỡ. Bà không đau đầu, không ù tai, không nghe kém, không nhìn đôi, không nói ngọng, không méo miệng, không tê yếu tay chân, không sốt, không ngất, vẫn tỉnh táo. Con gái đo huyết áp sáng nay được 150/90 mmHg. Nhà không có máy đo đường huyết; bà chưa ăn uống đồ ngọt để thử."
+patient:
+  age_years: 67
+  sex: female
+  region: south
+  month: 9
+complaint: dizziness
+answers:
+  dizziness_pattern: continuous
+  vertigo_spinning: present
+  dizziness_positional: present
+  nausea: present
+  vomiting: present
+  persistent_vomiting: absent
+  sudden_loss_of_balance: present
+  cannot_walk_unaided: absent
+  recent_viral_illness: present
+  hearing_loss_tinnitus: absent
+  headache: absent
+  vision_loss_or_double: absent
+  transient_neuro_symptoms: absent
+  es_stroke_signs: absent
+  confusion: absent
+  fever: absent
+  fainting_or_near_fainting: absent
+  similar_episodes_before: absent
+  hypertension_known: present
+  bp_lowering_meds: present
+  bp_measured: high
+  diabetes: present
+  on_glucose_lowering_meds: present
+  glucose_measured: not_measured
+  missed_meal: present
+  better_after_sugar: unknown
+  known_heart_disease: absent
+  smoker: absent
+default_unmentioned: absent
+expected:
+  condition: vestibular_neuritis
+  acceptable: []
+  triage: 2
+source:
+  basis: "Viêm dây thần kinh tiền đình ở người cao tuổi có nhiều yếu tố nguy cơ mạch máu: hội chứng tiền đình cấp (chóng mặt quay liên tục, nôn, đi không vững) sau nhiễm vi rút, vẫn tự đi được, không nghe kém, không dấu hiệu thần kinh. GRACE-3: hội chứng tiền đình cấp cần người được đào tạo khám HINTS để phân biệt đột quỵ với nguyên nhân ở tai trong, chụp cộng hưởng từ khi HINTS gợi ý trung ương hoặc không rõ. 3312/QĐ-BYT (2024): nhồi máu não có thể biểu hiện chóng mặt, thất điều; viêm mê đạo có thể nhầm với đột quỵ tiểu não. Ở người 67 tuổi có tăng huyết áp, đái tháo đường, chưa được khám HINTS thì chưa loại trừ được đột quỵ tuần hoàn sau, nên cần đến cấp cứu ngay (mức 2), dù bệnh thật là viêm dây thần kinh tiền đình."
+  references:
+    - grace3-dizziness-2023
+    - byt-qd-3312-2024
+    - "https://www.nhs.uk/conditions/labyrinthitis/"
+author: "agent:vignette-holdout"
+notes_vi: "Ca khó: cùng bệnh với h-dizzy-003 nhưng mức xử trí khẩn hơn vì tuổi và yếu tố nguy cơ mạch máu. Ăn ít do nôn nên trả lời 'có' câu bỏ bữa; chưa thử ăn đồ ngọt."

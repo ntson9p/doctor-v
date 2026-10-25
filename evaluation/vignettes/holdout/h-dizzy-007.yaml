@@ -1,0 +1,56 @@
+id: h-dizzy-007
+set: holdout
+title_vi: "Nam 27 tuổi, đêm qua đốt than tổ ong sưởi trong phòng trọ đóng kín, sáng dậy chóng mặt, đau đầu, nôn; bạn cùng phòng cũng bị"
+narrative_vi: "Anh Q., 27 tuổi, công nhân, thuê phòng trọ cùng một người bạn ở Bắc Ninh, hút thuốc lá, không có bệnh mạn tính. Đêm qua trời rét đậm, hai người đốt một bếp than tổ ong trong phòng để sưởi, đóng kín cửa rồi đi ngủ. Khoảng 5 giờ sáng anh thức dậy thấy chóng mặt, choáng váng, đau đầu nhức cả đầu, buồn nôn, nôn 1 lần, người mệt rũ, chân tay bủn rủn. Anh mở cửa ra ngồi ngoài sân, thấy đỡ hơn một chút nhưng vẫn chóng mặt, đau đầu. Người bạn cùng phòng cũng kêu đau đầu, chóng mặt, buồn nôn, nhưng không nôn, không đau bụng, không tiêu chảy. Anh vẫn tỉnh, nói chuyện bình thường, tự đi lại được, không thấy mọi vật quay tròn, không khó thở, không đau ngực, không sốt, không ngất."
+patient:
+  age_years: 27
+  sex: male
+  region: north
+  month: 1
+complaint: dizziness
+answers:
+  co_exposure: present
+  others_same_symptoms: present
+  unsafe_food_shared: absent
+  dizziness_pattern: continuous
+  vertigo_spinning: absent
+  dizziness_positional: absent
+  headache: present
+  headache_course: first_time
+  headache_duration: lt_4h
+  headache_location: whole_head
+  headache_severity: moderate
+  headache_thunderclap: absent
+  nausea: present
+  vomiting: present
+  persistent_vomiting: absent
+  fatigue: present
+  severe_weakness: absent
+  confusion: absent
+  drowsy_hard_to_wake: absent
+  fainting_or_near_fainting: absent
+  breathing_difficulty: absent
+  chest_pain_pressure: absent
+  cannot_walk_unaided: absent
+  sudden_loss_of_balance: absent
+  vision_loss_or_double: absent
+  es_stroke_signs: absent
+  fever: absent
+  abdominal_pain: absent
+  diarrhea: absent
+  smoker: present
+  hypertension_known: absent
+  diabetes: absent
+default_unmentioned: absent
+expected:
+  condition: carbon_monoxide_poisoning
+  acceptable: []
+  triage: 2
+source:
+  basis: "Ngộ độc khí CO mức nhẹ–vừa do đốt than tổ ong sưởi trong phòng kín mùa đông miền Bắc: chóng mặt, đau đầu, buồn nôn, nôn, mệt khi ngủ dậy, đỡ một chút khi ra ngoài, người ở cùng phòng có triệu chứng giống vậy. NHS Carbon monoxide poisoning: ra chỗ thoáng, xin tư vấn y tế càng sớm càng tốt; người ngộ độc CO cần được kiểm tra ở bệnh viện (đo nồng độ CO trong máu, có thể thở oxy). Trung tâm Chống độc Bệnh viện Bạch Mai (VTC News, Nhân Dân 01/2026): mở cửa, đưa người bệnh ra chỗ thoáng và gọi cấp cứu; ngộ độc có thể tổn thương não, tim. Còn tỉnh, không khó thở, không lú lẫn, không ngất nên mức 2 (đến cấp cứu ngay), chưa cần mức 1."
+  references:
+    - nhs-carbon-monoxide-poisoning
+    - "https://vtcnews.vn/dong-kin-cua-suoi-than-chong-tu-vong-vo-nguy-kich-vi-ngo-doc-khi-co-ar1000521.html"
+    - "https://nhandan.vn/ocop/hiem-hoa-tu-dot-than-cui-trong-khong-gian-kin-de-suoi-am-post939642.html"
+author: "agent:vignette-holdout"
+notes_vi: "Ca điển hình. Chóng mặt liên tục từ lúc ngủ dậy nên chọn kiểu 'liên tục'."

@@ -1,0 +1,51 @@
+id: h-palp-006
+set: holdout
+title_vi: "Nữ 70 tuổi, 2 tháng mệt, ăn kém, sụt 6 kg; 3 tuần nay tim đập lộn xộn, hụt hơi khi làm việc nhà; không run, không sợ nóng, cổ không to"
+narrative_vi: "Bà Th., 70 tuổi, ở Long An. Khoảng 2 tháng nay bà mệt, uể oải, ăn kém, sụt khoảng 6 kg; người nhà tưởng bà buồn phiền chuyện gia đình, bà cũng hay lo nghĩ, ngủ kém. Ba tuần nay bà hay thấy tim đập lộn xộn, lúc nhanh lúc chậm, không đều, nhất là khi làm việc nhà; đi chợ về là hụt hơi. Bà không thấy run tay, không sợ nóng, cổ không thấy to, mắt không lồi. Bà không đau ngực, không ngất, không choáng, ngồi nghỉ không khó thở, không phù chân. Bà không bị tăng huyết áp, không bị đái tháo đường, không có bệnh tim đã biết, không uống aspirin hay thuốc chống đông. Bà đi ngoài phân bình thường, không đen, không tiêu chảy."
+patient:
+  age_years: 70
+  sex: female
+  region: south
+  month: 8
+complaint: palpitations
+answers:
+  palpitation_rhythm: irregular
+  palpitation_abrupt_onset: absent
+  neck_pounding: absent
+  weight_loss_unintended: present
+  loss_of_appetite: present
+  fatigue: present
+  breathless_on_exertion: present
+  stress_poor_sleep: present
+  tremor: absent
+  heat_intolerance: absent
+  goiter_visible: absent
+  eyes_bulging: absent
+  chest_pain_pressure: absent
+  breathing_difficulty: absent
+  fainting_or_near_fainting: absent
+  dizziness: absent
+  pallor: absent
+  black_stool: absent
+  diarrhea: absent
+  leg_swelling_one_side: absent
+  edema_face_hands: absent
+  es_stroke_signs: absent
+  similar_episodes_before: absent
+  hypertension_known: absent
+  diabetes: absent
+  known_heart_disease: absent
+  antithrombotic_use: absent
+default_unmentioned: absent
+expected:
+  condition: hyperthyroidism
+  acceptable: [cardiac_arrhythmia]
+  triage: 4
+source:
+  basis: "Cường giáp thể vô cảm ở người cao tuổi kèm nghi rung nhĩ: mệt, uể oải, ăn kém, sụt cân, tim đập không đều, hụt hơi khi gắng sức; không run tay, không sợ nóng, không bướu cổ, không lồi mắt. Sharma (Cureus 2022, ca bệnh và tổng quan y văn): người cao tuổi cường giáp có thể biểu hiện 'cường giáp vô cảm' với li bì, trầm buồn, sụt cân, ăn kém; run, hồi hộp, tiêu chảy, sợ nóng thường không có; ít bướu cổ hơn người trẻ; rung nhĩ, suy tim hay gặp. NHS Atrial fibrillation: nghĩ có triệu chứng rung nhĩ thì đi khám bác sĩ (không khẩn); gọi 999 khi đang tim nhanh hoặc không đều kèm đau ngực, khó thở, ngất, yếu một bên người. NHS Overactive thyroid: đi khám bác sĩ. Mức 4."
+  references:
+    - "https://pmc.ncbi.nlm.nih.gov/articles/PMC8788900"
+    - "https://www.nhs.uk/conditions/atrial-fibrillation/symptoms/"
+    - "https://www.nhs.uk/conditions/overactive-thyroid-hyperthyroidism/"
+author: "agent:vignette-holdout"
+notes_vi: "Ca khó ở người cao tuổi: người nhà nghĩ do buồn phiền. Rung nhĩ là biến chứng của cường giáp nên chấp nhận cả rối loạn nhịp tim."

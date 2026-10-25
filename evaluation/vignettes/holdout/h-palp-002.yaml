@@ -1,0 +1,55 @@
+id: h-palp-002
+set: holdout
+title_vi: "Nam 71 tuổi hay uống thuốc giảm đau xương khớp, 2 tháng nay tim đập nhanh, hụt hơi khi đi bộ, xanh xao, sụt 4 kg"
+narrative_vi: "Ông D., 71 tuổi, làm vườn ở Vĩnh Long, bị thoái hóa khớp gối, hai năm nay hay tự mua thuốc giảm đau xương khớp uống. Khoảng hai tháng nay ông thấy tim đập nhanh, đập mạnh mỗi khi đi bộ ra chợ hay làm vườn, phải dừng lại nghỉ; đi một đoạn ngắn đã hụt hơi, mệt. Thỉnh thoảng đứng dậy nhanh ông thấy choáng vài giây. Người nhà thấy ông xanh xao, môi và mí mắt nhợt. Ông ăn kém, sụt khoảng 4 kg trong 3 tháng. Ông không để ý màu phân, chưa từng nôn ra máu, không đau bụng. Ông không đau ngực, không ngất, ngồi nghỉ thì không khó thở, không sốt, không phù chân. Ông chưa từng được nói là bị thiếu máu, không bị tăng huyết áp, không có bệnh tim đã biết, không uống aspirin hay thuốc chống đông, đã bỏ thuốc lá 10 năm."
+patient:
+  age_years: 71
+  sex: male
+  region: south
+  month: 9
+complaint: palpitations
+answers:
+  palpitation_rhythm: fast_regular
+  palpitation_abrupt_onset: absent
+  neck_pounding: absent
+  breathless_on_exertion: present
+  fatigue: present
+  pallor: present
+  loss_of_appetite: present
+  weight_loss_unintended: present
+  regular_painkiller_use: present
+  antithrombotic_use: absent
+  anemia_known: absent
+  black_stool: unknown
+  vomiting_blood: absent
+  abdominal_pain: absent
+  dizziness: present
+  dizziness_pattern: brief_episodes
+  vertigo_spinning: absent
+  dizziness_positional: absent
+  dizziness_on_standing: present
+  chest_pain_pressure: absent
+  breathing_difficulty: absent
+  fainting_or_near_fainting: absent
+  fever: absent
+  leg_swelling_one_side: absent
+  hypertension_known: absent
+  known_heart_disease: absent
+  diabetes: absent
+  smoker: absent
+  heavy_alcohol: absent
+  tremor: absent
+  heat_intolerance: absent
+  goiter_visible: absent
+default_unmentioned: absent
+expected:
+  condition: anemia
+  acceptable: []
+  triage: 4
+source:
+  basis: "Thiếu máu ở người cao tuổi, nghi do mất máu tiêu hóa rỉ rả vì dùng thuốc giảm đau chống viêm kéo dài: hồi hộp và hụt hơi khi gắng sức, mệt, da xanh, môi và mí mắt nhợt, choáng khi đứng dậy nhanh, ăn kém, sụt cân. NHS Iron deficiency anaemia: mệt, khó thở, hồi hộp, da nhợt; chảy máu dạ dày, ruột (kể cả do thuốc giảm đau chống viêm) là nguyên nhân hay gặp; nghĩ mình bị thiếu máu thì đi khám bác sĩ. NHS Heart palpitations: hồi hộp tái diễn nhưng vẫn khỏe thì đi khám bác sĩ (không khẩn). Không đau ngực, không ngất, không khó thở khi nghỉ, không nôn ra máu nên mức 4; thiếu máu kèm sụt cân ở người cao tuổi cần được khám sớm để tìm nguồn chảy máu và loại trừ ung thư đường tiêu hóa."
+  references:
+    - "https://www.nhs.uk/conditions/iron-deficiency-anaemia/"
+    - nhs-heart-palpitations
+author: "agent:vignette-holdout"
+notes_vi: "Ca khó ở người cao tuổi: biểu hiện là hồi hộp khi gắng sức; người bệnh không để ý màu phân nên câu phân đen trả lời 'không rõ'."

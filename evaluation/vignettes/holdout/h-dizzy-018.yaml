@@ -1,0 +1,55 @@
+id: h-dizzy-018
+set: holdout
+title_vi: "Nam 60 tuổi mới uống amlodipine 10 ngày, mỗi sáng lâng lâng vài giờ sau uống thuốc, nhức đầu, đỏ bừng mặt; huyết áp bình thường"
+narrative_vi: "Ông Tr., 60 tuổi, ở Đà Lạt (Lâm Đồng), mới phát hiện tăng huyết áp, được bác sĩ kê amlodipine uống mỗi sáng từ 10 ngày nay. Từ khi uống thuốc, ngày nào cũng vậy, khoảng 1–2 giờ sau khi uống ông thấy lâng lâng, choáng nhẹ trong vài giờ, kèm nhức đầu giật giật nhẹ khắp đầu, mặt nóng đỏ bừng. Cảm giác này có cả khi ngồi yên, không nặng hơn khi đứng dậy, không quay cuồng. Hai cổ chân hơi phù vào buổi chiều. Ông tự đo huyết áp ở nhà lúc đang choáng được 128/78 mmHg, mạch 84 lần/phút. Ông không ngất, không đau ngực, không khó thở, không hồi hộp, không tê yếu tay chân, không nói khó, nghe rõ, không ù tai. Ông không bị đái tháo đường, không hút thuốc."
+patient:
+  age_years: 60
+  sex: male
+  region: highlands
+  month: 3
+complaint: dizziness
+answers:
+  dizziness_pattern: long_episodes
+  vertigo_spinning: absent
+  dizziness_positional: absent
+  dizziness_on_standing: absent
+  similar_episodes_before: present
+  hypertension_known: present
+  bp_lowering_meds: present
+  bp_measured: normal
+  pulse_measured: n40_100
+  headache: present
+  headache_course: recurrent_similar
+  headache_duration: lt_4h
+  headache_location: whole_head
+  headache_character: throbbing
+  headache_severity: mild
+  headache_frequent: present
+  headache_thunderclap: absent
+  edema_face_hands: absent
+  leg_swelling_one_side: absent
+  palpitations: absent
+  fainting_or_near_fainting: absent
+  chest_pain_pressure: absent
+  breathing_difficulty: absent
+  es_stroke_signs: absent
+  transient_neuro_symptoms: absent
+  vision_loss_or_double: absent
+  hearing_loss_tinnitus: absent
+  cannot_walk_unaided: absent
+  sudden_loss_of_balance: absent
+  diabetes: absent
+  known_heart_disease: absent
+  smoker: absent
+default_unmentioned: absent
+expected:
+  condition: other
+  acceptable: []
+  triage: 4
+source:
+  basis: "Tác dụng phụ của thuốc hạ áp mới (amlodipine), không có đặc điểm hạ huyết áp tư thế: lâng lâng, nhức đầu, đỏ bừng mặt vài giờ sau uống thuốc, cả khi ngồi yên, không nặng hơn khi đứng dậy, huyết áp và mạch đo lúc có triệu chứng bình thường, phù nhẹ hai cổ chân. NHS Amlodipine: phù cổ chân, nhức đầu, chóng mặt, đỏ bừng mặt là tác dụng phụ thường gặp; nói với dược sĩ hoặc bác sĩ nếu khó chịu hoặc không hết, vẫn uống thuốc cho đến khi được hướng dẫn khác. NHS Low blood pressure: hạ huyết áp tư thế là choáng khi đứng dậy hoặc đổi tư thế; ở đây không có. Mức 4 (khám lại trong vài ngày để bác sĩ cân nhắc đổi thuốc)."
+  references:
+    - "https://www.nhs.uk/medicines/amlodipine/side-effects-of-amlodipine/"
+    - "https://www.nhs.uk/conditions/low-blood-pressure-hypotension/"
+author: "agent:vignette-holdout"
+notes_vi: "Ngoài danh mục: chóng mặt do tác dụng phụ của thuốc, không phải hạ huyết áp tư thế (không choáng khi đứng dậy, huyết áp không thấp). Danh mục chưa có câu hỏi về đỏ bừng mặt, phù hai chân hay thuốc mới bắt đầu dùng."

@@ -1,0 +1,49 @@
+id: h-syncope-015
+set: holdout
+title_vi: "Nam 17 tuổi thức khuya ôn thi, đang ngồi ăn thì kêu lên, ngã, co cứng rồi giật cả người 1–2 phút, cắn lưỡi, tè ra quần; gia đình gọi là ngất"
+narrative_vi: "Em Q., nam, 17 tuổi, học lớp 12 ở Hưng Yên. Cả tuần nay em thức khuya ôn thi, mỗi đêm ngủ khoảng 4 tiếng. Sáng nay khoảng 6 giờ, đang ngồi ăn sáng, em đột ngột kêu lên một tiếng rồi ngã xuống. Mẹ kể em bất tỉnh, người co cứng rồi giật mạnh cả tay chân khoảng 1–2 phút, mắt trợn ngược, sùi bọt mép, cắn rách cạnh lưỡi, tè ra quần. Sau đó em lơ mơ, nói lẫn lộn, không nhận ra mẹ khoảng 20 phút rồi tỉnh dần. Bây giờ là 9 giờ sáng, em đã tỉnh táo hoàn toàn, nói chuyện bình thường nhưng đau đầu, mỏi nhừ người. Em nói trước khi ngã không thấy choáng, không vã mồ hôi, không thấy tim đập nhanh. Em chưa từng bị như vậy, không sốt, cổ không cứng, không dùng thuốc, rượu bia hay chất kích thích, không bị va đập đầu. Trong nhà không ai đột tử. Gia đình nói em bị 'ngất'."
+patient:
+  age_years: 17
+  sex: male
+  region: north
+  month: 6
+complaint: syncope
+answers:
+  syncope_trigger: no_trigger
+  syncope_warning: no_warning
+  not_recovered_after_faint: absent
+  seizure_recent: present
+  confusion: present
+  es_unresponsive_or_seizing: absent
+  drowsy_hard_to_wake: absent
+  headache: present
+  headache_course: first_time
+  headache_duration: lt_4h
+  headache_location: whole_head
+  headache_severity: moderate
+  headache_thunderclap: absent
+  headache_after_head_injury: absent
+  myalgia: present
+  stress_poor_sleep: present
+  fever: absent
+  neck_stiffness: absent
+  similar_episodes_before: absent
+  palpitations: absent
+  chest_pain_pressure: absent
+  breathing_difficulty: absent
+  family_sudden_death: absent
+  es_stroke_signs: absent
+  heavy_alcohol: absent
+  smoker: absent
+  diabetes: absent
+default_unmentioned: absent
+expected:
+  condition: other
+  acceptable: []
+  triage: 3
+source:
+  basis: "Cơn co giật toàn thể lần đầu (không có trong danh mục), bị gia đình gọi là ngất: mất ý thức đột ngột không có tiền triệu khi đang ngồi, co cứng rồi giật toàn thân 1–2 phút, cắn cạnh lưỡi, tiểu không tự chủ, lú lẫn khoảng 20 phút sau cơn, đau mỏi cơ; khởi phát sau nhiều đêm thiếu ngủ. Co giật kéo dài, cắn cạnh lưỡi, lú lẫn kéo dài sau cơn gợi ý cơn động kinh hơn là ngất. NHS Epilepsy: đang co giật lần đầu thì gọi 999; nếu có thể đã co giật lần đầu mà không đến bệnh viện thì khám khẩn với bác sĩ hoặc gọi 111. Đã tỉnh táo hoàn toàn sau 3 giờ, không chấn thương, không sốt, không cứng gáy nên mức 3."
+  references:
+    - "https://www.nhs.uk/conditions/epilepsy/"
+author: "agent:vignette-holdout"
+notes_vi: "Ngoài danh mục, ở thiếu niên. Lú lẫn sau cơn đã hết nhưng mới xảy ra sáng nay nên người nhà trả lời 'có'; nay đã tỉnh táo, đi lại bình thường nên câu chưa hồi phục hẳn trả lời 'không'. Danh mục chưa có câu hỏi về cắn lưỡi, tiểu không tự chủ, thời gian lú lẫn sau cơn."

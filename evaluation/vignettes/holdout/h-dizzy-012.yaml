@@ -1,0 +1,64 @@
+id: h-dizzy-012
+set: holdout
+title_vi: "Nữ 80 tuổi hay uống thuốc xương khớp, 3 ngày chóng mặt, đứng dậy tối sầm mắt, phân đen sệt, không đau bụng, không nôn"
+narrative_vi: "Bà X., 80 tuổi, ở Bến Tre, bị tăng huyết áp uống thuốc đều; bà đau khớp nhiều năm nên hay uống thuốc xương khớp, thuốc giảm đau mua ở hiệu thuốc. Ba ngày nay bà chóng mặt, mệt, đi vài bước đã hụt hơi; đứng dậy là choáng, tối sầm mắt, phải ngồi xuống một lúc mới đi tiếp được; hôm nay ngồi ăn cũng thấy lâng lâng. Con gái hỏi kỹ thì bà kể mấy ngày nay đi ngoài phân đen sệt như hắc ín, bà tưởng do ăn rau. Bà không đau bụng, không buồn nôn, không nôn ra máu. Bà không thấy mọi vật quay tròn, không nói khó, không yếu tay chân, không đau ngực, chưa ngất hẳn. Con gái thấy bà xanh xao hơn mọi khi; đo huyết áp lúc ngồi được 105/60 mmHg. Bà vẫn tỉnh táo, tự đi lại trong nhà được, tay chân không lạnh, không vã mồ hôi. Bà không uống aspirin hay thuốc chống đông, không bị bệnh gan."
+patient:
+  age_years: 80
+  sex: female
+  region: south
+  month: 10
+complaint: dizziness
+answers:
+  dizziness_pattern: unknown
+  vertigo_spinning: absent
+  dizziness_positional: absent
+  dizziness_on_standing: present
+  fainting_or_near_fainting: present
+  syncope_trigger: standing_up
+  syncope_warning: prodrome
+  not_recovered_after_faint: absent
+  black_stool: present
+  vomiting_blood: absent
+  abdominal_pain: absent
+  nausea: absent
+  vomiting: absent
+  fatigue: present
+  pallor: present
+  breathless_on_exertion: present
+  cold_sweat: absent
+  cold_hands_feet: absent
+  severe_weakness: absent
+  confusion: absent
+  breathing_difficulty: absent
+  chest_pain_pressure: absent
+  palpitations: absent
+  es_stroke_signs: absent
+  transient_neuro_symptoms: absent
+  vision_loss_or_double: absent
+  cannot_walk_unaided: absent
+  sudden_loss_of_balance: absent
+  headache: absent
+  vaginal_bleeding: absent
+  regular_painkiller_use: present
+  antithrombotic_use: absent
+  chronic_liver_disease: absent
+  hypertension_known: present
+  bp_lowering_meds: present
+  bp_measured: normal
+  known_heart_disease: absent
+  diabetes: absent
+  heavy_alcohol: absent
+default_unmentioned: absent
+expected:
+  condition: upper_gi_bleeding
+  acceptable: []
+  triage: 2
+source:
+  basis: "Xuất huyết tiêu hóa trên không đau ở người cao tuổi hay dùng thuốc giảm đau chống viêm: phân đen như hắc ín vài ngày (người bệnh không để ý), chóng mặt, choáng khi đứng dậy, da xanh, mệt, hụt hơi khi gắng sức. NHS Stomach ulcer: phân đen hoặc có máu thì gọi 999 hoặc đến cấp cứu. NHS Iron deficiency anaemia: thuốc giảm đau chống viêm (kể cả aspirin) gây chảy máu dạ dày, ruột. ESC 2018: nghi chảy máu tiêu hóa ở người ngất, suýt ngất là đặc điểm nguy cơ cao. NICE CG141: đánh giá nguy cơ ngay khi đến viện. Còn tỉnh, không vã mồ hôi, tay chân không lạnh nên mức 2 (đến cấp cứu ngay)."
+  references:
+    - nhs-stomach-ulcer
+    - esc-syncope-2018
+    - nice-cg141
+    - "https://www.nhs.uk/conditions/iron-deficiency-anaemia/"
+author: "agent:vignette-holdout"
+notes_vi: "Ca khó: không đau bụng, không nôn ra máu; người bệnh tưởng phân đen do ăn rau; đang uống thuốc hạ áp nên dễ nghĩ là hạ huyết áp tư thế do thuốc. Người bệnh không chọn được kiểu chóng mặt (không rõ)."

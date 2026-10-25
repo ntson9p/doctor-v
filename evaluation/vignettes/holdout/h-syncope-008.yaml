@@ -1,0 +1,60 @@
+id: h-syncope-008
+set: holdout
+title_vi: "Bé gái 12 tuổi sốt cao 4 ngày, sáng nay hết sốt nhưng mệt lả, đau bụng, nôn, chảy máu cam, ngồi dậy suýt ngất, tay chân lạnh"
+narrative_vi: "Bé Ng., gái, 12 tuổi, ở Long Xuyên (An Giang); khu phố đang có nhiều người bị sốt xuất huyết. Bé sốt cao 39–40°C liên tục 4 ngày, đau đầu, đau sau hốc mắt, đau mỏi người. Từ sáng nay bé hết sốt nhưng mệt lả hơn, chỉ nằm, không tự đi lại được. Bé đau bụng vùng dưới sườn phải, nôn 3 lần từ sáng. Chiều nay bé ngồi dậy đi vệ sinh thì choáng váng, tối sầm mắt, suýt ngã, mẹ phải đỡ. Mẹ sờ thấy tay chân bé lạnh, ẩm. Bé chảy máu cam một ít; ở cẳng chân có nhiều chấm đỏ li ti, mẹ ấn thử không mất. Từ sáng bé mới đi tiểu 1 lần, ít. Bé vẫn trả lời mẹ được, không khó thở, không co giật, không ho, không tiêu chảy."
+patient:
+  age_years: 12
+  sex: female
+  region: south
+  month: 7
+complaint: syncope
+answers:
+  syncope_trigger: standing_up
+  syncope_warning: prodrome
+  not_recovered_after_faint: present
+  fever: present
+  fever_max_temp: ge_39
+  fever_duration: d3_5
+  headache: present
+  headache_thunderclap: absent
+  retro_orbital_pain: present
+  myalgia: present
+  abdominal_pain: present
+  abd_pain_location: right_upper
+  abd_pain_onset: gradual
+  abd_pain_duration: h6_24
+  abd_pain_severe: absent
+  nausea: present
+  vomiting: present
+  persistent_vomiting: absent
+  severe_weakness: present
+  cold_hands_feet: present
+  bleeding_gums_nose: present
+  rash_any: present
+  rash_non_blanching: present
+  decreased_urine: present
+  dengue_nearby: present
+  dizziness_on_standing: present
+  confusion: absent
+  drowsy_hard_to_wake: absent
+  breathing_difficulty: absent
+  seizure_recent: absent
+  es_unresponsive_or_seizing: absent
+  vomiting_blood: absent
+  black_stool: absent
+  neck_stiffness: absent
+  cough: absent
+  diarrhea: absent
+default_unmentioned: absent
+expected:
+  condition: dengue
+  acceptable: []
+  triage: 1
+source:
+  basis: "Sốt xuất huyết Dengue ở giai đoạn nguy hiểm, ngay khi hết sốt (ngày thứ 5): mệt lả, đau bụng vùng gan, nôn, chảy máu cam, chấm xuất huyết, kèm dấu hiệu sốc (tay chân lạnh ẩm, suýt ngất khi ngồi dậy, tiểu ít). 2760/QĐ-BYT: giai đoạn nguy hiểm thường ở ngày 3–7, người bệnh có thể hết sốt; dấu hiệu cảnh báo gồm đau bụng vùng gan, nôn nhiều, chảy máu niêm mạc, li bì; sốc cần cấp cứu ngay. CDC Clinical features of dengue: giai đoạn nguy hiểm bắt đầu khi hết sốt, dấu hiệu cảnh báo xuất hiện quanh lúc hết sốt. Mức 1."
+  references:
+    - byt-qd-2760-2023
+    - cdc-dengue-clinical
+    - who-arbovirus-2025
+author: "agent:vignette-holdout"
+notes_vi: "Bệnh đã có trong danh mục, nay thêm triệu chứng chính 'Ngất'. Người nhà chọn 'Ngất, suýt ngất' vì bé hết sốt rồi, lo nhất là cơn suýt ngất."

@@ -1,0 +1,50 @@
+id: h-palp-001
+set: holdout
+title_vi: "Nam 55 tuổi tiêm insulin, mới tăng liều, bỏ bữa trưa thì hồi hộp, tim đập nhanh, run, vã mồ hôi; đường huyết 3,1 mmol/L, uống nước đường đỡ hẳn"
+narrative_vi: "Ông T., 55 tuổi, bán tạp hóa ở Biên Hòa (Đồng Nai), bị đái tháo đường típ 2 tám năm, tiêm insulin hai lần mỗi ngày và uống metformin; hai tuần trước bác sĩ tăng liều insulin. Sáng nay ông tiêm insulin, ăn sáng ít, rồi bận khách nên bỏ bữa trưa. Khoảng 2 giờ chiều ông thấy hồi hộp, tim đập nhanh thình thịch, run tay, vã mồ hôi, chóng mặt, cồn cào đói. Ông đo đường huyết bằng máy ở nhà được 3,1 mmol/L, uống ngay một cốc nước đường, khoảng 10 phút sau thấy đỡ hẳn. Tuần này ông đã bị 3 lần giống vậy, lần nào ăn kẹo hoặc uống nước ngọt cũng đỡ. Hiện ông tỉnh táo, nói chuyện bình thường, không đau ngực, không khó thở, không ngất, không yếu tay chân. Ông không bị tăng huyết áp, không có bệnh tim đã biết."
+patient:
+  age_years: 55
+  sex: male
+  region: south
+  month: 3
+complaint: palpitations
+answers:
+  palpitation_rhythm: fast_regular
+  palpitation_abrupt_onset: absent
+  neck_pounding: absent
+  diabetes: present
+  on_glucose_lowering_meds: present
+  glucose_measured: low
+  missed_meal: present
+  better_after_sugar: present
+  similar_episodes_before: present
+  cold_sweat: present
+  tremor: present
+  dizziness: present
+  dizziness_pattern: long_episodes
+  vertigo_spinning: absent
+  dizziness_positional: absent
+  dizziness_on_standing: absent
+  confusion: absent
+  fainting_or_near_fainting: absent
+  chest_pain_pressure: absent
+  breathing_difficulty: absent
+  panic_fear: absent
+  perioral_tingling: absent
+  heat_intolerance: absent
+  weight_loss_unintended: absent
+  hypertension_known: absent
+  known_heart_disease: absent
+  heavy_alcohol: absent
+default_unmentioned: absent
+expected:
+  condition: hypoglycemia
+  acceptable: []
+  triage: 4
+source:
+  basis: "Hạ đường huyết nhẹ, tái diễn ở người tiêm insulin mới tăng liều, xảy ra khi bỏ bữa: hồi hộp, tim nhanh, run, vã mồ hôi, chóng mặt, đói, đường huyết 3,1 mmol/L, đỡ hẳn trong 10–15 phút sau khi uống nước đường; tuần này đã 3 lần. NHS Low blood sugar: hạ đường huyết thường là dưới 4 mmol/L, hay gặp ở người dùng insulin; triệu chứng gồm đói, chóng mặt, vã mồ hôi, run, hồi hộp; tự xử trí bằng đồ ngọt rồi đo lại; hay bị hạ đường huyết thì đi khám bác sĩ (không khẩn) để chỉnh thuốc. NHS Heart palpitations: đã hết hồi hộp, vẫn khỏe nhưng hay tái lại thì đi khám bác sĩ. Mức 4."
+  references:
+    - nhs-hypoglycaemia
+    - nhs-heart-palpitations
+author: "agent:vignette-holdout"
+notes_vi: "Ca điển hình. Người bệnh chọn 'Hồi hộp' vì tim đập nhanh là triệu chứng làm ông lo nhất."

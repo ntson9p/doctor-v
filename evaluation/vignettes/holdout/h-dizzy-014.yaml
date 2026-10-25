@@ -1,0 +1,57 @@
+id: h-dizzy-014
+set: holdout
+title_vi: "Bé trai 8 tuổi nôn và tiêu chảy toàn nước từ tối qua sau ăn cỗ, đứng dậy là choáng, khát, mắt trũng, tiểu ít"
+narrative_vi: "Bé Kh., trai, 8 tuổi, ở Tam Kỳ (Quảng Nam). Trưa qua cả nhà đi ăn cỗ đám cưới; từ tối qua bé nôn 4 lần, đi ngoài phân toàn nước 7–8 lần, đau quặn bụng từng cơn quanh rốn; em gái 5 tuổi của bé cũng bị tiêu chảy. Từ sáng nay bé uống được oresol từng ngụm nhỏ, không nôn thêm, nhưng vẫn đi ngoài phân lỏng. Bé kêu chóng mặt; mỗi lần đứng dậy đi vệ sinh là choáng, tối sầm mắt, phải ngồi xuống. Bé khát, đòi uống nước liên tục, môi khô, mắt trũng; từ sáng mới đi tiểu 1 lần, ít, nước tiểu sẫm màu. Mẹ đo nhiệt độ 37,8°C. Bé vẫn tỉnh, nói chuyện được, không li bì, không co giật, tay chân không lạnh, không khó thở. Phân không có máu, bụng không chướng."
+patient:
+  age_years: 8
+  sex: male
+  region: central
+  month: 6
+complaint: dizziness
+answers:
+  dizziness_pattern: brief_episodes
+  vertigo_spinning: absent
+  dizziness_positional: absent
+  dizziness_on_standing: present
+  fainting_or_near_fainting: present
+  syncope_trigger: standing_up
+  syncope_warning: prodrome
+  not_recovered_after_faint: absent
+  diarrhea: present
+  diarrhea_bloody: absent
+  vomiting: present
+  nausea: present
+  persistent_vomiting: absent
+  abdominal_pain: present
+  abd_pain_location: periumbilical
+  abd_pain_onset: gradual
+  abd_pain_duration: h6_24
+  abd_pain_colicky: present
+  abd_pain_severe: absent
+  abdomen_hard_swollen: absent
+  sunken_eyes: present
+  decreased_urine: present
+  fever: present
+  fever_max_temp: lt_38
+  fever_duration: d1_2
+  unsafe_food_shared: present
+  drowsy_hard_to_wake: absent
+  confusion: absent
+  seizure_recent: absent
+  cold_hands_feet: absent
+  severe_weakness: absent
+  breathing_difficulty: absent
+  headache: absent
+  red_jelly_stool: absent
+default_unmentioned: absent
+expected:
+  condition: acute_gastroenteritis
+  acceptable: []
+  triage: 3
+source:
+  basis: "Viêm dạ dày – ruột cấp (nghi ngộ độc thức ăn, người ăn cùng cũng bị) có mất nước mức vừa: khát, mắt trũng, môi khô, tiểu ít, choáng khi đứng dậy; vẫn tỉnh, uống được, không li bì, tay chân không lạnh. WHO (2005): khát, mắt trũng là dấu hiệu mất nước; mất nước có dấu hiệu (chưa nặng) thì bù nước bằng ORS dưới sự theo dõi của nhân viên y tế; đưa trẻ đến nhân viên y tế khi đi ngoài nhiều lần phân nước, nôn nhiều lần, rất khát. NHS Diarrhoea and vomiting: chưa có dấu hiệu cần gọi cấp cứu (li bì, lú lẫn, da tím tái, nôn ra máu, đau bụng dữ dội). Mức 3 (khám trong ngày)."
+  references:
+    - who-diarrhoea-2005
+    - nhs-diarrhoea-vomiting
+author: "agent:vignette-holdout"
+notes_vi: "Bệnh đã có trong danh mục, nay thêm triệu chứng chính 'Chóng mặt'. Người nhà chọn 'Chóng mặt' vì bé kêu choáng mỗi khi đứng dậy."

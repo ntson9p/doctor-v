@@ -1,0 +1,48 @@
+id: h-dizzy-005
+set: holdout
+title_vi: "Nam 68 tuổi tăng huyết áp, đái tháo đường, hút thuốc lào; sáng nay 20 phút chóng mặt, nói ngọng, tê tay phải, méo miệng rồi tự hết"
+narrative_vi: "Ông P., 68 tuổi, ở Hà Nội, bị tăng huyết áp và đái tháo đường, uống thuốc hằng ngày, hút thuốc lào nhiều năm. Khoảng 8 giờ sáng nay, đang ngồi uống trà, ông đột ngột chóng mặt, thấy mọi vật quay tròn, nói ngọng líu lưỡi, tay phải tê bì, cầm chén không chắc; vợ ông thấy miệng ông méo sang một bên. Khoảng 20 phút sau mọi triệu chứng tự hết hoàn toàn. Bây giờ là 10 giờ sáng, ông nói rõ, cười hai bên miệng đều, giơ hai tay đều, đi lại vững, không còn chóng mặt, chỉ hơi mệt. Ông không đau đầu, không buồn nôn, không nhìn đôi, không ngất, không đau ngực, không hồi hộp. Con trai đo huyết áp được 165/95 mmHg. Trước đây ông chưa từng bị như vậy."
+patient:
+  age_years: 68
+  sex: male
+  region: north
+  month: 12
+complaint: dizziness
+answers:
+  dizziness_pattern: long_episodes
+  vertigo_spinning: present
+  dizziness_positional: absent
+  transient_neuro_symptoms: present
+  es_stroke_signs: absent
+  vision_loss_or_double: absent
+  sudden_loss_of_balance: absent
+  cannot_walk_unaided: absent
+  confusion: absent
+  headache: absent
+  nausea: absent
+  hearing_loss_tinnitus: absent
+  fainting_or_near_fainting: absent
+  chest_pain_pressure: absent
+  palpitations: absent
+  similar_episodes_before: absent
+  hypertension_known: present
+  bp_lowering_meds: present
+  bp_measured: very_high
+  diabetes: present
+  on_glucose_lowering_meds: present
+  missed_meal: absent
+  smoker: present
+  known_heart_disease: absent
+default_unmentioned: absent
+expected:
+  condition: transient_ischemic_attack
+  acceptable: []
+  triage: 2
+source:
+  basis: "Cơn thiếu máu não thoáng qua: đột ngột chóng mặt kèm nói khó, tê tay phải, méo miệng, hết hoàn toàn sau 20 phút, ở người có tăng huyết áp, đái tháo đường, hút thuốc. NHS TIA: triệu chứng giống đột quỵ, hết trong 24 giờ, là dấu hiệu báo trước đột quỵ; cần được đánh giá ở bệnh viện và khám chuyên khoa trong 24 giờ kể từ khi khởi phát. 3312/QĐ-BYT (2024): nguy cơ tái phát sớm rất cao, điều trị dự phòng ngay, tối ưu trong 24 giờ đầu. Triệu chứng đã hết, người bệnh ổn định nên mức đúng là đến cấp cứu ngay (mức 2); gọi 115 cũng an toàn."
+  references:
+    - nhs-tia
+    - nhs-stroke-symptoms
+    - byt-qd-3312-2024
+author: "agent:vignette-holdout"
+notes_vi: "Các câu sàng lọc đột quỵ hỏi tình trạng hiện tại nên trả lời 'không'; triệu chứng đã tự hết được ghi ở câu 'yếu, tê nửa người hoặc nói khó, dù đã tự hết'."

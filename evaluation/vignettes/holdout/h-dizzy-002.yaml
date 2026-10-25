@@ -1,0 +1,47 @@
+id: h-dizzy-002
+set: holdout
+title_vi: "Nam 76 tuổi tăng huyết áp, 5 ngày nay chao đảo vài giây mỗi khi nằm xuống, trở mình, ngửa cổ"
+narrative_vi: "Ông K., 76 tuổi, ở Huế, bị tăng huyết áp nhiều năm, uống thuốc huyết áp đều, đo ở nhà vẫn khoảng 130/80 mmHg. Năm ngày nay, mỗi lần nằm xuống giường, trở mình sang trái hoặc ngửa cổ lấy đồ trên cao, ông thấy chao đảo, chòng chành như say sóng trong vài giây rồi hết; ông không tả là mọi vật quay tròn. Trong cơn ông mất thăng bằng, phải vịn tường cho đến khi hết, có lần suýt ngã. Ngồi hoặc đứng yên thì không sao; đứng dậy khỏi ghế không bị choáng hay tối sầm mắt. Ông hơi buồn nôn, không nôn. Ông không đau đầu, không ù tai, nghe vẫn như cũ, không nhìn mờ, không nhìn đôi, không nói khó, không tê yếu tay chân, chưa từng ngất. Giữa các cơn ông vẫn tự đi lại, tự đi chợ được. Trước đây ông chưa bị như vậy."
+patient:
+  age_years: 76
+  sex: male
+  region: central
+  month: 11
+complaint: dizziness
+answers:
+  dizziness_pattern: brief_episodes
+  vertigo_spinning: absent
+  dizziness_positional: present
+  dizziness_on_standing: absent
+  sudden_loss_of_balance: present
+  cannot_walk_unaided: absent
+  nausea: present
+  vomiting: absent
+  hearing_loss_tinnitus: absent
+  headache: absent
+  blurred_vision: absent
+  vision_loss_or_double: absent
+  transient_neuro_symptoms: absent
+  es_stroke_signs: absent
+  fainting_or_near_fainting: absent
+  palpitations: absent
+  similar_episodes_before: absent
+  recent_viral_illness: absent
+  hypertension_known: present
+  bp_lowering_meds: present
+  bp_measured: normal
+  diabetes: absent
+  known_heart_disease: absent
+default_unmentioned: absent
+expected:
+  condition: benign_paroxysmal_positional_vertigo
+  acceptable: []
+  triage: 4
+source:
+  basis: "Chóng mặt tư thế kịch phát lành tính ở người cao tuổi, mô tả không điển hình: cơn chao đảo vài giây (không tả là quay tròn) mỗi khi đổi tư thế đầu, giữa các cơn đi lại bình thường, không có dấu hiệu thần kinh, đứng dậy không choáng, huyết áp ở nhà bình thường. GRACE-3: cơn chóng mặt có yếu tố khởi phát là cử động đầu thì làm nghiệm pháp Dix–Hallpike, điều trị bằng nghiệm pháp Epley, không chụp chiếu thường quy. AAFP 2017 (Muncie và cộng sự): bệnh hay gặp nhất ở tuổi 50–70, khởi phát khi cử động đầu, đổi tư thế; người bệnh thường khó mô tả cảm giác chóng mặt. NHS Vertigo: chóng mặt hay tái lại thì đi khám bác sĩ (không khẩn); không có dấu hiệu cần khám khẩn hay gọi cấp cứu."
+  references:
+    - grace3-dizziness-2023
+    - nhs-vertigo
+    - "https://www.aafp.org/pubs/afp/issues/2017/0201/p154.html"
+author: "agent:vignette-holdout"
+notes_vi: "Ca khó ở người cao tuổi. Người bệnh trả lời 'có' câu đột ngột mất thăng bằng vì phải vịn tường trong cơn; câu 'không tự đi được' trả lời 'không' vì hướng dẫn của câu này không tính cơn ngắn dưới 1 phút. Đang uống thuốc hạ áp nhưng không choáng khi đứng dậy: không phải hạ huyết áp tư thế."

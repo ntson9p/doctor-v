@@ -1,0 +1,51 @@
+id: h-palp-007
+set: holdout
+title_vi: "Nữ 33 tuổi mang thai 32 tuần, 2 ngày tim đập nhanh cả khi nghỉ, hụt hơi, đau ngực khi hít sâu, bắp chân trái sưng đau sau chuyến xe 12 giờ"
+narrative_vi: "Chị Tr., 33 tuổi, mang thai con đầu được 32 tuần, ở Đà Nẵng. Một tuần trước chị đi xe khách 12 tiếng về quê. Bắp chân trái sưng, căng đau hơn chân phải từ 4–5 ngày nay, chị tưởng do phù khi mang thai. Hai ngày nay chị thấy tim đập nhanh liên tục, kể cả khi nằm nghỉ, thở hụt hơi hơn mấy tuần trước, đi vài bước đã mệt. Sáng nay chị đau nhói ngực bên trái khi hít sâu. Máy đo ở nhà báo mạch 118 lần/phút, huyết áp 110/70 mmHg. Chị vẫn nói được trọn câu, môi không tím. Chị không ho, không ho ra máu, không sốt, không ngất, không choáng. Chị không đau bụng, không ra máu âm đạo, không đau đầu, mặt và tay không phù, thai vẫn máy bình thường. Chị chưa từng bị cục máu đông, không có bệnh tim, không mắc ung thư."
+patient:
+  age_years: 33
+  sex: female
+  region: central
+  month: 5
+complaint: palpitations
+answers:
+  palpitation_rhythm: fast_regular
+  palpitation_abrupt_onset: absent
+  neck_pounding: absent
+  pulse_measured: n100_150
+  bp_measured: normal
+  pregnant: present
+  gestational_age: ge_20w
+  breathing_difficulty: present
+  es_severe_breathing: absent
+  breathless_on_exertion: present
+  pleuritic_chest_pain: present
+  chest_pain_pressure: absent
+  leg_swelling_one_side: present
+  recent_immobility: present
+  previous_clot: absent
+  active_cancer: absent
+  hemoptysis: absent
+  cough: absent
+  fever: absent
+  fainting_or_near_fainting: absent
+  dizziness: absent
+  abdominal_pain: absent
+  vaginal_bleeding: absent
+  headache: absent
+  edema_face_hands: absent
+  panic_fear: absent
+  pallor: absent
+  known_heart_disease: absent
+default_unmentioned: absent
+expected:
+  condition: pulmonary_embolism
+  acceptable: []
+  triage: 2
+source:
+  basis: "Thuyên tắc phổi ở phụ nữ mang thai, biểu hiện chủ yếu là hồi hộp: tim nhanh cả khi nghỉ (mạch 118), khó thở tăng, đau ngực khi hít sâu, sưng đau một bên bắp chân, sau chuyến xe 12 giờ; triệu chứng dễ bị coi là do mang thai. NHS DVT: đang mang thai, đi xe trên 4 giờ là yếu tố nguy cơ; triệu chứng huyết khối tĩnh mạch sâu kèm khó thở hoặc đau ngực thì gọi 999 hoặc đến cấp cứu. NHS Pulmonary embolism: khó thở, đau ngực tăng khi hít vào, tim đập rất nhanh thì gọi 999 hoặc đến cấp cứu. Huyết áp bình thường, không ngất, nói được trọn câu nên mức 2."
+  references:
+    - "https://www.nhs.uk/conditions/deep-vein-thrombosis-dvt/"
+    - "https://www.nhs.uk/conditions/pulmonary-embolism/"
+author: "agent:vignette-holdout"
+notes_vi: "Ca khó ở phụ nữ mang thai: khó thở, phù chân hay gặp khi mang thai nên dễ bị bỏ qua."

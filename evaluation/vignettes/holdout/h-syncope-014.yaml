@@ -1,0 +1,44 @@
+id: h-syncope-014
+set: holdout
+title_vi: "Nam 76 tuổi được nói hẹp van tim nhưng không tái khám, leo cầu thang thì tức ngực, choáng, tối sầm mắt, khuỵu xuống; hay hụt hơi khi gắng sức"
+narrative_vi: "Ông H., 76 tuổi, ở Nha Trang (Khánh Hòa). Ba năm trước đi khám, bác sĩ nói ông bị hẹp van tim, nghe tim có tiếng thổi, hẹn tái khám nhưng ông không đi. Mấy tháng nay ông đi bộ nhanh hoặc leo dốc là hụt hơi, phải dừng lại nghỉ. Sáng nay đang leo cầu thang lên tầng 3 thăm cháu, ông thấy tức nặng giữa ngực, choáng váng, tối sầm mắt, khuỵu xuống bậc thang; con trai đỡ kịp. Ông không mất ý thức hẳn; ngồi nghỉ khoảng 5 phút thì hết tức ngực, hết choáng. Hiện ông ngồi nghỉ thấy bình thường, không khó thở, không đau ngực. Ông không thấy tim đập nhanh hay đập loạn, không vã mồ hôi, không yếu tay chân, không nói khó. Ông không bị tăng huyết áp, không bị đái tháo đường, không hút thuốc; trong nhà không ai đột tử."
+patient:
+  age_years: 76
+  sex: male
+  region: central
+  month: 8
+complaint: syncope
+answers:
+  syncope_trigger: exertion
+  syncope_warning: prodrome
+  not_recovered_after_faint: absent
+  known_heart_disease: present
+  breathless_on_exertion: present
+  chest_pain_pressure: present
+  es_crushing_chest_pain: absent
+  pain_radiates_arm_jaw: absent
+  breathing_difficulty: absent
+  palpitations: absent
+  cold_sweat: absent
+  confusion: absent
+  es_stroke_signs: absent
+  es_unresponsive_or_seizing: absent
+  family_sudden_death: absent
+  similar_episodes_before: absent
+  hypertension_known: absent
+  diabetes: absent
+  smoker: absent
+  edema_face_hands: absent
+default_unmentioned: absent
+expected:
+  condition: other
+  acceptable: []
+  triage: 2
+source:
+  basis: "Hẹp van động mạch chủ có triệu chứng (không có trong danh mục): suýt ngất khi gắng sức kèm tức ngực khi gắng sức, hụt hơi khi gắng sức tăng dần, đã được nói là hẹp van tim có tiếng thổi. MSD Aortic stenosis: hẹp van động mạch chủ tiến triển gây ngất khi gắng sức, đau thắt ngực, khó thở; khi đã có triệu chứng, thời gian sống trung bình còn khoảng 3 năm nếu không thay van, khoảng 13% tử vong là đột tử. ESC 2018: ngất khi gắng sức, bệnh tim cấu trúc là đặc điểm nguy cơ cao; suýt ngất xử trí như ngất. NHS Fainting: ngất khi đang gắng sức thì gọi 999. Không mất ý thức hẳn, đã hồi phục, ổn định lúc nghỉ nên mức 2."
+  references:
+    - "https://www.msdmanuals.com/professional/cardiovascular-disorders/valvular-disorders/aortic-stenosis"
+    - esc-syncope-2018
+    - nhs-fainting
+author: "agent:vignette-holdout"
+notes_vi: "Ngoài danh mục. Tức ngực khi gắng sức đã hết khi nghỉ nhưng mới xảy ra sáng nay nên trả lời 'có'; câu đau thắt ngực dữ dội trả lời 'không'. Danh mục chưa có câu hỏi về bệnh van tim, tiếng thổi ở tim (câu bệnh tim đã biết trả lời 'có')."

@@ -200,7 +200,7 @@
   options:
     - { id: brief_episodes, label_vi: "Từng cơn ngắn, mỗi cơn dưới 1 phút" }
     - { id: long_episodes, label_vi: "Từng cơn, mỗi cơn vài phút đến vài giờ" }
-    - { id: continuous, label_vi: "Liên tục không dứt, mới bắt đầu vài ngày nay" }
+    - { id: continuous, label_vi: "Liên tục không dứt, mới bị vài giờ hoặc vài ngày nay" }
     - { id: chronic, label_vi: "Âm ỉ gần như suốt ngày, đã nhiều tuần" }
   baseline: { brief_episodes: 0.25, long_episodes: 0.3, continuous: 0.2, chronic: 0.25 }
   requires:

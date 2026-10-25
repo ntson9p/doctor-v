@@ -1,0 +1,53 @@
+id: h-syncope-004
+set: holdout
+title_vi: "Nam 78 tuổi uống thuốc huyết áp có lợi tiểu, nửa đêm đứng đi tiểu thì choáng, vã mồ hôi, lả đi nửa phút; mấy tuần hay choáng khi đứng dậy"
+narrative_vi: "Ông B., 78 tuổi, ở Hà Nam, bị tăng huyết áp, đang uống hai loại thuốc huyết áp, trong đó có thuốc lợi tiểu. Đêm qua khoảng 2 giờ sáng ông ngồi dậy đi tiểu; đứng tiểu được một lúc thì thấy choáng váng, tối sầm mắt, vã mồ hôi rồi lả đi. Bà vợ đỡ kịp nên ông không ngã, không đập đầu; ông mê đi khoảng nửa phút rồi tỉnh, nói chuyện bình thường ngay, không co giật, không tè ra quần. Sáng nay ông tỉnh táo, ăn sáng bình thường. Mấy tuần nay ông thỉnh thoảng choáng vài giây khi đứng dậy nhanh, không quay cuồng. Ông không đau ngực, không thấy tim đập nhanh hay đập loạn trước khi ngất, không khó thở, không yếu tay chân, không nói khó, không đau đầu; đi ngoài phân vàng bình thường, tiểu không buốt. Sáng nay con đo huyết áp lúc ngồi được 125/70 mmHg. Trước đây ông chưa từng ngất; trong nhà không ai đột tử."
+patient:
+  age_years: 78
+  sex: male
+  region: north
+  month: 1
+complaint: syncope
+answers:
+  syncope_trigger: toilet_cough
+  syncope_warning: prodrome
+  not_recovered_after_faint: absent
+  dizziness: present
+  dizziness_pattern: brief_episodes
+  vertigo_spinning: absent
+  dizziness_positional: absent
+  dizziness_on_standing: present
+  bp_lowering_meds: present
+  hypertension_known: present
+  bp_measured: normal
+  known_heart_disease: absent
+  diabetes: absent
+  chest_pain_pressure: absent
+  palpitations: absent
+  breathing_difficulty: absent
+  es_stroke_signs: absent
+  transient_neuro_symptoms: absent
+  confusion: absent
+  seizure_recent: absent
+  es_unresponsive_or_seizing: absent
+  black_stool: absent
+  vomiting_blood: absent
+  similar_episodes_before: absent
+  family_sudden_death: absent
+  headache: absent
+  pallor: absent
+  fever: absent
+  dysuria: absent
+default_unmentioned: absent
+expected:
+  condition: reflex_orthostatic_syncope
+  acceptable: []
+  triage: 4
+source:
+  basis: "Ngất tình huống khi đi tiểu kết hợp hạ huyết áp tư thế do thuốc hạ áp, lợi tiểu ở người cao tuổi: ngất khi vừa ngồi dậy, đứng đi tiểu lúc nửa đêm, có tiền triệu choáng, tối sầm mắt, vã mồ hôi, tỉnh nhanh, không bị thương; mấy tuần nay hay choáng khi đứng dậy. ESC 2018: ngất khi đi tiểu, khi vừa đứng dậy là đặc điểm nguy cơ thấp; ca này không có đặc điểm nguy cơ cao (không đau ngực, khó thở, hồi hộp trước ngất, không ngất khi gắng sức hay khi nằm, không bệnh tim, không phân đen). NHS Fainting: đi khám bác sĩ (không khẩn) để tìm nguyên nhân. NHS Low blood pressure: một số thuốc gây hạ huyết áp; hay choáng, ngất thì đi khám bác sĩ. Mức 4 để bác sĩ xem lại thuốc."
+  references:
+    - esc-syncope-2018
+    - nhs-fainting
+    - "https://www.nhs.uk/conditions/low-blood-pressure-hypotension/"
+author: "agent:vignette-holdout"
+notes_vi: "Ca khó ở người cao tuổi: tuổi cao, đang uống thuốc tim mạch nhưng không có đặc điểm nguy cơ cao theo ESC 2018."

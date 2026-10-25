@@ -1,0 +1,47 @@
+id: h-syncope-012
+set: holdout
+title_vi: "Bé trai 9 tuổi, cả nhà đốt than sưởi trong phòng kín ở Sa Pa, sáng đứng dậy thì ngã gục, giờ lơ mơ, nôn; bố mẹ, chị cũng đau đầu"
+narrative_vi: "Bé T., trai, 9 tuổi, ở Sa Pa (Lào Cai). Đêm qua trời rét đậm, cả nhà 4 người ngủ chung một phòng đóng kín cửa, đốt một chậu than củi để sưởi. Sáng nay khoảng 6 giờ mẹ gọi bé dậy; bé vừa đứng lên thì ngã gục, lịm đi một lúc. Hiện bé đã mở mắt nhưng lơ mơ, gọi mới đáp, trả lời chậm, lẫn lộn, kêu đau đầu, buồn nôn, đã nôn 2 lần. Bố mẹ và chị gái 13 tuổi cũng đau đầu, chóng mặt, buồn nôn; chị gái nôn 1 lần. Cả nhà đã ra ngoài sân. Bé không sốt, không co giật, không khó thở, không đau bụng, không tiêu chảy, cổ không cứng."
+patient:
+  age_years: 9
+  sex: male
+  region: north
+  month: 1
+complaint: syncope
+answers:
+  syncope_trigger: standing_up
+  syncope_warning: unknown
+  not_recovered_after_faint: present
+  co_exposure: present
+  others_same_symptoms: present
+  unsafe_food_shared: present
+  drowsy_hard_to_wake: present
+  confusion: present
+  headache: present
+  headache_course: first_time
+  headache_location: whole_head
+  headache_duration: lt_4h
+  headache_thunderclap: absent
+  nausea: present
+  vomiting: present
+  persistent_vomiting: absent
+  es_unresponsive_or_seizing: absent
+  seizure_recent: absent
+  fever: absent
+  breathing_difficulty: absent
+  neck_stiffness: absent
+  diarrhea: absent
+  abdominal_pain: absent
+default_unmentioned: absent
+expected:
+  condition: carbon_monoxide_poisoning
+  acceptable: []
+  triage: 1
+source:
+  basis: "Ngộ độc khí CO cả gia đình do đốt than củi sưởi trong phòng kín mùa đông vùng núi phía Bắc: trẻ ngất khi đứng dậy, sau đó lơ mơ, lẫn lộn, đau đầu, nôn; cả nhà cùng đau đầu, chóng mặt, buồn nôn. NHS Carbon monoxide poisoning: đã phơi nhiễm mà lú lẫn đột ngột hoặc mất ý thức thì gọi 999 hoặc đến cấp cứu. Trung tâm Chống độc Bệnh viện Bạch Mai (VTC News, Nhân Dân 01/2026): triệu chứng đau đầu, nôn, lơ mơ đến hôn mê; nôn, đau bụng dễ nhầm với ngộ độc thực phẩm; mở cửa, đưa ra chỗ thoáng và gọi cấp cứu. Mức 1."
+  references:
+    - nhs-carbon-monoxide-poisoning
+    - "https://vtcnews.vn/dong-kin-cua-suoi-than-chong-tu-vong-vo-nguy-kich-vi-ngo-doc-khi-co-ar1000521.html"
+    - "https://nhandan.vn/ocop/hiem-hoa-tu-dot-than-cui-trong-khong-gian-kin-de-suoi-am-post939642.html"
+author: "agent:vignette-holdout"
+notes_vi: "Ca cấp cứu ở trẻ em. Chị gái (ăn cùng) cũng nôn nên câu 'người ăn cùng cũng bị' trả lời 'có', dễ dẫn sang ngộ độc thức ăn như Trung tâm Chống độc Bạch Mai cảnh báo. Trẻ đang lơ mơ nên không kể được dấu hiệu trước khi ngất. Bé vẫn mở mắt khi gọi nên câu bất tỉnh trả lời 'không'."

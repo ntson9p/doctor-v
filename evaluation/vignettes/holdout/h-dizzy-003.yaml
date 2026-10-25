@@ -1,0 +1,45 @@
+id: h-dizzy-003
+set: holdout
+title_vi: "Nam 38 tuổi, 10 ngày sau cảm, chóng mặt quay cuồng liên tục từ hôm qua, nôn, đi xiêu nhưng vẫn tự đi được"
+narrative_vi: "Anh T., 38 tuổi, nhân viên văn phòng ở Đà Nẵng, không có bệnh mạn tính, không hút thuốc. Khoảng 10 ngày trước anh bị cảm, sổ mũi, đau họng, đã khỏi. Sáng hôm qua vừa ngủ dậy anh thấy mọi vật quay tròn liên tục, không dứt; quay đầu hoặc trở mình thì nặng hơn, nằm yên nhắm mắt đỡ hơn một chút nhưng không hết. Anh buồn nôn, nôn 3 lần từ hôm qua, vẫn uống được nước. Anh đi chậm, hơi xiêu sang trái nhưng vẫn tự đứng dậy và tự đi vào nhà vệ sinh, không cần vịn hay người đỡ. Anh không đau đầu, không ù tai, không nghe kém, không đau tai, không nhìn đôi, không nói khó, không tê yếu tay chân, không sốt, không ngất. Trước đây anh chưa từng bị chóng mặt."
+patient:
+  age_years: 38
+  sex: male
+  region: central
+  month: 4
+complaint: dizziness
+answers:
+  dizziness_pattern: continuous
+  vertigo_spinning: present
+  dizziness_positional: present
+  nausea: present
+  vomiting: present
+  persistent_vomiting: absent
+  sudden_loss_of_balance: present
+  cannot_walk_unaided: absent
+  recent_viral_illness: present
+  hearing_loss_tinnitus: absent
+  ear_pain: absent
+  headache: absent
+  vision_loss_or_double: absent
+  transient_neuro_symptoms: absent
+  es_stroke_signs: absent
+  fever: absent
+  fainting_or_near_fainting: absent
+  similar_episodes_before: absent
+  hypertension_known: absent
+  diabetes: absent
+  smoker: absent
+default_unmentioned: absent
+expected:
+  condition: vestibular_neuritis
+  acceptable: []
+  triage: 3
+source:
+  basis: "Viêm dây thần kinh tiền đình điển hình: hội chứng tiền đình cấp (chóng mặt quay liên tục hơn 24 giờ, buồn nôn, nôn, đi không vững nhưng vẫn tự đi được) khởi phát lúc ngủ dậy, khoảng 10 ngày sau nhiễm vi rút đường hô hấp, không nghe kém, không dấu hiệu thần kinh. NHS Labyrinthitis: thường do vi rút sau cảm cúm; viêm dây thần kinh tiền đình không có nghe kém, ù tai; triệu chứng có thể nặng hơn khi ngủ dậy. GRACE-3: hội chứng tiền đình cấp cần người được đào tạo khám HINTS để phân biệt với đột quỵ. NHS Vertigo: chóng mặt quay kèm nôn hoặc rất buồn nôn thì khám khẩn (mức 3); người trẻ, không có yếu tố nguy cơ mạch máu, tự đi được, không có dấu hiệu cần gọi cấp cứu."
+  references:
+    - grace3-dizziness-2023
+    - nhs-vertigo
+    - "https://www.nhs.uk/conditions/labyrinthitis/"
+author: "agent:vignette-holdout"
+notes_vi: "Trả lời 'có' câu chóng mặt khi trở mình vì cử động đầu làm chóng mặt nặng thêm, người bị hội chứng tiền đình cấp hay kể như vậy; điểm khác chóng mặt tư thế là chóng mặt liên tục cả khi nằm yên."

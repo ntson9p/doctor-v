@@ -1,0 +1,48 @@
+id: h-palp-004
+set: holdout
+title_vi: "Nữ 24 tuổi, 3 tháng nay nhiều cơn đột ngột tim đập nhanh, run, tê quanh miệng, sợ hãi như sắp chết, mỗi cơn 10–20 phút; đã khám tim bình thường"
+narrative_vi: "Chị K., 24 tuổi, nhân viên văn phòng ở TP.HCM. Ba tháng nay chị hay lên những cơn đột ngột: tim đập nhanh thình thịch, run tay, vã mồ hôi, chóng mặt, tê bì quanh miệng và đầu ngón tay, thở gấp, sợ hãi dữ dội như sắp chết. Mỗi cơn kéo dài khoảng 10–20 phút rồi dịu dần. Tối nay vừa có một cơn lúc đang ngồi xem điện thoại; đến giờ (1 tiếng sau) đã hết hẳn, thở bình thường, chỉ còn mệt và lo. Hai tháng trước chị từng vào cấp cứu một lần trong cơn, được đo điện tim và xét nghiệm, bác sĩ nói tim bình thường. Dạo này công việc căng thẳng, chị ngủ kém. Chị không đau ngực, không ngất, không uống thuốc gì, không có thai, không sụt cân, không sợ nóng, cổ không to; trong nhà không ai bị bệnh tim hay đột tử."
+patient:
+  age_years: 24
+  sex: female
+  region: south
+  month: 10
+complaint: palpitations
+answers:
+  palpitation_rhythm: fast_regular
+  palpitation_abrupt_onset: absent
+  neck_pounding: absent
+  panic_fear: present
+  perioral_tingling: present
+  tremor: present
+  cold_sweat: present
+  dizziness: present
+  dizziness_pattern: long_episodes
+  vertigo_spinning: absent
+  dizziness_positional: absent
+  similar_episodes_before: present
+  stress_poor_sleep: present
+  breathing_difficulty: absent
+  chest_pain_pressure: absent
+  fainting_or_near_fainting: absent
+  heat_intolerance: absent
+  weight_loss_unintended: absent
+  goiter_visible: absent
+  known_heart_disease: absent
+  family_sudden_death: absent
+  missed_meal: absent
+  pregnant: absent
+  missed_period: absent
+  es_self_harm: absent
+default_unmentioned: absent
+expected:
+  condition: panic_disorder
+  acceptable: []
+  triage: 4
+source:
+  basis: "Rối loạn hoảng sợ điển hình: các cơn tái diễn đột ngột với tim nhanh, run, vã mồ hôi, chóng mặt, tê quanh miệng và đầu ngón tay, thở gấp, sợ hãi dữ dội như sắp chết, mỗi cơn 10–20 phút rồi tự hết; đã được khám cấp cứu, điện tim bình thường; đang căng thẳng, ngủ kém. NHS Panic disorder: các triệu chứng trên là triệu chứng cơn hoảng sợ, phần lớn cơn kéo dài 5–20 phút; có triệu chứng rối loạn hoảng sợ thì đi khám bác sĩ. NHS Heart palpitations: hồi hộp đã hết, vẫn khỏe nhưng hay tái lại thì đi khám bác sĩ (không khẩn). Hiện không khó thở, không đau ngực, không ngất nên mức 4."
+  references:
+    - "https://www.nhs.uk/mental-health/conditions/panic-disorder/"
+    - nhs-heart-palpitations
+author: "agent:vignette-holdout"
+notes_vi: "Ca điển hình. Thở gấp trong cơn đã hết nên câu khó thở (hỏi tình trạng hiện tại) trả lời 'không'; cơn dịu dần chứ không dừng đột ngột. Danh mục chưa có câu hỏi về điện tim, xét nghiệm đã làm."

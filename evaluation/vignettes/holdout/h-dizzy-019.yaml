@@ -1,0 +1,53 @@
+id: h-dizzy-019
+set: holdout
+title_vi: "Nam 50 tuổi phụ hồ làm ngoài nắng 39°C, chóng mặt, đau đầu, vã mồ hôi, chuột rút; nghỉ chỗ mát, uống oresol 30 phút thì đỡ hẳn"
+narrative_vi: "Anh C., 50 tuổi, phụ hồ ở Hà Tĩnh, không có bệnh mạn tính. Trưa nay trời nắng gắt, nhiệt độ ngoài trời khoảng 39°C, anh làm việc ngoài công trình từ sáng, uống ít nước. Khoảng 11 giờ anh thấy chóng mặt, choáng váng, đau đầu nhẹ, buồn nôn, ra mồ hôi rất nhiều, da tái ẩm, chuột rút bắp chân, người mệt rã. Anh không ngất, không thấy sắp ngất, không thấy mọi vật quay tròn. Anh được đưa vào chỗ râm mát, cởi bớt áo, chườm khăn ướt, quạt và uống khoảng 1 lít oresol. Khoảng 30 phút sau anh đỡ hẳn, hết chóng mặt, hết chuột rút, chỉ còn hơi mệt. Anh tỉnh táo, nói chuyện bình thường, đi lại vững, không nôn, không khó thở, không đau ngực, không hồi hộp. Anh không uống rượu bia hôm nay."
+patient:
+  age_years: 50
+  sex: male
+  region: central
+  month: 6
+complaint: dizziness
+answers:
+  dizziness_pattern: long_episodes
+  vertigo_spinning: absent
+  dizziness_positional: absent
+  dizziness_on_standing: absent
+  headache: present
+  headache_course: first_time
+  headache_duration: lt_4h
+  headache_location: whole_head
+  headache_severity: mild
+  headache_thunderclap: absent
+  nausea: present
+  vomiting: absent
+  cold_sweat: present
+  myalgia: present
+  fatigue: present
+  fever: absent
+  fainting_or_near_fainting: absent
+  confusion: absent
+  drowsy_hard_to_wake: absent
+  seizure_recent: absent
+  chest_pain_pressure: absent
+  breathing_difficulty: absent
+  palpitations: absent
+  es_stroke_signs: absent
+  cannot_walk_unaided: absent
+  sudden_loss_of_balance: absent
+  similar_episodes_before: absent
+  missed_meal: absent
+  hypertension_known: absent
+  diabetes: absent
+  heavy_alcohol: absent
+default_unmentioned: absent
+expected:
+  condition: other
+  acceptable: []
+  triage: 5
+source:
+  basis: "Kiệt sức do nóng (không có trong danh mục): làm việc nặng ngoài nắng nóng, uống ít nước; chóng mặt, đau đầu, buồn nôn, vã nhiều mồ hôi, da tái ẩm, chuột rút, mệt; đỡ hẳn sau khoảng 30 phút nghỉ chỗ mát, làm mát và uống bù nước, tỉnh táo hoàn toàn. NHS Heat exhaustion and heatstroke: kiệt sức do nóng thường không cần cấp cứu nếu hạ nhiệt được trong 30 phút; gọi 999 khi vẫn không đỡ sau 30 phút nghỉ, làm mát, uống nước, hoặc có dấu hiệu say nóng (sốt rất cao, da nóng không ra mồ hôi, tim nhanh, thở nhanh, lú lẫn, co giật, mất ý thức). Mức 5."
+  references:
+    - "https://www.nhs.uk/conditions/heat-exhaustion-heatstroke/"
+author: "agent:vignette-holdout"
+notes_vi: "Ngoài danh mục. Danh mục chưa có câu hỏi về làm việc hoặc ở nơi nắng nóng. Chuột rút được trả lời ở câu đau nhức cơ."

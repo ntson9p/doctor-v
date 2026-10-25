@@ -1,0 +1,41 @@
+id: h-syncope-010
+set: holdout
+title_vi: "Nam 15 tuổi đang chạy nước rút đá bóng thì ngã gục, bất tỉnh 30 giây; trước đó tim đập dồn dập; bố đột tử năm 36 tuổi"
+narrative_vi: "Em H., nam, 15 tuổi, học lớp 10 ở Hà Nội, chơi trong đội bóng đá của trường, không có bệnh gì đã biết. Chiều nay đang chạy nước rút trong trận đấu, em đột ngột ngã gục xuống sân. Bạn bè kể em bất tỉnh khoảng 30 giây, không co giật, rồi tự tỉnh. Em kể ngay trước đó thấy tim đập rất nhanh, dồn dập vài giây rồi tối sầm. Sau khi tỉnh em nói chuyện bình thường, chỉ mệt, trầy xước đầu gối. Hai tháng trước em cũng một lần choáng, tối sầm mắt suýt ngất khi đang chạy bền. Bố em mất đột ngột năm 36 tuổi khi đang ngủ, không rõ nguyên nhân. Em không đau ngực, không khó thở, không đau đầu, không dùng thuốc hay chất kích thích nào, hôm nay vẫn ăn uống bình thường."
+patient:
+  age_years: 15
+  sex: male
+  region: north
+  month: 10
+complaint: syncope
+answers:
+  syncope_trigger: exertion
+  syncope_warning: palpitations_first
+  not_recovered_after_faint: absent
+  family_sudden_death: present
+  similar_episodes_before: present
+  palpitations: present
+  palpitation_rhythm: fast_regular
+  chest_pain_pressure: absent
+  breathing_difficulty: absent
+  es_unresponsive_or_seizing: absent
+  seizure_recent: absent
+  confusion: absent
+  headache: absent
+  dizziness: absent
+  missed_meal: absent
+  diabetes: absent
+  smoker: absent
+  heavy_alcohol: absent
+default_unmentioned: absent
+expected:
+  condition: cardiac_arrhythmia
+  acceptable: []
+  triage: 1
+source:
+  basis: "Ngất khi gắng sức ở vận động viên trẻ, nghi do rối loạn nhịp thất có tính gia đình (ví dụ hội chứng QT dài): ngất đột ngột khi đang chạy nước rút, hồi hộp ngay trước ngất, từng suýt ngất khi gắng sức, bố đột tử khi còn trẻ. NHS Fainting: ngất khi đang tập luyện, gắng sức thì gọi 999. ESC 2018: ngất khi gắng sức, hồi hộp đột ngột rồi ngất ngay sau đó là đặc điểm nguy cơ cao; gia đình có người đột tử khi còn trẻ là yếu tố nguy cơ; ngất trong lúc gắng sức thường do tim. Mức 1."
+  references:
+    - nhs-fainting
+    - esc-syncope-2018
+author: "agent:vignette-holdout"
+notes_vi: "Ca cấp cứu ở thiếu niên. Danh mục không hỏi bệnh tim đã biết ở người dưới 18 tuổi. Nguyên nhân thật cũng có thể là bệnh cơ tim phì đại gây rối loạn nhịp thất; ca này xếp vào rối loạn nhịp tim."

@@ -1,0 +1,46 @@
+id: h-dizzy-001
+set: holdout
+title_vi: "Nữ 58 tuổi, từng cơn quay cuồng dưới 1 phút mỗi khi trở mình, nằm xuống, ngửa cổ"
+narrative_vi: "Bà H., 58 tuổi, nội trợ ở Hải Phòng, đã mãn kinh. Sáng nay vừa trở mình sang phải trên giường, bà thấy mọi vật quay tròn dữ dội khoảng 20–30 giây rồi hết. Từ sáng đến giờ bà bị thêm nhiều cơn giống vậy mỗi khi nằm xuống, ngồi dậy, cúi nhặt đồ hoặc ngửa cổ phơi quần áo, mỗi cơn dưới 1 phút. Trong cơn bà buồn nôn nhưng không nôn. Giữa các cơn bà đi lại bình thường, chỉ sợ quay đầu nhanh. Bà không đau đầu, không ù tai, không nghe kém, không nhìn đôi, không nói khó, không tê yếu tay chân, không choáng tối sầm mắt khi đứng dậy. Hai năm trước bà từng bị một đợt giống hệt, tự hết sau khoảng 2 tuần. Bà không bị tăng huyết áp, không bị đái tháo đường, không uống thuốc gì."
+patient:
+  age_years: 58
+  sex: female
+  region: north
+  month: 3
+complaint: dizziness
+answers:
+  dizziness_pattern: brief_episodes
+  vertigo_spinning: present
+  dizziness_positional: present
+  dizziness_on_standing: absent
+  nausea: present
+  vomiting: absent
+  similar_episodes_before: present
+  sudden_loss_of_balance: absent
+  cannot_walk_unaided: absent
+  hearing_loss_tinnitus: absent
+  headache: absent
+  vision_loss_or_double: absent
+  transient_neuro_symptoms: absent
+  es_stroke_signs: absent
+  fainting_or_near_fainting: absent
+  palpitations: absent
+  recent_viral_illness: absent
+  hypertension_known: absent
+  bp_lowering_meds: absent
+  diabetes: absent
+  pregnant: absent
+  missed_period: absent
+default_unmentioned: absent
+expected:
+  condition: benign_paroxysmal_positional_vertigo
+  acceptable: []
+  triage: 4
+source:
+  basis: "Chóng mặt tư thế kịch phát lành tính điển hình: cơn quay cuồng ngắn dưới 1 phút, khởi phát khi đổi tư thế đầu (trở mình, nằm xuống, ngửa cổ), giữa các cơn bình thường, không có dấu hiệu thần kinh, đã từng có đợt tương tự. GRACE-3 xếp vào nhóm cơn chóng mặt có yếu tố khởi phát: làm nghiệm pháp Dix–Hallpike, không chụp chiếu thường quy, điều trị bằng nghiệm pháp Epley. NHS Vertigo: chóng mặt quay không hết hoặc hay tái lại thì đi khám bác sĩ (không khẩn); không có dấu hiệu cần khám khẩn (đau đầu dữ dội, nôn nhiều, sốt cao) hay cấp cứu (nhìn đôi, nghe kém, nói khó, tê yếu tay chân)."
+  references:
+    - grace3-dizziness-2023
+    - nhs-vertigo
+    - https://www.aafp.org/pubs/afp/issues/2017/0201/p154.html
+author: "agent:vignette-holdout"
+notes_vi: "Ca điển hình. Ngồi dậy cũng gây cơn quay vì đầu đổi tư thế, nhưng người bệnh không bị choáng, tối sầm mắt khi đứng dậy nên trả lời 'không' câu hạ huyết áp tư thế."

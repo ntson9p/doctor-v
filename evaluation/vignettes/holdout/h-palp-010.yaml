@@ -1,0 +1,51 @@
+id: h-palp-010
+set: holdout
+title_vi: "Nữ 48 tuổi, 3 tuần nay nhiều lần mỗi ngày tim hẫng một nhịp rồi đập thịch mạnh, nhất là lúc nằm nghỉ; vẫn khỏe, mạch đo được 76"
+narrative_vi: "Chị H., 48 tuổi, kế toán ở Ninh Bình, kinh nguyệt vẫn đều. Ba tuần nay chị thấy tim hay hẫng một nhịp rồi đập thịch mạnh một cái, có lúc như tim lộn một vòng trong ngực, mỗi lần 1–2 giây; ngày bị nhiều lần, nhất là buổi tối lúc nằm nghỉ hoặc sau khi uống trà đặc; khi đi bộ nhanh, làm việc thì lại ít thấy. Dạo này chị lo lắng chuyện công việc, ngủ kém. Chị đo bằng máy đo huyết áp đúng lúc đang thấy hẫng nhịp: mạch 76 lần/phút, huyết áp 125/80 mmHg, máy thỉnh thoảng báo nhịp không đều. Chị vẫn khỏe, leo cầu thang không mệt hơn trước, không đau ngực, không khó thở, không choáng, không ngất, không có cơn tim đập nhanh kéo dài. Chị không sụt cân, không run tay, không sợ nóng, cổ không to, không xanh xao. Chị không có bệnh tim, không bị tăng huyết áp, không uống rượu, không hút thuốc; trong nhà không ai bị bệnh tim hay đột tử."
+patient:
+  age_years: 48
+  sex: female
+  region: north
+  month: 7
+complaint: palpitations
+answers:
+  palpitation_rhythm: skipped_beats
+  palpitation_abrupt_onset: absent
+  neck_pounding: absent
+  pulse_measured: n40_100
+  bp_measured: normal
+  similar_episodes_before: present
+  stress_poor_sleep: present
+  chest_pain_pressure: absent
+  breathing_difficulty: absent
+  fainting_or_near_fainting: absent
+  dizziness: absent
+  breathless_on_exertion: absent
+  family_sudden_death: absent
+  known_heart_disease: absent
+  hypertension_known: absent
+  weight_loss_unintended: absent
+  tremor: absent
+  heat_intolerance: absent
+  goiter_visible: absent
+  eyes_bulging: absent
+  panic_fear: absent
+  perioral_tingling: absent
+  pallor: absent
+  anemia_known: absent
+  heavy_periods: absent
+  pregnant: absent
+  missed_period: absent
+  heavy_alcohol: absent
+  smoker: absent
+default_unmentioned: absent
+expected:
+  condition: premature_beats
+  acceptable: []
+  triage: 4
+source:
+  basis: "Ngoại tâm thu điển hình: cảm giác tim hẫng một nhịp rồi đập mạnh một cái, mỗi lần 1–2 giây, nhiều lần mỗi ngày trong 3 tuần, hay gặp lúc nghỉ ngơi, sau uống trà đặc, khi căng thẳng, ít đi khi gắng sức; mạch đo lúc có triệu chứng bình thường; không có triệu chứng kèm, không bệnh tim, không tiền sử gia đình. NHS Heart palpitations: cảm giác hẫng hoặc thêm nhịp, đập mạnh là kiểu hồi hộp thường gặp, thường vô hại; nguyên nhân hay gặp là căng thẳng, lo âu, thiếu ngủ, cà phê; đã hồi hộp, vẫn khỏe nhưng hay tái lại hoặc dày hơn thì đi khám bác sĩ (không khẩn) để ghi điện tim; gọi cấp cứu chỉ khi kèm đau ngực, khó thở, choáng hoặc ngất. Mức 4."
+  references:
+    - nhs-heart-palpitations
+author: "agent:vignette-holdout"
+notes_vi: "Ca điển hình của ngoại tâm thu cần đi khám vì tái diễn nhiều tuần; không có dấu hiệu gợi ý cường giáp, thiếu máu hay rối loạn nhịp nhanh."

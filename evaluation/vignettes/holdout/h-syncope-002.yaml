@@ -1,0 +1,49 @@
+id: h-syncope-002
+set: holdout
+title_vi: "Nữ 74 tuổi uống gliclazide, 1 tuần ăn rất ít vì viêm họng, sáng nay lả đi trên ghế, vã mồ hôi, nói lẫn lộn; uống sữa đường thì tỉnh"
+narrative_vi: "Bà S., 74 tuổi, ở Thái Bình, bị đái tháo đường típ 2, uống gliclazide và metformin nhiều năm. Một tuần nay bà bị viêm họng, nuốt đau, ăn rất ít, mỗi bữa vài thìa cháo, nhưng vẫn uống thuốc tiểu đường đều. Sáng nay khoảng 6 giờ, trước bữa sáng, con gái thấy bà ngồi lả trên ghế, vã mồ hôi, run tay, nói năng lẫn lộn, gọi hỏi trả lời chậm, suýt ngã khỏi ghế. Con gái cho bà uống một cốc sữa pha đường; khoảng 15 phút sau bà tỉnh táo hẳn, nói chuyện bình thường, nhận ra mọi người, hiện chỉ còn mệt. Hai buổi sáng trước bà cũng có lúc vã mồ hôi, run, mệt, ăn xong thì đỡ. Bà không sốt, không đau ngực, không khó thở, không thấy tim đập nhanh, không yếu tay chân, không méo miệng, không co giật. Nhà không có máy đo đường huyết."
+patient:
+  age_years: 74
+  sex: female
+  region: north
+  month: 10
+complaint: syncope
+answers:
+  syncope_trigger: no_trigger
+  syncope_warning: prodrome
+  not_recovered_after_faint: absent
+  diabetes: present
+  on_glucose_lowering_meds: present
+  glucose_measured: not_measured
+  missed_meal: present
+  better_after_sugar: present
+  similar_episodes_before: present
+  cold_sweat: present
+  tremor: present
+  confusion: present
+  drowsy_hard_to_wake: absent
+  fatigue: present
+  loss_of_appetite: present
+  sore_throat: present
+  fever: absent
+  es_unresponsive_or_seizing: absent
+  es_stroke_signs: absent
+  seizure_recent: absent
+  chest_pain_pressure: absent
+  breathing_difficulty: absent
+  palpitations: absent
+  hypertension_known: absent
+  known_heart_disease: absent
+default_unmentioned: absent
+expected:
+  condition: hypoglycemia
+  acceptable: []
+  triage: 2
+source:
+  basis: "Hạ đường huyết do sulfonylurea (gliclazide) ở người cao tuổi ăn kém: vã mồ hôi, run, lú lẫn, lả đi trước bữa sáng, tỉnh hẳn sau khi được cho uống sữa đường; hai buổi sáng trước cũng có cơn nhẹ. NHS Low blood sugar: triệu chứng gồm vã mồ hôi, run, lú lẫn; hay gặp ở người dùng insulin hoặc thuốc như gliclazide; hay bị hạ đường huyết hoặc đã bị hạ đường huyết nặng thì cần được bác sĩ xem lại. Veitch và Clifton-Bligh (MJA 2004): hạ đường huyết do sulfonylurea có thể kéo dài và tái phát quá 24 giờ dù đã điều trị, cần theo dõi đường huyết ít nhất 24 giờ; ở người cao tuổi, lơ mơ, lú lẫn có thể là biểu hiện nổi bật; người không ăn uống được cần chuyển viện khẩn. Đã cần người khác giúp mới hết cơn, vẫn ăn kém và thuốc còn tác dụng nên đến cấp cứu ngay để theo dõi (mức 2)."
+  references:
+    - nhs-hypoglycaemia
+    - "https://www.mja.com.au/journal/2004/180/2/long-acting-sulfonylureas-long-acting-hypoglycaemia"
+    - "https://www.nhs.uk/medicines/gliclazide/side-effects-of-gliclazide/"
+author: "agent:vignette-holdout"
+notes_vi: "Ca khó ở người cao tuổi: biểu hiện chủ yếu là lú lẫn, lả đi. Lú lẫn đã hết sau khi uống sữa đường nhưng mới xảy ra trong giờ qua nên người nhà trả lời 'có'; đến giờ bà đã hồi phục hẳn nên câu chưa hồi phục sau ngất trả lời 'không'. Nhà không có máy đo nên đường huyết là 'Chưa đo'."

@@ -1,0 +1,52 @@
+id: h-palp-005
+set: holdout
+title_vi: "Nữ 35 tuổi, 3 tháng tim đập nhanh cả khi nghỉ, ăn nhiều mà sụt 5 kg, sợ nóng, run tay, cổ to ra, mắt lồi; mạch 112"
+narrative_vi: "Chị L., 35 tuổi, buôn bán ở Thanh Hóa. Ba tháng nay chị thấy tim đập nhanh, đập mạnh gần như cả ngày, kể cả lúc ngồi nghỉ. Chị ăn nhiều hơn trước nhưng sụt 5 kg, hay đổ mồ hôi, sợ nóng (người nhà thấy mát mà chị vẫn bật quạt mạnh), run tay khi cầm đũa, dễ cáu gắt, khó ngủ, đi ngoài 3–4 lần mỗi ngày phân nát. Chồng chị thấy cổ chị to ra phía trước và mắt lồi hơn trước. Máy đo huyết áp ở nhà báo mạch 112 lần/phút, huyết áp 135/70 mmHg. Chị không đau ngực, không ngất, ngồi nghỉ không khó thở; leo cầu thang nhanh mệt hơn trước. Kinh nguyệt ít đi nhưng vẫn đều, chị không có thai. Chị không có bệnh tim, không uống thuốc gì."
+patient:
+  age_years: 35
+  sex: female
+  region: central
+  month: 2
+complaint: palpitations
+answers:
+  palpitation_rhythm: fast_regular
+  palpitation_abrupt_onset: absent
+  neck_pounding: absent
+  pulse_measured: n100_150
+  bp_measured: normal
+  weight_loss_unintended: present
+  heat_intolerance: present
+  tremor: present
+  goiter_visible: present
+  eyes_bulging: present
+  diarrhea: present
+  diarrhea_bloody: absent
+  stress_poor_sleep: present
+  breathless_on_exertion: present
+  fatigue: present
+  loss_of_appetite: absent
+  cold_sweat: absent
+  chest_pain_pressure: absent
+  breathing_difficulty: absent
+  fainting_or_near_fainting: absent
+  panic_fear: absent
+  perioral_tingling: absent
+  similar_episodes_before: absent
+  pregnant: absent
+  missed_period: absent
+  heavy_periods: absent
+  known_heart_disease: absent
+  abdominal_pain: absent
+  fever: absent
+default_unmentioned: absent
+expected:
+  condition: hyperthyroidism
+  acceptable: []
+  triage: 4
+source:
+  basis: "Cường giáp (nghi bệnh Basedow) điển hình: hồi hộp, tim nhanh cả khi nghỉ (mạch 112), sụt cân dù ăn nhiều, sợ nóng, vã mồ hôi, run tay, cáu gắt, khó ngủ, đi ngoài nhiều lần, bướu cổ, mắt lồi. NHS Overactive thyroid: lo âu, cáu gắt, khó ngủ, mệt, sợ nóng, bướu cổ, tim nhanh hoặc không đều, run, sụt cân; có triệu chứng thì đi khám bác sĩ để xét nghiệm chức năng tuyến giáp. AAFP 2016 (Kravets): tăng chuyển hóa gây sụt cân dù ăn nhiều; hồi hộp, nhịp nhanh, run, vã mồ hôi, sợ nóng là triệu chứng cường giao cảm. Không đau ngực, không ngất, không khó thở khi nghỉ nên mức 4."
+  references:
+    - "https://www.nhs.uk/conditions/overactive-thyroid-hyperthyroidism/"
+    - "https://www.aafp.org/pubs/afp/issues/2016/0301/p363.html"
+author: "agent:vignette-holdout"
+notes_vi: "Ca điển hình. Đi ngoài phân nát 3–4 lần mỗi ngày nên câu tiêu chảy trả lời 'có'; mồ hôi nóng do sợ nóng, không phải vã mồ hôi lạnh."
