@@ -1,0 +1,215 @@
+id: reflex_orthostatic_syncope
+names:
+  vi: "Ngất do phản xạ, hạ huyết áp tư thế đứng"
+  vi_common: ["Ngất phế vị", "Cường phế vị", "Tụt huyết áp khi đứng dậy", "Hạ huyết áp do thuốc"]
+  en: "Reflex (vasovagal, situational) syncope and orthostatic hypotension, including drug-induced"
+codes:
+  icd10: "R55"
+  icd10_verified: true
+summary_vi:
+  - "Ngất hoặc choáng do huyết áp, nhịp tim tụt thoáng qua, rồi tự hồi phục hoàn toàn."
+  - "Hay xảy ra khi đứng lâu, ở nơi nóng, khi đau, sợ hãi, hoặc ngay khi vừa đứng dậy."
+  - "Người cao tuổi, người uống thuốc hạ huyết áp hoặc thuốc lợi tiểu dễ bị choáng khi đứng dậy."
+urgency: 4
+cant_miss: false
+specialties: [general_medicine, cardiology]
+priors:
+  - complaint: syncope
+    default: P1
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [soteriades-nejm-2002, romme-car-2008, alboni-jacc-2001, esc-syncope-2018-practical]
+      locator: "Soteriades 2002, Romme 2008, Alboni 2001: tóm tắt; hướng dẫn thực hành ESC 2018: dịch tễ, bảng web 2"
+      reported: "Cộng đồng (Framingham): phế vị 21,2%, hạ huyết áp tư thế 9,4%, do tim 9,5%, không rõ 36,6%. Cấp cứu (Amsterdam): ngất phản xạ 60,2% (73,4% dưới 40 tuổi, 45,3% từ 60 tuổi). Bệnh viện (Ý): qua trung gian thần kinh 58%."
+      population: "Người ngất ở cộng đồng Mỹ, cấp cứu Hà Lan, bệnh viện Ý"
+      note: "Hai lượt trùng mức P1 cho mọi nhóm tuổi. ESC: ngất phản xạ là nguyên nhân hay gặp nhất ở mọi bối cảnh, mọi lứa tuổi; hạ huyết áp tư thế hiếm dưới 40 tuổi, hay gặp ở người rất cao tuổi; chỉ 2–10% người ngất đến cấp cứu, nên ở người tự kiểm tra tỷ lệ còn cao hơn số liệu bệnh viện. Ở người cao tuổi ngất phản xạ ít hơn nhưng hạ huyết áp tư thế (nhất là do thuốc) nhiều hơn, gộp lại vẫn từ 20% trở lên. Chưa có số liệu Việt Nam; cần bác sĩ duyệt."
+  - complaint: dizziness
+    default: P2
+    by_age: { elder_65_74: P1, elder_75p: P1 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [maarsingh-annfammed-2010, bosner-bmcfampract-2018, esc-syncope-2018-practical, nhs-low-blood-pressure]
+      locator: "Maarsingh 2010 tóm tắt; Bösner 2018 bảng 3–4; NHS Low blood pressure"
+      reported: "Người 65–95 tuổi chóng mặt kéo dài: kiểu tiền ngất 69%, nguyên nhân chính do tim mạch 57%, thuốc là nguyên nhân phụ hay gặp nhất 23%. Tuyến ban đầu: tim mạch 3,8–56,8% (48,0% và 56,8% ở hai nghiên cứu ít sai lệch ở người từ 60–65 tuổi)."
+      note: "Hai lượt cùng chọn P2, từ 65 tuổi P1; lượt B hạ trẻ 5–12 tuổi xuống P3 (ước lượng), lượt A giữ P2. Lượt C giữ P2 cho trẻ em: tiền ngất phế vị, choáng khi đứng dậy vẫn là nguyên nhân hay gặp của chóng mặt ở trẻ lớn, cả hai lượt đều không có số liệu riêng. Bösner, Maarsingh không tách hạ huyết áp tư thế khỏi nhóm tim mạch; phần lớn tiền ngất ở người cao tuổi do hạ huyết áp khi đứng, kể cả do thuốc (nhận định). Ước lượng, cần bác sĩ duyệt."
+findings:
+  - finding: syncope_trigger
+    dist: { standing_heat: 0.32, emotion_pain: 0.18, standing_up: 0.25, toilet_cough: 0.08, exertion: 0.02, lying: 0.02, no_trigger: 0.13 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [esc-syncope-2018, esc-syncope-2018-practical, berecki-plosone-2013, nhs-fainting]
+      locator: "ESC 2018 bảng 5, mục 4.2.9; Berecki 2013 bảng 2; NHS Fainting"
+      reported: "Ngất khi gắng sức 2% và khi nằm 2% ở ngất không do tim (Berecki)"
+      note: "Phân bố trong số người đã ngất hoặc suýt ngất; hai lượt gần trùng (chênh dưới 0,02). Lượt C lấy trung bình và đặt gắng sức, khi nằm bằng số liệu Berecki (2%). ESC: ngất phản xạ hay xảy ra khi đứng lâu, nơi nóng, đông người, khi đau, sợ hãi, khi ho, đi tiểu, đi ngoài; hạ huyết áp tư thế xảy ra khi hoặc ngay sau khi đứng dậy; ngất sau khi đã dừng gắng sức hầu như luôn do phản xạ, câu hỏi không tách được nên vẫn có người chọn 'khi đang gắng sức'. Tỷ lệ từng lựa chọn là ước lượng."
+  - finding: syncope_warning
+    dist: { prodrome: 0.75, palpitations_first: 0.07, no_warning: 0.18 }
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [romme-car-2008, berecki-plosone-2013, esc-syncope-2018, delrosso-heart-2008]
+      locator: "Romme 2008 tóm tắt; Berecki 2013 bảng 2; ESC 2018 bảng 5; EGSYS tóm tắt"
+      reported: "Trước cơn ngất phản xạ: da tái 79,9%, choáng váng 73,4%, vã mồ hôi 63,0% (Romme). Có (hoặc kéo dài) tiền triệu 63% ở ngất không do tim so với 39% ở ngất do tim; hồi hộp 11% so với 8% (Berecki)."
+      note: "Phân bố trong số người đã ngất hoặc suýt ngất. Lượt A (0,75/0,05/0,20) và lượt B (0,80/0,07/0,13) lệch nhẹ; lượt C chọn tiền triệu 0,75, 'tim đập nhanh trước' 0,07 (gần số liệu hồi hộp 11% của Berecki, phần còn lại chọn tiền triệu), 'ngất đột ngột' 0,18 vì người cao tuổi và hạ huyết áp tư thế ban đầu ít tiền triệu. EGSYS: không có tiền triệu thần kinh thực vật là yếu tố dự báo ngất do tim."
+  - finding: dizziness_on_standing
+    freq: frequent
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [esc-syncope-2018-practical, esc-syncope-2018, nhs-low-blood-pressure]
+      locator: "Hướng dẫn thực hành ESC 2018 (hạ huyết áp tư thế ban đầu, kinh điển); NHS Low blood pressure (postural hypotension)"
+      note: "Hai lượt trùng mức. Hạ huyết áp tư thế gần như luôn gây choáng ngay khi vừa đứng dậy; ngất phản xạ do cảm xúc, đau, đứng lâu thì không nhất thiết; gộp lại khoảng một nửa. Tỷ lệ nền 0,15."
+  - finding: bp_lowering_meds
+    freq: occasional
+    freq_by_age: { elder_65_74: frequent, elder_75p: frequent }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [esc-syncope-2018-practical, esc-syncope-2018, maarsingh-annfammed-2010]
+      locator: "Hướng dẫn thực hành ESC 2018 bảng web 1 (thuốc vận mạch, lợi tiểu gây hạ huyết áp tư thế); Maarsingh 2010 tóm tắt"
+      note: "Hai lượt cùng chọn occasional, từ 65 tuổi frequent. Lượt A thêm rare/very_rare cho người dưới 45 tuổi; lượt C không giữ: tỷ lệ nền 0,15 của danh mục không đổi theo tuổi, nên mức rare sẽ làm người trẻ đang uống thuốc hạ áp mà ngất bị giảm khả năng hạ huyết áp do thuốc, ngược với ESC (thuốc là nguyên nhân hay gặp nhất của hạ huyết áp tư thế). Thuốc là nguyên nhân phụ ở khoảng một phần tư người cao tuổi chóng mặt (Maarsingh). Ước lượng."
+  - finding: similar_episodes_before
+    freq: frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [berecki-plosone-2013, alboni-jacc-2001, esc-syncope-2018]
+      locator: "Berecki 2013 bảng 2 và phần kết quả; Alboni 2001 tóm tắt; ESC 2018 bảng 5"
+      reported: "Trên 2 cơn: 62% ở ngất không do tim so với 30% ở ngất do tim. Chỉ 1 cơn: 19% (Calgary) đến 66% (Rochester) mọi người ngất."
+      note: "Lượt A very_frequent, lượt B frequent. Lượt C chọn frequent: tỷ lệ từng có cơn trước dao động rất rộng theo bối cảnh (ở Rochester 66% mới ngất lần đầu), và với very_frequent, câu trả lời 'lần đầu' sẽ giảm khả năng ngất phản xạ 4 lần dù ngất lần đầu rất hay gặp. ESC: ngất tái diễn nhiều năm, nhất là bắt đầu trước 40 tuổi, gợi ý ngất phản xạ. Tỷ lệ nền 0,2."
+  - finding: cold_sweat
+    freq: frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [romme-car-2008, berecki-plosone-2013, esc-syncope-2018]
+      locator: "Romme 2008 tóm tắt; Berecki 2013 bảng 2; ESC 2018 bảng 5"
+      reported: "Vã mồ hôi 63,0% trước cơn ngất phản xạ (Romme); 43% ở ngất không do tim so với 18% ở ngất do tim (Berecki)."
+      note: "Hai lượt trùng mức. Nội dung trùng một phần với lựa chọn 'tiền triệu' của câu dấu hiệu trước ngất (hai câu không cùng cụm), nên không chọn very_frequent."
+  - finding: palpitations
+    freq: occasional
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [berecki-plosone-2013, esc-syncope-2018-practical, alboni-jacc-2001]
+      locator: "Berecki 2013 bảng 2; hướng dẫn thực hành ESC 2018 (nhịp nhanh xoang trong ngất phế vị)"
+      reported: "Hồi hộp 11% ở ngất không do tim, 8% ở ngất do tim (khác biệt không có ý nghĩa)."
+      note: "Hai lượt trùng mức. Có ý nghĩa với Ngất và Chóng mặt. Rối loạn nhịp tim được để cao hơn nên câu trả lời 'Có' vẫn nghiêng về rối loạn nhịp; ở Ngất, có hồi hộp thì quy tắc rf_palpitations_danger đã xếp mức 2."
+  - finding: dizziness
+    freq: very_frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [romme-car-2008]
+      locator: "Tóm tắt"
+      reported: "Choáng váng 73,4% trước cơn ngất phản xạ."
+      note: "Chỉ lượt A có; lượt C giữ vì có số liệu. Có ý nghĩa khi triệu chứng chính là Ngất (với Chóng mặt là dấu hiệu ngầm định). Câu trả lời 'không chóng mặt' làm giảm khả năng ngất phản xạ, nghiêng về các nguyên nhân ngất đột ngột như rối loạn nhịp."
+  - finding: fainting_or_near_fainting
+    freq: very_frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [maarsingh-annfammed-2010, esc-syncope-2018-practical]
+      locator: "Maarsingh 2010 tóm tắt"
+      reported: "Tiền ngất (choáng như sắp ngất) là kiểu chóng mặt hay gặp nhất (69%) ở người cao tuổi chóng mặt kéo dài."
+      population: "Người 65–95 tuổi khám bác sĩ gia đình vì chóng mặt (Hà Lan)"
+      note: "Chỉ lượt A có; lượt C giữ. Có ý nghĩa khi triệu chứng chính là Chóng mặt (tỷ lệ nền 0,25). Chóng mặt do tụt huyết áp tư thế hoặc do phản xạ chính là cảm giác choáng như sắp ngất."
+  - finding: vertigo_spinning
+    freq: occasional
+    evidence:
+      tier: A
+      basis: verbal
+      sources: [bosner-bmcfampract-2018, maarsingh-annfammed-2010, nhs-low-blood-pressure]
+      locator: "Bösner 2018 phần kết quả (nguyên nhân của chóng mặt kiểu quay); Maarsingh 2010 tóm tắt"
+      note: "Hai lượt trùng mức. Tính trong số người đã chóng mặt. Bösner: với chóng mặt kiểu quay, bệnh tim mạch không đóng vai trò nào; tụt huyết áp gây choáng, nhìn mờ (NHS). Maarsingh: 44% người cao tuổi có nhiều kiểu chóng mặt, nên không để quá thấp. Mức occasional thấp hơn tỷ lệ nền 0,4 (danh mục đã nâng): trả lời 'Có' làm giảm khả năng bệnh."
+  - finding: dizziness_positional
+    freq: rare
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [esc-syncope-2018-practical, nhs-low-blood-pressure]
+      note: "Hai lượt trùng mức. Tính trong số người đã chóng mặt. Câu hỏi về trở mình, nằm xuống, ngửa cổ và không tính choáng khi đứng dậy; hạ huyết áp gây triệu chứng khi đứng lên. Mức rare thấp hơn tỷ lệ nền 0,1. Ước lượng."
+  - finding: dizziness_pattern
+    dist: { brief_episodes: 0.47, long_episodes: 0.28, continuous: 0.05, chronic: 0.20 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [esc-syncope-2018-practical, maarsingh-annfammed-2010]
+      note: "Tính trong số người đã chóng mặt; trung bình hai lượt (chênh 0,05). Hạ huyết áp tư thế ban đầu gây triệu chứng trong vài giây sau khi đứng (ESC); cơn tiền ngất phế vị kéo dài vài phút; người cao tuổi hạ huyết áp do thuốc có thể choáng mỗi lần đứng dậy trong nhiều tuần (Maarsingh tuyển người chóng mặt từ 2 tuần). Ít khi liên tục không dứt. Ước lượng."
+  - finding: pulse_measured
+    dist: { lt_40: 0.01, n40_100: 0.34, n100_150: 0.045, gt_150: 0.005, not_measured: 0.6 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [esc-syncope-2018-practical, esc-syncope-2018]
+      note: "'Chưa đo' giữ đúng tỷ lệ nền 0,6. Hai lượt gần trùng; lượt C lấy bản của lượt B. Khi đã nghỉ, mạch thường bình thường; trong cơn phế vị mạch có thể chậm, khi đứng có thể hơi nhanh; mạch dưới 40 kéo dài lúc thức là nguy cơ cao (ESC bảng 6) nên để thấp. Ước lượng."
+  - finding: breathing_difficulty
+    freq: rare
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [esc-syncope-2018]
+      locator: "ESC 2018 bảng 6 (mới xuất hiện khó thở: nguy cơ cao loại nặng)"
+      note: "Hai lượt trùng mức. Khó thở mới kèm ngất gợi ý thuyên tắc phổi, bệnh tim; ít gặp ở ngất phản xạ. Mức rare thấp hơn tỷ lệ nền 0,05."
+  - finding: chest_pain_pressure
+    freq: rare
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [esc-syncope-2018, nhs-fainting]
+      locator: "ESC 2018 bảng 6 (mới xuất hiện đau ngực); NHS Fainting (Call 999)"
+      note: "Hai lượt trùng mức. Đau ngực mới kèm ngất là đặc điểm nguy cơ cao, không phải kiểu ngất lành tính. Mức rare thấp hơn tỷ lệ nền 0,05."
+  - finding: abdominal_pain
+    freq: occasional
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [alboni-jacc-2001, esc-syncope-2018]
+      locator: "Alboni 2001 tóm tắt; ESC 2018 bảng 5 (sau cơn đau đột ngột)"
+      note: "Chỉ lượt A có; lượt C giữ. Alboni: khó chịu ở bụng trước khi mất ý thức gợi ý ngất phản xạ; ESC: đau đột ngột là yếu tố khởi phát (ví dụ đau quặn bụng khi đi ngoài). Tần suất là ước lượng. Ngất kèm đau bụng vẫn được quy tắc rf_fainting_with_pain xếp mức 2 để loại trừ chảy máu trong."
+  - finding: not_recovered_after_faint
+    freq: rare
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [esc-syncope-2018, nhs-fainting]
+      locator: "ESC 2018 (ngất tự hồi phục hoàn toàn); NHS Fainting (thường tỉnh lại trong khoảng 30 giây)"
+      note: "Chỉ lượt B có (dấu hiệu thêm sau lượt A); lượt C giữ. Tính trong số người đã ngất hoặc suýt ngất. Mức rare thấp hơn tỷ lệ nền 0,05: trả lời 'Có' làm giảm khả năng ngất phản xạ."
+  - finding: known_heart_disease
+    freq: rare
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [alboni-jacc-2001, berecki-plosone-2013, esc-syncope-2018]
+      locator: "Alboni 2001 tóm tắt; Berecki 2013 bảng 2; ESC 2018 bảng 5"
+      reported: "Có bệnh tim: OR 16 cho ngất do tim; không có bệnh tim loại trừ được ngất do tim ở 97% (Alboni). Bệnh tim cấu trúc 26% ở ngất không do tim tại bệnh viện (Berecki)."
+      note: "Chỉ lượt B có; lượt C giữ. Không có bệnh tim gợi ý ngất phản xạ (ESC). Bệnh tim đã được nói cho biết ít hơn bệnh tim phát hiện khi khám ở bệnh viện; ngất phản xạ phần lớn ở người trẻ. Mức rare thấp hơn tỷ lệ nền 0,05 để câu trả lời 'Có' làm giảm vừa phải khả năng ngất phản xạ; quy tắc rf_syncope_heart_disease đã xếp mức 2. Ước lượng."
+  - finding: pregnant
+    freq: occasional
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [nhs-low-blood-pressure, nhs-fainting]
+      locator: "NHS Low blood pressure (nguyên nhân); NHS Fainting (người có thai trên 28 tuần nằm nghiêng)"
+      note: "Chỉ lượt B có; lượt C giữ. Có thai là một nguyên nhân hạ huyết áp, choáng; có thai bình thường hay gặp hơn nhiều so với chửa ngoài tử cung ở phụ nữ bị choáng, ngất. Không liên kết thì câu trả lời 'có thai' tăng khả năng chửa ngoài tử cung 16 lần so với ngất phản xạ, và người có thai ngất đơn thuần bị xếp mức 2 trong khi NHS chỉ khuyên khám (quy tắc rf_syncope_pregnancy mức 3). Ước khoảng 10% phụ nữ tuổi sinh đẻ bị ngất phản xạ, hạ huyết áp đang có thai; cần bác sĩ duyệt."
+warning_signs: [not_recovered_after_faint, es_unresponsive_or_seizing, chest_pain_pressure, palpitations, breathing_difficulty, black_stool]
+self_care_vi:
+  - "Khi thấy sắp ngất, nằm xuống và kê cao chân, hoặc ngồi cúi đầu xuống giữa hai gối."
+  - "Đứng dậy từ từ: từ nằm sang ngồi một lúc rồi mới đứng."
+  - "Uống đủ nước, tránh đứng lâu ở nơi nóng, đông người."
+  - "Không tự ngừng hay đổi thuốc huyết áp; báo bác sĩ nếu hay choáng sau khi uống thuốc."
+see_doctor_vi:
+  - "Mọi lần ngất đều nên đi khám trong vài ngày để tìm nguyên nhân."
+  - "Bác sĩ sẽ đo huyết áp khi nằm và khi đứng, làm điện tim."
+  - "Gọi 115 hoặc nhờ người đưa đi cấp cứu ngay nếu ngất khi đang gắng sức hoặc khi đang nằm."
+  - "Cũng đi cấp cứu ngay nếu ngất kèm đau ngực, khó thở, tim đập loạn, hoặc chưa tỉnh táo hẳn."
+  - "Không tự lái xe khi hay bị ngất, cho đến khi được bác sĩ cho phép."
+review:
+  status: source_checked
+  authors: ["agent:pass-a", "agent:pass-b"]
+  reconciler: "agent:pass-c"
+  doctor_reviewer: null
+  updated: "2026-10-25"
+  notes_vi: "Lượt C (phần b) đối chiếu 20 liên kết và mở lại mọi nguồn được trích. Mức xử trí 4, không thuộc nhóm không được bỏ sót: NHS khuyên mọi người đã ngất khám bác sĩ (không khẩn), ESC cho ngất nguy cơ thấp về từ cấp cứu; ca nguy cơ cao do quy tắc xử lý. Bệnh gộp ngất phản xạ (phế vị, tình huống) và hạ huyết áp tư thế (kể cả do thuốc); mất nước, mất máu thuộc viêm dạ dày ruột cấp và xuất huyết tiêu hóa trên. Lượt C không giữ liên kết 'tay chân lạnh, da tái' của lượt B: tỷ lệ nền 0,15 của dấu hiệu này khi Ngất đã tính phần da tái sau ngất thông thường, còn khi Chóng mặt liên kết sẽ tăng khả năng một bệnh lành tính 20 lần trên một dấu hiệu sốc. Bác sĩ cần xem: (1) prior dựa trên số liệu Mỹ, châu Âu, chưa có số liệu Việt Nam; (2) phân bố hoàn cảnh ngất, dấu hiệu báo trước là ước lượng từ số liệu bệnh viện; (3) vã mồ hôi lạnh và lựa chọn 'tiền triệu' trùng một phần; (4) liên kết 'có thai' (occasional) là nhận định để không xếp mọi phụ nữ có thai bị ngất vào chửa ngoài tử cung; (5) tỷ lệ nền của thuốc hạ áp, bệnh tim không đổi theo tuổi."

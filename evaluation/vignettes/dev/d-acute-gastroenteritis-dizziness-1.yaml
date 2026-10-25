@@ -1,0 +1,45 @@
+id: d-acute-gastroenteritis-dizziness-1
+set: dev
+title_vi: "Nam 35 tuổi, tiêu chảy, nôn từ hôm qua, hôm nay choáng khi đứng dậy rồi hết"
+narrative_vi: "Anh R., 35 tuổi. Từ trưa hôm qua đi ngoài phân lỏng 6–7 lần, nôn 2 lần hôm qua, đau quặn bụng nhẹ quanh rốn. Hôm nay hết nôn, uống được nước, nhưng mỗi lần đứng dậy thì choáng, tối sầm mắt vài giây, ngồi xuống là hết. Miệng khô, khát. Vẫn đi tiểu bình thường. Không sốt, không ngất, không thấy quay, không đi ngoài ra máu, không đau bụng dữ dội. Người ăn cùng không ai bị. Không có bệnh nền."
+patient:
+  age_years: 35
+  sex: male
+  region: south
+  month: 7
+complaint: dizziness
+answers:
+  diarrhea: present
+  diarrhea_bloody: absent
+  vomiting: present
+  persistent_vomiting: absent
+  nausea: present
+  abdominal_pain: present
+  abd_pain_severe: absent
+  abd_pain_colicky: present
+  abd_pain_location: periumbilical
+  abd_pain_duration: d1_3
+  dizziness_on_standing: present
+  dizziness_pattern: brief_episodes
+  vertigo_spinning: absent
+  dizziness_positional: absent
+  fainting_or_near_fainting: absent
+  decreased_urine: absent
+  unsafe_food_shared: absent
+  fever: absent
+  headache: absent
+  palpitations: absent
+  black_stool: absent
+  severe_weakness: absent
+  cold_hands_feet: absent
+  hypertension_known: absent
+  diabetes: absent
+default_unmentioned: absent
+expected:
+  condition: acute_gastroenteritis
+  acceptable: []
+  triage: 5
+source:
+  basis: "Mất nước nhẹ do viêm dạ dày – ruột cấp: tiêu chảy, nôn, khát, khô miệng, choáng khi đứng dậy rồi hết (NHS Dehydration; NHS Diarrhoea and vomiting). NHS: uống nhiều nước, dùng dung dịch bù nước; chỉ khám khẩn khi chóng mặt khi đứng dậy không hết, tiểu ít, tim nhanh. Không có dấu hiệu đó nên theo dõi tại nhà."
+  references: [nhs-dehydration, nhs-diarrhoea-vomiting]
+author: "agent:pass-c"

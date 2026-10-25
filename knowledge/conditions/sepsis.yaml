@@ -25,6 +25,25 @@ priors:
       locator: "Rudd 2020 phần Findings; NHS Sepsis (nhóm nguy cơ cao); 5642 bài Nhiễm khuẩn huyết (yếu tố nguy cơ); Loots 2022 bảng 1"
       reported: "Toàn cầu năm 2017 có khoảng 48,9 triệu ca nhiễm khuẩn huyết; tỷ lệ mắc cao nhất ở trẻ nhỏ, đỉnh thứ hai ở người cao tuổi; gánh nặng cao ở Đông Nam Á. NHS: nhóm nguy cơ cao gồm trẻ dưới 12 tháng và người trên 75 tuổi. Ở người cao tuổi bệnh cấp nghi nhiễm khuẩn nặng được bác sĩ gia đình khám tại nhà, 42% là nhiễm khuẩn huyết (chọn lọc mạnh)"
       note: "Không có số liệu về tỷ lệ nhiễm khuẩn huyết trong số người sốt ở cộng đồng Việt Nam. Hai lượt trùng mức ở mọi nhóm tuổi trừ 2 tháng–5 tuổi (lượt A P4, lượt B P5 sau khi chạy thử). Lượt C chọn P5 cho 2 tháng–5 tuổi: nhóm nguy cơ cao theo NHS và 5642 là trẻ sơ sinh, trẻ dưới 12 tháng (nhóm dưới 2 tháng đã ở P3); trẻ sốt không có dấu hiệu nguy hiểm được IMCI và NHS cho theo dõi tại nhà, còn trẻ có dấu hiệu nặng đã được quy tắc mức 2 bắt. Lượt C chạy lại: với P4, trẻ 2 tuổi chỉ sốt cao 1 ngày, không có dấu hiệu nào khác bị xếp mức 2 (tổng xác suất mức 1–2 vượt ngưỡng 2%); với P5 là mức 3 (xem biên bản đối chiếu). Người lớn dưới 65 tuổi P5; 65–74 tuổi P4; từ 75 tuổi P3. Cần bác sĩ duyệt."
+  - complaint: syncope
+    default: P5
+    by_age: { child_5_12: P6, teen_13_17: P6, elder_65_74: P4, elder_75p: P4 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-5642-2015, nhs-sepsis, msd-sepsis, wattanapaiboon-idr-2020, esc-syncope-2018-practical]
+      locator: "5642/QĐ-BYT bài Nhiễm khuẩn huyết mục 2.1 (sốc nhiễm khuẩn, yếu tố nguy cơ); NHS Sepsis; MSD (người cao tuổi); Wattanapaiboon 2020 bảng 2"
+      reported: "Ở khoa cấp cứu Thái Lan, sốt là lý do đi khám của 42,1% người nhiễm khuẩn huyết."
+      note: "Giai đoạn 3 lô 1; hai lượt trùng mức. Chưa có số liệu về nhiễm khuẩn huyết trong số người ngất. Sốc nhiễm khuẩn gây tụt huyết áp, có thể thay đổi ý thức; người già, người có bệnh mạn là nhóm nguy cơ (5642/QĐ-BYT); sốt cao ít gặp hơn ở người cao tuổi (NHS), người cao tuổi có thể không có phản ứng viêm rõ (MSD); hơn một nửa người nhiễm khuẩn huyết đi khám vì lý do khác sốt (Wattanapaiboon). Ngất ở cộng đồng chủ yếu là ngất phản xạ (ESC). Người lớn dưới 65 tuổi P5, từ 65 tuổi P4, trẻ 5–17 tuổi P6; thấp hơn prior của Sốt ở cùng nhóm tuổi. Cần bác sĩ duyệt."
+  - complaint: dizziness
+    default: P5
+    by_age: { child_5_12: P6, teen_13_17: P6, elder_75p: P4 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-5642-2015, nhs-sepsis, msd-sepsis, bosner-bmcfampract-2018]
+      locator: "5642/QĐ-BYT mục 2.1; NHS Sepsis (sốt cao ít gặp hơn ở người cao tuổi); Bösner 2018 bảng 3"
+      note: "Giai đoạn 3 lô 1. Hai lượt trùng mức trừ 18–44 tuổi (A P6, B P5); ngang nguồn nên lượt C chọn mức thận trọng hơn (P5). Chóng mặt ở tuyến ban đầu có rất nhiều nguyên nhân lành tính (Bösner); nhiễm khuẩn huyết biểu hiện chủ yếu bằng choáng, chóng mặt chủ yếu ở người cao tuổi. Từ 75 tuổi P4, 18–74 tuổi P5, trẻ 5–17 tuổi P6. Ước lượng."
 findings:
   - finding: chills_rigors
     freq: frequent
@@ -106,12 +125,13 @@ findings:
       note: "Hai lượt trùng mức. Câu hỏi doctor-v (lượng nước tiểu ít hẳn trong 12 giờ) dễ thỏa hơn 'cả ngày không đi tiểu'."
   - finding: fainting_or_near_fainting
     freq: occasional
+    freq_by_complaint: { dizziness: frequent }
     evidence:
       tier: B
       basis: judgment
       sources: [byt-qd-5642-2015, wattanapaiboon-idr-2020]
       locator: "5642 mục 2.1 (sốc nhiễm khuẩn: tụt huyết áp); Wattanapaiboon bảng 1 (42,8% sốc)"
-      note: "Hai lượt trùng mức; choáng, ngất do tụt huyết áp, ước lượng."
+      note: "Hai lượt trùng mức; choáng, ngất do tụt huyết áp, ước lượng. Giai đoạn 3 lô 1: lượt B thêm frequent khi Chóng mặt, lượt C giữ: người nhiễm khuẩn huyết chọn Chóng mặt chủ yếu bị choáng do tụt huyết áp (5642/QĐ-BYT: sốc nhiễm khuẩn; Wattanapaiboon: 42,8% sốc ở cấp cứu), còn tỷ lệ nền của dấu hiệu này khi Chóng mặt là 0,25 nên mức occasional sẽ làm câu trả lời 'Có' giảm khả năng bệnh. Với Ngất là dấu hiệu ngầm định."
   - finding: rash_non_blanching
     freq: frequent
     evidence:
@@ -155,6 +175,55 @@ findings:
       sources: [nhs-sepsis]
       locator: "Trẻ dưới 5 tuổi: not feeding"
       note: "Hai lượt trùng mức. Chỉ hỏi ở trẻ 2 tháng–5 tuổi; ước lượng, chưa có số liệu."
+  - finding: fever
+    freq: frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [wattanapaiboon-idr-2020, byt-qd-5642-2015, nhs-sepsis, msd-sepsis]
+      locator: "Wattanapaiboon 2020 bảng 2; 5642/QĐ-BYT mục 2.1; NHS Sepsis (nhiệt độ cao hoặc thấp; sốt cao ít gặp hơn ở người cao tuổi)"
+      reported: "Sốt và/hoặc rét run 53,8%; sốt là lý do đi khám 42,1% (cấp cứu Thái Lan, tuổi trung vị 67)."
+      note: "Giai đoạn 3 lô 1. Có ý nghĩa với Ngất và Chóng mặt (với Sốt là dấu hiệu ngầm định). Lượt A very_frequent (từ 65 tuổi frequent; mô tả bằng lời), lượt B frequent (số liệu Thái Lan). Lượt C chọn frequent theo số liệu: sốt rất thường gặp nhưng ca nặng có thể hạ thân nhiệt (5642/QĐ-BYT), và người nhiễm khuẩn huyết chọn Ngất, Chóng mặt có lẽ ít sốt hơn người chọn Sốt. Mức very_frequent sẽ làm câu trả lời 'không sốt' giảm khả năng bệnh khoảng 5 lần. Tỷ lệ nền 0,05."
+  - finding: dizziness_on_standing
+    freq: occasional
+    freq_by_complaint: { syncope: frequent, dizziness: frequent }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-5642-2015, nhs-sepsis]
+      locator: "5642/QĐ-BYT mục 2.1 (sốc nhiễm khuẩn: huyết áp tâm thu dưới 90 mmHg)"
+      note: "Giai đoạn 3 lô 1; chỉ lượt B có (frequent), lượt C giữ cho Ngất, Chóng mặt: tụt huyết áp và mất nước gây choáng khi đứng; ở người nhiễm khuẩn huyết chọn hai triệu chứng chính này, ước khoảng một nửa. Mức chung occasional để câu trả lời 'Không' không hạ nhiễm khuẩn huyết ở người chọn Sốt (lý do của lượt B chỉ đúng với người đã choáng, ngất). Tỷ lệ nền 0,15. Ước lượng."
+  - finding: syncope_trigger
+    dist: { standing_heat: 0.10, emotion_pain: 0.05, standing_up: 0.30, toilet_cough: 0.10, exertion: 0.04, lying: 0.06, no_trigger: 0.35 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-5642-2015, msd-sepsis]
+      locator: "5642/QĐ-BYT mục 2.1"
+      note: "Giai đoạn 3 lô 1; trung bình hai lượt. Phân bố trong số người đã ngất hoặc suýt ngất. Tụt huyết áp và mất nước làm choáng khi vừa đứng dậy hoặc không có yếu tố khởi phát rõ. Ước lượng."
+  - finding: not_recovered_after_faint
+    freq: occasional
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-5642-2015, nhs-sepsis]
+      locator: "5642/QĐ-BYT mục 2.1 (có thể thay đổi tình trạng ý thức); NHS (lú lẫn, nói ngọng)"
+      note: "Giai đoạn 3 lô 1; chỉ lượt B có (dấu hiệu thêm sau lượt A), lượt C giữ. Tính trong số người đã ngất hoặc suýt ngất. Ước 20%. Tỷ lệ nền 0,05."
+  - finding: pulse_measured
+    dist: { lt_40: 0.004, n40_100: 0.155, n100_150: 0.221, gt_150: 0.02, not_measured: 0.6 }
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-5642-2015, msd-sepsis]
+      locator: "5642/QĐ-BYT mục 2.1 (nhịp tim nhanh); MSD (tim nhanh)"
+      note: "Giai đoạn 3 lô 1; trung bình hai lượt. 'Chưa đo' giữ đúng tỷ lệ nền 0,6. Nhịp tim nhanh là dấu hiệu thường gặp; ước hơn một nửa số người đo được có mạch trên 100. Ước lượng."
+  - finding: dizziness_pattern
+    dist: { brief_episodes: 0.12, long_episodes: 0.23, continuous: 0.58, chronic: 0.07 }
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [msd-sepsis, byt-qd-5642-2015]
+      note: "Giai đoạn 3 lô 1; trung bình hai lượt. Tính trong số người đã chóng mặt. Bệnh cấp, choáng kéo dài liên tục trong những ngày bị bệnh. Ước lượng."
 warning_signs:
   - confusion
   - drowsy_hard_to_wake
@@ -178,4 +247,4 @@ review:
   reconciler: "agent:pass-c"
   doctor_reviewer: null
   updated: "2026-10-25"
-  notes_vi: "Mức xử trí 1, thuộc nhóm không được bỏ sót (kb-guide mục 2.5; 5642: tử vong 20–50%; NHS: gọi 999 khi có dấu hiệu). Lượt C bỏ: tiểu buốt (4,3% khi đến khám, không phân biệt), nôn liên tục (không có số liệu; đã có quy tắc mức 3), để tránh làm mọi ca nhiễm trùng tiết niệu, tiêu chảy có sốt bị đẩy lên mức cấp cứu chỉ vì xác suất. Không liên kết ăn tiết canh, giết mổ lợn: chưa có số liệu tỷ lệ liên cầu lợn trong toàn bộ nhiễm khuẩn huyết. Không dùng NICE NG253/NG254 vì nice.org.uk chặn truy cập trực tiếp. Điểm cần bác sĩ xem: (1) prior hoàn toàn là ước lượng, nhất là trẻ 2 tháng–5 tuổi (P4 hay P5); (2) tần suất triệu chứng lấy từ nghiên cứu ở khoa cấp cứu Thái Lan và người cao tuổi Hà Lan; (3) mô hình một bệnh: nhiễm khuẩn huyết thường đi kèm viêm phổi, viêm thận – bể thận, nên xác suất bị chia với bệnh nguồn; (4) MONDO:0005229 là 'bacterial infectious disease with sepsis'."
+  notes_vi: "Mức xử trí 1, thuộc nhóm không được bỏ sót (kb-guide mục 2.5; 5642: tử vong 20–50%; NHS: gọi 999 khi có dấu hiệu). Lượt C bỏ: tiểu buốt (4,3% khi đến khám, không phân biệt), nôn liên tục (không có số liệu; đã có quy tắc mức 3), để tránh làm mọi ca nhiễm trùng tiết niệu, tiêu chảy có sốt bị đẩy lên mức cấp cứu chỉ vì xác suất. Không liên kết ăn tiết canh, giết mổ lợn: chưa có số liệu tỷ lệ liên cầu lợn trong toàn bộ nhiễm khuẩn huyết. Không dùng NICE NG253/NG254 vì nice.org.uk chặn truy cập trực tiếp. Điểm cần bác sĩ xem: (1) prior hoàn toàn là ước lượng, nhất là trẻ 2 tháng–5 tuổi (P4 hay P5); (2) tần suất triệu chứng lấy từ nghiên cứu ở khoa cấp cứu Thái Lan và người cao tuổi Hà Lan; (3) mô hình một bệnh: nhiễm khuẩn huyết thường đi kèm viêm phổi, viêm thận – bể thận, nên xác suất bị chia với bệnh nguồn; (4) MONDO:0005229 là 'bacterial infectious disease with sepsis'. Giai đoạn 3 lô 1 (lượt C phần b, 25/10/2026): thêm prior cho Ngất (người lớn dưới 65 tuổi P5, từ 65 tuổi P4, trẻ 5–17 tuổi P6) và Chóng mặt (18–74 tuổi P5, từ 75 tuổi P4, trẻ 5–17 tuổi P6); thêm 6 liên kết (sốt, choáng khi đứng dậy, hoàn cảnh ngất, chưa hồi phục sau ngất, mạch, kiểu chóng mặt); không giữ liên kết chóng mặt (frequent) của lượt A vì chỉ là nhận định (NHS Sepsis không liệt kê chóng mặt) mà câu trả lời không chóng mặt sẽ hạ nhiễm khuẩn huyết ở mọi người chọn Sốt và tần suất theo triệu chứng chính cho choáng, ngất (Chóng mặt: frequent). Không sửa giá trị cũ. Bác sĩ cần xem thêm: prior dưới Ngất, Chóng mặt là ước lượng; các liên kết có sẵn (lú lẫn, khó thở, tay chân lạnh) lấy từ người bệnh đi khám vì sốt; liên kết mới choáng khi đứng dậy, mạch cũng có thể được hỏi khi triệu chứng chính là Sốt."

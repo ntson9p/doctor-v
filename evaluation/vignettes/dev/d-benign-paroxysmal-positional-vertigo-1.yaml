@@ -1,0 +1,38 @@
+id: d-benign-paroxysmal-positional-vertigo-1
+set: dev
+title_vi: "Nữ 57 tuổi, quay cuồng vài giây mỗi khi trở mình, nằm xuống, ngửa cổ"
+narrative_vi: "Bà H., 57 tuổi. Ba ngày nay, mỗi lần trở mình trên giường, nằm xuống hoặc ngửa cổ phơi đồ thì thấy mọi vật quay tròn, kéo dài vài giây rồi hết, kèm buồn nôn nhưng không nôn. Giữa các cơn đi lại bình thường. Hai năm trước cũng bị một đợt giống vậy, tự hết sau vài tuần. Không ù tai, không nghe kém, không đau đầu, không nhìn đôi, không yếu tê tay chân, không ngất. Không choáng khi đứng dậy. Không sốt. Không có bệnh nền."
+patient:
+  age_years: 57
+  sex: female
+  region: north
+  month: 4
+complaint: dizziness
+answers:
+  dizziness_pattern: brief_episodes
+  dizziness_positional: present
+  vertigo_spinning: present
+  nausea: present
+  vomiting: absent
+  similar_episodes_before: present
+  hearing_loss_tinnitus: absent
+  headache: absent
+  vision_loss_or_double: absent
+  transient_neuro_symptoms: absent
+  cannot_walk_unaided: absent
+  sudden_loss_of_balance: absent
+  fainting_or_near_fainting: absent
+  dizziness_on_standing: absent
+  fever: absent
+  hypertension_known: absent
+  diabetes: absent
+  known_heart_disease: absent
+default_unmentioned: absent
+expected:
+  condition: benign_paroxysmal_positional_vertigo
+  acceptable: []
+  triage: 4
+source:
+  basis: "Ca điển hình: cơn quay dưới 1 phút luôn do đổi tư thế đầu, hay khi trở mình trên giường, có thể buồn nôn, không nghe kém, khám thần kinh bình thường, hay tái lại (von Brevern 2007, MSD, 5643/QĐ-BYT). NHS Vertigo: chóng mặt quay hay tái lại thì khám bác sĩ (không khẩn); GRACE-3: cơn có yếu tố khởi phát làm nghiệm pháp Dix-Hallpike, không cần chụp."
+  references: [vonbrevern-jnnp-2007, msd-bppv, byt-qd-5643-2015, nhs-vertigo, grace3-dizziness-2023]
+author: "agent:pass-c"

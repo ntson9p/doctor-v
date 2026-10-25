@@ -1,0 +1,38 @@
+id: d-premature-beats-3
+set: dev
+title_vi: "Nam 62 tuổi tăng huyết áp lo bị rung nhĩ vì thấy tim hẫng nhịp, mạch đo 76"
+narrative_vi: "Ông S., 62 tuổi, tăng huyết áp. Gần đây hay thấy tim hẫng một nhịp rồi đập thịch mạnh, có lúc vài nhịp liền như lộn xộn, mỗi lần chỉ vài giây. Hàng xóm bị rung nhĩ nên ông lo. Đo bằng máy huyết áp lúc đang thấy hẫng nhịp: mạch 76. Không tim nhanh kéo dài, không đau ngực, không khó thở, không choáng. Uống trà đặc buổi sáng. Không có bệnh tim đã biết."
+patient:
+  age_years: 62
+  sex: male
+  region: north
+  month: 11
+complaint: palpitations
+answers:
+  palpitation_rhythm: skipped_beats
+  palpitation_duration: seconds
+  palpitation_abrupt_onset: absent
+  pulse_measured: n40_100
+  hypertension_known: present
+  stimulant_intake: present
+  similar_episodes_before: present
+  neck_pounding: absent
+  dizziness: absent
+  fainting_or_near_fainting: absent
+  chest_pain_pressure: absent
+  breathing_difficulty: absent
+  panic_fear: absent
+  tremor: absent
+  weight_loss_unintended: absent
+  known_heart_disease: absent
+  family_sudden_death: absent
+  stress_poor_sleep: absent
+default_unmentioned: absent
+expected:
+  condition: premature_beats
+  acceptable: []
+  triage: 4
+source:
+  basis: "Dễ nhầm với rung nhĩ ở người lớn tuổi, nhưng kiểu hồi hộp là hẫng nhịp xen nhịp bình thường, từng cơn vài giây, mạch bình thường lúc có triệu chứng (EHRA 2011 bảng 2; Thavendiranathan 2009: cơn dưới 5 phút làm giảm khả năng rối loạn nhịp đáng kể). MSD: ngoại tâm thu ở người không có bệnh tim cấu trúc lành tính. NHS: khám bác sĩ gia đình (không khẩn) để đo điện tim."
+  references: [raviele-europace-2011, thavendiranathan-jama-2009, msd-ventricular-premature-beats, nhs-heart-palpitations]
+author: "agent:pass-c"

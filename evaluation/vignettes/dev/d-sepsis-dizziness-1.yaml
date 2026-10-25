@@ -1,0 +1,37 @@
+id: d-sepsis-dizziness-1
+set: dev
+title_vi: "Nữ 79 tuổi đái tháo đường, sốt, rét run, tiểu buốt, nay choáng váng, mệt lả, tay chân lạnh"
+narrative_vi: "Bà R., 79 tuổi, đái tháo đường. Hai ngày nay sốt, rét run, tiểu buốt. Hôm nay bà choáng váng, đứng dậy là muốn ngã, mệt lả không tự đi lại được, tay chân lạnh, da tái. Bà vẫn tỉnh, trả lời đúng. Không đau ngực, không khó thở, không đau đầu, không nôn. Chưa đo mạch."
+patient:
+  age_years: 79
+  sex: female
+  region: north
+  month: 11
+complaint: dizziness
+answers:
+  fever: present
+  chills_rigors: present
+  dysuria: present
+  diabetes: present
+  severe_weakness: present
+  cold_hands_feet: present
+  dizziness_on_standing: present
+  dizziness_pattern: continuous
+  confusion: absent
+  drowsy_hard_to_wake: absent
+  breathing_difficulty: absent
+  chest_pain_pressure: absent
+  headache: absent
+  vomiting: absent
+  vertigo_spinning: absent
+  fainting_or_near_fainting: absent
+  pulse_measured: not_measured
+default_unmentioned: absent
+expected:
+  condition: sepsis
+  acceptable: []
+  triage: 1
+source:
+  basis: "Nhiễm khuẩn huyết từ đường tiết niệu ở người cao tuổi, đái tháo đường, biểu hiện bằng choáng váng: sốt, rét run, mệt lả, tay chân lạnh, da tái là dấu hiệu sốc (5642/QĐ-BYT bài Nhiễm khuẩn huyết; NHS Sepsis; MSD: người cao tuổi có thể không có phản ứng viêm rõ). Quy tắc rf_shock_cold_and_weak (mức 1)."
+  references: [byt-qd-5642-2015, nhs-sepsis, msd-sepsis]
+author: "agent:pass-c"

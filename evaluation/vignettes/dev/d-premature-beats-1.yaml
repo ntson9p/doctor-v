@@ -1,0 +1,36 @@
+id: d-premature-beats-1
+set: dev
+title_vi: "Nam 40 tuổi uống nhiều cà phê, thiếu ngủ, hay thấy tim hẫng một nhịp vài giây"
+narrative_vi: "Anh D., 40 tuổi, nhân viên văn phòng, dạo này làm việc căng thẳng, ngủ ít, mỗi ngày uống 3–4 cốc cà phê. Hai tuần nay nhiều lần trong ngày thấy tim hẫng một nhịp rồi thịch mạnh một cái, chỉ trong vài giây, sau đó bình thường. Không thấy tim đập nhanh kéo dài. Không đau ngực, không khó thở, không choáng, không ngất. Không có bệnh tim, gia đình không ai đột tử. Chưa đo mạch."
+patient:
+  age_years: 40
+  sex: male
+  region: north
+  month: 4
+complaint: palpitations
+answers:
+  palpitation_rhythm: skipped_beats
+  palpitation_duration: seconds
+  palpitation_abrupt_onset: absent
+  stimulant_intake: present
+  stress_poor_sleep: present
+  similar_episodes_before: present
+  neck_pounding: absent
+  dizziness: absent
+  fainting_or_near_fainting: absent
+  chest_pain_pressure: absent
+  breathing_difficulty: absent
+  panic_fear: absent
+  tremor: absent
+  known_heart_disease: absent
+  family_sudden_death: absent
+  pulse_measured: not_measured
+default_unmentioned: absent
+expected:
+  condition: premature_beats
+  acceptable: []
+  triage: 4
+source:
+  basis: "Ngoại tâm thu điển hình: cảm giác hẫng một nhịp rồi thịch mạnh, từng nhịp lẻ vài giây (EHRA 2011 bảng 2; MSD), tăng khi căng thẳng, thiếu ngủ, cà phê (MSD; NHS Heart palpitations). Không có triệu chứng kèm nguy hiểm; NHS: hồi hộp hay tái lại thì khám bác sĩ gia đình (không khẩn)."
+  references: [raviele-europace-2011, msd-ventricular-premature-beats, nhs-heart-palpitations]
+author: "agent:pass-c"

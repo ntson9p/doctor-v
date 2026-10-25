@@ -34,6 +34,23 @@ priors:
       sources: [lively-ofid-2018, vu-ijid-2006, tran-jidc-2025, who-diarrhoea-2005, byt-qd-5642-2015]
       reported: "Sốt ở 22% ca do noro vi rút, 58% ca do vi khuẩn (Lively); 43,6% (Hà Nội) và 27,1% (Thái Bình) trẻ tiêu chảy đến viện"
       note: "Trẻ 2 tháng – 5 tuổi bị tiêu chảy nhiều đợt mỗi năm (WHO 2005) và sốt là lý do cha mẹ hay chọn, nên P2 (hai lượt giống nhau). Lượt A để P2 cho cả trẻ 5–12 tuổi; lượt B để P3. Lượt C chọn P3 (lệch một mức, cả hai là ước lượng): ở tuổi đi học, sốt chủ yếu do bệnh hô hấp, cúm, sốt xuất huyết, và người viêm dạ dày – ruột thường chọn tiêu chảy hoặc đau bụng làm triệu chứng chính. Người lớn: P3. Chưa có số liệu Việt Nam về lý do đi khám vì sốt."
+  - complaint: dizziness
+    default: P3
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [nhs-dehydration, nhs-dizziness, newmantoker-mayoclinproc-2008]
+      locator: "NHS Dehydration mục Symptoms, Causes; NHS Dizziness mục Causes; Newman-Toker 2008 bảng 4"
+      reported: "Người chóng mặt đến cấp cứu ở Mỹ: rối loạn nước – điện giải 5,6%, bệnh tiêu hóa 7,0%"
+      note: "Giai đoạn 3 lô 1 (lượt C). Với Chóng mặt, bệnh này đại diện cho chóng mặt, choáng do mất nước khi nôn, tiêu chảy (NHS Dehydration: chóng mặt, choáng váng; NHS Dizziness: mất nước là một nguyên nhân). Bệnh rất phổ biến nhưng phần lớn người bệnh chọn Đau bụng hoặc Sốt (và sau này Tiêu chảy, Nôn) làm triệu chứng chính. Hai lượt cùng chọn P3 cho mọi nhóm tuổi; số liệu cấp cứu ở Mỹ chỉ để tham khảo. Cần bác sĩ duyệt."
+  - complaint: syncope
+    default: P3
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [nhs-fainting, nhs-dehydration, esc-syncope-2018]
+      locator: "NHS Fainting mục Causes; ESC 2018 bảng 6 (hoàn cảnh nguy cơ thấp: khi đi ngoài, đi tiểu, khi vừa đứng dậy)"
+      note: "Giai đoạn 3 lô 1 (lượt C). Mất nước do nôn, tiêu chảy làm tụt huyết áp khi đứng; ngất khi đang đi ngoài là hoàn cảnh nguy cơ thấp của ngất phản xạ (ESC 2018). Hai lượt cùng chọn P3; chưa có số liệu."
 findings:
   - finding: abdominal_pain
     freq: very_frequent
@@ -245,6 +262,69 @@ findings:
       locator: "Bines 2006, Bảng 3 (phân như mứt dâu: đặc hiệu 91% ở nhóm chứng Hà Nội)"
       reported: "9% trẻ nhóm chứng ở Hà Nội (phần lớn viêm dạ dày – ruột) được ghi là có phân như mứt dâu; 0% ở Melbourne"
       note: "Chỉ lượt A có. Lỵ (phân nhầy máu) ở trẻ có thể được cha mẹ mô tả giống 'mứt dâu'. Mức rare (2,5%) cao hơn tỷ lệ nền 1% là có chủ ý (above_leak_ok), để câu trả lời 'Có' không loại trừ hẳn bệnh này; vẫn thấp hơn lồng ruột (occasional) 8 lần, và quy tắc rf_red_jelly_stool vẫn xếp mức 2. Không chọn occasional vì nhóm chứng của Bines là trẻ đã bị nghi lồng ruột (chọn lọc)."
+  # ---------- Giai đoạn 3, lô 1 (lượt C): liên kết cho triệu chứng chính Chóng mặt, Ngất ----------
+  - finding: dizziness_on_standing
+    freq: occasional
+    freq_by_complaint: { dizziness: frequent, syncope: frequent }
+    evidence:
+      tier: C
+      basis: verbal
+      sources: [nhs-dehydration, esc-syncope-2018]
+      locator: "NHS Dehydration mục Symptoms, Urgent advice; ESC 2018 bảng 6"
+      note: "Hai lượt cùng chọn frequent cho người chọn Chóng mặt, Ngất: chóng mặt, choáng váng là triệu chứng mất nước, chóng mặt khi đứng dậy không hết thì khám khẩn (NHS); giảm thể tích do nôn, tiêu chảy gây tụt huyết áp khi đứng. Lượt C để mức chung occasional và chỉ dùng frequent cho hai triệu chứng chính này: người viêm dạ dày – ruột chọn Chóng mặt hoặc Ngất là nhóm đang mất nước, còn phần lớn người bệnh chọn Đau bụng, Sốt chưa mất nước nhiều; nếu để frequent cho mọi triệu chứng chính, người đau bụng, sốt không choáng khi đứng sẽ bị giảm khả năng bệnh này mà không có số liệu. Tỷ lệ nền 0,15."
+  - finding: dizziness
+    freq: occasional
+    freq_by_complaint: { syncope: frequent }
+    evidence:
+      tier: C
+      basis: verbal
+      sources: [nhs-dehydration]
+      note: "Hai lượt cùng chọn frequent, nghĩ rằng chỉ có tác dụng khi triệu chứng chính là Ngất; thực ra câu này còn được hỏi ở Đau bụng, Sốt. Lượt C để mức chung occasional (bằng tỷ lệ nền 0,2, trung tính) và mức frequent riêng cho Ngất: người ngất vì mất nước thường choáng, chóng mặt trước đó (NHS Dehydration), còn ở người đau bụng, sốt chưa có số liệu so sánh."
+  - finding: fainting_or_near_fainting
+    freq: occasional
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [nhs-dehydration, nhs-fainting, esc-syncope-2018]
+      note: "Hai lượt cùng chọn occasional. Người mất nước có thể choáng như sắp ngất khi đứng dậy, khi đi ngoài. Có tác dụng khi triệu chứng chính là Chóng mặt (tỷ lệ nền 0,25: gần trung tính), Đau bụng, Sốt (tỷ lệ nền 5%)."
+  - finding: vertigo_spinning
+    freq: occasional
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [nhs-dehydration, newmantoker-mayoclinproc-2007]
+      note: "Chỉ lượt A có; lượt C giữ. Tần suất trong số người đã chóng mặt. Chóng mặt do mất nước thường là choáng váng (NHS), không quay cuồng; mô tả kiểu chóng mặt kém tin cậy (Newman-Toker 2007). Ước 20%, thấp hơn tỷ lệ nền 0,4."
+  - finding: dizziness_pattern
+    dist: { brief_episodes: 0.275, long_episodes: 0.30, continuous: 0.375, chronic: 0.05 }
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [nhs-dehydration, nhs-diarrhoea-vomiting]
+      note: "Trung bình hai lượt (lệch 0,05). Choáng khi đứng dậy (cơn ngắn) hoặc chóng mặt suốt những ngày nôn, tiêu chảy; nôn thường hết trong 1–2 ngày, tiêu chảy 5–7 ngày (NHS), nên ít khi kéo dài nhiều tuần. Ước lượng."
+  - finding: syncope_trigger
+    dist: { standing_heat: 0.135, emotion_pain: 0.065, standing_up: 0.35, toilet_cough: 0.275, exertion: 0.025, lying: 0.025, no_trigger: 0.125 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [esc-syncope-2018, nhs-dehydration]
+      locator: "ESC 2018 bảng 6 (hoàn cảnh nguy cơ thấp)"
+      note: "Trung bình hai lượt. Ngất khi vừa đứng dậy (tụt huyết áp do mất nước) và khi đang đi ngoài (đau quặn, rặn) là hai hoàn cảnh chính; cả hai thuộc nhóm nguy cơ thấp của ESC 2018. Ước lượng."
+  - finding: syncope_warning
+    dist: { prodrome: 0.80, palpitations_first: 0.055, no_warning: 0.145 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [esc-syncope-2018]
+      locator: "Bảng 6 (tiền triệu điển hình của ngất phản xạ)"
+      note: "Trung bình hai lượt. Ngất do mất nước, do phản xạ khi đi ngoài thường có tiền triệu điển hình (nóng người, vã mồ hôi, buồn nôn, tối sầm mắt). Ước lượng."
+  - finding: pulse_measured
+    dist: { lt_40: 0.002, n40_100: 0.255, n100_150: 0.135, gt_150: 0.008, not_measured: 0.6 }
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [nhs-dehydration]
+      locator: "Mục Urgent advice (tim đập nhanh)"
+      note: "Trung bình hai lượt. Mất nước làm tim đập nhanh (NHS). 'Chưa đo' giữ đúng 0,6 (lựa chọn trung tính). Ước lượng."
 warning_signs:
   - persistent_vomiting
   - child_vomits_everything
@@ -270,4 +350,4 @@ review:
   reconciler: "agent:pass-c"
   doctor_reviewer: null
   updated: "2026-10-25"
-  notes_vi: "Lượt C đã đối chiếu 27 liên kết và mở lại mọi nguồn được trích. Bác sĩ cần xem: (1) prior P1 ở trẻ 2 tháng – 5 tuổi và P3 khi sốt ở trẻ 5–12 tuổi là ước lượng, chưa có số liệu Việt Nam ở tuyến ban đầu; (2) tần suất sốt, nôn, phân máu lấy từ vụ dịch ở Mỹ và trẻ nằm viện ở Hà Nội, Thái Bình; (3) 'phân như mứt dâu' và 'khóc thét từng cơn' được liên kết có chủ ý cao hơn tỷ lệ nền, theo nhóm chứng của Bines 2006, để không đẩy quá mạnh về lồng ruột; (4) câu hỏi nôn dịch xanh gộp cả 'vàng đắng', nên trẻ viêm dạ dày – ruột nôn nhiều có thể bị quy tắc rf_child_bilious_vomiting xếp mức 2; (5) lời khuyên không tự dùng thuốc cầm nôn, cầm tiêu chảy cho trẻ theo 3312/QĐ-BYT, WHO 2005 và NHS."
+  notes_vi: "Lượt C đã đối chiếu 27 liên kết và mở lại mọi nguồn được trích. Bác sĩ cần xem: (1) prior P1 ở trẻ 2 tháng – 5 tuổi và P3 khi sốt ở trẻ 5–12 tuổi là ước lượng, chưa có số liệu Việt Nam ở tuyến ban đầu; (2) tần suất sốt, nôn, phân máu lấy từ vụ dịch ở Mỹ và trẻ nằm viện ở Hà Nội, Thái Bình; (3) 'phân như mứt dâu' và 'khóc thét từng cơn' được liên kết có chủ ý cao hơn tỷ lệ nền, theo nhóm chứng của Bines 2006, để không đẩy quá mạnh về lồng ruột; (4) câu hỏi nôn dịch xanh gộp cả 'vàng đắng', nên trẻ viêm dạ dày – ruột nôn nhiều có thể bị quy tắc rf_child_bilious_vomiting xếp mức 2; (5) lời khuyên không tự dùng thuốc cầm nôn, cầm tiêu chảy cho trẻ theo 3312/QĐ-BYT, WHO 2005 và NHS. Giai đoạn 3 lô 1 (lượt C, 25/10/2026): thêm prior cho Chóng mặt (P3) và Ngất (P3), và 8 liên kết (choáng khi vừa đứng dậy, chóng mặt, ngất hoặc choáng, cảm giác quay, kiểu chóng mặt, hoàn cảnh lúc ngất, dấu hiệu trước khi ngất, mạch đo được); mọi giá trị cũ giữ nguyên, mọi nguồn mới đã mở lại. Choáng khi vừa đứng dậy và chóng mặt dùng mức chung occasional, mức frequent chỉ cho Chóng mặt, Ngất, để không làm thay đổi kết quả của Đau bụng, Sốt khi chưa có số liệu. Bác sĩ cần xem thêm: (6) prior cho Chóng mặt, Ngất là ước lượng; (7) người đau bụng có ngất, choáng được quy tắc rf_fainting_with_pain xếp mức 2, kể cả khi do mất nước."

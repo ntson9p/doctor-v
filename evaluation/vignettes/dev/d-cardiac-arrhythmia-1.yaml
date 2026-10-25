@@ -1,0 +1,37 @@
+id: d-cardiac-arrhythmia-1
+set: dev
+title_vi: "Nam 68 tuổi tăng huyết áp, nhiều cơn tim đập nhanh, lộn xộn kéo dài 1–2 giờ rồi tự hết"
+narrative_vi: "Ông H., 68 tuổi, tăng huyết áp. Hai tuần nay có ba lần bỗng thấy tim đập nhanh, lộn xộn, mỗi lần kéo dài 1–2 giờ rồi tự hết; lúc có cơn thấy mệt, hơi choáng nhưng không như sắp ngất. Lần gần nhất con trai đo bằng máy huyết áp thấy mạch khoảng 130. Hiện đã hết cơn. Không đau ngực, không khó thở, không ngất. Không run tay, không sụt cân, không sợ nóng."
+patient:
+  age_years: 68
+  sex: male
+  region: south
+  month: 9
+complaint: palpitations
+answers:
+  palpitation_rhythm: irregular
+  palpitation_duration: minutes_hours
+  palpitation_abrupt_onset: present
+  pulse_measured: n100_150
+  dizziness: present
+  fainting_or_near_fainting: absent
+  chest_pain_pressure: absent
+  breathing_difficulty: absent
+  hypertension_known: present
+  similar_episodes_before: present
+  neck_pounding: absent
+  panic_fear: absent
+  tremor: absent
+  weight_loss_unintended: absent
+  heat_intolerance: absent
+  stimulant_intake: absent
+  stress_poor_sleep: absent
+default_unmentioned: absent
+expected:
+  condition: cardiac_arrhythmia
+  acceptable: []
+  triage: 3
+source:
+  basis: "Rung nhĩ kịch phát điển hình ở người cao tuổi: tim đập không đều, nhanh trên 100, cơn tự hết, mệt (NHS Atrial fibrillation; ESC 2024). Không có đau ngực, khó thở, ngất nên không cần cấp cứu (NHS: gọi 999 khi kèm các dấu hiệu đó). NHS khuyên khám bác sĩ gia đình; doctor-v xếp mức 3 (mức của bệnh) vì rung nhĩ mới cần được ghi điện tim sớm và đánh giá nguy cơ đột quỵ (ESC 2024, EHRA 2011)."
+  references: [nhs-atrial-fibrillation, esc-af-2024, raviele-europace-2011]
+author: "agent:pass-c"

@@ -1,0 +1,15 @@
+id: kessler-archgenpsych-2006
+type: primary_study
+title: "The epidemiology of panic attacks, panic disorder, and agoraphobia in the National Comorbidity Survey Replication"
+publisher: "Archives of General Psychiatry 2006;63(4):415–424 (Kessler RC và cộng sự)"
+date: "2006"
+url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC1958997/"
+doi: "10.1001/archpsyc.63.4.415"
+pmid: "16585471"
+license_class: L3
+license_note: "Bản quyền nhà xuất bản: chỉ dùng dữ kiện kèm trích dẫn, không sao chép câu chữ."
+default_tier: B
+accessed: "2026-10-25"
+verified: true
+verified_by: "agent:pass-c"
+notes_vi: "Lượt C (phần b) đọc tóm tắt qua API Europe PMC và mở toàn văn trên PMC ngày 25/10/2026. Khảo sát quốc gia Mỹ (9.282 người lớn): từng có cơn hoảng sợ 28,3%; rối loạn hoảng sợ suốt đời 4,7% (không kèm sợ khoảng rộng 3,7%, có kèm 1,1%). Nữ so với nam: OR 1,4 với cơn hoảng sợ đơn lẻ, 2,3 với rối loạn hoảng sợ không kèm sợ khoảng rộng, 2,0 khi có kèm. Tuổi khởi phát trung bình khoảng 23."

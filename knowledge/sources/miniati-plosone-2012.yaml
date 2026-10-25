@@ -1,0 +1,15 @@
+id: miniati-plosone-2012
+type: primary_study
+title: "Clinical presentation of acute pulmonary embolism: survey of 800 cases"
+publisher: "PLoS One 2012;7(2):e30891 (Miniati M và cộng sự)"
+date: "2012"
+url: "https://europepmc.org/article/MED/22383978"
+doi: "10.1371/journal.pone.0030891"
+pmid: "22383978"
+license_class: L1
+license_note: "CC BY 4.0: dùng và chuyển thể, ghi công và nêu thay đổi."
+default_tier: B
+accessed: "2026-10-25"
+verified: true
+verified_by: "agent:pass-c"
+notes_vi: "Lượt C (phần b) đọc toàn văn PMC3288010 qua API Europe PMC. 800 người thuyên tắc phổi đã xác định ở Ý (440 ở Pisa, phần lớn nằm viện; 360 ở Firenze, 90% ngoại trú). Cả hai mẫu: khó thở đột ngột 80%, đau ngực 49% (ở Firenze 84% số người đau ngực đau một bên kiểu màng phổi), ngất hoặc xỉu 24% (35% khi có quá tải thất phải, 15% khi không), ho ra máu 6%, sưng đau một bên chi 30%; 94% có ít nhất một trong bốn triệu chứng khó thở đột ngột, đau ngực, ngất, ho ra máu. Không có yếu tố thuận lợi 51% (66% ở Firenze); ung thư đang tiến triển 11%."

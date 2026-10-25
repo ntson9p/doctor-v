@@ -1,0 +1,44 @@
+id: d-carbon-monoxide-poisoning-3
+set: dev
+title_vi: "Nam 38 tuổi, ăn lẩu than trong phòng kín cùng gia đình, 2 giờ sau nhiều người đau đầu, chóng mặt, nôn"
+narrative_vi: "Anh S., 38 tuổi, ở Lạng Sơn. Tối nay cả nhà 5 người ăn lẩu nấu bằng bếp than trong phòng kín vì trời rét. Khoảng 2 giờ sau anh đau đầu vừa, chóng mặt liên tục, buồn nôn và nôn một lần; vợ và mẹ anh cũng đau đầu, buồn nôn, con gái nôn. Mọi người nghĩ bị ngộ độc thức ăn. Không đau bụng, không tiêu chảy, không sốt. Không ngất, không khó thở, không đau ngực, vẫn tỉnh táo. Mọi người vẫn ở trong phòng nên chưa biết ra ngoài có đỡ không."
+patient:
+  age_years: 38
+  sex: male
+  region: north
+  month: 12
+complaint: dizziness
+answers:
+  co_exposure: present
+  others_same_symptoms: present
+  unsafe_food_shared: present
+  better_away_from_place: unknown
+  headache: present
+  headache_thunderclap: absent
+  headache_severity: moderate
+  nausea: present
+  vomiting: present
+  persistent_vomiting: absent
+  abdominal_pain: absent
+  diarrhea: absent
+  fever: absent
+  dizziness_pattern: continuous
+  vertigo_spinning: absent
+  fainting_or_near_fainting: absent
+  confusion: absent
+  drowsy_hard_to_wake: absent
+  breathing_difficulty: absent
+  chest_pain_pressure: absent
+  severe_weakness: absent
+  hypertension_known: absent
+  diabetes: absent
+default_unmentioned: absent
+expected:
+  condition: carbon_monoxide_poisoning
+  acceptable: []
+  triage: 2
+source:
+  basis: "Dễ nhầm với ngộ độc thức ăn (viêm dạ dày – ruột cấp) vì nhiều người cùng bữa cùng buồn nôn, nôn: 3610/QĐ-BYT mục 3.4 ghi ngộ độc khí CO mức vừa dễ nhầm với ngộ độc thức ăn; bếp lẩu than trong phòng kín là nguồn khí CO (Lu 2015). Không đau bụng, không tiêu chảy, đau đầu nổi bật. Mức 2 theo NHS (người ngộ độc cần được kiểm tra ở bệnh viện) và quy tắc rf_co_exposure."
+  references: [byt-qd-3610-2015, lu-plosone-2015, nhs-carbon-monoxide-poisoning]
+author: "agent:pass-c"
+notes_vi: "Ca dễ nhầm với viêm dạ dày – ruột cấp (phần mở rộng của lô này)."

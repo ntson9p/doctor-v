@@ -1,0 +1,43 @@
+id: d-anemia-2
+set: dev
+title_vi: "Nam 74 tuổi, đã biết thiếu máu, vài tuần nay choáng váng âm ỉ, mệt, hụt hơi khi đi bộ"
+narrative_vi: "Ông C., 74 tuổi, bị bệnh thận mạn, đã được bác sĩ nói là thiếu máu từ năm ngoái nhưng không tái khám. Vài tuần nay choáng váng âm ỉ gần như cả ngày, mệt nhiều, đi bộ một đoạn ngắn là hụt hơi. Không thấy quay, không ngất, không đau ngực, không khó thở khi ngồi nghỉ. Không đi ngoài phân đen, không nôn ra máu, không sụt cân. Không tự biết da có xanh không. Không đau đầu, không yếu tê tay chân. Không tăng huyết áp, không đái tháo đường."
+patient:
+  age_years: 74
+  sex: male
+  region: south
+  month: 3
+complaint: dizziness
+answers:
+  anemia_known: present
+  fatigue: present
+  breathless_on_exertion: present
+  pallor: unknown
+  dizziness_pattern: chronic
+  vertigo_spinning: absent
+  dizziness_positional: absent
+  dizziness_on_standing: absent
+  fainting_or_near_fainting: absent
+  palpitations: absent
+  black_stool: absent
+  vomiting_blood: absent
+  weight_loss_unintended: absent
+  chest_pain_pressure: absent
+  breathing_difficulty: absent
+  headache: absent
+  transient_neuro_symptoms: absent
+  vision_loss_or_double: absent
+  cannot_walk_unaided: absent
+  hypertension_known: absent
+  diabetes: absent
+  known_heart_disease: absent
+  fever: absent
+default_unmentioned: absent
+expected:
+  condition: anemia
+  acceptable: []
+  triage: 4
+source:
+  basis: "Ca không điển hình: nam cao tuổi, không có kinh nguyệt nhiều, thiếu máu do bệnh thận mạn (nguyên nhân quan trọng ở người cao tuổi, GBD 2021); triệu chứng thiếu oxy mô: mệt, chóng mặt, khó thở khi gắng sức (1832/QĐ-BYT; MSD). Không có dấu hiệu chảy máu hay dấu hiệu nặng: khám trong vài ngày để xét nghiệm máu và tìm nguyên nhân (NHS)."
+  references: [byt-qd-1832-2022, gbd-anaemia-lancethaematol-2023, msd-evaluation-anemia, nhs-iron-deficiency-anaemia]
+author: "agent:pass-c"

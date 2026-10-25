@@ -1,0 +1,42 @@
+id: d-migraine-dizziness-1
+set: dev
+title_vi: "Nữ 28 tuổi bị đau nửa đầu, một năm nay nhiều đợt quay cuồng 2–3 giờ kèm đau đầu, sợ ánh sáng"
+narrative_vi: "Chị Y., 28 tuổi, bị đau nửa đầu từ năm 16 tuổi. Một năm nay có khoảng chục đợt chóng mặt quay, mỗi đợt 2–3 giờ, thường kèm đau giật giật một bên đầu, buồn nôn, khó chịu với ánh sáng và tiếng ồn. Đợt này bắt đầu một giờ trước, giống hệt các đợt trước, đau đầu mức vừa. Không ù tai, không nghe kém, không yếu tê tay chân, không nói khó, không nhìn đôi. Không do trở mình hay ngửa cổ. Không có thai, không chậm kinh."
+patient:
+  age_years: 28
+  sex: female
+  region: south
+  month: 4
+complaint: dizziness
+answers:
+  dizziness_pattern: long_episodes
+  vertigo_spinning: present
+  similar_episodes_before: present
+  headache: present
+  headache_thunderclap: absent
+  headache_severity: moderate
+  headache_character: throbbing
+  headache_location: one_side
+  headache_course: recurrent_similar
+  photophobia: present
+  phonophobia: present
+  nausea: present
+  vomiting: absent
+  hearing_loss_tinnitus: absent
+  dizziness_positional: absent
+  transient_neuro_symptoms: absent
+  vision_loss_or_double: absent
+  cannot_walk_unaided: absent
+  fainting_or_near_fainting: absent
+  pregnant: absent
+  missed_period: absent
+  fever: absent
+default_unmentioned: absent
+expected:
+  condition: migraine
+  acceptable: []
+  triage: 4
+source:
+  basis: "Đau nửa đầu tiền đình theo tiêu chuẩn Bárány – IHS (Lempert 2022): ít nhất 5 đợt chóng mặt vừa hoặc nặng, mỗi đợt 5 phút đến 72 giờ, có tiền sử đau nửa đầu, phần lớn số đợt kèm đau đầu kiểu đau nửa đầu, sợ ánh sáng, sợ tiếng ồn. NHS Vertigo: chóng mặt quay hay tái lại thì khám bác sĩ (không khẩn); đau đầu không dữ dội."
+  references: [lempert-jvestibres-2022, dieterich-jneurol-2016, nhs-vertigo]
+author: "agent:pass-c"

@@ -1,0 +1,13 @@
+id: nhs-svt
+type: web_page
+title: "Supraventricular tachycardia (SVT)"
+publisher: "NHS (UK)"
+date: "2024-06-12"
+url: "https://www.nhs.uk/conditions/supraventricular-tachycardia-svt/"
+license_class: L1
+license_note: "Open Government Licence v3.0; bản chuyển thể không được trình bày như nội dung của NHS."
+default_tier: C
+accessed: "2026-10-25"
+verified: true
+verified_by: "agent:pass-c"
+notes_vi: "Lượt C (phần b) tải trang và trích chữ ngày 25/10/2026 (rà soát lần cuối 12/6/2024, hạn rà soát 12/6/2027). Tim bỗng đập nhanh hơn hẳn (trên 100 lần/phút) rồi có thể chậm lại đột ngột; cơn thường vài phút, có khi vài giờ; vài lần mỗi ngày đến một lần mỗi năm; có thể do cà phê, rượu, chất gây nghiện khởi phát nhưng thường không có yếu tố rõ; hay bắt đầu ở trẻ em, người trẻ, nhiều người có triệu chứng đầu tiên ở tuổi 25–40. Có thể kèm đau, khó chịu ngực, yếu, khó thở, choáng váng, chóng mặt, mệt. Khám bác sĩ gia đình (không khẩn) khi hay bị tim nhanh. Gọi 999 khi đã biết bị và cơn dài hơn thường lệ, hoặc tim nhanh kèm khó thở, đau ngực, cảm giác sắp ngất; không tự lái xe. Hiếm khi nguy hiểm tính mạng."

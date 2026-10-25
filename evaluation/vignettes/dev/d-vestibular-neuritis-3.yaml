@@ -1,0 +1,44 @@
+id: d-vestibular-neuritis-3
+set: dev
+title_vi: "Nữ 35 tuổi, sau cúm 1 tuần, quay cuồng liên tục kèm ù tai, nghe kém tai trái đột ngột"
+narrative_vi: "Chị P., 35 tuổi. Một tuần trước bị cúm, sốt, đau họng, nay đã hết sốt. Từ sáng hôm qua đột ngột quay cuồng liên tục, nôn nhiều lần, đồng thời tai trái ù và nghe kém hẳn đi. Đi lại loạng choạng nhưng vẫn tự đi được. Không đau đầu, không đau tai, không chảy mủ tai, không nhìn đôi, không nói khó, không yếu tê tay chân. Không có thai, không chậm kinh. Chưa từng bị như vậy. Không có bệnh nền."
+patient:
+  age_years: 35
+  sex: female
+  region: north
+  month: 2
+complaint: dizziness
+answers:
+  dizziness_pattern: continuous
+  vertigo_spinning: present
+  dizziness_positional: absent
+  nausea: present
+  vomiting: present
+  persistent_vomiting: absent
+  hearing_loss_tinnitus: present
+  hearing_loss_sudden: present
+  recent_viral_illness: present
+  sudden_loss_of_balance: present
+  cannot_walk_unaided: absent
+  headache: absent
+  ear_pain: absent
+  ear_discharge: absent
+  vision_loss_or_double: absent
+  transient_neuro_symptoms: absent
+  fainting_or_near_fainting: absent
+  similar_episodes_before: absent
+  fever: absent
+  pregnant: absent
+  missed_period: absent
+  hypertension_known: absent
+  diabetes: absent
+default_unmentioned: absent
+expected:
+  condition: vestibular_neuritis
+  acceptable: []
+  triage: 2
+source:
+  basis: "Viêm mê nhĩ sau nhiễm vi rút (gộp trong vestibular_neuritis): chóng mặt quay liên tục kèm nghe kém, ù tai một bên (NHS Labyrinthitis; MSD). Dễ nhầm với đột quỵ động mạch tiểu não trước dưới, cũng gây chóng mặt kèm nghe kém (Tarnutzer 2011). NHS Vertigo: chóng mặt quay kèm nghe kém thì gọi 999 hoặc đến cấp cứu (mức 2; quy tắc rf_vertigo_sudden_hearing_loss)."
+  references: [nhs-labyrinthitis, nhs-vertigo, msd-vestibular-neuronitis, tarnutzer-cmaj-2011]
+author: "agent:pass-c"
+notes_vi: "Ca dễ nhầm với đột quỵ (phần mở rộng của lô này); kiểm tra phần gộp viêm mê nhĩ."

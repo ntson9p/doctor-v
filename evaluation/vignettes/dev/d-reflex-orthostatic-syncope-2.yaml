@@ -1,0 +1,39 @@
+id: d-reflex-orthostatic-syncope-2
+set: dev
+title_vi: "Nam 67 tuổi tăng huyết áp, vừa tăng liều thuốc hạ áp, ngất thoáng qua khi vừa đứng dậy"
+narrative_vi: "Ông T., 67 tuổi, tăng huyết áp, tuần trước được bác sĩ tăng liều thuốc hạ áp. Mấy hôm nay cứ đứng dậy là choáng, tối sầm mắt. Sáng nay vừa ngồi dậy rồi đứng lên khỏi giường thì tối sầm mắt, khuỵu xuống, mất ý thức vài giây rồi tỉnh, sau đó tỉnh táo hoàn toàn. Không đau ngực, không khó thở, không hồi hộp. Không đi ngoài phân đen, không nôn ra máu. Chưa từng được nói có bệnh tim. Chưa đo mạch."
+patient:
+  age_years: 67
+  sex: male
+  region: north
+  month: 10
+complaint: syncope
+answers:
+  syncope_trigger: standing_up
+  syncope_warning: prodrome
+  dizziness_on_standing: present
+  dizziness: present
+  hypertension_known: present
+  bp_lowering_meds: present
+  not_recovered_after_faint: absent
+  similar_episodes_before: absent
+  chest_pain_pressure: absent
+  breathing_difficulty: absent
+  palpitations: absent
+  abdominal_pain: absent
+  headache: absent
+  black_stool: absent
+  vomiting_blood: absent
+  known_heart_disease: absent
+  diabetes: absent
+  family_sudden_death: absent
+  pulse_measured: not_measured
+default_unmentioned: absent
+expected:
+  condition: reflex_orthostatic_syncope
+  acceptable: []
+  triage: 4
+source:
+  basis: "Ca không điển hình (người cao tuổi, hạ huyết áp tư thế do thuốc): ngất ngay khi vừa đứng dậy, có tiền triệu, mới tăng liều thuốc hạ áp (ESC 2018 bảng 5; hướng dẫn thực hành ESC 2018 bảng web 1: thuốc vận mạch, lợi tiểu gây hạ huyết áp tư thế). Không có đặc điểm nguy cơ cao của bảng 6 ESC; NHS Fainting và NHS Low blood pressure: khám bác sĩ gia đình (không khẩn), có thể cần đổi thuốc. Ca kiểm tra lo ngại của lượt B: người 50–70 tuổi ngất lành tính không bị đẩy lên mức 2 chỉ vì xác suất."
+  references: [esc-syncope-2018, esc-syncope-2018-practical, nhs-fainting, nhs-low-blood-pressure]
+author: "agent:pass-c"

@@ -1,0 +1,13 @@
+id: nhs-low-blood-pressure
+type: web_page
+title: "Low blood pressure (hypotension)"
+publisher: "NHS (UK)"
+date: "2023-07-11"
+url: "https://www.nhs.uk/conditions/low-blood-pressure-hypotension/"
+license_class: L1
+license_note: "Open Government Licence v3.0; bản chuyển thể không được trình bày như nội dung của NHS."
+default_tier: C
+accessed: "2026-10-25"
+verified: true
+verified_by: "agent:pass-c"
+notes_vi: "Lượt C (phần b) tải trang và trích chữ ngày 25/10/2026 (rà soát lần cuối 11/7/2023, hạn rà soát 11/7/2026, chưa có bản mới). Huyết áp thấp là dưới 90/60 mmHg; triệu chứng: choáng váng, chóng mặt, buồn nôn, nhìn mờ, yếu người, lú lẫn, ngất; có triệu chứng khi đứng dậy hoặc đổi tư thế đột ngột là hạ huyết áp tư thế. Khám bác sĩ gia đình (không khẩn) khi hay bị chóng mặt, ngất. Điều trị: đổi thuốc hoặc liều nếu thuốc là nguyên nhân, tất áp lực. Tự chăm sóc: đứng dậy từ từ, từ nằm sang ngồi rồi mới đứng, ăn bữa nhỏ, uống nhiều nước, không ngồi hay đứng lâu, không cúi hoặc đổi tư thế đột ngột."

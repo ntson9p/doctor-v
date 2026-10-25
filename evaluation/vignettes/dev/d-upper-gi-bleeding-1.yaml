@@ -1,0 +1,38 @@
+id: d-upper-gi-bleeding-1
+set: dev
+title_vi: "Nam 58 tuổi uống thuốc xương khớp, hai ngày đi ngoài phân đen, hôm nay suýt ngất"
+narrative_vi: "Ông L., 58 tuổi, hay uống thuốc xương khớp vì đau gối. Hai ngày nay đi ngoài phân đen như hắc ín, hơi đau vùng trên rốn. Sáng nay vừa đứng dậy thì choáng, tối sầm mắt, suýt ngã trong nhà vệ sinh, phải ngồi xuống. Da xanh. Không nôn ra máu, không đau ngực, không khó thở. Không có xơ gan, không uống thuốc chống đông. Chưa đo mạch."
+patient:
+  age_years: 58
+  sex: male
+  region: north
+  month: 3
+complaint: syncope
+answers:
+  black_stool: present
+  regular_painkiller_use: present
+  abdominal_pain: present
+  abd_pain_location: epigastric
+  dizziness_on_standing: present
+  dizziness: present
+  pallor: present
+  syncope_trigger: standing_up
+  syncope_warning: prodrome
+  vomiting_blood: absent
+  chest_pain_pressure: absent
+  breathing_difficulty: absent
+  palpitations: absent
+  headache: absent
+  chronic_liver_disease: absent
+  antithrombotic_use: absent
+  not_recovered_after_faint: absent
+  pulse_measured: not_measured
+default_unmentioned: absent
+expected:
+  condition: upper_gi_bleeding
+  acceptable: [peptic_ulcer_gastritis]
+  triage: 1
+source:
+  basis: "Xuất huyết tiêu hóa trên điển hình do thuốc chống viêm không steroid: phân đen, đau thượng vị, choáng, suýt ngất khi đứng, da xanh (MSD; Anh 2025). NHS Stomach ulcer: phân đen thì gọi 999 hoặc đến cấp cứu; ESC 2018: nghi chảy máu tiêu hóa là nguy cơ cao. Kèm choáng, suýt ngất là dấu hiệu mất máu nhiều: quy tắc rf_syncope_gi_bleeding (mức 1). Chấp nhận viêm, loét dạ dày – tá tràng (nguồn chảy máu)."
+  references: [msd-gi-bleeding, anh-vjcm-2025, nhs-stomach-ulcer, esc-syncope-2018]
+author: "agent:pass-c"

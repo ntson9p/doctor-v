@@ -1,0 +1,38 @@
+id: d-upper-gi-bleeding-2
+set: dev
+title_vi: "Nữ 76 tuổi uống aspirin hằng ngày, mệt, choáng khi đứng dậy, da xanh, phân đen"
+narrative_vi: "Bà E., 76 tuổi, uống aspirin hằng ngày sau đặt stent mạch vành. Ba ngày nay mệt, đứng dậy là choáng váng, da xanh. Hôm nay con gái thấy phân bà màu đen. Bà không đau bụng, không nôn ra máu, không ngất, không choáng như sắp ngất. Không đau ngực, không khó thở, không sốt. Chưa đo mạch."
+patient:
+  age_years: 76
+  sex: female
+  region: central
+  month: 8
+complaint: dizziness
+answers:
+  black_stool: present
+  antithrombotic_use: present
+  known_heart_disease: present
+  dizziness_on_standing: present
+  pallor: present
+  fatigue: present
+  dizziness_pattern: chronic
+  fainting_or_near_fainting: absent
+  vomiting_blood: absent
+  abdominal_pain: absent
+  chest_pain_pressure: absent
+  breathing_difficulty: absent
+  fever: absent
+  vertigo_spinning: absent
+  regular_painkiller_use: absent
+  chronic_liver_disease: absent
+  anemia_known: absent
+  pulse_measured: not_measured
+default_unmentioned: absent
+expected:
+  condition: upper_gi_bleeding
+  acceptable: []
+  triage: 2
+source:
+  basis: "Ca không điển hình (người rất cao tuổi, không đau bụng, không nôn ra máu, chỉ choáng và phân đen): MSD: nhiều người loét chảy máu không đau; aspirin, thuốc chống đông làm tăng chảy máu; phân đen kéo dài vài ngày. NHS Stomach ulcer: phân đen thì gọi 999 hoặc đến cấp cứu; quy tắc rf_gi_bleeding (mức 2)."
+  references: [msd-gi-bleeding, nhs-stomach-ulcer, esc-syncope-2018]
+author: "agent:pass-c"

@@ -1,0 +1,36 @@
+id: d-pulmonary-embolism-1
+set: dev
+title_vi: "Nam 55 tuổi sau chuyến xe 10 giờ, đột ngột khó thở, đau ngực khi hít sâu rồi ngất"
+narrative_vi: "Ông C., 55 tuổi, ba ngày trước đi xe khách 10 giờ liền. Từ hôm qua bắp chân trái sưng đau. Sáng nay đột ngột khó thở, đau nhói ngực khi hít sâu, tim đập nhanh, rồi ngất khi vừa đứng dậy, vài giây sau tỉnh. Hiện vẫn còn khó thở. Không ho ra máu. Không có ung thư, chưa từng bị cục máu đông."
+patient:
+  age_years: 55
+  sex: male
+  region: central
+  month: 2
+complaint: syncope
+answers:
+  breathing_difficulty: present
+  pleuritic_chest_pain: present
+  palpitations: present
+  leg_swelling_one_side: present
+  recent_immobility: present
+  syncope_trigger: standing_up
+  syncope_warning: no_warning
+  chest_pain_pressure: absent
+  hemoptysis: absent
+  previous_clot: absent
+  active_cancer: absent
+  abdominal_pain: absent
+  headache: absent
+  black_stool: absent
+  vomiting_blood: absent
+  known_heart_disease: absent
+default_unmentioned: absent
+expected:
+  condition: pulmonary_embolism
+  acceptable: []
+  triage: 1
+source:
+  basis: "Thuyên tắc phổi điển hình: khó thở đột ngột, đau ngực kiểu màng phổi, ngất, dấu hiệu huyết khối tĩnh mạch sâu sau ngồi xe lâu (ESC 2019 mục 4.1, bảng 3; Miniati 2012). NHS: khó thở đột ngột, ngất thì gọi 999 hoặc đến cấp cứu. Quy tắc rf_syncope_breathing (mức 1)."
+  references: [esc-pe-2019, miniati-plosone-2012, nhs-pulmonary-embolism]
+author: "agent:pass-c"

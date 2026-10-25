@@ -1,0 +1,35 @@
+id: d-reflex-orthostatic-syncope-1
+set: dev
+title_vi: "Nữ 22 tuổi ngất khi đứng lâu dưới nắng, có báo trước, tỉnh lại ngay"
+narrative_vi: "Chị L., 22 tuổi, đứng xếp hàng ngoài nắng gần một giờ thì thấy nóng người, vã mồ hôi, buồn nôn, tối sầm mắt rồi ngã xuống. Người xung quanh đỡ nằm, chị tỉnh lại sau khoảng nửa phút, vài phút sau đi lại bình thường. Hồi học cấp ba chị cũng từng ngất như vậy hai lần. Không đau ngực, không khó thở, không thấy tim đập loạn, không đau bụng, không đau đầu. Không có thai, kinh nguyệt đều."
+patient:
+  age_years: 22
+  sex: female
+  region: south
+  month: 6
+complaint: syncope
+answers:
+  syncope_trigger: standing_heat
+  syncope_warning: prodrome
+  cold_sweat: present
+  dizziness: present
+  similar_episodes_before: present
+  not_recovered_after_faint: absent
+  pregnant: absent
+  missed_period: absent
+  chest_pain_pressure: absent
+  breathing_difficulty: absent
+  palpitations: absent
+  abdominal_pain: absent
+  headache: absent
+  known_heart_disease: absent
+  family_sudden_death: absent
+default_unmentioned: absent
+expected:
+  condition: reflex_orthostatic_syncope
+  acceptable: []
+  triage: 4
+source:
+  basis: "Ngất phế vị điển hình: đứng lâu nơi nóng, có tiền triệu nóng người, vã mồ hôi, buồn nôn, hồi phục nhanh, tái diễn từ trẻ, không có đặc điểm nguy cơ cao (ESC 2018 bảng 5–6). NHS Fainting: mọi người đã ngất nên khám bác sĩ gia đình (không khẩn)."
+  references: [esc-syncope-2018, esc-syncope-2018-practical, nhs-fainting]
+author: "agent:pass-c"

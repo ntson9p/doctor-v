@@ -1,0 +1,45 @@
+id: d-hypoglycemia-3
+set: dev
+title_vi: "Nữ 50 tuổi, đái tháo đường uống thuốc, chờ bữa trưa thì hồi hộp, run, vã mồ hôi, sợ hãi, ăn kẹo thì đỡ"
+narrative_vi: "Chị D., 50 tuổi, đái tháo đường típ 2, uống thuốc hạ đường huyết. Trưa nay bữa ăn bị muộn hơn 2 tiếng. Đang chờ thì đột ngột tim đập nhanh, run tay, vã mồ hôi, tê quanh môi, sợ hãi như sắp có chuyện gì, hơi choáng. Chị nghĩ mình bị cơn hoảng loạn. Ăn mấy viên kẹo thì khoảng 10 phút sau đỡ hẳn. Không đau ngực, không khó thở, không ngất. Chưa đo đường huyết. Trước đây chưa bị như vậy. Không có thai, không chậm kinh."
+patient:
+  age_years: 50
+  sex: female
+  region: central
+  month: 5
+complaint: palpitations
+answers:
+  diabetes: present
+  on_glucose_lowering_meds: present
+  missed_meal: present
+  better_after_sugar: present
+  tremor: present
+  cold_sweat: present
+  perioral_tingling: present
+  panic_fear: present
+  dizziness: present
+  palpitation_rhythm: fast_regular
+  palpitation_abrupt_onset: absent
+  similar_episodes_before: absent
+  chest_pain_pressure: absent
+  breathing_difficulty: absent
+  fainting_or_near_fainting: absent
+  confusion: absent
+  weight_loss_unintended: absent
+  breathless_on_exertion: absent
+  heat_intolerance: absent
+  pregnant: absent
+  missed_period: absent
+  hypertension_known: absent
+  known_heart_disease: absent
+  fever: absent
+default_unmentioned: absent
+expected:
+  condition: hypoglycemia
+  acceptable: []
+  triage: 3
+source:
+  basis: "Dễ nhầm với cơn hoảng sợ (panic_disorder): cả hai có hồi hộp, run, vã mồ hôi, tê môi, lo sợ (NHS Low blood sugar: lo lắng, tê môi). Điểm phân biệt: đang dùng thuốc hạ đường huyết, ăn muộn, đỡ hẳn sau khi ăn đồ ngọt (5481/QĐ-BYT phần 6; NHS). Mức xử trí: khám trong 24 giờ để xem lại thuốc (quy tắc rf_hypoglycemia_suspected)."
+  references: [nhs-hypoglycaemia, byt-qd-5481-2020]
+author: "agent:pass-c"
+notes_vi: "Ca dễ nhầm với bệnh của phần b (cơn hoảng sợ)."

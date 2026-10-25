@@ -1,0 +1,281 @@
+id: hypoglycemia
+names:
+  vi: "Hạ đường huyết"
+  vi_common: ["Hạ đường máu", "Tụt đường huyết", "Hạ glucose máu"]
+  en: "Hypoglycaemia"
+codes:
+  icd10: "E16.2"
+  icd10_verified: false
+  mondo: "MONDO:0004946"
+summary_vi:
+  - "Đường trong máu xuống quá thấp (dưới 3,9 mmol/L), hay gặp ở người tiêm insulin hoặc uống thuốc hạ đường huyết."
+  - "Thường gây đói, vã mồ hôi, run tay, hồi hộp, hoa mắt; nặng có thể lú lẫn, co giật, bất tỉnh."
+  - "Nếu còn tỉnh và nuốt được, cần ăn hoặc uống ngay đồ ngọt."
+urgency: 3
+cant_miss: false
+specialties: [endocrinology, general_medicine, emergency]
+priors:
+  - complaint: dizziness
+    default: P3
+    by_age: { child_5_12: P5, teen_13_17: P4 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [newmantoker-mayoclinproc-2008, maarsingh-annfammed-2010, byt-qd-5481-2020, nhs-hypoglycaemia]
+      locator: "Newman-Toker 2008 bảng 4; Maarsingh 2010 bảng nguyên nhân; 5481/QĐ-BYT phần 6"
+      reported: "Hạ đường huyết 1,4% lượt chóng mặt đến cấp cứu ở Mỹ; nguyên nhân chuyển hóa – nội tiết 1% ở người từ 65 tuổi chóng mặt kéo dài tại tuyến ban đầu"
+      note: "Hai lượt cùng chọn P3 từ 45 tuổi và P5 ở 5–12 tuổi. Lệch một mức ở 13–17 tuổi (A P5, B P4) và 18–44 tuổi (A P4, B P3). Lượt A dựa vào tỷ lệ dùng thuốc điều trị đái tháo đường theo tuổi của STEPS 2021, nhưng lượt C không mở lại được số liệu này (bản PDF không trích được chữ), nên coi hai lượt ngang nguồn (đều là ước lượng) và chọn mức cao hơn theo quy tắc đối chiếu: P4 ở 13–17 tuổi, P3 từ 18 tuổi. Hạ đường huyết chủ yếu là biến chứng của insulin và sulfonylurea (5481/QĐ-BYT; NHS: hiếm ở người không bị đái tháo đường). Câu hỏi đái tháo đường và thuốc hạ đường huyết mang phần lớn thông tin; riêng ở thiếu niên, tỷ lệ nền 7% của câu đái tháo đường (lấy theo người lớn) làm câu trả lời 'Có' yếu hơn thực tế, mức P4 bù một phần. Cần bác sĩ duyệt."
+  - complaint: syncope
+    default: P3
+    by_age: { child_5_12: P5, teen_13_17: P4, adult_18_44: P4 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [bonds-bmcendocrdisord-2012, byt-qd-5481-2020, nhs-hypoglycaemia]
+      locator: "Bonds 2012 bảng 2; 5481/QĐ-BYT phần 6 mục 2"
+      reported: "Mất ý thức ở 25% các cơn hạ đường huyết nặng (Bonds 2012)"
+      note: "Lượt A: P4 từ 45 tuổi, P5 dưới 45 tuổi; lượt B: P3, thiếu niên P4, trẻ em P5. Từ 45 tuổi và ở 13–17 tuổi lệch một mức, nguồn ngang nhau: lượt C chọn mức cao hơn (P3, P4). Ở 18–44 tuổi lệch hai mức: lượt C đọc lại nguồn và chọn P4 ở giữa: mất ý thức do hạ đường huyết không phải ngất thật (rối loạn ý thức kéo dài, cần đường mới hồi phục, 5481/QĐ-BYT), chỉ xảy ra ở một phần các cơn nặng (Bonds 2012: 25%), và người chọn Ngất phần lớn là ngất phản xạ; nhưng người dùng insulin ở tuổi này vẫn có thể lịm đi, và người bệnh, người nhà vẫn chọn 'Ngất, suýt ngất' khi choáng, vã mồ hôi. Cần bác sĩ duyệt."
+  - complaint: palpitations
+    default: P4
+    by_age: { child_5_12: P5 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [weber-amjmed-1996, byt-qd-5481-2020, nhs-hypoglycaemia]
+      locator: "Weber 1996 tóm tắt; 5481/QĐ-BYT phần thuốc insulin (tác dụng phụ)"
+      reported: "Nguyên nhân hồi hộp ở một trung tâm y khoa (Mỹ): tim 43%, tâm thần 31%, nguyên nhân khác 10%, không rõ 16% (Weber 1996)"
+      note: "Hạ đường huyết thuộc nhóm 'nguyên nhân khác'; khoảng 3 mmol/L thường có tim đập nhanh, hồi hộp (5481/QĐ-BYT). Hai lượt cùng chọn P4 từ 45 tuổi và P5 ở 5–12 tuổi; lệch một mức ở 13–44 tuổi (A P5, B P4). Như với Chóng mặt, hai lượt ngang nguồn nên lượt C chọn mức cao hơn (P4). Cần bác sĩ duyệt."
+findings:
+  - finding: diabetes
+    freq: very_frequent
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-5481-2020, nhs-hypoglycaemia]
+      locator: "5481/QĐ-BYT phần 6; NHS Low blood sugar mục Symptoms, How you get low blood sugar"
+      note: "Hạ đường huyết là biến chứng cấp thường gặp ở người đái tháo đường (5481/QĐ-BYT) và hiếm ở người không bị đái tháo đường (NHS). Không chọn almost_always vì còn hạ đường huyết do rượu, nhịn đói, bệnh nặng, và người chưa biết mình bị đái tháo đường. Câu hỏi chỉ hỏi người từ 13 tuổi. Hai lượt giống nhau."
+  - finding: on_glucose_lowering_meds
+    freq: almost_always
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-5481-2020, nhs-hypoglycaemia]
+      locator: "5481/QĐ-BYT phần 6 mục 1; NHS mục How you get low blood sugar"
+      note: "Tần suất trong số người đã có đái tháo đường. Người dùng insulin, sulfonylurea có nguy cơ (5481/QĐ-BYT; NHS: hay gặp với insulin, gliclazide, glimepiride). Tỷ lệ nền 0,7 nên 'Có' chỉ tăng khoảng 1,4 lần, nhưng 'Không' giảm khoảng 6 lần. Câu hỏi gộp cả thuốc ít gây hạ đường huyết. Hai lượt giống nhau."
+  - finding: glucose_measured
+    dist: { low: 0.355, normal: 0.038, high: 0.007, not_measured: 0.6 }
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-5481-2020, nhs-hypoglycaemia]
+      locator: "5481/QĐ-BYT phần 6 mục 1c, 2 (phân mức); NHS mục Checking your blood sugar"
+      note: "Định nghĩa: glucose dưới 3,9 mmol/L (5481/QĐ-BYT; NHS: dưới 4 mmol/L). Lượt A dùng bản đề xuất riêng của câu hỏi (dưới 3,9 / 3,9–10 / trên 10, không có 'Chưa đo'); lượt C chuyển sang bản trong danh mục (dưới 4 / 4–11 / trên 11 / Chưa đo) và lấy trung bình với lượt B. 'Chưa đo' giữ đúng 0,6 như tỷ lệ nền (lựa chọn trung tính); trong số người đã đo, khoảng 89% dưới 4 mmol/L, phần còn lại cho người đo sau khi đã ăn đồ ngọt hoặc máy đo sai."
+  - finding: cold_sweat
+    freq: frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [bonds-bmcendocrdisord-2012, byt-qd-5481-2020, nhs-hypoglycaemia, vo-jpma-2019]
+      locator: "Bonds 2012 bảng 1; 5481/QĐ-BYT phần thuốc insulin"
+      reported: "Vã mồ hôi 26–27% trong cơn nặng ghi sau cơn (Bonds 2012); 83% ở người nằm viện tại Lâm Đồng (Vo 2019, chất lượng thấp)"
+      note: "Lượt A frequent, lượt B very_frequent. Lượt C chọn frequent: nguồn có chất lượng tốt hơn (Bonds 2012) cho số thấp, nguồn Việt Nam cho số cao nhưng cách tính không rõ; vã mồ hôi là dấu hiệu sớm (5481/QĐ-BYT) và có cả ở cơn nhẹ (NHS), nên mức giữa là khoảng một nửa. Cùng cụm adrenergic với run tay."
+  - finding: tremor
+    freq: frequent
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [nhs-hypoglycaemia, byt-qd-5481-2020, bonds-bmcendocrdisord-2012]
+      reported: "Run 19–21% trong cơn nặng (Bonds 2012)"
+      note: "NHS: run là triệu chứng thường gặp; 5481/QĐ-BYT: lạnh run trong nhóm triệu chứng cường giao cảm. Cơn nhẹ ở cộng đồng có nhiều triệu chứng giao cảm hơn cơn nặng; hai lượt cùng ước khoảng một nửa. Cùng cụm adrenergic."
+  - finding: missed_meal
+    freq: frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [bonds-bmcendocrdisord-2012, byt-qd-5481-2020, nhs-hypoglycaemia]
+      locator: "Bonds 2012 bảng 2"
+      reported: "Trước cơn hạ đường huyết nặng: ăn muộn hoặc bỏ bữa 31–44%; khoảng một nửa số cơn liên quan ăn uống"
+      population: "Người đái tháo đường típ 2 trong thử nghiệm ACCORD"
+      note: "5481/QĐ-BYT: bỏ bữa hoặc ăn muộn sau tiêm insulin là nguyên nhân hay gặp. Hai lượt giống nhau. Tỷ lệ nền 0,2."
+  - finding: better_after_sugar
+    freq: very_frequent
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-5481-2020, nhs-hypoglycaemia]
+      locator: "5481/QĐ-BYT phần 6 mục 1c; NHS mục How to treat low blood sugar yourself"
+      note: "Người tỉnh, uống được thì dùng 15–20 g glucose hoặc đồ ngọt, thử lại sau 15 phút, nhắc lại nếu còn thấp; phần lớn đỡ sau một đến hai lần. Người chưa thử thì trả lời 'Không rõ'. Hai lượt giống nhau."
+  - finding: palpitations
+    freq: occasional
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [bonds-bmcendocrdisord-2012, byt-qd-5481-2020, nhs-hypoglycaemia]
+      locator: "Bonds 2012 bảng 1; 5481/QĐ-BYT phần thuốc insulin"
+      reported: "Tim đập nhanh 4% trong cơn nặng (Bonds 2012)"
+      note: "Lượt A occasional, lượt B frequent. Lượt C chọn occasional: số liệu duy nhất (Bonds 2012) rất thấp, còn NHS chỉ ghi 'có thể có' hồi hộp (mức occasional theo bảng 2.1); 5481/QĐ-BYT: tim đập nhanh, hồi hộp khi glucose khoảng 3 mmol/L. Có tác dụng khi triệu chứng chính là Chóng mặt hoặc Ngất."
+  - finding: dizziness
+    freq: frequent
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-5481-2020, nhs-hypoglycaemia, bonds-bmcendocrdisord-2012, vo-jpma-2019]
+      reported: "Chóng mặt 14–16% trong cơn nặng (Bonds 2012); khoảng một nửa người nằm viện (Vo 2019)"
+      note: "Chỉ có tác dụng khi triệu chứng chính là Ngất hoặc Hồi hộp. 5481/QĐ-BYT: hoa mắt là dấu hiệu sớm; NHS: chóng mặt. Hai lượt cùng ước khoảng một nửa."
+  - finding: fatigue
+    freq: frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [bonds-bmcendocrdisord-2012, byt-qd-5481-2020, nhs-hypoglycaemia]
+      reported: "Yếu, mệt 29–30% (hay gặp nhất) trong cơn nặng"
+      note: "5481/QĐ-BYT: mệt mỏi khi glucose dưới 2,8 mmol/L; NHS: mệt hoặc yếu. Hai lượt giống nhau. Tỷ lệ nền 0,2."
+  - finding: confusion
+    freq: occasional
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [bonds-bmcendocrdisord-2012, byt-qd-5481-2020, nhs-hypoglycaemia]
+      reported: "Lú lẫn, mất định hướng 22–29% trong cơn nặng"
+      note: "Ở cộng đồng phần lớn là cơn nhẹ; ước 10–20%. Quy tắc rf_altered_consciousness xếp mức 1. Hai lượt giống nhau."
+  - finding: drowsy_hard_to_wake
+    freq: occasional
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [bonds-bmcendocrdisord-2012, byt-qd-5481-2020]
+      reported: "Mất ý thức 25% các cơn nặng"
+      note: "Mức 3 theo 5481/QĐ-BYT (rối loạn ý thức) cần cấp cứu; người nhà có thể kiểm tra giúp. Hai lượt giống nhau."
+  - finding: severe_weakness
+    freq: occasional
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [bonds-bmcendocrdisord-2012, nhs-hypoglycaemia]
+      note: "Chỉ lượt A có; lượt C giữ. Yếu, mệt là triệu chứng hay gặp nhất trong cơn nặng (Bonds 2012); NHS: mệt hoặc yếu. Mệt lả không tự đi lại được gặp ở một phần nhỏ; ước 10–20%."
+  - finding: blurred_vision
+    freq: occasional
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [byt-qd-5481-2020, bonds-bmcendocrdisord-2012, nhs-hypoglycaemia]
+      reported: "Nhìn mờ 9–14% trong cơn nặng (Bonds 2012)"
+      note: "Dưới 2,8 mmol/L xuất hiện nhìn mờ, nhức đầu, nói khó (5481/QĐ-BYT). Hai lượt giống nhau."
+  - finding: fainting_or_near_fainting
+    freq: occasional
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [bonds-bmcendocrdisord-2012, byt-qd-5481-2020, nhs-hypoglycaemia]
+      note: "Hai lượt cùng chọn occasional. Chỉ có tác dụng khi triệu chứng chính là Chóng mặt hoặc Hồi hộp. Mất ý thức ở 25% cơn nặng (Bonds 2012), ít hơn nhiều ở cơn nhẹ. Với tỷ lệ nền mới (0,25 khi chóng mặt, 0,15 khi hồi hộp), mức này gần trung tính; chưa có nguồn cho thấy choáng như sắp ngất hay gặp hơn ở người chóng mặt do hạ đường huyết."
+  - finding: similar_episodes_before
+    freq: frequent
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-5481-2020]
+      locator: "Phần 6 mục 1a, 1b, 1e"
+      note: "5481/QĐ-BYT: người có nguy cơ cần được hỏi các cơn trước mỗi lần khám; người dùng insulin, sulfonylurea hay bị lại. Hai lượt cùng ước khoảng một nửa; tỷ lệ nền 0,2."
+  - finding: vertigo_spinning
+    freq: occasional
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [byt-qd-5481-2020, newmantoker-mayoclinproc-2007]
+      note: "Chỉ lượt A có; lượt C giữ. Tần suất trong số người đã chóng mặt. 5481/QĐ-BYT mô tả hoa mắt, không mô tả quay cuồng; mô tả kiểu chóng mặt kém tin cậy (Newman-Toker 2007). Ước 20%, thấp hơn tỷ lệ nền 0,4."
+  - finding: dizziness_pattern
+    dist: { brief_episodes: 0.115, long_episodes: 0.65, continuous: 0.12, chronic: 0.115 }
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [byt-qd-5481-2020, nhs-hypoglycaemia]
+      note: "Trung bình hai lượt (lệch 0,10). Cơn kéo dài đến khi được ăn uống đồ ngọt, thường vài phút đến vài giờ; người hay bị lại có thể chọn 'âm ỉ nhiều tuần'. Ước lượng."
+  - finding: syncope_trigger
+    dist: { standing_heat: 0.075, emotion_pain: 0.025, standing_up: 0.10, toilet_cough: 0.025, exertion: 0.14, lying: 0.085, no_trigger: 0.55 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [bonds-bmcendocrdisord-2012, byt-qd-5481-2020, nhs-hypoglycaemia]
+      reported: "Vận động nhiều hơn thường lệ trước 12–15% cơn nặng; 10–11% cơn xảy ra lúc 0–4 giờ sáng (Bonds 2012)"
+      note: "Trung bình hai lượt. Không phụ thuộc tư thế; vận động nhiều hơn thường lệ là yếu tố khởi phát hay gặp (Bonds 2012; 5481/QĐ-BYT; NHS); cơn ban đêm có thể được kể là 'khi đang nằm'. Ước lượng."
+  - finding: syncope_warning
+    dist: { prodrome: 0.72, palpitations_first: 0.135, no_warning: 0.145 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-5481-2020, nhs-hypoglycaemia]
+      note: "Trung bình hai lượt. Thường có vã mồ hôi, đói, hoa mắt, hồi hộp trước; người không nhận biết được cơn hạ đường huyết có thể lịm đi không báo trước (5481/QĐ-BYT). Ước lượng."
+  - finding: palpitation_rhythm
+    dist: { fast_regular: 0.50, irregular: 0.05, skipped_beats: 0.07, forceful: 0.38 }
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [byt-qd-5481-2020]
+      note: "Chỉ lượt A có; lượt C giữ. Phân bố trong số người đã hồi hộp. Tim nhanh do phản ứng giao cảm nên thường nhanh đều hoặc đập mạnh. Ước lượng."
+  - finding: pulse_measured
+    dist: { lt_40: 0.003, n40_100: 0.235, n100_150: 0.154, gt_150: 0.008, not_measured: 0.6 }
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [byt-qd-5481-2020, nhs-hypoglycaemia]
+      note: "Trung bình hai lượt. Tim nhanh khi glucose khoảng 3 mmol/L (5481/QĐ-BYT); hiếm khi trên 150 lần/phút. 'Chưa đo' giữ đúng 0,6 (lựa chọn trung tính). Ước lượng."
+  - finding: perioral_tingling
+    freq: occasional
+    evidence:
+      tier: C
+      basis: verbal
+      sources: [nhs-hypoglycaemia]
+      note: "Chỉ lượt B có; lượt C giữ. NHS: tê môi là triệu chứng có thể có. Ước 20%; tỷ lệ nền 5%."
+  - finding: panic_fear
+    freq: occasional
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [bonds-bmcendocrdisord-2012, nhs-hypoglycaemia]
+      reported: "Lo âu 8–10% trong cơn nặng (Bonds 2012)"
+      note: "Chỉ lượt B có; lượt C giữ. NHS: lo lắng hoặc cáu gắt. Câu hỏi hỏi sợ hãi dữ dội, đặc trưng của cơn hoảng sợ hơn; số liệu ở đầu dưới mức occasional."
+  - finding: heavy_alcohol
+    freq: occasional
+    evidence:
+      tier: C
+      basis: verbal
+      sources: [nhs-hypoglycaemia, bonds-bmcendocrdisord-2012]
+      reported: "Uống rượu trước 2–3% cơn nặng ở người đái tháo đường típ 2 (Bonds 2012)"
+      note: "Chỉ lượt B có; lượt C giữ. NHS: uống nhiều rượu, nhất là khi không ăn, làm dễ hạ đường huyết, kể cả ở người không bị đái tháo đường. Ước 20%, hơi cao hơn tỷ lệ nền 0,15 (gần trung tính)."
+  - finding: seizure_recent
+    freq: rare
+    above_leak_ok: true
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [bonds-bmcendocrdisord-2012, nhs-hypoglycaemia, byt-qd-5481-2020]
+      reported: "Co giật 2–3% các cơn nặng (Bonds 2012)"
+      note: "Chỉ lượt B có; lượt C giữ và lấy số của Bonds 2012 thay cho số nằm viện. NHS, 5481/QĐ-BYT: co giật là dấu hiệu hạ đường huyết nặng. Mức rare cao hơn tỷ lệ nền 1% là có chủ ý: co giật ở người dùng thuốc tiểu đường làm tăng khả năng hạ đường huyết."
+  - finding: not_recovered_after_faint
+    freq: occasional
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-5481-2020]
+      locator: "Phần 6 mục 3a"
+      note: "Chỉ lượt B có; lượt C giữ. 5481/QĐ-BYT: rối loạn ý thức do thiếu glucose não có thể mất một thời gian mới hồi phục hoàn toàn; mất ý thức do hạ đường huyết không tự hết nhanh như ngất. Ước 20%; tỷ lệ nền 5%."
+warning_signs: [confusion, drowsy_hard_to_wake, es_unresponsive_or_seizing, seizure_recent, not_recovered_after_faint]
+self_care_vi:
+  - "Nếu còn tỉnh và nuốt được, ăn hoặc uống ngay đồ ngọt, ví dụ một cốc nhỏ nước hoa quả hoặc nước ngọt có đường."
+  - "Sau 10–15 phút chưa đỡ thì ăn, uống đồ ngọt lần nữa."
+  - "Khi đã đỡ, ăn thêm bữa nhẹ như bánh mì, cơm để tránh bị lại."
+  - "Nếu có máy, đo đường huyết và ghi lại kết quả."
+  - "Nếu lơ mơ hoặc không nuốt được, không cho ăn uống; đặt nằm nghiêng và gọi 115."
+  - "Không lái xe trong ít nhất 45 phút sau khi đường huyết trở lại bình thường."
+see_doctor_vi:
+  - "Đi khám trong 24 giờ để bác sĩ xem lại thuốc và cách ăn uống, vì cơn có thể tái lại."
+  - "Gọi 115 nếu lơ mơ, co giật, bất tỉnh hoặc không nuốt được."
+  - "Người dùng thuốc tiểu đường mà bị cơn nặng cần được theo dõi tại bệnh viện, vì cơn có thể kéo dài."
+  - "Người không bị tiểu đường mà có các cơn như vậy cần đi khám để tìm nguyên nhân."
+review:
+  status: source_checked
+  authors: ["agent:pass-a", "agent:pass-b"]
+  reconciler: "agent:pass-c"
+  doctor_reviewer: null
+  updated: "2026-10-25"
+  notes_vi: "Lượt C đã đối chiếu 27 liên kết và mở lại mọi nguồn được trích. Mức xử trí 3, không thuộc nhóm 'không được bỏ sót': hai lượt cùng đổi so với gợi ý (mức 2, không được bỏ sót) và lượt C đồng ý sau khi đọc lại nguồn: ca điển hình là người còn tỉnh; 5481/QĐ-BYT (phần 6 mục 1c) và NHS đều cho người tỉnh, nuốt được tự ăn uống đồ ngọt rồi thử lại sau 15 phút; chỉ hạ đường huyết mức 3 (rối loạn ý thức) mới cần cấp cứu, và các dấu hiệu này đã có quy tắc mức 1–2 (lú lẫn, li bì, chưa hồi phục sau ngất, màn sàng lọc cấp cứu). Mức 3 khớp quy tắc rf_hypoglycemia_suspected (khám trong 24 giờ để xem lại thuốc). Mức 2 kèm ngưỡng 1% sẽ khuyên đi viện ngay mọi người tiểu đường có chóng mặt, làm chậm việc ăn đồ ngọt. Mã E16.2 và tên chính thức chưa đối chiếu được với bảng ICD-10 của Bộ Y tế; phần lớn ca do thuốc (E16.0). Bác sĩ cần xem: (1) 5481/QĐ-BYT ghi người dùng sulfonylurea hoặc insulin tác dụng chậm bị cơn nặng cần được theo dõi trong bệnh viện: có cần mức 2 cho nhóm này sau một cơn nặng không; (2) prior theo tuổi là ước lượng; (3) tần suất triệu chứng lấy từ cơn nặng trong thử nghiệm ACCORD và mô tả của 5481/QĐ-BYT, NHS, chưa có số liệu cơn nhẹ ở cộng đồng; (4) câu hỏi thuốc hạ đường huyết chưa tách insulin, sulfonylurea với thuốc ít gây hạ đường huyết."

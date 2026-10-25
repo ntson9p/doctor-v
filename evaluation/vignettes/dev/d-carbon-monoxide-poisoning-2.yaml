@@ -1,0 +1,34 @@
+id: d-carbon-monoxide-poisoning-2
+set: dev
+title_vi: "Nam 78 tuổi sống một mình, ngất trong nhà tắm kín có bình nóng lạnh chạy gas, tỉnh lại còn lẫn lộn"
+narrative_vi: "Ông Q., 78 tuổi, sống một mình. Tối nay con gái sang thăm thấy ông nằm gục trong nhà tắm đóng kín, bình nóng lạnh chạy gas đang bật. Đưa ra ngoài thì vài phút sau ông tỉnh, nhưng đến giờ vẫn lẫn lộn, hỏi lại nhiều lần, chưa đi lại vững như trước. Ông kêu đau đầu. Không co giật, không méo miệng, không yếu nửa người. Không khó thở, không đau ngực. Không biết trước khi ngất ông có thấy gì không."
+patient:
+  age_years: 78
+  sex: male
+  region: north
+  month: 12
+complaint: syncope
+answers:
+  co_exposure: present
+  others_same_symptoms: absent
+  confusion: present
+  not_recovered_after_faint: present
+  headache: present
+  headache_thunderclap: absent
+  syncope_trigger: standing_heat
+  syncope_warning: unknown
+  breathing_difficulty: absent
+  chest_pain_pressure: absent
+  palpitations: absent
+  seizure_recent: absent
+  vomiting: absent
+  fever: absent
+default_unmentioned: absent
+expected:
+  condition: carbon_monoxide_poisoning
+  acceptable: []
+  triage: 1
+source:
+  basis: "Ca không điển hình: người già có thể khởi đầu bằng lẫn lộn (3610/QĐ-BYT mục 3.5); bình nóng lạnh chạy gas trong nhà tắm kín là nguồn khí CO hay gặp ở Việt Nam (mục 2.2); mất ý thức trong phòng kín có thiết bị đốt là tình huống điển hình (Jüttner 2021). NHS: đã phơi nhiễm kèm đột ngột lú lẫn hoặc mất ý thức thì gọi 999; người lú lẫn không tự đến viện an toàn được (quy tắc rf_altered_consciousness, mức 1)."
+  references: [byt-qd-3610-2015, juttner-germedsci-2021, nhs-carbon-monoxide-poisoning]
+author: "agent:pass-c"

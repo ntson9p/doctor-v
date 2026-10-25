@@ -1,0 +1,44 @@
+id: d-panic-disorder-3
+set: dev
+title_vi: "Nữ 30 tuổi hay có cơn hồi hộp, run, vã mồ hôi từng lúc, giữa các cơn bình thường"
+narrative_vi: "Chị V., 30 tuổi, ba tháng nay hay có cơn bỗng sợ hãi dữ dội, tim đập nhanh, run tay, vã mồ hôi, tê bì đầu ngón tay, mỗi cơn khoảng 10–20 phút rồi hết; giữa các cơn chị hoàn toàn bình thường. Người nhà nghi chị bị cường giáp. Chị không sụt cân, không sợ nóng, cổ không to, mắt không lồi, không tiêu chảy. Không đau ngực, không khó thở, không ngất. Không có thai, kinh nguyệt đều. Chưa đo mạch."
+patient:
+  age_years: 30
+  sex: female
+  region: central
+  month: 7
+complaint: palpitations
+answers:
+  panic_fear: present
+  tremor: present
+  cold_sweat: present
+  perioral_tingling: present
+  palpitation_rhythm: fast_regular
+  palpitation_duration: minutes_hours
+  palpitation_abrupt_onset: absent
+  similar_episodes_before: present
+  dizziness: present
+  stress_poor_sleep: present
+  weight_loss_unintended: absent
+  heat_intolerance: absent
+  goiter_visible: absent
+  eyes_bulging: absent
+  diarrhea: absent
+  fatigue: absent
+  fainting_or_near_fainting: absent
+  chest_pain_pressure: absent
+  breathing_difficulty: absent
+  neck_pounding: absent
+  stimulant_intake: absent
+  pregnant: absent
+  missed_period: absent
+  pulse_measured: not_measured
+default_unmentioned: absent
+expected:
+  condition: panic_disorder
+  acceptable: []
+  triage: 4
+source:
+  basis: "Dễ nhầm với cường giáp (cùng run tay, vã mồ hôi, hồi hộp), nhưng triệu chứng thành cơn rời rạc 10–20 phút, có cảm giác sợ hãi dữ dội và tê bì, giữa các cơn bình thường, không sụt cân, không sợ nóng, không bướu cổ (NHS Panic disorder; 3879/QĐ-BYT: cường giáp có nhịp tim nhanh thường xuyên, sụt cân, sợ nóng). MSD: khám để loại trừ cường giáp."
+  references: [nhs-panic-disorder, msd-panic-disorder, byt-qd-3879-2014]
+author: "agent:pass-c"

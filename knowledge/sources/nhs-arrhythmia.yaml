@@ -1,0 +1,13 @@
+id: nhs-arrhythmia
+type: web_page
+title: "Heart rhythm problems (arrhythmia)"
+publisher: "NHS (UK)"
+date: "2024-10-28"
+url: "https://www.nhs.uk/conditions/arrhythmia/"
+license_class: L1
+license_note: "Open Government Licence v3.0; bản chuyển thể không được trình bày như nội dung của NHS."
+default_tier: C
+accessed: "2026-10-25"
+verified: true
+verified_by: "agent:pass-c"
+notes_vi: "Lượt C (phần b) tải trang và trích chữ ngày 25/10/2026 (rà soát lần cuối 28/10/2024, hạn rà soát 28/10/2027). Tim đập quá nhanh, quá chậm hoặc không đều; có thể gây hồi hộp (đập mạnh, nhanh, rung, hẫng nhịp, vài giây đến vài phút), khó thở, choáng váng, chóng mặt hoặc cảm giác sắp ngất, mệt, đau hoặc khó chịu ngực. Khám bác sĩ gia đình (không khẩn) khi nghĩ có rối loạn nhịp hoặc hồi hộp hay tái lại, nặng lên. Gọi 999 hoặc đến cấp cứu khi đang hồi hộp kèm đau ngực, khó thở, chóng mặt, choáng váng, ngất hoặc cảm giác sắp ngất; nếu các triệu chứng đó đã hết thì hẹn khám khẩn hoặc gọi 111; không tự lái xe. Nguyên nhân khác: tăng huyết áp, bệnh mạch vành, bệnh van tim, nhồi máu cơ tim; thuốc, vi rút, cà phê, rượu, thuốc lá, chất gây nghiện."

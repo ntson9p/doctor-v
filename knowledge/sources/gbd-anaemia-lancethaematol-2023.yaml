@@ -1,0 +1,15 @@
+id: gbd-anaemia-lancethaematol-2023
+type: statistic
+title: "Prevalence, years lived with disability, and trends in anaemia burden by severity and cause, 1990–2021: findings from the Global Burden of Disease Study 2021"
+publisher: "Lancet Haematology 2023;10(9):e713–e734 (GBD 2021 Anaemia Collaborators)"
+date: "2023-09"
+url: "https://europepmc.org/article/MED/37536353"
+doi: "10.1016/S2352-3026(23)00160-6"
+pmid: "37536353"
+license_class: L1
+license_note: "CC BY 4.0 (theo toàn văn PMC10465717): được dùng, chuyển thể, ghi công."
+default_tier: B
+accessed: "2026-10-25"
+verified: true
+verified_by: "agent:pass-c (đọc lại toàn văn PMC10465717 qua API Europe PMC)"
+notes_vi: "Năm 2021 thiếu máu ở 24,3% dân số thế giới; nam 17,5%, nữ 31,2% (mọi lứa tuổi); 15–49 tuổi: nữ 33,7%, nam 11,3%. Chênh lệch theo giới lớn nhất ở 10–64 tuổi, nhỏ ở trẻ dưới 5 tuổi (41,4% chung) và thu hẹp lại từ 80 tuổi. Nguyên nhân hàng đầu là thiếu sắt do ăn uống (66,2% số ca), tiếp theo là bệnh hemoglobin và tan máu; bệnh phụ khoa và mất máu sản khoa quan trọng ở phụ nữ tuổi sinh đẻ; ở người trên 80 tuổi, bệnh thận mạn đứng thứ hai về gánh nặng."

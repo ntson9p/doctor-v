@@ -1,0 +1,15 @@
+id: soteriades-nejm-2002
+type: primary_study
+title: "Incidence and prognosis of syncope"
+publisher: "New England Journal of Medicine 2002;347(12):878–885 (Soteriades ES và cộng sự)"
+date: "2002"
+url: "https://europepmc.org/article/MED/12239256"
+doi: "10.1056/NEJMoa012407"
+pmid: "12239256"
+license_class: L3
+license_note: "Bản quyền nhà xuất bản: chỉ dùng dữ kiện kèm trích dẫn, không sao chép câu chữ."
+default_tier: B
+accessed: "2026-10-25"
+verified: true
+verified_by: "agent:pass-c"
+notes_vi: "Lượt C (agent:pass-c, phần b) đọc tóm tắt qua API Europe PMC ngày 25/10/2026. Nghiên cứu Framingham (cộng đồng Mỹ, 1971–1998): 7.814 người theo dõi trung bình 17 năm, 822 người ngất; tỷ lệ mới mắc 6,2/1.000 người-năm. Nguyên nhân hay gặp: phế vị 21,2%, do tim 9,5%, hạ huyết áp tư thế 9,4%; không rõ 36,6%. Ngất do tim làm tăng tử vong và biến cố tim mạch; ngất phế vị (gồm cả tư thế và do thuốc) không làm tăng nguy cơ."

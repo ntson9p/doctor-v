@@ -1,0 +1,38 @@
+id: d-upper-gi-bleeding-3
+set: dev
+title_vi: "Nam 45 tuổi uống nhiều rượu, viêm gan B, ngất khi đi ngoài, phân đen sệt"
+narrative_vi: "Anh N., 45 tuổi, uống rượu nhiều, có viêm gan B mạn. Tối qua đang đi ngoài thì nóng người, vã mồ hôi rồi ngất gục trong nhà vệ sinh, vài giây sau tỉnh. Vợ anh thấy phân đen sệt. Anh nghĩ chỉ là cường phế vị. Sáng nay vẫn còn choáng khi đứng dậy. Không nôn ra máu, không đau bụng, không đau ngực, không khó thở. Chưa đo mạch."
+patient:
+  age_years: 45
+  sex: male
+  region: south
+  month: 1
+complaint: syncope
+answers:
+  black_stool: present
+  chronic_liver_disease: present
+  heavy_alcohol: present
+  syncope_trigger: toilet_cough
+  syncope_warning: prodrome
+  cold_sweat: present
+  dizziness_on_standing: present
+  dizziness: present
+  vomiting_blood: absent
+  abdominal_pain: absent
+  chest_pain_pressure: absent
+  breathing_difficulty: absent
+  palpitations: absent
+  headache: absent
+  regular_painkiller_use: absent
+  antithrombotic_use: absent
+  not_recovered_after_faint: absent
+  pulse_measured: not_measured
+default_unmentioned: absent
+expected:
+  condition: upper_gi_bleeding
+  acceptable: []
+  triage: 1
+source:
+  basis: "Dễ nhầm với ngất tình huống khi đi ngoài (có tiền triệu, tỉnh nhanh), nhưng phân đen và bệnh gan mạn, rượu gợi ý xuất huyết tiêu hóa trên, có thể do vỡ giãn tĩnh mạch thực quản (MSD; Phuc 2024; ESC 2018: nghi chảy máu tiêu hóa là nguy cơ cao). Ngất kèm phân đen: quy tắc rf_syncope_gi_bleeding (mức 1)."
+  references: [msd-gi-bleeding, phuc-vjcm-2024, esc-syncope-2018, nhs-stomach-ulcer]
+author: "agent:pass-c"

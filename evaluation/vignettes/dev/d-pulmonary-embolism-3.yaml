@@ -1,0 +1,41 @@
+id: d-pulmonary-embolism-3
+set: dev
+title_vi: "Nữ 30 tuổi sau chuyến bay dài, hồi hộp, khó thở, lo sợ, tưởng là cơn hoảng sợ"
+narrative_vi: "Chị K., 30 tuổi, hai ngày trước bay một chuyến 12 giờ. Tối nay bỗng thấy tim đập nhanh, khó thở, đau nhói ngực bên phải khi hít sâu, rất lo sợ, choáng váng nhưng không như sắp ngất. Chị từng có cơn hoảng sợ hồi đi học nên nghĩ lại bị như vậy. Bắp chân trái hơi sưng đau. Không ho ra máu. Không run tay, không tê bì. Không có thai, kinh nguyệt đều. Chưa đo mạch."
+patient:
+  age_years: 30
+  sex: female
+  region: south
+  month: 7
+complaint: palpitations
+answers:
+  breathing_difficulty: present
+  pleuritic_chest_pain: present
+  recent_immobility: present
+  leg_swelling_one_side: present
+  panic_fear: present
+  dizziness: present
+  palpitation_rhythm: fast_regular
+  palpitation_duration: ongoing
+  palpitation_abrupt_onset: absent
+  similar_episodes_before: absent
+  fainting_or_near_fainting: absent
+  chest_pain_pressure: absent
+  hemoptysis: absent
+  tremor: absent
+  perioral_tingling: absent
+  previous_clot: absent
+  active_cancer: absent
+  stress_poor_sleep: absent
+  pregnant: absent
+  missed_period: absent
+  pulse_measured: not_measured
+default_unmentioned: absent
+expected:
+  condition: pulmonary_embolism
+  acceptable: []
+  triage: 1
+source:
+  basis: "Dễ nhầm với cơn hoảng sợ (hồi hộp, khó thở, lo sợ, từng có cơn hoảng sợ), nhưng có đau ngực kiểu màng phổi, sưng đau một bên bắp chân sau chuyến bay dài, không có tê bì (ESC 2019 mục 4.1, bảng 3; Miniati 2012; NHS Pulmonary embolism: khó thở đột ngột, đau ngực thì gọi 999 hoặc đến cấp cứu). doctor-v xếp thuyên tắc phổi mức 1."
+  references: [esc-pe-2019, miniati-plosone-2012, nhs-pulmonary-embolism, nhs-panic-disorder]
+author: "agent:pass-c"

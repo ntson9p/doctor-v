@@ -1,0 +1,15 @@
+id: thavendiranathan-jama-2009
+type: systematic_review
+title: "Does this patient with palpitations have a cardiac arrhythmia?"
+publisher: "JAMA 2009;302(19):2135–2143 (Thavendiranathan P và cộng sự; The Rational Clinical Examination)"
+date: "2009"
+url: "https://europepmc.org/article/MED/19920238"
+doi: "10.1001/jama.2009.1673"
+pmid: "19920238"
+license_class: L3
+license_note: "Bản quyền nhà xuất bản: chỉ dùng dữ kiện kèm trích dẫn, không sao chép câu chữ."
+default_tier: A
+accessed: "2026-10-25"
+verified: true
+verified_by: "agent:pass-c"
+notes_vi: "Lượt C (agent:pass-c, phần b) đọc tóm tắt qua API Europe PMC ngày 25/10/2026. Tổng quan hệ thống (7 nghiên cứu về độ chính xác). Làm tăng nhẹ khả năng rối loạn nhịp: tiền sử bệnh tim (LR 2,03), hồi hộp bị ảnh hưởng khi ngủ (LR 2,29), xảy ra lúc làm việc (LR 2,17). Làm giảm nhẹ: tiền sử rối loạn hoảng sợ (LR 0,26), cơn kéo dài dưới 5 phút (LR 0,38). Cảm giác đập nhanh, đều, thình thịch ở cổ (LR 177) hoặc thấy mạch cổ đập (LR 2,68) làm tăng khả năng nhịp nhanh vòng vào lại nút nhĩ thất; không có cảm giác đập ở cổ: LR 0,07. Các đặc điểm khác không đổi đáng kể khả năng; khám lâm sàng không đủ để loại trừ rối loạn nhịp đáng kể."

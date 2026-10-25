@@ -1,0 +1,184 @@
+id: vestibular_neuritis
+names:
+  vi: "Viêm dây thần kinh tiền đình"
+  vi_common: ["Viêm thần kinh tiền đình", "Viêm mê nhĩ (viêm tai trong)"]
+  en: "Vestibular neuritis and labyrinthitis"
+codes:
+  icd10: "H81.2"
+  icd10_verified: false
+  mondo: "MONDO:0006008"
+summary_vi:
+  - "Dây thần kinh thăng bằng hoặc mê nhĩ ở một bên tai bị viêm, thường sau khi bị cảm, cúm do vi rút."
+  - "Đột ngột chóng mặt quay liên tục nhiều ngày, buồn nôn, nôn, đi loạng choạng; viêm mê nhĩ còn kèm ù tai, nghe kém."
+  - "Thường đỡ dần sau vài ngày; thăng bằng hồi phục trong vài tuần."
+urgency: 3
+cant_miss: false
+specialties: [ent, neurology]
+priors:
+  - complaint: dizziness
+    default: P3
+    by_age: { child_5_12: P4 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [bosner-bmcfampract-2018, strupp-jvestibres-2022, newmantoker-mayoclinproc-2008, tarnutzer-cmaj-2011, bae-yujm-2022, vonbrevern-jnnp-2007]
+      locator: "Bösner 2018 bảng 3, bảng 4; Strupp 2022 mục Dịch tễ; Newman-Toker 2008 bảng 4; Tarnutzer 2011 phần Mở đầu; Bae 2022 mục Dịch tễ"
+      reported: "Tuyến ban đầu: 0,6–24% người chóng mặt (6 nghiên cứu), 24% ở người trên 60 tuổi (Lawson 1999, 50 người); mới mắc 3,5–15,5/100.000 mỗi năm; cấp cứu ở Mỹ: viêm dây thần kinh tiền đình hoặc viêm mê nhĩ 5,6% lượt chóng mặt"
+      population: "Tuyến ban đầu ở châu Âu; cấp cứu ở Mỹ; chưa có số liệu Việt Nam"
+      note: "Bệnh này gồm cả viêm mê nhĩ (labyrinthitis): hai bệnh rất giống nhau, cùng do vi rút, cùng cách xử trí (NHS), và các tổng quan gộp chung thành nguyên nhân ngoại biên của hội chứng tiền đình cấp (Tarnutzer 2011; Newman-Toker 2008). Hai lượt cùng chọn P3 cho người lớn, P4 cho 5–12 tuổi. Từ 75 tuổi: lượt A P3, lượt B P4; lượt C chọn P3 vì Bae 2022 ghi bệnh gặp nhiều cả ở người trên 70 tuổi, và việc gộp viêm mê nhĩ làm tăng nhẹ tỷ lệ. Mới mắc thấp hơn nhiều so với chóng mặt tư thế kịch phát lành tính (0,6% mỗi năm, von Brevern 2007), nhưng người bệnh hầu như đều đi khám vì triệu chứng nặng nhiều ngày. Cần bác sĩ duyệt."
+findings:
+  - finding: vertigo_spinning
+    freq: very_frequent
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [strupp-jvestibres-2022, bae-yujm-2022, byt-qd-5643-2015, nhs-labyrinthitis, newmantoker-mayoclinproc-2007]
+      locator: "Strupp 2022 tiêu chuẩn A và mục triệu chứng hay gặp; 5643/QĐ-BYT bài Chóng mặt mục 3.1"
+      note: "Tần suất trong số người đã chóng mặt. Triệu chứng hay gặp nhất là chóng mặt quay liên tục; tiêu chuẩn chấp nhận cả chóng mặt không quay, và mô tả kiểu chóng mặt kém tin cậy (Newman-Toker 2007), nên không chọn almost_always. Hai lượt giống nhau."
+  - finding: dizziness_pattern
+    dist: { brief_episodes: 0.035, long_episodes: 0.085, continuous: 0.79, chronic: 0.09 }
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [strupp-jvestibres-2022, bae-yujm-2022, nhs-labyrinthitis, grace3-dizziness-2023]
+      locator: "Strupp 2022 tiêu chuẩn A, chú thích 1–6; NHS Labyrinthitis mục Symptoms; GRACE-3 định nghĩa hội chứng tiền đình cấp"
+      note: "Phân bố trong số người đã chóng mặt; trung bình hai lượt (lệch 0,02). Chóng mặt liên tục, khởi phát cấp, ít nhất 24 giờ rồi giảm dần; tới 25% có một cơn vài giờ trong 2 ngày trước; thăng bằng hồi phục sau 2–6 tuần (NHS), nên người dùng muộn có thể chọn 'âm ỉ nhiều tuần'. Ước lượng."
+  - finding: dizziness_positional
+    freq: occasional
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [tarnutzer-cmaj-2011, strupp-jvestibres-2022, msd-vestibular-neuronitis]
+      locator: "Tarnutzer 2011 bảng 3 (yếu tố làm tăng chóng mặt); Strupp 2022 chú thích 2"
+      note: "Tần suất trong số người đã chóng mặt. Lượt A frequent, lượt B occasional. Lượt C chọn occasional: chóng mặt có cả khi nằm yên nhưng tăng khi cử động đầu, nên một phần người bệnh trả lời 'Có'; Tarnutzer 2011 ghi yếu tố cử động đầu không phân biệt được nguyên nhân ngoại biên với đột quỵ, nên để bằng mức của đột quỵ (occasional) thay vì cao hơn. Phân biệt với chóng mặt tư thế kịch phát lành tính chủ yếu dựa vào kiểu chóng mặt liên tục."
+  - finding: nausea
+    freq: very_frequent
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [strupp-jvestibres-2022, bae-yujm-2022, msd-vestibular-neuronitis, nhs-labyrinthitis]
+      locator: "Strupp 2022 mục triệu chứng hay gặp; Bae 2022 mục Lâm sàng"
+      note: "Buồn nôn và thường có nôn là triệu chứng chính; phần lớn buồn nôn, nôn nhiều, đỡ rõ sau 1–3 ngày (Bae 2022). Hai lượt giống nhau."
+  - finding: vomiting
+    freq: frequent
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [strupp-jvestibres-2022, bae-yujm-2022, nhs-labyrinthitis]
+      note: "'Thường nôn' (often) chuyển thành frequent; người dùng có thể kiểm tra sau giai đoạn nôn nhiều. Hai lượt giống nhau."
+  - finding: persistent_vomiting
+    freq: occasional
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [msd-vestibular-neuronitis, nhs-labyrinthitis]
+      note: "Chỉ lượt A có; lượt C giữ vì nguồn ủng hộ: MSD ghi cần truyền dịch khi nôn kéo dài; NHS khuyên uống từng ngụm khi nôn. Nôn đến mức không giữ được nước gặp ở một phần người bệnh trong vài ngày đầu; ước 20%. Quy tắc rf_persistent_vomiting xếp mức 3, khớp với mức xử trí của bệnh."
+  - finding: cannot_walk_unaided
+    freq: occasional
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [tarnutzer-cmaj-2011, bae-yujm-2022, msd-vestibular-neuronitis, strupp-jvestibres-2022]
+      locator: "Tarnutzer 2011 phần Dấu hiệu thần kinh; Bae 2022 mục Lâm sàng; Strupp 2022 chú thích 4"
+      reported: "Thất điều thân nặng (không tự ngồi được) 0% ở viêm dây thần kinh tiền đình so với 33% ở đột quỵ"
+      note: "Hai lượt cùng chọn occasional. Người bệnh vẫn đi được (MSD; mức vừa là còn đi được quãng ngắn, Strupp 2022), nhưng trong 3 ngày đầu phần lớn phải có người đỡ (Bae 2022), nên tần suất thật có thể cao hơn. Thấp hơn đột quỵ (frequent). Kèm chóng mặt liên tục thì quy tắc rf_dizziness_central_signs vẫn xếp mức 2, vì tại nhà không phân biệt được với đột quỵ."
+  - finding: sudden_loss_of_balance
+    freq: frequent
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [strupp-jvestibres-2022, bae-yujm-2022, kerber-stroke-2006]
+      locator: "Strupp 2022 mục triệu chứng hay gặp; Kerber 2006 bảng 2"
+      note: "Lượt A very_frequent, lượt B frequent. Lượt C chọn frequent (bằng đột quỵ): mất thăng bằng, xu hướng ngã về bên bệnh là triệu chứng chính (Strupp 2022), nhưng mất thăng bằng là dấu hiệu gợi ý đột quỵ (Kerber 2006: OR 3,71), nên câu này không được nghiêng về bệnh lành tính hơn đột quỵ. Tỷ lệ nền khi chóng mặt 0,4 nên gần trung tính."
+  - finding: hearing_loss_tinnitus
+    freq: occasional
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [tarnutzer-cmaj-2011, nhs-labyrinthitis, strupp-jvestibres-2022, msd-vestibular-neuronitis]
+      locator: "Tarnutzer 2011 mục triệu chứng tai; NHS Labyrinthitis mục Symptoms"
+      reported: "Nghe kém 33% ở một nghiên cứu 63 người bệnh ngoại biên; ù tai hoặc đầy tai lúc khởi phát 31% ở một nghiên cứu cũ"
+      note: "Hai lượt chọn rare vì chỉ tính viêm dây thần kinh tiền đình (tiêu chuẩn Bárány loại trừ nghe kém, ù tai). Lượt C gộp viêm mê nhĩ vào bệnh này (nghe kém, ù tai là đặc điểm của viêm mê nhĩ, NHS) nên đổi thành occasional theo số liệu nguyên nhân ngoại biên gộp của Tarnutzer 2011. Tỷ lệ nền 5%."
+  - finding: hearing_loss_sudden
+    freq: frequent
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [nhs-labyrinthitis, nhs-vertigo]
+      note: "Lượt C thêm khi gộp viêm mê nhĩ. Tần suất trong số người đã có ù tai, nghe kém hoặc đầy tai: ở viêm mê nhĩ, nghe kém xuất hiện cùng lúc với chóng mặt, đột ngột (NHS). Ước khoảng một nửa (tỷ lệ nền 0,2). Quy tắc rf_vertigo_sudden_hearing_loss vẫn xếp mức 2 vì đột quỵ động mạch tiểu não trước dưới cũng gây nghe kém."
+  - finding: recent_viral_illness
+    freq: frequent
+    evidence:
+      tier: C
+      basis: numeric
+      sources: [bae-yujm-2022, nhs-labyrinthitis, strupp-jvestibres-2022]
+      reported: "Nhiễm vi rút đường hô hấp trên trước đó hoặc cùng lúc ở 43–46% (Bae 2022)"
+      note: "NHS: thường do nhiễm vi rút như cảm lạnh, cúm; Strupp 2022: căn nguyên vi rút có khả năng nhưng chưa chứng minh. Hai lượt giống nhau. Tỷ lệ nền 0,2."
+  - finding: similar_episodes_before
+    freq: occasional
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [strupp-jvestibres-2022, tarnutzer-cmaj-2011]
+      locator: "Strupp 2022 mục Dịch tễ, chú thích 5; Tarnutzer 2011 bảng 3"
+      reported: "Tái phát 1,9–10,7%; tới 25% có một cơn vài giờ trong 2 ngày trước"
+      note: "Lượt A rare, lượt B occasional (lệch một mức). Lượt C chọn occasional: một cơn báo trước trong 48 giờ gặp ở 1/4 người bệnh dù nguyên nhân nào (Tarnutzer 2011), nên trả lời 'Có' không nên làm giảm mạnh khả năng bệnh. Nhiều cơn trước đó gợi ý bệnh Ménière, đau nửa đầu tiền đình hoặc cơn thiếu máu não thoáng qua (Strupp 2022). Bằng tỷ lệ nền 0,2 nên gần trung tính."
+  - finding: vision_loss_or_double
+    freq: very_rare
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [strupp-jvestibres-2022, tarnutzer-cmaj-2011]
+      locator: "Strupp 2022 tiêu chuẩn; Tarnutzer 2011 bảng 3"
+      note: "Tiêu chuẩn loại trừ triệu chứng thần kinh trung ương; nhìn đôi là bệnh sử gợi ý đột quỵ. Thấp hơn tỷ lệ nền 1%. Hai lượt giống nhau."
+  - finding: transient_neuro_symptoms
+    freq: very_rare
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [strupp-jvestibres-2022, byt-qd-3312-2024]
+      note: "Yếu, tê nửa người, nói khó không thuộc bệnh này; cần nghĩ đột quỵ hoặc cơn thiếu máu não thoáng qua. Thấp hơn tỷ lệ nền 1%. Hai lượt giống nhau."
+  - finding: headache
+    freq: occasional
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [tarnutzer-cmaj-2011]
+      locator: "Bảng 3"
+      reported: "Đau đầu hoặc đau cổ ở 12% nguyên nhân ngoại biên so với 38% nguyên nhân trung ương"
+      note: "Chỉ lượt B có; lượt C giữ để ghi nhận số liệu. Bằng tỷ lệ nền 0,2 nên trung tính; thấp hơn đột quỵ (frequent)."
+  - finding: fever
+    freq: rare
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [nhs-vertigo, msd-vestibular-neuronitis]
+      note: "Chỉ lượt B có; lượt C giữ. Các nguồn không mô tả sốt; NHS Vertigo khuyên khám khẩn khi chóng mặt kèm sốt, gợi ý viêm tai giữa, viêm màng não hoặc bệnh khác. Thấp hơn tỷ lệ nền 5%."
+  - finding: fainting_or_near_fainting
+    freq: rare
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [strupp-jvestibres-2022, msd-vestibular-neuronitis]
+      note: "Hai lượt cùng chọn rare: bệnh không gây mất ý thức. Với tỷ lệ nền 0,25 khi triệu chứng chính là Chóng mặt, trả lời 'Có' làm giảm khả năng bệnh khoảng 10 lần, theo hướng an toàn."
+warning_signs: [vision_loss_or_double, transient_neuro_symptoms, es_stroke_signs, cannot_walk_unaided, hearing_loss_sudden, headache_thunderclap, persistent_vomiting]
+self_care_vi:
+  - "Khi chóng mặt nhiều, nằm yên trong phòng tối, yên tĩnh."
+  - "Nếu đang nôn, uống nước từng ngụm nhỏ, nhiều lần."
+  - "Ngủ đủ giấc, vì mệt mỏi làm triệu chứng nặng hơn."
+  - "Khi đỡ hơn, tập đi lại sớm, nên có người đi kèm để tránh ngã."
+  - "Không lái xe, đi xe đạp hoặc vận hành máy khi còn chóng mặt."
+  - "Không uống rượu bia, vì làm triệu chứng nặng hơn."
+see_doctor_vi:
+  - "Đi khám trong 24 giờ để được khám mắt, tai và thần kinh, phân biệt với đột quỵ."
+  - "Đến cơ sở cấp cứu ngay nếu nhìn đôi, nói khó, yếu tê tay chân, không tự đứng được hoặc đau đầu dữ dội."
+  - "Đến cơ sở cấp cứu ngay nếu đột ngột nghe kém một bên tai."
+  - "Đi khám sớm nếu nôn đến mức không uống được nước."
+  - "Đi khám lại nếu sau vài ngày không đỡ hoặc nặng hơn."
+review:
+  status: source_checked
+  authors: ["agent:pass-a", "agent:pass-b"]
+  reconciler: "agent:pass-c"
+  doctor_reviewer: null
+  updated: "2026-10-25"
+  notes_vi: "Lượt C đã đối chiếu 17 liên kết và mở lại mọi nguồn được trích. Lượt C gộp viêm mê nhĩ (labyrinthitis) vào bệnh này: NHS dùng một trang cho cả hai, triệu chứng và cách xử trí gần như giống nhau, chỉ khác có nghe kém, ù tai; Tarnutzer 2011 và Newman-Toker 2008 cũng gộp chung. Vì vậy tên thường gọi có 'viêm mê nhĩ', liên kết nghe kém đổi thành occasional và thêm liên kết nghe kém đột ngột. Mức xử trí 3, không thuộc nhóm không được bỏ sót (hai lượt giống nhau): NHS chỉ khuyên khám không khẩn, nhưng tại nhà không phân biệt được với đột quỵ tuần hoàn sau (khoảng 25% ± 15% hội chứng tiền đình cấp ở cấp cứu là đột quỵ, Tarnutzer 2011; 3312/QĐ-BYT: viêm mê đạo có thể nhầm với đột quỵ tiểu não), nên khám trong 24 giờ; người có nguy cơ mạch máu được quy tắc rf_acute_vertigo_vascular_risk nâng lên mức 2. Mã H81.2 (viêm mê nhĩ là H83.0) và tên chính thức chưa đối chiếu được với bảng ICD-10 của Bộ Y tế. Bác sĩ cần xem: (1) prior P3 suy từ tỷ lệ mới mắc và số liệu tuyến ban đầu không chặt chẽ; (2) tỷ lệ không tự đi được (occasional) nằm giữa 'vẫn đi được' (MSD) và 'phần lớn phải có người đỡ' (Bae 2022); (3) tỷ lệ nghe kém, ù tai của nhóm gộp chỉ có số liệu ít tin cậy; (4) câu chóng mặt khi trở mình không phân biệt tốt với chóng mặt tư thế kịch phát lành tính."

@@ -1,0 +1,40 @@
+id: d-hypoglycemia-2
+set: dev
+title_vi: "Nam 15 tuổi, đái tháo đường típ 1 tiêm insulin, sau đá bóng tim đập nhanh, run tay, vã mồ hôi, tê môi"
+narrative_vi: "Em T., 15 tuổi, bị đái tháo đường típ 1, tiêm insulin hằng ngày. Chiều nay đá bóng 2 tiếng mà không ăn thêm. Vừa về nhà thấy tim đập nhanh, đều, run tay, vã mồ hôi lạnh, tê quanh môi, hơi choáng váng. Không đau ngực, không khó thở, không ngất, vẫn tỉnh táo. Không sợ hãi gì đặc biệt. Chưa đo đường huyết, chưa đo mạch. Ăn trưa bình thường."
+patient:
+  age_years: 15
+  sex: male
+  region: south
+  month: 10
+complaint: palpitations
+answers:
+  diabetes: present
+  on_glucose_lowering_meds: present
+  tremor: present
+  cold_sweat: present
+  perioral_tingling: present
+  dizziness: present
+  palpitation_rhythm: fast_regular
+  palpitation_abrupt_onset: absent
+  missed_meal: absent
+  better_after_sugar: unknown
+  panic_fear: absent
+  chest_pain_pressure: absent
+  breathing_difficulty: absent
+  fainting_or_near_fainting: absent
+  confusion: absent
+  drowsy_hard_to_wake: absent
+  weight_loss_unintended: absent
+  breathless_on_exertion: absent
+  heat_intolerance: absent
+  fever: absent
+default_unmentioned: absent
+expected:
+  condition: hypoglycemia
+  acceptable: []
+  triage: 3
+source:
+  basis: "Ca không điển hình: thiếu niên đái tháo đường típ 1, biểu hiện bằng hồi hộp; vận động nhiều mà không ăn thêm làm dễ hạ đường huyết (NHS; 5481/QĐ-BYT: vận động nhiều là nguyên nhân hay gặp khi tiêm insulin). Triệu chứng cường giao cảm và tê môi (NHS). Còn tỉnh: tự ăn uống đồ ngọt ngay, khám trong 24 giờ để xem lại liều insulin (quy tắc rf_hypoglycemia_suspected)."
+  references: [nhs-hypoglycaemia, byt-qd-5481-2020]
+author: "agent:pass-c"

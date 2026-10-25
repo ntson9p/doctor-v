@@ -1,0 +1,15 @@
+id: delrosso-heart-2008
+type: primary_study
+title: "Clinical predictors of cardiac syncope at initial evaluation in patients referred urgently to a general hospital: the EGSYS score"
+publisher: "Heart 2008;94(12):1620–1626 (Del Rosso A và cộng sự)"
+date: "2008"
+url: "https://europepmc.org/article/MED/18519550"
+doi: "10.1136/hrt.2008.143123"
+pmid: "18519550"
+license_class: L3
+license_note: "Bản quyền nhà xuất bản: chỉ dùng dữ kiện kèm trích dẫn, không sao chép câu chữ."
+default_tier: B
+accessed: "2026-10-25"
+verified: true
+verified_by: "agent:pass-c"
+notes_vi: "Lượt C (agent:pass-c, phần b) đọc tóm tắt qua API Europe PMC ngày 25/10/2026. 516 người ngất chưa rõ nguyên nhân ở cấp cứu của 14 bệnh viện đa khoa (Ý). Yếu tố dự báo ngất do tim: điện tim bất thường hoặc bệnh tim, hồi hộp trước khi ngất, ngất khi gắng sức hoặc khi nằm, không có tiền triệu thần kinh thực vật, không có yếu tố thuận lợi hoặc khởi phát. Điểm EGSYS từ 3 trở lên nhận ra ngất do tim với độ nhạy 95%/92% và độ đặc hiệu 61%/69%."

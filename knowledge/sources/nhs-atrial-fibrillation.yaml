@@ -1,0 +1,13 @@
+id: nhs-atrial-fibrillation
+type: web_page
+title: "Atrial fibrillation"
+publisher: "NHS (UK)"
+date: "2025-01-13"
+url: "https://www.nhs.uk/conditions/atrial-fibrillation/"
+license_class: L1
+license_note: "Open Government Licence v3.0; bản chuyển thể không được trình bày như nội dung của NHS."
+default_tier: C
+accessed: "2026-10-25"
+verified: true
+verified_by: "agent:pass-c"
+notes_vi: "Lượt C (phần b) tải trang và trích chữ ngày 25/10/2026 (rà soát lần cuối 13/1/2025). Triệu chứng: tim đập không đều; bỗng thấy tim đập mạnh, nhanh, rung, hẫng nhịp, kéo dài vài giây đến vài phút; tim trên 100 lần/phút; rất mệt; khó gắng sức; đau, tức ngực; khó thở, choáng váng, chóng mặt, cảm giác sắp ngất; có người không triệu chứng; cơn có thể tự hết (kịch phát) hoặc thành thường xuyên. Khám bác sĩ gia đình (không khẩn) khi nghĩ có triệu chứng hoặc hồi hộp hay tái lại. Gọi 999 khi đang có tim nhanh hoặc không đều kèm đau ngực, khó thở, vã mồ hôi, buồn nôn hoặc nôn, ngất, chóng mặt hoặc ngã, đau đầu dữ dội, yếu tê một bên, nhìn mờ, lú lẫn hoặc nói khó; không tự lái xe. Yếu tố khởi phát: cà phê, căng thẳng, mất nước, thiếu ngủ, rượu."

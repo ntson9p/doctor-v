@@ -1,0 +1,38 @@
+id: d-transient-ischemic-attack-2
+set: dev
+title_vi: "Nữ 72 tuổi, rung nhĩ, 3 ngày nay 2 cơn quay cuồng tự phát khoảng 10 phút, không triệu chứng khác"
+narrative_vi: "Bà G., 72 tuổi, bị rung nhĩ và tăng huyết áp. Ba ngày nay có 2 cơn đang ngồi yên bỗng thấy mọi vật quay tròn, mỗi cơn khoảng 10 phút rồi tự hết; không do trở mình hay ngửa cổ. Trong cơn không yếu tê tay chân, không nói khó, không nhìn đôi, không méo miệng. Hiện đã hết, đi lại bình thường. Không đau đầu, không buồn nôn, không ù tai, không ngất. Không sốt."
+patient:
+  age_years: 72
+  sex: female
+  region: central
+  month: 7
+complaint: dizziness
+answers:
+  dizziness_pattern: long_episodes
+  vertigo_spinning: present
+  dizziness_positional: absent
+  transient_neuro_symptoms: absent
+  vision_loss_or_double: absent
+  cannot_walk_unaided: absent
+  sudden_loss_of_balance: absent
+  similar_episodes_before: present
+  headache: absent
+  nausea: absent
+  vomiting: absent
+  hearing_loss_tinnitus: absent
+  fainting_or_near_fainting: absent
+  known_heart_disease: present
+  hypertension_known: present
+  diabetes: absent
+  fever: absent
+default_unmentioned: absent
+expected:
+  condition: transient_ischemic_attack
+  acceptable: [stroke]
+  triage: 2
+source:
+  basis: "Ca không điển hình: cơn thiếu máu thoáng qua tuần hoàn sau chỉ có chóng mặt đơn độc, kiểu hay gặp nhất trong những ngày trước đột quỵ tuần hoàn sau (Paul 2013), không đủ tiêu chuẩn kinh điển. GRACE-3: cơn chóng mặt tự phát cần nghĩ cơn thiếu máu não thoáng qua; rung nhĩ là nguồn huyết khối (NHS TIA). 3312/QĐ-BYT: nguy cơ tái phát sớm rất cao, điều trị ngay; nên đến cơ sở cấp cứu."
+  references: [paul-lancetneurol-2013, grace3-dizziness-2023, nhs-tia, byt-qd-3312-2024, lempert-jvestibres-2022]
+author: "agent:pass-c"
+notes_vi: "Ca khó: không có triệu chứng nào trong câu hỏi 'yếu, tê nửa người, nói khó rồi tự hết'; mức xử trí phải dựa vào xác suất và ngưỡng 'không được bỏ sót'."

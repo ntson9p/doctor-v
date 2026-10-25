@@ -1,0 +1,49 @@
+id: d-dengue-dizziness-1
+set: dev
+title_vi: "Nam 24 tuổi ở TP.HCM, tháng 8, sốt ngày thứ 4, chóng mặt từ sáng, choáng khi đứng, tiểu ít"
+narrative_vi: "Anh H., 24 tuổi, ở TP.HCM. Sốt 4 ngày nay, cao nhất 39°C, nay còn khoảng 38°C, đau đầu, đau mỏi người. Từ sáng nay chóng mặt suốt, đứng dậy thì choáng, suýt ngất, phải ngồi xuống. Từ sáng đến chiều chỉ đi tiểu một lần, ít. Không chảy máu chân răng, không chảy máu mũi, không nổi chấm đỏ, không đau bụng, không nôn, không khó thở. Không ho, không sổ mũi, không đau họng. Không thấy quay. Không rõ quanh nhà có ai bị sốt xuất huyết không."
+patient:
+  age_years: 24
+  sex: male
+  region: south
+  month: 8
+complaint: dizziness
+answers:
+  fever: present
+  fever_duration: d3_5
+  fever_max_temp: ge_39
+  headache: present
+  headache_thunderclap: absent
+  headache_severity: moderate
+  myalgia: present
+  dizziness_pattern: continuous
+  dizziness_on_standing: present
+  fainting_or_near_fainting: present
+  vertigo_spinning: absent
+  dizziness_positional: absent
+  decreased_urine: present
+  bleeding_gums_nose: absent
+  rash_any: absent
+  abdominal_pain: absent
+  vomiting: absent
+  persistent_vomiting: absent
+  breathing_difficulty: absent
+  cold_hands_feet: absent
+  severe_weakness: absent
+  cough: absent
+  runny_nose: absent
+  sore_throat: absent
+  chest_pain_pressure: absent
+  palpitations: absent
+  dengue_nearby: unknown
+  hypertension_known: absent
+  diabetes: absent
+default_unmentioned: absent
+expected:
+  condition: dengue
+  acceptable: []
+  triage: 2
+source:
+  basis: "Sốt xuất huyết ở giai đoạn nguy hiểm (ngày 3–7) có dấu hiệu cảnh báo: tiểu ít (2760 Phụ lục 2); choáng váng hoặc hạ huyết áp tư thế là tiêu chí nhập viện (WHO 2009 Textbox E), là dấu hiệu cảnh báo theo CDC, PAHO (Mahabala 2023). Theo 2760, người có dấu hiệu cảnh báo được cho nhập viện: đến cơ sở cấp cứu ngay (quy tắc rf_fever_critical_phase_signs)."
+  references: [byt-qd-2760-2023, who-dengue-2009, mahabala-f1000res-2023]
+author: "agent:pass-c"

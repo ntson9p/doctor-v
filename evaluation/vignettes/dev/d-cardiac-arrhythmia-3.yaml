@@ -1,0 +1,39 @@
+id: d-cardiac-arrhythmia-3
+set: dev
+title_vi: "Nữ 28 tuổi, nhiều năm có cơn tim nhanh đều bật tắt, kèm sợ hãi, từng được nói là lo âu"
+narrative_vi: "Chị P., 28 tuổi, từ vài năm nay thỉnh thoảng bỗng tim đập rất nhanh và đều, cổ đập thình thịch, kéo dài 15–30 phút rồi dừng đột ngột như tắt công tắc. Trong cơn chị sợ hãi, hơi choáng nhưng không như sắp ngất. Từng đi khám được nói là do lo âu. Cơn hôm qua đã hết. Không đau ngực, không khó thở. Không run tay, không tê bì, không sụt cân. Không uống nhiều cà phê. Không có thai, kinh nguyệt đều. Chưa đo mạch lúc có cơn."
+patient:
+  age_years: 28
+  sex: female
+  region: south
+  month: 5
+complaint: palpitations
+answers:
+  palpitation_rhythm: fast_regular
+  palpitation_abrupt_onset: present
+  palpitation_duration: minutes_hours
+  neck_pounding: present
+  panic_fear: present
+  dizziness: present
+  similar_episodes_before: present
+  fainting_or_near_fainting: absent
+  chest_pain_pressure: absent
+  breathing_difficulty: absent
+  tremor: absent
+  perioral_tingling: absent
+  weight_loss_unintended: absent
+  heat_intolerance: absent
+  stimulant_intake: absent
+  stress_poor_sleep: absent
+  pregnant: absent
+  missed_period: absent
+  pulse_measured: not_measured
+default_unmentioned: absent
+expected:
+  condition: cardiac_arrhythmia
+  acceptable: []
+  triage: 3
+source:
+  basis: "Nhịp nhanh vòng vào lại nút nhĩ thất dễ nhầm với cơn hoảng sợ: cơn nhanh, đều, bật tắt, mạch cổ đập thình thịch (Thavendiranathan 2009: LR 177; EHRA 2011: hai phần ba người nhịp nhanh trên thất từng bị chẩn đoán nhầm là hoảng sợ; ESC 2019: có thể giống rối loạn hoảng sợ). NHS SVT: hay bị tim nhanh thì khám bác sĩ để làm điện tim; doctor-v xếp mức 3 (mức của bệnh)."
+  references: [thavendiranathan-jama-2009, raviele-europace-2011, esc-svt-2019, nhs-svt]
+author: "agent:pass-c"

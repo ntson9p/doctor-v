@@ -1,0 +1,221 @@
+id: upper_gi_bleeding
+names:
+  vi: "Xuất huyết tiêu hóa trên"
+  vi_common: ["Xuất huyết dạ dày", "Chảy máu dạ dày", "Xuất huyết tiêu hóa"]
+  en: "Upper gastrointestinal bleeding"
+codes:
+  icd10: "K92.2"
+  icd10_verified: true
+summary_vi:
+  - "Chảy máu ở thực quản, dạ dày hoặc tá tràng, hay gặp nhất do loét dạ dày – tá tràng."
+  - "Thường đi ngoài phân đen như hắc ín, nôn ra máu hoặc chất như bã cà phê, kèm choáng váng, da xanh."
+  - "Mất máu nhiều có thể gây ngất, sốc, nguy hiểm tính mạng."
+urgency: 2
+cant_miss: true
+specialties: [emergency, gastroenterology]
+priors:
+  - complaint: syncope
+    default: P4
+    by_age: { child_5_12: P6, teen_13_17: P6, adult_18_44: P5 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [esc-syncope-2018, msd-gi-bleeding, quach-gutliver-2016, anh-vjcm-2025, stanley-bmj-2017]
+      locator: "ESC 2018 bảng 6 (nghi chảy máu tiêu hóa: nguy cơ cao); MSD (dấu hiệu giảm thể tích); Quach 2016 bảng 2; Anh 2025 bảng 1, 3; Stanley 2017 bảng 1"
+      reported: "Xuất huyết tiêu hóa trên ở Việt Nam: tuổi trung bình 50,8 (Quach, không do giãn tĩnh mạch), 56,6 (Anh, do loét); ngất 5,7%, hoa mắt chóng mặt 84,3% (Anh). Nhóm quốc tế: tuổi trung vị 65 (Stanley)."
+      note: "Hai lượt trùng mức ở mọi nhóm tuổi (từ 45 tuổi P4; 18–44 tuổi P5; trẻ em, thiếu niên P6). Chưa có nghiên cứu về tỷ lệ xuất huyết tiêu hóa trong số người ngất. ESC xếp chảy máu tiêu hóa vào nguyên nhân ngất do giảm thể tích và đặc điểm nguy cơ cao; người xuất huyết tiêu hóa thường đi khám vì phân đen, nôn ra máu, chỉ một phần chọn Ngất. Ước lượng, cần bác sĩ duyệt."
+  - complaint: dizziness
+    default: P5
+    by_age: { child_5_12: P6, teen_13_17: P6, elder_65_74: P4, elder_75p: P4 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [anh-vjcm-2025, bosner-bmcfampract-2018, msd-gi-bleeding]
+      locator: "Anh 2025 bảng 3; Bösner 2018 bảng 3; MSD (hạ huyết áp tư thế khi mất trên 2 đơn vị máu)"
+      reported: "Hoa mắt, chóng mặt 84,3% người xuất huyết do loét (Nghệ An)."
+      note: "Hai lượt lệch một mức ở 18–44 tuổi (A P6, B P5); ngang nguồn nên lượt C chọn mức thận trọng hơn (P5). Phần lớn người xuất huyết tiêu hóa có hoa mắt, chóng mặt, nhưng chóng mặt ở tuyến ban đầu có rất nhiều nguyên nhân khác (Bösner); người cao tuổi chịu mất máu kém hơn. Ước lượng."
+prior_modifiers:
+  - when: { sex: [male] }
+    factor: 1.6
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [quach-gutliver-2016, anh-vjcm-2025, phuc-vjcm-2024]
+      locator: "Quach 2016 bảng 2; Anh 2025; Phuc 2024 tóm tắt"
+      reported: "Nam 74,4% (Quach, 395 người, không do giãn tĩnh mạch); nam/nữ 2,2/1 (Anh, do loét); nam 94,5% (Phuc, vỡ giãn tĩnh mạch thực quản)."
+      note: "Lượt A 1,6/0,5 (số liệu Việt Nam, có tính tỷ lệ nam khoảng 45% trong người ngất, chóng mặt); lượt B 1,4/0,7 (giả định nam nữ ngang nhau, gộp cả số liệu quốc tế 58% nam). Lượt C chọn bản của lượt A vì dựa trên số liệu Việt Nam và tính đúng mẫu số: với khoảng 73% người bệnh là nam, hệ số so với mức chung khoảng 1,6 cho nam, 0,5 cho nữ. Ước lượng."
+  - when: { sex: [female] }
+    factor: 0.5
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [quach-gutliver-2016, anh-vjcm-2025]
+      reported: "Nữ 25,6% (Quach); nam/nữ 2,2/1 (Anh)."
+      note: "Xem hệ số của nam."
+findings:
+  - finding: black_stool
+    freq: very_frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [anh-vjcm-2025, msd-gi-bleeding, quach-gutliver-2016, nhs-stomach-ulcer]
+      locator: "Anh 2025 bảng 3; MSD; Quach 2016 bảng 2; NHS Stomach ulcer (Call 999 or go to A&E)"
+      reported: "Đi ngoài phân đen 63/70 (90,0%) (Anh); chỉ đi ngoài phân đen, không nôn ra máu: 23,3% (Quach)."
+      population: "Người xuất huyết tiêu hóa nằm viện ở Việt Nam"
+      note: "Hai lượt trùng mức. Số liệu bệnh viện ở mức almost_always, hạ một mức (kb-guide mục 2.1) vì người tự kiểm tra có thể đến sớm, khi phân chưa kịp đen; khoảng 100–200 mL máu là đủ gây phân đen và phân đen kéo dài vài ngày (MSD). Cùng cụm xuất huyết tiêu hóa với nôn ra máu. Có dấu hiệu này thì quy tắc rf_gi_bleeding (mức 2) và rf_syncope_gi_bleeding (mức 1) đã áp dụng."
+  - finding: vomiting_blood
+    freq: frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [quach-gutliver-2016, anh-vjcm-2025, phuc-vjcm-2024, msd-gi-bleeding]
+      locator: "Quach 2016 bảng 2; Anh 2025 bảng 3; Phuc 2024 tóm tắt"
+      reported: "Nôn ra máu đỏ 28,6%, nôn dịch như bã cà phê 48,1% (Quach); nôn ra máu 50,0% (Anh, do loét); trên 70% (Phuc, vỡ giãn tĩnh mạch)."
+      note: "Hai lượt trùng mức. Số liệu cấp cứu tuyến cuối được hạ một mức vì người chảy máu chậm (chỉ phân đen) hay đến muộn hoặc ở tuyến dưới. Tỷ lệ nền 0,01."
+  - finding: fainting_or_near_fainting
+    freq: frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [anh-vjcm-2025, msd-gi-bleeding, esc-syncope-2018]
+      locator: "Anh 2025 bảng 3; MSD (dấu hiệu giảm thể tích); ESC 2018 bảng 6"
+      reported: "Ngất 5,7%; hoa mắt, chóng mặt 84,3% (Anh)."
+      note: "Hai lượt trùng mức. Chỉ có ý nghĩa với Chóng mặt (với Ngất là dấu hiệu ngầm định; bệnh không có prior cho Hồi hộp). Câu hỏi gồm cả choáng như sắp ngất, hay gặp hơn ngất thật; người xuất huyết tiêu hóa chọn Chóng mặt chủ yếu bị choáng do mất máu. Mức frequent cao hơn tỷ lệ nền 0,25 khi Chóng mặt. Có dấu hiệu này kèm phân đen hoặc nôn ra máu thì quy tắc rf_syncope_gi_bleeding xếp mức 1."
+  - finding: dizziness
+    freq: very_frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [anh-vjcm-2025, msd-gi-bleeding]
+      locator: "Anh 2025 bảng 3"
+      reported: "Hoa mắt, chóng mặt 59/70 (84,3%)."
+      note: "Có ý nghĩa với triệu chứng chính Ngất. Lượt A frequent (mô tả bằng lời của MSD), lượt B very_frequent (số liệu Việt Nam); lượt C chọn bản có số liệu. Chóng mặt là triệu chứng của mất máu ở mọi mức nên không hạ mức."
+  - finding: dizziness_on_standing
+    freq: frequent
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [msd-gi-bleeding, esc-syncope-2018, anh-vjcm-2025]
+      locator: "MSD (hạ huyết áp tư thế kèm tim nhanh khi mất trên 2 đơn vị máu); ESC 2018 (chảy máu gây hạ huyết áp tư thế do giảm thể tích)"
+      note: "Hai lượt trùng mức. Ước khoảng một nửa. Tỷ lệ nền 0,15."
+  - finding: pallor
+    freq: frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [anh-vjcm-2025, msd-gi-bleeding]
+      locator: "Anh 2025 bảng 3; MSD"
+      reported: "Da xanh, niêm mạc nhợt 51/70 (72,9%)."
+      note: "Hai lượt trùng mức. Số liệu bệnh viện ở mức very_frequent, hạ một mức cho người tự kiểm tra (chảy máu mới vài giờ có thể chưa tái; người dùng tự nhận xét da nhợt kém chính xác). Tỷ lệ nền 0,15."
+  - finding: abdominal_pain
+    freq: frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [anh-vjcm-2025, msd-gi-bleeding, nhs-stomach-ulcer, quach-gutliver-2016]
+      locator: "Anh 2025 bảng 3; MSD (nhiều người loét chảy máu không có tiền sử đau); Quach 2016 bảng 3"
+      reported: "Đau, nóng rát vùng thượng vị 49/70 (70%) ở người xuất huyết do loét (Anh); loét dạ dày, tá tràng 73,6% nguyên nhân (Quach)."
+      note: "Lượt A occasional (ước lượng: chảy máu do thuốc giảm đau, ở người cao tuổi hay không đau), lượt B frequent (số liệu Việt Nam hạ một mức). Lượt C chọn frequent: có số liệu, đã hạ một mức cho người tự kiểm tra và cho xuất huyết do vỡ giãn tĩnh mạch (thường không đau); MSD xác nhận nhiều người loét chảy máu không đau nên không để cao hơn. Với Ngất, Chóng mặt, đau bụng không phải dấu hiệu ngầm định; kèm ngất thì quy tắc rf_fainting_with_pain đã xếp mức 2."
+  - finding: abd_pain_location
+    dist: { epigastric: 0.70, right_upper: 0.07, left_upper: 0.07, periumbilical: 0.055, right_lower: 0.015, left_lower: 0.015, suprapubic: 0.01, whole: 0.065 }
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [anh-vjcm-2025, nhs-stomach-ulcer, msd-gi-bleeding]
+      locator: "Anh 2025 bảng 3 (đau vùng thượng vị); NHS Stomach ulcer (đau bụng trên)"
+      note: "Phân bố trong số người đã đau bụng; trung bình hai lượt (hai lượt cùng để thượng vị 0,70). Tỷ lệ từng vùng là ước lượng."
+  - finding: regular_painkiller_use
+    freq: frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [anh-vjcm-2025, msd-gi-bleeding, nhs-stomach-ulcer]
+      locator: "Anh 2025 (dùng thuốc chống viêm không steroid); MSD (thuốc liên quan chảy máu); NHS Stomach ulcer (nguyên nhân)"
+      reported: "Dùng thuốc chống viêm không steroid 37,1% (Anh)."
+      note: "Lượt A occasional (để người ngất phản xạ đang dùng thuốc giảm đau không bị đẩy lên quá cao), lượt B frequent (số liệu Việt Nam). Lượt C chọn frequent theo số liệu; phân đen, nôn ra máu được hỏi trước ở nhóm dấu hiệu nguy hiểm, nên khi không có hai dấu hiệu này thì khả năng bệnh đã giảm khoảng 10 lần. Ở Việt Nam nhiều người cao tuổi dùng thuốc xương khớp có chứa thuốc chống viêm. Tỷ lệ nền 0,05."
+  - finding: chronic_liver_disease
+    freq: occasional
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [stanley-bmj-2017, quach-gutliver-2016, phuc-vjcm-2024, msd-gi-bleeding]
+      locator: "Stanley 2017 bảng 1; Quach 2016 bảng 2; Phuc 2024 tóm tắt; MSD (xơ gan, viêm gan mạn gợi ý giãn tĩnh mạch)"
+      reported: "Bệnh gan 15%, giãn tĩnh mạch 7% (Stanley); bệnh gan mạn 6,1% ở xuất huyết không do giãn tĩnh mạch (Quach); vỡ giãn tĩnh mạch: viêm gan B, C 14,5%, nghiện rượu 79,1% (Phuc)."
+      note: "Hai lượt trùng mức (lượt A đề xuất dấu hiệu này). Ở Việt Nam viêm gan B và rượu hay gặp nên tỷ lệ có thể cao hơn nhóm quốc tế. Tỷ lệ nền 0,06."
+  - finding: antithrombotic_use
+    freq: occasional
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [msd-gi-bleeding]
+      locator: "MSD (thuốc chống đông, aspirin, clopidogrel liên quan chảy máu tiêu hóa)"
+      note: "Chỉ lượt A có (lượt A đề xuất dấu hiệu này); lượt C giữ. Tỷ lệ dùng thuốc ở người xuất huyết tiêu hóa Việt Nam chưa có số liệu; ước lượng. Tỷ lệ nền 0,05."
+  - finding: cold_sweat
+    freq: occasional
+    evidence:
+      tier: C
+      basis: verbal
+      sources: [msd-gi-bleeding]
+      locator: "MSD (vã mồ hôi là dấu hiệu giảm thể tích, sốc)"
+      note: "Chỉ lượt A có; lượt C giữ. Ước lượng."
+  - finding: cold_hands_feet
+    freq: occasional
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [msd-gi-bleeding]
+      locator: "MSD (dấu hiệu sốc mất máu)"
+      note: "Chỉ lượt A có (lượt B để trong dấu hiệu cảnh báo); lượt C giữ. Gặp ở người chảy máu nhiều. Ước lượng; có dấu hiệu này thì quy tắc sốc đã xếp mức 1–2."
+  - finding: severe_weakness
+    freq: occasional
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [msd-gi-bleeding]
+      note: "Chỉ lượt A có (lượt B để trong dấu hiệu cảnh báo); lượt C giữ. Mệt lả do mất máu nhiều, sốc. Ước lượng; có dấu hiệu này thì quy tắc rf_shock_signs đã xếp mức 2."
+  - finding: syncope_trigger
+    dist: { standing_heat: 0.10, emotion_pain: 0.05, standing_up: 0.30, toilet_cough: 0.20, exertion: 0.04, lying: 0.035, no_trigger: 0.275 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [esc-syncope-2018, msd-gi-bleeding]
+      locator: "ESC 2018 (hạ huyết áp tư thế do giảm thể tích)"
+      note: "Phân bố trong số người đã ngất hoặc suýt ngất; trung bình hai lượt. Ngất do giảm thể tích máu hay xảy ra khi vừa đứng dậy, khi đi ngoài phân đen hoặc không có yếu tố khởi phát. Ước lượng."
+  - finding: not_recovered_after_faint
+    freq: occasional
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [esc-syncope-2018, msd-gi-bleeding]
+      note: "Chỉ lượt B có (dấu hiệu thêm sau lượt A); lượt C giữ. Tính trong số người đã ngất hoặc suýt ngất. Mất máu tiếp diễn làm người bệnh mệt lả, choáng kéo dài sau ngất. Ước 20%. Tỷ lệ nền 0,05."
+  - finding: pulse_measured
+    dist: { lt_40: 0.004, n40_100: 0.234, n100_150: 0.149, gt_150: 0.013, not_measured: 0.6 }
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [stanley-bmj-2017, msd-gi-bleeding]
+      locator: "Stanley 2017 bảng 1; MSD"
+      reported: "Mạch trung vị 89 lần/phút; khoảng 95%: 61–126 (Stanley)."
+      note: "'Chưa đo' giữ đúng tỷ lệ nền 0,6; trung bình hai lượt. Khoảng 35–40% số người đo được có mạch trên 100; chảy máu ít có thể chỉ tim hơi nhanh (MSD). Ước lượng."
+  - finding: dizziness_pattern
+    dist: { brief_episodes: 0.20, long_episodes: 0.25, continuous: 0.42, chronic: 0.13 }
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [msd-gi-bleeding]
+      note: "Tính trong số người đã chóng mặt; trung bình hai lượt. Chảy máu cấp gây choáng mới xuất hiện, kéo dài, nặng hơn khi đứng; chảy máu rỉ rả gây thiếu máu, choáng âm ỉ nhiều tuần. Ước lượng."
+warning_signs: [vomiting_blood, black_stool, fainting_or_near_fainting, cold_hands_feet, severe_weakness, confusion]
+self_care_vi:
+  - "Nằm nghỉ, nhờ người đưa đến khoa cấp cứu ngay; không tự lái xe."
+  - "Mang theo các thuốc đang dùng, nhất là thuốc giảm đau, thuốc chống đông hoặc aspirin."
+  - "Không uống thêm thuốc giảm đau chống viêm, không uống rượu bia."
+see_doctor_vi:
+  - "Cần đến khoa cấp cứu ngay để được xét nghiệm máu và nội soi dạ dày."
+  - "Gọi 115 nếu ngất, choáng nhiều, vã mồ hôi, da tái lạnh hoặc nôn ra nhiều máu."
+review:
+  status: source_checked
+  authors: ["agent:pass-a", "agent:pass-b"]
+  reconciler: "agent:pass-c"
+  doctor_reviewer: null
+  updated: "2026-10-25"
+  notes_vi: "Lượt C (phần b) đối chiếu 19 liên kết và mở lại mọi nguồn được trích. Mức xử trí 2 (không phải 1 như gợi ý), thuộc nhóm không được bỏ sót, như hai lượt: kb-guide mục 2.5 lấy mức của ca điển hình chưa biến chứng; NHS Stomach ulcer ghi 'gọi 999 hoặc đến cấp cứu' khi nôn ra máu, phân đen; Stanley 2017: người có điểm Glasgow Blatchford từ 1 trở xuống có thể xử trí ngoại trú. Ngất, choáng kèm phân đen hoặc nôn ra máu, dấu hiệu sốc đã được rf_syncope_gi_bleeding, rf_shock_cold_and_weak nâng lên mức 1. Lượt C không giữ liên kết 'nôn' của lượt A: nôn ra máu đã được hỏi riêng, và liên kết 'nôn' (khác cụm) sẽ đẩy người ngất do viêm dạ dày ruột (nôn, mất nước) lên nhóm cấp cứu chỉ vì xác suất. Không trích NICE CG141 vì nice.org.uk chặn truy cập tự động. Bác sĩ cần xem: (1) prior là ước lượng; (2) tần suất triệu chứng lấy từ người nằm viện ở Việt Nam, đã hạ một mức với dấu hiệu nặng; (3) danh mục chưa có câu hỏi uống viên sắt (làm phân đen); (4) bệnh viêm, loét dạ dày – tá tràng là nguồn chảy máu chính nhưng chưa có prior cho Ngất, Chóng mặt."

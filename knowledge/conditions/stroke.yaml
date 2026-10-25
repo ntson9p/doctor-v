@@ -23,16 +23,28 @@ priors:
       basis: judgment
       sources: [byt-qd-3312-2024, kumral-jnnp-1995, jorgensen-neurology-1994, vestergaard-stroke-1993, melo-neurology-1996, goldstein-cephalalgia-2006, ihs-ichd3-2018]
       locator: "3312/QĐ-BYT, bài nhồi máu não cấp, mục 1"
-      note: "Bệnh này trong doctor-v chỉ có prior cho đau đầu, nên đại diện cho đột quỵ biểu hiện chủ yếu bằng đau đầu (phần lớn là xuất huyết não, đột quỵ tiểu não, tuần hoàn sau). Ở Việt Nam đột quỵ là nguyên nhân tử vong hàng đầu, nhồi máu não chiếm 76,2% (3312/QĐ-BYT). Đau đầu lúc khởi phát gặp ở 18–28% người đột quỵ (Kumral 1995; Jørgensen 1994; Vestergaard 1993), 36–57% người xuất huyết não (Kumral 1995; Melo 1996), ít gặp hơn ở người lớn tuổi (OR 0,57 mỗi 20 tuổi, Jørgensen 1994); ICHD-3: đau đầu hiếm khi là biểu hiện nổi bật của nhồi máu não. Người trên 50 tuổi đau đầu đến cấp cứu có nguy cơ bệnh thực thể cao hơn (OR 3,3, Goldstein 2006). Prior tính trên mọi người đau đầu, kể cả người sẽ chọn 'dấu hiệu đột quỵ' ở màn sàng lọc. Lượt C: hai lượt cùng P6 dưới 45 tuổi, P5 ở 45–64 tuổi, P4 ở 65–74 tuổi; từ 75 tuổi chọn P3 của lượt B (lượt A để P4) vì nguồn ngang nhau, chọn mức thận trọng cho bệnh nguy hiểm, và ở tuổi này đột quỵ tăng nhanh trong khi đau đầu lành tính giảm. Cần bác sĩ duyệt."
+      note: "Với triệu chứng chính Đau đầu, bệnh này đại diện cho đột quỵ biểu hiện chủ yếu bằng đau đầu (phần lớn là xuất huyết não, đột quỵ tiểu não, tuần hoàn sau). Ở Việt Nam đột quỵ là nguyên nhân tử vong hàng đầu, nhồi máu não chiếm 76,2% (3312/QĐ-BYT). Đau đầu lúc khởi phát gặp ở 18–28% người đột quỵ (Kumral 1995; Jørgensen 1994; Vestergaard 1993), 36–57% người xuất huyết não (Kumral 1995; Melo 1996), ít gặp hơn ở người lớn tuổi (OR 0,57 mỗi 20 tuổi, Jørgensen 1994); ICHD-3: đau đầu hiếm khi là biểu hiện nổi bật của nhồi máu não. Người trên 50 tuổi đau đầu đến cấp cứu có nguy cơ bệnh thực thể cao hơn (OR 3,3, Goldstein 2006). Prior tính trên mọi người đau đầu, kể cả người sẽ chọn 'dấu hiệu đột quỵ' ở màn sàng lọc. Lượt C: hai lượt cùng P6 dưới 45 tuổi, P5 ở 45–64 tuổi, P4 ở 65–74 tuổi; từ 75 tuổi chọn P3 của lượt B (lượt A để P4) vì nguồn ngang nhau, chọn mức thận trọng cho bệnh nguy hiểm, và ở tuổi này đột quỵ tăng nhanh trong khi đau đầu lành tính giảm. Cần bác sĩ duyệt."
+  - complaint: dizziness
+    default: P5
+    by_age: { child_5_12: P6, teen_13_17: P6, adult_45_64: P4, elder_65_74: P3, elder_75p: P3 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [kerber-stroke-2006, newmantoker-mayoclinproc-2008, bosner-bmcfampract-2018, tarnutzer-cmaj-2011, byt-qd-3312-2024]
+      locator: "Kerber 2006 bảng 1; Newman-Toker 2008 bảng 4; Bösner 2018 bảng 3, bảng 4; Tarnutzer 2011 bảng 3; 3312/QĐ-BYT (2024) bài 2 mục 3.1, 3.4"
+      reported: "Người trên 44 tuổi đến cấp cứu vì chóng mặt (Mỹ, tuổi trung bình khoảng 65): đột quỵ hoặc cơn thiếu máu não thoáng qua 3,2% (riêng đột quỵ khoảng 2%), chỉ 0,7% khi chóng mặt đơn độc; người lớn đến cấp cứu vì chóng mặt: đột quỵ, chảy máu não 0,5%, bệnh mạch máu não 4%; tuyến ban đầu: nguyên nhân thần kinh trung ương 1,4–11,4%, mạch máu não 4% ở người trên 60 tuổi (1 nghiên cứu)"
+      population: "Cấp cứu ở Mỹ; tuyến ban đầu ở châu Âu; chưa có số liệu Việt Nam"
+      note: "Giai đoạn 3 lô 1 (lượt C). Với triệu chứng chính Chóng mặt, bệnh này đại diện cho đột quỵ biểu hiện bằng chóng mặt (chủ yếu tuần hoàn sau). Hai lượt cùng chọn P6 dưới 18 tuổi, P5 ở 18–44 tuổi, P4 ở 45–64 tuổi, P3 từ 75 tuổi; ở 65–74 tuổi lượt A chọn P4, lượt B P3: nguồn ngang nhau nên lượt C chọn mức cao hơn cho bệnh nguy hiểm (P3), vì tuổi trên 50 dự báo mạnh đột quỵ ở người chóng mặt cấp (Tarnutzer 2011). Tuyến ban đầu ít ca nặng hơn cấp cứu. 3312/QĐ-BYT: chóng mặt hiếm khi xuất hiện đơn độc trong nhồi máu não; viêm mê đạo có thể nhầm với đột quỵ tiểu não. Prior tính trên mọi người chóng mặt, kể cả người sẽ chọn 'dấu hiệu đột quỵ' ở màn sàng lọc. Cần bác sĩ duyệt."
 findings:
   - finding: es_stroke_signs
     freq: very_frequent
+    freq_by_complaint: { dizziness: occasional }
     evidence:
       tier: A
       basis: numeric
-      sources: [zhelev-cochrane-2019, aroor-stroke-2017, byt-qd-3312-2024, nhs-stroke-symptoms]
+      sources: [zhelev-cochrane-2019, aroor-stroke-2017, byt-qd-3312-2024, nhs-stroke-symptoms, tarnutzer-cmaj-2011, kerber-stroke-2006, paul-lancetneurol-2013]
       reported: "ROSIER ở khoa cấp cứu có độ nhạy gộp 0,88 (khoảng dự báo 0,75–0,95), FAST có độ chính xác tương tự (Zhelev 2019); 14,1% người nhồi máu não không có triệu chứng FAST (Aroor 2017)."
-      note: "Câu hỏi gần với FAST (méo mặt, yếu tê một bên, nói khó). Nhóm biểu hiện chủ yếu bằng đau đầu có nhiều đột quỵ tuần hoàn sau, tiểu não (3312/QĐ-BYT: chảy máu tiểu não gây nhức đầu vùng chẩm, thất điều, nôn), dễ không có dấu hiệu FAST; vì vậy hai lượt cùng chọn very_frequent, không chọn almost_always. Trả lời 'Có' đã dừng phiên ở màn sàng lọc; liên kết này chủ yếu để trả lời 'Không' giảm khả năng khoảng 5 lần, không loại trừ."
+      note: "Câu hỏi gần với FAST (méo mặt, yếu tê một bên, nói khó). Nhóm biểu hiện chủ yếu bằng đau đầu có nhiều đột quỵ tuần hoàn sau, tiểu não (3312/QĐ-BYT: chảy máu tiểu não gây nhức đầu vùng chẩm, thất điều, nôn), dễ không có dấu hiệu FAST; vì vậy hai lượt cùng chọn very_frequent, không chọn almost_always. Trả lời 'Có' đã dừng phiên ở màn sàng lọc; liên kết này chủ yếu để trả lời 'Không' giảm khả năng khoảng 5 lần, không loại trừ. Giai đoạn 3 lô 1 (lượt C): mức riêng cho Chóng mặt là occasional. Lượt B đề xuất mức này, lượt A nêu cùng vấn đề (very_frequent quá mạnh khi chóng mặt). Đột quỵ biểu hiện bằng chóng mặt chủ yếu ở tuần hoàn sau: ở hội chứng tiền đình cấp do đột quỵ, không kể dấu hiệu vận nhãn và thất điều nặng, chỉ khoảng 1/5 có dấu hiệu thần kinh khác như yếu, tê nửa người (Tarnutzer 2011); nhiều cơn thoáng qua trước đột quỵ tuần hoàn sau chỉ có chóng mặt (Paul 2013). Kerber 2006 (60% yếu vận động) đo ở cấp cứu, ghi cả dấu hiệu bác sĩ khám thấy. Mức occasional làm trả lời 'Không' chỉ giảm khả năng khoảng 1,2 lần, theo hướng an toàn."
   - finding: sudden_loss_of_balance
     freq: frequent
     evidence:
@@ -177,6 +189,61 @@ findings:
       basis: judgment
       sources: [byt-qd-3312-2024, nhs-stroke-symptoms]
       note: "Chỉ lượt B có; lượt C giữ. Sốt không có trong triệu chứng khởi phát của đột quỵ trong cả hai nguồn; đau đầu kèm sốt nghiêng về bệnh nhiễm trùng. Mức rare thấp hơn tỷ lệ nền 5%."
+  # ---------- Giai đoạn 3, lô 1 (lượt C): liên kết cho triệu chứng chính Chóng mặt ----------
+  - finding: headache
+    freq: frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [tarnutzer-cmaj-2011, byt-qd-3312-2024]
+      locator: "Tarnutzer 2011 bảng 3 và phần Đau; 3312/QĐ-BYT (2024)"
+      reported: "Đau đầu hoặc đau cổ ở 38% nguyên nhân trung ương so với 12% nguyên nhân ngoại biên của hội chứng tiền đình cấp (LR+ 3,2)"
+      population: "Hội chứng tiền đình cấp ở cấp cứu và khoa thần kinh"
+      note: "Hai lượt cùng chọn frequent. Chỉ có tác dụng khi triệu chứng chính là Chóng mặt (với Đau đầu, câu này được ngầm định). 3312/QĐ-BYT: chảy máu tiểu não gây nhức đầu dữ dội vùng chẩm, thất điều, nôn."
+  - finding: vertigo_spinning
+    freq: frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [kerber-stroke-2006, tarnutzer-cmaj-2011, msd-stroke-overview, newmantoker-mayoclinproc-2007]
+      locator: "Kerber 2006 phần Kết quả, bảng 2; Tarnutzer 2011 bảng 3"
+      reported: "53 người đột quỵ hoặc cơn thoáng qua: lý do khám là quay cuồng ở 18 người, chóng mặt 23, mất thăng bằng 11 (Kerber 2006)"
+      note: "Hai lượt cùng chọn frequent. Tần suất trong số người đã chóng mặt. Kiểu chóng mặt (quay hay không quay) không giúp phân biệt đột quỵ (Tarnutzer 2011; Kerber 2006: OR 0,88). Với tỷ lệ nền 0,4, mức này gần trung tính."
+  - finding: dizziness_pattern
+    dist: { brief_episodes: 0.065, long_episodes: 0.225, continuous: 0.62, chronic: 0.09 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [tarnutzer-cmaj-2011, grace3-dizziness-2023, byt-qd-3312-2024, paul-lancetneurol-2013]
+      locator: "GRACE-3 định nghĩa hội chứng tiền đình cấp; Tarnutzer 2011 bảng 3; Paul 2013 phần Kết quả"
+      note: "Trung bình hai lượt (lệch 0,05). Đột quỵ biểu hiện bằng chóng mặt thường là hội chứng tiền đình cấp (chóng mặt liên tục, khởi phát cấp); khoảng 25% ± 15% hội chứng tiền đình cấp ở cấp cứu là đột quỵ (Tarnutzer 2011); một phần có triệu chứng dao động hoặc có cơn báo trước (Paul 2013). Ước lượng."
+  - finding: dizziness_positional
+    freq: occasional
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [tarnutzer-cmaj-2011, grace3-dizziness-2023]
+      locator: "Tarnutzer 2011 bảng 3 (yếu tố làm tăng chóng mặt)"
+      note: "Hai lượt cùng chọn occasional. Tần suất trong số người đã chóng mặt. Chóng mặt do đột quỵ là chóng mặt tự phát, có thể tăng khi cử động đầu như viêm dây thần kinh tiền đình (Tarnutzer 2011), nên một phần người bệnh trả lời 'Có'. Ước 20%, thấp hơn hẳn chóng mặt tư thế kịch phát lành tính."
+  - finding: cannot_walk_unaided
+    freq: frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [tarnutzer-cmaj-2011, grace3-dizziness-2023]
+      locator: "Tarnutzer 2011 phần Dấu hiệu thần kinh; GRACE-3 khuyến cáo 4"
+      reported: "Thất điều thân nặng (không tự ngồi được) 33% ở đột quỵ so với 0% ở viêm dây thần kinh tiền đình, là dấu hiệu rõ duy nhất ở 29% người đột quỵ; 67% nhồi máu động mạch tiểu não trên không tự đứng, đi được"
+      population: "Cấp cứu, bệnh viện"
+      note: "Hai lượt cùng chọn frequent. Câu hỏi gồm cả phải vịn, phải đỡ mới đi được (rộng hơn thất điều thân nặng); ở cộng đồng có thể thấp hơn. GRACE-3: mức độ đi không vững giúp phân biệt nguyên nhân trung ương. Cùng cụm imbalance với 'đột ngột mất thăng bằng'."
+  - finding: transient_neuro_symptoms
+    freq: occasional
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [paul-lancetneurol-2013, kerber-stroke-2006, byt-qd-3312-2024]
+      locator: "Paul 2013 phần Kết quả; Kerber 2006 bảng 1"
+      reported: "Cơn thoáng qua trước 59/275 đột quỵ tuần hoàn sau (khoảng 21%), phần lớn là triệu chứng thân não đơn độc, nhiều nhất trong 2 ngày trước (Paul 2013); 28% từng bị cơn thoáng qua hoặc đột quỵ (Kerber 2006)"
+      note: "Hai lượt cùng chọn occasional. Chỉ một phần cơn báo trước khớp với câu hỏi (yếu, tê nửa người, nói khó, nhìn đôi rồi tự hết); người có triệu chứng dao động cũng có thể trả lời 'Có'. Đã có quy tắc rf_transient_neuro (mức 2)."
 warning_signs: [es_stroke_signs, sudden_loss_of_balance, headache_thunderclap, confusion, drowsy_hard_to_wake, seizure_recent, vision_loss_or_double, persistent_vomiting]
 self_care_vi:
   - "Gọi 115 ngay và ghi nhớ giờ bắt đầu có triệu chứng."
@@ -190,5 +257,5 @@ review:
   authors: ["agent:pass-a", "agent:pass-b"]
   reconciler: "agent:pass-c"
   doctor_reviewer: null
-  updated: "2026-10-24"
-  notes_vi: "Lượt C đã đối chiếu 21 liên kết và mở lại mọi nguồn được trích, kể cả 3312/QĐ-BYT (2024) trên luatvietnam.vn. Bác sĩ cần xem: (1) prior là ước lượng, chưa có số liệu Việt Nam; từ 75 tuổi chọn P3; (2) tỷ lệ có dấu hiệu FAST và mất thăng bằng ở nhóm biểu hiện bằng đau đầu chưa có số liệu trực tiếp (dùng số của nhồi máu não chung); (3) phần lớn tần suất khác dựa trên mô tả bằng lời của 3312/QĐ-BYT và LR của Runchey 2010; (4) chưa có tỷ lệ yếu tố nguy cơ trong người đột quỵ Việt Nam; (5) mã I64 dùng chung cho đột quỵ không xác định thể vì bệnh gộp cả nhồi máu và xuất huyết não."
+  updated: "2026-10-25"
+  notes_vi: "Lượt C đã đối chiếu 21 liên kết và mở lại mọi nguồn được trích, kể cả 3312/QĐ-BYT (2024) trên luatvietnam.vn. Bác sĩ cần xem: (1) prior là ước lượng, chưa có số liệu Việt Nam; từ 75 tuổi chọn P3; (2) tỷ lệ có dấu hiệu FAST và mất thăng bằng ở nhóm biểu hiện bằng đau đầu chưa có số liệu trực tiếp (dùng số của nhồi máu não chung); (3) phần lớn tần suất khác dựa trên mô tả bằng lời của 3312/QĐ-BYT và LR của Runchey 2010; (4) chưa có tỷ lệ yếu tố nguy cơ trong người đột quỵ Việt Nam; (5) mã I64 dùng chung cho đột quỵ không xác định thể vì bệnh gộp cả nhồi máu và xuất huyết não. Giai đoạn 3 lô 1 (lượt C, 25/10/2026): thêm prior cho Chóng mặt (P5; dưới 18 tuổi P6; 45–64 tuổi P4; từ 65 tuổi P3), mức riêng occasional cho dấu hiệu đột quỵ ở màn sàng lọc khi triệu chứng chính là Chóng mặt, và 6 liên kết (đau đầu, cảm giác quay, kiểu chóng mặt, chóng mặt tư thế, không tự đi được, cơn thần kinh thoáng qua); mọi giá trị cũ giữ nguyên, mọi nguồn mới đã mở lại. Bác sĩ cần xem thêm: (6) prior cho Chóng mặt suy từ số liệu cấp cứu ở Mỹ; (7) mức occasional cho méo miệng, yếu tay, nói khó ở người chọn Chóng mặt suy từ Tarnutzer 2011 và Paul 2013, chưa có số liệu ở tuyến ban đầu."

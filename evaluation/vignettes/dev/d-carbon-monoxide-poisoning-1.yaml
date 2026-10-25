@@ -1,0 +1,47 @@
+id: d-carbon-monoxide-poisoning-1
+set: dev
+title_vi: "Nữ 45 tuổi ở Hà Nội, tháng 1, đốt than sưởi trong phòng ngủ đóng kín, sáng dậy đau đầu, chóng mặt, buồn nôn"
+narrative_vi: "Chị M., 45 tuổi, ở Hà Nội. Đêm qua trời rét, cả nhà đốt than tổ ong sưởi trong phòng ngủ, đóng kín cửa. Sáng dậy chị đau đầu vừa, chóng mặt, choáng váng suốt từ sáng, buồn nôn, mệt; chồng chị cũng đau đầu. Ra sân một lúc thấy đỡ hơn. Không nôn, không ngất, không khó thở, không đau ngực, tỉnh táo, nói chuyện bình thường. Không sốt, không ho, không sổ mũi. Không có thai, không chậm kinh. Không có bệnh nền."
+patient:
+  age_years: 45
+  sex: female
+  region: north
+  month: 1
+complaint: dizziness
+answers:
+  co_exposure: present
+  others_same_symptoms: present
+  better_away_from_place: present
+  headache: present
+  headache_thunderclap: absent
+  headache_severity: moderate
+  nausea: present
+  vomiting: absent
+  fatigue: present
+  dizziness_pattern: continuous
+  vertigo_spinning: absent
+  dizziness_positional: absent
+  fainting_or_near_fainting: absent
+  confusion: absent
+  drowsy_hard_to_wake: absent
+  breathing_difficulty: absent
+  chest_pain_pressure: absent
+  severe_weakness: absent
+  blurred_vision: absent
+  cannot_walk_unaided: absent
+  fever: absent
+  cough: absent
+  runny_nose: absent
+  pregnant: absent
+  missed_period: absent
+  hypertension_known: absent
+  diabetes: absent
+default_unmentioned: absent
+expected:
+  condition: carbon_monoxide_poisoning
+  acceptable: []
+  triage: 2
+source:
+  basis: "Ca điển hình theo 3610/QĐ-BYT bài 33: đốt than tổ ong sưởi trong phòng kín, nhiều người trong nhà cùng bị, khởi đầu bằng đau đầu, mệt, chóng mặt, buồn nôn; ngộ độc nhẹ dễ lầm với cảm cúm mùa đông. NHS: triệu chứng đỡ khi ra ngoài; người ngộ độc cần được kiểm tra ở bệnh viện (đo CO trong máu, thở oxy). Mức 2 theo quy tắc rf_co_exposure."
+  references: [byt-qd-3610-2015, nhs-carbon-monoxide-poisoning, juttner-germedsci-2021]
+author: "agent:pass-c"

@@ -1,0 +1,41 @@
+id: d-transient-ischemic-attack-1
+set: dev
+title_vi: "Nam 69 tuổi, tăng huyết áp, đái tháo đường, 2 ngày trước chóng mặt kèm nói ngọng, tê tay 20 phút"
+narrative_vi: "Ông Đ., 69 tuổi, bị tăng huyết áp và đái tháo đường, uống thuốc hạ đường huyết. Hai ngày trước đang ngồi xem ti vi thì đột ngột thấy mọi vật quay, nói ngọng, tê bàn tay trái, khoảng 20 phút thì hết hẳn. Hôm nay không còn triệu chứng nhưng con cái lo nên kiểm tra. Không đau đầu, không nhìn đôi, đi lại bình thường, không ngất. Không run tay, không vã mồ hôi, ăn uống đều bữa. Chưa đo đường huyết."
+patient:
+  age_years: 69
+  sex: male
+  region: north
+  month: 12
+complaint: dizziness
+answers:
+  dizziness_pattern: long_episodes
+  vertigo_spinning: present
+  transient_neuro_symptoms: present
+  dizziness_positional: absent
+  vision_loss_or_double: absent
+  cannot_walk_unaided: absent
+  sudden_loss_of_balance: absent
+  headache: absent
+  nausea: absent
+  fainting_or_near_fainting: absent
+  similar_episodes_before: absent
+  hypertension_known: present
+  diabetes: present
+  on_glucose_lowering_meds: present
+  tremor: absent
+  cold_sweat: absent
+  missed_meal: absent
+  better_after_sugar: absent
+  known_heart_disease: absent
+  hearing_loss_tinnitus: absent
+  fever: absent
+default_unmentioned: absent
+expected:
+  condition: transient_ischemic_attack
+  acceptable: [stroke]
+  triage: 2
+source:
+  basis: "Cơn thiếu máu não thoáng qua điển hình: triệu chứng thần kinh khu trú khởi phát đột ngột (nói ngọng, tê nửa người, chóng mặt), hết trong 24 giờ (3312/QĐ-BYT bài 1; NHS TIA). Nguy cơ cao (ABCD2: tuổi, huyết áp, đái tháo đường, rối loạn lời nói, kéo dài 10–59 phút): 3312/QĐ-BYT khuyên điều trị dự phòng ngay, tối ưu trong 24 giờ đầu, tối đa 7 ngày đầu, nên đến cơ sở cấp cứu ngay (quy tắc rf_transient_neuro). Đột quỵ nhẹ là chẩn đoán phân biệt chấp nhận được."
+  references: [byt-qd-3312-2024, nhs-tia, kerber-stroke-2006]
+author: "agent:pass-c"

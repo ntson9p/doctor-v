@@ -1,0 +1,39 @@
+id: d-hyperthyroidism-1
+set: dev
+title_vi: "Nữ 32 tuổi hai tháng nay tim đập nhanh liên tục, sợ nóng, sụt cân dù ăn nhiều, run tay"
+narrative_vi: "Chị Q., 32 tuổi, hai tháng nay lúc nào cũng thấy tim đập nhanh, cả khi ngồi nghỉ; đo máy huyết áp thấy mạch khoảng 115. Chị sợ nóng, ra nhiều mồ hôi, ăn nhiều nhưng sụt 5 kg, run tay, khó ngủ, hay cáu gắt. Người nhà thấy cổ chị to ra. Không đau ngực, không khó thở, không ngất. Không có thai, không chậm kinh."
+patient:
+  age_years: 32
+  sex: female
+  region: south
+  month: 10
+complaint: palpitations
+answers:
+  palpitation_duration: ongoing
+  palpitation_rhythm: fast_regular
+  palpitation_abrupt_onset: absent
+  pulse_measured: n100_150
+  heat_intolerance: present
+  weight_loss_unintended: present
+  tremor: present
+  goiter_visible: present
+  stress_poor_sleep: present
+  fatigue: present
+  eyes_bulging: absent
+  panic_fear: absent
+  perioral_tingling: absent
+  fainting_or_near_fainting: absent
+  chest_pain_pressure: absent
+  breathing_difficulty: absent
+  dizziness: absent
+  pregnant: absent
+  missed_period: absent
+default_unmentioned: absent
+expected:
+  condition: hyperthyroidism
+  acceptable: []
+  triage: 4
+source:
+  basis: "Bệnh Basedow điển hình: nhịp tim nhanh thường xuyên 100–140, sợ nóng, ra nhiều mồ hôi, ăn nhiều mà gầy sút, run tay, bướu giáp (3879/QĐ-BYT bài Bệnh Basedow; NHS Overactive thyroid). Không có dấu hiệu cơn bão giáp; NHS: khám bác sĩ gia đình để xét nghiệm máu."
+  references: [byt-qd-3879-2014, nhs-overactive-thyroid, msd-hyperthyroidism]
+author: "agent:pass-c"

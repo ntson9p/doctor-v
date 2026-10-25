@@ -1,0 +1,41 @@
+id: d-vestibular-neuritis-2
+set: dev
+title_vi: "Nữ 70 tuổi, tăng huyết áp, quay cuồng liên tục từ sáng nay, nôn, chưa có cảm trước đó"
+narrative_vi: "Bà N., 70 tuổi, bị tăng huyết áp, uống thuốc đều. Sáng nay khoảng 6 giờ trước, vừa thức dậy thấy mọi vật quay tròn liên tục, buồn nôn, nôn 2 lần, nằm yên thì đỡ hơn một chút. Đi lại chao đảo nhưng vẫn tự đi được vài bước không cần vịn. Không đau đầu, không nhìn đôi, không nói khó, không yếu tê tay chân, không ù tai, không nghe kém. Không sốt. Không bị cảm trước đó. Chưa từng bị như vậy. Không đái tháo đường, không bệnh tim."
+patient:
+  age_years: 70
+  sex: female
+  region: south
+  month: 3
+complaint: dizziness
+answers:
+  dizziness_pattern: continuous
+  vertigo_spinning: present
+  dizziness_positional: absent
+  nausea: present
+  vomiting: present
+  persistent_vomiting: absent
+  sudden_loss_of_balance: present
+  cannot_walk_unaided: absent
+  recent_viral_illness: absent
+  hearing_loss_tinnitus: absent
+  headache: absent
+  vision_loss_or_double: absent
+  transient_neuro_symptoms: absent
+  fainting_or_near_fainting: absent
+  similar_episodes_before: absent
+  fever: absent
+  hypertension_known: present
+  bp_lowering_meds: present
+  diabetes: absent
+  known_heart_disease: absent
+default_unmentioned: absent
+expected:
+  condition: vestibular_neuritis
+  acceptable: [stroke]
+  triage: 2
+source:
+  basis: "Ca không điển hình: người cao tuổi, giai đoạn sớm (mới 6 giờ, chưa đủ 24 giờ: 'đang tiến triển' theo Strupp 2022), không có cảm trước. Chẩn đoán cuối cùng là viêm dây thần kinh tiền đình, nhưng hội chứng tiền đình cấp ở người có yếu tố nguy cơ mạch máu không phân biệt được với đột quỵ tại nhà (GRACE-3; Tarnutzer 2011: 25% ± 15% là đột quỵ; 3312/QĐ-BYT: viêm mê đạo có thể nhầm với đột quỵ tiểu não), nên mức xử trí đúng là đến cấp cứu ngay (quy tắc rf_acute_vertigo_vascular_risk)."
+  references: [strupp-jvestibres-2022, grace3-dizziness-2023, tarnutzer-cmaj-2011, byt-qd-3312-2024]
+author: "agent:pass-c"
+notes_vi: "Đột quỵ là kết quả chấp nhận được vì tại nhà ca này thật sự không phân biệt được với đột quỵ tuần hoàn sau (GRACE-3, Tarnutzer 2011); phiên dừng cấp cứu ở mức 2 chỉ hiện danh sách 'bác sĩ cần loại trừ' (bệnh mức 1–2), nên viêm dây thần kinh tiền đình (mức 3) không thể có mặt."

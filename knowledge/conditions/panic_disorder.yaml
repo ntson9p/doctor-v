@@ -1,0 +1,225 @@
+id: panic_disorder
+names:
+  vi: "Rối loạn hoảng sợ (lo âu kịch phát từng giai đoạn)"
+  vi_common: ["Cơn hoảng sợ", "Cơn hoảng loạn", "Rối loạn hoảng loạn"]
+  en: "Panic attack and panic disorder"
+codes:
+  icd10: "F41.0"
+  icd10_verified: true
+  mondo: "MONDO:0005383"
+summary_vi:
+  - "Cơn sợ hãi hoặc khó chịu dữ dội đến đột ngột, kèm tim đập nhanh, khó thở, run, vã mồ hôi, chóng mặt."
+  - "Cơn thường kéo dài khoảng 5–20 phút rồi tự hết, có thể lặp lại."
+  - "Cơn rất khó chịu nhưng không làm hại cơ thể; lần đầu bị nên đi khám để loại trừ bệnh tim, bệnh tuyến giáp."
+urgency: 4
+cant_miss: false
+specialties: [mental_health, general_medicine]
+priors:
+  - complaint: palpitations
+    default: P2
+    by_age: { child_5_12: P4, teen_13_17: P3, elder_65_74: P3, elder_75p: P4 }
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [weber-amjmed-1996, raviele-europace-2011, barsky-archintmed-1996, dejonge-depressanxiety-2016, msd-panic-disorder]
+      locator: "Weber 1996 tóm tắt; EHRA 2011 mục nguyên nhân; Barsky 1996 tóm tắt; de Jonge 2016 bảng 2; MSD (tuổi khởi phát)"
+      reported: "Nguyên nhân tâm thần 31% người hồi hộp, chủ yếu hoảng sợ, lo âu (Weber); lo âu, cơn hoảng sợ 15–31% (EHRA); 29% người hồi hộp không có rối loạn nhịp có rối loạn tâm thần, 83% trong số đó là trầm cảm nặng hoặc rối loạn hoảng sợ (Barsky). Rối loạn hoảng sợ suốt đời 0,8% ở nước thu nhập thấp và trung bình thấp, 2,2% ở nước thu nhập cao; tuổi khởi phát trung vị 32 (de Jonge)."
+      population: "Người hồi hộp ở bệnh viện, phòng khám (Mỹ); khảo sát dân số nhiều nước"
+      note: "Hai lượt cùng chọn P2 cho người lớn dưới 65 tuổi (nhóm tâm thần gồm cả lo âu lan tỏa, trầm cảm; rối loạn hoảng sợ ít gặp hơn ở nước thu nhập thấp, trung bình và ở Trung Quốc, Nhật Bản). Hai lượt lệch theo tuổi: 5–12 tuổi (A P3, B P5, lệch hai mức), 13–17 tuổi (A P2, B P3), từ 75 tuổi (A P3, B P4). Lượt C mở lại nguồn: bệnh thường bắt đầu cuối tuổi vị thành niên, đầu tuổi trưởng thành (MSD), chỉ khoảng một phần tư khởi phát trước 20 tuổi (de Jonge: khoảng tứ phân vị 20–47), nên trẻ 5–12 tuổi chọn P4; 13–17 tuổi và từ 75 tuổi chọn mức thấp hơn của hai lượt (thận trọng hơn với bệnh lành tính: để phần xác suất cho các nguyên nhân cần khám). Ước lượng, cần bác sĩ duyệt."
+  - complaint: dizziness
+    default: P3
+    by_age: { child_5_12: P5, teen_13_17: P4, elder_65_74: P4, elder_75p: P4 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [bosner-bmcfampract-2018, maarsingh-annfammed-2010, hayashi-biopsychosocmed-2010, dejonge-depressanxiety-2016]
+      locator: "Bösner 2018 bảng 3–4; Maarsingh 2010 tóm tắt; Hayashi 2010 bảng 3"
+      reported: "Nguyên nhân tâm lý 1,8–21,6% người chóng mặt ở tuyến ban đầu (Bösner); bệnh tâm thần là nguyên nhân chính ở 10% người cao tuổi chóng mặt kéo dài (Maarsingh); chóng mặt, choáng có ở 72–88% cơn hoảng sợ (Hayashi)."
+      note: "Hai lượt cùng chọn P3; lệch một mức ở 5–12 tuổi (A P4, B P5), 13–17 tuổi (A P3, B P4), 18–44 tuổi (A P2, B P3), 65–74 tuổi (A P3, B P4). Ngang nguồn (ước lượng); lượt C chọn mức thấp hơn (thận trọng hơn với bệnh lành tính). Nhóm 'tâm lý' gồm cả lo âu lan tỏa, trầm cảm, chóng mặt chức năng; cơn hoảng sợ chỉ là một phần. Ước lượng."
+prior_modifiers:
+  - when: { sex: [female] }
+    factor: 1.2
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [dejonge-depressanxiety-2016, kessler-archgenpsych-2006, msd-panic-disorder]
+      locator: "de Jonge 2016 phụ lục bảng 4; Kessler 2006 bảng 2; MSD"
+      reported: "Nữ so với nam: OR 1,8 (de Jonge, nhiều nước), OR 2,3 (Kessler, Mỹ); MSD: nữ gấp khoảng 2 lần nam."
+      note: "Lượt A 1,2/0,75 (quy đổi bằng lời), lượt B 1,4/0,7 (giả định nam nữ ngang nhau). Lượt C dùng hệ số của lượt A vì người đi khám vì hồi hộp vốn nhiều nữ hơn (56–64% ở các nghiên cứu tuyến ban đầu, bệnh viện): với tỷ lệ nữ/nam 2/1 trong bệnh và khoảng 60% nữ trong người hồi hộp, hệ số so với mức chung khoảng 1,1–1,2 cho nữ và 0,75–0,85 cho nam. Ước lượng."
+  - when: { sex: [male] }
+    factor: 0.75
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [dejonge-depressanxiety-2016, kessler-archgenpsych-2006, msd-panic-disorder]
+      reported: "Nữ so với nam: OR 1,8–2,3."
+      note: "Xem hệ số của nữ."
+findings:
+  - finding: palpitations
+    freq: very_frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [hayashi-biopsychosocmed-2010, nhs-panic-disorder, msd-panic-disorder]
+      locator: "Hayashi 2010 bảng 3"
+      reported: "Hồi hộp, tim đập nhanh 83,0% và 76,5% (nhóm điện não bình thường và bất thường)."
+      population: "70 người rối loạn hoảng sợ khám tại khoa Tâm thể (Nhật Bản)"
+      note: "Hai lượt trùng mức. Có ý nghĩa với triệu chứng chính Chóng mặt (với Hồi hộp là dấu hiệu ngầm định)."
+  - finding: dizziness
+    freq: very_frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [hayashi-biopsychosocmed-2010, msd-panic-disorder, nhs-panic-disorder]
+      locator: "Hayashi 2010 bảng 3"
+      reported: "Chóng mặt, mất vững, choáng hoặc cảm giác sắp ngất 71,7% và 88,2%."
+      note: "Có ý nghĩa với Hồi hộp. Lượt A very_frequent (số liệu Hayashi), lượt B frequent (mô tả bằng lời); lượt C chọn bản có số liệu. Tỷ lệ nền 0,2."
+  - finding: panic_fear
+    freq: frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [hayashi-biopsychosocmed-2010, nhs-panic-disorder, msd-panic-disorder]
+      locator: "Hayashi 2010 bảng 3"
+      reported: "Sợ mất kiểm soát 43,4% và 64,7%; sợ chết 30,2% và 29,4%."
+      note: "Hai lượt trùng mức. Câu hỏi gộp sợ chết và sợ mất kiểm soát nên tần suất cao hơn từng ý; tiêu chuẩn chỉ cần 4 trong 13 triệu chứng nên không chọn very_frequent."
+  - finding: perioral_tingling
+    freq: frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [hayashi-biopsychosocmed-2010, raviele-europace-2011, nhs-panic-disorder]
+      locator: "Hayashi 2010 bảng 3; EHRA 2011 bảng 2"
+      reported: "Tê bì 43,4% và 64,7%."
+      note: "Hai lượt trùng mức. EHRA: hồi hộp kiểu lo âu hay kèm tê tay, mặt. Cùng cụm panic_attack với 'sợ hãi dữ dội'."
+  - finding: breathing_difficulty
+    freq: frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [hayashi-biopsychosocmed-2010, nhs-panic-disorder]
+      locator: "Hayashi 2010 bảng 3"
+      reported: "Khó thở, ngột ngạt 75,5% và 76,5%."
+      note: "Hai lượt trùng mức. Số liệu ở khoa chuyên sâu ứng với very_frequent; hạ một mức để khó thở không bị quy hết cho cơn hoảng sợ. Hồi hộp kèm khó thở vẫn được quy tắc rf_palpitations_danger xếp mức 2."
+  - finding: chest_pain_pressure
+    freq: occasional
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [hayashi-biopsychosocmed-2010, msd-panic-disorder]
+      locator: "Hayashi 2010 bảng 3"
+      reported: "Đau, khó chịu ngực 41,5% và 41,2%."
+      note: "Hai lượt trùng mức. Hạ một mức (frequent thành occasional): câu hỏi của app hỏi đau, tức nặng giữa ngực, và để đau ngực không bị quy cho cơn hoảng sợ vì tại nhà không phân biệt được với hội chứng vành cấp (MSD). Các quy tắc đau ngực đã xếp mức 1–2."
+  - finding: tremor
+    freq: occasional
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [hayashi-biopsychosocmed-2010, nhs-panic-disorder]
+      locator: "Hayashi 2010 bảng 3"
+      reported: "Run 30,2% và 29,4%."
+      note: "Lượt A occasional (số liệu Hayashi), lượt B frequent (danh sách triệu chứng của NHS); lượt C chọn bản có số liệu. Cùng cụm 'run tay, vã mồ hôi'."
+  - finding: cold_sweat
+    freq: occasional
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [hayashi-biopsychosocmed-2010, nhs-panic-disorder]
+      locator: "Hayashi 2010 bảng 3"
+      reported: "Vã mồ hôi 20,8% và 29,4%."
+      note: "Lượt A occasional (số liệu Hayashi), lượt B frequent (danh sách triệu chứng); lượt C chọn bản có số liệu. Câu hỏi hỏi vã mồ hôi lạnh, hẹp hơn 'vã mồ hôi'."
+  - finding: fainting_or_near_fainting
+    freq: occasional
+    freq_by_complaint: { dizziness: frequent }
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [hayashi-biopsychosocmed-2010, nhs-panic-disorder, msd-panic-disorder]
+      locator: "Hayashi 2010 bảng 3; NHS Panic disorder (cảm giác sắp ngất); MSD (tiêu chuẩn: chóng mặt, mất vững, choáng hoặc sắp ngất)"
+      note: "Có ý nghĩa với Hồi hộp và Chóng mặt. Hai lượt cùng chọn occasional vì ngất thật hiếm trong cơn. Lượt C thêm freq_by_complaint cho Chóng mặt (cả hai lượt chưa có): ở người hoảng sợ chọn Chóng mặt, kiểu chóng mặt chính là choáng, cảm giác sắp ngất (NHS liệt kê cảm giác sắp ngất; Hayashi: 72–88% có triệu chứng này), nên chọn frequent; tỷ lệ nền của dấu hiệu này khi Chóng mặt là 0,25 nên mức occasional sẽ làm câu trả lời 'Có' giảm khả năng bệnh. Ước lượng."
+  - finding: similar_episodes_before
+    freq: frequent
+    evidence:
+      tier: C
+      basis: verbal
+      sources: [msd-panic-disorder, nhs-panic-disorder]
+      note: "Hai lượt trùng mức. Rối loạn hoảng sợ là các cơn tái diễn (MSD); bệnh gồm cả cơn hoảng sợ lần đầu nên không chọn very_frequent. Tỷ lệ nền 0,2."
+  - finding: stress_poor_sleep
+    freq: frequent
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [raviele-europace-2011, msd-panic-disorder]
+      locator: "EHRA 2011 bảng 2 (hồi hộp kiểu lo âu sau căng thẳng)"
+      note: "Chỉ lượt A có; lượt C giữ. Tỷ lệ nền 0,2 nên phân biệt vừa phải. Ước lượng."
+  - finding: palpitation_rhythm
+    dist: { fast_regular: 0.47, irregular: 0.04, skipped_beats: 0.11, forceful: 0.38 }
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [raviele-europace-2011, esc-svt-2019]
+      locator: "EHRA 2011 bảng 2 (kiểu lo âu: đều, hơi nhanh); ESC 2019 bảng 10 (lo âu, cơn hoảng sợ gây nhịp nhanh xoang)"
+      note: "Tính trong số người đã hồi hộp; trung bình hai lượt. Nhịp lộn xộn, không đều hiếm. Ước lượng."
+  - finding: palpitation_abrupt_onset
+    freq: rare
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [raviele-europace-2011, thavendiranathan-jama-2009]
+      locator: "EHRA 2011 bảng 2 (kiểu lo âu khởi phát từ từ)"
+      note: "Lượt A occasional, lượt B rare. Hai lượt ngang nguồn; lượt C chọn rare (thận trọng hơn): hồi hộp do lo âu khởi phát và dừng từ từ (EHRA), còn cơn bật tắt gợi ý nhịp nhanh vòng vào lại; nhịp nhanh trên thất hay bị nhầm với cơn hoảng sợ, nên câu trả lời 'Có' cần nghiêng về rối loạn nhịp. Mức rare thấp hơn tỷ lệ nền 0,15."
+  - finding: palpitation_duration
+    dist: { seconds: 0.05, minutes_hours: 0.85, ongoing: 0.10 }
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [nhs-panic-disorder, msd-panic-disorder, barsky-archintmed-1996]
+      locator: "NHS Panic disorder (phần lớn cơn 5–20 phút, có khi tới 1 giờ); MSD (vài phút đến 1 giờ); Barsky 1996 tóm tắt (cơn hay kéo dài trên 15 phút)"
+      note: "Chỉ lượt B có (dấu hiệu thêm sau lượt A); lượt C giữ. Tính trong số người đã hồi hộp. Ước lượng."
+  - finding: pulse_measured
+    dist: { lt_40: 0.004, n40_100: 0.228, n100_150: 0.163, gt_150: 0.005, not_measured: 0.6 }
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [raviele-europace-2011]
+      locator: "EHRA 2011 (hồi hộp do lo âu: nhịp tim chỉ tăng nhẹ)"
+      note: "'Chưa đo' giữ đúng tỷ lệ nền 0,6; trung bình hai lượt. Mạch trên 150 hoặc dưới 40 lần/phút lúc nghỉ gợi ý rối loạn nhịp. Ước lượng."
+  - finding: vertigo_spinning
+    freq: occasional
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [hayashi-biopsychosocmed-2010, msd-panic-disorder, bosner-bmcfampract-2018]
+      note: "Hai lượt trùng mức. Tính trong số người đã chóng mặt. Chóng mặt trong cơn hoảng sợ chủ yếu là choáng, mất vững, cảm giác sắp ngất; có người tả là quay. Mức occasional thấp hơn tỷ lệ nền 0,4. Ước lượng."
+  - finding: dizziness_positional
+    freq: rare
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [bosner-bmcfampract-2018, msd-panic-disorder]
+      note: "Hai lượt trùng mức. Tính trong số người đã chóng mặt. Chóng mặt khi đổi tư thế đầu là kiểu của bệnh tiền đình ngoại biên. Mức rare thấp hơn tỷ lệ nền 0,1. Ước lượng."
+  - finding: dizziness_pattern
+    dist: { brief_episodes: 0.13, long_episodes: 0.55, continuous: 0.05, chronic: 0.27 }
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [msd-panic-disorder, nhs-panic-disorder]
+      note: "Tính trong số người đã chóng mặt; trung bình hai lượt. Cơn kéo dài vài phút đến 1 giờ; người rối loạn hoảng sợ có thể choáng âm ỉ giữa các cơn. Ước lượng."
+warning_signs: [chest_pain_pressure, breathing_difficulty, fainting_or_near_fainting, es_self_harm]
+self_care_vi:
+  - "Trong cơn, ngồi yên ở chỗ an toàn, thở chậm và sâu, tự nhắc rằng cơn sẽ qua."
+  - "Hạn chế cà phê, rượu bia, thuốc lá; ngủ đủ giấc và vận động đều đặn."
+  - "Không tự dùng thuốc an thần, thuốc ngủ; hỏi bác sĩ hoặc dược sĩ trước khi dùng thuốc."
+see_doctor_vi:
+  - "Đặt lịch khám trong vài ngày, nhất là khi mới bị lần đầu hoặc các cơn lặp lại."
+  - "Bác sĩ cần khám để loại trừ bệnh tim, cường giáp, hạ đường huyết."
+  - "Đi cấp cứu ngay nếu đau tức ngực, khó thở nhiều hoặc ngất."
+  - "Tại nhà không thể tự phân biệt cơn hoảng sợ với bệnh tim."
+  - "Rối loạn hoảng sợ điều trị được bằng tâm lý trị liệu hoặc thuốc theo chỉ định của bác sĩ."
+review:
+  status: source_checked
+  authors: ["agent:pass-a", "agent:pass-b"]
+  reconciler: "agent:pass-c"
+  doctor_reviewer: null
+  updated: "2026-10-25"
+  notes_vi: "Lượt C (phần b) đối chiếu 18 liên kết và mở lại mọi nguồn được trích. Mức xử trí 4, không thuộc nhóm không được bỏ sót: NHS khuyên khám bác sĩ gia đình, cơn không gây hại cho cơ thể; MSD: chỉ kết luận sau khi đã khám loại trừ bệnh cơ thể. Bộ Y tế chưa có bài riêng về rối loạn hoảng sợ (Quyết định 2058/QĐ-BYT năm 2020 chỉ có lo âu lan tỏa và rối loạn hỗn hợp lo âu – trầm cảm, theo hai lượt). Bác sĩ cần xem: (1) tần suất triệu chứng lấy từ một nghiên cứu nhỏ ở khoa chuyên sâu Nhật Bản (Hayashi, 70 người); (2) prior suy từ nhóm 'tâm thần' của các nghiên cứu hồi hộp ở Mỹ, có hiệu chỉnh vì tỷ lệ mắc ở châu Á thấp hơn, chưa có số liệu Việt Nam; (3) hệ số giới là quy đổi ước lượng; (4) các triệu chứng cơ thể của cơn trùng với rối loạn nhịp, hạ đường huyết, cường giáp, nên các liên kết dễ gây nhầm (đau ngực, kiểu cơn bật tắt) được để thấp."

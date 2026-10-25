@@ -1,0 +1,39 @@
+id: d-acute-coronary-syndrome-syncope-1
+set: dev
+title_vi: "Nam 66 tuổi đái tháo đường ngất khi đang leo cầu thang, sau đó buồn nôn, vã mồ hôi, hơi khó thở"
+narrative_vi: "Ông P., 66 tuổi, đái tháo đường, tăng huyết áp, hút thuốc. Chiều nay đang leo cầu thang thì đột ngột ngất, không thấy báo trước, khoảng nửa phút sau tỉnh lại. Từ đó ông buồn nôn, vã mồ hôi lạnh, hơi khó thở, mệt. Không đau ngực, không hồi hộp, không đau đầu, không đau bụng. Không đi ngoài phân đen. Chưa đo mạch."
+patient:
+  age_years: 66
+  sex: male
+  region: north
+  month: 12
+complaint: syncope
+answers:
+  syncope_trigger: exertion
+  syncope_warning: no_warning
+  cold_sweat: present
+  nausea: present
+  breathing_difficulty: present
+  diabetes: present
+  hypertension_known: present
+  smoker: present
+  chest_pain_pressure: absent
+  palpitations: absent
+  headache: absent
+  abdominal_pain: absent
+  black_stool: absent
+  vomiting_blood: absent
+  known_heart_disease: absent
+  leg_swelling_one_side: absent
+  recent_immobility: absent
+  not_recovered_after_faint: absent
+  pulse_measured: not_measured
+default_unmentioned: absent
+expected:
+  condition: acute_coronary_syndrome
+  acceptable: [cardiac_arrhythmia]
+  triage: 1
+source:
+  basis: "Hội chứng mạch vành cấp không đau ngực biểu hiện bằng ngất khi gắng sức ở người già, đái tháo đường (Canto 2000: 33% không đau ngực, già hơn, nhiều đái tháo đường; 2187/QĐ-BYT: triệu chứng không điển hình, có cơn ngất thì chuyển viện ngay). ESC 2018 bảng 6: ngất khi gắng sức, kèm khó thở mới là nguy cơ cao; quy tắc rf_syncope_breathing (mức 1). Chấp nhận rối loạn nhịp tim (ngất khi gắng sức do loạn nhịp thất trong thiếu máu cơ tim)."
+  references: [canto-jama-2000, byt-qd-2187-2019, esc-syncope-2018, msd-acute-mi]
+author: "agent:pass-c"

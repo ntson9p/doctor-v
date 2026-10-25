@@ -1,0 +1,15 @@
+id: stanley-bmj-2017
+type: primary_study
+title: "Comparison of risk scoring systems for patients presenting with upper gastrointestinal bleeding: international multicentre prospective study"
+publisher: "BMJ 2017;356:i6432 (Stanley AJ và cộng sự)"
+date: "2017"
+url: "https://europepmc.org/article/MED/28053181"
+doi: "10.1136/bmj.i6432"
+pmid: "28053181"
+license_class: L2
+license_note: "CC BY-NC: dùng phi thương mại, ghi công; không sao chép câu chữ."
+default_tier: B
+accessed: "2026-10-25"
+verified: true
+verified_by: "agent:pass-c"
+notes_vi: "Lượt C (phần b) đọc toàn văn PMC5217768 qua API Europe PMC. 3.012 người xuất huyết tiêu hóa trên liên tiếp ở 6 bệnh viện lớn (châu Âu, Bắc Mỹ, châu Á, châu Đại Dương): tuổi trung vị 65, nam 58%; bệnh gan 15%; mạch trung vị 89 lần/phút (khoảng 95%: 61–126); loét dạ dày tá tràng 28%, giãn tĩnh mạch 7%; 45% cần can thiệp tại viện hoặc tử vong trong 30 ngày. Thang Glasgow Blatchford dự báo can thiệp hoặc tử vong tốt nhất; điểm từ 1 trở xuống là ngưỡng tối ưu để xử trí ngoại trú."

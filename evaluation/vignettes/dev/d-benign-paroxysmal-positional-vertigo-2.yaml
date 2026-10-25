@@ -1,0 +1,40 @@
+id: d-benign-paroxysmal-positional-vertigo-2
+set: dev
+title_vi: "Nam 79 tuổi, tăng huyết áp, choáng chao đảo vài giây khi trở mình, không thấy quay"
+narrative_vi: "Ông T., 79 tuổi, bị tăng huyết áp, đang uống thuốc hạ áp. Một tuần nay, mỗi khi trở mình hoặc ngửa cổ lên thì thấy choáng, chao đảo vài giây rồi hết. Ông không tả được là mọi vật quay, chỉ thấy chòng chành. Không buồn nôn. Đứng dậy từ ghế không thấy choáng. Giữa các cơn đi lại bình thường, chỉ sợ ngã. Đây là lần đầu bị. Không đau đầu, không nhìn đôi, không yếu tê tay chân, không nói khó, không ù tai, không ngất."
+patient:
+  age_years: 79
+  sex: male
+  region: south
+  month: 9
+complaint: dizziness
+answers:
+  dizziness_pattern: brief_episodes
+  dizziness_positional: present
+  vertigo_spinning: absent
+  nausea: absent
+  vomiting: absent
+  similar_episodes_before: absent
+  dizziness_on_standing: absent
+  sudden_loss_of_balance: absent
+  cannot_walk_unaided: absent
+  hypertension_known: present
+  bp_lowering_meds: present
+  diabetes: absent
+  known_heart_disease: absent
+  headache: absent
+  vision_loss_or_double: absent
+  transient_neuro_symptoms: absent
+  hearing_loss_tinnitus: absent
+  fainting_or_near_fainting: absent
+  fever: absent
+default_unmentioned: absent
+expected:
+  condition: benign_paroxysmal_positional_vertigo
+  acceptable: []
+  triage: 4
+source:
+  basis: "Ca không điển hình: người rất cao tuổi, mô tả choáng, chòng chành thay vì quay (14% người bệnh không thấy quay, von Brevern 2007), nhưng cơn vẫn ngắn và luôn do đổi tư thế đầu. Bệnh tăng theo tuổi và làm người già dễ ngã (MSD). Cơn có yếu tố khởi phát, không có dấu hiệu thần kinh: GRACE-3 khuyên nghiệm pháp Dix-Hallpike; NHS Vertigo: khám bác sĩ (không khẩn)."
+  references: [vonbrevern-jnnp-2007, msd-bppv, grace3-dizziness-2023, nhs-vertigo]
+author: "agent:pass-c"
+notes_vi: "Kiểm tra người từ 75 tuổi (ngưỡng mức xử trí giảm một nửa) có tăng huyết áp nhưng chóng mặt tư thế điển hình."

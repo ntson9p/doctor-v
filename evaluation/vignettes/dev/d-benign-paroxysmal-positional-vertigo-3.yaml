@@ -1,0 +1,40 @@
+id: d-benign-paroxysmal-positional-vertigo-3
+set: dev
+title_vi: "Nữ 66 tuổi, uống thuốc huyết áp, quay cuồng khi nằm xuống và khi ngồi dậy buổi sáng"
+narrative_vi: "Bà L., 66 tuổi, tăng huyết áp, uống thuốc hạ áp đều. Năm ngày nay, sáng nào ngồi dậy khỏi giường cũng thấy quay cuồng, phải ngồi yên khoảng nửa phút mới hết; khi nằm xuống hoặc trở mình cũng bị. Bà nghĩ do thuốc huyết áp làm tụt huyết áp vì hay bị lúc vừa dậy. Có buồn nôn, không nôn. Không ngất, không tối sầm mắt. Không đau đầu, không nhìn đôi, không yếu tê, không ù tai. Chưa bị lần nào trước đây."
+patient:
+  age_years: 66
+  sex: female
+  region: central
+  month: 6
+complaint: dizziness
+answers:
+  dizziness_pattern: brief_episodes
+  dizziness_positional: present
+  vertigo_spinning: present
+  dizziness_on_standing: present
+  nausea: present
+  vomiting: absent
+  similar_episodes_before: absent
+  fainting_or_near_fainting: absent
+  hypertension_known: present
+  bp_lowering_meds: present
+  diabetes: absent
+  known_heart_disease: absent
+  headache: absent
+  vision_loss_or_double: absent
+  transient_neuro_symptoms: absent
+  cannot_walk_unaided: absent
+  sudden_loss_of_balance: absent
+  hearing_loss_tinnitus: absent
+  fever: absent
+default_unmentioned: absent
+expected:
+  condition: benign_paroxysmal_positional_vertigo
+  acceptable: []
+  triage: 4
+source:
+  basis: "Dễ nhầm với hạ huyết áp tư thế do thuốc hạ áp (reflex_orthostatic_syncope): cả hai xuất hiện khi vừa ngồi dậy. Điểm phân biệt là cảm giác quay, cơn dưới 1 phút và cơn có cả khi nằm xuống, trở mình (von Brevern 2007: ngồi dậy 58%, nằm xuống 74%, trở mình 85%), còn hạ huyết áp tư thế gây choáng, tối sầm mắt khi đứng, không khi nằm xuống (NHS Dizziness). Mức xử trí theo NHS Vertigo (khám không khẩn)."
+  references: [vonbrevern-jnnp-2007, msd-bppv, nhs-dizziness, nhs-vertigo]
+author: "agent:pass-c"
+notes_vi: "Ca dễ nhầm với bệnh của phần b (ngất phản xạ, hạ huyết áp tư thế)."

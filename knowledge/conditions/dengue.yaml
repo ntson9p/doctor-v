@@ -43,6 +43,24 @@ priors:
       locator: "2760 mục II.2 (đau bụng nhiều ở giai đoạn nguy hiểm), Phụ lục 22 (trẻ em gặp nhiều nhất); Phuong 2006 bảng 2; Le-Viet 2019 bảng 4"
       reported: "Đau bụng ở 16,3% (Bình Thuận) và 17,9% (Quảng Nam) người dengue khi khám sớm"
       note: "Lượt A chọn P4, lượt B chọn P5 (P4 cho 5–17 tuổi). Lượt C chọn P4: đau bụng nhiều là dấu hiệu cảnh báo của giai đoạn nguy hiểm, người bệnh lúc này có thể chọn 'Đau bụng'; giữ mức cao hơn để không bỏ sót (bệnh có dấu hiệu cảnh báo cần nhập viện). Trẻ dưới 5 tuổi và người từ 65 tuổi hạ một mức như với 'Sốt'. Ước lượng, chưa có số liệu."
+  - complaint: dizziness
+    default: P4
+    by_age: { elder_65_74: P5, elder_75p: P5 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-2760-2023, who-dengue-2009, cdc-dengue-clinical, mahabala-f1000res-2023]
+      locator: "2760 mục II.2 (giai đoạn nguy hiểm ngày 3–7); WHO 2009 mục 2.3.1.1, Textbox D–E; CDC mục Critical phase; Mahabala 2023 phần Bàn luận"
+      note: "Giai đoạn 3 lô 1 (lượt C). Hai lượt cùng chọn P4, từ 65 tuổi P5 (như prior Đau bụng). Phần lớn người sốt xuất huyết chọn 'Sốt'; người chọn Chóng mặt chủ yếu ở giai đoạn nguy hiểm (thoát huyết tương, có thể đã hết sốt; CDC: giai đoạn này bắt đầu khi hết sốt) hoặc đang mất nước. WHO 2009 xếp choáng váng hoặc hạ huyết áp tư thế vào tiêu chí nhập viện; CDC và PAHO xếp hạ huyết áp tư thế vào dấu hiệu cảnh báo (theo Mahabala 2023). Hệ số mùa, vùng sẵn có vẫn áp dụng. Chưa có số liệu."
+  - complaint: syncope
+    default: P4
+    by_age: { elder_65_74: P5, elder_75p: P5 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [who-dengue-2009, byt-qd-2760-2023, cdc-dengue-clinical]
+      locator: "WHO 2009 Textbox E (vã mồ hôi nhiều, ngất, lả khi hết sốt); 2760 mục II.2"
+      note: "Giai đoạn 3 lô 1 (lượt C). Hai lượt cùng chọn P4, từ 65 tuổi P5. Ngất khi hết sốt liên quan tụt huyết áp do thoát huyết tương (WHO 2009). Sốc (tay chân lạnh, mệt lả, tiểu ít) đã có quy tắc mức 1. Chưa có số liệu."
 prior_modifiers:
   - when: { months: [8, 9, 10, 11] }
     factor: 1.5
@@ -115,12 +133,13 @@ prior_modifiers:
 findings:
   - finding: fever
     freq: very_frequent
+    freq_by_complaint: { dizziness: frequent, syncope: frequent }
     evidence:
       tier: B
       basis: verbal
-      sources: [byt-qd-2760-2023]
+      sources: [byt-qd-2760-2023, cdc-dengue-clinical, who-dengue-2009]
       locator: "Mục II.1.1 (sốt cao đột ngột, liên tục); mục II.2 (giai đoạn nguy hiểm có thể đã giảm sốt); Phụ lục 2 (sốt không quá 7 ngày)"
-      note: "Chỉ có tác dụng khi triệu chứng chính là đau đầu hoặc đau bụng. Lượt A chọn almost_always, lượt B very_frequent; lượt C chọn very_frequent để người đau bụng ở giai đoạn nguy hiểm, đã hết sốt, không bị loại gần hết khả năng sốt xuất huyết."
+      note: "Chỉ có tác dụng khi triệu chứng chính là đau đầu hoặc đau bụng. Lượt A chọn almost_always, lượt B very_frequent; lượt C chọn very_frequent để người đau bụng ở giai đoạn nguy hiểm, đã hết sốt, không bị loại gần hết khả năng sốt xuất huyết. Giai đoạn 3 lô 1 (lượt C): mức riêng cho Chóng mặt và Ngất là frequent (lượt B đề xuất, lượt A nêu cùng vấn đề): người sốt xuất huyết chọn hai triệu chứng chính này phần lớn đang ở giai đoạn nguy hiểm, vốn bắt đầu khi hết sốt (CDC) hoặc khi sốt đã giảm (2760 mục II.2); WHO 2009 (Textbox E) ghi vã mồ hôi nhiều, ngất, lả khi hết sốt. Mức này để câu trả lời 'Không sốt' chỉ giảm khả năng khoảng 2 lần thay vì 4 lần."
   - finding: fever_duration
     dist: { d1_2: 0.38, d3_5: 0.46, d6_7: 0.14, gt_7d: 0.02 }
     evidence:
@@ -361,6 +380,65 @@ findings:
       sources: [byt-qd-2760-2023]
       locator: "Mục II.1 (giai đoạn sốt)"
       note: "Trung bình hai lượt; đau đầu kéo dài theo những ngày sốt."
+  # ---------- Giai đoạn 3, lô 1 (lượt C): liên kết cho triệu chứng chính Chóng mặt, Ngất ----------
+  - finding: dizziness_on_standing
+    freq: occasional
+    freq_by_complaint: { dizziness: frequent, syncope: frequent }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [who-dengue-2009, mahabala-f1000res-2023, byt-qd-2760-2023]
+      locator: "WHO 2009 Textbox D, E; Mahabala 2023 phần Kết quả, Bàn luận"
+      reported: "Huyết áp tâm thu giảm khi đứng trung bình 14,8% ở Dengue nặng so với 8,4% ở thể không nặng (người lớn nằm viện, Ấn Độ)"
+      note: "Hai lượt cùng chọn frequent cho người chọn Chóng mặt, Ngất: hạ huyết áp tư thế là dấu hiệu của sốc còn bù và tiêu chí nhập viện (WHO 2009), là dấu hiệu cảnh báo theo CDC, PAHO (Mahabala 2023). Lượt C để mức chung occasional và chỉ dùng frequent cho hai triệu chứng chính này: người chọn Chóng mặt, Ngất chủ yếu đang ở giai đoạn nguy hiểm, còn người chọn Sốt, Đau đầu, Đau bụng phần lớn ở giai đoạn sốt. Chưa có tỷ lệ chóng mặt (bài chỉ đo huyết áp); tỷ lệ nền 0,15."
+  - finding: dizziness
+    freq: occasional
+    freq_by_complaint: { syncope: frequent }
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [who-dengue-2009, byt-qd-2760-2023]
+      locator: "WHO 2009 mục 2.3.1.1 (hỏi chóng mặt), Textbox E (choáng váng hoặc hạ huyết áp tư thế)"
+      note: "Hai lượt cùng chọn frequent, nghĩ rằng chỉ có tác dụng khi triệu chứng chính là Ngất; thực ra câu này còn được hỏi ở Sốt, Đau đầu, Đau bụng. Lượt C để mức chung occasional (bằng tỷ lệ nền 0,2, trung tính) và frequent riêng cho Ngất (WHO 2009: choáng váng, ngất khi hết sốt là tiêu chí nhập viện)."
+  - finding: fainting_or_near_fainting
+    freq: occasional
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [who-dengue-2009, byt-qd-2760-2023]
+      locator: "WHO 2009 Textbox E; 2760 mục II.2"
+      note: "Hai lượt cùng chọn occasional. Ngất khi hết sốt liên quan tụt huyết áp do thoát huyết tương (WHO 2009); thoát huyết tương nhiều dẫn đến sốc (2760). Câu hỏi tính cả choáng như sắp ngất. Với Chóng mặt (tỷ lệ nền 0,25) mức này gần trung tính."
+  - finding: vertigo_spinning
+    freq: occasional
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [who-dengue-2009, newmantoker-mayoclinproc-2007]
+      note: "Chỉ lượt A có; lượt C giữ. Tần suất trong số người đã chóng mặt. Chóng mặt do tụt huyết áp, mất nước thường là choáng váng, không quay cuồng; mô tả kiểu chóng mặt kém tin cậy (Newman-Toker 2007). Ước 20%, thấp hơn tỷ lệ nền 0,4."
+  - finding: dizziness_pattern
+    dist: { brief_episodes: 0.20, long_episodes: 0.275, continuous: 0.475, chronic: 0.05 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-2760-2023, who-dengue-2009]
+      locator: "2760 mục II (giai đoạn sốt 2–7 ngày, giai đoạn nguy hiểm ngày 3–7)"
+      note: "Trung bình hai lượt (lệch 0,05). Bệnh cấp vài ngày: chóng mặt kéo dài theo những ngày bệnh, hoặc thành cơn ngắn khi đứng dậy; 'âm ỉ nhiều tuần' gần như không phải sốt xuất huyết. Ước lượng."
+  - finding: syncope_trigger
+    dist: { standing_heat: 0.12, emotion_pain: 0.04, standing_up: 0.45, toilet_cough: 0.125, exertion: 0.025, lying: 0.04, no_trigger: 0.20 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [who-dengue-2009, mahabala-f1000res-2023, esc-syncope-2018]
+      locator: "WHO 2009 Textbox D; ESC 2018 bảng 6"
+      note: "Trung bình hai lượt. Hạ huyết áp tư thế nên ngất chủ yếu khi vừa ngồi dậy, đứng dậy (WHO 2009; ESC 2018: hoàn cảnh của ngất do tư thế); một phần khi đi vệ sinh; sốc nặng có thể làm lịm cả khi đang nằm. Ước lượng."
+  - finding: syncope_warning
+    dist: { prodrome: 0.75, palpitations_first: 0.065, no_warning: 0.185 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [who-dengue-2009, esc-syncope-2018]
+      locator: "WHO 2009 Textbox E"
+      note: "Trung bình hai lượt. Thường có vã mồ hôi, choáng, tối sầm mắt báo trước (WHO 2009: vã mồ hôi nhiều khi hết sốt). Ước lượng."
 warning_signs:
   - abd_pain_severe
   - persistent_vomiting
@@ -392,4 +470,4 @@ review:
   reconciler: "agent:pass-c"
   doctor_reviewer: null
   updated: "2026-10-25"
-  notes_vi: "Mức xử trí 3, không thuộc nhóm không được bỏ sót (2760 mục IV.A: phần lớn điều trị ngoại trú, khám lại hằng ngày); dấu hiệu cảnh báo và sốc do quy tắc mức 2 xử lý, và hiện trong danh sách 'Đi cấp cứu ngay nếu…' khi xác suất từ 10%. Lượt C bỏ các liên kết của lượt A: mệt mỏi (gặp ở hầu hết bệnh sốt, không có số liệu so sánh), tiêu chảy (Phuong 2006: 4,5% ở dengue so với 7,6% ở bệnh sốt khác), đi ngoài phân đen, li bì, tay chân lạnh ở mức rare (cao hơn tỷ lệ nền 1%; đã có quy tắc mức 2 và có trong dấu hiệu cảnh báo). Điểm cần bác sĩ xem: (1) prior 'Sốt' P2 suy từ nghiên cứu sốt không rõ ổ ở Bình Thuận 2001–2002 và Quảng Nam 2016; chưa có số liệu theo tuổi; (2) hệ số mùa, vùng lấy từ 4 tỉnh 1994–2013, chưa có số liệu Tây Nguyên, Bắc Trung Bộ, và các đợt dịch lớn ở miền Bắc sau 2013; (3) tỷ lệ nền khi sốt của chán ăn (0,4), đau sau hốc mắt (0,05), đau khớp, đau cơ thấp hơn tỷ lệ ở bệnh sốt khác trong Phuong 2006 và Low 2011, nên các liên kết này phóng đại giá trị phân biệt; (4) tần suất dấu hiệu cảnh báo ở cộng đồng (nôn nhiều, tiểu ít, đau bụng nhiều) là ước lượng; (5) chấm xuất huyết đơn thuần không là dấu hiệu cảnh báo theo 2760 nhưng quy tắc chung xếp mức 2; (6) mã ICD-10: A97 theo bản ICD-10 của WHO 2016, báo cáo giám sát của Bộ Y tế dùng A90/A91 (Hoang 2025); chưa đối chiếu bảng ICD-10 của Bộ Y tế."
+  notes_vi: "Mức xử trí 3, không thuộc nhóm không được bỏ sót (2760 mục IV.A: phần lớn điều trị ngoại trú, khám lại hằng ngày); dấu hiệu cảnh báo và sốc do quy tắc mức 2 xử lý, và hiện trong danh sách 'Đi cấp cứu ngay nếu…' khi xác suất từ 10%. Lượt C bỏ các liên kết của lượt A: mệt mỏi (gặp ở hầu hết bệnh sốt, không có số liệu so sánh), tiêu chảy (Phuong 2006: 4,5% ở dengue so với 7,6% ở bệnh sốt khác), đi ngoài phân đen, li bì, tay chân lạnh ở mức rare (cao hơn tỷ lệ nền 1%; đã có quy tắc mức 2 và có trong dấu hiệu cảnh báo). Điểm cần bác sĩ xem: (1) prior 'Sốt' P2 suy từ nghiên cứu sốt không rõ ổ ở Bình Thuận 2001–2002 và Quảng Nam 2016; chưa có số liệu theo tuổi; (2) hệ số mùa, vùng lấy từ 4 tỉnh 1994–2013, chưa có số liệu Tây Nguyên, Bắc Trung Bộ, và các đợt dịch lớn ở miền Bắc sau 2013; (3) tỷ lệ nền khi sốt của chán ăn (0,4), đau sau hốc mắt (0,05), đau khớp, đau cơ thấp hơn tỷ lệ ở bệnh sốt khác trong Phuong 2006 và Low 2011, nên các liên kết này phóng đại giá trị phân biệt; (4) tần suất dấu hiệu cảnh báo ở cộng đồng (nôn nhiều, tiểu ít, đau bụng nhiều) là ước lượng; (5) chấm xuất huyết đơn thuần không là dấu hiệu cảnh báo theo 2760 nhưng quy tắc chung xếp mức 2; (6) mã ICD-10: A97 theo bản ICD-10 của WHO 2016, báo cáo giám sát của Bộ Y tế dùng A90/A91 (Hoang 2025); chưa đối chiếu bảng ICD-10 của Bộ Y tế. Giai đoạn 3 lô 1 (lượt C, 25/10/2026): thêm prior cho Chóng mặt và Ngất (P4; từ 65 tuổi P5), mức riêng frequent cho sốt khi triệu chứng chính là Chóng mặt, Ngất, và 7 liên kết (choáng khi vừa đứng dậy, chóng mặt, ngất hoặc choáng, cảm giác quay, kiểu chóng mặt, hoàn cảnh lúc ngất, dấu hiệu trước khi ngất); mọi giá trị cũ giữ nguyên, mọi nguồn mới đã mở lại. Không liên kết hồi hộp và mạch đo được (chỉ lượt A có; nhịp nhanh khi sốc là dấu hiệu đo, không phải hồi hộp, và chưa có số liệu mạch ở người tự đo). Bác sĩ cần xem thêm: (7) prior cho Chóng mặt, Ngất là ước lượng; (8) người đã hết sốt bị ngất, choáng khi đứng dậy ở ngày 3–7 chưa có quy tắc mức 2 riêng (WHO 2009 xếp vào tiêu chí nhập viện), vì không còn sốt nên các quy tắc giai đoạn nguy hiểm không áp dụng."

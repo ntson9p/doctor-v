@@ -24,6 +24,17 @@ priors:
       sources: [stovner-jhp-2022, vo-jhp-2024, carlsen-fampract-2024, detsky-jama-2006]
       locator: "Stovner 2022, bảng 1; Vo 2024, bảng 2"
       note: "Đau nửa đầu đang mắc ở 15,2% người 20–64 tuổi, 13,4% ở 10–19 tuổi, 7,9% từ 65 tuổi và 5,0% ở 0–9 tuổi; trong số người có đau đầu, tỷ lệ là đau nửa đầu khoảng 30%, 23%, 20% và 12% (Stovner 2022). Ở Việt Nam, 21,8% sinh viên y bị đau nửa đầu trong 1 năm, giảm theo tuổi (OR 0,84 mỗi năm, Vo 2024). Bệnh làm mất khả năng sinh hoạt nên người bệnh hay đi khám: 44% người đau đầu kéo dài ở phòng khám đa khoa là đau nửa đầu (Carlsen 2024). Lượt C: P1 cho 13–44 tuổi (lượt B để P2 cho 13–17 tuổi, nhưng chính số liệu Stovner cho khoảng 23% ở 10–19 tuổi); 45–64 tuổi P2 theo lượt A (nguồn ngang nhau, chọn mức thận trọng cho bệnh lành tính vì từ tuổi này bệnh giảm và nguyên nhân thứ phát tăng); 65–74 tuổi P2 và từ 75 tuổi P3 theo lượt B (có số liệu theo tuổi); trẻ 5–12 tuổi P2; trẻ dưới 5 tuổi P3 theo lượt B (lượt A để P4)."
+  - complaint: dizziness
+    default: P2
+    by_age: { child_5_12: P2, adult_45_64: P3, elder_65_74: P4, elder_75p: P4 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [lempert-jvestibres-2022, dieterich-jneurol-2016, vonbrevern-jnnp-2007, bosner-bmcfampract-2018]
+      locator: "Lempert 2022 mục Dịch tễ, chú thích 3; Dieterich 2016 phần Mở đầu và mục trẻ em; von Brevern 2007 bảng 2"
+      reported: "Đau nửa đầu tiền đình ảnh hưởng 1–2,7% dân số, 7–11% người khám ở trung tâm chóng mặt, 65–85% là nữ; là nguyên nhân chóng mặt hay gặp nhất ở trẻ em (39%); so sánh: chóng mặt tư thế kịch phát lành tính mắc trong 1 năm 1,6% ở người lớn"
+      population: "Dân số, phòng khám chuyên khoa ở châu Âu; chưa có số liệu Việt Nam"
+      note: "Giai đoạn 3 lô 1 (lượt C). Với triệu chứng chính Chóng mặt, bệnh này đại diện cho đau nửa đầu tiền đình và chóng mặt ở người đau nửa đầu. Hai lượt cùng chọn P2 ở 13–44 tuổi và P4 từ 75 tuổi. Lệch một mức: 5–12 tuổi (A P2, B P3), lượt C chọn P2 vì Dieterich 2016 ghi đây là nguyên nhân chóng mặt hay gặp nhất ở trẻ em (lượt B không có nguồn này); 45–64 tuổi (A P3, B P2) và 65–74 tuổi (A P4, B P3), nguồn ngang nhau, lượt C chọn mức thấp hơn cho bệnh lành tính như prior Đau đầu (bệnh giảm theo tuổi, nguyên nhân mạch máu và tai trong tăng). Ở tuyến ban đầu bệnh ít được nhận ra (Bösner 2018 không tách riêng). Hệ số giới sẵn có (1,2/0,85) áp dụng cho mọi triệu chứng chính, thấp hơn tỷ lệ nữ của đau nửa đầu tiền đình. Cần bác sĩ duyệt."
 prior_modifiers:
   - when: { sex: [female] }
     factor: 1.2
@@ -107,21 +118,24 @@ findings:
       note: "Ước tỷ lệ nôn trong một cơn bất kỳ khoảng 20–30%."
   - finding: photophobia
     freq: very_frequent
+    freq_by_complaint: { dizziness: frequent }
     evidence:
       tier: B
       basis: numeric
-      sources: [evans-headache-2008, smetana-archintmed-2000, rasmussen-cephalalgia-1991, ihs-ichd3-2018]
+      sources: [evans-headache-2008, smetana-archintmed-2000, rasmussen-cephalalgia-1991, ihs-ichd3-2018, lempert-jvestibres-2022, dieterich-jneurol-2016]
       reported: "Khi hỏi thông thường, 76% xác nhận nhạy cảm với ánh sáng và tiếng ồn (24% phủ nhận); khi hỏi kỹ 93% (Evans 2008); LR+ so với đau đầu căng thẳng 5,8 (Smetana 2000)."
       population: "Người đau nửa đầu ở phòng khám đau đầu và thần kinh"
+      note: "Giai đoạn 3 lô 1 (lượt C): mức riêng cho Chóng mặt là frequent (lượt B đề xuất; lượt A nêu cùng vấn đề với các triệu chứng của cơn đau đầu). Tiêu chuẩn đau nửa đầu tiền đình chỉ đòi hỏi ít nhất một nửa số đợt chóng mặt có một đặc điểm đau nửa đầu (đau đầu, sợ ánh sáng kèm sợ tiếng ồn, hoặc tiền triệu thị giác) (Lempert 2022), và dưới 50% người bệnh có cả đau đầu và chóng mặt ở mọi cơn (Dieterich 2016), nên trong một đợt chóng mặt, sợ ánh sáng ít hơn trong cơn đau đầu."
   - finding: phonophobia
     freq: very_frequent
+    freq_by_complaint: { dizziness: frequent }
     evidence:
       tier: B
       basis: numeric
-      sources: [evans-headache-2008, smetana-archintmed-2000, rasmussen-cephalalgia-1991, ihs-ichd3-2018]
+      sources: [evans-headache-2008, smetana-archintmed-2000, rasmussen-cephalalgia-1991, ihs-ichd3-2018, lempert-jvestibres-2022, dieterich-jneurol-2016]
       reported: "Như sợ ánh sáng (76% khi hỏi thông thường); LR+ so với đau đầu căng thẳng 5,2."
       population: "Người đau nửa đầu ở phòng khám đau đầu và thần kinh"
-      note: "Cùng cụm light_sound với sợ ánh sáng nên không đếm trùng hoàn toàn."
+      note: "Cùng cụm light_sound với sợ ánh sáng nên không đếm trùng hoàn toàn. Giai đoạn 3 lô 1 (lượt C): mức riêng cho Chóng mặt là frequent, cùng lý do như sợ ánh sáng (Lempert 2022; Dieterich 2016)."
   - finding: visual_aura
     freq: occasional
     evidence:
@@ -151,6 +165,68 @@ findings:
       basis: judgment
       sources: [ihs-ichd3-2018, nhs-migraine]
       note: "Đau đầu kiểu đau nửa đầu xuất hiện cùng lúc với bệnh khác như sốt do nhiễm trùng được xếp là đau đầu thứ phát (ICHD-3); NHS khuyên gọi cấp cứu khi đau đầu kèm sốt rất cao và dấu hiệu viêm màng não. Mức rare thấp hơn tỷ lệ nền 5%."
+  # ---------- Giai đoạn 3, lô 1 (lượt C): liên kết cho triệu chứng chính Chóng mặt ----------
+  - finding: headache
+    freq: frequent
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [lempert-jvestibres-2022, dieterich-jneurol-2016]
+      locator: "Lempert 2022 tiêu chuẩn C và chú thích 5; Dieterich 2016 mục Lâm sàng"
+      note: "Hai lượt cùng chọn frequent. Chỉ có tác dụng khi triệu chứng chính là Chóng mặt (với Đau đầu, câu này được ngầm định). Ít nhất một nửa số đợt chóng mặt có một đặc điểm đau nửa đầu, không nhất thiết là đau đầu (Lempert 2022); dưới 50% có cả đau đầu và chóng mặt ở mọi cơn (Dieterich 2016). Ước khoảng một nửa (tỷ lệ nền 0,2)."
+  - finding: vertigo_spinning
+    freq: frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [dieterich-jneurol-2016, lempert-jvestibres-2022]
+      locator: "Dieterich 2016 mục Lâm sàng; Lempert 2022 tiêu chuẩn A, chú thích 1"
+      reported: "Chóng mặt tự phát 21–83% các nghiên cứu; điều tra dân số: 67% có chóng mặt quay tự phát"
+      note: "Hai lượt cùng chọn frequent. Tần suất trong số người đã chóng mặt. Triệu chứng tiền đình gồm cả chóng mặt tư thế, chóng mặt do kích thích thị giác, choáng váng khi cử động đầu (Lempert 2022), nên một phần chỉ chao đảo, không quay. Tỷ lệ nền 0,4."
+  - finding: dizziness_positional
+    freq: occasional
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [dieterich-jneurol-2016, lempert-jvestibres-2022]
+      locator: "Dieterich 2016 mục Lâm sàng; Lempert 2022 chú thích 3 và mục Chẩn đoán phân biệt"
+      reported: "Chóng mặt tư thế 17–65% các nghiên cứu; điều tra dân số 24%"
+      note: "Hai lượt cùng chọn occasional. Tần suất trong số người đã chóng mặt. Bệnh có thể chỉ gây chóng mặt tư thế, giống chóng mặt tư thế kịch phát lành tính (Lempert 2022); khoảng 10% có cơn vài giây khi đổi tư thế. Tỷ lệ nền 0,1."
+  - finding: dizziness_pattern
+    dist: { brief_episodes: 0.10, long_episodes: 0.58, continuous: 0.25, chronic: 0.07 }
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [lempert-jvestibres-2022, dieterich-jneurol-2016]
+      locator: "Lempert 2022 chú thích 3"
+      reported: "Khoảng 30% đợt kéo dài vài phút, 30% vài giờ, 30% vài ngày, 10% chỉ vài giây (lặp lại khi cử động đầu, đổi tư thế); có người tới 4 tuần mới hồi phục hẳn"
+      note: "Lượt A {0,12; 0,60; 0,13; 0,15}, lượt B {0,10; 0,60; 0,25; 0,05} (lệch 0,12). Lượt C đọc lại Lempert 2022 và theo số liệu của nguồn như lượt B: đợt vài phút và vài giờ vào 'vài phút đến vài giờ', đợt vài ngày phần lớn vào 'liên tục, mới vài ngày', đợt vài giây vào 'cơn ngắn'; để 7% cho 'âm ỉ nhiều tuần' vì có người hồi phục chậm tới vài tuần."
+  - finding: similar_episodes_before
+    freq: very_frequent
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [lempert-jvestibres-2022]
+      locator: "Tiêu chuẩn A (ít nhất 5 đợt), B (tiền sử đau nửa đầu)"
+      note: "Hai lượt cùng chọn very_frequent. Tiêu chuẩn đòi hỏi ít nhất 5 đợt; đợt đầu tiên khó nhận ra nên không chọn almost_always. Tỷ lệ nền 0,2."
+  - finding: hearing_loss_tinnitus
+    freq: occasional
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [dieterich-jneurol-2016, lempert-jvestibres-2022]
+      locator: "Dieterich 2016 mục Lâm sàng; Lempert 2022 mục Chẩn đoán phân biệt (bệnh Ménière)"
+      reported: "Triệu chứng tai (nghe kém, ù tai, đầy tai) 38%, thường nhẹ và thoáng qua (Dieterich 2016)"
+      note: "Hai lượt cùng chọn occasional. Câu hỏi hỏi một bên tai, nên thấp hơn số của nguồn; nghe kém không tiến tới mức nặng (Lempert 2022). Tỷ lệ nền 5%."
+  - finding: transient_neuro_symptoms
+    freq: rare
+    above_leak_ok: true
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [dieterich-jneurol-2016, nhs-migraine, byt-qd-3312-2024]
+      locator: "Dieterich 2016 mục Lâm sàng; NHS Migraine (tiền triệu); 3312/QĐ-BYT (2024) bài 1 mục 3.4"
+      note: "Hai lượt cùng chọn rare, above_leak_ok. Tiền triệu (thị giác, tê bì, khó nói; NHS) có thể được kể như tê nửa người hoặc nói khó rồi tự hết; cơn kiểu tiền triệu 5–60 phút gặp ở 10–30% người đau nửa đầu tiền đình (Dieterich 2016); 3312/QĐ-BYT: cần phân biệt cơn thiếu máu não thoáng qua với đau nửa đầu. Mức rare cao hơn tỷ lệ nền 1% là có chủ ý: trả lời 'Có' không loại hẳn bệnh này, nhưng tăng ít hơn nhiều so với cơn thiếu máu não thoáng qua; quy tắc rf_transient_neuro vẫn xếp mức 2."
 warning_signs: [headache_thunderclap, es_stroke_signs, vision_loss_or_double, confusion, seizure_recent, neck_stiffness]
 self_care_vi:
   - "Khi lên cơn, nằm nghỉ trong phòng tối, yên tĩnh; ngủ được càng tốt."
@@ -168,5 +244,5 @@ review:
   authors: ["agent:pass-a", "agent:pass-b"]
   reconciler: "agent:pass-c"
   doctor_reviewer: null
-  updated: "2026-10-24"
-  notes_vi: "Lượt C đã đối chiếu 16 liên kết và mở lại mọi nguồn được trích; thêm liên kết đau đầu sét đánh very_rare theo ghi chú lô 4 (tổng 15 liên kết sau khi bỏ 2). Bỏ hai liên kết chỉ có ở lượt A, đều để rare (cao hơn tỷ lệ nền 1% nên bộ kiểm tra cảnh báo): 'cứng gáy' (ICHD-3 ghi cứng cổ là triệu chứng báo trước của cơn, nên mức thấp hơn nền cũng không đúng) và 'đột ngột mất thị lực hoặc nhìn đôi' (tiền triệu có thể để lại ám điểm); hai dấu hiệu này đã có quy tắc mức 2. Bác sĩ cần xem: (1) hệ số theo giới 1,2/0,85 áp dụng cho mọi lứa tuổi; (2) đặc điểm cơn đau lấy từ nghiên cứu ở Đan Mạch, Thổ Nhĩ Kỳ, Mỹ, Ấn Độ, chưa có số liệu người Việt; (3) tần suất buồn nôn, sợ ánh sáng trong một cơn suy từ tỷ lệ 'từng có' và LR; (4) tiền triệu có thể bị mô tả như tê một bên, giống đột quỵ; quy tắc an toàn đảm nhận."
+  updated: "2026-10-25"
+  notes_vi: "Lượt C đã đối chiếu 16 liên kết và mở lại mọi nguồn được trích; thêm liên kết đau đầu sét đánh very_rare theo ghi chú lô 4 (tổng 15 liên kết sau khi bỏ 2). Bỏ hai liên kết chỉ có ở lượt A, đều để rare (cao hơn tỷ lệ nền 1% nên bộ kiểm tra cảnh báo): 'cứng gáy' (ICHD-3 ghi cứng cổ là triệu chứng báo trước của cơn, nên mức thấp hơn nền cũng không đúng) và 'đột ngột mất thị lực hoặc nhìn đôi' (tiền triệu có thể để lại ám điểm); hai dấu hiệu này đã có quy tắc mức 2. Bác sĩ cần xem: (1) hệ số theo giới 1,2/0,85 áp dụng cho mọi lứa tuổi; (2) đặc điểm cơn đau lấy từ nghiên cứu ở Đan Mạch, Thổ Nhĩ Kỳ, Mỹ, Ấn Độ, chưa có số liệu người Việt; (3) tần suất buồn nôn, sợ ánh sáng trong một cơn suy từ tỷ lệ 'từng có' và LR; (4) tiền triệu có thể bị mô tả như tê một bên, giống đột quỵ; quy tắc an toàn đảm nhận. Giai đoạn 3 lô 1 (lượt C, 25/10/2026): thêm prior cho Chóng mặt (đại diện cho đau nửa đầu tiền đình: P2; 45–64 tuổi P3; từ 65 tuổi P4), mức riêng frequent cho sợ ánh sáng, sợ tiếng ồn khi triệu chứng chính là Chóng mặt, và 7 liên kết (đau đầu, cảm giác quay, chóng mặt tư thế, kiểu chóng mặt, đã từng có cơn giống hệt, ù tai hoặc nghe kém, cơn thần kinh thoáng qua); mọi giá trị cũ giữ nguyên, mọi nguồn mới đã mở lại. Bác sĩ cần xem thêm: (5) prior cho Chóng mặt là ước lượng, bệnh ít được nhận ra ở tuyến ban đầu; (6) buồn nôn (very_frequent) vẫn dùng mức của cơn đau đầu khi triệu chứng chính là Chóng mặt."

@@ -1,0 +1,39 @@
+id: d-reflex-orthostatic-syncope-3
+set: dev
+title_vi: "Nam 60 tuổi ngất khi rặn đi ngoài lúc táo bón, phân bình thường"
+narrative_vi: "Ông K., 60 tuổi, bị táo bón mấy ngày. Sáng nay rặn mạnh khi đi ngoài thì thấy nóng người, vã mồ hôi, buồn nôn rồi ngất gục trong nhà vệ sinh, vài giây sau tỉnh, sau đó tỉnh táo hoàn toàn. Phân màu vàng nâu bình thường, không đen. Không nôn ra máu, không đau bụng, không đau ngực, không khó thở, không hồi hộp. Không uống thuốc giảm đau thường xuyên. Chưa đo mạch."
+patient:
+  age_years: 60
+  sex: male
+  region: central
+  month: 3
+complaint: syncope
+answers:
+  syncope_trigger: toilet_cough
+  syncope_warning: prodrome
+  cold_sweat: present
+  dizziness: present
+  not_recovered_after_faint: absent
+  black_stool: absent
+  vomiting_blood: absent
+  abdominal_pain: absent
+  chest_pain_pressure: absent
+  breathing_difficulty: absent
+  palpitations: absent
+  headache: absent
+  regular_painkiller_use: absent
+  antithrombotic_use: absent
+  chronic_liver_disease: absent
+  pallor: absent
+  dizziness_on_standing: absent
+  known_heart_disease: absent
+  pulse_measured: not_measured
+default_unmentioned: absent
+expected:
+  condition: reflex_orthostatic_syncope
+  acceptable: []
+  triage: 4
+source:
+  basis: "Ngất tình huống khi đi ngoài, có tiền triệu thần kinh thực vật (ESC 2018 bảng 5: khi ho, đi ngoài, đi tiểu là nguy cơ thấp). Dễ nhầm với xuất huyết tiêu hóa trên (người đi ngoài phân đen hay ngất trong nhà vệ sinh), nhưng không có phân đen, nôn ra máu, da xanh. NHS Fainting: khám bác sĩ gia đình. Ca thứ hai kiểm tra người 50–70 tuổi ngất lành tính."
+  references: [esc-syncope-2018, nhs-fainting, msd-gi-bleeding]
+author: "agent:pass-c"

@@ -1,0 +1,13 @@
+id: cdc-co-basics
+type: web_page
+title: "Carbon Monoxide Poisoning Basics"
+publisher: "Centers for Disease Control and Prevention (CDC)"
+date: "2026-01-12"
+url: "https://www.cdc.gov/carbon-monoxide/about/index.html"
+license_class: L0
+license_note: "Nội dung của chính phủ Hoa Kỳ (public domain); vẫn ghi nguồn."
+default_tier: C
+accessed: "2026-10-25"
+verified: true
+verified_by: "agent:pass-c"
+notes_vi: "Lượt A (cdc-co-about) và lượt B (cdc-co-basics) cùng đề xuất trang này; lượt C dùng một mã và mở lại trang. Trang cho người dân, nên bậc C. Triệu chứng hay gặp nhất: đau đầu, chóng mặt, mệt yếu, khó chịu dạ dày, nôn, đau ngực, lú lẫn; thường được mô tả giống cúm. Hít nhiều khí CO có thể ngất hoặc tử vong; người đang ngủ, say rượu hoặc dùng chất có thể chết trước khi có triệu chứng. Khí CO tích tụ trong nhà, gây ngộ độc cả người lẫn vật nuôi. Trẻ nhỏ, người già, người có bệnh tim, thiếu máu hoặc bệnh hô hấp dễ bị nặng hơn. Mỹ: hơn 400 người chết, hơn 100.000 lượt cấp cứu, hơn 14.000 ca nhập viện mỗi năm do ngộ độc khí CO không do cháy."

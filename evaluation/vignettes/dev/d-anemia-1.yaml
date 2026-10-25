@@ -1,0 +1,43 @@
+id: d-anemia-1
+set: dev
+title_vi: "Nữ 32 tuổi, kinh nguyệt ra nhiều nửa năm, mệt, da xanh, hụt hơi khi leo cầu thang, chóng mặt âm ỉ"
+narrative_vi: "Chị A., 32 tuổi. Nửa năm nay kinh nguyệt ra nhiều, kéo dài 8–9 ngày, phải thay băng liên tục. Mấy tuần nay hay choáng váng, hoa mắt âm ỉ gần như suốt ngày, nhất là khi vừa đứng dậy; mệt, leo một tầng cầu thang đã hụt hơi, tim đập nhanh khi làm việc nặng. Người nhà bảo chị da xanh, môi nhợt. Không thấy quay, không ngất. Không đi ngoài phân đen, không sụt cân. Không có thai, không chậm kinh. Chưa từng xét nghiệm máu. Không có bệnh nền."
+patient:
+  age_years: 32
+  sex: female
+  region: north
+  month: 6
+complaint: dizziness
+answers:
+  heavy_periods: present
+  fatigue: present
+  pallor: present
+  breathless_on_exertion: present
+  palpitations: present
+  dizziness_pattern: chronic
+  dizziness_on_standing: present
+  vertigo_spinning: absent
+  dizziness_positional: absent
+  fainting_or_near_fainting: absent
+  anemia_known: absent
+  black_stool: absent
+  vomiting_blood: absent
+  weight_loss_unintended: absent
+  chest_pain_pressure: absent
+  breathing_difficulty: absent
+  headache: absent
+  hearing_loss_tinnitus: absent
+  pregnant: absent
+  missed_period: absent
+  fever: absent
+  hypertension_known: absent
+  diabetes: absent
+default_unmentioned: absent
+expected:
+  condition: anemia
+  acceptable: []
+  triage: 4
+source:
+  basis: "Ca điển hình của thiếu máu thiếu sắt do kinh nguyệt nhiều (NHS Iron deficiency anaemia; 1832/QĐ-BYT): mệt, hoa mắt, chóng mặt, khó thở khi gắng sức, hồi hộp, da xanh, niêm mạc nhợt. NHS: khám bác sĩ (không khẩn) để xét nghiệm máu và tìm nguyên nhân."
+  references: [byt-qd-1832-2022, nhs-iron-deficiency-anaemia, msd-evaluation-anemia]
+author: "agent:pass-c"

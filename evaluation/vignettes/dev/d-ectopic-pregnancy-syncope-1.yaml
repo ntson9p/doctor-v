@@ -1,0 +1,42 @@
+id: d-ectopic-pregnancy-syncope-1
+set: dev
+title_vi: "Nữ 27 tuổi có thai 6 tuần, đau bụng dưới đột ngột dữ dội rồi ngất, da xanh"
+narrative_vi: "Chị Y., 27 tuổi, chậm kinh 2 tuần, tuần trước thử que 2 vạch, chưa đi siêu âm. Sáng nay bỗng đau bụng dưới bên trái rất dữ dội rồi ngất ở nhà, khoảng một phút sau tỉnh. Hiện vẫn đau bụng, choáng khi đứng dậy, da xanh. Có ra ít máu sẫm màu ở âm đạo. Không sốt, không đau ngực, không khó thở. Tay chân không lạnh. Chưa đo mạch."
+patient:
+  age_years: 27
+  sex: female
+  region: south
+  month: 4
+complaint: syncope
+answers:
+  pregnant: present
+  missed_period: present
+  gestational_age: lt_20w
+  abdominal_pain: present
+  abd_pain_severe: present
+  abd_pain_onset: sudden
+  abd_pain_location: left_lower
+  vaginal_bleeding: present
+  dizziness_on_standing: present
+  pallor: present
+  syncope_trigger: emotion_pain
+  syncope_warning: prodrome
+  not_recovered_after_faint: absent
+  fever: absent
+  chest_pain_pressure: absent
+  breathing_difficulty: absent
+  cold_hands_feet: absent
+  severe_weakness: absent
+  headache: absent
+  black_stool: absent
+  vomiting_blood: absent
+  pulse_measured: not_measured
+default_unmentioned: absent
+expected:
+  condition: ectopic_pregnancy
+  acceptable: []
+  triage: 2
+source:
+  basis: "Chửa ngoài tử cung vỡ biểu hiện bằng ngất: đau bụng dưới đột ngột dữ dội, ngất, da xanh, ra máu sẫm ở người chậm kinh, thử thai dương tính (315/QĐ-BYT: choáng ngất do đau, do vỡ khối chửa; NHS Ectopic pregnancy: kết hợp đau bụng đột ngột dữ dội, ngất, da rất tái thì gọi 999 hoặc đến cấp cứu; MSD). Quy tắc rf_fainting_with_pain và rf_severe_abdominal_pain (mức 2)."
+  references: [byt-qd-315-2015, nhs-ectopic-pregnancy, msd-ectopic-pregnancy]
+author: "agent:pass-c"

@@ -1,0 +1,194 @@
+id: premature_beats
+names:
+  vi: "Ngoại tâm thu"
+  vi_common: ["Tim hẫng nhịp", "Tim đập thêm nhịp", "Nhịp tim đến sớm"]
+  en: "Premature beats (benign atrial or ventricular ectopic beats)"
+codes:
+  icd10: "I49.4"
+  icd10_verified: true
+summary_vi:
+  - "Tim thỉnh thoảng có một nhịp đến sớm rồi nghỉ một chút, nên thấy tim hẫng hoặc thịch mạnh một nhịp."
+  - "Rất hay gặp và thường vô hại ở người không có bệnh tim."
+  - "Hay tăng khi căng thẳng, thiếu ngủ, uống cà phê, rượu bia hoặc hút thuốc."
+urgency: 4
+cant_miss: false
+specialties: [cardiology, general_medicine]
+priors:
+  - complaint: palpitations
+    default: P2
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [zwietering-fampract-1998, zwietering-sjphc-1996, hoefman-fampract-2005, klein-wiele-cardiolj-2016, reed-eclinm-2019, weber-amjmed-1996, raviele-europace-2011, dong-bmjopen-2022, aman-jpma-2017]
+      locator: "Zwietering 1998, 1996, Hoefman 2005, Klein-Wiele 2016, Dong 2022, Aman 2017, Weber 1996: tóm tắt; Reed 2019: kết quả; EHRA 2011"
+      reported: "Phòng khám đa khoa Hà Lan: có rối loạn nhịp 28,3%, có ý nghĩa lâm sàng chỉ 8,8% (Zwietering 1998); 32% và khoảng 10% (Zwietering 1996). Cấp cứu ở Anh: ngoại tâm thu là nhịp lúc có triệu chứng ở 13/80 người (16,3%), rối loạn nhịp ở 12/80 (Reed 2019). Phòng khám đa khoa Đức: ngoại tâm thu, nhịp đôi 7,1% (Klein-Wiele 2016). Trẻ hồi hộp ở bệnh viện nhi: ngoại tâm thu thất dày 11,2%, ngoại tâm thu nhĩ 8,4% (Aman 2017)."
+      population: "Người hồi hộp hoặc có triệu chứng nghi do rối loạn nhịp ở phòng khám đa khoa, cấp cứu, bệnh viện"
+      note: "Lượt A P2 cho mọi tuổi; lượt B P1 cho người lớn, P2 cho trẻ em. Lượt C chọn P2 vì số liệu tốt hơn: phần 'rối loạn nhịp không có ý nghĩa' ở phòng khám đa khoa là 19,5–22% (dưới ngưỡng P1 là 20%) và gồm cả loại khác ngoại tâm thu; ở cấp cứu, ngoại tâm thu chiếm 16% số nhịp ghi được lúc có triệu chứng, ngang rối loạn nhịp đáng kể; ngoại tâm thu ghi được trên Holter có thể chỉ là tình cờ (Dong 2022: 67,7% có ngoại tâm thu thất, chỉ 7,7% dày). Cùng mức P2 với rối loạn nhịp tim (bệnh mức 3) ở người lớn dưới 65 tuổi, phù hợp các số liệu trên. Chưa có số liệu Việt Nam; cần bác sĩ duyệt."
+findings:
+  - finding: palpitation_rhythm
+    dist: { fast_regular: 0.05, irregular: 0.15, skipped_beats: 0.70, forceful: 0.10 }
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [raviele-europace-2011, msd-ventricular-premature-beats, nhs-heart-palpitations, summerton-fampract-2001]
+      locator: "EHRA 2011 bảng 2 (kiểu ngoại tâm thu); MSD; NHS Heart palpitations; Summerton 2001 tóm tắt"
+      note: "Tính trong số người đã hồi hộp; trung bình hai lượt (hai lượt cùng để 'hẫng nhịp' 0,70). Kiểu ngoại tâm thu là cảm giác hẫng, mất một nhịp, không đều xen giữa những nhịp bình thường (EHRA); người bệnh cảm nhận nhịp xoang mạnh sau nhịp sớm (MSD), nên có người tả là đập mạnh; ngoại tâm thu dày có thể thấy như lộn xộn. Hồi hộp đều làm tăng khả năng rối loạn nhịp đáng kể (Summerton). Ước lượng."
+  - finding: palpitation_duration
+    dist: { seconds: 0.60, minutes_hours: 0.32, ongoing: 0.08 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [raviele-europace-2011, gao-jce-2025, thavendiranathan-jama-2009]
+      locator: "EHRA 2011 bảng 2; Gao 2025 bảng 4; Thavendiranathan 2009 tóm tắt"
+      reported: "Ở người ngoại tâm thu thất dày, hồi hộp chỉ vài giây gặp ở 29,2% nhóm có hồi hộp trùng với ngoại tâm thu, so với 11,5% nhóm còn lại (Gao)."
+      note: "Lượt A đề xuất dấu hiệu này; lượt B khai báo (vài giây 0,75). Lượt C hạ 'vài giây' xuống 0,60 vì Gao 2025 (toàn văn) cho thấy ngay cả khi hồi hộp đúng do ngoại tâm thu, 70,8% tả cơn kéo dài hơn vài giây; nhóm của Gao là ngoại tâm thu dày ở bệnh viện, còn người dùng phần lớn chỉ có nhịp hẫng lẻ tẻ (EHRA: từng nhịp lẻ chen vào nhịp bình thường). Tính trong số người đã hồi hộp. Ước lượng."
+  - finding: palpitation_abrupt_onset
+    freq: rare
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [raviele-europace-2011]
+      locator: "EHRA 2011 bảng 2"
+      note: "Lượt A occasional (gần tỷ lệ nền), lượt B rare. Hai lượt ngang nguồn; lượt C chọn rare (thận trọng hơn): câu hỏi về cơn tim nhanh bật tắt, còn ngoại tâm thu là từng nhịp lẻ, không thành cơn nhịp nhanh; trả lời 'Có' nghiêng về rối loạn nhịp tim (mức 3). Mức rare thấp hơn tỷ lệ nền 0,15."
+  - finding: neck_pounding
+    freq: occasional
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [raviele-europace-2011, thavendiranathan-jama-2009, nhs-heart-palpitations]
+      locator: "EHRA 2011 (mạch đập ở cổ); Thavendiranathan 2009 tóm tắt; NHS Heart palpitations (cảm thấy ở ngực, cổ hoặc họng)"
+      note: "Hai lượt trùng mức. Tính trong số người đã hồi hộp. Khi có ngoại tâm thu thất, người bệnh thấy một hoặc vài nhịp đập không đều ở cổ, khác với cổ đập nhanh, đều của nhịp nhanh vòng vào lại nút nhĩ thất (EHRA). Câu hỏi chưa hỏi 'nhanh và đều' nên người ngoại tâm thu cũng có thể trả lời 'Có'; nếu sửa câu hỏi, nên hạ mức này xuống rare. Tỷ lệ nền 0,1."
+  - finding: pulse_measured
+    dist: { lt_40: 0.006, n40_100: 0.352, n100_150: 0.039, gt_150: 0.003, not_measured: 0.6 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [raviele-europace-2011, msd-ventricular-premature-beats]
+      locator: "EHRA 2011 bảng 2; MSD (nhịp đôi)"
+      note: "'Chưa đo' giữ đúng tỷ lệ nền 0,6; trung bình hai lượt. Ngoại tâm thu chen vào nhịp xoang có tần số bình thường nên phần lớn mạch 40–100; nhịp đôi có thể làm máy đo đọc mạch thấp. Mạch dưới 40 hoặc trên 150 lúc nghỉ gợi ý rối loạn nhịp khác (quy tắc rf_pulse_extreme mức 2). Ước lượng."
+  - finding: fainting_or_near_fainting
+    freq: rare
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [raviele-europace-2011, nhs-heart-palpitations]
+      locator: "EHRA 2011 bảng 2 và bảng 4; NHS Heart palpitations (Call 999 or go to A&E)"
+      note: "Hai lượt trùng mức. Kiểu ngoại tâm thu không kèm triệu chứng khác; hồi hộp kèm choáng, ngất gợi ý rối loạn huyết động, nguyên nhân nặng hơn. Mức rare thấp hơn tỷ lệ nền 0,15 khi Hồi hộp; quy tắc rf_palpitations_danger vẫn xếp mức 2."
+  - finding: chest_pain_pressure
+    freq: rare
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [raviele-europace-2011, nhs-heart-palpitations]
+      locator: "EHRA 2011 bảng 2; NHS Heart palpitations"
+      note: "Hai lượt trùng mức. Nhịp thịch mạnh sau nhịp sớm có thể gây khó chịu thoáng qua, nhưng không phải đau, tức nặng giữa ngực. Mức rare thấp hơn tỷ lệ nền 0,05; hồi hộp kèm đau ngực đã có quy tắc mức 1–2."
+  - finding: breathing_difficulty
+    freq: rare
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [raviele-europace-2011, nhs-heart-palpitations]
+      locator: "EHRA 2011 bảng 2; NHS Heart palpitations"
+      note: "Hai lượt trùng mức. Mức rare thấp hơn tỷ lệ nền 0,05; hồi hộp kèm khó thở đã được quy tắc rf_palpitations_danger xếp mức 2."
+  - finding: similar_episodes_before
+    freq: frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [weber-amjmed-1996, nhs-heart-palpitations]
+      locator: "Weber 1996 tóm tắt"
+      reported: "75% người hồi hộp (mọi nguyên nhân) bị lại trong năm đầu."
+      note: "Hai lượt trùng mức. Ngoại tâm thu thường tái đi tái lại, lúc nhiều lúc ít; người mới nhận thấy lần đầu cũng hay dùng app. Tỷ lệ nền 0,2."
+  - finding: stress_poor_sleep
+    freq: frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [gao-jce-2025, msd-ventricular-premature-beats, nhs-heart-palpitations]
+      locator: "Gao 2025 bảng 3; MSD (yếu tố làm tăng ngoại tâm thu); NHS Heart palpitations (nguyên nhân)"
+      reported: "Lo âu 44,4% ở người ngoại tâm thu thất dày có hồi hộp, 14,4% ở người không hồi hộp (Gao)."
+      note: "Hai lượt trùng mức. Lo âu, căng thẳng làm tăng ngoại tâm thu (MSD); thiếu ngủ, căng thẳng là nguyên nhân hồi hộp hay gặp (NHS). Tỷ lệ nền 0,2."
+  - finding: stimulant_intake
+    freq: frequent
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [msd-ventricular-premature-beats, msd-ectopic-supraventricular-rhythms, nhs-heart-palpitations]
+      locator: "MSD: cà phê, rượu, thuốc thông mũi làm tăng ngoại tâm thu; NHS: cà phê, rượu là nguyên nhân hồi hộp lành tính"
+      note: "Lượt A đề xuất dấu hiệu này; lượt B liên kết frequent; lượt C giữ. Tỷ lệ ở người ngoại tâm thu chưa có số liệu; ước khoảng một nửa, so với tỷ lệ nền 0,2. Ước lượng, cần bác sĩ duyệt."
+  - finding: known_heart_disease
+    freq: rare
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [thavendiranathan-jama-2009, msd-ventricular-premature-beats, raviele-europace-2011, nhs-heart-palpitations]
+      locator: "Thavendiranathan 2009 tóm tắt; MSD (tiên lượng); EHRA 2011 bảng 4; NHS Heart palpitations (See a GP)"
+      reported: "Tiền sử bệnh tim: LR 2,03 cho rối loạn nhịp ở người hồi hộp (Thavendiranathan)."
+      note: "Hai lượt trùng mức. Bệnh này chỉ gồm ngoại tâm thu ở người không có bệnh tim nặng: không có bệnh tim cấu trúc thì tiên lượng lành tính, có bệnh tim thì ngoại tâm thu dày liên quan tăng tử vong (MSD). Mức rare thấp hơn tỷ lệ nền 0,05; ngoại tâm thu ở người có bệnh tim thuộc rối loạn nhịp tim (mức 3)."
+  - finding: family_sudden_death
+    freq: very_rare
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [raviele-europace-2011, nhs-heart-palpitations]
+      locator: "EHRA 2011 bảng 4; NHS Heart palpitations (See a GP)"
+      note: "Chỉ lượt A có; lượt C giữ vì an toàn: gia đình có người đột tử gợi ý nguyên nhân rối loạn nhịp (EHRA), và ngoại tâm thu chỉ được coi là lành tính khi đã loại trừ bệnh tim di truyền. Mức very_rare thấp hơn tỷ lệ nền 0,02: trả lời 'Có' chuyển khả năng sang rối loạn nhịp tim. Tần suất thật có lẽ gần tỷ lệ chung."
+  - finding: panic_fear
+    freq: rare
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [raviele-europace-2011]
+      locator: "EHRA 2011 bảng 2"
+      note: "Chỉ lượt A có; lượt C giữ. EHRA tách kiểu hồi hộp do lo âu khỏi kiểu ngoại tâm thu; sợ hãi dữ dội như sắp chết là đặc trưng của cơn hoảng sợ. Mức rare thấp hơn tỷ lệ nền 0,05."
+  - finding: perioral_tingling
+    freq: rare
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [raviele-europace-2011]
+      locator: "EHRA 2011 bảng 2"
+      note: "Chỉ lượt A có; lượt C giữ. Tê bì đi kèm kiểu hồi hộp do lo âu, không có trong kiểu ngoại tâm thu. Mức rare thấp hơn tỷ lệ nền 0,05."
+  - finding: tremor
+    freq: rare
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [raviele-europace-2011, msd-ventricular-premature-beats]
+      locator: "EHRA 2011 bảng 1–2; MSD (nguyên nhân)"
+      note: "Chỉ lượt A có; lượt C giữ. Ngoại tâm thu không gây run tay; run tay gợi ý nguyên nhân toàn thân như cường giáp, hạ đường huyết. Chất kích thích, lo âu cũng làm tăng ngoại tâm thu nên không chọn very_rare. Mức rare thấp hơn tỷ lệ nền 0,05."
+  - finding: heat_intolerance
+    freq: rare
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [raviele-europace-2011]
+      locator: "EHRA 2011 bảng 1–2"
+      note: "Chỉ lượt A có; lượt C giữ. Sợ nóng là biểu hiện của cường giáp, không phải của ngoại tâm thu. Mức rare thấp hơn tỷ lệ nền 0,05."
+  - finding: cold_sweat
+    freq: rare
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [raviele-europace-2011]
+      locator: "EHRA 2011 bảng 2 và bảng 4"
+      note: "Chỉ lượt A có; lượt C giữ. Vã mồ hôi lạnh khi hồi hộp gợi ý phản ứng giao cảm mạnh hoặc rối loạn huyết động (hạ đường huyết, hội chứng vành cấp, cơn nhịp nhanh, cơn hoảng sợ). Mức rare thấp hơn tỷ lệ nền 0,05."
+warning_signs: [chest_pain_pressure, breathing_difficulty, fainting_or_near_fainting]
+self_care_vi:
+  - "Hạn chế cà phê, trà đặc, nước tăng lực và rượu bia; không hút thuốc lá."
+  - "Ngủ đủ giấc và tìm cách giảm căng thẳng."
+  - "Ghi lại lúc nào thấy hẫng nhịp, mỗi lần kéo dài bao lâu, để kể cho bác sĩ."
+  - "Một số thuốc cảm, thuốc thông mũi có thể gây hồi hộp; hỏi dược sĩ hoặc bác sĩ trước khi dùng."
+see_doctor_vi:
+  - "Đặt lịch khám trong vài ngày để được nghe tim và đo điện tim, nhất là khi mới bị lần đầu."
+  - "Đi khám sớm hơn nếu hẫng nhịp dày lên hoặc kéo dài hơn vài phút."
+  - "Cũng đi khám sớm nếu có bệnh tim, hoặc người nhà bị bệnh tim hay đột tử khi còn trẻ."
+  - "Đến cấp cứu ngay nếu tim đập nhanh không dứt, hoặc kèm đau ngực, khó thở, choáng hay ngất."
+  - "Nhờ người đưa đi hoặc gọi 115, không tự lái xe."
+review:
+  status: source_checked
+  authors: ["agent:pass-a", "agent:pass-b"]
+  reconciler: "agent:pass-c"
+  doctor_reviewer: null
+  updated: "2026-10-25"
+  notes_vi: "Lượt C (phần b) đối chiếu 19 liên kết và mở lại mọi nguồn được trích. Bệnh tách khỏi rối loạn nhịp tim sau lượt A; bản lượt A của bệnh này do một agent khác soạn sau khi tách. Mức xử trí 4, không thuộc nhóm không được bỏ sót: MSD và EHRA coi ngoại tâm thu ở người không có bệnh tim cấu trúc là lành tính, chỉ cần trấn an; NHS khuyên khám bác sĩ (không khẩn) khi hồi hộp hay tái lại, kéo dài hơn vài phút, có bệnh tim hoặc người nhà bệnh tim. Không hạ xuống mức 5 vì tại nhà không phân biệt được với rối loạn nhịp khác khi chưa đo điện tim. Lượt C bỏ liên kết 'chóng mặt' của lượt A (mức occasional bằng đúng tỷ lệ nền 0,2, không mang thông tin). Bác sĩ cần xem: (1) prior P2 suy từ phần 'rối loạn nhịp không đáng kể' ở phòng khám đa khoa Hà Lan và số liệu cấp cứu ở Anh, chưa có nghiên cứu nêu riêng tỷ lệ ngoại tâm thu ở tuyến ban đầu; (2) phần lớn tần suất là ước lượng từ bảng phân kiểu hồi hộp của EHRA; (3) câu hỏi mạch cổ đập chưa hỏi 'nhanh và đều'; (4) thời gian mỗi cơn của danh mục không tách mốc 5 phút mà tổng quan JAMA dùng."

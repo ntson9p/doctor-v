@@ -1,0 +1,36 @@
+id: d-cardiac-arrhythmia-2
+set: dev
+title_vi: "Nữ 78 tuổi ngất đột ngột khi đang ngồi, không báo trước, con đo mạch 38"
+narrative_vi: "Bà N., 78 tuổi, đang ngồi xem ti vi thì bỗng gục xuống, không có dấu hiệu gì trước, khoảng mười giây sau tỉnh lại, tỉnh táo hoàn toàn. Mấy tuần nay bà hay mệt, có lúc choáng thoáng qua. Con gái đo bằng máy huyết áp thấy mạch 38 lần mỗi phút. Không hồi hộp, không đau ngực, không khó thở, không đau đầu. Không đi ngoài phân đen. Chưa từng được nói có bệnh tim."
+patient:
+  age_years: 78
+  sex: female
+  region: north
+  month: 1
+complaint: syncope
+answers:
+  syncope_trigger: no_trigger
+  syncope_warning: no_warning
+  pulse_measured: lt_40
+  dizziness: present
+  not_recovered_after_faint: absent
+  palpitations: absent
+  chest_pain_pressure: absent
+  breathing_difficulty: absent
+  headache: absent
+  abdominal_pain: absent
+  black_stool: absent
+  vomiting_blood: absent
+  known_heart_disease: absent
+  hypertension_known: absent
+  bp_lowering_meds: absent
+  similar_episodes_before: absent
+default_unmentioned: absent
+expected:
+  condition: cardiac_arrhythmia
+  acceptable: []
+  triage: 2
+source:
+  basis: "Ca không điển hình (người rất cao tuổi, không hồi hộp): ngất không báo trước khi đang ngồi, mạch dưới 40 lần/phút lúc thức. ESC 2018 bảng 6: nhịp chậm dai dẳng dưới 40 lần/phút là đặc điểm nguy cơ cao loại nặng, cần đánh giá tại khoa cấp cứu; ngất không báo trước, khi đang ngồi là đặc điểm nguy cơ loại nhẹ. Quy tắc rf_pulse_extreme (mức 2)."
+  references: [esc-syncope-2018, esc-syncope-2018-practical]
+author: "agent:pass-c"

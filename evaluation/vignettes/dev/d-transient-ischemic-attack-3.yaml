@@ -1,0 +1,41 @@
+id: d-transient-ischemic-attack-3
+set: dev
+title_vi: "Nữ 52 tuổi có tiền sử đau nửa đầu, sáng nay chóng mặt kèm tê tay phải, nói khó 30 phút, không đau đầu"
+narrative_vi: "Chị V., 52 tuổi, bị đau nửa đầu từ trẻ và tăng huyết áp mới phát hiện năm ngoái. Sáng nay đang nấu cơm bỗng chóng mặt quay, tê bàn tay phải và nói khó, khoảng 30 phút thì hết. Lần này không đau đầu, không sợ ánh sáng, không thấy chớp sáng trước mắt. Chị nghĩ là cơn đau nửa đầu. Chưa từng bị chóng mặt kiểu này. Không nhìn đôi, không ngất, đi lại bình thường. Không có thai, không chậm kinh."
+patient:
+  age_years: 52
+  sex: female
+  region: south
+  month: 5
+complaint: dizziness
+answers:
+  dizziness_pattern: long_episodes
+  vertigo_spinning: present
+  transient_neuro_symptoms: present
+  headache: absent
+  photophobia: absent
+  phonophobia: absent
+  nausea: absent
+  dizziness_positional: absent
+  vision_loss_or_double: absent
+  similar_episodes_before: absent
+  cannot_walk_unaided: absent
+  sudden_loss_of_balance: absent
+  fainting_or_near_fainting: absent
+  hearing_loss_tinnitus: absent
+  hypertension_known: present
+  diabetes: absent
+  known_heart_disease: absent
+  pregnant: absent
+  missed_period: absent
+  fever: absent
+default_unmentioned: absent
+expected:
+  condition: transient_ischemic_attack
+  acceptable: [stroke]
+  triage: 2
+source:
+  basis: "Dễ nhầm với tiền triệu của đau nửa đầu (migraine) ở người có tiền sử đau nửa đầu. Lempert 2022: cần nghĩ cơn thiếu máu não thoáng qua ở người có yếu tố nguy cơ mạch máu, khởi phát đột ngột, cơn mới xuất hiện; 3312/QĐ-BYT: cần phân biệt cơn thiếu máu não thoáng qua với đau nửa đầu. Cơn lần này không có đau đầu, không có tiền triệu thị giác. Mức xử trí theo 3312/QĐ-BYT và NHS TIA."
+  references: [lempert-jvestibres-2022, byt-qd-3312-2024, nhs-tia, nhs-migraine]
+author: "agent:pass-c"
+notes_vi: "Ca dễ nhầm với đau nửa đầu (phần mở rộng của lô này)."

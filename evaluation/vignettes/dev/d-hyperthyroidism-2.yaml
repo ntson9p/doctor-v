@@ -1,0 +1,37 @@
+id: d-hyperthyroidism-2
+set: dev
+title_vi: "Nam 72 tuổi sụt cân, mệt, tim đập không đều, hụt hơi khi gắng sức, không run tay"
+narrative_vi: "Ông B., 72 tuổi, ba tháng nay sụt 6 kg, mệt, hay thấy tim đập không đều, đi lên vài bậc thang đã hụt hơi. Con trai đo máy thấy mạch khoảng 120, không đều. Ông không run tay, không sợ nóng, mắt không lồi, không thấy cổ to. Không đau ngực, không khó thở lúc nghỉ, không ngất. Không có bệnh tim đã biết."
+patient:
+  age_years: 72
+  sex: male
+  region: north
+  month: 2
+complaint: palpitations
+answers:
+  palpitation_rhythm: irregular
+  palpitation_duration: ongoing
+  palpitation_abrupt_onset: absent
+  pulse_measured: n100_150
+  weight_loss_unintended: present
+  fatigue: present
+  breathless_on_exertion: present
+  tremor: absent
+  heat_intolerance: absent
+  eyes_bulging: absent
+  goiter_visible: absent
+  chest_pain_pressure: absent
+  breathing_difficulty: absent
+  fainting_or_near_fainting: absent
+  dizziness: absent
+  known_heart_disease: absent
+  panic_fear: absent
+default_unmentioned: absent
+expected:
+  condition: hyperthyroidism
+  acceptable: [cardiac_arrhythmia]
+  triage: 3
+source:
+  basis: "Ca không điển hình (cường giáp vô cảm ở người cao tuổi): sụt cân, rung nhĩ, khó thở là biểu hiện chính, không run, không lồi mắt (MSD; 3879/QĐ-BYT: người cao tuổi biểu hiện tim mạch rầm rộ, thể vô cảm chủ yếu gầy sút; Boelaert 2010: sụt cân, khó thở không giảm theo tuổi). Rung nhĩ là chẩn đoán đồng thời nên chấp nhận rối loạn nhịp tim. Rung nhĩ mới ở người cao tuổi cần điện tim và xét nghiệm sớm (ESC 2024): mức 3."
+  references: [msd-hyperthyroidism, byt-qd-3879-2014, boelaert-jcem-2010, esc-af-2024]
+author: "agent:pass-c"

@@ -1,0 +1,43 @@
+id: d-stroke-dizziness-1
+set: dev
+title_vi: "Nam 67 tuổi, tăng huyết áp, 5 giờ nay đột ngột quay cuồng liên tục, nôn, không tự đi được, đau vùng gáy"
+narrative_vi: "Ông X., 67 tuổi, bị tăng huyết áp. Năm giờ trước đang ngồi ăn cơm bỗng quay cuồng liên tục, nôn 3 lần, đau đầu vừa vùng sau gáy. Đứng lên là xiêu về một bên, phải có người đỡ mới đi được. Không méo miệng, không yếu tê tay chân, nói rõ, không nhìn đôi. Không ù tai, không nghe kém. Chưa từng bị như vậy."
+patient:
+  age_years: 67
+  sex: male
+  region: north
+  month: 1
+complaint: dizziness
+answers:
+  es_stroke_signs: absent
+  dizziness_pattern: continuous
+  vertigo_spinning: present
+  cannot_walk_unaided: present
+  sudden_loss_of_balance: present
+  headache: present
+  headache_thunderclap: absent
+  headache_severity: moderate
+  headache_location: back_neck
+  nausea: present
+  vomiting: present
+  persistent_vomiting: absent
+  vision_loss_or_double: absent
+  transient_neuro_symptoms: absent
+  hearing_loss_tinnitus: absent
+  dizziness_positional: absent
+  fainting_or_near_fainting: absent
+  similar_episodes_before: absent
+  hypertension_known: present
+  diabetes: absent
+  known_heart_disease: absent
+  recent_viral_illness: absent
+  fever: absent
+default_unmentioned: absent
+expected:
+  condition: stroke
+  acceptable: []
+  triage: 1
+source:
+  basis: "Đột quỵ tuần hoàn sau (tiểu não) biểu hiện bằng chóng mặt: hội chứng tiền đình cấp ở người trên 50 tuổi có tăng huyết áp, không tự đi được, đau đầu vùng gáy, không có dấu hiệu FAST (Tarnutzer 2011: thất điều nặng, đau đầu cổ gợi ý trung ương; 3312/QĐ-BYT: chảy máu tiểu não gây nhức đầu vùng chẩm, thất điều, nôn). NHS Stroke: chóng mặt hoặc ngã đột ngột là dấu hiệu đột quỵ, gọi 999 (quy tắc rf_dizziness_central_signs_high_risk, mức 1)."
+  references: [tarnutzer-cmaj-2011, byt-qd-3312-2024, nhs-stroke-symptoms, grace3-dizziness-2023]
+author: "agent:pass-c"

@@ -1,0 +1,15 @@
+id: oqab-ajem-2018
+type: systematic_review
+title: "Prevalence of pulmonary embolism in patients presenting with syncope. A systematic review and meta-analysis"
+publisher: "American Journal of Emergency Medicine 2018;36(4):551–555 (Oqab Z và cộng sự)"
+date: "2018"
+url: "https://europepmc.org/article/MED/28947223"
+doi: "10.1016/j.ajem.2017.09.015"
+pmid: "28947223"
+license_class: L3
+license_note: "Bản quyền nhà xuất bản: chỉ dùng dữ kiện kèm trích dẫn, không sao chép câu chữ."
+default_tier: A
+accessed: "2026-10-25"
+verified: true
+verified_by: "agent:pass-c"
+notes_vi: "Lượt C (agent:pass-c, phần b) đọc tóm tắt qua API Europe PMC ngày 25/10/2026. Tổng quan, phân tích gộp: 9 nghiên cứu ở cấp cứu (6.608 người, tuổi trung bình 62) và 3 nghiên cứu ở người nằm viện (975 người, tuổi trung bình 67). Tỷ lệ thuyên tắc phổi gộp: 0,8% (KTC 95% 0,5–1,3%) ở người ngất đến cấp cứu; 1,0% (0,5–1,9%) ở người nằm viện. Nghiên cứu của Prandoni (3,8% và 17,3%) cao hơn hẳn các nghiên cứu khác."

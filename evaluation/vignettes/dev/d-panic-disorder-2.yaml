@@ -1,0 +1,42 @@
+id: d-panic-disorder-2
+set: dev
+title_vi: "Nữ 17 tuổi lần đầu có cơn hồi hộp, run, tê tay trong giờ thi, không sợ chết"
+narrative_vi: "Em H., 17 tuổi, đang làm bài thi thì bỗng tim đập nhanh, run tay, tê bì đầu ngón tay và quanh miệng, choáng váng, phải gục xuống bàn; không thấy sợ chết hay mất kiểm soát. Khoảng 20 phút sau thì hết. Đây là lần đầu. Không đau ngực, không khó thở, không ngất. Không sụt cân, không sợ nóng, không bị tiểu đường. Không có thai, không chậm kinh. Chưa đo mạch."
+patient:
+  age_years: 17
+  sex: female
+  region: north
+  month: 6
+complaint: palpitations
+answers:
+  panic_fear: absent
+  palpitation_rhythm: fast_regular
+  palpitation_duration: minutes_hours
+  palpitation_abrupt_onset: absent
+  tremor: present
+  perioral_tingling: present
+  dizziness: present
+  stress_poor_sleep: present
+  similar_episodes_before: absent
+  fainting_or_near_fainting: absent
+  chest_pain_pressure: absent
+  breathing_difficulty: absent
+  neck_pounding: absent
+  cold_sweat: absent
+  weight_loss_unintended: absent
+  heat_intolerance: absent
+  goiter_visible: absent
+  stimulant_intake: absent
+  diabetes: absent
+  pregnant: absent
+  missed_period: absent
+  pulse_measured: not_measured
+default_unmentioned: absent
+expected:
+  condition: panic_disorder
+  acceptable: []
+  triage: 4
+source:
+  basis: "Ca không điển hình (thiếu niên, cơn đầu tiên, không có cảm giác sợ chết): tiêu chuẩn cơn hoảng sợ chỉ cần 4 trong 13 triệu chứng (MSD); hồi hộp kiểu lo âu sau căng thẳng, kèm tê tay, mặt (EHRA 2011 bảng 2); cơn 5–20 phút (NHS). Không có dấu hiệu nguy hiểm; NHS, MSD: khám bác sĩ để loại trừ bệnh khác."
+  references: [msd-panic-disorder, raviele-europace-2011, nhs-panic-disorder]
+author: "agent:pass-c"

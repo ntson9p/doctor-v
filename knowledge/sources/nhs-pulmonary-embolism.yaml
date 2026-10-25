@@ -1,0 +1,13 @@
+id: nhs-pulmonary-embolism
+type: web_page
+title: "Pulmonary embolism"
+publisher: "NHS (UK)"
+date: "2026-10-15"
+url: "https://www.nhs.uk/conditions/pulmonary-embolism/"
+license_class: L1
+license_note: "Open Government Licence v3.0; bản chuyển thể không được trình bày như nội dung của NHS."
+default_tier: C
+accessed: "2026-10-25"
+verified: true
+verified_by: "agent:pass-c"
+notes_vi: "Lượt C (phần b) tải trang và trích chữ ngày 25/10/2026 (rà soát lần cuối 15/10/2026). Triệu chứng: khó thở đến đột ngột, đau ngực tăng khi hít vào, ho ra máu; có thể kèm sưng đau ở chân (thường bắp chân) hoặc tay. Gọi 999 hoặc đến cấp cứu khi khó thở đột ngột, đau ngực hoặc lưng trên, tim đập rất nhanh, hoặc có người ngất; không tự lái xe đến cấp cứu, nhờ người chở hoặc gọi xe cấp cứu, mang theo thuốc đang dùng. Ho ra máu: hẹn khám khẩn hoặc gọi 111. Nguy cơ huyết khối tăng khi đi máy bay, tàu, xe từ 4 giờ trở lên, hoặc khi nằm viện."

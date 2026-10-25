@@ -1,0 +1,39 @@
+id: d-vestibular-neuritis-1
+set: dev
+title_vi: "Nam 42 tuổi, sau cảm 10 ngày, quay cuồng liên tục từ hôm qua, nôn, đi loạng choạng"
+narrative_vi: "Anh K., 42 tuổi, khỏe mạnh. Mười ngày trước bị cảm, sổ mũi. Sáng hôm qua thức dậy thấy mọi vật quay tròn liên tục, cử động đầu thì nặng hơn, nôn nhiều lần hôm qua; hôm nay còn buồn nôn nhưng uống được nước. Đi lại loạng choạng, hay xiêu về bên trái nhưng vẫn tự đi được. Không ù tai, không nghe kém, không đau đầu, không nhìn đôi, không nói khó, không yếu tê tay chân. Không sốt. Chưa từng bị như vậy. Không tăng huyết áp, không đái tháo đường."
+patient:
+  age_years: 42
+  sex: male
+  region: north
+  month: 11
+complaint: dizziness
+answers:
+  dizziness_pattern: continuous
+  vertigo_spinning: present
+  dizziness_positional: absent
+  nausea: present
+  vomiting: present
+  persistent_vomiting: absent
+  sudden_loss_of_balance: present
+  cannot_walk_unaided: absent
+  recent_viral_illness: present
+  hearing_loss_tinnitus: absent
+  headache: absent
+  vision_loss_or_double: absent
+  transient_neuro_symptoms: absent
+  fainting_or_near_fainting: absent
+  similar_episodes_before: absent
+  fever: absent
+  hypertension_known: absent
+  diabetes: absent
+  known_heart_disease: absent
+default_unmentioned: absent
+expected:
+  condition: vestibular_neuritis
+  acceptable: []
+  triage: 3
+source:
+  basis: "Ca điển hình theo tiêu chuẩn Bárány (Strupp 2022): chóng mặt quay liên tục khởi phát cấp trên 24 giờ, buồn nôn, nôn, mất thăng bằng ngã về một bên, không triệu chứng thần kinh trung ương hay triệu chứng tai; sau nhiễm vi rút (Bae 2022; NHS). Người trẻ không có yếu tố nguy cơ mạch máu: NHS Vertigo khuyên khám khẩn khi nôn, rất buồn nôn; GRACE-3 cần người được đào tạo khám để loại trừ đột quỵ: khám trong 24 giờ."
+  references: [strupp-jvestibres-2022, bae-yujm-2022, nhs-labyrinthitis, nhs-vertigo, grace3-dizziness-2023]
+author: "agent:pass-c"

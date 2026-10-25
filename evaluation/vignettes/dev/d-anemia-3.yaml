@@ -1,0 +1,46 @@
+id: d-anemia-3
+set: dev
+title_vi: "Nữ 38 tuổi, hồi hộp tim nhanh đều cả khi nghỉ, mạch 108, mệt, da xanh, kinh nguyệt ra nhiều"
+narrative_vi: "Chị E., 38 tuổi. Hai tháng nay hay thấy tim đập nhanh, đều, cả khi ngồi nghỉ, nặng hơn khi làm việc. Đếm mạch lúc ngồi nghỉ được 108 lần mỗi phút. Mệt, da xanh, leo cầu thang là hụt hơi, hơi choáng váng. Kinh nguyệt hơn một năm nay ra nhiều. Cơn tim nhanh không bắt đầu hay dừng đột ngột. Không run tay, không sợ nóng, không sụt cân, không mắt lồi, không bướu cổ. Không đau ngực, không khó thở khi nghỉ, không ngất. Không có thai, không chậm kinh."
+patient:
+  age_years: 38
+  sex: female
+  region: south
+  month: 9
+complaint: palpitations
+answers:
+  pulse_measured: n100_150
+  palpitation_rhythm: fast_regular
+  palpitation_abrupt_onset: absent
+  fatigue: present
+  pallor: present
+  breathless_on_exertion: present
+  heavy_periods: present
+  dizziness: present
+  tremor: absent
+  heat_intolerance: absent
+  weight_loss_unintended: absent
+  eyes_bulging: absent
+  goiter_visible: absent
+  panic_fear: absent
+  cold_sweat: absent
+  chest_pain_pressure: absent
+  breathing_difficulty: absent
+  fainting_or_near_fainting: absent
+  anemia_known: absent
+  black_stool: absent
+  pregnant: absent
+  missed_period: absent
+  diabetes: absent
+  known_heart_disease: absent
+  fever: absent
+default_unmentioned: absent
+expected:
+  condition: anemia
+  acceptable: []
+  triage: 4
+source:
+  basis: "Dễ nhầm với rối loạn nhịp tim và cường giáp (phần b): tim nhanh đều lúc nghỉ. Ở đây tim nhanh xoang để bù thiếu oxy (1832/QĐ-BYT: hồi hộp, đánh trống ngực), kèm mệt, da xanh, hụt hơi khi gắng sức và kinh nguyệt nhiều (NHS Iron deficiency anaemia); không có dấu hiệu cường giáp, cơn không bắt đầu, dừng đột ngột. NHS: khám bác sĩ (không khẩn); mạch dưới 150 lúc nghỉ, không có dấu hiệu nặng."
+  references: [byt-qd-1832-2022, nhs-iron-deficiency-anaemia, nhs-heart-palpitations]
+author: "agent:pass-c"
+notes_vi: "Ca dễ nhầm với bệnh của phần b (rối loạn nhịp tim, cường giáp)."

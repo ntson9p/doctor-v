@@ -1,0 +1,43 @@
+id: d-hypoglycemia-1
+set: dev
+title_vi: "Nam 62 tuổi, đái tháo đường tiêm insulin, bỏ bữa trưa, chóng mặt, run tay, vã mồ hôi, đường huyết 3,1"
+narrative_vi: "Ông B., 62 tuổi, đái tháo đường típ 2, tiêm insulin và uống thuốc hạ đường huyết. Hôm nay bận việc nên bỏ bữa trưa. Khoảng nửa giờ nay thấy chóng mặt, hoa mắt, run tay, vã mồ hôi lạnh, tim đập nhanh, đói cồn cào. Đo đường huyết bằng máy ở nhà được 3,1 mmol/L. Chưa ăn gì. Vẫn tỉnh táo, nói chuyện bình thường. Không thấy quay, không đau đầu, không yếu tê, không ngất. Không tăng huyết áp, không bệnh tim."
+patient:
+  age_years: 62
+  sex: male
+  region: south
+  month: 8
+complaint: dizziness
+answers:
+  diabetes: present
+  on_glucose_lowering_meds: present
+  glucose_measured: low
+  missed_meal: present
+  tremor: present
+  cold_sweat: present
+  palpitations: present
+  better_after_sugar: unknown
+  dizziness_pattern: long_episodes
+  vertigo_spinning: absent
+  dizziness_positional: absent
+  confusion: absent
+  drowsy_hard_to_wake: absent
+  fainting_or_near_fainting: absent
+  headache: absent
+  nausea: absent
+  vision_loss_or_double: absent
+  transient_neuro_symptoms: absent
+  chest_pain_pressure: absent
+  breathing_difficulty: absent
+  hypertension_known: absent
+  known_heart_disease: absent
+  fever: absent
+default_unmentioned: absent
+expected:
+  condition: hypoglycemia
+  acceptable: []
+  triage: 3
+source:
+  basis: "Ca điển hình: người dùng insulin và thuốc hạ đường huyết, bỏ bữa, có triệu chứng cường giao cảm (run, vã mồ hôi, tim nhanh, đói), glucose dưới 3,9 mmol/L, còn tỉnh (5481/QĐ-BYT phần 6 và phần thuốc insulin; NHS Low blood sugar). Người tỉnh tự ăn uống đồ ngọt, thử lại sau 15 phút; nên khám trong 24 giờ để xem lại thuốc (quy tắc rf_hypoglycemia_suspected, mức 3)."
+  references: [byt-qd-5481-2020, nhs-hypoglycaemia, bonds-bmcendocrdisord-2012]
+author: "agent:pass-c"
