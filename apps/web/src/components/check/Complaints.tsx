@@ -1,6 +1,6 @@
 import type { CompiledKb } from '@doctor-v/engine';
 import { ageGroupOf } from '@doctor-v/engine';
-import { useState } from 'preact/hooks';
+import { useEffect, useRef, useState } from 'preact/hooks';
 import { matches } from '../../lib/vi.ts';
 
 const ICONS: Record<string, preact.JSX.Element> = {
@@ -30,15 +30,40 @@ interface Props {
   onPick: (complaintId: string) => void;
 }
 
-/** Chief complaint: a grid of large buttons, plus accent-insensitive search with synonyms. */
+/**
+ * On a phone the on-screen keyboard covers the lower half of the screen, where the matches and the advice
+ * below the search box appear. When the keyboard opens, scroll the box up to just under the sticky header
+ * (two rows high on a narrow screen with large text). Returns a function that stops watching.
+ */
+function revealWhenKeyboardOpens(input: HTMLElement): () => void {
+  const vv = window.visualViewport;
+  if (!vv) return () => {};
+  const before = vv.height;
+  const onResize = () => {
+    if (vv.height > before * 0.85) return;
+    vv.removeEventListener('resize', onResize);
+    const header = document.querySelector<HTMLElement>('.site-header');
+    input.style.scrollMarginTop = `${(header?.offsetHeight ?? 0) + 8}px`;
+    input.scrollIntoView({ block: 'start' });
+  };
+  vv.addEventListener('resize', onResize);
+  return () => vv.removeEventListener('resize', onResize);
+}
+
+/** Chief complaint: a grid of large buttons, plus search that takes accents or none, and synonyms. */
 export function Complaints({ kb, ageMonths, onPick }: Props) {
   const [query, setQuery] = useState('');
+  const stopWatching = useRef<(() => void) | null>(null);
+  useEffect(() => () => stopWatching.current?.(), []);
   const ageGroup = ageGroupOf(kb.ageGroups, ageMonths);
   const available = kb.complaints.filter((c) => c.ageGroups === null || c.ageGroups.includes(ageGroup));
   const shown = available.filter((c) => {
     const t = kb.text.complaints[c.id];
     return matches(query, [t?.label ?? c.id, ...(t?.synonyms ?? [])]);
   });
+  const typed = query.trim().replace(/\s+/g, ' ');
+  // Nothing matched: say so, and still offer every complaint, so the screen never ends in a dead end.
+  const notFound = shown.length === 0;
 
   return (
     <div>
@@ -53,10 +78,37 @@ export function Complaints({ kb, ageMonths, onPick }: Props) {
           value={query}
           placeholder="Ví dụ: nhuc dau, dau bao tu"
           onInput={(e) => setQuery((e.target as HTMLInputElement).value)}
+          onFocus={(e) => {
+            stopWatching.current?.();
+            stopWatching.current = revealWhenKeyboardOpens(e.currentTarget);
+          }}
+          onBlur={() => stopWatching.current?.()}
         />
       </div>
+      {/* Always in the page, so screen readers announce what the search found as the user types. */}
+      <div role="status" class="search-status">
+        {notFound ? (
+          <>
+            <p>
+              <strong>Chưa tìm thấy "{typed}".</strong> Bản thử nghiệm mới có {available.length} triệu chứng chính, ở
+              ngay dưới đây.
+            </p>
+            {/* Danger signs worded as on the first screen (docs/legal/disclaimers.md §2). */}
+            <ul>
+              <li>
+                Nếu có khó thở, đau ngực, ngất, co giật, yếu hoặc liệt một bên người, nói khó, chảy máu nhiều, lơ mơ:
+                hãy <strong>gọi 115</strong> hoặc đến cơ sở cấp cứu gần nhất ngay.
+              </li>
+              <li>Nếu bạn còn có một triệu chứng ở dưới, hãy chọn triệu chứng đó. Kết quả sẽ chưa tính đến "{typed}".</li>
+              <li>Nếu không, hãy đi khám để được tư vấn.</li>
+            </ul>
+          </>
+        ) : typed !== '' ? (
+          <p class="visually-hidden">Có {shown.length} triệu chứng phù hợp.</p>
+        ) : null}
+      </div>
       <div class="complaints">
-        {shown.map((c) => {
+        {(notFound ? available : shown).map((c) => {
           const t = kb.text.complaints[c.id];
           return (
             <button key={c.id} type="button" class="complaint" onClick={() => onPick(c.id)}>
@@ -66,12 +118,11 @@ export function Complaints({ kb, ageMonths, onPick }: Props) {
           );
         })}
       </div>
-      {shown.length === 0 ? (
-        <p>
-          Chưa tìm thấy triệu chứng này. Bản thử nghiệm mới có: {available.map((c) => kb.text.complaints[c.id]?.label ?? c.id).join(', ')}.
+      {notFound ? null : (
+        <p class="note">
+          Bản thử nghiệm mới có {available.length} triệu chứng chính. Nếu triệu chứng khác làm bạn lo lắng, hãy đi khám.
         </p>
-      ) : null}
-      <p class="note">Bản thử nghiệm mới có {available.length} triệu chứng chính. Nếu triệu chứng khác làm bạn lo lắng, hãy đi khám.</p>
+      )}
     </div>
   );
 }

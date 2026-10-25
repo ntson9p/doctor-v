@@ -312,3 +312,31 @@ Ca duy nhất bị xếp thấp: sởi giai đoạn khởi phát, chưa nổi ba
 **Việc tồn của giao diện (Giai đoạn 4):**
 - tra cứu bệnh, hình cơ thể, nút Nghe, tóm tắt chia sẻ/in, offline (service worker), chế độ tối;
 - cân nhắc chạy engine trong Web Worker nếu máy yếu vẫn chậm.
+
+### Góp ý đầu tiên khi thử trên điện thoại: ô tìm triệu chứng
+
+Chủ dự án gõ "chóng mặt" vào ô tìm triệu chứng, không ra kết quả nào.
+
+**Nguyên nhân chính là phạm vi:** bản thử mới có 3 triệu chứng chính (sốt, đau bụng, đau đầu); "chóng mặt" thuộc Giai đoạn 3. Nhưng khi dựng lại, đã thấy thêm các lỗi thật, nay đã sửa:
+- **Khớp sai.** Cách cũ bỏ hết dấu rồi tìm chuỗi con, nên "nôn" ra "Sốt" (nằm trong "nóng"), "ói" ra "Sốt" và "Đau bụng" (nằm trong "người", "dưới"), "đầu" ra cả "Đau bụng". Nay so theo từng tiếng: dấu người dùng gõ phải khớp, chữ gõ không dấu khớp mọi dạng có dấu, chỉ tiếng cuối đang gõ dở mới được khớp phần đầu; dấu đặt kiểu cũ hay mới đều nhận ("hoà", "hòa").
+- **Gõ thành câu thì không tìm ra.** "bé bị sốt cao", "đau bụng dữ dội" trước đây không ra gì. Nay bỏ qua từ đệm (bị, hay, tôi, bé…) và nhận khi cả một tên triệu chứng nằm trong câu.
+- **Khi không tìm thấy:** thông báo cũ chung chung, các nút triệu chứng biến mất, trình đọc màn hình không đọc, và từ cỡ chữ ×1,5 trở lên thì bàn phím che mất thông báo. Nay:
+  - thông báo nêu rõ chữ đã gõ;
+  - nhắc các dấu hiệu cần gọi 115 (cùng câu chữ với màn đầu);
+  - cho chọn một triệu chứng đang có, kèm câu "kết quả sẽ chưa tính đến" chữ đã gõ;
+  - nếu không có triệu chứng nào phù hợp, khuyên đi khám;
+  - vẫn hiện đủ các nút, nằm trong vùng `role="status"`;
+  - khi bàn phím mở, ô tìm kiếm tự cuộn lên sát dưới đầu trang.
+
+**Kiểm thử:**
+- 8 kiểm thử đơn vị cho phần khớp chữ (`apps/web/test/vi.test.ts`);
+- 3 kiểm thử đầu cuối mới. Kiểm thử bàn phím đã được thử với phần sửa bị tắt và thất bại như mong đợi;
+- tổng cộng 64 kiểm thử đơn vị và 24 lượt đầu cuối (12 kiểm thử × 2 cỡ màn hình).
+
+Kiểm thử đầu cuối nay chạy trên máy chủ tĩnh riêng (`apps/web/scripts/serve-dist.mjs`, cổng 4329), nên chạy được cả khi `npm run web:phone` đang mở.
+
+**Chưa kiểm chứng trên máy thật:** cách cuộn khi bàn phím mở mới chỉ được giả lập bằng cách thu nhỏ khung nhìn.
+
+**Việc tồn:**
+- ở màn 320 px với chữ lớn nhất, đầu trang xuống 2 dòng;
+- từ điển tìm kiếm: từ dân gian ("trúng gió" → triệu chứng thật, theo `docs/style-guide-vi.md` §4), gợi ý khi gõ sai, xếp hạng kết quả khi đã có 35–40 triệu chứng.

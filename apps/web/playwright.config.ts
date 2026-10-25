@@ -5,10 +5,11 @@ export default defineConfig({
   testDir: './e2e',
   fullyParallel: true,
   reporter: 'list',
-  use: { baseURL: 'http://localhost:4321', trace: 'retain-on-failure' },
+  use: { baseURL: 'http://localhost:4329', trace: 'retain-on-failure' },
   webServer: {
-    command: 'npm run build && npx astro preview --port 4321',
-    url: 'http://localhost:4321',
+    // A plain static server on its own port, so the tests also run while `npm run web:phone` is open.
+    command: 'npm run build && node scripts/serve-dist.mjs 4329',
+    url: 'http://localhost:4329',
     // Always build and serve afresh: a leftover server would test a stale build.
     reuseExistingServer: false,
     timeout: 240_000,

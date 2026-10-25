@@ -99,6 +99,55 @@ test('accent-insensitive search finds a complaint by a synonym', async ({ page }
   await expect(page.locator('.complaint')).toContainText('Đau đầu');
 });
 
+test('search respects the accents typed and reads a sentence', async ({ page }) => {
+  await startCheck(page, '40', 'Nữ');
+  const search = page.getByLabel(/Tìm triệu chứng/);
+  await search.fill('đầu');
+  await expect(page.locator('.complaint')).toHaveCount(1);
+  await expect(page.locator('.complaint')).toContainText('Đau đầu');
+  await search.fill('bé bị sốt cao');
+  await expect(page.locator('.complaint')).toHaveCount(1);
+  await expect(page.locator('.complaint')).toContainText('Sốt');
+  // "nôn" (vomiting) is not "nóng", which is part of a fever synonym.
+  await search.fill('nôn');
+  await expect(page.locator('.search-status')).toContainText('Chưa tìm thấy "nôn"');
+});
+
+test('a symptom the pilot does not cover gets advice, and every complaint stays on screen', async ({ page }) => {
+  await startCheck(page, '70', 'Nữ');
+  await page.getByLabel(/Tìm triệu chứng/).fill('chóng mặt');
+  const status = page.locator('.search-status');
+  await expect(status).toHaveAttribute('role', 'status');
+  await expect(status).toContainText('Chưa tìm thấy "chóng mặt"');
+  await expect(status).toContainText('gọi 115');
+  await expect(status).toContainText('Kết quả sẽ chưa tính đến "chóng mặt"');
+  await expect(page.locator('.complaint')).toHaveCount(3);
+  await expectNoAxeViolations(page);
+  await expectNoHorizontalScroll(page);
+  await page.locator('.complaint', { hasText: 'Đau đầu' }).click();
+  await settle(page);
+  await expect(page.locator('.search-status')).toHaveCount(0);
+});
+
+test('when the on-screen keyboard opens, the search field moves up so the advice below stays visible', async ({
+  page,
+}) => {
+  await page.addInitScript(() => localStorage.setItem('dv.fontScale', '1.75'));
+  await startCheck(page, '70', 'Nữ');
+  const { width, height } = page.viewportSize() ?? { width: 393, height: 727 };
+  const search = page.getByLabel(/Tìm triệu chứng/);
+  await search.focus();
+  // An on-screen keyboard takes about 40% of a phone screen.
+  await page.setViewportSize({ width, height: Math.round(height * 0.6) });
+  await search.pressSequentially('chóng mặt');
+  await expect(page.locator('.search-status strong').first()).toBeInViewport();
+  // The search box sits below the sticky header, not under it.
+  const gap = await search.evaluate(
+    (el) => el.getBoundingClientRect().top - (document.querySelector('.site-header')?.getBoundingClientRect().bottom ?? 0),
+  );
+  expect(gap).toBeGreaterThanOrEqual(0);
+});
+
 test('the largest text size is remembered and the layout does not scroll sideways', async ({ page }) => {
   await page.goto('/');
   await page.getByLabel('Cỡ chữ').click();
