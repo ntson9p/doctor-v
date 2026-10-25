@@ -23,7 +23,14 @@ red_flags:
   # dẫn tới mức 1, nên câu phơi nhiễm hỏi sau sẽ bị bỏ qua và ngộ độc khí CO không vào danh sách cần loại trừ.
   - finding: co_exposure
   - finding: dizziness_pattern
+  # Có sốt: hỏi trước nhóm dấu hiệu nguy hiểm, để quy tắc sốc khi sốt (mức 1) chỉ còn thiếu một dấu hiệu
+  # khi một dấu hiệu mức 2 đã gặp (xem syncope.yaml).
+  - finding: fever
   - group: dizziness_red_flags
+  # Hỏi trước nhóm dấu hiệu nguy hiểm toàn thân: người lú lẫn dừng ngay ở mức 1, nên nếu hỏi sau thì hạ đường
+  # huyết không bao giờ vào danh sách cần loại trừ (lần chấm giữ kín đầu tiên của lô 1).
+  - finding: diabetes
+  - finding: on_glucose_lowering_meds
   - group: general_danger_signs
   # Khi có sốt: như đau bụng, đau đầu (sốt xuất huyết giai đoạn nguy hiểm, nhiễm khuẩn huyết).
   - group: fever_red_flags
@@ -32,9 +39,6 @@ red_flags:
   - finding: headache_thunderclap
   - finding: pregnant
   - finding: missed_period
-  # Lượt R: hỏi ngay sau khi biết có đái tháo đường (câu này cần "có đái tháo đường", hỏi ở nhóm bệnh nền):
-  # hạ đường huyết do thuốc là nguyên nhân cần nhận ra sớm (NHS: chóng mặt, hồi hộp, bất tỉnh là triệu chứng).
-  - finding: on_glucose_lowering_meds
 intake: [dizziness_associated, chronic_conditions]
 # Bệnh "không được bỏ sót" (mức 1–2) có prior cho triệu chứng chính này; danh sách để kiểm tra an toàn.
 cant_miss:

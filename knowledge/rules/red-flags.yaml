@@ -712,6 +712,8 @@
 - id: rf_fainting_with_pain
   level: 2
   conditions: [ectopic_pregnancy, acute_coronary_syndrome]
+  # Không áp cho Chóng mặt, Hồi hộp: ở đó choáng rất hay gặp; chửa ngoài tử cung vỡ và đau ngực có quy tắc riêng.
+  complaints: [abdominal_pain, fever, headache, syncope]
   when:
     all:
       - { finding: fainting_or_near_fainting, is: present }
@@ -792,7 +794,8 @@
 - id: rf_ectopic_rupture_signs
   level: 1
   conditions: [ectopic_pregnancy]
-  complaints: [abdominal_pain]
+  # Chửa ngoài tử cung vỡ có thể biểu hiện trước hết bằng ngất hoặc choáng (lần chấm giữ kín đầu tiên của lô 1).
+  complaints: [abdominal_pain, syncope, dizziness]
   when:
     all:
       - { finding: fainting_or_near_fainting, is: present }
@@ -1562,3 +1565,73 @@
     basis: verbal
     sources: [nhs-vertigo]
     note: "NHS Vertigo (lượt R đã mở): đi khám (không khẩn) khi chóng mặt quay không hết hoặc hay tái lại. Người bảo trì thêm theo đề xuất của lượt C lô 1 phần a."
+
+- id: rf_co_exposure_syncope
+  level: 1
+  conditions: [carbon_monoxide_poisoning]
+  complaints: [syncope]
+  when: { finding: co_exposure, is: present }
+  reason_vi: "Ngất hoặc choáng khi ở phòng kín có đốt than, củi hoặc chạy máy nổ có thể là ngộ độc khí CO nặng. Đưa mọi người ra chỗ thoáng khí và gọi 115 ngay."
+  evidence:
+    tier: C
+    basis: verbal
+    sources: [nhs-carbon-monoxide-poisoning]
+    note: "NHS Carbon monoxide poisoning: đã phơi nhiễm kèm mất ý thức hoặc lú lẫn đột ngột thì gọi 999. Triệu chứng chính Ngất gồm cả suýt ngất; chọn mức 1 vì không phân biệt được tại nhà và khí CO vẫn còn trong phòng."
+
+- id: rf_febrile_shock_signs
+  level: 1
+  conditions: [dengue, sepsis]
+  complaints: [dizziness, syncope, palpitations]
+  when:
+    all:
+      - { finding: fever, is: present }
+      - { finding: cold_hands_feet, is: present }
+      - any:
+          - { finding: fainting_or_near_fainting, is: present }
+          - { finding: dizziness_on_standing, is: present }
+          - { finding: severe_weakness, is: present }
+          - { finding: decreased_urine, is: present }
+  reason_vi: "Sốt hoặc vừa hết sốt mà tay chân lạnh, da tái kèm choáng, ngất, mệt lả hoặc tiểu ít là dấu hiệu sốc: gọi 115 ngay."
+  evidence:
+    tier: B
+    basis: judgment
+    sources: [byt-qd-2760-2023, who-dengue-2009, nhs-sepsis]
+    note: "Sốc sốt xuất huyết, sốc nhiễm khuẩn: chi lạnh kèm hạ huyết áp tư thế, ngất hoặc lả khi hết sốt (WHO 2009 Textbox D, E; 2760/QĐ-BYT). Khác rf_shock_cold_and_weak: có sốt nên da tái, chi lạnh không còn là da tái thoáng qua sau một lần ngất thông thường."
+
+- id: rf_syncope_multiple_high_risk
+  level: 1
+  conditions: [cardiac_arrhythmia, acute_coronary_syndrome]
+  complaints: [syncope]
+  when:
+    at_least: 2
+    of:
+      - { finding: syncope_trigger, in: [exertion, lying] }
+      - { finding: syncope_warning, in: [palpitations_first] }
+      - { finding: family_sudden_death, is: present }
+      - { finding: known_heart_disease, is: present }
+      - { finding: chest_pain_pressure, is: present }
+  reason_vi: "Ngất kèm từ hai dấu hiệu nguy cơ cao của bệnh tim có thể là rối loạn nhịp tim nguy hiểm: gọi 115 ngay."
+  evidence:
+    tier: B
+    basis: judgment
+    sources: [esc-syncope-2018]
+    note: "ESC 2018 bảng 6: các đặc điểm nguy cơ cao loại nặng (ngất khi gắng sức hoặc khi nằm, hồi hộp ngay trước khi ngất, bệnh tim nặng, đau ngực mới) và tiền sử gia đình đột tử. Mỗi đặc điểm riêng lẻ đã ở mức 2; có từ hai đặc điểm thì chọn mức 1 (người bảo trì) vì nguy cơ đột tử trước khi đến viện."
+
+- id: rf_symptomatic_bradycardia
+  level: 1
+  conditions: [cardiac_arrhythmia]
+  complaints: [dizziness, syncope, palpitations]
+  when:
+    all:
+      - { finding: pulse_measured, in: [lt_40] }
+      - any:
+          - { finding: fainting_or_near_fainting, is: present }
+          - { finding: breathing_difficulty, is: present }
+          - { finding: chest_pain_pressure, is: present }
+          - { finding: confusion, is: present }
+  reason_vi: "Mạch dưới 40 lần mỗi phút kèm choáng, ngất, khó thở hoặc đau ngực có thể do tim đập quá chậm: gọi 115 ngay."
+  evidence:
+    tier: B
+    basis: judgment
+    sources: [esc-syncope-2018]
+    note: "ESC 2018 bảng 6: nhịp chậm kéo dài dưới 40 lần mỗi phút khi thức là đặc điểm nguy cơ cao loại nặng. Có triệu chứng thiếu máu não, khó thở hoặc đau ngực thì chọn mức 1 (người bảo trì)."

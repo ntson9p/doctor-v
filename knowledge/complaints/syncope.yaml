@@ -16,20 +16,25 @@ description_vi: "Đột ngột mất ý thức trong thời gian ngắn rồi t�
 implies: [fainting_or_near_fainting]
 age_groups: [child_5_12, teen_13_17, adult_18_44, adult_45_64, elder_65_74, elder_75p]
 red_flags:
-  # Hỏi đầu tiên (xem dizziness.yaml).
+  # Thứ tự có chủ ý. Khi một dấu hiệu đã đưa mức xử trí lên 2, bộ suy luận chỉ hỏi tiếp những dấu hiệu tự
+  # mình làm một quy tắc mức 1 thành đúng. Vì vậy các câu then chốt của quy tắc mức 1 nhiều điều kiện (hoàn
+  # cảnh và dấu hiệu báo trước của ngất, có thai, có sốt, phơi nhiễm khí CO) được hỏi trước nhóm dấu hiệu
+  # nguy hiểm (lần chấm giữ kín đầu tiên của lô 1). ESC 2018 cũng đánh giá ngất bắt đầu từ hoàn cảnh xảy ra.
   - finding: co_exposure
-  - group: syncope_red_flags
-  - group: general_danger_signs
-  - group: fever_red_flags
-  - finding: fever_duration
-  - finding: not_recovered_after_faint
   - finding: syncope_trigger
   - finding: syncope_warning
   - finding: pregnant
   - finding: missed_period
-  # Lượt R: hỏi ngay sau khi biết có đái tháo đường (câu này cần "có đái tháo đường", hỏi ở nhóm bệnh nền):
-  # hạ đường huyết do thuốc là nguyên nhân cần nhận ra sớm (NHS: chóng mặt, hồi hộp, bất tỉnh là triệu chứng).
+  - finding: fever
+  - group: syncope_red_flags
+  # Hỏi trước nhóm dấu hiệu nguy hiểm toàn thân: người lú lẫn dừng ngay ở mức 1, nên nếu hỏi sau thì hạ đường
+  # huyết không bao giờ vào danh sách cần loại trừ.
+  - finding: diabetes
   - finding: on_glucose_lowering_meds
+  - group: general_danger_signs
+  - group: fever_red_flags
+  - finding: fever_duration
+  - finding: not_recovered_after_faint
 intake: [syncope_associated, chronic_conditions]
 # Bệnh "không được bỏ sót" (mức 1–2) có prior cho triệu chứng chính này; danh sách để kiểm tra an toàn.
 cant_miss:
