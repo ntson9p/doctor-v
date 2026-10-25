@@ -180,8 +180,8 @@
   question_vi: "Có cảm giác mọi vật quay tròn quanh mình, hoặc mình đang quay tròn không?"
   requires:
     - { finding: dizziness, is: present }
-  leak: 0.3
-  leak_note: "Tính trong số người đã chóng mặt (dấu hiệu có điều kiện). Người bảo trì ước lượng khoảng một phần ba người chóng mặt có cảm giác quay; lượt A/B/C đối chiếu với nguồn."
+  leak: 0.4
+  leak_note: "Tính trong số người đã chóng mặt (dấu hiệu có điều kiện). Mô tả của người bệnh về kiểu chóng mặt không đáng tin (Newman-Toker 2007), nhiều người không bị bệnh tiền đình vẫn nói là quay; lượt B lô 1 phần a cho rằng 0,3 là thấp. Người bảo trì ước lượng."
 - id: dizziness_positional
   kind: symptom
   type: binary

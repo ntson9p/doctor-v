@@ -246,6 +246,8 @@
   alt_question:
     text_vi: "Có lúc nào tối sầm mắt, phải ngồi hoặc nằm xuống ngay không?"
   leak: moderate
+  leak_by_complaint: { dizziness: 0.25, palpitations: 0.15 }
+  leak_note: "Người chóng mặt hay mô tả cảm giác choáng như sắp ngất, kể cả khi bệnh lành tính (lượt B lô 1 phần a: 5% là quá thấp); người hồi hộp cũng hay thấy choáng trong cơn. Người bảo trì ước lượng."
 
 # ---------- Giai đoạn 3, lô 1 ----------
 - id: tremor

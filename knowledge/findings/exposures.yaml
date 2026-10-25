@@ -42,3 +42,11 @@
   cluster: co_source
   leak: 0.03
   leak_note: "Nhiều người cùng chỗ ở có triệu chứng giống nhau gợi ý nguồn chung (khí CO); người bảo trì ước lượng."
+- id: better_away_from_place
+  kind: history
+  type: binary
+  label_vi: "Đỡ hơn khi ra khỏi nhà hoặc phòng đó"
+  question_vi: "Khi ra khỏi nhà hoặc căn phòng đó một lúc, có thấy đỡ hơn không?"
+  cluster: co_source
+  leak: 0.05
+  leak_note: "Gợi ý nguồn khí độc trong nhà (lượt B lô 1 phần a đề xuất); người bảo trì ước lượng."
