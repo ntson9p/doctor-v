@@ -449,3 +449,53 @@ Bộ dev cho kết quả giống hệt sau mọi thay đổi.
 - dưới 18 tuổi không được hỏi bệnh tim, tăng huyết áp.
 
 **Giới hạn sử dụng:** các agent bị dừng hai lần (10:40 và 15:30). Mỗi lần đều làm tiếp được từ chỗ dừng, không phải chạy lại.
+
+### Lô 1: lượt C, tích hợp, lần chấm giữ kín đầu tiên
+
+**Lượt C** (2 agent):
+- 13 bệnh mới và 7 bệnh mở rộng vào `knowledge/conditions/`; độ đồng thuận A–B: kappa có trọng số 0,90.
+- 85 nguồn mới, đều đã mở lại để xác minh.
+- 46 ca dev.
+- Các quyết định chính:
+  - ngộ độc CO: mức 2, vẫn "không được bỏ sót";
+  - hạ đường huyết: mức 3;
+  - xuất huyết tiêu hóa trên: mức 2;
+  - thuyên tắc phổi: mức 1;
+  - viêm dây thần kinh tiền đình gộp cả viêm mê đạo.
+
+**Tích hợp (người bảo trì):**
+- danh sách "không được bỏ sót" của 3 triệu chứng;
+- bệnh mục tiêu của các quy tắc;
+- 6 quy tắc mới có nguồn:
+  - khó thở kèm sưng một bên bắp chân (mức 1);
+  - cơn hồi hộp đột ngột chưa dứt (mức 2);
+  - ngất, choáng ngày sốt 3–7 (mức 2, tiêu chí nhập viện của WHO 2009);
+  - mất nước kèm tiểu ít hoặc ngất (mức 3);
+  - chóng mặt quay tái diễn (mức 4).
+- Lần chạy dev đầu cho thấy hai quy tắc kích hoạt quá rộng, nên đã thu hẹp:
+  - "hồi hộp chưa dứt" cũng bắt người tim nhanh âm ỉ nhiều tuần do cường giáp; nay cần thêm "cơn đến đột ngột";
+  - "mất nước" tính cả chóng mặt khi đứng dậy, điều NHS không nêu cho người lớn; nay bỏ dấu hiệu này.
+
+**Lần chấm giữ kín đầu tiên** (156 ca, `evaluation/reports/2026-10-25-holdout-94cd5ffc57cd.md`):
+- 3 triệu chứng cũ không đổi.
+- Hồi hộp đạt 10/10.
+- 5 ca cấp cứu Chóng mặt, Ngất được khuyên mức 2 thay vì mức 1: bỏ sót 5/78, an toàn 95,5%.
+- Nguyên nhân:
+  1. **Quy tắc "dấu hiệu vỡ" của chửa ngoài tử cung** chỉ áp cho Đau bụng.
+  2. **Thiếu quy tắc mức 1** cho:
+     - CO kèm ngất;
+     - sốt kèm dấu hiệu sốc;
+     - nhiều dấu hiệu nguy cơ cao của ngất;
+     - mạch dưới 40 có triệu chứng.
+  3. **Giới hạn của bước nâng mức.** Khi một dấu hiệu đã đưa mức lên 2, bộ suy luận chỉ hỏi tiếp dấu hiệu tự mình làm một quy tắc mức 1 thành đúng, nên quy tắc cần từ hai câu trở lên không bao giờ được xét. Cách xử lý: đổi thứ tự câu hỏi bắt buộc.
+     - Ngất hỏi trước hoàn cảnh xảy ra, dấu hiệu báo trước, có thai, có sốt (ESC cũng đánh giá ngất bắt đầu từ đây).
+     - Chóng mặt hỏi sốt sớm.
+     - Phơi nhiễm CO, đái tháo đường và thuốc hạ đường huyết hỏi trước nhóm dấu hiệu nguy hiểm toàn thân.
+
+**Theo quy tắc giữ kín:**
+- 7 ca đã dùng để sửa chuyển sang dev (`d-from-h-*`);
+- một agent độc lập đang viết 12 ca mới: 7 ca thay thế và 5 ca bổ sung.
+
+**Bộ dev** (166 ca): sạch bỏ sót 0/73, an toàn 98,8%, top-3 95,7%; nhiễu bỏ sót 10/365.
+
+**Việc tồn của bộ suy luận:** bước nâng mức nên xét cả quy tắc mức 1 còn thiếu hai câu, có giới hạn số câu hỏi thêm. Thứ tự câu hỏi hiện chỉ là cách xử lý tạm.
