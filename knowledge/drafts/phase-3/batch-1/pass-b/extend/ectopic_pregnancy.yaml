@@ -1,0 +1,228 @@
+id: ectopic_pregnancy
+names:
+  vi: "Thai ngoài tử cung"
+  vi_common: ["Chửa ngoài tử cung", "Mang thai ngoài tử cung"]
+  en: "Ectopic pregnancy"
+codes:
+  icd10: "O00"
+  icd10_verified: true
+  mondo: "MONDO:0000755"
+summary_vi:
+  - "Thai làm tổ ở ngoài buồng tử cung, phần lớn ở vòi trứng."
+  - "Hay gặp chậm kinh, đau bụng dưới một bên và ra máu âm đạo ít, sẫm màu."
+  - "Khối thai có thể vỡ, gây chảy máu trong ổ bụng và nguy hiểm tính mạng."
+urgency: 2
+cant_miss: true
+specialties: [obstetrics_gynecology, emergency]
+applicability:
+  sex: [female]
+  age_groups: [teen_13_17, adult_18_44, adult_45_64]
+  reason_vi: "Chỉ gặp ở phụ nữ trong độ tuổi có thể mang thai."
+priors:
+  - complaint: abdominal_pain
+    default: P4
+    by_age: { teen_13_17: P5, adult_45_64: P6 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-315-2015, msd-ectopic-pregnancy, nhs-ectopic-pregnancy, viniol-fampract-2014]
+      note: "Prior tính trong số phụ nữ cùng nhóm tuổi bị đau bụng (bệnh chỉ xét cho nữ, applicability), nên khi so với tổng prior của mọi bệnh trong cột đau bụng cần nhớ mẫu số chỉ gồm nữ. Thai ngoài tử cung chiếm khoảng 1/90 (NHS) đến 2/100 (MSD) số thai và là cấp cứu sản khoa (315/QĐ-BYT); phần lớn có đau bụng. Ở chăm sóc ban đầu, đau bụng có nhiều nguyên nhân lành tính (Viniol 2014). Ước tính thô của lượt C: khoảng 2% phụ nữ 18–44 tuổi đang có thai 3 tháng đầu tại một thời điểm, với 1–2% số thai là thai ngoài tử cung, cho tỷ lệ khoảng 0,5–1% trong số phụ nữ 18–44 tuổi đau bụng đi khám hoặc tự kiểm tra (P4). Tuổi 13–17 có thai ít hơn khoảng 8–10 lần (P5); từ 45 tuổi rất hiếm có thai (P6). Hai lượt độc lập cùng chọn các mức này. Chưa có số liệu Việt Nam về lý do đi khám; cần bác sĩ duyệt."
+  - complaint: syncope
+    default: P5
+    by_age: { adult_18_44: P4, adult_45_64: P6 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-315-2015, nhs-ectopic-pregnancy, esc-syncope-2018-practical]
+      locator: "315/QĐ-BYT bài Chửa ngoài tử cung mục 2.1, 2.4.2; NHS Ectopic pregnancy (signs of a rupture); hướng dẫn thực hành ESC 2018 mục 2.2"
+      note: "Lượt B Giai đoạn 3 lô 1. Tính trong số phụ nữ cùng nhóm tuổi bị ngất hoặc suýt ngất (bệnh chỉ xét cho nữ). Chửa ngoài tử cung khoảng 1/90 thai (NHS); có thể choáng ngất do đau, do vỡ khối chửa, thể lụt máu ổ bụng choáng nặng đột ngột (315); NHS: chóng mặt nhiều hoặc ngất kèm đau bụng dữ dội là dấu hiệu vỡ. Ngất rất hay gặp ở phụ nữ trẻ và phần lớn là ngất phản xạ (ESC: tỷ lệ mắc cao nhất ở tuổi 10–30), nên chửa ngoài tử cung chỉ chiếm phần nhỏ. Ước: 18–44 tuổi 0,2–1% (P4, như với Đau bụng); 13–17 tuổi P5; 45–64 tuổi P6. Cần bác sĩ duyệt."
+  - complaint: dizziness
+    default: P5
+    by_age: { teen_13_17: P6, adult_45_64: P6 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-315-2015, nhs-ectopic-pregnancy, bosner-bmcfampract-2018]
+      note: "Lượt B Giai đoạn 3 lô 1. Tính trong số phụ nữ cùng nhóm tuổi bị chóng mặt. Chóng mặt rất hay gặp ở tuyến ban đầu, phần lớn nữ (Bösner), và hiếm khi do chửa ngoài tử cung; chóng mặt nhiều là dấu hiệu vỡ khối chửa (NHS). Ước: 18–44 tuổi P5; 13–17 tuổi và 45–64 tuổi P6."
+findings:
+  - finding: pregnant
+    freq: very_frequent
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-315-2015, msd-ectopic-pregnancy, nhs-ectopic-pregnancy]
+      locator: "315/QĐ-BYT, bài Chửa ngoài tử cung, mục 2.1; MSD: Symptoms and Signs; NHS: Symptoms"
+      note: "Theo định nghĩa luôn có thai, nhưng nhiều người chưa biết: 315/QĐ-BYT ghi chậm kinh nhiều khi không rõ vì ra máu trước ngày dự kiến có kinh; MSD ghi người kinh không đều có thể không biết mình có thai; NHS khuyên đi khám ngay cả khi chưa thử thai dương tính. Cố ý chọn very_frequent, không chọn almost_always (theo ghi chú lô 4), để câu trả lời 'không có thai' chỉ làm giảm khả năng khoảng 5 lần chứ không loại trừ."
+  - finding: missed_period
+    freq: frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [joshi-cureus-2025, nalini-cureus-2023, byt-qd-315-2015, nhs-ectopic-pregnancy]
+      locator: "Joshi 2025 và Nalini 2023: tóm tắt; 315/QĐ-BYT mục 2.1 và 2.3"
+      reported: "Mất kinh 63,4% (Joshi 2025, n = 123) và 97,3% (Nalini 2023, n = 75)."
+      population: "Phụ nữ thai ngoài tử cung ở bệnh viện tuyến cuối Ấn Độ, phần lớn đã vỡ"
+      note: "Lượt C: hai lượt lệch một mức (A very_frequent, B frequent). Số liệu bệnh viện (trung bình khoảng 80%) được hạ một mức theo kb-guide mục 2.1 vì người tự kiểm tra thường đến sớm hơn, khi kinh mới chậm vài ngày hoặc ra máu bị tưởng là kinh (315/QĐ-BYT: chậm kinh nhiều khi không rõ). Cùng cụm pregnancy_signs với 'pregnant' (tương quan cao) nên không bị đếm trùng hoàn toàn."
+  - finding: gestational_age
+    dist: { lt_20w: 0.97, ge_20w: 0.03 }
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-315-2015, nhs-ectopic-pregnancy, msd-ectopic-pregnancy]
+      note: "Phân bố trong số người đã trả lời có thai. Triệu chứng thường xuất hiện từ tuần 4 đến tuần 12 (NHS); khối thai thường vỡ sau khoảng 6–16 tuần (MSD); thai trong ổ bụng phát triển lớn là thể rất hiếm (315/QĐ-BYT). Để 0,03 cho trường hợp người dùng ước sai tuổi thai."
+  - finding: vaginal_bleeding
+    freq: frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [joshi-cureus-2025, byt-qd-315-2015, msd-ectopic-pregnancy, nhs-ectopic-pregnancy]
+      locator: "Joshi 2025: tóm tắt; 315/QĐ-BYT mục 2.1"
+      reported: "Ra máu âm đạo bất thường 46,3% (123 ca)."
+      population: "Bệnh viện tuyến cuối Ấn Độ"
+      note: "315/QĐ-BYT: máu ra ít một, sẫm màu, dai dẳng; MSD: phần lớn có đau vùng chậu, ra máu âm đạo hoặc cả hai; NHS: ra máu hoặc dịch nâu loãng. Trong nhóm đã có thai, đau và ra máu không phân biệt được thai ngoài tử cung với nguyên nhân khác (mọi yếu tố bệnh sử có LR+ dưới 1,5, Crochet 2013); dấu hiệu này chủ yếu giúp phân biệt với bệnh không liên quan thai."
+  - finding: abd_pain_location
+    dist: { epigastric: 0.03, right_upper: 0.02, left_upper: 0.02, periumbilical: 0.04, right_lower: 0.29, left_lower: 0.29, suprapubic: 0.20, whole: 0.11 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-315-2015, nhs-ectopic-pregnancy]
+      locator: "315/QĐ-BYT, mục 2.1 và 2.4.2 (thể lụt máu ổ bụng); NHS: Symptoms"
+      note: "Thường đau ở vị trí khối chửa, tức hố chậu một bên hoặc hạ vị (315/QĐ-BYT; NHS: đau bụng dưới một bên); thể lụt máu ổ bụng đau khắp bụng. Tỷ lệ từng vùng là ước lượng (trung bình hai lượt, lệch rất nhỏ)."
+  - finding: abd_pain_onset
+    dist: { sudden: 0.35, gradual: 0.65 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-315-2015, msd-ectopic-pregnancy, nhs-ectopic-pregnancy]
+      locator: "315/QĐ-BYT, mục 2.4.2 (đau và choáng xuất hiện đột ngột); MSD và NHS: dấu hiệu vỡ"
+      note: "Thể chưa vỡ thường đau âm ỉ, tăng dần; khi vỡ đau đột ngột, dữ dội. Hai lượt cùng ước 0,35 (cao hơn nền 0,25)."
+  - finding: abd_pain_severe
+    freq: occasional
+    freq_by_complaint: { syncope: frequent, dizziness: frequent }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-315-2015, nhs-ectopic-pregnancy, joshi-cureus-2025]
+      note: "Đau dữ dội chủ yếu khi khối chửa vỡ. Ở bệnh viện tuyến cuối phần lớn đã vỡ (84,6% khi mổ, Joshi 2025), nhưng người tự kiểm tra thường đến sớm hơn và NHS ghi vỡ không thường gặp nếu được xử trí sớm, nên chọn occasional. Có đau dữ dội thì quy tắc rf_severe_abdominal_pain đã xếp mức 2. Lượt B Giai đoạn 3 lô 1 thêm freq_by_complaint: với Ngất và Chóng mặt chọn frequent, vì người chửa ngoài tử cung biểu hiện bằng choáng, ngất phần lớn là đã vỡ hoặc chảy máu trong (315/QĐ-BYT: thể lụt máu ổ bụng có đau và choáng nặng đột ngột; NHS: đau bụng đột ngột dữ dội kèm chóng mặt nhiều hoặc ngất là dấu hiệu vỡ)."
+  - finding: abdomen_hard_swollen
+    freq: occasional
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-315-2015]
+      locator: "315/QĐ-BYT, mục 2.1 (phản ứng thành bụng khi có máu trong ổ bụng) và 2.4.2 (bụng trướng, ấn đau khắp bụng)"
+      note: "Gặp ở thể có máu trong ổ bụng; tỷ lệ ở người tự kiểm tra chưa rõ. Tỷ lệ nền của dấu hiệu là 1% nên trả lời 'Có' làm tăng mạnh khả năng bệnh."
+  - finding: fainting_or_near_fainting
+    freq: occasional
+    freq_by_complaint: { dizziness: frequent }
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-315-2015, msd-ectopic-pregnancy, nhs-ectopic-pregnancy]
+      locator: "315/QĐ-BYT, mục 2.1 (toàn thân: có thể choáng ngất do đau, do vỡ khối chửa); MSD; NHS: signs of a rupture"
+      note: "Các nguồn mô tả là 'có thể' (choáng, ngất khi vỡ); chọn occasional. Lượt B Giai đoạn 3 lô 1 thêm freq_by_complaint: với Chóng mặt chọn frequent, vì người chửa ngoài tử cung đi khám vì chóng mặt chủ yếu là khi đã chảy máu trong, lúc đó choáng như sắp ngất hay gặp (NHS: chóng mặt nhiều hoặc ngất là dấu hiệu vỡ; 315: choáng ngất do vỡ khối chửa). Với Ngất, dấu hiệu này được ngầm định."
+  - finding: abd_pain_worse_movement
+    freq: occasional
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-315-2015]
+      locator: "315/QĐ-BYT, mục 2.1 (máu trong ổ bụng gây kích thích phúc mạc, phản ứng thành bụng)"
+      note: "Chỉ lượt B có. Lượt C giữ vì nguồn ủng hộ: đau tăng khi đi lại, ho, xe xóc là biểu hiện kích thích phúc mạc khi có máu trong ổ bụng. Tần suất là ước lượng."
+  - finding: abd_pain_radiates_right_shoulder
+    freq: occasional
+    evidence:
+      tier: C
+      basis: verbal
+      sources: [nhs-ectopic-pregnancy]
+      note: "Chỉ lượt B có. NHS liệt kê đau ở đầu vai trong các triệu chứng (máu kích thích cơ hoành). Câu hỏi chỉ hỏi vai phải hoặc lưng bên phải nên tần suất thật của câu trả lời 'Có' thấp hơn tần suất đau vai nói chung; chọn occasional."
+  - finding: pain_with_menses
+    freq: occasional
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-315-2015]
+      locator: "315/QĐ-BYT, mục 2.1 (chậm kinh không rõ vì ra máu trước thời điểm dự báo có kinh)"
+      note: "Chỉ lượt A có. Máu âm đạo của thai ngoài tử cung có thể ra đúng khoảng ngày dự kiến có kinh và bị tưởng là kinh. Mức occasional (20%) gần bằng tỷ lệ nền 18% của câu hỏi, nên câu trả lời 'Có' (đau trùng kỳ kinh) không làm giảm khả năng bệnh. Lượt B không liên kết với cùng mục đích; hai cách cho kết quả gần như nhau."
+  - finding: fever
+    freq: rare
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-315-2015, msd-ectopic-pregnancy, nhs-ectopic-pregnancy]
+      locator: "315/QĐ-BYT, mục 3 (chẩn đoán phân biệt: viêm phần phụ, viêm ruột thừa có tình trạng nhiễm khuẩn)"
+      note: "Sốt không có trong triệu chứng của cả ba nguồn; 315/QĐ-BYT dùng tình trạng nhiễm khuẩn để nhận ra viêm phần phụ, viêm ruột thừa. Mức rare (thấp hơn tỷ lệ nền 5%) làm câu trả lời 'Có sốt' giảm nhẹ khả năng bệnh."
+  - finding: abdominal_pain
+    freq: very_frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [joshi-cureus-2025, byt-qd-315-2015, nhs-ectopic-pregnancy]
+      locator: "Joshi 2025 tóm tắt; 315/QĐ-BYT mục 2.1; NHS Ectopic pregnancy (symptoms)"
+      reported: "Đau bụng 82,9% (123 ca, bệnh viện tuyến cuối Ấn Độ, phần lớn đã vỡ)"
+      note: "Lượt B Giai đoạn 3 lô 1. Với Ngất và Chóng mặt, đau bụng không phải dấu hiệu ngầm định. Người chửa ngoài tử cung bị choáng, ngất phần lớn đã có chảy máu trong ổ bụng nên hầu hết có đau bụng (315: choáng ngất do đau, do vỡ khối chửa), giống nhóm bệnh viện của Joshi, nên không hạ mức. Có đau bụng kèm ngất, choáng thì quy tắc rf_fainting_with_pain đã xếp mức 2."
+  - finding: dizziness_on_standing
+    freq: frequent
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-315-2015, nhs-ectopic-pregnancy]
+      note: "Lượt B Giai đoạn 3 lô 1. Chảy máu trong ổ bụng gây choáng (315: thể lụt máu ổ bụng choáng nặng, đột ngột; NHS: chóng mặt nhiều hoặc ngất là dấu hiệu vỡ). Ở người có Ngất, Chóng mặt, ước khoảng một nửa choáng khi vừa đứng dậy. Tỷ lệ nền 0,15. Ước lượng."
+  - finding: pallor
+    freq: frequent
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [nhs-ectopic-pregnancy, byt-qd-315-2015]
+      locator: "NHS (dấu hiệu vỡ: da rất tái); 315/QĐ-BYT mục 2.1, 2.4.4 (thiếu máu ở thể huyết tụ thành nang)"
+      note: "Lượt B Giai đoạn 3 lô 1. Da rất tái là dấu hiệu vỡ khối chửa (NHS); thể huyết tụ thành nang có thiếu máu (315). Người có Ngất, Chóng mặt chủ yếu đã chảy máu trong: ước khoảng một nửa. Tỷ lệ nền 0,15."
+  - finding: cold_hands_feet
+    freq: occasional
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-315-2015, nhs-ectopic-pregnancy]
+      note: "Lượt B Giai đoạn 3 lô 1. Choáng do chảy máu trong (315) có thể làm tay chân lạnh, da tái (NHS: da rất tái). Ước 20%; tỷ lệ nền 1% nên trả lời 'Có' làm tăng mạnh khả năng bệnh. Dấu hiệu đã có trong warning_signs."
+  - finding: syncope_trigger
+    dist: { standing_heat: 0.1, emotion_pain: 0.25, standing_up: 0.25, toilet_cough: 0.12, exertion: 0.05, lying: 0.03, no_trigger: 0.2 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-315-2015]
+      locator: "315/QĐ-BYT mục 2.1 (choáng ngất do đau, do vỡ khối chửa; đau kèm mót rặn)"
+      note: "Lượt B Giai đoạn 3 lô 1. Phân bố trong số người đã ngất hoặc suýt ngất. Ngất do đau (lựa chọn 'khi đang đau'), do mất máu khi đứng dậy, khi mót rặn đi ngoài. Ước lượng."
+  - finding: not_recovered_after_faint
+    freq: occasional
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-315-2015, nhs-ectopic-pregnancy]
+      note: "Lượt B Giai đoạn 3 lô 1. Tính trong số người đã ngất hoặc suýt ngất. Chảy máu trong tiếp diễn làm choáng kéo dài (315: thể lụt máu ổ bụng). Ước 20%. Tỷ lệ nền 0,05."
+  - finding: pulse_measured
+    dist: { lt_40: 0.004, n40_100: 0.28, n100_150: 0.11, gt_150: 0.006, not_measured: 0.6 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-315-2015]
+      note: "Lượt B Giai đoạn 3 lô 1. 'Chưa đo' giữ đúng tỷ lệ nền 0,6. Mất máu làm mạch nhanh; thể chưa vỡ mạch bình thường. Ước lượng."
+  - finding: dizziness_pattern
+    dist: { brief_episodes: 0.25, long_episodes: 0.35, continuous: 0.35, chronic: 0.05 }
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [byt-qd-315-2015]
+      note: "Lượt B Giai đoạn 3 lô 1. Tính trong số người chóng mặt. Choáng ngắn khi đứng dậy, hoặc kéo dài khi chảy máu tiếp diễn. Ước lượng."
+warning_signs: [abd_pain_severe, fainting_or_near_fainting, abdomen_hard_swollen, cold_hands_feet, severe_weakness]
+self_care_vi:
+  - "Nhờ người thân đưa đi khám, không tự lái xe."
+  - "Nếu có sẵn que thử thai, có thể thử ngay, nhưng không chờ kết quả mới đi khám."
+  - "Mang theo kết quả siêu âm hoặc xét nghiệm, nếu có."
+see_doctor_vi:
+  - "Đến ngay khoa cấp cứu hoặc khoa sản của bệnh viện gần nhất để được thử thai và siêu âm."
+  - "Gọi 115 nếu đau bụng dữ dội đột ngột, choáng ngất, vã mồ hôi lạnh hoặc da tái nhợt."
+review:
+  status: draft
+  authors: ["agent:pass-b"]
+  doctor_reviewer: null
+  updated: "2026-10-25"
+  notes_vi: "Lượt B Giai đoạn 3 lô 1 (phần b) bổ sung, giữ nguyên mọi giá trị đã có. Đã thêm: (1) prior cho Ngất (mặc định P5; 18–44 tuổi P4; 45–64 tuổi P6) và Chóng mặt (mặc định P5; 13–17 và 45–64 tuổi P6); (2) freq_by_complaint: abd_pain_severe với Ngất và Chóng mặt là frequent; fainting_or_near_fainting với Chóng mặt là frequent (kèm một đoạn cuối note); (3) 8 liên kết mới: abdominal_pain (very_frequent), dizziness_on_standing (frequent), pallor (frequent), cold_hands_feet (occasional), syncope_trigger, not_recovered_after_faint (occasional), pulse_measured, dizziness_pattern. Nguồn chép từ bản nháp mới: esc-syncope-2018-practical (extend/sources); bosner-bmcfampract-2018 dùng bản đã có trong extend/sources. Điểm chưa chắc chắn: prior là ước lượng (không có số liệu về chửa ngoài tử cung trong số người ngất, chóng mặt); không mở được NICE NG126 (chặn truy cập tự động) nên không trích thêm. Không sửa giá trị cũ. Ghi chú của lượt C trước đây: Lượt C đã đối chiếu 13 liên kết và mở lại mọi nguồn được trích. Bác sĩ cần xem: (1) prior P4 chỉ là ước lượng từ tỷ lệ có thai và tỷ lệ thai ngoài tử cung, chưa có số liệu Việt Nam về người đau bụng đi khám; (2) 'có thai' để very_frequent và 'chậm kinh' để frequent cố ý, để người chưa biết mình có thai vẫn được xét; (3) số liệu triệu chứng lấy từ bệnh viện tuyến cuối Ấn Độ, nơi phần lớn đã vỡ; (4) danh mục chưa có các yếu tố nguy cơ chính (từng bị thai ngoài tử cung, từng mổ vòi trứng, đang đặt vòng tránh thai) và câu hỏi đau vai chỉ hỏi bên phải; (5) mã ICD-10 dùng cấp nhóm O00 vì bệnh gồm mọi vị trí làm tổ."

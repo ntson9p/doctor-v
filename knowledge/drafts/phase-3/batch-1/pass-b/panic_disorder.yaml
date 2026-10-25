@@ -1,0 +1,189 @@
+id: panic_disorder
+names:
+  vi: "Rối loạn hoảng sợ (lo âu kịch phát từng giai đoạn)"
+  vi_common: ["Cơn hoảng sợ", "Cơn hoảng loạn", "Cơn lo âu cấp"]
+  en: "Panic attack and panic disorder"
+codes:
+  icd10: "F41.0"
+  icd10_verified: true
+  mondo: "MONDO:0005383"
+summary_vi:
+  - "Cơn sợ hãi hoặc khó chịu dữ dội đến đột ngột, kèm tim đập nhanh, khó thở, run, vã mồ hôi, chóng mặt."
+  - "Cơn thường kéo dài khoảng 5–20 phút rồi tự hết, có thể lặp lại."
+  - "Cơn rất khó chịu nhưng không làm hại cơ thể; lần đầu bị nên đi khám để loại trừ bệnh tim, bệnh tuyến giáp."
+urgency: 4
+cant_miss: false
+specialties: [mental_health, general_medicine]
+priors:
+  - complaint: palpitations
+    default: P2
+    by_age: { child_5_12: P5, teen_13_17: P3, elder_65_74: P3, elder_75p: P4 }
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [weber-amjmed-1996, raviele-europace-2011, dejonge-depressanxiety-2016, msd-panic-disorder]
+      locator: "Weber 1996 tóm tắt; EHRA 2011 (lo âu, cơn hoảng sợ 15–31%); de Jonge 2016 bảng 2; MSD (tuổi khởi phát)"
+      reported: "Nguyên nhân tâm thần 31% người hồi hộp (trung tâm đại học Mỹ); lo âu, cơn hoảng sợ 15–31% (EHRA)"
+      population: "Người hồi hộp ở trung tâm y khoa đại học Mỹ và các nghiên cứu châu Âu"
+      note: "Nhóm 'tâm thần' của Weber gồm cả lo âu lan tỏa, trầm cảm; riêng cơn hoảng sợ, rối loạn hoảng sợ ước khoảng một nửa. Rối loạn hoảng sợ ở nước thu nhập thấp, trung bình và ở Trung Quốc, Nhật Bản ít gặp hơn nước thu nhập cao (0,3–1,1% so với 2,2% suốt đời; de Jonge 2016), nên ở Việt Nam chọn P2 (5–20%), không chọn P1. Bệnh thường khởi phát cuối tuổi vị thành niên đến tuổi trưởng thành (MSD; tuổi khởi phát trung vị 32): trẻ 5–12 tuổi P5, 13–17 tuổi P3; khởi phát mới sau 65 tuổi ít gặp: 65–74 tuổi P3, từ 75 tuổi P4. Không có số liệu Việt Nam; cần bác sĩ duyệt."
+  - complaint: dizziness
+    default: P3
+    by_age: { child_5_12: P5, teen_13_17: P4, elder_65_74: P4, elder_75p: P4 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [bosner-bmcfampract-2018, maarsingh-annfammed-2010, dejonge-depressanxiety-2016]
+      note: "Nguyên nhân tâm lý chiếm 1,8–21,6% người chóng mặt ở tuyến ban đầu (Bösner), 10% ở người từ 65 tuổi (Maarsingh; bệnh tâm thần nói chung). Cơn hoảng sợ chỉ là một phần nhóm này: người lớn P3, người cao tuổi, thanh thiếu niên P4, trẻ em P5. Ước lượng."
+prior_modifiers:
+  - when: { sex: [female] }
+    factor: 1.4
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [dejonge-depressanxiety-2016, kessler-archgenpsych-2006, msd-panic-disorder]
+      reported: "Nữ so với nam: OR 1,8 (WHO, nhiều nước), OR 2,3 (Mỹ); MSD: nữ gấp khoảng 2 lần"
+      note: "Với tỷ lệ nam nữ ngang nhau, nữ gấp khoảng 2 lần nam tương ứng hệ số 1,4 cho nữ và 0,7 cho nam so với mức chung."
+  - when: { sex: [male] }
+    factor: 0.7
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [dejonge-depressanxiety-2016, kessler-archgenpsych-2006, msd-panic-disorder]
+      reported: "Nữ so với nam: OR 1,8–2,3"
+      note: "Xem hệ số của nữ."
+findings:
+  - finding: panic_fear
+    freq: frequent
+    evidence:
+      tier: C
+      basis: verbal
+      sources: [nhs-panic-disorder, msd-panic-disorder]
+      locator: "NHS Panic disorder (cảm giác sợ hãi hoặc sợ chết); MSD (sợ chết, sợ mất kiểm soát)"
+      note: "Cơn hoảng sợ là cơn sợ hãi hoặc khó chịu dữ dội; tiêu chuẩn chỉ cần 4 trong 13 triệu chứng, nên không phải ai cũng có cảm giác sợ chết hay mất kiểm soát. Chọn frequent (không chọn very_frequent) để câu trả lời 'Không' không loại trừ cơn hoảng sợ. Ước lượng."
+  - finding: palpitations
+    freq: very_frequent
+    evidence:
+      tier: C
+      basis: verbal
+      sources: [nhs-panic-disorder, msd-panic-disorder, raviele-europace-2011]
+      note: "Có ý nghĩa với triệu chứng chính Chóng mặt (với Hồi hộp là dấu hiệu ngầm định). Tim đập nhanh là triệu chứng đầu tiên trong danh sách của NHS và một trong 13 triệu chứng của MSD; EHRA: lo âu, cơn hoảng sợ chiếm 15–31% người hồi hộp. Ước lượng."
+  - finding: dizziness
+    freq: frequent
+    evidence:
+      tier: C
+      basis: verbal
+      sources: [nhs-panic-disorder, msd-panic-disorder]
+      note: "Có ý nghĩa với Hồi hộp. Chóng mặt, mất vững, choáng là triệu chứng của cơn (MSD, NHS). Tỷ lệ nền 0,2. Ước lượng."
+  - finding: breathing_difficulty
+    freq: frequent
+    evidence:
+      tier: C
+      basis: verbal
+      sources: [nhs-panic-disorder, msd-panic-disorder]
+      note: "Khó thở, cảm giác ngột ngạt là triệu chứng hay gặp của cơn (NHS, MSD). Khi kèm hồi hộp, quy tắc rf_palpitations_danger vẫn xếp mức 2 vì tại nhà không phân biệt được với bệnh tim. Ước lượng."
+  - finding: perioral_tingling
+    freq: frequent
+    evidence:
+      tier: C
+      basis: verbal
+      sources: [nhs-panic-disorder, msd-panic-disorder, raviele-europace-2011]
+      note: "Tê hoặc châm chích, tê bì đầu ngón tay là triệu chứng của cơn (NHS, MSD); EHRA: hồi hộp do lo âu hay kèm tê bì. Ước lượng."
+  - finding: tremor
+    freq: frequent
+    evidence:
+      tier: C
+      basis: verbal
+      sources: [nhs-panic-disorder, msd-panic-disorder]
+      note: "Run, run chân tay là triệu chứng của cơn (NHS, MSD). Cùng cụm 'run tay, vã mồ hôi' nên không đếm trùng hoàn toàn. Ước lượng."
+  - finding: cold_sweat
+    freq: frequent
+    evidence:
+      tier: C
+      basis: verbal
+      sources: [nhs-panic-disorder, msd-panic-disorder]
+      note: "Vã mồ hôi là triệu chứng của cơn (NHS, MSD). Ước lượng."
+  - finding: chest_pain_pressure
+    freq: occasional
+    evidence:
+      tier: C
+      basis: verbal
+      sources: [nhs-panic-disorder, msd-panic-disorder]
+      note: "Đau, tức ngực là một triệu chứng của cơn (NHS, MSD). Chọn occasional để câu trả lời 'có đau ngực' không kéo khả năng về cơn hoảng sợ, vì tại nhà không phân biệt được với hội chứng vành cấp; quy tắc đã xếp mức 1–2. Ước lượng."
+  - finding: fainting_or_near_fainting
+    freq: occasional
+    evidence:
+      tier: C
+      basis: verbal
+      sources: [nhs-panic-disorder, msd-panic-disorder]
+      note: "Có ý nghĩa với Hồi hộp và Chóng mặt. Cảm giác sắp ngất là triệu chứng của cơn (NHS, MSD), nhưng ngất thật ít gặp. Ước lượng."
+  - finding: similar_episodes_before
+    freq: frequent
+    evidence:
+      tier: C
+      basis: verbal
+      sources: [msd-panic-disorder, nhs-panic-disorder]
+      note: "Rối loạn hoảng sợ là các cơn tái diễn, bất ngờ; người bệnh hay lo sợ cơn tiếp theo (MSD). Bệnh gồm cả cơn hoảng sợ lần đầu nên chọn frequent. Tỷ lệ nền 0,2."
+  - finding: palpitation_rhythm
+    dist: { fast_regular: 0.45, irregular: 0.05, skipped_beats: 0.1, forceful: 0.4 }
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [raviele-europace-2011]
+      locator: "EHRA 2011 bảng 2 (hồi hộp do lo âu)"
+      note: "Phân bố trong số người đã hồi hộp. Hồi hộp do lo âu: đều, hơi nhanh, khởi phát từ từ, sau căng thẳng (EHRA); nhiều người tả là tim đập mạnh. Ước lượng."
+  - finding: palpitation_abrupt_onset
+    freq: rare
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [raviele-europace-2011, thavendiranathan-jama-2009]
+      note: "Tính trong số người đã hồi hộp. Hồi hộp do lo âu khởi phát và kết thúc từ từ (EHRA), khác cơn nhịp nhanh bật tắt. Mức rare thấp hơn tỷ lệ nền 0,15: trả lời 'Có' nghiêng về rối loạn nhịp, là hướng an toàn (tiền sử rối loạn hoảng sợ chỉ làm giảm nhẹ khả năng rối loạn nhịp, LR 0,26)."
+  - finding: palpitation_duration
+    dist: { seconds: 0.05, minutes_hours: 0.85, ongoing: 0.1 }
+    evidence:
+      tier: C
+      basis: verbal
+      sources: [nhs-panic-disorder, msd-panic-disorder]
+      note: "Phân bố trong số người đã hồi hộp. Phần lớn cơn kéo dài 5–20 phút, có khi tới 1 giờ (NHS); vài phút đến 1 giờ (MSD). Ước lượng."
+  - finding: pulse_measured
+    dist: { lt_40: 0.004, n40_100: 0.24, n100_150: 0.15, gt_150: 0.006, not_measured: 0.6 }
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [raviele-europace-2011]
+      note: "'Chưa đo' giữ đúng tỷ lệ nền 0,6. Hồi hộp do lo âu chỉ hơi nhanh (EHRA): mạch thường dưới 100 hoặc 100–150, hiếm khi trên 150. Ước lượng."
+  - finding: dizziness_pattern
+    dist: { brief_episodes: 0.15, long_episodes: 0.55, continuous: 0.05, chronic: 0.25 }
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [nhs-panic-disorder, bosner-bmcfampract-2018]
+      note: "Tính trong số người chóng mặt. Chóng mặt trong cơn kéo dài theo cơn (5–20 phút, NHS); một phần người lo âu kéo dài bị choáng váng âm ỉ nhiều tuần. Ước lượng."
+  - finding: vertigo_spinning
+    freq: occasional
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [msd-panic-disorder]
+      note: "Tính trong số người chóng mặt. Chóng mặt trong cơn hoảng sợ chủ yếu là choáng váng, mất vững (MSD), ít khi thấy mọi vật quay. Mức occasional thấp hơn tỷ lệ nền 0,3. Ước lượng."
+  - finding: dizziness_positional
+    freq: rare
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [msd-panic-disorder]
+      note: "Tính trong số người chóng mặt. Chóng mặt của cơn hoảng sợ không do tư thế đầu. Mức rare thấp hơn tỷ lệ nền 0,1. Ước lượng."
+warning_signs: [chest_pain_pressure, breathing_difficulty, fainting_or_near_fainting, es_self_harm]
+self_care_vi:
+  - "Trong cơn, ngồi yên ở chỗ an toàn, thở chậm và sâu, tự nhắc rằng cơn sẽ qua."
+  - "Hạn chế cà phê, rượu bia, thuốc lá; ngủ đủ giấc."
+  - "Không tự dùng thuốc an thần, thuốc ngủ; hỏi bác sĩ hoặc dược sĩ trước khi dùng thuốc."
+see_doctor_vi:
+  - "Đặt lịch khám trong vài ngày, nhất là khi các cơn lặp lại hoặc làm bạn ngại ra ngoài."
+  - "Nếu là lần đầu, hoặc cơn có đau ngực, khó thở, choáng ngất, cần đi khám ngay để loại trừ bệnh tim."
+  - "Bác sĩ có thể giới thiệu khám chuyên khoa tâm thần hoặc tâm lý."
+review:
+  status: draft
+  authors: ["agent:pass-b"]
+  updated: "2026-10-25"
+  notes_vi: "Lượt B (Giai đoạn 3, lô 1, phần b). Mức xử trí 4, không thuộc nhóm không được bỏ sót, giữ như gợi ý: NHS khuyên khám bác sĩ gia đình, cơn không nguy hiểm; MSD: chỉ kết luận rối loạn hoảng sợ sau khi đã khám loại trừ bệnh cơ thể. Bộ Y tế: Quyết định 2058/QĐ-BYT (2020) về một số rối loạn tâm thần thường gặp không có bài riêng về rối loạn hoảng sợ (lượt B xem mục lục trên vnras.com), nên dùng NHS, MSD, khảo sát WHO. Điểm chưa chắc chắn: (1) chưa mở được nguồn có tỷ lệ từng triệu chứng của cơn, nên tần suất các triệu chứng là ước lượng từ danh sách triệu chứng (bậc C); (2) prior dựa trên số liệu Mỹ, châu Âu, có hiệu chỉnh vì tỷ lệ mắc ở châu Á thấp hơn; (3) người rối loạn nhịp (nhất là nhịp nhanh trên thất) hay bị nhầm là cơn hoảng sợ, nên các liên kết dễ gây nhầm (đau ngực, kiểu cơn bật tắt) được để thấp; (4) các triệu chứng cơ thể của cơn trùng với hạ đường huyết, cường giáp."

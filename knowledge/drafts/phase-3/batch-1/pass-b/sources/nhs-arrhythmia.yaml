@@ -1,0 +1,12 @@
+id: nhs-arrhythmia
+type: web_page
+title: "Arrhythmia"
+publisher: "NHS (UK)"
+url: "https://www.nhs.uk/conditions/arrhythmia/"
+license_class: L1
+license_note: "Open Government Licence v3.0; bản chuyển thể không được trình bày như nội dung của NHS."
+default_tier: C
+accessed: "2026-10-25"
+verified: true
+verified_by: "agent:pass-b"
+notes_vi: "Lượt B mở trang (rà soát lần cuối 28/10/2024, hạn 28/10/2027). Ba kiểu: nhịp nhanh, nhịp chậm, nhịp không đều; nêu rung nhĩ và nhịp nhanh trên thất. Triệu chứng: hồi hộp (đập thình thịch, dồn dập, rung, hẫng nhịp), khó thở, choáng váng hoặc chóng mặt, cảm giác sắp ngất, mệt, đau hoặc tức ngực. Gọi 999 hoặc đến cấp cứu khi hồi hộp kèm đau ngực, khó thở, chóng mặt, choáng hoặc ngất, suýt ngất; khám bác sĩ khi nghĩ mình có rối loạn nhịp, hoặc hồi hộp hay tái lại, nặng dần. Yếu tố khởi phát: cà phê, rượu, thuốc lá, chất gây nghiện, thuốc, vi rút; bệnh nền: tăng huyết áp, bệnh mạch vành, bệnh van tim, nhồi máu cơ tim, hội chứng Wolff-Parkinson-White."

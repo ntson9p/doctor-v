@@ -1,0 +1,15 @@
+id: kalantri-plosone-2010
+type: primary_study
+title: "Accuracy and reliability of pallor for detecting anaemia: a hospital-based diagnostic accuracy study"
+publisher: "PLoS One 2010;5(1):e8545 (Kalantri A, Karambelkar M, Joshi R, Kalantri S, Jajoo U)"
+date: "2010-01"
+url: "https://europepmc.org/article/MED/20049324"
+doi: "10.1371/journal.pone.0008545"
+pmid: "20049324"
+license_class: L1
+license_note: "CC BY (theo Europe PMC)."
+default_tier: B
+accessed: "2026-10-25"
+verified: true
+verified_by: "agent:pass-b"
+notes_vi: "Lượt B đọc toàn văn qua API Europe PMC (PMC2797134). 390 người từ 12 tuổi ở bệnh viện dạy học tại Ấn Độ (ngoại trú và nội trú). Các nghiên cứu trước ở người lớn: độ nhạy của da, niêm mạc nhợt 19–70%, độ đặc hiệu 70–100%. Trong nghiên cứu: ở ngưỡng huyết sắc tố 9 g/dL không vị trí nào loại trừ hay khẳng định được thiếu máu (diện tích dưới đường cong 0,66–0,70); không nhợt lưỡi, kết mạc gần như loại trừ thiếu máu nặng dưới 7 g/dL. Hai người khám đánh giá rất khác nhau (kappa 0,07 với kết mạc). Ý nghĩa: người dùng tự nhận xét da xanh còn kém chính xác hơn."

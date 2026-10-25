@@ -1,0 +1,15 @@
+id: thavendiranathan-jama-2009
+type: systematic_review
+title: "Does this patient with palpitations have a cardiac arrhythmia?"
+publisher: "JAMA 2009;302(19):2135–2143 (Thavendiranathan P, Bagai A, Khoo C, Dorian P, Choudhry NK)"
+date: "2009-11"
+url: "https://europepmc.org/article/MED/19920238"
+doi: "10.1001/jama.2009.1673"
+pmid: "19920238"
+license_class: L3
+license_note: "Bản quyền nhà xuất bản: chỉ dùng dữ kiện kèm trích dẫn, không sao chép câu chữ."
+default_tier: A
+accessed: "2026-10-25"
+verified: true
+verified_by: "agent:pass-b"
+notes_vi: "Lượt B đọc tóm tắt qua API Europe PMC. Tổng quan JAMA Rational Clinical Examination: 7 nghiên cứu về độ chính xác, 16 nghiên cứu về hiệu quả theo dõi điện tim. Làm tăng nhẹ khả năng rối loạn nhịp: có bệnh tim đã biết (LR 2,03), hồi hộp bị ảnh hưởng bởi giấc ngủ (LR 2,29), hồi hộp khi đang làm việc (LR 2,17). Cảm giác đập nhanh, đều, thình thịch ở cổ (LR 177) hoặc thấy mạch cổ đập (LR 2,68) làm tăng khả năng nhịp nhanh vòng vào lại nút nhĩ thất (một loại nhịp nhanh kịch phát trên thất); không có cảm giác này LR 0,07. Làm giảm nhẹ khả năng rối loạn nhịp: đã biết có rối loạn hoảng sợ (LR 0,26; khoảng tin cậy 0,07–1,01) và cơn hồi hộp dưới 5 phút (LR 0,38). Hỏi bệnh và khám không đủ để loại trừ rối loạn nhịp; cần ghi điện tim lúc có triệu chứng."

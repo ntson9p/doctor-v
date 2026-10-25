@@ -1,0 +1,15 @@
+id: newmantoker-mayoclinproc-2007
+type: primary_study
+title: "Imprecision in patient reports of dizziness symptom quality: a cross-sectional study conducted in an acute care setting"
+publisher: "Mayo Clin Proc 2007;82(11):1329–1340 (Newman-Toker DE, Cannon LM, Stofferahn ME và cộng sự)"
+date: "2007-11"
+url: "https://europepmc.org/article/MED/17976352"
+doi: "10.4065/82.11.1329"
+pmid: "17976352"
+license_class: L3
+license_note: "Bản quyền nhà xuất bản: chỉ dùng dữ kiện kèm trích dẫn."
+default_tier: B
+accessed: "2026-10-25"
+verified: true
+verified_by: "agent:pass-b"
+notes_vi: "Lượt B đọc tóm tắt qua API Europe PMC. 872 người chóng mặt ở 2 khoa cấp cứu (Mỹ). 62% chọn nhiều kiểu chóng mặt cùng lúc; khi chọn một kiểu duy nhất, 52% đổi câu trả lời khi hỏi lại sau khoảng 6 phút; trong 218 người không nêu cảm giác quay, 70% xác nhận 'quay hoặc chuyển động' khi được hỏi thẳng. Ngược lại, người bệnh kể thời gian kéo dài và yếu tố khởi phát của chóng mặt rõ ràng, nhất quán và tin cậy. Ý nghĩa cho doctor-v: câu hỏi kiểu cảm giác (vertigo_spinning) phân biệt kém; câu hỏi thời gian (dizziness_pattern) và yếu tố tư thế (dizziness_positional) đáng tin hơn."

@@ -186,6 +186,8 @@
     text_vi: "Sờ bàn tay, bàn chân có thấy lạnh hơn hẳn bình thường không?"
   cluster: shock_signs
   leak: specific
+  leak_by_complaint: { syncope: 0.15 }
+  leak_note: "Sau một lần ngất thông thường, người bệnh hay còn tái, lạnh tay chân trong ít phút, nên dưới triệu chứng Ngất 1% là quá thấp (lượt B lô 1 phần b). Người bảo trì ước lượng."
 - id: decreased_urine
   kind: sign
   type: binary

@@ -1,0 +1,169 @@
+id: benign_paroxysmal_positional_vertigo
+names:
+  vi: "Chóng mặt kịch phát lành tính"
+  vi_common: ["Chóng mặt tư thế kịch phát lành tính", "Chóng mặt do thay đổi tư thế đầu"]
+  en: "Benign paroxysmal positional vertigo"
+codes:
+  icd10: "H81.1"
+  icd10_verified: false
+  mondo: "MONDO:8000018"
+summary_vi:
+  - "Những hạt thăng bằng nhỏ trong tai trong bị lạc chỗ, gây chóng mặt khi đổi tư thế đầu."
+  - "Mỗi cơn quay cuồng thường dưới 1 phút, hay xảy ra khi trở mình, nằm xuống hoặc ngửa cổ."
+  - "Bệnh lành tính, thường tự hết sau vài tuần và có thể đỡ nhanh nhờ động tác xoay đầu do nhân viên y tế làm."
+urgency: 4
+cant_miss: false
+specialties: [ent, neurology]
+priors:
+  - complaint: dizziness
+    default: P2
+    by_age: { child_5_12: P4, teen_13_17: P3 }
+    evidence:
+      tier: A
+      basis: judgment
+      sources: [bosner-bmcfampract-2018, vonbrevern-jnnp-2007, strupp-jvestibres-2022]
+      locator: "Bösner 2018 bảng 3, bảng 4; von Brevern 2007 tóm tắt, bảng 2; Strupp 2022 mục Dịch tễ"
+      reported: "Tuyến ban đầu: 4,3–39,5% người chóng mặt (6 nghiên cứu), 8,0% ở người trên 60 tuổi (Lawson 1999); cộng đồng: 8% người chóng mặt vừa hoặc nặng, khoảng 1/3 người chóng mặt do tiền đình; tỷ lệ 1 năm 0,5% ở 18–39 tuổi, 1,7% ở 40–59 tuổi, 3,4% từ 60 tuổi"
+      population: "Tuyến ban đầu ở châu Âu, Mỹ; điều tra dân số trưởng thành ở Đức"
+      note: "Chưa có số liệu Việt Nam. Là bệnh tiền đình ngoại biên hay gặp nhất (Strupp 2022, hơn 36.000 người ở trung tâm chóng mặt). Chọn P2 (5–20%) cho người lớn, nằm giữa khoảng rất rộng của Bösner. Bệnh tăng rõ theo tuổi (von Brevern: OR 1,8 mỗi thập kỷ), nhưng người cao tuổi chóng mặt cũng có nhiều nguyên nhân tim mạch, tư thế (Maarsingh 2010: 56,8%), nên giữ P2 cho mọi nhóm người lớn thay vì P1. Thiếu niên P3; trẻ 5–12 tuổi hiếm gặp, P4 (ước lượng). Không dùng hệ số giới tính: bệnh ở nữ gấp khoảng 2,5 lần nam (von Brevern), nhưng người đi khám vì chóng mặt cũng khoảng hai phần ba là nữ (Bösner: 58–83%), nên chênh lệch so với các nguyên nhân chóng mặt khác nhỏ. Cần bác sĩ duyệt."
+findings:
+  - finding: dizziness_positional
+    freq: almost_always
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [vonbrevern-jnnp-2007, msd-bppv, newmantoker-mayoclinproc-2007]
+      locator: "von Brevern 2007 bảng 1, bảng 4; MSD mục Triệu chứng"
+      reported: "Tiêu chuẩn chẩn đoán: mọi cơn đều do thay đổi tư thế đầu; khởi phát khi trở mình trên giường 85%, khi nằm xuống 74%, khi ngửa đầu 41%; mọi người bệnh đều bị khi ở trên giường"
+      population: "Điều tra dân số ở Đức (80 người bệnh)"
+      note: "Tần suất trong số người đã chóng mặt. Newman-Toker 2007: người bệnh kể yếu tố khởi phát rõ ràng và tin cậy, khác với kiểu cảm giác chóng mặt, nên giữ almost_always. Trả lời 'Không' làm giảm mạnh khả năng bệnh này."
+  - finding: vertigo_spinning
+    freq: very_frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [vonbrevern-jnnp-2007, msd-bppv, newmantoker-mayoclinproc-2007]
+      locator: "von Brevern 2007 bảng 4 và phần Bàn luận"
+      reported: "Cảm giác quay 86%; khoảng 14% chỉ thấy choáng váng không đặc hiệu"
+      note: "Tần suất trong số người đã chóng mặt. Không chọn almost_always vì mô tả kiểu chóng mặt kém ổn định (Newman-Toker 2007: 52% đổi câu trả lời khi hỏi lại)."
+  - finding: dizziness_pattern
+    dist: { brief_episodes: 0.72, long_episodes: 0.16, continuous: 0.04, chronic: 0.08 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [vonbrevern-jnnp-2007, msd-bppv, grace3-dizziness-2023]
+      locator: "von Brevern 2007 bảng 1, bảng 3; MSD mục Triệu chứng; GRACE-3 khuyến cáo 11–15"
+      note: "Mỗi cơn dưới 1 phút (tiêu chuẩn của von Brevern; MSD: vài giây đến vài phút). GRACE-3: cơn chóng mặt có yếu tố khởi phát là kiểu của bệnh này. Đợt bệnh kéo dài trung vị 2 tuần, 12,5% quá 12 tuần; một số người kể cả cảm giác choáng váng còn lại sau cơn, nên để 16% cho 'vài phút đến vài giờ' và 8% cho 'âm ỉ nhiều tuần'. Phân bố là ước lượng."
+  - finding: nausea
+    freq: frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [vonbrevern-jnnp-2007, msd-bppv]
+      locator: "von Brevern 2007 bảng 4"
+      reported: "Buồn nôn 33%"
+      note: "33% nằm ở ranh giới occasional và frequent; người đi khám thường có cơn nặng hơn người trong điều tra cộng đồng, nên chọn frequent."
+  - finding: vomiting
+    freq: occasional
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [vonbrevern-jnnp-2007, msd-bppv]
+      locator: "von Brevern 2007 bảng 4"
+      reported: "Nôn 14%"
+  - finding: sudden_loss_of_balance
+    freq: frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [vonbrevern-jnnp-2007]
+      locator: "Bảng 4"
+      reported: "Mất thăng bằng 49%"
+      note: "Tỷ lệ nền khi chóng mặt là 0,4 nên câu trả lời gần như trung tính."
+  - finding: similar_episodes_before
+    freq: frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [vonbrevern-jnnp-2007, msd-bppv]
+      locator: "von Brevern 2007 phần Kết quả"
+      reported: "56% có nhiều đợt tái lại"
+      note: "Trong một đợt, cơn quay cuồng còn lặp lại nhiều lần mỗi ngày, nên nhiều người trả lời 'có' ngay ở đợt đầu."
+  - finding: hearing_loss_tinnitus
+    freq: rare
+    evidence:
+      tier: C
+      basis: verbal
+      sources: [msd-bppv]
+      locator: "Mục Triệu chứng"
+      note: "MSD: không có nghe kém, ù tai. Ù tai do tuổi tác vẫn có thể có, nên dùng rare (thấp hơn tỷ lệ nền 5%) thay vì very_rare."
+  - finding: cannot_walk_unaided
+    freq: rare
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-5643-2015, msd-bppv]
+      locator: "5643/QĐ-BYT, bài Chóng mặt, mục 3.1"
+      note: "5643/QĐ-BYT: chóng mặt do tiền đình ngoại biên thành từng cơn, ngoài cơn người bệnh đi lại được. Câu hỏi đã loại trừ lúc đang trong cơn ngắn. Thấp hơn tỷ lệ nền 5%: trả lời 'Có' làm giảm khả năng bệnh này, nghiêng về đột quỵ hoặc viêm dây thần kinh tiền đình."
+  - finding: vision_loss_or_double
+    freq: very_rare
+    evidence:
+      tier: C
+      basis: verbal
+      sources: [msd-bppv, grace3-dizziness-2023]
+      note: "MSD: khám thần kinh bình thường. Nhìn đôi, mất thị lực kèm chóng mặt gợi ý tổn thương trung ương. Thấp hơn tỷ lệ nền 1%."
+  - finding: transient_neuro_symptoms
+    freq: very_rare
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [vonbrevern-jnnp-2007, byt-qd-3312-2024]
+      locator: "von Brevern 2007 bảng 1; 3312/QĐ-BYT (2024) bài 1 mục 3.1"
+      note: "Tiêu chuẩn chẩn đoán loại trừ triệu chứng thần kinh đi kèm. Yếu, tê nửa người hoặc nói khó cần nghĩ cơn thiếu máu não thoáng qua. Thấp hơn tỷ lệ nền 1%."
+  - finding: fever
+    freq: rare
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [msd-bppv, nhs-vertigo]
+      note: "Bệnh không gây sốt; NHS Vertigo: chóng mặt kèm sốt cần khám khẩn. Thấp hơn tỷ lệ nền 5%."
+  - finding: fainting_or_near_fainting
+    freq: rare
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [vonbrevern-jnnp-2007, msd-bppv]
+      note: "Bệnh không gây mất ý thức. Cơn quay cuồng mạnh có thể bị mô tả là choáng, nên dùng rare thay vì very_rare. Thấp hơn tỷ lệ nền 5% (lượt R đề xuất nâng tỷ lệ nền của câu này khi triệu chứng chính là Chóng mặt; khi đó mức này vẫn hợp lý)."
+  - finding: dizziness_on_standing
+    freq: occasional
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [vonbrevern-jnnp-2007]
+      locator: "Bảng 4"
+      reported: "Cơn xuất hiện khi ngồi dậy từ tư thế nằm ở 58%"
+      note: "Câu hỏi hỏi choáng, tối sầm mắt khi vừa đứng dậy (kiểu hạ huyết áp tư thế), nhưng người bệnh vẫn có thể trả lời 'có' vì cơn quay khi ngồi dậy. Ước 20%, hơi cao hơn tỷ lệ nền 15%."
+  - finding: syncope_trigger
+    dist: { standing_heat: 0.03, emotion_pain: 0.02, standing_up: 0.35, toilet_cough: 0.02, exertion: 0.03, lying: 0.4, no_trigger: 0.15 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [vonbrevern-jnnp-2007]
+      locator: "Bảng 4"
+      note: "Chỉ hỏi khi có choáng như sắp ngất (hiếm ở bệnh này). Theo yếu tố khởi phát của cơn: khi nằm xuống, trở mình (74–85%), khi ngồi dậy (58%). Phân bố là ước lượng."
+warning_signs: [vision_loss_or_double, transient_neuro_symptoms, cannot_walk_unaided, hearing_loss_sudden, headache_thunderclap]
+self_care_vi:
+  - "Khi đang chóng mặt, ngồi hoặc nằm yên đến khi hết cơn rồi mới từ từ đứng dậy."
+  - "Đổi tư thế đầu chậm, nhất là khi ngồi dậy khỏi giường hoặc ngửa cổ."
+  - "Bật đèn khi dậy ban đêm và vịn vào tường hoặc thành giường để tránh ngã."
+  - "Không lái xe, leo cao hoặc vận hành máy khi đang chóng mặt."
+  - "Hỏi bác sĩ hoặc dược sĩ trước khi dùng thuốc chống chóng mặt; thuốc này thường không cần dùng lâu."
+see_doctor_vi:
+  - "Đặt lịch khám trong vài ngày để được làm động tác xoay đầu, giúp hết chóng mặt nhanh hơn."
+  - "Đi khám lại nếu sau 1 tháng vẫn còn chóng mặt, hoặc chóng mặt hay tái lại."
+  - "Đến cấp cứu ngay nếu kèm nhìn đôi, nói khó, yếu tê tay chân, không tự đi được hoặc đột ngột nghe kém."
+review:
+  status: draft
+  authors: ["agent:pass-b"]
+  updated: "2026-10-25"
+  notes_vi: "Mức xử trí 4 giữ như gợi ý: AAO-HNS 2017 cho phép theo dõi kèm hẹn khám lại trong 1 tháng, điều trị bằng thủ thuật xoay đầu, không cần chụp hình ảnh khi đủ tiêu chuẩn (bhattacharyya-otohns-2017, chỉ đọc tóm tắt); NHS Vertigo khuyên khám không khẩn khi chóng mặt không hết hoặc hay tái lại. Dấu hiệu trung ương do quy tắc an toàn xử trí. Điểm cần bác sĩ xem: (1) prior P2 cho mọi nhóm người lớn là ước lượng từ số liệu châu Âu rất không đồng nhất (4,3–39,5%), chưa có số liệu Việt Nam; người cao tuổi có thể cao hơn (P1); (2) tần suất triệu chứng lấy từ điều tra dân số ở Đức (von Brevern 2007), người đi khám có thể nặng hơn; (3) không dùng hệ số giới tính (lý do ở prior); (4) mã H81.1 và tên chính thức chưa đối chiếu được với ICD-10 của Bộ Y tế (icd.kcb.vn là ứng dụng web, không đọc được bằng công cụ tự động); (5) tên thường gọi 'rối loạn tiền đình' là từ chung cho mọi chóng mặt nên không dùng làm tên bệnh."

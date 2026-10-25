@@ -1,0 +1,12 @@
+id: nhs-low-blood-pressure
+type: web_page
+title: "Low blood pressure (hypotension)"
+publisher: "NHS (UK)"
+url: "https://www.nhs.uk/conditions/low-blood-pressure-hypotension/"
+license_class: L1
+license_note: "Open Government Licence v3.0; bản chuyển thể không được trình bày như nội dung của NHS."
+default_tier: C
+accessed: "2026-10-25"
+verified: true
+verified_by: "agent:pass-b"
+notes_vi: "Lượt B mở trang (rà soát lần cuối 11/7/2023, hạn rà soát 11/7/2026, chưa thấy bản mới). Triệu chứng: choáng váng hoặc chóng mặt, buồn nôn, nhìn mờ, mệt yếu, lú lẫn, ngất; xảy ra khi đứng dậy hoặc đổi tư thế đột ngột gọi là hạ huyết áp tư thế. Nguyên nhân nêu trên trang: thể trạng khỏe hoặc di truyền, tuổi cao, có thai, một số bệnh như đái tháo đường, một số thuốc. Tự chăm sóc: đứng dậy từ từ (nằm sang ngồi rồi mới đứng), ăn ít một và nhiều bữa, uống nhiều nước; tránh ngồi, đứng lâu, cúi hay đổi tư thế đột ngột, uống nhiều rượu. Khám bác sĩ (không khẩn) khi hay bị chóng mặt, ngất."

@@ -1,0 +1,181 @@
+id: pulmonary_embolism
+names:
+  vi: "Thuyên tắc mạch phổi"
+  vi_common: ["Thuyên tắc phổi", "Tắc mạch phổi", "Tắc động mạch phổi do cục máu đông"]
+  en: "Pulmonary embolism"
+codes:
+  icd10: "I26"
+  icd10_verified: true
+  mondo: "MONDO:0005279"
+summary_vi:
+  - "Cục máu đông, thường từ tĩnh mạch ở chân, theo dòng máu lên làm tắc động mạch phổi."
+  - "Hay gây khó thở đột ngột, đau ngực khi hít sâu, tim đập nhanh, có khi choáng ngất hoặc ho ra máu."
+  - "Đây là bệnh nguy hiểm tính mạng, cần được cấp cứu ngay."
+urgency: 1
+cant_miss: true
+specialties: [emergency, cardiology, respiratory]
+priors:
+  - complaint: syncope
+    default: P5
+    by_age: { child_5_12: P6, teen_13_17: P6, elder_65_74: P4, elder_75p: P4 }
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [costantino-jamaim-2018, badertscher-jacc-2019, esc-syncope-2018-practical, esc-pe-2019]
+      locator: "Costantino 2018 tóm tắt; Badertscher 2019 tóm tắt; hướng dẫn thực hành ESC 2018 bảng web 2; ESC 2019 mục 3.1"
+      reported: "Thuyên tắc phổi ở người ngất đến khoa cấp cứu: 0,06–0,55% (dữ liệu 1,67 triệu lượt, 4 nước); 1,4% khi đánh giá có hệ thống (BASEL IX)"
+      population: "Người lớn đến khoa cấp cứu vì ngất ở Bắc Mỹ, châu Âu"
+      note: "Chỉ 2–10% người ngất đến khoa cấp cứu (ESC) và nhóm này nặng hơn, nên ở người tự kiểm tra tỷ lệ còn thấp hơn số liệu cấp cứu. Huyết khối tĩnh mạch ở người từ 80 tuổi cao gần 8 lần so với tuổi 40–49 (ESC 2019). Người lớn dưới 65 tuổi: 0,02–0,2% (P5); từ 65 tuổi: 0,2–1% (P4); trẻ em, thanh thiếu niên: dưới 0,02% (P6). Không có số liệu Việt Nam; cần bác sĩ duyệt."
+  - complaint: palpitations
+    default: P6
+    by_age: { adult_45_64: P5, elder_65_74: P5, elder_75p: P5 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [esc-pe-2019, weber-amjmed-1996, raviele-europace-2011]
+      note: "Tim nhanh là dấu hiệu hay gặp của thuyên tắc phổi (nhịp nhanh xoang khoảng 40%, ESC 2019), nhưng người bệnh thường đi khám vì khó thở, đau ngực; các nghiên cứu về nguyên nhân hồi hộp (Weber 1996, EHRA 2011) không nêu thuyên tắc phổi. Dưới 45 tuổi P6, từ 45 tuổi P5. Ước lượng."
+  - complaint: dizziness
+    default: P6
+    by_age: { adult_45_64: P5, elder_65_74: P5, elder_75p: P5 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [esc-pe-2019, bosner-bmcfampract-2018]
+      note: "ESC 2019: tiền ngất là một trong các biểu hiện thường khiến nghĩ tới thuyên tắc phổi; các tổng quan về chóng mặt ở tuyến ban đầu không nêu thuyên tắc phổi là nguyên nhân thường gặp (Bösner). Dưới 45 tuổi P6, từ 45 tuổi P5. Ước lượng."
+findings:
+  - finding: breathing_difficulty
+    freq: very_frequent
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [esc-pe-2019, nhs-pulmonary-embolism]
+      locator: "ESC 2019 mục 4.1; NHS Pulmonary embolism (sudden difficulty breathing)"
+      note: "Khó thở là biểu hiện chính, thường cấp và nặng ở thuyên tắc trung tâm, nhẹ và thoáng qua ở thuyên tắc nhỏ ngoại vi (ESC). Chọn very_frequent, không chọn almost_always, vì thuyên tắc nhỏ có thể chỉ khó thở nhẹ hoặc không có. Ước lượng."
+  - finding: pleuritic_chest_pain
+    freq: frequent
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [esc-pe-2019, nhs-pulmonary-embolism]
+      locator: "ESC 2019 mục 4.1 (đau ngực hay gặp, thường do kích thích màng phổi); NHS (chest pain worse when you breathe in)"
+      note: "Đau ngực khi hít sâu hay gặp, do cục tắc nhỏ ở xa gây nhồi máu phổi. Ước khoảng một nửa."
+  - finding: chest_pain_pressure
+    freq: occasional
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [esc-pe-2019, nhs-pulmonary-embolism]
+      locator: "ESC 2019 mục 4.1 (ở thuyên tắc trung tâm, đau có thể giống đau thắt ngực); NHS (pain in the chest or upper back)"
+      note: "Đau tức giữa ngực kiểu thắt ngực gặp ở thuyên tắc trung tâm, ít hơn đau kiểu màng phổi. Ước 20%."
+  - finding: hemoptysis
+    freq: occasional
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [esc-pe-2019, nhs-pulmonary-embolism]
+      locator: "ESC 2019 mục 4.1 (ho ra máu là một biểu hiện khiến nghĩ tới), thang Geneva; NHS (coughing up blood)"
+      note: "Ho ra máu là một trong bốn biểu hiện chính và là một mục của thang Geneva, nhưng gặp ở số ít người bệnh; ước 5–15%, xếp occasional. Tỷ lệ nền 1% nên trả lời 'Có' làm tăng mạnh khả năng bệnh."
+  - finding: leg_swelling_one_side
+    freq: occasional
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [esc-pe-2019, nhs-pulmonary-embolism]
+      locator: "ESC 2019 thang Geneva (đau một chân; đau khi ấn dọc tĩnh mạch và phù một chân); NHS (pain and swelling in a leg)"
+      note: "Dấu hiệu huyết khối tĩnh mạch sâu ở chân chỉ có ở một phần người thuyên tắc phổi; ước 20%. Tỷ lệ nền 0,03."
+  - finding: recent_immobility
+    freq: frequent
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [esc-pe-2019, nhs-pulmonary-embolism]
+      locator: "ESC 2019 mục 3.2, bảng 3; NHS (long journeys of 4 hours or more; being in hospital)"
+      note: "Khoảng 40% người thuyên tắc phổi không có yếu tố thuận lợi (ESC); phẫu thuật, gãy xương, nằm lâu, ngồi bất động đường dài là các yếu tố thường gặp (cùng với ung thư, từng bị huyết khối, thai sản, thuốc tránh thai). Ước 35–45% có một yếu tố trong câu hỏi: frequent. Tỷ lệ nền 0,08."
+  - finding: previous_clot
+    freq: occasional
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [esc-pe-2019]
+      locator: "ESC 2019 bảng 3 (từng bị huyết khối tĩnh mạch: yếu tố mạnh, OR trên 10), thang Geneva"
+      note: "Từng bị huyết khối tĩnh mạch là yếu tố nguy cơ mạnh nhưng chỉ có ở một phần người bệnh; ước 10–25%. Tỷ lệ nền 0,01."
+  - finding: active_cancer
+    freq: occasional
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [esc-pe-2019]
+      locator: "ESC 2019 bảng 3 (ung thư: yếu tố trung bình, cao nhất khi di căn), thang Geneva"
+      note: "Ung thư đang tiến triển là yếu tố nguy cơ và một mục của thang Geneva; ước 10–20% người bệnh. Tỷ lệ nền 0,02."
+  - finding: palpitations
+    freq: occasional
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [esc-pe-2019, nhs-pulmonary-embolism]
+      note: "Có ý nghĩa với Ngất và Chóng mặt. Nhịp nhanh xoang gặp khoảng 40%, có thể có rung nhĩ (ESC); NHS: tim đập rất nhanh là lý do gọi cấp cứu. Người bệnh tự thấy hồi hộp ít hơn số người có tim nhanh; ước 20%."
+  - finding: fainting_or_near_fainting
+    freq: occasional
+    freq_by_complaint: { dizziness: frequent }
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [esc-pe-2019, nhs-pulmonary-embolism]
+      locator: "ESC 2019 mục 4.1 (tiền ngất hoặc ngất là một biểu hiện khiến nghĩ tới; ngất liên quan với rối loạn huyết động)"
+      note: "Có ý nghĩa với Hồi hộp và Chóng mặt. Tiền ngất, ngất gặp ở một phần người bệnh, nhiều hơn ở thuyên tắc lớn: occasional, so với tỷ lệ nền 0,15 khi Hồi hộp. Với Chóng mặt, người thuyên tắc phổi đi khám vì chóng mặt chủ yếu có kiểu tiền ngất (ESC), nên chọn frequent, cao hơn tỷ lệ nền 0,25 của danh mục. Ước lượng."
+  - finding: syncope_trigger
+    dist: { standing_heat: 0.05, emotion_pain: 0.05, standing_up: 0.15, toilet_cough: 0.1, exertion: 0.2, lying: 0.05, no_trigger: 0.4 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [esc-syncope-2018, esc-pe-2019]
+      note: "Phân bố trong số người đã ngất hoặc suýt ngất. Ngất do thuyên tắc phổi là do tắc nghẽn tuần hoàn, hay xảy ra khi gắng sức hoặc không có yếu tố khởi phát rõ (ESC 2018: ngất khi gắng sức là nguy cơ cao). Ước lượng."
+  - finding: syncope_warning
+    dist: { prodrome: 0.3, palpitations_first: 0.2, no_warning: 0.5 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [esc-syncope-2018, esc-pe-2019]
+      note: "Phân bố trong số người đã ngất hoặc suýt ngất. Ngất do nguyên nhân tim phổi thường đột ngột, ít tiền triệu phản xạ; tim nhanh có thể có trước. Ước lượng."
+  - finding: not_recovered_after_faint
+    freq: occasional
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [esc-pe-2019, esc-syncope-2018]
+      note: "Tính trong số người đã ngất hoặc suýt ngất. Ngất do thuyên tắc phổi đi kèm rối loạn huyết động, suy thất phải (ESC 2019), nên khó thở, mệt lả có thể còn sau ngất. Ước 20%. Tỷ lệ nền 0,05."
+  - finding: pulse_measured
+    dist: { lt_40: 0.005, n40_100: 0.2, n100_150: 0.17, gt_150: 0.025, not_measured: 0.6 }
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [esc-pe-2019]
+      locator: "ESC 2019 mục 4.1 (nhịp nhanh xoang khoảng 40%), thang Geneva (nhịp tim từ 95 lần/phút)"
+      note: "'Chưa đo' giữ đúng tỷ lệ nền 0,6. Khoảng một nửa số người đo được có mạch trên 100. Ước lượng."
+  - finding: palpitation_rhythm
+    dist: { fast_regular: 0.55, irregular: 0.2, skipped_beats: 0.1, forceful: 0.15 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [esc-pe-2019]
+      note: "Phân bố trong số người đã hồi hộp. Phần lớn là nhịp nhanh xoang (đều, nhanh); có thể có rung nhĩ (ESC 2019). Ước lượng."
+  - finding: dizziness_pattern
+    dist: { brief_episodes: 0.15, long_episodes: 0.35, continuous: 0.4, chronic: 0.1 }
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [esc-pe-2019]
+      note: "Tính trong số người chóng mặt. Bệnh khởi phát cấp, triệu chứng kéo dài theo tình trạng thiếu oxy, tụt huyết áp. Ước lượng."
+warning_signs: [breathing_difficulty, pleuritic_chest_pain, chest_pain_pressure, hemoptysis, fainting_or_near_fainting, cold_hands_feet]
+self_care_vi:
+  - "Gọi 115 hoặc nhờ người đưa đến khoa cấp cứu ngay. Không tự lái xe."
+  - "Trong lúc chờ, ngồi hoặc nằm nghỉ, tránh đi lại nhiều."
+  - "Mang theo các thuốc đang dùng, nhất là thuốc chống đông."
+see_doctor_vi:
+  - "Cần được xét nghiệm máu và chụp mạch phổi ở bệnh viện càng sớm càng tốt."
+  - "Người vừa phẫu thuật, nằm lâu, đi xe đường dài, đang có thai hoặc mới sinh dễ bị hơn."
+review:
+  status: draft
+  authors: ["agent:pass-b"]
+  updated: "2026-10-25"
+  notes_vi: "Lượt B (Giai đoạn 3, lô 1, phần b). Mức xử trí 1, thuộc nhóm không được bỏ sót, giữ như gợi ý: NHS khuyên gọi 999 hoặc đến cấp cứu khi khó thở đột ngột, đau ngực, tim rất nhanh, ngất; ESC 2019: thuyên tắc phổi có thể diễn biến xấu nhanh, cần làm chẩn đoán và điều trị ngay ở bệnh viện; cùng mức với nhiễm khuẩn huyết, nhồi máu cơ tim trong kb-guide. Theo quy ước của lượt R ('999 hoặc cấp cứu' là mức 2), có thể cân nhắc mức 2; cần bác sĩ quyết. Điểm chưa chắc chắn: (1) chưa đọc được bảng tần suất triệu chứng (ESC 2019 là ảnh), nên tần suất là ước lượng từ mô tả; (2) prior dựa trên số liệu cấp cứu Bắc Mỹ, châu Âu (0,06–1,4%), hạ xuống cho cộng đồng; tỷ lệ huyết khối ở người châu Á có thể thấp hơn nhưng lượt B chưa mở được nguồn; (3) với Ngất kèm khó thở đã có quy tắc mức 1 (rf_syncope_breathing); với Hồi hộp, Chóng mặt kèm khó thở là mức 2; (4) danh mục chưa có câu hỏi về thuốc tránh thai kết hợp, mới sinh cho thuyên tắc phổi (có recent_childbirth nhưng chưa liên kết)."

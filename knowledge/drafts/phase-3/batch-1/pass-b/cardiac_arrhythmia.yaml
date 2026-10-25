@@ -1,0 +1,198 @@
+id: cardiac_arrhythmia
+names:
+  vi: "Rối loạn nhịp tim"
+  vi_common: ["Loạn nhịp tim", "Rung nhĩ", "Nhịp nhanh kịch phát trên thất", "Nhịp tim chậm, blốc tim"]
+  en: "Cardiac arrhythmia (sustained or clinically significant tachyarrhythmia or bradyarrhythmia)"
+codes:
+  icd10: "I49.9"
+  icd10_verified: true
+  mondo: "MONDO:0007263"
+summary_vi:
+  - "Tim đập quá nhanh, quá chậm hoặc lộn xộn kéo dài, như rung nhĩ, nhịp nhanh kịch phát hoặc nhịp chậm do blốc tim."
+  - "Có thể gây hồi hộp, choáng, khó thở, đau ngực hoặc ngất."
+  - "Cần được đo điện tim; một số loại làm tăng nguy cơ đột quỵ hoặc nguy hiểm tính mạng."
+urgency: 3
+cant_miss: false
+specialties: [cardiology]
+priors:
+  - complaint: palpitations
+    default: P2
+    by_age: { child_5_12: P3, teen_13_17: P3, elder_65_74: P1, elder_75p: P1 }
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [zwietering-fampract-1998, weber-amjmed-1996, raviele-europace-2011, nhs-svt, nhs-atrial-fibrillation]
+      locator: "Zwietering 1998 tóm tắt; Weber 1996 tóm tắt và bản tóm tắt trong EHRA 2011; NHS SVT, NHS Atrial fibrillation"
+      reported: "Tuyến ban đầu Hà Lan: rối loạn nhịp có ý nghĩa lâm sàng 8,8% người có triệu chứng nghi rối loạn nhịp. Trung tâm đại học Mỹ: rung, cuồng nhĩ 16%, nhịp nhanh trên thất 10%, nhịp nhanh thất 2% người hồi hộp."
+      population: "762 người khám bác sĩ gia đình ở Hà Lan; 190 người hồi hộp ở một trung tâm đại học Mỹ"
+      note: "Bệnh này không gồm ngoại tâm thu đơn thuần (bệnh premature_beats). Ở tuyến ban đầu, rối loạn nhịp có ý nghĩa lâm sàng gần 9% (P2); tuổi là yếu tố liên quan mạnh nhất (Zwietering). Ở trung tâm đại học (gồm cả cấp cứu), rung nhĩ, nhịp nhanh trên thất, nhịp nhanh thất cộng lại 28%. Rung nhĩ hay gặp từ 55 tuổi (NHS): từ 65 tuổi chọn P1. Nhịp nhanh trên thất hay bắt đầu ở trẻ em, người trẻ (NHS), nhưng ở trẻ em hồi hộp chủ yếu do nhịp nhanh xoang, lo âu: trẻ 5–17 tuổi P3. Không có số liệu Việt Nam."
+  - complaint: syncope
+    default: P3
+    by_age: { child_5_12: P4, teen_13_17: P4, elder_65_74: P2, elder_75p: P2 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [soteriades-nejm-2002, esc-syncope-2018-practical, alboni-jacc-2001, esc-syncope-2018]
+      locator: "Soteriades 2002 tóm tắt; hướng dẫn thực hành ESC 2018 mục 2.2; Alboni 2001 tóm tắt; ESC 2018 (máy ghi điện tim cấy dưới da)"
+      reported: "Ngất do tim: 9,5% ở cộng đồng (Framingham), 23% ở bệnh viện (Alboni)"
+      note: "Ngất do tim (gồm cả bệnh tim cấu trúc, không chỉ rối loạn nhịp) đứng thứ hai sau ngất phản xạ và tăng theo tuổi (ESC). Trong ngất không rõ nguyên nhân được ghi điện tim lúc ngất, phần lớn là nhịp chậm hoặc vô tâm thu (56%), nhịp nhanh 11% (ESC 2018). Cộng đồng 9,5% gồm cả bệnh tim cấu trúc: người 18–64 tuổi ước 1–5% (P3); từ 65 tuổi P2; trẻ em, thanh thiếu niên rất hiếm (P4). Ước lượng, cần bác sĩ duyệt."
+  - complaint: dizziness
+    default: P3
+    by_age: { child_5_12: P5, teen_13_17: P4, elder_75p: P2 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [maarsingh-annfammed-2010, bosner-bmcfampract-2018, zwietering-fampract-1998, nhs-arrhythmia]
+      note: "Tim mạch chiếm 3,8–56,8% nguyên nhân chóng mặt ở tuyến ban đầu (Bösner), 57% ở người từ 65 tuổi chóng mặt kéo dài (Maarsingh, gồm cả hạ huyết áp, mạch máu não). Rối loạn nhịp chỉ là một phần của nhóm tim mạch; NHS: choáng váng, chóng mặt là triệu chứng của rối loạn nhịp. Người lớn P3, từ 75 tuổi P2, trẻ em P4–P5. Ước lượng."
+findings:
+  - finding: palpitation_rhythm
+    dist: { fast_regular: 0.38, irregular: 0.42, skipped_beats: 0.08, forceful: 0.12 }
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [raviele-europace-2011, nhs-atrial-fibrillation, nhs-svt, weber-amjmed-1996]
+      locator: "EHRA 2011 bảng 2 (kiểu hồi hộp do nhịp nhanh); NHS Atrial fibrillation; NHS SVT"
+      note: "Phân bố trong số người đã hồi hộp. Hồi hộp do nhịp nhanh: rất nhanh, đều (nhịp nhanh trên thất, cuồng nhĩ) hoặc không đều (rung nhĩ) (EHRA). Ở trung tâm đại học, rung, cuồng nhĩ gặp nhiều hơn nhịp nhanh trên thất (16% so với 10%). Để một phần nhỏ cho 'hẫng nhịp' và 'đập mạnh không nhanh' (nhịp chậm, rung nhĩ đã kiểm soát tần số). Ước lượng."
+  - finding: palpitation_duration
+    dist: { seconds: 0.08, minutes_hours: 0.62, ongoing: 0.3 }
+    evidence:
+      tier: A
+      basis: judgment
+      sources: [thavendiranathan-jama-2009, nhs-svt, nhs-heart-palpitations]
+      locator: "Thavendiranathan 2009 tóm tắt (cơn dưới 5 phút LR 0,38); NHS SVT (cơn vài phút, có khi vài giờ); NHS Heart palpitations (cơn không dứt: gọi 999 hoặc đến cấp cứu)"
+      note: "Phân bố trong số người đã hồi hộp. Cơn nhịp nhanh trên thất thường vài phút đến vài giờ (NHS); rung nhĩ có thể kéo dài liên tục; cơn ngắn dưới 5 phút làm giảm khả năng rối loạn nhịp (LR 0,38), nên 'vài giây, chỉ vài nhịp' để rất thấp (gợi ý ngoại tâm thu). Lựa chọn của danh mục không tách mốc 5 phút nên không dùng trực tiếp LR. Ước lượng."
+  - finding: palpitation_abrupt_onset
+    freq: frequent
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [raviele-europace-2011, nhs-svt]
+      locator: "EHRA 2011 bảng 2; NHS SVT (tim bỗng đập nhanh hẳn)"
+      note: "Tính trong số người đã hồi hộp. Hồi hộp do nhịp nhanh khởi phát đột ngột (EHRA); nhịp nhanh trên thất bắt đầu và dừng đột ngột. Rung nhĩ dai dẳng và nhịp chậm không có kiểu bật tắt, nên cả nhóm chọn frequent. Tỷ lệ nền 0,15. Ước lượng."
+  - finding: neck_pounding
+    freq: frequent
+    evidence:
+      tier: A
+      basis: judgment
+      sources: [thavendiranathan-jama-2009]
+      locator: "Tóm tắt: cảm giác đập nhanh, đều, thình thịch ở cổ LR 177; thấy mạch cổ đập LR 2,68"
+      note: "Tính trong số người đã hồi hộp. Dấu hiệu rất gợi ý nhịp nhanh vòng vào lại nút nhĩ thất (LR 177), ít gặp hơn ở rung nhĩ. Ước cả nhóm khoảng 35–40% (nhịp nhanh trên thất khoảng một phần ba nhóm, phần lớn có dấu hiệu này; rung nhĩ, nhịp chậm ít có). Tỷ lệ nền 0,1. Ước lượng."
+  - finding: pulse_measured
+    dist: { lt_40: 0.04, n40_100: 0.12, n100_150: 0.12, gt_150: 0.12, not_measured: 0.6 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [esc-syncope-2018, nhs-svt, raviele-europace-2011]
+      locator: "ESC 2018 bảng 6 (nhịp chậm dưới 40 lần/phút lúc thức); NHS SVT (trên 100 lần/phút); EHRA 2011 bảng 2"
+      note: "'Chưa đo' giữ đúng tỷ lệ nền 0,6; 0,4 còn lại chia theo ước tính trong số người đo được lúc có triệu chứng: dưới 40 khoảng 10%, 40–100 khoảng 30% (cơn đã hết, rung nhĩ có tần số vừa), trên 100–150 khoảng 30%, trên 150 khoảng 30% (nhịp nhanh trên thất thường rất nhanh). Ước lượng."
+  - finding: palpitations
+    freq: frequent
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [esc-syncope-2018, delrosso-heart-2008, alboni-jacc-2001, nhs-arrhythmia]
+      locator: "ESC 2018 bảng 5–6 (hồi hộp đột ngột rồi ngất ngay); EGSYS, Alboni tóm tắt; NHS Arrhythmia"
+      note: "Có ý nghĩa với triệu chứng chính Ngất và Chóng mặt (với Hồi hộp là dấu hiệu ngầm định). Hồi hộp trước ngất là yếu tố dự báo ngất do tim (EGSYS; Alboni ở người không có bệnh tim). Nhịp chậm, vô tâm thu thường không gây hồi hộp, nên chọn frequent, không chọn very_frequent. Ước lượng."
+  - finding: dizziness
+    freq: frequent
+    evidence:
+      tier: C
+      basis: verbal
+      sources: [nhs-arrhythmia, nhs-svt, nhs-atrial-fibrillation]
+      note: "Có ý nghĩa với Hồi hộp và Ngất. NHS: choáng váng, chóng mặt là triệu chứng của rối loạn nhịp, rung nhĩ, nhịp nhanh trên thất. Tỷ lệ nền 0,2. Ước khoảng một nửa."
+  - finding: fainting_or_near_fainting
+    freq: occasional
+    freq_by_complaint: { dizziness: frequent }
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [raviele-europace-2011, nhs-arrhythmia, esc-syncope-2018]
+      locator: "EHRA 2011 (hồi hộp kèm ngất, tiền ngất gợi ý rối loạn huyết động); NHS Arrhythmia (cảm giác sắp ngất); ESC 2018 (tiền ngất xử trí như ngất)"
+      note: "Có ý nghĩa với Hồi hộp và Chóng mặt. Ngất, tiền ngất khi hồi hộp gặp ở một phần người rối loạn nhịp, hay hơn khi có bệnh tim cấu trúc (EHRA): occasional, so với tỷ lệ nền 0,15 khi Hồi hộp. Với Chóng mặt, chóng mặt do rối loạn nhịp chủ yếu là kiểu choáng như sắp ngất (do tụt cung lượng tim), nên chọn frequent, cao hơn tỷ lệ nền 0,25 của danh mục. Có dấu hiệu này kèm hồi hộp thì quy tắc rf_palpitations_danger đã xếp mức 2."
+  - finding: breathing_difficulty
+    freq: occasional
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [raviele-europace-2011, nhs-atrial-fibrillation, nhs-svt]
+      note: "EHRA: hồi hộp do nhịp nhanh có thể kèm khó thở; NHS liệt kê khó thở trong triệu chứng rung nhĩ, nhịp nhanh trên thất. Ước 20%; có dấu hiệu này kèm hồi hộp thì quy tắc đã xếp mức 2."
+  - finding: chest_pain_pressure
+    freq: occasional
+    evidence:
+      tier: C
+      basis: verbal
+      sources: [nhs-atrial-fibrillation, nhs-svt, raviele-europace-2011]
+      note: "NHS: đau hoặc tức ngực có thể gặp trong rung nhĩ, nhịp nhanh trên thất; EHRA: hồi hộp do nhịp nhanh có thể kèm đau ngực. Ước 20%."
+  - finding: syncope_trigger
+    dist: { standing_heat: 0.06, emotion_pain: 0.04, standing_up: 0.06, toilet_cough: 0.03, exertion: 0.2, lying: 0.15, no_trigger: 0.46 }
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [esc-syncope-2018, delrosso-heart-2008]
+      locator: "ESC 2018 bảng 5 (ngất do rối loạn nhịp: khi gắng sức hoặc khi nằm), bảng 6, mục 4.2.9; EGSYS tóm tắt"
+      note: "Phân bố trong số người đã ngất hoặc suýt ngất. ESC: ngất trong lúc gắng sức hoặc khi nằm gợi ý ngất do tim; EGSYS: không có yếu tố thuận lợi, khởi phát là yếu tố dự báo ngất do tim. Tỷ lệ từng lựa chọn là ước lượng."
+  - finding: syncope_warning
+    dist: { prodrome: 0.2, palpitations_first: 0.35, no_warning: 0.45 }
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [esc-syncope-2018, esc-syncope-2018-practical, delrosso-heart-2008]
+      locator: "ESC 2018 bảng 5 (hồi hộp đột ngột rồi ngất ngay); hướng dẫn thực hành ESC (tiền triệu dưới 5 giây gợi ý rối loạn nhịp); EGSYS tóm tắt"
+      note: "Phân bố trong số người đã ngất hoặc suýt ngất. Tiền triệu rất ngắn hoặc không có gợi ý ngất do rối loạn nhịp; hồi hộp đột ngột rồi ngất ngay là nguy cơ cao loại nặng. Ước lượng."
+  - finding: dizziness_pattern
+    dist: { brief_episodes: 0.3, long_episodes: 0.45, continuous: 0.15, chronic: 0.1 }
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [nhs-svt, nhs-atrial-fibrillation]
+      note: "Tính trong số người chóng mặt. Cơn nhịp nhanh trên thất thường vài phút, có khi vài giờ (NHS); rung nhĩ dai dẳng có thể gây choáng kéo dài; nhịp chậm có thể gây cơn choáng ngắn. Ước lượng."
+  - finding: known_heart_disease
+    freq: occasional
+    freq_by_complaint: { syncope: frequent }
+    evidence:
+      tier: A
+      basis: numeric
+      sources: [thavendiranathan-jama-2009, alboni-jacc-2001, esc-syncope-2018]
+      locator: "Thavendiranathan 2009 tóm tắt; Alboni 2001 tóm tắt; ESC 2018 bảng 5–6"
+      reported: "Có bệnh tim đã biết: LR 2,03 cho rối loạn nhịp ở người hồi hộp. Bệnh tim (đã biết hoặc nghi ngờ khi khám) có ở 95% người ngất do tim."
+      note: "Câu hỏi chỉ hỏi bệnh tim đã được nói cho biết, ít hơn bệnh tim phát hiện khi khám. Với Hồi hộp, Chóng mặt: occasional (người trẻ nhịp nhanh trên thất thường không có bệnh tim). Với Ngất: frequent, vì ngất do rối loạn nhịp phần lớn ở người có bệnh tim (Alboni; ESC: bệnh tim cấu trúc là nguy cơ cao)."
+  - finding: family_sudden_death
+    freq: rare
+    freq_by_age: { child_5_12: occasional, teen_13_17: occasional, adult_18_44: occasional }
+    above_leak_ok: true
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [esc-syncope-2018]
+      locator: "ESC 2018 bảng 5 (gia đình có người đột tử không rõ nguyên nhân khi còn trẻ gợi ý ngất do rối loạn nhịp), bảng 6"
+      note: "Ở người trẻ, ngất do rối loạn nhịp hay do bệnh di truyền (hội chứng QT dài, Brugada...), nên tiền sử gia đình đột tử khi còn trẻ gặp nhiều hơn: occasional. Ở người lớn tuổi, rối loạn nhịp chủ yếu do bệnh tim mắc phải: mức rare (0,025) chỉ cao hơn tỷ lệ nền 0,02 một chút, cố ý (above_leak_ok) vì tiền sử này vẫn gợi ý rối loạn nhịp. Ước lượng."
+  - finding: similar_episodes_before
+    freq: frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [weber-amjmed-1996, nhs-svt]
+      reported: "75% bị hồi hộp lại trong năm đầu"
+      note: "Cơn nhịp nhanh trên thất, rung nhĩ kịch phát hay tái lại (NHS: vài lần mỗi ngày đến một lần mỗi năm; Weber: 75% tái lại trong 1 năm, mọi nguyên nhân). Câu hỏi gồm cả cơn đầu tiên nên chọn frequent. Tỷ lệ nền 0,2."
+  - finding: panic_fear
+    freq: occasional
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [raviele-europace-2011, loan-yhvn-2022]
+      note: "Khoảng hai phần ba người có nhịp nhanh trên thất từng bị nhầm là rối loạn hoảng sợ (EHRA); 39,6% người rung nhĩ nằm viện ở Bạch Mai có rối loạn lo âu (Loan 2022). Liên kết ở mức occasional để câu trả lời 'sợ hãi dữ dội' không làm mất khả năng rối loạn nhịp. Ước lượng."
+warning_signs: [chest_pain_pressure, breathing_difficulty, fainting_or_near_fainting, confusion, cold_hands_feet, transient_neuro_symptoms]
+self_care_vi:
+  - "Khi đang hồi hộp mà vẫn tỉnh táo, ngồi hoặc nằm nghỉ, thở chậm."
+  - "Nếu có máy đo huyết áp hoặc đồng hồ thông minh, ghi lại mạch lúc đang có cơn."
+  - "Hạn chế rượu bia, cà phê, nước tăng lực và thuốc lá."
+  - "Không tự uống thuốc tim mạch của người khác."
+see_doctor_vi:
+  - "Đi khám trong 24 giờ để được đo điện tim, tốt nhất là khi đang có cơn."
+  - "Gọi 115 hoặc nhờ người đưa đi cấp cứu nếu cơn không dứt, hoặc kèm đau ngực, khó thở, choáng, ngất."
+  - "Không tự lái xe đến bệnh viện."
+review:
+  status: draft
+  authors: ["agent:pass-b"]
+  updated: "2026-10-25"
+  notes_vi: "Lượt B (Giai đoạn 3, lô 1, phần b). Bệnh này gồm rung, cuồng nhĩ, nhịp nhanh trên thất, nhịp nhanh thất, blốc tim, suy nút xoang; không gồm ngoại tâm thu đơn thuần. Mức xử trí 3, không thuộc nhóm không được bỏ sót, giữ như gợi ý: NHS chỉ khuyên khám bác sĩ khi hồi hộp tái lại và gọi 999 hoặc đến cấp cứu khi kèm đau ngực, khó thở, choáng, ngất (các quy tắc rf_palpitations_danger, rf_pulse_extreme, rf_syncope_* đã nâng mức). Điểm chưa chắc chắn: (1) prior của Ngất, Chóng mặt là ước lượng; số liệu cộng đồng gộp cả bệnh tim cấu trúc; (2) bệnh gộp nhiều loại khác hẳn nhau (nhịp nhanh trên thất ở người trẻ, rung nhĩ và nhịp chậm ở người cao tuổi), nên phân bố của kiểu hồi hộp, mạch, hoàn cảnh ngất là hỗn hợp; (3) cơn nhịp nhanh đang tiếp diễn chưa có câu hỏi riêng (lượt R đã đề xuất); (4) câu thời gian cơn hồi hộp của danh mục (palpitation_duration) không tách mốc 5 phút mà tổng quan JAMA dùng (cơn dưới 5 phút LR 0,38), nên phân bố là ước lượng; (5) không có số liệu Việt Nam về tỷ lệ rối loạn nhịp ở người hồi hộp."

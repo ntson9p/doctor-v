@@ -1,0 +1,13 @@
+id: who-gho-anaemia
+type: statistic
+title: "WHO Global Anaemia estimates: prevalence of anaemia in women of reproductive age and in children aged 6–59 months (Viet Nam)"
+publisher: "World Health Organization, Global Health Observatory"
+date: "2023"
+url: "https://ghoapi.azureedge.net/api/NUTRITION_ANAEMIA_REPRODUCTIVEAGE_PREV?%24filter=SpatialDim%20eq%20%27VNM%27"
+license_class: L2
+license_note: "Dữ liệu GHO của WHO: CC BY-NC-SA 3.0 IGO; ghi nguồn."
+default_tier: B
+accessed: "2026-10-25"
+verified: true
+verified_by: "agent:pass-b"
+notes_vi: "Lượt B lấy số liệu qua API chính thức của GHO (ghoapi.azureedge.net; chỉ số NUTRITION_ANAEMIA_REPRODUCTIVEAGE_PREV, NUTRITION_ANAEMIA_CHILDREN_PREV, NUTRITION_ANAEMIA_PREGNANT_PREV; mã nước VNM). Việt Nam năm 2023: thiếu máu ở 20,5% phụ nữ 15–49 tuổi (khoảng bất định 8,5–38,7%), 20,4% phụ nữ không có thai, 25,3% phụ nữ có thai. Trẻ 6–59 tháng năm 2019: 22,9% (nhẹ 15,0%, vừa 7,4%, nặng 0,5%). Phụ nữ có thai năm 2019: nhẹ 17,5%, vừa 10,5%, nặng 0,4%. Không có chỉ số cho nam giới. Phần lớn là thiếu máu nhẹ."

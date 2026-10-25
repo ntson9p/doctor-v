@@ -1,0 +1,186 @@
+id: reflex_orthostatic_syncope
+names:
+  vi: "Ngất do phản xạ, hạ huyết áp thế đứng"
+  vi_common: ["Ngất xỉu thông thường", "Ngất do cường phế vị", "Choáng, tụt huyết áp khi đứng dậy", "Hạ huyết áp do thuốc"]
+  en: "Reflex (vasovagal, situational) syncope and orthostatic hypotension, including drug-induced"
+codes:
+  icd10: "R55"
+  icd10_verified: true
+summary_vi:
+  - "Ngất hoặc choáng thoáng qua do huyết áp, nhịp tim tụt nhanh trong chốc lát, rồi tự hồi phục hoàn toàn."
+  - "Hay xảy ra khi đứng lâu, ở nơi nóng, khi đau, sợ hãi, hoặc ngay khi vừa đứng dậy."
+  - "Người cao tuổi, người uống thuốc hạ huyết áp hoặc thuốc lợi tiểu dễ bị choáng khi đứng dậy."
+urgency: 4
+cant_miss: false
+specialties: [general_medicine, cardiology]
+priors:
+  - complaint: syncope
+    default: P1
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [esc-syncope-2018-practical, soteriades-nejm-2002, alboni-jacc-2001, esc-syncope-2018]
+      locator: "Hướng dẫn thực hành ESC 2018 mục 2.2 và bảng web 2; Soteriades 2002 tóm tắt; Alboni 2001 tóm tắt"
+      reported: "Cộng đồng (Framingham): phế vị 21,2%, hạ huyết áp thế đứng 9,4%, do tim 9,5%, không rõ 36,6%. Bệnh viện (Alboni): phản xạ 58%, do tim 23%."
+      population: "Người ngất ở cộng đồng Mỹ (Framingham); người ngất ở bệnh viện Ý"
+      note: "ESC: ngất phản xạ là nguyên nhân hay gặp nhất ở mọi bối cảnh và mọi lứa tuổi; hạ huyết áp thế đứng hiếm trước 40 tuổi, hay gặp ở người rất cao tuổi. Ở cộng đồng, phản xạ cộng hạ huyết áp thế đứng chiếm khoảng 30% tổng số ca, khoảng một nửa số ca đã rõ nguyên nhân; nhiều ca 'không rõ nguyên nhân' cũng có tiên lượng lành tính. Chỉ 2–10% người ngất đến khoa cấp cứu (ESC, bảng web 2), nên ở người tự kiểm tra tỷ lệ này còn cao hơn số liệu bệnh viện. Trẻ em, thanh thiếu niên: tỷ lệ mắc ngất cao nhất ở tuổi 10–30 và phần lớn là phản xạ. Chọn P1 cho mọi nhóm tuổi. Không tìm thấy số liệu Việt Nam."
+  - complaint: dizziness
+    default: P2
+    by_age: { child_5_12: P3, elder_65_74: P1, elder_75p: P1 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [maarsingh-annfammed-2010, bosner-bmcfampract-2018, nhs-low-blood-pressure, esc-syncope-2018-practical]
+      locator: "Maarsingh 2010 tóm tắt; Bösner 2018 bảng 3–4; NHS Low blood pressure"
+      note: "Tổng quan tuyến ban đầu (Bösner 2018): nguyên nhân tim mạch chiếm 3,8–56,8% người chóng mặt, cao nhất ở người cao tuổi. Người từ 65 tuổi chóng mặt kéo dài (Maarsingh 2010): kiểu tiền ngất 69%, tim mạch là nguyên nhân chính 57%, tác dụng phụ của thuốc là nguyên nhân phụ hay gặp nhất 23%; bài không tách riêng hạ huyết áp thế đứng, nhưng phần lớn tiền ngất ở nhóm này do hạ huyết áp khi đứng, kể cả do thuốc (nhận định). Người trẻ: choáng khi đứng dậy, tiền ngất phản xạ hay gặp, nhưng chóng mặt quay, đau nửa đầu, lo âu chiếm phần lớn: P2. Trẻ 5–12 tuổi: P3. Từ 65 tuổi: P1. Cần bác sĩ duyệt."
+findings:
+  - finding: syncope_trigger
+    dist: { standing_heat: 0.33, emotion_pain: 0.18, standing_up: 0.25, toilet_cough: 0.09, exertion: 0.02, lying: 0.01, no_trigger: 0.12 }
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [esc-syncope-2018, esc-syncope-2018-practical, nhs-fainting]
+      locator: "ESC 2018 bảng 5 (đặc điểm gợi ý ngất phản xạ, hạ huyết áp thế đứng), mục 4.2.9; NHS Fainting (causes)"
+      note: "Phân bố trong số người đã ngất hoặc suýt ngất. ESC: ngất phản xạ hay xảy ra sau cảnh, tiếng, mùi khó chịu hoặc đau; khi đứng lâu, ở nơi nóng, đông người; khi ho, đi tiểu, đi ngoài; hạ huyết áp thế đứng xảy ra khi hoặc ngay sau khi đứng dậy; ngất sau gắng sức hầu như luôn do phản xạ, còn ngất trong lúc gắng sức hoặc khi nằm gợi ý do tim. NHS: đứng dậy quá nhanh, quá nóng, xúc động mạnh hoặc đau dữ dội. Tỷ lệ từng lựa chọn là ước lượng; để 0,12 cho 'ngồi yên, không có gì đặc biệt' vì người cao tuổi hay không nhớ rõ hoàn cảnh."
+  - finding: syncope_warning
+    dist: { prodrome: 0.8, palpitations_first: 0.07, no_warning: 0.13 }
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [esc-syncope-2018-practical, esc-syncope-2018, delrosso-heart-2008, nhs-fainting]
+      locator: "Hướng dẫn thực hành ESC 2018 mục 2.1.1; ESC 2018 bảng 5; EGSYS tóm tắt; NHS Fainting"
+      note: "Phân bố trong số người đã ngất hoặc suýt ngất. Tiền triệu (nóng người, vã mồ hôi, buồn nôn, tối sầm mắt) có ở hầu hết cơn ngất phản xạ khi làm nghiệm pháp bàn nghiêng; tiền triệu trên 10 giây giúp phân biệt với ngất do tim (ESC); không có tiền triệu thần kinh thực vật là yếu tố dự báo ngất do tim (EGSYS). Nhịp nhanh khi đứng có thể làm người bệnh thấy tim đập nhanh trước cơn. Để 0,13 cho 'ngất đột ngột' vì người cao tuổi và hạ huyết áp thế đứng ban đầu có thể không kịp nhận ra tiền triệu. Ước lượng."
+  - finding: dizziness_on_standing
+    freq: frequent
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [esc-syncope-2018-practical, esc-syncope-2018, nhs-low-blood-pressure]
+      locator: "Hướng dẫn thực hành ESC 2018 (hạ huyết áp thế đứng ban đầu và kinh điển); NHS Low blood pressure (postural hypotension)"
+      note: "Hạ huyết áp thế đứng gần như luôn có choáng ngay khi vừa đứng dậy (triệu chứng trong vài bước sau khi đứng); ngất phản xạ do cảm xúc, đau, đứng lâu thì không nhất thiết. Gộp hai nhóm: khoảng một nửa. Tỷ lệ nền 0,15. Ước lượng."
+  - finding: bp_lowering_meds
+    freq: occasional
+    freq_by_age: { elder_65_74: frequent, elder_75p: frequent }
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [esc-syncope-2018, esc-syncope-2018-practical, maarsingh-annfammed-2010]
+      locator: "ESC 2018 (nguyên nhân hạ huyết áp thế đứng; điều trị hạ áp tích cực); hướng dẫn thực hành ESC (thuốc gây hạ huyết áp thế đứng); Maarsingh 2010 tóm tắt"
+      note: "ESC: thuốc là nguyên nhân hay gặp nhất của hạ huyết áp thế đứng; điều trị hạ áp tích cực, dùng từ 3 thuốc hạ áp làm tăng nguy cơ; thuốc lợi tiểu, thuốc giãn mạch là nguyên nhân. Ở người cao tuổi chóng mặt kéo dài, tác dụng phụ của thuốc góp phần ở khoảng một phần tư (Maarsingh). Người trẻ bị ngất phản xạ hiếm khi dùng thuốc hạ áp: occasional; từ 65 tuổi: frequent. Ước lượng; tỷ lệ nền 0,15 của danh mục không đổi theo tuổi nên ở người cao tuổi liên kết này có thể hơi mạnh."
+  - finding: similar_episodes_before
+    freq: frequent
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [esc-syncope-2018, alboni-jacc-2001]
+      locator: "ESC 2018 bảng 5 (tiền sử ngất tái diễn lâu năm, nhất là trước 40 tuổi); Alboni 2001 tóm tắt"
+      note: "Tiền sử ngất tái diễn nhiều năm gợi ý ngất phản xạ (ESC); cơn đầu và cơn cuối cách nhau trên 4 năm là yếu tố dự báo ngất phản xạ (Alboni). Câu hỏi gồm cả người mới bị lần đầu nên chọn frequent. Tỷ lệ nền 0,2."
+  - finding: not_recovered_after_faint
+    freq: rare
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [esc-syncope-2018-practical, nhs-fainting]
+      locator: "Hướng dẫn thực hành ESC 2018 (thời gian hồi phục sau ngất); NHS Fainting (first aid)"
+      note: "Tính trong số người đã ngất hoặc suýt ngất. Sau ngất thông thường chỉ ngơ ngác khoảng 5–10 giây và nhớ lại ngay (ESC); phần lớn tỉnh lại trong khoảng 30 giây (NHS). Mức rare (2,5%) thấp hơn tỷ lệ nền 0,05: trả lời 'Có' làm giảm khả năng ngất phản xạ."
+  - finding: palpitations
+    freq: occasional
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [esc-syncope-2018-practical, alboni-jacc-2001, delrosso-heart-2008]
+      note: "Hướng dẫn thực hành ESC liệt kê nhịp nhanh khi đứng trong phần cảm giác hồi hộp của ngất phế vị; ngược lại, hồi hộp trước ngất là yếu tố dự báo ngất do tim (Alboni, EGSYS). Ước khoảng 10–20% người ngất phản xạ thấy tim đập nhanh; rối loạn nhịp tim được để frequent nên câu trả lời 'Có' vẫn nghiêng về rối loạn nhịp. Ước lượng."
+  - finding: cold_sweat
+    freq: frequent
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [esc-syncope-2018, nhs-fainting]
+      locator: "ESC 2018 bảng 5 (hoạt hóa thần kinh thực vật: da tái, vã mồ hôi, buồn nôn, nôn); NHS Fainting (sweating)"
+      note: "Vã mồ hôi là tiền triệu điển hình của ngất phản xạ; người hạ huyết áp thế đứng ít khi vã mồ hôi, nên gộp lại chọn frequent. Nội dung trùng một phần với lựa chọn 'tiền triệu' của câu dấu hiệu trước ngất (hai câu không cùng cụm), ghi trong review."
+  - finding: chest_pain_pressure
+    freq: rare
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [esc-syncope-2018]
+      locator: "ESC 2018 bảng 6 (mới xuất hiện đau ngực: nguy cơ cao loại nặng)"
+      note: "Đau ngực mới kèm ngất là đặc điểm nguy cơ cao, gợi ý bệnh tim, phổi; ít gặp ở ngất phản xạ. Mức rare thấp hơn tỷ lệ nền 0,05."
+  - finding: breathing_difficulty
+    freq: rare
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [esc-syncope-2018]
+      locator: "ESC 2018 bảng 6 (mới xuất hiện khó thở: nguy cơ cao loại nặng)"
+      note: "Khó thở mới kèm ngất gợi ý thuyên tắc phổi, bệnh tim; ít gặp ở ngất phản xạ. Mức rare thấp hơn tỷ lệ nền 0,05."
+  - finding: known_heart_disease
+    freq: rare
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [alboni-jacc-2001, esc-syncope-2018]
+      locator: "Alboni 2001 tóm tắt; ESC 2018 bảng 5 (không có bệnh tim gợi ý ngất phản xạ)"
+      reported: "Có bệnh tim: OR 16 cho ngất do tim; không có bệnh tim loại trừ được ngất do tim ở 97% người"
+      population: "341 người ngất ở bệnh viện Ý"
+      note: "Bệnh tim là yếu tố dự báo mạnh nhất của ngất do tim; không có bệnh tim gợi ý ngất phản xạ. Người cao tuổi bị hạ huyết áp thế đứng vẫn có thể có bệnh tim; chọn rare (thấp hơn tỷ lệ nền 0,05) để câu trả lời 'Có' làm giảm vừa phải khả năng ngất phản xạ. Ước lượng."
+  - finding: vertigo_spinning
+    freq: occasional
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [maarsingh-annfammed-2010, nhs-low-blood-pressure]
+      note: "Tính trong số người chóng mặt. Hạ huyết áp và tiền ngất gây choáng váng, nhìn mờ (NHS), ít khi gây cảm giác mọi vật quay; ở người cao tuổi nhiều người có nhiều kiểu chóng mặt cùng lúc (Maarsingh: 44%). Mức occasional (0,2) thấp hơn tỷ lệ nền 0,3: trả lời 'Có' làm giảm nhẹ khả năng bệnh. Ước lượng."
+  - finding: dizziness_positional
+    freq: rare
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [nhs-low-blood-pressure, esc-syncope-2018-practical]
+      note: "Tính trong số người chóng mặt. Câu hỏi về trở mình, nằm xuống, ngửa cổ và không tính choáng khi đứng dậy; hạ huyết áp gây triệu chứng khi đứng lên hoặc đổi tư thế đột ngột. Mức rare thấp hơn tỷ lệ nền 0,1. Ước lượng."
+  - finding: dizziness_pattern
+    dist: { brief_episodes: 0.5, long_episodes: 0.25, continuous: 0.05, chronic: 0.2 }
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [esc-syncope-2018-practical, maarsingh-annfammed-2010]
+      note: "Tính trong số người chóng mặt. Hạ huyết áp thế đứng ban đầu gây triệu chứng dưới 40 giây sau khi đứng (ESC); cơn phế vị kéo dài vài phút; người cao tuổi có thể bị choáng mỗi khi đứng trong nhiều tuần (chóng mặt kéo dài ở Maarsingh). Chóng mặt liên tục nhiều ngày ít gặp. Ước lượng."
+  - finding: pulse_measured
+    dist: { lt_40: 0.01, n40_100: 0.34, n100_150: 0.045, gt_150: 0.005, not_measured: 0.6 }
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [esc-syncope-2018-practical, esc-syncope-2018]
+      note: "'Chưa đo' giữ đúng tỷ lệ nền 0,6. Khi đã nghỉ, mạch thường bình thường; trong cơn phế vị mạch có thể chậm, khi đứng có thể nhanh. Mạch dưới 40 kéo dài lúc thức là nguy cơ cao (ESC bảng 6) nên để thấp. Ước lượng."
+  - finding: pregnant
+    freq: occasional
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [nhs-low-blood-pressure]
+      locator: "NHS Low blood pressure (causes: pregnancy)"
+      note: "Có thai là một nguyên nhân hạ huyết áp, choáng (NHS). Có thai bình thường hay gặp hơn nhiều so với chửa ngoài tử cung ở phụ nữ bị choáng, ngất; liên kết để câu trả lời 'có thai' không đẩy chửa ngoài tử cung lên quá cao. Ước khoảng 10% phụ nữ 13–64 tuổi bị ngất phản xạ, hạ huyết áp đang có thai; cần bác sĩ duyệt."
+  - finding: cold_hands_feet
+    freq: occasional
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [esc-syncope-2018, nhs-fainting]
+      locator: "ESC 2018 bảng 5 (da tái do hoạt hóa thần kinh thực vật)"
+      note: "Ngay sau cơn ngất phản xạ người bệnh thường còn tái, lạnh vài phút. Tỷ lệ nền 1% của dấu hiệu này quá thấp với Ngất (lượt R cũng ghi nhận); liên kết để câu trả lời 'Có' không đẩy nhiễm khuẩn huyết, xuất huyết tiêu hóa lên quá cao so với ngất phản xạ. Ước lượng; nên thêm leak_by_complaint cho Ngất."
+warning_signs: [not_recovered_after_faint, chest_pain_pressure, breathing_difficulty, palpitations, black_stool, es_unresponsive_or_seizing]
+self_care_vi:
+  - "Khi thấy sắp ngất, nằm xuống và kê cao chân, hoặc ngồi cúi đầu xuống giữa hai gối."
+  - "Đứng dậy từ từ: từ nằm sang ngồi một lúc rồi mới đứng."
+  - "Uống đủ nước, tránh đứng lâu ở nơi nóng, đông người."
+  - "Không tự ngừng hay đổi thuốc huyết áp; báo bác sĩ nếu hay choáng sau khi uống thuốc."
+see_doctor_vi:
+  - "Mọi lần ngất đều nên đi khám trong vài ngày để tìm nguyên nhân."
+  - "Đi cấp cứu ngay nếu ngất khi đang gắng sức hoặc đang nằm."
+  - "Cũng đi cấp cứu ngay nếu kèm đau ngực, khó thở, tim đập loạn, hoặc chưa tỉnh táo hẳn."
+  - "Không tự lái xe khi hay bị ngất, cho đến khi được bác sĩ cho phép."
+review:
+  status: draft
+  authors: ["agent:pass-b"]
+  updated: "2026-10-25"
+  notes_vi: "Lượt B (Giai đoạn 3, lô 1, phần b). Mức xử trí 4, không thuộc nhóm không được bỏ sót, giữ như gợi ý: NHS Fainting khuyên mọi người đã ngất đi khám bác sĩ gia đình (không khẩn) và chỉ gọi 999 khi có dấu hiệu nguy hiểm; ESC 2018 cho ngất nguy cơ thấp về từ khoa cấp cứu; ca nguy cơ cao do quy tắc xử lý. Điểm chưa chắc chắn: (1) prior dựa trên số liệu Mỹ, Ý, Hà Lan, không có số liệu Việt Nam; (2) bệnh gộp ngất phản xạ và hạ huyết áp thế đứng nên các phân bố là hỗn hợp, ước lượng; (3) vã mồ hôi lạnh và lựa chọn 'tiền triệu' của câu dấu hiệu trước ngất đếm trùng một phần; (4) tỷ lệ nền 1% của 'tay chân lạnh, da tái' quá thấp với Ngất, nên đề xuất leak_by_complaint khoảng 0,1; (5) tỷ lệ nền của thuốc hạ huyết áp không đổi theo tuổi; (6) trẻ em không có số liệu riêng. ESC cần thỏa thuận cấp phép khi dùng trong phần mềm (xem nguồn esc-syncope-2018)."

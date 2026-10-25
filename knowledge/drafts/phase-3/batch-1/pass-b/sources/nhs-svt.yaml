@@ -1,0 +1,12 @@
+id: nhs-svt
+type: web_page
+title: "Supraventricular tachycardia (SVT)"
+publisher: "NHS (UK)"
+url: "https://www.nhs.uk/conditions/supraventricular-tachycardia-svt/"
+license_class: L1
+license_note: "Open Government Licence v3.0; bản chuyển thể không được trình bày như nội dung của NHS."
+default_tier: C
+accessed: "2026-10-25"
+verified: true
+verified_by: "agent:pass-b"
+notes_vi: "Lượt B mở trang (rà soát lần cuối 12/6/2024, hạn 12/6/2027). Tim bỗng đập nhanh hẳn, trên 100 lần/phút; cơn thường vài phút, có khi vài giờ; có thể vài lần mỗi ngày hoặc một lần mỗi năm. Kèm theo có thể đau, tức ngực, mệt yếu, khó thở, choáng váng hoặc chóng mặt. Hay bắt đầu ở trẻ em và người trẻ; nhiều người có triệu chứng đầu tiên ở tuổi 25–40. Cà phê, rượu, chất gây nghiện có thể khởi phát cơn, nhưng thường không rõ yếu tố khởi phát. Thường không nghiêm trọng, hiếm khi đe dọa tính mạng. Gọi 999 khi cơn dài hơn thường lệ ở người đã được chẩn đoán, hoặc tim nhanh kèm khó thở, đau ngực, choáng."

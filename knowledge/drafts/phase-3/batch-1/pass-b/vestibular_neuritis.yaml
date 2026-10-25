@@ -1,0 +1,159 @@
+id: vestibular_neuritis
+names:
+  vi: "Viêm dây thần kinh tiền đình"
+  vi_common: ["Viêm thần kinh tiền đình"]
+  en: "Vestibular neuritis (acute unilateral vestibulopathy)"
+codes:
+  icd10: "H81.2"
+  icd10_verified: false
+  mondo: "MONDO:0006008"
+summary_vi:
+  - "Dây thần kinh thăng bằng ở một bên tai bị viêm, có lẽ do vi rút, gây mất thăng bằng đột ngột."
+  - "Chóng mặt quay liên tục nhiều ngày, kèm buồn nôn, nôn, đi loạng choạng, nhưng không nghe kém."
+  - "Phần lớn đỡ dần sau vài ngày; thăng bằng thường hồi phục trong vài tuần."
+urgency: 3
+cant_miss: false
+specialties: [ent, neurology]
+priors:
+  - complaint: dizziness
+    default: P3
+    by_age: { child_5_12: P4, elder_75p: P4 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [bosner-bmcfampract-2018, strupp-jvestibres-2022, vonbrevern-jnnp-2007, grace3-dizziness-2023]
+      locator: "Bösner 2018 bảng 3; Strupp 2022 mục Dịch tễ; GRACE-3 khuyến cáo 2"
+      reported: "Tuyến ban đầu: 0,6–24% người chóng mặt (6 nghiên cứu); mới mắc 3,5–15,5/100.000 người/năm; tuổi khởi phát thường 30–60"
+      note: "Chưa có số liệu Việt Nam. Mới mắc thấp hơn nhiều so với chóng mặt tư thế kịch phát lành tính (von Brevern: 0,6% mỗi năm), nhưng người bệnh hầu như đều đi khám vì triệu chứng nặng kéo dài nhiều ngày; con số ở tuyến ban đầu (Bösner) có lẽ gồm cả chẩn đoán chưa chính xác. GRACE-3: là nguyên nhân tai trong thường gặp nhất của hội chứng tiền đình cấp. Chọn P3 cho người từ 13 đến 74 tuổi; trẻ 5–12 tuổi và người từ 75 tuổi P4 (Strupp: tuổi khởi phát thường 30–60; không khác theo giới, không theo mùa). Ước lượng, cần bác sĩ duyệt."
+findings:
+  - finding: dizziness_pattern
+    dist: { brief_episodes: 0.03, long_episodes: 0.09, continuous: 0.8, chronic: 0.08 }
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [strupp-jvestibres-2022, grace3-dizziness-2023, nhs-labyrinthitis]
+      locator: "Strupp 2022 tiêu chuẩn A và chú thích 1–6; NHS Labyrinthitis mục How long"
+      note: "Tiêu chuẩn Bárány: chóng mặt liên tục, khởi phát cấp, kéo dài ít nhất 24 giờ, giảm dần trong nhiều ngày; tới 25% có một cơn vài giờ trong 2 ngày trước (xếp một phần vào 'vài phút đến vài giờ'). NHS: thăng bằng hồi phục sau 2–6 tuần, nên người dùng muộn có thể chọn 'âm ỉ nhiều tuần'. Phân bố là ước lượng theo mô tả."
+  - finding: vertigo_spinning
+    freq: very_frequent
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [strupp-jvestibres-2022, newmantoker-mayoclinproc-2007]
+      locator: "Strupp 2022 mục 4.2 (triệu chứng hay gặp)"
+      note: "Tần suất trong số người đã chóng mặt. Triệu chứng hay gặp nhất là chóng mặt quay liên tục; tiêu chuẩn chấp nhận cả chóng mặt không quay. Không chọn almost_always vì mô tả kiểu chóng mặt kém tin cậy (Newman-Toker 2007)."
+  - finding: nausea
+    freq: very_frequent
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [strupp-jvestibres-2022, nhs-labyrinthitis]
+      locator: "Strupp 2022 mục 4.2"
+      note: "Buồn nôn và thường nôn là triệu chứng chính. Tỷ lệ nền 20% nên trả lời 'Có' làm tăng khả năng khoảng 4 lần."
+  - finding: vomiting
+    freq: frequent
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [strupp-jvestibres-2022, nhs-labyrinthitis]
+      locator: "Strupp 2022 mục 4.2"
+      note: "'Thường nôn' (often) chuyển thành frequent. Tỷ lệ nền 5%."
+  - finding: sudden_loss_of_balance
+    freq: frequent
+    evidence:
+      tier: A
+      basis: verbal
+      sources: [strupp-jvestibres-2022, tarnutzer-cmaj-2011]
+      note: "Mất thăng bằng, xu hướng ngã về bên tai bệnh (Strupp 2022). Để bằng đột quỵ (frequent) vì Tarnutzer 2011 ghi mất thăng bằng là yếu tố gợi ý đột quỵ (OR 3,71); câu này không nên nghiêng về bệnh lành tính."
+  - finding: cannot_walk_unaided
+    freq: occasional
+    evidence:
+      tier: A
+      basis: numeric
+      sources: [tarnutzer-cmaj-2011, strupp-jvestibres-2022]
+      locator: "Tarnutzer 2011 mục dấu hiệu thần kinh"
+      reported: "Thất điều thân nặng 0% ở viêm dây thần kinh tiền đình so với 33% ở đột quỵ (hội chứng tiền đình cấp)"
+      note: "Trong vài ngày đầu nhiều người vẫn phải vịn khi đi vì chóng mặt nặng, nên để occasional, thấp hơn đột quỵ (frequent). Kèm chóng mặt liên tục thì quy tắc rf_dizziness_central_signs xếp mức 2."
+  - finding: hearing_loss_tinnitus
+    freq: rare
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [strupp-jvestibres-2022, nhs-labyrinthitis]
+      locator: "Strupp 2022 tiêu chuẩn D, E; NHS Labyrinthitis mục Symptoms"
+      note: "Tiêu chuẩn: không có nghe kém, ù tai cấp; NHS: viêm dây thần kinh tiền đình không gây nghe kém hay ù tai (khác viêm mê đạo). Có nghe kém cần nghĩ viêm mê đạo, bệnh Ménière hoặc nhồi máu động mạch tiểu não trước dưới (Strupp). Thấp hơn tỷ lệ nền 5%."
+  - finding: vision_loss_or_double
+    freq: very_rare
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [strupp-jvestibres-2022]
+      locator: "Mục 4.6 (chẩn đoán phân biệt)"
+      note: "Nhìn đôi là bệnh sử gợi ý nguyên nhân trung ương (đôi khi do lác ẩn mất bù). Thấp hơn tỷ lệ nền 1%."
+  - finding: transient_neuro_symptoms
+    freq: very_rare
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [strupp-jvestibres-2022, byt-qd-3312-2024]
+      note: "Tiêu chuẩn loại trừ mọi triệu chứng thần kinh trung ương; yếu, tê nửa người, nói khó cần nghĩ đột quỵ hoặc cơn thiếu máu não thoáng qua. Thấp hơn tỷ lệ nền 1%."
+  - finding: headache
+    freq: occasional
+    evidence:
+      tier: A
+      basis: numeric
+      sources: [tarnutzer-cmaj-2011]
+      reported: "Đau đầu hoặc đau cổ ở 12% nguyên nhân ngoại biên so với 38% nguyên nhân trung ương"
+      note: "Bằng tỷ lệ nền 20% nên gần như trung tính; thấp hơn đột quỵ (frequent)."
+  - finding: recent_viral_illness
+    freq: frequent
+    evidence:
+      tier: C
+      basis: verbal
+      sources: [nhs-labyrinthitis, strupp-jvestibres-2022]
+      note: "NHS: thường do nhiễm vi rút như cảm lạnh, cúm. Strupp 2022: căn nguyên vi rút có khả năng nhưng chưa chứng minh. Không có tỷ lệ người bệnh kể có cảm trước đó; ước khoảng một nửa (tỷ lệ nền 20%). Cần bác sĩ duyệt."
+  - finding: dizziness_positional
+    freq: occasional
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [strupp-jvestibres-2022]
+      locator: "Chú thích 2 (chóng mặt liên tục cả khi nghỉ, tăng khi cử động đầu)"
+      note: "Tần suất trong số người đã chóng mặt. Chóng mặt có cả khi nằm yên nhưng tăng khi cử động đầu, nên một số người trả lời 'có'. Ước 20%, thấp hơn nhiều so với chóng mặt tư thế kịch phát lành tính."
+  - finding: similar_episodes_before
+    freq: occasional
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [strupp-jvestibres-2022]
+      reported: "Tái phát 1,9–10,7%; tới 25% có một cơn ngắn trong 2 ngày trước"
+      note: "Thường là lần đầu. Ước 20% (bằng tỷ lệ nền), thấp hơn hẳn đau nửa đầu tiền đình và chóng mặt tư thế kịch phát lành tính, nên câu trả lời 'Có' nghiêng về các bệnh tái diễn."
+  - finding: fever
+    freq: rare
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [strupp-jvestibres-2022, nhs-vertigo]
+      note: "Không sốt khi khởi phát; chóng mặt kèm sốt cần nghĩ viêm tai, viêm màng não (NHS Vertigo: khám khẩn). Thấp hơn tỷ lệ nền 5%."
+  - finding: fainting_or_near_fainting
+    freq: rare
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [strupp-jvestibres-2022]
+      note: "Bệnh không gây mất ý thức; người chóng mặt nặng đôi khi mô tả là choáng. Thấp hơn tỷ lệ nền 5%."
+warning_signs: [vision_loss_or_double, transient_neuro_symptoms, hearing_loss_sudden, headache_thunderclap, cannot_walk_unaided]
+self_care_vi:
+  - "Khi chóng mặt nhiều, nằm yên trong phòng tối, tránh tiếng ồn và ánh sáng mạnh."
+  - "Nếu nôn, uống từng ngụm nước nhỏ, nhiều lần trong ngày."
+  - "Không uống rượu bia và ngủ đủ giấc."
+  - "Không lái xe, đi xe đạp hoặc vận hành máy khi đang chóng mặt."
+see_doctor_vi:
+  - "Đi khám trong 24 giờ để được khám mắt, tai và thần kinh, phân biệt với đột quỵ."
+  - "Đi khám lại nếu sau vài ngày không đỡ hoặc nặng lên."
+  - "Đến cấp cứu ngay nếu nhìn đôi, nói khó, yếu tê tay chân, đột ngột nghe kém hoặc đau đầu dữ dội."
+review:
+  status: draft
+  authors: ["agent:pass-b"]
+  updated: "2026-10-25"
+  notes_vi: "Mức xử trí 3 giữ như gợi ý. NHS Labyrinthitis chỉ khuyên khám không khẩn, nhưng GRACE-3 và 3312/QĐ-BYT (2024) nhấn mạnh hội chứng tiền đình cấp cần người được đào tạo khám để loại trừ đột quỵ tiểu não (viêm mê đạo có thể nhầm với đột quỵ), nên chọn khám trong 24 giờ; người có nguy cơ mạch máu được quy tắc rf_acute_vertigo_vascular_risk nâng lên mức 2. Điểm cần bác sĩ xem: (1) prior P3 là ước lượng: mới mắc rất thấp so với chóng mặt tư thế, nhưng số liệu tuyến ban đầu (0,6–24%) rộng; (2) bệnh này không gồm viêm mê đạo (có nghe kém); người chóng mặt cấp kèm nghe kém hiện thuộc 'nguyên nhân khác' và quy tắc rf_vertigo_sudden_hearing_loss; người bảo trì có thể cân nhắc gộp; (3) tần suất triệu chứng chủ yếu dựa trên mô tả của tiêu chuẩn Bárány, không có số liệu tỷ lệ; (4) tỷ lệ có cảm cúm trước đó là ước lượng; (5) mã H81.2 chưa đối chiếu với ICD-10 của Bộ Y tế."

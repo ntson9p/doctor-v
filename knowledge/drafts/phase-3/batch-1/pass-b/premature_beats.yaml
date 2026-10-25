@@ -1,0 +1,130 @@
+id: premature_beats
+names:
+  vi: "Ngoại tâm thu"
+  vi_common: ["Tim hẫng nhịp", "Tim đập thêm nhịp", "Nhịp tim đến sớm"]
+  en: "Premature (ectopic) beats: atrial or ventricular premature contractions"
+codes:
+  icd10: "I49.4"
+  icd10_verified: true
+summary_vi:
+  - "Tim thỉnh thoảng có một nhịp đến sớm rồi nghỉ một chút, nên thấy tim hẫng hoặc thịch mạnh một nhịp."
+  - "Rất hay gặp và thường vô hại ở người không có bệnh tim."
+  - "Hay tăng khi căng thẳng, thiếu ngủ, uống cà phê, rượu bia hoặc hút thuốc."
+urgency: 4
+cant_miss: false
+specialties: [cardiology, general_medicine]
+priors:
+  - complaint: palpitations
+    default: P1
+    by_age: { child_5_12: P2, teen_13_17: P2 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [zwietering-fampract-1998, raviele-europace-2011, nhs-heart-palpitations, weber-amjmed-1996]
+      locator: "Zwietering 1998 tóm tắt; EHRA 2011 (ngoại tâm thu hay gặp khi theo dõi điện tim, thường lành tính); NHS Heart palpitations"
+      reported: "Tuyến ban đầu Hà Lan: có rối loạn nhịp 28,3%, trong đó có ý nghĩa lâm sàng 8,8%"
+      population: "762 người khám bác sĩ gia đình vì triệu chứng nghi rối loạn nhịp"
+      note: "Khoảng 20% người có triệu chứng nghi rối loạn nhịp ở tuyến ban đầu có rối loạn nhịp không có ý nghĩa lâm sàng (28,3% trừ 8,8%); nhận định là phần lớn số này là ngoại tâm thu (tóm tắt không nêu loại). EHRA: ở người hồi hộp được theo dõi điện tim, ngoại tâm thu nhĩ, thất hay gặp và thường lành tính; NHS: hẫng hoặc thêm nhịp (ngoại tâm thu) là một kiểu hồi hộp thường vô hại. Weber 1996 (trung tâm đại học) có 43% nguyên nhân do tim, gồm cả ngoại tâm thu. Người lớn: từ 20% (P1). Trẻ em, thanh thiếu niên: hồi hộp chủ yếu do nhịp nhanh xoang, lo âu: P2. Không có số liệu Việt Nam; cần bác sĩ duyệt."
+findings:
+  - finding: palpitation_rhythm
+    dist: { fast_regular: 0.06, irregular: 0.12, skipped_beats: 0.7, forceful: 0.12 }
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [raviele-europace-2011, nhs-heart-palpitations]
+      locator: "EHRA 2011 bảng 2 (hồi hộp kiểu ngoại tâm thu); NHS Heart palpitations"
+      note: "Phân bố trong số người đã hồi hộp. Hồi hộp kiểu ngoại tâm thu là cảm giác hẫng, mất một nhịp, không đều với các nhịp bình thường xen giữa (EHRA); NHS gọi nhịp hẫng hoặc thêm nhịp là ngoại tâm thu. Nhịp sau khoảng nghỉ thường đập mạnh nên có người tả là 'đập mạnh'. Ngoại tâm thu dày có thể thấy như lộn xộn. Ước lượng."
+  - finding: palpitation_duration
+    dist: { seconds: 0.75, minutes_hours: 0.2, ongoing: 0.05 }
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [gao-jce-2025, raviele-europace-2011, thavendiranathan-jama-2009]
+      locator: "Gao 2025 bảng so sánh nhóm hồi hộp do ngoại tâm thu; EHRA 2011 bảng 2"
+      note: "Phân bố trong số người đã hồi hộp. Hồi hộp chỉ vài giây gợi ý do ngoại tâm thu (29,2% so với 11,5%, Gao 2025); mỗi nhịp đến sớm chỉ gây cảm giác thoáng qua (EHRA); ngoại tâm thu dày có thể gây cảm giác hẫng nhịp từng lúc trong vài phút đến vài giờ. Ước lượng."
+  - finding: palpitation_abrupt_onset
+    freq: rare
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [raviele-europace-2011]
+      note: "Tính trong số người đã hồi hộp. Câu hỏi về cơn tim nhanh bật tắt; ngoại tâm thu là từng nhịp lẻ, không thành cơn nhịp nhanh (EHRA bảng 2). Mức rare thấp hơn tỷ lệ nền 0,15: trả lời 'Có' nghiêng về rối loạn nhịp."
+  - finding: neck_pounding
+    freq: occasional
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [nhs-heart-palpitations]
+      note: "Tính trong số người đã hồi hộp. NHS: hồi hộp có thể cảm thấy ở ngực, cổ hoặc họng; nhịp sau khoảng nghỉ đập mạnh có thể thấy ở cổ. Ước 20%, thấp hơn rối loạn nhịp (nhịp nhanh vòng vào lại nút nhĩ thất). Tỷ lệ nền 0,1."
+  - finding: pulse_measured
+    dist: { lt_40: 0.008, n40_100: 0.36, n100_150: 0.03, gt_150: 0.002, not_measured: 0.6 }
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [raviele-europace-2011]
+      note: "'Chưa đo' giữ đúng tỷ lệ nền 0,6. Nhịp nền bình thường, các nhịp bình thường xen giữa nhịp đến sớm (EHRA), nên mạch thường 40–100. Ngoại tâm thu dày (nhịp đôi) có thể làm máy đo đọc mạch thấp. Ước lượng."
+  - finding: stress_poor_sleep
+    freq: frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [nhs-heart-palpitations, gao-jce-2025]
+      reported: "Lo âu 44,4% ở người ngoại tâm thu thất có hồi hộp, 14,4% ở người không có hồi hộp"
+      note: "NHS: thiếu ngủ, căng thẳng, lo âu là yếu tố khởi phát hồi hộp lành tính; người ngoại tâm thu có triệu chứng hay lo âu (Gao 2025, bệnh viện Trung Quốc). Tỷ lệ nền 0,2."
+  - finding: stimulant_intake
+    freq: frequent
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [nhs-heart-palpitations, nhs-arrhythmia]
+      note: "NHS: cà phê, rượu, nicotin là yếu tố khởi phát hồi hộp và rối loạn nhịp. Tỷ lệ ở người ngoại tâm thu chưa có số liệu; ước khoảng một nửa, so với tỷ lệ nền 0,2. Ước lượng."
+  - finding: similar_episodes_before
+    freq: frequent
+    evidence:
+      tier: C
+      basis: verbal
+      sources: [nhs-heart-palpitations, gao-jce-2025]
+      note: "Ngoại tâm thu thường kéo dài, lúc nhiều lúc ít; người đi khám hay đã bị nhiều lần (NHS: khám khi hồi hộp hay tái lại). Tỷ lệ nền 0,2. Ước lượng."
+  - finding: fainting_or_near_fainting
+    freq: rare
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [raviele-europace-2011, nhs-heart-palpitations]
+      locator: "EHRA 2011 (hồi hộp kèm ngất, tiền ngất gợi ý rối loạn huyết động); NHS Heart palpitations (Call 999 or go to A&E)"
+      note: "Ngoại tâm thu lành tính không gây rối loạn huyết động; hồi hộp kèm choáng, ngất gợi ý nguyên nhân nặng hơn. Mức rare thấp hơn tỷ lệ nền 0,15 khi Hồi hộp: trả lời 'Có' làm giảm khả năng ngoại tâm thu đơn thuần."
+  - finding: breathing_difficulty
+    freq: rare
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [raviele-europace-2011, nhs-heart-palpitations]
+      note: "Hồi hộp kèm khó thở cần cấp cứu (NHS), gợi ý nhịp nhanh hoặc bệnh tim phổi hơn là ngoại tâm thu. Mức rare thấp hơn tỷ lệ nền 0,05."
+  - finding: chest_pain_pressure
+    freq: rare
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [raviele-europace-2011, nhs-heart-palpitations]
+      note: "Hồi hộp kèm đau ngực cần cấp cứu (NHS). Mức rare thấp hơn tỷ lệ nền 0,05."
+  - finding: known_heart_disease
+    freq: rare
+    evidence:
+      tier: A
+      basis: judgment
+      sources: [thavendiranathan-jama-2009, nhs-heart-palpitations]
+      note: "Bệnh tim đã biết làm tăng khả năng rối loạn nhịp có ý nghĩa (LR 2,03); bệnh này chỉ gồm ngoại tâm thu lành tính, phần lớn ở người không có bệnh tim. NHS: người có bệnh tim bị hồi hộp nên đi khám. Mức rare thấp hơn tỷ lệ nền 0,05. Ước lượng."
+warning_signs: [chest_pain_pressure, breathing_difficulty, fainting_or_near_fainting]
+self_care_vi:
+  - "Ngủ đủ giấc, giảm căng thẳng."
+  - "Hạn chế cà phê, trà đặc, nước tăng lực, rượu bia và thuốc lá."
+  - "Ghi lại lúc nào thấy hẫng nhịp, mỗi lần kéo dài bao lâu, để kể cho bác sĩ."
+see_doctor_vi:
+  - "Đặt lịch khám trong vài ngày để được đo điện tim, nhất là khi hẫng nhịp xảy ra nhiều lần trong ngày."
+  - "Đi khám sớm hơn nếu có bệnh tim, hoặc gia đình có người bệnh tim hay đột tử khi còn trẻ."
+  - "Đi cấp cứu ngay nếu kèm đau ngực, khó thở, choáng hoặc ngất."
+review:
+  status: draft
+  authors: ["agent:pass-b"]
+  updated: "2026-10-25"
+  notes_vi: "Lượt B (Giai đoạn 3, lô 1, phần b). Bệnh mới tách khỏi rối loạn nhịp tim theo scope.yaml. Mức xử trí 4, không thuộc nhóm không được bỏ sót, giữ như gợi ý: NHS chỉ khuyên khám không khẩn khi hồi hộp hay tái lại, kéo dài hơn vài phút hoặc có bệnh tim; EHRA: ngoại tâm thu thường lành tính. Điểm chưa chắc chắn: (1) prior P1 dựa trên suy luận từ Zwietering (rối loạn nhịp không có ý nghĩa 19,5%), chưa có nghiên cứu tuyến ban đầu nêu riêng tỷ lệ ngoại tâm thu; (2) ngoại tâm thu ở người có bệnh tim có thể có ý nghĩa, bệnh này chỉ tính loại lành tính; (3) lượt B đã định đề xuất 2 dấu hiệu (thời gian mỗi cơn hồi hộp; uống nhiều cà phê, trà, nước tăng lực) thì người bảo trì đã thêm vào danh mục (palpitation_duration, stimulant_intake), nên dùng bản của danh mục. Lựa chọn của palpitation_duration không tách mốc 5 phút (tổng quan JAMA: cơn dưới 5 phút làm giảm khả năng rối loạn nhịp, LR 0,38); nếu tách được 'dưới 5 phút' và 'trên 5 phút' thì phân biệt tốt hơn."

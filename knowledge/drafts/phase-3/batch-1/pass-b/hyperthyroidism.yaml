@@ -1,0 +1,160 @@
+id: hyperthyroidism
+names:
+  vi: "Nhiễm độc giáp (cường giáp)"
+  vi_common: ["Cường giáp", "Bệnh Basedow", "Bướu cổ lồi mắt"]
+  en: "Hyperthyroidism (thyrotoxicosis)"
+codes:
+  icd10: "E05"
+  icd10_verified: true
+  mondo: "MONDO:0004425"
+summary_vi:
+  - "Tuyến giáp tiết quá nhiều hormon, làm cơ thể hoạt động quá mức."
+  - "Hay gặp hồi hộp, tim nhanh, run tay, sợ nóng, ra nhiều mồ hôi, sụt cân dù ăn nhiều."
+  - "Nguyên nhân hay gặp nhất là bệnh Basedow, gặp ở nữ nhiều hơn hẳn nam."
+urgency: 4
+cant_miss: false
+specialties: [endocrinology]
+priors:
+  - complaint: palpitations
+    default: P3
+    by_age: { child_5_12: P5, teen_13_17: P4 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [weber-amjmed-1996, raviele-europace-2011, nhs-overactive-thyroid, nhs-heart-palpitations]
+      locator: "Weber 1996 tóm tắt; EHRA 2011 (bệnh toàn thân 4%); NHS Overactive thyroid; NHS Heart palpitations (nguyên nhân bệnh lý)"
+      reported: "Bệnh toàn thân (gồm cường giáp, thiếu máu, sốt...) 4% người hồi hộp; nhóm nguyên nhân khác 10% (Weber)"
+      note: "Cường giáp là một nguyên nhân bệnh lý của hồi hộp (NHS) nhưng chỉ chiếm một phần nhỏ trong nhóm bệnh toàn thân 4% ở trung tâm đại học. Ước 1–5% ở người lớn hồi hộp (P3), tính chung cả hai giới; hệ số giới điều chỉnh. Hay gặp ở tuổi 20–40 (NHS) nhưng vẫn gặp ở người cao tuổi (thường do bướu nhân, biểu hiện tim mạch nổi trội: 3879/QĐ-BYT), nên giữ P3 đến tuổi già. Thanh thiếu niên P4, trẻ 5–12 tuổi P5. Không có số liệu Việt Nam về tỷ lệ cường giáp ở người hồi hộp."
+prior_modifiers:
+  - when: { sex: [female] }
+    factor: 1.5
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [byt-qd-3879-2014, nhs-overactive-thyroid]
+      reported: "Basedow: nữ/nam 7–10/1 (3879/QĐ-BYT); cường giáp ở nữ gấp khoảng 10 lần nam (NHS)"
+      note: "Người đi khám vì hồi hộp vốn nhiều nữ hơn nam, nên tỷ số trong số người hồi hộp nhỏ hơn 7–10 lần. Ước nữ khoảng 5 lần nam trong số người hồi hộp: hệ số 1,5 cho nữ, 0,3 cho nam so với mức chung."
+  - when: { sex: [male] }
+    factor: 0.3
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [byt-qd-3879-2014, nhs-overactive-thyroid]
+      reported: "Nữ/nam 7–10/1"
+      note: "Xem hệ số của nữ."
+findings:
+  - finding: heat_intolerance
+    freq: very_frequent
+    freq_by_age: { elder_65_74: frequent, elder_75p: frequent }
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-3879-2014, nhs-overactive-thyroid, boelaert-jcem-2010]
+      locator: "3879/QĐ-BYT, bài Cường chức năng tuyến giáp, mục 3.1.1; NHS (sensitivity to heat); Boelaert 2010 tóm tắt"
+      note: "Người bệnh luôn có cảm giác nóng bức, ra nhiều mồ hôi (3879/QĐ-BYT); sợ nóng là triệu chứng chính (NHS). Người trên 60 tuổi ít có các triệu chứng kinh điển hơn (Boelaert; Nordyke: giảm sau 50 tuổi), nên hạ một mức từ 65 tuổi. Ước lượng."
+  - finding: weight_loss_unintended
+    freq: very_frequent
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-3879-2014, nhs-overactive-thyroid, boelaert-jcem-2010, nordyke-archintmed-1988]
+      locator: "3879/QĐ-BYT mục 3.1.1, 3.4.5; NHS (weight loss); Boelaert, Nordyke tóm tắt"
+      note: "Ăn nhiều, mau đói nhưng gầy sút cân là biểu hiện thường gặp (3879/QĐ-BYT); thể tăng cân chỉ khoảng 5% trường hợp. Sụt cân không giảm theo tuổi (Boelaert), thậm chí tăng theo tuổi (Nordyke), nên không hạ mức ở người cao tuổi. Ước lượng."
+  - finding: tremor
+    freq: very_frequent
+    freq_by_age: { elder_65_74: frequent, elder_75p: frequent }
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-3879-2014, nhs-overactive-thyroid, boelaert-jcem-2010]
+      locator: "3879/QĐ-BYT mục 3.1.3 (run tay tần số cao, biên độ nhỏ, ở đầu ngón); NHS (twitching or trembling)"
+      note: "Run tay đầu ngón là dấu hiệu dùng để xác định bệnh (3879/QĐ-BYT mục 3.3). Người cao tuổi ít có triệu chứng kinh điển hơn (Boelaert): hạ một mức từ 65 tuổi. Cùng cụm 'run tay, vã mồ hôi'. Ước lượng."
+  - finding: goiter_visible
+    freq: frequent
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-3879-2014, nhs-overactive-thyroid]
+      locator: "3879/QĐ-BYT mục 3.1.4, 3.3, 3.4.3; NHS (swelling in your neck)"
+      note: "Basedow có tuyến giáp to lan tỏa; ở người cao tuổi bướu chỉ to vừa phải; bướu nhân độc cũng có khối ở cổ. Người bệnh tự nhận thấy cổ to ra ít hơn số người khám thấy bướu, nên chọn frequent. Tỷ lệ nền 0,03. Ước lượng."
+  - finding: eyes_bulging
+    freq: occasional
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [byt-qd-3879-2014, nhs-overactive-thyroid]
+      locator: "3879/QĐ-BYT mục 3.1.5 (khoảng 50% có bệnh mắt trên lâm sàng; 10–20% lồi một bên), 3.4.3 (người cao tuổi ít triệu chứng mắt)"
+      reported: "Khoảng 50% người Basedow có bệnh mắt trên lâm sàng"
+      note: "Bệnh mắt gồm cả cộm, chói mắt, phù mi; người bệnh tự thấy mắt lồi ra ít hơn; người cao tuổi và người bướu nhân độc ít có bệnh mắt. Hạ xuống occasional. Tỷ lệ nền 1% nên trả lời 'Có' làm tăng mạnh khả năng bệnh."
+  - finding: fatigue
+    freq: frequent
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-3879-2014, nhs-overactive-thyroid]
+      note: "Mệt mỏi, giảm khả năng lao động (3879/QĐ-BYT mục 3.1.3); mệt, yếu kéo dài (NHS). Tỷ lệ nền 0,2. Ước lượng."
+  - finding: stress_poor_sleep
+    freq: frequent
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-3879-2014, nhs-overactive-thyroid]
+      note: "Bồn chồn, dễ cáu gắt, rối loạn giấc ngủ (3879/QĐ-BYT); lo âu, khó ngủ (NHS). Câu hỏi gộp căng thẳng, lo lắng, thiếu ngủ. Tỷ lệ nền 0,2. Ước lượng."
+  - finding: diarrhea
+    freq: occasional
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-3879-2014]
+      locator: "3879/QĐ-BYT mục 3.1.1 (khoảng 50% tiêu chảy không đau quặn)"
+      note: "3879/QĐ-BYT ghi khoảng 50% tiêu chảy không kèm đau quặn; NHS không nêu triệu chứng này. Câu hỏi đòi từ 3 lần phân lỏng trong 1 ngày, nhiều người chỉ đi ngoài nhiều lần hơn, nên hạ xuống occasional. Ước lượng."
+  - finding: cold_sweat
+    freq: occasional
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-3879-2014]
+      note: "Người bệnh ra nhiều mồ hôi, bàn tay ấm ẩm (3879/QĐ-BYT); mồ hôi thường ấm, không phải vã mồ hôi lạnh, nhưng người dùng có thể trả lời 'Có'. Ước 20%."
+  - finding: palpitation_rhythm
+    dist: { fast_regular: 0.45, irregular: 0.12, skipped_beats: 0.08, forceful: 0.35 }
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-3879-2014, raviele-europace-2011]
+      locator: "3879/QĐ-BYT mục 3.1.2 (nhịp tim nhanh thường xuyên 100–140 lần/phút, mạch nảy mạnh, rung nhĩ ở người cao tuổi); EHRA 2011 (cường giáp gây nhịp nhanh xoang)"
+      note: "Phân bố trong số người đã hồi hộp. Nhịp nhanh xoang đều, mạch nảy mạnh; rung nhĩ là biến chứng hay gặp, nhất là ở người cao tuổi. Ước lượng."
+  - finding: palpitation_abrupt_onset
+    freq: rare
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-3879-2014]
+      note: "Tính trong số người đã hồi hộp. Nhịp tim nhanh thường xuyên, không thành cơn bật tắt; chỉ đôi khi có cơn nhịp nhanh kịch phát (3879/QĐ-BYT). Mức rare thấp hơn tỷ lệ nền 0,15."
+  - finding: palpitation_duration
+    dist: { seconds: 0.1, minutes_hours: 0.3, ongoing: 0.6 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-3879-2014]
+      note: "Phân bố trong số người đã hồi hộp. Nhịp tim nhanh thường xuyên (3879/QĐ-BYT) nên phần lớn thấy hồi hộp kéo dài liên tục. Ước lượng."
+  - finding: pulse_measured
+    dist: { lt_40: 0.004, n40_100: 0.14, n100_150: 0.24, gt_150: 0.016, not_measured: 0.6 }
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-3879-2014]
+      locator: "3879/QĐ-BYT mục 3.1.2 (tần số tim 100–140 lần/phút)"
+      note: "'Chưa đo' giữ đúng tỷ lệ nền 0,6. Phần lớn người bệnh có tim nhanh 100–140 lần/phút; trên 140 gợi ý cơn bão giáp hoặc rung nhĩ nhanh. Ước lượng."
+warning_signs: [confusion, breathing_difficulty, chest_pain_pressure, fainting_or_near_fainting]
+self_care_vi:
+  - "Hạn chế cà phê, trà đặc, nước tăng lực vì làm tim đập nhanh hơn."
+  - "Không tự uống thuốc hay thực phẩm chức năng có i-ốt khi chưa hỏi bác sĩ."
+see_doctor_vi:
+  - "Đặt lịch khám trong vài ngày để được xét nghiệm máu về tuyến giáp."
+  - "Đi cấp cứu ngay nếu sốt cao kèm tim đập rất nhanh, vật vã, lú lẫn hoặc khó thở."
+  - "Nếu đang điều trị, không tự ý ngừng thuốc, vì ngừng đột ngột có thể gây cơn bão giáp."
+review:
+  status: draft
+  authors: ["agent:pass-b"]
+  updated: "2026-10-25"
+  notes_vi: "Lượt B (Giai đoạn 3, lô 1, phần b). Mức xử trí 4, không thuộc nhóm không được bỏ sót, giữ như gợi ý: NHS khuyên khám bác sĩ gia đình để xét nghiệm máu; 3879/QĐ-BYT điều trị nội khoa; cơn bão giáp là cấp cứu (dấu hiệu cảnh báo: lú lẫn, khó thở, đau ngực, ngất; sốt cao kèm vật vã ghi trong lời khuyên). Prior chỉ khai báo cho Hồi hộp theo scope.yaml. Điểm chưa chắc chắn: (1) chưa mở được nguồn có tỷ lệ từng triệu chứng (Boelaert 2010 toàn văn cần đăng nhập), nên tần suất dựa trên mô tả của 3879/QĐ-BYT và NHS; (2) prior là ước lượng, không có số liệu Việt Nam; (3) hệ số giới tính suy từ tỷ số nữ/nam của bệnh, chưa có tỷ số trong số người hồi hộp; (4) người cao tuổi có thể biểu hiện chủ yếu bằng rung nhĩ, sụt cân, khó thở (thể vô cảm), dễ bị xếp vào rối loạn nhịp."
