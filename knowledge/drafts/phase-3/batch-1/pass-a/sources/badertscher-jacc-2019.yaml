@@ -1,0 +1,15 @@
+id: badertscher-jacc-2019
+type: primary_study
+title: "Prevalence of pulmonary embolism in patients with syncope"
+publisher: "Journal of the American College of Cardiology 2019;74(6):744–754 (Badertscher P và cs., BASEL IX)"
+date: "2019"
+url: "https://europepmc.org/article/MED/31395124"
+doi: "10.1016/j.jacc.2019.06.020"
+pmid: "31395124"
+license_class: L3
+license_note: "Bản quyền Elsevier: chỉ dùng dữ kiện kèm trích dẫn."
+default_tier: B
+accessed: "2026-10-25"
+verified: true
+verified_by: "agent:pass-a (chỉ đọc tóm tắt qua API Europe PMC)"
+notes_vi: "Nghiên cứu tiến cứu đa trung tâm (BASEL IX): 1.397 người ngất đến cấp cứu, không chọn lọc; thuyên tắc phổi lúc đến khám 1,4% (KTC 95% 0,87–2,11%), 2,3% ở nhóm nằm viện. Kết luận: thuyên tắc phổi là nguyên nhân ngất khá hiếm ở cấp cứu."

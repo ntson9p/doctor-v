@@ -1,0 +1,187 @@
+id: reflex_orthostatic_syncope
+names:
+  vi: "Ngất do phản xạ, hạ huyết áp tư thế đứng"
+  vi_common: ["Ngất phế vị", "Cường phế vị", "Tụt huyết áp khi đứng dậy", "Hạ huyết áp do thuốc"]
+  en: "Reflex syncope and orthostatic hypotension (including drug-induced)"
+codes:
+  icd10: "R55"
+  icd10_verified: true
+summary_vi:
+  - "Ngất hoặc choáng do huyết áp tụt thoáng qua, hay gặp khi đứng lâu, nóng bức, đau, sợ hãi hoặc vừa đứng dậy."
+  - "Người cao tuổi hay bị tụt huyết áp khi đứng dậy, nhất là khi đang uống thuốc hạ áp hoặc lợi tiểu."
+  - "Thường lành tính và tỉnh lại nhanh, nhưng cần đi khám để loại trừ ngất do tim."
+urgency: 4
+cant_miss: false
+specialties: [cardiology, general_medicine]
+priors:
+  - complaint: syncope
+    default: P1
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [soteriades-nejm-2002, romme-car-2008, alboni-jacc-2001, esc-syncope-2018-practical]
+      locator: "Soteriades: tóm tắt; Romme: tóm tắt; Alboni: tóm tắt; ESC 2018 Practical Instructions: mục dịch tễ"
+      reported: "Cộng đồng (Framingham): phế vị 21,2%, hạ huyết áp tư thế 9,4%, không rõ 36,6%, do tim 9,5%. Cấp cứu (Amsterdam): ngất phản xạ 60,2%, gồm 73,4% ở người dưới 40 tuổi và 45,3% ở người từ 60 tuổi. Đơn vị ngất (Ý): qua trung gian thần kinh 58%."
+      population: "Người ngất ở cộng đồng, cấp cứu và đơn vị ngất (châu Âu, Mỹ)"
+      note: "ESC 2018: ngất phản xạ là nguyên nhân hay gặp nhất ở mọi bối cảnh và mọi lứa tuổi; hạ huyết áp tư thế hiếm dưới 40 tuổi, hay gặp ở người rất cao tuổi; ngất do tim rất hiếm ở trẻ em, thiếu niên, người trẻ. Ở người cao tuổi, ngất phản xạ ít hơn nhưng hạ huyết áp tư thế (nhất là do thuốc) nhiều hơn, nên gộp lại vẫn từ 20% trở lên ở mọi nhóm tuổi (P1). Phần lớn ca 'không rõ nguyên nhân' ở cộng đồng có lẽ cũng là ngất phản xạ, nhưng chưa có số liệu. Chưa có số liệu Việt Nam."
+  - complaint: dizziness
+    default: P2
+    by_age: { elder_65_74: P1, elder_75p: P1 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [bosner-bmcfampract-2018, maarsingh-annfammed-2010, esc-syncope-2018-practical]
+      locator: "Bösner bảng 3 và 4; Maarsingh: tóm tắt và kết quả"
+      reported: "Nguyên nhân tim mạch 3,8–56,8% người chóng mặt ở chăm sóc ban đầu; ở người 65–95 tuổi chóng mặt kéo dài: tiền ngất 69%, tim mạch (kể cả mạch não) 57%, thuốc góp phần ở 23–25%."
+      population: "Người chóng mặt đi khám bác sĩ gia đình (châu Âu, Mỹ)"
+      note: "Choáng như sắp ngất do tụt huyết áp tư thế, do thuốc hạ áp hoặc do phản xạ phế vị là phần lớn của nhóm 'tim mạch' ở người cao tuổi, nên chọn P1 từ 65 tuổi. Ở người trẻ, chóng mặt kiểu quay và đau nửa đầu chiếm phần lớn hơn, nhưng choáng khi đứng dậy và cơn phế vị vẫn hay gặp ở thiếu niên, người trẻ; ước 5–20% (P2). Ước lượng, chưa có số liệu Việt Nam."
+findings:
+  - finding: syncope_trigger
+    dist: { standing_heat: 0.33, emotion_pain: 0.18, standing_up: 0.25, toilet_cough: 0.08, exertion: 0.01, lying: 0.01, no_trigger: 0.14 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [esc-syncope-2018, berecki-plosone-2013]
+      locator: "ESC 2018 bảng 3 (phân loại ngất) và bảng 5 (đặc điểm gợi ý); Berecki 2013 bảng 2"
+      note: "Phân bố trong số người đã ngất hoặc suýt ngất. ESC 2018: ngất phế vị xảy ra khi đứng lâu, nơi nóng, đông người, khi sợ hãi, đau, thấy máu; ngất tình huống khi đi tiểu, đi ngoài, ho, nuốt; hạ huyết áp tư thế khi vừa đứng dậy hoặc sau khi đứng lâu; thể không điển hình không có yếu tố khởi phát. Berecki: ngất khi gắng sức và khi nằm chỉ khoảng 2% ở ngất không do tim. Tỷ lệ từng lựa chọn là ước lượng."
+  - finding: syncope_warning
+    dist: { prodrome: 0.75, palpitations_first: 0.05, no_warning: 0.20 }
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [romme-car-2008, berecki-plosone-2013, esc-syncope-2018]
+      locator: "Romme: tóm tắt; Berecki bảng 2; ESC 2018 bảng 5"
+      reported: "Trước cơn ngất phản xạ: da tái 79,9%, choáng váng 73,4%, vã mồ hôi 63,0% (Romme). Có dấu hiệu báo trước 63% ở ngất không do tim so với 39% ở ngất do tim; hồi hộp 11% so với 8% (Berecki)."
+      note: "Phân bố trong số người đã ngất hoặc suýt ngất. Lựa chọn 'nóng người, vã mồ hôi, buồn nôn hoặc tối sầm mắt' gồm các dấu hiệu báo trước điển hình của ngất phản xạ (ESC 2018 bảng 5). Người cao tuổi ít dấu hiệu báo trước hơn (Romme) và thể không điển hình không có báo trước, nên để 20% cho 'ngất đột ngột'."
+  - finding: dizziness_on_standing
+    freq: frequent
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [esc-syncope-2018, esc-syncope-2018-practical]
+      locator: "ESC 2018 bảng 3 và bảng 5"
+      note: "ESC 2018: hạ huyết áp tư thế xảy ra trong hoặc ngay sau khi đứng; ngất phế vị thể tư thế xảy ra chủ yếu khi đứng. Người ngất phản xạ do cảm xúc, đau hoặc ngất tình huống không nhất thiết choáng khi đứng dậy, nên chọn frequent (khoảng một nửa) cho cả nhóm. Ước lượng."
+  - finding: bp_lowering_meds
+    freq: occasional
+    freq_by_age: { child_5_12: very_rare, teen_13_17: very_rare, adult_18_44: rare, elder_65_74: frequent, elder_75p: frequent }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [esc-syncope-2018, maarsingh-annfammed-2010]
+      locator: "ESC 2018 bảng 3 (hạ huyết áp do thuốc) và bảng 5; Maarsingh: kết quả"
+      note: "ESC 2018: hạ huyết áp do thuốc (giãn mạch, lợi tiểu, an thần kinh, chống trầm cảm) là nguyên nhân hay gặp nhất của hạ huyết áp tư thế; khởi phát gắn với việc mới dùng hoặc đổi liều thuốc hạ áp, lợi tiểu gợi ý ngất do hạ huyết áp tư thế. Maarsingh: tác dụng phụ của thuốc góp phần ở khoảng 1/4 người cao tuổi chóng mặt. Tỷ lệ theo tuổi là ước lượng: người trẻ hầu như không dùng thuốc hạ áp, người từ 65 tuổi hạ huyết áp tư thế thường đang dùng thuốc."
+  - finding: similar_episodes_before
+    freq: very_frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [berecki-plosone-2013, alboni-jacc-2001, esc-syncope-2018]
+      locator: "Berecki bảng 2; Alboni: tóm tắt; ESC 2018 bảng 5"
+      reported: "Trên 2 cơn: 62% ở ngất không do tim so với 30% ở ngất do tim (Berecki)."
+      note: "ESC 2018: tiền sử ngất tái diễn nhiều năm, nhất là bắt đầu trước 40 tuổi, gợi ý ngất phản xạ; Alboni: các cơn kéo dài trên 4 năm gợi ý ngất phản xạ. Câu hỏi chỉ cần từng có một cơn giống hệt, nên tần suất cao hơn tỷ lệ 'trên 2 cơn'."
+  - finding: cold_sweat
+    freq: frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [romme-car-2008, berecki-plosone-2013]
+      locator: "Romme: tóm tắt; Berecki bảng 2"
+      reported: "Vã mồ hôi 63,0% trước cơn ngất phản xạ (Romme); 43% ở ngất không do tim so với 18% ở ngất do tim (Berecki)."
+      note: "Vã mồ hôi cũng nằm trong lựa chọn 'dấu hiệu báo trước' của câu hỏi syncope_warning, nên hai câu trùng nhau một phần; vì vậy chọn frequent, không chọn very_frequent."
+  - finding: palpitations
+    freq: occasional
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [berecki-plosone-2013]
+      locator: "Bảng 2"
+      reported: "Hồi hộp 11% ở ngất không do tim, 8% ở ngất do tim (khác biệt không có ý nghĩa)."
+      note: "Chỉ dùng khi triệu chứng chính là ngất hoặc chóng mặt. Mức occasional cao hơn tỷ lệ nền 5% vì người ngất phản xạ khá hay thấy hồi hộp trước hoặc sau cơn."
+  - finding: dizziness
+    freq: very_frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [romme-car-2008]
+      locator: "Tóm tắt"
+      reported: "Choáng váng 73,4% trước cơn ngất phản xạ."
+      note: "Chỉ dùng khi triệu chứng chính là ngất (khi triệu chứng chính là chóng mặt, dấu hiệu này đã được ngầm định)."
+  - finding: fainting_or_near_fainting
+    freq: very_frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [maarsingh-annfammed-2010, esc-syncope-2018-practical]
+      locator: "Maarsingh: tóm tắt"
+      reported: "Tiền ngất (choáng như sắp ngất) là kiểu chóng mặt hay gặp nhất (69%) ở người cao tuổi chóng mặt kéo dài."
+      population: "Người 65–95 tuổi khám bác sĩ gia đình vì chóng mặt (Hà Lan)"
+      note: "Chỉ dùng khi triệu chứng chính là chóng mặt. Chóng mặt do tụt huyết áp tư thế hoặc do phản xạ chính là cảm giác choáng như sắp ngất."
+  - finding: vertigo_spinning
+    freq: occasional
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [bosner-bmcfampract-2018, maarsingh-annfammed-2010]
+      locator: "Bösner: kết quả về nguyên nhân chóng mặt kiểu quay; Maarsingh: kiểu chóng mặt"
+      note: "Tính trong số người đã chóng mặt. Chóng mặt do tụt huyết áp là choáng, tối sầm mắt, ít khi là cảm giác quay; Bösner: ở người chóng mặt kiểu quay, nguyên nhân tim mạch hầu như không có. Maarsingh: 44% người cao tuổi có từ 2 kiểu chóng mặt, nên không để quá thấp. Mức occasional thấp hơn tỷ lệ nền 30%."
+  - finding: dizziness_positional
+    freq: rare
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [esc-syncope-2018, bosner-bmcfampract-2018]
+      locator: "ESC 2018 bảng 5"
+      note: "Tính trong số người đã chóng mặt. Hạ huyết áp tư thế gây choáng khi đứng dậy, không gây chóng mặt khi trở mình, nằm xuống hoặc ngửa cổ (kiểu của chóng mặt tư thế kịch phát lành tính). Mức rare thấp hơn tỷ lệ nền 10%. Ước lượng; người bệnh có thể nhầm 'ngồi dậy' với 'trở mình'."
+  - finding: dizziness_pattern
+    dist: { brief_episodes: 0.45, long_episodes: 0.30, continuous: 0.05, chronic: 0.20 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [esc-syncope-2018, maarsingh-annfammed-2010]
+      note: "Phân bố trong số người đã chóng mặt. Choáng khi đứng dậy thường chỉ vài giây đến dưới 1 phút; cơn tiền ngất phế vị kéo dài vài phút; người cao tuổi hạ huyết áp tư thế do thuốc có thể choáng nhiều lần mỗi ngày, kéo dài nhiều tuần (Maarsingh tuyển người chóng mặt từ 2 tuần). Ít khi liên tục không dứt. Ước lượng."
+  - finding: pulse_measured
+    dist: { lt_40: 0.012, n40_100: 0.34, n100_150: 0.044, gt_150: 0.004, not_measured: 0.6 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [esc-syncope-2018]
+      note: "Mạch đo lúc có triệu chứng. Ngất phế vị có thể làm mạch chậm thoáng qua (thể ức chế tim); hạ huyết áp tư thế có thể kèm mạch hơi nhanh khi đứng; mạch trên 150 lần/phút rất hiếm. Ước lượng. Lựa chọn 'Chưa đo' là trung tính nên để 0,6 như nền; bốn mức đo được đã nhân 0,4 (người bảo trì, 25/10/2026)."
+  - finding: breathing_difficulty
+    freq: rare
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [esc-pe-2019]
+      locator: "Mục biểu hiện lâm sàng"
+      note: "ESC 2019 (thuyên tắc phổi): nghĩ đến thuyên tắc phổi khi khó thở đi kèm tiền ngất hoặc ngất. Ngất phản xạ ít khi kèm khó thở thật; mức rare thấp hơn tỷ lệ nền 5% để câu trả lời 'Có' làm giảm khả năng ngất lành tính. Ngất kèm khó thở đã được quy tắc rf_syncope_breathing xếp mức 1. Ước lượng."
+  - finding: chest_pain_pressure
+    freq: rare
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [nhs-fainting]
+      locator: "When to call 999"
+      note: "NHS khuyên gọi 999 khi ngất kèm đau ngực hoặc tim đập mạnh, loạn, vì đó không phải kiểu ngất lành tính. Mức rare thấp hơn tỷ lệ nền 5%. Ước lượng."
+  - finding: abdominal_pain
+    freq: occasional
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [alboni-jacc-2001]
+      locator: "Tóm tắt"
+      note: "Alboni: khó chịu ở bụng trước khi mất ý thức là dấu hiệu gợi ý ngất phản xạ. Tần suất là ước lượng. Ngất kèm đau bụng vẫn được quy tắc rf_fainting_with_pain xếp mức 2 để loại trừ chảy máu trong ổ bụng."
+warning_signs: [chest_pain_pressure, breathing_difficulty, confusion, black_stool]
+self_care_vi:
+  - "Khi thấy sắp ngất, nằm xuống và kê cao chân, hoặc ngồi cúi đầu xuống thấp."
+  - "Uống đủ nước, tránh đứng lâu ở nơi nóng, đông người."
+  - "Đứng dậy từ từ: ngồi dậy trước, chờ một lát rồi mới đứng lên."
+  - "Không tự ngừng hay đổi thuốc huyết áp; hỏi bác sĩ nếu hay bị choáng khi đứng dậy."
+see_doctor_vi:
+  - "Đi khám trong vài ngày tới để được đo huyết áp khi nằm và khi đứng, làm điện tim."
+  - "Gọi 115 nếu ngất khi đang gắng sức hoặc khi đang nằm, hoặc kèm đau ngực, khó thở, tim đập loạn."
+  - "Gọi 115 nếu người ngất không tỉnh lại trong 1 phút, hoặc bị co giật."
+review:
+  status: draft
+  authors: ["agent:pass-a"]
+  updated: "2026-10-25"
+  notes_vi: "Giữ mức xử trí 4, không thuộc nhóm không được bỏ sót, như gợi ý: ESC 2018 coi ngất phản xạ, hạ huyết áp tư thế ở người nguy cơ thấp là lành tính (Soteriades: không tăng tử vong); NHS khuyên đi khám bác sĩ sau khi ngất, gọi 999 khi ngất khi gắng sức, khi nằm, kèm đau ngực hoặc tim đập loạn (các quy tắc lô 1 đã xử trí). Bệnh gộp ngất phản xạ (phế vị, tình huống, xoang cảnh) và hạ huyết áp tư thế (kể cả do thuốc); mất nước do tiêu chảy, mất máu thuộc bệnh viêm dạ dày ruột cấp và xuất huyết tiêu hóa trên. Mã ICD-10 chính là R55 ('Ngất và/hoặc ngã quỵ', đã tra bộ mã theo Thông tư 06/2026/TT-BYT qua dữ liệu của icd.kcb.vn); hạ huyết áp tư thế đứng là I95.1, hạ huyết áp do thuốc là I95.2. Không có mã MONDO tương ứng cho cả nhóm. Lượt A đã tự mở ESC 2018 (esc-syncope-2018, bảng 3 và bảng 5 trên trang OUP) và trang NHS Fainting ngày 25/10/2026; lượt R cũng đã xác nhận hai nguồn này trong sổ đăng ký. Điểm chưa chắc: (1) prior P1 dựa trên số liệu châu Âu, Mỹ, chưa có số liệu Việt Nam; (2) phân bố hoàn cảnh ngất và dấu hiệu báo trước là ước lượng từ mô tả của ESC và số liệu gộp ở bệnh viện (Berecki), chưa có số liệu ở cộng đồng; (3) bảng 6 của ESC 2018 (đặc điểm nguy cơ cao) không hiện trong bản lượt A đọc được, nên liên kết đau ngực, khó thở dựa vào NHS Fainting và ESC 2019 về thuyên tắc phổi; (4) vã mồ hôi lạnh và lựa chọn 'dấu hiệu báo trước' trùng nhau một phần, có thể đếm trùng; (5) chưa có câu hỏi 'đứng lâu', 'vừa đổi thuốc hạ áp' riêng, nên hai ý này nằm trong câu hỏi hoàn cảnh ngất và câu hỏi thuốc hạ áp."

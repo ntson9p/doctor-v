@@ -1,0 +1,15 @@
+id: costantino-jamaim-2018
+type: primary_study
+title: "Prevalence of pulmonary embolism in patients with syncope"
+publisher: "JAMA Internal Medicine 2018;178(3):356–362 (Costantino G, Ruwald MH, Quinn J và cs.)"
+date: "2018"
+url: "https://europepmc.org/article/MED/29379959"
+doi: "10.1001/jamainternmed.2017.8175"
+pmid: "29379959"
+license_class: L3
+license_note: "Bản quyền JAMA Network: chỉ dùng dữ kiện kèm trích dẫn."
+default_tier: B
+accessed: "2026-10-25"
+verified: true
+verified_by: "agent:pass-a (chỉ đọc tóm tắt qua API Europe PMC)"
+notes_vi: "Dữ liệu hành chính của 1.671.944 người lớn đến cấp cứu vì ngất ở Canada, Đan Mạch, Ý, Mỹ (2000–2016). Tỷ lệ thuyên tắc phổi khi ra viện: 0,06–0,55% ở mọi người, 0,15–2,10% ở người nằm viện; sau 90 ngày 0,14–0,83%. Kết luận: thuyên tắc phổi hiếm khi là nguyên nhân ngất."

@@ -1,0 +1,158 @@
+id: hyperthyroidism
+names:
+  vi: "Nhiễm độc tuyến giáp (cường giáp)"
+  vi_common: ["Cường giáp", "Bệnh Basedow", "Bướu giáp lồi mắt"]
+  en: "Hyperthyroidism (thyrotoxicosis)"
+codes:
+  icd10: "E05"
+  icd10_verified: true
+  mondo: "MONDO:0004425"
+summary_vi:
+  - "Tuyến giáp tiết quá nhiều hormon, làm cơ thể hoạt động quá mức."
+  - "Hay gặp tim đập nhanh, run tay, sợ nóng, ra nhiều mồ hôi, sụt cân dù ăn nhiều; có thể có bướu cổ, lồi mắt."
+  - "Bệnh Basedow là nguyên nhân hay gặp nhất, chủ yếu ở phụ nữ."
+urgency: 4
+cant_miss: false
+specialties: [endocrinology]
+priors:
+  - complaint: palpitations
+    default: P3
+    by_age: { child_5_12: P5, teen_13_17: P4 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [raviele-europace-2011, weber-amjmed-1996, msd-hyperthyroidism, byt-qd-3879-2014]
+      locator: "EHRA 2011: mục nguyên nhân hồi hộp; MSD: dịch tễ; 3879/QĐ-BYT: bài Cường chức năng tuyến giáp"
+      reported: "Nguyên nhân toàn thân (cường giáp, thiếu máu, sốt) 4% người hồi hộp (Weber và Kapoor, theo EHRA 2011); cường giáp khoảng 1% dân số Mỹ, hay gặp ở nữ 20–50 tuổi (MSD)."
+      note: "Cường giáp là một phần trong nhóm nguyên nhân toàn thân 4%; hồi hộp, nhịp nhanh là triệu chứng chính của bệnh (3879/QĐ-BYT). Ước 1–5% người lớn hồi hộp (P3). Trẻ em, thiếu niên rất ít bị Basedow: 5–12 tuổi P5, 13–17 tuổi P4. Chưa có số liệu Việt Nam."
+prior_modifiers:
+  - when: { sex: [female] }
+    factor: 1.5
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-3879-2014, msd-hyperthyroidism]
+      locator: "3879/QĐ-BYT: bài Cường chức năng tuyến giáp (Basedow)"
+      note: "3879/QĐ-BYT: Basedow gặp ở nữ nhiều hơn nam, khoảng 7–10 nữ/1 nam; MSD: hay gặp ở nữ 20–50 tuổi. Người hồi hộp vốn đã nhiều nữ hơn, nên hệ số so với mức trung bình khoảng 1,5 cho nữ và 0,3 cho nam (quy đổi ước lượng)."
+  - when: { sex: [male] }
+    factor: 0.3
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-3879-2014]
+      note: "Xem hệ số cho nữ: tỷ lệ nữ/nam khoảng 7–10/1, quy về hệ số so với mức trung bình của người dùng (ước lượng)."
+findings:
+  - finding: palpitation_rhythm
+    dist: { fast_regular: 0.50, irregular: 0.12, skipped_beats: 0.08, forceful: 0.30 }
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-3879-2014, msd-hyperthyroidism]
+      locator: "3879/QĐ-BYT: triệu chứng tim mạch"
+      note: "Tính trong số người đã hồi hộp. 3879/QĐ-BYT: nhịp tim nhanh 100–140 lần/phút, rung nhĩ ở khoảng 10–25% người Basedow, nhất là người cao tuổi; tim đập mạnh do tăng cung lượng tim. Tỷ lệ từng lựa chọn là ước lượng."
+  - finding: palpitation_abrupt_onset
+    freq: rare
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-3879-2014]
+      note: "Tính trong số người đã hồi hộp. Nhịp nhanh do cường giáp kéo dài liên tục, cả khi nghỉ, không đến và dừng đột ngột như cơn nhịp nhanh kịch phát; trừ khi có cơn rung nhĩ. Mức rare thấp hơn tỷ lệ nền 15%. Ước lượng."
+  - finding: pulse_measured
+    dist: { lt_40: 0.004, n40_100: 0.152, n100_150: 0.224, gt_150: 0.02, not_measured: 0.6 }
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-3879-2014]
+      locator: "Bài Cường chức năng tuyến giáp: triệu chứng tim mạch"
+      note: "3879/QĐ-BYT: nhịp tim thường 100–140 lần/phút; trên 140 gặp trong cơn bão giáp. Bệnh nhẹ có thể dưới 100. Tỷ lệ là ước lượng. Lựa chọn 'Chưa đo' là trung tính nên để 0,6 như nền; bốn mức đo được đã nhân 0,4 (người bảo trì, 25/10/2026)."
+  - finding: weight_loss_unintended
+    freq: frequent
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-3879-2014, msd-hyperthyroidism, boelaert-jcem-2010]
+      locator: "3879: triệu chứng chuyển hóa; MSD: Symptoms and Signs; Boelaert: tóm tắt"
+      note: "3879/QĐ-BYT và MSD: ăn nhiều mà vẫn sụt cân; Boelaert: sụt cân vẫn hay gặp ở người cao tuổi, khác với phần lớn triệu chứng kinh điển. Tần suất cụ thể chưa có (tóm tắt không ghi số); chọn frequent."
+  - finding: heat_intolerance
+    freq: frequent
+    freq_by_age: { elder_65_74: occasional, elder_75p: occasional }
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-3879-2014, msd-hyperthyroidism, boelaert-jcem-2010]
+      note: "3879/QĐ-BYT và MSD: sợ nóng, ra nhiều mồ hôi là triệu chứng chính; Boelaert: triệu chứng kinh điển ít gặp hơn hẳn ở người cao tuổi, nên hạ một mức từ 65 tuổi. Ước lượng."
+  - finding: tremor
+    freq: frequent
+    freq_by_age: { elder_65_74: occasional, elder_75p: occasional }
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-3879-2014, msd-hyperthyroidism, boelaert-jcem-2010]
+      note: "3879/QĐ-BYT: run tay nhỏ; MSD: run là triệu chứng hay gặp, nhưng người cao tuổi phần lớn không run; Boelaert: triệu chứng kinh điển giảm theo tuổi (3879 lại ghi người cao tuổi run biên độ lớn, hai nguồn chưa thống nhất). Ước lượng."
+  - finding: goiter_visible
+    freq: frequent
+    freq_by_age: { elder_65_74: occasional, elder_75p: occasional }
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-3879-2014, msd-hyperthyroidism]
+      note: "3879/QĐ-BYT: Basedow có bướu giáp lan tỏa, mềm; người cao tuổi bướu vừa phải. MSD: bướu giáp có thể có. Câu hỏi hỏi bướu nhìn thấy được nên thấp hơn tỷ lệ có bướu khi khám; chọn frequent, hạ một mức từ 65 tuổi. Tỷ lệ nền 3% nên câu trả lời 'Có' làm tăng mạnh khả năng bệnh."
+  - finding: fatigue
+    freq: frequent
+    evidence:
+      tier: C
+      basis: verbal
+      sources: [msd-hyperthyroidism]
+      note: "MSD: mệt, yếu là triệu chứng hay gặp. Tỷ lệ nền 20% nên dấu hiệu này phân biệt kém."
+  - finding: diarrhea
+    freq: occasional
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-3879-2014, msd-hyperthyroidism]
+      note: "3879/QĐ-BYT ghi khoảng 50% có tiêu chảy không đau quặn; MSD: đi ngoài nhiều lần, chỉ đôi khi tiêu chảy. Câu hỏi đòi từ 3 lần phân lỏng mỗi ngày nên chọn occasional."
+  - finding: breathless_on_exertion
+    freq: occasional
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [boelaert-jcem-2010, msd-hyperthyroidism]
+      note: "Boelaert: khó thở là triệu chứng vẫn hay gặp ở người cao tuổi cường giáp; MSD: yếu cơ, suy tim ở người cao tuổi. Tần suất chưa có; ước lượng."
+  - finding: panic_fear
+    freq: rare
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [msd-hyperthyroidism, msd-panic-disorder]
+      note: "Cường giáp gây bồn chồn, lo lắng kéo dài, nhưng cơn sợ hãi dữ dội như sắp chết là đặc trưng của cơn hoảng sợ; MSD (cơn hoảng sợ) xếp cường giáp vào bệnh cần loại trừ. Mức rare thấp hơn tỷ lệ nền 5%. Ước lượng."
+  - finding: eyes_bulging
+    freq: occasional
+    freq_by_age: { elder_65_74: rare, elder_75p: rare }
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-3879-2014, msd-hyperthyroidism]
+      note: "Dấu hiệu đề xuất (proposed_findings). 3879/QĐ-BYT: khoảng 50% người Basedow có bệnh mắt (lồi mắt, nhìn đôi), người cao tuổi ít triệu chứng mắt; MSD: lồi mắt thâm nhiễm chỉ có ở Basedow, người cao tuổi phần lớn không lồi mắt. Người bệnh tự nhận thấy mắt lồi ít hơn, và bệnh gồm cả nguyên nhân khác Basedow, nên chọn occasional; ước lượng."
+warning_signs: [confusion, breathing_difficulty, chest_pain_pressure, fainting_or_near_fainting]
+self_care_vi:
+  - "Hạn chế cà phê, trà đặc, nước tăng lực vì làm tim đập nhanh hơn."
+  - "Không tự dùng thuốc hoặc thực phẩm chức năng chứa i-ốt (iod) khi chưa hỏi bác sĩ."
+  - "Người đang điều trị cường giáp không tự ngừng thuốc."
+see_doctor_vi:
+  - "Đi khám trong vài ngày tới để được xét nghiệm hormon tuyến giáp."
+  - "Đến cấp cứu ngay nếu sốt cao kèm tim đập rất nhanh, lú lẫn, nôn hoặc tiêu chảy nhiều."
+review:
+  status: draft
+  authors: ["agent:pass-a"]
+  updated: "2026-10-25"
+  notes_vi: "Giữ mức xử trí 4, không thuộc nhóm không được bỏ sót, như gợi ý: 3879/QĐ-BYT điều trị cường giáp chưa biến chứng ngoại trú; cơn bão giáp (khoảng 1–2% người nhiễm độc giáp nhập viện) có sốt cao, nhịp trên 140, lú lẫn, nôn, tiêu chảy, đã được các quy tắc lú lẫn (mức 1), mạch trên 150 (mức 2) bắt một phần. Mã E05 cấp nhóm ('Nhiễm độc tuyến giáp [cường giáp]', bộ mã Thông tư 06/2026/TT-BYT) vì bệnh gồm Basedow (E05.0), bướu nhân độc (E05.1, E05.2) và nguyên nhân khác. Điểm chưa chắc: (1) prior chỉ suy từ nhóm 'nguyên nhân toàn thân' 4% của Weber và Kapoor, chưa có số liệu riêng; (2) tần suất triệu chứng chủ yếu là mô tả bằng lời (3879, MSD); toàn văn Boelaert có tỷ lệ từng triệu chứng theo tuổi nhưng cần thuê bao; (3) hệ số giới quy đổi từ tỷ lệ nữ/nam của Basedow; (4) đề nghị thêm cơn bão giáp vào quy tắc (sốt kèm mạch trên 140 ở người đã biết cường giáp) nếu người bảo trì thấy cần; (5) đề xuất dấu hiệu mới eyes_bulging (mắt lồi). Chưa có câu hỏi 'đã biết bị cường giáp' và 'ăn nhiều hơn trước'."
+proposed_findings:
+  - id: eyes_bulging
+    kind: sign
+    type: binary
+    label_vi: "Mắt lồi hơn trước"
+    question_vi: "Mắt có lồi ra hoặc trợn to hơn trước không?"
+    help_vi: "So với ảnh cũ hoặc nhờ người nhà nhận xét. Có thể kèm cộm mắt, chảy nước mắt hoặc nhìn đôi."
+    leak: specific
+    sources: [byt-qd-3879-2014, msd-hyperthyroidism]
+    notes_vi: "3879/QĐ-BYT: khoảng 50% người Basedow có bệnh mắt; MSD: lồi mắt thâm nhiễm chỉ có ở Basedow. Giúp phân biệt cường giáp với cơn hoảng sợ, rối loạn nhịp ở người hồi hộp."

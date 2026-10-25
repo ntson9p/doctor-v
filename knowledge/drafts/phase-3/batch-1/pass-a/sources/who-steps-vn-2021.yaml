@@ -1,0 +1,13 @@
+id: who-steps-vn-2021
+type: statistic
+title: "National survey on the risk factors of noncommunicable diseases in Viet Nam, 2021 (STEPS)"
+publisher: "World Health Organization Regional Office for the Western Pacific; Bộ Y tế"
+date: "2025"
+url: "https://extranet.who.int/ncdsmicrodata/index.php/catalog/948"
+license_class: L2
+license_note: "CC BY-NC-SA 3.0 IGO (ghi trong báo cáo): dùng phi thương mại, ghi nguồn; vi dữ liệu có điều kiện riêng."
+default_tier: B
+accessed: "2026-10-25"
+verified: true
+verified_by: "agent:pass-a (tải PDF báo cáo, ISBN 978 92 9062 026 6)"
+notes_vi: "Điều tra quốc gia 01–03/2021, 4.738 người 18–69 tuổi. Đường huyết lúc đói từ 7,0 mmol/L hoặc đang dùng thuốc điều trị đái tháo đường: 7,1% (nam 7,3%, nữ 6,9%); 3,0% ở 18–29 tuổi, 5,6% ở 30–49 tuổi, 13,4% ở 50–69 tuổi (bảng 39). Đang dùng thuốc điều trị đái tháo đường: 2,9% chung; 0,8% ở 18–29 tuổi, 1,4% ở 30–49 tuổi, 7,5% ở 50–69 tuổi. Chỉ 34,9% người tăng đường huyết đã được chẩn đoán, 23,3% đang được quản lý ở cơ sở y tế (bảng 41). Huyết áp cao 26,2%."

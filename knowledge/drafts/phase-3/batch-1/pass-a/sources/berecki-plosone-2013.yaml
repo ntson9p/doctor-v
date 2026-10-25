@@ -1,0 +1,15 @@
+id: berecki-plosone-2013
+type: systematic_review
+title: "Identifying cardiac syncope based on clinical history: a literature-based model tested in four independent datasets"
+publisher: "PLoS One 2013;8(9):e75255 (Berecki-Gisolf J, Sheldon A, Wieling W và cs.)"
+date: "2013"
+url: "https://europepmc.org/article/MED/24223233"
+doi: "10.1371/journal.pone.0075255"
+pmid: "24223233"
+license_class: L1
+license_note: "CC BY: dùng và chuyển thể, ghi công."
+default_tier: B
+accessed: "2026-10-25"
+verified: true
+verified_by: "agent:pass-a (đọc toàn văn PMC3815402 qua API Europe PMC)"
+notes_vi: "Gộp tần suất từ 7 nghiên cứu (2.388 người ngất ở đơn vị ngất, cấp cứu, phòng khám; Ý, Thụy Sĩ, Mỹ, Canada), bảng 2: ngất do tim (488 người) so với không do tim (1.800 người): dưới 40 tuổi 1% so với 29%, từ 60 tuổi 77% so với 33%; nam 64% so với 49%; bệnh tim cấu trúc 87% so với 26%; từ 2 cơn trở xuống 70% so với 38%; buồn nôn 8% so với 20%; vã mồ hôi 18% so với 43%; có dấu hiệu báo trước (kéo dài) 39% so với 63%; nhìn mờ 21% so với 29%; hồi hộp 8% so với 11% (không khác biệt có ý nghĩa); ngất khi nằm 10% so với 2%; ngất khi gắng sức 13% so với 2%. Tỷ lệ ngất do tim ở 4 bộ dữ liệu kiểm tra: 21% (Calgary, phòng khám chuyên khoa), 9% (Amsterdam, cấp cứu), 5% (Milan, cấp cứu), 11% (Rochester). Phần mở đầu nêu ngất do tim chiếm hơn 1/5 nguyên nhân ở người dưới 65 tuổi và 42% ở người trên 65 tuổi (trong các nghiên cứu được trích, chủ yếu ở bệnh viện)."

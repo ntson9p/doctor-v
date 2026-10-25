@@ -1,0 +1,15 @@
+id: chalco-bmcpediatr-2005
+type: systematic_review
+title: "Accuracy of clinical pallor in the diagnosis of anaemia in children: a meta-analysis"
+publisher: "BMC Pediatrics 2005;5:46 (Chalco JP, Huicho L, Alamo C, Carreazo NY, Bada CA)"
+date: "2005-12"
+url: "https://europepmc.org/article/MED/16336667"
+doi: "10.1186/1471-2431-5-46"
+pmid: "16336667"
+license_class: L1
+license_note: "CC BY 2.0: dùng và chuyển thể, ghi công."
+default_tier: A
+accessed: "2026-10-25"
+verified: true
+verified_by: "agent:pass-a (đọc toàn văn PMC1325025 qua API Europe PMC)"
+notes_vi: "Phân tích gộp độ chính xác của da xanh do nhân viên y tế nhận định ở trẻ em (phần lớn nghiên cứu ở châu Phi). Hb < 11 g/dL: niêm mạc mắt nhạy 43,6%, đặc hiệu 81,4%; lòng bàn tay 39,2% và 86,7%. Hb < 8 g/dL: niêm mạc mắt 70,8% và 69%; lòng bàn tay 80,9% và 67,7%. Hb < 7 g/dL: niêm mạc mắt 36,9% và 88,7%. Kết luận: không có dấu hiệu lâm sàng nào chính xác cao."

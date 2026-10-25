@@ -1,0 +1,235 @@
+id: carbon_monoxide_poisoning
+names:
+  vi: "Ngộ độc carbon monoxide"
+  vi_common: ["Ngộ độc khí CO", "Ngộ độc khí than"]
+  en: "Carbon monoxide poisoning"
+codes:
+  icd10: "T58"
+  icd10_verified: true
+  mondo: "MONDO:0800373"
+summary_vi:
+  - "Ngộ độc do hít phải khí CO không màu, không mùi, sinh ra khi đốt than, củi, ga hoặc chạy máy nổ trong phòng kín."
+  - "Thường đau đầu, chóng mặt, buồn nôn, mệt; ngộ độc nặng gây lú lẫn, ngất, hôn mê."
+  - "Người ở cùng phòng thường cùng bị; cần ra ngay chỗ thoáng khí và đi cấp cứu."
+urgency: 1
+cant_miss: true
+specialties: [emergency]
+priors:
+  - complaint: dizziness
+    default: P5
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [newmantoker-mayoclinproc-2008, byt-qd-3610-2015, cdc-mmwr-co-2005]
+      reported: "Ngộ độc CO: 0,2% người chóng mặt đến cấp cứu ở Mỹ (16 ca, ước lượng không ổn định; Newman-Toker 2008)"
+      note: "Tuyến ban đầu ít hơn cấp cứu. Ở Việt Nam hay gặp khi đốt than tổ ong, than củi để sưởi, đun nấu, hoặc chạy máy phát điện trong phòng kín (3610/QĐ-BYT). Ước trung bình cả năm 0,02–0,2% (P5) ở mọi lứa tuổi; mùa đông và miền Bắc tăng bằng prior_modifiers. Phơi nhiễm được hỏi bằng câu co_exposure, không dùng hệ số. Chưa có số liệu Việt Nam."
+  - complaint: syncope
+    default: P5
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [juttner-germedsci-2021, lu-plosone-2015, byt-qd-3610-2015]
+      reported: "Hôn mê 11% ca ngộ độc tại nhà (Lu 2015)"
+      note: "Ngất là một trong các biểu hiện hay gặp nhất khi vào viện (Jüttner 2021). Chưa có tỷ lệ ngộ độc CO trong người ngất; ước như với chóng mặt (P5)."
+prior_modifiers:
+  - when: { months: [12, 1, 2] }
+    factor: 2
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [cdc-mmwr-co-2005, byt-qd-3610-2015]
+      reported: "Mỹ 2001–2003: tháng 12 có 2.157 và tháng 1 có 2.511 lượt cấp cứu không tử vong, so với 510 (tháng 6) và 524 (tháng 7)"
+      note: "Tháng 12–1 gấp khoảng 4–5 lần tháng 6–7, tức khoảng 2 lần trung bình năm. Ở Việt Nam, ngộ độc nhẹ dễ nhầm với cảm cúm nhất là về mùa đông, và hay do sưởi ấm bằng bếp than (3610/QĐ-BYT)."
+  - when: { months: [5, 6, 7, 8, 9] }
+    factor: 0.7
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [cdc-mmwr-co-2005]
+      reported: "Như trên (tháng 6–7 khoảng một nửa trung bình năm ở Mỹ)"
+      note: "Giữ 0,7 thay vì 0,5 vì ở Việt Nam mùa hè vẫn có ngộ độc do chạy máy phát điện khi mất điện, bình nóng lạnh dùng ga."
+  - when: { regions: [north], months: [12, 1, 2] }
+    factor: 1.5
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-3610-2015, lu-plosone-2015]
+      reported: "56% ca ngộ độc tại nhà trong mùa đông ở vùng sưởi bằng bếp than do rò khí từ bếp sưởi (Lu 2015, Trung Quốc)"
+      note: "Miền Bắc có mùa đông lạnh, nhiều hộ đốt than để sưởi (3610/QĐ-BYT nêu sưởi ấm bằng bếp than là hoàn cảnh hay gặp). Cộng với hệ số tháng chung: miền Bắc tháng 12–2 khoảng 3 lần trung bình năm. Ước lượng, chưa có số liệu Việt Nam theo tháng, vùng."
+findings:
+  - finding: co_exposure
+    freq: very_frequent
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-3610-2015, lu-plosone-2015, juttner-germedsci-2021]
+      locator: "3610/QĐ-BYT, bài Ngộ độc khí carbon monoxide, mục 2.2 và 3.1"
+      reported: "Nguồn ngộ độc tại nhà: bếp than sưởi trong nhà 56%, quên khóa van ga 19%, bếp than trong phòng kín 10%, bình ga nấu ăn rò 10% (Lu 2015)"
+      note: "3610/QĐ-BYT: ở Việt Nam hay gặp do đốt than, củi, ga trong phòng kín để nấu ăn, sưởi, đun nước (bình nóng lạnh dùng ga), chạy máy phát điện, động cơ; thường khai thác được hoàn cảnh sưởi bằng bếp than, chạy máy nổ trong nhà. Câu hỏi không nhắc đến ga, cháy nhà, nên chọn very_frequent, không chọn almost_always."
+  - finding: others_same_symptoms
+    freq: frequent
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-3610-2015, cdc-co-about, lu-plosone-2015]
+      reported: "5/67 hộ có 2 ca được ghi nhận trong hồ sơ (Lu 2015)"
+      note: "3610/QĐ-BYT: ngộ độc thường xảy ra với nhiều người sống trong nhà, cả vật nuôi; CDC: khí tích tụ trong nhà gây ngộ độc cả người lẫn vật nuôi. Người sống một mình trả lời 'Không'. Số của Lu 2015 lấy từ bệnh án nên có lẽ thấp hơn thực tế. Ước khoảng một nửa."
+  - finding: headache
+    freq: frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [cdc-mmwr-co-2005, lu-plosone-2015, byt-qd-3610-2015, cdc-co-about]
+      reported: "Đau đầu 37,5% (hồ sơ cấp cứu Mỹ), 37% (Trung Quốc)"
+      note: "CDC: đau đầu, chóng mặt, yếu là triệu chứng hay gặp nhất; 3610/QĐ-BYT: khởi đầu bằng đau đầu, mệt, chóng mặt, buồn nôn, nhìn mờ. Số liệu lấy từ hồ sơ nên thấp hơn thực tế; chọn frequent, không chọn very_frequent để người không đau đầu không bị hạ khả năng quá nhiều."
+  - finding: dizziness
+    freq: frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [cdc-mmwr-co-2005, lu-plosone-2015, byt-qd-3610-2015, juttner-germedsci-2021]
+      reported: "Chóng mặt 18,0% (hồ sơ cấp cứu Mỹ), 39% (Trung Quốc)"
+      note: "Chỉ có tác dụng khi triệu chứng chính là ngất. Các nguồn chính thức xếp chóng mặt trong nhóm triệu chứng hay gặp nhất (3610/QĐ-BYT; Jüttner 2021); số liệu hồ sơ thấp do ghi chép không đủ. Ước khoảng một nửa."
+  - finding: nausea
+    freq: frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [lu-plosone-2015, cdc-mmwr-co-2005, byt-qd-3610-2015]
+      reported: "Buồn nôn hoặc nôn 33% (Trung Quốc); buồn nôn 17,3% (Mỹ)"
+      note: "Ngộ độc vừa dễ nhầm với ngộ độc thức ăn vì buồn nôn, nôn (3610/QĐ-BYT)."
+  - finding: vomiting
+    freq: occasional
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [lu-plosone-2015, byt-qd-3610-2015]
+      reported: "Buồn nôn hoặc nôn 33% (Lu 2015)"
+      note: "Nôn ít hơn buồn nôn; ước 20%."
+  - finding: fatigue
+    freq: frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [lu-plosone-2015, byt-qd-3610-2015]
+      reported: "Mệt 43%"
+  - finding: fainting_or_near_fainting
+    freq: occasional
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [cdc-mmwr-co-2005, lu-plosone-2015, juttner-germedsci-2021]
+      reported: "Mất ý thức 7,7% (Mỹ); hôn mê 11% (Trung Quốc)"
+      note: "Chỉ có tác dụng khi triệu chứng chính là chóng mặt. Ngất nằm trong nhóm biểu hiện hay gặp nhất khi vào viện (Jüttner 2021). Câu hỏi tính cả choáng như sắp ngất; ước 20%."
+  - finding: confusion
+    freq: occasional
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [lu-plosone-2015, byt-qd-3610-2015]
+      reported: "Lú lẫn 14%"
+      note: "3610/QĐ-BYT: rối loạn hành vi; người già có thể khởi đầu bằng lẫn lộn. Quy tắc rf_altered_consciousness xếp mức 1."
+  - finding: drowsy_hard_to_wake
+    freq: occasional
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [lu-plosone-2015, byt-qd-3610-2015]
+      reported: "Hôn mê 11%"
+      note: "Người hôn mê không tự dùng app được, nhưng người nhà có thể kiểm tra giúp. Quy tắc rf_altered_consciousness xếp mức 1."
+  - finding: severe_weakness
+    freq: occasional
+    evidence:
+      tier: C
+      basis: verbal
+      sources: [cdc-co-about, nhs-carbon-monoxide-poisoning]
+      note: "CDC: yếu là triệu chứng hay gặp; NHS: thấy yếu sau khi phơi nhiễm là lý do gọi cấp cứu. Câu hỏi hỏi mệt lả không tự đi lại được; ước 20%."
+  - finding: breathing_difficulty
+    freq: occasional
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [cdc-mmwr-co-2005, juttner-germedsci-2021]
+      reported: "Khó thở 6,7% (hồ sơ cấp cứu Mỹ)"
+      note: "Khó thở nằm trong nhóm biểu hiện hay gặp nhất khi vào viện (Jüttner 2021); ước 10–20%."
+  - finding: chest_pain_pressure
+    freq: occasional
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [cdc-co-about, byt-qd-3610-2015, juttner-germedsci-2021]
+      note: "CDC: đau ngực là triệu chứng hay gặp; 3610/QĐ-BYT: tổn thương cơ tim, ngộ độc vừa dễ nhầm với đau thắt ngực không ổn định; Jüttner 2021: đau thắt ngực. Ước 10–20%."
+  - finding: blurred_vision
+    freq: occasional
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-3610-2015]
+      note: "3610/QĐ-BYT: khởi đầu có nhìn mờ; thể thần kinh có rối loạn thị giác. Ước 20%."
+  - finding: cannot_walk_unaided
+    freq: occasional
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-3610-2015, cdc-mmwr-co-2005]
+      reported: "Mất kiểm soát vận động 3,5% (hồ sơ cấp cứu Mỹ)"
+      note: "3610/QĐ-BYT: thể thần kinh – tâm thần khởi đầu bằng đi loạng choạng. Câu hỏi tính cả phải vịn, phải đỡ mới đi được; ước 10–20%."
+  - finding: vertigo_spinning
+    freq: occasional
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [byt-qd-3610-2015, cdc-co-about]
+      note: "Tần suất trong số người đã chóng mặt. Chóng mặt do thiếu oxy thường là choáng váng hơn là quay cuồng; nguồn không mô tả kiểu chóng mặt. Ước 20%, hơi thấp hơn tỷ lệ nền 0,3."
+  - finding: dizziness_pattern
+    dist: { brief_episodes: 0.08, long_episodes: 0.45, continuous: 0.32, chronic: 0.15 }
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [nhs-carbon-monoxide-poisoning, byt-qd-3610-2015]
+      note: "Phân bố trong số người đã chóng mặt. NHS: triệu chứng có thể lúc có lúc không, nặng hơn khi ở trong phòng bị nhiễm khí và đỡ khi ra ngoài. Phơi nhiễm kéo dài nhiều tuần (bếp, bình nóng lạnh hỏng) gây triệu chứng âm ỉ. Phân bố là ước lượng."
+  - finding: syncope_trigger
+    dist: { standing_heat: 0.15, emotion_pain: 0.03, standing_up: 0.20, toilet_cough: 0.04, exertion: 0.05, lying: 0.13, no_trigger: 0.40 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-3610-2015, juttner-germedsci-2021]
+      note: "Phân bố trong số người đã ngất hoặc suýt ngất. Thường xảy ra khi đang ngủ, ngồi yên trong phòng kín có bếp than, hoặc trong nhà tắm có bình nóng lạnh dùng ga (3610/QĐ-BYT); mất ý thức không rõ lý do trong phòng kín có bếp lửa là tình huống điển hình (Jüttner 2021). Phân bố là ước lượng."
+  - finding: syncope_warning
+    dist: { prodrome: 0.55, palpitations_first: 0.05, no_warning: 0.40 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-3610-2015, cdc-co-about]
+      note: "Phân bố trong số người đã ngất hoặc suýt ngất. Thường có đau đầu, buồn nôn, nhìn mờ trước (3610/QĐ-BYT), nhưng người đang ngủ hoặc say có thể bất tỉnh không kịp có triệu chứng (CDC). Phân bố là ước lượng."
+  - finding: fever
+    freq: rare
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-3610-2015, cdc-co-about]
+      note: "Ngộ độc nhẹ dễ nhầm với cảm cúm, nhất là mùa đông (3610/QĐ-BYT; CDC: giống cúm), nhưng khí CO không gây sốt. Ước 2,5%, thấp hơn tỷ lệ nền 5%."
+  - finding: pulse_measured
+    dist: { lt_40: 0.004, n40_100: 0.24, n100_150: 0.144, gt_150: 0.012, not_measured: 0.6 }
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [byt-qd-3610-2015]
+      note: "Thiếu oxy làm tim đập nhanh; loạn nhịp tim gặp ở 5–6% (3610/QĐ-BYT). Ở người đã đo mạch: dưới 40 lần 1%, 40–100 lần 60%, trên 100–150 lần 36%, trên 150 lần 3%; nhân 0,4 và để 'Chưa đo' 0,6 như tỷ lệ nền (lựa chọn trung tính). Phân bố là ước lượng."
+warning_signs: [confusion, drowsy_hard_to_wake, fainting_or_near_fainting, breathing_difficulty, chest_pain_pressure, severe_weakness, seizure_recent]
+self_care_vi:
+  - "Mở hết cửa và đưa mọi người ra ngay chỗ thoáng khí."
+  - "Tắt bếp than, bếp ga, máy phát điện nếu làm được an toàn."
+  - "Người vào cứu phải mở rộng cửa trước và không ở lâu trong phòng."
+  - "Không quay lại phòng đó cho đến khi đã thông khí hoàn toàn."
+  - "Không đốt than, không chạy máy phát điện trong phòng kín."
+see_doctor_vi:
+  - "Gọi 115 hoặc đến cơ sở cấp cứu ngay, kể cả khi đã đỡ sau khi ra ngoài."
+  - "Những người ở cùng phòng cũng cần được khám, kể cả khi chưa có triệu chứng."
+  - "Phụ nữ có thai bị ngộ độc cần được cấp cứu sớm vì thai nhi rất dễ bị tổn thương."
+  - "Đi khám lại nếu vài ngày hoặc vài tuần sau thấy hay quên, đổi tính tình hoặc đi lại khó."
+review:
+  status: draft
+  authors: ["agent:pass-a"]
+  updated: "2026-10-25"
+  notes_vi: "Mức xử trí 1, thuộc nhóm không được bỏ sót (giữ như gợi ý): 3610/QĐ-BYT yêu cầu chẩn đoán, xử trí nhanh chóng, tích cực, thở oxy càng sớm càng tốt; Jüttner 2021 khuyên thở oxy 100% ngay từ trước khi đến viện khi nghi ngờ; người bệnh có thể xấu đi nhanh và thường nhiều người cùng bị. NHS chỉ khuyên gọi 111 khi có triệu chứng nhẹ, gọi 999 khi khó thở, lú lẫn, bất tỉnh, yếu, đau ngực; lượt C cân nhắc mức 2 nếu thấy nguồn này phù hợp hơn với ca nhẹ. Quy tắc rf_co_exposure hiện ở mức 2. Tên chính thức theo bảng ICD-10 của Bộ Y tế (T58 'Ngộ độc carbon monoxide'; Thông tư 06: 'Tác động độc hại của carbon monoxide'), tra dữ liệu của icd.kcb.vn ngày 25/10/2026. Bác sĩ cần xem: (1) prior P5 và các hệ số mùa, vùng là ước lượng (số liệu theo tháng của Mỹ, không có số liệu Việt Nam); (2) tần suất triệu chứng lấy từ hồ sơ (thấp hơn thực tế); (3) câu co_exposure không nhắc bình nóng lạnh, bếp ga, cháy nhà (3610/QĐ-BYT nêu các nguồn này): đề xuất người bảo trì mở rộng câu hỏi; (4) NHS nêu dấu hiệu 'triệu chứng đỡ khi ra khỏi nhà, nặng lên khi ở trong phòng' chưa có trong danh mục."

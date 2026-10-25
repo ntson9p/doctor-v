@@ -1,0 +1,193 @@
+id: anemia
+names:
+  vi: "Thiếu máu"
+  vi_common: ["Thiếu máu thiếu sắt"]
+  en: "Anaemia"
+codes:
+  icd10: "D64.9"
+  icd10_verified: true
+  mondo: "MONDO:0002280"
+summary_vi:
+  - "Máu có ít hồng cầu hơn bình thường nên cơ thể không nhận đủ oxy (khác với 'thiếu máu não')."
+  - "Hay gặp ở phụ nữ có kinh nguyệt nhiều, người có thai và trẻ em, thường do thiếu sắt."
+  - "Thường gây mệt, da xanh, hoa mắt, hụt hơi hoặc tim đập nhanh khi gắng sức."
+urgency: 4
+cant_miss: false
+specialties: [general_medicine]
+priors:
+  - complaint: dizziness
+    default: P3
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [newmantoker-mayoclinproc-2008, maarsingh-annfammed-2010, who-gho-anaemia-vn, gbd-anaemia-lancethaematol-2023, msd-evaluation-anemia]
+      reported: "Thiếu máu 1,6% người chóng mặt đến cấp cứu ở Mỹ (Newman-Toker 2008); người từ 65 tuổi chóng mặt kéo dài: thiếu máu vừa – nặng trên xét nghiệm 2% (Maarsingh 2010); Việt Nam: thiếu máu ở phụ nữ 15–49 tuổi 20,5% (2023), trẻ 6–59 tháng 22,9% (2019) (WHO GHO)"
+      note: "Phần lớn thiếu máu ở mức nhẹ, ít gây triệu chứng; triệu chứng rõ khi huyết sắc tố giảm nhiều hoặc giảm nhanh (MSD). Ước 1–5% người chóng mặt ở mọi lứa tuổi (P3); khác biệt theo giới dùng prior_modifiers. Chưa có số liệu Việt Nam ở người chóng mặt; cần bác sĩ duyệt."
+  - complaint: palpitations
+    default: P3
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [weber-amjmed-1996, who-gho-anaemia-vn, gbd-anaemia-lancethaematol-2023]
+      reported: "Nguyên nhân hồi hộp ở một trung tâm y khoa (Mỹ): tim 43%, tâm thần 31%, nguyên nhân khác 10%, không rõ 16% (Weber 1996)"
+      note: "Thiếu máu thuộc nhóm 'nguyên nhân khác' cùng cường giáp, thuốc, chất kích thích, sốt. Tỷ lệ thiếu máu ở phụ nữ Việt Nam khoảng 1/5 (WHO GHO). Ước P3; cần bác sĩ duyệt."
+  - complaint: syncope
+    default: P4
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [msd-evaluation-anemia, gbd-anaemia-lancethaematol-2023]
+      note: "Ngất là một triệu chứng của thiếu máu, nhất là khi thiếu máu nặng hoặc xảy ra nhanh (MSD); thiếu máu nhẹ, mạn tính ít khi tự gây ngất. Mất máu cấp do xuất huyết tiêu hóa, chửa ngoài tử cung là các bệnh riêng. Ước P4."
+prior_modifiers:
+  - when: { sex: [female] }
+    factor: 1.4
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [gbd-anaemia-lancethaematol-2023, who-gho-anaemia-vn]
+      reported: "Toàn cầu 2021: thiếu máu 31,2% ở nữ, 17,5% ở nam (mọi tuổi); ở tuổi 15–49: 33,7% so với 11,3%; khác biệt nhỏ ở trẻ dưới 5 tuổi (GBD 2023)"
+      note: "Ở tuổi 10–64 tỷ số nữ/nam khoảng 3; ở trẻ nhỏ và người cao tuổi khác biệt ít hơn. Vì hệ số áp dụng cho mọi tuổi, chọn tỷ số khoảng 2 (nữ 1,4, nam 0,7)."
+  - when: { sex: [male] }
+    factor: 0.7
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [gbd-anaemia-lancethaematol-2023]
+      reported: "Như hệ số cho nữ."
+      note: "Đi cặp với hệ số 1,4 cho nữ."
+findings:
+  - finding: pallor
+    freq: frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [chalco-bmcpediatr-2005, msd-evaluation-anemia]
+      reported: "Nhân viên y tế nhận định: niêm mạc mắt nhợt nhạy 43,6% khi Hb < 11 g/dL, 70,8% khi Hb < 8 g/dL; lòng bàn tay nhợt 39,2% và 80,9%"
+      population: "Trẻ em, phần lớn ở châu Phi (phân tích gộp)"
+      note: "MSD: da xanh hay gặp khi thiếu máu nặng (Hb < 7 g/dL). Thiếu máu gây chóng mặt, hồi hộp thường ở mức vừa trở lên, nhưng người tự nhìn kém chính xác hơn nhân viên y tế; ước khoảng một nửa. Độ đặc hiệu trong nguồn chỉ 69–89%, nên tỷ lệ nền 5% của danh mục có thể thấp (đề xuất người bảo trì xem lại)."
+  - finding: fatigue
+    freq: very_frequent
+    evidence:
+      tier: C
+      basis: verbal
+      sources: [msd-evaluation-anemia, nhs-iron-deficiency-anaemia]
+      note: "MSD: mệt mỏi, yếu là triệu chứng hay gặp; NHS: mệt, thiếu năng lượng. Tỷ lệ nền 0,2."
+  - finding: breathless_on_exertion
+    freq: frequent
+    evidence:
+      tier: C
+      basis: verbal
+      sources: [msd-evaluation-anemia, nhs-iron-deficiency-anaemia]
+      note: "MSD: khó thở khi gắng sức là triệu chứng hay gặp; NHS: khó thở. Ước khoảng một nửa. Hụt hơi khi gắng sức cũng hay gặp ở người cao tuổi có bệnh tim, phổi, nên tỷ lệ nền 5% có thể thấp."
+  - finding: palpitations
+    freq: occasional
+    evidence:
+      tier: C
+      basis: verbal
+      sources: [nhs-iron-deficiency-anaemia]
+      note: "Chỉ có tác dụng khi triệu chứng chính là chóng mặt hoặc ngất. NHS: cảm nhận rõ tim đập (hồi hộp). Chọn occasional vì mệt, hụt hơi, da xanh đã được hỏi (tránh đếm trùng)."
+  - finding: dizziness
+    freq: frequent
+    evidence:
+      tier: C
+      basis: verbal
+      sources: [nhs-dizziness, msd-evaluation-anemia]
+      note: "Chỉ có tác dụng khi triệu chứng chính là hồi hộp hoặc ngất. NHS: thiếu máu thiếu sắt là một nguyên nhân chóng mặt; MSD liệt kê chóng mặt, ngất. Ước khoảng một nửa."
+  - finding: fainting_or_near_fainting
+    freq: occasional
+    evidence:
+      tier: C
+      basis: verbal
+      sources: [msd-evaluation-anemia]
+      note: "Chỉ có tác dụng khi triệu chứng chính là chóng mặt hoặc hồi hộp. MSD liệt kê ngất trong các triệu chứng; câu hỏi tính cả choáng như sắp ngất. Ước 20%."
+  - finding: heavy_periods
+    freq: frequent
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [nhs-iron-deficiency-anaemia, msd-evaluation-anemia]
+      note: "NHS: kinh nguyệt nhiều và có thai là nguyên nhân rất hay gặp của thiếu máu thiếu sắt; MSD: rong kinh gợi ý mất máu. Chỉ hỏi nữ 13–64 tuổi. Ước khoảng một nửa; ở Việt Nam còn có thiếu sắt do ăn uống, giun móc, bệnh tan máu bẩm sinh. Cần bác sĩ duyệt."
+  - finding: black_stool
+    freq: rare
+    above_leak_ok: true
+    evidence:
+      tier: C
+      basis: verbal
+      sources: [nhs-iron-deficiency-anaemia, msd-evaluation-anemia]
+      note: "Chảy máu dạ dày, ruột là nguyên nhân hay gặp (NHS); phân đen gợi ý chảy máu (MSD); viên sắt cũng làm phân sẫm màu (NHS). Mức rare (2,5%) cao hơn tỷ lệ nền 1% là có chủ ý: phân đen tăng nhẹ khả năng thiếu máu, còn xuất huyết tiêu hóa là bệnh riêng và đã có quy tắc rf_gi_bleeding, rf_syncope_gi_bleeding."
+  - finding: vertigo_spinning
+    freq: occasional
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [msd-evaluation-anemia]
+      note: "Tần suất trong số người đã chóng mặt. Chóng mặt do thiếu máu thường là choáng váng, hoa mắt; MSD có liệt kê chóng mặt nhưng không nói kiểu. Ước 20%, hơi thấp hơn tỷ lệ nền 0,3."
+  - finding: dizziness_pattern
+    dist: { brief_episodes: 0.25, long_episodes: 0.22, continuous: 0.13, chronic: 0.40 }
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [msd-evaluation-anemia]
+      note: "Phân bố trong số người đã chóng mặt. Thiếu máu thường diễn tiến từ từ nên hay chóng mặt âm ỉ nhiều tuần, hoặc từng lúc khi đứng dậy, gắng sức. Phân bố là ước lượng."
+  - finding: syncope_trigger
+    dist: { standing_heat: 0.25, emotion_pain: 0.05, standing_up: 0.32, toilet_cough: 0.06, exertion: 0.10, lying: 0.02, no_trigger: 0.20 }
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [msd-evaluation-anemia]
+      note: "Phân bố trong số người đã ngất hoặc suýt ngất. Triệu chứng rõ hơn khi cơ thể cần nhiều oxy hoặc khi đứng dậy; ngất khi gắng sức vẫn cần loại trừ bệnh tim (quy tắc mức 2). Phân bố là ước lượng."
+  - finding: syncope_warning
+    dist: { prodrome: 0.72, palpitations_first: 0.10, no_warning: 0.18 }
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [msd-evaluation-anemia]
+      note: "Phân bố trong số người đã ngất hoặc suýt ngất; thường có choáng, tối sầm mắt trước. Phân bố là ước lượng."
+  - finding: palpitation_rhythm
+    dist: { fast_regular: 0.40, irregular: 0.05, skipped_beats: 0.10, forceful: 0.45 }
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [nhs-iron-deficiency-anaemia]
+      note: "Phân bố trong số người đã hồi hộp. Tim đập nhanh, mạnh để bù thiếu oxy, nhịp đều. Phân bố là ước lượng."
+  - finding: pulse_measured
+    dist: { lt_40: 0.002, n40_100: 0.28, n100_150: 0.112, gt_150: 0.006, not_measured: 0.6 }
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [msd-evaluation-anemia]
+      note: "Thiếu máu vừa – nặng có thể làm mạch nhanh khi nghỉ; hiếm khi trên 150 lần/phút. Ở người đã đo mạch: dưới 40 lần 0,5%, 40–100 lần 70%, trên 100–150 lần 28%, trên 150 lần 1,5%; nhân 0,4 và để 'Chưa đo' 0,6 như tỷ lệ nền (lựa chọn trung tính). Phân bố là ước lượng."
+  - finding: anemia_known
+    freq: occasional
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [who-gho-anaemia-vn, nhs-iron-deficiency-anaemia]
+      note: "Dấu hiệu đề xuất (proposed_findings). Thiếu máu thiếu sắt hay kéo dài, tái lại; nhiều phụ nữ Việt Nam đã được phát hiện khi khám thai hoặc xét nghiệm máu. Ước 20%; cần số liệu."
+warning_signs: [black_stool, vomiting_blood, chest_pain_pressure, breathing_difficulty, es_severe_bleeding]
+self_care_vi:
+  - "Ăn thêm thịt, rau lá xanh đậm, các loại đậu và ngũ cốc có bổ sung sắt."
+  - "Hạn chế uống nhiều trà, cà phê, sữa cùng bữa ăn vì làm giảm hấp thu sắt."
+  - "Đứng dậy từ từ khi đang nằm hoặc ngồi."
+  - "Hỏi bác sĩ trước khi tự uống viên sắt kéo dài, và để viên sắt xa tầm tay trẻ em."
+see_doctor_vi:
+  - "Đặt lịch khám trong vài ngày tới để được xét nghiệm máu và tìm nguyên nhân."
+  - "Đi khám sớm hơn nếu kinh nguyệt ra rất nhiều, sụt cân, hoặc mệt, khó thở tăng dần."
+  - "Đến cơ sở cấp cứu ngay nếu ngất, đau ngực, khó thở khi nghỉ, nôn ra máu hoặc đi ngoài phân đen."
+review:
+  status: draft
+  authors: ["agent:pass-a"]
+  updated: "2026-10-25"
+  notes_vi: "Mức xử trí 4, không thuộc nhóm không được bỏ sót (giữ như gợi ý): NHS chỉ khuyên khám không khẩn khi nghĩ đến thiếu máu thiếu sắt; mất máu cấp (xuất huyết tiêu hóa, chửa ngoài tử cung) là bệnh riêng và có quy tắc mức 1–2. Tên và mã theo bảng ICD-10 của Bộ Y tế (D64.9 'Thiếu máu không đặc hiệu'; Thông tư 06: 'Thiếu máu, không xác định'; thiếu máu thiếu sắt là D50), tra dữ liệu của icd.kcb.vn ngày 25/10/2026. Người Việt hay gọi chóng mặt là 'thiếu máu não', nên mô tả có ghi rõ khác biệt. Bác sĩ cần xem: (1) prior P3 ở mọi tuổi và hệ số giới 1,4/0,7 là ước lượng; chưa có số liệu thiếu máu ở nam giới, người cao tuổi Việt Nam; (2) da xanh, mệt, hụt hơi tương quan với nhau nhưng chưa có cụm; tỷ lệ nền 5% của da xanh và hụt hơi có thể thấp, làm khả năng thiếu máu tăng quá mạnh; (3) bệnh tan máu bẩm sinh (thalassemia) hay gặp ở Việt Nam chưa có câu hỏi; (4) đề xuất thêm dấu hiệu 'Đã biết bị thiếu máu' (anemia_known)."
+proposed_findings:
+  - id: anemia_known
+    kind: history
+    type: binary
+    label_vi: "Đã biết bị thiếu máu (qua xét nghiệm máu)"
+    question_vi: "Đã từng được bác sĩ nói là bị thiếu máu không?"
+    help_vi: "Thiếu máu ở đây là máu có ít hồng cầu, phát hiện qua xét nghiệm máu, không phải 'thiếu máu não'."
+    applies_to:
+      age_groups: [child_5_12, teen_13_17, adult_18_44, adult_45_64, elder_65_74, elder_75p]
+    leak: 0.08
+    leak_note: "Thiếu máu gặp ở khoảng 20% phụ nữ 15–49 tuổi ở Việt Nam (WHO GHO), ít hơn ở nam; chỉ một phần đã được phát hiện. Lượt A ước lượng, cần số liệu."
+    notes_vi: "Giống các câu tiền sử đã có (gallstones_known, kidney_stones_known). Giúp phân biệt thiếu máu với hạ huyết áp tư thế, rối loạn nhịp, cơn hoảng sợ ở người chóng mặt, hồi hộp, ngất."

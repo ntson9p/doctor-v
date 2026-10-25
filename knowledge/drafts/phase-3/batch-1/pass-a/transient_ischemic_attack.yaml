@@ -1,0 +1,151 @@
+id: transient_ischemic_attack
+names:
+  vi: "Cơn thiếu máu não thoáng qua"
+  vi_common: ["Thiếu máu não thoáng qua", "Đột quỵ nhỏ", "Tai biến thoáng qua"]
+  en: "Transient ischaemic attack"
+codes:
+  icd10: "G45.9"
+  icd10_verified: true
+  mondo: "MONDO:0005264"
+summary_vi:
+  - "Một mạch máu não bị tắc tạm thời, gây yếu, tê, nói khó, mất thị lực hoặc chóng mặt rồi tự hết."
+  - "Triệu chứng thường kéo dài vài phút đến vài giờ, hết hẳn trong 24 giờ."
+  - "Đây là dấu hiệu báo trước đột quỵ, nguy cơ cao nhất trong vài ngày đầu, nên cần đi cấp cứu ngay."
+urgency: 2
+cant_miss: true
+specialties: [neurology, emergency]
+priors:
+  - complaint: dizziness
+    default: P5
+    by_age: { child_5_12: P6, teen_13_17: P6, adult_45_64: P4, elder_65_74: P4, elder_75p: P4 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [kerber-stroke-2006, newmantoker-mayoclinproc-2008, bosner-bmcfampract-2018, paul-lancetneurol-2013, byt-qd-3312-2024]
+      reported: "Người từ 45 tuổi chóng mặt đến cấp cứu (Mỹ, tuổi trung bình 69): cơn thiếu máu não thoáng qua 17/1.666 (1,0%), đột quỵ 2,0% (Kerber 2006); người lớn chóng mặt đến cấp cứu: cơn thoáng qua 1,7% (Newman-Toker 2008); người cao tuổi chóng mặt nặng ở tuyến ban đầu: bệnh mạch máu não 4% (Lawson 1999, trong Bösner 2018)"
+      population: "Cấp cứu ở Mỹ; tuyến ban đầu ở châu Âu; chưa có số liệu Việt Nam"
+      note: "Tuyến ban đầu ít ca nặng hơn cấp cứu: ước 0,2–1% (P4) từ 45 tuổi, P5 ở 18–44 tuổi, rất hiếm dưới 18 tuổi (P6). Chóng mặt đơn độc vẫn có thể do thiếu máu tuần hoàn sau: đây là triệu chứng thoáng qua hay gặp nhất trước đột quỵ tuần hoàn sau (Paul 2013), và 3312/QĐ-BYT liệt kê chóng mặt, thất điều trong dấu hiệu của cơn thiếu máu não thoáng qua. Đột quỵ là nguyên nhân tử vong hàng đầu ở Việt Nam (3312/QĐ-BYT) nhưng chưa có số liệu ở người chóng mặt. Cần bác sĩ duyệt."
+prior_modifiers:
+  - when: { sex: [male] }
+    factor: 1.4
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [kerber-stroke-2006]
+      reported: "Nam giới: OR hiệu chỉnh 2,47 (1,39–4,40) cho đột quỵ hoặc cơn thoáng qua ở người chóng mặt từ 45 tuổi; nam chiếm 55% số ca so với 36% người không đột quỵ"
+      note: "Chọn tỷ số nam/nữ khoảng 1,9 (nam 1,4, nữ 0,75), thấp hơn OR của nguồn vì số liệu ở cấp cứu tại Mỹ."
+  - when: { sex: [female] }
+    factor: 0.75
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [kerber-stroke-2006]
+      reported: "Như hệ số cho nam."
+      note: "Đi cặp với hệ số 1,4 cho nam."
+findings:
+  - finding: transient_neuro_symptoms
+    freq: frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [kerber-stroke-2006, paul-lancetneurol-2013, byt-qd-3312-2024, nhs-tia]
+      locator: "Kerber 2006 bảng 2; Paul 2013 phần Kết quả; 3312/QĐ-BYT, bài đột quỵ nhẹ và cơn thiếu máu não thoáng qua, mục 1.1 và 3.1"
+      reported: "Người đột quỵ hoặc cơn thoáng qua đến khám vì chóng mặt: yếu vận động 60%, rối loạn cảm giác 31%, ngôn ngữ 21%, thị giác 24%, chóng mặt đơn độc 17% (Kerber 2006). Trước đột quỵ tuần hoàn sau, 45/59 người có cơn thoáng qua là triệu chứng thân não đơn độc, hay gặp nhất là chóng mặt đơn độc; chỉ 8% đạt tiêu chuẩn kinh điển (Paul 2013)"
+      note: "Câu hỏi gồm yếu, tê một bên, méo miệng, nói khó, mất thị lực rồi tự hết, gần với định nghĩa (3312/QĐ-BYT; NHS). Ở người chọn triệu chứng chính là chóng mặt, một phần đáng kể chỉ có chóng mặt, nhìn đôi hoặc đi loạng choạng, nên chọn frequent, không chọn very_frequent: trả lời 'Không' chỉ giảm khoảng 2 lần. Quy tắc rf_transient_neuro xếp mức 2."
+  - finding: vision_loss_or_double
+    freq: occasional
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [kerber-stroke-2006, byt-qd-5643-2015]
+      reported: "Rối loạn thị giác 24% (Kerber 2006)"
+      note: "5643/QĐ-BYT: thiểu năng tuần hoàn động mạch đốt sống – thân nền là nguyên nhân chóng mặt thường gặp ở người trên 50 tuổi, gây nhìn không rõ, song thị, rối loạn ngôn ngữ, cùng đợt chóng mặt hoặc riêng biệt."
+  - finding: dizziness_pattern
+    dist: { brief_episodes: 0.20, long_episodes: 0.60, continuous: 0.12, chronic: 0.08 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [nhs-tia, byt-qd-3312-2024, paul-lancetneurol-2013]
+      note: "Phân bố trong số người đã chóng mặt. Triệu chứng kéo dài vài phút đến vài giờ, hết trong 24 giờ (NHS; 3312/QĐ-BYT: dưới 24 giờ; thang ABCD2 chia thời gian dưới 10 phút, 10–59 phút, từ 60 phút). Một số cơn rất ngắn; người đã có nhiều cơn trong vài ngày (Paul 2013) có thể chọn 'liên tục' hoặc 'nhiều tuần'. Phân bố là ước lượng."
+  - finding: vertigo_spinning
+    freq: frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [kerber-stroke-2006, paul-lancetneurol-2013]
+      reported: "53 ca đột quỵ hoặc cơn thoáng qua: 18 người mô tả là quay cuồng (vertigo), 23 chóng mặt (dizziness), 11 mất thăng bằng (Kerber 2006)"
+      note: "Tần suất trong số người đã chóng mặt. Chóng mặt đơn độc là triệu chứng thoáng qua hay gặp nhất trước đột quỵ tuần hoàn sau (Paul 2013). Ước khoảng một nửa có cảm giác quay; tỷ lệ nền 0,3."
+  - finding: dizziness_positional
+    freq: rare
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [byt-qd-5643-2015, msd-bppv]
+      note: "Tần suất trong số người đã chóng mặt. Chóng mặt xuất hiện ngay khi đổi tư thế đầu là đặc điểm của bệnh tai trong, nhất là sỏi tai (5643/QĐ-BYT; MSD); cơn thiếu máu não không do tư thế đầu gây ra. Ước 2,5%, thấp hơn tỷ lệ nền 0,1. Cần bác sĩ duyệt."
+  - finding: cannot_walk_unaided
+    freq: rare
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-3312-2024, nhs-tia]
+      note: "Theo định nghĩa, triệu chứng đã hết hẳn; nếu hiện vẫn không tự đứng, đi được thì nghĩ đến đột quỵ đang diễn ra (liên kết của bệnh đột quỵ). Ước 2,5%, thấp hơn tỷ lệ nền 5%; quy tắc rf_dizziness_central_signs vẫn xếp mức 2."
+  - finding: sudden_loss_of_balance
+    freq: frequent
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-3312-2024, kerber-stroke-2006]
+      note: "3312/QĐ-BYT: thất điều, chóng mặt là dấu hiệu khu trú của cơn thiếu máu não thoáng qua; mô tả 'mất thăng bằng' làm tăng khả năng đột quỵ hoặc cơn thoáng qua so với 'chóng mặt' (OR 3,71, Kerber 2006). Tỷ lệ nền khi chóng mặt 0,4 nên liên kết gần trung tính."
+  - finding: fainting_or_near_fainting
+    freq: rare
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-3312-2024]
+      note: "3312/QĐ-BYT xếp ngất vào chẩn đoán phân biệt của cơn thiếu máu não thoáng qua. Ước 2,5%, thấp hơn tỷ lệ nền 5%."
+  - finding: hypertension_known
+    freq: frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [kerber-stroke-2006, nhs-tia, who-steps-vn-2021]
+      reported: "Tăng huyết áp 72% ở người đột quỵ hoặc cơn thoáng qua có chóng mặt (Kerber 2006)"
+      note: "Ở Việt Nam khoảng 6/10 người tăng huyết áp chưa từng được phát hiện (STEPS 2021), nên tỷ lệ 'đã biết' thấp hơn; chọn frequent."
+  - finding: diabetes
+    freq: occasional
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [kerber-stroke-2006, byt-qd-3312-2024, who-steps-vn-2021]
+      reported: "Đái tháo đường 32% (Kerber 2006)"
+      note: "Đái tháo đường là 1 điểm trong thang ABCD2 (3312/QĐ-BYT). Ở Việt Nam chỉ khoảng 1/3 người tăng đường huyết đã được phát hiện (STEPS 2021); chọn occasional."
+  - finding: known_heart_disease
+    freq: occasional
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [kerber-stroke-2006, byt-qd-3312-2024, nhs-tia]
+      reported: "Bệnh mạch vành 40%, rung nhĩ 6% (Kerber 2006)"
+      note: "Rung nhĩ là căn nguyên huyết khối từ tim (3312/QĐ-BYT; NHS). Câu hỏi hỏi bệnh tim đã biết; tỷ lệ được phát hiện ở Việt Nam thấp hơn ở Mỹ, nên chọn occasional, thấp hơn số của nguồn."
+  - finding: bp_measured
+    dist: { normal: 0.35, high: 0.40, very_high: 0.17, extreme: 0.08 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-3312-2024, kerber-stroke-2006]
+      note: "Huyết áp từ 140/90 mmHg được tính 1 điểm trong thang ABCD2 (3312/QĐ-BYT); 72% có tăng huyết áp (Kerber 2006). Lần đo gần nhất có thể trước cơn. Phân bố là ước lượng, cần bác sĩ duyệt."
+warning_signs: [es_stroke_signs, transient_neuro_symptoms, vision_loss_or_double, cannot_walk_unaided, confusion]
+self_care_vi:
+  - "Đi cấp cứu ngay, kể cả khi các triệu chứng đã tự hết."
+  - "Không tự lái xe; nhờ người đưa đi hoặc gọi 115."
+  - "Ghi nhớ giờ bắt đầu có triệu chứng để báo cho nhân viên y tế."
+  - "Không tự dùng thuốc khi chưa có ý kiến bác sĩ."
+see_doctor_vi:
+  - "Đến ngay bệnh viện có khả năng điều trị đột quỵ để được khám và điều trị phòng đột quỵ sớm."
+  - "Gọi 115 nếu triệu chứng quay lại hoặc không hết sau vài phút."
+  - "Sau đó cần tái khám đều để kiểm soát huyết áp, đường máu, mỡ máu theo hướng dẫn của bác sĩ."
+review:
+  status: draft
+  authors: ["agent:pass-a"]
+  updated: "2026-10-25"
+  notes_vi: "Mức xử trí 2, thuộc nhóm không được bỏ sót (giữ như gợi ý). 3312/QĐ-BYT: cơn thiếu máu não thoáng qua và đột quỵ nhẹ có nguy cơ tái phát sớm rất cao; ABCD2 từ 4 điểm cần điều trị ngay, tối ưu trong 24 giờ. NHS: gọi 999 khi có triệu chứng, kể cả khi đã tự hết vẫn cần được đánh giá ở bệnh viện, chuyên khoa trong 24 giờ. Triệu chứng đang còn (đột quỵ) đã được màn sàng lọc cấp cứu xếp mức 1. Mã G45.9 theo bảng ICD-10 của Bộ Y tế ('Cơn thiếu máu não thoáng qua không đặc hiệu'; Thông tư 06: 'không xác định'), tra dữ liệu của icd.kcb.vn ngày 25/10/2026. Bác sĩ cần xem: (1) prior suy từ số liệu cấp cứu ở Mỹ, hạ cho tuyến ban đầu; (2) chóng mặt đơn độc do thiếu máu tuần hoàn sau (Paul 2013) có thể không có triệu chứng nào trong câu transient_neuro_symptoms, nên liên kết này chỉ để frequent; (3) hệ số nam 1,4 lấy từ một nghiên cứu ở Mỹ; (4) khi chóng mặt từng cơn vài phút ở người cao tuổi không do tư thế, khả năng cơn thoáng qua có thể vượt ngưỡng 'không được bỏ sót' (1%, từ 75 tuổi 0,5%) và đẩy lên mức 2; cần kiểm tra trên bộ ca dev."

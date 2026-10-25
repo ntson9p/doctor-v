@@ -1,0 +1,250 @@
+id: stroke
+names:
+  vi: "Đột quỵ não"
+  vi_common: ["Đột quỵ", "Tai biến mạch máu não", "Xuất huyết não", "Nhồi máu não"]
+  en: "Stroke"
+codes:
+  icd10: "I64"
+  icd10_verified: true
+  mondo: "MONDO:0005098"
+summary_vi:
+  - "Mạch máu não bị tắc hoặc vỡ đột ngột, làm một vùng não bị tổn thương."
+  - "Thường đột ngột méo miệng, yếu tê một bên người, nói khó; có thể kèm đau đầu, nôn, chóng mặt, mất thăng bằng."
+  - "Cần gọi 115 ngay vì được điều trị càng sớm thì tổn thương não càng ít."
+urgency: 1
+cant_miss: true
+specialties: [neurology, emergency]
+priors:
+  - complaint: headache
+    default: P6
+    by_age: { adult_45_64: P5, elder_65_74: P4, elder_75p: P3 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-3312-2024, kumral-jnnp-1995, jorgensen-neurology-1994, vestergaard-stroke-1993, melo-neurology-1996, goldstein-cephalalgia-2006, ihs-ichd3-2018]
+      locator: "3312/QĐ-BYT, bài nhồi máu não cấp, mục 1"
+      note: "Bệnh này trong doctor-v chỉ có prior cho đau đầu, nên đại diện cho đột quỵ biểu hiện chủ yếu bằng đau đầu (phần lớn là xuất huyết não, đột quỵ tiểu não, tuần hoàn sau). Ở Việt Nam đột quỵ là nguyên nhân tử vong hàng đầu, nhồi máu não chiếm 76,2% (3312/QĐ-BYT). Đau đầu lúc khởi phát gặp ở 18–28% người đột quỵ (Kumral 1995; Jørgensen 1994; Vestergaard 1993), 36–57% người xuất huyết não (Kumral 1995; Melo 1996), ít gặp hơn ở người lớn tuổi (OR 0,57 mỗi 20 tuổi, Jørgensen 1994); ICHD-3: đau đầu hiếm khi là biểu hiện nổi bật của nhồi máu não. Người trên 50 tuổi đau đầu đến cấp cứu có nguy cơ bệnh thực thể cao hơn (OR 3,3, Goldstein 2006). Prior tính trên mọi người đau đầu, kể cả người sẽ chọn 'dấu hiệu đột quỵ' ở màn sàng lọc. Lượt C: hai lượt cùng P6 dưới 45 tuổi, P5 ở 45–64 tuổi, P4 ở 65–74 tuổi; từ 75 tuổi chọn P3 của lượt B (lượt A để P4) vì nguồn ngang nhau, chọn mức thận trọng cho bệnh nguy hiểm, và ở tuổi này đột quỵ tăng nhanh trong khi đau đầu lành tính giảm. Cần bác sĩ duyệt."
+  - complaint: dizziness
+    default: P5
+    by_age: { child_5_12: P6, teen_13_17: P6, adult_45_64: P4, elder_65_74: P4, elder_75p: P3 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [kerber-stroke-2006, newmantoker-mayoclinproc-2008, tarnutzer-cmaj-2011, byt-qd-3312-2024]
+      reported: "Người từ 45 tuổi chóng mặt đến cấp cứu (Mỹ, tuổi trung bình 69): đột quỵ 34/1.666 (2,0%), tính cả cơn thiếu máu não thoáng qua 3,2%; chỉ 0,7% khi chóng mặt đơn độc (Kerber 2006). Người lớn chóng mặt đến cấp cứu: đột quỵ, xuất huyết não 0,5%, bệnh mạch máu não 4% (Newman-Toker 2008). Hội chứng tiền đình cấp ở cấp cứu: khoảng 25% ± 15% do đột quỵ (Tarnutzer 2011)"
+      population: "Cấp cứu ở Mỹ; chưa có số liệu Việt Nam"
+      note: "Lượt A (Giai đoạn 3, lô 1). Tuyến ban đầu ít ca nặng hơn cấp cứu: ước 0,2–1% (P4) ở 45–74 tuổi, 1–5% (P3) từ 75 tuổi; 18–44 tuổi P5; dưới 18 tuổi rất hiếm (P6). 3312/QĐ-BYT: chóng mặt hiếm khi xuất hiện đơn độc trong nhồi máu não; viêm mê đạo có thể nhầm với đột quỵ tiểu não. Prior tính trên mọi người chóng mặt, kể cả người sẽ chọn 'dấu hiệu đột quỵ' ở màn sàng lọc. Cần bác sĩ duyệt."
+findings:
+  - finding: es_stroke_signs
+    freq: very_frequent
+    evidence:
+      tier: A
+      basis: numeric
+      sources: [zhelev-cochrane-2019, aroor-stroke-2017, byt-qd-3312-2024, nhs-stroke-symptoms]
+      reported: "ROSIER ở khoa cấp cứu có độ nhạy gộp 0,88 (khoảng dự báo 0,75–0,95), FAST có độ chính xác tương tự (Zhelev 2019); 14,1% người nhồi máu não không có triệu chứng FAST (Aroor 2017)."
+      note: "Câu hỏi gần với FAST (méo mặt, yếu tê một bên, nói khó). Nhóm biểu hiện chủ yếu bằng đau đầu có nhiều đột quỵ tuần hoàn sau, tiểu não (3312/QĐ-BYT: chảy máu tiểu não gây nhức đầu vùng chẩm, thất điều, nôn), dễ không có dấu hiệu FAST; vì vậy hai lượt cùng chọn very_frequent, không chọn almost_always. Trả lời 'Có' đã dừng phiên ở màn sàng lọc; liên kết này chủ yếu để trả lời 'Không' giảm khả năng khoảng 5 lần, không loại trừ."
+  - finding: sudden_loss_of_balance
+    freq: frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [aroor-stroke-2017, byt-qd-3312-2024, msd-stroke-overview, nhs-stroke-symptoms]
+      reported: "42% người nhồi máu não không có triệu chứng FAST có mất thăng bằng khi đi hoặc yếu chân (Aroor 2017)."
+      population: "Người nhồi máu não nhập viện (Mỹ)"
+      note: "Chỉ lượt A có (dấu hiệu nay đã có trong danh mục, chữ B của BE-FAST). Lượt C giữ vì nguồn ủng hộ: thất điều, chóng mặt là triệu chứng khởi phát của nhồi máu não; chảy máu tiểu não gây thất điều (3312/QĐ-BYT); đột quỵ tuần hoàn sau gây thất điều (MSD); NHS: chóng mặt hoặc ngã. Ở người có dấu hiệu FAST, đi đứng cũng hay bị ảnh hưởng do yếu chân, nên trên mọi ca đột quỵ biểu hiện bằng đau đầu (nhiều ca tuần hoàn sau) ước khoảng một nửa: frequent."
+  - finding: headache_thunderclap
+    freq: occasional
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [ihs-ichd3-2018, byt-qd-3312-2024]
+      note: "Đau đầu do chảy máu não đôi khi khởi phát kiểu sét đánh; hiếm khi nhồi máu não do huyết khối từ xa biểu hiện bằng đau đầu đột ngột đơn độc (ICHD-3 mục 6.1.1, 6.2.1). Chảy máu não khởi phát đột ngột, chảy máu tiểu não gây nhức đầu dữ dội vùng chẩm (3312/QĐ-BYT). Hai lượt cùng chọn occasional."
+  - finding: vomiting
+    freq: frequent
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-3312-2024, runchey-jama-2010, melo-neurology-1996, nhs-stroke-symptoms]
+      note: "Nôn làm tăng khả năng xuất huyết so với nhồi máu (LR 3,0, Runchey 2010); chảy máu tiểu não gây nôn (3312/QĐ-BYT); đau đầu lúc khởi phát hay gặp hơn ở người có nôn (Melo 1996). Hai lượt cùng ước frequent ở đột quỵ biểu hiện bằng đau đầu."
+  - finding: nausea
+    freq: frequent
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-3312-2024, nhs-stroke-symptoms]
+      note: "Chỉ lượt B có; lượt C giữ. 3312/QĐ-BYT: triệu chứng hay gặp của chảy máu não gồm đau đầu, buồn nôn, liệt nửa người, rối loạn ý thức; NHS: buồn nôn hoặc nôn. Cùng cụm vomiting."
+  - finding: confusion
+    freq: occasional
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-3312-2024, msd-stroke-overview, nhs-stroke-symptoms]
+      note: "Rối loạn ý thức hay gặp trong xuất huyết não (3312/QĐ-BYT) và đột quỵ tuần hoàn sau (MSD); NHS: lú lẫn. Người còn tự kiểm tra được thường tỉnh táo, nên hai lượt cùng chọn occasional."
+  - finding: drowsy_hard_to_wake
+    freq: occasional
+    evidence:
+      tier: A
+      basis: judgment
+      sources: [runchey-jama-2010, byt-qd-3312-2024]
+      note: "Chỉ lượt B có; lượt C giữ. Hôn mê làm tăng khả năng xuất huyết (LR 6,2, Runchey 2010); 3312/QĐ-BYT: rối loạn ý thức hay gặp ở chảy máu não. Ước occasional ở bối cảnh tự kiểm tra; cùng cụm với lú lẫn."
+  - finding: vision_loss_or_double
+    freq: occasional
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [aroor-stroke-2017, byt-qd-3312-2024, msd-stroke-overview, nhs-stroke-symptoms]
+      reported: "40% người nhồi máu não không có triệu chứng FAST có triệu chứng thị giác (Aroor 2017)."
+      note: "Mất thị lực, nhìn đôi là triệu chứng khởi phát của nhồi máu não (3312/QĐ-BYT) và đột quỵ tuần hoàn sau (MSD). Tần suất trên mọi ca đột quỵ biểu hiện bằng đau đầu thấp hơn 40%; hai lượt cùng chọn occasional."
+  - finding: blurred_vision
+    freq: occasional
+    evidence:
+      tier: C
+      basis: verbal
+      sources: [nhs-stroke-symptoms]
+      note: "Chỉ lượt B có; lượt C giữ. NHS: nhìn mờ. Cùng cụm visual với 'vision_loss_or_double'."
+  - finding: fainting_or_near_fainting
+    freq: occasional
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [nhs-stroke-symptoms, byt-qd-3312-2024]
+      note: "Chỉ lượt B có; lượt C giữ. NHS: chóng mặt hoặc ngã; 3312/QĐ-BYT: chóng mặt trong triệu chứng khởi phát. Câu hỏi hỏi ngất hoặc choáng như sắp ngất, chỉ gần nghĩa một phần; ước occasional."
+  - finding: seizure_recent
+    freq: occasional
+    evidence:
+      tier: A
+      basis: judgment
+      sources: [runchey-jama-2010, byt-qd-3312-2024]
+      note: "Lượt C: hai lượt lệch một mức (A rare, B occasional). Mức rare cao hơn tỷ lệ nền 1% nên bộ kiểm tra cảnh báo; chọn occasional của lượt B: co giật kèm thiếu hụt thần kinh làm tăng khả năng xuất huyết (LR 4,7, Runchey 2010), 3312/QĐ-BYT ghi có thể có cơn động kinh khi chảy máu thùy trán, thái dương, đỉnh, và nhóm biểu hiện bằng đau đầu có nhiều xuất huyết não. Ước khoảng 10%."
+  - finding: neck_stiffness
+    freq: occasional
+    evidence:
+      tier: A
+      basis: judgment
+      sources: [runchey-jama-2010, byt-qd-3312-2024]
+      note: "Cứng gáy làm tăng khả năng xuất huyết (LR 5,0, Runchey 2010); 3312/QĐ-BYT: hôn mê, cứng gáy, co giật, huyết áp tăng cao, nôn hoặc đau đầu gợi ý chảy máu não. Không có tỷ lệ; hai lượt cùng ước occasional."
+  - finding: headache_course
+    dist: { first_time: 0.85, recurrent_similar: 0.08, progressive: 0.07 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [ihs-ichd3-2018, byt-qd-3312-2024]
+      note: "Đau đầu mới, khởi phát cấp tính cùng lúc với các triệu chứng của đột quỵ (ICHD-3 mục 6.1.1, 6.2.1; 3312/QĐ-BYT: khởi phát đột ngột). Người có bệnh đau đầu từ trước có thể thấy giống cơn cũ. Phân bố là ước lượng (trung bình hai lượt)."
+  - finding: headache_severity
+    dist: { mild: 0.15, moderate: 0.38, severe: 0.47 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [harriott-neurology-2020, ihs-ichd3-2018, byt-qd-3312-2024]
+      note: "Đau đầu trong nhồi máu não phần lớn ở mức vừa đến nặng (Harriott 2020); đau đầu do xuất huyết hay gặp hơn và nặng hơn (ICHD-3); chảy máu tiểu não gây nhức đầu dữ dội (3312/QĐ-BYT). Phân bố là ước lượng (trung bình hai lượt)."
+  - finding: headache_location
+    dist: { one_side: 0.30, both_sides: 0.10, forehead_face: 0.17, back_neck: 0.20, whole_head: 0.23 }
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [jorgensen-neurology-1994, kumral-jnnp-1995, byt-qd-3312-2024]
+      reported: "Đau khu trú một bên ở 46% người đột quỵ có đau đầu, cùng bên tổn thương ở 68% số này (Jørgensen 1994); vị trí hay gặp nhất là vùng trán (41%), rồi lan tỏa (27%); đột quỵ tuần hoàn sau hay đau lan tỏa hoặc vùng chẩm (Kumral 1995)."
+      note: "Lượt C: hai lượt lệch 0,07; khi đọc lại Kumral 1995 thấy vùng trán là vị trí hay gặp nhất, nên tăng 'trán, quanh mắt' từ 0,10 lên 0,17 và giảm 'gáy' từ khoảng 0,24 xuống 0,20. Chảy máu tiểu não gây đau vùng chẩm (3312/QĐ-BYT)."
+  - finding: headache_duration
+    dist: { lt_4h: 0.50, h4_72: 0.42, gt_3d: 0.08 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-3312-2024]
+      note: "Chỉ lượt B có; lượt C giữ. Triệu chứng chảy máu não đạt tối đa sau 30 phút đến vài giờ (3312/QĐ-BYT). Phân bố là ước lượng."
+  - finding: hypertension_known
+    freq: frequent
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-3312-2024, msd-stroke-overview]
+      note: "Tăng huyết áp là nguyên nhân chính của chảy máu não nguyên phát (3312/QĐ-BYT) và yếu tố nguy cơ hàng đầu của đột quỵ (MSD). Hai lượt cùng chọn frequent thay vì very_frequent vì nhiều người Việt Nam chưa biết mình tăng huyết áp."
+  - finding: bp_measured
+    dist: { normal: 0.20, high: 0.30, very_high: 0.26, extreme: 0.24 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-3312-2024, runchey-jama-2010]
+      note: "Huyết áp tăng cao gợi ý chảy máu não (3312/QĐ-BYT bảng phân biệt); huyết áp tâm trương trên 110 mmHg làm tăng khả năng xuất huyết (LR 4,3, Runchey 2010). Lần đo gần nhất có thể trước khi bệnh khởi phát nên giữ 20% 'dưới 140/90'. Phân bố là ước lượng (trung bình hai lượt)."
+  - finding: diabetes
+    freq: occasional
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [msd-stroke-overview, byt-qd-3312-2024]
+      note: "Đái tháo đường là yếu tố nguy cơ đột quỵ (MSD). Chưa có tỷ lệ ở người Việt; hai lượt cùng ước occasional (tỷ lệ nền của danh mục 7%)."
+  - finding: known_heart_disease
+    freq: occasional
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [msd-stroke-overview, jorgensen-neurology-1994]
+      note: "Rung nhĩ và bệnh tim gây huyết khối là yếu tố nguy cơ nhồi máu não (MSD); bệnh tim thiếu máu cục bộ liên quan với đau đầu khi đột quỵ (OR 1,5, Jørgensen 1994). Hai lượt cùng ước occasional."
+  - finding: fever
+    freq: rare
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-3312-2024, nhs-stroke-symptoms]
+      note: "Chỉ lượt B có; lượt C giữ. Sốt không có trong triệu chứng khởi phát của đột quỵ trong cả hai nguồn; đau đầu kèm sốt nghiêng về bệnh nhiễm trùng. Mức rare thấp hơn tỷ lệ nền 5%."
+  # ---------- Thêm ở Giai đoạn 3, lô 1 (lượt A): triệu chứng chính Chóng mặt ----------
+  - finding: vertigo_spinning
+    freq: frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [kerber-stroke-2006, msd-stroke-overview]
+      reported: "53 ca đột quỵ hoặc cơn thiếu máu não thoáng qua: 18 người mô tả là quay cuồng (vertigo), 23 chóng mặt (dizziness), 11 mất thăng bằng (Kerber 2006)"
+      note: "Tần suất trong số người đã chóng mặt. Đột quỵ tuần hoàn sau gây chóng mặt, rung giật nhãn cầu (MSD). Ước khoảng một nửa có cảm giác quay; tỷ lệ nền 0,3."
+  - finding: dizziness_positional
+    freq: occasional
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [tarnutzer-cmaj-2011]
+      note: "Tần suất trong số người đã chóng mặt. Hội chứng tiền đình cấp (do đột quỵ hay viêm thần kinh tiền đình) gồm cả không chịu được cử động đầu (Tarnutzer 2011), nên một phần người bệnh trả lời 'Có'. Ước 20%, thấp hơn nhiều so với chóng mặt tư thế kịch phát lành tính."
+  - finding: dizziness_pattern
+    dist: { brief_episodes: 0.08, long_episodes: 0.20, continuous: 0.62, chronic: 0.10 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [tarnutzer-cmaj-2011, byt-qd-3312-2024, paul-lancetneurol-2013]
+      note: "Phân bố trong số người đã chóng mặt. Đột quỵ tuần hoàn sau thường gây chóng mặt liên tục từ 1 ngày trở lên (hội chứng tiền đình cấp, Tarnutzer 2011); 3312/QĐ-BYT: khởi phát đột ngột. 29% có các cơn báo trước (Tarnutzer 2011), cơn ngắn hay xảy ra trong 2 ngày trước đột quỵ (Paul 2013). Phân bố là ước lượng."
+  - finding: cannot_walk_unaided
+    freq: frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [tarnutzer-cmaj-2011]
+      reported: "Mất điều hòa thân nặng (không tự ngồi được) 33% ở đột quỵ so với 0% ở viêm thần kinh tiền đình; đi không vững 55% ở nguyên nhân trung ương; 67% người nhồi máu động mạch tiểu não trên không tự đứng, đi được"
+      population: "Cấp cứu, bệnh viện"
+      note: "Ở cộng đồng có thể thấp hơn; vẫn ước khoảng một nửa vì câu hỏi tính cả phải vịn, phải đỡ mới đi được. Quy tắc rf_dizziness_central_signs xếp mức 2, mức 1 nếu có yếu tố nguy cơ."
+  - finding: transient_neuro_symptoms
+    freq: occasional
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [paul-lancetneurol-2013, kerber-stroke-2006]
+      reported: "22% người đột quỵ tuần hoàn sau có cơn thoáng qua trong 90 ngày trước; 9% trong 2 ngày và 2% trong 3–7 ngày trước (Paul 2013); 28% từng bị cơn thoáng qua hoặc đột quỵ (Kerber 2006)"
+      note: "Phần lớn cơn trước đột quỵ tuần hoàn sau là triệu chứng thân não đơn độc (chóng mặt, nhìn đôi), chỉ một phần khớp với câu hỏi (yếu, tê, nói khó, mất thị lực rồi tự hết). Ước 10–20%."
+  - finding: headache
+    freq: frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [tarnutzer-cmaj-2011, byt-qd-3312-2024]
+      reported: "Đau đầu hoặc đau cổ ở 38% nguyên nhân trung ương so với 12% nguyên nhân ngoại biên (LR+ 3,2; Tarnutzer 2011)"
+      note: "Chỉ có tác dụng khi triệu chứng chính là chóng mặt (với đau đầu, dấu hiệu này được ngầm định). Chảy máu tiểu não gây nhức đầu dữ dội vùng chẩm, thất điều, nôn (3312/QĐ-BYT). Dấu hiệu 'headache' không thuộc lô 1 nhưng được hỏi trong nhóm dizziness_associated."
+warning_signs: [es_stroke_signs, sudden_loss_of_balance, headache_thunderclap, confusion, drowsy_hard_to_wake, seizure_recent, vision_loss_or_double, persistent_vomiting]
+self_care_vi:
+  - "Gọi 115 ngay và ghi nhớ giờ bắt đầu có triệu chứng."
+  - "Không tự lái xe đến viện."
+  - "Không tự dùng thuốc khi chưa có ý kiến bác sĩ."
+see_doctor_vi:
+  - "Cần đến bệnh viện có khả năng điều trị đột quỵ càng sớm càng tốt."
+  - "Vẫn gọi 115 nếu các dấu hiệu đã tự hết sau vài phút."
+review:
+  status: draft
+  authors: ["agent:pass-a"]
+  updated: "2026-10-25"
+  notes_vi: "Bản mở rộng của lượt A (Giai đoạn 3, lô 1); mọi phần đã có từ Giai đoạn 1 giữ nguyên. Đã thêm: (1) prior cho triệu chứng chính 'dizziness' (mặc định P5; 5–17 tuổi P6; 45–74 tuổi P4; từ 75 tuổi P3); (2) 6 liên kết: vertigo_spinning (frequent), dizziness_positional (occasional), dizziness_pattern (phân bố, chủ yếu 'liên tục'), cannot_walk_unaided (frequent), transient_neuro_symptoms (occasional), headache (frequent; không thuộc lô 1 nhưng có trong nhóm dizziness_associated); (3) nguồn mới trong extend/sources: kerber-stroke-2006, newmantoker-mayoclinproc-2008, tarnutzer-cmaj-2011, paul-lancetneurol-2013. Đề nghị xem lại (không tự sửa): liên kết es_stroke_signs (very_frequent) được đặt cho đột quỵ biểu hiện bằng đau đầu; với chóng mặt, nhiều ca tuần hoàn sau không có dấu hiệu FAST (Kerber 2006: chỉ 60% có yếu vận động, 17% chóng mặt đơn độc; Tarnutzer 2011: gần 2/3 không có dấu hiệu khu trú mà người không chuyên nhận ra). Vì liên kết dùng chung cho mọi triệu chứng chính, câu trả lời 'không' ở màn sàng lọc làm khả năng đột quỵ ở người chóng mặt giảm khoảng 5 lần, có lẽ quá mạnh; an toàn hiện dựa vào các quy tắc rf_dizziness_central_signs, rf_acute_vertigo_vascular_risk. Tương tự, sudden_loss_of_balance (frequent) có tỷ lệ nền 0,4 khi chóng mặt nên gần trung tính. Nghe kém kèm chóng mặt (đột quỵ động mạch tiểu não trước dưới) không được liên kết vì số liệu chỉ 2/69 ca (Tarnutzer 2011); NHS xếp dấu hiệu này vào nhóm gọi 999."
