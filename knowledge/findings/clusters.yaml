@@ -59,3 +59,17 @@
   rho: medium
   label_vi: "Xuất huyết tiêu hóa"
   rationale_vi: "Nôn ra máu và đi ngoài phân đen cùng phản ánh chảy máu đường tiêu hóa trên."
+
+# ---------- Giai đoạn 3, lô 1 ----------
+- id: imbalance
+  rho: high
+  label_vi: "Mất thăng bằng"
+  rationale_vi: "Đi loạng choạng và không tự đứng, đi được là hai mức của cùng một triệu chứng."
+- id: panic_attack
+  rho: medium
+  label_vi: "Cơn hoảng sợ"
+  rationale_vi: "Sợ hãi dữ dội và tê bì quanh miệng do thở nhanh thường cùng xuất hiện trong một cơn hoảng sợ."
+- id: co_source
+  rho: medium
+  label_vi: "Nguồn khí CO"
+  rationale_vi: "Ở phòng kín có đốt than và người ở cùng cũng có triệu chứng cùng phản ánh một nguồn khí CO."

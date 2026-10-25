@@ -1,0 +1,35 @@
+id: syncope
+label_vi: "Ngất, suýt ngất"
+icon: faint
+# Lô 1 của Giai đoạn 3 đang soạn (docs/phase-3/scope.md): bộ kiểm định dùng được, app chưa cho chọn.
+status: in_progress
+synonyms_vi:
+  - "ngất xỉu"
+  - "xỉu"
+  - "té xỉu"
+  - "bất tỉnh"
+  - "lịm đi"
+  - "tối sầm mắt"
+  - "choáng"
+  - "đổ gục"
+description_vi: "Đột ngột mất ý thức trong thời gian ngắn rồi tự tỉnh, hoặc cảm giác sắp ngất."
+implies: [fainting_or_near_fainting]
+age_groups: [child_5_12, teen_13_17, adult_18_44, adult_45_64, elder_65_74, elder_75p]
+red_flags:
+  - group: syncope_red_flags
+  - group: general_danger_signs
+  - finding: syncope_trigger
+  - finding: syncope_warning
+  - finding: pregnant
+  - finding: missed_period
+intake: [syncope_associated, chronic_conditions]
+# Điền sau lượt C: một bệnh chỉ vào được danh sách này khi đã có prior cho triệu chứng chính này.
+cant_miss: []
+safety_net:
+  - chest_pain_pressure
+  - breathing_difficulty
+  - palpitations
+  - black_stool
+  - vomiting_blood
+  - confusion
+sources: [esc-syncope-2018, nice-cg109, nhs-fainting]

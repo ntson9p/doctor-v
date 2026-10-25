@@ -246,3 +246,72 @@
   alt_question:
     text_vi: "Có lúc nào tối sầm mắt, phải ngồi hoặc nằm xuống ngay không?"
   leak: moderate
+
+# ---------- Giai đoạn 3, lô 1 ----------
+- id: tremor
+  kind: symptom
+  type: binary
+  label_vi: "Run tay"
+  question_vi: "Có bị run tay không?"
+  help_vi: "Tay run khi cầm đồ vật hoặc khi duỗi thẳng tay ra trước."
+  leak: moderate
+- id: pallor
+  kind: sign
+  type: binary
+  label_vi: "Da xanh, môi và mí mắt nhợt"
+  question_vi: "Da có xanh xao, môi và mí mắt có nhợt nhạt không?"
+  help_vi: "Nhìn mặt trong mí mắt dưới: bình thường màu hồng đỏ, khi thiếu máu thì nhợt."
+  leak: moderate
+- id: weight_loss_unintended
+  kind: symptom
+  type: binary
+  label_vi: "Sụt cân không rõ lý do"
+  question_vi: "Vài tháng gần đây có sụt cân mà không do ăn kiêng không?"
+  leak: moderate
+- id: heat_intolerance
+  kind: symptom
+  type: binary
+  label_vi: "Sợ nóng hơn trước"
+  question_vi: "Gần đây có thấy sợ nóng hơn hẳn người xung quanh không?"
+  help_vi: "Ví dụ người khác thấy mát mà bạn vẫn nóng, dễ đổ mồ hôi."
+  leak: moderate
+- id: goiter_visible
+  kind: sign
+  type: binary
+  label_vi: "Bướu cổ"
+  question_vi: "Phía trước cổ có to ra hoặc nổi một khối không?"
+  leak: 0.03
+  leak_note: "Bướu cổ nhìn thấy được ít gặp ở người không có bệnh tuyến giáp; người bảo trì ước lượng."
+- id: panic_fear
+  kind: symptom
+  type: binary
+  label_vi: "Cơn sợ hãi dữ dội"
+  question_vi: "Trong cơn, có sợ hãi dữ dội như sắp chết hoặc mất kiểm soát không?"
+  cluster: panic_attack
+  leak: moderate
+- id: similar_episodes_before
+  kind: history
+  type: binary
+  label_vi: "Đã từng có những cơn giống hệt"
+  question_vi: "Trước đây đã từng có những cơn giống hệt như lần này chưa?"
+  leak: nonspecific
+- id: missed_meal
+  kind: history
+  type: binary
+  label_vi: "Bỏ bữa hoặc ăn ít hơn thường lệ"
+  question_vi: "Hôm nay có bỏ bữa hoặc ăn ít hơn thường lệ không?"
+  leak: nonspecific
+- id: better_after_sugar
+  kind: history
+  type: binary
+  label_vi: "Đỡ nhanh sau khi ăn hoặc uống đồ ngọt"
+  question_vi: "Sau khi ăn hoặc uống đồ ngọt, có đỡ hẳn trong vòng 15 phút không?"
+  leak: 0.05
+  leak_note: "Phần lớn người chưa thử thì trả lời 'Không rõ'. Đỡ hẳn sau khi ăn đồ ngọt gợi ý hạ đường huyết; người bảo trì ước lượng."
+  unknown_rate: 0.5
+- id: recent_viral_illness
+  kind: history
+  type: binary
+  label_vi: "Bị cảm, đau họng trong 2 tuần trước"
+  question_vi: "Trong 2 tuần trước đó có bị cảm, sổ mũi hoặc đau họng không?"
+  leak: nonspecific

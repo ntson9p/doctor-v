@@ -56,14 +56,19 @@ export function Complaints({ kb, ageMonths, onPick }: Props) {
   const stopWatching = useRef<(() => void) | null>(null);
   useEffect(() => () => stopWatching.current?.(), []);
   const ageGroup = ageGroupOf(kb.ageGroups, ageMonths);
-  const available = kb.complaints.filter((c) => c.ageGroups === null || c.ageGroups.includes(ageGroup));
-  const shown = available.filter((c) => {
-    const t = kb.text.complaints[c.id];
-    return matches(query, [t?.label ?? c.id, ...(t?.synonyms ?? [])]);
-  });
+  const forAge = kb.complaints.filter((c) => c.ageGroups === null || c.ageGroups.includes(ageGroup));
+  const available = forAge.filter((c) => c.released);
+  const named = (id: string) => {
+    const t = kb.text.complaints[id];
+    return matches(query, [t?.label ?? id, ...(t?.synonyms ?? [])]);
+  };
+  const shown = available.filter((c) => named(c.id));
   const typed = query.trim().replace(/\s+/g, ' ');
   // Nothing matched: say so, and still offer every complaint, so the screen never ends in a dead end.
   const notFound = shown.length === 0;
+  // Complaints whose batch is still being authored: name them rather than just saying "not found".
+  const upcoming = notFound && typed !== '' ? forAge.filter((c) => !c.released && named(c.id)) : [];
+  const upcomingNames = upcoming.map((c) => `"${kb.text.complaints[c.id]?.label ?? c.id}"`).join(', ');
 
   return (
     <div>
@@ -90,8 +95,12 @@ export function Complaints({ kb, ageMonths, onPick }: Props) {
         {notFound ? (
           <>
             <p>
-              <strong>Chưa tìm thấy "{typed}".</strong> Bản thử nghiệm mới có {available.length} triệu chứng chính, ở
-              ngay dưới đây.
+              <strong>
+                {upcoming.length > 0
+                  ? `${upcoming.length === 1 ? 'Triệu chứng' : 'Các triệu chứng'} ${upcomingNames} đang được soạn, chưa dùng được.`
+                  : `Chưa tìm thấy "${typed}".`}
+              </strong>{' '}
+              Bản thử nghiệm mới có {available.length} triệu chứng chính, ở ngay dưới đây.
             </p>
             {/* Danger signs worded as on the first screen (docs/legal/disclaimers.md §2). */}
             <ul>

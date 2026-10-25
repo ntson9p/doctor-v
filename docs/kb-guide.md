@@ -275,6 +275,12 @@ sources: [who-imci-2014]
 
 Dấu hiệu trong `implies` **không được tính lại** khi suy luận, vì prior đã tính theo triệu chứng chính. Chúng chỉ dùng cho điều kiện hỏi và quy tắc.
 
+`status: in_progress` dùng cho triệu chứng chính đang được soạn trong một lô:
+- bộ kiểm định chấm được triệu chứng này;
+- app chưa cho chọn. Khi người dùng tìm đúng triệu chứng này, app báo "đang được soạn".
+
+Khi lô đạt chỉ tiêu trên bộ ca giữ kín, bỏ trường này đi (mặc định là `released`).
+
 ### 4.6 Bệnh: `knowledge/conditions/<id>.yaml`
 
 ```yaml

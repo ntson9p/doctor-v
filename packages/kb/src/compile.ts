@@ -157,6 +157,7 @@ export function compileKnowledge(k: RawKnowledge): CompiledKb {
     safetyNet: [...c.safety_net],
     otherPrior: c.other_prior ?? null,
     ageGroups: c.age_groups ? [...c.age_groups] : null,
+    released: (c.status ?? 'released') === 'released',
   }));
 
   const text: TextBundle = {

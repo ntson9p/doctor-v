@@ -101,3 +101,14 @@
   label_vi: "7 ngày qua tiếp xúc gần người đang sốt, ho"
   question_vi: "Trong 7 ngày qua, có tiếp xúc gần người đang sốt hoặc ho không?"
   leak: nonspecific
+
+# ---------- Giai đoạn 3, lô 1 ----------
+- id: hemoptysis
+  kind: symptom
+  type: binary
+  label_vi: "Ho ra máu"
+  question_vi: "Có ho ra máu không?"
+  help_vi: "Máu ra khi ho, có thể lẫn trong đờm."
+  alt_question:
+    text_vi: "Đờm hoặc nước bọt khi ho có lẫn máu đỏ không?"
+  leak: specific

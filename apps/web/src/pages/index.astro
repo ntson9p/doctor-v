@@ -4,7 +4,7 @@ import { builtKnowledge } from '../lib/build-kb.ts';
 
 const { kb } = builtKnowledge();
 const emergencySigns = kb.emergencyScreen.items.map((i) => kb.text.findings[i.findingId]?.label ?? i.findingId);
-const complaints = kb.complaints.map((c) => kb.text.complaints[c.id]?.label ?? c.id);
+const complaints = kb.complaints.filter((c) => c.released).map((c) => kb.text.complaints[c.id]?.label ?? c.id);
 ---
 
 <Base title="doctor-v · Nên đi khám ở đâu, khi nào">

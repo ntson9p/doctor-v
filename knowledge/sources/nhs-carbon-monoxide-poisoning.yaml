@@ -1,0 +1,11 @@
+id: nhs-carbon-monoxide-poisoning
+type: web_page
+title: "Carbon monoxide poisoning"
+publisher: "NHS (UK)"
+url: "https://www.nhs.uk/conditions/carbon-monoxide-poisoning/"
+license_class: L1
+license_note: "Open Government Licence v3.0; bản chuyển thể không được trình bày như nội dung của NHS."
+default_tier: C
+accessed: "2026-10-25"
+verified: false
+notes_vi: "Người bảo trì thêm cho quy tắc ngộ độc khí CO (lô 1, Giai đoạn 3). Lượt R cần mở và đối chiếu mức xử trí."

@@ -166,6 +166,8 @@ export const complaintSchema = z.strictObject({
   description_vi: TEXT.optional(),
   implies: z.array(ID),
   age_groups: z.array(ID).min(1).optional(),
+  /** in_progress: its batch is still being authored; evaluation uses it, the app does not offer it. */
+  status: z.enum(['released', 'in_progress']).optional(),
   other_prior: z.number().min(0.05).max(0.4).optional(),
   red_flags: z.array(z.union([z.strictObject({ group: ID }), z.strictObject({ finding: ID })])),
   intake: z.array(ID),

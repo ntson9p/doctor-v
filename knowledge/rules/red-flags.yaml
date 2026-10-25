@@ -694,7 +694,7 @@
 - id: rf_gi_bleeding
   level: 2
   conditions: [peptic_ulcer_gastritis]
-  complaints: [abdominal_pain, fever]
+  complaints: [abdominal_pain, fever, dizziness, syncope, palpitations]
   when:
     any:
       - { finding: vomiting_blood, is: present }
@@ -857,7 +857,7 @@
 - id: rf_chest_pain
   level: 2
   conditions: [acute_coronary_syndrome]
-  complaints: [abdominal_pain]
+  complaints: [abdominal_pain, dizziness, syncope, palpitations]
   when: { finding: chest_pain_pressure, is: present }
   reason_vi: "Đau hoặc tức nặng giữa ngực cần được khám cấp cứu để loại trừ bệnh tim."
   evidence:
@@ -869,7 +869,7 @@
 - id: rf_chest_pain_with_features
   level: 1
   conditions: [acute_coronary_syndrome]
-  complaints: [abdominal_pain]
+  complaints: [abdominal_pain, dizziness, syncope, palpitations]
   when:
     all:
       - { finding: chest_pain_pressure, is: present }
@@ -892,7 +892,7 @@
 - id: rf_thunderclap_headache
   level: 1
   conditions: [subarachnoid_hemorrhage]
-  complaints: [headache]
+  complaints: [headache, dizziness, syncope]
   when: { finding: headache_thunderclap, is: present }
   reason_vi: "Đau đầu đột ngột, dữ dội nhất từ trước tới nay có thể là chảy máu não."
   evidence:
@@ -1101,3 +1101,230 @@
     sources: [nice-cg150, nhs-headaches]
     locator: "CG150 khuyến cáo 1.1.2; NHS Headaches (urgent GP: headache and being sick)"
     note: "Quy tắc mới của lượt R. CG150: đau đầu mới xuất hiện kèm nôn không rõ nguyên nhân khác thì cân nhắc thăm dò hoặc chuyển tuyến. NHS: đau đầu kèm nôn thì hẹn khám khẩn hoặc gọi 111. Giới hạn ở đau đầu lần đầu hoặc nặng dần để không xếp cao cơn đau nửa đầu quen thuộc."
+
+# ---------- Chóng mặt, ngất, hồi hộp (Giai đoạn 3, lô 1) ----------
+# Người bảo trì soạn; lượt R đối chiếu từng quy tắc với văn bản gốc.
+# Sau lượt C, thêm các bệnh mới vào `conditions` (danh sách ở knowledge/drafts/phase-3/batch-1/scope.yaml).
+
+- id: rf_dizziness_central_signs
+  level: 2
+  conditions: [stroke]
+  complaints: [dizziness]
+  when:
+    any:
+      - { finding: vision_loss_or_double, is: present }
+      - { finding: cannot_walk_unaided, is: present }
+  reason_vi: "Chóng mặt kèm nhìn đôi hoặc không tự đi được có thể do đột quỵ, cần khám cấp cứu."
+  evidence:
+    tier: B
+    basis: verbal
+    sources: [grace3-dizziness-2023, byt-qd-3312-2024, nhs-dizziness]
+    note: "GRACE-3: ở người chóng mặt cấp, không tự đi được gợi ý nguyên nhân trung ương. 3312/QĐ-BYT: đột quỵ hệ sau gây chóng mặt, nhìn đôi, thất điều."
+
+- id: rf_dizziness_central_signs_high_risk
+  level: 1
+  conditions: [stroke]
+  complaints: [dizziness]
+  when:
+    all:
+      - any:
+          - { finding: vision_loss_or_double, is: present }
+          - { finding: cannot_walk_unaided, is: present }
+      - any:
+          - { age_years_gte: 50 }
+          - { finding: hypertension_known, is: present }
+          - { finding: diabetes, is: present }
+          - { finding: known_heart_disease, is: present }
+  reason_vi: "Chóng mặt kèm nhìn đôi hoặc không tự đi được ở người có nguy cơ đột quỵ: gọi 115 ngay."
+  evidence:
+    tier: B
+    basis: verbal
+    sources: [grace3-dizziness-2023, byt-qd-3312-2024]
+    note: "Cùng cấu trúc với rf_befast_high_risk của triệu chứng đau đầu."
+
+- id: rf_acute_vertigo_vascular_risk
+  level: 2
+  conditions: [stroke]
+  complaints: [dizziness]
+  when:
+    all:
+      - { finding: dizziness_pattern, in: [continuous] }
+      - any:
+          - { age_years_gte: 60 }
+          - { finding: hypertension_known, is: present }
+          - { finding: diabetes, is: present }
+          - { finding: known_heart_disease, is: present }
+  reason_vi: "Chóng mặt liên tục mới xuất hiện ở người có nguy cơ đột quỵ cần khám cấp cứu. Tại nhà không phân biệt được với đột quỵ."
+  evidence:
+    tier: B
+    basis: judgment
+    sources: [grace3-dizziness-2023]
+    note: "Hội chứng tiền đình cấp: một phần là đột quỵ hệ sau, nhất là ở người có yếu tố nguy cơ mạch máu; cần thăm khám chuyên môn để phân biệt. Ngưỡng tuổi 60 do người bảo trì chọn; lượt R đối chiếu."
+
+- id: rf_transient_neuro
+  level: 2
+  conditions: [stroke]
+  complaints: [dizziness, syncope, palpitations]
+  when: { finding: transient_neuro_symptoms, is: present }
+  reason_vi: "Vừa có lúc yếu, tê, nói khó hoặc mất thị lực rồi tự hết có thể là cơn thiếu máu não thoáng qua. Đây là dấu hiệu báo trước đột quỵ: cần khám cấp cứu ngay."
+  evidence:
+    tier: B
+    basis: verbal
+    sources: [nice-ng128, nhs-stroke-symptoms]
+    note: "NHS: gọi cấp cứu kể cả khi triệu chứng đã tự hết. NICE NG128: người nghi cơn thiếu máu não thoáng qua cần được chuyên khoa đánh giá trong 24 giờ. Lượt R cân nhắc mức 1 hay 2."
+
+- id: rf_syncope_exertion_or_lying
+  level: 2
+  conditions: [acute_coronary_syndrome]
+  complaints: [syncope, dizziness, palpitations]
+  when: { finding: syncope_trigger, in: [exertion, lying] }
+  reason_vi: "Ngất khi đang gắng sức hoặc đang nằm có thể do bệnh tim, cần khám cấp cứu."
+  evidence:
+    tier: B
+    basis: verbal
+    sources: [esc-syncope-2018, nice-cg109]
+    note: "ESC 2018: ngất khi gắng sức hoặc khi nằm là đặc điểm nguy cơ cao."
+
+- id: rf_syncope_palpitations_first
+  level: 2
+  complaints: [syncope, dizziness, palpitations]
+  when: { finding: syncope_warning, in: [palpitations_first] }
+  reason_vi: "Tim đập nhanh hoặc loạn ngay trước khi ngất có thể do rối loạn nhịp tim, cần khám cấp cứu."
+  evidence:
+    tier: B
+    basis: verbal
+    sources: [esc-syncope-2018]
+    note: "ESC 2018: hồi hộp đột ngột ngay trước khi ngất là đặc điểm nguy cơ cao."
+
+- id: rf_syncope_heart_disease
+  level: 2
+  conditions: [acute_coronary_syndrome]
+  complaints: [syncope]
+  when:
+    all:
+      - { finding: fainting_or_near_fainting, is: present }
+      - { finding: known_heart_disease, is: present }
+  reason_vi: "Ngất hoặc suýt ngất ở người có bệnh tim cần khám cấp cứu."
+  evidence:
+    tier: B
+    basis: verbal
+    sources: [esc-syncope-2018, nice-cg109]
+    note: "ESC 2018: bệnh tim cấu trúc hoặc bệnh mạch vành nặng là đặc điểm nguy cơ cao."
+
+- id: rf_syncope_breathing
+  level: 1
+  conditions: [acute_coronary_syndrome]
+  complaints: [syncope, dizziness, palpitations]
+  when:
+    all:
+      - { finding: fainting_or_near_fainting, is: present }
+      - { finding: breathing_difficulty, is: present }
+  reason_vi: "Ngất hoặc choáng kèm khó thở có thể do bệnh tim, phổi nguy hiểm: gọi 115 ngay."
+  evidence:
+    tier: B
+    basis: verbal
+    sources: [esc-syncope-2018, nhs-fainting]
+    note: "ESC 2018: ngất kèm khó thở mới xuất hiện là đặc điểm nguy cơ cao. Lượt R đối chiếu mức với trang NHS."
+
+- id: rf_syncope_gi_bleeding
+  level: 1
+  conditions: [peptic_ulcer_gastritis]
+  complaints: [syncope, dizziness, palpitations]
+  when:
+    all:
+      - { finding: fainting_or_near_fainting, is: present }
+      - any:
+          - { finding: black_stool, is: present }
+          - { finding: vomiting_blood, is: present }
+  reason_vi: "Ngất hoặc choáng kèm nôn ra máu, đi ngoài phân đen là dấu hiệu mất máu nhiều: gọi 115 ngay."
+  evidence:
+    tier: B
+    basis: verbal
+    sources: [nice-cg141, esc-syncope-2018]
+    note: "Ngất trong chảy máu tiêu hóa phản ánh mất máu nhiều (NICE CG141 dùng thang Blatchford, trong đó có ngất)."
+
+- id: rf_syncope_family_sudden_death
+  level: 3
+  complaints: [syncope]
+  when:
+    all:
+      - { finding: fainting_or_near_fainting, is: present }
+      - { finding: family_sudden_death, is: present }
+  reason_vi: "Ngất ở người có người thân chết đột ngột khi còn trẻ cần được khám tim trong 24 giờ."
+  evidence:
+    tier: B
+    basis: verbal
+    sources: [esc-syncope-2018]
+    note: "ESC 2018: tiền sử gia đình đột tử khi trẻ là đặc điểm nguy cơ. Mức 3 do người bảo trì chọn."
+
+- id: rf_syncope_pregnancy
+  level: 3
+  conditions: [ectopic_pregnancy]
+  complaints: [syncope, dizziness]
+  when:
+    all:
+      - { finding: fainting_or_near_fainting, is: present }
+      - any:
+          - { finding: pregnant, is: present }
+          - { finding: missed_period, is: present }
+  reason_vi: "Ngất hoặc choáng khi đang có thai hoặc chậm kinh cần được khám trong 24 giờ để loại trừ chửa ngoài tử cung."
+  evidence:
+    tier: B
+    basis: verbal
+    sources: [nice-ng126, nhs-ectopic-pregnancy]
+    note: "Choáng, ngất là một biểu hiện của chửa ngoài tử cung. Khi kèm đau bụng, rf_fainting_with_pain đã ở mức 2."
+
+- id: rf_palpitations_danger
+  level: 1
+  conditions: [acute_coronary_syndrome]
+  complaints: [palpitations]
+  when:
+    any:
+      - { finding: chest_pain_pressure, is: present }
+      - { finding: breathing_difficulty, is: present }
+      - { finding: fainting_or_near_fainting, is: present }
+  reason_vi: "Tim đập nhanh kèm đau ngực, khó thở hoặc choáng ngất có thể nguy hiểm: gọi 115 ngay."
+  evidence:
+    tier: B
+    basis: verbal
+    sources: [nhs-heart-palpitations, esc-syncope-2018]
+    note: "NHS (Heart palpitations): hồi hộp kèm đau ngực, khó thở hoặc ngất là lý do gọi cấp cứu. Lượt R đối chiếu."
+
+- id: rf_pulse_extreme
+  level: 2
+  complaints: [palpitations, dizziness, syncope]
+  when: { finding: pulse_measured, in: [lt_40, gt_150] }
+  reason_vi: "Mạch dưới 40 hoặc trên 150 lần mỗi phút khi đang có triệu chứng cần khám cấp cứu."
+  evidence:
+    tier: B
+    basis: judgment
+    sources: [esc-syncope-2018]
+    note: "Ngưỡng do người bảo trì chọn: nhịp chậm dưới 40 khi thức và nhịp nhanh trên 150 thường cần xử trí cấp cứu. Lượt R đối chiếu."
+
+- id: rf_hypoglycemia_suspected
+  level: 3
+  complaints: [dizziness, syncope, palpitations]
+  when:
+    all:
+      - { finding: on_glucose_lowering_meds, is: present }
+      - any:
+          - { finding: tremor, is: present }
+          - { finding: cold_sweat, is: present }
+          - { finding: missed_meal, is: present }
+  reason_vi: "Người đang dùng thuốc tiểu đường bị run tay, vã mồ hôi hoặc bỏ bữa có thể đang hạ đường huyết. Nếu còn tỉnh và nuốt được, ăn hoặc uống ngay đồ ngọt. Nếu không đỡ sau 15 phút hoặc lơ mơ, gọi 115."
+  evidence:
+    tier: C
+    basis: verbal
+    sources: [nhs-hypoglycaemia]
+    note: "Lú lẫn, li bì đã có rf_altered_consciousness ở mức 1. Lượt R đối chiếu mức 2 hay 3 và cách sơ cứu."
+
+- id: rf_co_exposure
+  level: 2
+  complaints: [dizziness, syncope]
+  when: { finding: co_exposure, is: present }
+  reason_vi: "Chóng mặt hoặc ngất khi ở phòng kín có đốt than, chạy máy nổ có thể là ngộ độc khí CO. Ra ngay chỗ thoáng khí và đến cơ sở cấp cứu."
+  evidence:
+    tier: C
+    basis: verbal
+    sources: [nhs-carbon-monoxide-poisoning]
+    note: "Triệu chứng chính Đau đầu sẽ được thêm ở lô 2. Lượt R đối chiếu mức."

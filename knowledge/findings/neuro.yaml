@@ -4,6 +4,8 @@
   type: binary
   label_vi: "Đau đầu"
   question_vi: "Có đau đầu không?"
+  alt_question:
+    text_vi: "Có thấy đau, nhức hoặc nặng ở đầu không?"
   leak: nonspecific
   leak_by_complaint: { abdominal_pain: moderate, fever: 0.7 }
   leak_note: "Người sốt không do sốt xuất huyết vẫn đau đầu khoảng 70% (Phuong 2006 bảng 2, Low 2011 bảng 3, Le-Viet 2019 bảng 1; lượt C lô 2); 20% làm kết quả quá tự tin (lượt B lô 2). Ước lượng, cần bác sĩ duyệt."
@@ -162,3 +164,73 @@
   label_vi: "Căng thẳng hoặc thiếu ngủ"
   question_vi: "Trong tuần qua có căng thẳng, lo lắng hoặc thiếu ngủ không?"
   leak: nonspecific
+
+# ---------- Chóng mặt (Giai đoạn 3, lô 1) ----------
+- id: dizziness
+  kind: symptom
+  type: binary
+  label_vi: "Chóng mặt"
+  question_vi: "Có bị chóng mặt, choáng váng hoặc mất thăng bằng không?"
+  help_vi: "Gồm cảm giác quay cuồng, chòng chành như đứng trên thuyền, hoặc choáng váng như sắp ngất."
+  leak: nonspecific
+- id: vertigo_spinning
+  kind: symptom
+  type: binary
+  label_vi: "Cảm giác mọi vật quay tròn"
+  question_vi: "Có cảm giác mọi vật quay tròn quanh mình, hoặc mình đang quay tròn không?"
+  requires:
+    - { finding: dizziness, is: present }
+  leak: 0.3
+  leak_note: "Tính trong số người đã chóng mặt (dấu hiệu có điều kiện). Người bảo trì ước lượng khoảng một phần ba người chóng mặt có cảm giác quay; lượt A/B/C đối chiếu với nguồn."
+- id: dizziness_positional
+  kind: symptom
+  type: binary
+  label_vi: "Chóng mặt khi trở mình, nằm xuống hoặc ngửa cổ"
+  question_vi: "Có chóng mặt ngay khi trở mình, nằm xuống hoặc ngửa cổ không?"
+  requires:
+    - { finding: dizziness, is: present }
+  leak: 0.1
+  leak_note: "Tính trong số người đã chóng mặt. Kiểu chóng mặt do tư thế đầu là đặc trưng của chóng mặt tư thế kịch phát lành tính; người bảo trì ước lượng tỷ lệ ở người không có bệnh liên kết, lượt A/B/C đối chiếu."
+- id: dizziness_pattern
+  kind: history
+  type: categorical
+  label_vi: "Kiểu chóng mặt"
+  question_vi: "Chóng mặt diễn ra thế nào?"
+  options:
+    - { id: brief_episodes, label_vi: "Từng cơn ngắn, mỗi cơn dưới 1 phút" }
+    - { id: long_episodes, label_vi: "Từng cơn, mỗi cơn vài phút đến vài giờ" }
+    - { id: continuous, label_vi: "Liên tục không dứt, mới bắt đầu vài ngày nay" }
+    - { id: chronic, label_vi: "Âm ỉ gần như suốt ngày, đã nhiều tuần" }
+  baseline: { brief_episodes: 0.25, long_episodes: 0.3, continuous: 0.2, chronic: 0.25 }
+  requires:
+    - { finding: dizziness, is: present }
+- id: hearing_loss_tinnitus
+  kind: symptom
+  type: binary
+  label_vi: "Ù tai hoặc nghe kém một bên"
+  question_vi: "Có ù tai, nghe kém hoặc đầy tức ở một bên tai không?"
+  leak: moderate
+- id: cannot_walk_unaided
+  kind: sign
+  type: binary
+  label_vi: "Không tự đứng vững hoặc tự đi được"
+  question_vi: "Có mất thăng bằng đến mức không tự đứng hoặc đi được không?"
+  help_vi: "Nghĩa là phải có người đỡ hoặc phải vịn mới đứng, đi được, kể cả khi mở mắt nhìn."
+  alt_question:
+    text_vi: "Có tự đi được vài bước mà không cần vịn hay người đỡ không?"
+    inverted: true
+  cluster: imbalance
+  leak: moderate
+- id: transient_neuro_symptoms
+  kind: history
+  type: binary
+  label_vi: "Có lúc yếu, tê, nói khó, mất thị lực rồi tự hết"
+  question_vi: "Trong 7 ngày qua, có lúc nào bỗng yếu hoặc tê một bên người, méo miệng, nói khó, mất thị lực rồi tự hết không?"
+  leak: specific
+- id: perioral_tingling
+  kind: symptom
+  type: binary
+  label_vi: "Tê bì quanh miệng hoặc đầu ngón tay"
+  question_vi: "Trong cơn, có bị tê bì quanh miệng hoặc ở đầu các ngón tay không?"
+  cluster: panic_attack
+  leak: moderate

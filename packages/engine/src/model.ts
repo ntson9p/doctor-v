@@ -120,6 +120,8 @@ export interface Complaint {
   safetyNet: string[];
   otherPrior: number | null;
   ageGroups: string[] | null;
+  /** False while the complaint's batch is being authored: evaluation can use it, the app does not offer it. */
+  released: boolean;
 }
 
 export interface QuestionGroup {

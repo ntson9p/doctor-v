@@ -136,6 +136,7 @@ export function makeKb(overrides: Partial<CompiledKb> = {}): CompiledKb {
         safetyNet: ['neck'],
         otherPrior: null,
         ageGroups: null,
+        released: true,
       },
     ],
     groups: [

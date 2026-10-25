@@ -3,6 +3,9 @@ import Base from '../layouts/Base.astro';
 import { builtKnowledge } from '../lib/build-kb.ts';
 
 const { kb, knowledge } = builtKnowledge();
+// Only what the app offers: complaints still being authored, and conditions reachable only from them, are left out.
+const released = kb.complaints.filter((c) => c.released);
+const reachable = kb.conditions.filter((d) => released.some((c) => c.id in d.priors));
 const GROUPS: { type: string; title: string }[] = [
   { type: 'guideline_vn', title: 'Hướng dẫn của Bộ Y tế' },
   { type: 'guideline_intl', title: 'Hướng dẫn quốc tế' },
@@ -29,7 +32,7 @@ const others = sources.filter((s) => !known.has(s.type));
   <ul>
     <li>Mức xử trí do các quy tắc an toàn quyết định, dựa trên hướng dẫn chính thức.</li>
     <li>Con số % là ước tính từ tần suất triệu chứng trong y văn, chưa được hiệu chuẩn trên người bệnh thật.</li>
-    <li>Bản thử nghiệm có {kb.complaints.length} triệu chứng chính và {kb.conditions.length} tình trạng.</li>
+    <li>Bản thử nghiệm có {released.length} triệu chứng chính và {reachable.length} tình trạng.</li>
   </ul>
 
   <h2>Quyền riêng tư</h2>

@@ -130,3 +130,16 @@
   cost: 3
   sensitive: true
   leak: moderate
+
+# ---------- Giai đoạn 3, lô 1 ----------
+- id: heavy_periods
+  kind: symptom
+  type: binary
+  label_vi: "Kinh nguyệt ra nhiều hoặc kéo dài"
+  question_vi: "Kinh nguyệt có ra rất nhiều hoặc kéo dài hơn 7 ngày không?"
+  help_vi: "Ra rất nhiều nghĩa là phải thay băng vệ sinh sau mỗi 1–2 giờ."
+  applies_to:
+    sex: [female]
+    age_groups: [teen_13_17, adult_18_44, adult_45_64]
+  leak: 0.1
+  leak_note: "Ra kinh nhiều khá phổ biến ở phụ nữ tuổi sinh đẻ; người bảo trì ước lượng."

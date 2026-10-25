@@ -86,7 +86,10 @@
   alt_question:
     text_vi: "Có tự đi thẳng vài bước mà không phải vịn không?"
     inverted: true
+  cluster: imbalance
   leak: specific
+  leak_by_complaint: { dizziness: 0.4, syncope: 0.1 }
+  leak_note: "Ở người chóng mặt, đi loạng choạng rất hay gặp kể cả khi bệnh lành tính (người bảo trì ước lượng 0,4; lượt A/B/C đối chiếu); ở người ngất, choáng, khoảng 0,1."
   notes_vi: "Chữ B (Balance) trong BE-FAST; lượt A lô 4 đề xuất."
 - id: covid_self_test
   kind: measurement

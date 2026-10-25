@@ -23,3 +23,22 @@
   cluster: forest_field
   leak: 0.10
   leak_note: "Làm vườn, làm rẫy, cắt cỏ rất phổ biến ở nông thôn; 5% là thấp (lượt B lô 2). Ước lượng."
+
+# ---------- Giai đoạn 3, lô 1 ----------
+- id: co_exposure
+  kind: exposure
+  type: binary
+  label_vi: "Ở phòng kín có đốt than, củi hoặc chạy máy nổ"
+  question_vi: "Gần đây có ở phòng kín đốt than, củi hoặc chạy máy nổ không?"
+  help_vi: "Ví dụ đốt than sưởi, bếp củi, lò sưởi hoặc máy phát điện trong phòng đóng kín cửa."
+  cluster: co_source
+  leak: 0.02
+  leak_note: "Ít gặp nhưng có ở miền Bắc mùa lạnh (đốt than sưởi) và khi chạy máy phát điện trong nhà; người bảo trì ước lượng."
+- id: others_same_symptoms
+  kind: exposure
+  type: binary
+  label_vi: "Người ở cùng cũng có triệu chứng giống vậy"
+  question_vi: "Người ở cùng có ai cũng đau đầu, chóng mặt, buồn nôn như vậy không?"
+  cluster: co_source
+  leak: 0.03
+  leak_note: "Nhiều người cùng chỗ ở có triệu chứng giống nhau gợi ý nguồn chung (khí CO); người bảo trì ước lượng."

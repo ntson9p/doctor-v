@@ -46,3 +46,104 @@
   label_vi: "Phù mặt, phù tay mới xuất hiện"
   question_vi: "Có sưng phù mặt hoặc bàn tay mới xuất hiện không?"
   leak: moderate
+
+# ---------- Hồi hộp, ngất (Giai đoạn 3, lô 1) ----------
+- id: palpitations
+  kind: symptom
+  type: binary
+  label_vi: "Tim đập nhanh, mạnh hoặc không đều"
+  question_vi: "Có thấy tim đập nhanh, mạnh hoặc không đều (hồi hộp) không?"
+  leak: moderate
+- id: palpitation_rhythm
+  kind: symptom
+  type: categorical
+  label_vi: "Nhịp tim khi hồi hộp"
+  question_vi: "Khi hồi hộp, tim đập thế nào?"
+  options:
+    - { id: fast_regular, label_vi: "Nhanh và đều" }
+    - { id: irregular, label_vi: "Lộn xộn, không đều" }
+    - { id: skipped_beats, label_vi: "Thỉnh thoảng hẫng hoặc thịch mạnh một nhịp" }
+    - { id: forceful, label_vi: "Đập mạnh nhưng không nhanh lắm" }
+  baseline: { fast_regular: 0.3, irregular: 0.15, skipped_beats: 0.3, forceful: 0.25 }
+  requires:
+    - { finding: palpitations, is: present }
+- id: palpitation_abrupt_onset
+  kind: symptom
+  type: binary
+  label_vi: "Cơn tim nhanh bắt đầu và dừng đột ngột"
+  question_vi: "Cơn tim nhanh có đến và dừng đột ngột như bật tắt công tắc không?"
+  requires:
+    - { finding: palpitations, is: present }
+  leak: 0.15
+  leak_note: "Tính trong số người đã hồi hộp. Bắt đầu và dừng đột ngột gợi ý nhịp nhanh kịch phát; người bảo trì ước lượng tỷ lệ ở người không có bệnh liên kết, lượt A/B/C đối chiếu."
+- id: pulse_measured
+  kind: measurement
+  type: categorical
+  label_vi: "Mạch đo được"
+  question_vi: "Mạch (nhịp tim) đo được lúc có triệu chứng là bao nhiêu lần mỗi phút?"
+  help_vi: "Có thể đọc trên máy đo huyết áp, đồng hồ thông minh, hoặc đếm mạch ở cổ tay trong 1 phút. Chọn 'Không rõ' nếu chưa đo."
+  options:
+    - { id: lt_40, label_vi: "Dưới 40 lần" }
+    - { id: n40_100, label_vi: "Từ 40 đến 100 lần" }
+    - { id: n100_150, label_vi: "Trên 100 đến 150 lần" }
+    - { id: gt_150, label_vi: "Trên 150 lần" }
+  baseline: { lt_40: 0.01, n40_100: 0.79, n100_150: 0.17, gt_150: 0.03 }
+  cost: 2
+  unknown_rate: 0.6
+- id: dizziness_on_standing
+  kind: symptom
+  type: binary
+  label_vi: "Choáng, tối sầm mắt khi vừa đứng dậy"
+  question_vi: "Có choáng, tối sầm mắt ngay khi vừa đứng dậy không?"
+  leak: 0.15
+  leak_note: "Choáng khi đứng dậy hay gặp, nhất là ở người cao tuổi và người đang uống thuốc hạ áp; người bảo trì ước lượng, lượt A/B/C đối chiếu."
+- id: syncope_trigger
+  kind: history
+  type: categorical
+  label_vi: "Hoàn cảnh lúc ngất"
+  question_vi: "Lần ngất hoặc suýt ngất này xảy ra khi nào?"
+  options:
+    - { id: standing_heat, label_vi: "Khi đứng lâu, ở nơi nóng hoặc đông người" }
+    - { id: emotion_pain, label_vi: "Khi đang đau, sợ hãi hoặc thấy máu" }
+    - { id: standing_up, label_vi: "Ngay khi vừa ngồi dậy hoặc đứng dậy" }
+    - { id: toilet_cough, label_vi: "Khi đang đi tiểu, đi ngoài hoặc ho" }
+    - { id: exertion, label_vi: "Khi đang gắng sức: làm việc nặng, chạy, leo dốc" }
+    - { id: lying, label_vi: "Khi đang nằm" }
+    - { id: no_trigger, label_vi: "Khi đang ngồi yên, hoặc không có gì đặc biệt" }
+  baseline: { standing_heat: 0.25, emotion_pain: 0.15, standing_up: 0.2, toilet_cough: 0.08, exertion: 0.04, lying: 0.03, no_trigger: 0.25 }
+  requires:
+    - { finding: fainting_or_near_fainting, is: present }
+- id: syncope_warning
+  kind: history
+  type: categorical
+  label_vi: "Dấu hiệu ngay trước khi ngất"
+  question_vi: "Ngay trước khi ngất hoặc suýt ngất, có thấy gì không?"
+  options:
+    - { id: prodrome, label_vi: "Nóng người, vã mồ hôi, buồn nôn hoặc tối sầm mắt" }
+    - { id: palpitations_first, label_vi: "Tim đập nhanh hoặc đập loạn" }
+    - { id: no_warning, label_vi: "Không thấy gì, ngất đột ngột" }
+  baseline: { prodrome: 0.6, palpitations_first: 0.1, no_warning: 0.3 }
+  requires:
+    - { finding: fainting_or_near_fainting, is: present }
+- id: family_sudden_death
+  kind: history
+  type: binary
+  label_vi: "Người thân chết đột ngột khi còn trẻ"
+  question_vi: "Bố mẹ, anh chị em hay con có ai chết đột ngột trước 40 tuổi không?"
+  help_vi: "Chết đột ngột không rõ lý do, không phải do tai nạn."
+  leak: 0.02
+  leak_note: "Hiếm; người bảo trì ước lượng. Là dấu hiệu nguy cơ của ngất do tim (lượt R đối chiếu với hướng dẫn về ngất)."
+  cost: 1.5
+- id: leg_swelling_one_side
+  kind: symptom
+  type: binary
+  label_vi: "Sưng đau một bên bắp chân"
+  question_vi: "Có bị sưng, đau ở một bên bắp chân không?"
+  leak: 0.03
+  leak_note: "Ít gặp ở người không có huyết khối tĩnh mạch hay bệnh liên kết khác; người bảo trì ước lượng."
+- id: breathless_on_exertion
+  kind: symptom
+  type: binary
+  label_vi: "Mệt, hụt hơi khi gắng sức nhẹ"
+  question_vi: "Gần đây có hụt hơi khi làm việc nhẹ hoặc leo vài bậc thang không?"
+  leak: moderate

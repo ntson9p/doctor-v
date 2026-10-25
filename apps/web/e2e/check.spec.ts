@@ -115,12 +115,16 @@ test('search respects the accents typed and reads a sentence', async ({ page }) 
 
 test('a symptom the pilot does not cover gets advice, and every complaint stays on screen', async ({ page }) => {
   await startCheck(page, '70', 'Nữ');
-  await page.getByLabel(/Tìm triệu chứng/).fill('chóng mặt');
+  const search = page.getByLabel(/Tìm triệu chứng/);
   const status = page.locator('.search-status');
+  // A complaint whose batch is still being authored is named, but not offered.
+  await search.fill('chóng mặt');
+  await expect(status).toContainText('Triệu chứng "Chóng mặt" đang được soạn, chưa dùng được.');
+  await search.fill('đau lưng');
   await expect(status).toHaveAttribute('role', 'status');
-  await expect(status).toContainText('Chưa tìm thấy "chóng mặt"');
+  await expect(status).toContainText('Chưa tìm thấy "đau lưng"');
   await expect(status).toContainText('gọi 115');
-  await expect(status).toContainText('Kết quả sẽ chưa tính đến "chóng mặt"');
+  await expect(status).toContainText('Kết quả sẽ chưa tính đến "đau lưng"');
   await expect(page.locator('.complaint')).toHaveCount(3);
   await expectNoAxeViolations(page);
   await expectNoHorizontalScroll(page);

@@ -1,0 +1,28 @@
+id: palpitations
+label_vi: "Hồi hộp, tim đập nhanh"
+icon: heart
+# Lô 1 của Giai đoạn 3 đang soạn (docs/phase-3/scope.md): bộ kiểm định dùng được, app chưa cho chọn.
+status: in_progress
+synonyms_vi:
+  - "tim đập nhanh"
+  - "tim đập mạnh"
+  - "đánh trống ngực"
+  - "trống ngực"
+  - "tim đập thình thịch"
+  - "tim đập loạn"
+  - "tim đập không đều"
+  - "hẫng nhịp"
+description_vi: "Cảm giác tim đập nhanh, đập mạnh, đập không đều hoặc hẫng nhịp."
+implies: [palpitations]
+age_groups: [child_5_12, teen_13_17, adult_18_44, adult_45_64, elder_65_74, elder_75p]
+red_flags:
+  - group: palpitations_red_flags
+  - finding: pulse_measured
+intake: [palpitations_associated, chronic_conditions]
+# Điền sau lượt C: một bệnh chỉ vào được danh sách này khi đã có prior cho triệu chứng chính này.
+cant_miss: []
+safety_net:
+  - chest_pain_pressure
+  - breathing_difficulty
+  - fainting_or_near_fainting
+sources: [nhs-heart-palpitations, esc-syncope-2018]

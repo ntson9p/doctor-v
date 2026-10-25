@@ -113,3 +113,46 @@
   allow_unknown: true
   applies_to:
     age_groups: [teen_13_17, adult_18_44, adult_45_64, elder_65_74, elder_75p]
+
+# ---------- Giai đoạn 3, lô 1: chóng mặt, ngất, hồi hộp ----------
+- id: dizziness_red_flags
+  title_vi: "Cùng với chóng mặt, có dấu hiệu nào sau đây không?"
+  findings:
+    - vision_loss_or_double
+    - cannot_walk_unaided
+    - transient_neuro_symptoms
+    - chest_pain_pressure
+    - breathing_difficulty
+  none_label_vi: "Không có dấu hiệu nào ở trên"
+  allow_unknown: true
+- id: syncope_red_flags
+  title_vi: "Lần ngất hoặc suýt ngất này có kèm dấu hiệu nào sau đây không?"
+  findings:
+    - chest_pain_pressure
+    - breathing_difficulty
+    - abdominal_pain
+    - headache
+    - black_stool
+    - vomiting_blood
+  none_label_vi: "Không có dấu hiệu nào ở trên"
+  allow_unknown: true
+- id: palpitations_red_flags
+  title_vi: "Khi tim đập nhanh, có dấu hiệu nào sau đây không?"
+  findings:
+    - chest_pain_pressure
+    - breathing_difficulty
+    - fainting_or_near_fainting
+  none_label_vi: "Không có dấu hiệu nào ở trên"
+  allow_unknown: true
+- id: dizziness_associated
+  title_vi: "Ngoài chóng mặt, còn có triệu chứng nào sau đây không?"
+  findings: [vomiting, hearing_loss_tinnitus, headache, palpitations, diarrhea, fever]
+  none_label_vi: "Không có triệu chứng nào ở trên"
+- id: syncope_associated
+  title_vi: "Gần đây còn có triệu chứng nào sau đây không?"
+  findings: [palpitations, dizziness, vomiting, diarrhea, fever]
+  none_label_vi: "Không có triệu chứng nào ở trên"
+- id: palpitations_associated
+  title_vi: "Ngoài hồi hộp, còn có triệu chứng nào sau đây không?"
+  findings: [dizziness, tremor, panic_fear, weight_loss_unintended, breathless_on_exertion, cold_sweat]
+  none_label_vi: "Không có triệu chứng nào ở trên"

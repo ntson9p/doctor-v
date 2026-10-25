@@ -1,0 +1,35 @@
+# Giai đoạn 3, lô 1: Chóng mặt, Ngất, Hồi hộp (docs/phase-3/scope.md, mục 4).
+# suggested_urgency / suggested_cant_miss chỉ là gợi ý của người bảo trì; agent soạn bệnh
+# phải đối chiếu với hướng dẫn chính thức và quyết định lại (ghi lý do).
+# Triệu chứng chính mới (status: in_progress): dizziness, syncope, palpitations.
+
+# Bệnh mới: soạn đủ cả file, prior chỉ cho các triệu chứng chính ghi ở đây.
+new:
+  - { id: benign_paroxysmal_positional_vertigo, name_vi: "Chóng mặt tư thế kịch phát lành tính", complaints: [dizziness], suggested_urgency: 4, suggested_cant_miss: false }
+  - { id: vestibular_neuritis, name_vi: "Viêm dây thần kinh tiền đình", complaints: [dizziness], suggested_urgency: 3, suggested_cant_miss: false }
+  - { id: reflex_orthostatic_syncope, name_vi: "Ngất do phản xạ, hạ huyết áp tư thế (kể cả do thuốc hạ áp)", complaints: [syncope, dizziness], suggested_urgency: 4, suggested_cant_miss: false }
+  - { id: cardiac_arrhythmia, name_vi: "Rối loạn nhịp tim (nhanh hoặc chậm)", complaints: [palpitations, syncope, dizziness], suggested_urgency: 3, suggested_cant_miss: false }
+  - { id: hypoglycemia, name_vi: "Hạ đường huyết", complaints: [dizziness, syncope, palpitations], suggested_urgency: 2, suggested_cant_miss: true }
+  - { id: anemia, name_vi: "Thiếu máu", complaints: [dizziness, palpitations, syncope], suggested_urgency: 4, suggested_cant_miss: false }
+  - { id: transient_ischemic_attack, name_vi: "Cơn thiếu máu não thoáng qua", complaints: [dizziness], suggested_urgency: 2, suggested_cant_miss: true }
+  - { id: carbon_monoxide_poisoning, name_vi: "Ngộ độc khí CO", complaints: [dizziness, syncope], suggested_urgency: 1, suggested_cant_miss: true }
+  - { id: panic_disorder, name_vi: "Cơn hoảng sợ, rối loạn hoảng sợ", complaints: [palpitations, dizziness], suggested_urgency: 4, suggested_cant_miss: false }
+  - { id: hyperthyroidism, name_vi: "Cường giáp", complaints: [palpitations], suggested_urgency: 4, suggested_cant_miss: false }
+  - { id: pulmonary_embolism, name_vi: "Thuyên tắc phổi", complaints: [syncope, palpitations, dizziness], suggested_urgency: 1, suggested_cant_miss: true }
+  - { id: upper_gi_bleeding, name_vi: "Xuất huyết tiêu hóa trên", complaints: [syncope, dizziness], suggested_urgency: 1, suggested_cant_miss: true }
+
+# Bệnh đã có: chỉ thêm prior cho các triệu chứng chính ghi ở đây và liên kết với dấu hiệu mới
+# của lô 1. Không sửa phần đã đối chiếu xong ở Giai đoạn 1.
+extend:
+  - { id: stroke, complaints: [dizziness] }
+  - { id: acute_coronary_syndrome, complaints: [syncope, palpitations, dizziness] }
+  - { id: ectopic_pregnancy, complaints: [syncope, dizziness] }
+  - { id: sepsis, complaints: [syncope, dizziness] }
+  - { id: acute_gastroenteritis, complaints: [dizziness, syncope] }
+  - { id: dengue, complaints: [dizziness, syncope] }
+  - { id: migraine, complaints: [dizziness] }
+
+# Việc của người bảo trì sau lượt C:
+# - điền cant_miss của 3 triệu chứng chính;
+# - thêm bệnh mới vào `conditions` của các quy tắc lô 1 (red-flags.yaml);
+# - bỏ status: in_progress khi lô đạt chỉ tiêu trên bộ ca giữ kín.
