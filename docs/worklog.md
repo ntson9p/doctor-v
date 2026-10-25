@@ -340,3 +340,26 @@ Kiểm thử đầu cuối nay chạy trên máy chủ tĩnh riêng (`apps/web/s
 **Việc tồn:**
 - ở màn 320 px với chữ lớn nhất, đầu trang xuống 2 dòng;
 - từ điển tìm kiếm: từ dân gian ("trúng gió" → triệu chứng thật, theo `docs/style-guide-vi.md` §4), gợi ý khi gõ sai, xếp hạng kết quả khi đã có 35–40 triệu chứng.
+
+## 2026-10-25 — Giai đoạn 3: đề xuất phạm vi
+
+Chủ dự án chọn bước tiếp theo: soạn danh sách đề xuất để duyệt trước khi soạn dữ liệu. Chủ dự án vẫn tiếp tục thử app trên điện thoại song song.
+
+**Đề xuất** (`docs/phase-3/scope.md`, chờ duyệt):
+- 40 triệu chứng chính;
+- 166 bệnh: 33 đã có, 133 mới; khoảng 35 bệnh dự bị;
+- 10 lô:
+  - lô 1: Chóng mặt, Ngất, Hồi hộp;
+  - lô 2: bổ sung các bệnh nguy hiểm còn thiếu cho 3 triệu chứng đang chạy, ví dụ phình động mạch chủ bụng, thiếu máu mạc treo ruột, xoắn buồng trứng, glôcôm cấp.
+
+Ước tính khoảng 46 triệu token.
+
+**Đối chiếu với hai bộ ca đã công bố** (Semigran 2015, Levine 2024). Một agent tra phụ lục gốc; danh sách đã được kiểm lại từ tệp tải về. Bảng đối chiếu ở `docs/phase-3/benchmark-diagnoses.md`.
+- Danh sách đầu chỉ phủ 87% và 79% số ca.
+- Đã thêm 7 bệnh để đạt chỉ tiêu ≥ 95%: suy gan cấp, tăng bạch cầu đơn nhân, nhiệt miệng, lẹo mắt, mụn trứng cá, suy giáp, ngưng thở khi ngủ.
+
+**Chờ chủ dự án quyết định 4 điểm:**
+- danh sách triệu chứng;
+- ung thư;
+- sức khỏe tâm thần;
+- quy mô.
