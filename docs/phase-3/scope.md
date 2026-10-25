@@ -93,6 +93,8 @@ Cột "Mức" là mức xử trí dự kiến: 1 = gọi 115, 2 = đến cấp c
 
 ### Lô 1 — Chóng mặt, Ngất, Hồi hộp (12 bệnh mới)
 
+> **Xong ngày 2026-10-26:** đã mở trong app. Thực tế 13 bệnh mới, vì ngoại tâm thu tách khỏi rối loạn nhịp tim. Kết quả chấm và chi phí: `docs/worklog.md`.
+
 Vì sao đi trước: chủ dự án ưu tiên. Ba triệu chứng này hay gặp ở người cao tuổi, dùng chung nhiều bệnh (rối loạn nhịp tim, hạ đường huyết, thiếu máu, hạ huyết áp tư thế) và có nhiều nguyên nhân nguy hiểm.
 
 | Bệnh | Tiếng Anh | ICD-10 | Mức | Vì sao chọn |
@@ -131,6 +133,11 @@ Vì sao: ba triệu chứng này đang chạy nhưng còn thiếu một số b�
 | Say nắng, sốc nhiệt | Heat stroke | T67.0 | 1 | Không được bỏ sót; khí hậu nóng |
 | Viêm đường mật cấp | Acute cholangitis | K83.0 | 2 | Không được bỏ sót: sốt, đau bụng, vàng da |
 | Cơn tăng huyết áp (cần có số đo huyết áp) | Hypertensive urgency or emergency | I10 | 2 | Tăng huyết áp chiếm 26% người 18–69 tuổi (STEPS 2021); chỉ xét khi người dùng có số đo |
+
+Thêm sau lô 1 (hai ca cấp cứu của lần chấm giữ kín thứ hai bị khuyên mức 2 thay vì mức 1):
+- Phình động mạch chủ bụng cần cả triệu chứng Ngất và Chóng mặt (ca h-syncope-017).
+- Đột quỵ tuần hoàn sau sau khi bị bẻ cổ hoặc chấn thương cổ (ca h-dizzy-020): xét thêm dấu hiệu này cho Chóng mặt.
+- Ca nào được dùng để sửa sẽ chuyển sang dev, và có ca thay thế.
 
 ### Lô 3 — Ho, Khó thở, Đau ngực (15 bệnh mới)
 

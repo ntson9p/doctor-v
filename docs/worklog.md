@@ -499,3 +499,51 @@ Bộ dev cho kết quả giống hệt sau mọi thay đổi.
 **Bộ dev** (166 ca): sạch bỏ sót 0/73, an toàn 98,8%, top-3 95,7%; nhiễu bỏ sót 10/365.
 
 **Việc tồn của bộ suy luận:** bước nâng mức nên xét cả quy tắc mức 1 còn thiếu hai câu, có giới hạn số câu hỏi thêm. Thứ tự câu hỏi hiện chỉ là cách xử lý tạm.
+
+## 2026-10-26 — Giai đoạn 3, lô 1: mở trong app
+
+### Lần chấm giữ kín thứ hai (161 ca, phiên bản dữ liệu 367336526ecf)
+
+- 12 ca mới do agent độc lập viết: 7 ca thay thế, 5 ca bổ sung.
+- Đạt mọi chỉ tiêu (`evaluation/reports/2026-10-26-holdout-367336526ecf.md`):
+  - sạch: an toàn 97,5%, bỏ sót cấp cứu 2/79, top-3 91,9%, khuyên đi khám quá mức 18,6%, ECE 0,072;
+  - nhiễu: an toàn 97,0%, bỏ sót 17/395 (4,3%).
+- 3 triệu chứng cũ không đổi.
+- 4 ca bị phân loại thấp hơn mức cần:
+  - h-dizzy-020: đột quỵ tuần hoàn sau, nam 41 tuổi sau khi bị bẻ cổ; cần mức 1, app ra mức 2;
+  - h-syncope-017: vỡ phình động mạch chủ bụng, bệnh chưa có trong dữ liệu; cần mức 1, app ra mức 2;
+  - h-dizzy-015: chóng mặt do đau nửa đầu; cần mức 4, app ra mức 5;
+  - h-fever-009: sởi trước khi mọc ban; cần mức 3, app ra mức 5; có từ Giai đoạn 1.
+- Theo quy tắc giữ kín, chưa sửa theo các ca này. Lô 2 sẽ thêm phình động mạch chủ bụng; ca nào được dùng để sửa sẽ chuyển sang dev và có ca thay thế.
+
+### Mở Chóng mặt, Ngất, Hồi hộp
+
+- Bỏ `status: in_progress` ở 3 triệu chứng (commit 414f89a). App có 6 triệu chứng chính.
+- Kiểm thử đầu cuối: 24/24. Phép thử bàn phím ảo nay gõ "rụng tóc", vì "chóng mặt" đã tìm thấy.
+- Trang chủ liệt kê triệu chứng bằng dấu chấm phẩy: "Ngất, suýt ngất" có dấu phẩy riêng, nên danh sách cách bằng dấu phẩy đọc thành 8 triệu chứng (commit 0fce300).
+- Xem lại ảnh chụp (điện thoại, 320 px, cỡ chữ lớn nhất):
+  - lưới 6 ô và 3 biểu tượng mới hiển thị đúng; trẻ dưới 5 tuổi chỉ thấy 3 triệu chứng cũ;
+  - tìm "xây xẩm", "xỉu", "tim đập nhanh" ra đúng triệu chứng; "choáng" ra cả Chóng mặt và Ngất.
+- **Việc tồn** từ ảnh chụp:
+  - Chóng mặt và Ngất mở đầu bằng câu "phòng kín đốt than". Đây là cách xử lý tạm cho giới hạn của bước nâng mức; xem lại khi sửa bộ suy luận;
+  - gợi ý "Ở trẻ nhỏ: thở nhanh, cánh mũi phập phồng…" của câu khó thở hiện cả với người lớn;
+  - ở 320 px với cỡ chữ lớn nhất, chữ trong ô đánh dấu xuống dòng gần như từng từ.
+
+### Chi phí lô 1
+
+Token do agent dùng, đo như Giai đoạn 1 (`docs/reports/phase-1.md`, mục 6):
+
+| Việc | Token |
+|---|---|
+| Lượt A (3 agent, gồm agent riêng cho ngoại tâm thu) | 1,84 triệu |
+| Lượt B (2 agent) | 1,38 triệu |
+| Lượt C (2 agent) | 1,87 triệu |
+| Lượt R | 0,60 triệu |
+| Viết ca giữ kín (2 agent: bộ đầu, ca thay thế) | 0,93 triệu |
+| **Cộng** | **6,62 triệu** |
+
+- Ước tính cho lô này theo `docs/phase-3/scope.md` mục 6 là khoảng 4,8 triệu: 13 bệnh mới × 270 nghìn, thêm 20%, cộng 13 cặp "bệnh đã có × triệu chứng mới" (7 bệnh cũ). Thực tế gấp khoảng 1,4 lần.
+- Lượt A, B, C: khoảng 390 nghìn mỗi bệnh mới (tính cả phần mở rộng 7 bệnh cũ), so với 270 nghìn ở Giai đoạn 1. Nhiều bệnh mới phải viết cho cả 3 triệu chứng.
+- Lượt R và viết ca giữ kín (1,53 triệu) là chi phí cố định của mỗi lô, không giảm theo số bệnh. Ước tính cũ gộp chúng vào phần 20%. Lần này còn thêm một agent viết ca thay thế, theo quy tắc giữ kín.
+- Agent bị dừng vì giới hạn sử dụng nhiều lần. Mỗi lần làm tiếp được, nhưng phải đọc lại ngữ cảnh, nên tốn thêm token.
+- Nếu các lô sau cũng vậy, cả Giai đoạn 3 cần khoảng 70 triệu token thay vì 50 triệu.
