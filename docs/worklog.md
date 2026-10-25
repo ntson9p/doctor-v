@@ -547,3 +547,12 @@ Token do agent dùng, đo như Giai đoạn 1 (`docs/reports/phase-1.md`, mục 
 - Lượt R và viết ca giữ kín (1,53 triệu) là chi phí cố định của mỗi lô, không giảm theo số bệnh. Ước tính cũ gộp chúng vào phần 20%. Lần này còn thêm một agent viết ca thay thế, theo quy tắc giữ kín.
 - Agent bị dừng vì giới hạn sử dụng nhiều lần. Mỗi lần làm tiếp được, nhưng phải đọc lại ngữ cảnh, nên tốn thêm token.
 - Nếu các lô sau cũng vậy, cả Giai đoạn 3 cần khoảng 70 triệu token thay vì 50 triệu.
+
+### Điện thoại chỉ chạy bản đã phát hành
+
+Lô 2 thêm bệnh cho Sốt, Đau bụng, Đau đầu, ba triệu chứng đang chạy. Vì vậy bản nháp không được hiện trên điện thoại trước khi đạt kiểm định:
+- `npm run web:phone` nay chỉ mở `apps/web/dist/` (bản đã phát hành), không build lại;
+- kiểm thử đầu cuối và `npm run web:build` build vào `apps/web/dist-test/`;
+- `npm run web:release` build vào `apps/web/dist/`; chỉ chạy khi lô đạt chỉ tiêu. Mỗi lần phát hành có tag git `release-…`.
+
+Bản đang phát hành: lô 1 (6 triệu chứng chính), tag `release-phase3-batch1`.

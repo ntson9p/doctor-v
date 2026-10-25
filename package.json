@@ -30,7 +30,8 @@
     "kb:priors": "node packages/kb/src/cli/priors.ts",
     "web:dev": "npm run dev -w @doctor-v/web",
     "web:build": "npm run build -w @doctor-v/web",
-    "web:phone": "npm run build -w @doctor-v/web && npm run preview -w @doctor-v/web -- --host"
+    "web:release": "npm run release -w @doctor-v/web",
+    "web:phone": "npm run preview -w @doctor-v/web -- --host"
   },
   "devDependencies": {
     "@eslint/js": "10.0.1",

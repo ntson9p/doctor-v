@@ -7,6 +7,7 @@ export default defineConfig([
   globalIgnores([
     '**/node_modules/',
     '**/dist/',
+    '**/dist-test/',
     '**/coverage/',
     'apps/web/.astro/',
     'evaluation/.out/',

@@ -373,7 +373,7 @@ Bệnh đã có cần bổ sung: quai bị (sưng mang tai). Các bệnh của l
 3. Lượt R đối chiếu các quy tắc an toàn mới với văn bản gốc.
 4. Một agent độc lập, không xem dữ liệu bệnh, viết ca giữ kín cho các triệu chứng của lô. Mục tiêu đến cuối Giai đoạn 3: ≥ 300 ca giữ kín, trong đó ≥ 150 ca cấp cứu (kế hoạch, mục 7).
 5. Chấm trên dev, giữ kín và biến thể nhiễu. Sửa theo quy tắc giữ kín.
-6. Đạt chỉ tiêu thì mở các triệu chứng của lô trong app.
+6. Đạt chỉ tiêu thì mở các triệu chứng của lô trong app và phát hành (`npm run web:release`). Trước đó, điện thoại vẫn chạy bản phát hành trước.
 
 **Chi phí ước tính,** theo số đo của Giai đoạn 1 (khoảng 270 nghìn token và 20 phút chạy agent cho mỗi bệnh):
 

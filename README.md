@@ -58,9 +58,10 @@ Cần Node.js 24 trở lên. Cài đặt: `npm install`.
 | `npm run eval:tune` | Thử các hệ số nhiệt trên bộ ca phát triển |
 | `npm run play` | Chạy thử một phiên hỏi đáp ngay trong terminal |
 | `npm run web:dev` | Chạy ứng dụng web ở chế độ phát triển (mặc định http://localhost:4321) |
-| `npm run web:build` | Build ứng dụng web thành trang tĩnh trong `apps/web/dist/` |
-| `npm run web:phone` | Build rồi mở ứng dụng cho điện thoại trong cùng mạng Wi-Fi (xem địa chỉ "Network" hiện ra; lần đầu Windows có thể hỏi cho phép Node.js) |
-| `npm run test:e2e -w @doctor-v/web` | Kiểm thử giao diện bằng Playwright và axe (điện thoại, màn 320 px, cỡ chữ lớn nhất). Chạy trên cổng riêng 4329, nên không vướng `web:phone` đang mở; nhưng có build lại `apps/web/dist/`, nên điện thoại đang thử cần tải lại trang |
+| `npm run web:build` | Build thử ứng dụng web vào `apps/web/dist-test/`. Bản đang phát hành không đổi |
+| `npm run web:release` | Phát hành: build vào `apps/web/dist/`. Chỉ chạy khi các lô đang soạn đã đạt kiểm định (`docs/evaluation.md`) |
+| `npm run web:phone` | Mở bản đã phát hành (`apps/web/dist/`) cho điện thoại trong cùng mạng Wi-Fi (xem địa chỉ "Network" hiện ra; lần đầu Windows có thể hỏi cho phép Node.js). Lệnh này không build lại, nên bản nháp của lô đang soạn không hiện trên điện thoại |
+| `npm run test:e2e -w @doctor-v/web` | Kiểm thử giao diện bằng Playwright và axe (điện thoại, màn 320 px, cỡ chữ lớn nhất). Build vào `apps/web/dist-test/` và chạy trên cổng riêng 4329, nên không vướng `web:phone` đang mở |
 
 Trên Windows, nên dùng Windows Terminal để hiển thị đúng tiếng Việt.
 

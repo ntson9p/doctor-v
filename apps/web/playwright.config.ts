@@ -8,7 +8,8 @@ export default defineConfig({
   use: { baseURL: 'http://localhost:4329', trace: 'retain-on-failure' },
   webServer: {
     // A plain static server on its own port, so the tests also run while `npm run web:phone` is open.
-    command: 'npm run build && node scripts/serve-dist.mjs 4329',
+    // The test build goes to dist-test/: dist/ holds the released site the phone is shown.
+    command: 'npm run build && node scripts/serve-dist.mjs 4329 dist-test',
     url: 'http://localhost:4329',
     // Always build and serve afresh: a leftover server would test a stale build.
     reuseExistingServer: false,

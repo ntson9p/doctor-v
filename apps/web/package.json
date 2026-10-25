@@ -8,7 +8,9 @@
     "predev": "node scripts/copy-fonts.mjs",
     "dev": "astro dev",
     "prebuild": "node scripts/copy-fonts.mjs",
-    "build": "astro build",
+    "build": "astro build --outDir dist-test",
+    "prerelease": "node scripts/copy-fonts.mjs",
+    "release": "astro build",
     "preview": "astro preview",
     "check": "astro check",
     "test:e2e": "playwright test"

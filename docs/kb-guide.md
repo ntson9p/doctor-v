@@ -290,6 +290,8 @@ Dấu hiệu trong `implies` **không được tính lại** khi suy luận, vì
 
 Khi lô đạt chỉ tiêu trên bộ ca giữ kín, bỏ trường này đi (mặc định là `released`).
 
+Lô chỉ bổ sung cho triệu chứng đã phát hành (ví dụ thêm bệnh cho Sốt) không cần trường này. Điện thoại chỉ chạy bản đã phát hành (`apps/web/dist/`); bản này chỉ đổi khi chạy `npm run web:release`, sau khi lô đạt chỉ tiêu.
+
 ### 4.6 Bệnh: `knowledge/conditions/<id>.yaml`
 
 ```yaml

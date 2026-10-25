@@ -1,5 +1,7 @@
 node_modules/
+# dist/ is the released site (npm run web:release); dist-test/ is the build the tests use
 dist/
+dist-test/
 coverage/
 .astro/
 *.log

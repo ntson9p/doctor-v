@@ -1,13 +1,14 @@
-// Serves the built site (dist/) as a plain static host would, for the end-to-end tests. Unlike
-// `astro preview`, it runs alongside a preview opened for phone testing (`npm run web:phone`).
-// Usage: node scripts/serve-dist.mjs <port>
+// Serves a built site as a plain static host would, for the end-to-end tests. Unlike `astro preview`,
+// it runs alongside a preview opened for phone testing (`npm run web:phone`).
+// Usage: node scripts/serve-dist.mjs <port> [folder, default dist-test]
 import { createReadStream, statSync } from 'node:fs';
 import { createServer } from 'node:http';
 import { extname, join, normalize } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
-const root = fileURLToPath(new URL('../dist/', import.meta.url));
 const port = Number(process.argv[2] ?? 4329);
+const folder = process.argv[3] ?? 'dist-test';
+const root = fileURLToPath(new URL(`../${folder}/`, import.meta.url));
 const TYPES = {
   '.html': 'text/html; charset=utf-8',
   '.js': 'text/javascript; charset=utf-8',
@@ -46,4 +47,4 @@ createServer((req, res) => {
   }
   res.writeHead(200, { 'content-type': TYPES[extname(file)] ?? 'application/octet-stream' });
   createReadStream(file).pipe(res);
-}).listen(port, () => console.log(`serving dist/ on http://localhost:${port}`));
+}).listen(port, () => console.log(`serving ${folder}/ on http://localhost:${port}`));
