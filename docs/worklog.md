@@ -363,3 +363,33 @@ Chủ dự án chọn bước tiếp theo: soạn danh sách đề xuất để 
 - ung thư;
 - sức khỏe tâm thần;
 - quy mô.
+
+## 2026-10-25 — Giai đoạn 3, lô 1 (Chóng mặt, Ngất, Hồi hộp): bắt đầu
+
+Chủ dự án đã duyệt phạm vi, kèm 4 quyết định (`docs/phase-3/scope.md`, mục 7):
+- 41 triệu chứng chính, 177 bệnh;
+- nêu tên 6 bệnh ung thư, kèm nhãn "Bác sĩ cần loại trừ";
+- đưa sức khỏe tâm thần vào lô 7.
+
+**Nền cho lô 1** (commit 3f3e606):
+- Trạng thái `in_progress` cho triệu chứng chính đang soạn:
+  - bộ kiểm định dùng được;
+  - app chưa cho chọn; khi tìm đúng triệu chứng đó, app báo "đang được soạn".
+- Danh mục mới:
+  - 3 triệu chứng chính;
+  - 35 dấu hiệu, 3 cụm, 6 nhóm câu hỏi;
+  - 15 quy tắc, theo ESC 2018 (ngất), NICE CG109, GRACE-3 (chóng mặt) và NHS;
+  - 4 quy tắc cũ được mở phạm vi sang triệu chứng mới;
+  - 9 nguồn, chờ lượt R xác minh.
+- Quy tắc "mất thăng bằng" của Đau đầu không áp cho Chóng mặt, vì gần như ai chóng mặt cũng đi loạng choạng. Chóng mặt dùng dấu hiệu nặng hơn: không tự đứng hoặc tự đi được.
+- Bộ dev cho kết quả giống hệt trước và sau thay đổi, nên 3 triệu chứng đang chạy không bị ảnh hưởng.
+- Bản nháp của Giai đoạn 3 nằm riêng ở `knowledge/drafts/phase-3/batch-1/`, không ghi đè dấu vết soạn của Giai đoạn 1. Bệnh đã có được bổ sung trong thư mục `extend/`.
+
+**Đang chạy:** lượt A (2 agent: phần a nhóm chóng mặt, phần b nhóm ngất và hồi hộp) và lượt R.
+
+**Tiếp theo:**
+1. Agent độc lập viết ca giữ kín cho 3 triệu chứng mới.
+2. Lượt B.
+3. Lượt C, viết ca dev.
+4. Điền danh sách "không được bỏ sót" và bệnh mục tiêu của các quy tắc.
+5. Chấm điểm.
