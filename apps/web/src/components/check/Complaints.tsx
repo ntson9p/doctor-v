@@ -22,6 +22,25 @@ const ICONS: Record<string, preact.JSX.Element> = {
       <path d="M9 9.5c.8-.7 2-.7 2.8 0M12.5 9.5c.8-.7 2-.7 2.8 0" />
     </svg>
   ),
+  dizzy: (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+      <path d="M12 3a7 7 0 0 0-7 7c0 2.2 1 4 2.5 5.3V20h6v-2h2a2 2 0 0 0 2-2v-2l1.5-1-1.5-2.5A7 7 0 0 0 12 3z" />
+      <path d="M11 10a1 1 0 0 1 1 1 2 2 0 0 1-2 2 3 3 0 0 1-3-3 4 4 0 0 1 4-4" stroke-width="1.6" />
+    </svg>
+  ),
+  faint: (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+      <circle cx="6" cy="13" r="2" />
+      <path d="M9 14h8.5l2.5 2.5M3 19h18" />
+      <path d="M10 4.5v3M8.5 6h3M16 6v3M14.5 7.5h3" stroke-width="1.6" />
+    </svg>
+  ),
+  heart: (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+      <path d="M12 20l-7.1-7.2a4.6 4.6 0 0 1 6.5-6.6l.6.6.6-.6a4.6 4.6 0 0 1 6.5 6.6z" />
+      <path d="M6 12.5h3l1.5-2.5 2 4.5 1.5-2h4" stroke-width="1.6" />
+    </svg>
+  ),
 };
 
 interface Props {
