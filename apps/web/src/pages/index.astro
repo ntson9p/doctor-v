@@ -5,6 +5,8 @@ import { builtKnowledge } from '../lib/build-kb.ts';
 const { kb } = builtKnowledge();
 const emergencySigns = kb.emergencyScreen.items.map((i) => kb.text.findings[i.findingId]?.label ?? i.findingId);
 const complaints = kb.complaints.filter((c) => c.released).map((c) => kb.text.complaints[c.id]?.label ?? c.id);
+// Semicolons between complaints: some labels have a comma of their own ("Ngất, suýt ngất").
+const complaintList = complaints.join('; ').toLowerCase();
 ---
 
 <Base title="doctor-v · Nên đi khám ở đâu, khi nào">
@@ -21,7 +23,7 @@ const complaints = kb.complaints.filter((c) => c.released).map((c) => kb.text.co
   </div>
 
   <p class="note">
-    Bản thử nghiệm: mới có {complaints.length} triệu chứng chính ({complaints.join(', ').toLowerCase()}). Ứng dụng không chẩn
+    Bản thử nghiệm: mới có {complaints.length} triệu chứng chính ({complaintList}). Ứng dụng không chẩn
     đoán bệnh. Nội dung chưa được bác sĩ thẩm định.
   </p>
 </Base>
