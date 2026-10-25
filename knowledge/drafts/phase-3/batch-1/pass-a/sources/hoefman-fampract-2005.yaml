@@ -1,0 +1,15 @@
+id: hoefman-fampract-2005
+type: primary_study
+title: "Diagnostic yield of patient-activated loop recorders for detecting heart rhythm abnormalities in general practice: a randomised clinical trial"
+publisher: "Family Practice 2005;22(5):478–484 (Hoefman E, van Weert HC, Reitsma JB, Koster RW, Bindels PJ)"
+date: "2005"
+url: "https://europepmc.org/article/MED/15964867"
+doi: "10.1093/fampra/cmi048"
+pmid: "15964867"
+license_class: L3
+license_note: "Bản quyền OUP: chỉ dùng dữ kiện kèm trích dẫn."
+default_tier: B
+accessed: "2026-10-25"
+verified: true
+verified_by: "agent:pass-a (chỉ đọc tóm tắt qua API Europe PMC)"
+notes_vi: "Thử nghiệm ngẫu nhiên ở phòng khám đa khoa Hà Lan: người liên tiếp đến khám vì hồi hộp hoặc choáng váng, chăm sóc thường quy có hoặc không kèm máy ghi biến cố do người bệnh tự bấm. Nhóm có máy: không tìm được nguyên nhân 17% (nhóm chứng 38%), có chẩn đoán về tim 67% (27%), rối loạn nhịp đáng kể 22% (7%). Tóm tắt không nêu thành phần của các chẩn đoán về tim không đáng kể (có lẽ chủ yếu là ngoại tâm thu)."

@@ -50,3 +50,10 @@
   cluster: co_source
   leak: 0.05
   leak_note: "Gợi ý nguồn khí độc trong nhà (lượt B lô 1 phần a đề xuất); người bảo trì ước lượng."
+- id: stimulant_intake
+  kind: exposure
+  type: binary
+  label_vi: "Uống nhiều cà phê, trà đặc, nước tăng lực, rượu bia"
+  question_vi: "Hôm nay có uống nhiều cà phê, trà đặc, nước tăng lực hoặc rượu bia không?"
+  leak: nonspecific
+  notes_vi: "Hay làm khởi phát ngoại tâm thu, cơn rung nhĩ, cơn hồi hộp (lượt A lô 1, ngoại tâm thu, đề xuất)."

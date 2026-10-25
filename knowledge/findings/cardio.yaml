@@ -176,3 +176,16 @@
     - { finding: palpitations, is: present }
   leak: 0.1
   leak_note: "Tính trong số người đã hồi hộp. Gợi ý nhịp nhanh kịch phát trên thất (lượt A lô 1 phần b đề xuất); người bảo trì ước lượng."
+- id: palpitation_duration
+  kind: history
+  type: categorical
+  label_vi: "Thời gian mỗi cơn hồi hộp"
+  question_vi: "Mỗi cơn hồi hộp thường kéo dài bao lâu?"
+  options:
+    - { id: seconds, label_vi: "Vài giây, chỉ vài nhịp" }
+    - { id: minutes_hours, label_vi: "Vài phút đến vài giờ" }
+    - { id: ongoing, label_vi: "Kéo dài liên tục, đến giờ vẫn còn" }
+  # Lượt A (ngoại tâm thu) đề xuất: phân biệt ngoại tâm thu (vài nhịp) với cơn nhịp nhanh (vài phút đến vài giờ).
+  baseline: { seconds: 0.45, minutes_hours: 0.4, ongoing: 0.15 }
+  requires:
+    - { finding: palpitations, is: present }
