@@ -1,18 +1,19 @@
-# Giai đoạn 3: phạm vi đề xuất
+# Giai đoạn 3: phạm vi
 
-> **Trạng thái:** đề xuất ngày 2026-10-25, chờ chủ dự án duyệt. Chưa có bác sĩ duyệt.
+> **Trạng thái:** chủ dự án đã duyệt ngày 2026-10-25, kèm 4 quyết định (mục 7). Chưa có bác sĩ duyệt.
 > **Căn cứ:** `docs/plan.md` (mục 6 và 10), `docs/research/vietnam-sources.md`, 33 bệnh đã có trong `knowledge/conditions/`, chi phí đo được ở Giai đoạn 1 (`docs/reports/phase-1.md`, mục 6).
 
 ## 1. Tóm tắt
 
-- **40 triệu chứng chính:** 3 đã có, 37 mới, chia 11 nhóm.
-- **166 bệnh:** 33 đã có, 133 mới. Thêm khoảng 35 bệnh dự bị cho các đợt sau.
+- **41 triệu chứng chính:** 3 đã có, 38 mới, chia 11 nhóm.
+- **177 bệnh:** 33 đã có, 144 mới. Trong đó có 6 bệnh ung thư, gắn nhãn "Bác sĩ cần loại trừ". Thêm khoảng 30 bệnh dự bị cho các đợt sau.
 - **Phủ hai bộ ca đã công bố** mà kế hoạch dùng để so sánh: 43/45 ca Semigran và 45/48 ca Levine có bệnh đúng trong danh sách (mục 8).
-- **10 lô:**
+- **11 lô:**
   - lô 1: Chóng mặt, Ngất, Hồi hộp, theo yêu cầu của chủ dự án;
-  - lô 2: bổ sung các bệnh nguy hiểm còn thiếu của 3 triệu chứng đã có (Sốt, Đau bụng, Đau đầu).
-- **Chi phí ước tính:** khoảng 46 triệu token. Nếu chạy 3 agent song song, mất khoảng 15 giờ chạy agent, chưa tính các vòng chấm và sửa.
-- **Cần chủ dự án quyết định:** 4 điểm, ở mục 7.
+  - lô 2: bổ sung các bệnh nguy hiểm còn thiếu của 3 triệu chứng đã có (Sốt, Đau bụng, Đau đầu);
+  - lô 11: Nổi cục, nổi hạch.
+- **Chi phí ước tính:** khoảng 50 triệu token. Nếu chạy 3 agent song song, mất khoảng 16 giờ chạy agent, chưa tính các vòng chấm và sửa.
+- **Quyết định của chủ dự án:** mục 7.
 
 ## 2. Cách chọn
 
@@ -34,7 +35,7 @@
 - Không có số liệu về lý do đi khám ở tuyến ban đầu tại Việt Nam (báo cáo nghiên cứu, mục 3.4). Vì vậy nhãn "hay gặp" và thứ tự lô dựa trên đánh giá, không dựa trên số liệu.
 - Mức xử trí và mã ICD-10 dưới đây là dự kiến. Ba lượt soạn A/B/C sẽ đối chiếu với nguồn và với bộ mã của Thông tư 06/2026/TT-BYT.
 
-## 3. Bốn mươi triệu chứng chính
+## 3. Bốn mươi mốt triệu chứng chính
 
 | # | Nhóm | Triệu chứng chính | Lô |
 |---|---|---|---|
@@ -78,15 +79,15 @@
 | 38 | Tai nạn – ngộ độc | Vết thương, bỏng, bị cắn, bị đốt | 10 |
 | 39 | Tai nạn – ngộ độc | Ngộ độc (thức ăn, rượu, hóa chất, khí than) | 10 |
 | 40 | Trẻ nhỏ | Trẻ dưới 1 tuổi quấy khóc, bỏ bú | 4 |
+| 41 | Toàn thân | Nổi cục, nổi hạch, khối u (cổ, vú, dưới da) | 11 |
 
-**Triệu chứng dự bị** (thay vào được nếu chủ dự án muốn):
-- Nổi cục, nổi hạch, khối u (cần cho ung thư vòm họng, ung thư vú, quai bị, hạch lao);
+**Triệu chứng dự bị** (cho các đợt sau):
 - Ù tai, nghe kém;
 - Thai máy ít. Đề xuất xử trí bằng quy tắc an toàn trong hồ sơ thai, không làm triệu chứng riêng.
 
 **Việc giao diện đi kèm:** với 40 triệu chứng, màn chọn triệu chứng cần chia theo nhóm (kế hoạch, mục 3.1). Từ điển tìm kiếm cũng cần thêm từ dân gian, ví dụ "trúng gió", "lên máu".
 
-## 4. Mười lô
+## 4. Mười một lô
 
 Cột "Mức" là mức xử trí dự kiến: 1 = gọi 115, 2 = đến cấp cứu ngay, 3 = khám trong 24 giờ, 4 = khám trong vài ngày, 5 = theo dõi tại nhà. Quy tắc an toàn có thể nâng mức khi có dấu hiệu nặng.
 
@@ -131,7 +132,7 @@ Vì sao: ba triệu chứng này đang chạy nhưng còn thiếu một số b�
 | Viêm đường mật cấp | Acute cholangitis | K83.0 | 2 | Không được bỏ sót: sốt, đau bụng, vàng da |
 | Cơn tăng huyết áp (cần có số đo huyết áp) | Hypertensive urgency or emergency | I10 | 2 | Tăng huyết áp chiếm 26% người 18–69 tuổi (STEPS 2021); chỉ xét khi người dùng có số đo |
 
-### Lô 3 — Ho, Khó thở, Đau ngực (14 bệnh mới)
+### Lô 3 — Ho, Khó thở, Đau ngực (15 bệnh mới)
 
 Vì sao: rất hay gặp. Có nhiều bệnh nguy hiểm, nhất là ở người cao tuổi và người hút thuốc (41% nam giới, STEPS 2021).
 
@@ -151,10 +152,11 @@ Vì sao: rất hay gặp. Có nhiều bệnh nguy hiểm, nhất là ở ngườ
 | Trào ngược dạ dày – thực quản | GORD | K21 | 5 | Hay gặp: ợ nóng, đau ngực, ho kéo dài |
 | Đau thành ngực (cơ, sụn sườn) | Chest wall pain, costochondritis | M94.0, R07.4 | 5 | Nguyên nhân đau ngực lành tính hay gặp nhất |
 | Zona thần kinh (giời leo) | Herpes zoster | B02 | 4 | Hay gặp ở người cao tuổi; đau ngực trước khi nổi ban |
+| Ung thư phổi | Lung cancer | C34 | 4 | Bác sĩ cần loại trừ: ho kéo dài, ho ra máu, sụt cân, nhất là người hút thuốc |
 
 Bệnh đã có cần bổ sung: viêm phổi, cảm lạnh, cúm, COVID-19, sởi (ho), hội chứng vành cấp (đau ngực, khó thở), nhiễm khuẩn huyết (khó thở). Các bệnh của lô 1 cũng cần thêm: thuyên tắc phổi, rối loạn nhịp tim, cơn hoảng sợ, thiếu máu.
 
-### Lô 4 — Tiêu chảy, Nôn, Táo bón, Đi ngoài ra máu, Vàng da, Trẻ quấy khóc (13 bệnh mới)
+### Lô 4 — Tiêu chảy, Nôn, Táo bón, Đi ngoài ra máu, Vàng da, Trẻ quấy khóc (16 bệnh mới)
 
 Vì sao: tiêu hóa là nhóm lý do khám rất hay gặp. Phần lớn bệnh nguy hiểm của nhóm này đã có từ triệu chứng Đau bụng và từ lô 1–2.
 
@@ -170,6 +172,9 @@ Vì sao: tiêu hóa là nhóm lý do khám rất hay gặp. Phần lớn bệnh 
 | Sỏi túi mật (cơn đau quặn mật) | Biliary colic | K80.2 | 4 | Hay gặp |
 | Xơ gan | Cirrhosis | K70.3, K74.6 | 3 | Việt Nam: do viêm gan B, rượu; vàng da, phù, nôn ra máu |
 | Suy gan cấp (do viêm gan, do thuốc như paracetamol, do thảo dược) | Acute liver failure | K72.0 | 1 | Không được bỏ sót: vàng da, lơ mơ; có trong 2 bộ ca đã công bố |
+| Ung thư đại trực tràng | Colorectal cancer | C18–C20 | 4 | Bác sĩ cần loại trừ: đi ngoài ra máu, thay đổi thói quen đại tiện, sụt cân |
+| Ung thư dạ dày | Gastric cancer | C16 | 4 | Bác sĩ cần loại trừ: đau thượng vị kèm sụt cân, nôn, phân đen |
+| Ung thư gan | Hepatocellular carcinoma | C22.0 | 4 | Bác sĩ cần loại trừ: người viêm gan B, xơ gan; đau hạ sườn phải, sụt cân, vàng da |
 | Vàng da sơ sinh | Neonatal jaundice | P59 | 3 | Trẻ sơ sinh |
 | Teo đường mật bẩm sinh | Biliary atresia | Q44.2 | 3 | Không được bỏ sót: vàng da kéo dài, phân bạc màu |
 | Khóc dạ đề (cơn khóc ở trẻ nhỏ) | Infant colic | R10.4 | 5 | Lý do quấy khóc hay gặp nhất ở trẻ dưới 4 tháng |
@@ -305,6 +310,22 @@ Vì sao để cuối: phần lớn người bị nạn gọi 115 hoặc đến v
 
 Bệnh đã có cần bổ sung: viêm dạ dày ruột cấp (ngộ độc thực phẩm). Các bệnh của lô trước cũng cần thêm: chảy máu trong sọ, ngộ độc CO, phản vệ, côn trùng đốt, say nắng.
 
+### Lô 11 — Nổi cục, nổi hạch (7 bệnh mới)
+
+Chủ dự án thêm triệu chứng này và chọn nêu tên ung thư (mục 7). Vì vậy lô này có 2 bệnh ung thư hay gặp nhất của triệu chứng: ung thư vú và ung thư vòm họng. Nếu chỉ muốn 5 bệnh, có thể bỏ 2 bệnh này và dùng quy tắc "dấu hiệu báo động" (khối cứng, không đau, to dần, kèm sụt cân).
+
+| Bệnh | Tiếng Anh | ICD-10 | Mức | Vì sao chọn |
+|---|---|---|---|---|
+| Viêm hạch, hạch to do nhiễm trùng | Reactive lymphadenitis | L04, R59 | 5 | Nguyên nhân nổi hạch hay gặp nhất |
+| Lao hạch | Tuberculous lymphadenitis | A18.2 | 4 | Việt Nam: gánh nặng lao cao |
+| Bướu cổ, nhân tuyến giáp | Goitre, thyroid nodule | E01, E04 | 4 | Hay gặp |
+| U mỡ, nang bã dưới da | Lipoma, epidermoid cyst | D17, L72.1 | 5 | Hay gặp, lành tính |
+| U vú lành tính (u xơ tuyến vú, nang vú) | Fibroadenoma, breast cyst | D24, N60 | 4 | Nguyên nhân khối u vú hay gặp nhất |
+| Ung thư vú | Breast cancer | C50 | 4 | Bác sĩ cần loại trừ: ung thư hay gặp nhất ở phụ nữ |
+| Ung thư vòm họng | Nasopharyngeal carcinoma | C11 | 4 | Bác sĩ cần loại trừ: hạch cổ, nghẹt mũi hoặc chảy máu mũi một bên; Việt Nam thuộc vùng hay gặp |
+
+Bệnh đã có cần bổ sung: quai bị (sưng mang tai). Các bệnh của lô trước cũng cần thêm: thoát vị bẹn (khối ở bẹn), tăng bạch cầu đơn nhân (hạch cổ), lao phổi, nhọt và áp xe da. Ung thư vòm họng cũng cần thêm cho triệu chứng "Sổ mũi, nghẹt mũi, chảy máu mũi" và "Đau tai".
+
 ## 5. Bệnh dự bị (để sau Giai đoạn 3)
 
 | Bệnh | Vì sao để sau |
@@ -320,7 +341,8 @@ Bệnh đã có cần bổ sung: viêm dạ dày ruột cấp (ngộ độc th�
 | Nút ráy tai; viêm xương chũm | Ít gặp hơn, hoặc ít nguy hiểm |
 | Nhiễm khuẩn cột sống (kể cả lao cột sống) | Quy tắc "đau lưng kèm sốt" đã xử trí |
 | Nhiễm HIV | Cần tư vấn và xét nghiệm; nhạy cảm; nên chờ bác sĩ |
-| Ung thư vòm họng | Cần triệu chứng "Nổi cục, nổi hạch" |
+| U lympho | Ít gặp hơn lao hạch, viêm hạch; quy tắc "hạch to dần, không đau, kèm sốt, sụt cân" xử trí |
+| Viêm tuyến vú, áp xe vú | Quy tắc "vú sưng đỏ đau, kèm sốt khi đang cho con bú" xử trí: khám trong 24 giờ |
 | Tan máu do thiếu men G6PD | Cần xét nghiệm |
 | Đục thủy tinh thể; viêm màng bồ đào | Tiến triển chậm, hoặc ít gặp |
 | Viêm ruột mạn (Crohn, viêm loét đại tràng); viêm túi thừa | Ít gặp hơn ở Việt Nam |
@@ -330,7 +352,6 @@ Bệnh đã có cần bổ sung: viêm dạ dày ruột cấp (ngộ độc th�
 | Rối loạn lưỡng cực; loạn thần | Cần bác sĩ tâm thần thiết kế câu hỏi |
 | Quá liều paracetamol | Quy tắc "uống quá liều thuốc" sẽ xử trí: gọi 115 |
 | Huyết khối tĩnh mạch não; viêm động mạch tế bào khổng lồ | Hiếm |
-| Ung thư (đại trực tràng, dạ dày, gan, phổi) | Xem mục 7, câu hỏi 2 |
 
 **Cố ý không đưa vào:**
 - **Mọc răng:** quy sốt hay quấy khóc cho mọc răng dễ làm bỏ sót bệnh thật.
@@ -351,25 +372,27 @@ Bệnh đã có cần bổ sung: viêm dạ dày ruột cấp (ngộ độc th�
 
 | Việc | Token |
 |---|---|
-| Soạn 133 bệnh mới (lượt A, B, C) | khoảng 36 triệu |
-| Quy tắc, nguồn, ca kiểm thử (thêm khoảng 20%, như Giai đoạn 1) | khoảng 7 triệu |
-| Bổ sung khoảng 65 cặp "bệnh đã có × triệu chứng mới" | khoảng 3 triệu (ước đoán, chưa đo) |
-| **Cộng** | **khoảng 46 triệu** |
+| Soạn 144 bệnh mới (lượt A, B, C) | khoảng 39 triệu |
+| Quy tắc, nguồn, ca kiểm thử (thêm khoảng 20%, như Giai đoạn 1) | khoảng 8 triệu |
+| Bổ sung khoảng 70 cặp "bệnh đã có × triệu chứng mới" | khoảng 3 triệu (ước đoán, chưa đo) |
+| **Cộng** | **khoảng 50 triệu** |
 
-- Mỗi lô khoảng 4–5 triệu token.
-- Thời gian chạy agent: khoảng 44 giờ, tức khoảng 15 giờ nếu chạy 3 agent song song; chưa tính các vòng chấm và sửa.
+- Mỗi lô khoảng 2–5 triệu token.
+- Thời gian chạy agent: khoảng 48 giờ, tức khoảng 16 giờ nếu chạy 3 agent song song; chưa tính các vòng chấm và sửa.
 - Giai đoạn 1 từng bị ngắt vì giới hạn sử dụng. Mỗi lô được lưu từng bước nên làm tiếp được.
 
-## 7. Cần chủ dự án quyết định
+## 7. Quyết định của chủ dự án (2026-10-25)
 
-1. **Danh sách 40 triệu chứng chính:** duyệt như mục 3, hay đổi với triệu chứng dự bị.
-2. **Ung thư:** có đưa 4 bệnh ung thư (đại trực tràng, dạ dày, gan, phổi) vào danh sách kết quả không, hay chỉ dùng quy tắc "dấu hiệu báo động" để khuyên đi khám sớm.
-3. **Sức khỏe tâm thần (trầm cảm, lo âu, mất ngủ):** đưa vào lô 7 hay để sau.
-   - Nếu đưa vào, câu hỏi về ý nghĩ tự hại dẫn tới gọi 115.
+1. **Triệu chứng chính:** duyệt 40 triệu chứng như đề xuất, thêm "Nổi cục, nổi hạch", tổng 41 (lô 11).
+2. **Ung thư:** đưa 4 bệnh ung thư (đại trực tràng, dạ dày, gan, phổi) vào danh sách kết quả, gắn nhãn "Bác sĩ cần loại trừ". Đề xuất ban đầu là chỉ dùng dấu hiệu báo động.
+   - Theo quyết định này, lô 11 thêm ung thư vú và ung thư vòm họng.
+   - Câu chữ về ung thư cần bác sĩ duyệt kỹ trước khi công khai.
+3. **Sức khỏe tâm thần:** trầm cảm, lo âu, mất ngủ vào lô 7.
+   - Câu hỏi về ý nghĩ tự hại dẫn tới khuyên gọi 115 hoặc đến cơ sở y tế ngay.
    - Chưa hiện đường dây hỗ trợ tâm lý nào cho tới khi xác minh được số chính thức.
-4. **Quy mô:** giữ 166 bệnh (vượt khoảng 11% so với mốc 150 đã duyệt), hay cắt bớt.
+4. **Quy mô:** giữ đủ danh sách, không cắt. Sau hai quyết định trên, tổng là 177 bệnh.
 
-Hai điểm sau có đề xuất mặc định; chủ dự án có thể đổi:
+Hai điểm theo đề xuất mặc định:
 - **HIV:** để dự bị.
 - **Cơn tăng huyết áp:** đưa vào lô 2, nhưng chỉ xét khi người dùng có số đo huyết áp.
 

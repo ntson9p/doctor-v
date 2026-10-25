@@ -1,6 +1,6 @@
 # Chẩn đoán trong hai bộ ca đã công bố
 
-Kế hoạch dùng hai bộ ca này để so sánh doctor-v với các nghiên cứu khác (`docs/evaluation.md`, bộ `external`). Danh sách 166 bệnh của Giai đoạn 3 (`scope.md`) được đối chiếu với chúng để đạt chỉ tiêu "bệnh đúng có trong cơ sở tri thức ≥ 95% số ca" (`docs/research/symptom-checker-methodology.md`, mục 3.5e).
+Kế hoạch dùng hai bộ ca này để so sánh doctor-v với các nghiên cứu khác (`docs/evaluation.md`, bộ `external`). Danh sách 177 bệnh của Giai đoạn 3 (`scope.md`) được đối chiếu với chúng để đạt chỉ tiêu "bệnh đúng có trong cơ sở tri thức ≥ 95% số ca" (`docs/research/symptom-checker-methodology.md`, mục 3.5e).
 
 ## Nguồn
 
