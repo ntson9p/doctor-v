@@ -1,0 +1,51 @@
+id: h-syncope-021
+set: holdout
+title_vi: "Nam 19 tuổi lần đầu hiến máu, chưa ăn sáng, lúc rút kim choáng như sắp ngất; nằm kê chân 15 phút thì khỏe"
+narrative_vi: "Em L., nam, 19 tuổi, sinh viên năm nhất ở Huế, khỏe mạnh. Sáng nay em hiến máu lần đầu ở ngày hội hiến máu của trường; đêm qua em thức khuya, sáng chưa ăn gì, uống ít nước. Hiến xong, lúc nhân viên rút kim, em vẫn đang ngả lưng trên ghế hiến máu, nhìn thấy túi máu thì thấy nóng bừng người, vã mồ hôi, buồn nôn, mắt tối sầm, choáng như sắp ngất nhưng không mất ý thức. Nhân viên cho em nằm, kê cao chân, cho uống nước cam, ăn bánh; khoảng 15 phút sau em hết hẳn. Bây giờ là 2 giờ sau, em đã ăn trưa, đi lại, lên lớp bình thường, không choáng, không mệt. Em không đau ngực, không khó thở, không thấy tim đập nhanh hay đập loạn, không co giật, không đập đầu. Hồi lớp 9 đi lấy máu xét nghiệm em cũng từng choáng giống vậy một lần. Em không có bệnh tim, không hút thuốc, không uống rượu bia; trong nhà không ai đột tử. Em muốn biết có cần đi khám không."
+patient:
+  age_years: 19
+  sex: male
+  region: central
+  month: 1
+complaint: syncope
+answers:
+  co_exposure: absent
+  syncope_trigger: emotion_pain
+  syncope_warning: prodrome
+  not_recovered_after_faint: absent
+  missed_meal: present
+  better_after_sugar: present
+  stress_poor_sleep: present
+  similar_episodes_before: present
+  dizziness: absent
+  dizziness_on_standing: absent
+  cold_sweat: absent
+  pallor: absent
+  palpitations: absent
+  chest_pain_pressure: absent
+  breathing_difficulty: absent
+  seizure_recent: absent
+  es_unresponsive_or_seizing: absent
+  confusion: absent
+  headache: absent
+  family_sudden_death: absent
+  fever: absent
+  black_stool: absent
+  diabetes: absent
+  heavy_alcohol: absent
+  smoker: absent
+  known_heart_disease: absent
+  hypertension_known: absent
+default_unmentioned: absent
+expected:
+  condition: reflex_orthostatic_syncope
+  acceptable: []
+  triage: 5
+source:
+  basis: "Suýt ngất phản xạ (phế vị) khi hiến máu ở người trẻ khỏe: yếu tố khởi phát rõ (rút kim, nhìn thấy máu, nhịn đói, thiếu ngủ, vừa mất một lượng máu), tiền triệu điển hình nóng bừng, vã mồ hôi, buồn nôn, tối sầm mắt, không mất ý thức, hết hẳn sau 15 phút nằm kê cao chân, uống nước; đã từng bị giống vậy khi lấy máu; không đau ngực, không hồi hộp, không bệnh tim, gia đình không ai đột tử. ESC 2018: tiền triệu điển hình, xảy ra sau cảnh tượng khó chịu hoặc đau là đặc điểm nguy cơ thấp của ngất phản xạ, không có đặc điểm nguy cơ cao; Romme (2008): ngất phản xạ là nguyên nhân hay gặp nhất ở người dưới 40 tuổi, hay báo trước bằng da tái, choáng, vã mồ hôi; NHS Fainting: khi thấy sắp ngất thì nằm xuống, kê cao chân, uống nước, chỉ cần đi khám để tìm nguyên nhân khi đã ngất hẳn; đã hồi phục hoàn toàn nên mức 5."
+  references:
+    - esc-syncope-2018
+    - nhs-fainting
+    - romme-car-2008
+author: "agent:vignette-holdout"
+notes_vi: "Ca nhẹ: suýt ngất, không mất ý thức, nguyên nhân rõ, đã hồi phục hoàn toàn; khác h-syncope-003 (đã ngất hẳn nên cần đi khám không khẩn). Ăn bánh, uống nước cam xong thì đỡ hẳn trong 15 phút nên câu đỡ sau khi ăn đồ ngọt trả lời 'có', dù nằm kê cao chân mới là cách xử trí chính. Các dấu hiệu lúc suýt ngất (vã mồ hôi, choáng) đã hết từ lâu nên trả lời 'không'; tiền triệu được ghi ở câu dấu hiệu ngay trước khi ngất."

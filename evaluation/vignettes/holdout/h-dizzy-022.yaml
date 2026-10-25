@@ -1,0 +1,50 @@
+id: h-dizzy-022
+set: holdout
+title_vi: "Bé trai 8 tuổi đi xe khách qua đèo, chóng mặt, buồn nôn, nôn 2 lần; dừng xe nghỉ 30 phút thì khỏe hẳn"
+narrative_vi: "Bé Q., nam, 8 tuổi, ở Hà Nội. Sáng nay cả nhà đi xe khách lên Hà Giang du lịch. Khi xe bắt đầu qua các đoạn đèo dốc quanh co, bé ngồi xem điện thoại một lúc thì kêu chóng mặt, buồn nôn, mặt tái, vã mồ hôi, ngáp liên tục, rồi nôn 2 lần ra thức ăn. Bé không thấy mọi vật quay tròn. Đến điểm dừng nghỉ, bố mẹ cho bé xuống xe hít thở, nằm nghỉ ở chỗ thoáng, uống vài ngụm nước; khoảng 30 phút sau bé hết chóng mặt, hết buồn nôn, đòi ăn và chạy chơi bình thường. Bé không sốt, không đau đầu, không đau bụng, không đau tai, không tiêu chảy, đi đứng vững, nói chuyện bình thường, tỉnh táo. Lần nào đi ô tô đường dài bé cũng bị say xe giống vậy. Những người khác trên xe không ai bị. Bố mẹ muốn biết có cần cho bé đi khám trước khi đi tiếp không."
+patient:
+  age_years: 8
+  sex: male
+  region: north
+  month: 6
+complaint: dizziness
+answers:
+  co_exposure: absent
+  dizziness_pattern: long_episodes
+  vertigo_spinning: absent
+  dizziness_positional: absent
+  dizziness_on_standing: absent
+  nausea: present
+  vomiting: present
+  persistent_vomiting: absent
+  cold_sweat: present
+  similar_episodes_before: present
+  fainting_or_near_fainting: absent
+  headache: absent
+  fever: absent
+  abdominal_pain: absent
+  diarrhea: absent
+  ear_pain: absent
+  hearing_loss_tinnitus: absent
+  vision_loss_or_double: absent
+  cannot_walk_unaided: absent
+  sudden_loss_of_balance: absent
+  confusion: absent
+  drowsy_hard_to_wake: absent
+  es_stroke_signs: absent
+  transient_neuro_symptoms: absent
+  others_same_symptoms: absent
+  unsafe_food_shared: absent
+  recent_viral_illness: absent
+  pallor: absent
+default_unmentioned: absent
+expected:
+  condition: other
+  acceptable: []
+  triage: 5
+source:
+  basis: "Say tàu xe (không có trong danh mục) ở trẻ em: chóng mặt, buồn nôn, nôn, mặt tái, vã mồ hôi, ngáp khi đi xe qua đường đèo quanh co và nhìn điện thoại, hết hẳn trong 30 phút sau khi dừng xe, nghỉ chỗ thoáng; lần nào đi xe đường dài cũng bị; không sốt, không đau đầu, đi đứng vững, tỉnh táo, nay ăn chơi bình thường. NHS Dizziness nêu say tàu xe là một nguyên nhân chóng mặt và hướng dẫn tự chăm sóc; trang này khuyên khám bác sĩ (không khẩn) khi chóng mặt không hết, hay tái lại không rõ lý do hoặc kèm triệu chứng khác như nôn, còn ở đây chóng mặt và nôn chỉ xảy ra khi đi xe, có nguyên nhân rõ và hết hẳn khi dừng xe, nên tự chăm sóc là phù hợp (mức 5)."
+  references:
+    - nhs-dizziness
+author: "agent:vignette-holdout"
+notes_vi: "Ngoài danh mục, ca nhẹ ở trẻ em. Nôn, buồn nôn, vã mồ hôi xảy ra trên xe cách đây khoảng 1 giờ nên bố mẹ trả lời 'có'; da xanh, môi nhợt hỏi về thiếu máu, nay bé hồng hào nên trả lời 'không'. Trang NHS Motion sickness (chưa có trong danh mục nguồn) chỉ hướng dẫn tự xử trí (ngồi phía trước, nhìn xa, không xem màn hình, nghỉ giữa chặng) và hỏi dược sĩ, không có mục cần đi khám. Danh mục chưa có câu hỏi về đi tàu xe."

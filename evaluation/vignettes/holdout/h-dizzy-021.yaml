@@ -1,0 +1,75 @@
+id: h-dizzy-021
+set: holdout
+title_vi: "Nữ 33 tuổi uống thuốc tránh thai, sau chuyến xe 14 giờ hay choáng váng khi gắng sức, thở hụt, mạch 112"
+narrative_vi: "Chị Tr., 33 tuổi, nhân viên kinh doanh ở Hà Nội, uống thuốc tránh thai hằng ngày 8 tháng nay. 10 ngày trước chị đi công tác Đà Nẵng bằng xe khách giường nằm, mỗi chiều khoảng 14 tiếng. Ba ngày nay chị hay choáng váng, lâng lâng mỗi khi đi nhanh hoặc leo cầu thang; leo lên tầng 3 phải dừng lại vì thở hụt, tim đập nhanh; ngồi nghỉ vài phút thì đỡ choáng. Từ sáng nay ngồi yên chị vẫn thấy thở nhanh hơn bình thường, tim đập nhanh liên tục, người mệt. Máy đo ở nhà lúc ngồi nghỉ báo mạch 112 lần/phút, huyết áp 110/75 mmHg. Chị vẫn nói được trọn câu. Chị không thấy mọi vật quay tròn, chưa lần nào tối sầm mắt hay suýt ngất. Chị không đau ngực, không ho, không ho ra máu, không sốt, hai bắp chân không sưng đau. Chị vừa có kinh tuần trước, lượng như mọi tháng, không có thai. Chị không hút thuốc, không có bệnh tim, chưa từng bị cục máu đông, không mắc ung thư, không sụt cân, không run tay, không sợ nóng."
+patient:
+  age_years: 33
+  sex: female
+  region: north
+  month: 5
+complaint: dizziness
+answers:
+  co_exposure: absent
+  dizziness_pattern: long_episodes
+  vertigo_spinning: absent
+  dizziness_positional: absent
+  dizziness_on_standing: absent
+  fainting_or_near_fainting: absent
+  breathing_difficulty: present
+  es_severe_breathing: absent
+  breathless_on_exertion: present
+  palpitations: present
+  palpitation_rhythm: fast_regular
+  palpitation_abrupt_onset: absent
+  palpitation_duration: ongoing
+  neck_pounding: absent
+  pulse_measured: n100_150
+  bp_measured: normal
+  fatigue: present
+  chest_pain_pressure: absent
+  pleuritic_chest_pain: absent
+  cough: absent
+  hemoptysis: absent
+  fever: absent
+  leg_swelling_one_side: absent
+  recent_immobility: present
+  previous_clot: absent
+  active_cancer: absent
+  pregnant: absent
+  missed_period: absent
+  recent_childbirth: absent
+  heavy_periods: absent
+  pallor: absent
+  anemia_known: absent
+  cold_sweat: absent
+  panic_fear: absent
+  perioral_tingling: absent
+  tremor: absent
+  heat_intolerance: absent
+  weight_loss_unintended: absent
+  stimulant_intake: absent
+  headache: absent
+  confusion: absent
+  cannot_walk_unaided: absent
+  sudden_loss_of_balance: absent
+  vision_loss_or_double: absent
+  hearing_loss_tinnitus: absent
+  es_stroke_signs: absent
+  similar_episodes_before: absent
+  smoker: absent
+  known_heart_disease: absent
+  hypertension_known: absent
+  diabetes: absent
+default_unmentioned: absent
+expected:
+  condition: pulmonary_embolism
+  acceptable: []
+  triage: 2
+source:
+  basis: "Thuyên tắc phổi biểu hiện chủ yếu bằng choáng váng: choáng khi gắng sức, thở hụt tăng dần, nay khó thở cả khi nghỉ, tim nhanh 112 lần/phút liên tục, ở phụ nữ đang uống thuốc tránh thai vừa ngồi xe đường dài, không đau ngực, không sưng chân, không có dấu hiệu thiếu máu hay cường giáp. ESC 2019 (thuyên tắc phổi): thuốc tránh thai là yếu tố thuận lợi mức trung bình, ngồi lâu khi đi xa là yếu tố yếu, tiền ngất và khó thở là biểu hiện, nhịp nhanh có thể là bất thường duy nhất; NHS Pulmonary embolism: khó thở đột ngột, tim đập rất nhanh thì gọi 999 hoặc đến cấp cứu; NHS Heart palpitations: hồi hộp không dứt thì gọi 999 hoặc đến cấp cứu; huyết áp còn bình thường, không ngất, nói được trọn câu nên mức 2."
+  references:
+    - esc-pe-2019
+    - nhs-pulmonary-embolism
+    - nhs-heart-palpitations
+author: "agent:vignette-holdout"
+notes_vi: "Ca khó: không đau ngực, không ho ra máu, không sưng chân; người bệnh chọn triệu chứng chính 'Chóng mặt'. Danh mục chưa có câu hỏi về thuốc tránh thai; chuyến xe đường dài được ghi ở câu mổ, nằm lâu, ngồi xe lâu trong 4 tuần qua. Thở nhanh cả khi ngồi nghỉ nên câu khó thở trả lời 'có'; vẫn nói trọn câu nên câu khó thở dữ dội trả lời 'không'."

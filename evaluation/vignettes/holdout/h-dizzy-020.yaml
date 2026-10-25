@@ -1,0 +1,61 @@
+id: h-dizzy-020
+set: holdout
+title_vi: "Nam 41 tuổi đau gáy từ khi bị bẻ cổ ở tiệm gội đầu, nay đột ngột chóng mặt quay, nôn, không tự đi được"
+narrative_vi: "Anh Đ., 41 tuổi, nhân viên văn phòng ở TP.HCM, khỏe mạnh, không tăng huyết áp, không hút thuốc, hay mỏi cổ vai gáy. Hai hôm trước anh đi gội đầu, được thợ 'bẻ cổ', vặn mạnh cổ sang hai bên, nghe kêu 'rắc'. Từ tối hôm đó anh đau gáy bên trái, nhức âm ỉ vùng sau đầu, quay cổ sang trái thì đau hơn nhưng vẫn cúi đầu được; uống thuốc giảm đau không đỡ. Khoảng 1 giờ trước, đang ngồi làm việc, anh đột ngột chóng mặt, thấy mọi vật quay tròn liên tục, nằm yên cũng không hết, buồn nôn, đã nôn 2 lần. Anh đứng dậy thì ngã xiêu sang trái, phải có hai đồng nghiệp dìu mới đi được, kể cả khi mở mắt. Anh vẫn tỉnh, nói rõ, cười hai bên miệng đều, giơ hai tay đều, không nhìn đôi, không ù tai, không nghe kém. Đồng nghiệp đo huyết áp được 150/90 mmHg. Trước đây anh chưa từng bị chóng mặt, mấy tuần nay không bị cảm."
+patient:
+  age_years: 41
+  sex: male
+  region: south
+  month: 8
+complaint: dizziness
+answers:
+  co_exposure: absent
+  dizziness_pattern: continuous
+  vertigo_spinning: present
+  dizziness_positional: absent
+  dizziness_on_standing: absent
+  nausea: present
+  vomiting: present
+  persistent_vomiting: absent
+  cannot_walk_unaided: present
+  sudden_loss_of_balance: present
+  headache: present
+  headache_thunderclap: absent
+  headache_course: first_time
+  headache_duration: h4_72
+  headache_location: back_neck
+  headache_severity: moderate
+  headache_after_head_injury: absent
+  neck_stiffness: absent
+  hearing_loss_tinnitus: absent
+  vision_loss_or_double: absent
+  es_stroke_signs: absent
+  transient_neuro_symptoms: absent
+  confusion: absent
+  drowsy_hard_to_wake: absent
+  fainting_or_near_fainting: absent
+  chest_pain_pressure: absent
+  palpitations: absent
+  fever: absent
+  recent_viral_illness: absent
+  similar_episodes_before: absent
+  hypertension_known: absent
+  bp_measured: high
+  diabetes: absent
+  smoker: absent
+  heavy_alcohol: absent
+  known_heart_disease: absent
+default_unmentioned: absent
+expected:
+  condition: stroke
+  acceptable: []
+  triage: 1
+source:
+  basis: "Đột quỵ tuần hoàn sau ở người trẻ, nghi do bóc tách động mạch đốt sống sau nắn vặn cổ: đau gáy và vùng sau đầu mới xuất hiện từ khi bị bẻ cổ, rồi đột ngột chóng mặt quay liên tục, nôn, không tự đứng, đi được kể cả khi mở mắt, dù không méo miệng, không yếu tay, không nói khó. GRACE-3: ở hội chứng tiền đình cấp, đi không vững nặng gợi ý nguyên nhân trung ương; Tarnutzer (CMAJ 2011): đau đầu hoặc đau cổ mới làm tăng khả năng đột quỵ, 25% đột quỵ xảy ra dưới 50 tuổi, thất điều nặng có khi là dấu hiệu rõ duy nhất; 3312/QĐ-BYT (2024): nhồi máu não có thể biểu hiện chóng mặt, thất điều, cần vận chuyển nhanh đến nơi điều trị được đột quỵ; NHS Symptoms of a stroke: chóng mặt hoặc ngã là triệu chứng đột quỵ, gọi 999, nên mức 1."
+  references:
+    - grace3-dizziness-2023
+    - tarnutzer-cmaj-2011
+    - byt-qd-3312-2024
+    - nhs-stroke-symptoms
+author: "agent:vignette-holdout"
+notes_vi: "Ca cấp cứu khó: người trẻ, không có yếu tố nguy cơ mạch máu, các câu sàng lọc đột quỵ đều 'không'; dấu hiệu then chốt là chóng mặt liên tục, không tự đi được và đau gáy mới sau nắn vặn cổ. Đau khi quay cổ nhưng vẫn cúi được cằm chạm ngực nên câu cứng gáy trả lời 'không'. Danh mục chưa có câu hỏi về nắn, vặn cổ."

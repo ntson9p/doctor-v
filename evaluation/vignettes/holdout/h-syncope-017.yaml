@@ -1,0 +1,74 @@
+id: h-syncope-017
+set: holdout
+title_vi: "Nam 74 tuổi hút thuốc lào, từng bị sỏi thận, đột ngột đau dữ dội hông lưng trái lan xuống bẹn rồi ngất; huyết áp 85/50"
+narrative_vi: "Ông Th., 74 tuổi, ở Nam Định, hút thuốc lào hơn 50 năm, bị tăng huyết áp nhưng uống thuốc lúc nhớ lúc quên. Tám năm trước ông bị sỏi thận trái, đã tán sỏi. Khoảng 1 giờ trước, đang ngồi xem ti vi, ông đột ngột đau dữ dội vùng hông lưng trái, lan ra bụng dưới bên trái và xuống bẹn trái, đau liên tục không lúc nào dứt. Ông nghĩ sỏi thận tái phát nên uống viên giảm đau còn ở nhà. Lúc đứng dậy đi vệ sinh, ông choáng, vã mồ hôi, tối sầm mắt rồi ngã gục, bất tỉnh khoảng 1 phút. Hiện ông nằm trên giường, tỉnh, trả lời được nhưng da tái nhợt, vã mồ hôi lạnh, tay chân lạnh, khát nước; cứ ngồi dậy là choáng muốn ngất, không tự đứng lên được; vẫn đau dữ dội. Con trai đo huyết áp được 85/50 mmHg, mạch 120 lần/phút. Ông hơi buồn nôn, không nôn. Ông không sốt, không tiểu buốt, nước tiểu không đỏ, không đi ngoài phân đen, không đau ngực, không khó thở, không uống thuốc chống đông hay aspirin."
+patient:
+  age_years: 74
+  sex: male
+  region: north
+  month: 2
+complaint: syncope
+answers:
+  co_exposure: absent
+  syncope_trigger: standing_up
+  syncope_warning: prodrome
+  not_recovered_after_faint: present
+  abdominal_pain: present
+  abd_pain_location: left_lower
+  abd_pain_onset: sudden
+  abd_pain_duration: lt_6h
+  abd_pain_severe: present
+  abd_pain_colicky: absent
+  abd_pain_radiates_back: present
+  abd_pain_radiates_groin: present
+  flank_pain: present
+  kidney_stones_known: present
+  hematuria: absent
+  dysuria: absent
+  urinary_frequency: absent
+  nausea: present
+  vomiting: absent
+  cold_sweat: present
+  cold_hands_feet: present
+  pallor: present
+  severe_weakness: present
+  dizziness: present
+  dizziness_pattern: unknown
+  vertigo_spinning: absent
+  dizziness_on_standing: present
+  pulse_measured: n100_150
+  bp_measured: normal
+  palpitations: absent
+  confusion: absent
+  es_unresponsive_or_seizing: absent
+  es_severe_bleeding: absent
+  chest_pain_pressure: absent
+  breathing_difficulty: absent
+  fever: absent
+  black_stool: absent
+  vomiting_blood: absent
+  headache: absent
+  seizure_recent: absent
+  similar_episodes_before: absent
+  family_sudden_death: absent
+  hypertension_known: present
+  bp_lowering_meds: present
+  smoker: present
+  antithrombotic_use: absent
+  known_heart_disease: absent
+  diabetes: absent
+  heavy_alcohol: absent
+  regular_painkiller_use: absent
+  previous_abdominal_surgery: absent
+default_unmentioned: absent
+expected:
+  condition: other
+  acceptable: []
+  triage: 1
+source:
+  basis: "Vỡ phình động mạch chủ bụng (không có trong danh mục) giống cơn đau quặn thận: nam 74 tuổi hút thuốc, tăng huyết áp, đột ngột đau dữ dội liên tục vùng hông lưng trái lan xuống bẹn, rồi ngất khi đứng dậy, sau đó da tái, vã mồ hôi lạnh, tay chân lạnh, không tự đứng được, huyết áp 85/50 mmHg, mạch 120 (sốc mất máu), điều mà cơn đau quặn thận không gây ra. ESC 2018: ngất kèm đau bụng mới xuất hiện, huyết áp tâm thu dưới 90 mmHg không rõ lý do là đặc điểm nguy cơ cao loại nặng; NHS Fainting: chưa hồi phục hẳn sau ngất thì gọi 999, nên mức 1."
+  references:
+    - esc-syncope-2018
+    - nhs-fainting
+author: "agent:vignette-holdout"
+notes_vi: "Ngoài danh mục, ca cấp cứu khó: từng bị sỏi thận và đau lan xuống bẹn nên người nhà tưởng sỏi thận tái phát; ngất khi đứng dậy, có tiền triệu dễ bị coi là ngất tư thế. Huyết áp 85/50 mmHg nên câu huyết áp chọn 'Dưới 140/90 mmHg' (câu hỏi chưa có mức huyết áp thấp). Trang NHS Abdominal aortic aneurysm (chưa có trong danh mục nguồn) ghi: đau bụng hoặc lưng đột ngột dữ dội, da tái xám, mất ý thức thì gọi 999; người hay mắc là nam từ 65 tuổi, hút thuốc, tăng huyết áp."

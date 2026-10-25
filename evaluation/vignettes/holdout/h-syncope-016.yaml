@@ -1,0 +1,53 @@
+id: h-syncope-016
+set: holdout
+title_vi: "Nam 15 tuổi đang đá bóng thấy tim đập rất nhanh rồi ngất, giật tay vài giây; bố đột tử năm 32 tuổi"
+narrative_vi: "Em K., nam, 15 tuổi, học lớp 10 ở Huế. Chiều nay đang chạy theo bóng trong trận đá bóng ở sân trường, em thấy tim đập rất nhanh, thình thịch trong ngực vài giây rồi ngã gục xuống, không kịp kêu choáng. Bạn kể em bất tỉnh khoảng 1 phút, mặt tái, hai tay giật vài cái chừng 5–10 giây, không cắn lưỡi, không tè ra quần. Tỉnh lại em nói chuyện được ngay, biết mình đang ở đâu; ngã trên cỏ nên không đập đầu. Hiện em ngồi nghỉ, thở bình thường, không đau ngực, không đau đầu, không chóng mặt, không còn thấy tim đập nhanh. Hai tháng trước em từng ngất một lần khi đang chạy thi ở trường, lúc đó thầy cô nói do nắng nóng. Bố em mất đột ngột năm 32 tuổi khi đang đá bóng với bạn, gia đình nghĩ là 'trúng gió'. Em không sốt, đã ăn trưa đầy đủ, không uống cà phê hay nước tăng lực, không dùng thuốc gì. Cô y tế trường nói có thể em bị động kinh."
+patient:
+  age_years: 15
+  sex: male
+  region: central
+  month: 3
+complaint: syncope
+answers:
+  co_exposure: absent
+  syncope_trigger: exertion
+  syncope_warning: palpitations_first
+  not_recovered_after_faint: absent
+  palpitations: present
+  palpitation_rhythm: fast_regular
+  palpitation_abrupt_onset: unknown
+  palpitation_duration: seconds
+  neck_pounding: unknown
+  seizure_recent: present
+  es_unresponsive_or_seizing: absent
+  confusion: absent
+  drowsy_hard_to_wake: absent
+  family_sudden_death: present
+  similar_episodes_before: present
+  chest_pain_pressure: absent
+  breathing_difficulty: absent
+  headache: absent
+  dizziness: absent
+  fever: absent
+  missed_meal: absent
+  better_after_sugar: unknown
+  stimulant_intake: absent
+  pallor: absent
+  cold_sweat: absent
+  es_stroke_signs: absent
+  heavy_alcohol: absent
+  smoker: absent
+  diabetes: absent
+default_unmentioned: absent
+expected:
+  condition: cardiac_arrhythmia
+  acceptable: []
+  triage: 1
+source:
+  basis: "Ngất do rối loạn nhịp tim nguy hiểm ở thiếu niên (nghi bệnh kênh ion di truyền hoặc bệnh cơ tim gây nhịp nhanh thất): ngất lần thứ hai khi đang gắng sức, ngay trước đó tim đập rất nhanh, không có tiền triệu phế vị, bố đột tử trẻ khi đang chơi thể thao; vài cái giật tay lúc bất tỉnh rồi tỉnh ngay, không lú lẫn, là kiểu ngất có giật cơ chứ không phải động kinh. ESC 2018: ngất khi gắng sức, hồi hộp đột ngột rồi ngất là đặc điểm nguy cơ cao loại nặng, người thân đột tử trẻ là nguy cơ cao loại nhẹ, ngất trong lúc gắng sức thường do tim; EGSYS (Del Rosso 2008): ngất khi gắng sức, hồi hộp trước ngất dự báo ngất do tim; NHS Fainting: ngất khi đang tập luyện hoặc có giật tay chân thì gọi 999, nên mức 1."
+  references:
+    - esc-syncope-2018
+    - delrosso-heart-2008
+    - nhs-fainting
+author: "agent:vignette-holdout"
+notes_vi: "Ca cấp cứu ở thiếu niên, dễ bị bỏ qua vì đã tỉnh hẳn: lần trước bị cho là do nắng nóng, lần này bị nghĩ là động kinh. Giật tay vài giây lúc bất tỉnh nên câu co giật trả lời 'có'. Tim đập nhanh ngay trước khi ngã nên câu hồi hộp trả lời 'có'; em không biết cơn tim nhanh dừng lúc nào. Chưa thử ăn đồ ngọt. Không ghi các câu chỉ hỏi người từ 18 tuổi (bệnh tim đã biết, tăng huyết áp)."

@@ -1,0 +1,61 @@
+id: h-palp-011
+set: holdout
+title_vi: "Nữ 72 tuổi tăng huyết áp, 3 tuần có 3 cơn tim đập loạn, nhanh 1–3 giờ rồi tự hết, máy đo báo nhịp không đều"
+narrative_vi: "Bà M., 72 tuổi, ở Hải Phòng, bị tăng huyết áp, uống amlodipine mỗi sáng, đo ở nhà thường khoảng 130/80 mmHg. Ba tuần nay bà có 3 cơn tim đập loạn xạ, lúc nhanh lúc chậm, không đều, thấy rõ trong ngực, kèm hơi mệt; mỗi cơn kéo dài khoảng 1–3 giờ rồi tự hết, bà không để ý cơn bắt đầu và hết đột ngột hay từ từ. Lần gần nhất là tối hôm kia, con gái đo bằng máy đo huyết áp lúc đang có cơn: mạch 128 lần/phút, huyết áp 135/85 mmHg, máy báo nhịp tim không đều. Trong cơn bà không đau ngực, không khó thở, không choáng, không ngất. Hiện bà khỏe, đi chợ, làm việc nhà bình thường, đo mạch 76 lần/phút, máy không báo bất thường. Bà không yếu tay chân, không méo miệng, không nói khó. Bà không bị đái tháo đường, không có bệnh tim đã biết, không uống thuốc chống đông hay aspirin, không uống rượu, không uống cà phê hay trà đặc. Bà không sụt cân, không run tay, không sợ nóng, cổ không to, không xanh xao."
+patient:
+  age_years: 72
+  sex: female
+  region: north
+  month: 10
+complaint: palpitations
+answers:
+  palpitation_rhythm: irregular
+  palpitation_abrupt_onset: unknown
+  palpitation_duration: minutes_hours
+  neck_pounding: absent
+  pulse_measured: n100_150
+  bp_measured: normal
+  similar_episodes_before: present
+  chest_pain_pressure: absent
+  breathing_difficulty: absent
+  fainting_or_near_fainting: absent
+  dizziness: absent
+  breathless_on_exertion: absent
+  fatigue: absent
+  cold_sweat: absent
+  confusion: absent
+  es_stroke_signs: absent
+  transient_neuro_symptoms: absent
+  hypertension_known: present
+  bp_lowering_meds: present
+  known_heart_disease: absent
+  diabetes: absent
+  antithrombotic_use: absent
+  heavy_alcohol: absent
+  stimulant_intake: absent
+  smoker: absent
+  weight_loss_unintended: absent
+  tremor: absent
+  heat_intolerance: absent
+  goiter_visible: absent
+  eyes_bulging: absent
+  pallor: absent
+  anemia_known: absent
+  panic_fear: absent
+  perioral_tingling: absent
+  stress_poor_sleep: absent
+  family_sudden_death: absent
+  leg_swelling_one_side: absent
+  edema_face_hands: absent
+default_unmentioned: absent
+expected:
+  condition: cardiac_arrhythmia
+  acceptable: []
+  triage: 4
+source:
+  basis: "Rung nhĩ kịch phát ở người cao tuổi tăng huyết áp: các cơn tim đập không đều, nhanh 1–3 giờ rồi tự hết, máy đo lúc có cơn báo mạch 128 lần/phút và nhịp không đều; nay đã hết cơn, khỏe, trong cơn không đau ngực, khó thở, choáng hay ngất, không có dấu hiệu đột quỵ, không có dấu hiệu cường giáp hay thiếu máu. NHS Atrial fibrillation: nghĩ có triệu chứng rung nhĩ hoặc hồi hộp hay tái lại thì khám bác sĩ (không khẩn), chỉ gọi 999 khi đang có cơn kèm đau ngực, khó thở, ngất hoặc dấu hiệu đột quỵ; NHS Heart palpitations: đã hết, vẫn khỏe nhưng cơn hay tái lại, kéo dài hơn vài phút thì khám bác sĩ, nên mức 4 (ghi điện tim, theo dõi nhịp tim, bác sĩ cân nhắc thuốc chống đông)."
+  references:
+    - nhs-atrial-fibrillation
+    - nhs-heart-palpitations
+author: "agent:vignette-holdout"
+notes_vi: "Ca điển hình, cơn đã hết. Bà không để ý cơn bắt đầu và dừng có đột ngột không nên câu này là 'không rõ'. Mạch ghi theo lần đo lúc đang có cơn. Hơi mệt chỉ trong cơn, nay không mệt nên câu mệt mỏi trả lời 'không'."

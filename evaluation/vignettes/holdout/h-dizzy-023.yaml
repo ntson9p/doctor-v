@@ -1,0 +1,66 @@
+id: h-dizzy-023
+set: holdout
+title_vi: "Nữ 77 tuổi uống thuốc lợi tiểu, tiêu chảy 2 ngày sau đám giỗ, nay đứng dậy là xây xẩm, tiểu ít, khô miệng"
+narrative_vi: "Bà S., 77 tuổi, ở Pleiku (Gia Lai), bị tăng huyết áp, mỗi sáng uống một viên thuốc huyết áp và một viên thuốc lợi tiểu. Hai hôm trước bà ăn đám giỗ, tối đó bắt đầu đi ngoài phân lỏng toàn nước, mỗi ngày 6–7 lần, không có máu, kèm buồn nôn, nôn 1 lần; mấy người ăn cùng cũng bị đi ngoài. Bà chỉ sôi bụng, không đau bụng, không sốt, ăn uống kém. Bà uống oresol được, không nôn thêm, nhưng vẫn đi ngoài nhiều, và vẫn uống thuốc huyết áp, thuốc lợi tiểu đều. Từ sáng nay bà mệt, khô miệng, khát; mỗi lần đứng dậy là xây xẩm vài giây, phải vịn tường, chưa lần nào tối sầm mắt hay ngã. Từ sáng đến chiều bà chỉ đi tiểu 1 lần, nước tiểu ít và sẫm màu. Con trai đo huyết áp lúc ngồi được 105/65 mmHg (bình thường bà khoảng 140/85), mạch 96 lần/phút. Bà vẫn tỉnh táo, nói chuyện bình thường, tự đi lại trong nhà được, tay chân ấm. Bà không thấy mọi vật quay tròn, không đau đầu, không nhìn đôi, không nói khó, không yếu tay chân, không đau ngực, không khó thở. Bà không bị đái tháo đường, không đi ngoài phân đen."
+patient:
+  age_years: 77
+  sex: female
+  region: highlands
+  month: 11
+complaint: dizziness
+answers:
+  co_exposure: absent
+  dizziness_pattern: brief_episodes
+  vertigo_spinning: absent
+  dizziness_positional: absent
+  dizziness_on_standing: present
+  fainting_or_near_fainting: absent
+  diarrhea: present
+  diarrhea_bloody: absent
+  nausea: present
+  vomiting: present
+  persistent_vomiting: absent
+  abdominal_pain: absent
+  unsafe_food_shared: present
+  fever: absent
+  decreased_urine: present
+  fatigue: present
+  loss_of_appetite: present
+  bp_measured: normal
+  pulse_measured: n40_100
+  hypertension_known: present
+  bp_lowering_meds: present
+  confusion: absent
+  drowsy_hard_to_wake: absent
+  severe_weakness: absent
+  cold_hands_feet: absent
+  cold_sweat: absent
+  cannot_walk_unaided: absent
+  sudden_loss_of_balance: absent
+  headache: absent
+  vision_loss_or_double: absent
+  es_stroke_signs: absent
+  transient_neuro_symptoms: absent
+  hearing_loss_tinnitus: absent
+  chest_pain_pressure: absent
+  breathing_difficulty: absent
+  palpitations: absent
+  black_stool: absent
+  vomiting_blood: absent
+  diabetes: absent
+  known_heart_disease: absent
+  antithrombotic_use: absent
+  similar_episodes_before: absent
+default_unmentioned: absent
+expected:
+  condition: acute_gastroenteritis
+  acceptable: [reflex_orthostatic_syncope]
+  triage: 3
+source:
+  basis: "Viêm dạ dày – ruột cấp sau bữa giỗ (người ăn cùng cũng bị) gây mất nước ở người cao tuổi đang uống thuốc lợi tiểu và thuốc hạ áp: tiêu chảy toàn nước 2 ngày, khô miệng, khát, tiểu ít, nước tiểu sẫm, xây xẩm mỗi khi đứng dậy, huyết áp thấp hơn hẳn thường ngày; vẫn tỉnh, tự đi lại, uống được, tay chân ấm, không có dấu hiệu sốc. NHS Dehydration: chóng mặt khi đứng dậy không hết, tiểu ít, nước tiểu sẫm thì khám khẩn trong ngày, chỉ gọi 999 khi có dấu hiệu sốc (da lạnh, lú lẫn, lơ mơ); NHS Low blood pressure: thuốc là một nguyên nhân hạ huyết áp tư thế, cần bác sĩ xem lại thuốc; NHS Diarrhoea and vomiting: không có dấu hiệu cần gọi cấp cứu, nên mức 3."
+  references:
+    - nhs-dehydration
+    - nhs-low-blood-pressure
+    - nhs-diarrhoea-vomiting
+author: "agent:vignette-holdout"
+notes_vi: "Ca ở người cao tuổi: người nhà chọn triệu chứng chính 'Chóng mặt', không chọn 'Đau bụng'. Hạ huyết áp tư thế do mất nước và thuốc lợi tiểu là cơ chế gây chóng mặt nên chấp nhận cả ngất phản xạ, hạ huyết áp tư thế. Xây xẩm vài giây khi đứng dậy, chưa tối sầm mắt nên câu ngất, suýt ngất trả lời 'không'. Huyết áp 105/65 mmHg nên chọn 'Dưới 140/90 mmHg'."

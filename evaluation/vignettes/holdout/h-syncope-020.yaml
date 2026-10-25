@@ -1,0 +1,61 @@
+id: h-syncope-020
+set: holdout
+title_vi: "Nữ 13 tuổi tắm nước nóng 30 phút trong phòng tắm kín có bình nóng lạnh chạy gas, ngất, nay lơ mơ, đau đầu, nôn"
+narrative_vi: "Em H., nữ, 13 tuổi, học lớp 8 ở Đà Lạt (Lâm Đồng), khỏe mạnh, kinh nguyệt đều. Nhà em dùng bình nóng lạnh chạy gas đặt ngay trong phòng tắm nhỏ, cửa sổ đóng kín vì trời lạnh. Tối nay em tắm nước nóng khoảng 30 phút, đóng kín cửa. Mẹ nghe tiếng động mạnh, gọi không thấy em trả lời, mở cửa thấy em ngồi gục trên sàn, gọi chỉ ú ớ; em không đập đầu. Mẹ đưa em ra phòng khách, mở hết cửa cho thoáng. Khoảng 10 phút sau em mở mắt, đỡ hơn lúc đầu, nhưng đến giờ vẫn lơ mơ, gọi mới đáp, trả lời chậm, lẫn lộn, không nhớ vừa xảy ra chuyện gì. Em kêu đau nhức cả đầu, choáng váng, buồn nôn, đã nôn 1 lần, mệt rũ. Trong nhà không ai khác bị đau đầu hay chóng mặt vì chỉ mình em tắm. Em không co giật, không sốt, thở bình thường, môi không tím. Tối nay em ăn cơm bình thường cùng cả nhà."
+patient:
+  age_years: 13
+  sex: female
+  region: highlands
+  month: 12
+complaint: syncope
+answers:
+  co_exposure: present
+  others_same_symptoms: absent
+  better_away_from_place: present
+  syncope_trigger: standing_heat
+  syncope_warning: unknown
+  not_recovered_after_faint: present
+  confusion: present
+  drowsy_hard_to_wake: present
+  es_unresponsive_or_seizing: absent
+  headache: present
+  headache_thunderclap: absent
+  headache_course: first_time
+  headache_location: whole_head
+  headache_duration: lt_4h
+  headache_severity: moderate
+  headache_after_head_injury: absent
+  dizziness: present
+  dizziness_pattern: continuous
+  vertigo_spinning: absent
+  nausea: present
+  vomiting: present
+  persistent_vomiting: absent
+  fatigue: present
+  seizure_recent: absent
+  fever: absent
+  breathing_difficulty: absent
+  es_severe_breathing: absent
+  chest_pain_pressure: absent
+  neck_stiffness: absent
+  palpitations: absent
+  missed_meal: absent
+  better_after_sugar: unknown
+  unsafe_food_shared: absent
+  es_stroke_signs: absent
+  diabetes: absent
+  pregnant: absent
+  missed_period: absent
+default_unmentioned: absent
+expected:
+  condition: carbon_monoxide_poisoning
+  acceptable: []
+  triage: 1
+source:
+  basis: "Ngộ độc khí CO do bình nóng lạnh chạy gas trong phòng tắm kín: tắm nước nóng 30 phút, đóng kín cửa, ngất trong phòng tắm, ra chỗ thoáng có đỡ nhưng vẫn lơ mơ, lẫn lộn, đau đầu, choáng váng, nôn; dễ bị nhầm với ngất do tắm nước nóng vì chỉ một người bị. 3610/QĐ-BYT: ở Việt Nam hay gặp do đốt than, củi, khí gas trong phòng kín, kể cả bình nóng lạnh chạy gas trong nhà tắm, cần thở oxy càng sớm càng tốt, oxy cao áp khi đã mất ý thức; CDC: hít nhiều khí CO có thể gây ngất hoặc tử vong; NHS Carbon monoxide poisoning: đã phơi nhiễm mà mất ý thức hoặc đột ngột lú lẫn thì gọi 999, nên mức 1."
+  references:
+    - byt-qd-3610-2015
+    - nhs-carbon-monoxide-poisoning
+    - cdc-co-basics
+author: "agent:vignette-holdout"
+notes_vi: "Ca cấp cứu khó ở thiếu niên: chỉ một người bị, hoàn cảnh giống ngất khi tắm nước nóng (đứng lâu ở nơi nóng). Câu phơi nhiễm trả lời 'có' vì phần giải thích của câu hỏi có nêu bình nóng lạnh chạy gas. Em còn lơ mơ, không nhớ trước khi ngất thấy gì nên câu dấu hiệu báo trước là 'không rõ'. Em vẫn mở mắt khi được gọi nên câu bất tỉnh trả lời 'không'."

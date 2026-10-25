@@ -1,0 +1,79 @@
+id: h-syncope-018
+set: holdout
+title_vi: "Nam 30 tuổi sốt cao 4 ngày, vừa hết sốt thì đau dưới sườn phải, nôn, ngất khi đứng dậy; tay chân lạnh, tiểu ít"
+narrative_vi: "Anh Ph., 30 tuổi, thợ điện ở Biên Hòa (Đồng Nai), người to béo, nặng 92 kg, không có bệnh mạn tính. Anh sốt cao 39–40°C từ 4 ngày trước, đau đầu vùng trán, nhức hai hốc mắt, đau mỏi khắp người, ăn uống kém, tự uống thuốc hạ sốt; dãy trọ có mấy người đang bị sốt xuất huyết. Sáng nay anh hết sốt, tưởng đã khỏi nên đi làm lại. Gần trưa anh đau tức dưới sườn phải, buồn nôn, nôn 3 lần, người mệt rã rời. Đang ngồi nghỉ, anh đứng dậy thì choáng, vã mồ hôi, tối sầm mắt rồi ngất khoảng nửa phút, đồng nghiệp đỡ kịp. Hiện anh đã tỉnh, nói chuyện được nhưng mệt lả, không tự đứng dậy được, vã mồ hôi, tay chân lạnh ẩm, khát nước; cứ ngồi dậy là choáng. Từ sáng anh mới đi tiểu 1 lần, rất ít. Anh không chảy máu chân răng, không chảy máu cam, không thấy nốt đỏ trên da, không đi ngoài phân đen, không ho, không sổ mũi, không tiêu chảy, không khó thở."
+patient:
+  age_years: 30
+  sex: male
+  region: south
+  month: 7
+complaint: syncope
+answers:
+  co_exposure: absent
+  syncope_trigger: standing_up
+  syncope_warning: prodrome
+  not_recovered_after_faint: present
+  fever: present
+  fever_max_temp: ge_39
+  fever_duration: d3_5
+  chills_rigors: absent
+  headache: present
+  headache_thunderclap: absent
+  headache_course: first_time
+  headache_location: forehead_face
+  headache_duration: gt_3d
+  headache_severity: mild
+  retro_orbital_pain: present
+  myalgia: present
+  loss_of_appetite: present
+  dengue_nearby: present
+  abdominal_pain: present
+  abd_pain_location: right_upper
+  abd_pain_onset: gradual
+  abd_pain_duration: lt_6h
+  abd_pain_severe: absent
+  nausea: present
+  vomiting: present
+  persistent_vomiting: absent
+  cold_hands_feet: present
+  cold_sweat: present
+  severe_weakness: present
+  decreased_urine: present
+  dizziness_on_standing: present
+  fatigue: present
+  rash_any: absent
+  bleeding_gums_nose: absent
+  black_stool: absent
+  vomiting_blood: absent
+  jaundice: absent
+  confusion: absent
+  drowsy_hard_to_wake: absent
+  breathing_difficulty: absent
+  chest_pain_pressure: absent
+  palpitations: absent
+  neck_stiffness: absent
+  cough: absent
+  runny_nose: absent
+  sore_throat: absent
+  diarrhea: absent
+  es_unresponsive_or_seizing: absent
+  seizure_recent: absent
+  malaria_area_exposure: absent
+  bush_exposure: absent
+  diabetes: absent
+  hypertension_known: absent
+  heavy_alcohol: absent
+  regular_painkiller_use: absent
+default_unmentioned: absent
+expected:
+  condition: dengue
+  acceptable: []
+  triage: 1
+source:
+  basis: "Sốt xuất huyết Dengue vào giai đoạn nguy hiểm, có sốc: sốt cao 4 ngày, đau đầu, nhức hốc mắt, đau mỏi người, xung quanh có người bệnh; vừa hết sốt thì đau dưới sườn phải, nôn, mệt lả, ngất khi đứng dậy, sau đó vẫn vã mồ hôi, tay chân lạnh ẩm, tiểu rất ít, dù không chảy máu, không phát ban. 2760/QĐ-BYT: giai đoạn nguy hiểm thường vào ngày 3–7 của bệnh; WHO 2009: choáng váng, hạ huyết áp tư thế, ngất, lả khi hết sốt là dấu hiệu liên quan tụt huyết áp cần nhập viện, hạ huyết áp tư thế là dấu hiệu sốc còn bù; CDC: giai đoạn nguy hiểm bắt đầu khi hết sốt; đã có dấu hiệu sốc nên mức 1."
+  references:
+    - byt-qd-2760-2023
+    - who-dengue-2009
+    - cdc-dengue-clinical
+author: "agent:vignette-holdout"
+notes_vi: "Ca cấp cứu khó: không chảy máu, không phát ban; người bệnh hết sốt, tưởng khỏi nên đi làm lại, đến khám vì ngất. Người bệnh vẫn trả lời 'có' câu sốt vì vừa sốt 4 ngày, sáng nay mới hết. Uống thuốc hạ sốt vài ngày không tính là hay dùng thuốc giảm đau. Danh mục chưa có câu hỏi về béo phì."

@@ -1,0 +1,61 @@
+id: h-syncope-019
+set: holdout
+title_vi: "Nữ 81 tuổi tăng huyết áp, đang ngồi ăn thì gục xuống bất tỉnh, không báo trước; mấy tuần hay xây xẩm; mạch 36"
+narrative_vi: "Bà Ch., 81 tuổi, ở Vĩnh Long, bị tăng huyết áp nhiều năm, chỉ uống một loại thuốc huyết áp là amlodipine, không uống thuốc tim nào khác. Khoảng 2 tuần nay bà mệt hơn, đi chậm hơn, đi chợ về là hụt hơi; có 2 lần đang đứng nấu cơm thì xây xẩm vài giây, phải bám vào bàn. Sáng nay đang ngồi ăn sáng, bà đột ngột gục xuống bàn, mặt tái nhợt, gọi không biết; khoảng 20–30 giây sau bà tỉnh lại, mặt hồng trở lại, nói chuyện được ngay, không lú lẫn. Trước khi gục bà không thấy choáng, không vã mồ hôi, không buồn nôn, không thấy tim đập nhanh. Bà không co giật, không đập đầu. Con gái đo bằng máy đo huyết áp ở nhà: mạch 36 lần/phút, huyết áp 160/70 mmHg; 10 phút sau đo lại mạch vẫn 38 lần/phút. Hiện bà ngồi nghỉ, tỉnh táo, không đau ngực, không khó thở, không yếu tay chân, không méo miệng, không nói khó, không đau đầu. Bà không bị đái tháo đường, không đi ngoài phân đen, chưa từng ngất trước đây."
+patient:
+  age_years: 81
+  sex: female
+  region: south
+  month: 4
+complaint: syncope
+answers:
+  co_exposure: absent
+  syncope_trigger: no_trigger
+  syncope_warning: no_warning
+  not_recovered_after_faint: absent
+  pulse_measured: lt_40
+  bp_measured: very_high
+  dizziness: present
+  dizziness_pattern: brief_episodes
+  vertigo_spinning: absent
+  dizziness_positional: absent
+  dizziness_on_standing: absent
+  fatigue: present
+  breathless_on_exertion: present
+  palpitations: absent
+  chest_pain_pressure: absent
+  breathing_difficulty: absent
+  confusion: absent
+  es_unresponsive_or_seizing: absent
+  seizure_recent: absent
+  es_stroke_signs: absent
+  transient_neuro_symptoms: absent
+  headache: absent
+  cold_sweat: absent
+  cold_hands_feet: absent
+  pallor: absent
+  similar_episodes_before: absent
+  hypertension_known: present
+  bp_lowering_meds: present
+  known_heart_disease: absent
+  diabetes: absent
+  antithrombotic_use: absent
+  family_sudden_death: absent
+  black_stool: absent
+  vomiting_blood: absent
+  fever: absent
+  edema_face_hands: absent
+  leg_swelling_one_side: absent
+default_unmentioned: absent
+expected:
+  condition: cardiac_arrhythmia
+  acceptable: []
+  triage: 1
+source:
+  basis: "Ngất do nhịp chậm ở người cao tuổi (nghi blốc nhĩ thất hoàn toàn, cơn Adams–Stokes): đang ngồi thì mất ý thức đột ngột, không có tiền triệu, mặt tái rồi hồng lại khi tỉnh, mạch đo 2 lần dưới 40 lần/phút, mấy tuần nay mệt, hụt hơi, xây xẩm; không dùng thuốc làm chậm nhịp tim. ESC 2018: nhịp chậm dai dẳng dưới 40 lần/phút lúc thức là đặc điểm nguy cơ cao loại nặng, ngất khi đang ngồi không có tiền triệu là nguy cơ cao loại nhẹ, người có đặc điểm nguy cơ cao cần được đánh giá sớm và tích cực ở cấp cứu; Framingham (Soteriades 2002): ngất do tim làm tăng tử vong; NHS Heart rhythm problems: tim đập quá chậm có thể gây mệt, choáng, cảm giác sắp ngất; nhịp vẫn dưới 40, có thể ngất lại hoặc ngừng tim bất cứ lúc nào nên mức 1."
+  references:
+    - esc-syncope-2018
+    - soteriades-nejm-2002
+    - nhs-arrhythmia
+author: "agent:vignette-holdout"
+notes_vi: "Ca điển hình của ngất do tim ở người cao tuổi; đang uống thuốc hạ áp nên dễ bị nghĩ là tụt huyết áp do thuốc. Hai lần xây xẩm khi đang đứng nấu cơm, không phải ngay lúc vừa đứng dậy, nên câu choáng khi đứng dậy trả lời 'không'. Huyết áp 160/70 mmHg chọn mức 'Từ 160/110 đến dưới 180/120 mmHg' theo hướng dẫn chọn mức cao hơn."

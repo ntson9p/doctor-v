@@ -1,0 +1,61 @@
+id: h-palp-012
+set: holdout
+title_vi: "Nữ 20 tuổi, 4 tháng sau đợt sốt vi rút, cứ đứng vài phút là tim đập nhanh, lâng lâng, nằm xuống thì hết"
+narrative_vi: "Em V., nữ, 20 tuổi, sinh viên ở Đà Nẵng. Khoảng 4 tháng trước em bị một đợt sốt cao, đau họng, mệt khoảng 1 tuần rồi khỏi. Từ đó đến nay, ngày nào cũng vậy: vừa đứng dậy đã hơi choáng, đứng thêm vài phút, nhất là khi xếp hàng, đứng tắm hoặc đứng thuyết trình, thì tim đập nhanh thình thịch, lâng lâng, mệt; ngồi hoặc nằm xuống vài phút thì đỡ hẳn. Đồng hồ thông minh của em báo nhịp tim khoảng 75 lần/phút khi nằm, đứng 5 phút thì lên 120–125 lần/phút; em đo huyết áp lúc đang đứng được 110/75 mmHg. Buổi sáng em hay mệt hơn, học khó tập trung. Em chưa lần nào ngất hay tối sầm mắt, không đau ngực, không khó thở, leo cầu thang không hụt hơi. Em không sụt cân, không run tay, không sợ nóng, cổ không to, không xanh xao, kinh nguyệt đều, không ra nhiều, không có thai. Em ít uống nước, không uống cà phê hay nước tăng lực, không dùng thuốc gì. Trong nhà không ai bị bệnh tim hay đột tử."
+patient:
+  age_years: 20
+  sex: female
+  region: central
+  month: 9
+complaint: palpitations
+answers:
+  palpitation_rhythm: fast_regular
+  palpitation_abrupt_onset: absent
+  palpitation_duration: minutes_hours
+  neck_pounding: absent
+  pulse_measured: n100_150
+  bp_measured: normal
+  dizziness: present
+  dizziness_pattern: long_episodes
+  vertigo_spinning: absent
+  dizziness_positional: absent
+  dizziness_on_standing: present
+  fainting_or_near_fainting: absent
+  similar_episodes_before: present
+  fatigue: present
+  recent_viral_illness: absent
+  chest_pain_pressure: absent
+  breathing_difficulty: absent
+  breathless_on_exertion: absent
+  tremor: absent
+  heat_intolerance: absent
+  weight_loss_unintended: absent
+  goiter_visible: absent
+  eyes_bulging: absent
+  pallor: absent
+  anemia_known: absent
+  heavy_periods: absent
+  pregnant: absent
+  missed_period: absent
+  panic_fear: absent
+  perioral_tingling: absent
+  stress_poor_sleep: absent
+  stimulant_intake: absent
+  cold_sweat: absent
+  missed_meal: absent
+  family_sudden_death: absent
+  smoker: absent
+  heavy_alcohol: absent
+  diabetes: absent
+default_unmentioned: absent
+expected:
+  condition: other
+  acceptable: []
+  triage: 4
+source:
+  basis: "Hội chứng nhịp nhanh tư thế đứng (không có trong danh mục) sau một đợt nhiễm vi rút: 4 tháng nay ngày nào cứ đứng vài phút là tim nhanh, lâng lâng, mệt, nằm xuống thì hết; nhịp tim tăng từ khoảng 75 lên 120–125 lần/phút khi đứng, huyết áp không tụt; chưa từng ngất, không đau ngực, không khó thở, không có dấu hiệu cường giáp, thiếu máu hay cơn hoảng sợ. ESC 2018 xếp hội chứng này vào nhóm không dung nạp tư thế đứng, cùng hạ huyết áp tư thế và ngất phế vị; NHS Heart palpitations: hồi hộp hay tái lại mà vẫn khỏe thì khám bác sĩ (không khẩn), nên mức 4."
+  references:
+    - esc-syncope-2018
+    - nhs-heart-palpitations
+author: "agent:vignette-holdout"
+notes_vi: "Ngoài danh mục. Tiêu chuẩn thường dùng: nhịp tim tăng từ 30 lần/phút trở lên trong 10 phút đứng (từ 40 lần/phút ở tuổi 12–19), không tụt huyết áp. Mạch ghi theo lần đo lúc có triệu chứng (đang đứng). Lâng lâng nhưng chưa tối sầm mắt nên câu ngất, suýt ngất trả lời 'không'. Đợt sốt cách đây 4 tháng nên câu bị cảm trong 2 tuần trước trả lời 'không'. Trang NHS Postural tachycardia syndrome (chưa có trong danh mục nguồn) khuyên khám bác sĩ gia đình (không khẩn) khi có triệu chứng, không có mục gọi cấp cứu."
