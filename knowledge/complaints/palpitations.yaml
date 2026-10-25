@@ -1,8 +1,6 @@
 id: palpitations
 label_vi: "Hồi hộp, tim đập nhanh"
 icon: heart
-# Lô 1 của Giai đoạn 3 đang soạn (docs/phase-3/scope.md): bộ kiểm định dùng được, app chưa cho chọn.
-status: in_progress
 synonyms_vi:
   - "tim đập nhanh"
   - "tim đập mạnh"

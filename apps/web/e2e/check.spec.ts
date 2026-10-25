@@ -155,7 +155,7 @@ test('when the on-screen keyboard opens, the search field moves up so the advice
   await search.focus();
   // An on-screen keyboard takes about 40% of a phone screen.
   await page.setViewportSize({ width, height: Math.round(height * 0.6) });
-  await search.pressSequentially('chóng mặt');
+  await search.pressSequentially('rụng tóc');
   await expect(page.locator('.search-status strong').first()).toBeInViewport();
   // The search box sits below the sticky header, not under it.
   const gap = await search.evaluate(

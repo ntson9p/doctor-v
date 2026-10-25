@@ -1,8 +1,6 @@
 id: dizziness
 label_vi: "Chóng mặt"
 icon: dizzy
-# Lô 1 của Giai đoạn 3 đang soạn (docs/phase-3/scope.md): bộ kiểm định dùng được, app chưa cho chọn.
-status: in_progress
 synonyms_vi:
   - "choáng váng"
   - "xây xẩm"

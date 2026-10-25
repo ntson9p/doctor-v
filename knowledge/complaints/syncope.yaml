@@ -1,8 +1,6 @@
 id: syncope
 label_vi: "Ngất, suýt ngất"
 icon: faint
-# Lô 1 của Giai đoạn 3 đang soạn (docs/phase-3/scope.md): bộ kiểm định dùng được, app chưa cho chọn.
-status: in_progress
 synonyms_vi:
   - "ngất xỉu"
   - "xỉu"
