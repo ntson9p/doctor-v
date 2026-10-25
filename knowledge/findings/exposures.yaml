@@ -57,3 +57,21 @@
   question_vi: "Hôm nay có uống nhiều cà phê, trà đặc, nước tăng lực hoặc rượu bia không?"
   leak: nonspecific
   notes_vi: "Hay làm khởi phát ngoại tâm thu, cơn rung nhĩ, cơn hồi hộp (lượt A lô 1, ngoại tâm thu, đề xuất)."
+
+# ---------- Giai đoạn 3, lô 2 ----------
+- id: heat_exposure
+  kind: exposure
+  type: binary
+  label_vi: "Phơi nắng lâu hoặc làm việc nặng nơi nóng bức"
+  question_vi: "24 giờ qua có phơi nắng lâu hoặc làm việc nặng nơi nóng bức không?"
+  help_vi: "Ví dụ làm đồng, làm công trường, chạy bộ giữa trưa hè, hoặc ở lâu trong phòng, xe kín nóng bức. Người già, trẻ nhỏ dễ bị hơn."
+  leak: 0.15
+  leak_note: "Việt Nam nóng quanh năm ở miền Nam và vào mùa hè ở miền Bắc; nhiều người làm việc ngoài trời. Người bảo trì ước lượng."
+- id: flood_mud_exposure
+  kind: exposure
+  type: binary
+  label_vi: "Lội nước lũ, bùn, ruộng hoặc tiếp xúc chuột"
+  question_vi: "Trong 3 tuần qua có lội nước lũ, bùn, ruộng hoặc tiếp xúc chuột không?"
+  help_vi: "Ví dụ cấy lúa, dọn dẹp sau lũ, khơi cống, bắt chuột, hoặc ở nhà có nhiều chuột."
+  leak: 0.2
+  leak_note: "Ở nông thôn, làm ruộng và lội nước rất phổ biến; người bảo trì ước lượng khoảng 20% người sốt, lượt A/B/C đối chiếu."

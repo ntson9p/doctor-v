@@ -144,3 +144,33 @@
   applies_to:
     age_groups: [child_2m_5y, child_5_12]
   leak: specific
+
+# ---------- Giai đoạn 3, lô 2 ----------
+- id: red_lips_strawberry_tongue
+  kind: sign
+  type: binary
+  label_vi: "Môi đỏ, khô nứt hoặc lưỡi đỏ như quả dâu"
+  question_vi: "Môi có đỏ, khô nứt, hoặc lưỡi đỏ rực như quả dâu không?"
+  applies_to:
+    age_groups: [child_2m_5y, child_5_12]
+  leak: 0.08
+  leak_note: "Môi khô nứt khá hay gặp ở trẻ sốt vì mất nước; người bảo trì ước lượng."
+- id: hands_feet_swelling_peeling
+  kind: sign
+  type: binary
+  label_vi: "Bàn tay, bàn chân sưng đỏ hoặc bong da đầu ngón"
+  question_vi: "Bàn tay, bàn chân có sưng phù, đỏ, hoặc bong da ở đầu ngón không?"
+  help_vi: "Không tính các nốt phỏng nước của bệnh tay chân miệng."
+  applies_to:
+    age_groups: [child_2m_5y, child_5_12]
+  leak: 0.02
+  leak_note: "Người bảo trì ước lượng."
+- id: bcg_scar_red
+  kind: sign
+  type: binary
+  label_vi: "Chỗ tiêm phòng lao sưng đỏ lại"
+  question_vi: "Vết tiêm phòng lao (BCG) ở cánh tay có sưng đỏ trở lại không?"
+  applies_to:
+    age_groups: [child_2m_5y]
+  leak: 0.005
+  leak_note: "Người bảo trì ước lượng; dấu hiệu khá đặc hiệu của bệnh Kawasaki ở trẻ đã tiêm BCG."

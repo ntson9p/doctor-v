@@ -1,0 +1,49 @@
+# Giai đoạn 3, lô 2: bổ sung bệnh nguy hiểm cho Sốt, Đau bụng, Đau đầu (docs/phase-3/scope.md, mục 4).
+# suggested_urgency / suggested_cant_miss chỉ là gợi ý của người bảo trì; agent soạn bệnh
+# phải đối chiếu với hướng dẫn chính thức và quyết định lại (ghi lý do).
+# Ba triệu chứng chính này đang chạy trong app. Điện thoại chỉ chạy bản đã phát hành, nên bản nháp không
+# hiện ra cho tới khi lô đạt chỉ tiêu (README, `npm run web:release`).
+
+# Bệnh mới: soạn đủ cả file, prior chỉ cho các triệu chứng chính ghi ở đây.
+new:
+  # Phần a: bụng, mạch máu, chuyển hóa
+  - { id: abdominal_aortic_aneurysm, name_vi: "Phình động mạch chủ bụng dọa vỡ hoặc vỡ", complaints: [abdominal_pain, syncope, dizziness], suggested_urgency: 1, suggested_cant_miss: true }
+  - { id: acute_mesenteric_ischemia, name_vi: "Thiếu máu mạc treo ruột cấp", complaints: [abdominal_pain], suggested_urgency: 1, suggested_cant_miss: true }
+  - { id: ovarian_torsion, name_vi: "Xoắn phần phụ, vỡ nang buồng trứng", complaints: [abdominal_pain], suggested_urgency: 2, suggested_cant_miss: true }
+  - { id: testicular_torsion, name_vi: "Xoắn tinh hoàn", complaints: [abdominal_pain], suggested_urgency: 2, suggested_cant_miss: true }
+  - { id: diabetic_ketoacidosis, name_vi: "Nhiễm toan ceton, tăng áp lực thẩm thấu do đái tháo đường", complaints: [abdominal_pain, fever, dizziness], suggested_urgency: 2, suggested_cant_miss: true }
+  - { id: acute_cholangitis, name_vi: "Viêm đường mật cấp", complaints: [fever, abdominal_pain], suggested_urgency: 2, suggested_cant_miss: true }
+  - { id: liver_abscess, name_vi: "Áp xe gan (do amip, do vi khuẩn)", complaints: [fever, abdominal_pain], suggested_urgency: 3, suggested_cant_miss: false }
+  # Phần b: sốt, đau đầu, nắng nóng
+  - { id: encephalitis, name_vi: "Viêm não (viêm não Nhật Bản, do vi rút herpes…)", complaints: [fever, headache], suggested_urgency: 1, suggested_cant_miss: true }
+  - { id: leptospirosis, name_vi: "Bệnh do xoắn khuẩn Leptospira", complaints: [fever, headache], suggested_urgency: 3, suggested_cant_miss: false }
+  - { id: kawasaki_disease, name_vi: "Bệnh Kawasaki", complaints: [fever], suggested_urgency: 3, suggested_cant_miss: false }
+  # Phạm vi ghi "Say nắng, sốc nhiệt" là một bệnh mức 1. Tách làm hai, như ngoại tâm thu ở lô 1: gộp lại thì
+  # người chỉ mệt, choáng sau khi phơi nắng bị khuyên gọi 115, và mất lời khuyên tự làm mát an toàn.
+  - { id: heat_exhaustion, name_vi: "Say nắng, kiệt sức do nóng", complaints: [headache, dizziness, syncope, fever], suggested_urgency: 5, suggested_cant_miss: false }
+  - { id: heat_stroke, name_vi: "Sốc nhiệt", complaints: [fever, headache, dizziness, syncope], suggested_urgency: 1, suggested_cant_miss: true }
+  - { id: acute_angle_closure_glaucoma, name_vi: "Glôcôm góc đóng cơn cấp", complaints: [headache], suggested_urgency: 2, suggested_cant_miss: true }
+  # Chỉ có ích khi người dùng có số đo huyết áp (bp_measured); không có số đo thì prior phải thấp.
+  - { id: hypertensive_crisis, name_vi: "Cơn tăng huyết áp", complaints: [headache, dizziness], suggested_urgency: 3, suggested_cant_miss: false }
+
+# Bệnh đã có: chỉ thêm liên kết với dấu hiệu mới của lô 2 và những điểm ghi ở đây.
+# Không sửa phần đã đối chiếu xong; nếu thấy giá trị cũ sai, ghi vào review.notes_vi.
+extend:
+  # Phần a
+  - { id: stroke, complaints: [dizziness, headache], note: "Liên kết neck_injury_or_manipulation (bóc tách động mạch đốt sống, động mạch cảnh) và atrial_fibrillation_known. Ca dev d-from-h-dizzy-020." }
+  - { id: transient_ischemic_attack, complaints: [dizziness], note: "Liên kết atrial_fibrillation_known, neck_injury_or_manipulation." }
+  - { id: cardiac_arrhythmia, complaints: [palpitations, syncope, dizziness], note: "Liên kết atrial_fibrillation_known (rung nhĩ đã biết)." }
+  # Phần b
+  - { id: migraine, complaints: [dizziness], note: "Chóng mặt do đau nửa đầu: xem lại dizziness_pattern (từng cơn vài phút đến vài giờ), similar_episodes_before. Ca dev d-from-h-dizzy-015." }
+  - { id: measles, complaints: [fever], note: "Giai đoạn khởi phát chưa mọc ban: xem lại tần suất rash_any theo thời điểm người dùng hỏi, sức nặng của measles_contact. Ca dev d-from-h-fever-009." }
+
+# Dấu hiệu mới của lô 2 (knowledge/findings/, mục "Giai đoạn 3, lô 2"): scrotal_pain, ovarian_cyst_known,
+# eye_pain_one_side, halos_around_lights, neck_injury_or_manipulation, heat_exposure, flood_mud_exposure,
+# calf_pain, thirst_polyuria, ketone_breath, known_aaa, atrial_fibrillation_known, red_lips_strawberry_tongue,
+# hands_feet_swelling_peeling, bcg_scar_red.
+
+# Việc của người bảo trì sau lượt C:
+# - điền cant_miss của các triệu chứng chính;
+# - thêm bệnh mới vào `conditions` của các quy tắc lô 2 (và rf_cholangitis_triad, rf_severe_abdominal_pain…);
+# - đổi bệnh đúng của ca dev d-from-h-syncope-017 từ "other" sang abdominal_aortic_aneurysm;
+# - phát hành (`npm run web:release`) khi lô đạt chỉ tiêu trên bộ ca giữ kín.

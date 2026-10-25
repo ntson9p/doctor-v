@@ -102,6 +102,8 @@
     - dengue_nearby
     - sick_contact_respiratory
     - measles_contact
+    - flood_mud_exposure
+    - heat_exposure
   none_label_vi: "Không có điều nào ở trên"
   # Tiền sử dịch tễ khi có sốt (sốt rét, sốt mò, sốt xuất huyết, cúm, sởi): hỏi cho mọi triệu chứng chính.
   requires:

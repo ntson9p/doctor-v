@@ -25,6 +25,8 @@ red_flags:
   - finding: missed_period
   - finding: fever
   - group: syncope_red_flags
+  # Lô 2: vỡ phình động mạch chủ có thể biểu hiện bằng ngất kèm đau lưng, hông (nhóm trên đã đủ 7 mục).
+  - finding: flank_pain
   # Hỏi trước nhóm dấu hiệu nguy hiểm toàn thân: người lú lẫn dừng ngay ở mức 1, nên nếu hỏi sau thì hạ đường
   # huyết không bao giờ vào danh sách cần loại trừ.
   - finding: diabetes

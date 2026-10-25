@@ -18,6 +18,8 @@
   type: binary
   label_vi: "Đau hông lưng"
   question_vi: "Có đau vùng hông lưng, một hoặc hai bên không?"
+  alt_question:
+    text_vi: "Có đau ở lưng, ngang thắt lưng hoặc hai bên sườn không?"
   leak: moderate
 - id: hematuria
   kind: sign
@@ -143,3 +145,27 @@
     age_groups: [teen_13_17, adult_18_44, adult_45_64]
   leak: 0.1
   leak_note: "Ra kinh nhiều khá phổ biến ở phụ nữ tuổi sinh đẻ; người bảo trì ước lượng."
+
+# ---------- Giai đoạn 3, lô 2 ----------
+- id: scrotal_pain
+  kind: symptom
+  type: binary
+  label_vi: "Đau hoặc sưng bìu, tinh hoàn"
+  question_vi: "Có đau hoặc sưng ở bìu, tinh hoàn không?"
+  help_vi: "Trẻ trai có thể ngại nói. Hãy hỏi kỹ, hoặc xem bìu có sưng, đỏ không."
+  alt_question:
+    text_vi: "Bìu có một bên to hơn, đỏ, hoặc chạm vào thấy đau không?"
+  applies_to:
+    sex: [male]
+  leak: 0.01
+  leak_note: "Ít gặp ở người đau bụng không do bệnh ở bìu; cơn đau quặn thận có thể lan xuống bìu (đã có dấu hiệu đau lan xuống bẹn). Người bảo trì ước lượng."
+- id: ovarian_cyst_known
+  kind: history
+  type: binary
+  label_vi: "Đã biết có u nang buồng trứng"
+  question_vi: "Bác sĩ đã từng nói có u nang hoặc khối u ở buồng trứng chưa?"
+  applies_to:
+    sex: [female]
+    age_groups: [teen_13_17, adult_18_44, adult_45_64, elder_65_74, elder_75p]
+  leak: 0.05
+  leak_note: "Nang buồng trứng hay được phát hiện tình cờ khi siêu âm; người bảo trì ước lượng."

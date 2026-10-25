@@ -138,6 +138,7 @@ Thêm sau lô 1 (hai ca cấp cứu của lần chấm giữ kín thứ hai bị
 - Phình động mạch chủ bụng cần cả triệu chứng Ngất và Chóng mặt (ca h-syncope-017).
 - Đột quỵ tuần hoàn sau sau khi bị bẻ cổ hoặc chấn thương cổ (ca h-dizzy-020): xét thêm dấu hiệu này cho Chóng mặt.
 - Ca nào được dùng để sửa sẽ chuyển sang dev, và có ca thay thế.
+- "Say nắng, sốc nhiệt" được tách làm hai bệnh: say nắng, kiệt sức do nóng (mức nhẹ) và sốc nhiệt (mức 1). Lô 2 vì vậy có 14 bệnh mới.
 
 ### Lô 3 — Ho, Khó thở, Đau ngực (15 bệnh mới)
 

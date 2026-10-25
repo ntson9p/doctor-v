@@ -1,5 +1,5 @@
-id: h-fever-009
-set: holdout
+id: d-from-h-fever-009
+set: dev
 title_vi: "Nam 16 tuổi, sốt cao 4 ngày, ho, mắt đỏ, chưa mọc ban, bạn cùng lớp bị sởi"
 narrative_vi: "Em Q., nam, 16 tuổi, học sinh lớp 10 ở Thành phố Hồ Chí Minh. Khoảng 12 ngày trước, một bạn cùng lớp nghỉ học vì bị sởi. Bốn ngày nay em sốt 39,2°C, ho nhiều, chảy nước mũi, đau họng, hai mắt đỏ và chảy nước mắt. Em mệt, chán ăn. Chưa thấy nổi ban. Gia đình không nhớ em đã tiêm đủ 2 mũi vắc xin sởi chưa."
 patient:

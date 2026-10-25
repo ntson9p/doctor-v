@@ -1,5 +1,5 @@
-id: h-dizzy-020
-set: holdout
+id: d-from-h-dizzy-020
+set: dev
 title_vi: "Nam 41 tuổi đau gáy từ khi bị bẻ cổ ở tiệm gội đầu, nay đột ngột chóng mặt quay, nôn, không tự đi được"
 narrative_vi: "Anh Đ., 41 tuổi, nhân viên văn phòng ở TP.HCM, khỏe mạnh, không tăng huyết áp, không hút thuốc, hay mỏi cổ vai gáy. Hai hôm trước anh đi gội đầu, được thợ 'bẻ cổ', vặn mạnh cổ sang hai bên, nghe kêu 'rắc'. Từ tối hôm đó anh đau gáy bên trái, nhức âm ỉ vùng sau đầu, quay cổ sang trái thì đau hơn nhưng vẫn cúi đầu được; uống thuốc giảm đau không đỡ. Khoảng 1 giờ trước, đang ngồi làm việc, anh đột ngột chóng mặt, thấy mọi vật quay tròn liên tục, nằm yên cũng không hết, buồn nôn, đã nôn 2 lần. Anh đứng dậy thì ngã xiêu sang trái, phải có hai đồng nghiệp dìu mới đi được, kể cả khi mở mắt. Anh vẫn tỉnh, nói rõ, cười hai bên miệng đều, giơ hai tay đều, không nhìn đôi, không ù tai, không nghe kém. Đồng nghiệp đo huyết áp được 150/90 mmHg. Trước đây anh chưa từng bị chóng mặt, mấy tuần nay không bị cảm."
 patient:
@@ -31,6 +31,7 @@ answers:
   vision_loss_or_double: absent
   es_stroke_signs: absent
   transient_neuro_symptoms: absent
+  neck_injury_or_manipulation: present
   confusion: absent
   drowsy_hard_to_wake: absent
   fainting_or_near_fainting: absent

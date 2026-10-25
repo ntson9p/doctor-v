@@ -247,3 +247,29 @@
   question_vi: "Trong cơn, có bị tê bì quanh miệng hoặc ở đầu các ngón tay không?"
   cluster: panic_attack
   leak: moderate
+
+# ---------- Giai đoạn 3, lô 2 ----------
+- id: eye_pain_one_side
+  kind: symptom
+  type: binary
+  label_vi: "Đau nhức dữ dội ở một bên mắt"
+  question_vi: "Có đau nhức dữ dội trong hoặc quanh một bên mắt không?"
+  help_vi: "Không tính cảm giác cộm, ngứa hay mỏi mắt."
+  leak: 0.03
+  leak_note: "Đau nửa đầu có thể đau quanh một mắt; đau nhức dữ dội trong mắt ít gặp ở các bệnh khác. Người bảo trì ước lượng; lượt A/B/C đối chiếu."
+- id: halos_around_lights
+  kind: symptom
+  type: binary
+  label_vi: "Thấy quầng sáng nhiều màu quanh bóng đèn"
+  question_vi: "Khi nhìn bóng đèn, có thấy vòng sáng nhiều màu quanh đèn không?"
+  cluster: visual
+  leak: 0.02
+  leak_note: "Quầng sáng quanh đèn do giác mạc phù trong cơn glôcôm cấp; cũng gặp khi đục thủy tinh thể. Người bảo trì ước lượng."
+- id: neck_injury_or_manipulation
+  kind: history
+  type: binary
+  label_vi: "Vừa bị bẻ, nắn cổ hoặc chấn thương cổ"
+  question_vi: "Vài tuần gần đây có bị bẻ, nắn cổ hoặc chấn thương vùng cổ không?"
+  help_vi: "Ví dụ bẻ cổ khi gội đầu, xoa bóp, nắn chỉnh cột sống, ngã hoặc tai nạn xe."
+  leak: 0.02
+  leak_note: "Người bảo trì ước lượng. Bóc tách động mạch cổ sau bẻ, nắn cổ hoặc chấn thương là nguyên nhân đột quỵ ở người trẻ."

@@ -1164,13 +1164,14 @@
           - { finding: hypertension_known, is: present }
           - { finding: diabetes, is: present }
           - { finding: known_heart_disease, is: present }
+          - { finding: neck_injury_or_manipulation, is: present }
   reason_vi: "Chóng mặt kèm nhìn đôi, mất thị lực hoặc không tự đi được ở người có nguy cơ đột quỵ: gọi 115 ngay."
   evidence:
     tier: B
     basis: judgment
-    sources: [byt-qd-3312-2024, grace3-dizziness-2023, nhs-stroke-symptoms]
+    sources: [byt-qd-3312-2024, grace3-dizziness-2023, nhs-stroke-symptoms, biller-stroke-2014]
     locator: "3312/QĐ-BYT (2024) bài 2 mục 3.1, 4.1; GRACE-3 khuyến cáo 2, 4; NHS Symptoms of a stroke (Call 999 now if)"
-    note: "Cùng cấu trúc với rf_befast_high_risk (Đau đầu): dấu hiệu B (thăng bằng) và E (mắt) của BE-FAST ở người từ 50 tuổi hoặc có tăng huyết áp, đái tháo đường, bệnh tim. 3312/QĐ-BYT (2024): khi phát hiện đột quỵ cấp cần vận chuyển nhanh, an toàn đến cơ sở điều trị được đột quỵ. NHS: nghĩ đang bị đột quỵ thì gọi 999; dấu hiệu gồm chóng mặt hoặc ngã, nhìn mờ hoặc mất thị lực. Cùng giới hạn kiểu chóng mặt như rf_dizziness_central_signs. Mức 1 và ngưỡng 50 tuổi là nhận định (như quy tắc của Đau đầu), chờ bác sĩ duyệt."
+    note: "Cùng cấu trúc với rf_befast_high_risk (Đau đầu): dấu hiệu B (thăng bằng) và E (mắt) của BE-FAST ở người từ 50 tuổi hoặc có tăng huyết áp, đái tháo đường, bệnh tim. 3312/QĐ-BYT (2024): khi phát hiện đột quỵ cấp cần vận chuyển nhanh, an toàn đến cơ sở điều trị được đột quỵ. NHS: nghĩ đang bị đột quỵ thì gọi 999; dấu hiệu gồm chóng mặt hoặc ngã, nhìn mờ hoặc mất thị lực. Cùng giới hạn kiểu chóng mặt như rf_dizziness_central_signs. Mức 1 và ngưỡng 50 tuổi là nhận định (như quy tắc của Đau đầu), chờ bác sĩ duyệt. Lô 2: thêm bẻ, nắn cổ hoặc chấn thương cổ gần đây, vì bóc tách động mạch đốt sống gây đột quỵ tuần hoàn sau ở mọi lứa tuổi (AHA/ASA 2014, lượt R đối chiếu)."
 
 - id: rf_acute_vertigo_vascular_risk
   level: 2
@@ -1184,13 +1185,14 @@
           - { finding: hypertension_known, is: present }
           - { finding: diabetes, is: present }
           - { finding: known_heart_disease, is: present }
+          - { finding: neck_injury_or_manipulation, is: present }
   reason_vi: "Chóng mặt liên tục mới xuất hiện ở người có nguy cơ đột quỵ cần khám cấp cứu. Tại nhà không phân biệt được với đột quỵ."
   evidence:
     tier: B
     basis: judgment
-    sources: [grace3-dizziness-2023, byt-qd-3312-2024]
+    sources: [grace3-dizziness-2023, byt-qd-3312-2024, biller-stroke-2014]
     locator: "GRACE-3: định nghĩa hội chứng tiền đình cấp, khuyến cáo 2–7 (trang SAEM); 3312/QĐ-BYT (2024) bài 2 mục 3.4"
-    note: "GRACE-3: chóng mặt liên tục, khởi phát cấp, kéo dài trên 24 giờ là hội chứng tiền đình cấp; cần người được đào tạo khám HINTS hoặc chụp cộng hưởng từ để phân biệt đột quỵ với viêm dây thần kinh tiền đình, chụp cắt lớp vi tính không dùng để phân biệt. GRACE-3 phân loại theo thời gian và yếu tố khởi phát, không theo cảm giác, nên lựa chọn 'liên tục không dứt, mới bắt đầu vài ngày nay' tương ứng định nghĩa này dù là chóng mặt quay hay choáng váng. 3312/QĐ-BYT (2024): viêm mê đạo có thể nhầm với đột quỵ tiểu não. Ở Việt Nam ít nơi khám được HINTS, nên người có nguy cơ mạch máu được khuyên đi cấp cứu ở bệnh viện điều trị được đột quỵ. Ngưỡng 60 tuổi do người bảo trì chọn (phần GRACE-3 đọc được không nêu ngưỡng tuổi); chờ bác sĩ duyệt."
+    note: "GRACE-3: chóng mặt liên tục, khởi phát cấp, kéo dài trên 24 giờ là hội chứng tiền đình cấp; cần người được đào tạo khám HINTS hoặc chụp cộng hưởng từ để phân biệt đột quỵ với viêm dây thần kinh tiền đình, chụp cắt lớp vi tính không dùng để phân biệt. GRACE-3 phân loại theo thời gian và yếu tố khởi phát, không theo cảm giác, nên lựa chọn 'liên tục không dứt, mới bắt đầu vài ngày nay' tương ứng định nghĩa này dù là chóng mặt quay hay choáng váng. 3312/QĐ-BYT (2024): viêm mê đạo có thể nhầm với đột quỵ tiểu não. Ở Việt Nam ít nơi khám được HINTS, nên người có nguy cơ mạch máu được khuyên đi cấp cứu ở bệnh viện điều trị được đột quỵ. Ngưỡng 60 tuổi do người bảo trì chọn (phần GRACE-3 đọc được không nêu ngưỡng tuổi); chờ bác sĩ duyệt. Lô 2: thêm bẻ, nắn cổ hoặc chấn thương cổ gần đây, vì bóc tách động mạch đốt sống gây đột quỵ tuần hoàn sau ở mọi lứa tuổi (AHA/ASA 2014, lượt R đối chiếu)."
 
 - id: rf_transient_neuro
   level: 2
@@ -1558,13 +1560,13 @@
       - { finding: vertigo_spinning, is: present }
       - any:
           - { finding: similar_episodes_before, is: present }
-          - { finding: dizziness_pattern, in: [chronic] }
+          - { finding: dizziness_pattern, in: [long_episodes, chronic] }
   reason_vi: "Chóng mặt quay cuồng hay tái lại hoặc kéo dài cần đi khám để tìm nguyên nhân."
   evidence:
     tier: C
     basis: verbal
     sources: [nhs-vertigo]
-    note: "NHS Vertigo (lượt R đã mở): đi khám (không khẩn) khi chóng mặt quay không hết hoặc hay tái lại. Người bảo trì thêm theo đề xuất của lượt C lô 1 phần a."
+    note: "NHS Vertigo (lượt R đã mở): đi khám (không khẩn) khi chóng mặt quay không hết hoặc hay tái lại. Người bảo trì thêm theo đề xuất của lượt C lô 1 phần a. Lô 2: tính cả kiểu 'từng cơn, mỗi cơn vài phút đến vài giờ', vì đó đã là nhiều cơn; phiên hỏi thường dừng trước khi hỏi 'đã từng bị như vậy' (ca d-from-h-dizzy-015)."
 
 - id: rf_co_exposure_syncope
   level: 1
@@ -1635,3 +1637,180 @@
     basis: judgment
     sources: [esc-syncope-2018]
     note: "ESC 2018 bảng 6: nhịp chậm kéo dài dưới 40 lần mỗi phút khi thức là đặc điểm nguy cơ cao loại nặng. Có triệu chứng thiếu máu não, khó thở hoặc đau ngực thì chọn mức 1 (người bảo trì)."
+
+# ---------- Giai đoạn 3, lô 2 (nguồn chờ lượt R xác minh) ----------
+- id: rf_scrotal_pain
+  level: 2
+  complaints: [abdominal_pain]
+  when: { finding: scrotal_pain, is: present }
+  reason_vi: "Đau bụng kèm đau hoặc sưng bìu có thể là xoắn tinh hoàn. Cần đến cấp cứu ngay, vì phải mổ trong vài giờ để giữ tinh hoàn."
+  evidence:
+    tier: C
+    basis: verbal
+    sources: [nhs-testicle-pain]
+    note: "NHS Testicle pain (người bảo trì ghi theo trí nhớ, lượt R mở và đối chiếu): đau tinh hoàn đột ngột, dữ dội, hoặc đau tinh hoàn kèm đau bụng, nôn thì đến cấp cứu hoặc gọi 999. Mức 2 theo quy ước 'gọi 999 hoặc đến cấp cứu' của lô 1."
+
+- id: rf_acute_glaucoma_signs
+  level: 2
+  complaints: [headache]
+  when:
+    all:
+      - { finding: eye_pain_one_side, is: present }
+      - any:
+          - { finding: red_eyes, is: present }
+          - { finding: halos_around_lights, is: present }
+  reason_vi: "Đau đầu kèm đau nhức một bên mắt, đỏ mắt hoặc thấy quầng sáng quanh đèn có thể là cơn glôcôm cấp. Cần khám mắt cấp cứu ngay, vì chậm có thể mất thị lực."
+  evidence:
+    tier: B
+    basis: verbal
+    sources: [nice-cg150, nhs-glaucoma]
+    note: "NICE CG150: triệu chứng, dấu hiệu của glôcôm góc đóng cấp là dấu hiệu cảnh báo khi đau đầu. NHS Glaucoma (người bảo trì ghi theo trí nhớ, lượt R đối chiếu): glôcôm cấp cần đến cấp cứu mắt ngay (đau mắt dữ dội, đỏ mắt, nhìn mờ, quầng sáng quanh đèn, đau đầu, buồn nôn). Không dùng 'nhìn mờ' vì nhìn mờ, đốm sáng hay gặp trong đau nửa đầu có tiền triệu."
+
+- id: rf_heat_stroke_signs
+  level: 1
+  complaints: [fever, headache, dizziness, syncope]
+  when:
+    all:
+      - { finding: heat_exposure, is: present }
+      - any:
+          - { finding: confusion, is: present }
+          - { finding: drowsy_hard_to_wake, is: present }
+          - { finding: seizure_recent, is: present }
+  reason_vi: "Sau khi ở nơi nắng nóng mà lú lẫn, lơ mơ hoặc co giật có thể là sốc nhiệt. Gọi 115 ngay; trong lúc chờ, đưa vào chỗ mát, cởi bớt quần áo, làm mát bằng nước."
+  evidence:
+    tier: C
+    basis: verbal
+    sources: [nhs-heat-exhaustion-heatstroke]
+    note: "NHS Heat exhaustion and heatstroke (người bảo trì ghi theo trí nhớ, lượt R đối chiếu): gọi 999 khi có dấu hiệu sốc nhiệt (lú lẫn, co giật, mất ý thức, không đổ mồ hôi dù rất nóng, thở nhanh, sốt từ 40°C, không đỡ sau 30 phút làm mát). Lú lẫn, lơ mơ đã ở mức 1 theo quy tắc chung; quy tắc này thêm sốc nhiệt vào danh sách cần loại trừ và hướng dẫn làm mát."
+
+- id: rf_kawasaki_signs
+  level: 3
+  complaints: [fever]
+  when:
+    all:
+      - { age_groups: [child_2m_5y, child_5_12] }
+      - { finding: fever_duration, in: [d3_5, d6_7, gt_7d] }
+      - at_least: 2
+        of:
+          - { finding: red_eyes, is: present }
+          - { finding: red_lips_strawberry_tongue, is: present }
+          - { finding: hands_feet_swelling_peeling, is: present }
+          - { finding: rash_any, is: present }
+          - { finding: lymph_node_swelling, is: present }
+          - { finding: bcg_scar_red, is: present }
+  reason_vi: "Trẻ sốt từ 3 ngày kèm đỏ mắt, môi đỏ nứt, phát ban, sưng tay chân hoặc nổi hạch cổ có thể bị bệnh Kawasaki. Cần khám trong 24 giờ để được điều trị sớm, tránh tổn thương tim."
+  evidence:
+    tier: B
+    basis: judgment
+    sources: [aha-kawasaki-2017, nhs-kawasaki-disease]
+    note: "AHA 2017: chẩn đoán khi sốt từ 5 ngày kèm từ 4/5 tiêu chuẩn chính (kết mạc đỏ, môi miệng đỏ, phát ban, tay chân sưng đỏ hoặc bong da, hạch cổ); thể không điển hình có ít tiêu chuẩn hơn; vết BCG sưng đỏ gợi ý ở trẻ đã tiêm BCG. Điều trị trong 10 ngày đầu giảm tổn thương mạch vành. NHS Kawasaki disease (lượt R đối chiếu): sốt từ 5 ngày kèm dấu hiệu khác thì khám khẩn. Ngưỡng 3 ngày và 2 dấu hiệu do người bảo trì chọn để không bỏ sót thể không điển hình; sốt từ 6 ngày đã ở mức 3 theo rf_prolonged_fever."
+
+- id: rf_dka_suspected
+  level: 2
+  complaints: [abdominal_pain, fever, headache, dizziness, syncope]
+  when:
+    all:
+      - any:
+          - { finding: diabetes, is: present }
+          - { finding: thirst_polyuria, is: present }
+      - any:
+          - { finding: ketone_breath, is: present }
+          - { finding: breathing_difficulty, is: present }
+          - all:
+              - { finding: vomiting, is: present }
+              - any:
+                  - { finding: thirst_polyuria, is: present }
+                  - { finding: glucose_measured, in: [high] }
+  reason_vi: "Người tiểu đường hoặc khát nhiều, tiểu nhiều mà nôn, thở nhanh sâu, hơi thở có mùi trái cây có thể bị nhiễm toan ceton. Cần đến cấp cứu ngay."
+  evidence:
+    tier: C
+    basis: verbal
+    sources: [nhs-diabetic-ketoacidosis]
+    note: "NHS Diabetic ketoacidosis (người bảo trì ghi theo trí nhớ, lượt R đối chiếu): người đái tháo đường có triệu chứng nhiễm toan ceton (nôn, đau bụng, thở nhanh sâu, hơi thở mùi trái cây, buồn ngủ, lú lẫn) hoặc đường huyết, ceton cao thì đến cấp cứu ngay. Trẻ chưa biết bị đái tháo đường hay khởi phát bằng nhiễm toan ceton, nên dùng cả 'khát nhiều, tiểu nhiều'."
+
+- id: rf_new_diabetes_child
+  level: 3
+  complaints: [abdominal_pain, fever, headache, dizziness]
+  when:
+    all:
+      - { age_groups: [child_2m_5y, child_5_12, teen_13_17] }
+      - { finding: thirst_polyuria, is: present }
+      - any:
+          - { finding: weight_loss_unintended, is: present }
+          - { finding: fatigue, is: present }
+  reason_vi: "Trẻ khát nhiều, tiểu nhiều kèm sụt cân hoặc mệt có thể bị tiểu đường. Cần khám và thử đường máu ngay trong ngày."
+  evidence:
+    tier: B
+    basis: verbal
+    sources: [nice-ng18]
+    note: "NICE NG18 (người bảo trì ghi theo trí nhớ, lượt R đối chiếu): trẻ nghi đái tháo đường típ 1 cần được chuyển ngay trong ngày tới nhóm chuyên khoa, vì có thể nhanh chóng chuyển sang nhiễm toan ceton."
+
+- id: rf_aaa_rupture_signs
+  level: 1
+  complaints: [abdominal_pain, syncope, dizziness]
+  when:
+    all:
+      - { age_years_gte: 60 }
+      - any:
+          - { finding: abd_pain_severe, is: present }
+          - { finding: abd_pain_radiates_back, is: present }
+          - { finding: flank_pain, is: present }
+      - any:
+          - { finding: fainting_or_near_fainting, is: present }
+          - { finding: cold_hands_feet, is: present }
+          - { finding: cold_sweat, is: present }
+  reason_vi: "Từ 60 tuổi mà đau bụng, lưng dữ dội kèm ngất, choáng hoặc vã mồ hôi lạnh có thể là vỡ phình động mạch chủ. Gọi 115 ngay."
+  evidence:
+    tier: C
+    basis: verbal
+    sources: [nhs-abdominal-aortic-aneurysm]
+    note: "NHS Abdominal aortic aneurysm (người bảo trì ghi theo trí nhớ, lượt R đối chiếu): đau đột ngột, dữ dội ở bụng hoặc lưng kèm choáng, vã mồ hôi, ngất là dấu hiệu vỡ phình, gọi 999. Vỡ phình hay bị nhầm với cơn đau quặn thận ở người cao tuổi. Ngưỡng 60 tuổi do người bảo trì chọn, chờ bác sĩ duyệt."
+
+- id: rf_lepto_severe
+  level: 2
+  complaints: [fever, headache]
+  when:
+    all:
+      - { finding: fever, is: present }
+      - { finding: flood_mud_exposure, is: present }
+      - any:
+          - { finding: jaundice, is: present }
+          - { finding: decreased_urine, is: present }
+          - { finding: bleeding_gums_nose, is: present }
+          - { finding: hemoptysis, is: present }
+          - { finding: breathing_difficulty, is: present }
+  reason_vi: "Sốt sau khi lội nước bẩn, kèm vàng da, tiểu ít, chảy máu hoặc khó thở có thể là bệnh Leptospira thể nặng. Cần khám cấp cứu ngay."
+  evidence:
+    tier: B
+    basis: verbal
+    sources: [who-leptospirosis-2003]
+    note: "WHO 2003 (người bảo trì ghi theo trí nhớ, lượt R đối chiếu): thể nặng có vàng da, suy thận (tiểu ít), xuất huyết, xuất huyết phổi; cần nhập viện. Lượt R tìm thêm hướng dẫn của Bộ Y tế nếu có."
+
+- id: rf_fever_jaundice
+  level: 3
+  complaints: [fever, abdominal_pain, headache]
+  when:
+    all:
+      - { finding: fever, is: present }
+      - { finding: jaundice, is: present }
+  reason_vi: "Sốt kèm vàng da, vàng mắt cần khám trong 24 giờ để tìm nguyên nhân."
+  evidence:
+    tier: C
+    basis: verbal
+    sources: [nhs-jaundice]
+    note: "NHS Jaundice (người bảo trì ghi theo trí nhớ, lượt R đối chiếu): vàng da cần khám khẩn. Sốt kèm vàng da và đau bụng đã ở mức 2 (rf_cholangitis_triad); sau khi đi rừng đã ở mức 2 (rf_fever_jaundice_malaria_exposure)."
+
+- id: rf_measles_contact_fever
+  level: 3
+  conditions: [measles]
+  complaints: [fever]
+  when:
+    all:
+      - { finding: fever, is: present }
+      - { finding: measles_contact, is: present }
+  reason_vi: "Sốt sau khi tiếp xúc người bị sởi có thể là sởi, kể cả khi chưa mọc ban. Cần khám trong 24 giờ; gọi trước để được khám riêng, tránh lây cho người khác."
+  evidence:
+    tier: B
+    basis: verbal
+    sources: [byt-qd-1019-2025, nhs-measles]
+    note: "1019/QĐ-BYT: ban sởi mọc sau vài ngày sốt, ho, chảy mũi, mắt đỏ (giai đoạn khởi phát), là lúc dễ lây nhất. NHS Measles (người bảo trì ghi theo trí nhớ, lượt R đối chiếu): nghĩ bị sởi, hoặc đã tiếp xúc gần người bị sởi mà chưa tiêm đủ 2 mũi thì hẹn khám khẩn hoặc gọi 111, gọi trước khi đến để tránh lây. Thêm sau ca d-from-h-fever-009."

@@ -17,6 +17,8 @@ red_flags:
   - group: young_infant_danger_signs
   - group: child_danger_signs
   - group: abdominal_red_flags
+  # Lô 2: xoắn tinh hoàn ở trẻ trai, nam trẻ có thể chỉ biểu hiện bằng đau bụng (nhóm trên đã đủ 7 mục).
+  - finding: scrotal_pain
   - group: general_danger_signs
   - finding: red_jelly_stool
   - finding: pregnant

@@ -351,3 +351,30 @@
   label_vi: "Mắt lồi"
   question_vi: "Mắt có lồi ra hơn trước không?"
   leak: specific
+
+# ---------- Giai đoạn 3, lô 2 ----------
+- id: calf_pain
+  kind: symptom
+  type: binary
+  label_vi: "Đau nhiều ở hai bắp chân"
+  question_vi: "Có đau nhiều ở hai bắp chân, bóp vào thấy đau không?"
+  help_vi: "Khác với sưng đau một bên bắp chân, được hỏi riêng."
+  cluster: aches
+  leak: 0.1
+  leak_note: "Đau cơ khi sốt hay gặp, nhưng đau nhiều, ấn đau ở bắp chân ít gặp hơn. Người bảo trì ước lượng."
+- id: thirst_polyuria
+  kind: symptom
+  type: binary
+  label_vi: "Khát nhiều, tiểu nhiều"
+  question_vi: "Gần đây có khát nước nhiều và đi tiểu nhiều hơn hẳn bình thường không?"
+  help_vi: "Ví dụ phải dậy đi tiểu nhiều lần trong đêm, hoặc trẻ đã biết đi vệ sinh lại đái dầm."
+  leak: 0.05
+  leak_note: "Người bảo trì ước lượng; trời nóng hoặc uống nhiều nước cũng làm tiểu nhiều."
+- id: ketone_breath
+  kind: sign
+  type: binary
+  label_vi: "Hơi thở có mùi như trái cây chín"
+  question_vi: "Hơi thở có mùi lạ như trái cây chín hoặc nước rửa móng tay không?"
+  help_vi: "Người nhà thường nhận ra mùi này trước người bệnh."
+  leak: 0.01
+  leak_note: "Người bảo trì ước lượng."

@@ -556,3 +556,56 @@ Lô 2 thêm bệnh cho Sốt, Đau bụng, Đau đầu, ba triệu chứng đang
 - `npm run web:release` build vào `apps/web/dist/`; chỉ chạy khi lô đạt chỉ tiêu. Mỗi lần phát hành có tag git `release-…`.
 
 Bản đang phát hành: lô 1 (6 triệu chứng chính), tag `release-phase3-batch1`.
+
+## 2026-10-26 — Giai đoạn 3, lô 2 (bổ sung cho Sốt, Đau bụng, Đau đầu): bắt đầu
+
+**Phạm vi** (`knowledge/drafts/phase-3/batch-2/scope.yaml`):
+- 14 bệnh mới. Phạm vi ghi 13 bệnh; "Say nắng, sốc nhiệt" được tách làm hai:
+  - say nắng, kiệt sức do nóng (gợi ý mức 5, tự làm mát);
+  - sốc nhiệt (mức 1).
+  Gộp lại thì người chỉ mệt, choáng sau khi phơi nắng bị khuyên gọi 115.
+- 5 bệnh mở rộng: đột quỵ, cơn thiếu máu não thoáng qua, rối loạn nhịp tim, đau nửa đầu, sởi.
+
+**Danh mục mới:**
+- 15 dấu hiệu:
+  - đau, sưng bìu;
+  - đau nhức một bên mắt; quầng sáng quanh đèn;
+  - vừa bị bẻ, nắn cổ;
+  - phơi nắng, làm việc nơi nóng bức; lội nước lũ, bùn, tiếp xúc chuột;
+  - đau hai bắp chân;
+  - khát nhiều, tiểu nhiều; hơi thở mùi trái cây;
+  - đã biết phình động mạch chủ, rung nhĩ, u nang buồng trứng;
+  - 3 dấu hiệu Kawasaki: môi đỏ nứt, lưỡi dâu; tay chân sưng, bong da; vết BCG sưng đỏ.
+- Bảng hỏi đánh dấu có tối đa 7 mục. Ba câu mới được hỏi riêng, ngay sau nhóm dấu hiệu nguy hiểm tương ứng:
+  - đau bìu (Đau bụng);
+  - đau một bên mắt (Đau đầu);
+  - đau hông lưng (Ngất).
+- 10 quy tắc mới, nguồn chờ lượt R xác minh:
+  - xoắn tinh hoàn (mức 2);
+  - glôcôm cấp (mức 2);
+  - sốc nhiệt (mức 1);
+  - Kawasaki (mức 3);
+  - nhiễm toan ceton (mức 2); trẻ nghi đái tháo đường (mức 3);
+  - vỡ phình động mạch chủ ở người từ 60 tuổi (mức 1);
+  - Leptospira thể nặng (mức 2);
+  - sốt kèm vàng da (mức 3);
+  - sốt sau khi tiếp xúc người bị sởi (mức 3).
+
+**4 ca giữ kín chuyển sang dev,** vì được dùng để sửa (quy tắc giữ kín). Một agent độc lập sẽ viết ca thay thế.
+- d-from-h-syncope-017 (vỡ phình động mạch chủ): quy tắc mới ở trên. Nay đúng mức 1.
+- d-from-h-dizzy-020 (đột quỵ sau bẻ cổ): "vừa bị bẻ, nắn cổ" được tính là yếu tố nguy cơ trong hai quy tắc đột quỵ của Chóng mặt. Nay đúng mức 1.
+- d-from-h-dizzy-015 (chóng mặt do đau nửa đầu): quy tắc chóng mặt quay tái diễn tính cả kiểu "từng cơn vài phút đến vài giờ", vì phiên hỏi thường dừng trước câu "đã từng bị như vậy". Nay đúng mức 4.
+- d-from-h-fever-009 (sởi chưa mọc ban): quy tắc tiếp xúc người bị sởi. Nay đúng mức 3.
+
+**Bộ dev** (170 ca):
+- Sạch: bỏ sót 0/75, an toàn 99,4%, top-3 95,8%.
+- Nhiễu: bỏ sót 12/375; khuyên khám quá mức 17,3% → 18,7%. Lý do: các câu nguy hiểm mới bị đổi thành "Không rõ" (15% câu trả lời) thì app khuyên khám trong 24 giờ, đúng nguyên tắc an toàn.
+- Trước khi thêm 4 ca, bộ dev cho kết quả giống hệt ở chế độ sạch.
+
+**Việc tồn:** câu huyết áp chưa có lựa chọn "huyết áp thấp" (dưới 90/60), dấu hiệu sốc quan trọng khi ngất.
+
+**Tiếp theo:**
+1. Lượt R (quy tắc, nguồn).
+2. Lượt A (2 agent).
+3. Agent viết ca giữ kín.
+4. Lượt B, lượt C, tích hợp, chấm điểm.

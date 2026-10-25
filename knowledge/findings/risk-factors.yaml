@@ -128,3 +128,24 @@
   question_vi: "Có bị xơ gan hoặc viêm gan B, viêm gan C mạn tính không?"
   leak: 0.06
   leak_note: "Viêm gan B lưu hành cao ở Việt Nam; người bảo trì ước lượng (lượt A lô 1 phần b đề xuất)."
+
+# ---------- Giai đoạn 3, lô 2 ----------
+- id: known_aaa
+  kind: history
+  type: binary
+  label_vi: "Đã biết có phình động mạch chủ"
+  question_vi: "Bác sĩ đã từng nói có phình động mạch chủ chưa?"
+  help_vi: "Động mạch chủ là mạch máu lớn nhất, chạy qua ngực và bụng."
+  applies_to:
+    age_groups: [adult_45_64, elder_65_74, elder_75p]
+  leak: 0.01
+  leak_note: "Người bảo trì ước lượng."
+- id: atrial_fibrillation_known
+  kind: history
+  type: binary
+  label_vi: "Bị rung nhĩ"
+  question_vi: "Bác sĩ đã từng nói bị rung nhĩ (một kiểu loạn nhịp tim) chưa?"
+  applies_to:
+    age_groups: [adult_45_64, elder_65_74, elder_75p]
+  leak: 0.04
+  leak_note: "Rung nhĩ tăng theo tuổi (vài phần trăm ở người cao tuổi); người bảo trì ước lượng."

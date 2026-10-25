@@ -14,6 +14,8 @@ age_groups: [child_2m_5y, child_5_12, teen_13_17, adult_18_44, adult_45_64, elde
 red_flags:
   - group: child_danger_signs
   - group: headache_red_flags
+  # Lô 2: dấu hiệu glôcôm cấp là dấu hiệu cảnh báo của đau đầu (NICE CG150; nhóm trên đã đủ 7 mục).
+  - finding: eye_pain_one_side
   - group: general_danger_signs
   # Lượt R: ban không mất khi ấn kèm đau đầu là dấu hiệu bệnh não mô cầu (NG240; NHS Headaches).
   - finding: rash_any
