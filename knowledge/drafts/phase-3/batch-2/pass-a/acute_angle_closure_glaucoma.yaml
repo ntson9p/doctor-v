@@ -1,0 +1,188 @@
+id: acute_angle_closure_glaucoma
+names:
+  vi: "Glôcôm góc đóng cơn cấp"
+  vi_common: ["Cơn tăng nhãn áp cấp", "Cườm nước cấp"]
+  en: "Acute angle-closure glaucoma (acute primary angle closure)"
+codes:
+  icd10: "H40.2"
+  icd10_verified: false
+  mondo: "MONDO:0001817"
+summary_vi:
+  - "Nhãn áp trong mắt tăng rất cao đột ngột do góc thoát thủy dịch của mắt bị đóng lại."
+  - "Thường đau nhức dữ dội một bên mắt lan lên đầu, mắt đỏ, nhìn mờ, thấy quầng sáng quanh đèn, buồn nôn."
+  - "Đây là cấp cứu mắt: điều trị chậm có thể mất thị lực vĩnh viễn."
+urgency: 2
+cant_miss: true
+specialties: [ophthalmology, emergency]
+applicability:
+  age_groups: [adult_18_44, adult_45_64, elder_65_74, elder_75p]
+  reason_vi: "Góc tiền phòng hẹp không có ở người trẻ; cơn cấp gần như chỉ gặp từ 40 tuổi."
+priors:
+  - complaint: headache
+    default: P6
+    by_age: { adult_45_64: P5, elder_65_74: P4, elder_75p: P4 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [seah-archophthalmol-1997, lai-hkmj-2001, ha-plosone-2019, msd-angle-closure-glaucoma]
+      locator: "Seah 1997 tóm tắt; Lai 2001 tóm tắt; Ha 2019 bảng 2; MSD (người bệnh bị nhầm là bệnh thần kinh)"
+      reported: "Tỷ lệ mới mắc 12,2/100.000 người từ 30 tuổi mỗi năm (Singapore), 10,4/100.000 (Hồng Kông), 58,7/100.000 người từ 70 tuổi (Hồng Kông); từ 60 tuổi nguy cơ gấp 9,1 lần; không có ca dưới 40 tuổi (Hàn Quốc)"
+      note: "Chưa có số liệu Việt Nam; dùng số liệu người gốc Hoa ở Singapore, Hồng Kông. Triệu chứng chính Mắt chưa có trong app, nên phần lớn người bệnh sẽ chọn Đau đầu (đau lan lên nửa đầu, buồn nôn). Giả sử 4–5% người lớn đi khám vì đau đầu mỗi năm: 45–64 tuổi khoảng 0,1% (P5); 65–74 tuổi khoảng 0,3–0,5% và từ 75 tuổi khoảng 0,5–1% (P4); 18–44 tuổi dưới 0,02% (P6). Ước lượng, cần bác sĩ duyệt."
+prior_modifiers:
+  - when: { sex: [female] }
+    factor: 1.5
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [seah-archophthalmol-1997, lai-hkmj-2001, ha-plosone-2019]
+      locator: "Seah 1997 tóm tắt; Lai 2001 tóm tắt; Ha 2019 bảng 2"
+      reported: "Nữ có nguy cơ gấp 2,4 lần (Singapore) và 3,8 lần (Hồng Kông) nam; nữ chiếm 64–70% (Hàn Quốc)"
+      note: "Cặp hệ số 1,5 (nữ) và 0,65 (nam) cho tỉ số khoảng 2,3, gần mức thấp của các nguồn để thận trọng; tích gần 1."
+  - when: { sex: [male] }
+    factor: 0.65
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [seah-archophthalmol-1997, lai-hkmj-2001, ha-plosone-2019]
+      locator: "Như trên"
+      reported: "Như hệ số cho nữ."
+      note: "Đi cặp với hệ số 1,5 cho nữ."
+findings:
+  - finding: eye_pain_one_side
+    freq: very_frequent
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-40-2015, nhs-glaucoma, msd-angle-closure-glaucoma]
+      locator: "40/QĐ-BYT bài Glôcôm góc đóng nguyên phát, mục 3.a (cơn cấp: đột ngột đau nhức mắt, nhức quanh hốc mắt); NHS (intense eye pain); MSD (severe ocular pain)"
+      note: "Triệu chứng chính của cơn cấp ở cả ba nguồn. Không chọn almost_always: một số người kể là đau đầu quanh mắt, hoặc cơn bán cấp đau nhẹ."
+  - finding: red_eyes
+    freq: very_frequent
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-40-2015, nhs-glaucoma, msd-angle-closure-glaucoma]
+      locator: "40/QĐ-BYT mục 3.a (mắt cương tụ đỏ, mi sưng nề); NHS (a red eye); MSD (redness)"
+      note: "Dấu hiệu khám thấy ở hầu hết cơn cấp. Đau đầu kèm đau mắt và đỏ mắt đã ở mức 2 (rf_acute_glaucoma_signs)."
+  - finding: blurred_vision
+    freq: very_frequent
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-40-2015, nhs-glaucoma, msd-angle-closure-glaucoma]
+      locator: "40/QĐ-BYT mục 3.a (nhìn mờ như qua màn sương; thị lực giảm sút nhiều); NHS (blurred vision); MSD (decreased vision)"
+      note: "Giác mạc phù làm nhìn mờ. Cùng cụm thị giác với quầng sáng và mất thị lực."
+  - finding: halos_around_lights
+    freq: frequent
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-40-2015, nhs-glaucoma, msd-angle-closure-glaucoma]
+      locator: "40/QĐ-BYT mục 3.a (nhìn đèn có quầng xanh đỏ); NHS (rainbow-coloured circles around bright lights); MSD (colored halos)"
+      note: "Cả ba nguồn nêu nhưng không có tỷ lệ; người bệnh chỉ nhận ra khi nhìn đèn (cơn hay xảy ra về chiều tối). Chọn frequent. Tỷ lệ nền 2% nên câu trả lời 'có' làm tăng mạnh khả năng bệnh."
+  - finding: vision_loss_or_double
+    freq: occasional
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-40-2015, msd-angle-closure-glaucoma]
+      locator: "40/QĐ-BYT mục 3.a (thị lực giảm sút nhiều); MSD (thị lực có thể mất nhanh)"
+      note: "Thị lực giảm nhiều đột ngột có thể được kể là mất một phần thị lực; phần lớn sẽ kể là nhìn mờ (đã liên kết). Ước occasional; câu trả lời 'có' đã ở mức 2 (rf_vision_loss)."
+  - finding: photophobia
+    freq: frequent
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-40-2015]
+      locator: "Bài Glôcôm góc đóng nguyên phát, mục 3.a (sợ ánh sáng, chói, chảy nước mắt)"
+      note: "Nằm trong danh sách triệu chứng cơn cấp, không có tỷ lệ; chọn frequent. Không giúp phân biệt với đau nửa đầu (very_frequent)."
+  - finding: nausea
+    freq: frequent
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-40-2015, nhs-glaucoma, msd-angle-closure-glaucoma]
+      locator: "40/QĐ-BYT mục 3.a (có thể buồn nôn hoặc nôn); NHS (feeling sick); MSD (nausea)"
+      note: "Triệu chứng toàn thân hay gặp, có khi nặng đến mức bị nhầm là bệnh tiêu hóa (MSD). Chọn frequent."
+  - finding: vomiting
+    freq: occasional
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [msd-angle-closure-glaucoma, byt-qd-40-2015, nhs-glaucoma]
+      locator: "MSD (sometimes vomiting); 40/QĐ-BYT mục 3.a; NHS (being sick)"
+      note: "'Đôi khi' chuyển thành occasional."
+  - finding: abdominal_pain
+    freq: occasional
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-40-2015]
+      locator: "Bài Glôcôm góc đóng nguyên phát, mục 3.a (có thể ... đau bụng)"
+      note: "'Có thể có' chuyển thành occasional. Phản xạ thần kinh tự chủ trong cơn cấp."
+  - finding: cold_sweat
+    freq: occasional
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-40-2015]
+      locator: "Bài Glôcôm góc đóng nguyên phát, mục 3.a (vã mồ hôi)"
+      note: "'Có thể có' chuyển thành occasional."
+  - finding: fever
+    freq: rare
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-40-2015]
+      locator: "Bài Glôcôm góc đóng nguyên phát, mục 3.a (có thể ... sốt)"
+      note: "40/QĐ-BYT nêu sốt trong các triệu chứng có thể có, nhưng cơn glôcôm không do nhiễm trùng; sốt kèm đau đầu thường do bệnh khác. Mức rare thấp hơn tỷ lệ nền 5% là ước lượng của người soạn, để câu trả lời 'có sốt' không làm tăng khả năng glôcôm."
+  - finding: headache_location
+    dist: { one_side: 0.45, both_sides: 0.03, forehead_face: 0.42, back_neck: 0.02, whole_head: 0.08 }
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-40-2015]
+      locator: "Bài Glôcôm góc đóng nguyên phát, mục 3.a (nhức quanh hốc mắt, lan lên nửa đầu cùng bên)"
+      note: "Đau quanh hốc mắt (trán, quanh mắt) và nửa đầu cùng bên. Phân bố là ước lượng."
+  - finding: headache_severity
+    dist: { mild: 0.07, moderate: 0.33, severe: 0.60 }
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-40-2015, nhs-glaucoma, msd-angle-closure-glaucoma]
+      locator: "40/QĐ-BYT mục 3.a (khởi phát đột ngột, rầm rộ); NHS (intense eye pain); MSD (severe ocular pain)"
+      note: "Lệch về mức nặng. Phân bố là ước lượng."
+  - finding: headache_course
+    dist: { first_time: 0.70, recurrent_similar: 0.25, progressive: 0.05 }
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-40-2015, msd-angle-closure-glaucoma]
+      locator: "40/QĐ-BYT mục 3.a (glôcôm góc đóng bán cấp: các đợt nhìn mờ, thấy quầng, nhức nhẹ tự hết); MSD (thể từng đợt, tự hết sau vài giờ)"
+      note: "Phần lớn là cơn đầu tiên; một phần đã có những đợt nhẹ tự hết trước đó. Phân bố là ước lượng."
+  - finding: headache_duration
+    dist: { lt_4h: 0.20, h4_72: 0.50, gt_3d: 0.30 }
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [seah-archophthalmol-1997]
+      locator: "Tóm tắt"
+      reported: "Một nửa số người bệnh đến khám từ ngày thứ 3 sau khi có triệu chứng"
+      note: "Cơn cấp không tự hết; nhiều người chậm đi khám. Phân bố là ước lượng."
+warning_signs:
+  - eye_pain_one_side
+  - halos_around_lights
+  - vision_loss_or_double
+self_care_vi:
+  - "Không chờ đỡ tại nhà và không tự nhỏ thuốc mắt hay uống thuốc giảm đau rồi theo dõi."
+  - "Không tự lái xe; nhờ người đưa đi hoặc gọi 115."
+see_doctor_vi:
+  - "Đến ngay khoa cấp cứu, tốt nhất là bệnh viện có chuyên khoa mắt."
+  - "Sau cơn cấp, mắt còn lại cũng cần được khám và điều trị dự phòng."
+  - "Người từng có những đợt nhìn mờ, thấy quầng sáng quanh đèn, nhức mắt rồi tự hết nên đi khám mắt sớm."
+sources: [byt-qd-40-2015, nhs-glaucoma, msd-angle-closure-glaucoma]
+review:
+  status: draft
+  authors: ["agent:pass-a"]
+  updated: "2026-10-26"
+  notes_vi: "Mức xử trí 2, thuộc nhóm không được bỏ sót (giữ như gợi ý): NHS 'Call 999 or go to A&E' khi triệu chứng glôcôm xuất hiện đột ngột; 40/QĐ-BYT: tổn thương thần kinh thị giác không hồi phục, phát hiện sớm và điều trị kịp thời rất quan trọng; MSD: phải điều trị ngay vì thị lực có thể mất nhanh và vĩnh viễn. Quy tắc rf_acute_glaucoma_signs (mức 2) đã có; đề nghị người bảo trì thêm bệnh này vào `conditions` của quy tắc (lượt R đã ghi) và của rf_vision_loss. Prior chỉ cho Đau đầu theo phạm vi lô; khi mở triệu chứng chính Mắt (lô 5) cần thêm prior. Mã H40.2 chưa đối chiếu được với icd.kcb.vn. Không thêm 'Thiên đầu thống' vào tên thường gọi: trong nhãn khoa tên này chỉ bệnh glôcôm, nhưng bệnh đau nửa đầu đang dùng tên này làm tên thường gọi; đề nghị bác sĩ xem lại tên của bệnh đau nửa đầu. Điểm cần bác sĩ xem: (1) prior suy từ tỷ lệ mới mắc ở người gốc Hoa (Singapore, Hồng Kông) và giả định về số người đi khám vì đau đầu; (2) tần suất triệu chứng chỉ có mô tả, chưa tìm được nghiên cứu có tỷ lệ; (3) hệ số giới 1,5/0,65; (4) sốt để rare dù 40/QĐ-BYT nêu sốt có thể gặp."

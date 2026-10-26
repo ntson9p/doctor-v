@@ -1,0 +1,202 @@
+id: heat_stroke
+names:
+  vi: "Sốc nhiệt"
+  vi_common: ["Đột quỵ do nóng", "Say nắng nặng"]
+  en: "Heatstroke"
+codes:
+  icd10: "T67.0"
+  icd10_verified: false
+summary_vi:
+  - "Tình trạng cấp cứu khi thân nhiệt tăng rất cao do nóng, làm tổn thương não và nhiều cơ quan."
+  - "Người bệnh lú lẫn, nói lắp, co giật hoặc bất tỉnh, da rất nóng, có thể không ra mồ hôi."
+  - "Cần gọi 115 và làm mát cơ thể ngay, vì chậm trễ có thể gây tử vong."
+urgency: 1
+cant_miss: true
+specialties: [emergency]
+priors:
+  - complaint: syncope
+    default: P5
+    by_age: { elder_75p: P4 }
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [nhs-heat-exhaustion-heatstroke, cdc-niosh-heat-illness]
+      locator: "NHS (Call 999 now: mất ý thức; Who is more at risk); CDC NIOSH (Heat stroke)"
+      note: "Chưa có số liệu Việt Nam. Sốc nhiệt hiếm hơn nhiều so với kiệt sức do nóng (P3); người bệnh thường gục ngã, mất ý thức nên người nhà hay chọn triệu chứng chính Ngất. Ước 0,02–0,2% (P5); người từ 75 tuổi dễ bị khi nắng nóng kéo dài (NHS): P4. Ước lượng, cần bác sĩ duyệt."
+  - complaint: fever
+    default: P6
+    by_age: { elder_75p: P5 }
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [nhs-heat-exhaustion-heatstroke, cdc-niosh-heat-illness]
+      locator: "NHS (a very high temperature); CDC NIOSH (very high body temperature)"
+      note: "Thân nhiệt rất cao có thể khiến người nhà chọn triệu chứng chính Sốt, nhưng trong số người sốt, sốc nhiệt rất hiếm (dưới 0,02%). Người từ 75 tuổi P5. Ước lượng."
+  - complaint: headache
+    default: P6
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [nhs-heat-exhaustion-heatstroke]
+      locator: "Symptoms of heat exhaustion (đau đầu ở giai đoạn trước)"
+      note: "Đau đầu có ở giai đoạn kiệt sức do nóng trước khi chuyển thành sốc nhiệt; khi đã sốc nhiệt, người bệnh khó tự kể. Rất hiếm trong số người đau đầu (P6). Ước lượng."
+  - complaint: dizziness
+    default: P6
+    by_age: { elder_75p: P5 }
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [nhs-heat-exhaustion-heatstroke, cdc-niosh-heat-illness]
+      locator: "NHS (confusion and lack of coordination); CDC NIOSH (Heat stroke)"
+      note: "Choáng, mất phối hợp có thể được kể là chóng mặt. Rất hiếm trong số người chóng mặt (P6); người từ 75 tuổi P5. Ước lượng."
+findings:
+  - finding: heat_exposure
+    freq: very_frequent
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [cdc-niosh-heat-illness, nhs-heat-exhaustion-heatstroke]
+      locator: "CDC NIOSH (Heat stroke); NHS (heatstroke là khi cơ thể quá nóng)"
+      note: "Gần như là điều kiện của bệnh. Chọn very_frequent thay vì almost_always: người cao tuổi bị sốc nhiệt khi ở nhà trong đợt nắng nóng có thể không nghĩ mình đã phơi nắng hay làm việc nặng, và người nhà trả lời thay. Quy tắc rf_heat_stroke_signs cần câu trả lời 'có'."
+  - finding: confusion
+    freq: very_frequent
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [nhs-heat-exhaustion-heatstroke, cdc-niosh-heat-illness]
+      locator: "NHS (Call 999 now: confusion and lack of coordination); CDC NIOSH (Heat stroke: confusion, slurred speech)"
+      note: "Rối loạn chức năng thần kinh là dấu hiệu phân biệt sốc nhiệt với kiệt sức do nóng. Câu hỏi chỉ áp dụng từ 5 tuổi. Không có tỷ lệ; chọn very_frequent (một phần chỉ li bì hoặc co giật)."
+  - finding: drowsy_hard_to_wake
+    freq: frequent
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [nhs-heat-exhaustion-heatstroke, cdc-niosh-heat-illness]
+      locator: "NHS (loss of consciousness); CDC NIOSH (loss of consciousness)"
+      note: "Cùng cụm rối loạn tri giác với lú lẫn. Ước frequent."
+  - finding: seizure_recent
+    freq: occasional
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [nhs-heat-exhaustion-heatstroke, cdc-niosh-heat-illness]
+      locator: "NHS (a seizure or fit); CDC NIOSH (seizures)"
+      note: "Cả hai nguồn liệt kê co giật, không có tỷ lệ; ước occasional."
+  - finding: fainting_or_near_fainting
+    freq: frequent
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [nhs-heat-exhaustion-heatstroke, cdc-niosh-heat-illness]
+      locator: "NHS (loss of consciousness); CDC NIOSH (loss of consciousness)"
+      note: "Gục ngã, mất ý thức hay gặp; chỉ có tác dụng khi triệu chứng chính không phải Ngất. Ước frequent."
+  - finding: not_recovered_after_faint
+    freq: very_frequent
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [nhs-heat-exhaustion-heatstroke, cdc-niosh-heat-illness]
+      locator: "NHS (Call 999 now: still being unwell after 30 minutes; loss of consciousness); CDC NIOSH (Heat stroke)"
+      note: "Tần suất trong số người đã ngất hoặc suýt ngất. Rối loạn tri giác kéo dài, không hồi phục nhanh như ngất thông thường. Quy tắc rf_heat_stroke_signs dùng dấu hiệu này."
+  - finding: fever
+    freq: very_frequent
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [nhs-heat-exhaustion-heatstroke, cdc-niosh-heat-illness]
+      locator: "NHS (a very high temperature); CDC NIOSH (very high body temperature)"
+      note: "Thân nhiệt rất cao là đặc điểm của bệnh. Không chọn almost_always: nhiệt độ có thể đã giảm khi được làm mát, và da có thể ướt mồ hôi ở người gắng sức nên sờ không thấy nóng. Chỉ có tác dụng khi triệu chứng chính không phải Sốt."
+  - finding: fever_max_temp
+    dist: { lt_38: 0.05, t38_39: 0.15, ge_39: 0.80 }
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [cdc-niosh-heat-illness, nhs-heat-exhaustion-heatstroke]
+      locator: "CDC NIOSH (thân nhiệt có thể lên 41°C hoặc hơn trong 10–15 phút); NHS (a very high temperature)"
+      note: "Phân bố trong số người có sốt. Đo nách thấp hơn thân nhiệt trung tâm và có thể đo sau khi đã làm mát. Ước lượng."
+  - finding: fever_duration
+    dist: { d1_2: 0.97, d3_5: 0.02, d6_7: 0.005, gt_7d: 0.005 }
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [cdc-niosh-heat-illness]
+      locator: "Heat stroke (thân nhiệt tăng nhanh trong vài phút)"
+      note: "Phân bố trong số người có sốt. Bệnh cấp tính trong ngày; sốt nhiều ngày gợi ý nhiễm trùng. Ước lượng."
+  - finding: cold_sweat
+    freq: rare
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [nhs-heat-exhaustion-heatstroke, cdc-niosh-heat-illness]
+      locator: "NHS (hot skin that's not sweating); CDC NIOSH (hot, dry skin or profuse sweating)"
+      note: "Da nóng, có thể không ra mồ hôi (người gắng sức có thể vẫn ra nhiều mồ hôi nhưng da nóng). 'Vã mồ hôi lạnh', da lạnh ẩm hợp với kiệt sức do nóng hơn. Mức rare thấp hơn tỷ lệ nền 5%."
+  - finding: breathing_difficulty
+    freq: frequent
+    evidence:
+      tier: C
+      basis: verbal
+      sources: [nhs-heat-exhaustion-heatstroke]
+      locator: "Call 999 now (fast breathing or shortness of breath)"
+      note: "Thở nhanh là một dấu hiệu sốc nhiệt; không có tỷ lệ. Ước frequent."
+  - finding: palpitations
+    freq: occasional
+    evidence:
+      tier: C
+      basis: verbal
+      sources: [nhs-heat-exhaustion-heatstroke]
+      locator: "Call 999 now (a fast heartbeat)"
+      note: "Tim đập nhanh; người bệnh lú lẫn ít khi tự kể được nên chọn occasional."
+  - finding: severe_weakness
+    freq: frequent
+    evidence:
+      tier: C
+      basis: verbal
+      sources: [nhs-heat-exhaustion-heatstroke]
+      locator: "Call 999 now (confusion and lack of coordination; loss of consciousness)"
+      note: "Mất phối hợp, gục ngã nên không tự đi lại được. Ước frequent."
+  - finding: dizziness_pattern
+    dist: { brief_episodes: 0.05, long_episodes: 0.15, continuous: 0.78, chronic: 0.02 }
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [nhs-heat-exhaustion-heatstroke]
+      locator: "Call 999 now"
+      note: "Tần suất trong số người đã chóng mặt. Choáng, mất phối hợp liên tục từ vài giờ. Ước lượng."
+  - finding: syncope_trigger
+    dist: { standing_heat: 0.40, emotion_pain: 0.01, standing_up: 0.05, toilet_cough: 0.01, exertion: 0.35, lying: 0.03, no_trigger: 0.15 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [cdc-niosh-heat-illness, nhs-heat-exhaustion-heatstroke]
+      locator: "CDC NIOSH (Heat stroke ở người lao động); NHS (Who is more at risk)"
+      note: "Phân bố trong số người đã ngất hoặc suýt ngất. Sốc nhiệt khi gắng sức (lao động, tập luyện) và khi ở nơi nóng lâu (người cao tuổi trong đợt nắng nóng). Ước lượng."
+  - finding: syncope_warning
+    dist: { prodrome: 0.60, palpitations_first: 0.10, no_warning: 0.30 }
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [nhs-heat-exhaustion-heatstroke]
+      locator: "Symptoms of heat exhaustion (giai đoạn trước sốc nhiệt)"
+      note: "Phân bố trong số người đã ngất hoặc suýt ngất. Thường có giai đoạn kiệt sức do nóng trước; một phần gục ngã đột ngột khi đang gắng sức. Ước lượng."
+warning_signs:
+  - confusion
+  - drowsy_hard_to_wake
+  - seizure_recent
+  - not_recovered_after_faint
+  - es_unresponsive_or_seizing
+  - breathing_difficulty
+self_care_vi:
+  - "Gọi 115 ngay; trong lúc chờ, đưa người bệnh vào chỗ mát."
+  - "Cởi bớt quần áo; lau hoặc xịt nước mát lên người và quạt liên tục."
+  - "Có thể đắp khăn ướt mát lên người, chườm túi lạnh bọc khăn ở nách và cổ."
+  - "Không cho ăn uống khi người bệnh lơ mơ, co giật hoặc bất tỉnh."
+  - "Nếu bất tỉnh mà vẫn thở, đặt nằm nghiêng an toàn."
+see_doctor_vi:
+  - "Đây là cấp cứu: gọi 115 ngay khi lú lẫn, co giật hoặc bất tỉnh sau khi ở nơi nắng nóng."
+  - "Tiếp tục làm mát trong lúc chờ xe cấp cứu."
+sources: [nhs-heat-exhaustion-heatstroke, cdc-niosh-heat-illness]
+review:
+  status: draft
+  authors: ["agent:pass-a"]
+  updated: "2026-10-26"
+  notes_vi: "Mức xử trí 1, thuộc nhóm không được bỏ sót (giữ như gợi ý): NHS 'Call 999 now' khi có dấu hiệu sốc nhiệt; CDC NIOSH: gọi cấp cứu, sốc nhiệt là bệnh do nóng nặng nhất, có thể tử vong nếu chậm điều trị. Ranh giới với kiệt sức do nóng: sốc nhiệt có rối loạn tri giác (lú lẫn, li bì, co giật, ngất chưa tỉnh hẳn), da nóng; kiệt sức do nóng tỉnh táo, ra nhiều mồ hôi, đỡ khi được làm mát. Đề nghị người bảo trì thêm heat_stroke vào `conditions` của rf_heat_stroke_signs và rf_altered_consciousness (lượt R đã ghi). Mã T67.0 chưa đối chiếu được với icd.kcb.vn. Không thêm hệ số theo tháng, vùng: chưa có nguồn Việt Nam. Lời khuyên trong lúc chờ theo NHS (quấn khăn ướt mát, quạt hoặc lau nước lạnh; bất tỉnh thì đặt nằm nghiêng an toàn) và CDC NIOSH (chỗ mát, cởi bớt quần áo, làm mát nhanh bằng nước lạnh, quạt); không cho ăn uống khi lơ mơ là lời dặn an toàn chung, lượt C đối chiếu thêm. Điểm cần bác sĩ xem: (1) mọi prior là ước lượng; (2) tần suất triệu chứng chỉ có mô tả, không có tỷ lệ; (3) chưa có câu hỏi 'đã làm mát 30 phút mà chưa đỡ' (lượt R đề xuất)."

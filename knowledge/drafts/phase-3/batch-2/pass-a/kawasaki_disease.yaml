@@ -1,0 +1,204 @@
+id: kawasaki_disease
+names:
+  vi: "Bệnh Kawasaki"
+  vi_common: ["Hội chứng hạch, da, niêm mạc"]
+  en: "Kawasaki disease"
+codes:
+  icd10: "M30.3"
+  icd10_verified: false
+  mondo: "MONDO:0012727"
+summary_vi:
+  - "Bệnh viêm mạch máu cấp tính chưa rõ nguyên nhân, thường gặp ở trẻ dưới 5 tuổi."
+  - "Trẻ sốt cao liên tục nhiều ngày, kèm mắt đỏ, môi đỏ nứt, phát ban, sưng đỏ bàn tay bàn chân, nổi hạch cổ."
+  - "Cần được điều trị sớm trong bệnh viện để tránh tổn thương động mạch vành của tim."
+urgency: 3
+cant_miss: false
+specialties: [pediatrics, cardiology]
+applicability:
+  age_groups: [infant_0_2m, child_2m_5y, child_5_12, teen_13_17]
+  reason_vi: "Bệnh của trẻ em, phần lớn dưới 5 tuổi; ở người lớn rất hiếm và các câu hỏi đặc trưng của bệnh chỉ hỏi ở trẻ dưới 13 tuổi."
+priors:
+  - complaint: fever
+    default: P5
+    by_age: { infant_0_2m: P6, child_5_12: P6, teen_13_17: P6 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [kim-pidj-2020, byt-qd-3312-2015, lee-medicina-2022, doan-pidj-2022, khreis-pedint-2026]
+      locator: "Kim 2020 tóm tắt; 3312/QĐ-BYT (2015) bài Bệnh Kawasaki mục 1; Lee 2022 mục Epidemiology; Doan 2022 tóm tắt"
+      reported: "Hàn Quốc 196,9/100.000 trẻ dưới 5 tuổi mỗi năm (tuổi trung bình 33 tháng); Nhật Bản 215–218/100.000 trẻ dưới 5 tuổi (3312); Đông Bắc Á cao gấp 10–30 lần Mỹ, châu Âu"
+      note: "Chưa có tỷ lệ mắc ở Việt Nam; Doan 2022 gợi ý tỷ lệ mắc và mức nặng cao ở trẻ Việt. Giả sử 50–200 ca/100.000 trẻ dưới 5 tuổi mỗi năm và mỗi trẻ có khoảng 2–4 đợt sốt được hỏi ý kiến mỗi năm: khoảng 0,02–0,1% đợt sốt (P5). Trẻ 5–12 tuổi và thiếu niên mắc ít hơn nhiều (Lee 2022: hiếm sau 5 tuổi): P6. Trẻ dưới 2 tháng ít gặp và chỉ dùng để sàng lọc: P6. Ước lượng, cần bác sĩ duyệt."
+prior_modifiers:
+  - when: { sex: [male] }
+    factor: 1.15
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [kim-pidj-2020]
+      locator: "Tóm tắt"
+      reported: "Tỷ lệ nam/nữ 1,41 (15.378 ca, Hàn Quốc 2015–2017)"
+      note: "Cặp hệ số 1,15 (nam) và 0,82 (nữ) cho tỉ số khoảng 1,4, tích gần 1."
+  - when: { sex: [female] }
+    factor: 0.82
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [kim-pidj-2020]
+      locator: "Tóm tắt"
+      reported: "Như hệ số cho nam."
+      note: "Đi cặp với hệ số 1,15 cho nam."
+findings:
+  - finding: fever_duration
+    dist: { d1_2: 0.10, d3_5: 0.38, d6_7: 0.27, gt_7d: 0.25 }
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [byt-qd-3312-2015, doan-pidj-2022]
+      locator: "3312 bài Bệnh Kawasaki mục 3.1 và bảng 1; Doan 2022 tóm tắt"
+      reported: "Sốt trung bình 9–11 ngày nếu không điều trị; tiêu chuẩn sốt từ 5 ngày; ngày chẩn đoán trung vị là ngày 5,5–6 ở trẻ gốc châu Á"
+      note: "Phân bố theo thời điểm người dùng hỏi (trước khi được chẩn đoán): ít ở 1–2 ngày đầu (sốt chưa đáng lo, chưa đủ dấu hiệu), nhiều nhất từ ngày 3 đến ngày 7, một phần sau ngày 7 (chẩn đoán muộn). Ước lượng."
+  - finding: fever_max_temp
+    dist: { lt_38: 0.04, t38_39: 0.26, ge_39: 0.70 }
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-3312-2015, nhs-kawasaki-disease, lee-medicina-2022]
+      locator: "3312 bài Bệnh Kawasaki mục 3.1 (thường sốt cao liên tục, không đáp ứng kháng sinh); NHS (sốt cao); Lee 2022 mục Diagnosis (sốt trên 39°C)"
+      note: "Phân bố trong số trẻ có sốt. Ước lượng theo mô tả 'sốt cao'."
+  - finding: red_eyes
+    freq: very_frequent
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-3312-2015, nhs-kawasaki-disease, byt-qd-1019-2025]
+      locator: "3312 bài Bệnh Kawasaki bảng 1 (viêm đỏ kết mạc 2 bên) và mục 3.1 (không có nhử); NHS (mắt đỏ); 1019 mục 2.5 (phân biệt với sởi: đỏ mắt không có mủ)"
+      note: "Một trong 6 biểu hiện chính 'thường gặp' (3312), chuyển thành very_frequent. Thể không điển hình có ít dấu hiệu hơn nên không chọn almost_always."
+  - finding: red_lips_strawberry_tongue
+    freq: very_frequent
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-3312-2015, nhs-kawasaki-disease]
+      locator: "3312 bài Bệnh Kawasaki bảng 1 (môi đỏ sẫm, mọng hoặc rỉ máu; lưỡi dâu tây); NHS (môi khô nứt, lưỡi dâu tây)"
+      note: "Biểu hiện chính thường gặp. Tỷ lệ nền 0,08 (môi khô nứt khi sốt) nên câu trả lời 'có' làm tăng khả năng khoảng 10 lần. Chỉ hỏi trẻ 2 tháng–12 tuổi."
+  - finding: hands_feet_swelling_peeling
+    freq: frequent
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-3312-2015, nhs-kawasaki-disease, byt-qd-1019-2025]
+      locator: "3312 bài Bệnh Kawasaki bảng 1 (phù mu tay, mu chân, đỏ tía lòng bàn tay, bàn chân; bong da đầu ngón ở tuần 2–3); NHS (lòng bàn tay, bàn chân đỏ rực); 1019 mục 2.5"
+      note: "Biểu hiện chính nhưng phần bong da chỉ có từ tuần thứ 2–3, sau thời điểm phần lớn người dùng hỏi; thay đổi đầu chi ở giai đoạn đầu dễ bị bỏ qua. Chọn frequent thay vì very_frequent."
+  - finding: rash_any
+    freq: very_frequent
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-3312-2015, nhs-kawasaki-disease]
+      locator: "3312 bài Bệnh Kawasaki bảng 1 (ban đỏ đa dạng toàn thân) và mục 3.1; NHS (phát ban)"
+      note: "Biểu hiện chính thường gặp; ban dạng hồng ban, đôi khi giống sởi hoặc sẩn, không phỏng nước."
+  - finding: rash_non_blanching
+    freq: rare
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-3312-2015]
+      locator: "Bài Bệnh Kawasaki mục 3.1"
+      note: "Tần suất trong số trẻ đã có ban. Ban Kawasaki là hồng ban, dạng sởi hoặc sẩn; nguồn không mô tả chấm xuất huyết. Mức rare thấp hơn tỷ lệ nền 5% để ban không mất khi ấn nghiêng về não mô cầu, sốt xuất huyết. Ước lượng."
+  - finding: rash_spreads_from_face
+    freq: rare
+    evidence:
+      tier: C
+      basis: verbal
+      sources: [lee-medicina-2022, byt-qd-1019-2025]
+      locator: "Lee 2022 mục Mucocutaneous Manifestations (ban xuất hiện ở thân rồi lan ra tay chân); 1019 mục 2.5"
+      note: "Tần suất trong số trẻ đã có ban. Ban mọc từ sau tai, mặt lan xuống người là đặc trưng của sởi; ban Kawasaki thường bắt đầu ở thân. Mức rare thấp hơn tỷ lệ nền 5%."
+  - finding: lymph_node_swelling
+    freq: occasional
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [doan-pidj-2022, byt-qd-3312-2015, nhs-kawasaki-disease]
+      locator: "Doan 2022 tóm tắt; 3312 bài Bệnh Kawasaki bảng 1 (sưng hạch góc hàm trên 1,5 cm) và mục 3.1 (sưng hạch một bên); NHS (sưng hạch cổ)"
+      reported: "Hạch cổ rõ lúc chẩn đoán ở 20% trẻ gốc Việt và 40% trẻ gốc châu Á khác"
+      note: "Biểu hiện chính ít gặp nhất; chọn occasional theo số liệu."
+  - finding: bcg_scar_red
+    freq: occasional
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [khreis-pedint-2026, byt-qd-3312-2015]
+      locator: "Khreis 2026 phần Results; 3312 bài Bệnh Kawasaki mục 3.1 (có thể tấy đỏ sẹo BCG)"
+      reported: "Phản ứng tại sẹo BCG 11,8–49,9% tùy nghiên cứu, cao nhất ở nhũ nhi, trẻ nhỏ; thường xuất hiện sớm"
+      note: "Chỉ hỏi trẻ 2 tháng–5 tuổi. Chọn occasional (giữa khoảng) để câu trả lời 'không' (phụ huynh có thể không để ý) không làm giảm nhiều khả năng bệnh; tỷ lệ nền 0,5% nên câu trả lời 'có' làm tăng mạnh."
+  - finding: mouth_ulcers
+    freq: rare
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-3312-2015, byt-qd-1019-2025]
+      locator: "3312 bài Bệnh Kawasaki bảng 1 (thay đổi khoang miệng); 1019 mục 2.5"
+      note: "Thay đổi miệng của Kawasaki là môi đỏ nứt, niêm mạc miệng đỏ, lưỡi dâu tây; nguồn không mô tả loét hay phỏng nước. Mức rare thấp hơn tỷ lệ nền 5% để loét, phỏng nước trong miệng nghiêng về tay chân miệng. Ước lượng."
+  - finding: hand_foot_blisters
+    freq: very_rare
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-3312-2015]
+      locator: "Bài Bệnh Kawasaki mục 3.1 (ban không phỏng nước)"
+      note: "Phỏng nước ở lòng bàn tay, bàn chân là dấu hiệu của tay chân miệng; ban Kawasaki không phỏng nước. very_rare thấp hơn tỷ lệ nền 1%."
+  - finding: cough
+    freq: frequent
+    evidence:
+      tier: C
+      basis: numeric
+      sources: [lee-medicina-2022]
+      locator: "Mục Respiratory System"
+      reported: "Ho 69% (Đài Loan, tiến cứu); 46% (Hàn Quốc)"
+      note: "Ho không loại trừ Kawasaki; vẫn thấp hơn cảm lạnh, cúm, sởi (very_frequent)."
+  - finding: runny_nose
+    freq: frequent
+    evidence:
+      tier: C
+      basis: numeric
+      sources: [lee-medicina-2022]
+      locator: "Mục Respiratory System"
+      reported: "Chảy mũi 58% (Đài Loan); 31% (Hàn Quốc)"
+      note: "Trung bình hai số liệu khoảng 45%: frequent."
+  - finding: vomiting
+    freq: occasional
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [byt-qd-3312-2015, lee-medicina-2022]
+      locator: "3312 bài Bệnh Kawasaki mục 3.1 (rối loạn tiêu hóa hay gặp ở trẻ nhỏ); Lee 2022 mục Gastrointestinal System"
+      reported: "Triệu chứng tiêu hóa 6–38% tùy nghiên cứu"
+  - finding: diarrhea
+    freq: occasional
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [byt-qd-3312-2015, lee-medicina-2022]
+      locator: "3312 bài Bệnh Kawasaki mục 3.1; Lee 2022 mục Gastrointestinal System"
+      reported: "Triệu chứng tiêu hóa 6–38% tùy nghiên cứu; tiêu chảy, nôn, đau bụng hay gặp nhất"
+warning_signs:
+  - drowsy_hard_to_wake
+  - cold_hands_feet
+  - breathing_difficulty
+  - child_unable_to_drink
+  - child_vomits_everything
+  - seizure_recent
+self_care_vi:
+  - "Cho trẻ uống đủ nước, nghỉ ngơi, theo dõi nhiệt độ."
+  - "Không tự cho trẻ uống aspirin; chỉ dùng khi bác sĩ chỉ định."
+see_doctor_vi:
+  - "Đi khám trong 24 giờ nếu trẻ sốt từ 3 ngày kèm mắt đỏ, môi đỏ nứt, phát ban hoặc sưng đỏ tay chân."
+  - "Bệnh cần được điều trị trong bệnh viện, tốt nhất trong 10 ngày đầu, để giảm nguy cơ tổn thương tim."
+  - "Đi cấp cứu ngay nếu trẻ li bì, thở nhanh, tay chân lạnh hoặc không uống được."
+  - "Sau khi khỏi, cần tái khám và siêu âm tim theo hẹn của bác sĩ."
+sources: [byt-qd-3312-2015, nhs-kawasaki-disease]
+review:
+  status: draft
+  authors: ["agent:pass-a"]
+  updated: "2026-10-26"
+  notes_vi: "Mức xử trí 3, không thuộc nhóm không được bỏ sót (giữ như gợi ý): NHS khuyên khám khẩn (bác sĩ gia đình trong ngày hoặc gọi 111), không có mục gọi 999; 3312/QĐ-BYT: nên truyền globulin miễn dịch sớm trong 10 ngày đầu, tổn thương động mạch vành gặp khoảng 1/3 ca không điều trị hoặc điều trị muộn. Quy tắc rf_kawasaki_signs (mức 3) đã có. Không dùng số liệu của AHA 2017 vì toàn văn bị chặn (lượt R cũng ghi như vậy); tần suất từng dấu hiệu chính dựa trên mô tả 'thường gặp' của 3312 và NHS, chưa có số liệu ở trẻ Việt Nam (bài của Bệnh viện Trung ương Huế 2020 không mở được). Mã M30.3 chưa đối chiếu được với icd.kcb.vn. Điểm cần bác sĩ xem: (1) prior P5 là ước lượng, chưa có tỷ lệ mắc ở Việt Nam; (2) phân bố số ngày sốt theo thời điểm hỏi là ước lượng; (3) ho, chảy mũi để frequent theo số liệu Đài Loan, Hàn Quốc (dễ nhầm với nhiễm vi rút); (4) loét miệng, phỏng nước tay chân, ban mọc từ mặt, ban không mất khi ấn được để thấp hơn tỷ lệ nền để phân biệt với tay chân miệng, sởi, não mô cầu; (5) hệ số giới theo số liệu Hàn Quốc; (6) bệnh có thể gặp ở trẻ dưới 6 tháng với ít dấu hiệu, dễ bỏ sót, nhưng nhóm dưới 2 tháng chỉ dùng để sàng lọc."

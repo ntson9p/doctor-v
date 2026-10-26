@@ -1,0 +1,15 @@
+id: ha-plosone-2019
+type: primary_study
+title: "Trends in the characteristics of acute primary angle closure in Korea over the past 10-years"
+publisher: "PLoS ONE 2019;14(10):e0223527 (Ha JY, Sung MS, Heo H, Park SW)"
+date: "2019-10"
+url: "https://europepmc.org/article/MED/31596882"
+doi: "10.1371/journal.pone.0223527"
+pmid: "31596882"
+license_class: L1
+license_note: "CC BY 4.0 (PLoS): dùng và chuyển thể, ghi công."
+default_tier: B
+accessed: "2026-10-26"
+verified: true
+verified_by: "agent:pass-a (đọc toàn văn PMC6785132 qua API Europe PMC)"
+notes_vi: "122 người bệnh lên cơn góc đóng cấp nguyên phát ở một bệnh viện đại học Hàn Quốc (năm 2007 và 2017). Bảng 2: tuổi trung bình 64; không có ca dưới 40 tuổi (40–49 tuổi 7–9%, 50–59 tuổi 21–24%, 60–69 tuổi 37%, 70–79 tuổi 22–25%, từ 80 tuổi 9%); nữ 64–70%; cơn phân bố gần đều bốn mùa."

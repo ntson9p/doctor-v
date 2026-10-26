@@ -1,0 +1,194 @@
+id: encephalitis
+names:
+  vi: "Viêm não"
+  vi_common: ["Viêm não Nhật Bản", "Viêm não do vi rút"]
+  en: "Encephalitis (Japanese encephalitis, herpes simplex encephalitis, other viral encephalitis)"
+codes:
+  icd10: "A86"
+  icd10_verified: false
+  mondo: "MONDO:0019956"
+summary_vi:
+  - "Tình trạng viêm cấp tính ở nhu mô não, phần lớn do vi rút như vi rút viêm não Nhật Bản, vi rút herpes."
+  - "Thường sốt, đau đầu, nôn, rồi nhanh chóng li bì, lú lẫn, co giật hoặc yếu liệt tay chân."
+  - "Đây là bệnh cấp cứu, hay gặp ở trẻ em; viêm não Nhật Bản phòng được bằng vắc xin."
+urgency: 1
+cant_miss: true
+specialties: [emergency, infectious_disease, neurology, pediatrics]
+priors:
+  - complaint: fever
+    default: P6
+    by_age: { infant_0_2m: P5, child_2m_5y: P5, child_5_12: P5 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [hodangtrung-plosone-2012, huong-ofid-2024, byt-qd-3312-2015]
+      locator: "Ho Dang Trung 2012 bảng 2 và 7; Huong 2024 bảng 1; 3312/QĐ-BYT (2015) bài Viêm não, mục 1–2"
+      reported: "13 bệnh viện tỉnh miền Trung, miền Nam: trẻ em có 432 ca viêm não, viêm màng não do vi rút so với 150 ca viêm màng não vi khuẩn; người lớn 209 so với 302. Viêm não Nhật Bản chiếm 33% nhóm do vi rút ở trẻ em, 5% ở người lớn."
+      note: "Chưa có số liệu người đi khám vì sốt. Neo theo bệnh viêm màng não vi khuẩn đã có (sốt: P6, trẻ 2 tháng–5 tuổi P5): ở bệnh viện tỉnh, trẻ em viêm não, viêm màng não do vi rút nhiều gấp khoảng 3 lần viêm màng não vi khuẩn, người lớn ít hơn (khoảng 0,7 lần, và phần lớn là viêm màng não lành tính hơn viêm não thật sự). Vì vậy trẻ dưới 13 tuổi P5, từ 13 tuổi P6. 3312/QĐ-BYT: bệnh hay gặp ở trẻ em; viêm não Nhật Bản nhiều nhất ở trẻ 2–8 tuổi; viêm não do herpes gặp quanh năm. Trẻ dưới 2 tháng chỉ dùng để sàng lọc, để P5 (viêm não do herpes sơ sinh). Tiêm chủng viêm não Nhật Bản làm giảm số ca, nên mức này có thể còn cao. Cần bác sĩ duyệt."
+  - complaint: headache
+    default: P6
+    by_age: { child_5_12: P5 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [hodangtrung-plosone-2012, takamatsu-virolj-2013, byt-qd-5642-2015]
+      locator: "Ho Dang Trung 2012 bảng 2; Takamatsu 2013 bảng 2; 5642/QĐ-BYT bài Viêm não do vi rút Herpes simplex, mục 3.1"
+      reported: "Đau đầu ở 50% trẻ viêm não Nhật Bản nằm viện (Takamatsu 2013)."
+      note: "Người sốt kèm đau đầu phần lớn chọn triệu chứng chính Sốt; viêm màng não vi khuẩn (bệnh tương tự) có prior Đau đầu P5. Ở người lớn, viêm não ít hơn viêm màng não vi khuẩn (Ho Dang Trung 2012) nên để P6; trẻ 5–12 tuổi tự kể được đau đầu và viêm não nhiều hơn viêm màng não vi khuẩn nên để P5; trẻ dưới 5 tuổi ít khi được chọn triệu chứng chính Đau đầu. 5642: viêm não do herpes khởi phát đột ngột với sốt, đau đầu. Ước lượng, cần bác sĩ duyệt."
+prior_modifiers:
+  - when: { months: [5, 6, 7] }
+    factor: 1.5
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-3312-2015, takamatsu-virolj-2013]
+      locator: "3312/QĐ-BYT (2015) bài Viêm não, mục 2 (Dịch tễ học); Takamatsu 2013 phần Results (hình 3)"
+      note: "3312: viêm não cấp gặp rải rác quanh năm nhưng tăng vào mùa nóng (tháng 3–8); viêm não Nhật Bản lưu hành ở hầu hết các địa phương, thường gây dịch vào tháng 5, 6, 7. Takamatsu 2013: ở miền Bắc, ca viêm não Nhật Bản tập trung vào tháng 5–7. Hệ số 1,5 là ước lượng (chỉ một phần ca viêm não do vi rút viêm não Nhật Bản); không hạ hệ số các tháng khác vì bệnh gặp quanh năm."
+findings:
+  - finding: fever
+    freq: very_frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [huong-ofid-2024, byt-qd-3312-2015, byt-qd-5642-2015, cdc-je-clinical]
+      locator: "Huong 2024 bảng 1; 3312 bài Viêm não mục 3.2.1; 5642 bài Viêm não do Herpes mục 3.1; CDC (khởi phát đột ngột với sốt)"
+      reported: "Sốt 68,3–75,6% trẻ viêm não mọi căn nguyên; 100% trẻ viêm não Nhật Bản (Huong 2024)"
+      note: "3312: sốt là triệu chứng phổ biến, thường cao 39–40°C nhưng có khi không cao. Viêm não tự miễn (không do nhiễm trùng) ít sốt hơn, kéo tỷ lệ chung xuống. Chỉ có tác dụng khi triệu chứng chính là Đau đầu."
+  - finding: fever_max_temp
+    dist: { lt_38: 0.12, t38_39: 0.38, ge_39: 0.50 }
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [huong-ofid-2024, takamatsu-virolj-2013, byt-qd-3312-2015]
+      locator: "Huong 2024 bảng 1; Takamatsu 2013 bảng 2; 3312 bài Viêm não mục 3.2.1"
+      reported: "Nhiệt độ cao nhất trung vị 39,0°C (khoảng tứ phân vị 38,5–39,5) ở trẻ viêm não; 38,8°C ở trẻ viêm não Nhật Bản"
+      note: "Phân bố trong số người có sốt. Số đo trong bệnh viện; ở nhà đo nách có thể thấp hơn, nên để 12% dưới 38°C."
+  - finding: fever_duration
+    dist: { d1_2: 0.40, d3_5: 0.42, d6_7: 0.12, gt_7d: 0.06 }
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [huong-ofid-2024, takamatsu-virolj-2013, cdc-je-clinical]
+      locator: "Huong 2024 bảng 1 (số ngày bệnh trước nhập viện); Takamatsu 2013 bảng 2 (số ngày sốt)"
+      reported: "Số ngày bệnh trước nhập viện trung vị 4 (3–7); số ngày sốt trung vị 2 (1–7) ở trẻ viêm não Nhật Bản"
+      note: "Bệnh khởi phát đột ngột, dấu hiệu thần kinh xuất hiện sau vài ngày (CDC). Người dùng hỏi trước khi nhập viện nên dồn về 1–5 ngày. Ước lượng theo số liệu bệnh viện."
+  - finding: headache
+    freq: very_frequent
+    freq_by_age: { infant_0_2m: rare, child_2m_5y: occasional, child_5_12: frequent }
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [takamatsu-virolj-2013, byt-qd-3312-2015, byt-qd-5642-2015, cdc-je-clinical]
+      locator: "Takamatsu 2013 bảng 2; 3312 bài Viêm não mục 3.2.1 (nhức đầu, quấy khóc); 5642 bài Viêm não do Herpes mục 3.1; CDC"
+      reported: "Đau đầu 50% ở trẻ viêm não Nhật Bản nằm viện (tuổi trung vị 6)"
+      note: "Chỉ có tác dụng khi triệu chứng chính là Sốt. Người lớn (viêm não do herpes) tự kể được đau đầu và nguồn nêu đau đầu là triệu chứng khởi phát: very_frequent. Trẻ 5–12 tuổi frequent theo số liệu Takamatsu; trẻ nhỏ chỉ quấy khóc, kích thích: occasional; dưới 2 tháng rare. Tỷ lệ nền của đau đầu khi sốt là 0,7 nên liên kết này gần như trung tính."
+  - finding: headache_course
+    dist: { first_time: 0.88, recurrent_similar: 0.07, progressive: 0.05 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-3312-2015, byt-qd-5642-2015]
+      locator: "3312 bài Viêm não mục 1 và 3.2; 5642 bài Viêm não do Herpes mục 1"
+      note: "Bệnh khởi phát cấp tính, đau đầu kiểu mới; lựa chọn 'nặng dần trong vài tuần' ít hợp. Giống phân bố của viêm màng não vi khuẩn. Ước lượng."
+  - finding: headache_duration
+    dist: { lt_4h: 0.10, h4_72: 0.60, gt_3d: 0.30 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [huong-ofid-2024, takamatsu-virolj-2013]
+      locator: "Huong 2024 bảng 1; Takamatsu 2013 bảng 2 (số ngày đau đầu trung vị 2,5)"
+      note: "Đau đầu kéo dài theo đợt bệnh vài ngày (số ngày đau đầu trung vị 2,5, từ 1 đến 12 ở trẻ viêm não Nhật Bản). Ước lượng."
+  - finding: headache_severity
+    dist: { mild: 0.10, moderate: 0.40, severe: 0.50 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-3312-2015, byt-qd-5642-2015]
+      locator: "3312 bài Viêm não mục 3.2; 5642 bài Viêm não do Herpes mục 3.1"
+      note: "Nguồn không mô tả mức độ đau đầu; bệnh cảnh nặng, kèm nôn và tăng áp lực trong sọ nên lệch về mức nặng, nhưng ít hơn viêm màng não vi khuẩn (0,67). Ước lượng."
+  - finding: confusion
+    freq: frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [takamatsu-virolj-2013, huong-ofid-2024, byt-qd-3312-2015, byt-qd-5642-2015, cdc-je-clinical]
+      locator: "Takamatsu 2013 bảng 2; Huong 2024 (định nghĩa ca); 3312 bài Viêm não mục 3.2.2; 5642 mục 3.1 (thay đổi tính cách, mất trí nhớ)"
+      reported: "Rối loạn ý thức 97% trẻ viêm não Nhật Bản nằm viện; thay đổi ý thức từ 24 giờ là điều kiện bắt buộc của định nghĩa ca"
+      note: "Hạ một mức so với số liệu bệnh viện (kb-guide 2.1): người dùng có thể hỏi ở giai đoạn khởi phát, khi chưa có dấu hiệu thần kinh (3312: sau khởi phát, dấu hiệu thần kinh nhanh chóng xuất hiện). Đây là dấu hiệu phân biệt chính với các bệnh sốt khác và với viêm màng não vi khuẩn (occasional). Câu hỏi chỉ áp dụng từ 5 tuổi; trẻ nhỏ dùng câu li bì. Có lú lẫn thì quy tắc mức 1 đã áp dụng."
+  - finding: drowsy_hard_to_wake
+    freq: frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [takamatsu-virolj-2013, huong-ofid-2024, byt-qd-3312-2015]
+      locator: "Takamatsu 2013 bảng 2; Huong 2024 bảng 1 (điểm Glasgow trung vị 11–12); 3312 bài Viêm não mục 3.2.2 (ngủ gà, li bì, lơ mơ đến hôn mê)"
+      reported: "Rối loạn ý thức 97% (viêm não Nhật Bản); điểm Glasgow trung vị 8 ở viêm não Nhật Bản, 11–12 ở các căn nguyên khác"
+      note: "Như lú lẫn: hạ một mức cho cộng đồng. Cùng cụm rối loạn tri giác với lú lẫn nên không đếm trùng hoàn toàn."
+  - finding: seizure_recent
+    freq: frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [takamatsu-virolj-2013, huong-ofid-2024, byt-qd-3312-2015, cdc-je-clinical]
+      locator: "Takamatsu 2013 bảng 2; Huong 2024 bảng 1; 3312 bài Viêm não mục 3.2.2 (thường có co giật); CDC (co giật hay gặp, nhất là ở trẻ em)"
+      reported: "Co giật 73% (trẻ viêm não Nhật Bản, miền Bắc); 61,8–65,9% (trẻ viêm não mọi căn nguyên, TP.HCM)"
+      note: "Hạ một mức so với số liệu bệnh viện. Người lớn ít co giật hơn trẻ em. Tỷ lệ nền của co giật khi sốt là 0,002 nên câu trả lời 'có' làm tăng mạnh khả năng viêm não và viêm màng não; co giật do sốt ở trẻ nhỏ chưa có trong danh mục bệnh. Có co giật thì quy tắc mức 2 đã áp dụng."
+  - finding: neck_stiffness
+    freq: occasional
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [takamatsu-virolj-2013, byt-qd-5642-2015, byt-qd-3312-2015]
+      locator: "Takamatsu 2013 bảng 2; 5642 bài Viêm não do Herpes mục 3.1; 3312 bài Viêm não mục 3.2.2"
+      reported: "Dấu hiệu màng não 68% (trẻ viêm não Nhật Bản, bác sĩ khám)"
+      note: "Bác sĩ khám thấy dấu hiệu màng não nhiều hơn người nhà tự nhận ra cứng gáy; viêm não có thể kèm hoặc không kèm viêm màng não (5642). Hạ hai mức (từ very_frequent xuống occasional) để giữ khác biệt với viêm màng não vi khuẩn (frequent), là bệnh mà cứng gáy là dấu hiệu chính. Lượt C cân nhắc frequent nếu thấy hạ hai mức là quá nhiều."
+  - finding: vomiting
+    freq: occasional
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [takamatsu-virolj-2013, byt-qd-3312-2015, cdc-je-clinical]
+      locator: "Takamatsu 2013 bảng 2; 3312 bài Viêm não mục 3.2.1 (buồn nôn, nôn); CDC (sốt, đau đầu, nôn)"
+      reported: "Nôn 33% (trẻ viêm não Nhật Bản nằm viện)"
+      note: "Hạ một mức cho cộng đồng; cùng mức với viêm màng não vi khuẩn."
+  - finding: es_stroke_signs
+    freq: occasional
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [takamatsu-virolj-2013, huong-ofid-2024, byt-qd-3312-2015, cdc-je-clinical]
+      locator: "Takamatsu 2013 bảng 2 (liệt nửa người, dấu hiệu khu trú); Huong 2024 bảng 1 (dấu hiệu thần kinh khu trú); 3312 bài Viêm não mục 3.2.2"
+      reported: "Liệt nửa người 25%, dấu hiệu khu trú 17% (viêm não Nhật Bản); dấu hiệu thần kinh khu trú 18,7–36,6% (mọi căn nguyên)"
+      note: "Hạ một mức cho cộng đồng. Câu hỏi này nằm ở màn sàng lọc cấp cứu: trả lời 'có' thì dừng ở mức 1; liên kết chỉ để viêm não có mặt khi xếp hạng."
+  - finding: rash_any
+    freq: rare
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [takamatsu-virolj-2013, byt-qd-3312-2015]
+      locator: "Takamatsu 2013 bảng 2; 3312 bài Viêm não mục 3.2.1"
+      reported: "Phát ban 2% (viêm não Nhật Bản)"
+      note: "3312: có thể phát ban tùy loại vi rút (bọng nước ở tay chân, loét miệng khi viêm não do EV71 trong bệnh tay chân miệng; bệnh này đã có trong danh mục). Mức rare thấp hơn tỷ lệ nền 5%: sốt kèm ban gợi ý bệnh khác (não mô cầu, sốt xuất huyết, sởi) hơn là viêm não."
+warning_signs:
+  - confusion
+  - drowsy_hard_to_wake
+  - seizure_recent
+  - neck_stiffness
+  - es_stroke_signs
+  - breathing_difficulty
+  - persistent_vomiting
+self_care_vi:
+  - "Không tự điều trị tại nhà và không chờ xem có đỡ không."
+  - "Khi đang co giật: đặt người bệnh nằm nghiêng, nới lỏng quần áo, không nhét vật gì vào miệng."
+  - "Chỉ cho uống nước khi người bệnh còn tỉnh, tự nuốt được."
+see_doctor_vi:
+  - "Gọi 115 ngay nếu sốt kèm li bì, lú lẫn, co giật, nói khó hoặc yếu tay chân."
+  - "Đi khám cấp cứu ngay nếu sốt kèm đau đầu dữ dội, nôn nhiều hoặc cứng gáy."
+  - "Trẻ cần được tiêm đủ vắc xin viêm não Nhật Bản theo lịch tiêm chủng."
+  - "Ngủ màn, diệt muỗi quanh nhà, nhất là vào mùa hè."
+sources: [byt-qd-3312-2015, byt-qd-5642-2015, cdc-je-clinical]
+review:
+  status: draft
+  authors: ["agent:pass-a"]
+  updated: "2026-10-26"
+  notes_vi: "Mức xử trí 1, thuộc nhóm không được bỏ sót (giữ như gợi ý): 3312/QĐ-BYT ghi viêm não cấp khởi phát cấp tính, diễn biến nặng, tử vong và di chứng cao, dấu hiệu thần kinh xuất hiện nhanh; CDC: viêm não Nhật Bản tử vong 20–30%; 5642/QĐ-BYT: viêm não do herpes cần thuốc kháng vi rút tĩnh mạch sớm, điều trị muộn tăng tử vong và di chứng. Bệnh gộp viêm não do vi rút viêm não Nhật Bản, herpes, vi rút đường ruột và căn nguyên khác; mã A86 (viêm não do vi rút không đặc hiệu) chỉ là mã đại diện (A83.0 viêm não Nhật Bản, B00.4 viêm não do herpes, G04 viêm não khác), chưa đối chiếu được với icd.kcb.vn. Không tìm được hướng dẫn riêng còn hiệu lực của Bộ Y tế về viêm não Nhật Bản; đã dùng bài Viêm não của 3312/QĐ-BYT (2015) và bài Viêm não do herpes của 5642/QĐ-BYT. Đề nghị người bảo trì thêm encephalitis vào `conditions` của rf_altered_consciousness và rf_new_seizure (lượt R đã ghi). Điểm cần bác sĩ xem: (1) prior không có số liệu người đi khám vì sốt, neo theo viêm màng não vi khuẩn và tỷ lệ ca ở bệnh viện tỉnh; tiêm chủng viêm não Nhật Bản có thể đã làm số ca thấp hơn; (2) tần suất lấy từ trẻ nằm viện (phần lớn viêm não Nhật Bản), đã hạ một mức cho dấu hiệu nặng; chưa có số liệu người lớn Việt Nam; (3) cứng gáy để occasional (hạ hai mức) để phân biệt với viêm màng não vi khuẩn; (4) liên kết co giật mạnh vì tỷ lệ nền của co giật khi sốt là 0,002, trong khi co giật do sốt đơn thuần ở trẻ nhỏ chưa có trong danh mục; (5) hệ số tháng 5–7 áp dụng cho mọi vùng."

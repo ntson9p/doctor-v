@@ -1,0 +1,151 @@
+id: hypertensive_crisis
+names:
+  vi: "Cơn tăng huyết áp"
+  vi_common: ["Lên huyết áp", "Lên tăng-xông"]
+  en: "Hypertensive crisis (hypertensive urgency or emergency)"
+codes:
+  icd10: "I10"
+  icd10_verified: false
+summary_vi:
+  - "Huyết áp tăng rất cao, thường từ 180/120 mmHg trở lên, hay gặp ở người đã bị tăng huyết áp."
+  - "Có thể không có triệu chứng, hoặc đau đầu, chóng mặt, buồn nôn, mệt."
+  - "Nếu kèm đau ngực, khó thở, lú lẫn hoặc yếu liệt là cấp cứu vì tổn thương tim, não."
+urgency: 3
+cant_miss: false
+specialties: [cardiology, general_medicine]
+applicability:
+  age_groups: [teen_13_17, adult_18_44, adult_45_64, elder_65_74, elder_75p]
+  reason_vi: "Câu hỏi số đo huyết áp chỉ áp dụng từ 13 tuổi; ở trẻ nhỏ, tăng huyết áp nặng rất hiếm và cần bác sĩ khám."
+priors:
+  - complaint: headache
+    default: P5
+    by_age: { teen_13_17: P6, adult_45_64: P4, elder_65_74: P4, elder_75p: P4 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [zampaglione-hypertension-1996, pierin-einstein-2019, shin-jcm-2021]
+      locator: "Zampaglione 1996 tóm tắt; Pierin 2019 bảng 1; Shin 2021 bảng 1"
+      reported: "Đau đầu ở 22% (Ý) và 35,9% (Brazil) ca tăng huyết áp khẩn cấp; tuổi trung bình 55–60"
+      note: "Theo yêu cầu của phạm vi lô (docs/phase-3/scope.md mục 7), bệnh chỉ có ích khi người dùng có số đo huyết áp, nên prior để thấp: không có số đo thì bệnh không vượt lên các nguyên nhân đau đầu hay gặp. Tăng huyết áp chiếm khoảng 1/4 người 18–69 tuổi (STEPS 2021, theo docs/research/vietnam-sources.md) và tăng theo tuổi; người bệnh trong các nghiên cứu có tuổi trung bình 55–60. Vì vậy từ 45 tuổi P4, 18–44 tuổi P5, thiếu niên P6. Với P4, khi số đo từ 180/120 mmHg (hệ số khoảng 30), bệnh lên khoảng 15–25%. Ước lượng, cần bác sĩ duyệt."
+  - complaint: dizziness
+    default: P5
+    by_age: { teen_13_17: P6, elder_65_74: P4, elder_75p: P4 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [pierin-einstein-2019, shin-jcm-2021]
+      locator: "Pierin 2019 bảng 1; Shin 2021 phần Discussion"
+      reported: "Chóng mặt ở 15,8% ca tăng huyết áp khẩn cấp (Brazil); nhiều người bệnh chỉ có chóng mặt, đau đầu nhẹ (Hàn Quốc)"
+      note: "Chóng mặt ít gặp hơn đau đầu trong cơn tăng huyết áp nên 45–64 tuổi để P5 (thấp hơn Đau đầu một bậc), từ 65 tuổi P4. Như với Đau đầu, prior để thấp vì bệnh chỉ có ích khi có số đo huyết áp. Ước lượng."
+findings:
+  - finding: bp_measured
+    dist: { normal: 0.02, high: 0.06, very_high: 0.27, extreme: 0.65 }
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [msd-hypertensive-emergencies, byt-qd-3192-2010, pierin-einstein-2019, shin-jcm-2021]
+      locator: "MSD (định nghĩa: thường từ 180 và/hoặc 120 mmHg); 3192/QĐ-BYT bảng 1 (độ 3: từ 180 và/hoặc 110 mmHg); Pierin 2019 bảng 1; Shin 2021 bảng 1"
+      reported: "Huyết áp lần đo đầu trung bình 197/125 mmHg (Brazil), 186/108 mmHg (Hàn Quốc, ngưỡng từ 180/110)"
+      note: "Theo định nghĩa, phần lớn người bệnh có số đo từ 180/120 mmHg. Để 27% cho mức 160/110–180/120 vì một số định nghĩa dùng ngưỡng tâm trương 110 (3192, Shin 2021), và số đo tại nhà có thể thấp hơn lúc cao nhất. Số đo dưới 140/90 gần như loại trừ bệnh. Bệnh chủ yếu được nhận ra nhờ câu hỏi này; ước lượng."
+  - finding: hypertension_known
+    freq: frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [zampaglione-hypertension-1996, shin-jcm-2021, pierin-einstein-2019]
+      locator: "Zampaglione 1996 tóm tắt; Shin 2021 bảng 1; Pierin 2019 bảng 1"
+      reported: "Tăng huyết áp đã được biết ở 72% ca khẩn cấp, 92% ca cấp cứu (Ý); 48,4% (Hàn Quốc); 33,7% (Brazil)"
+      note: "Các nguồn dao động 34–92%; chọn frequent. Tỷ lệ nền 0,15 nên câu trả lời 'có' làm tăng khả năng khoảng 3 lần."
+  - finding: bp_lowering_meds
+    freq: occasional
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [shin-jcm-2021]
+      locator: "Bảng 1"
+      reported: "55,4% đang dùng thuốc hạ áp"
+      note: "Số liệu ở mức frequent, nhưng gần như mọi người đang dùng thuốc hạ áp đã trả lời 'có' ở câu tăng huyết áp: tính thêm một hệ số 3 lần nữa sẽ đếm trùng và đẩy bệnh lên chỉ vì có bệnh nền, khi chưa có số đo. Chọn occasional (gần trung tính) có chủ ý; đề nghị lượt C cân nhắc gom hai câu này vào một cụm."
+  - finding: headache
+    freq: occasional
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [zampaglione-hypertension-1996, pierin-einstein-2019]
+      locator: "Zampaglione 1996 tóm tắt; Pierin 2019 bảng 1"
+      reported: "Đau đầu 22% (Ý), 35,9% (Brazil) ở ca khẩn cấp; 2,5% ở ca cấp cứu (Brazil)"
+      note: "Chỉ có tác dụng khi triệu chứng chính là Chóng mặt; tỷ lệ nền 0,2 nên liên kết gần như trung tính, đúng yêu cầu không đẩy bệnh lên chỉ vì đau đầu."
+  - finding: dizziness
+    freq: occasional
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [pierin-einstein-2019]
+      locator: "Bảng 1"
+      reported: "Chóng mặt 15,8% (khẩn cấp), 7,4% (cấp cứu)"
+      note: "Chỉ có tác dụng khi triệu chứng chính là Đau đầu; gần như trung tính (tỷ lệ nền 0,2)."
+  - finding: nausea
+    freq: occasional
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [pierin-einstein-2019]
+      locator: "Bảng 1"
+      reported: "Buồn nôn 14,1% (khẩn cấp)"
+      note: "Gần như trung tính (tỷ lệ nền 0,2)."
+  - finding: fainting_or_near_fainting
+    freq: occasional
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [zampaglione-hypertension-1996]
+      locator: "Tóm tắt"
+      reported: "Choáng ngất 10% ca khẩn cấp"
+  - finding: chest_pain_pressure
+    freq: occasional
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [pierin-einstein-2019, zampaglione-hypertension-1996, msd-hypertensive-emergencies]
+      locator: "Pierin 2019 bảng 1; Zampaglione 1996 tóm tắt; MSD (Symptoms and Signs)"
+      reported: "Đau ngực 17,8% (khẩn cấp, Brazil); 27% (cấp cứu, Ý)"
+      note: "Đau ngực kèm huyết áp từ 180/120 đã ở mức 2 (rf_extreme_bp_with_symptoms)."
+  - finding: breathing_difficulty
+    freq: occasional
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [pierin-einstein-2019, zampaglione-hypertension-1996, msd-hypertensive-emergencies]
+      locator: "Pierin 2019 bảng 1; Zampaglione 1996 tóm tắt; MSD (Symptoms and Signs)"
+      reported: "Khó thở 8,7% (khẩn cấp), 27,2% (cấp cứu, Brazil); 22% (cấp cứu, Ý)"
+      note: "Gộp hai thể theo tỷ lệ khoảng 3:1 thành khoảng 12%: occasional."
+  - finding: confusion
+    freq: rare
+    above_leak_ok: true
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [zampaglione-hypertension-1996, msd-hypertensive-emergencies]
+      locator: "Zampaglione 1996 tóm tắt; MSD (Symptoms and Signs)"
+      reported: "Bệnh não do tăng huyết áp ở 16% ca cấp cứu; ca cấp cứu chiếm 24% cơn tăng huyết áp"
+      note: "Khoảng 4% mọi cơn: rare. Mức này cao hơn tỷ lệ nền 1% là có chủ ý (bệnh não do tăng huyết áp gây lú lẫn). Lú lẫn đã ở mức 1."
+warning_signs:
+  - chest_pain_pressure
+  - breathing_difficulty
+  - confusion
+  - es_stroke_signs
+  - vision_loss_or_double
+  - headache_thunderclap
+self_care_vi:
+  - "Ngồi nghỉ yên tĩnh 5–10 phút rồi đo lại huyết áp; không uống cà phê, hút thuốc trước khi đo."
+  - "Nếu đang dùng thuốc huyết áp, tiếp tục dùng đúng như bác sĩ đã dặn."
+  - "Không tự uống thêm thuốc để hạ huyết áp thật nhanh khi chưa hỏi bác sĩ."
+see_doctor_vi:
+  - "Đi khám trong hôm nay nếu đo lại huyết áp vẫn từ 180/120 mmHg trở lên."
+  - "Đến cấp cứu ngay nếu kèm đau ngực, khó thở, lú lẫn hoặc nhìn mờ."
+  - "Gọi 115 nếu méo miệng, yếu tay chân, nói khó hoặc đau đầu đột ngột dữ dội."
+sources: [byt-qd-3192-2010, msd-hypertensive-emergencies]
+review:
+  status: draft
+  authors: ["agent:pass-a"]
+  updated: "2026-10-26"
+  notes_vi: "Mức xử trí 3, không thuộc nhóm không được bỏ sót (giữ như gợi ý của scope.yaml; bảng trong docs/phase-3/scope.md ghi mức 2): ca điển hình là tăng huyết áp khẩn cấp không có tổn thương cơ quan đích; MSD ghi biến chứng cấp ít xảy ra nên không cần hạ áp ngay, dùng thuốc uống và theo dõi ngoại trú; Pierin 2019: 57% ca khẩn cấp được cho về. Quy tắc rf_extreme_bp (mức 3) và rf_extreme_bp_with_symptoms (mức 2) đã xử trí; thể cấp cứu có tổn thương não, tim đã có bệnh riêng (đột quỵ, hội chứng vành cấp). Đề nghị người bảo trì thêm bệnh này vào `conditions` của rf_extreme_bp_with_symptoms (lượt R đã ghi). Không dùng NICE NG136 vì nice.org.uk chặn truy cập. Thiết kế theo phạm vi: prior thấp (P4–P6); bệnh được đẩy lên chủ yếu nhờ số đo huyết áp (hệ số khoảng 30 khi từ 180/120); các liên kết đau đầu, chóng mặt, buồn nôn để gần trung tính; không liên kết các câu đặc điểm đau đầu. Không liên kết chảy máu mũi (17% ca khẩn cấp, Zampaglione 1996) vì câu hỏi của danh mục gộp chảy máu chân răng (hay gặp khi viêm lợi) với tỷ lệ nền 1%, sẽ đẩy bệnh lên quá mạnh. Mã I10 chỉ là mã đại diện (ICD-10 của WHO không có mã riêng cho cơn tăng huyết áp), chưa đối chiếu được với icd.kcb.vn. Điểm cần bác sĩ xem: (1) prior là ước lượng, chưa có số liệu Việt Nam; (2) tần suất triệu chứng từ khoa cấp cứu ở Ý, Brazil, Hàn Quốc; (3) phân bố số đo huyết áp là ước lượng; (4) dùng thuốc hạ áp để occasional có chủ ý để tránh đếm trùng với câu tăng huyết áp."
