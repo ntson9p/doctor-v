@@ -29,6 +29,7 @@
   type: binary
   label_vi: "Bệnh tim đã biết"
   question_vi: "Có bệnh tim đã biết, như bệnh mạch vành hoặc suy tim không?"
+  cluster: heart_history
   applies_to:
     age_groups: [adult_18_44, adult_45_64, elder_65_74, elder_75p]
   leak: moderate
@@ -145,6 +146,7 @@
   type: binary
   label_vi: "Bị rung nhĩ"
   question_vi: "Bác sĩ đã từng nói bị rung nhĩ (một kiểu loạn nhịp tim) chưa?"
+  cluster: heart_history
   applies_to:
     age_groups: [adult_45_64, elder_65_74, elder_75p]
   leak: 0.04

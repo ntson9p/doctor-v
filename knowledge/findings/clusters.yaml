@@ -81,3 +81,9 @@
   rho: low
   label_vi: "Dấu hiệu thiếu máu"
   rationale_vi: "Da xanh và hụt hơi khi gắng sức cùng phản ánh tình trạng thiếu máu."
+
+# ---------- Giai đoạn 3, lô 2 ----------
+- id: heart_history
+  rho: medium
+  label_vi: "Bệnh tim đã biết"
+  rationale_vi: "Người bị rung nhĩ thường cũng được nói là có bệnh tim, nên hai câu trả lời \"có\" hay đi cùng nhau (lượt A lô 2 phần a đề xuất)."
