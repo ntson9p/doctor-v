@@ -2,7 +2,7 @@
  * Clinical vignettes (test cases) used to measure accuracy and safety.
  * One vignette per YAML file under evaluation/vignettes/<set>/. Format: docs/evaluation.md.
  */
-import { existsSync, readFileSync } from 'node:fs';
+import { existsSync, readFileSync, readdirSync } from 'node:fs';
 import { join, relative } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { listYamlFiles, parseYamlFile } from '@doctor-v/kb';
@@ -76,13 +76,28 @@ export function loadVignettes(sets: readonly VignetteSet[], issues: Issue[], roo
   return out;
 }
 
-/** Condition ids of the pilot scope (knowledge/drafts/pilot-scope.yaml), used before conditions exist. */
-export function pilotConditionIds(knowledgeRoot: string): Set<string> {
-  const file = join(knowledgeRoot, 'drafts', 'pilot-scope.yaml');
-  if (!existsSync(file)) return new Set();
-  const data: unknown = parse(readFileSync(file, 'utf8'));
-  const ids = Array.isArray(data) ? data.map((d: { id?: unknown }) => d.id).filter((id) => typeof id === 'string') : [];
-  return new Set(ids);
+const idsOf = (list: unknown): string[] =>
+  Array.isArray(list) ? list.map((d: { id?: unknown }) => d.id).filter((id) => typeof id === 'string') : [];
+
+/**
+ * Condition ids planned but not yet written, so that cases can name them before pass C creates them:
+ * the pilot scope (knowledge/drafts/pilot-scope.yaml) and the new conditions of each Phase 3 batch
+ * (knowledge/drafts/phase-3/<batch>/scope.yaml).
+ */
+export function plannedConditionIds(knowledgeRoot: string): Set<string> {
+  const ids = new Set<string>();
+  const pilot = join(knowledgeRoot, 'drafts', 'pilot-scope.yaml');
+  if (existsSync(pilot)) idsOf(parse(readFileSync(pilot, 'utf8'))).forEach((id) => ids.add(id));
+  const phase3 = join(knowledgeRoot, 'drafts', 'phase-3');
+  if (existsSync(phase3)) {
+    for (const batch of readdirSync(phase3)) {
+      const scope = join(phase3, batch, 'scope.yaml');
+      if (!existsSync(scope)) continue;
+      const data: unknown = parse(readFileSync(scope, 'utf8'));
+      if (data && typeof data === 'object' && 'new' in data) idsOf(data.new).forEach((id) => ids.add(id));
+    }
+  }
+  return ids;
 }
 
 export function ageMonthsOf(v: Vignette): number {

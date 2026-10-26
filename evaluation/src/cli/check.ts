@@ -5,7 +5,7 @@
  */
 import { DEFAULT_KNOWLEDGE_ROOT, formatIssues, loadKnowledge } from '@doctor-v/kb';
 import type { Issue } from '@doctor-v/kb';
-import { VIGNETTE_SETS, loadVignettes, pilotConditionIds, validateVignettes } from '../vignette.ts';
+import { VIGNETTE_SETS, loadVignettes, plannedConditionIds, validateVignettes } from '../vignette.ts';
 import type { VignetteSet } from '../vignette.ts';
 
 const args = process.argv.slice(2);
@@ -26,7 +26,7 @@ if (!loaded.knowledge) {
 }
 const issues: Issue[] = [];
 const vignettes = loadVignettes(sets, issues);
-issues.push(...validateVignettes(vignettes, loaded.knowledge, pilotConditionIds(DEFAULT_KNOWLEDGE_ROOT)));
+issues.push(...validateVignettes(vignettes, loaded.knowledge, plannedConditionIds(DEFAULT_KNOWLEDGE_ROOT)));
 
 if (issues.length > 0) console.log(formatIssues(issues));
 const counts = sets.map((s) => `${s}: ${vignettes.filter((v) => v.vignette.set === s).length}`).join(', ');
