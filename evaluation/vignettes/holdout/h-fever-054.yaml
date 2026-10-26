@@ -1,0 +1,55 @@
+id: h-fever-054
+set: holdout
+title_vi: "Nam 84 tuổi có sỏi ống mật chủ chưa lấy, rét run rồi sốt 39°C, sáng nay lơ mơ, lú lẫn, lòng trắng mắt hơi vàng, gần như không than đau bụng"
+narrative_vi: "Ông B., 84 tuổi, ở Mỹ Tho (Tiền Giang), bị tăng huyết áp, biết có sỏi ống mật chủ từ 2 năm trước; bác sĩ hẹn làm thủ thuật lấy sỏi nhưng gia đình chưa đưa đi. Tối qua ông lạnh run cầm cập, sau đó sốt, con đo được 39°C. Sáng nay ông lơ mơ, lúc tỉnh lúc lẫn, nói lẫn lộn, không nhận ra cháu, gọi thì mở mắt rồi lại ngủ, không tự đứng dậy đi được. Con gái thấy lòng trắng mắt ông hơi vàng. Ông không than đau bụng, chỉ nhăn mặt khi con ấn vào vùng dưới sườn phải. Ông bỏ ăn từ hôm qua, chưa nôn. Không ho, không khó thở, không tiểu buốt, không tiêu chảy, không cứng gáy, không nổi ban, không co giật. Tay chân ông vẫn ấm."
+patient:
+  age_years: 84
+  sex: male
+  region: south
+  month: 10
+complaint: fever
+answers:
+  fever_max_temp: ge_39
+  fever_duration: d1_2
+  chills_rigors: present
+  confusion: present
+  drowsy_hard_to_wake: present
+  severe_weakness: present
+  jaundice: present
+  abdominal_pain: unknown
+  headache: unknown
+  loss_of_appetite: present
+  gallstones_known: present
+  nausea: absent
+  vomiting: absent
+  persistent_vomiting: absent
+  cough: absent
+  breathing_difficulty: absent
+  dysuria: absent
+  urinary_frequency: absent
+  diarrhea: absent
+  neck_stiffness: absent
+  rash_any: absent
+  seizure_recent: absent
+  cold_hands_feet: absent
+  hypertension_known: present
+  diabetes: absent
+  known_heart_disease: absent
+  immunocompromised: absent
+  sick_contact_respiratory: absent
+  dengue_nearby: absent
+  flood_mud_exposure: absent
+  heat_exposure: absent
+default_unmentioned: absent
+expected:
+  condition: acute_cholangitis
+  acceptable: [sepsis]
+  triage: 1
+source:
+  basis: "Viêm đường mật cấp nặng ở người 84 tuổi có sỏi ống mật chủ chưa lấy: rét run, sốt 39°C, vàng mắt, lơ mơ, lú lẫn, gần như không than đau bụng (người cao tuổi hay không đủ tam chứng Charcot). Lú lẫn là dấu hiệu rối loạn chức năng cơ quan của viêm đường mật nặng. MSD Manual: viêm đường mật là cấp cứu, cần hồi sức và dẫn lưu khẩn. NICE NG253: thay đổi ý thức mới là tiêu chí nguy cơ cao của nhiễm khuẩn huyết; NHS Sepsis: lú lẫn kèm sốt thì gọi 999."
+  references:
+    - msd-choledocholithiasis-cholangitis
+    - nice-ng253
+    - nhs-sepsis
+author: "agent:vignette-holdout"
+notes_vi: "Ca khó ở người cao tuổi. Người nhà không rõ có đau bụng không vì ông lú lẫn, chỉ nhăn mặt khi ấn hạ sườn phải. Nhiễm khuẩn huyết đường mật là cách gọi khác cũng đúng của ca này nên chấp nhận sepsis. Danh mục chưa có câu hỏi về nước tiểu sẫm màu, phân bạc màu."

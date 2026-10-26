@@ -1,0 +1,59 @@
+id: h-fever-060
+set: holdout
+title_vi: "Bé trai 26 tháng sốt cao liên tục 6 ngày không đỡ với kháng sinh, mắt đỏ không ghèn, môi nứt, lưỡi dâu tây, ban đỏ, phù đỏ bàn tay bàn chân, hạch cổ"
+narrative_vi: "Bé N., trai, 26 tháng, ở Hà Nội, đã tiêm đủ 2 mũi vắc xin sởi. Bé sốt cao liên tục 6 ngày nay, 39–40°C, uống hạ sốt chỉ đỡ vài giờ; đã uống kháng sinh 3 ngày theo đơn phòng khám tư nhưng không đỡ. Bé quấy khóc rất nhiều, ăn ít. Từ ngày thứ 3, hai mắt bé đỏ nhưng không có ghèn; môi đỏ sẫm, khô nứt, lưỡi đỏ rực nổi gai như quả dâu tây. Người bé nổi ban đỏ ở thân mình, ấn vào thì mất. Hai bàn tay, bàn chân sưng phù, lòng bàn tay đỏ. Cổ bên phải nổi một hạch to bằng đầu ngón tay cái. Bé không ho, không sổ mũi, không tiêu chảy, không nôn, trong miệng không có vết loét, không có nốt phỏng. Bé vẫn uống được, không li bì, không co giật."
+patient:
+  age_months: 26
+  sex: male
+  region: north
+  month: 3
+complaint: fever
+answers:
+  fever_max_temp: ge_39
+  fever_duration: d6_7
+  red_eyes: present
+  red_lips_strawberry_tongue: present
+  rash_any: present
+  rash_non_blanching: absent
+  rash_spreads_from_face: absent
+  hands_feet_swelling_peeling: present
+  lymph_node_swelling: present
+  bcg_scar_red: unknown
+  loss_of_appetite: present
+  headache: unknown
+  cough: absent
+  runny_nose: absent
+  sore_throat: absent
+  ear_pain: absent
+  diarrhea: absent
+  vomiting: absent
+  abdominal_pain: absent
+  mouth_ulcers: absent
+  hand_foot_blisters: absent
+  measles_vaccinated: present
+  measles_contact: absent
+  hfmd_contact: absent
+  child_unable_to_drink: absent
+  child_vomits_everything: absent
+  seizure_recent: absent
+  drowsy_hard_to_wake: absent
+  breathing_difficulty: absent
+  cold_hands_feet: absent
+  severe_weakness: absent
+  neck_stiffness: absent
+  sunken_eyes: absent
+  dengue_nearby: absent
+  sick_contact_respiratory: absent
+default_unmentioned: absent
+expected:
+  condition: kawasaki_disease
+  acceptable: []
+  triage: 3
+source:
+  basis: "Bệnh Kawasaki điển hình ở bé trai 26 tháng: sốt cao liên tục 6 ngày không đáp ứng kháng sinh, mắt đỏ không ghèn, môi đỏ nứt, lưỡi dâu tây, ban đỏ thân mình, phù đỏ bàn tay bàn chân, hạch cổ một bên, quấy khóc. Bộ Y tế 3312/QĐ-BYT 2015 (Bệnh Kawasaki): sốt liên tục từ 5 ngày kèm đủ các biểu hiện chính; globulin miễn dịch nên dùng trong 10 ngày đầu; tổn thương động mạch vành ở khoảng một phần ba ca không điều trị hoặc điều trị muộn. NHS Kawasaki disease: có triệu chứng thì khám khẩn (urgent GP / NHS 111). AHA 2017: không điều trị thì khoảng 25% bị phình động mạch vành. Mức 3."
+  references:
+    - byt-qd-3312-2015
+    - nhs-kawasaki-disease
+    - aha-kawasaki-2017
+author: "agent:vignette-holdout"
+notes_vi: "Ca điển hình. Sởi là chẩn đoán phân biệt nhưng bé đã tiêm đủ 2 mũi, không ho, không sổ mũi, ban không mọc từ mặt."

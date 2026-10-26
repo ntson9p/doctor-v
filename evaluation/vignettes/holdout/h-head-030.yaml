@@ -1,0 +1,55 @@
+id: h-head-030
+set: holdout
+title_vi: "Nữ 70 tuổi tăng huyết áp, sau khi bực tức thì đau đầu dữ dội nửa bên trái, nôn 4 lần, huyết áp 175/100; hỏi kỹ mới thấy đau quanh mắt trái, mắt trái đỏ, nhìn mờ"
+narrative_vi: "Bà K., 70 tuổi, ở Hà Tĩnh, bị tăng huyết áp, đang uống thuốc đều. Chiều nay bà bực tức vì cãi nhau với hàng xóm; khoảng một giờ sau bà đau đầu dữ dội nửa đầu bên trái, buồn nôn, nôn 4 lần trong 3 giờ. Con trai đo huyết áp được 175/100 mmHg, nghĩ bà bị lên huyết áp nên mở app. Khi được hỏi kỹ, bà nói đau nhức nhiều quanh mắt trái, mắt trái nhìn mờ; con thấy mắt trái đỏ hơn mắt phải. Bà không để ý có quầng sáng quanh đèn không. Bà không sốt, không cứng gáy, không méo miệng, không yếu tay chân, nói rõ ràng, vẫn tỉnh táo, tự đi lại được. Trước đây bà chưa từng đau đầu như vậy."
+patient:
+  age_years: 70
+  sex: female
+  region: central
+  month: 1
+complaint: headache
+answers:
+  headache_location: one_side
+  headache_severity: severe
+  headache_duration: lt_4h
+  headache_course: first_time
+  headache_thunderclap: absent
+  eye_pain_one_side: present
+  red_eyes: present
+  blurred_vision: present
+  halos_around_lights: unknown
+  vision_loss_or_double: absent
+  nausea: present
+  vomiting: present
+  persistent_vomiting: present
+  photophobia: absent
+  bp_measured: very_high
+  hypertension_known: present
+  bp_lowering_meds: present
+  fever: absent
+  neck_stiffness: absent
+  confusion: absent
+  seizure_recent: absent
+  es_stroke_signs: absent
+  sudden_loss_of_balance: absent
+  headache_after_head_injury: absent
+  chest_pain_pressure: absent
+  breathing_difficulty: absent
+  severe_weakness: absent
+  cold_hands_feet: absent
+  nasal_congestion: absent
+  stress_poor_sleep: absent
+  diabetes: absent
+  known_heart_disease: absent
+default_unmentioned: absent
+expected:
+  condition: acute_angle_closure_glaucoma
+  acceptable: []
+  triage: 2
+source:
+  basis: "Glôcôm góc đóng cơn cấp ở nữ 70 tuổi, khởi phát sau xúc động mạnh: biểu hiện nổi bật là đau đầu dữ dội nửa bên trái và nôn nhiều, huyết áp 175/100 mmHg nên người nhà nghĩ lên huyết áp; hỏi kỹ mới thấy đau nhức quanh mắt trái, mắt trái đỏ, nhìn mờ. Bộ Y tế 40/QĐ-BYT 2015: cơn cấp khởi phát đột ngột, thường về chiều tối hoặc sau xúc động mạnh; đau nhức quanh hốc mắt lan lên nửa đầu cùng bên, nhìn mờ; có thể buồn nôn, nôn, đau bụng, vã mồ hôi. NHS Glaucoma: triệu chứng đột ngột là cấp cứu, gọi 999 hoặc đến cấp cứu."
+  references:
+    - byt-qd-40-2015
+    - nhs-glaucoma
+author: "agent:vignette-holdout"
+notes_vi: "Ca khó: dễ nhầm cơn tăng huyết áp, đột quỵ hoặc đau nửa đầu vì đau đầu và nôn nổi bật, huyết áp tăng do đau; không nhận ra quầng sáng quanh đèn."

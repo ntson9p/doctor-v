@@ -1,0 +1,59 @@
+id: h-fever-059
+set: holdout
+title_vi: "Nông dân 66 tuổi lội ruộng mùa nước nổi ở Đồng Tháp, sốt cao 6 ngày, đau nhiều hai bắp chân, đỏ mắt, 2 ngày nay vàng da, tiểu rất ít, mệt lả"
+narrative_vi: "Ông Đ., 66 tuổi, làm ruộng ở Tháp Mười (Đồng Tháp). Mùa nước nổi năm nay ông lội ruộng vớt lúa ngập nhiều ngày, chân có vết xước; ruộng có nhiều chuột. Sáu ngày nay ông sốt cao đột ngột 39,5°C, rét run, đau đầu, đau nhức khắp người, nhất là hai bắp chân, bóp vào rất đau. Hai mắt đỏ, không có ghèn. Hai ngày nay da và mắt vàng dần, nước tiểu ít hẳn, sẫm màu; từ tối qua đến giờ (khoảng 14 giờ) ông mới tiểu một lần rất ít. Ông buồn nôn, chán ăn, mệt lả, phải có người đỡ mới đi được. Không ho ra máu, không chảy máu chân răng, không nổi ban, không khó thở, không đau bụng. Ông vẫn tỉnh, trả lời đúng."
+patient:
+  age_years: 66
+  sex: male
+  region: south
+  month: 10
+complaint: fever
+answers:
+  fever_max_temp: ge_39
+  fever_duration: d6_7
+  chills_rigors: present
+  headache: present
+  myalgia: present
+  calf_pain: present
+  red_eyes: present
+  jaundice: present
+  decreased_urine: present
+  severe_weakness: present
+  nausea: present
+  loss_of_appetite: present
+  flood_mud_exposure: present
+  vomiting: absent
+  persistent_vomiting: absent
+  confusion: absent
+  drowsy_hard_to_wake: absent
+  breathing_difficulty: absent
+  cold_hands_feet: absent
+  neck_stiffness: absent
+  hemoptysis: absent
+  bleeding_gums_nose: absent
+  rash_any: absent
+  abdominal_pain: absent
+  diarrhea: absent
+  cough: absent
+  dysuria: absent
+  retro_orbital_pain: absent
+  arthralgia: absent
+  bush_exposure: absent
+  malaria_area_exposure: absent
+  dengue_nearby: absent
+  hypertension_known: absent
+  diabetes: absent
+  heavy_alcohol: absent
+default_unmentioned: absent
+expected:
+  condition: leptospirosis
+  acceptable: []
+  triage: 2
+source:
+  basis: "Bệnh do Leptospira thể nặng (hội chứng Weil) ở nông dân 66 tuổi lội ruộng mùa nước nổi, nhiều chuột: sốt cao đột ngột, rét run, đau cơ bắp chân khi bóp, đỏ mắt, từ ngày 4–5 vàng da, tiểu rất ít, mệt lả. WHO 2003 (Human leptospirosis): hội chứng Weil gồm vàng da, suy thận, xuất huyết; đỏ kết mạc và đau cơ khi ấn (rõ nhất ở bắp chân) là dấu hiệu phân biệt nhất; người cao tuổi dễ bị nặng; thể nặng cần nhập viện, có thể phải lọc máu; tử vong 5–30%. NICE NG253: không tiểu 12–18 giờ là tiêu chí nguy cơ trung bình – cao của nhiễm khuẩn huyết, cần đánh giá khẩn ở bệnh viện. NHS Leptospirosis: vàng da, không tiểu được là dấu hiệu nặng. Mức 2."
+  references:
+    - who-leptospirosis-2003
+    - nice-ng253
+    - "https://www.nhs.uk/conditions/leptospirosis/"
+author: "agent:vignette-holdout"
+notes_vi: "Ca khó ở người cao tuổi. Chẩn đoán phân biệt: viêm đường mật (vàng da, sốt), sốt rét, sốt xuất huyết, nhiễm khuẩn huyết. Danh mục chưa có câu hỏi về vết xước ở chân khi lội nước."

@@ -1,0 +1,62 @@
+id: h-dizzy-027
+set: holdout
+title_vi: "Nữ 36 tuổi có tiền sử đau nửa đầu, 8 tháng nay 7–8 đợt chóng mặt quay nửa giờ đến vài giờ kèm buồn nôn, sợ ánh sáng, đau đầu nhẹ; đợt này sau một tuần thiếu ngủ"
+narrative_vi: "Chị L., 36 tuổi, giáo viên ở Hà Nội, bị đau nửa đầu từ năm 20 tuổi, hay lên cơn trước kỳ kinh hoặc khi thiếu ngủ: đau giật giật một bên đầu, sợ ánh sáng, sợ tiếng ồn. Khoảng 8 tháng nay chị có thêm những đợt chóng mặt: tự nhiên thấy mọi vật quay tròn hoặc chòng chành, mỗi đợt kéo dài từ nửa giờ đến vài giờ, kèm buồn nôn, sợ ánh sáng, nhiều lần có đau đầu giống cơn đau nửa đầu. Đã khoảng 7–8 đợt, giữa các đợt hoàn toàn bình thường. Đợt này bắt đầu từ 2 giờ trước, sau một tuần chấm thi thiếu ngủ: chóng mặt quay, buồn nôn, đau đầu nhẹ giật giật bên trái, khó chịu với ánh sáng và tiếng ồn; chị nằm yên trong phòng tối thì đỡ hơn, vẫn tự đi vào nhà vệ sinh được. Không nôn, không ù tai, không nghe kém, không nhìn đôi, không yếu tê tay chân, nói rõ. Không bị bẻ cổ hay va đập. Kinh nguyệt đều, không có thai."
+patient:
+  age_years: 36
+  sex: female
+  region: north
+  month: 9
+complaint: dizziness
+answers:
+  co_exposure: absent
+  dizziness_pattern: long_episodes
+  vertigo_spinning: present
+  dizziness_positional: absent
+  similar_episodes_before: present
+  headache: present
+  headache_thunderclap: absent
+  headache_location: one_side
+  headache_severity: mild
+  headache_character: throbbing
+  headache_course: recurrent_similar
+  photophobia: present
+  phonophobia: present
+  nausea: present
+  vomiting: absent
+  stress_poor_sleep: present
+  visual_aura: absent
+  hearing_loss_tinnitus: absent
+  vision_loss_or_double: absent
+  cannot_walk_unaided: absent
+  sudden_loss_of_balance: absent
+  transient_neuro_symptoms: absent
+  es_stroke_signs: absent
+  chest_pain_pressure: absent
+  breathing_difficulty: absent
+  fainting_or_near_fainting: absent
+  black_stool: absent
+  fever: absent
+  palpitations: absent
+  diarrhea: absent
+  dizziness_on_standing: absent
+  recent_viral_illness: absent
+  neck_injury_or_manipulation: absent
+  confusion: absent
+  pregnant: absent
+  missed_period: absent
+  hypertension_known: absent
+  diabetes: absent
+default_unmentioned: absent
+expected:
+  condition: migraine
+  acceptable: []
+  triage: 4
+source:
+  basis: "Đau nửa đầu tiền đình ở nữ 36 tuổi có tiền sử đau nửa đầu: 8 tháng nay 7–8 đợt chóng mặt quay tự phát, mỗi đợt nửa giờ đến vài giờ, kèm buồn nôn, sợ ánh sáng, nhiều đợt có đau đầu kiểu đau nửa đầu; đợt này sau một tuần thiếu ngủ; không ù tai, không nghe kém, không dấu hiệu thần kinh, tự đi được. Bárány Society và IHS (Lempert 2022): ít nhất 5 đợt triệu chứng tiền đình mức vừa hoặc nặng, mỗi đợt 5 phút đến 72 giờ, có tiền sử đau nửa đầu, ít nhất một nửa số đợt có đặc điểm đau nửa đầu; 65–85% là nữ. NHS Vertigo: chóng mặt quay hay tái lại thì khám bác sĩ (không khẩn); không có dấu hiệu cần cấp cứu (nhìn đôi, nghe kém, nói khó, yếu tê). Mức 4."
+  references:
+    - lempert-jvestibres-2022
+    - nhs-vertigo
+    - nhs-migraine
+author: "agent:vignette-holdout"
+notes_vi: "Ca thay thế cho ca giữ kín đã chuyển sang bộ dev (chóng mặt do đau nửa đầu)."

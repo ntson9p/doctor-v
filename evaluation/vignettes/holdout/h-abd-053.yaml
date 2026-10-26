@@ -1,0 +1,55 @@
+id: h-abd-053
+set: holdout
+title_vi: "Bé gái 11 tuổi chưa có kinh, nửa đêm đột ngột đau quặn từng cơn bụng dưới trái, nôn 4 lần, không sốt; tháng trước từng có một cơn ngắn tương tự"
+narrative_vi: "Bé H., gái, 11 tuổi, ở Vinh (Nghệ An), chưa có kinh nguyệt. Khoảng 2 giờ sáng nay bé đột ngột thức dậy vì đau bụng dưới bên trái. Đau từng cơn: có cơn đau quặn dữ dội làm bé khóc, rồi đỡ dần, khoảng một giờ sau lại đau lại. Đến giờ đã khoảng 10 giờ. Bé nôn 4 lần ra thức ăn và nước, vẫn uống được từng ngụm nước. Mẹ nghĩ bé bị rối loạn tiêu hóa nên cho uống men tiêu hóa nhưng không đỡ. Bé không sốt, không tiêu chảy, không tiểu buốt, hôm qua đi ngoài bình thường. Một tháng trước bé từng đau bụng dưới bên trái một lần chừng nửa giờ rồi tự hết. Ngoài cơn đau bé vẫn tỉnh táo, nói chuyện bình thường, nhưng bỏ ăn."
+patient:
+  age_years: 11
+  sex: female
+  region: central
+  month: 4
+complaint: abdominal_pain
+answers:
+  abd_pain_location: left_lower
+  abd_pain_onset: sudden
+  abd_pain_duration: h6_24
+  abd_pain_severe: present
+  abd_pain_colicky: present
+  abd_pain_migrated_rlq: absent
+  abd_pain_worse_movement: unknown
+  nausea: present
+  vomiting: present
+  vomiting_bilious: absent
+  persistent_vomiting: absent
+  loss_of_appetite: present
+  similar_episodes_before: present
+  fever: absent
+  diarrhea: absent
+  dysuria: absent
+  urinary_frequency: absent
+  no_stool_or_gas: absent
+  abdomen_hard_swollen: absent
+  black_stool: absent
+  vomiting_blood: absent
+  red_jelly_stool: absent
+  sunken_eyes: absent
+  fainting_or_near_fainting: absent
+  unsafe_food_shared: absent
+  confusion: absent
+  drowsy_hard_to_wake: absent
+  breathing_difficulty: absent
+  cold_hands_feet: absent
+  severe_weakness: absent
+  cough: absent
+  runny_nose: absent
+default_unmentioned: absent
+expected:
+  condition: ovarian_torsion
+  acceptable: []
+  triage: 2
+source:
+  basis: "Xoắn buồng trứng ở bé gái 11 tuổi chưa có kinh: đau bụng dưới trái đột ngột lúc nửa đêm, từng cơn (xoắn rồi tự tháo xoắn một phần), nôn nhiều lần, không sốt, không tiêu chảy; tháng trước từng có một cơn ngắn tự hết. Winton và Yamoah (BMJ Case Rep 2020): ở trẻ gái chưa có kinh, đau bụng gặp 92%, buồn nôn và nôn 85%; xoắn có thể xảy ra ở buồng trứng bình thường; không triệu chứng nào đủ để loại trừ; là cấp cứu, ưu tiên mổ tháo xoắn bảo tồn. NHS Stomach ache: đau bụng đột ngột, dữ dội thì đến cấp cứu ngay."
+  references:
+    - "https://pmc.ncbi.nlm.nih.gov/articles/PMC7228144/"
+    - nhs-stomach-ache
+author: "agent:vignette-holdout"
+notes_vi: "Ca khó: trẻ chưa có kinh, đau từng cơn, mẹ nghĩ rối loạn tiêu hóa. Trẻ dưới 13 tuổi không được hỏi các câu về kinh nguyệt, u nang buồng trứng."

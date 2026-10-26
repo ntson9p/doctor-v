@@ -1,0 +1,52 @@
+id: h-head-031
+set: holdout
+title_vi: "Nam 57 tuổi tăng huyết áp hết thuốc 2 tuần, đau nặng vùng gáy từ sáng, huyết áp đo hai lần khoảng 195/115 mmHg, không đau ngực, không yếu tê, không nhìn mờ"
+narrative_vi: "Ông D., 57 tuổi, ở Thái Bình, bị tăng huyết áp 5 năm, hết thuốc từ 2 tuần nay nhưng chưa đi lấy thuốc. Ông hút thuốc lào. Từ sáng ông đau đầu vùng sau gáy, căng tức, nặng đầu, vẫn làm việc nhẹ được nhưng phải nghỉ. Con trai đo huyết áp hai lần cách nhau 15 phút, đều khoảng 195/115 mmHg. Ông không đau ngực, không khó thở, không nhìn mờ, không yếu tê tay chân, nói năng bình thường, không lú lẫn, không buồn nôn, không nôn, không sốt. Kiểu đau đầu này ông thỉnh thoảng bị mỗi khi quên uống thuốc."
+patient:
+  age_years: 57
+  sex: male
+  region: north
+  month: 12
+complaint: headache
+answers:
+  headache_location: back_neck
+  headache_severity: moderate
+  headache_character: pressing
+  headache_duration: h4_72
+  headache_course: recurrent_similar
+  headache_thunderclap: absent
+  bp_measured: extreme
+  hypertension_known: present
+  bp_lowering_meds: absent
+  smoker: present
+  chest_pain_pressure: absent
+  breathing_difficulty: absent
+  blurred_vision: absent
+  vision_loss_or_double: absent
+  es_stroke_signs: absent
+  confusion: absent
+  seizure_recent: absent
+  neck_stiffness: absent
+  sudden_loss_of_balance: absent
+  headache_after_head_injury: absent
+  nausea: absent
+  vomiting: absent
+  fever: absent
+  photophobia: absent
+  edema_face_hands: absent
+  nasal_congestion: absent
+  stress_poor_sleep: absent
+  heavy_alcohol: absent
+  diabetes: absent
+  known_heart_disease: absent
+default_unmentioned: absent
+expected:
+  condition: hypertensive_crisis
+  acceptable: []
+  triage: 3
+source:
+  basis: "Huyết áp tăng rất cao không có tổn thương cơ quan đích cấp (tăng huyết áp khẩn cấp) ở nam 57 tuổi bỏ thuốc 2 tuần: huyết áp đo hai lần khoảng 195/115 mmHg, đau đầu vùng gáy; không đau ngực, không khó thở, không nhìn mờ, không yếu tê, không lú lẫn. NICE NG136: huyết áp từ 180/120 mmHg mà không có dấu hiệu cần chuyển viện trong ngày thì thăm dò tổn thương cơ quan đích càng sớm càng tốt; chỉ chuyển khám chuyên khoa ngay trong ngày khi có xuất huyết võng mạc, phù gai thị hoặc triệu chứng đe dọa tính mạng (lú lẫn mới, đau ngực, dấu hiệu suy tim, tổn thương thận cấp). Mức 3: đi khám, dùng lại thuốc trong ngày hoặc chậm nhất ngày mai."
+  references:
+    - nice-ng136
+author: "agent:vignette-holdout"
+notes_vi: "Ca điển hình, có số đo huyết áp."

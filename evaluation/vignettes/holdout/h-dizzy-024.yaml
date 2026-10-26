@@ -1,0 +1,62 @@
+id: h-dizzy-024
+set: holdout
+title_vi: "Cụ bà 79 tuổi đái tháo đường típ 2 tự bỏ thuốc 3 tuần, khát nhiều, tiểu nhiều, sụt cân, choáng khi đứng, không đứng vững, nay lơ mơ, lú lẫn; máy đo đường huyết báo 'HI'"
+narrative_vi: "Bà T., 79 tuổi, ở Long Xuyên (An Giang), bị đái tháo đường típ 2 và tăng huyết áp. Khoảng 3 tuần nay bà tự bỏ thuốc tiểu đường vì hết thuốc, ngại đi khám; thuốc huyết áp vẫn uống. Hai tuần nay bà khát nước nhiều, uống nhiều nước mía, nước ngọt, đi tiểu liên tục, kể cả ban đêm; người gầy rộc đi. Mấy hôm nay bà than chóng mặt, choáng váng, đứng dậy là tối sầm mắt, phải vịn tường; không thấy mọi vật quay tròn. Từ hôm qua bà mệt lả, lơ mơ, lúc nói chuyện được lúc lẫn lộn, không nhận ra cháu, không tự đứng vững. Con gái đo đường huyết bằng máy, máy báo 'HI'. Bà không sốt, không ho, không tiểu buốt, không nôn, không tiêu chảy, không đau ngực, không đau đầu. Không méo miệng, hai tay chân cử động đều. Nhà không đốt than."
+patient:
+  age_years: 79
+  sex: female
+  region: south
+  month: 4
+complaint: dizziness
+answers:
+  co_exposure: absent
+  dizziness_pattern: continuous
+  vertigo_spinning: absent
+  dizziness_positional: absent
+  dizziness_on_standing: present
+  fainting_or_near_fainting: present
+  cannot_walk_unaided: present
+  sudden_loss_of_balance: absent
+  vision_loss_or_double: absent
+  transient_neuro_symptoms: absent
+  es_stroke_signs: absent
+  chest_pain_pressure: absent
+  breathing_difficulty: absent
+  black_stool: absent
+  fever: absent
+  diabetes: present
+  on_glucose_lowering_meds: absent
+  glucose_measured: high
+  confusion: present
+  drowsy_hard_to_wake: present
+  severe_weakness: present
+  cold_hands_feet: absent
+  thirst_polyuria: present
+  weight_loss_unintended: present
+  headache: absent
+  vomiting: absent
+  diarrhea: absent
+  hearing_loss_tinnitus: absent
+  palpitations: absent
+  dysuria: absent
+  cough: absent
+  ketone_breath: absent
+  decreased_urine: absent
+  missed_meal: absent
+  better_after_sugar: absent
+  hypertension_known: present
+  bp_lowering_meds: present
+  known_heart_disease: absent
+  atrial_fibrillation_known: absent
+default_unmentioned: absent
+expected:
+  condition: diabetic_ketoacidosis
+  acceptable: []
+  triage: 1
+source:
+  basis: "Tình trạng tăng áp lực thẩm thấu do đái tháo đường ở cụ bà 79 tuổi đái tháo đường típ 2 tự bỏ thuốc 3 tuần, uống nhiều nước ngọt: 2 tuần khát nhiều, tiểu nhiều, sụt cân, choáng khi đứng, không tự đứng vững, rồi lơ mơ, lú lẫn; máy đo đường huyết báo 'HI'; không sốt, không nôn, không dấu hiệu thần kinh khu trú. ADA 2024 (Umpierrez và cộng sự, Hyperglycemic crises in adults with diabetes): tăng áp lực thẩm thấu hay gặp ở người cao tuổi đái tháo đường típ 2, có thể hình thành trong nhiều ngày đến nhiều tuần với tiểu nhiều, khát nhiều, sụt cân, mất nước, thay đổi ý thức; là cấp cứu đe dọa tính mạng. NHS Diabetic ketoacidosis: buồn ngủ hoặc lú lẫn ở người đái tháo đường thì gọi 999 hoặc đến cấp cứu. Lú lẫn, li bì nên mức 1."
+  references:
+    - "https://pmc.ncbi.nlm.nih.gov/articles/PMC11272983/"
+    - nhs-diabetic-ketoacidosis
+author: "agent:vignette-holdout"
+notes_vi: "Ca khó ở người cao tuổi; bệnh đúng là thể tăng áp lực thẩm thấu của bệnh 'Nhiễm toan ceton, tăng áp lực thẩm thấu do đái tháo đường'. Người nhà chọn 'Chóng mặt' vì bà than choáng váng. Đột quỵ là chẩn đoán phân biệt vì không tự đứng vững. Danh mục chưa có câu hỏi về bỏ thuốc tiểu đường hay uống nhiều nước ngọt."

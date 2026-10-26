@@ -1,0 +1,56 @@
+id: h-fever-064
+set: holdout
+title_vi: "Bé gái 3 tuổi chưa tiêm vắc xin sởi, 11 ngày trước chơi với em họ bị sởi, nay sốt cao 3 ngày, ho, sổ mũi, mắt đỏ chảy nước, chưa nổi ban"
+narrative_vi: "Bé Q., gái, 3 tuổi, ở quận Bình Tân (TP.HCM). Gia đình không cho bé tiêm vắc xin sởi vì sợ phản ứng sau tiêm. Mười một ngày trước, bé chơi cả buổi với em họ ở đám giỗ; hai hôm sau em họ nổi ban, được bệnh viện chẩn đoán sởi. Ba ngày nay bé sốt cao 39–39,8°C, ho khan nhiều, sổ mũi, nghẹt mũi, hắt hơi, hai mắt đỏ, chảy nước mắt, nheo mắt khi ra chỗ sáng. Bé mệt, quấy, ăn kém. Đến giờ người bé chưa nổi ban. Bé vẫn uống được, không nôn, không tiêu chảy, không khó thở, không thở rít, không co giật, không li bì, không đau tai."
+patient:
+  age_years: 3
+  sex: female
+  region: south
+  month: 3
+complaint: fever
+answers:
+  fever_max_temp: ge_39
+  fever_duration: d3_5
+  measles_contact: present
+  measles_vaccinated: absent
+  cough: present
+  productive_cough: absent
+  runny_nose: present
+  nasal_congestion: present
+  red_eyes: present
+  photophobia: present
+  fatigue: present
+  loss_of_appetite: present
+  rash_any: absent
+  headache: unknown
+  sore_throat: unknown
+  vomiting: absent
+  diarrhea: absent
+  abdominal_pain: absent
+  ear_pain: absent
+  breathing_difficulty: absent
+  child_unable_to_drink: absent
+  child_vomits_everything: absent
+  seizure_recent: absent
+  drowsy_hard_to_wake: absent
+  cold_hands_feet: absent
+  severe_weakness: absent
+  neck_stiffness: absent
+  mouth_ulcers: absent
+  hand_foot_blisters: absent
+  hfmd_contact: absent
+  sick_contact_respiratory: absent
+  dengue_nearby: absent
+default_unmentioned: absent
+expected:
+  condition: measles
+  acceptable: []
+  triage: 3
+source:
+  basis: "Sởi giai đoạn khởi phát (chưa mọc ban) ở bé gái 3 tuổi chưa tiêm vắc xin, tiếp xúc gần người bị sởi 11 ngày trước: sốt cao 3 ngày, ho, sổ mũi, hắt hơi, mắt đỏ, chảy nước mắt, sợ ánh sáng. CDC (Clinical overview of measles): tiền triệu gồm sốt có thể tới 40,5°C, ho, sổ mũi, viêm kết mạc; ban xuất hiện khoảng 14 ngày sau phơi nhiễm, lây từ 4 ngày trước khi phát ban. NHS Measles: nghĩ con bị sởi, hoặc chưa tiêm đủ 2 mũi mà tiếp xúc gần người bị sởi thì khám khẩn (urgent GP / NHS 111), gọi trước để được khám riêng; chưa có dấu hiệu nào cần gọi 999. Bộ Y tế 1019/QĐ-BYT 2025."
+  references:
+    - nhs-measles
+    - cdc-measles-clinical-overview
+    - byt-qd-1019-2025
+author: "agent:vignette-holdout"
+notes_vi: "Ca thay thế cho ca giữ kín đã chuyển sang bộ dev (sởi giai đoạn khởi phát). Câu hỏi phát ban trả lời 'không' vì ban chưa mọc. Danh mục chưa có câu hỏi về hạt Koplik (chấm trắng nhỏ trong má)."

@@ -1,0 +1,56 @@
+id: h-fever-062
+set: holdout
+title_vi: "Bé trai 9 tuổi sau buổi hội thao giữa trưa nắng: mệt, đỏ mặt, nhiều mồ hôi, nhức đầu, nôn 1 lần, 38,3°C; làm mát, uống oresol 1 giờ thì đỡ hẳn"
+narrative_vi: "Bé T., nam, 9 tuổi, ở Biên Hòa (Đồng Nai), đã tiêm đủ 2 mũi vắc xin sởi. Hôm nay trường tổ chức hội thao, bé chạy thi và đứng ngoài sân nắng gần như cả buổi trưa, trời khoảng 37°C, bé mang theo ít nước. Chiều về bé mệt, đỏ bừng mặt, ra nhiều mồ hôi, kêu nhức đầu, buồn nôn, nôn 1 lần. Mẹ đo nhiệt độ được 38,3°C. Mẹ cho bé vào phòng có quạt, lau người bằng nước mát, cho uống từng ngụm nước và oresol. Khoảng 1 giờ sau bé đỡ hẳn, đo lại 37,4°C, tỉnh táo, uống được nước, đi tiểu được, đòi ăn. Bé không ho, không sổ mũi, không đau họng, không tiêu chảy, không đau bụng, không nổi ban, không co giật, không lú lẫn. Mấy hôm nay trong lớp không có bạn nào bị sốt."
+patient:
+  age_years: 9
+  sex: male
+  region: south
+  month: 4
+complaint: fever
+answers:
+  fever_max_temp: t38_39
+  fever_duration: d1_2
+  heat_exposure: present
+  headache: present
+  nausea: present
+  vomiting: present
+  persistent_vomiting: absent
+  fatigue: present
+  chills_rigors: absent
+  myalgia: absent
+  loss_of_appetite: absent
+  cough: absent
+  runny_nose: absent
+  sore_throat: absent
+  diarrhea: absent
+  abdominal_pain: absent
+  rash_any: absent
+  mouth_ulcers: absent
+  hand_foot_blisters: absent
+  seizure_recent: absent
+  confusion: absent
+  drowsy_hard_to_wake: absent
+  neck_stiffness: absent
+  breathing_difficulty: absent
+  cold_hands_feet: absent
+  severe_weakness: absent
+  decreased_urine: absent
+  sunken_eyes: absent
+  fainting_or_near_fainting: absent
+  measles_vaccinated: present
+  measles_contact: absent
+  hfmd_contact: absent
+  sick_contact_respiratory: absent
+  dengue_nearby: absent
+default_unmentioned: absent
+expected:
+  condition: heat_exhaustion
+  acceptable: []
+  triage: 5
+source:
+  basis: "Kiệt sức do nóng ở bé trai 9 tuổi sau buổi hội thao giữa trưa nắng, uống ít nước: mệt, đỏ bừng mặt, ra nhiều mồ hôi, nhức đầu, buồn nôn, nôn 1 lần, nhiệt độ 38,3°C; được làm mát, uống nước và oresol thì sau khoảng 1 giờ đỡ hẳn, nhiệt độ về 37,4°C, tỉnh táo, ăn uống được. NHS Heat exhaustion and heatstroke: kiệt sức do nóng gồm mệt, đau đầu, buồn nôn hoặc nôn, ra nhiều mồ hôi, nhiệt độ cao, rất khát; không cần cấp cứu nếu làm mát được trong 30 phút; chỉ gọi 999 khi vẫn không khỏe sau 30 phút, thân nhiệt rất cao, da nóng không ra mồ hôi, lú lẫn, co giật. Đã hồi phục nên theo dõi tại nhà."
+  references:
+    - nhs-heat-exhaustion-heatstroke
+author: "agent:vignette-holdout"
+notes_vi: "Ca khó: người nhà chọn 'Sốt' vì đo được 38,3°C; phơi nắng là manh mối chính để phân biệt với sốt do nhiễm trùng."

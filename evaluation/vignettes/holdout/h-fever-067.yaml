@@ -1,0 +1,50 @@
+id: h-fever-067
+set: holdout
+title_vi: "Nam 17 tuổi sau 6 giờ tắm biển không bôi kem chống nắng, da vai lưng đỏ rát, sờ thấy nóng, 37,7°C, ngoài ra khỏe"
+narrative_vi: "Em Y., nam, 17 tuổi, ở Nha Trang (Khánh Hòa). Hôm qua em đi tắm biển với bạn từ 9 giờ sáng đến 3 giờ chiều, không bôi kem chống nắng. Tối qua da vai, lưng, mặt và hai cánh tay đỏ rát, chạm vào rất xót, không có bọng nước, không sưng. Sáng nay mẹ sờ lưng em thấy nóng, đo nhiệt độ ở nách được 37,7°C nên lo em bị sốt. Em chỉ thấy rát ở chỗ da cháy nắng, không thấy ớn lạnh hay rét run. Em vẫn ăn uống, đi lại bình thường, uống nhiều nước, đi tiểu bình thường. Không đau đầu, không chóng mặt, không buồn nôn, không nôn, không chuột rút, không mệt nhiều. Không ho, không sổ mũi, không đau họng. Em muốn biết có cần đi khám không."
+patient:
+  age_years: 17
+  sex: male
+  region: central
+  month: 6
+complaint: fever
+answers:
+  fever_max_temp: lt_38
+  fever_duration: d1_2
+  heat_exposure: present
+  rash_any: absent
+  chills_rigors: absent
+  headache: absent
+  nausea: absent
+  vomiting: absent
+  fatigue: absent
+  myalgia: absent
+  dizziness: absent
+  fainting_or_near_fainting: absent
+  cough: absent
+  runny_nose: absent
+  sore_throat: absent
+  diarrhea: absent
+  abdominal_pain: absent
+  red_eyes: absent
+  confusion: absent
+  drowsy_hard_to_wake: absent
+  breathing_difficulty: absent
+  cold_hands_feet: absent
+  severe_weakness: absent
+  neck_stiffness: absent
+  persistent_vomiting: absent
+  decreased_urine: absent
+  sick_contact_respiratory: absent
+  dengue_nearby: absent
+default_unmentioned: absent
+expected:
+  condition: other
+  acceptable: []
+  triage: 5
+source:
+  basis: "Cháy nắng không biến chứng ở nam 17 tuổi sau 6 giờ tắm biển không bôi kem chống nắng: da vai, lưng, mặt đỏ rát, không phỏng nước, không sưng, nhiệt độ 37,7°C; không đau đầu, không chóng mặt, không buồn nôn, không rét run, không chuột rút, ăn uống bình thường. NHS Sunburn: tự chăm sóc (tránh nắng, làm mát da, kem dưỡng, uống nhiều nước, thuốc giảm đau không kê đơn); chỉ khám khẩn khi da phỏng hoặc sưng, nhiệt độ rất cao, thấy nóng lạnh rét run, rất mệt, chóng mặt, buồn nôn, đau đầu, chuột rút, hoặc khi trẻ nhỏ bị cháy nắng. Không có dấu hiệu nào nên theo dõi tại nhà."
+  references:
+    - "https://www.nhs.uk/conditions/sunburn/"
+author: "agent:vignette-holdout"
+notes_vi: "Ca ngoài danh mục. Người nhà chọn 'Sốt' vì sờ lưng thấy nóng, đo được 37,7°C. Vùng da đỏ do cháy nắng không được tính là phát ban. Chẩn đoán phân biệt trong danh mục: kiệt sức do nóng (không có triệu chứng toàn thân). Danh mục chưa có câu hỏi về cháy nắng."

@@ -1,0 +1,61 @@
+id: h-abd-049
+set: holdout
+title_vi: "Nam 66 tuổi hút thuốc, từng bị sỏi thận, đột ngột đau dữ dội hông lưng và bụng dưới trái lan xuống bẹn, nôn, choáng khi đứng; tưởng sỏi thận tái phát"
+narrative_vi: "Ông H., 66 tuổi, ở Cần Thơ, hút thuốc lá 1 gói mỗi ngày, bị tăng huyết áp nhưng uống thuốc không đều. Mười năm trước ông bị sỏi thận trái, đã tán sỏi. Sáng nay đang tưới cây, ông đột ngột đau dữ dội ở hông lưng trái và bụng dưới bên trái, đau lan xuống bẹn trái. Ông nghĩ sỏi thận tái phát nên uống một viên thuốc giảm đau nhưng không đỡ. Đã khoảng 3 giờ, đau liên tục, không lúc nào hết. Ông buồn nôn, nôn 1 lần ra thức ăn. Mỗi lần đứng dậy ông thấy choáng váng, xây xẩm, phải ngồi xuống ngay; ông không ngất. Không sốt, không tiểu buốt, nước tiểu không đỏ, vẫn đi ngoài và xì hơi được. Ông chưa từng được siêu âm động mạch chủ."
+patient:
+  age_years: 66
+  sex: male
+  region: south
+  month: 5
+complaint: abdominal_pain
+answers:
+  abd_pain_location: left_lower
+  abd_pain_onset: sudden
+  abd_pain_duration: lt_6h
+  abd_pain_severe: present
+  abd_pain_colicky: absent
+  abd_pain_radiates_groin: present
+  abd_pain_radiates_back: present
+  flank_pain: present
+  nausea: present
+  vomiting: present
+  persistent_vomiting: absent
+  fainting_or_near_fainting: present
+  dizziness_on_standing: present
+  cold_sweat: absent
+  cold_hands_feet: absent
+  pallor: absent
+  hematuria: absent
+  dysuria: absent
+  urinary_frequency: absent
+  fever: absent
+  diarrhea: absent
+  black_stool: absent
+  vomiting_blood: absent
+  abdomen_hard_swollen: absent
+  no_stool_or_gas: absent
+  chest_pain_pressure: absent
+  breathing_difficulty: absent
+  confusion: absent
+  drowsy_hard_to_wake: absent
+  severe_weakness: absent
+  kidney_stones_known: present
+  smoker: present
+  hypertension_known: present
+  bp_lowering_meds: present
+  known_aaa: absent
+  known_heart_disease: absent
+  diabetes: absent
+  regular_painkiller_use: absent
+default_unmentioned: absent
+expected:
+  condition: abdominal_aortic_aneurysm
+  acceptable: []
+  triage: 1
+source:
+  basis: "Phình động mạch chủ bụng rỉ máu biểu hiện giống cơn đau quặn thận ở nam 66 tuổi hút thuốc, tăng huyết áp: đau hông lưng và bụng dưới trái đột ngột, dữ dội, liên tục, lan xuống bẹn, choáng mỗi khi đứng dậy. Đau quặn thận là chẩn đoán nhầm hay gặp nhất của vỡ phình động mạch chủ bụng; cơn đau quặn thận ở người cao tuổi phải nghĩ đến phình động mạch chủ dù dấu hiệu sinh tồn ổn định (emDocs, Tandlich và Colton 2021). NHS (Abdominal aortic aneurysm): đau bụng hoặc đau lưng đột ngột, dữ dội thì gọi 999."
+  references:
+    - nhs-abdominal-aortic-aneurysm
+    - "https://www.emdocs.net/?p=17980"
+author: "agent:vignette-holdout"
+notes_vi: "Ca khó: tiền sử sỏi thận trái và đau lan xuống bẹn là yếu tố gây nhiễu có chủ ý; choáng khi đứng là dấu hiệu duy nhất gợi ý mất máu. Danh mục chưa có câu hỏi về khối đập theo nhịp mạch trong bụng."

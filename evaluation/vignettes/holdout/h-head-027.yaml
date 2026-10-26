@@ -1,0 +1,56 @@
+id: h-head-027
+set: holdout
+title_vi: "Nam 41 tuổi sốt, đau đầu nhiều 4 ngày, từ hôm qua nói năng lạ, khó tìm từ, quên, sáng nay co giật toàn thân rồi lơ mơ, lẫn lộn"
+narrative_vi: "Anh S., 41 tuổi, ở Vĩnh Long, trước giờ khỏe. Bốn ngày nay anh sốt 38,5–39,2°C, đau đầu khắp đầu, rất đau, uống thuốc hạ sốt không đỡ, buồn nôn, nôn 1 lần. Từ chiều qua vợ thấy anh nói năng lạ, lặp đi lặp lại một câu, có lúc nói không ra từ, cáu gắt vô cớ, không nhớ chuyện vừa xảy ra. Sáng nay anh lên một cơn co giật toàn thân khoảng 2 phút, sau đó lơ mơ, gọi hỏi trả lời chậm, lẫn lộn. Vợ dùng app thay anh. Anh không cứng gáy rõ, không nổi ban, không ho; không bị ngã hay va đập đầu. Không méo miệng, tay chân cử động được cả hai bên. Đây là lần đầu anh đau đầu như vậy."
+patient:
+  age_years: 41
+  sex: male
+  region: south
+  month: 11
+complaint: headache
+answers:
+  headache_location: whole_head
+  headache_severity: severe
+  headache_duration: gt_3d
+  headache_course: first_time
+  headache_thunderclap: absent
+  fever: present
+  fever_max_temp: ge_39
+  fever_duration: d3_5
+  confusion: present
+  seizure_recent: present
+  drowsy_hard_to_wake: present
+  nausea: present
+  vomiting: present
+  persistent_vomiting: absent
+  neck_stiffness: absent
+  rash_any: absent
+  photophobia: absent
+  es_stroke_signs: absent
+  vision_loss_or_double: absent
+  sudden_loss_of_balance: absent
+  headache_after_head_injury: absent
+  cough: absent
+  breathing_difficulty: absent
+  cold_hands_feet: absent
+  severe_weakness: absent
+  nasal_congestion: absent
+  stress_poor_sleep: absent
+  myalgia: absent
+  immunocompromised: absent
+  hypertension_known: absent
+  diabetes: absent
+  dengue_nearby: absent
+  flood_mud_exposure: absent
+  sick_contact_respiratory: absent
+default_unmentioned: absent
+expected:
+  condition: encephalitis
+  acceptable: []
+  triage: 1
+source:
+  basis: "Viêm não do vi rút (nhiều khả năng do herpes) ở nam 41 tuổi: sốt, đau đầu 4 ngày, rồi thay đổi hành vi, lặp lời, khó tìm từ, quên, sau đó co giật toàn thân và lơ mơ, lú lẫn; không cứng gáy, không ban. NHS Encephalitis: bệnh khởi đầu như cúm (sốt, đau đầu), sau đó lú lẫn, co giật, thay đổi tính cách và hành vi, khó nói, mất ý thức; có các dấu hiệu này thì gọi 999 ngay, cần điều trị khẩn ở bệnh viện."
+  references:
+    - "https://www.nhs.uk/conditions/encephalitis/"
+author: "agent:vignette-holdout"
+notes_vi: "Ca điển hình. Danh mục chưa có câu hỏi về thay đổi hành vi, tính cách hay khó tìm từ xuất hiện dần trong vài ngày."

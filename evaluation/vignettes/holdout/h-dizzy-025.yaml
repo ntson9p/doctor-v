@@ -1,0 +1,60 @@
+id: h-dizzy-025
+set: holdout
+title_vi: "Nữ 69 tuổi uống thuốc huyết áp lúc nhớ lúc quên, sáng dậy choáng váng, nặng đầu, đau gáy, chảy máu mũi một lần, huyết áp đo hai lần khoảng 200/105 mmHg"
+narrative_vi: "Bà H., 69 tuổi, ở Phủ Lý (Hà Nam), bị tăng huyết áp, uống thuốc lúc nhớ lúc quên. Sáng nay trời rét, bà ngủ dậy thấy choáng váng, nặng đầu, đi lại hơi chòng chành nhưng vẫn tự đi được, không thấy mọi vật quay tròn; đến giờ đã khoảng 3 giờ. Bà đau đầu âm ỉ vùng gáy và chảy máu mũi bên trái một lần, ép mũi 10 phút thì cầm. Con gái đo huyết áp hai lần, đều khoảng 200/105 mmHg. Bà không nhìn mờ, không nhìn đôi, không méo miệng, không yếu tê tay chân, nói rõ, không đau ngực, không khó thở, không buồn nôn, không nôn, không ù tai. Nhà dùng máy sưởi điện, không đốt than. Bà chưa từng bị như vậy."
+patient:
+  age_years: 69
+  sex: female
+  region: north
+  month: 1
+complaint: dizziness
+answers:
+  co_exposure: absent
+  dizziness_pattern: continuous
+  vertigo_spinning: absent
+  dizziness_positional: absent
+  dizziness_on_standing: absent
+  headache: present
+  headache_thunderclap: absent
+  headache_location: back_neck
+  headache_severity: mild
+  bleeding_gums_nose: present
+  bp_measured: extreme
+  hypertension_known: present
+  bp_lowering_meds: present
+  vision_loss_or_double: absent
+  blurred_vision: absent
+  cannot_walk_unaided: absent
+  sudden_loss_of_balance: absent
+  transient_neuro_symptoms: absent
+  es_stroke_signs: absent
+  chest_pain_pressure: absent
+  breathing_difficulty: absent
+  fainting_or_near_fainting: absent
+  black_stool: absent
+  fever: absent
+  nausea: absent
+  vomiting: absent
+  hearing_loss_tinnitus: absent
+  palpitations: absent
+  diarrhea: absent
+  confusion: absent
+  drowsy_hard_to_wake: absent
+  severe_weakness: absent
+  cold_hands_feet: absent
+  others_same_symptoms: absent
+  antithrombotic_use: absent
+  diabetes: absent
+  known_heart_disease: absent
+  atrial_fibrillation_known: absent
+default_unmentioned: absent
+expected:
+  condition: hypertensive_crisis
+  acceptable: []
+  triage: 3
+source:
+  basis: "Huyết áp tăng rất cao không có tổn thương cơ quan đích cấp (tăng huyết áp khẩn cấp) ở nữ 69 tuổi uống thuốc không đều: choáng váng, nặng đầu, đau đầu vùng gáy, chảy máu mũi một lần đã cầm, huyết áp đo hai lần khoảng 200/105 mmHg; không nhìn mờ, không nhìn đôi, không yếu tê, nói rõ, tự đi được, không đau ngực, không khó thở. NICE NG136: huyết áp từ 180/120 mmHg mà không có triệu chứng đe dọa tính mạng (lú lẫn mới, đau ngực, suy tim, tổn thương thận cấp) hay xuất huyết võng mạc, phù gai thị thì thăm dò tổn thương cơ quan đích càng sớm càng tốt, không cần chuyển viện ngay trong ngày. Mức 3."
+  references:
+    - nice-ng136
+author: "agent:vignette-holdout"
+notes_vi: "Ca khó ở người cao tuổi: chóng mặt kèm huyết áp rất cao làm nghĩ đến đột quỵ, nhưng không có dấu hiệu thần kinh, tự đi được. Câu chảy máu chân răng, chảy máu mũi trả lời 'có' vì chảy máu mũi."

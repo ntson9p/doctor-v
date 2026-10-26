@@ -1,0 +1,50 @@
+id: h-head-029
+set: holdout
+title_vi: "Nữ 61 tuổi viễn thị, tối nay sau khi xem phim lâu trong phòng tối đột ngột đau nhức dữ dội mắt phải lan lên nửa đầu, mắt đỏ, nhìn mờ, thấy quầng sáng quanh đèn, nôn"
+narrative_vi: "Bà P., 61 tuổi, ở Hà Nội, bị viễn thị, đeo kính từ năm 40 tuổi. Tối nay sau khi ngồi xem phim lâu trong phòng tắt đèn, bà đột ngột đau nhức dữ dội ở mắt phải, đau lan lên trán và nửa đầu bên phải. Mắt phải đỏ, nhìn mờ như có màn sương, nhìn bóng đèn thấy quầng sáng nhiều màu; ánh sáng làm bà chói mắt. Bà buồn nôn, đã nôn 2 lần. Đau khoảng 2 giờ nay, uống thuốc giảm đau không đỡ. Bà không sốt, không cứng gáy, không yếu tay chân, không méo miệng, nói năng bình thường. Trước đây bà ít khi đau đầu, chưa từng bị như vậy."
+patient:
+  age_years: 61
+  sex: female
+  region: north
+  month: 11
+complaint: headache
+answers:
+  eye_pain_one_side: present
+  headache_location: one_side
+  headache_severity: severe
+  headache_duration: lt_4h
+  headache_course: first_time
+  headache_thunderclap: absent
+  red_eyes: present
+  blurred_vision: present
+  halos_around_lights: present
+  vision_loss_or_double: present
+  photophobia: present
+  nausea: present
+  vomiting: present
+  persistent_vomiting: absent
+  fever: absent
+  neck_stiffness: absent
+  confusion: absent
+  seizure_recent: absent
+  es_stroke_signs: absent
+  sudden_loss_of_balance: absent
+  headache_after_head_injury: absent
+  visual_aura: absent
+  nasal_congestion: absent
+  stress_poor_sleep: absent
+  pregnant: absent
+  hypertension_known: absent
+  diabetes: absent
+default_unmentioned: absent
+expected:
+  condition: acute_angle_closure_glaucoma
+  acceptable: []
+  triage: 2
+source:
+  basis: "Glôcôm góc đóng cơn cấp điển hình ở nữ 61 tuổi viễn thị, khởi phát buổi tối sau khi ngồi lâu trong phòng tối: đau nhức dữ dội mắt phải lan lên nửa đầu, mắt đỏ, nhìn mờ như sương, thấy quầng sáng nhiều màu quanh đèn, buồn nôn, nôn. Bộ Y tế 40/QĐ-BYT 2015 (Glôcôm góc đóng nguyên phát): cơn cấp khởi phát đột ngột, thường về chiều tối; đau nhức mắt, quanh hốc mắt lan lên nửa đầu cùng bên, nhìn mờ như qua màn sương, nhìn đèn thấy quầng xanh đỏ, sợ ánh sáng, có thể buồn nôn, nôn; tổn thương thị thần kinh không hồi phục nên cần điều trị kịp thời. NHS Glaucoma: triệu chứng xuất hiện đột ngột là cấp cứu, gọi 999 hoặc đến cấp cứu."
+  references:
+    - byt-qd-40-2015
+    - nhs-glaucoma
+author: "agent:vignette-holdout"
+notes_vi: "Ca điển hình. Người bệnh trả lời 'có' ở câu đột ngột mất một phần thị lực vì mắt phải đột ngột nhìn kém hẳn."

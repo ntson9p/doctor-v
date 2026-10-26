@@ -1,0 +1,66 @@
+id: h-fever-055
+set: holdout
+title_vi: "Nam 45 tuổi ở Huế uống rượu nhiều, sốt cao ớn lạnh 10 ngày, đau dưới sườn phải tăng khi hít sâu, lan lên vai phải, chán ăn, sụt cân"
+narrative_vi: "Anh C., 45 tuổi, thợ hồ ở Huế, uống rượu hằng ngày nhiều năm nay. Mười ngày nay anh sốt, chiều tối sốt cao, có hôm đo 39,2°C, kèm ớn lạnh, rét run. Anh đau âm ỉ vùng dưới sườn phải, đau tăng khi hít sâu, khi đi xe máy qua chỗ xóc, đau lan lên vai phải. Anh buồn nôn, chán ăn, mệt, sụt khoảng 4 kg. Da và mắt không vàng. Không ho, không khó thở, không tiêu chảy, không tiểu buốt, không nổi ban. Không đi rừng, không lội nước lũ, khu phố không có ai bị sốt xuất huyết. Anh vẫn tỉnh táo, tự đi lại được."
+patient:
+  age_years: 45
+  sex: male
+  region: central
+  month: 7
+complaint: fever
+answers:
+  fever_max_temp: ge_39
+  fever_duration: gt_7d
+  chills_rigors: present
+  abdominal_pain: present
+  abd_pain_location: right_upper
+  abd_pain_onset: gradual
+  abd_pain_duration: d4_14
+  abd_pain_severe: absent
+  abd_pain_colicky: absent
+  abd_pain_worse_movement: present
+  abd_pain_radiates_right_shoulder: present
+  abd_pain_radiates_back: absent
+  pleuritic_chest_pain: present
+  nausea: present
+  vomiting: absent
+  loss_of_appetite: present
+  fatigue: present
+  weight_loss_unintended: present
+  heavy_alcohol: present
+  jaundice: absent
+  cough: absent
+  breathing_difficulty: absent
+  diarrhea: absent
+  dysuria: absent
+  rash_any: absent
+  headache: absent
+  myalgia: absent
+  sore_throat: absent
+  runny_nose: absent
+  abdomen_hard_swollen: absent
+  confusion: absent
+  drowsy_hard_to_wake: absent
+  cold_hands_feet: absent
+  severe_weakness: absent
+  neck_stiffness: absent
+  persistent_vomiting: absent
+  diabetes: absent
+  gallstones_known: absent
+  malaria_area_exposure: absent
+  bush_exposure: absent
+  flood_mud_exposure: absent
+  dengue_nearby: absent
+default_unmentioned: absent
+expected:
+  condition: liver_abscess
+  acceptable: []
+  triage: 3
+source:
+  basis: "Áp xe gan (nhiều khả năng do amip) ở nam 45 tuổi uống rượu nhiều, sống ở Huế: sốt cao, rét run 10 ngày, đau hạ sườn phải tăng khi hít sâu, khi xóc, lan lên vai phải, chán ăn, sụt cân, không vàng da. Blessmann và cộng sự (Am J Trop Med Hyg 2002): Thừa Thiên Huế có tỷ lệ áp xe gan do amip ít nhất 21/100.000 dân mỗi năm, 95% là người lớn, hơn 80% là nam; các triệu chứng được theo dõi là sốt, đau hạ sườn phải, gan đau (Blessmann 2003). Kong và cộng sự (Medicine 2017): sốt, rét run, đau vùng gan là triệu chứng điển hình của áp xe gan. Không có tiêu chí nguy cơ cao của nhiễm khuẩn huyết (NICE NG253) nên đi khám trong 24 giờ để siêu âm và điều trị."
+  references:
+    - "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=Blessmann%20AND%20amebic%20AND%20Vietnam&format=json&resultType=core&pageSize=8"
+    - "https://pmc.ncbi.nlm.nih.gov/articles/PMC5604666/"
+    - nice-ng253
+author: "agent:vignette-holdout"
+notes_vi: "Ca điển hình. Đau khi hít sâu là đau hạ sườn phải do ổ áp xe sát cơ hoành, người bệnh trả lời 'có' ở câu đau ngực khi hít sâu."

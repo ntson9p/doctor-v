@@ -1,0 +1,63 @@
+id: h-abd-048
+set: holdout
+title_vi: "Nam 71 tuổi hút thuốc lào, đã biết phình động mạch chủ bụng chưa mổ, đột ngột đau dữ dội quanh rốn xuyên ra sau lưng, vã mồ hôi, choáng khi đứng dậy"
+narrative_vi: "Ông T., 71 tuổi, ở Hải Phòng, hút thuốc lào hơn 40 năm, bị tăng huyết áp đang uống thuốc. Ba năm trước đi khám sức khỏe, bác sĩ siêu âm nói ông có phình động mạch chủ bụng khoảng 5 cm và hẹn mổ, nhưng ông sợ nên không quay lại. Khoảng 2 giờ trước, đang ngồi xem ti vi, ông đột ngột đau dữ dội quanh rốn, đau xuyên ra sau lưng, đau liên tục không lúc nào đỡ, không nằm yên được. Ông vã mồ hôi, buồn nôn nhưng chưa nôn. Lúc đứng dậy đi vệ sinh, ông choáng, tối sầm mắt, phải ngồi thụp xuống, không ngất hẳn. Con trai thấy da ông tái, tay lạnh. Ông vẫn tỉnh, nói chuyện được. Không sốt, không nôn ra máu, không đi ngoài phân đen, không đau ngực, không khó thở. Đi tiểu bình thường, không tiểu buốt, nước tiểu không đỏ."
+patient:
+  age_years: 71
+  sex: male
+  region: north
+  month: 12
+complaint: abdominal_pain
+answers:
+  abd_pain_location: periumbilical
+  abd_pain_onset: sudden
+  abd_pain_duration: lt_6h
+  abd_pain_severe: present
+  abd_pain_colicky: absent
+  abd_pain_radiates_back: present
+  abd_pain_radiates_groin: absent
+  abd_pain_meal_relation: no_relation
+  flank_pain: present
+  fainting_or_near_fainting: present
+  dizziness_on_standing: present
+  cold_sweat: present
+  cold_hands_feet: present
+  pallor: present
+  nausea: present
+  vomiting: absent
+  persistent_vomiting: absent
+  abdomen_hard_swollen: absent
+  no_stool_or_gas: absent
+  vomiting_blood: absent
+  black_stool: absent
+  diarrhea: absent
+  fever: absent
+  dysuria: absent
+  hematuria: absent
+  chest_pain_pressure: absent
+  breathing_difficulty: absent
+  confusion: absent
+  drowsy_hard_to_wake: absent
+  severe_weakness: absent
+  known_aaa: present
+  hypertension_known: present
+  bp_lowering_meds: present
+  smoker: present
+  known_heart_disease: absent
+  atrial_fibrillation_known: absent
+  antithrombotic_use: absent
+  diabetes: absent
+  kidney_stones_known: absent
+  gallstones_known: absent
+  previous_abdominal_surgery: absent
+default_unmentioned: absent
+expected:
+  condition: abdominal_aortic_aneurysm
+  acceptable: []
+  triage: 1
+source:
+  basis: "Phình động mạch chủ bụng đã biết (khoảng 5 cm, chưa mổ) dọa vỡ hoặc đang rỉ máu ở nam 71 tuổi hút thuốc, tăng huyết áp: đau bụng quanh rốn xuyên ra lưng đột ngột, dữ dội, liên tục, kèm choáng khi đứng, vã mồ hôi, da tái, tay lạnh. NHS (Abdominal aortic aneurysm): đau bụng hoặc đau lưng đột ngột, dữ dội, da tái hoặc xám, mất ý thức là dấu hiệu vỡ phình, đe dọa tính mạng, gọi 999; nam từ 65 tuổi, hút thuốc, tăng huyết áp là yếu tố nguy cơ chính."
+  references:
+    - nhs-abdominal-aortic-aneurysm
+author: "agent:vignette-holdout"
+notes_vi: "Ca điển hình. Danh mục chưa có câu hỏi về khối đập theo nhịp mạch trong bụng."

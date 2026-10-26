@@ -1,0 +1,53 @@
+id: h-fever-063
+set: holdout
+title_vi: "Cụ bà 82 tuổi sống một mình trong phòng mái tôn giữa đợt nắng nóng ở Hà Nội, người nóng ran 40,5°C, da khô đỏ không ra mồ hôi, thở nhanh, lơ mơ, lú lẫn"
+narrative_vi: "Bà M., 82 tuổi, sống một mình trên tầng 4 khu tập thể ở Hà Nội, phòng mái tôn, chỉ có một quạt nhỏ, không có điều hòa. Bà bị tăng huyết áp, mỗi sáng uống một viên thuốc huyết áp có lợi tiểu. Đợt nắng nóng tuần này ngoài trời 40–41°C; bà sợ tốn điện nên ít bật quạt, uống ít nước. Chiều nay hàng xóm sang chơi thấy bà nằm trên giường, người nóng ran, da khô đỏ, không ra mồ hôi, thở nhanh. Bà lơ mơ, gọi to mới mở mắt, nói lẫn lộn, không biết đang ở đâu, không tự ngồi dậy được. Hàng xóm đo nhiệt độ ở trán được 40,5°C. Mấy hôm trước bà vẫn khỏe, không ho, không sổ mũi, không tiểu buốt, không tiêu chảy, không nôn. Không co giật, không méo miệng."
+patient:
+  age_years: 82
+  sex: female
+  region: north
+  month: 6
+complaint: fever
+answers:
+  fever_max_temp: ge_39
+  fever_duration: d1_2
+  heat_exposure: present
+  confusion: present
+  drowsy_hard_to_wake: present
+  breathing_difficulty: present
+  severe_weakness: present
+  headache: unknown
+  decreased_urine: unknown
+  cold_hands_feet: absent
+  neck_stiffness: absent
+  seizure_recent: absent
+  es_stroke_signs: absent
+  vomiting: absent
+  persistent_vomiting: absent
+  chills_rigors: absent
+  cough: absent
+  runny_nose: absent
+  sore_throat: absent
+  dysuria: absent
+  urinary_frequency: absent
+  diarrhea: absent
+  abdominal_pain: absent
+  rash_any: absent
+  hypertension_known: present
+  bp_lowering_meds: present
+  diabetes: absent
+  known_heart_disease: absent
+  immunocompromised: absent
+  sick_contact_respiratory: absent
+  dengue_nearby: absent
+default_unmentioned: absent
+expected:
+  condition: heat_stroke
+  acceptable: []
+  triage: 1
+source:
+  basis: "Sốc nhiệt cổ điển (không do gắng sức) ở cụ bà 82 tuổi sống một mình trong phòng mái tôn, không có điều hòa, giữa đợt nắng nóng 40–41°C, uống ít nước, đang dùng thuốc lợi tiểu: thân nhiệt 40,5°C, da nóng khô đỏ, không ra mồ hôi, thở nhanh, lơ mơ, lú lẫn. NHS Heat exhaustion and heatstroke: thân nhiệt rất cao, da nóng không ra mồ hôi, thở nhanh, lú lẫn, mất phối hợp là dấu hiệu sốc nhiệt, gọi 999 ngay; người cao tuổi, người có bệnh mạn tính dễ bị."
+  references:
+    - nhs-heat-exhaustion-heatstroke
+author: "agent:vignette-holdout"
+notes_vi: "Ca khó ở người cao tuổi, cũng là ca cấp cứu bổ sung (người già sống một mình giữa đợt nắng nóng). Không có triệu chứng nhiễm trùng, nhưng nhiễm khuẩn huyết vẫn là chẩn đoán phân biệt. Danh mục chưa có câu hỏi về da nóng khô, không ra mồ hôi; câu nhiệt độ cao nhất chỉ có lựa chọn 'từ 39°C trở lên', không phân biệt được 39°C với trên 40°C."

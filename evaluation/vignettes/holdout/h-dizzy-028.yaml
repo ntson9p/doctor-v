@@ -1,0 +1,66 @@
+id: h-dizzy-028
+set: holdout
+title_vi: "Thợ xây 28 tuổi làm trên mái giữa trưa nắng 39°C ở Hà Nội: choáng váng, nhức đầu, buồn nôn, ra nhiều mồ hôi, chuột rút, 37,9°C; nghỉ chỗ mát, uống oresol 30 phút thì đỡ nhiều"
+narrative_vi: "Anh K., 28 tuổi, thợ xây ở Hà Nội, khỏe mạnh. Hôm nay nắng nóng 39°C, anh làm trên mái công trình từ trưa đến 3 giờ chiều, uống ít nước. Khoảng 3 giờ chiều anh thấy choáng váng, chòng chành, nhức đầu, buồn nôn, ra mồ hôi rất nhiều, rất khát, mệt rã rời, chuột rút ở bắp chân. Đồng nghiệp đưa anh xuống chỗ râm mát, cởi bớt áo, quạt và lau người bằng nước mát, cho uống nước và oresol. Tổ trưởng đo nhiệt độ ở nách được 37,9°C. Sau khoảng 30 phút anh đỡ nhiều, hết choáng, tỉnh táo, nói chuyện bình thường, đi lại vững. Anh không nôn, không ngất, không đau ngực, không khó thở, không thấy tim đập loạn, không thấy mọi vật quay tròn."
+patient:
+  age_years: 28
+  sex: male
+  region: north
+  month: 6
+complaint: dizziness
+answers:
+  co_exposure: absent
+  dizziness_pattern: long_episodes
+  vertigo_spinning: absent
+  dizziness_positional: absent
+  fever: present
+  fever_max_temp: lt_38
+  fever_duration: d1_2
+  heat_exposure: present
+  headache: present
+  headache_thunderclap: absent
+  nausea: present
+  vomiting: absent
+  fatigue: present
+  myalgia: present
+  calf_pain: absent
+  cold_sweat: absent
+  fainting_or_near_fainting: absent
+  vision_loss_or_double: absent
+  cannot_walk_unaided: absent
+  sudden_loss_of_balance: absent
+  transient_neuro_symptoms: absent
+  chest_pain_pressure: absent
+  breathing_difficulty: absent
+  black_stool: absent
+  palpitations: absent
+  hearing_loss_tinnitus: absent
+  diarrhea: absent
+  confusion: absent
+  drowsy_hard_to_wake: absent
+  severe_weakness: absent
+  cold_hands_feet: absent
+  neck_stiffness: absent
+  persistent_vomiting: absent
+  dizziness_on_standing: absent
+  others_same_symptoms: absent
+  stimulant_intake: absent
+  heavy_alcohol: absent
+  diabetes: absent
+  flood_mud_exposure: absent
+  bush_exposure: absent
+  dengue_nearby: absent
+  sick_contact_respiratory: absent
+  malaria_area_exposure: absent
+  measles_contact: absent
+default_unmentioned: absent
+expected:
+  condition: heat_exhaustion
+  acceptable: []
+  triage: 5
+source:
+  basis: "Kiệt sức do nóng ở thợ xây 28 tuổi làm việc trên mái giữa trưa nắng 39°C, uống ít nước: choáng váng, nhức đầu, buồn nôn, ra nhiều mồ hôi, rất khát, mệt, chuột rút, nhiệt độ 37,9°C; được đưa vào chỗ mát, quạt, lau nước mát, uống nước và oresol, sau 30 phút đỡ nhiều, tỉnh táo, đi vững. NHS Heat exhaustion and heatstroke: kiệt sức do nóng gồm mệt, chóng mặt, đau đầu, buồn nôn, ra nhiều mồ hôi, chuột rút, rất khát; không cần cấp cứu nếu làm mát được trong 30 phút; chỉ gọi 999 khi vẫn không khỏe sau 30 phút, thân nhiệt rất cao, da nóng không ra mồ hôi, lú lẫn, co giật. Mức 5."
+  references:
+    - nhs-heat-exhaustion-heatstroke
+author: "agent:vignette-holdout"
+notes_vi: "Ca điển hình. Chuột rút được trả lời 'có' ở câu đau nhức cơ. Danh mục chưa có câu hỏi về chuột rút."

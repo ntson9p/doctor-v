@@ -1,0 +1,57 @@
+id: h-abd-052
+set: holdout
+title_vi: "Nữ 27 tuổi có u nang buồng trứng phải 6 cm đã biết, đột ngột đau dữ dội bụng dưới phải khi đang tập nhảy, nôn 2 lần, không chậm kinh"
+narrative_vi: "Chị N., 27 tuổi, nhân viên văn phòng ở TP.HCM. Hai tháng trước đi khám phụ khoa, bác sĩ siêu âm thấy u nang buồng trứng phải khoảng 6 cm, hẹn theo dõi. Khoảng 3 giờ trước, đang tập nhảy ở phòng tập, chị đột ngột đau dữ dội ở bụng dưới bên phải, đau liên tục, phải ngồi bệt xuống. Chị buồn nôn, đã nôn 2 lần. Đi lại hay ngồi xe xóc thì đau tăng. Không sốt, không tiêu chảy, không tiểu buốt, không ra máu âm đạo, khí hư bình thường. Kinh nguyệt đều, có kinh lần cuối cách đây 2 tuần, không chậm kinh; hai vợ chồng dùng bao cao su, chị không nghĩ mình có thai. Trước đây chị chưa từng đau như vậy."
+patient:
+  age_years: 27
+  sex: female
+  region: south
+  month: 9
+complaint: abdominal_pain
+answers:
+  abd_pain_location: right_lower
+  abd_pain_onset: sudden
+  abd_pain_duration: lt_6h
+  abd_pain_severe: present
+  abd_pain_colicky: absent
+  abd_pain_migrated_rlq: absent
+  abd_pain_worse_movement: present
+  abd_pain_radiates_back: absent
+  abd_pain_radiates_groin: absent
+  nausea: present
+  vomiting: present
+  persistent_vomiting: absent
+  fever: absent
+  diarrhea: absent
+  dysuria: absent
+  urinary_frequency: absent
+  vaginal_bleeding: absent
+  abnormal_vaginal_discharge: absent
+  pregnant: absent
+  missed_period: absent
+  pain_with_menses: absent
+  ovarian_cyst_known: present
+  similar_episodes_before: absent
+  fainting_or_near_fainting: absent
+  abdomen_hard_swollen: absent
+  no_stool_or_gas: absent
+  heartburn: absent
+  previous_abdominal_surgery: absent
+  confusion: absent
+  drowsy_hard_to_wake: absent
+  breathing_difficulty: absent
+  cold_hands_feet: absent
+  severe_weakness: absent
+default_unmentioned: absent
+expected:
+  condition: ovarian_torsion
+  acceptable: []
+  triage: 2
+source:
+  basis: "Xoắn phần phụ ở nữ 27 tuổi có u nang buồng trứng phải 6 cm đã biết: đau bụng dưới phải đột ngột, dữ dội khi đang vận động mạnh, kèm buồn nôn, nôn; không chậm kinh, không sốt, không ra máu âm đạo. Winton và Yamoah (BMJ Case Rep 2020): xoắn buồng trứng là cấp cứu, thường biểu hiện bằng đau đột ngột, dữ dội kèm nôn, cần mổ sớm để bảo tồn buồng trứng. NHS Ovarian cyst: nang xoắn hoặc vỡ gây đau vùng chậu đột ngột, dữ dội. NHS Stomach ache: đau bụng đột ngột, dữ dội thì đến cấp cứu ngay."
+  references:
+    - nhs-stomach-ache
+    - "https://pmc.ncbi.nlm.nih.gov/articles/PMC7228144/"
+    - "https://www.nhs.uk/conditions/ovarian-cyst/"
+author: "agent:vignette-holdout"
+notes_vi: "Ca điển hình. Viêm ruột thừa là chẩn đoán phân biệt nhưng đau không chuyển từ quanh rốn xuống."

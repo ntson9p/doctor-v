@@ -1,0 +1,58 @@
+id: h-dizzy-026
+set: holdout
+title_vi: "Nam 38 tuổi, 5 ngày sau khi bị bẻ cổ ở tiệm cắt tóc, đau gáy phải, nay đột ngột chóng mặt quay liên tục, nôn, đi loạng choạng ngã sang phải, không tự đi được"
+narrative_vi: "Anh V., 38 tuổi, ở TP.HCM, khỏe mạnh, không có bệnh nền, không hút thuốc. Năm ngày trước anh đi cắt tóc, thợ xoa bóp rồi bẻ mạnh cổ anh sang hai bên, nghe 'rắc'. Từ hôm đó anh đau cổ và đau vùng gáy bên phải. Khoảng 2 giờ trước, đang ngồi làm việc, anh đột ngột thấy mọi vật quay tròn liên tục, buồn nôn, nôn 3 lần. Anh đứng dậy thì loạng choạng, ngã sang phải, phải có người đỡ mới đi được, kể cả khi mở mắt. Đầu đau nhói ở gáy bên phải, tăng dần chứ không bùng lên đột ngột. Anh vẫn tỉnh, nói rõ, không nhìn đôi, không méo miệng, tay chân không yếu, không tê. Không ù tai, không nghe kém. Mấy tuần nay anh không bị cảm. Trước đây chưa từng bị chóng mặt."
+patient:
+  age_years: 38
+  sex: male
+  region: south
+  month: 6
+complaint: dizziness
+answers:
+  co_exposure: absent
+  dizziness_pattern: continuous
+  vertigo_spinning: present
+  dizziness_positional: absent
+  neck_injury_or_manipulation: present
+  cannot_walk_unaided: present
+  sudden_loss_of_balance: present
+  nausea: present
+  vomiting: present
+  headache: present
+  headache_thunderclap: absent
+  headache_location: back_neck
+  headache_severity: moderate
+  vision_loss_or_double: absent
+  es_stroke_signs: absent
+  transient_neuro_symptoms: absent
+  hearing_loss_tinnitus: absent
+  chest_pain_pressure: absent
+  breathing_difficulty: absent
+  fainting_or_near_fainting: absent
+  black_stool: absent
+  fever: absent
+  confusion: absent
+  drowsy_hard_to_wake: absent
+  palpitations: absent
+  diarrhea: absent
+  dizziness_on_standing: absent
+  similar_episodes_before: absent
+  recent_viral_illness: absent
+  hypertension_known: absent
+  diabetes: absent
+  smoker: absent
+default_unmentioned: absent
+expected:
+  condition: stroke
+  acceptable: []
+  triage: 1
+source:
+  basis: "Nhồi máu não tuần hoàn sau do bóc tách động mạch đốt sống ở nam 38 tuổi, 5 ngày sau khi bị bẻ cổ ở tiệm cắt tóc: đau cổ, đau gáy phải từ hôm đó, nay đột ngột chóng mặt quay liên tục, nôn, đi loạng choạng ngã sang phải, không tự đi được; không có dấu hiệu FAST. AHA/ASA (Biller 2014): bóc tách động mạch cổ là một trong những nguyên nhân hay gặp nhất của đột quỵ ở người trẻ và trung niên, gắn với nắn chỉnh cột sống cổ, biểu hiện đau đầu một bên, đau gáy, thiếu máu não. Rothwell 2001: người dưới 45 tuổi bị đột quỵ hệ sống – nền có khả năng đã nắn chỉnh cột sống cổ trong tuần trước cao gấp khoảng 5 lần. BE-FAST (Aroor 2017): mất thăng bằng đột ngột là dấu hiệu đột quỵ hay bị bỏ sót khi chỉ dùng FAST. GRACE-3: chóng mặt liên tục cấp kèm đi không vững cần nghĩ nguyên nhân trung ương. Bộ Y tế 3312/QĐ-BYT 2024: nhồi máu não có thể biểu hiện chóng mặt, thất điều. Nghi đột quỵ thì gọi 115."
+  references:
+    - biller-stroke-2014
+    - rothwell-stroke-2001
+    - aroor-stroke-2017
+    - grace3-dizziness-2023
+    - byt-qd-3312-2024
+author: "agent:vignette-holdout"
+notes_vi: "Ca thay thế cho ca giữ kín đã chuyển sang bộ dev (đột quỵ tuần hoàn sau sau khi bị bẻ cổ). Ca khó: không có yếu liệt, nói khó hay nhìn đôi, dễ nhầm với viêm dây thần kinh tiền đình."

@@ -1,0 +1,64 @@
+id: h-fever-065
+set: holdout
+title_vi: "Nam sinh viên 21 tuổi, hai bạn cùng phòng vừa bị viêm gan A: 5 ngày sốt nhẹ, mệt, chán ăn, buồn nôn, tức dưới sườn phải, nay nước tiểu sẫm, vàng mắt"
+narrative_vi: "Em H., nam, 21 tuổi, sinh viên ở ký túc xá tại Hà Nội, hay ăn ở quán vỉa hè, uống nước đá. Ba tuần trước, hai bạn cùng phòng bị vàng da và được chẩn đoán viêm gan A. Năm ngày nay em sốt nhẹ 37,8–38,4°C, mệt, đau mỏi người, nhức đầu nhẹ, chán ăn hẳn, buồn nôn, tức nhẹ vùng dưới sườn phải. Hai ngày nay nước tiểu sẫm như nước chè đặc; hôm nay soi gương thấy lòng trắng mắt vàng. Em không nôn, không tiêu chảy, không đi ngoài phân đen, không ho, không nổi ban, không chảy máu chân răng. Em không uống rượu, chưa từng được nói có sỏi mật hay viêm gan B, chưa tiêm vắc xin viêm gan A. Em vẫn tỉnh táo, ăn uống được ít, tự đi học được."
+patient:
+  age_years: 21
+  sex: male
+  region: north
+  month: 5
+complaint: fever
+answers:
+  fever_max_temp: t38_39
+  fever_duration: d3_5
+  chills_rigors: absent
+  fatigue: present
+  myalgia: present
+  headache: present
+  loss_of_appetite: present
+  nausea: present
+  vomiting: absent
+  abdominal_pain: present
+  abd_pain_location: right_upper
+  abd_pain_onset: gradual
+  abd_pain_duration: d4_14
+  abd_pain_severe: absent
+  abd_pain_colicky: absent
+  abd_pain_radiates_right_shoulder: absent
+  abd_pain_worse_movement: absent
+  jaundice: present
+  diarrhea: absent
+  cough: absent
+  sore_throat: absent
+  runny_nose: absent
+  rash_any: absent
+  red_eyes: absent
+  calf_pain: absent
+  bleeding_gums_nose: absent
+  black_stool: absent
+  vomiting_blood: absent
+  persistent_vomiting: absent
+  confusion: absent
+  drowsy_hard_to_wake: absent
+  breathing_difficulty: absent
+  cold_hands_feet: absent
+  severe_weakness: absent
+  neck_stiffness: absent
+  heavy_alcohol: absent
+  gallstones_known: absent
+  chronic_liver_disease: absent
+  dengue_nearby: absent
+  flood_mud_exposure: absent
+  sick_contact_respiratory: absent
+default_unmentioned: absent
+expected:
+  condition: other
+  acceptable: []
+  triage: 3
+source:
+  basis: "Viêm gan A cấp ở sinh viên 21 tuổi, hai bạn cùng phòng ký túc xá vừa bị viêm gan A: sốt nhẹ, mệt, đau mỏi, chán ăn, buồn nôn, tức hạ sườn phải, rồi nước tiểu sẫm, vàng mắt; không có dấu hiệu nặng. NHS Hepatitis A: triệu chứng gồm sốt, mệt, đau đầu, đau cơ, buồn nôn, đau bụng trên, nước tiểu sẫm, phân bạc màu, vàng da. NHS Jaundice: da hoặc lòng trắng mắt vàng thì khám khẩn (urgent GP / NHS 111). Mức 3."
+  references:
+    - "https://www.nhs.uk/conditions/hepatitis-a/"
+    - nhs-jaundice
+author: "agent:vignette-holdout"
+notes_vi: "Ca ngoài danh mục. Chẩn đoán phân biệt trong danh mục: viêm đường mật (không rét run, không biết sỏi mật), áp xe gan, bệnh do Leptospira (không phơi nhiễm nước bẩn, không đau bắp chân). Danh mục chưa có câu hỏi về nước tiểu sẫm, phân bạc màu, tiếp xúc người bị viêm gan."

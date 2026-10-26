@@ -1,0 +1,54 @@
+id: h-head-032
+set: holdout
+title_vi: "Nam 32 tuổi hút thuốc, 10 ngày nay đêm nào cũng bị đánh thức bởi cơn đau dữ dội quanh mắt phải 45–60 phút, kèm đỏ mắt, chảy nước mắt, nghẹt mũi cùng bên"
+narrative_vi: "Anh B., 32 tuổi, nhân viên kinh doanh ở TP.HCM, hút thuốc lá 1 gói mỗi ngày. Mười ngày nay, đêm nào anh cũng bị đánh thức vào khoảng 2 giờ sáng bởi cơn đau dữ dội quanh và sau mắt phải, như dao đâm, kéo dài khoảng 45 phút đến 1 giờ rồi hết hẳn. Trong cơn, mắt phải đỏ, chảy nước mắt, mũi bên phải nghẹt và chảy nước; anh không nằm yên được, phải đi lại trong phòng. Uống bia vào là lên cơn. Ngoài cơn anh hoàn toàn bình thường, nhìn rõ, không buồn nôn, không nôn, không thấy quầng sáng quanh đèn. Năm ngoái cũng vào khoảng tháng 10 anh bị một đợt giống hệt kéo dài 6 tuần rồi tự hết, chưa đi khám. Hiện anh đang không trong cơn, không sốt, không yếu tê tay chân, không cứng gáy."
+patient:
+  age_years: 32
+  sex: male
+  region: south
+  month: 10
+complaint: headache
+answers:
+  headache_location: forehead_face
+  headache_severity: severe
+  headache_duration: lt_4h
+  headache_course: recurrent_similar
+  headache_frequent: present
+  headache_thunderclap: absent
+  similar_episodes_before: present
+  eye_pain_one_side: present
+  red_eyes: present
+  nasal_congestion: present
+  runny_nose: present
+  stress_poor_sleep: present
+  smoker: present
+  blurred_vision: absent
+  halos_around_lights: absent
+  vision_loss_or_double: absent
+  visual_aura: absent
+  photophobia: absent
+  nausea: absent
+  vomiting: absent
+  facial_pain_pressure: absent
+  purulent_nasal_discharge: absent
+  fever: absent
+  neck_stiffness: absent
+  confusion: absent
+  seizure_recent: absent
+  es_stroke_signs: absent
+  sudden_loss_of_balance: absent
+  headache_after_head_injury: absent
+  heavy_alcohol: absent
+  hypertension_known: absent
+default_unmentioned: absent
+expected:
+  condition: other
+  acceptable: []
+  triage: 4
+source:
+  basis: "Đau đầu từng cụm (cluster headache) ở nam 32 tuổi hút thuốc: 10 ngày nay đêm nào cũng có cơn đau dữ dội quanh và sau mắt phải 45–60 phút, kèm đỏ mắt, chảy nước mắt, nghẹt và chảy nước mũi cùng bên, bồn chồn phải đi lại; bia làm khởi phát; năm ngoái cùng mùa có một đợt giống hệt; ngoài cơn bình thường, nhìn rõ. NHS Cluster headaches: đau một bên quanh mắt 15 phút đến 3 giờ, xảy ra vào mùa hoặc giờ cố định, kèm đỏ mắt, chảy nước mắt, nghẹt hoặc chảy nước mũi cùng bên, hay gặp ở nam 30–40 tuổi; rượu, hút thuốc là yếu tố khởi phát; nên khám bác sĩ (không khẩn); chỉ gọi 999 khi lần đầu sụp mi hoặc đồng tử nhỏ một bên. Mức 4."
+  references:
+    - "https://www.nhs.uk/conditions/cluster-headaches/"
+    - nice-cg150
+author: "agent:vignette-holdout"
+notes_vi: "Ca ngoài danh mục. Chẩn đoán phân biệt trong danh mục: glôcôm góc đóng (không nhìn mờ, không quầng sáng, cơn tự hết hẳn, đã có đợt giống hệt), đau nửa đầu, viêm xoang. Danh mục chưa có câu hỏi về cơn đau theo giờ cố định trong ngày, hay bồn chồn phải đi lại trong cơn."

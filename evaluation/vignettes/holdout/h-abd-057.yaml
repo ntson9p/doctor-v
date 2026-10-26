@@ -1,0 +1,53 @@
+id: h-abd-057
+set: holdout
+title_vi: "Bé trai 12 tuổi đột ngột đau dữ dội bụng dưới phải sát bẹn, nôn 2 lần; mẹ nghĩ đau ruột thừa, bé ngại không nói và không cho xem bìu"
+narrative_vi: "Bé T., nam, 12 tuổi, ở Pleiku (Gia Lai). Khoảng 4 giờ trước, đang ngồi học bài, bé đột ngột kêu đau bụng dưới, chỉ vào vùng bụng dưới bên phải sát bẹn, đau nhiều đến mức phải nằm co. Bé nôn 2 lần, bỏ bữa trưa. Mẹ nghĩ bé bị đau ruột thừa. Khi mẹ hỏi có đau ở 'chỗ kín' không, bé ngượng, lắc đầu nói không biết và không cho mẹ xem. Bé không sốt, không tiêu chảy, không tiểu buốt, sáng nay đi ngoài bình thường. Bé không bị ngã hay va đập. Bé vẫn tỉnh táo, trả lời rõ ràng."
+patient:
+  age_years: 12
+  sex: male
+  region: highlands
+  month: 12
+complaint: abdominal_pain
+answers:
+  scrotal_pain: unknown
+  abd_pain_location: right_lower
+  abd_pain_onset: sudden
+  abd_pain_duration: lt_6h
+  abd_pain_severe: present
+  abd_pain_colicky: absent
+  abd_pain_migrated_rlq: absent
+  abd_pain_radiates_groin: unknown
+  abd_pain_worse_movement: absent
+  hernia_lump_painful: unknown
+  nausea: present
+  vomiting: present
+  persistent_vomiting: absent
+  loss_of_appetite: present
+  fever: absent
+  diarrhea: absent
+  dysuria: absent
+  urinary_frequency: absent
+  abdomen_hard_swollen: absent
+  no_stool_or_gas: absent
+  red_jelly_stool: absent
+  fainting_or_near_fainting: absent
+  confusion: absent
+  drowsy_hard_to_wake: absent
+  breathing_difficulty: absent
+  cold_hands_feet: absent
+  severe_weakness: absent
+  cough: absent
+  runny_nose: absent
+default_unmentioned: absent
+expected:
+  condition: testicular_torsion
+  acceptable: []
+  triage: 2
+source:
+  basis: "Xoắn tinh hoàn phải ở bé trai 12 tuổi chỉ kể đau bụng dưới phải đột ngột, dữ dội và nôn; bé ngại, không cho xem bìu. EAU Paediatric Urology (2026): bìu cấp là cấp cứu tiết niệu nhi, hay gặp nhất do xoắn tinh hoàn, đỉnh quanh tuổi dậy thì; đau đột ngột kèm buồn nôn, nôn là điển hình. NHS Testicle pain: đau tinh hoàn kèm đau bụng, nôn thì đến cấp cứu ngay; NHS Stomach ache: đau bụng đột ngột, dữ dội thì đến cấp cứu. Ở trẻ trai đau bụng dưới phải luôn hỏi kỹ và xem bìu."
+  references:
+    - eau-paediatric-urology-2026
+    - nhs-testicle-pain
+    - nhs-stomach-ache
+author: "agent:vignette-holdout"
+notes_vi: "Chẩn đoán cuối cùng của ca giả định là xoắn tinh hoàn phải. Câu hỏi về bìu được trả lời 'không rõ' vì trẻ ngại, đúng tình huống câu hỏi đã lường trước. Viêm ruột thừa là chẩn đoán phân biệt chính nhưng không đưa vào danh sách chấp nhận: ca dùng để đo việc app có giữ xoắn tinh hoàn trong danh sách khi người bệnh không nói về bìu."

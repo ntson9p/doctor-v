@@ -1,0 +1,67 @@
+id: h-head-028
+set: holdout
+title_vi: "Nam 33 tuổi dọn bùn, khơi cống 5 ngày sau lũ ở Quảng Nam, đột ngột sốt cao rét run, đau đầu dữ dội vùng trán, đau nhiều hai bắp chân, đỏ mắt"
+narrative_vi: "Anh T., 33 tuổi, ở Đại Lộc (Quảng Nam). Đợt lũ đầu tháng 11, nhà anh ngập gần 1 mét; anh lội nước, dọn bùn, khơi cống suốt 5 ngày, chân tay có nhiều vết xước, trong nhà nhiều chuột chết. Ba ngày nay anh đột ngột sốt cao 39,5°C, rét run, đau đầu dữ dội vùng trán và quanh hai mắt, đau nhức khắp người, nhất là hai bắp chân, bóp vào đau đến mức đi lại khó. Hai mắt đỏ, không có ghèn. Anh buồn nôn, chán ăn, không nôn. Không cứng gáy, không lú lẫn, không ho, không khó thở, không nổi ban, không chảy máu chân răng, da không vàng, đi tiểu bình thường. Đau đầu là điều làm anh khó chịu nhất. Trước đây anh ít khi đau đầu."
+patient:
+  age_years: 33
+  sex: male
+  region: central
+  month: 11
+complaint: headache
+answers:
+  headache_location: forehead_face
+  headache_severity: severe
+  headache_duration: h4_72
+  headache_course: first_time
+  headache_thunderclap: absent
+  fever: present
+  fever_max_temp: ge_39
+  fever_duration: d3_5
+  chills_rigors: present
+  myalgia: present
+  calf_pain: present
+  red_eyes: present
+  flood_mud_exposure: present
+  nausea: present
+  vomiting: absent
+  loss_of_appetite: present
+  photophobia: absent
+  retro_orbital_pain: absent
+  arthralgia: absent
+  neck_stiffness: absent
+  confusion: absent
+  seizure_recent: absent
+  vision_loss_or_double: absent
+  sudden_loss_of_balance: absent
+  headache_after_head_injury: absent
+  cough: absent
+  breathing_difficulty: absent
+  rash_any: absent
+  bleeding_gums_nose: absent
+  jaundice: absent
+  decreased_urine: absent
+  abdominal_pain: absent
+  diarrhea: absent
+  cold_hands_feet: absent
+  severe_weakness: absent
+  persistent_vomiting: absent
+  nasal_congestion: absent
+  stress_poor_sleep: absent
+  dengue_nearby: absent
+  bush_exposure: absent
+  malaria_area_exposure: absent
+  sick_contact_respiratory: absent
+  hypertension_known: absent
+  diabetes: absent
+default_unmentioned: absent
+expected:
+  condition: leptospirosis
+  acceptable: []
+  triage: 3
+source:
+  basis: "Bệnh do Leptospira thể thông thường ở nam 33 tuổi dọn bùn, khơi cống 5 ngày sau lũ ở Quảng Nam, nhà nhiều chuột: sốt cao đột ngột, rét run, đau đầu dữ dội, đau cơ bắp chân khi bóp, đỏ mắt không ghèn; chưa vàng da, chưa tiểu ít, không chảy máu. WHO 2003 (Human leptospirosis): nghĩ đến bệnh khi sốt đột ngột, rét run, đỏ kết mạc, đau đầu, đau cơ, nhất là khi có phơi nhiễm nước hoặc đất nhiễm nước tiểu động vật; đỏ kết mạc và đau cơ bắp chân khi ấn là dấu hiệu phân biệt nhất; dùng kháng sinh càng sớm càng tốt, tốt nhất trước ngày thứ 5, không chờ xét nghiệm. Chưa có dấu hiệu nặng nên đi khám trong 24 giờ."
+  references:
+    - who-leptospirosis-2003
+    - "https://www.nhs.uk/conditions/leptospirosis/"
+author: "agent:vignette-holdout"
+notes_vi: "Ca điển hình; người bệnh chọn 'Đau đầu' vì đây là triệu chứng nặng nề nhất. Sốt xuất huyết, sốt mò là chẩn đoán phân biệt."

@@ -1,0 +1,48 @@
+id: h-abd-055
+set: holdout
+title_vi: "Nam 14 tuổi sáng sớm thức dậy vì đau dữ dội tinh hoàn trái lan lên bẹn và bụng dưới, nôn 2 lần, bìu trái sưng đỏ"
+narrative_vi: "Em P., nam, 14 tuổi, ở Thái Nguyên. Khoảng 5 giờ sáng nay em thức dậy vì đau dữ dội ở tinh hoàn trái, đau lan lên bẹn và bụng dưới bên trái. Em nôn 2 lần. Mẹ xem thấy bìu bên trái sưng, đỏ, tinh hoàn trái nằm cao hơn bên phải, chạm vào là em kêu đau. Đến giờ đã khoảng 3 giờ, đau không giảm. Em không bị va đập, không sốt, không tiểu buốt, nước tiểu không đỏ, không tiêu chảy. Ở bẹn không có khối phồng."
+patient:
+  age_years: 14
+  sex: male
+  region: north
+  month: 1
+complaint: abdominal_pain
+answers:
+  scrotal_pain: present
+  abd_pain_location: left_lower
+  abd_pain_onset: sudden
+  abd_pain_duration: lt_6h
+  abd_pain_severe: present
+  abd_pain_colicky: absent
+  abd_pain_radiates_groin: present
+  nausea: present
+  vomiting: present
+  persistent_vomiting: absent
+  fever: absent
+  dysuria: absent
+  urinary_frequency: absent
+  hematuria: absent
+  diarrhea: absent
+  flank_pain: absent
+  hernia_lump_painful: absent
+  abdomen_hard_swollen: absent
+  no_stool_or_gas: absent
+  fainting_or_near_fainting: absent
+  confusion: absent
+  drowsy_hard_to_wake: absent
+  breathing_difficulty: absent
+  cold_hands_feet: absent
+  severe_weakness: absent
+default_unmentioned: absent
+expected:
+  condition: testicular_torsion
+  acceptable: []
+  triage: 2
+source:
+  basis: "Xoắn tinh hoàn điển hình ở thiếu niên 14 tuổi: đau tinh hoàn trái đột ngột, dữ dội, đánh thức lúc sáng sớm, lan lên bẹn và bụng dưới, nôn, bìu sưng đỏ, tinh hoàn nằm cao. EAU Paediatric Urology (2026): xoắn tinh hoàn hay gặp nhất quanh tuổi dậy thì; đau đột ngột kèm buồn nôn, nôn là điển hình; tổn thương phụ thuộc thời gian, cửa sổ quyết định khoảng 4–6 giờ, cần mổ thám sát khẩn. NHS Testicle pain: đau tinh hoàn đột ngột, dữ dội, hoặc kèm nôn, đau bụng thì đến cấp cứu ngay hoặc gọi 999."
+  references:
+    - nhs-testicle-pain
+    - eau-paediatric-urology-2026
+author: "agent:vignette-holdout"
+notes_vi: "Ca điển hình. Danh mục chưa có câu hỏi về tinh hoàn nằm cao hoặc nằm ngang."

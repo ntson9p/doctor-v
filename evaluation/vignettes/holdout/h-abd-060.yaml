@@ -1,0 +1,64 @@
+id: h-abd-060
+set: holdout
+title_vi: "Nữ 68 tuổi có sỏi mật, 2 ngày đau dưới sườn phải lan ra sau lưng, sốt 39,5°C rét run, vàng mắt, nước tiểu sẫm"
+narrative_vi: "Bà S., 68 tuổi, ở Quảng Ngãi, biết có sỏi mật từ 5 năm trước nhưng chưa mổ, bị tăng huyết áp. Hai ngày nay bà đau tức vùng dưới sườn phải, đau lan ra sau lưng bên phải, đau tăng dần. Từ tối qua bà sốt cao 39,5°C, rét run từng cơn, đắp chăn vẫn run. Sáng nay con gái thấy mắt bà vàng, nước tiểu vàng sẫm như nước chè. Bà buồn nôn, chán ăn, nôn 1 lần. Bà vẫn tỉnh táo, nói chuyện bình thường, tự đi lại được, tay chân ấm. Không tiêu chảy, không ho, không tiểu buốt, không đau đầu, không nổi ban."
+patient:
+  age_years: 68
+  sex: female
+  region: central
+  month: 6
+complaint: abdominal_pain
+answers:
+  abd_pain_location: right_upper
+  abd_pain_onset: gradual
+  abd_pain_duration: d1_3
+  abd_pain_severe: absent
+  abd_pain_colicky: absent
+  abd_pain_radiates_right_shoulder: present
+  abd_pain_radiates_back: present
+  fever: present
+  fever_max_temp: ge_39
+  fever_duration: d1_2
+  chills_rigors: present
+  jaundice: present
+  nausea: present
+  vomiting: present
+  persistent_vomiting: absent
+  loss_of_appetite: present
+  gallstones_known: present
+  diarrhea: absent
+  cough: absent
+  dysuria: absent
+  headache: absent
+  rash_any: absent
+  myalgia: absent
+  vaginal_bleeding: absent
+  abdomen_hard_swollen: absent
+  black_stool: absent
+  vomiting_blood: absent
+  fainting_or_near_fainting: absent
+  confusion: absent
+  drowsy_hard_to_wake: absent
+  breathing_difficulty: absent
+  cold_hands_feet: absent
+  severe_weakness: absent
+  neck_stiffness: absent
+  hypertension_known: present
+  diabetes: absent
+  heavy_alcohol: absent
+  dengue_nearby: absent
+  flood_mud_exposure: absent
+  malaria_area_exposure: absent
+default_unmentioned: absent
+expected:
+  condition: acute_cholangitis
+  acceptable: []
+  triage: 2
+source:
+  basis: "Viêm đường mật cấp do sỏi ở nữ 68 tuổi đã biết sỏi mật: đau hạ sườn phải lan ra sau lưng phải, sốt cao rét run, vàng mắt, nước tiểu sẫm (tam chứng Charcot), còn tỉnh, chưa có dấu hiệu sốc. MSD Manual (Choledocholithiasis and Cholangitis): tam chứng Charcot đặc hiệu khoảng 90%; viêm đường mật là cấp cứu, cần hồi sức và dẫn lưu khẩn. Tokyo Guidelines 2018 (Kiriyama và cộng sự): ở viêm đường mật độ II, dẫn lưu đường mật sớm hoặc khẩn làm giảm tử vong 30 ngày. Chưa có lú lẫn hay dấu hiệu sốc nên mức 2."
+  references:
+    - msd-choledocholithiasis-cholangitis
+    - nhs-jaundice
+    - "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID:29032610%20AND%20SRC:MED&format=json&resultType=core"
+author: "agent:vignette-holdout"
+notes_vi: "Ca điển hình. Danh mục chưa có câu hỏi về nước tiểu sẫm màu, phân bạc màu."

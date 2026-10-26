@@ -1,0 +1,53 @@
+id: h-abd-054
+set: holdout
+title_vi: "Nữ 31 tuổi mang thai 10 tuần sau thụ tinh trong ống nghiệm, buồng trứng còn nhiều nang sau kích trứng, đột ngột đau dữ dội bụng dưới phải khi trở mình, nôn 3 lần"
+narrative_vi: "Chị V., 31 tuổi, ở Hà Nội, đang mang thai 10 tuần sau làm thụ tinh trong ống nghiệm. Lần siêu âm lúc thai 7 tuần, bác sĩ nói thai đã vào tử cung, có tim thai; hai buồng trứng còn to, có nhiều nang sau kích trứng. Khoảng 2 giờ trước, khi trở mình trên giường, chị đột ngột đau dữ dội ở bụng dưới bên phải, đau liên tục, không nằm yên được; cử động là đau tăng. Chị buồn nôn, nôn 3 lần. Không ra máu âm đạo, không sốt, không tiêu chảy, không tiểu buốt. Chị không choáng, không ngất, không đau đầu, không phù."
+patient:
+  age_years: 31
+  sex: female
+  region: north
+  month: 10
+complaint: abdominal_pain
+answers:
+  pregnant: present
+  gestational_age: lt_20w
+  missed_period: present
+  abd_pain_location: right_lower
+  abd_pain_onset: sudden
+  abd_pain_duration: lt_6h
+  abd_pain_severe: present
+  abd_pain_colicky: absent
+  abd_pain_migrated_rlq: absent
+  abd_pain_worse_movement: present
+  nausea: present
+  vomiting: present
+  persistent_vomiting: absent
+  vaginal_bleeding: absent
+  ovarian_cyst_known: present
+  fever: absent
+  diarrhea: absent
+  dysuria: absent
+  urinary_frequency: absent
+  fainting_or_near_fainting: absent
+  abdomen_hard_swollen: absent
+  no_stool_or_gas: absent
+  headache: absent
+  edema_face_hands: absent
+  previous_abdominal_surgery: absent
+  confusion: absent
+  drowsy_hard_to_wake: absent
+  breathing_difficulty: absent
+  cold_hands_feet: absent
+  severe_weakness: absent
+default_unmentioned: absent
+expected:
+  condition: ovarian_torsion
+  acceptable: [ectopic_pregnancy]
+  triage: 2
+source:
+  basis: "Xoắn phần phụ khi mang thai 10 tuần sau thụ tinh trong ống nghiệm, buồng trứng còn to, nhiều nang sau kích trứng: đau bụng dưới phải đột ngột, dữ dội khi trở mình, nôn, không ra máu âm đạo. Spitzer và cộng sự (Geburtshilfe Frauenheilkd 2012): nguy cơ xoắn tăng rõ khi có thai sau hỗ trợ sinh sản hoặc quá kích buồng trứng, phần lớn xảy ra trong 3 tháng đầu; đau bụng cấp trên 80%, đau kèm buồn nôn, nôn gợi ý xoắn; chẩn đoán muộn tăng nguy cơ phải cắt bỏ phần phụ, nên mổ nội soi tháo xoắn sớm. NHS Stomach ache: đau bụng đột ngột, dữ dội thì đến cấp cứu ngay."
+  references:
+    - "https://pmc.ncbi.nlm.nih.gov/articles/PMC4168525/"
+    - nhs-stomach-ache
+author: "agent:vignette-holdout"
+notes_vi: "Siêu âm đã thấy thai trong tử cung, nhưng danh mục không có câu hỏi về điều này, nên từ câu trả lời không phân biệt được với chửa ngoài tử cung (sau thụ tinh trong ống nghiệm còn có thể có thai cả trong và ngoài tử cung); vì vậy chấp nhận ectopic_pregnancy. Danh mục chưa có câu hỏi về thụ tinh trong ống nghiệm hoặc kích trứng."

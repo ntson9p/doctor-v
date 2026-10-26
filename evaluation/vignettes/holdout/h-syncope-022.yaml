@@ -1,0 +1,64 @@
+id: h-syncope-022
+set: holdout
+title_vi: "Nam 76 tuổi hút thuốc lào, bệnh mạch vành, đang rặn đi ngoài thì đột ngột đau dữ dội thắt lưng và bụng dưới trái rồi ngất; tỉnh lại nhưng tái, vã mồ hôi lạnh, vẫn đau, ngồi dậy là muốn ngất"
+narrative_vi: "Ông C., 76 tuổi, ở Nam Định, hút thuốc lào từ trẻ, bị tăng huyết áp, từng đặt stent mạch vành, đang uống aspirin và thuốc huyết áp. Sáng nay khi đang rặn đi ngoài, ông đột ngột đau dữ dội vùng thắt lưng và bụng dưới bên trái, vã mồ hôi, tối sầm mắt rồi ngã gục trong nhà vệ sinh, bất tỉnh khoảng 1 phút. Con trai đỡ ông ra giường: ông đã tỉnh, nói chuyện được, nhưng da tái nhợt, vã mồ hôi lạnh, tay chân lạnh, buồn nôn, vẫn đau bụng và đau lưng dữ dội, ngồi dậy là choáng muốn ngất lại, không tự đứng được. Ông chưa từng được nói có phình động mạch chủ. Ông không đau ngực, không khó thở, không thấy tim đập nhanh trước khi ngất, không co giật, không nôn ra máu, không đi ngoài phân đen. Không sốt."
+patient:
+  age_years: 76
+  sex: male
+  region: north
+  month: 12
+complaint: syncope
+answers:
+  co_exposure: absent
+  syncope_trigger: toilet_cough
+  syncope_warning: prodrome
+  not_recovered_after_faint: present
+  fever: absent
+  chest_pain_pressure: absent
+  breathing_difficulty: absent
+  palpitations: absent
+  abdominal_pain: present
+  abd_pain_location: left_lower
+  abd_pain_onset: sudden
+  abd_pain_duration: lt_6h
+  abd_pain_severe: present
+  abd_pain_radiates_back: present
+  flank_pain: present
+  headache: absent
+  black_stool: absent
+  vomiting_blood: absent
+  nausea: present
+  vomiting: absent
+  diarrhea: absent
+  dizziness: present
+  dizziness_on_standing: present
+  cold_sweat: present
+  cold_hands_feet: present
+  pallor: present
+  severe_weakness: present
+  confusion: absent
+  drowsy_hard_to_wake: absent
+  es_unresponsive_or_seizing: absent
+  seizure_recent: absent
+  diabetes: absent
+  hypertension_known: present
+  bp_lowering_meds: present
+  known_heart_disease: present
+  atrial_fibrillation_known: absent
+  smoker: present
+  known_aaa: absent
+  antithrombotic_use: present
+  family_sudden_death: absent
+default_unmentioned: absent
+expected:
+  condition: abdominal_aortic_aneurysm
+  acceptable: []
+  triage: 1
+source:
+  basis: "Vỡ phình động mạch chủ bụng ở nam 76 tuổi hút thuốc lào, tăng huyết áp, bệnh mạch vành, chưa từng được siêu âm động mạch chủ: đang rặn đi ngoài thì đột ngột đau dữ dội thắt lưng và bụng dưới trái rồi ngất khoảng 1 phút; tỉnh lại nhưng da tái, vã mồ hôi lạnh, tay chân lạnh, vẫn đau, ngồi dậy là muốn ngất lại. Hoàn cảnh đi ngoài và dấu hiệu báo trước dễ làm nghĩ ngất phản xạ. ESC 2018: ngất kèm đau bụng mới xuất hiện là đặc điểm nguy cơ cao loại nặng. NHS Fainting: chưa hồi phục hoàn toàn sau ngất thì gọi 999. NHS Abdominal aortic aneurysm: đau bụng hoặc đau lưng đột ngột, dữ dội, da tái, mất ý thức là dấu hiệu vỡ phình, gọi 999."
+  references:
+    - nhs-abdominal-aortic-aneurysm
+    - esc-syncope-2018
+    - nhs-fainting
+author: "agent:vignette-holdout"
+notes_vi: "Ca thay thế cho ca giữ kín đã chuyển sang bộ dev (vỡ phình động mạch chủ bụng biểu hiện bằng ngất). Danh mục chưa có lựa chọn 'đau dữ dội' trong câu dấu hiệu ngay trước khi ngất; người bệnh chọn 'nóng người, vã mồ hôi, tối sầm mắt'."

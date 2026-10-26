@@ -1,0 +1,57 @@
+id: h-fever-057
+set: holdout
+title_vi: "Nam 72 tuổi sốt nhẹ, nhức đầu 4 ngày, từ hôm qua nói năng lộn xộn, khó tìm từ, cáu gắt, đêm đi lang thang không biết mình ở đâu"
+narrative_vi: "Ông G., 72 tuổi, ở Bắc Ninh, bị tăng huyết áp, trước đây khỏe, minh mẫn. Bốn ngày nay ông sốt nhẹ, đo được 38,3°C, kêu nhức đầu khắp đầu. Từ hôm qua vợ thấy ông khác hẳn: nói năng lộn xộn, gọi nhầm tên con cháu, lúc thì gắt gỏng vô cớ, hỏi câu này trả lời câu khác, có lúc không tìm ra từ để nói. Đêm qua ông đi lang thang trong nhà, không biết mình đang ở đâu. Ông không bị méo miệng, không yếu tay chân, vẫn tự đi lại được. Không co giật, không cứng gáy, không nôn, không nổi ban, không ho, không tiểu buốt, không vàng da, không đau bụng."
+patient:
+  age_years: 72
+  sex: male
+  region: north
+  month: 9
+complaint: fever
+answers:
+  fever_max_temp: t38_39
+  fever_duration: d3_5
+  chills_rigors: absent
+  headache: present
+  headache_location: whole_head
+  headache_severity: moderate
+  headache_thunderclap: absent
+  confusion: present
+  drowsy_hard_to_wake: absent
+  seizure_recent: absent
+  neck_stiffness: absent
+  es_stroke_signs: absent
+  vision_loss_or_double: absent
+  photophobia: absent
+  rash_any: absent
+  cough: absent
+  sore_throat: absent
+  runny_nose: absent
+  breathing_difficulty: absent
+  dysuria: absent
+  urinary_frequency: absent
+  jaundice: absent
+  abdominal_pain: absent
+  diarrhea: absent
+  vomiting: absent
+  persistent_vomiting: absent
+  myalgia: absent
+  cold_hands_feet: absent
+  severe_weakness: absent
+  hypertension_known: present
+  diabetes: absent
+  immunocompromised: absent
+  heat_exposure: absent
+  sick_contact_respiratory: absent
+  flood_mud_exposure: absent
+default_unmentioned: absent
+expected:
+  condition: encephalitis
+  acceptable: [bacterial_meningitis]
+  triage: 1
+source:
+  basis: "Viêm não (nhiều khả năng do vi rút herpes) ở nam 72 tuổi: sốt nhẹ, nhức đầu 4 ngày, rồi thay đổi hành vi, nói lộn xộn, khó tìm từ, lú lẫn, đi lang thang; không cứng gáy, không co giật, không yếu nửa người. NHS Encephalitis: bệnh thường bắt đầu như cúm (sốt, đau đầu), sau đó trong vài giờ đến vài ngày xuất hiện lú lẫn, thay đổi tính cách và hành vi, khó nói, co giật; có các dấu hiệu này thì gọi 999 ngay."
+  references:
+    - "https://www.nhs.uk/conditions/encephalitis/"
+author: "agent:vignette-holdout"
+notes_vi: "Ca khó ở người cao tuổi: sốt nhẹ, triệu chứng chính là thay đổi hành vi. Ở nhà không phân biệt được viêm não với viêm màng não khi có sốt, đau đầu, lú lẫn mà không cứng gáy, nên chấp nhận bacterial_meningitis. Danh mục chưa có câu hỏi về thay đổi hành vi, tính cách hay khó tìm từ xuất hiện dần trong vài ngày (câu 'nói khó' hiện chỉ hỏi kiểu đột ngột như đột quỵ)."

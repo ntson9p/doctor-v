@@ -1,0 +1,55 @@
+id: h-fever-061
+set: holdout
+title_vi: "Bé gái 7 tháng sốt 6 ngày, quấy khóc khó dỗ, mắt đỏ không ghèn, ban thoáng qua, sẹo tiêm phòng lao ở vai sưng đỏ lại"
+narrative_vi: "Bé A., gái, 7 tháng, ở Hải Phòng. Bé sốt 6 ngày nay, 38,5–39,5°C, quấy khóc, khó dỗ hơn hẳn mọi lần ốm. Phòng khám nói bé bị viêm họng do vi rút, cho thuốc hạ sốt nhưng bé vẫn sốt. Hai mắt bé đỏ, không có ghèn. Ngày thứ 3 người bé nổi ban đỏ nhạt ở bụng, lưng, ấn vào thì mất, nay đã mờ. Hôm qua mẹ thấy vết sẹo tiêm phòng lao ở vai trái của bé sưng đỏ lên. Môi bé không nứt, lưỡi không đỏ, tay chân không sưng, không sờ thấy hạch. Bé không ho, không sổ mũi, không tiêu chảy, không nôn, vẫn bú được nhưng bú ít hơn, vẫn đi tiểu bình thường. Bé không li bì, không co giật, thóp không phồng."
+patient:
+  age_months: 7
+  sex: female
+  region: north
+  month: 12
+complaint: fever
+answers:
+  fever_max_temp: ge_39
+  fever_duration: d6_7
+  red_eyes: present
+  bcg_scar_red: present
+  rash_any: present
+  rash_non_blanching: absent
+  rash_spreads_from_face: absent
+  red_lips_strawberry_tongue: absent
+  hands_feet_swelling_peeling: absent
+  lymph_node_swelling: absent
+  loss_of_appetite: present
+  cough: absent
+  runny_nose: absent
+  diarrhea: absent
+  vomiting: absent
+  ear_pain: absent
+  mouth_ulcers: absent
+  hand_foot_blisters: absent
+  child_unable_to_drink: absent
+  child_vomits_everything: absent
+  seizure_recent: absent
+  drowsy_hard_to_wake: absent
+  bulging_fontanelle: absent
+  breathing_difficulty: absent
+  cold_hands_feet: absent
+  severe_weakness: absent
+  decreased_urine: absent
+  sunken_eyes: absent
+  measles_contact: absent
+  sick_contact_respiratory: absent
+default_unmentioned: absent
+expected:
+  condition: kawasaki_disease
+  acceptable: []
+  triage: 3
+source:
+  basis: "Bệnh Kawasaki không điển hình ở bé gái 7 tháng: sốt 6 ngày, quấy khóc nhiều, mắt đỏ không ghèn, ban thoáng qua, sẹo tiêm phòng lao sưng đỏ lại; chưa đủ các biểu hiện chính. Bộ Y tế 3312/QĐ-BYT 2015: có thể tấy đỏ sẹo BCG; thể không điển hình có ít biểu hiện hơn, chẩn đoán dựa vào xét nghiệm viêm và tổn thương mạch vành; Kawasaki hay gặp ở nhũ nhi. AHA 2017: có thuật toán chẩn đoán khi tiêu chuẩn lâm sàng không đủ. NICE NG143: sốt từ 5 ngày là dấu hiệu 'vàng', cần được khám trực tiếp; NHS Kawasaki disease: khám khẩn. Mức 3."
+  references:
+    - byt-qd-3312-2015
+    - aha-kawasaki-2017
+    - nice-ng143
+    - nhs-kawasaki-disease
+author: "agent:vignette-holdout"
+notes_vi: "Ca khó: nhũ nhi, thể không điển hình. Danh mục chưa có câu hỏi về quấy khóc, khó dỗ bất thường ở trẻ nhỏ, hay sốt không đỡ dù đã dùng kháng sinh."

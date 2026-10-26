@@ -1,0 +1,52 @@
+id: h-fever-058
+set: holdout
+title_vi: "Bé trai 6 tuổi ở vùng trồng lúa Bắc Giang, chưa tiêm vắc xin viêm não Nhật Bản, tháng 7 sốt cao, đau đầu, nôn 3 ngày, rồi li bì, lú lẫn, co giật"
+narrative_vi: "Bé L., nam, 6 tuổi, ở một xã trồng lúa của huyện Lục Ngạn (Bắc Giang); nhà nuôi lợn, sát ruộng lúa. Bé đã tiêm đủ 2 mũi vắc xin sởi nhưng chưa được tiêm vắc xin viêm não Nhật Bản vì bố mẹ đi làm ăn xa, bỏ lỡ lịch tiêm. Ba ngày nay bé sốt cao 39,5–40°C, kêu đau đầu, nôn 3 lần. Từ chiều qua bé li bì, gọi mới mở mắt, nói lẫn lộn, không nhận ra mẹ, không tự đi được. Sáng nay bé lên một cơn co giật toàn thân khoảng 3 phút. Bây giờ bé nằm lơ mơ, lay gọi mới hé mắt. Mẹ không biết cổ bé có cứng không. Bé không ho, không sổ mũi, không tiêu chảy, không nổi ban, không có nốt phỏng ở tay chân, miệng. Tháng này trong xã đã có một trẻ khác bị sốt, co giật phải đi viện."
+patient:
+  age_years: 6
+  sex: male
+  region: north
+  month: 7
+complaint: fever
+answers:
+  fever_max_temp: ge_39
+  fever_duration: d3_5
+  headache: present
+  vomiting: present
+  persistent_vomiting: absent
+  drowsy_hard_to_wake: present
+  confusion: present
+  seizure_recent: present
+  severe_weakness: present
+  neck_stiffness: unknown
+  rash_any: absent
+  mouth_ulcers: absent
+  hand_foot_blisters: absent
+  hfmd_contact: absent
+  cough: absent
+  runny_nose: absent
+  sore_throat: absent
+  diarrhea: absent
+  abdominal_pain: absent
+  breathing_difficulty: absent
+  cold_hands_feet: absent
+  measles_vaccinated: present
+  measles_contact: absent
+  dengue_nearby: absent
+  sick_contact_respiratory: absent
+  heat_exposure: absent
+  flood_mud_exposure: absent
+  bush_exposure: absent
+  malaria_area_exposure: absent
+default_unmentioned: absent
+expected:
+  condition: encephalitis
+  acceptable: []
+  triage: 1
+source:
+  basis: "Viêm não Nhật Bản ở bé trai 6 tuổi chưa tiêm vắc xin, sống ở vùng trồng lúa, nuôi lợn của Bắc Giang, đang tháng 7: sốt cao, đau đầu, nôn 3 ngày rồi li bì, lú lẫn, co giật. CDC Yellow Book (2026, Japanese encephalitis): ở vùng lưu hành, bệnh chủ yếu gặp ở trẻ em; lây chủ yếu ở vùng nông nghiệp trồng lúa, lợn là vật chủ khuếch đại; ở vùng ôn đới và cận nhiệt đới bệnh đỉnh vào mùa hè, thu; khởi phát bằng sốt, đau đầu, nôn, sau đó thay đổi ý thức, co giật hay gặp ở trẻ em; tử vong 20–30%, 30–50% người sống sót có di chứng nặng. NHS Encephalitis: co giật, lú lẫn thì gọi 999 ngay."
+  references:
+    - "https://www.cdc.gov/yellow-book/hcp/travel-associated-infections-diseases/japanese-encephalitis.html"
+    - "https://www.nhs.uk/conditions/encephalitis/"
+author: "agent:vignette-holdout"
+notes_vi: "Ca cấp cứu bổ sung. Danh mục chưa có câu hỏi về tiêm vắc xin viêm não Nhật Bản, nơi ở gần ruộng lúa hoặc chuồng lợn, hay ca bệnh tương tự trong vùng."

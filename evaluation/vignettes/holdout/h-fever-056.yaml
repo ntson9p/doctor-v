@@ -1,0 +1,65 @@
+id: h-fever-056
+set: holdout
+title_vi: "Nữ 70 tuổi đái tháo đường kiểm soát kém, sốt cao kèm rét run 5 ngày, chỉ tức nhẹ dưới sườn phải, không vàng da, không có ổ nhiễm trùng rõ"
+narrative_vi: "Bà Đ., 70 tuổi, ở Bến Tre, bị đái tháo đường típ 2 và tăng huyết áp nhiều năm, uống thuốc không đều; sáng nay tự đo đường huyết được 15 mmol/L. Năm ngày nay bà sốt cao, mỗi ngày có 1–2 cơn rét run, con đo được 39,6°C. Bà mệt, chán ăn, buồn nôn, đau đầu nhẹ và mỏi người khi sốt. Hỏi kỹ thì bà chỉ thấy hơi tức nhẹ vùng dưới sườn phải, không đau nhiều. Bà không ho, không khó thở, không tiểu buốt, không đau hông lưng, không tiêu chảy, da và mắt không vàng, không nổi ban. Bà vẫn tỉnh táo, tự đi lại được. Hàng xóm không ai bị sốt xuất huyết."
+patient:
+  age_years: 70
+  sex: female
+  region: south
+  month: 3
+complaint: fever
+answers:
+  fever_max_temp: ge_39
+  fever_duration: d3_5
+  chills_rigors: present
+  abdominal_pain: present
+  abd_pain_location: right_upper
+  abd_pain_onset: gradual
+  abd_pain_duration: d4_14
+  abd_pain_severe: absent
+  abd_pain_colicky: absent
+  abd_pain_worse_movement: absent
+  abd_pain_radiates_right_shoulder: absent
+  fatigue: present
+  loss_of_appetite: present
+  nausea: present
+  vomiting: absent
+  headache: present
+  myalgia: present
+  jaundice: absent
+  cough: absent
+  breathing_difficulty: absent
+  dysuria: absent
+  urinary_frequency: absent
+  flank_pain: absent
+  diarrhea: absent
+  rash_any: absent
+  sore_throat: absent
+  runny_nose: absent
+  thirst_polyuria: absent
+  confusion: absent
+  drowsy_hard_to_wake: absent
+  cold_hands_feet: absent
+  severe_weakness: absent
+  neck_stiffness: absent
+  persistent_vomiting: absent
+  diabetes: present
+  on_glucose_lowering_meds: present
+  glucose_measured: high
+  hypertension_known: present
+  gallstones_known: absent
+  dengue_nearby: absent
+  flood_mud_exposure: absent
+  sick_contact_respiratory: absent
+default_unmentioned: absent
+expected:
+  condition: liver_abscess
+  acceptable: []
+  triage: 3
+source:
+  basis: "Áp xe gan do vi khuẩn ở nữ 70 tuổi đái tháo đường kiểm soát kém: sốt cao, rét run 5 ngày, chỉ tức nhẹ hạ sườn phải, không vàng da, không có ổ nhiễm khuẩn rõ khác (ở châu Á căn nguyên hay gặp là Klebsiella pneumoniae). Kong và cộng sự (Medicine 2017): K. pneumoniae là căn nguyên hay gặp nhất của áp xe gan do vi khuẩn, gắn với đái tháo đường (43% so với 21% ở căn nguyên khác); phần lớn người bệnh sốt. Chưa có tiêu chí nguy cơ cao của nhiễm khuẩn huyết (NICE NG253) nên đi khám trong 24 giờ."
+  references:
+    - "https://pmc.ncbi.nlm.nih.gov/articles/PMC5604666/"
+    - nice-ng253
+author: "agent:vignette-holdout"
+notes_vi: "Ca khó: biểu hiện chủ yếu là sốt kéo dài, đau bụng mơ hồ; dễ nghĩ nhiễm khuẩn tiết niệu hoặc sốt do vi rút."

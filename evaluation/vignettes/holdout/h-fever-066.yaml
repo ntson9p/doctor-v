@@ -1,0 +1,54 @@
+id: h-fever-066
+set: holdout
+title_vi: "Nam 67 tuổi phì đại tiền liệt tuyến, 4 ngày tiểu buốt, tiểu nhiều lần, 2 ngày sốt 38,6°C ớn lạnh, bìu phải sưng đỏ, đau tăng dần"
+narrative_vi: "Ông X., 67 tuổi, ở Quy Nhơn (Bình Định), bị tăng huyết áp và phì đại tiền liệt tuyến, mấy năm nay đi tiểu khó, tia yếu, đêm dậy tiểu 2–3 lần. Bốn ngày nay ông đi tiểu buốt, tiểu nhiều lần, mỗi lần ít. Hai ngày nay ông sốt 38,6°C, ớn lạnh, và thấy bìu bên phải sưng to dần, đỏ, nóng, đau tức, chạm vào rất đau; ông nói đau tăng từ từ chứ không đột ngột. Ông không đau bụng, không đau hông lưng, nước tiểu không đỏ. Không nôn, không tiêu chảy, không ho. Ông vẫn tỉnh táo, ăn uống được, tự đi lại."
+patient:
+  age_years: 67
+  sex: male
+  region: central
+  month: 8
+complaint: fever
+answers:
+  fever_max_temp: t38_39
+  fever_duration: d1_2
+  chills_rigors: present
+  dysuria: present
+  urinary_frequency: present
+  scrotal_pain: present
+  flank_pain: absent
+  hematuria: absent
+  abdominal_pain: absent
+  nausea: absent
+  vomiting: absent
+  diarrhea: absent
+  cough: absent
+  sore_throat: absent
+  runny_nose: absent
+  headache: absent
+  myalgia: absent
+  rash_any: absent
+  confusion: absent
+  drowsy_hard_to_wake: absent
+  breathing_difficulty: absent
+  cold_hands_feet: absent
+  severe_weakness: absent
+  neck_stiffness: absent
+  persistent_vomiting: absent
+  hypertension_known: present
+  diabetes: absent
+  kidney_stones_known: absent
+  immunocompromised: absent
+  sick_contact_respiratory: absent
+  dengue_nearby: absent
+default_unmentioned: absent
+expected:
+  condition: other
+  acceptable: []
+  triage: 3
+source:
+  basis: "Viêm mào tinh hoàn – tinh hoàn do nhiễm khuẩn tiết niệu ở nam 67 tuổi phì đại tiền liệt tuyến: tiểu buốt, tiểu nhiều lần 4 ngày, rồi sốt 38,6°C, ớn lạnh, bìu phải sưng đỏ, nóng, đau tăng dần trong 2 ngày. NHS Epididymitis: ở nam trên 35 tuổi thường do nhiễm khuẩn tiết niệu, nhất là khi phì đại tiền liệt tuyến; đau có thể đến từ từ; chỉ cần cấp cứu khi đau tinh hoàn hoặc bụng đột ngột, dữ dội không chịu nổi (nghi xoắn). Có sốt nên cần khám và dùng kháng sinh trong 24 giờ."
+  references:
+    - "https://www.nhs.uk/conditions/epididymitis/"
+    - "https://www.nhs.uk/conditions/testicle-pain/"
+author: "agent:vignette-holdout"
+notes_vi: "Ca ngoài danh mục. NHS Testicle pain khuyên đến cấp cứu khi đau tinh hoàn quá 1 giờ để không bỏ sót xoắn; ở người 67 tuổi khởi phát từ từ trong 2 ngày, kèm tiểu buốt và sốt, xoắn rất khó xảy ra, nên mức đúng là 3; app khuyên mức 2 vẫn an toàn (tính là khuyên quá mức). Danh mục chưa có câu hỏi về tiểu khó, tia tiểu yếu, phì đại tiền liệt tuyến."
