@@ -1,0 +1,200 @@
+id: diabetic_ketoacidosis
+names:
+  vi: "Nhiễm toan ceton, tăng áp lực thẩm thấu do đái tháo đường"
+  vi_common: ["Nhiễm toan ceton do tiểu đường", "Hôn mê do tiểu đường", "Tăng áp lực thẩm thấu do tiểu đường"]
+  en: "Diabetic ketoacidosis or hyperosmolar hyperglycaemic state"
+codes:
+  icd10: "E10.1"
+  icd10_verified: false
+  mondo: "MONDO:0012819"
+summary_vi:
+  - "Đường huyết tăng rất cao do thiếu insulin, gây mất nước nặng và nhiễm toan máu (nhiễm toan ceton hoặc tăng áp lực thẩm thấu)."
+  - "Thường khát nhiều, tiểu nhiều, mệt, nôn, đau bụng, thở nhanh sâu; trẻ có thể bị lần đầu khi chưa biết mắc tiểu đường."
+  - "Bệnh có thể nặng lên trong vài giờ, cần đến cấp cứu ngay."
+urgency: 2
+cant_miss: true
+specialties: [endocrinology, emergency, pediatrics]
+priors:
+  - complaint: abdominal_pain
+    default: P5
+    by_age: { infant_0_2m: P6, child_2m_5y: P6 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [who-steps-vn-2021, ada-hyperglycemic-crises-2024, umpierrez-jcc-2002, bich-apem-2025, usher-smith-diabetologia-2012]
+      locator: "STEPS 2021 bảng 39–41; ADA 2024 mục Epidemiology; Umpierrez 2002 tóm tắt; Bich 2025 tóm tắt"
+      reported: "Đái tháo đường 7,1% người 18–69 tuổi, 13,4% ở 50–69 tuổi (STEPS); cơn tăng đường huyết cấp đến 3,2/1000 người-năm ở đái tháo đường típ 2 (ADA); đau bụng ở 46% người nhiễm toan ceton (Umpierrez); đái tháo đường típ 1 ở trẻ miền Bắc 0,77/100.000 trẻ, 57,8% nhiễm toan ceton khi mới phát hiện (Bich)"
+      population: "Việt Nam (STEPS, Bich); Hoa Kỳ (ADA, Umpierrez)"
+      note: "Ước lượng của lượt A cho người lớn: khoảng 7% có đái tháo đường, mỗi năm khoảng 2/1000 người bệnh bị cơn tăng đường huyết cấp, khoảng 40% có đau bụng (nhiễm toan ceton hay đau bụng, tăng áp lực thẩm thấu ít đau); nếu khoảng 10% người lớn đi khám hoặc tự kiểm tra vì đau bụng mỗi năm, bệnh chiếm khoảng 0,05–0,1% (P5). Trẻ 5–17 tuổi: tỷ lệ mắc đái tháo đường típ 1 ghi nhận ở Việt Nam thấp (Bich) nhưng có thể thấp hơn thực tế, hơn một nửa phát hiện khi đã nhiễm toan ceton (Bich; Usher-Smith: 12,8–80% tùy nước) và hay bị nhầm với viêm dạ dày – ruột, nên giữ P5 thay vì P6. Trẻ dưới 5 tuổi: P6. Cần bác sĩ duyệt."
+  - complaint: fever
+    default: P6
+    by_age: { elder_65_74: P5, elder_75p: P5 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [ada-hyperglycemic-crises-2024, byt-qd-3879-2014, who-steps-vn-2021]
+      reported: "Nhiễm khuẩn khởi phát 14–58% cơn nhiễm toan ceton và 30–60% cơn tăng áp lực thẩm thấu (ADA)"
+      note: "3879/QĐ-BYT: tăng áp lực thẩm thấu thường gặp ở người đái tháo đường típ 2 trên 60 tuổi, xuất hiện ngay sau một nhiễm trùng cấp. Người cao tuổi sốt (viêm phổi, nhiễm khuẩn tiết niệu) có thể bị cơn tăng đường huyết đi kèm; ước khoảng 0,05–0,1% người từ 65 tuổi sốt (P5), thấp hơn ở người trẻ (P6). Ước lượng."
+  - complaint: dizziness
+    default: P6
+    by_age: { adult_45_64: P5, elder_65_74: P5, elder_75p: P5 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [ada-hyperglycemic-crises-2024, byt-qd-3879-2014, who-steps-vn-2021]
+      note: "Mất nước nặng do tiểu nhiều gây choáng, mệt lả, nhất là ở người cao tuổi bị tăng áp lực thẩm thấu (3879/QĐ-BYT; ADA). Đái tháo đường tăng theo tuổi (STEPS: 13,4% ở 50–69 tuổi), nên P5 từ 45 tuổi, P6 ở người trẻ hơn. Ước lượng."
+findings:
+  - finding: diabetes
+    freq: frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [ada-hyperglycemic-crises-2024, who-steps-vn-2021, bich-apem-2025]
+      reported: "Đái tháo đường mới phát hiện ở 17–24% cơn nhiễm toan ceton tại Mỹ (ADA); ở Việt Nam chỉ 34,9% người có đường huyết cao đã từng được chẩn đoán (STEPS); 57,8% trẻ mới phát hiện típ 1 đã nhiễm toan ceton (Bich)"
+      note: "Câu hỏi chỉ hỏi từ 13 tuổi. Ở Việt Nam nhiều người chưa biết mình bị đái tháo đường, và trẻ, người trẻ hay phát hiện bệnh bằng chính cơn nhiễm toan ceton, nên lượt A ước khoảng 60–70% người bệnh đã biết mình bị đái tháo đường: chọn frequent để câu trả lời 'Không' không loại bệnh quá mạnh. Quy tắc rf_dka_suspected cũng dùng câu khát nhiều, tiểu nhiều cho người chưa biết bệnh."
+  - finding: thirst_polyuria
+    freq: very_frequent
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-3879-2014, ada-hyperglycemic-crises-2024, bich-apem-2025, nhs-diabetic-ketoacidosis]
+      reported: "Mọi trẻ mới phát hiện đái tháo đường típ 1 có khát nhiều, tiểu nhiều (Bich)"
+      note: "3879/QĐ-BYT: khát nhiều, uống nhiều và đái nhiều là triệu chứng của nhiễm toan ceton; ADA, NHS cũng nêu cho cả hai thể. Không chọn almost_always vì người lớn tuổi có thể giảm cảm giác khát (3879/QĐ-BYT) và người lơ mơ không tự kể được."
+  - finding: glucose_measured
+    dist: { low: 0.004, normal: 0.036, high: 0.36, not_measured: 0.6 }
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [ada-hyperglycemic-crises-2024]
+      reported: "Khoảng 10% cơn nhiễm toan ceton có đường huyết dưới 200 mg/dL (11,1 mmol/L), chủ yếu do thuốc ức chế SGLT2"
+      note: "Phân bố trong số người đã biết mình bị đái tháo đường. 'Chưa đo' giữ đúng tỷ lệ nền 0,6. Trong số người đã đo: khoảng 90% trên 11 mmol/L, 9% trong khoảng bình thường (nhiễm toan ceton đường huyết gần bình thường), 1% thấp."
+  - finding: ketone_breath
+    freq: occasional
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-3879-2014, ada-hyperglycemic-crises-2024, nhs-diabetic-ketoacidosis]
+      note: "Hơi thở mùi ceton, mùi trái cây là dấu hiệu đặc trưng của nhiễm toan ceton (3879/QĐ-BYT; ADA; NHS), nhưng không có ở thể tăng áp lực thẩm thấu và người nhà không phải ai cũng nhận ra. Lượt A ước occasional; tỷ lệ nền 1%, nên trả lời 'Có' làm tăng khả năng khoảng 20 lần."
+  - finding: breathing_difficulty
+    freq: occasional
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-3879-2014, ada-hyperglycemic-crises-2024, nhs-diabetic-ketoacidosis]
+      note: "Thở nhanh sâu kiểu Kussmaul là dấu hiệu của nhiễm toan ceton vừa và nặng (3879/QĐ-BYT; ADA; NHS: thở sâu hơn bình thường). Người bệnh và người nhà có thể không coi đó là 'khó thở'; thể tăng áp lực thẩm thấu thường không có. Ước occasional."
+  - finding: vomiting
+    freq: frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [ada-hyperglycemic-crises-2024, byt-qd-3879-2014]
+      reported: "Buồn nôn, nôn, đau bụng gặp ở hơn 50% người nhiễm toan ceton, ít gặp ở tăng áp lực thẩm thấu (ADA)"
+      note: "Tính chung hai thể, ước khoảng một nửa."
+  - finding: nausea
+    freq: frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [ada-hyperglycemic-crises-2024, byt-qd-3879-2014]
+      reported: "Như câu nôn"
+      note: "Cùng cụm vomiting với câu nôn; bộ suy luận giảm đếm trùng."
+  - finding: abdominal_pain
+    freq: frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [umpierrez-jcc-2002, ada-hyperglycemic-crises-2024, nhs-diabetic-ketoacidosis]
+      reported: "Đau bụng 46% người nhiễm toan ceton, liên quan với mức toan nặng (Umpierrez)"
+      note: "Chỉ có tác dụng khi triệu chứng chính là Sốt hoặc Chóng mặt. Thể tăng áp lực thẩm thấu ít đau bụng."
+  - finding: abd_pain_location
+    dist: { epigastric: 0.30, right_upper: 0.04, left_upper: 0.04, periumbilical: 0.20, right_lower: 0.04, left_lower: 0.03, suprapubic: 0.03, whole: 0.32 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [umpierrez-jcc-2002]
+      note: "Đau bụng do toan chuyển hóa thường lan tỏa hoặc vùng trên rốn, có khi giống bụng ngoại khoa (Umpierrez). Phân bố là ước lượng."
+  - finding: abd_pain_onset
+    dist: { sudden: 0.15, gradual: 0.85 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [ada-hyperglycemic-crises-2024]
+      note: "Cơn nhiễm toan ceton diễn biến trong vài giờ đến vài ngày (ADA), nên đau thường tăng dần. Ước lượng."
+  - finding: abd_pain_duration
+    dist: { lt_6h: 0.15, h6_24: 0.35, d1_3: 0.35, d4_14: 0.12, gt_2w: 0.03 }
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [ada-hyperglycemic-crises-2024, nhs-diabetic-ketoacidosis]
+      note: "Phân bố trong số người đã đau bụng. NHS: triệu chứng thường xuất hiện trong khoảng 24 giờ; ADA: nhiễm toan ceton trong vài giờ đến vài ngày, tăng áp lực thẩm thấu vài ngày đến vài tuần. Ước lượng."
+  - finding: weight_loss_unintended
+    freq: frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [bich-apem-2025, byt-qd-3879-2014, ada-hyperglycemic-crises-2024]
+      reported: "89,1% trẻ mới phát hiện típ 1 có sụt cân kèm khát nhiều, tiểu nhiều (Bich)"
+      note: "3879/QĐ-BYT và ADA nêu sụt cân; ở người đã biết đái tháo đường và đang điều trị, tỷ lệ thấp hơn trẻ mới phát hiện. Ước frequent."
+  - finding: fatigue
+    freq: very_frequent
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-3879-2014, nhs-diabetic-ketoacidosis]
+      note: "3879/QĐ-BYT: mệt mỏi, chán ăn; NHS: thấy mệt, buồn ngủ. Ước very_frequent; tỷ lệ nền khi sốt 0,5 nên tác dụng nhỏ khi triệu chứng chính là Sốt."
+  - finding: confusion
+    freq: occasional
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-3879-2014, ada-hyperglycemic-crises-2024]
+      note: "Thay đổi ý thức thường có ở nhiễm toan ceton nặng và ở tăng áp lực thẩm thấu (ADA; 3879/QĐ-BYT). Người còn tự kiểm tra được thường ở giai đoạn sớm hơn, nên ước occasional. Lú lẫn đã ở mức 1 (rf_altered_consciousness)."
+  - finding: drowsy_hard_to_wake
+    freq: occasional
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-3879-2014, ada-hyperglycemic-crises-2024]
+      note: "3879/QĐ-BYT: ngủ gà, mơ màng; hôn mê ở thể nặng. Cùng cụm altered_consciousness với câu lú lẫn."
+  - finding: severe_weakness
+    freq: occasional
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [ada-hyperglycemic-crises-2024, byt-qd-3879-2014]
+      note: "Mất nước nặng, tụt huyết áp (ADA; 3879/QĐ-BYT: mất nước nặng ở tăng áp lực thẩm thấu) làm người bệnh mệt lả. Ước occasional."
+  - finding: fever
+    freq: occasional
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [ada-hyperglycemic-crises-2024, byt-qd-3879-2014]
+      reported: "Nhiễm khuẩn khởi phát 14–58% cơn nhiễm toan ceton, 30–60% cơn tăng áp lực thẩm thấu (ADA)"
+      note: "Không phải người nhiễm khuẩn nào cũng sốt; ước occasional. Có tác dụng khi triệu chứng chính là Đau bụng hoặc Chóng mặt."
+  - finding: diarrhea
+    freq: occasional
+    evidence:
+      tier: C
+      basis: verbal
+      sources: [nhs-diabetic-ketoacidosis]
+      note: "NHS liệt kê tiêu chảy trong triệu chứng nhiễm toan ceton. Liên kết để câu trả lời 'Có' (rất hay gặp ở viêm dạ dày – ruột) không loại bệnh này. Ước occasional."
+  - finding: blurred_vision
+    freq: occasional
+    evidence:
+      tier: C
+      basis: verbal
+      sources: [nhs-diabetic-ketoacidosis]
+      note: "NHS liệt kê nhìn mờ trong triệu chứng nhiễm toan ceton. Ước occasional; tỷ lệ nền 5%."
+warning_signs: [confusion, drowsy_hard_to_wake, breathing_difficulty, ketone_breath, persistent_vomiting, severe_weakness]
+self_care_vi:
+  - "Đến cấp cứu ngay; không tự điều chỉnh thuốc ở nhà để chữa."
+  - "Người đang tiêm insulin không tự ý bỏ tiêm khi bị bệnh, ăn kém; hãy hỏi ngay bác sĩ."
+  - "Nếu có máy đo đường huyết, đo và mang kết quả theo khi đi khám."
+see_doctor_vi:
+  - "Người tiểu đường bị nôn, đau bụng, thở nhanh sâu hoặc lơ mơ cần đến cấp cứu ngay."
+  - "Trẻ khát nhiều, tiểu nhiều, sụt cân hoặc mệt cần được thử đường máu ngay trong ngày."
+review:
+  status: draft
+  authors: ["agent:pass-a"]
+  updated: "2026-10-26"
+  notes_vi: "Lượt A. Mức 2, không được bỏ sót, như gợi ý: 3879/QĐ-BYT coi nhiễm toan ceton là biến chứng nguy hiểm đến tính mạng, tăng áp lực thẩm thấu có tử vong cao kể cả khi được cấp cứu; NHS khuyên gọi 999 hoặc đến cấp cứu khi có triệu chứng mà không biết mức ceton, hoặc chưa được chẩn đoán đái tháo đường (theo quy ước của lô 1, 'gọi 999 hoặc đến cấp cứu' là mức 2). Lú lẫn, li bì đã ở mức 1 theo quy tắc chung. Bệnh gộp hai thể vì cùng cách xử trí ban đầu; mã chính ghi E10.1, thể tăng áp lực thẩm thấu và người típ 2 dùng E11.0–E11.1; chưa đối chiếu được bảng ICD-10 của Bộ Y tế. Điểm cần xem: (1) prior là ước lượng từ STEPS 2021 và tỷ lệ cơn cấp ở Mỹ; ở trẻ em chọn P5 dù tỷ lệ mắc ghi nhận ở Việt Nam rất thấp, vì hơn một nửa trẻ phát hiện bệnh khi đã nhiễm toan ceton và hay bị nhầm; (2) tỷ lệ người đã biết mình bị đái tháo đường (frequent) là ước lượng; (3) chưa mở được hướng dẫn ISPAD cho trẻ em và NICE NG18 (nguồn của quy tắc rf_new_diabetes_child); (4) 3879/QĐ-BYT năm 2014: phần đái tháo đường típ 2 đã có văn bản riêng (5481/QĐ-BYT), nhưng chưa thấy văn bản thay thế hai bài nhiễm toan ceton và tăng áp lực thẩm thấu."

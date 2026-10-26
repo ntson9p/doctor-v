@@ -1,0 +1,149 @@
+id: acute_mesenteric_ischemia
+names:
+  vi: "Thiếu máu mạc treo ruột cấp"
+  vi_common: ["Tắc mạch mạc treo", "Nhồi máu ruột", "Thiếu máu ruột cấp"]
+  en: "Acute mesenteric ischaemia"
+codes:
+  icd10: "K55.0"
+  icd10_verified: false
+summary_vi:
+  - "Mạch máu nuôi ruột bị tắc đột ngột, thường do cục máu đông từ tim ở người bị rung nhĩ, làm ruột thiếu máu."
+  - "Người bệnh, thường cao tuổi, đau bụng dữ dội nhưng ấn bụng lại không đau nhiều, có thể nôn, tiêu chảy."
+  - "Ruột có thể hoại tử sau vài giờ, nên cần gọi 115 ngay."
+urgency: 1
+cant_miss: true
+specialties: [emergency, general_surgery]
+priors:
+  - complaint: abdominal_pain
+    default: P6
+    by_age: { adult_45_64: P5, elder_65_74: P5, elder_75p: P4 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [bala-wjes-2022, karkkainen-jgs-2015, cervellin-atm-2016]
+      locator: "WSES 2022 mục Epidemiology; Kärkkäinen 2015 tóm tắt; Cervellin 2016 bảng 1, 4"
+      reported: "Tỷ lệ mắc tại viện 7,3/100.000/năm, nhiều hơn vỡ phình động mạch chủ bụng; từ 75 tuổi gặp nhiều hơn viêm ruột thừa ở người đau bụng cấp (Kärkkäinen; WSES); tỷ lệ mắc ở 80 tuổi gấp khoảng 10 lần ở 60 tuổi (WSES)"
+      population: "Phần Lan và tổng quan quốc tế; chưa có số liệu Việt Nam"
+      note: "Lượt A ước lượng: tỷ lệ mắc tăng theo hàm mũ với tuổi, từ 75 tuổi khoảng 50–80/100.000/năm; nếu khoảng 10% người cao tuổi đi khám hoặc tự kiểm tra vì đau bụng mỗi năm, bệnh chiếm khoảng 0,5% ở người từ 75 tuổi (P4, ngang viêm ruột thừa ở nhóm tuổi này trong cơ sở tri thức, đúng như Kärkkäinen), khoảng 0,15% ở 65–74 tuổi (P5). 45–64 tuổi hiếm hơn khoảng 10 lần, gồm cả huyết khối tĩnh mạch mạc treo ở người trẻ hơn (P5); dưới 45 tuổi rất hiếm (P6). Thể không tắc mạch chủ yếu gặp ở người đang nằm hồi sức, không phải người dùng doctor-v. Không dùng hệ số giới tính vì nguồn đã mở không cho thấy khác biệt rõ. Cần bác sĩ duyệt."
+findings:
+  - finding: abd_pain_severe
+    freq: frequent
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [bala-wjes-2022]
+      locator: "WSES 2022 mục Clinical presentation"
+      note: "Tần suất trong số người đã đau bụng. Kinh điển là đau dữ dội không tương xứng với khám bụng; WSES ghi kiểu biểu hiện này đang ít đi, thể 'cấp trên nền mạn' (đau sau ăn từ trước rồi nặng lên) hay gặp hơn, và thể không tắc mạch đau âm ỉ. Chọn frequent, không chọn very_frequent. Quy tắc rf_severe_abdominal_pain đã xếp mức 2."
+  - finding: abd_pain_onset
+    dist: { sudden: 0.60, gradual: 0.40 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [bala-wjes-2022]
+      locator: "WSES 2022 bảng 1 (cách khởi phát theo nguyên nhân)"
+      note: "Tắc mạch do cục máu đông: đau dữ dội đột ngột; huyết khối trên nền xơ vữa: đột ngột hoặc tăng dần; không tắc mạch và huyết khối tĩnh mạch: tăng dần (WSES). Lượt A tính theo tỷ lệ các nguyên nhân, bớt phần không tắc mạch (người nằm hồi sức). Ước lượng."
+  - finding: abd_pain_location
+    dist: { epigastric: 0.15, right_upper: 0.03, left_upper: 0.03, periumbilical: 0.35, right_lower: 0.06, left_lower: 0.05, suprapubic: 0.03, whole: 0.30 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [bala-wjes-2022]
+      note: "Đau khó khu trú (WSES), chủ yếu quanh rốn hoặc khắp bụng vì động mạch mạc treo tràng trên nuôi ruột non và nửa phải đại tràng. Phân bố là ước lượng."
+  - finding: abd_pain_duration
+    dist: { lt_6h: 0.35, h6_24: 0.30, d1_3: 0.20, d4_14: 0.10, gt_2w: 0.05 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [bala-wjes-2022]
+      note: "Phân bố trong số người đã đau bụng. Thể tắc mạch đến sớm; thể 'cấp trên nền mạn' có đau sau ăn nhiều tuần trước đó (WSES). Ước lượng."
+  - finding: abd_pain_meal_relation
+    dist: { hungry_relieved_by_food: 0.03, worse_after_meal: 0.30, no_relation: 0.67 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [bala-wjes-2022]
+      locator: "WSES 2022 mục Medical history"
+      note: "Người huyết khối động mạch mạc treo hay có tiền sử đau sau ăn, sợ ăn, sụt cân (thiếu máu mạc treo mạn); thể tắc mạch không liên quan bữa ăn. Ước lượng."
+  - finding: nausea
+    freq: frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [bala-wjes-2022]
+      reported: "Buồn nôn 44%"
+      note: "Số liệu của một nghiên cứu được WSES dẫn. Tỷ lệ nền của buồn nôn khi đau bụng là 0,35, nên tác dụng nhỏ."
+  - finding: vomiting
+    freq: frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [bala-wjes-2022]
+      reported: "Nôn 35%"
+      note: "Nôn, tiêu chảy là phản ứng 'tống rỗng ruột' sớm, không phải dấu hiệu của giai đoạn nặng, nên không hạ mức."
+  - finding: diarrhea
+    freq: frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [bala-wjes-2022]
+      reported: "Tiêu chảy 35%"
+      note: "Người cao tuổi đau bụng dữ dội đột ngột kèm tiêu chảy dễ bị nghĩ là viêm dạ dày – ruột; liên kết giúp bệnh này không bị loại khi trả lời 'Có'. Tỷ lệ nền 5%."
+  - finding: diarrhea_bloody
+    freq: occasional
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [bala-wjes-2022]
+      reported: "Đi ngoài ra máu 16%; huyết khối tĩnh mạch mạc treo: chảy máu tiêu hóa 10%"
+      note: "Tần suất trong số người đã tiêu chảy: nếu phần lớn người đi ngoài ra máu cũng tiêu chảy thì khoảng 30–45%; lượt A chọn occasional cho thận trọng vì một phần chỉ có máu ẩn trong phân."
+  - finding: fever
+    freq: occasional
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [bala-wjes-2022]
+      reported: "Khoảng 1/3 có đau bụng, sốt và máu ẩn trong phân"
+      note: "Sốt thường xuất hiện muộn khi ruột đã tổn thương; ở người tự kiểm tra sớm ước occasional."
+  - finding: abdomen_hard_swollen
+    freq: occasional
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [bala-wjes-2022, who-bec-2018]
+      note: "Lúc đầu bụng mềm dù đau nhiều; khi ruột hoại tử thì có dấu hiệu viêm phúc mạc; chướng bụng không giải thích được có thể là dấu hiệu duy nhất của thể không tắc mạch (WSES). Ước occasional; quy tắc rf_abdomen_hard_swollen đã xếp mức 2."
+  - finding: atrial_fibrillation_known
+    freq: occasional
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [bala-wjes-2022]
+      reported: "Gần 50% người tắc mạch mạc treo do cục máu đông có rung nhĩ; tắc mạch chiếm 25–50% các ca"
+      note: "Rung nhĩ là yếu tố nguy cơ chính. Tính trên mọi ca (gồm cả huyết khối và thể khác) và chỉ tính người đã được bác sĩ nói là bị rung nhĩ, lượt A ước 20–30%: occasional. Tỷ lệ nền 0,04 (từ 45 tuổi), nên trả lời 'Có' làm tăng khả năng khoảng 5 lần. Cần bác sĩ duyệt."
+  - finding: known_heart_disease
+    freq: occasional
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [bala-wjes-2022]
+      note: "Cục máu đông từ tim (nhồi máu cơ tim mới, suy tim, bệnh van tim) và suy tim (thể không tắc mạch) là yếu tố nguy cơ (WSES bảng 1). Nguồn không cho tỷ lệ; ước occasional."
+  - finding: weight_loss_unintended
+    freq: occasional
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [bala-wjes-2022]
+      note: "Người huyết khối động mạch mạc treo hay sụt cân, sợ ăn từ trước (WSES). Ước occasional; tỷ lệ nền 5%."
+warning_signs: [abd_pain_severe, abdomen_hard_swollen, diarrhea_bloody, persistent_vomiting, cold_hands_feet, confusion, fainting_or_near_fainting]
+self_care_vi:
+  - "Gọi 115 ngay; không ăn uống gì trong lúc chờ."
+  - "Không tự uống thuốc giảm đau rồi chờ xem cơn đau có qua không."
+  - "Mang theo các thuốc đang dùng, nhất là thuốc chống đông, khi đi cấp cứu."
+see_doctor_vi:
+  - "Người cao tuổi bị rung nhĩ hoặc bệnh tim mà đau bụng dữ dội cần đi cấp cứu ngay."
+  - "Ấn bụng không đau nhiều chưa loại trừ được bệnh này."
+  - "Người hay đau bụng sau ăn, sợ ăn, sụt cân cần đi khám sớm để kiểm tra mạch máu nuôi ruột."
+review:
+  status: draft
+  authors: ["agent:pass-a"]
+  updated: "2026-10-26"
+  notes_vi: "Lượt A. Mức 1, không được bỏ sót, như gợi ý: WSES 2022 coi đau bụng dữ dội không tương xứng với khám là thiếu máu mạc treo cho tới khi loại trừ; tử vong 30–70%, mỗi 6 giờ chậm chẩn đoán làm tử vong tăng gấp đôi; người bệnh thường cao tuổi, nhiều bệnh nền. Mã K55.0 chưa đối chiếu được bảng ICD-10 của Bộ Y tế; chưa tìm thấy mã MONDO riêng cho thể cấp. Điểm cần xem: (1) prior suy từ tỷ lệ mắc ở Phần Lan và so sánh với viêm ruột thừa ở người từ 75 tuổi, chưa có số liệu Việt Nam; (2) tần suất triệu chứng lấy từ một nghiên cứu được WSES dẫn (đau 95%, buồn nôn 44%, nôn 35%, tiêu chảy 35%, đi ngoài ra máu 16%), là số ở bệnh viện; (3) tỷ lệ người đã biết mình bị rung nhĩ là ước lượng (ở Việt Nam nhiều người rung nhĩ chưa được chẩn đoán); (4) không liên kết ngất, sốc ở mức riêng vì không có số liệu; (5) danh mục chưa có câu 'tiền sử tắc mạch chi' (khoảng 1/3 người tắc mạch có tiền sử này, WSES), không đề xuất thêm vì hiếm người dùng trả lời được."

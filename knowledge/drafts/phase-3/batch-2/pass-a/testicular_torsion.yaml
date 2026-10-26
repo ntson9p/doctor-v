@@ -1,0 +1,96 @@
+id: testicular_torsion
+names:
+  vi: "Xoắn tinh hoàn"
+  vi_common: ["Xoắn thừng tinh", "Xoắn dịch hoàn"]
+  en: "Testicular torsion"
+codes:
+  icd10: "N44"
+  icd10_verified: false
+  mondo: "MONDO:0008541"
+summary_vi:
+  - "Tinh hoàn bị xoắn quanh thừng tinh làm tắc mạch máu nuôi tinh hoàn."
+  - "Hay gặp ở tuổi dậy thì; thường đau đột ngột, dữ dội ở bìu, có khi chỉ thấy đau bụng dưới và nôn."
+  - "Cần mổ trong vài giờ để giữ được tinh hoàn, nên phải đến cấp cứu ngay."
+urgency: 2
+cant_miss: true
+specialties: [urology, emergency]
+applicability:
+  sex: [male]
+  reason_vi: "Chỉ gặp ở nam giới."
+priors:
+  - complaint: abdominal_pain
+    default: P6
+    by_age: { teen_13_17: P5 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [zhao-jurol-2011, vasconceloscastro-jpedsurg-2020, pogorelic-jpediatrurol-2013, mantica-abdomradiol-2025]
+      locator: "Zhao 2011, Vasconcelos-Castro 2020, Pogorelić 2013, Mantica 2025: tóm tắt"
+      reported: "Khoảng 3,8/100.000 trẻ trai dưới 18 tuổi mỗi năm, đỉnh ở năm đầu đời và đầu tuổi dậy thì (Zhao); 22% trẻ xoắn tinh hoàn khởi đầu bằng đau bụng (Vasconcelos-Castro), 11% đau bụng mà chưa đau bìu (Pogorelić); 6,4% người lớn chỉ đau bụng lúc đầu (Mantica)"
+      population: "Hoa Kỳ, Bồ Đào Nha, Croatia, Ý; chưa có số liệu Việt Nam"
+      note: "Prior tính trong số nam cùng nhóm tuổi bị đau bụng (applicability chỉ giới hạn giới). Ước lượng của lượt A cho 13–17 tuổi: khoảng 10/100.000 trẻ trai mỗi năm; app chưa có triệu chứng chính 'đau bìu', nên ước 30–50% người xoắn sẽ chọn Đau bụng; nếu khoảng 10% trẻ trai đi khám hoặc tự kiểm tra vì đau bụng mỗi năm, bệnh chiếm khoảng 0,03–0,05% (P5). Trẻ 5–12 tuổi và nam 18–44 tuổi ít gặp hơn nhiều, còn đau bụng lại rất phổ biến (P6). Trẻ dưới 2 tháng thuộc nhóm chỉ sàng lọc dấu hiệu nguy hiểm. Cần bác sĩ duyệt."
+findings:
+  - finding: scrotal_pain
+    freq: frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [vasconceloscastro-jpedsurg-2020, pogorelic-jpediatrurol-2013, mantica-abdomradiol-2025, nhs-testicle-pain]
+      reported: "Đau bụng là triệu chứng khởi đầu ở 22% trẻ (Vasconcelos-Castro); 11% trẻ đau bụng mà chưa đau bìu (Pogorelić); 6,4% người lớn chỉ đau bụng lúc đầu (Mantica)"
+      note: "Nhìn chung gần như mọi người xoắn tinh hoàn đều đau hoặc sưng bìu. Nhưng người chọn triệu chứng chính Đau bụng là nhóm con có đau bụng nổi bật, trong đó nhiều người chưa đau bìu lúc đầu; lượt A ước khoảng 60–80% trả lời 'Có' khi được hỏi kỹ (câu hỏi có câu thay thế về bìu sưng, đỏ). Chọn frequent, không chọn very_frequent, để câu trả lời 'Không' không loại bệnh quá mạnh (trẻ hay ngại nói). Trả lời 'Có' đã được quy tắc rf_scrotal_pain xếp mức 2."
+  - finding: abd_pain_radiates_groin
+    freq: frequent
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [pogorelic-jpediatrurol-2013, vasconceloscastro-jpedsurg-2020, nhs-testicle-pain]
+      note: "Xoắn tinh hoàn biểu hiện bằng đau bụng thường là đau bụng dưới (Pogorelić), do đau từ tinh hoàn lan lên theo thừng tinh; người bệnh hay tả là đau lan xuống bẹn hoặc bộ phận sinh dục. Nguồn không cho tỷ lệ; ước khoảng một nửa. Tỷ lệ nền 1%."
+  - finding: abd_pain_location
+    dist: { epigastric: 0.03, right_upper: 0.01, left_upper: 0.01, periumbilical: 0.10, right_lower: 0.30, left_lower: 0.33, suprapubic: 0.15, whole: 0.07 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [pogorelic-jpediatrurol-2013, vasconceloscastro-jpedsurg-2020]
+      note: "Đau bụng dưới, thường lệch về bên tinh hoàn bị xoắn (Pogorelić: đau bụng dưới cấp ở nam trẻ). Bên trái gặp nhiều hơn một chút. Phân bố là ước lượng."
+  - finding: abd_pain_onset
+    dist: { sudden: 0.70, gradual: 0.30 }
+    evidence:
+      tier: C
+      basis: verbal
+      sources: [nhs-testicle-pain, pogorelic-jpediatrurol-2013]
+      note: "NHS gắn xoắn tinh hoàn với đau đột ngột, dữ dội. Đau bụng do xoắn có thể tăng dần, nhất là khi xoắn không hoàn toàn. Ước lượng."
+  - finding: abd_pain_duration
+    dist: { lt_6h: 0.35, h6_24: 0.30, d1_3: 0.25, d4_14: 0.07, gt_2w: 0.03 }
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [vasconceloscastro-jpedsurg-2020, pogorelic-jpediatrurol-2013]
+      reported: "Người khởi đầu bằng đau bụng đến viện sau trung vị 36 giờ, so với 5 giờ khi đau bìu (Vasconcelos-Castro); thời gian triệu chứng trung bình 4 giờ ở nhóm giữ được tinh hoàn, 39 giờ ở nhóm phải cắt (Pogorelić)"
+      note: "Phân bố trong số người đã đau bụng. Người tự kiểm tra dùng app sớm hơn lúc đến viện, nên dồn nhiều vào dưới 24 giờ; một phần xoắn từng đợt đau tái đi tái lại. Ước lượng."
+  - finding: vomiting
+    freq: frequent
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [pogorelic-jpediatrurol-2013, nhs-testicle-pain]
+      note: "Pogorelić: đau bụng và nôn là triệu chứng hay gặp nhất của xoắn tinh hoàn biểu hiện bằng đau bụng; NHS: đau tinh hoàn kèm buồn nôn, nôn hoặc đau bụng thì đến cấp cứu; buồn nôn, nôn là một mục của thang điểm TWIST. Ước khoảng một nửa; tỷ lệ nền khi đau bụng 0,2."
+  - finding: abd_pain_severe
+    freq: occasional
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [nhs-testicle-pain]
+      note: "Tần suất trong số người đã đau bụng. Cơn đau dữ dội chủ yếu ở bìu (NHS); phần đau bụng thường vừa phải. Ước occasional. Quy tắc rf_severe_abdominal_pain đã xếp mức 2 khi trả lời 'Có'."
+warning_signs: [scrotal_pain, abd_pain_severe, persistent_vomiting]
+self_care_vi:
+  - "Đến cấp cứu ngay; không chờ xem cơn đau có tự hết không."
+  - "Không ăn uống trong lúc chờ khám, vì có thể phải mổ."
+  - "Trẻ trai đau bụng cần được người lớn xem bìu, vì trẻ thường ngại nói."
+see_doctor_vi:
+  - "Đau tinh hoàn đột ngột, hoặc đau bìu kèm đau bụng, nôn cần đến cấp cứu ngay."
+  - "Đến viện càng sớm thì càng dễ giữ được tinh hoàn."
+review:
+  status: draft
+  authors: ["agent:pass-a"]
+  updated: "2026-10-26"
+  notes_vi: "Lượt A. Mức 2, không được bỏ sót, như gợi ý: NHS khuyên đến cấp cứu hoặc gọi 999 khi đau tinh hoàn đột ngột, dữ dội, hoặc đau kèm buồn nôn, nôn, đau bụng; chậm mổ làm mất tinh hoàn (Vasconcelos-Castro 2020: 81% mất tinh hoàn ở nhóm khởi đầu bằng đau bụng, so với 4%). Mã N44 chưa đối chiếu được bảng ICD-10 của Bộ Y tế (bản mới có thể tách N44.0). Chỉ có 7 liên kết vì danh mục ít dấu hiệu phân biệt được ở tuyến tự kiểm tra; các dấu hiệu khám (tinh hoàn nằm cao, mất phản xạ da bìu) không hỏi được. Điểm cần xem: (1) prior P5 ở 13–17 tuổi là ước lượng từ tỷ lệ mắc ở Mỹ và tỷ lệ khởi đầu bằng đau bụng; (2) mức frequent cho đau, sưng bìu ở người chọn Đau bụng là ước lượng có chủ ý thấp hơn thực tế chung; (3) không liên kết sốt, tiểu buốt vì nguồn đã mở không nêu tỷ lệ; viêm mào tinh hoàn (đối thủ chính) chưa có trong cơ sở tri thức; (4) khi có triệu chứng chính đau bìu (lô 6), cần prior riêng và tần suất khác."

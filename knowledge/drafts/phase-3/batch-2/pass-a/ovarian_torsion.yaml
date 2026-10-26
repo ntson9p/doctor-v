@@ -1,0 +1,170 @@
+id: ovarian_torsion
+names:
+  vi: "Xoắn phần phụ, vỡ nang buồng trứng"
+  vi_common: ["Xoắn buồng trứng", "Xoắn u nang buồng trứng", "Vỡ nang buồng trứng", "Vỡ nang hoàng thể"]
+  en: "Adnexal (ovarian) torsion or ruptured ovarian cyst"
+codes:
+  icd10: "N83.5"
+  icd10_verified: false
+summary_vi:
+  - "Buồng trứng hoặc u nang buồng trứng bị xoắn quanh cuống, hoặc nang bị vỡ gây chảy máu trong bụng."
+  - "Thường đột ngột đau dữ dội ở bụng dưới một bên, có thể kèm buồn nôn, nôn, vã mồ hôi, choáng."
+  - "Cần đến cấp cứu ngay, vì xoắn lâu có thể mất buồng trứng, còn vỡ nang có thể mất máu nhiều."
+urgency: 2
+cant_miss: true
+specialties: [obstetrics_gynecology, emergency]
+applicability:
+  sex: [female]
+  reason_vi: "Bệnh của buồng trứng, chỉ gặp ở nữ giới."
+priors:
+  - complaint: abdominal_pain
+    default: P4
+    by_age: { infant_0_2m: P6, child_2m_5y: P6, child_5_12: P5, adult_45_64: P5, elder_65_74: P6, elder_75p: P6 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [huchon-humreprod-2012, houry-annemergmed-2001, chen-bmcwomenshealth-2026, byt-qd-315-2015, cervellin-atm-2016]
+      locator: "Huchon 2012 tóm tắt; Houry 2001 tóm tắt; 315/QĐ-BYT bài U nang buồng trứng, tr. 149–153; Cervellin 2016 bảng 4"
+      reported: "Xoắn phần phụ ở 31/496 (6,25%) phụ nữ đau vùng chậu cấp mức trên 4/10 tại cấp cứu sản phụ khoa (Huchon); xoắn buồng trứng gặp từ 14 đến 82 tuổi, trung bình 32, 17% đã mãn kinh (Houry); vỡ hoàng thể là cấp cứu phụ khoa hay gặp ở phụ nữ tuổi sinh đẻ (Chen); đau do nguyên nhân phụ khoa 2,86% người dưới 65 tuổi đau bụng ở cấp cứu (Cervellin)"
+      note: "Prior tính trong số nữ cùng nhóm tuổi bị đau bụng (applicability chỉ giới hạn giới). Bệnh gộp xoắn phần phụ và vỡ nang (vỡ nang hay gặp hơn xoắn; 69% vỡ hoàng thể điều trị bảo tồn, Chen 2026). Ở cấp cứu phụ khoa, xoắn chiếm khoảng 6% người đau vùng chậu nặng; trong mọi phụ nữ 18–44 tuổi đau bụng ở cộng đồng, lượt A ước xoắn và vỡ nang cộng lại khoảng 0,5–1% (P4, ngang chửa ngoài tử cung trong cơ sở tri thức; P3 là mức trên nếu tính cả vỡ nang nhẹ). 13–17 tuổi cũng P4 (xoắn hay gặp ở trẻ gái, nhiều khi buồng trứng bình thường); 5–12 tuổi P5; 45–64 tuổi P5 (ít vỡ hoàng thể, vẫn có xoắn u buồng trứng); từ 65 tuổi và trẻ dưới 5 tuổi P6. Chưa có số liệu Việt Nam; cần bác sĩ duyệt."
+findings:
+  - finding: abd_pain_location
+    dist: { epigastric: 0.02, right_upper: 0.02, left_upper: 0.02, periumbilical: 0.04, right_lower: 0.37, left_lower: 0.30, suprapubic: 0.17, whole: 0.06 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [huchon-humreprod-2012, houry-annemergmed-2001, byt-qd-315-2015]
+      note: "Đau một bên bụng dưới hoặc thắt lưng là dấu hiệu gợi ý mạnh nhất của xoắn (Huchon 2012: aDOR 23,3). Xoắn và vỡ hoàng thể hay gặp bên phải hơn bên trái. Phân bố là ước lượng; vỡ nang nhiều máu có thể đau lan khắp bụng."
+  - finding: abd_pain_onset
+    dist: { sudden: 0.65, gradual: 0.35 }
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [houry-annemergmed-2001, byt-qd-315-2015, chen-bmcwomenshealth-2026]
+      reported: "Khởi phát đột ngột 59% ở xoắn buồng trứng (Houry); 79% vỡ hoàng thể có yếu tố khởi phát rõ như quan hệ tình dục, vận động (Chen)"
+      note: "315/QĐ-BYT: xoắn nang gây đau đột ngột, dữ dội. Lượt A tăng nhẹ so với 59% vì vỡ nang thường khởi phát đột ngột sau một hoạt động."
+  - finding: abd_pain_severe
+    freq: frequent
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [huchon-humreprod-2012, byt-qd-315-2015, houry-annemergmed-2001]
+      reported: "Đau không chịu nổi: aDOR 5,0 cho xoắn (Huchon); đau nhói như dao đâm 70% (Houry)"
+      note: "Tần suất trong số người đã đau bụng. 315/QĐ-BYT: đau đột ngột, dữ dội. Vỡ nang nhỏ có thể chỉ đau vừa, nên không chọn very_frequent. Quy tắc rf_severe_abdominal_pain đã xếp mức 2."
+  - finding: abd_pain_duration
+    dist: { lt_6h: 0.40, h6_24: 0.30, d1_3: 0.18, d4_14: 0.08, gt_2w: 0.04 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [houry-annemergmed-2001, byt-qd-315-2015]
+      note: "Phân bố trong số người đã đau bụng. Bệnh cảnh cấp (315/QĐ-BYT), đa số đi khám trong ngày; Houry: chẩn đoán hay bị chậm, chỉ 26/87 được mổ trong 24 giờ; xoắn không hoàn toàn có thể đau từng đợt nhiều ngày. Ước lượng."
+  - finding: abd_pain_radiates_back
+    freq: occasional
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [houry-annemergmed-2001]
+      reported: "Đau lan ra hông, lưng hoặc bẹn 51%"
+      note: "Tần suất trong số người đã đau bụng. Con số 51% gộp ba hướng lan; ước khoảng 20% lan ra lưng."
+  - finding: abd_pain_radiates_groin
+    freq: occasional
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [houry-annemergmed-2001]
+      reported: "Đau lan ra hông, lưng hoặc bẹn 51%"
+      note: "Như trên; ước khoảng 20% lan xuống bẹn. Liên kết để câu trả lời 'Có' không quy hết cho sỏi niệu quản ở phụ nữ."
+  - finding: flank_pain
+    freq: occasional
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [houry-annemergmed-2001, huchon-humreprod-2012]
+      reported: "Đau lan ra hông, lưng hoặc bẹn 51% (Houry); đau một bên thắt lưng hoặc bụng là dấu hiệu gợi ý xoắn (Huchon)"
+      note: "Ước occasional; tỷ lệ nền 5%."
+  - finding: nausea
+    freq: frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [houry-annemergmed-2001, chen-bmcwomenshealth-2026, byt-qd-315-2015]
+      reported: "Buồn nôn hoặc nôn 70% ở xoắn (Houry); buồn nôn 24%, nôn 14% ở vỡ hoàng thể (Chen)"
+      note: "Tính chung cho cả hai thể, ước khoảng 45%. Không liên kết riêng câu nôn: tính chung khoảng 25–30%, gần bằng tỷ lệ nền khi đau bụng (0,2) nên không mang thông tin."
+  - finding: fever
+    freq: rare
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [houry-annemergmed-2001]
+      reported: "Sốt ở 2/87 người xoắn buồng trứng"
+      note: "Thấp hơn tỷ lệ nền 5%: trả lời 'Có' nghiêng về viêm vùng chậu, viêm ruột thừa, viêm thận – bể thận."
+  - finding: vaginal_bleeding
+    freq: rare
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [huchon-humreprod-2012]
+      reported: "Không ra khí hư và không ra máu âm đạo: aDOR 7,0 cho xoắn"
+      note: "Ra máu âm đạo bất thường ít gặp ở xoắn và vỡ nang, hay gặp ở chửa ngoài tử cung, sảy thai. Ước rare, thấp hơn tỷ lệ nền 5%. Không liên kết khí hư bất thường vì tỷ lệ nền của câu đó (15%) đã gần bằng tỷ lệ ở người xoắn."
+  - finding: ovarian_cyst_known
+    freq: occasional
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [houry-annemergmed-2001, byt-qd-315-2015]
+      reported: "25% người xoắn buồng trứng từng biết có nang buồng trứng (Houry)"
+      note: "315/QĐ-BYT: nang cơ năng và u nang thực thể đều có thể xoắn, vỡ. Vỡ hoàng thể thường chưa biết có nang. Tỷ lệ nền 5%, nên trả lời 'Có' làm tăng khả năng khoảng 4 lần."
+  - finding: pain_with_intercourse
+    freq: occasional
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [chen-bmcwomenshealth-2026, byt-qd-315-2015]
+      reported: "79% vỡ hoàng thể có yếu tố khởi phát rõ như quan hệ tình dục, vận động (Chen)"
+      note: "Câu hỏi hỏi đau bụng dưới khi quan hệ; vỡ nang hay xảy ra trong hoặc ngay sau khi quan hệ, nang to gây đau khi giao hợp (315/QĐ-BYT). Ước occasional. Câu nhạy cảm, ít khi được hỏi."
+  - finding: fainting_or_near_fainting
+    freq: occasional
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-315-2015, chen-bmcwomenshealth-2026]
+      reported: "Ngất 3,2% ở vỡ hoàng thể (Chen); xoắn nang gây vã mồ hôi, choáng (315/QĐ-BYT)"
+      note: "Gồm cả choáng như sắp ngất, nên cao hơn tỷ lệ ngất thật; ước occasional. Ngất hoặc choáng kèm đau bụng đã được quy tắc rf_fainting_with_pain xếp mức 2."
+  - finding: cold_sweat
+    freq: occasional
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-315-2015]
+      note: "315/QĐ-BYT: xoắn nang gây đau đột ngột, dữ dội, vã mồ hôi, choáng, nôn. Ước occasional."
+  - finding: abd_pain_worse_movement
+    freq: occasional
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [chen-bmcwomenshealth-2026, houry-annemergmed-2001]
+      reported: "Phản ứng dội ở 15% người vỡ hoàng thể (Chen); dấu hiệu viêm phúc mạc ở 3/87 người xoắn (Houry)"
+      note: "Máu trong ổ bụng kích thích phúc mạc nên đau tăng khi đi lại, xe xóc; ít gặp hơn ở viêm ruột thừa. Ước occasional."
+  - finding: abdomen_hard_swollen
+    freq: rare
+    above_leak_ok: true
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [houry-annemergmed-2001, chen-bmcwomenshealth-2026]
+      reported: "Dấu hiệu viêm phúc mạc 3/87 (Houry); gõ đục vùng thấp 14% ở vỡ hoàng thể (Chen, dấu hiệu khi khám)"
+      note: "Bụng cứng hoặc chướng căng (câu người dùng tự nhận) gặp khi chảy máu nhiều. Mức rare (2,5%) cao hơn tỷ lệ nền 1% là có chủ ý để câu trả lời 'Có' không hạ bệnh nguy hiểm này; quy tắc rf_abdomen_hard_swollen đã xếp mức 2."
+warning_signs: [abd_pain_severe, fainting_or_near_fainting, cold_hands_feet, severe_weakness, abdomen_hard_swollen, persistent_vomiting]
+self_care_vi:
+  - "Đến cấp cứu ngay; không chờ xem cơn đau có tự hết không."
+  - "Không ăn uống trong lúc chờ khám, vì có thể phải mổ."
+  - "Không tự uống thuốc giảm đau để cố chịu ở nhà."
+see_doctor_vi:
+  - "Nữ giới đột ngột đau dữ dội bụng dưới một bên cần đi cấp cứu ngay, nhất là khi kèm nôn, vã mồ hôi, choáng."
+  - "Người đã biết có u nang buồng trứng cần tái khám theo hẹn, và đi cấp cứu ngay khi đột ngột đau bụng."
+  - "Nếu có thể đang có thai, hãy báo cho nhân viên y tế để loại trừ chửa ngoài tử cung."
+review:
+  status: draft
+  authors: ["agent:pass-a"]
+  updated: "2026-10-26"
+  notes_vi: "Lượt A. Mức 2, không được bỏ sót, như gợi ý: 315/QĐ-BYT xếp xoắn nang, vỡ nang vào bệnh cảnh cấp cứu, xoắn nang cần mổ cấp cứu, vỡ nang chảy máu có khi phải mổ cầm máu; chậm mổ làm mất buồng trứng (Houry 2001: chỉ 9% còn tháo xoắn được). Bệnh gộp hai tình trạng có cùng cách xử trí ban đầu (siêu âm cấp cứu), như tên trong phạm vi lô. Mã N83.5 (xoắn buồng trứng, cuống buồng trứng và vòi trứng) chưa đối chiếu được bảng ICD-10 của Bộ Y tế; vỡ nang thuộc N83.0–N83.2. Điểm cần xem: (1) prior là ước lượng, chưa có số liệu Việt Nam về lý do khám; (2) tần suất từ các nghiên cứu ở bệnh viện (Houry 87 ca xoắn; Chen 341 ca vỡ hoàng thể; Huchon chỉ có tỷ số chênh), tỷ lệ trộn giữa xoắn và vỡ nang là ước lượng; (3) không liên kết 'đang có thai': khoảng 14% người xoắn đang có thai (Houry) nhưng chỉ 4% người vỡ hoàng thể (Chen), tính chung gần tỷ lệ nền 5%; (4) không liên kết khí hư bất thường, đau trùng kỳ kinh, nôn vì tỷ lệ gần bằng tỷ lệ nền; (5) StatPearls không mở được (bị chặn), chưa tìm được hướng dẫn ACOG để mở."

@@ -1,0 +1,143 @@
+id: acute_cholangitis
+names:
+  vi: "Viêm đường mật cấp"
+  vi_common: ["Viêm đường mật", "Nhiễm trùng đường mật", "Sỏi ống mật chủ có sốt"]
+  en: "Acute cholangitis"
+codes:
+  icd10: "K83.0"
+  icd10_verified: false
+  mondo: "MONDO:0001930"
+summary_vi:
+  - "Đường dẫn mật bị tắc, thường do sỏi, rồi bị nhiễm khuẩn."
+  - "Thường sốt cao, rét run, đau dưới sườn phải hoặc vùng trên rốn, kèm vàng da, vàng mắt."
+  - "Bệnh có thể nhanh chóng gây nhiễm khuẩn huyết, cần đến cấp cứu để được điều trị thông đường mật."
+urgency: 2
+cant_miss: true
+specialties: [gastroenterology, general_surgery, emergency]
+priors:
+  - complaint: abdominal_pain
+    default: P4
+    by_age: { infant_0_2m: P6, child_2m_5y: P6, child_5_12: P6, teen_13_17: P6, adult_18_44: P5 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [hue-theradvgastro-2025, dang-life-2026, kiriyama-jhbps-2012, cervellin-atm-2016, msd-choledocholithiasis-cholangitis]
+      locator: "Hue 2025 mục Introduction, bảng 1; Dang 2026 mục Results; TG13 bảng 1; Cervellin 2016 bảng 4"
+      reported: "Khoảng 20 ca viêm đường mật do sỏi nhập một bệnh viện lớn ở Hà Nội mỗi ngày (Hue); tuổi trung bình 60–64, 49% từ 60 tuổi, 39% 40–59 tuổi (Dang); ở Ý, cơn đau quặn mật hoặc viêm túi mật chiếm 6,0% người dưới 65 tuổi và 13,2% người từ 65 tuổi đau bụng ở cấp cứu (Cervellin)"
+      population: "Bệnh viện ở Việt Nam, Nhật Bản, Ý; chưa có số liệu ở tuyến ban đầu"
+      note: "Lượt A ước viêm đường mật bằng khoảng 1/5–1/3 nhóm bệnh mật cấp ở cấp cứu, giảm cho người tự kiểm tra: khoảng 0,3–1% người từ 45 tuổi đau bụng (P4), thấp hơn viêm túi mật cấp một mức. Ở Việt Nam sỏi ống mật, sỏi trong gan và viêm đường mật tái phát hay gặp hơn phương Tây (MSD: viêm đường mật sinh mủ tái phát ở người gốc Á). 18–44 tuổi ít gặp hơn (P5); trẻ em rất hiếm (P6). Cần bác sĩ duyệt."
+  - complaint: fever
+    default: P5
+    by_age: { infant_0_2m: P6, child_2m_5y: P6, child_5_12: P6, teen_13_17: P6, adult_18_44: P6, elder_65_74: P4, elder_75p: P4 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [hue-theradvgastro-2025, kiriyama-jhbps-2012, dang-life-2026]
+      reported: "Tuổi trung bình 64 (Hue), 71,7 (TG13); sốt hoặc rét run là tiêu chuẩn chẩn đoán (TG13)"
+      note: "Sốt nổi bật hơn ở viêm đường mật so với viêm túi mật, nên một phần người bệnh chọn Sốt làm triệu chứng chính. Người cao tuổi sốt có nhiều nguyên nhân (viêm phổi, nhiễm khuẩn tiết niệu); ước khoảng 0,3–0,5% người từ 65 tuổi sốt (P4), 45–64 tuổi P5, người trẻ P6 vì sốt do vi rút, sốt xuất huyết chiếm phần lớn. Ước lượng."
+findings:
+  - finding: fever
+    freq: very_frequent
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [kiriyama-jhbps-2012, msd-choledocholithiasis-cholangitis, hue-theradvgastro-2025]
+      note: "Sốt hoặc rét run là một tiêu chuẩn chẩn đoán (TG13); tam chứng Charcot gồm sốt hoặc rét run (MSD). Một phần người cao tuổi chỉ có xét nghiệm viêm mà không sốt, nên không chọn almost_always. Có tác dụng khi triệu chứng chính là Đau bụng."
+  - finding: chills_rigors
+    freq: frequent
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [kiriyama-jhbps-2012, msd-choledocholithiasis-cholangitis]
+      note: "Tần suất trong số người đã sốt. Rét run là một phần của tiêu chuẩn 'sốt hoặc rét run' (TG13; MSD). Ước khoảng một nửa; tỷ lệ nền 0,2."
+  - finding: fever_max_temp
+    dist: { lt_38: 0.15, t38_39: 0.40, ge_39: 0.45 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [kiriyama-jhbps-2012]
+      note: "Phân bố trong số người đã sốt và đã đo. TG13 dùng ngưỡng sốt trên 38°C và coi sốt từ 39°C là yếu tố tiên lượng nặng. Ước lượng."
+  - finding: fever_duration
+    dist: { d1_2: 0.60, d3_5: 0.30, d6_7: 0.06, gt_7d: 0.04 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [kiriyama-jhbps-2012, hue-theradvgastro-2025]
+      note: "Phân bố trong số người đã sốt. Bệnh cảnh cấp, người bệnh thường đi viện sớm; sốt kéo dài hơn một tuần gợi ý áp xe gan hơn. Ước lượng."
+  - finding: jaundice
+    freq: frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [hue-theradvgastro-2025, kiriyama-jhbps-2012, msd-choledocholithiasis-cholangitis]
+      reported: "Vàng da 50–56% ở 708 người viêm đường mật do sỏi (Hue)"
+      note: "Vàng da là tiêu chuẩn chẩn đoán (TG13) và một phần tam chứng Charcot. Tỷ lệ nền 1%: dấu hiệu phân biệt mạnh nhất với viêm túi mật (11–14%), áp xe gan, sốt do vi rút. Sốt kèm vàng da và đau bụng đã được quy tắc rf_cholangitis_triad xếp mức 2."
+  - finding: abdominal_pain
+    freq: very_frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [hue-theradvgastro-2025, kiriyama-jhbps-2012]
+      reported: "Đau bụng 87–89% (Hue); 54,8% ở nhóm Nhật Bản lớn tuổi hơn, có cả tắc mật do u (TG13)"
+      note: "Chỉ có tác dụng khi triệu chứng chính là Sốt. Chọn theo số liệu Việt Nam (viêm đường mật do sỏi)."
+  - finding: abd_pain_location
+    dist: { epigastric: 0.30, right_upper: 0.52, left_upper: 0.02, periumbilical: 0.04, right_lower: 0.03, left_lower: 0.01, suprapubic: 0.01, whole: 0.07 }
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [kiriyama-jhbps-2012]
+      note: "TG13: đau hạ sườn phải hoặc đau bụng trên. Phân bố là ước lượng."
+  - finding: abd_pain_duration
+    dist: { lt_6h: 0.08, h6_24: 0.30, d1_3: 0.40, d4_14: 0.17, gt_2w: 0.05 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [hue-theradvgastro-2025, kiriyama-jhbps-2012]
+      note: "Phân bố trong số người đã đau bụng. Thường đau vài giờ đến vài ngày rồi mới sốt, vàng da; người có sỏi lâu năm có thể đã đau nhiều đợt. Ước lượng."
+  - finding: abd_pain_radiates_right_shoulder
+    freq: occasional
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [msd-acute-cholecystitis]
+      note: "Đau do bệnh đường mật có thể lan lên bả vai phải hoặc lưng trên (MSD, bài viêm túi mật). Nguồn về viêm đường mật không nêu; ước occasional. Cùng cụm pain_radiation."
+  - finding: gallstones_known
+    freq: frequent
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [hue-theradvgastro-2025, kiriyama-jhbps-2012, msd-choledocholithiasis-cholangitis]
+      reported: "Từng cắt túi mật 15–19%, từng nội soi mật tụy ngược dòng 16–22% (Hue); sỏi ống mật chủ gây khoảng 85% ca (MSD)"
+      note: "Tiền sử bệnh đường mật là yếu tố gợi ý (TG13). Siêu âm bụng phổ biến ở Việt Nam nên ước khoảng một nửa đã được nói là có sỏi mật. Tỷ lệ nền 5%. Cần bác sĩ duyệt."
+  - finding: confusion
+    freq: rare
+    above_leak_ok: true
+    freq_by_age: { elder_75p: occasional }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [kiriyama-jhbps-2012, msd-choledocholithiasis-cholangitis, hue-theradvgastro-2025]
+      reported: "Viêm đường mật nặng khoảng 18%, nhóm này tuổi trung bình 76,6 (Hue)"
+      note: "Rối loạn ý thức là tiêu chuẩn nặng (TG13) và một phần ngũ chứng Reynolds (MSD). Ở người tự kiểm tra ước rare (cao hơn tỷ lệ nền 1% là có chủ ý), từ 75 tuổi occasional. Lú lẫn đã ở mức 1 (rf_altered_consciousness)."
+  - finding: cold_hands_feet
+    freq: rare
+    above_leak_ok: true
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [hue-theradvgastro-2025, msd-choledocholithiasis-cholangitis]
+      reported: "Hơn một nửa người viêm đường mật nặng bị sốc nhiễm khuẩn (Hue)"
+      note: "Tụt huyết áp là một phần ngũ chứng Reynolds (MSD). Ước rare ở người tự kiểm tra, cao hơn tỷ lệ nền 1% là có chủ ý; quy tắc rf_shock_signs đã xếp mức 2."
+warning_signs: [confusion, drowsy_hard_to_wake, cold_hands_feet, severe_weakness, breathing_difficulty, abd_pain_severe, persistent_vomiting]
+self_care_vi:
+  - "Đến cấp cứu ngay; không tự uống kháng sinh ở nhà rồi chờ xem có đỡ không."
+  - "Không ăn uống trong lúc chờ khám, vì có thể phải làm thủ thuật."
+see_doctor_vi:
+  - "Sốt, rét run kèm vàng da hoặc đau dưới sườn phải cần đến cấp cứu ngay."
+  - "Người cao tuổi bị sỏi mật mà sốt hoặc lơ mơ cần được đưa đi cấp cứu sớm."
+  - "Người đã biết có sỏi ống mật nên hỏi bác sĩ về cách điều trị để tránh tái phát."
+review:
+  status: draft
+  authors: ["agent:pass-a"]
+  updated: "2026-10-26"
+  notes_vi: "Lượt A. Mức 2, không được bỏ sót, như gợi ý: MSD coi viêm đường mật cấp là cấp cứu ngoại khoa, cần hồi sức và lấy sỏi, dẫn lưu khẩn; TG18: dẫn lưu sớm làm giảm tử vong ở thể vừa; bệnh có thể chuyển thành sốc nhiễm khuẩn trong vài giờ đến vài ngày (Hue 2025: hơn một nửa thể nặng bị sốc). Mã K83.0 chưa đối chiếu được bảng ICD-10 của Bộ Y tế; MONDO tra qua EBI OLS. Điểm cần xem: (1) prior là ước lượng, chưa có số liệu tuyến ban đầu; (2) tần suất sốt, rét run chưa có số liệu trực tiếp (tiêu chuẩn TG13 dùng 'sốt hoặc rét run'); nghiên cứu Việt Nam chọn người được nội soi mật tụy ngược dòng nên có thể nặng hơn cộng đồng; (3) bệnh viêm túi mật cấp đã có (lượt C ghi chú rằng sỏi trong gan, viêm đường mật hay gặp ở Việt Nam mà chưa có trong hệ thống): hai bệnh dùng chung nhiều dấu hiệu, phân biệt chủ yếu bằng vàng da và sốt cao, rét run; (4) không liên kết buồn nôn, nôn vì nguồn đã mở không có tỷ lệ; (5) giun chui ống mật, sán lá gan nhỏ là nguyên nhân hiếm hơn, không tách riêng."

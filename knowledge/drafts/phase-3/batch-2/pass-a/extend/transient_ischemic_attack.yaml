@@ -1,0 +1,187 @@
+id: transient_ischemic_attack
+names:
+  vi: "Cơn thiếu máu não thoáng qua"
+  vi_common: ["Thiếu máu não thoáng qua", "Tai biến mạch máu não thoáng qua"]
+  en: "Transient ischaemic attack"
+codes:
+  icd10: "G45.9"
+  icd10_verified: false
+  mondo: "MONDO:0005264"
+summary_vi:
+  - "Một mạch máu não bị tắc tạm thời, gây yếu, tê, nói khó, nhìn đôi hoặc chóng mặt rồi tự hết trong 24 giờ."
+  - "Đây là dấu hiệu báo trước đột quỵ; nguy cơ đột quỵ cao nhất trong vài ngày đầu."
+  - "Cần đến bệnh viện ngay để được điều trị phòng đột quỵ, kể cả khi đã hết triệu chứng."
+urgency: 2
+cant_miss: true
+specialties: [neurology, emergency]
+priors:
+  - complaint: dizziness
+    default: P5
+    by_age: { child_5_12: P6, teen_13_17: P6, adult_45_64: P4, elder_65_74: P4, elder_75p: P4 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [kerber-stroke-2006, newmantoker-mayoclinproc-2008, bosner-bmcfampract-2018, paul-lancetneurol-2013, byt-qd-3312-2024, grace3-dizziness-2023]
+      locator: "Kerber 2006 bảng 1; Newman-Toker 2008 bảng 4; Bösner 2018 bảng 4 (Lawson 1999); Paul 2013 tóm tắt; GRACE-3 khuyến cáo 8–10"
+      reported: "Người trên 44 tuổi đến cấp cứu vì chóng mặt (Mỹ): cơn thiếu máu não thoáng qua 17/1.666 (1,0%), tính cả đột quỵ 3,2%; người lớn đến cấp cứu vì chóng mặt: cơn thoáng qua 1,7%; bệnh mạch máu não 4% ở người trên 60 tuổi chóng mặt tại tuyến ban đầu (1 nghiên cứu, 50 người)"
+      population: "Cấp cứu ở Mỹ; tuyến ban đầu ở châu Âu; chưa có số liệu Việt Nam"
+      note: "Hai lượt cùng chọn P6 dưới 18 tuổi và P4 từ 65 tuổi. Lệch một mức ở 18–44 tuổi (A P5, B P6) và 45–64 tuổi (A P4, B P5); nguồn ngang nhau (đều suy từ số liệu cấp cứu, hạ cho tuyến ban đầu), nên lượt C chọn mức cao hơn cho bệnh nguy hiểm: P5 và P4. Cơn thoáng qua tuần hoàn sau hay chỉ có chóng mặt đơn độc và ít người đi khám (Paul 2013: 22%); GRACE-3: cơn chóng mặt tự phát cần nghĩ cơn thiếu máu não thoáng qua. Prior tính trên mọi người chóng mặt, kể cả người sẽ chọn 'dấu hiệu đột quỵ' ở màn sàng lọc. Cần bác sĩ duyệt."
+prior_modifiers:
+  - when: { sex: [male] }
+    factor: 1.4
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [kerber-stroke-2006]
+      locator: "Bảng 1, bảng 2"
+      reported: "Nam chiếm 55% người đột quỵ hoặc cơn thoáng qua so với 36% người không đột quỵ; nam OR hiệu chỉnh 2,47 (1,39–4,40)"
+      population: "Người trên 44 tuổi đến cấp cứu vì chóng mặt (Mỹ)"
+      note: "Chỉ lượt A có; lượt C giữ vì nguồn cho thấy khác biệt rõ và có ý nghĩa thống kê. Tính từ bảng 1: P(bệnh | chóng mặt, nam) / P(bệnh | chóng mặt) khoảng 0,55/0,37 = 1,5, với nữ khoảng 0,45/0,63 = 0,7; chọn 1,4 và 0,75 (một nghiên cứu ở cấp cứu Mỹ, gộp cả đột quỵ)."
+  - when: { sex: [female] }
+    factor: 0.75
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [kerber-stroke-2006]
+      reported: "Như hệ số cho nam."
+      note: "Đi cặp với hệ số 1,4 cho nam."
+findings:
+  - finding: transient_neuro_symptoms
+    freq: frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [kerber-stroke-2006, paul-lancetneurol-2013, byt-qd-3312-2024, nhs-tia]
+      locator: "Kerber 2006 bảng 1; Paul 2013 phần Kết quả; 3312/QĐ-BYT (2024) bài 1 mục 1.1.2, 3.1"
+      reported: "Người đột quỵ hoặc cơn thoáng qua đến cấp cứu vì chóng mặt: yếu vận động 60%, rối loạn cảm giác 31%, ngôn ngữ 21%, thị giác 24%, chóng mặt đơn độc 17% (Kerber 2006). Trong 59 cơn thoáng qua trước đột quỵ tuần hoàn sau: 23 chóng mặt đơn độc, chỉ 5 cơn đủ tiêu chuẩn kinh điển (Paul 2013)"
+      note: "Hai lượt cùng chọn frequent. Câu hỏi gồm yếu, tê nửa người, nói khó, méo miệng, mất thị lực một mắt hoặc nhìn đôi rồi tự hết, gần với định nghĩa (3312/QĐ-BYT; NHS). Ở người chọn Chóng mặt, một phần đáng kể chỉ có chóng mặt, nhìn đôi hoặc đi loạng choạng, nên không chọn very_frequent: trả lời 'Không' chỉ giảm khả năng khoảng 2 lần. Trả lời 'Có' đã được quy tắc rf_transient_neuro xếp mức 2."
+  - finding: vision_loss_or_double
+    freq: occasional
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [kerber-stroke-2006, paul-lancetneurol-2013, byt-qd-5643-2015, byt-qd-3312-2024]
+      locator: "Kerber 2006 bảng 1; Paul 2013 phần Kết quả; 5643/QĐ-BYT bài Chóng mặt mục 2.3"
+      reported: "Rối loạn thị giác 24% (Kerber 2006); 9/59 cơn có rối loạn thị giác hai mắt (Paul 2013)"
+      note: "5643/QĐ-BYT: thiểu năng tuần hoàn động mạch đốt sống – thân nền là nguyên nhân chóng mặt thường gặp ở người trên 50 tuổi, gây nhìn không rõ, song thị, cùng cơn chóng mặt hoặc riêng biệt. Hai lượt giống nhau."
+  - finding: dizziness_pattern
+    dist: { brief_episodes: 0.12, long_episodes: 0.70, continuous: 0.11, chronic: 0.07 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [nhs-tia, byt-qd-3312-2024, paul-lancetneurol-2013, grace3-dizziness-2023]
+      locator: "NHS TIA mục Symptoms; 3312/QĐ-BYT (2024) bài 1 mục 1.1.2; GRACE-3 khuyến cáo 8–10"
+      note: "Phân bố trong số người đã chóng mặt. Lượt A {0,20; 0,60; 0,12; 0,08}, lượt B {0,12; 0,73; 0,10; 0,05} (lệch 0,13): triệu chứng kéo dài vài phút đến vài giờ và hết trong 24 giờ (NHS; 3312/QĐ-BYT), nên lượt C dồn vào 'vài phút đến vài giờ' như lượt B; cơn dưới 1 phút ít gặp; người có nhiều cơn trong vài ngày (Paul 2013) có thể chọn 'liên tục' hoặc 'nhiều tuần'. Ước lượng."
+  - finding: vertigo_spinning
+    freq: frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [kerber-stroke-2006, paul-lancetneurol-2013, tarnutzer-cmaj-2011]
+      locator: "Kerber 2006 phần Kết quả, bảng 2; Tarnutzer 2011 bảng 3"
+      reported: "53 người đột quỵ hoặc cơn thoáng qua: lý do khám là quay cuồng ở 18 người, chóng mặt 23, mất thăng bằng 11 (Kerber 2006)"
+      note: "Chỉ lượt A có; lượt C giữ. Tần suất trong số người đã chóng mặt. Chóng mặt đơn độc là cơn thoáng qua hay gặp nhất trước đột quỵ tuần hoàn sau (Paul 2013); kiểu chóng mặt không phân biệt được đột quỵ (Tarnutzer 2011; Kerber: OR 0,88). Với tỷ lệ nền 0,4, mức này gần trung tính."
+  - finding: dizziness_positional
+    freq: rare
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [grace3-dizziness-2023, newmantoker-mayoclinproc-2007, byt-qd-5643-2015]
+      locator: "GRACE-3: phân loại cơn tự phát và cơn có yếu tố khởi phát"
+      note: "Tần suất trong số người đã chóng mặt. Hai lượt cùng chọn rare. Cơn thiếu máu não thoáng qua là cơn tự phát, không do thay đổi tư thế đầu; yếu tố khởi phát là thông tin người bệnh kể tin cậy (Newman-Toker 2007). Thấp hơn tỷ lệ nền 0,1: trả lời 'Có' nghiêng về chóng mặt tư thế kịch phát lành tính."
+  - finding: cannot_walk_unaided
+    freq: rare
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-3312-2024, nhs-tia]
+      note: "Hai lượt cùng chọn rare. Theo định nghĩa triệu chứng đã hết; nếu hiện vẫn không tự đứng, đi được thì nghĩ đột quỵ đang diễn ra (liên kết của bệnh đột quỵ). Thấp hơn tỷ lệ nền 5%; quy tắc rf_dizziness_central_signs vẫn xếp mức 2."
+  - finding: sudden_loss_of_balance
+    freq: frequent
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-3312-2024, kerber-stroke-2006]
+      locator: "3312/QĐ-BYT (2024) bài 1 mục 3.1; Kerber 2006 bảng 2"
+      note: "Hai lượt cùng chọn frequent. 3312/QĐ-BYT: thất điều, chóng mặt là dấu hiệu khu trú dễ bị bỏ qua; mất thăng bằng làm tăng khả năng đột quỵ hoặc cơn thoáng qua so với chóng mặt (Kerber 2006: OR 3,71). Tỷ lệ nền khi chóng mặt 0,4 nên tác dụng nhỏ."
+  - finding: fainting_or_near_fainting
+    freq: occasional
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-3312-2024]
+      locator: "Bài 1 mục 3.4 (chẩn đoán phân biệt)"
+      note: "Hai lượt chọn rare khi tỷ lệ nền của câu này còn là 5%. Tỷ lệ nền khi triệu chứng chính là Chóng mặt nay là 0,25, nên rare sẽ làm khả năng của một bệnh 'không được bỏ sót' giảm khoảng 10 lần chỉ vì một câu trả lời rất hay gặp. Nguồn chỉ ghi cần phân biệt cơn thiếu máu não thoáng qua với ngất (3312/QĐ-BYT), không cho thấy choáng như sắp ngất ít gặp hơn ở người chóng mặt nói chung; lượt C chọn occasional (gần trung tính, giảm nhẹ khi 'Có'). Cần bác sĩ duyệt."
+  - finding: hypertension_known
+    freq: frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [kerber-stroke-2006, nhs-tia, byt-qd-3312-2024]
+      locator: "Kerber 2006 bảng 1"
+      reported: "Tăng huyết áp 72% ở người đột quỵ hoặc cơn thoáng qua có chóng mặt"
+      note: "Hai lượt cùng chọn frequent thay vì very_frequent vì nhiều người Việt Nam chưa biết mình tăng huyết áp (tỷ lệ nền của câu này 0,15 đã tính phần người tự biết)."
+  - finding: diabetes
+    freq: occasional
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [kerber-stroke-2006, byt-qd-3312-2024, nhs-tia]
+      locator: "Kerber 2006 bảng 1; 3312/QĐ-BYT (2024) bài 1, thang ABCD2"
+      reported: "Đái tháo đường 32%"
+      note: "Đái tháo đường là một mục của thang ABCD2 (3312/QĐ-BYT). Tỷ lệ được phát hiện ở Việt Nam thấp hơn ở Mỹ, nên chọn occasional (hai lượt giống nhau)."
+  - finding: known_heart_disease
+    freq: occasional
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [kerber-stroke-2006, nhs-tia, msd-stroke-overview]
+      locator: "Kerber 2006 bảng 1"
+      reported: "Bệnh mạch vành 40%, rung nhĩ 6%"
+      note: "Rung nhĩ và bệnh tim gây huyết khối là nguyên nhân (NHS TIA; MSD). Câu hỏi hỏi bệnh tim đã biết; hai lượt cùng chọn occasional, thấp hơn số của nguồn."
+  - finding: bp_measured
+    dist: { normal: 0.35, high: 0.385, very_high: 0.175, extreme: 0.09 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-3312-2024, kerber-stroke-2006]
+      locator: "3312/QĐ-BYT (2024) bài 1, thang ABCD2 (huyết áp từ 140/90 mmHg: 1 điểm)"
+      note: "Trung bình hai lượt (lệch 0,03). Tăng huyết áp là yếu tố nguy cơ chính (72%, Kerber 2006); lần đo gần nhất có thể trước cơn, nên giữ 35% cho 'dưới 140/90'. Ước lượng."
+  # ---------- Giai đoạn 3, lô 2 (lượt A): dấu hiệu mới của lô 2 ----------
+  - finding: neck_injury_or_manipulation
+    freq: rare
+    above_leak_ok: true
+    freq_by_age: { teen_13_17: occasional, adult_18_44: occasional }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [engelter-neurology-2013, debette-lancetneurol-2009, biller-stroke-2014]
+      locator: "Engelter 2013, Debette 2009, Biller 2014: tóm tắt"
+      reported: "40,5% người bóc tách động mạch cổ có chấn thương vùng cổ trong tháng trước (Engelter)"
+      note: "Phần lớn người bóc tách động mạch cổ bị đột quỵ hoặc cơn thiếu máu não thoáng qua (Debette 2009); bóc tách động mạch đốt sống có liên quan với nắn, vặn cổ (Biller 2014) và gây triệu chứng tuần hoàn sau như chóng mặt. Lượt A ước như bệnh đột quỵ: dưới 45 tuổi khoảng 10% (occasional); từ 45 tuổi gần bằng tỷ lệ nền 0,02 (rare, có chủ ý cao hơn tỷ lệ nền một chút). Cần bác sĩ duyệt."
+  - finding: atrial_fibrillation_known
+    freq: occasional
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [ton-jcdd-2024, kerber-stroke-2006, aphrs-af-2026]
+      locator: "Ton 2024 tóm tắt; Kerber 2006 bảng 1"
+      reported: "Rung nhĩ ở 15,1% người nhồi máu não hoặc cơn thiếu máu não thoáng qua nằm viện ở Việt Nam (Ton); 6% người đột quỵ hoặc cơn thoáng qua đến cấp cứu Mỹ vì chóng mặt (Kerber)"
+      note: "Câu hỏi chỉ hỏi từ 45 tuổi. Hai nguồn cho 6–15%, nằm quanh ranh giới rare/occasional; mức rare thấp hơn tỷ lệ nền 0,04 (sẽ làm giảm khả năng, ngược với vai trò nguy cơ của rung nhĩ), nên lượt A chọn occasional. Trả lời 'Có' làm tăng khả năng khoảng 5 lần, có lẽ hơi cao."
+warning_signs: [es_stroke_signs, transient_neuro_symptoms, vision_loss_or_double, cannot_walk_unaided, headache_thunderclap, confusion]
+self_care_vi:
+  - "Đi cấp cứu ngay, kể cả khi các triệu chứng đã tự hết."
+  - "Không tự lái xe đến viện; nhờ người đưa đi hoặc gọi 115."
+  - "Ghi nhớ giờ bắt đầu và giờ hết triệu chứng để báo cho bác sĩ."
+  - "Mang theo các thuốc đang dùng khi đi khám."
+  - "Không tự dùng thuốc khi chưa có ý kiến bác sĩ."
+see_doctor_vi:
+  - "Đến cơ sở cấp cứu có khả năng điều trị đột quỵ ngay, kể cả khi triệu chứng đã hết."
+  - "Gọi 115 nếu triệu chứng đang có, tái lại hoặc mới xảy ra trong 24 giờ qua."
+  - "Nếu cơn đã qua nhiều ngày mà chưa đi khám, vẫn cần đi khám ngay trong hôm nay."
+  - "Sau đó cần tái khám đều để kiểm soát huyết áp, đường máu, mỡ máu theo hướng dẫn của bác sĩ."
+review:
+  status: draft
+  authors: ["agent:pass-a"]
+  updated: "2026-10-26"
+  notes_vi: "Lượt A, Giai đoạn 3 lô 2 (mở rộng). Bản này chép nguyên knowledge/conditions/transient_ischemic_attack.yaml (đã qua lượt C, giữ nguyên mọi giá trị cũ; biên bản cũ xem trong bản chính thức) và chỉ thêm 2 liên kết ở cuối danh sách findings: (1) neck_injury_or_manipulation: rare (above_leak_ok), riêng 13–17 tuổi và 18–44 tuổi occasional, nguồn Engelter 2013, Debette 2009, Biller 2014; (2) atrial_fibrillation_known: occasional, nguồn Ton 2024, Kerber 2006, APHRS 2026. Nguồn mới nằm trong extend/sources. Điểm cần xem: (a) cùng cách ước như bệnh đột quỵ, chưa có số liệu riêng cho cơn thoáng qua do bóc tách động mạch cổ; (b) câu 'bệnh tim đã biết' (occasional, ghi chú cũ gộp cả rung nhĩ 6% của Kerber) và câu mới 'rung nhĩ đã biết' không cùng cụm, nên người rung nhĩ trả lời 'Có' cả hai câu sẽ bị tính hai lần (khoảng 4 × 5 lần); đề nghị người bảo trì xem xét gộp hai câu vào một cụm mức tương quan trung bình (cũng ảnh hưởng đột quỵ, rối loạn nhịp tim, thiếu máu mạc treo cấp). Không thấy giá trị cũ nào cần sửa."
