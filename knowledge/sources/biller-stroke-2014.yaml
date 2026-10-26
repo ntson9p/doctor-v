@@ -1,13 +1,15 @@
 id: biller-stroke-2014
 type: guideline_intl
 title: "Cervical arterial dissections and association with cervical manipulative therapy: a statement for healthcare professionals from the American Heart Association/American Stroke Association"
-publisher: "American Heart Association/American Stroke Association (Stroke)"
-date: "2014"
-url: "https://www.ahajournals.org/doi/10.1161/STR.0000000000000016"
+publisher: "American Heart Association/American Stroke Association (Stroke 2014;45(10):3155–3174; Biller J và cộng sự)"
+date: "2014-10"
+url: "https://europepmc.org/article/MED/25104849"
 doi: "10.1161/STR.0000000000000016"
+pmid: "25104849"
 license_class: L3
 license_note: "Bảo lưu mọi quyền: chỉ dùng dữ kiện kèm trích dẫn."
 default_tier: B
 accessed: "2026-10-26"
-verified: false
-notes_vi: "Người bảo trì thêm cho lô 2, chưa mở; lượt R xác minh."
+verified: true
+verified_by: "agent:pass-r"
+notes_vi: "Lượt R (Giai đoạn 3, lô 2) chỉ đọc tóm tắt qua API Europe PMC: ahajournals.org chặn truy cập tự động (403). Có đính chính (Stroke 2016;47(11):e261); chưa thấy bản thay thế. Tóm tắt: bóc tách động mạch cổ là một trong những nguyên nhân hay gặp nhất của đột quỵ ở người trẻ và trung niên, thường ở đoạn cổ cao, gồm động mạch cảnh trong và động mạch đốt sống; biểu hiện: đau đầu một bên, đau gáy, thiếu máu não hoặc võng mạc (cơn thoáng qua, đột quỵ), liệt dây thần kinh sọ, hội chứng Horner, ù tai theo nhịp mạch; lực cơ học có thể gây tổn thương nội mạc và bóc tách; phần lớn nghiên cứu bệnh–chứng dân số thấy liên quan giữa nắn chỉnh cột sống cổ và đột quỵ do bóc tách động mạch đốt sống ở người trẻ, chưa rõ là nguyên nhân hay do bóc tách có sẵn; người làm nắn chỉnh cần nghĩ đến bóc tách khi người bệnh đến vì đau cổ. Chưa đọc được khoảng thời gian từ nắn chỉnh đến đột quỵ trong toàn văn (xem rothwell-stroke-2001)."

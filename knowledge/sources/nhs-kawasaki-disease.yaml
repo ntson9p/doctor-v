@@ -7,5 +7,6 @@ license_class: L1
 license_note: "Open Government Licence v3.0; bản chuyển thể không được trình bày như nội dung của NHS."
 default_tier: C
 accessed: "2026-10-26"
-verified: false
-notes_vi: "Người bảo trì thêm cho lô 2, chưa mở; lượt R xác minh."
+verified: true
+verified_by: "agent:pass-r"
+notes_vi: "Lượt R (Giai đoạn 3, lô 2) mở trang ngày 26/10/2026 (rà soát lần cuối 19/2/2026, hạn rà soát 19/2/2029). Bệnh hiếm, thường ở trẻ dưới 5 tuổi; không điều trị sớm có thể gây bệnh tim. Triệu chứng chính: sốt cao từ 5 ngày trở lên. Triệu chứng khác: hạch cổ sưng; phát ban; lòng bàn tay, bàn chân đỏ rực; mắt đỏ; môi khô nứt; đỏ trong miệng và lưỡi (lưỡi dâu tây); rất quấy khóc. Triệu chứng giống nhiều bệnh trẻ em thường gặp. 'Urgent advice: urgent GP / NHS 111' (khám khẩn) khi có triệu chứng bệnh Kawasaki; trang không có mục gọi 999. Điều trị trong bệnh viện vài ngày bằng aspirin và thuốc truyền tĩnh mạch; trẻ dưới 6 tháng, viêm nặng hoặc sốt không hết có thể dùng thêm corticoid. Không cho trẻ dưới 16 tuổi uống aspirin nếu không có chỉ định. Phần lớn khỏi hẳn nếu được chẩn đoán và điều trị sớm; biến chứng là tổn thương mạch máu tim."

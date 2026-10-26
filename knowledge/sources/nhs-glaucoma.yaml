@@ -7,5 +7,6 @@ license_class: L1
 license_note: "Open Government Licence v3.0; bản chuyển thể không được trình bày như nội dung của NHS."
 default_tier: C
 accessed: "2026-10-26"
-verified: false
-notes_vi: "Người bảo trì thêm cho lô 2, chưa mở; lượt R xác minh."
+verified: true
+verified_by: "agent:pass-r"
+notes_vi: "Lượt R (Giai đoạn 3, lô 2) mở trang ngày 26/10/2026 (rà soát lần cuối 13/6/2025, hạn rà soát 13/6/2028). Glôcôm thường không có triệu chứng, hay gặp nhất từ 50 tuổi. Khi khởi phát đột ngột có thể gây: đau mắt dữ dội; mắt đỏ; đau khi chạm quanh mắt; thấy vòng sáng nhiều màu quanh đèn sáng; nhìn mờ; buồn nôn, nôn; đau đầu. Viêm màng bồ đào, chấn thương mắt có triệu chứng tương tự. 'Call 999 or go to A&E' (gọi 999 hoặc đến cấp cứu) khi triệu chứng glôcôm xuất hiện đột ngột: đây là cấp cứu, có thể cần điều trị ngay; không tự lái xe. 'See a GP or optician' (không khẩn) khi lo lắng về thị lực. Nguy cơ cao hơn khi trên 50 tuổi, có anh chị em hoặc bố mẹ bị glôcôm, gốc châu Phi, Caribê hoặc châu Á, cận thị, viễn thị, đái tháo đường."

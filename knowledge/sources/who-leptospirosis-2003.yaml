@@ -2,11 +2,13 @@ id: who-leptospirosis-2003
 type: guideline_intl
 title: "Human leptospirosis: guidance for diagnosis, surveillance and control"
 publisher: "World Health Organization; International Leptospirosis Society"
+doc_number: "WHO/CDS/CSR/EPH 2002.23"
 date: "2003"
 url: "https://iris.who.int/handle/10665/42667"
-license_class: L2
-license_note: "Ấn phẩm WHO; kiểm tra điều kiện sử dụng khi xác minh."
+license_class: L3
+license_note: "© World Health Organization 2003, All rights reserved (trang bản quyền của tài liệu): chỉ dùng dữ kiện kèm trích dẫn, không sao chép hay dịch nguyên văn."
 default_tier: B
 accessed: "2026-10-26"
-verified: false
-notes_vi: "Người bảo trì thêm cho lô 2, chưa mở; lượt R xác minh."
+verified: true
+verified_by: "agent:pass-r"
+notes_vi: "Lượt R (Giai đoạn 3, lô 2) tải bản PDF tiếng Anh trên kho IRIS ngày 26/10/2026 (ISBN 92 4 154589 5; IRIS ghi ngày 31/12/2003; tệp kia trên IRIS là bản dịch). Sửa nhãn giấy phép từ L2 thành L3 theo trang bản quyền. Chương II (Clinical features and treatment, tr. 4–7): bệnh có 4 nhóm biểu hiện: giống cúm nhẹ; hội chứng Weil (vàng da, suy thận, xuất huyết, viêm cơ tim kèm loạn nhịp); viêm màng não, viêm não màng não; xuất huyết phổi kèm suy hô hấp. Dễ nhầm với sốt xuất huyết và các sốt xuất huyết do vi rút. Tử vong 5–30% tùy nơi, chủ yếu do suy thận, suy tim phổi, xuất huyết lan tỏa; suy gan hiếm dù có vàng da. Người cao tuổi, nhiều bệnh nền dễ bị nặng. Nghĩ đến bệnh khi sốt đột ngột, rét run, đỏ kết mạc, đau đầu, đau cơ, vàng da; đỏ kết mạc và đau cơ khi ấn (rõ nhất ở bắp chân và vùng thắt lưng) là dấu hiệu phân biệt nhất; nghi nhiều hơn khi phơi nhiễm nghề nghiệp hoặc giải trí với động vật nhiễm bệnh hay môi trường nhiễm nước tiểu động vật. Ủ bệnh thường 5–14 ngày, dao động 2–30 ngày. Dùng kháng sinh ngay khi nghi, tốt nhất trước ngày thứ 5, không chờ kết quả xét nghiệm; thể nặng cần nhập viện, hồi sức tích cực, lọc máu khi suy thận."

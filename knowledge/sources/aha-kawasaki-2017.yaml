@@ -1,13 +1,15 @@
 id: aha-kawasaki-2017
 type: guideline_intl
 title: "Diagnosis, Treatment, and Long-Term Management of Kawasaki Disease: A Scientific Statement for Health Professionals From the American Heart Association"
-publisher: "American Heart Association (Circulation)"
-date: "2017"
+publisher: "American Heart Association (Circulation 2017;135(17):e927–e999; McCrindle BW và cộng sự)"
+date: "2017-04"
 url: "https://www.ahajournals.org/doi/10.1161/CIR.0000000000000484"
 doi: "10.1161/CIR.0000000000000484"
+pmid: "28356445"
 license_class: L3
 license_note: "Bảo lưu mọi quyền: chỉ dùng dữ kiện kèm trích dẫn."
 default_tier: B
 accessed: "2026-10-26"
 verified: false
-notes_vi: "Người bảo trì thêm cho lô 2, chưa mở; lượt R xác minh."
+verified_by: "agent:pass-r"
+notes_vi: "Lượt R (Giai đoạn 3, lô 2) chỉ mở được bản ghi và tóm tắt qua API Europe PMC: ahajournals.org chặn truy cập tự động (403), bài không có trên PMC. Đã xác nhận tên, tạp chí, số trang, PMID; có đính chính (Circulation 2019;140(5):e181–e184). Tóm tắt: không điều trị thì khoảng 25% bị phình động mạch vành; globulin miễn dịch truyền tĩnh mạch là điều trị chính, 10–20% không đáp ứng; có thuật toán mới hỗ trợ chẩn đoán khi tiêu chuẩn lâm sàng không đủ. Chưa đọc được tiêu chuẩn chẩn đoán và mốc thời gian điều trị trong toàn văn, nên quy tắc không dẫn nguồn này (tiêu chuẩn lấy qua byt-qd-3312-2015). AHA đã ra bản cập nhật năm 2024 (Jone PN và cộng sự, Circulation 2024;150(23):e481–e500, DOI 10.1161/CIR.0000000000001295, có 2 đính chính năm 2025): tóm tắt số liệu mới từ sau 2017 về chẩn đoán, hình ảnh tim, điều trị, không thay thế bản 2017."

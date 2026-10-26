@@ -7,5 +7,6 @@ license_class: L1
 license_note: "Open Government Licence v3.0; bản chuyển thể không được trình bày như nội dung của NHS."
 default_tier: C
 accessed: "2026-10-26"
-verified: false
-notes_vi: "Người bảo trì thêm cho lô 2, chưa mở; lượt R xác minh."
+verified: true
+verified_by: "agent:pass-r"
+notes_vi: "Lượt R (Giai đoạn 3, lô 2) mở trang ngày 26/10/2026 (rà soát lần cuối 14/6/2023, hạn rà soát 14/6/2026 đã qua, chưa có bản mới). Phình động mạch chủ bụng thường không có triệu chứng; khi to lên có thể đau bụng hoặc đau lưng, cảm giác đập trong bụng. 'See a GP' (không khẩn) khi đau bụng hoặc lưng không hết hoặc hay tái lại, sờ thấy khối trong bụng. 'Call 999' (chỉ gọi 999) khi: đau bụng hoặc đau lưng đột ngột, dữ dội; khó thở hoặc ngừng thở; da tái hoặc xám; mất ý thức (dấu hiệu vỡ phình, đe dọa tính mạng). Anh sàng lọc bằng siêu âm cho mọi nam giới khi 65 tuổi vì là nhóm nguy cơ cao nhất. Yếu tố nguy cơ: nam từ 65 tuổi; đang hoặc từng hút thuốc; tăng huyết áp; mỡ máu cao; người thân từng bị phình động mạch chủ bụng; bệnh mạch vành hoặc động mạch ngoại biên; bệnh phổi tắc nghẽn mạn tính; hội chứng Marfan. Kích thước: nhỏ 3–4,4 cm, vừa 4,5–5,4 cm, lớn từ 5,5 cm."

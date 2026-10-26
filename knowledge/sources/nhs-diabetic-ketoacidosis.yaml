@@ -7,5 +7,6 @@ license_class: L1
 license_note: "Open Government Licence v3.0; bản chuyển thể không được trình bày như nội dung của NHS."
 default_tier: C
 accessed: "2026-10-26"
-verified: false
-notes_vi: "Người bảo trì thêm cho lô 2, chưa mở; lượt R xác minh."
+verified: true
+verified_by: "agent:pass-r"
+notes_vi: "Lượt R (Giai đoạn 3, lô 2) mở trang ngày 26/10/2026 (rà soát lần cuối 08/6/2023, hạn rà soát 08/6/2026 đã qua, chưa có bản mới). Triệu chứng: khát; đi tiểu nhiều hơn; đau bụng, buồn nôn hoặc nôn; tiêu chảy; thở sâu hơn bình thường; hơi thở có mùi trái cây (như kẹo lê hoặc nước rửa móng tay); mệt, buồn ngủ hoặc lú lẫn; nhìn mờ. Thường xuất hiện trong 24 giờ, có thể nhanh hơn. Hay gặp ở đái tháo đường típ 1, cả típ 2 đang cần insulin, và lúc mới khởi phát típ 1 chưa được chẩn đoán, nhất là trẻ em. Xeton máu: dưới 0,6 mmol/L bình thường; 0,6–1,5 hơi cao, đo lại sau 2 giờ; 1,6–3 có nguy cơ, hỏi nhóm chăm sóc đái tháo đường; trên 3 có thể đã nhiễm toan ceton; que thử nước tiểu trên 2+ là cao. 'Call 999 or go to A&E' (gọi 999 hoặc đến cấp cứu) khi: xeton cao (máu trên 3 mmol/L, nước tiểu trên 2+); không biết mức xeton nhưng có triệu chứng nhiễm toan ceton, như khát và tiểu nhiều, buồn ngủ hoặc lú lẫn, hơi thở mùi trái cây; có triệu chứng nhiễm toan ceton mà chưa được chẩn đoán đái tháo đường. Không tự lái xe. 'Urgent advice: gọi nhóm chăm sóc đái tháo đường hoặc NHS 111' khi đã biết đái tháo đường và: đường huyết cao mà insulin không làm giảm, kể cả khi xeton bình thường; xeton 0,6–1,5 kèm thấy mệt; xeton 1,6–3. Điều trị trong bệnh viện (insulin, dịch truyền). Yếu tố khởi phát: ốm, chấn thương, phẫu thuật, hành kinh, thiếu insulin."

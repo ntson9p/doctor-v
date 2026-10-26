@@ -9,4 +9,5 @@ license_note: "Nội dung có bản quyền NICE: chỉ dùng dữ kiện kèm t
 default_tier: B
 accessed: "2026-10-26"
 verified: false
-notes_vi: "Người bảo trì thêm cho lô 2, chưa mở; lượt R xác minh."
+verified_by: "agent:pass-r"
+notes_vi: "Lượt R (Giai đoạn 3, lô 2) chưa mở được nội dung: nice.org.uk trả lỗi 403 cho cả trang hướng dẫn và bản PDF; bản lưu trên NCBI Bookshelf đòi xác minh reCAPTCHA; tệp trên labmed.org.uk chỉ là bản tóm tắt cho phòng xét nghiệm (11/2017), không có khuyến cáo chuyển tuyến. Lượt R không dùng dịch vụ đọc hộ để vượt chặn. Theo kết quả tìm kiếm (chưa đối chiếu), NG18 xuất bản 01/8/2015 và cập nhật nhiều lần, lần gần nhất năm 2023. Ý 'trẻ nghi đái tháo đường típ 1 cần được chuyển ngay trong ngày' chưa xác minh được ở nguồn này; quy tắc rf_new_diabetes_child nay dựa vào nhs-type-1-diabetes và byt-qd-3312-2015."

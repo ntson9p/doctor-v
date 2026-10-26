@@ -7,5 +7,6 @@ license_class: L1
 license_note: "Open Government Licence v3.0; bản chuyển thể không được trình bày như nội dung của NHS."
 default_tier: C
 accessed: "2026-10-26"
-verified: false
-notes_vi: "Người bảo trì thêm cho lô 2, chưa mở; lượt R xác minh."
+verified: true
+verified_by: "agent:pass-r"
+notes_vi: "Lượt R (Giai đoạn 3, lô 2) mở trang ngày 26/10/2026 (rà soát lần cuối 31/7/2025, hạn rà soát 31/7/2028). Khởi đầu giống cảm: sốt cao, sổ mũi hoặc nghẹt mũi, hắt hơi, ho, mắt đỏ, đau, chảy nước; vài ngày sau có thể có chấm trắng nhỏ trong má; ban mọc vài ngày sau các triệu chứng giống cảm, bắt đầu ở mặt và sau tai rồi lan khắp người. Đã tiêm đủ 2 mũi vắc xin (MMR hoặc MMRV) hoặc đã từng mắc sởi thì khó là sởi. 'Urgent advice: urgent GP / NHS 111' (khám khẩn) khi: nghĩ mình hoặc con bị sởi; trẻ dưới 1 tuổi tiếp xúc người bị sởi; tiếp xúc gần người bị sởi khi đang có thai hoặc suy giảm miễn dịch; chưa mắc sởi và chưa tiêm đủ 2 mũi mà tiếp xúc gần người bị sởi; sốt cao không hạ sau khi dùng paracetamol hoặc ibuprofen; khó thở; trẻ bú, ăn uống kém; tiểu ít; rất mệt hoặc lo có gì nghiêm trọng. Gọi điện trước khi đến cơ sở y tế để được khám riêng. Lây từ khi có triệu chứng (khoảng 4 ngày trước khi phát ban) đến 4 ngày sau khi phát ban; nghỉ học, nghỉ làm ít nhất 4 ngày từ khi phát ban. 'Call 999 or go to A&E' (gọi 999 hoặc đến cấp cứu) khi đang bị sởi mà: co giật; khó thở nặng; không thức được; đột ngột lú lẫn; trẻ mềm nhũn, không đáp ứng bình thường; ban không mất khi ấn; cứng gáy hoặc sợ ánh sáng. Biến chứng: viêm phổi, viêm màng não, mù, co giật; trẻ nhỏ, người suy giảm miễn dịch dễ bị hơn; sởi khi có thai có thể gây sảy thai, thai chết lưu, đẻ non."

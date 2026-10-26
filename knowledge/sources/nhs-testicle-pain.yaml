@@ -7,5 +7,6 @@ license_class: L1
 license_note: "Open Government Licence v3.0; bản chuyển thể không được trình bày như nội dung của NHS."
 default_tier: C
 accessed: "2026-10-26"
-verified: false
-notes_vi: "Người bảo trì thêm cho lô 2, chưa mở; lượt R xác minh."
+verified: true
+verified_by: "agent:pass-r"
+notes_vi: "Lượt R (Giai đoạn 3, lô 2) mở trang ngày 26/10/2026 (rà soát lần cuối 26/6/2025, hạn rà soát 26/6/2028). 'Go to A&E immediately or call 999' (đến cấp cứu ngay hoặc gọi 999) khi: đau tinh hoàn đột ngột, dữ dội; đau tinh hoàn kèm buồn nôn, nôn hoặc đau bụng; đau tinh hoàn quá 1 giờ hoặc vẫn đau khi nằm nghỉ. Không tự lái xe đến cấp cứu. Trang không có mục chỉ 'Call 999'. 'Urgent GP / NHS 111' (khám khẩn) khi: đau âm ỉ, khó chịu ở tinh hoàn khiến lo lắng; có khối u; tinh hoàn sưng; thay đổi hình dạng hoặc cảm giác khi sờ; một bên to hơn bên kia. Đau đột ngột, dữ dội có thể do xoắn tinh hoàn, có thể mất tinh hoàn nếu không điều trị nhanh (trang không nêu số giờ). Nguyên nhân khác: viêm mào tinh hoàn, chấn thương, thoát vị bẹn, nang nước, giãn tĩnh mạch tinh. Đau đơn thuần thường không phải ung thư."

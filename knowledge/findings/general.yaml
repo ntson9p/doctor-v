@@ -367,7 +367,7 @@
   type: binary
   label_vi: "Khát nhiều, tiểu nhiều"
   question_vi: "Gần đây có khát nước nhiều và đi tiểu nhiều hơn hẳn bình thường không?"
-  help_vi: "Ví dụ phải dậy đi tiểu nhiều lần trong đêm, hoặc trẻ đã biết đi vệ sinh lại đái dầm."
+  help_vi: "Ví dụ phải dậy đi tiểu nhiều lần trong đêm, hoặc trẻ đã biết đi vệ sinh lại đái dầm. Không tính tiểu buốt, mỗi lần chỉ ra ít."
   leak: 0.05
   leak_note: "Người bảo trì ước lượng; trời nóng hoặc uống nhiều nước cũng làm tiểu nhiều."
 - id: ketone_breath

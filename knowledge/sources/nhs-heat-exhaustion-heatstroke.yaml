@@ -7,5 +7,6 @@ license_class: L1
 license_note: "Open Government Licence v3.0; bản chuyển thể không được trình bày như nội dung của NHS."
 default_tier: C
 accessed: "2026-10-26"
-verified: false
-notes_vi: "Người bảo trì thêm cho lô 2, chưa mở; lượt R xác minh."
+verified: true
+verified_by: "agent:pass-r"
+notes_vi: "Lượt R (Giai đoạn 3, lô 2) mở trang ngày 26/10/2026 (rà soát lần cuối 28/5/2026, hạn rà soát 28/5/2029). Kiệt sức do nóng thường không cần cấp cứu nếu làm mát được trong 30 phút; chuyển thành sốc nhiệt thì là cấp cứu. Triệu chứng kiệt sức do nóng: mệt, chóng mặt, đau đầu, buồn nôn hoặc nôn, ra nhiều mồ hôi, da tái và ẩm, chuột rút ở tay chân và bụng, nhiệt độ cao, rất khát, cáu gắt. Triệu chứng sốc nhiệt: thân nhiệt rất cao, da nóng không ra mồ hôi, thở nhanh và tim đập nhanh, lú lẫn, bồn chồn, co giật, mất ý thức. Làm mát người kiệt sức do nóng (4 bước): đưa đến chỗ mát; cởi bớt quần áo không cần thiết; cho uống nhiều nước (hoặc nước bù điện giải); làm mát da bằng cách xịt hoặc lau nước mát và quạt, chườm túi lạnh bọc khăn ở nách hoặc cổ; ở cạnh đến khi đỡ, thường đỡ trong 30 phút. 'Urgent advice: NHS 111' khi khó tự xử trí kiệt sức do nóng. 'Call 999 now' (chỉ gọi 999) khi có dấu hiệu sốc nhiệt: vẫn không khỏe sau 30 phút nghỉ chỗ mát, được làm mát và uống nước; thân nhiệt rất cao; da nóng không ra mồ hôi, có thể đỏ; tim đập nhanh; thở nhanh hoặc khó thở; lú lẫn, mất phối hợp; co giật; mất ý thức. Không tự lái xe đến cấp cứu. Trong lúc chờ: quấn khăn ướt mát, hoặc quạt, lau người bằng nước lạnh; bất tỉnh thì đặt nằm nghiêng an toàn, kiểm tra thở, ép tim nếu không còn dấu hiệu sống. Trang không nêu ngưỡng nhiệt độ cụ thể. Trẻ em, người cao tuổi, người có bệnh mạn tính như đái tháo đường, bệnh tim dễ bị hơn."

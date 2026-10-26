@@ -255,6 +255,8 @@
   label_vi: "Đau nhức dữ dội ở một bên mắt"
   question_vi: "Có đau nhức dữ dội trong hoặc quanh một bên mắt không?"
   help_vi: "Không tính cảm giác cộm, ngứa hay mỏi mắt."
+  alt_question:
+    text_vi: "Có phải nhắm một bên mắt hoặc lấy tay ôm mắt vì đau không?"
   leak: 0.03
   leak_note: "Đau nửa đầu có thể đau quanh một mắt; đau nhức dữ dội trong mắt ít gặp ở các bệnh khác. Người bảo trì ước lượng; lượt A/B/C đối chiếu."
 - id: halos_around_lights
@@ -268,8 +270,8 @@
 - id: neck_injury_or_manipulation
   kind: history
   type: binary
-  label_vi: "Vừa bị bẻ, nắn cổ hoặc chấn thương cổ"
-  question_vi: "Vài tuần gần đây có bị bẻ, nắn cổ hoặc chấn thương vùng cổ không?"
+  label_vi: "Tháng qua bị bẻ, nắn cổ hoặc chấn thương cổ"
+  question_vi: "Tháng qua có bị bẻ, nắn cổ hoặc chấn thương vùng cổ không?"
   help_vi: "Ví dụ bẻ cổ khi gội đầu, xoa bóp, nắn chỉnh cột sống, ngã hoặc tai nạn xe."
   leak: 0.02
   leak_note: "Người bảo trì ước lượng. Bóc tách động mạch cổ sau bẻ, nắn cổ hoặc chấn thương là nguyên nhân đột quỵ ở người trẻ."

@@ -149,8 +149,8 @@
 - id: red_lips_strawberry_tongue
   kind: sign
   type: binary
-  label_vi: "Môi đỏ, khô nứt hoặc lưỡi đỏ như quả dâu"
-  question_vi: "Môi có đỏ, khô nứt, hoặc lưỡi đỏ rực như quả dâu không?"
+  label_vi: "Môi đỏ, khô nứt hoặc lưỡi đỏ như quả dâu tây"
+  question_vi: "Môi có đỏ, khô nứt, hoặc lưỡi đỏ rực như quả dâu tây không?"
   applies_to:
     age_groups: [child_2m_5y, child_5_12]
   leak: 0.08
@@ -169,7 +169,8 @@
   kind: sign
   type: binary
   label_vi: "Chỗ tiêm phòng lao sưng đỏ lại"
-  question_vi: "Vết tiêm phòng lao (BCG) ở cánh tay có sưng đỏ trở lại không?"
+  question_vi: "Vết tiêm phòng lao (BCG) ở vai, cánh tay có sưng đỏ lại không?"
+  help_vi: "Vết tiêm phòng lao lúc mới sinh thường để lại một sẹo nhỏ ở vai hoặc phía trên cánh tay."
   applies_to:
     age_groups: [child_2m_5y]
   leak: 0.005
