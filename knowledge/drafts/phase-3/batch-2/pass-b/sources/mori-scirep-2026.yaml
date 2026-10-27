@@ -1,0 +1,15 @@
+id: mori-scirep-2026
+type: statistic
+title: "Nationwide analysis of cases of emergency transport due to heatstroke in Japan from 2010 to 2024"
+publisher: "Scientific Reports 2026;16:25409 (Mori H, Almansour A, Krokva D và cộng sự)"
+date: "2026-06"
+url: "https://europepmc.org/article/MED/42236525"
+doi: "10.1038/s41598-026-55964-1"
+pmid: "42236525"
+license_class: L2
+license_note: "CC BY-NC-ND (theo siêu dữ liệu Europe PMC): chỉ dùng dữ kiện kèm trích dẫn."
+default_tier: B
+accessed: "2026-10-26"
+verified: true
+verified_by: "agent:pass-b"
+notes_vi: "Lượt B đọc toàn văn (PMC13473147) qua API Europe PMC ngày 26/10/2026. Số liệu xe cấp cứu chở người bệnh do nóng (gồm cả sốc nhiệt, chuột rút do nóng, kiệt sức do nóng) ở Nhật Bản tháng 6–9, 2010–2024: đỉnh tháng 8 rồi tháng 7; người từ 65 tuổi chiếm trung bình 50,7%, 18–64 tuổi 36,6%; 63,5% nhẹ (không cần nằm viện), 33% vừa (cần nằm viện), 2,4% nặng (nằm viện trên 3 tuần), 0,1–0,3% tử vong khi khám lần đầu; 39,9% xảy ra trong nhà."

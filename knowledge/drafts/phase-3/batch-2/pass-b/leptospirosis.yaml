@@ -1,0 +1,223 @@
+id: leptospirosis
+names:
+  vi: "Bệnh do xoắn khuẩn Leptospira"
+  vi_common: ["Bệnh Leptospira", "Bệnh xoắn khuẩn vàng da"]
+  en: "Leptospirosis"
+codes:
+  icd10: "A27"
+  icd10_verified: false
+summary_vi:
+  - "Bệnh do xoắn khuẩn Leptospira, lây khi da hoặc niêm mạc tiếp xúc nước, bùn nhiễm nước tiểu chuột, gia súc."
+  - "Thường sốt đột ngột, đau đầu, đau nhức cơ (rõ nhất ở bắp chân), có thể đỏ mắt."
+  - "Thể nặng có vàng da, tiểu ít, chảy máu hoặc khó thở, cần cấp cứu."
+urgency: 3
+cant_miss: false
+specialties: [infectious_disease, general_medicine]
+priors:
+  - complaint: fever
+    default: P4
+    by_age: { infant_0_2m: P6, child_2m_5y: P6, child_5_12: P5, teen_13_17: P5 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [leviet-emi-2019, who-leptospirosis-2003, rajapakse-plosntd-2016]
+      locator: "Le-Viet 2019 bảng 2, bảng 5 và phần Discussion (Leptospirosis); WHO 2003 chương II và phụ lục 2 (Risk factors and risk groups)"
+      reported: "Leptospira (PCR) ở 4,8% người lớn sốt cấp không rõ ổ nằm viện tại Quảng Nam (tháng 5–8/2016) so với 0,8% nhóm chứng không sốt; là căn nguyên đơn độc ở 3,2%"
+      note: "Số liệu Việt Nam lấy ở bệnh viện, nhóm sốt không rõ ổ (đã loại sốt xuất huyết test nhanh dương tính và nhiễm trùng có ổ rõ). Trong toàn bộ người sốt ở cộng đồng (gồm cả cảm cúm, viêm họng) tỷ lệ thấp hơn nhiều lần, ước khoảng 0,5–1% ở người lớn: P4. WHO: nam giới tuổi lao động, nghề làm ruộng, chăn nuôi hay mắc hơn; trẻ em ít hơn (P5 ở 5–17 tuổi, P6 dưới 5 tuổi). Bác sĩ lâm sàng ở Quảng Nam không nghĩ tới bệnh ở ca nào (Le-Viet 2019), nên bệnh có thể bị bỏ sót nhiều. Cần bác sĩ duyệt."
+  - complaint: headache
+    default: P5
+    by_age: { infant_0_2m: P6, child_2m_5y: P6, child_5_12: P6 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [leviet-emi-2019, rajapakse-plosntd-2016, who-leptospirosis-2003]
+      locator: "Le-Viet 2019 bảng 4; Rajapakse 2016 bảng 3; WHO 2003 phụ lục 5"
+      reported: "Đau đầu 66,7% (Việt Nam), 81,7% (Sri Lanka); WHO liệt kê đau đầu dữ dội"
+      note: "Người lớn sốt kèm đau đầu dữ dội có thể chọn Đau đầu làm triệu chứng chính; nhóm đi khám vì đau đầu lớn hơn nhiều so với nhóm sốt, nên thấp hơn prior của Sốt một mức (như sốt mò). Câu sốt và phơi nhiễm được hỏi nên sẽ tách nhóm này."
+findings:
+  - finding: flood_mud_exposure
+    freq: very_frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [rajapakse-plosntd-2016, who-leptospirosis-2003, cdc-leptospirosis-clinical]
+      locator: "Rajapakse 2016 bảng 3; WHO 2003 chương II (Is it leptospirosis?, Incubation period) và phụ lục 2; CDC Clinical Overview"
+      reported: "Có phơi nhiễm 74,6% ở người bệnh Leptospira so với 53,0% ở người sốt do nguyên nhân khác (Sri Lanka); ủ bệnh thường 5–14 ngày, dao động 2–30 ngày"
+      note: "Câu hỏi hỏi 1 tháng qua, khớp với thời gian ủ bệnh. Một phần người bệnh không nhớ hoặc bị lây qua chuột trong nhà, ao hồ, gia súc (WHO), nên không chọn almost_always. Tỷ lệ nền của câu này cao (0,2) nên trả lời 'Có' chỉ tăng khả năng khoảng 4 lần, 'Không' giảm khoảng 4 lần."
+  - finding: calf_pain
+    freq: frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [who-leptospirosis-2003, rajapakse-plosntd-2016, byt-qd-5642-2015]
+      locator: "WHO 2003 chương II (Is it leptospirosis?); Rajapakse 2016 bảng 3; 5642/QĐ-BYT bài Sốt mò, mục 3.4 (tr. 62)"
+      reported: "Ấn đau cơ 67,8% (Sri Lanka, nằm viện); WHO: xung huyết kết mạc và ấn đau cơ, rõ nhất ở bắp chân và thắt lưng, là dấu hiệu phân biệt nhất"
+      note: "Số liệu là ấn đau cơ nói chung ở người bệnh nặng nằm viện; câu hỏi chỉ hỏi đau nhiều ở hai bắp chân, nên hạ còn frequent. 5642/QĐ-BYT: đau cơ là dấu hiệu gợi ý. Cùng cụm đau nhức với đau cơ."
+  - finding: myalgia
+    freq: very_frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [rajapakse-plosntd-2016, leviet-emi-2019, who-leptospirosis-2003]
+      locator: "Rajapakse 2016 bảng 3; Le-Viet 2019 bảng 4; WHO 2003 chương II"
+      reported: "Đau cơ 88,3% (Sri Lanka), 50% (12 ca nhẹ, Việt Nam)"
+      note: "WHO xếp đau cơ vào nhóm triệu chứng gợi ý chính. Tỷ lệ nền khi sốt là 0,55 nên liên kết này chỉ tăng nhẹ khả năng bệnh."
+  - finding: red_eyes
+    freq: frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [rajapakse-plosntd-2016, who-leptospirosis-2003, cdc-leptospirosis-clinical]
+      locator: "Rajapakse 2016 bảng 3; WHO 2003 chương II; CDC Clinical Overview"
+      reported: "Xung huyết kết mạc 55% (Sri Lanka) so với 43,3% ở người sốt do nguyên nhân khác"
+      note: "Xung huyết kết mạc (mắt đỏ, không có ghèn) xuất hiện sớm, không phải dấu hiệu của ca nặng, nên không hạ mức; WHO coi là một trong hai dấu hiệu phân biệt nhất. Sởi và bệnh Kawasaki cũng có mắt đỏ."
+  - finding: headache
+    freq: very_frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [rajapakse-plosntd-2016, leviet-emi-2019, who-leptospirosis-2003]
+      locator: "Rajapakse 2016 bảng 3; Le-Viet 2019 bảng 4; WHO 2003 phụ lục 5"
+      reported: "Đau đầu 81,7% (Sri Lanka), 66,7% (Việt Nam)"
+      note: "Chỉ có tác dụng khi triệu chứng chính là Sốt (tỷ lệ nền 0,7)."
+  - finding: fever
+    freq: almost_always
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [rajapakse-plosntd-2016, who-leptospirosis-2003]
+      locator: "Rajapakse 2016 bảng 3; WHO 2003 chương II"
+      reported: "Sốt 95% (Sri Lanka); WHO: sốt khởi phát đột ngột"
+      note: "Chỉ có tác dụng khi triệu chứng chính là Đau đầu."
+  - finding: chills_rigors
+    freq: frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [rajapakse-plosntd-2016, who-leptospirosis-2003]
+      locator: "Rajapakse 2016 bảng 3; WHO 2003 chương II"
+      reported: "Rét run 73,9% (Sri Lanka) so với 69,6% ở người sốt do nguyên nhân khác"
+      note: "Hạ một mức so với số liệu bệnh viện (nhóm nặng, 58% phải lọc máu)."
+  - finding: jaundice
+    freq: occasional
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [rajapakse-plosntd-2016, who-leptospirosis-2003, byt-qd-5642-2015]
+      locator: "Rajapakse 2016 bảng 3; WHO 2003 chương II (hội chứng Weil); 5642/QĐ-BYT bài Sốt mò, mục 3.4"
+      reported: "Vàng da 27,2% (Sri Lanka, nằm viện, nhóm nặng)"
+      note: "Phần lớn người bệnh ở cộng đồng không vàng da (thể giống cúm); vàng da gặp ở thể Weil. Ước khoảng 5–15% ở người dùng: occasional, mức thấp. Sốt kèm vàng da sau lội nước bẩn đã ở mức 2 (rf_lepto_severe)."
+  - finding: decreased_urine
+    freq: occasional
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [rajapakse-plosntd-2016, who-leptospirosis-2003]
+      locator: "Rajapakse 2016 bảng 3; WHO 2003 chương II (Pathogenesis, Cause of death)"
+      reported: "Tiểu ít 31,1% (Sri Lanka) so với 18,5% ở người sốt do nguyên nhân khác"
+      note: "Hạ một mức so với số liệu bệnh viện (dấu hiệu suy thận của ca nặng)."
+  - finding: bleeding_gums_nose
+    freq: rare
+    above_leak_ok: true
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [leviet-emi-2019, who-leptospirosis-2003]
+      locator: "Le-Viet 2019 bảng 4; WHO 2003 chương II (Cause of death, Pathogenesis)"
+      reported: "Xuất huyết 0/12 ca nhẹ ở Việt Nam; WHO: giảm tiểu cầu có thể gây chảy máu, xuất huyết lan tỏa là nguyên nhân tử vong"
+      note: "Cố ý để rare, cao hơn tỷ lệ nền 1%: chảy máu có gặp ở thể nặng nên trả lời 'Có' không được làm giảm khả năng bệnh, nhưng chỉ tăng nhẹ (sốt xuất huyết hay chảy máu hơn)."
+  - finding: hemoptysis
+    freq: rare
+    above_leak_ok: true
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [rajapakse-plosntd-2016, who-leptospirosis-2003]
+      locator: "Rajapakse 2016 bảng 3; WHO 2003 chương II (Clinical manifestations)"
+      reported: "Xuất huyết phổi 0,6% (Sri Lanka); WHO: xuất huyết phổi kèm suy hô hấp là một trong 4 thể lâm sàng"
+      note: "Cố ý để rare, cao hơn tỷ lệ nền 1%: ho ra máu là dấu hiệu của thể xuất huyết phổi, nên trả lời 'Có' không được làm giảm khả năng bệnh. Đã có quy tắc mức 2 (rf_lepto_severe)."
+  - finding: neck_stiffness
+    freq: rare
+    above_leak_ok: true
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [rajapakse-plosntd-2016, who-leptospirosis-2003]
+      locator: "Rajapakse 2016 bảng 3; WHO 2003 chương II (viêm màng não, viêm não màng não)"
+      reported: "Cứng gáy 13,3% (Sri Lanka, bác sĩ khám) so với 13,7% ở người sốt do nguyên nhân khác"
+      note: "Viêm màng não là một thể của bệnh (WHO). Người dùng tự nhận biết kém hơn bác sĩ khám, nên hạ hai mức còn rare; cố ý cao hơn tỷ lệ nền 1% để trả lời 'Có' không làm giảm khả năng bệnh. Cứng gáy đã ở mức 2 theo quy tắc chung."
+  - finding: diarrhea
+    freq: occasional
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [leviet-emi-2019, who-leptospirosis-2003]
+      locator: "Le-Viet 2019 bảng 4; WHO 2003 chương II (Is it leptospirosis?)"
+      reported: "Tiêu chảy 16,7% (Việt Nam)"
+      note: "WHO: khi có ho, khó thở, buồn nôn, nôn, đau bụng, tiêu chảy thì càng khó nhận ra bệnh."
+  - finding: fever_duration
+    dist: { d1_2: 0.30, d3_5: 0.45, d6_7: 0.15, gt_7d: 0.10 }
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [leviet-emi-2019, who-leptospirosis-2003]
+      locator: "Le-Viet 2019 bảng 4; WHO 2003 chương II (Antibiotic treatment)"
+      reported: "Số ngày sốt lúc vào viện trung vị 5,5 (4–7) ngày (Việt Nam)"
+      note: "Phân bố theo thời điểm người dùng hỏi, sớm hơn lúc vào viện. WHO khuyên dùng kháng sinh ngay khi nghi, tốt nhất trước ngày thứ 5. Ước lượng."
+  - finding: fever_max_temp
+    dist: { lt_38: 0.07, t38_39: 0.33, ge_39: 0.60 }
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [leviet-emi-2019]
+      locator: "Le-Viet 2019 bảng 4"
+      reported: "Nhiệt độ cao nhất trung bình 39,5 ± 1,1°C (Việt Nam)"
+      note: "Phân bố trong số người có sốt, ước từ trung bình và độ lệch chuẩn."
+  - finding: headache_severity
+    dist: { mild: 0.10, moderate: 0.40, severe: 0.50 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [who-leptospirosis-2003]
+      locator: "WHO 2003 phụ lục 5"
+      note: "WHO liệt kê đau đầu dữ dội; không có tỷ lệ. Ước lượng."
+  - finding: headache_course
+    dist: { first_time: 0.80, recurrent_similar: 0.15, progressive: 0.05 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [who-leptospirosis-2003]
+      locator: "WHO 2003 chương II"
+      note: "Bệnh cấp tính, khởi phát đột ngột; phần lớn là đau đầu kiểu mới. Ước lượng như sốt mò."
+  - finding: headache_duration
+    dist: { lt_4h: 0.05, h4_72: 0.55, gt_3d: 0.40 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [leviet-emi-2019]
+      locator: "Le-Viet 2019 bảng 4"
+      note: "Theo số ngày sốt (trung vị 5,5 ngày lúc vào viện); ước lượng."
+warning_signs:
+  - jaundice
+  - decreased_urine
+  - bleeding_gums_nose
+  - hemoptysis
+  - breathing_difficulty
+  - confusion
+  - drowsy_hard_to_wake
+  - cold_hands_feet
+self_care_vi:
+  - "Nghỉ ngơi, uống đủ nước, chườm mát khi sốt."
+  - "Không tự mua kháng sinh uống; cần được bác sĩ khám và kê đơn."
+  - "Khi lội nước, làm ruộng, dọn bùn: mang ủng, găng tay và che kín vết xước trên da."
+  - "Diệt chuột quanh nhà; không tắm, bơi ở ao hồ hoặc nước lũ."
+see_doctor_vi:
+  - "Đi khám trong 24 giờ nếu sốt sau khi lội nước, làm ruộng hoặc tiếp xúc chuột trong tháng qua."
+  - "Nói rõ với bác sĩ việc lội nước, bùn hoặc tiếp xúc chuột, gia súc, vì bệnh dễ bị nhầm với sốt xuất huyết, cúm."
+  - "Đến cấp cứu ngay nếu vàng da, tiểu ít, chảy máu, ho ra máu hoặc khó thở."
+  - "Gọi 115 nếu lơ mơ, lú lẫn hoặc co giật."
+review:
+  status: draft
+  authors: ["agent:pass-b"]
+  updated: "2026-10-26"
+  notes_vi: "Lượt B (Giai đoạn 3, lô 2, phần b). Mức xử trí 3, không thuộc nhóm không được bỏ sót, giữ như gợi ý: phần lớn ca là thể nhẹ giống cúm, cần kháng sinh sớm (WHO 2003: dùng ngay khi nghi, tốt nhất trước ngày thứ 5); thể nặng (vàng da, suy thận, chảy máu, xuất huyết phổi) đã có quy tắc rf_lepto_severe mức 2. Chưa tìm được hướng dẫn chẩn đoán, điều trị riêng của Bộ Y tế về bệnh này (5642/QĐ-BYT chỉ có đoạn chẩn đoán phân biệt trong bài Sốt mò). Không khai báo hệ số theo mùa, vùng: WHO nêu bệnh tăng theo mùa mưa và sau lũ, nhưng chưa có số liệu Việt Nam theo tháng, vùng; phơi nhiễm đã được hỏi bằng câu lội nước, bùn. Không dùng hệ số giới vì nam nhiều hơn chủ yếu do phơi nhiễm nghề nghiệp (WHO), đã hỏi riêng. Điểm cần bác sĩ xem: (1) prior suy từ nghiên cứu bệnh viện ở Quảng Nam (người lớn sốt không rõ ổ), chưa có số liệu ở tuyến ban đầu; (2) tần suất triệu chứng chủ yếu từ Sri Lanka (người bệnh nặng nằm viện) và 12 ca nhẹ ở Việt Nam; (3) câu phơi nhiễm hiện không hỏi về chăm sóc, giết mổ trâu bò, lợn (WHO: cũng là nguồn lây); (4) catalog chưa có câu hỏi 'đau thắt lưng' (WHO: ấn đau cơ vùng thắt lưng)."

@@ -1,0 +1,15 @@
+id: chan-jvs-2021
+type: systematic_review
+title: "Systematic review and meta-analysis of the prevalence of abdominal aortic aneurysm in Asian populations"
+publisher: "Journal of Vascular Surgery 2021;73(3):1069–1074.e1 (Chan WK và cộng sự)"
+date: "2021-03"
+url: "https://europepmc.org/article/MED/32987145"
+doi: "10.1016/j.jvs.2020.08.140"
+pmid: "32987145"
+license_class: L3
+license_note: "Bản quyền nhà xuất bản: chỉ dùng dữ kiện kèm trích dẫn."
+default_tier: B
+accessed: "2026-10-26"
+verified: true
+verified_by: "agent:pass-b"
+notes_vi: "Lượt B (Giai đoạn 3 lô 2) đọc tóm tắt qua API Europe PMC. 17 nghiên cứu ở người châu Á: tỷ lệ hiện mắc phình động mạch chủ bụng chung 1,30%; 2,56% ở người được chọn vì có yếu tố nguy cơ tim mạch; 0,61% ở quần thể không chọn lọc. Thấp hơn phương Tây."

@@ -1,0 +1,15 @@
+id: wses-ami-2022
+type: guideline_intl
+title: "Acute mesenteric ischemia: updated guidelines of the World Society of Emergency Surgery"
+publisher: "World Society of Emergency Surgery (World Journal of Emergency Surgery 2022;17:54; Bala M và cộng sự)"
+date: "2022-10-19"
+url: "https://europepmc.org/article/MED/36261857"
+doi: "10.1186/s13017-022-00443-x"
+pmid: "36261857"
+license_class: L1
+license_note: "CC BY 4.0 (theo bài trên PMC, PMC9580452): được dùng, chuyển thể, ghi công và nêu thay đổi."
+default_tier: B
+accessed: "2026-10-26"
+verified: true
+verified_by: "agent:pass-b"
+notes_vi: "Lượt B (Giai đoạn 3 lô 2) tải toàn văn qua API Europe PMC. Tỷ lệ mới mắc thấp (0,09–0,2% lượt nhập viện cấp cứu), tăng theo hàm mũ với tuổi: người 80 tuổi gấp khoảng 10 lần người 60 tuổi; từ 75 tuổi là nguyên nhân bụng cấp hay gặp hơn viêm ruột thừa. Nguyên nhân: tắc mạch do cục máu đông, huyết khối động mạch trên nền xơ vữa, thiếu máu không do tắc mạch (suy tim, sốc), huyết khối tĩnh mạch mạc treo. Khuyến cáo 1: đau bụng dữ dội không tương xứng với khám thực thể phải coi là thiếu máu mạc treo cho tới khi loại trừ; dấu hiệu viêm phúc mạc là ruột đã hoại tử; trong một nghiên cứu (Park 2002): đau bụng 95%, buồn nôn 44%, nôn 35%, tiêu chảy 35%, đi ngoài ra máu 16%; khoảng một phần ba có bộ ba đau bụng, sốt, máu ẩn trong phân; người chẩn đoán muộn có thể vào viện trong sốc nhiễm khuẩn; kiểu đau 'không tương xứng' kinh điển đang ít dần, thể cấp trên nền mạn hay gặp hơn. Khuyến cáo 2 và bảng 1: thể huyết khối có tiền sử đau sau ăn, sụt cân, sợ ăn; gần 50% thể tắc mạch có rung nhĩ; huyết khối tĩnh mạch: buồn nôn, nôn, tiêu chảy, đau quặn, chảy máu tiêu hóa 10%. Chụp cắt lớp mạch máu ngay khi nghi ngờ; chậm chẩn đoán là yếu tố chính của tử vong 30–70%, cứ chậm 6 giờ tử vong tăng gấp đôi; khuyến khích điều trị tại trung tâm đa chuyên khoa như đơn vị đột quỵ."

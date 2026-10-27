@@ -1,0 +1,207 @@
+id: liver_abscess
+names:
+  vi: "Áp xe gan"
+  vi_common: ["Áp xe gan do amip", "Áp xe gan do vi khuẩn", "Ổ mủ trong gan"]
+  en: "Liver abscess (pyogenic or amoebic)"
+codes:
+  icd10: "K75.0"
+  icd10_verified: false
+  mondo: "MONDO:0700051"
+summary_vi:
+  - "Ổ mủ trong gan do vi khuẩn hoặc do amip (một loại ký sinh trùng gây lỵ)."
+  - "Thường sốt, rét run nhiều ngày, đau tức dưới sườn phải; hay gặp ở nam giới và người bị tiểu đường."
+  - "Cần khám trong 24 giờ để được siêu âm gan và điều trị kịp thời, tránh ổ mủ vỡ hoặc nhiễm khuẩn huyết."
+urgency: 3
+cant_miss: false
+specialties: [infectious_disease, gastroenterology, general_surgery]
+priors:
+  - complaint: fever
+    default: P5
+    by_age: { infant_0_2m: P6, child_2m_5y: P6, child_5_12: P6, teen_13_17: P6 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [maiphan-wjh-2026, tsai-eid-2008, blessmann-ajtmh-2002, yu-idr-2022]
+      locator: "Mai-Phan 2026 phần mở đầu và kết quả; Tsai 2008 tóm tắt; Blessmann 2002 tóm tắt; Yu 2022 tóm tắt"
+      reported: "Áp xe gan do vi khuẩn 14–18/100.000/năm ở châu Á (Mai-Phan 2026 dẫn), 14,87/100.000/năm ở Đài Loan, đỉnh 60–69 tuổi (Tsai 2008); áp xe gan do amip ít nhất 21/100.000/năm ở Thừa Thiên Huế 1990–1998, 95% là người lớn (Blessmann 2002); sốt ở 81,1% (Mai-Phan 2026), 92,9% (Yu 2022)"
+      population: "Dân số Đài Loan; bệnh viện ở Thừa Thiên Huế, TP. Hồ Chí Minh, Trung Quốc"
+      note: "Ước tính thô: khoảng 20–40/100.000 người lớn mỗi năm, phần lớn có sốt, chia cho vài chục nghìn lượt sốt trên 100.000 người lớn mỗi năm, cho khoảng 0,05–0,15% (P5). Trẻ em hiếm (P6). Hệ số giới điều chỉnh thêm. Chưa có số liệu theo triệu chứng chính; cần bác sĩ duyệt."
+  - complaint: abdominal_pain
+    default: P5
+    by_age: { infant_0_2m: P6, child_2m_5y: P6, child_5_12: P6, teen_13_17: P6 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [maiphan-wjh-2026, yu-idr-2022, blessmann-ajtmh-2002]
+      locator: "Mai-Phan 2026 bảng 1; Yu 2022 tóm tắt; Blessmann 2002 tóm tắt"
+      reported: "Đau hạ sườn phải 61,3% (Mai-Phan 2026); đau bụng 44,7% (Yu 2022)"
+      note: "Khoảng một nửa người bệnh đau bụng; số lượt đau bụng đi khám ít hơn lượt sốt, nên tỷ lệ trong người lớn đau bụng cũng khoảng 0,02–0,2% (P5). Trẻ em P6. Ước lượng, cần bác sĩ duyệt."
+prior_modifiers:
+  - when: { sex: [male] }
+    factor: 1.4
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [maiphan-wjh-2026, blessmann-ajtmh-2002, msd-amebiasis, tsai-eid-2008]
+      locator: "Mai-Phan 2026 tóm tắt; Blessmann 2002 tóm tắt; MSD Amebiasis (áp xe gan do amip); Tsai 2008 tóm tắt và kết quả"
+      reported: "Nam 67% (áp xe gan do vi khuẩn, TP. Hồ Chí Minh); trên 80% người lớn bị áp xe gan do amip ở Huế là nam; tỷ lệ nam/nữ 7–9/1 ở áp xe gan do amip (MSD); nam 61,7% ở Đài Loan"
+      note: "Gộp hai loại, khoảng 70% người bệnh là nam, tương ứng hệ số khoảng 1,4 cho nam và 0,6 cho nữ so với trung bình hai giới."
+  - when: { sex: [female] }
+    factor: 0.6
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [maiphan-wjh-2026, blessmann-ajtmh-2002]
+      reported: "Như hệ số cho nam."
+      note: "Đi cặp với hệ số 1,4 cho nam."
+findings:
+  - finding: fever
+    freq: very_frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [maiphan-wjh-2026, yu-idr-2022, msd-amebiasis]
+      locator: "Mai-Phan 2026 bảng 1; Yu 2022 bảng 1; MSD Amebiasis"
+      reported: "Sốt 81,1% (106 người, TP. Hồ Chí Minh); 92,9% (606 người, Trung Quốc)"
+      population: "Người áp xe gan do vi khuẩn nằm viện"
+      note: "Có ý nghĩa với Đau bụng (với Sốt là dấu hiệu ngầm định). MSD: áp xe gan do amip sốt từng đợt, vã mồ hôi, rét run."
+  - finding: chills_rigors
+    freq: very_frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [yu-idr-2022, msd-amebiasis]
+      locator: "Yu 2022 bảng 1"
+      reported: "Sợ lạnh, rét run 74,7% trên mọi người bệnh, tức khoảng 80% người có sốt"
+      population: "Người áp xe gan do vi khuẩn nằm viện (Trung Quốc)"
+      note: "Tính trong số người đã sốt. Tỷ lệ nền 0,2."
+  - finding: fever_max_temp
+    dist: { lt_38: 0.08, t38_39: 0.37, ge_39: 0.55 }
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [yu-idr-2022]
+      locator: "Yu 2022 bảng 1"
+      reported: "Nhiệt độ cao nhất trên 39°C ở 57,3% người có sốt"
+      note: "Tính trong số người đã sốt. Người tự đo ở nách thường thấp hơn đo ở bệnh viện, nên để 55%."
+  - finding: fever_duration
+    dist: { d1_2: 0.15, d3_5: 0.32, d6_7: 0.2, gt_7d: 0.33 }
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [msd-amebiasis, maiphan-wjh-2026]
+      locator: "MSD Amebiasis (áp xe gan do amip có thể khởi phát âm ỉ)"
+      note: "Tính trong số người đã sốt. Bệnh thường âm ỉ, sốt nhiều ngày trước khi được chẩn đoán; nguồn đã mở không cho số ngày. Phân bố là ước lượng, dồn về phía sốt dài ngày hơn tỷ lệ nền."
+  - finding: abdominal_pain
+    freq: frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [maiphan-wjh-2026, yu-idr-2022, blessmann-ajtmh-2002]
+      locator: "Mai-Phan 2026 bảng 1; Yu 2022 bảng 1"
+      reported: "Đau hạ sườn phải 61,3% (Mai-Phan 2026); đau bụng 44,7% (Yu 2022)"
+      note: "Có ý nghĩa với Sốt (với Đau bụng là dấu hiệu ngầm định). Tỷ lệ nền khi sốt 0,15."
+  - finding: abd_pain_location
+    dist: { epigastric: 0.2, right_upper: 0.62, left_upper: 0.03, periumbilical: 0.03, right_lower: 0.03, left_lower: 0.01, suprapubic: 0.01, whole: 0.07 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [maiphan-wjh-2026, msd-amebiasis]
+      locator: "Mai-Phan 2026 (ổ áp xe ở gan phải 56,6%, còn lại ở gan trái hoặc cả hai thùy); MSD Amebiasis (đau vùng gan)"
+      note: "Đau dưới sườn phải; ổ ở gan trái gây đau vùng trên rốn. Phân bố là ước lượng."
+  - finding: abd_pain_onset
+    dist: { sudden: 0.15, gradual: 0.85 }
+    evidence:
+      tier: C
+      basis: verbal
+      sources: [msd-amebiasis]
+      locator: "MSD Amebiasis (khởi phát âm ỉ)"
+      note: "Phân bố là ước lượng."
+  - finding: abd_pain_duration
+    dist: { lt_6h: 0.03, h6_24: 0.1, d1_3: 0.27, d4_14: 0.42, gt_2w: 0.18 }
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [msd-amebiasis]
+      note: "Đau tức tăng dần nhiều ngày, nhiều người đi khám sau 4 ngày đến 2 tuần. Phân bố là ước lượng."
+  - finding: abd_pain_radiates_right_shoulder
+    freq: occasional
+    evidence:
+      tier: C
+      basis: verbal
+      sources: [msd-amebiasis]
+      locator: "MSD Amebiasis (đau vùng gan, có khi lan lên vai phải)"
+      note: "Tính trong số người đã đau bụng. Không có tỷ lệ; ước khoảng 20% (tỷ lệ nền 5%)."
+  - finding: pleuritic_chest_pain
+    freq: occasional
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [msd-amebiasis, maiphan-wjh-2026]
+      locator: "MSD Amebiasis (ổ áp xe có thể lan lên dưới cơ hoành, màng phổi phải, phổi phải); Mai-Phan 2026 (nhiễm trùng phổi kèm theo 27,4%)"
+      note: "Ổ áp xe sát cơ hoành gây đau khi hít sâu, ho; ước khoảng 20% (tỷ lệ nền 5%)."
+  - finding: jaundice
+    freq: rare
+    above_leak_ok: true
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [maiphan-wjh-2026, yu-idr-2022, msd-amebiasis]
+      locator: "Mai-Phan 2026 bảng 1; Yu 2022 bảng 1; MSD Amebiasis (vàng da ít gặp, nhẹ)"
+      reported: "Vàng da 8,5% (Mai-Phan 2026), 6,3% (Yu 2022)"
+      note: "Khoảng 6–9%, ở ranh giới rare và occasional; chọn rare (above_leak_ok, tỷ lệ nền 1%) để vàng da nghiêng về viêm đường mật (frequent) hơn áp xe gan."
+  - finding: diabetes
+    freq: frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [maiphan-wjh-2026, yu-idr-2022, tsai-eid-2008]
+      locator: "Mai-Phan 2026 tóm tắt; Yu 2022 tóm tắt; Tsai 2008 kết quả (đái tháo đường tăng nguy cơ khoảng 10 lần)"
+      reported: "Đái tháo đường 50,0% (TP. Hồ Chí Minh), 38,7% (Trung Quốc), 33,3% (Đài Loan)"
+      note: "Áp dụng từ 13 tuổi theo danh mục. Áp xe gan do amip ít liên quan đái tháo đường, nên gộp hai loại khoảng 35–45%. Tỷ lệ nền 0,07."
+  - finding: gallstones_known
+    freq: occasional
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [yu-idr-2022, tsai-eid-2008]
+      locator: "Yu 2022 tóm tắt; Tsai 2008 kết quả"
+      reported: "Bệnh đường mật lành tính hoặc đã mổ đường mật 22,3% (Yu 2022); sỏi mật 14,6% (Tsai 2008)"
+      note: "Tỷ lệ nền 5%."
+  - finding: immunocompromised
+    freq: occasional
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [yu-idr-2022, tsai-eid-2008]
+      locator: "Yu 2022 bảng 1 (ung thư 11,1%); Tsai 2008 kết quả (ung thư tăng nguy cơ khoảng 10 lần)"
+      reported: "Ung thư 11,1% (Yu 2022)"
+      note: "Câu hỏi gồm đang điều trị ung thư, dùng corticoid kéo dài; ước khoảng 10–20% (tỷ lệ nền 5%)."
+  - finding: weight_loss_unintended
+    freq: occasional
+    evidence:
+      tier: C
+      basis: verbal
+      sources: [msd-amebiasis]
+      locator: "MSD Amebiasis (buồn nôn, nôn, mệt, sụt cân)"
+      note: "Không có tỷ lệ; ước khoảng 20% (tỷ lệ nền 5%)."
+warning_signs:
+  - confusion
+  - drowsy_hard_to_wake
+  - cold_hands_feet
+  - severe_weakness
+  - breathing_difficulty
+  - abd_pain_severe
+  - jaundice
+self_care_vi:
+  - "Không tự dùng kháng sinh hay thuốc hạ sốt kéo dài ở nhà mà không đi khám."
+  - "Uống đủ nước, nghỉ ngơi trong lúc chờ đi khám."
+  - "Người bị tiểu đường cần theo dõi đường huyết sát hơn khi đang sốt."
+see_doctor_vi:
+  - "Đi khám trong 24 giờ khi sốt nhiều ngày kèm đau tức dưới sườn phải."
+  - "Đến cấp cứu ngay nếu đau bụng tăng dữ dội, khó thở, lơ mơ hoặc tay chân lạnh."
+review:
+  status: draft
+  authors: ["agent:pass-b"]
+  updated: "2026-10-27"
+  notes_vi: "Lượt B (Giai đoạn 3 lô 2, phần a). Bệnh gồm áp xe gan do vi khuẩn (ở Việt Nam chủ yếu do Klebsiella pneumoniae, Mai-Phan 2026) và do amip (Huế từng là vùng có tỷ lệ mới mắc cao, Blessmann 2002). Mức xử trí 3, không thuộc nhóm không được bỏ sót: giữ như gợi ý. Ca điển hình sốt, đau hạ sườn phải nhiều ngày cần siêu âm, xét nghiệm trong 24 giờ; tử vong khoảng 10% (Mai-Phan 2026, Tsai 2008) chủ yếu ở người cao tuổi, ca nặng, đã được các quy tắc dấu hiệu nhiễm khuẩn huyết nâng mức. Mã K75.0 (áp xe gan) chọn cho bệnh gộp; áp xe gan do amip là A06.4; chưa đối chiếu được bảng ICD-10 của Bộ Y tế. Điểm chưa chắc: (1) prior suy từ tỷ lệ mới mắc ở châu Á và số liệu cũ ở Huế, chưa có số liệu theo triệu chứng chính; (2) số ngày sốt và số ngày đau là ước lượng (nguồn đã mở không cho số ngày trước khi vào viện); (3) chưa mở được trang MSD về áp xe gan do vi khuẩn (đường dẫn cũ trả lỗi 404), dùng hai loạt ca châu Á; (4) chưa tìm được hướng dẫn chẩn đoán, điều trị áp xe gan của Bộ Y tế; (5) không liên kết uống nhiều rượu bia (yếu tố hay được nêu với áp xe gan do amip) vì nguồn đã mở không có; (6) áp xe gan do sán lá gan lớn (gặp ở miền Trung) chưa được tính riêng."

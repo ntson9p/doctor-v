@@ -1,0 +1,12 @@
+id: nhs-high-blood-pressure
+type: web_page
+title: "High blood pressure (hypertension)"
+publisher: "NHS (UK)"
+url: "https://www.nhs.uk/conditions/high-blood-pressure/"
+license_class: L1
+license_note: "Open Government Licence v3.0; bản chuyển thể không được trình bày như nội dung của NHS."
+default_tier: C
+accessed: "2026-10-26"
+verified: true
+verified_by: "agent:pass-b"
+notes_vi: "Lượt B mở trang ngày 26/10/2026 (rà soát lần cuối 19/7/2024, hạn rà soát 19/7/2027). Tăng huyết áp thường không gây triệu chứng; hiếm khi gây đau đầu, nhìn mờ, đau ngực. 'Urgent advice: NHS 111' khi hay bị đau đầu hoặc nhìn mờ, đau ngực lúc có lúc không, hoặc có triệu chứng khác lo là do huyết áp cao. 'Call 999' khi đau hoặc khó chịu ở ngực đột ngột không hết, lan ra tay, cổ, hàm, bụng, lưng, hoặc kèm vã mồ hôi, buồn nôn, choáng, khó thở. Trang không nêu ngưỡng 180/120."

@@ -1,0 +1,130 @@
+id: testicular_torsion
+names:
+  vi: "Xoắn tinh hoàn"
+  vi_common: ["Xoắn thừng tinh"]
+  en: "Testicular torsion"
+codes:
+  icd10: "N44"
+  icd10_verified: false
+  mondo: "MONDO:0008541"
+summary_vi:
+  - "Tinh hoàn bị xoắn quanh thừng tinh, làm tắc mạch máu nuôi tinh hoàn."
+  - "Hay gặp ở tuổi dậy thì và trẻ sơ sinh; thường đau bìu đột ngột, dữ dội, có khi chỉ thấy đau bụng dưới."
+  - "Cần đến cấp cứu ngay, vì chậm vài giờ có thể mất tinh hoàn."
+urgency: 2
+cant_miss: true
+specialties: [urology, emergency]
+applicability:
+  sex: [male]
+  reason_vi: "Bệnh của tinh hoàn, chỉ gặp ở nam giới."
+priors:
+  - complaint: abdominal_pain
+    default: P6
+    by_age: { infant_0_2m: P5, teen_13_17: P5 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [choi-icu-2022, huang-actapaediatr-2013, eau-paediatric-urology-2026, mantica-abdomradiol-2025, moran-pec-2024]
+      locator: "Choi 2022 tóm tắt; Huang 2013 tóm tắt; EAU 2026 chương Acute scrotum; Mantica 2025 tóm tắt; Moran 2024 tóm tắt"
+      reported: "Hàn Quốc: 2,02/100.000 nam giới mỗi năm, 6,99/100.000 ở nam dưới 19 tuổi, hai đỉnh ở nhũ nhi và tuổi dậy thì; Đài Loan: 3,5/100.000 ở nam dưới 25 tuổi, đỉnh 7,7/100.000 ở 10–14 tuổi và 7,6/100.000 ở trẻ dưới 1 tuổi; tới 22% trẻ bị xoắn lúc đầu chỉ đau bụng dưới; 26% trẻ có đau bụng"
+      population: "Dân số Hàn Quốc, Đài Loan; người bệnh ở bệnh viện"
+      note: "Prior tính trong số nam cùng nhóm tuổi bị đau bụng (applicability chỉ giới hạn giới). App chưa có triệu chứng chính 'đau bìu', nên người đau bìu có thể chọn Đau bụng; prior tính cả nhóm này. Ước tính thô ở nam 13–17 tuổi: khoảng 8/100.000 mỗi năm chia cho vài nghìn đến một vạn lượt đau bụng trên 100.000 mỗi năm, cho khoảng 0,05–0,1% (P5). Sơ sinh, nhũ nhi dưới 2 tháng là đỉnh thứ hai (P5; nhóm tuổi này chỉ sàng lọc dấu hiệu nguy hiểm). Trẻ 2 tháng – 12 tuổi và người lớn: dưới 0,02% (P6). Chưa có số liệu Việt Nam; cần bác sĩ duyệt."
+findings:
+  - finding: scrotal_pain
+    freq: very_frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [murali-urolann-2022, deng-frontpediatr-2024, mantica-abdomradiol-2025, nhs-testicle-pain]
+      locator: "Murali 2022 kết quả; Deng 2024 kết quả và bàn luận; Mantica 2025 tóm tắt"
+      reported: "Đau bìu 92,2% (Murali, 64 ca); đau bìu 95,5%, sưng đỏ bìu 91% (Deng, 67 trẻ); tổng quan trong Deng: đau bìu 70–90%, sưng 60–75%; tới 22% trẻ lúc đầu chỉ đau bụng dưới (Mantica)"
+      population: "Người được mổ xoắn tinh hoàn ở bệnh viện (Ấn Độ, Trung Quốc)"
+      note: "Câu hỏi gồm đau hoặc sưng bìu. Người chọn triệu chứng chính Đau bụng gồm cả nhóm lúc đầu chỉ đau bụng, nên chọn very_frequent thay vì almost_always. Câu này được hỏi bắt buộc ở nam giới đau bụng và đã có quy tắc rf_scrotal_pain (mức 2)."
+  - finding: abd_pain_location
+    dist: { epigastric: 0.03, right_upper: 0.02, left_upper: 0.02, periumbilical: 0.08, right_lower: 0.24, left_lower: 0.37, suprapubic: 0.16, whole: 0.08 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [murali-urolann-2022, deng-frontpediatr-2024, mantica-abdomradiol-2025]
+      locator: "Murali 2022 (bên trái 65,6%); Deng 2024 (bên trái 68,7%); Mantica 2025 (đau bụng dưới)"
+      note: "Đau bụng dưới, bẹn cùng bên tinh hoàn bị xoắn; bên trái gặp khoảng hai phần ba. Phân bố là ước lượng."
+  - finding: abd_pain_onset
+    dist: { sudden: 0.75, gradual: 0.25 }
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [eau-paediatric-urology-2026, nhs-testicle-pain]
+      locator: "EAU 2026 chương Acute scrotum (đau đột ngột, dữ dội kèm buồn nôn, nôn là điển hình); NHS Testicle pain (đau đột ngột, dữ dội)"
+      note: "Phân bố là ước lượng."
+  - finding: abd_pain_duration
+    dist: { lt_6h: 0.45, h6_24: 0.28, d1_3: 0.17, d4_14: 0.06, gt_2w: 0.04 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [lukosiute-emj-2023, murali-urolann-2022, eau-paediatric-urology-2026]
+      locator: "Lukosiute-Urboniene 2023 tóm tắt (triệu chứng dưới 7 giờ: OR 3,41); Murali 2022 (trung vị 36 giờ ở nơi đến viện muộn); EAU 2026 (cửa sổ khoảng 4–6 giờ)"
+      note: "Người tự kiểm tra thường ngay trong những giờ đầu; ở nơi người dân đến viện muộn, nhiều người đã đau trên 1 ngày. Phân bố là ước lượng."
+  - finding: abd_pain_severe
+    freq: frequent
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [eau-paediatric-urology-2026, nhs-testicle-pain]
+      locator: "EAU 2026 chương Acute scrotum; NHS Testicle pain"
+      note: "Tính trong số người đã đau bụng. Đau đột ngột, dữ dội là điển hình, nhưng phần đau ở bụng thường nhẹ hơn ở bìu. Ước khoảng một nửa."
+  - finding: abd_pain_radiates_groin
+    freq: frequent
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [mantica-abdomradiol-2025, murali-urolann-2022]
+      locator: "Mantica 2025 tóm tắt (đau bụng dưới rồi chuyển xuống bìu); Murali 2022 kết quả"
+      note: "Câu hỏi 'đau lan xuống bẹn hoặc bộ phận sinh dục' gần với chính triệu chứng của bệnh. Chọn frequent, không chọn cao hơn, vì câu đau bìu đã mang phần lớn thông tin (hai câu hay được trả lời cùng nhau)."
+  - finding: vomiting
+    freq: occasional
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [deng-frontpediatr-2024, murali-urolann-2022, lukosiute-emj-2023, eau-paediatric-urology-2026]
+      locator: "Deng 2024 kết quả và bàn luận; Murali 2022 kết quả; Lukosiute-Urboniene 2023 tóm tắt"
+      reported: "Buồn nôn, nôn 11,9% (Deng), 18,8% (Murali), 5–43% trong các nghiên cứu (tổng quan trong Deng); buồn nôn, nôn làm tăng khả năng xoắn so với nguyên nhân bìu cấp khác (OR 4,37)"
+      note: "Gần bằng tỷ lệ nền của nôn khi đau bụng (0,2), nên liên kết gần trung tính với Đau bụng; nôn chủ yếu giúp phân biệt với bệnh bìu khác, chưa có trong cơ sở tri thức."
+  - finding: dysuria
+    freq: rare
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [murali-urolann-2022, eau-paediatric-urology-2026]
+      locator: "Murali 2022 kết quả (triệu chứng tiết niệu 3,1%)"
+      reported: "Triệu chứng tiết niệu 3,1%"
+      note: "Thấp hơn tỷ lệ nền 5%: tiểu buốt gợi ý nhiễm khuẩn tiết niệu hoặc viêm mào tinh hoàn."
+  - finding: abd_pain_migrated_rlq
+    freq: rare
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [mantica-abdomradiol-2025]
+      note: "Tính trong số người đã đau bụng. Kiểu đau bắt đầu quanh rốn rồi khu trú ở hố chậu phải là của viêm ruột thừa; ở xoắn tinh hoàn, đau bụng dưới thường cùng bên và lan xuống bìu. Mức rare thấp hơn tỷ lệ nền 0,1. Ước lượng."
+  - finding: abd_pain_meal_relation
+    dist: { hungry_relieved_by_food: 0.03, worse_after_meal: 0.05, no_relation: 0.92 }
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [eau-paediatric-urology-2026]
+      note: "Đau do thiếu máu tinh hoàn, không liên quan bữa ăn; liên kết giúp phân biệt với bệnh dạ dày, túi mật. Phân bố là ước lượng."
+warning_signs:
+  - scrotal_pain
+  - abd_pain_severe
+  - persistent_vomiting
+self_care_vi:
+  - "Không chờ xem cơn đau bìu có tự hết không, kể cả khi đau đã đỡ."
+  - "Trẻ trai đau bụng dưới cần được hỏi và xem bìu, vì trẻ có thể ngại nói."
+  - "Hỏi bác sĩ trước khi dùng thuốc giảm đau."
+see_doctor_vi:
+  - "Đến cấp cứu ngay khi đau hoặc sưng bìu đột ngột, tốt nhất trong vòng 6 giờ từ lúc bắt đầu đau."
+  - "Đau bìu kèm đau bụng, buồn nôn hoặc nôn cần đến cấp cứu ngay, kể cả khi đau không dữ dội."
+review:
+  status: draft
+  authors: ["agent:pass-b"]
+  updated: "2026-10-27"
+  notes_vi: "Lượt B (Giai đoạn 3 lô 2, phần a). Mức xử trí 2, không được bỏ sót: giữ như gợi ý. NHS Testicle pain: đau tinh hoàn đột ngột, dữ dội, hoặc kèm buồn nôn, nôn, đau bụng thì đến cấp cứu ngay hoặc gọi 999; EAU 2026: bìu cấp là cấp cứu tiết niệu, cửa sổ quyết định khoảng 4–6 giờ, mổ thám sát khẩn mọi ca trong 24 giờ đầu; Murali 2022: mọi tinh hoàn đến trong 6 giờ đều giữ được. Mã N44 (xoắn tinh hoàn) chưa đối chiếu được bảng ICD-10 của Bộ Y tế. Điểm chưa chắc: (1) prior suy từ tỷ lệ mới mắc ở Hàn Quốc, Đài Loan, chưa có số liệu Việt Nam; giả định phần lớn người đau bìu chọn Đau bụng vì app chưa có triệu chứng chính về bìu, cần xem lại khi lô 6 (tiết niệu, sinh dục) thêm triệu chứng này; (2) tần suất lấy từ người được mổ ở bệnh viện; (3) chỉ 10 liên kết vì phần lớn dấu hiệu phân biệt (tinh hoàn nằm cao, mất phản xạ bìu, tinh hoàn cứng) cần khám, không hỏi được tại nhà; (4) không liên kết sốt: Murali ghi 9,4% (gần tỷ lệ nền 5%), EAU ghi sốt gặp nhiều hơn ở viêm mào tinh hoàn; (5) đau bìu và đau lan xuống bẹn hay được trả lời cùng nhau nhưng không cùng cụm; đề xuất người bảo trì cân nhắc thêm cụm cho hai câu này."

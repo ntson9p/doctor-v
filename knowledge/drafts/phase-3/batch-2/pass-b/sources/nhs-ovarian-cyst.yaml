@@ -1,0 +1,12 @@
+id: nhs-ovarian-cyst
+type: web_page
+title: "Ovarian cyst"
+publisher: "NHS (UK)"
+url: "https://www.nhs.uk/conditions/ovarian-cyst/"
+license_class: L1
+license_note: "Open Government Licence v3.0; bản chuyển thể không được trình bày như nội dung của NHS."
+default_tier: C
+accessed: "2026-10-26"
+verified: true
+verified_by: "agent:pass-b"
+notes_vi: "Lượt B (Giai đoạn 3 lô 2) tải trang bằng curl và trích chữ ngày 26/10/2026 (rà soát lần cuối 21/6/2023, hạn rà soát 21/6/2026 đã qua). Nang buồng trứng thường không gây triệu chứng, chỉ gây triệu chứng khi vỡ, rất to hoặc xoắn làm tắc mạch máu nuôi buồng trứng: đau vùng chậu từ âm ỉ, nặng tức tới đột ngột, dữ dội, nhói; đau khi giao hợp; khó đi ngoài; tiểu nhiều lần; rối loạn kinh nguyệt; đầy, chướng bụng. 'Urgent advice: urgent GP / NHS 111' (khám khẩn, tương ứng mức 3) khi đau vùng chậu đột ngột, dữ dội, hoặc đau bụng kèm buồn nôn hay nôn. Trang không có mục gọi 999 hoặc đến cấp cứu."

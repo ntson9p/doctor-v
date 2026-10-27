@@ -1,0 +1,12 @@
+id: nhs-encephalitis
+type: web_page
+title: "Encephalitis"
+publisher: "NHS (UK)"
+url: "https://www.nhs.uk/conditions/encephalitis/"
+license_class: L1
+license_note: "Open Government Licence v3.0; bản chuyển thể không được trình bày như nội dung của NHS."
+default_tier: C
+accessed: "2026-10-26"
+verified: true
+verified_by: "agent:pass-b"
+notes_vi: "Lượt B (Giai đoạn 3, lô 2, phần b) mở trang ngày 26/10/2026 (rà soát lần cuối 15/5/2023, hạn rà soát 15/5/2026, chưa có bản mới). Viêm não thường khởi đầu như cúm: sốt cao, đau đầu; trong vài giờ đến vài ngày, vài tuần xuất hiện triệu chứng nặng: lú lẫn, co giật, thay đổi tính cách, khó nói, yếu, mất ý thức. 'Dial 999' (gọi xe cấp cứu ngay) khi có các triệu chứng nặng này; cần điều trị khẩn trong bệnh viện. Mọi người đều có thể mắc, nhưng trẻ rất nhỏ và người rất già có nguy cơ cao nhất. Nguyên nhân: vi rút (hiếm khi là vi rút herpes gây mụn rộp, thủy đậu), muỗi truyền (viêm não Nhật Bản), hoặc hệ miễn dịch tấn công nhầm vào não."

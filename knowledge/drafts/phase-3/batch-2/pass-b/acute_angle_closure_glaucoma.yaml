@@ -1,0 +1,160 @@
+id: acute_angle_closure_glaucoma
+names:
+  vi: "Glôcôm góc đóng cơn cấp"
+  vi_common: ["Cơn tăng nhãn áp cấp"]
+  en: "Acute angle-closure glaucoma"
+codes:
+  icd10: "H40.2"
+  icd10_verified: false
+summary_vi:
+  - "Áp lực trong mắt tăng vọt đột ngột do đường thoát nước trong mắt bị đóng lại."
+  - "Thường đau nhức dữ dội một bên mắt lan lên nửa đầu, mắt đỏ, nhìn mờ, thấy quầng sáng quanh đèn."
+  - "Đây là cấp cứu về mắt: chậm điều trị có thể mất thị lực vĩnh viễn."
+urgency: 2
+cant_miss: true
+specialties: [ophthalmology, emergency]
+applicability:
+  age_groups: [adult_18_44, adult_45_64, elder_65_74, elder_75p]
+  reason_vi: "Cơn glôcôm góc đóng nguyên phát gần như chỉ gặp ở người lớn, chủ yếu từ 50 tuổi; ở trẻ em và thiếu niên rất hiếm."
+priors:
+  - complaint: headache
+    default: P6
+    by_age: { adult_45_64: P5, elder_65_74: P5, elder_75p: P4 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [lai-hkmj-2001, seah-archophthalmol-1997, park-jkms-2019, nhs-glaucoma]
+      locator: "Lai 2001 phần Results, bảng 1; Seah 1997 tóm tắt; Park 2019 phần Results; NHS Glaucoma"
+      reported: "Tỷ suất mắc cơn cấp 10,4/100.000/năm ở người Hoa từ 30 tuổi, 58,7/100.000/năm từ 70 tuổi (Hồng Kông); 12,2/100.000/năm từ 30 tuổi, nguy cơ gấp 9,1 lần từ 60 tuổi (Singapore); khoảng 6/100.000/năm từ 20 tuổi, đỉnh 70–79 tuổi (Hàn Quốc); đau đầu là triệu chứng lúc đến khám ở 36,1%"
+      note: "Chưa có số liệu Việt Nam; người Đông Á có nguy cơ cao (NHS: người gốc châu Á; Seah: người Hoa gấp 2,8 lần). App chưa có triệu chứng chính về mắt, nên phần lớn người bị cơn cấp sẽ chọn Đau đầu. Từ 75 tuổi (tỷ suất 30–60/100.000/năm theo Hồng Kông, đỉnh 75–79 tuổi theo Hàn Quốc) và vài nghìn lượt khám đau đầu trên 100.000 người mỗi năm, khoảng 0,3–0,7% người đau đầu là cơn glôcôm cấp: P4. 65–74 tuổi theo số liệu toàn quốc Hàn Quốc (thấp hơn Hồng Kông) khoảng 0,2%: để P5, mức thấp của khoảng, để prior không vượt đột quỵ (P4 ở tuổi này) khi phiên dừng sớm; 45–64 tuổi khoảng 0,1%: P5; 18–44 tuổi P6. Khi có nhóm triệu chứng chính về mắt (lô 5), cần giảm prior của Đau đầu. Cần bác sĩ duyệt."
+prior_modifiers:
+  - when: { sex: [female] }
+    factor: 1.5
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [seah-archophthalmol-1997, lai-hkmj-2001, park-jkms-2019]
+      locator: "Seah 1997 tóm tắt; Lai 2001 phần Results; Park 2019 phần Results"
+      reported: "Nữ có nguy cơ gấp 2,4 lần (Singapore), 3,8 lần (Hồng Kông), 2,56 lần (Hàn Quốc)"
+      note: "Đi cặp với hệ số 0,6 cho nam; tỉ số 2,5, gần với Singapore và Hàn Quốc."
+  - when: { sex: [male] }
+    factor: 0.6
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [seah-archophthalmol-1997, lai-hkmj-2001, park-jkms-2019]
+      locator: "Như hệ số cho nữ"
+      reported: "Như hệ số cho nữ."
+      note: "Đi cặp với hệ số 1,5 cho nữ."
+findings:
+  - finding: eye_pain_one_side
+    freq: very_frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [lai-hkmj-2001, byt-qd-40-2015, ihs-ichd3-2018, nhs-glaucoma]
+      locator: "Lai 2001 bảng 1; 40/QĐ-BYT bài Glôcôm góc đóng nguyên phát, mục 3a (tr. 78–79); ICHD-3 mục 11.3.1; NHS Glaucoma"
+      reported: "Đau nhức mắt 81,9% lúc đến khám; không có ca nào bị hai mắt cùng lúc (Hồng Kông)"
+      note: "40/QĐ-BYT: đột ngột đau nhức mắt, nhức quanh hố mắt lan lên nửa đầu cùng bên; ICHD-3: đau mắt và/hoặc quanh hốc mắt, đau đầu thường một bên. Ở người chọn Đau đầu, đau mắt có lẽ còn thường gặp hơn."
+  - finding: red_eyes
+    freq: very_frequent
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-40-2015, ihs-ichd3-2018, nhs-glaucoma]
+      locator: "40/QĐ-BYT mục 3a (mắt cương tụ đỏ); ICHD-3 mục 11.3.1 (cương tụ kết mạc); NHS Glaucoma (mắt đỏ)"
+      note: "Dấu hiệu thực thể gần như luôn có khi khám; người bệnh tự nhận thấy mắt đỏ ở phần lớn trường hợp. Không có tỷ lệ."
+  - finding: blurred_vision
+    freq: very_frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [lai-hkmj-2001, byt-qd-40-2015, ihs-ichd3-2018]
+      locator: "Lai 2001 bảng 1; 40/QĐ-BYT mục 3a (nhìn mờ như qua màn sương; thị lực giảm sút nhiều); ICHD-3 mục 11.3.1"
+      reported: "Giảm thị lực 86,1% lúc đến khám; 80,6% thị lực từ 20/200 trở xuống (Hồng Kông)"
+      note: "Cùng cụm thị giác với quầng sáng, mất thị lực."
+  - finding: halos_around_lights
+    freq: frequent
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-40-2015, nhs-glaucoma]
+      locator: "40/QĐ-BYT mục 3a (nhìn đèn có quầng xanh đỏ); NHS Glaucoma (vòng sáng nhiều màu quanh đèn)"
+      note: "Nằm trong nhóm triệu chứng điển hình của cơn cấp (40/QĐ-BYT); không có tỷ lệ. Người đang đau nhiều, nhìn mờ có thể không để ý, nên chọn frequent thay vì very_frequent."
+  - finding: vision_loss_or_double
+    freq: occasional
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [lai-hkmj-2001, byt-qd-40-2015]
+      locator: "Lai 2001 phần Results (thị lực); 40/QĐ-BYT mục 3a (nhìn mờ như qua màn sương, thị lực giảm sút nhiều)"
+      reported: "80,6% thị lực từ 20/200 trở xuống lúc đến khám (Hồng Kông)"
+      note: "Câu hỏi hỏi đột ngột mất một phần thị lực (khuyết thị trường) hoặc nhìn một thành hai; cơn glôcôm gây nhìn mờ như qua màn sương ở một mắt, đã được tính ở câu nhìn mờ (very_frequent, cùng cụm thị giác). Chỉ một phần người bệnh sẽ mô tả là mất thị lực, nên chọn occasional (bằng đột quỵ) để câu này không làm glôcôm vượt đột quỵ ở người cao tuổi đau đầu kèm mất thị lực đột ngột. Đã có quy tắc mức 2 cho mất thị lực đột ngột."
+  - finding: photophobia
+    freq: frequent
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-40-2015]
+      locator: "40/QĐ-BYT mục 3a (sợ ánh sáng, chói, chảy nước mắt)"
+      note: "Nguồn liệt kê trong triệu chứng cơn cấp; không có tỷ lệ. Ước lượng."
+  - finding: vomiting
+    freq: occasional
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [lai-hkmj-2001, byt-qd-40-2015, ihs-ichd3-2018, nhs-glaucoma]
+      locator: "Lai 2001 bảng 1; 40/QĐ-BYT mục 3a (có thể buồn nôn hoặc nôn); ICHD-3 mục 11.3.1"
+      reported: "Triệu chứng khác như buồn nôn, nôn 27,8% (Hồng Kông)"
+      note: "Buồn nôn, nôn có thể làm người bệnh và nhân viên y tế nghĩ tới bệnh tiêu hóa, đau nửa đầu."
+  - finding: headache_location
+    dist: { one_side: 0.50, both_sides: 0.04, forehead_face: 0.38, back_neck: 0.03, whole_head: 0.05 }
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [ihs-ichd3-2018, byt-qd-40-2015]
+      locator: "ICHD-3 mục 11.3.1 (đau đầu thường một bên); 40/QĐ-BYT mục 3a (quanh hố mắt, lan lên nửa đầu cùng bên)"
+      note: "Đau quanh mắt, trán cùng bên và nửa đầu; phân bố là ước lượng."
+  - finding: headache_severity
+    dist: { mild: 0.05, moderate: 0.30, severe: 0.65 }
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-40-2015, nhs-glaucoma]
+      locator: "40/QĐ-BYT mục 3a (khởi phát đột ngột, rầm rộ); NHS (đau mắt dữ dội)"
+      note: "Ước lượng."
+  - finding: headache_course
+    dist: { first_time: 0.75, recurrent_similar: 0.20, progressive: 0.05 }
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-40-2015]
+      locator: "40/QĐ-BYT mục 3a (thể bán cấp: những đợt nhìn mờ, quầng sáng, đau nhức nhẹ tự hết)"
+      note: "Phần lớn là cơn đầu tiên; một phần đã có những đợt bán cấp nhẹ hơn trước đó. Ước lượng."
+  - finding: headache_duration
+    dist: { lt_4h: 0.20, h4_72: 0.60, gt_3d: 0.20 }
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [lai-hkmj-2001, seah-archophthalmol-1997]
+      locator: "Lai 2001 phần Results; Seah 1997 tóm tắt"
+      reported: "68,1% đi khám trong 24 giờ, 11,1% sau hơn 1 tuần (Hồng Kông); một nửa đến khám sau 3 ngày trở lên (Singapore)"
+      note: "Phân bố theo thời điểm người dùng hỏi; ước lượng."
+warning_signs:
+  - eye_pain_one_side
+  - vision_loss_or_double
+  - red_eyes
+  - halos_around_lights
+  - persistent_vomiting
+self_care_vi:
+  - "Không tự nhỏ thuốc vào mắt và không chờ đến sáng hôm sau."
+  - "Người trên 40 tuổi nên khám mắt mỗi năm; người có bố mẹ, anh chị em bị glôcôm nên khám 6 tháng một lần."
+see_doctor_vi:
+  - "Đến ngay cơ sở cấp cứu hoặc bệnh viện có chuyên khoa mắt, kể cả ban đêm."
+  - "Không tự lái xe; nhờ người đưa đi."
+  - "Sau cơn cấp, mắt còn lại cũng cần được bác sĩ mắt khám và điều trị phòng ngừa."
+review:
+  status: draft
+  authors: ["agent:pass-b"]
+  updated: "2026-10-26"
+  notes_vi: "Lượt B (Giai đoạn 3, lô 2, phần b). Mức xử trí 2, không được bỏ sót, giữ như gợi ý: NHS 'Call 999 or go to A&E' khi triệu chứng glôcôm xuất hiện đột ngột; 40/QĐ-BYT: tổn thương thần kinh thị giác không hồi phục, phát hiện sớm và điều trị kịp thời là rất quan trọng; ICHD-3: nhãn áp trên 30 mmHg làm nguy cơ mất thị lực vĩnh viễn tăng mạnh. Đã có quy tắc rf_acute_glaucoma_signs (đau một bên mắt kèm đỏ mắt hoặc quầng sáng: mức 2). Đau nửa đầu cũng có thể đau quanh một mắt (Kelman 2005; lượt B thêm liên kết occasional cho đau nửa đầu), nên đỏ mắt, quầng sáng, nhìn mờ là điểm phân biệt chính. Điểm cần bác sĩ xem: (1) prior suy từ tỷ suất mắc ở Hồng Kông, Singapore, Hàn Quốc, chưa có số liệu Việt Nam; prior Đau đầu đang cao vì app chưa có triệu chứng chính về mắt; (2) chỉ có tỷ lệ triệu chứng từ một nghiên cứu (72 người, Hồng Kông); quầng sáng, đỏ mắt, sợ ánh sáng là chuyển từ mô tả; (3) chưa có câu hỏi về thuốc làm giãn đồng tử (thuốc cảm, thuốc ho; Lai 2001: một phần người bệnh đã dùng thuốc ho trước cơn) và tiền sử gia đình; (4) tên thường gọi 'thiên đầu thống', 'cườm nước' hay được dùng cho glôcôm nhưng chưa tìm được nguồn chính thức, nên chưa đưa vào (xem ghi chú ở bản mở rộng đau nửa đầu); (5) mã ICD-10 H40.2 chưa đối chiếu với bộ mã của Bộ Y tế."
