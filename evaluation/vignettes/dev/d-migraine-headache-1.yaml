@@ -1,0 +1,50 @@
+id: d-migraine-headache-1
+set: dev
+title_vi: "Nữ 27 tuổi, cơn đau nửa đầu quen thuộc, đau nhức quanh mắt phải, buồn nôn, sợ ánh sáng; mắt không đỏ"
+narrative_vi: "Chị V., 27 tuổi, nhân viên văn phòng ở Hà Nội, bị đau nửa đầu từ thời sinh viên, mỗi tháng 1–2 cơn giống nhau. Sáng nay sau một đêm thiếu ngủ, chị đau giật giật nửa đầu bên phải, đau nhức dữ dội quanh mắt phải, buồn nôn, sợ ánh sáng, sợ tiếng ồn, đi lại thì đau tăng. Đau đã khoảng 5 giờ. Mắt không đỏ, nhìn rõ, không thấy quầng sáng quanh đèn, trước cơn không thấy chớp sáng. Không sốt, không cứng gáy, không yếu tay chân, không nói khó. Chị không có thai, kinh nguyệt đều."
+patient:
+  age_years: 27
+  sex: female
+  region: north
+  month: 3
+complaint: headache
+answers:
+  eye_pain_one_side: present
+  red_eyes: absent
+  halos_around_lights: absent
+  blurred_vision: absent
+  vision_loss_or_double: absent
+  visual_aura: absent
+  headache_location: one_side
+  headache_character: throbbing
+  headache_severity: moderate
+  headache_course: recurrent_similar
+  headache_duration: h4_72
+  headache_worse_activity: present
+  headache_thunderclap: absent
+  headache_frequent: absent
+  nausea: present
+  vomiting: absent
+  photophobia: present
+  phonophobia: present
+  stress_poor_sleep: present
+  neck_stiffness: absent
+  confusion: absent
+  seizure_recent: absent
+  sudden_loss_of_balance: absent
+  es_stroke_signs: absent
+  fever: absent
+  nasal_congestion: absent
+  pregnant: absent
+  missed_period: absent
+  recent_childbirth: absent
+default_unmentioned: absent
+expected:
+  condition: migraine
+  acceptable: []
+  triage: 5
+source:
+  basis: "Đau nửa đầu không tiền triệu: cơn quen thuộc, một bên, theo nhịp mạch, vừa đến nặng, tăng khi vận động, buồn nôn, sợ ánh sáng và tiếng ồn (ICHD-3 mục 1.1); vị trí đau hay gặp nhất là vùng quanh mắt (Kelman 2005). Không có đỏ mắt, nhìn mờ, quầng sáng nên không nghĩ glôcôm cấp. Cơn quen thuộc không có dấu hiệu nguy hiểm: tự chăm sóc (NHS Migraine, mức 5)."
+  references: [ihs-ichd3-2018, kelman-headache-2005, nhs-migraine]
+author: "agent:pass-c"
+notes_vi: "Ca của bản mở rộng lô 2: đau quanh một mắt ở người đau nửa đầu, không có dấu hiệu glôcôm."

@@ -1,0 +1,50 @@
+id: d-cardiac-arrhythmia-palpitations-1
+set: dev
+title_vi: Nam 66 tuổi đã biết rung nhĩ, từ sáng tim đập nhanh, loạn nhịp, mạch 120
+narrative_vi: Ông Z., 66 tuổi, được chẩn đoán rung nhĩ kịch phát 2 năm trước, thỉnh thoảng có cơn. Từ sáng nay thấy tim đập nhanh, lộn xộn, đến giờ vẫn còn, hơi mệt khi đi lại. Máy đo huyết áp báo mạch 120 lần/phút. Không đau ngực, không khó thở, không choáng, không ngất. Không uống cà phê hay rượu bia.
+patient:
+  age_years: 66
+  sex: male
+  region: south
+  month: 12
+complaint: palpitations
+answers:
+  atrial_fibrillation_known: present
+  known_heart_disease: present
+  palpitation_rhythm: irregular
+  palpitation_duration: ongoing
+  palpitation_abrupt_onset: absent
+  pulse_measured: n100_150
+  similar_episodes_before: present
+  breathless_on_exertion: present
+  chest_pain_pressure: absent
+  breathing_difficulty: absent
+  fainting_or_near_fainting: absent
+  dizziness: absent
+  confusion: absent
+  drowsy_hard_to_wake: absent
+  cold_hands_feet: absent
+  severe_weakness: absent
+  neck_pounding: absent
+  panic_fear: absent
+  tremor: absent
+  cold_sweat: absent
+  weight_loss_unintended: absent
+  stimulant_intake: absent
+  heat_intolerance: absent
+  diabetes: absent
+  hypertension_known: present
+  perioral_tingling: absent
+  anemia_known: absent
+default_unmentioned: absent
+expected:
+  condition: cardiac_arrhythmia
+  acceptable: []
+  triage: 3
+source:
+  basis: "Cơn rung nhĩ ở người đã biết bệnh (Salbach 2025: khoảng 73% người đến cấp cứu vì rung nhĩ đã biết từ trước): hồi hộp không đều kéo dài, mạch 100–150, không có dấu hiệu nguy hiểm. NHS Atrial fibrillation: khám bác sĩ khẩn; gọi 999 hoặc đến cấp cứu khi kèm đau ngực, khó thở, ngất (không có). Mức 3."
+  references:
+    - nhs-atrial-fibrillation
+    - salbach-bmcem-2025
+    - esc-af-2024
+author: agent:pass-c

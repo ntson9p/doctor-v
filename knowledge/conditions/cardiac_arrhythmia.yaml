@@ -223,6 +223,18 @@ findings:
       basis: judgment
       sources: [bosner-bmcfampract-2018]
       note: "Chỉ lượt A có; lượt C giữ. Tính trong số người đã chóng mặt. Chóng mặt khi trở mình, nằm xuống, ngửa cổ là kiểu của bệnh tiền đình ngoại biên. Mức rare thấp hơn tỷ lệ nền 0,1. Ước lượng."
+  # ---------- Giai đoạn 3, lô 2 (lượt C): dấu hiệu mới của lô 2 ----------
+  - finding: atrial_fibrillation_known
+    freq: occasional
+    freq_by_complaint: { palpitations: frequent }
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [salbach-bmcem-2025, weber-amjmed-1996, raviele-europace-2011, nhs-atrial-fibrillation, esc-af-2024, esc-syncope-2018, ton-jcdd-2024]
+      locator: "Salbach 2025 kết quả; Weber 1996 (theo EHRA 2011); NHS Atrial fibrillation; ESC 2024 mục 3.3; ESC 2018 bảng 6; Ton 2024 tóm tắt"
+      reported: "27% người đến cấp cứu vì rung nhĩ là lần đầu phát hiện, tức khoảng 73% đã biết từ trước (Salbach); trong người hồi hộp: rung, cuồng nhĩ 16%, nhịp nhanh trên thất 10%, nhịp nhanh thất 2% (Weber)"
+      population: "Khoa cấp cứu ở Đức; trung tâm đại học ở Mỹ"
+      note: "Lượt C: hai lượt cùng frequent với Hồi hộp và occasional với Ngất; lệch một mức với Chóng mặt (A occasional, B frequent). Với Hồi hộp, từ 45 tuổi rung, cuồng nhĩ chiếm khoảng một nửa số rối loạn nhịp và khoảng ba phần tư người rung nhĩ đã biết bệnh, nên khoảng 35–50% trả lời 'Có': frequent (tăng khả năng khoảng 12 lần so với tỷ lệ nền 0,04, phù hợp với số liệu). Với Ngất và Chóng mặt, rối loạn nhịp ở người cao tuổi phần lớn là nhịp chậm (ESC 2018), nên chọn occasional như lượt A cho Chóng mặt (ngang nguồn, ước lượng). Áp dụng từ 45 tuổi; cùng cụm heart_history với bệnh tim đã biết. Cần bác sĩ duyệt."
 warning_signs: [chest_pain_pressure, breathing_difficulty, fainting_or_near_fainting, confusion, cold_hands_feet, transient_neuro_symptoms]
 self_care_vi:
   - "Khi đang hồi hộp mà vẫn tỉnh táo, ngồi hoặc nằm nghỉ, thở chậm."
@@ -240,5 +252,5 @@ review:
   authors: ["agent:pass-a", "agent:pass-b"]
   reconciler: "agent:pass-c"
   doctor_reviewer: null
-  updated: "2026-10-25"
-  notes_vi: "Lượt C (phần b) đối chiếu 21 liên kết và mở lại mọi nguồn được trích. Bệnh gồm rung, cuồng nhĩ, nhịp nhanh trên thất, nhịp nhanh thất, blốc tim, suy nút xoang; không gồm ngoại tâm thu đơn thuần (premature_beats). Mức xử trí 3, không thuộc nhóm không được bỏ sót: NHS khuyên khám bác sĩ khi hồi hộp tái lại, gọi 999 hoặc đến cấp cứu khi kèm đau ngực, khó thở, choáng, ngất (các quy tắc rf_palpitations_danger, rf_pulse_extreme, rf_syncope_* đã nâng mức). Bác sĩ cần xem: (1) prior của Ngất 45–64 tuổi (P2) và Chóng mặt 65–74 tuổi (P2) chọn mức thận trọng khi hai lượt lệch một mức; (2) bệnh gộp nhiều loại khác hẳn nhau (nhịp nhanh trên thất ở người trẻ, rung nhĩ và nhịp chậm ở người cao tuổi) nên các phân bố là hỗn hợp; (3) câu hỏi mạch cổ đập chưa hỏi 'nhanh và đều' nên mất phần lớn giá trị phân biệt (LR 177); (4) bệnh tim cấu trúc gây ngất chưa có trong cơ sở tri thức; (5) không có số liệu Việt Nam."
+  updated: "2026-10-27"
+  notes_vi: "Lượt C (phần b) đối chiếu 21 liên kết và mở lại mọi nguồn được trích. Bệnh gồm rung, cuồng nhĩ, nhịp nhanh trên thất, nhịp nhanh thất, blốc tim, suy nút xoang; không gồm ngoại tâm thu đơn thuần (premature_beats). Mức xử trí 3, không thuộc nhóm không được bỏ sót: NHS khuyên khám bác sĩ khi hồi hộp tái lại, gọi 999 hoặc đến cấp cứu khi kèm đau ngực, khó thở, choáng, ngất (các quy tắc rf_palpitations_danger, rf_pulse_extreme, rf_syncope_* đã nâng mức). Bác sĩ cần xem: (1) prior của Ngất 45–64 tuổi (P2) và Chóng mặt 65–74 tuổi (P2) chọn mức thận trọng khi hai lượt lệch một mức; (2) bệnh gộp nhiều loại khác hẳn nhau (nhịp nhanh trên thất ở người trẻ, rung nhĩ và nhịp chậm ở người cao tuổi) nên các phân bố là hỗn hợp; (3) câu hỏi mạch cổ đập chưa hỏi 'nhanh và đều' nên mất phần lớn giá trị phân biệt (LR 177); (4) bệnh tim cấu trúc gây ngất chưa có trong cơ sở tri thức; (5) không có số liệu Việt Nam. Giai đoạn 3 lô 2 (lượt C, 27/10/2026): thêm liên kết đã biết rung nhĩ (frequent với Hồi hộp, occasional với Ngất và Chóng mặt), mọi giá trị cũ giữ nguyên; nguồn mới Salbach 2025 đã mở lại qua API Europe PMC. Bác sĩ cần xem thêm: (6) tỷ lệ người rối loạn nhịp đã biết mình rung nhĩ suy từ một khoa cấp cứu ở Đức, chưa có số liệu Việt Nam; (7) câu rung nhĩ đã biết và bệnh tim đã biết cùng cụm heart_history (tương quan trung bình)."

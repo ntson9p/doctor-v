@@ -1,0 +1,49 @@
+id: d-heat-exhaustion-2
+set: dev
+title_vi: "Nữ 15 tuổi ngất khi đứng xếp hàng dưới nắng trưa ở trường, tỉnh lại ngay, còn mệt, khát"
+narrative_vi: "Em N., nữ, 15 tuổi, ở Biên Hòa. Trưa nay em đứng xếp hàng tập văn nghệ ngoài sân nắng gần 2 tiếng, uống ít nước. Em thấy nóng bừng, vã mồ hôi, buồn nôn, tối sầm mắt rồi ngã xuống, bất tỉnh chưa đến 1 phút. Bạn đưa em vào phòng mát, cho uống nước; em tỉnh táo hẳn, nói chuyện, đi lại bình thường, chỉ còn mệt, khát nhiều, không đau đầu. Không co giật, không đau ngực, không hồi hộp, không khó thở. Em chưa từng ngất. Em không có thai, chưa từng quan hệ tình dục, kinh nguyệt đều."
+patient:
+  age_years: 15
+  sex: female
+  region: south
+  month: 5
+complaint: syncope
+answers:
+  heat_exposure: present
+  syncope_trigger: standing_heat
+  syncope_warning: prodrome
+  not_recovered_after_faint: absent
+  headache: absent
+  nausea: present
+  vomiting: absent
+  cold_sweat: present
+  fatigue: present
+  dizziness: absent
+  fever: absent
+  confusion: absent
+  drowsy_hard_to_wake: absent
+  es_unresponsive_or_seizing: absent
+  seizure_recent: absent
+  chest_pain_pressure: absent
+  palpitations: absent
+  breathing_difficulty: absent
+  abdominal_pain: absent
+  black_stool: absent
+  vomiting_blood: absent
+  family_sudden_death: absent
+  similar_episodes_before: absent
+  diarrhea: absent
+  co_exposure: absent
+  diabetes: absent
+  pregnant: absent
+  missed_period: absent
+default_unmentioned: absent
+expected:
+  condition: heat_exhaustion
+  acceptable: [reflex_orthostatic_syncope]
+  triage: 4
+source:
+  basis: "Ngất do nóng (một thể của bệnh do nóng): ngất ngắn khi đứng lâu nơi nóng, có dấu hiệu báo trước, tỉnh lại ngay và hồi phục hoàn toàn (CDC NIOSH: Heat syncope; MSD Heat Exhaustion). NHS Heat: làm mát, uống nước, thường đỡ trong 30 phút; ESC 2018: ngất phản xạ có hoàn cảnh điển hình, hồi phục hoàn toàn, không có dấu hiệu nguy cơ cao thì không cần cấp cứu. Ngất lần đầu: đi khám trong vài ngày (NHS Fainting: khám bác sĩ khi ngất; mức 4, như các ca ngất phản xạ của bộ dev)."
+  references: [cdc-niosh-heat-illness, msd-heat-exhaustion, nhs-heat-exhaustion-heatstroke, esc-syncope-2018, nhs-fainting]
+author: "agent:pass-c"
+notes_vi: "Ca không điển hình: biểu hiện bằng ngất ở thiếu niên. Ngất phản xạ được chấp nhận vì hai bệnh chồng lấn (ngất khi đứng lâu nơi nóng)."

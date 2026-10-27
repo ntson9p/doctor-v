@@ -1,0 +1,15 @@
+id: traenka-neurology-2017
+type: primary_study
+title: "Cervical artery dissection in patients ≥60 years: Often painless, few mechanical triggers"
+publisher: Neurology 2017;88(14):1313–1320 (Traenka C và cộng sự)
+date: 2017-04
+url: https://europepmc.org/article/MED/28258079
+doi: 10.1212/WNL.0000000000003788
+pmid: "28258079"
+license_class: L3
+license_note: "Bản quyền nhà xuất bản: chỉ dùng dữ kiện kèm trích dẫn."
+default_tier: B
+accessed: 2026-10-27
+verified: true
+verified_by: agent:pass-c
+notes_vi: "Lượt C (Giai đoạn 3 lô 2 phần a, 27/10/2026) mở lại tóm tắt qua API Europe PMC. Đã đối chiếu: 177/2.391 người bóc tách (7,4%) từ 60 tuổi; nhóm này ít có sự kiện cơ học khởi phát (OR hiệu chỉnh 0,53)."

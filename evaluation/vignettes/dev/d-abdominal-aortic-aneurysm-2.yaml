@@ -1,0 +1,55 @@
+id: d-abdominal-aortic-aneurysm-2
+set: dev
+title_vi: Nam 68 tuổi chóng mặt, choáng khi đứng, đau lưng hông trái từ sáng, tay chân lạnh
+narrative_vi: Ông H., 68 tuổi, hút thuốc lào, bị tăng huyết áp. Từ sáng, cứ ngồi dậy hoặc đứng lên là choáng, tối sầm mắt vài giây, phải ngồi xuống; nằm yên thì đỡ. Kèm đau âm ỉ vùng hông lưng trái, không đau bụng nhiều. Người nhà thấy ông tái, sờ tay chân lạnh. Không thấy mọi vật quay, không nhìn đôi, không yếu tay chân, không nói khó, không đau đầu, không đau ngực, không khó thở, không sốt, không đi ngoài phân đen, không nôn. Chưa đo mạch, huyết áp.
+patient:
+  age_years: 68
+  sex: male
+  region: south
+  month: 6
+complaint: dizziness
+answers:
+  co_exposure: absent
+  dizziness_pattern: brief_episodes
+  fainting_or_near_fainting: present
+  dizziness_on_standing: present
+  vertigo_spinning: absent
+  flank_pain: present
+  abdominal_pain: absent
+  cold_hands_feet: present
+  severe_weakness: absent
+  vision_loss_or_double: absent
+  cannot_walk_unaided: absent
+  transient_neuro_symptoms: absent
+  headache: absent
+  chest_pain_pressure: absent
+  breathing_difficulty: absent
+  fever: absent
+  black_stool: absent
+  vomiting: absent
+  nausea: absent
+  diarrhea: absent
+  smoker: present
+  hypertension_known: present
+  bp_lowering_meds: present
+  diabetes: absent
+  known_heart_disease: absent
+  known_aaa: absent
+  hearing_loss_tinnitus: absent
+  palpitations: absent
+  syncope_trigger: standing_up
+  syncope_warning: prodrome
+  not_recovered_after_faint: absent
+default_unmentioned: absent
+expected:
+  condition: abdominal_aortic_aneurysm
+  acceptable: []
+  triage: 1
+source:
+  basis: "Phình động mạch chủ bụng vỡ biểu hiện không điển hình bằng choáng, đau lưng (van den Dries 2025: 10% gọi vì chóng mặt; Fernando 2022: đau lưng 53,6%, tụt huyết áp 30,9%). Người từ 60 tuổi đau hông lưng kèm da tái, tay chân lạnh: NHS gọi 999 (da tái hoặc xám), quy tắc rf_aaa_rupture_signs mức 1."
+  references:
+    - nhs-abdominal-aortic-aneurysm
+    - vandendries-ijem-2025
+    - fernando-aem-2022
+author: agent:pass-c
+notes_vi: "Ca không điển hình: triệu chứng chính là chóng mặt, không đau bụng; dễ bị coi là hạ huyết áp tư thế do thuốc."

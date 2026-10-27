@@ -1,0 +1,47 @@
+id: d-diabetic-ketoacidosis-1
+set: dev
+title_vi: Nam 24 tuổi tiểu đường tiêm insulin, khát nhiều, nôn, đau bụng, thở sâu, hơi thở mùi lạ
+narrative_vi: Anh C., 24 tuổi, bị tiểu đường từ năm 15 tuổi, tiêm insulin. Ba ngày nay bị cảm, ăn kém nên tự bỏ vài mũi insulin. Từ hôm qua khát nước nhiều, đi tiểu nhiều, mệt lả người, buồn nôn, nôn 4 lần, đau bụng khắp bụng. Người nhà thấy anh thở sâu, nhanh và hơi thở có mùi như trái cây chín. Máy đo đường huyết báo "HI". Anh vẫn tỉnh táo. Không tiêu chảy, không sốt.
+patient:
+  age_years: 24
+  sex: male
+  region: north
+  month: 1
+complaint: abdominal_pain
+answers:
+  diabetes: present
+  on_glucose_lowering_meds: present
+  glucose_measured: high
+  thirst_polyuria: present
+  vomiting: present
+  nausea: present
+  persistent_vomiting: absent
+  abd_pain_location: whole
+  abd_pain_onset: gradual
+  abd_pain_duration: h6_24
+  abd_pain_severe: absent
+  fatigue: present
+  breathing_difficulty: present
+  ketone_breath: present
+  fever: absent
+  diarrhea: absent
+  confusion: absent
+  drowsy_hard_to_wake: absent
+  severe_weakness: absent
+  cold_hands_feet: absent
+  cough: absent
+  chest_pain_pressure: absent
+  dysuria: absent
+  weight_loss_unintended: absent
+default_unmentioned: absent
+expected:
+  condition: diabetic_ketoacidosis
+  acceptable: []
+  triage: 2
+source:
+  basis: "Nhiễm toan ceton điển hình ở người đái tháo đường típ 1 bỏ insulin khi ốm: khát, tiểu nhiều, nôn, đau bụng, thở Kussmaul, hơi thở mùi ceton, đường huyết rất cao (3879/QĐ-BYT; 5481/QĐ-BYT Phần 7). NHS DKA: có triệu chứng mà không biết mức ceton thì đến cấp cứu hoặc gọi 999 (mức 2)."
+  references:
+    - byt-qd-3879-2014
+    - byt-qd-5481-2020
+    - nhs-diabetic-ketoacidosis
+author: agent:pass-c

@@ -1,0 +1,53 @@
+id: d-abdominal-aortic-aneurysm-3
+set: dev
+title_vi: Nam 74 tuổi từng bị sỏi thận, đột ngột đau dữ dội hông trái lan xuống bẹn, vã mồ hôi, da tái (dễ nhầm cơn đau quặn thận)
+narrative_vi: Ông K., 74 tuổi, hút thuốc, tăng huyết áp, 5 năm trước bị sỏi thận trái. Hai giờ trước đột ngột đau dữ dội hông lưng trái, lan ra bụng dưới trái và xuống bẹn, đau liên tục không dứt. Ông nghĩ sỏi thận tái phát. Ông vã mồ hôi lạnh, buồn nôn, người nhà thấy da tái, tay chân lạnh. Chưa ngất. Không sốt, không tiểu buốt, nước tiểu không đỏ, không nôn, không đau ngực.
+patient:
+  age_years: 74
+  sex: male
+  region: central
+  month: 9
+complaint: abdominal_pain
+answers:
+  abd_pain_severe: present
+  abd_pain_onset: sudden
+  abd_pain_duration: lt_6h
+  abd_pain_location: left_lower
+  abd_pain_radiates_groin: present
+  abd_pain_radiates_back: present
+  flank_pain: present
+  abd_pain_colicky: absent
+  kidney_stones_known: present
+  hematuria: absent
+  dysuria: absent
+  urinary_frequency: absent
+  cold_sweat: present
+  nausea: present
+  vomiting: absent
+  cold_hands_feet: present
+  fainting_or_near_fainting: absent
+  severe_weakness: absent
+  fever: absent
+  smoker: present
+  hypertension_known: present
+  known_aaa: absent
+  chest_pain_pressure: absent
+  breathing_difficulty: absent
+  diarrhea: absent
+  diabetes: absent
+  known_heart_disease: absent
+  confusion: absent
+  abdomen_hard_swollen: absent
+default_unmentioned: absent
+expected:
+  condition: abdominal_aortic_aneurysm
+  acceptable: []
+  triage: 1
+source:
+  basis: "Vỡ phình hay bị chẩn đoán nhầm nhất là cơn đau quặn niệu quản (Azhar 2014). Người cao tuổi hút thuốc, đau liên tục (không thành cơn), không tiểu máu, kèm vã mồ hôi, da tái, tay chân lạnh gợi ý mất máu. NHS: đau bụng hoặc lưng đột ngột dữ dội, da tái thì gọi 999 (mức 1)."
+  references:
+    - nhs-abdominal-aortic-aneurysm
+    - azhar-jet-2014
+    - vandendries-ijem-2025
+author: agent:pass-c
+notes_vi: Ca dễ nhầm với cơn đau quặn thận (renal_colic).

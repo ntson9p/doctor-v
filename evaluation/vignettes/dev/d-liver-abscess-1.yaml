@@ -1,0 +1,56 @@
+id: d-liver-abscess-1
+set: dev
+title_vi: Nam 56 tuổi tiểu đường, sốt cao rét run 9 ngày, đau tức dưới sườn phải
+narrative_vi: Ông E., 56 tuổi, bị tiểu đường 10 năm. Chín ngày nay sốt cao từng cơn, có lúc 39,5°C, kèm rét run, vã mồ hôi. Bốn ngày nay đau tức âm ỉ dưới sườn phải, đau tăng dần. Ăn kém, mệt. Không vàng da, không ho, không tiêu chảy, không tiểu buốt, không đau đầu nhiều, không phát ban.
+patient:
+  age_years: 56
+  sex: male
+  region: south
+  month: 4
+complaint: fever
+answers:
+  fever_max_temp: ge_39
+  fever_duration: gt_7d
+  chills_rigors: present
+  abdominal_pain: present
+  abd_pain_location: right_upper
+  abd_pain_onset: gradual
+  abd_pain_duration: d4_14
+  abd_pain_severe: absent
+  diabetes: present
+  loss_of_appetite: present
+  fatigue: present
+  jaundice: absent
+  cough: absent
+  sore_throat: absent
+  runny_nose: absent
+  headache: absent
+  rash_any: absent
+  diarrhea: absent
+  vomiting: absent
+  nausea: absent
+  dysuria: absent
+  myalgia: absent
+  breathing_difficulty: absent
+  confusion: absent
+  cold_hands_feet: absent
+  severe_weakness: absent
+  neck_stiffness: absent
+  persistent_vomiting: absent
+  bleeding_gums_nose: absent
+  gallstones_known: absent
+  abd_pain_radiates_right_shoulder: absent
+  malaria_area_exposure: absent
+  flood_mud_exposure: absent
+default_unmentioned: absent
+expected:
+  condition: liver_abscess
+  acceptable: []
+  triage: 3
+source:
+  basis: "Áp xe gan do vi khuẩn điển hình ở người đái tháo đường: sốt cao, rét run kéo dài, đau hạ sườn phải, không vàng da (Mai-Phan 2026: sốt 81,1%, đau hạ sườn phải 61,3%, đái tháo đường 50%; Yu 2022). Cần khám trong ngày để siêu âm gan, xét nghiệm (mức 3)."
+  references:
+    - maiphan-wjh-2026
+    - yu-idr-2022
+    - msd-amebiasis
+author: agent:pass-c

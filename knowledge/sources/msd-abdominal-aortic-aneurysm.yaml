@@ -1,0 +1,13 @@
+id: msd-abdominal-aortic-aneurysm
+type: reference
+title: Abdominal Aortic Aneurysms (AAA) (MSD Manual Professional Edition)
+publisher: Merck & Co. (MSD Manual); tác giả Mark A. Farber, Federico E. Parodi
+date: 2024-12
+url: https://www.msdmanuals.com/professional/cardiovascular-disorders/diseases-of-the-aorta-and-its-branches/abdominal-aortic-aneurysms-aaa
+license_class: L3
+license_note: "Bản quyền Merck & Co.: chỉ dùng dữ kiện kèm trích dẫn, không sao chép câu chữ."
+default_tier: C
+accessed: 2026-10-27
+verified: true
+verified_by: agent:pass-c
+notes_vi: "Lượt C (Giai đoạn 3 lô 2 phần a, 27/10/2026) mở lại trang web (tải bằng curl). Đã đối chiếu (rà soát 12/2024): 0,4–7,6% dân số, nam gấp 3 lần nữ, đỉnh 70–80 tuổi, hút thuốc là yếu tố nguy cơ mạnh nhất; đau sâu vùng thắt lưng – cùng; vỡ ở thành sau bên trái; phần lớn tử vong trước khi tới viện, khoảng 50% tử vong dù đã tới viện."

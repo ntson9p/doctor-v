@@ -1,0 +1,50 @@
+id: d-transient-ischemic-attack-dizziness-1
+set: dev
+title_vi: Nữ 71 tuổi rung nhĩ, hôm qua chóng mặt kèm nhìn đôi 20 phút rồi tự hết
+narrative_vi: Bà W., 71 tuổi, bị rung nhĩ 3 năm, đã tự ngừng thuốc chống đông vì sợ chảy máu. Hôm qua đang nấu cơm thì đột ngột chóng mặt, nhìn một thành hai, chân đi không vững, khoảng 20 phút thì hết hẳn. Hôm nay bình thường. Không đau đầu, không yếu tay chân, nói bình thường, không ngất, không đau ngực, không hồi hộp lúc đó.
+patient:
+  age_years: 71
+  sex: female
+  region: north
+  month: 10
+complaint: dizziness
+answers:
+  co_exposure: absent
+  dizziness_pattern: long_episodes
+  transient_neuro_symptoms: present
+  vision_loss_or_double: absent
+  cannot_walk_unaided: absent
+  vertigo_spinning: absent
+  dizziness_positional: absent
+  sudden_loss_of_balance: absent
+  atrial_fibrillation_known: present
+  known_heart_disease: present
+  antithrombotic_use: absent
+  hypertension_known: present
+  diabetes: absent
+  headache: absent
+  fainting_or_near_fainting: absent
+  chest_pain_pressure: absent
+  breathing_difficulty: absent
+  palpitations: absent
+  fever: absent
+  vomiting: absent
+  nausea: absent
+  hearing_loss_tinnitus: absent
+  similar_episodes_before: absent
+  black_stool: absent
+  confusion: absent
+  neck_injury_or_manipulation: absent
+default_unmentioned: absent
+expected:
+  condition: transient_ischemic_attack
+  acceptable:
+    - stroke
+  triage: 2
+source:
+  basis: "Cơn thiếu máu não thoáng qua tuần hoàn sau (chóng mặt, nhìn đôi, đi không vững, hết trong 20 phút) ở người rung nhĩ ngừng thuốc chống đông (Ton 2024: 15,1% người nhồi máu não, cơn thoáng qua ở Việt Nam có rung nhĩ). 3312/QĐ-BYT (2024): điều trị dự phòng ngay, tối ưu trong 24 giờ đầu; quy tắc rf_transient_neuro mức 2."
+  references:
+    - byt-qd-3312-2024
+    - nhs-tia
+    - ton-jcdd-2024
+author: agent:pass-c

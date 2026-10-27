@@ -1,0 +1,48 @@
+id: d-acute-angle-closure-glaucoma-3
+set: dev
+title_vi: "Nữ 52 tuổi có tiền sử đau nửa đầu, tối nay đau nhức mắt trái và nửa đầu trái, buồn nôn, sợ ánh sáng; mắt trái đỏ"
+narrative_vi: "Chị T., 52 tuổi, ở Huế. Chị bị đau nửa đầu từ trẻ, mỗi năm vài cơn. Tối nay chị đau đầu bên trái, buồn nôn, sợ ánh sáng, nghĩ là cơn đau nửa đầu nên uống thuốc giảm đau nhưng không đỡ. Lần này khác mọi lần: đau nhức dữ dội ngay trong mắt trái, mắt trái đỏ, nhìn mờ, nhìn đèn thấy vòng sáng nhiều màu. Trước cơn không thấy chớp sáng. Không sốt, không cứng gáy, không yếu tay chân. Chị không có thai, kinh nguyệt vẫn đều, không chậm kinh."
+patient:
+  age_years: 52
+  sex: female
+  region: central
+  month: 2
+complaint: headache
+answers:
+  eye_pain_one_side: present
+  red_eyes: present
+  blurred_vision: present
+  halos_around_lights: present
+  visual_aura: absent
+  vision_loss_or_double: absent
+  nausea: present
+  vomiting: absent
+  photophobia: present
+  phonophobia: absent
+  headache_location: one_side
+  headache_character: throbbing
+  headache_severity: severe
+  headache_course: first_time
+  headache_duration: lt_4h
+  headache_thunderclap: absent
+  headache_worse_activity: absent
+  headache_frequent: absent
+  neck_stiffness: absent
+  confusion: absent
+  seizure_recent: absent
+  sudden_loss_of_balance: absent
+  es_stroke_signs: absent
+  fever: absent
+  stress_poor_sleep: absent
+  hypertension_known: absent
+  pregnant: absent
+  missed_period: absent
+default_unmentioned: absent
+expected:
+  condition: acute_angle_closure_glaucoma
+  acceptable: []
+  triage: 2
+source:
+  basis: "Dễ nhầm với cơn đau nửa đầu (đau một bên, buồn nôn, sợ ánh sáng). Điểm gợi ý glôcôm cấp: đau nhức trong mắt, mắt đỏ, nhìn mờ, quầng sáng nhiều màu quanh đèn, đau kiểu mới (40/QĐ-BYT mục 3a; NHS Glaucoma; ICHD-3 mục 11.3.1). Đến cấp cứu ngay (rf_acute_glaucoma_signs, mức 2)."
+  references: [byt-qd-40-2015, nhs-glaucoma, ihs-ichd3-2018]
+author: "agent:pass-c"

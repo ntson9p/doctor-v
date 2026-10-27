@@ -1,0 +1,57 @@
+id: d-heat-exhaustion-3
+set: dev
+title_vi: "Nam 28 tuổi chạy bộ giữa trưa hè ở Hà Nội, đau đầu, chóng mặt, buồn nôn, người nóng, vẫn tỉnh táo"
+narrative_vi: "Anh Q., 28 tuổi, ở Hà Nội. Trưa nay trời 38°C, anh chạy bộ 10 km. Về nhà anh đau đầu vùng trán, chóng mặt, buồn nôn, mệt, vã mồ hôi đầm đìa, người nóng, đo nách 37,8°C, chuột rút ở bắp chân. Anh vẫn tỉnh táo, nói chuyện bình thường, tự đi lại vững, không ngất. Không đau ngực, không khó thở. Anh chưa từng đau đầu kiểu này. Không có bệnh nền."
+patient:
+  age_years: 28
+  sex: male
+  region: north
+  month: 7
+complaint: headache
+answers:
+  heat_exposure: present
+  headache_course: first_time
+  headache_duration: lt_4h
+  headache_severity: moderate
+  headache_location: forehead_face
+  headache_thunderclap: absent
+  dizziness: present
+  nausea: present
+  vomiting: absent
+  cold_sweat: present
+  fatigue: present
+  myalgia: present
+  fever: present
+  fever_max_temp: lt_38
+  fever_duration: d1_2
+  confusion: absent
+  drowsy_hard_to_wake: absent
+  seizure_recent: absent
+  sudden_loss_of_balance: absent
+  fainting_or_near_fainting: absent
+  severe_weakness: absent
+  neck_stiffness: absent
+  vision_loss_or_double: absent
+  eye_pain_one_side: absent
+  es_stroke_signs: absent
+  breathing_difficulty: absent
+  cold_hands_feet: absent
+  photophobia: absent
+  cough: absent
+  sore_throat: absent
+  runny_nose: absent
+  stress_poor_sleep: absent
+  nasal_congestion: absent
+  malaria_area_exposure: absent
+  bush_exposure: absent
+  dengue_nearby: absent
+  flood_mud_exposure: absent
+default_unmentioned: absent
+expected:
+  condition: heat_exhaustion
+  acceptable: []
+  triage: 5
+source:
+  basis: "Dễ nhầm với sốc nhiệt: cùng phơi nắng, gắng sức, người nóng, nhưng tỉnh táo, nói năng bình thường, đi lại vững, ra nhiều mồ hôi, chuột rút: kiệt sức do nóng (NHS Heat exhaustion and heatstroke; MSD: tri giác bình thường là điểm phân biệt chính, thân nhiệt nếu tăng thường không quá 40°C). NHS: làm mát, uống nước, thường đỡ trong 30 phút (mức 5)."
+  references: [nhs-heat-exhaustion-heatstroke, msd-heat-exhaustion, msd-heatstroke]
+author: "agent:pass-c"

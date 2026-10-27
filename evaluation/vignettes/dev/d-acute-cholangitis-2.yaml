@@ -1,0 +1,54 @@
+id: d-acute-cholangitis-2
+set: dev
+title_vi: Nữ 82 tuổi sốt, tức nhẹ bụng trên, người nhà thấy vàng mắt, không rét run
+narrative_vi: Cụ X., 82 tuổi, mổ sỏi mật 10 năm trước. Hôm qua cụ sốt khoảng 38,5°C, ăn kém, mệt. Cụ chỉ kêu tức nhẹ vùng trên rốn. Sáng nay con cháu thấy lòng trắng mắt cụ vàng. Không rét run, không nôn, không tiêu chảy, không ho, không tiểu buốt. Cụ vẫn nhận ra người nhà, nói chuyện bình thường.
+patient:
+  age_years: 82
+  sex: female
+  region: central
+  month: 2
+complaint: fever
+answers:
+  fever_max_temp: t38_39
+  fever_duration: d1_2
+  chills_rigors: absent
+  abdominal_pain: present
+  abd_pain_location: epigastric
+  abd_pain_severe: absent
+  abd_pain_duration: d1_3
+  jaundice: present
+  gallstones_known: present
+  loss_of_appetite: present
+  fatigue: present
+  nausea: absent
+  vomiting: absent
+  diarrhea: absent
+  cough: absent
+  sore_throat: absent
+  runny_nose: absent
+  headache: absent
+  rash_any: absent
+  dysuria: absent
+  confusion: absent
+  drowsy_hard_to_wake: absent
+  breathing_difficulty: absent
+  cold_hands_feet: absent
+  severe_weakness: absent
+  neck_stiffness: absent
+  persistent_vomiting: absent
+  bleeding_gums_nose: absent
+  abdomen_hard_swollen: absent
+  previous_abdominal_surgery: present
+default_unmentioned: absent
+expected:
+  condition: acute_cholangitis
+  acceptable: []
+  triage: 2
+source:
+  basis: "Người rất cao tuổi viêm đường mật hay có biểu hiện kín đáo: sốt vừa, đau nhẹ, không rét run; vàng mắt kèm sốt và đau bụng vẫn là tam chứng Charcot (Wada 2007; Kiriyama 2012: người cao tuổi đau bụng ít hơn). Đã mổ sỏi mật vẫn có thể có sỏi ống mật. Quy tắc rf_cholangitis_triad mức 2."
+  references:
+    - wada-jhbps-2007
+    - kiriyama-jhbps-2012
+    - msd-choledocholithiasis-cholangitis
+author: agent:pass-c
+notes_vi: "Ca không điển hình: người rất cao tuổi, triệu chứng chính là sốt, đau nhẹ."

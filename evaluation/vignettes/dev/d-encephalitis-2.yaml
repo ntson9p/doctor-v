@@ -1,0 +1,47 @@
+id: d-encephalitis-2
+set: dev
+title_vi: "Nam 55 tuổi ở Hà Nội, sốt, đau đầu 4 ngày, người nhà thấy hay quên, nói năng lạ"
+narrative_vi: "Ông T., 55 tuổi, ở Hà Nội. Bốn ngày nay ông sốt 38,5°C, đau đầu cả đầu mức vừa, chưa từng đau kiểu này. Hai ngày nay vợ thấy ông hay quên chuyện vừa nói, gọi nhầm tên con, có lúc nói những câu không đâu vào đâu, không biết đang ở đâu. Ông vẫn tự đi lại được, chưa co giật, không li bì. Cổ cúi được. Không ho, không sổ mũi, không nôn, không nổi ban. Không méo miệng, không yếu tay chân. Không có bệnh nền, không phơi nắng, không lội nước."
+patient:
+  age_years: 55
+  sex: male
+  region: north
+  month: 11
+complaint: headache
+answers:
+  fever: present
+  fever_max_temp: t38_39
+  fever_duration: d3_5
+  headache_course: first_time
+  headache_duration: gt_3d
+  headache_severity: moderate
+  headache_location: whole_head
+  headache_thunderclap: absent
+  confusion: present
+  drowsy_hard_to_wake: absent
+  seizure_recent: absent
+  neck_stiffness: absent
+  es_stroke_signs: absent
+  es_unresponsive_or_seizing: absent
+  vision_loss_or_double: absent
+  sudden_loss_of_balance: absent
+  vomiting: absent
+  nausea: absent
+  rash_any: absent
+  cough: absent
+  runny_nose: absent
+  heat_exposure: absent
+  flood_mud_exposure: absent
+  hypertension_known: absent
+  diabetes: absent
+  immunocompromised: absent
+default_unmentioned: absent
+expected:
+  condition: encephalitis
+  acceptable: []
+  triage: 1
+source:
+  basis: "Viêm não do vi rút Herpes simplex ở người lớn: khởi phát với sốt, đau đầu, thay đổi tính cách, mất trí nhớ (5642/QĐ-BYT, bài Viêm não do Herpes simplex, mục 3.1); bệnh tản phát, không theo mùa. NHS Encephalitis: lú lẫn, thay đổi tính cách, hành vi thì gọi 999 (mức 1)."
+  references: [byt-qd-5642-2015, nhs-encephalitis, ngan-bmcinfectdis-2024]
+author: "agent:pass-c"
+notes_vi: "Ca không điển hình: người lớn, viêm não do herpes, biểu hiện bằng thay đổi trí nhớ, hành vi hơn là li bì, co giật."

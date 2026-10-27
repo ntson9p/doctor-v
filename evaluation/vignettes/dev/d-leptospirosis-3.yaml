@@ -1,0 +1,43 @@
+id: d-leptospirosis-3
+set: dev
+title_vi: "Nữ 30 tuổi ở Cần Thơ, tháng 9, sốt 3 ngày, đau đầu, đau mỏi người, đỏ mắt, mới lội ruộng ngập"
+narrative_vi: "Chị L., 30 tuổi, ở Cần Thơ. Khoảng 2 tuần trước chị lội ruộng ngập nước để gặt lúa. Ba ngày nay chị sốt 39°C, đau đầu, đau mỏi khắp người, hai bắp chân đau nhiều, mắt đỏ. Chị nghĩ mình bị sốt xuất huyết vì đang mùa mưa. Không đau sau hốc mắt, không chảy máu chân răng, không nổi chấm đỏ, không đau bụng, không nôn. Không ho, không sổ mũi. Chị không có thai, kinh nguyệt đều. Không rõ quanh nhà có ai bị sốt xuất huyết không."
+patient:
+  age_years: 30
+  sex: female
+  region: south
+  month: 9
+complaint: fever
+answers:
+  fever_max_temp: ge_39
+  fever_duration: d3_5
+  headache: present
+  headache_severity: moderate
+  myalgia: present
+  calf_pain: present
+  red_eyes: present
+  flood_mud_exposure: present
+  retro_orbital_pain: absent
+  bleeding_gums_nose: absent
+  rash_any: absent
+  abdominal_pain: absent
+  vomiting: absent
+  persistent_vomiting: absent
+  jaundice: absent
+  decreased_urine: absent
+  breathing_difficulty: absent
+  cough: absent
+  runny_nose: absent
+  sore_throat: absent
+  dengue_nearby: unknown
+  pregnant: absent
+  missed_period: absent
+default_unmentioned: absent
+expected:
+  condition: leptospirosis
+  acceptable: []
+  triage: 3
+source:
+  basis: "Dễ nhầm với sốt xuất huyết (WHO 2003: bệnh dễ bị nhầm với sốt xuất huyết; Levett 2001: đau đầu giống sốt xuất huyết). Điểm gợi ý Leptospira: lội ruộng ngập trong tháng qua, đau nhiều bắp chân, đỏ kết mạc, không ban, không chảy máu. Chưa có dấu hiệu thể nặng: khám trong 24 giờ (mức 3)."
+  references: [who-leptospirosis-2003, levett-cmr-2001, cdc-leptospirosis-clinical]
+author: "agent:pass-c"

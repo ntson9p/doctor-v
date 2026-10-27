@@ -147,6 +147,28 @@ findings:
       sources: [byt-qd-3312-2024, kerber-stroke-2006]
       locator: "3312/QĐ-BYT (2024) bài 1, thang ABCD2 (huyết áp từ 140/90 mmHg: 1 điểm)"
       note: "Trung bình hai lượt (lệch 0,03). Tăng huyết áp là yếu tố nguy cơ chính (72%, Kerber 2006); lần đo gần nhất có thể trước cơn, nên giữ 35% cho 'dưới 140/90'. Ước lượng."
+  # ---------- Giai đoạn 3, lô 2 (lượt C): dấu hiệu mới của lô 2 ----------
+  - finding: atrial_fibrillation_known
+    freq: occasional
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [ton-jcdd-2024, phong-jcm-2023, kerber-stroke-2006, nhs-tia]
+      locator: "Ton 2024 tóm tắt; Phong 2023 tóm tắt; Kerber 2006 bảng 1; NHS TIA (yếu tố nguy cơ)"
+      reported: "Rung nhĩ (đã biết hoặc phát hiện lúc nhập viện) ở 15,1% người nhồi máu não hoặc cơn thoáng qua tại 66 bệnh viện Việt Nam (Ton), 18,1% tại Bệnh viện Bạch Mai (Phong); 6% ở người đột quỵ hoặc cơn thoáng qua đến cấp cứu vì chóng mặt (Kerber)"
+      population: "Người nhồi máu não, cơn thiếu máu não thoáng qua nằm viện ở Việt Nam; cấp cứu ở Mỹ"
+      note: "Hai lượt cùng occasional, như bệnh đột quỵ. Áp dụng từ 45 tuổi. Tỷ lệ đã biết từ trước khoảng 8–15%; mức occasional làm 'Có' tăng khả năng khoảng 5 lần (số liệu gợi ý 2–3 lần), mức rare thấp hơn tỷ lệ nền 0,04 nên không dùng. Cùng cụm heart_history với bệnh tim đã biết."
+  - finding: neck_injury_or_manipulation
+    freq: rare
+    above_leak_ok: true
+    freq_by_age: { teen_13_17: occasional, adult_18_44: occasional }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [engelter-neurology-2013, debette-lancetneurol-2009, traenka-neurology-2017, biller-stroke-2014, rothwell-stroke-2001]
+      locator: "Engelter 2013, Debette 2009, Traenka 2017, Biller 2014, Rothwell 2001: tóm tắt"
+      reported: "Chấn thương cổ trong tháng trước ở 40,5% người bóc tách động mạch cổ, 88% là nhẹ (Engelter); chỉ 7,4% người bóc tách từ 60 tuổi, ít có sự kiện cơ học khởi phát (Traenka)"
+      note: "Như bệnh đột quỵ: rare (above_leak_ok, gần trung tính) từ 45 tuổi, occasional ở 13–44 tuổi; bỏ mức riêng cho 5–12 tuổi của lượt B vì không có số liệu ở trẻ em. Bóc tách động mạch cổ thường biểu hiện bằng đột quỵ hoặc cơn thiếu máu não thoáng qua (Debette, Biller). Cần bác sĩ duyệt."
 warning_signs: [es_stroke_signs, transient_neuro_symptoms, vision_loss_or_double, cannot_walk_unaided, headache_thunderclap, confusion]
 self_care_vi:
   - "Đi cấp cứu ngay, kể cả khi các triệu chứng đã tự hết."
@@ -164,5 +186,5 @@ review:
   authors: ["agent:pass-a", "agent:pass-b"]
   reconciler: "agent:pass-c"
   doctor_reviewer: null
-  updated: "2026-10-25"
-  notes_vi: "Lượt C đã đối chiếu 13 liên kết và mở lại mọi nguồn được trích. Mức xử trí 2 và 'không được bỏ sót' (hai lượt giống nhau): 3312/QĐ-BYT (2024) bài 1: nguy cơ tái phát sớm rất cao, điều trị dự phòng ngay, tối ưu trong 24 giờ đầu; NHS TIA: gọi 999, khám chuyên khoa trong 24 giờ kể từ khi khởi phát, kể cả khi triệu chứng đã hết. Không chọn mức 1 vì ca điển hình đã hết triệu chứng; còn triệu chứng thì màn sàng lọc 'dấu hiệu đột quỵ' và bệnh đột quỵ (mức 1) xử trí. Mã G45.9 và tên chính thức chưa đối chiếu được với bảng ICD-10 của Bộ Y tế. Bác sĩ cần xem: (1) prior suy từ số liệu cấp cứu ở Mỹ, hạ cho tuyến ban đầu; P4 từ 45 tuổi làm người chóng mặt từng cơn không do tư thế dễ được khuyên đi cấp cứu (ngưỡng 'không được bỏ sót' 1%, từ 75 tuổi 0,5%), phù hợp GRACE-3 nhưng cần xem tỷ lệ khuyên quá mức; (2) cơn thoáng qua tuần hoàn sau chỉ có chóng mặt (Paul 2013) không có triệu chứng nào trong câu transient_neuro_symptoms, nên liên kết này chỉ để frequent; (3) hệ số nam 1,4, nữ 0,75 lấy từ một nghiên cứu cấp cứu ở Mỹ; (4) câu transient_neuro_symptoms gộp 7 ngày, chưa tách trong 24 giờ (đề xuất của lượt R); (5) choáng như sắp ngất đổi từ rare thành occasional vì tỷ lệ nền mới."
+  updated: "2026-10-27"
+  notes_vi: "Lượt C đã đối chiếu 13 liên kết và mở lại mọi nguồn được trích. Mức xử trí 2 và 'không được bỏ sót' (hai lượt giống nhau): 3312/QĐ-BYT (2024) bài 1: nguy cơ tái phát sớm rất cao, điều trị dự phòng ngay, tối ưu trong 24 giờ đầu; NHS TIA: gọi 999, khám chuyên khoa trong 24 giờ kể từ khi khởi phát, kể cả khi triệu chứng đã hết. Không chọn mức 1 vì ca điển hình đã hết triệu chứng; còn triệu chứng thì màn sàng lọc 'dấu hiệu đột quỵ' và bệnh đột quỵ (mức 1) xử trí. Mã G45.9 và tên chính thức chưa đối chiếu được với bảng ICD-10 của Bộ Y tế. Bác sĩ cần xem: (1) prior suy từ số liệu cấp cứu ở Mỹ, hạ cho tuyến ban đầu; P4 từ 45 tuổi làm người chóng mặt từng cơn không do tư thế dễ được khuyên đi cấp cứu (ngưỡng 'không được bỏ sót' 1%, từ 75 tuổi 0,5%), phù hợp GRACE-3 nhưng cần xem tỷ lệ khuyên quá mức; (2) cơn thoáng qua tuần hoàn sau chỉ có chóng mặt (Paul 2013) không có triệu chứng nào trong câu transient_neuro_symptoms, nên liên kết này chỉ để frequent; (3) hệ số nam 1,4, nữ 0,75 lấy từ một nghiên cứu cấp cứu ở Mỹ; (4) câu transient_neuro_symptoms gộp 7 ngày, chưa tách trong 24 giờ (đề xuất của lượt R); (5) choáng như sắp ngất đổi từ rare thành occasional vì tỷ lệ nền mới. Giai đoạn 3 lô 2 (lượt C, 27/10/2026): thêm 2 liên kết với dấu hiệu mới, mọi giá trị cũ giữ nguyên, mọi nguồn mới đã mở lại qua API Europe PMC: đã biết rung nhĩ (occasional) và bẻ, nắn cổ hoặc chấn thương cổ tháng qua (rare từ 45 tuổi, occasional ở 13–44 tuổi). Bác sĩ cần xem thêm: (6) rung nhĩ đã biết làm 'Có' tăng khả năng khoảng 5 lần, mạnh hơn số liệu; (7) chưa có số liệu cơn thiếu máu não thoáng qua do bóc tách động mạch cổ ở người Việt trẻ tuổi; (8) số liệu 'rung nhĩ 6%' của Kerber 2006 ở liên kết bệnh tim đã biết nay đã có câu hỏi riêng (cùng cụm heart_history)."

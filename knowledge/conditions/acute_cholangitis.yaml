@@ -1,0 +1,178 @@
+id: acute_cholangitis
+names:
+  vi: "Viêm đường mật cấp"
+  vi_common: ["Nhiễm trùng đường mật", "Viêm đường mật do sỏi", "Sỏi ống mật chủ có sốt"]
+  en: "Acute cholangitis"
+codes:
+  icd10: "K83.0"
+  icd10_verified: false
+  mondo: "MONDO:0001930"
+summary_vi:
+  - "Đường dẫn mật bị tắc, thường do sỏi, rồi bị nhiễm khuẩn."
+  - "Thường sốt cao, rét run, đau dưới sườn phải hoặc vùng trên rốn; có thể vàng da, vàng mắt."
+  - "Bệnh có thể chuyển nhanh thành nhiễm khuẩn huyết, nên cần đến cấp cứu để được điều trị thông đường mật."
+urgency: 2
+cant_miss: true
+specialties: [gastroenterology, general_surgery, emergency]
+priors:
+  - complaint: abdominal_pain
+    default: P5
+    by_age: { infant_0_2m: P6, child_2m_5y: P6, child_5_12: P6, teen_13_17: P6, adult_45_64: P4, elder_65_74: P4, elder_75p: P4 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [hue-tag-2025, dang-life-2026, viniol-fampract-2014, kiriyama-jhbps-2012, kimura-jhbps-2007, cervellin-atm-2016]
+      locator: "Hue 2025 bảng 1; Dang 2026 kết quả; Viniol 2014 tóm tắt; Kiriyama 2012 bảng 1; Kimura 2007 phần dịch tễ"
+      reported: "708 người viêm đường mật do sỏi được nội soi mật tụy ngược dòng ở một bệnh viện tuyến cuối Hà Nội (Hue); tuổi trung bình 60,1, 49,4% từ 60 tuổi (Dang); bệnh mật – tụy 4,0% người đau bụng ở chăm sóc ban đầu (Viniol)"
+      population: "Bệnh viện ở Việt Nam, Trung Quốc, Nhật Bản; chăm sóc ban đầu ở châu Âu"
+      note: "Hai lượt khai báo khác cách nhưng cùng mức theo từng nhóm tuổi: P4 từ 45 tuổi, P5 ở 18–44 tuổi, P6 ở trẻ em. Bệnh mật – tụy chiếm khoảng 4% người đau bụng ở chăm sóc ban đầu, viêm đường mật chỉ là một phần và chủ yếu ở người từ 45 tuổi: ước 0,2–1%, thấp hơn viêm túi mật cấp một mức. Ở Việt Nam sỏi ống mật chủ, sỏi trong gan và giun chui ống mật hay gặp hơn phương Tây (Kimura: giun đũa là nguyên nhân ở Đông Nam Á). Cần bác sĩ duyệt."
+  - complaint: fever
+    default: P5
+    by_age: { infant_0_2m: P6, child_2m_5y: P6, child_5_12: P6, teen_13_17: P6, adult_18_44: P6, elder_65_74: P4, elder_75p: P4 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [wada-jhbps-2007, hue-tag-2025, dang-life-2026]
+      locator: "Wada 2007 bảng 1; Hue 2025; Dang 2026 kết quả"
+      reported: "Sốt gặp ở tới 80% hoặc hơn người viêm đường mật cấp (Wada); 49,4% từ 60 tuổi, tuổi trung bình 60,1 (Dang)"
+      note: "Lượt C: hai lượt cùng P6 ở trẻ em, P5 ở 45–64 tuổi, P4 từ 65 tuổi; lệch một mức ở 18–44 tuổi (A P6, B P5). Chọn P6 của lượt A: người bệnh chủ yếu từ 40 tuổi (Dang 2026), trong khi người trẻ sốt chủ yếu do vi rút, sốt xuất huyết; ước dưới 0,02%. Mỗi bệnh 'không được bỏ sót' cộng vào ngưỡng 1% của người sốt nên không đặt cao hơn số liệu. Người cao tuổi: viêm đường mật là nguồn nhiễm khuẩn huyết hay gặp, P4. Cần bác sĩ duyệt."
+findings:
+  - finding: fever
+    freq: very_frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [wada-jhbps-2007, kiriyama-jhbps-2012, msd-choledocholithiasis-cholangitis]
+      locator: "Wada 2007 phần biểu hiện lâm sàng, bảng 1"
+      reported: "Sốt và đau bụng mỗi biểu hiện tới 80% hoặc hơn; sốt 93,9% trong loạt 99 ca của Boey (Wada bảng 1)"
+      population: "Các loạt ca ở bệnh viện"
+      note: "Hai lượt giống nhau. Có ý nghĩa với Đau bụng (với Sốt là dấu hiệu ngầm định). Người cao tuổi có thể sốt nhẹ hoặc không sốt nên không chọn almost_always."
+  - finding: chills_rigors
+    freq: frequent
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [wada-jhbps-2007, kiriyama-jhbps-2012, msd-choledocholithiasis-cholangitis]
+      locator: "Wada 2007, Kiriyama 2012 (tiêu chuẩn sốt và/hoặc rét run)"
+      note: "Hai lượt giống nhau. Tính trong số người đã sốt; không có tỷ lệ riêng, ước khoảng một nửa (tỷ lệ nền 0,2)."
+  - finding: fever_max_temp
+    dist: { lt_38: 0.135, t38_39: 0.40, ge_39: 0.465 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [kiriyama-jhbps-2012]
+      locator: "Kiriyama 2012 (sốt từ 39°C là một tiêu chuẩn mức độ trung bình)"
+      note: "Trung bình hai lượt. Tính trong số người đã sốt. Ước lượng."
+  - finding: fever_duration
+    dist: { d1_2: 0.61, d3_5: 0.285, d6_7: 0.06, gt_7d: 0.045 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [wada-jhbps-2007, hue-tag-2025]
+      note: "Trung bình hai lượt. Bệnh cấp, sốt cao kèm rét run làm người bệnh đi khám sớm; sốt hơn một tuần gợi ý áp xe gan hơn. Ước lượng."
+  - finding: jaundice
+    freq: frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [hue-tag-2025, wada-jhbps-2007]
+      locator: "Hue 2025 bảng 1; Wada 2007 phần biểu hiện lâm sàng"
+      reported: "Vàng da 55,8% và 49,8% ở hai nhóm (708 người, Hue); 60–70% (Wada)"
+      note: "Hai lượt giống nhau. Dấu hiệu phân biệt mạnh nhất với viêm túi mật, áp xe gan, sốt do vi rút. Vàng da nhẹ khó tự nhận ra nhưng vẫn trong mức frequent. Tỷ lệ nền 1%. Sốt kèm vàng da và đau bụng đã có quy tắc rf_cholangitis_triad (mức 2)."
+  - finding: abdominal_pain
+    freq: very_frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [hue-tag-2025, wada-jhbps-2007, kiriyama-jhbps-2012]
+      locator: "Hue 2025 bảng 1; Wada 2007; Kiriyama 2012 bảng 1"
+      reported: "Đau bụng 89% và 87,1% (Hue); tới 80% hoặc hơn (Wada); 54,8% ở Nhật Bản, nơi nhiều ca do u gây tắc mật, thường không đau (Kiriyama)"
+      note: "Hai lượt giống nhau. Có ý nghĩa với Sốt. Ở Việt Nam phần lớn do sỏi, đau gặp ở gần 90%."
+  - finding: abd_pain_location
+    dist: { epigastric: 0.315, right_upper: 0.52, left_upper: 0.02, periumbilical: 0.04, right_lower: 0.025, left_lower: 0.01, suprapubic: 0.01, whole: 0.06 }
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [wada-jhbps-2007, kiriyama-jhbps-2012]
+      locator: "Wada 2007 bảng 3 (đau hạ sườn phải hoặc bụng trên)"
+      note: "Trung bình hai lượt. Ước lượng."
+  - finding: abd_pain_duration
+    dist: { lt_6h: 0.10, h6_24: 0.30, d1_3: 0.39, d4_14: 0.16, gt_2w: 0.05 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [wada-jhbps-2007, hue-tag-2025]
+      note: "Trung bình hai lượt. Thường đau vài giờ đến vài ngày rồi mới sốt, vàng da. Ước lượng."
+  - finding: abd_pain_onset
+    dist: { sudden: 0.35, gradual: 0.65 }
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [msd-choledocholithiasis-cholangitis]
+      note: "Chỉ lượt B có; lượt C giữ (gần phân bố nền). Sỏi kẹt có thể đau đột ngột như cơn đau quặn mật; nhiều người đau tăng dần cùng sốt. Ước lượng."
+  - finding: abd_pain_radiates_right_shoulder
+    freq: occasional
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [msd-choledocholithiasis-cholangitis, msd-acute-cholecystitis]
+      note: "Hai lượt giống nhau. Đau đường mật có thể lan lên vai phải; ước 20% (tỷ lệ nền 5%). Cùng cụm pain_radiation."
+  - finding: abd_pain_severe
+    freq: occasional
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [msd-choledocholithiasis-cholangitis]
+      note: "Chỉ lượt B có; lượt C giữ, như viêm túi mật cấp. Thường đau vừa; ước 20%. Sốt kèm đau bụng dữ dội đã có quy tắc mức 2."
+  - finding: gallstones_known
+    freq: frequent
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [hue-tag-2025, wada-jhbps-2007, msd-choledocholithiasis-cholangitis]
+      locator: "Wada 2007 (tiền sử bệnh đường mật gợi ý viêm đường mật); MSD (sỏi ống mật chủ là nguyên nhân hay gặp nhất)"
+      note: "Hai lượt giống nhau. Câu hỏi gồm người đã mổ, đã lấy sỏi hoặc từng siêu âm thấy sỏi; siêu âm bụng phổ biến ở Việt Nam, ước khoảng một nửa. Tỷ lệ nền 5%. Cần bác sĩ duyệt."
+  - finding: confusion
+    freq: rare
+    above_leak_ok: true
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [wada-jhbps-2007, kiriyama-jhbps-2012]
+      locator: "Wada 2007 phần biểu hiện lâm sàng, bảng 1"
+      reported: "Ngũ chứng Reynolds (tam chứng Charcot kèm sốc và rối loạn ý thức) 3,5–7,7%"
+      population: "Bệnh viện"
+      note: "Lượt C: hai lượt cùng rare (above_leak_ok); lượt A thêm occasional từ 75 tuổi dựa trên số liệu thể nặng ở người cao tuổi chưa mở lại được, nên bỏ phần này. Người còn tự kiểm tra được ít khi lú lẫn; lú lẫn đã có quy tắc mức 1."
+  - finding: cold_hands_feet
+    freq: rare
+    above_leak_ok: true
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [wada-jhbps-2007, msd-choledocholithiasis-cholangitis]
+      locator: "Wada 2007 bảng 1 (sốc)"
+      note: "Hai lượt giống nhau. Sốc gặp ở một phần nhỏ người bệnh ở bệnh viện; hạ một mức cho người tự kiểm tra, cao hơn tỷ lệ nền 1% là có chủ ý (above_leak_ok). Dấu hiệu sốc đã có quy tắc mức 1–2."
+warning_signs:
+  - confusion
+  - drowsy_hard_to_wake
+  - cold_hands_feet
+  - severe_weakness
+  - breathing_difficulty
+  - decreased_urine
+  - abd_pain_severe
+  - persistent_vomiting
+self_care_vi:
+  - "Đến cấp cứu ngay; không tự uống kháng sinh hay thuốc hạ sốt ở nhà rồi chờ xem có đỡ không."
+  - "Không ăn uống trong lúc chờ khám, vì có thể phải làm thủ thuật."
+  - "Mang theo kết quả siêu âm, giấy ra viện cũ về sỏi mật nếu có."
+see_doctor_vi:
+  - "Sốt, rét run kèm đau bụng trên bên phải hoặc vàng da, vàng mắt cần đến cấp cứu ngay."
+  - "Người cao tuổi bị sỏi mật mà sốt hoặc lơ mơ cần được đưa đi cấp cứu sớm."
+  - "Người đã mổ sỏi mật hoặc đã lấy sỏi vẫn có thể bị lại; khi sốt, đau bụng trên cần đi khám sớm."
+review:
+  status: source_checked
+  authors: ["agent:pass-a", "agent:pass-b"]
+  reconciler: "agent:pass-c"
+  doctor_reviewer: null
+  updated: "2026-10-27"
+  notes_vi: "Lượt C đối chiếu 15 liên kết, mở lại mọi nguồn được trích (toàn văn Hue 2025, Dang 2026, Wada 2007, Kimura 2007, Kiriyama 2012 qua API Europe PMC). Mức 2, không được bỏ sót (hai lượt giống nhau): MSD coi viêm đường mật cấp là cấp cứu; Kimura 2007: tử vong 10–30% từ sau những năm 1980; Wada 2007: có thể diễn tiến nhanh thành thể nặng có suy tạng. Bác sĩ cần xem: (1) prior là ước lượng, có số liệu Việt Nam ở bệnh viện tuyến cuối nhưng chưa có ở tuyến ban đầu; 18–44 tuổi P6 với Sốt; (2) tỷ lệ rét run, sốt cao là ước lượng; nghiên cứu Việt Nam chọn người được nội soi mật tụy ngược dòng nên có thể nặng hơn cộng đồng; (3) phân biệt với viêm túi mật cấp chủ yếu nhờ vàng da và sốt cao, rét run; (4) chưa có câu hỏi nước tiểu sẫm, phân bạc màu; chưa mở được toàn văn Tokyo 2018; (5) mã K83.0 chưa đối chiếu bảng ICD-10 của Bộ Y tế."

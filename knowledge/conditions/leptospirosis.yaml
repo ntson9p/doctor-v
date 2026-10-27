@@ -1,0 +1,277 @@
+id: leptospirosis
+names:
+  vi: "Bệnh do xoắn khuẩn Leptospira"
+  vi_common: ["Bệnh Leptospira", "Bệnh xoắn khuẩn vàng da"]
+  en: "Leptospirosis"
+codes:
+  icd10: "A27"
+  icd10_verified: false
+summary_vi:
+  - "Bệnh do xoắn khuẩn Leptospira, lây khi da hoặc niêm mạc tiếp xúc nước, bùn nhiễm nước tiểu chuột, gia súc."
+  - "Thường sốt đột ngột, đau đầu, đau nhức cơ (rõ nhất ở bắp chân), có thể đỏ mắt."
+  - "Thể nặng có vàng da, tiểu ít, chảy máu hoặc khó thở, cần cấp cứu."
+urgency: 3
+cant_miss: false
+specialties: [infectious_disease, general_medicine]
+priors:
+  - complaint: fever
+    default: P4
+    by_age: { infant_0_2m: P6, child_2m_5y: P6, child_5_12: P5, teen_13_17: P5 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [leviet-emi-2019, who-leptospirosis-2003, haake-ctmi-2015]
+      locator: "Le-Viet 2019 bảng 2; WHO 2003 chương II và phụ lục 2 (nhóm nguy cơ); Haake 2015 phần Epidemiology"
+      reported: "Leptospira (PCR) ở 4,8% người lớn sốt cấp không rõ ổ nằm viện tại Quảng Nam (tháng 5–8/2016)"
+      note: "Hai lượt trùng mức (P4 người lớn, P5 ở 5–17 tuổi, P6 dưới 5 tuổi). Sốt không rõ ổ chỉ là một phần người sốt, ca nhẹ ít đến bệnh viện, nên ước 0,2–1% người lớn sốt ở cộng đồng; cao hơn ở nông thôn, mùa mưa lũ. Lượt A thêm P5 từ 75 tuổi (ít làm ruộng), lượt B không; lượt C giữ P4 (nguồn ngang nhau, không có số liệu theo tuổi; WHO: người cao tuổi dễ bị nặng; câu phơi nhiễm sẽ tách nhóm này). Cần bác sĩ duyệt."
+  - complaint: headache
+    default: P5
+    by_age: { infant_0_2m: P6, child_2m_5y: P6, child_5_12: P6, teen_13_17: P6 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [leviet-emi-2019, levett-cmr-2001, rajapakse-plosntd-2016]
+      locator: "Le-Viet 2019 bảng 4; Levett 2001 bảng 7; Rajapakse 2016 bảng 3"
+      reported: "Đau đầu 66,7% (Quảng Nam), 70–98% các loạt ca (Việt Nam 1973: 98%), 81,7% (Sri Lanka)"
+      note: "Hai lượt cùng P5 cho người lớn, P6 cho trẻ dưới 13 tuổi. Thiếu niên: lượt A P6, lượt B P5; lượt C chọn P6 cho đúng nguyên tắc chung của cả hai lượt (Đau đầu thấp hơn Sốt một bậc; Sốt ở thiếu niên là P5). Ước lượng."
+findings:
+  - finding: flood_mud_exposure
+    freq: very_frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [rajapakse-plosntd-2016, who-leptospirosis-2003, cdc-leptospirosis-clinical, haake-ctmi-2015]
+      locator: "Rajapakse 2016 bảng 3; WHO 2003 chương II và phụ lục 2; CDC Clinical Overview; Haake 2015 phần Epidemiology"
+      reported: "Có phơi nhiễm 74,6% ở người bệnh Leptospira (Sri Lanka); ủ bệnh 5–14 ngày, dao động 2–30 ngày"
+      note: "Hai lượt trùng mức. Câu hỏi hỏi 1 tháng qua, khớp thời gian ủ bệnh. Không chọn almost_always vì có người lây qua chuột trong nhà, ao hồ, gia súc hoặc không nhớ. Nhóm chứng của Rajapakse (53%) đã được chọn vì nghi bệnh nên không dùng làm tỷ lệ nền; tỷ lệ nền của danh mục là 0,2."
+  - finding: calf_pain
+    freq: frequent
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [who-leptospirosis-2003, levett-cmr-2001, byt-qd-5642-2015]
+      locator: "WHO 2003 chương II (Is it leptospirosis?); Levett 2001 mục Anicteric leptospirosis; 5642/QĐ-BYT bài Sốt mò, mục 3.4 (tr. 62)"
+      note: "Hai lượt trùng mức. WHO: đỏ kết mạc và đau cơ khi ấn, rõ nhất ở bắp chân và thắt lưng, là dấu hiệu phân biệt nhất; Levett: đau cơ thắt lưng, đùi, bắp chân thường dữ dội. Không có tỷ lệ riêng cho bắp chân (ấn đau cơ nói chung 67,8% ở Sri Lanka). Cùng cụm đau nhức với đau cơ."
+  - finding: myalgia
+    freq: very_frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [levett-cmr-2001, rajapakse-plosntd-2016, leviet-emi-2019]
+      locator: "Levett 2001 bảng 7; Rajapakse 2016 bảng 3; Le-Viet 2019 bảng 4"
+      reported: "Đau cơ 40–100% (Việt Nam 1973: 79%); 88,3% (Sri Lanka); 50% (12 ca, Quảng Nam)"
+      note: "Hai lượt trùng mức. Tỷ lệ nền khi sốt 0,55 nên gần như trung tính; dấu hiệu phân biệt là đau bắp chân."
+  - finding: red_eyes
+    freq: frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [levett-cmr-2001, rajapakse-plosntd-2016, who-leptospirosis-2003, cdc-leptospirosis-clinical]
+      locator: "Levett 2001 bảng 7; Rajapakse 2016 bảng 3; WHO 2003 chương II; CDC"
+      reported: "Đỏ kết mạc 28,5–99% (Việt Nam 1973: 42%); 55% (Sri Lanka)"
+      note: "Hai lượt trùng mức."
+  - finding: headache
+    freq: very_frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [levett-cmr-2001, rajapakse-plosntd-2016, leviet-emi-2019]
+      locator: "Levett 2001 bảng 7; Rajapakse 2016 bảng 3; Le-Viet 2019 bảng 4"
+      reported: "Đau đầu 70–98% (Việt Nam 1973: 98%); 81,7% (Sri Lanka); 66,7% (Quảng Nam)"
+      note: "Hai lượt trùng mức. Chỉ có tác dụng khi triệu chứng chính là Sốt (tỷ lệ nền 0,7)."
+  - finding: fever
+    freq: almost_always
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [rajapakse-plosntd-2016, who-leptospirosis-2003]
+      locator: "Rajapakse 2016 bảng 3; WHO 2003 chương II"
+      reported: "Sốt 95% (Sri Lanka); WHO: sốt khởi phát đột ngột"
+      note: "Chỉ lượt B có; lượt C giữ. Chỉ có tác dụng khi triệu chứng chính là Đau đầu."
+  - finding: chills_rigors
+    freq: frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [rajapakse-plosntd-2016, who-leptospirosis-2003, cdc-leptospirosis-clinical]
+      locator: "Rajapakse 2016 bảng 3; WHO 2003 chương II; CDC"
+      reported: "Rét run 73,9% (Sri Lanka, người bệnh nặng nằm viện)"
+      note: "Hai lượt trùng mức; hạ một mức so với số liệu bệnh viện."
+  - finding: jaundice
+    freq: occasional
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [levett-cmr-2001, rajapakse-plosntd-2016, who-leptospirosis-2003]
+      locator: "Levett 2001 bảng 7 và mục Icteric leptospirosis; Rajapakse 2016 bảng 3; WHO 2003 chương II"
+      reported: "Thể vàng da 5–10% mọi người bệnh (Levett); vàng da 27,2% (Sri Lanka, nằm viện); 1,5% (Việt Nam 1973)"
+      note: "Hai lượt trùng mức (mức thấp của khoảng occasional). Sốt kèm vàng da sau lội nước đã ở mức 2 (rf_lepto_severe)."
+  - finding: decreased_urine
+    freq: occasional
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [rajapakse-plosntd-2016, levett-cmr-2001, who-leptospirosis-2003]
+      locator: "Rajapakse 2016 bảng 3; Levett 2001 mục Icteric leptospirosis; WHO 2003 chương II"
+      reported: "Tiểu ít 31,1% (Sri Lanka); suy thận cấp ở 16–40% ca vàng da (Levett)"
+      note: "Hai lượt trùng mức; hạ một mức so với số liệu bệnh viện."
+  - finding: hemoptysis
+    freq: rare
+    above_leak_ok: true
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [levett-cmr-2001, rajapakse-plosntd-2016, haake-ctmi-2015]
+      locator: "Levett 2001 bảng 7; Rajapakse 2016 bảng 3; Haake 2015 phần Clinical"
+      reported: "Ho ra máu 9–51% ở các loạt ca nhập viện; xuất huyết phổi 0,6% (Sri Lanka); xuất huyết phổi nặng tử vong trên 50%"
+      note: "Hai lượt trùng mức. Cố ý cao hơn tỷ lệ nền 1%: ho ra máu là dấu hiệu thể xuất huyết phổi, nên trả lời 'Có' không được làm giảm khả năng bệnh. Đã có quy tắc mức 2."
+  - finding: bleeding_gums_nose
+    freq: rare
+    above_leak_ok: true
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [leviet-emi-2019, who-leptospirosis-2003]
+      locator: "Le-Viet 2019 bảng 4; WHO 2003 chương II (Cause of death)"
+      reported: "Xuất huyết 0/12 ca nhẹ ở Việt Nam; WHO: xuất huyết lan tỏa là nguyên nhân tử vong"
+      note: "Chỉ lượt B có; lượt C giữ. Cố ý cao hơn tỷ lệ nền 1%: chảy máu có ở thể nặng nên trả lời 'Có' không làm giảm khả năng bệnh, chỉ tăng nhẹ (sốt xuất huyết chảy máu nhiều hơn)."
+  - finding: neck_stiffness
+    freq: rare
+    above_leak_ok: true
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [rajapakse-plosntd-2016, levett-cmr-2001, who-leptospirosis-2003]
+      locator: "Rajapakse 2016 bảng 3; Levett 2001 mục Anicteric leptospirosis; WHO 2003 chương II"
+      reported: "Cứng gáy 13,3% (Sri Lanka, bác sĩ khám); viêm màng não vô khuẩn ở tới 25% ca (Levett)"
+      note: "Chỉ lượt B có; lượt C giữ. Người dùng tự nhận biết kém bác sĩ khám, nên hạ hai mức còn rare; cố ý cao hơn tỷ lệ nền 1%. Cứng gáy đã ở mức 2 theo quy tắc chung. Không đưa vào dấu hiệu cảnh báo (xem review)."
+  - finding: cough
+    freq: occasional
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [levett-cmr-2001, haake-ctmi-2015, leviet-emi-2019]
+      locator: "Levett 2001 bảng 7; Haake 2015 phần Clinical; Le-Viet 2019 bảng 4"
+      reported: "Ho 20–57% (Việt Nam 1973: 20%); ho khan 20–57% (Haake); 8,3% (Quảng Nam)"
+      note: "Chỉ lượt A có; lượt C giữ vì có nguồn. Bằng tỷ lệ nền khi sốt (0,2) nên gần như trung tính, nhưng thấp hơn hẳn cúm (very_frequent)."
+  - finding: vomiting
+    freq: occasional
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [levett-cmr-2001, leviet-emi-2019]
+      locator: "Levett 2001 bảng 7; Le-Viet 2019 bảng 4"
+      reported: "Nôn 18–69% (Việt Nam 1973: 33%); 8,3% (Quảng Nam)"
+      note: "Chỉ lượt A có; lượt C giữ vì có nguồn."
+  - finding: diarrhea
+    freq: occasional
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [levett-cmr-2001, leviet-emi-2019]
+      locator: "Levett 2001 bảng 7; Le-Viet 2019 bảng 4"
+      reported: "Tiêu chảy 11–36% (Việt Nam 1973: 29%); 16,7% (Quảng Nam)"
+      note: "Hai lượt trùng mức."
+  - finding: abdominal_pain
+    freq: occasional
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [levett-cmr-2001, leviet-emi-2019]
+      locator: "Levett 2001 bảng 7; Le-Viet 2019 bảng 4"
+      reported: "Đau bụng 26–43% (Việt Nam 1973: 28%); 16,7% (Quảng Nam)"
+      note: "Chỉ lượt A có; lượt C giữ vì có nguồn. Gần trung tính khi sốt (tỷ lệ nền 0,15)."
+  - finding: lymph_node_swelling
+    freq: occasional
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [levett-cmr-2001, leviet-emi-2019]
+      locator: "Levett 2001 bảng 7; Le-Viet 2019 bảng 4"
+      reported: "Nổi hạch 19–49% (Việt Nam 1973: 21%); 8,3% (Quảng Nam)"
+      note: "Chỉ lượt A có; lượt C giữ vì có nguồn."
+  - finding: rash_any
+    freq: rare
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [levett-cmr-2001, haake-ctmi-2015]
+      locator: "Levett 2001 bảng 7; Haake 2015 phần Clinical"
+      reported: "Phát ban 0–7% (Việt Nam 1973: 7%); Haake: phát ban ít gặp, khi có nên nghĩ tới sốt xuất huyết"
+      note: "Chỉ lượt A có; lượt C giữ. Thấp hơn tỷ lệ nền 5%: sốt kèm phát ban gợi ý sốt xuất huyết, sởi hơn."
+  - finding: fever_max_temp
+    dist: { lt_38: 0.07, t38_39: 0.33, ge_39: 0.60 }
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [leviet-emi-2019]
+      locator: "Le-Viet 2019 bảng 4"
+      reported: "Nhiệt độ cao nhất trung bình 39,5°C (độ lệch chuẩn 1,1) ở 12 ca nhập viện"
+      note: "Gần như trùng hai lượt. Phân bố trong số người có sốt."
+  - finding: fever_duration
+    dist: { d1_2: 0.27, d3_5: 0.45, d6_7: 0.18, gt_7d: 0.10 }
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [leviet-emi-2019, who-leptospirosis-2003]
+      locator: "Le-Viet 2019 bảng 4; WHO 2003 chương II (Antibiotic treatment)"
+      reported: "Số ngày sốt lúc nhập viện trung vị 5,5 (4–7)"
+      note: "Trung bình hai lượt; người dùng hỏi sớm hơn lúc nhập viện."
+  - finding: headache_severity
+    dist: { mild: 0.10, moderate: 0.40, severe: 0.50 }
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [levett-cmr-2001, who-leptospirosis-2003]
+      locator: "Levett 2001 mục Anicteric leptospirosis (đau đầu thường dữ dội); WHO 2003 phụ lục 5"
+      note: "Hai lượt trùng. Ước lượng."
+  - finding: headache_location
+    dist: { one_side: 0.05, both_sides: 0.15, forehead_face: 0.45, back_neck: 0.10, whole_head: 0.25 }
+    evidence:
+      tier: C
+      basis: verbal
+      sources: [levett-cmr-2001]
+      locator: "Mục Anicteric leptospirosis (đau đầu giống sốt xuất huyết, kèm đau sau hốc mắt, sợ ánh sáng)"
+      note: "Chỉ lượt A khai báo; lượt C giữ. Ước lượng."
+  - finding: headache_course
+    dist: { first_time: 0.83, recurrent_similar: 0.13, progressive: 0.04 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [who-leptospirosis-2003]
+      locator: "WHO 2003 chương II (khởi phát đột ngột)"
+      note: "Trung bình hai lượt. Ước lượng."
+  - finding: headache_duration
+    dist: { lt_4h: 0.05, h4_72: 0.52, gt_3d: 0.43 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [leviet-emi-2019, levett-cmr-2001]
+      locator: "Le-Viet 2019 bảng 4; Levett 2001 mục Anicteric leptospirosis (kéo dài khoảng một tuần)"
+      note: "Trung bình hai lượt. Ước lượng."
+warning_signs:
+  - jaundice
+  - decreased_urine
+  - bleeding_gums_nose
+  - hemoptysis
+  - breathing_difficulty
+  - confusion
+  - drowsy_hard_to_wake
+  - cold_hands_feet
+self_care_vi:
+  - "Nghỉ ngơi, uống đủ nước, chườm mát khi sốt."
+  - "Không tự mua kháng sinh uống; cần được bác sĩ khám và kê đơn."
+  - "Khi lội nước, làm ruộng, dọn bùn: mang ủng, găng tay và che kín vết xước trên da."
+  - "Diệt chuột quanh nhà; không tắm, bơi ở ao hồ hoặc nước lũ."
+see_doctor_vi:
+  - "Đi khám trong 24 giờ nếu sốt sau khi lội nước, làm ruộng hoặc tiếp xúc chuột trong tháng qua."
+  - "Nói rõ với bác sĩ việc lội nước, bùn hoặc tiếp xúc chuột, gia súc, vì bệnh dễ bị nhầm với sốt xuất huyết, cúm."
+  - "Đến cấp cứu ngay nếu vàng da, tiểu ít, chảy máu, ho ra máu hoặc khó thở."
+  - "Gọi 115 nếu lơ mơ, lú lẫn hoặc co giật."
+review:
+  status: source_checked
+  authors: ["agent:pass-a", "agent:pass-b"]
+  reconciler: "agent:pass-c"
+  doctor_reviewer: null
+  updated: "2026-10-27"
+  notes_vi: "Mức xử trí 3, không thuộc nhóm không được bỏ sót (hai lượt thống nhất): phần lớn ca là thể nhẹ giống cúm, tử vong gần như bằng 0 ở thể không vàng da (Levett 2001); WHO 2003: dùng kháng sinh ngay khi nghi, tốt nhất trước ngày thứ 5. Thể nặng đã có quy tắc rf_lepto_severe (mức 2); đề nghị người bảo trì thêm leptospirosis vào `conditions` của quy tắc này. Dấu hiệu cảnh báo theo lượt B, bỏ cứng gáy của lượt A: cứng gáy đã đưa mức lên 2 (rf_neck_stiffness, nêu viêm màng não vi khuẩn); nếu là dấu hiệu cảnh báo của bệnh này thì Leptospira (mức 3) có thể chiếm chỗ trong danh sách 'Bác sĩ cần loại trừ'. Không có hệ số mùa, vùng, giới (cả hai lượt): phơi nhiễm được hỏi trực tiếp. Mã A27 (cả nhóm bệnh), chưa đối chiếu với bộ mã của Bộ Y tế; bỏ mã MONDO của lượt A vì chưa kiểm tra. Lượt C sửa một ghi chú của lượt A: hệ số OR 5,29 trong Haake 2015 là nguy cơ khi sống cùng nhà với người bệnh, không phải tiếp xúc chuột. Chưa tìm được hướng dẫn chẩn đoán, điều trị riêng của Bộ Y tế. Cần bác sĩ xem: (1) prior suy từ nghiên cứu bệnh viện ở Quảng Nam; (2) tần suất chủ yếu từ loạt ca nhập viện cũ (Việt Nam 1973), Sri Lanka (người bệnh nặng) và 12 ca nhẹ ở Quảng Nam; (3) tần suất đau bắp chân, phơi nhiễm là chuyển từ mô tả; (4) câu phơi nhiễm chưa hỏi về chăm sóc, giết mổ gia súc, và chưa có câu 'đau thắt lưng'."

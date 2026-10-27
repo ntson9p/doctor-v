@@ -1,0 +1,15 @@
+id: hue-tag-2025
+type: primary_study
+title: "Delayed endoscopic retrograde cholangiopancreatography: a game-changer for acute cholangitis patients in a resource-limited setting"
+publisher: Therapeutic Advances in Gastroenterology 2025;18:17562848251329868 (Nguyễn Thị Huệ và cộng sự; Bệnh viện Trung ương Quân đội 108)
+date: "2025"
+url: https://europepmc.org/article/MED/40297202
+doi: 10.1177/17562848251329868
+pmid: "40297202"
+license_class: L2
+license_note: "CC BY-NC 4.0: dùng phi thương mại, ghi công."
+default_tier: B
+accessed: 2026-10-27
+verified: true
+verified_by: agent:pass-c
+notes_vi: "Lượt C (Giai đoạn 3 lô 2 phần a, 27/10/2026) mở lại toàn văn PMC12035265 qua API Europe PMC. Đã đối chiếu bảng 1: 708 người viêm đường mật do sỏi; đau bụng 89% và 87,1%, vàng da 55,8% và 49,8% ở hai nhóm. Trùng với hue-theradvgastro-2025 của lượt A (cùng bài); lượt C chỉ giữ id này."

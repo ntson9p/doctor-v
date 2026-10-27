@@ -1,0 +1,43 @@
+id: d-kawasaki-disease-2
+set: dev
+title_vi: "Bé gái 7 tháng, sốt cao 4 ngày, mắt đỏ, môi đỏ, chỗ tiêm phòng lao sưng đỏ lại, chưa nổi ban"
+narrative_vi: "Bé H., 7 tháng tuổi, ở TP.HCM. Bé sốt 39°C liên tục 4 ngày, quấy khóc nhiều, bú kém hơn nhưng vẫn bú được. Hai mắt đỏ, không có ghèn; môi đỏ, khô. Mẹ thấy vết tiêm phòng lao ở vai trái sưng đỏ lại. Bé chưa nổi ban, tay chân không sưng, không sờ thấy hạch. Không ho, không sổ mũi, không tiêu chảy, không nôn. Bé không li bì, không co giật."
+patient:
+  age_months: 7
+  sex: female
+  region: south
+  month: 1
+complaint: fever
+answers:
+  fever_max_temp: ge_39
+  fever_duration: d3_5
+  red_eyes: present
+  red_lips_strawberry_tongue: present
+  bcg_scar_red: present
+  rash_any: absent
+  hands_feet_swelling_peeling: absent
+  lymph_node_swelling: absent
+  mouth_ulcers: absent
+  hand_foot_blisters: absent
+  cough: absent
+  runny_nose: absent
+  vomiting: absent
+  diarrhea: absent
+  child_unable_to_drink: absent
+  child_vomits_everything: absent
+  drowsy_hard_to_wake: absent
+  seizure_recent: absent
+  bulging_fontanelle: absent
+  breathing_difficulty: absent
+  cold_hands_feet: absent
+  measles_contact: absent
+default_unmentioned: absent
+expected:
+  condition: kawasaki_disease
+  acceptable: []
+  triage: 3
+source:
+  basis: "Bệnh Kawasaki thể không điển hình ở nhũ nhi: sốt kèm ít biểu hiện chính (đỏ mắt, thay đổi môi) và sẹo BCG tấy đỏ lại (3312/QĐ-BYT 2015, mục 3.1b, 3.3b; Khreis 2026: hay gặp ở trẻ nhỏ, xuất hiện sớm). Sốt từ 3 ngày kèm 2 dấu hiệu da, niêm mạc ở trẻ: khám trong 24 giờ (rf_kawasaki_signs; NHS Kawasaki disease, mức 3)."
+  references: [byt-qd-3312-2015, khreis-pedint-2026, nhs-kawasaki-disease]
+author: "agent:pass-c"
+notes_vi: "Ca không điển hình: nhũ nhi, mới sốt 4 ngày, chưa đủ biểu hiện."

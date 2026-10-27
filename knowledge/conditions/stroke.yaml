@@ -244,6 +244,29 @@ findings:
       locator: "Paul 2013 phần Kết quả; Kerber 2006 bảng 1"
       reported: "Cơn thoáng qua trước 59/275 đột quỵ tuần hoàn sau (khoảng 21%), phần lớn là triệu chứng thân não đơn độc, nhiều nhất trong 2 ngày trước (Paul 2013); 28% từng bị cơn thoáng qua hoặc đột quỵ (Kerber 2006)"
       note: "Hai lượt cùng chọn occasional. Chỉ một phần cơn báo trước khớp với câu hỏi (yếu, tê nửa người, nói khó, nhìn đôi rồi tự hết); người có triệu chứng dao động cũng có thể trả lời 'Có'. Đã có quy tắc rf_transient_neuro (mức 2)."
+  # ---------- Giai đoạn 3, lô 2 (lượt C): dấu hiệu mới của lô 2 ----------
+  - finding: neck_injury_or_manipulation
+    freq: rare
+    above_leak_ok: true
+    freq_by_age: { teen_13_17: occasional, adult_18_44: occasional }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [engelter-neurology-2013, debette-lancetneurol-2009, traenka-neurology-2017, biller-stroke-2014, rothwell-stroke-2001]
+      locator: "Engelter 2013, Debette 2009, Traenka 2017, Biller 2014, Rothwell 2001: tóm tắt"
+      reported: "Chấn thương cổ trong tháng trước ở 40,5% người bóc tách động mạch cổ, 88% là nhẹ; nhiều hơn người nhồi máu não do nguyên nhân khác (OR thô 5,6) (Engelter); chỉ 7,4% người bóc tách từ 60 tuổi, nhóm này ít có sự kiện cơ học khởi phát (OR hiệu chỉnh 0,53) (Traenka); người dưới 45 tuổi đột quỵ hệ sống – nền có khả năng đã đi nắn chỉnh cột sống trong tuần trước cao gấp khoảng 5 lần (Rothwell)"
+      population: "Người bóc tách động mạch cổ ở các trung tâm châu Âu (CADISP); dân số Ontario"
+      note: "Lượt C: hai lượt cùng rare (above_leak_ok, gần trung tính) từ 45 tuổi và occasional ở 13–44 tuổi; lượt B thêm occasional cho 5–12 tuổi. Bỏ phần 5–12 tuổi vì không có số liệu ở trẻ em (lượt B cũng ghi vậy). Bóc tách động mạch cổ là nguyên nhân quan trọng của thiếu máu não ở người trẻ (Debette); dưới 45 tuổi ước 8–15% người đột quỵ trả lời 'Có' (tỷ lệ nền 0,02 nên 'Có' tăng khả năng khoảng 10 lần). Không tách theo triệu chứng chính vì freq_by_complaint sẽ đè lên mức theo tuổi. Ca dev d-from-h-dizzy-020. Cần bác sĩ duyệt."
+  - finding: atrial_fibrillation_known
+    freq: occasional
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [ton-jcdd-2024, phong-jcm-2023, kerber-stroke-2006, msd-stroke-overview]
+      locator: "Ton 2024 tóm tắt; Phong 2023 tóm tắt; Kerber 2006 bảng 1"
+      reported: "Rung nhĩ (đã biết hoặc phát hiện lúc nhập viện) ở 15,1% trong 94.144 người nhồi máu não hoặc cơn thoáng qua tại 66 bệnh viện Việt Nam, chỉ 15,8% đã dùng thuốc chống đông trước đó (Ton); 18,1% trong 2.038 người tại Bệnh viện Bạch Mai (Phong); 6% ở người đột quỵ hoặc cơn thoáng qua đến cấp cứu vì chóng mặt (Kerber)"
+      population: "Người nhồi máu não, cơn thiếu máu não thoáng qua nằm viện ở Việt Nam; cấp cứu ở Mỹ"
+      note: "Hai lượt cùng occasional. Áp dụng từ 45 tuổi. Tỷ lệ đã biết từ trước thấp hơn số của nguồn (gồm cả rung nhĩ mới phát hiện), khoảng 8–15%, ở cận dưới của occasional; bệnh này còn gộp xuất huyết não. Mức occasional làm 'Có' tăng khả năng khoảng 5 lần, mạnh hơn số liệu (khoảng 2–3 lần); mức rare lại thấp hơn tỷ lệ nền 0,04 (sẽ làm 'Có' giảm khả năng), nên giữ occasional theo hướng an toàn. Cùng cụm heart_history với bệnh tim đã biết nên hai câu 'Có' không được tính đủ hai lần. Cần bác sĩ duyệt."
 warning_signs: [es_stroke_signs, sudden_loss_of_balance, headache_thunderclap, confusion, drowsy_hard_to_wake, seizure_recent, vision_loss_or_double, persistent_vomiting]
 self_care_vi:
   - "Gọi 115 ngay và ghi nhớ giờ bắt đầu có triệu chứng."
@@ -257,5 +280,5 @@ review:
   authors: ["agent:pass-a", "agent:pass-b"]
   reconciler: "agent:pass-c"
   doctor_reviewer: null
-  updated: "2026-10-25"
-  notes_vi: "Lượt C đã đối chiếu 21 liên kết và mở lại mọi nguồn được trích, kể cả 3312/QĐ-BYT (2024) trên luatvietnam.vn. Bác sĩ cần xem: (1) prior là ước lượng, chưa có số liệu Việt Nam; từ 75 tuổi chọn P3; (2) tỷ lệ có dấu hiệu FAST và mất thăng bằng ở nhóm biểu hiện bằng đau đầu chưa có số liệu trực tiếp (dùng số của nhồi máu não chung); (3) phần lớn tần suất khác dựa trên mô tả bằng lời của 3312/QĐ-BYT và LR của Runchey 2010; (4) chưa có tỷ lệ yếu tố nguy cơ trong người đột quỵ Việt Nam; (5) mã I64 dùng chung cho đột quỵ không xác định thể vì bệnh gộp cả nhồi máu và xuất huyết não. Giai đoạn 3 lô 1 (lượt C, 25/10/2026): thêm prior cho Chóng mặt (P5; dưới 18 tuổi P6; 45–64 tuổi P4; từ 65 tuổi P3), mức riêng occasional cho dấu hiệu đột quỵ ở màn sàng lọc khi triệu chứng chính là Chóng mặt, và 6 liên kết (đau đầu, cảm giác quay, kiểu chóng mặt, chóng mặt tư thế, không tự đi được, cơn thần kinh thoáng qua); mọi giá trị cũ giữ nguyên, mọi nguồn mới đã mở lại. Bác sĩ cần xem thêm: (6) prior cho Chóng mặt suy từ số liệu cấp cứu ở Mỹ; (7) mức occasional cho méo miệng, yếu tay, nói khó ở người chọn Chóng mặt suy từ Tarnutzer 2011 và Paul 2013, chưa có số liệu ở tuyến ban đầu."
+  updated: "2026-10-27"
+  notes_vi: "Lượt C đã đối chiếu 21 liên kết và mở lại mọi nguồn được trích, kể cả 3312/QĐ-BYT (2024) trên luatvietnam.vn. Bác sĩ cần xem: (1) prior là ước lượng, chưa có số liệu Việt Nam; từ 75 tuổi chọn P3; (2) tỷ lệ có dấu hiệu FAST và mất thăng bằng ở nhóm biểu hiện bằng đau đầu chưa có số liệu trực tiếp (dùng số của nhồi máu não chung); (3) phần lớn tần suất khác dựa trên mô tả bằng lời của 3312/QĐ-BYT và LR của Runchey 2010; (4) chưa có tỷ lệ yếu tố nguy cơ trong người đột quỵ Việt Nam; (5) mã I64 dùng chung cho đột quỵ không xác định thể vì bệnh gộp cả nhồi máu và xuất huyết não. Giai đoạn 3 lô 1 (lượt C, 25/10/2026): thêm prior cho Chóng mặt (P5; dưới 18 tuổi P6; 45–64 tuổi P4; từ 65 tuổi P3), mức riêng occasional cho dấu hiệu đột quỵ ở màn sàng lọc khi triệu chứng chính là Chóng mặt, và 6 liên kết (đau đầu, cảm giác quay, kiểu chóng mặt, chóng mặt tư thế, không tự đi được, cơn thần kinh thoáng qua); mọi giá trị cũ giữ nguyên, mọi nguồn mới đã mở lại. Bác sĩ cần xem thêm: (6) prior cho Chóng mặt suy từ số liệu cấp cứu ở Mỹ; (7) mức occasional cho méo miệng, yếu tay, nói khó ở người chọn Chóng mặt suy từ Tarnutzer 2011 và Paul 2013, chưa có số liệu ở tuyến ban đầu. Giai đoạn 3 lô 2 (lượt C, 27/10/2026): thêm 2 liên kết với dấu hiệu mới, mọi giá trị cũ giữ nguyên, mọi nguồn mới đã mở lại qua API Europe PMC: bẻ, nắn cổ hoặc chấn thương cổ tháng qua (rare từ 45 tuổi, occasional ở 13–44 tuổi; bỏ mức riêng cho 5–12 tuổi của lượt B vì không có số liệu) và đã biết rung nhĩ (occasional). Bác sĩ cần xem thêm: (8) tỷ lệ đột quỵ do bóc tách động mạch cổ ở người Việt trẻ tuổi chưa có số liệu; tỷ lệ nền 0,02 của câu bẻ cổ có thể thấp; (9) rung nhĩ đã biết làm 'Có' tăng khả năng khoảng 5 lần, mạnh hơn số liệu (2–3 lần), vì thang tần suất không có mức nào giữa rare và occasional."

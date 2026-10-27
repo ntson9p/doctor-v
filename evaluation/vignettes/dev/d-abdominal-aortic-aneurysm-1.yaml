@@ -1,0 +1,51 @@
+id: d-abdominal-aortic-aneurysm-1
+set: dev
+title_vi: Nam 72 tuổi hút thuốc, đột ngột đau dữ dội quanh rốn lan ra sau lưng, vã mồ hôi, choáng
+narrative_vi: Ông T., 72 tuổi, hút thuốc lá 40 năm, bị tăng huyết áp. Một giờ trước đang ngồi thì đột ngột đau dữ dội quanh rốn, lan ra sau lưng, đau liên tục. Ông vã mồ hôi lạnh, buồn nôn, đứng dậy thì choáng muốn ngất, da tái, tay chân lạnh. Không sốt, không nôn, không tiêu chảy, không tiểu buốt, không đau ngực, không khó thở. Chưa ai nói ông có phình động mạch chủ.
+patient:
+  age_years: 72
+  sex: male
+  region: north
+  month: 3
+complaint: abdominal_pain
+answers:
+  abd_pain_severe: present
+  abd_pain_onset: sudden
+  abd_pain_duration: lt_6h
+  abd_pain_location: periumbilical
+  abd_pain_radiates_back: present
+  flank_pain: present
+  abd_pain_colicky: absent
+  cold_sweat: present
+  nausea: present
+  vomiting: absent
+  fainting_or_near_fainting: present
+  dizziness_on_standing: present
+  cold_hands_feet: present
+  severe_weakness: absent
+  smoker: present
+  hypertension_known: present
+  known_aaa: absent
+  fever: absent
+  diarrhea: absent
+  dysuria: absent
+  hematuria: absent
+  chest_pain_pressure: absent
+  breathing_difficulty: absent
+  abdomen_hard_swollen: absent
+  confusion: absent
+  kidney_stones_known: absent
+  diabetes: absent
+  known_heart_disease: absent
+default_unmentioned: absent
+expected:
+  condition: abdominal_aortic_aneurysm
+  acceptable: []
+  triage: 1
+source:
+  basis: "Vỡ phình động mạch chủ bụng điển hình: nam cao tuổi hút thuốc, tăng huyết áp, đau bụng lan ra lưng đột ngột, dữ dội, kèm vã mồ hôi, choáng, da tái lạnh (Fernando 2022; van den Dries 2025). NHS: đau bụng hoặc lưng đột ngột dữ dội, da tái, mất ý thức thì gọi 999 (mức 1)."
+  references:
+    - nhs-abdominal-aortic-aneurysm
+    - fernando-aem-2022
+    - vandendries-ijem-2025
+author: agent:pass-c

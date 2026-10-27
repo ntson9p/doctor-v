@@ -1,0 +1,12 @@
+id: nhs-ovarian-cyst
+type: web_page
+title: Ovarian cyst
+publisher: NHS (UK)
+url: https://www.nhs.uk/conditions/ovarian-cyst/
+license_class: L1
+license_note: Open Government Licence v3.0; bản chuyển thể không được trình bày như nội dung của NHS.
+default_tier: C
+accessed: 2026-10-27
+verified: true
+verified_by: agent:pass-c
+notes_vi: "Lượt C (Giai đoạn 3 lô 2 phần a, 27/10/2026) mở lại trang web (tải bằng curl). Đã đối chiếu (rà soát 21/6/2023, hạn 21/6/2026 đã qua): đau vùng chậu từ âm ỉ tới đột ngột, dữ dội; khám khẩn hoặc gọi 111 (mức 3) khi đau vùng chậu đột ngột, dữ dội, hoặc đau bụng kèm buồn nôn, nôn."

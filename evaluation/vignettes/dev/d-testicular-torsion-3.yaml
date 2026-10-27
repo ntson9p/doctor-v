@@ -1,0 +1,40 @@
+id: d-testicular-torsion-3
+set: dev
+title_vi: Nam 15 tuổi đau bụng dưới bên phải, nôn, đau lan xuống bìu (dễ nhầm viêm ruột thừa)
+narrative_vi: Em Đ., 15 tuổi, 8 giờ nay đau bụng dưới bên phải, nôn 2 lần, chán ăn. Bố mẹ nghĩ viêm ruột thừa. Khi được hỏi, em nói đau lan xuống bìu phải và bìu phải đau khi chạm. Đau không bắt đầu từ quanh rốn, không sốt, không tiêu chảy, không tiểu buốt, không dữ dội.
+patient:
+  age_years: 15
+  sex: male
+  region: central
+  month: 10
+complaint: abdominal_pain
+answers:
+  scrotal_pain: present
+  abd_pain_location: right_lower
+  abd_pain_onset: sudden
+  abd_pain_duration: h6_24
+  abd_pain_radiates_groin: present
+  abd_pain_severe: absent
+  vomiting: present
+  nausea: present
+  loss_of_appetite: present
+  abd_pain_migrated_rlq: absent
+  abd_pain_worse_movement: absent
+  fever: absent
+  diarrhea: absent
+  dysuria: absent
+  abd_pain_colicky: absent
+  flank_pain: absent
+default_unmentioned: absent
+expected:
+  condition: testicular_torsion
+  acceptable: []
+  triage: 2
+source:
+  basis: "Xoắn tinh hoàn hay bị bỏ sót khi trẻ chỉ kể đau bụng dưới và nôn (Pogorelić 2013: cần khám bìu ở mọi trẻ trai đau bụng cấp). Đau lan xuống bìu, bìu đau khi chạm, không đau di chuyển từ quanh rốn, không sốt. NHS Testicle pain: mức 2."
+  references:
+    - pogorelic-jpediatrurol-2013
+    - nhs-testicle-pain
+    - eau-paediatric-urology-2026
+author: agent:pass-c
+notes_vi: Ca dễ nhầm với viêm ruột thừa cấp (acute_appendicitis).

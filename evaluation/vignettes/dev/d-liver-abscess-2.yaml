@@ -1,0 +1,51 @@
+id: d-liver-abscess-2
+set: dev
+title_vi: Nam 42 tuổi ở Huế, đau âm ỉ dưới sườn phải 1 tuần, đau khi hít sâu, sốt nhẹ
+narrative_vi: Anh F., 42 tuổi, làm nông ở Thừa Thiên Huế, hay uống rượu. Một tuần nay đau âm ỉ dưới sườn phải, đau tăng khi hít sâu hoặc ho, có lúc lan lên vai phải. Sốt nhẹ về chiều, vã mồ hôi, sụt 2 kg. Không vàng da, không tiêu chảy, không nôn, không ho đờm, không khó thở. Không bị tiểu đường.
+patient:
+  age_years: 42
+  sex: male
+  region: central
+  month: 7
+complaint: abdominal_pain
+answers:
+  abd_pain_location: right_upper
+  abd_pain_onset: gradual
+  abd_pain_duration: d4_14
+  abd_pain_severe: absent
+  abd_pain_radiates_right_shoulder: present
+  pleuritic_chest_pain: present
+  fever: present
+  fever_max_temp: lt_38
+  fever_duration: d6_7
+  chills_rigors: absent
+  weight_loss_unintended: present
+  jaundice: absent
+  diarrhea: absent
+  vomiting: absent
+  nausea: absent
+  cough: absent
+  breathing_difficulty: absent
+  diabetes: absent
+  heavy_alcohol: present
+  gallstones_known: absent
+  dysuria: absent
+  abd_pain_meal_relation: no_relation
+  pain_after_fatty_meal: absent
+  confusion: absent
+  cold_hands_feet: absent
+  severe_weakness: absent
+  loss_of_appetite: present
+  abd_pain_worse_movement: absent
+default_unmentioned: absent
+expected:
+  condition: liver_abscess
+  acceptable: []
+  triage: 3
+source:
+  basis: "Áp xe gan do amip ở nam giới miền Trung (Blessmann 2002: Huế lưu hành cao, trên 80% là nam): khởi phát âm ỉ, đau vùng gan lan lên vai phải, đau khi hít sâu do ổ sát cơ hoành, sốt nhẹ, sụt cân (MSD). Cần siêu âm gan trong ngày (mức 3)."
+  references:
+    - blessmann-ajtmh-2002
+    - msd-amebiasis
+author: agent:pass-c
+notes_vi: "Ca không điển hình: triệu chứng chính là đau bụng, sốt nhẹ, không rét run."

@@ -1,0 +1,15 @@
+id: wses-ami-2022
+type: guideline_intl
+title: "Acute mesenteric ischemia: updated guidelines of the World Society of Emergency Surgery"
+publisher: World Society of Emergency Surgery (World Journal of Emergency Surgery 2022;17:54; Bala M và cộng sự)
+date: 2022-10-19
+url: https://europepmc.org/article/MED/36261857
+doi: 10.1186/s13017-022-00443-x
+pmid: "36261857"
+license_class: L1
+license_note: "CC BY 4.0 (theo bài trên PMC, PMC9580452): được dùng, chuyển thể, ghi công và nêu thay đổi."
+default_tier: B
+accessed: 2026-10-27
+verified: true
+verified_by: agent:pass-c
+notes_vi: "Lượt C (Giai đoạn 3 lô 2 phần a, 27/10/2026) mở lại toàn văn PMC9580452 qua API Europe PMC. Đã đối chiếu: đau bụng 95%, buồn nôn 44%, nôn 35%, tiêu chảy 35%, đi ngoài ra máu 16%; khoảng một phần ba có bộ ba đau bụng, sốt, máu ẩn trong phân; gần 50% tắc mạch do cục máu đông có rung nhĩ; đau không tương xứng với khám phải coi là bệnh này cho tới khi loại trừ; mỗi 6 giờ chậm chụp mạch làm tử vong tăng gấp đôi. Trùng với bala-wjes-2022 của lượt A (cùng bài); lượt C chỉ giữ id này."

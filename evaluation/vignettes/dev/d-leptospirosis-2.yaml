@@ -1,0 +1,44 @@
+id: d-leptospirosis-2
+set: dev
+title_vi: "Nam 52 tuổi ở An Giang, cấy lúa, sốt ngày thứ 6, vàng mắt, tiểu ít"
+narrative_vi: "Ông P., 52 tuổi, cấy lúa ở An Giang, nhà nhiều chuột. Sáu ngày nay ông sốt 39°C, đau đầu, đau mỏi người, đau hai bắp chân. Từ hôm qua vợ thấy lòng trắng mắt ông vàng, nước tiểu sẫm và ít hẳn, cả buổi sáng chỉ đi tiểu một lần. Ông mệt nhiều nhưng vẫn tỉnh táo, tự đi lại được. Không chảy máu chân răng, không ho ra máu, không khó thở. Không nổi ban, không nôn."
+patient:
+  age_years: 52
+  sex: male
+  region: south
+  month: 9
+complaint: fever
+answers:
+  fever_max_temp: ge_39
+  fever_duration: d6_7
+  headache: present
+  myalgia: present
+  calf_pain: present
+  flood_mud_exposure: present
+  jaundice: present
+  decreased_urine: present
+  fatigue: present
+  severe_weakness: absent
+  confusion: absent
+  drowsy_hard_to_wake: absent
+  bleeding_gums_nose: absent
+  hemoptysis: absent
+  breathing_difficulty: absent
+  cold_hands_feet: absent
+  red_eyes: unknown
+  rash_any: absent
+  vomiting: absent
+  abdominal_pain: absent
+  cough: absent
+  diabetes: absent
+  hypertension_known: absent
+default_unmentioned: absent
+expected:
+  condition: leptospirosis
+  acceptable: []
+  triage: 2
+source:
+  basis: "Bệnh do Leptospira thể nặng (hội chứng Weil: vàng da, suy thận) ở người làm ruộng (WHO 2003 chương II: thể nặng cần nhập viện, lọc máu khi suy thận; Levett 2001: thể vàng da diễn biến nhanh, tử vong 5–15%). Sốt sau lội nước kèm vàng da, tiểu ít: đến cấp cứu ngay (rf_lepto_severe, mức 2)."
+  references: [who-leptospirosis-2003, levett-cmr-2001]
+author: "agent:pass-c"
+notes_vi: "Ca không điển hình: đến muộn, đã ở thể nặng."

@@ -1,0 +1,123 @@
+id: testicular_torsion
+names:
+  vi: "Xoắn tinh hoàn"
+  vi_common: ["Xoắn thừng tinh", "Xoắn dịch hoàn"]
+  en: "Testicular torsion"
+codes:
+  icd10: "N44"
+  icd10_verified: false
+  mondo: "MONDO:0008541"
+summary_vi:
+  - "Tinh hoàn bị xoắn quanh thừng tinh, làm tắc mạch máu nuôi tinh hoàn."
+  - "Hay gặp ở tuổi dậy thì; thường đau bìu đột ngột, dữ dội, có khi chỉ thấy đau bụng dưới và nôn."
+  - "Cần đến cấp cứu ngay, vì chậm vài giờ có thể mất tinh hoàn."
+urgency: 2
+cant_miss: true
+specialties: [urology, emergency]
+applicability:
+  sex: [male]
+  reason_vi: "Bệnh của tinh hoàn, chỉ gặp ở nam giới."
+priors:
+  - complaint: abdominal_pain
+    default: P6
+    by_age: { infant_0_2m: P5, teen_13_17: P5 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [choi-icu-2022, huang-actapaediatr-2013, zhao-jurol-2011, vasconceloscastro-jpedsurg-2020, pogorelic-jpediatrurol-2013, eau-paediatric-urology-2026]
+      locator: "Choi 2022, Huang 2013, Zhao 2011, Vasconcelos-Castro 2020, Pogorelić 2013: tóm tắt; EAU 2026 chương bìu cấp"
+      reported: "Hàn Quốc: 2,02/100.000 nam mỗi năm, 6,99/100.000 ở nam dưới 19 tuổi (Choi); Đài Loan: 3,5/100.000, hai đỉnh ở 10–14 tuổi (7,7/100.000) và nhũ nhi (Huang); Mỹ: 3,8/100.000 trẻ trai dưới 18 tuổi (Zhao); 22% trẻ xoắn khởi đầu bằng đau bụng (Vasconcelos-Castro); 9/84 trẻ đau bụng mà chưa đau bìu (Pogorelić)"
+      population: "Dân số Hàn Quốc, Đài Loan, Mỹ; bệnh viện Bồ Đào Nha, Croatia"
+      note: "Prior tính trong số nam cùng nhóm tuổi bị đau bụng. Hai lượt cùng P6 mặc định và P5 ở 13–17 tuổi; lượt B thêm P5 cho dưới 2 tháng (đỉnh thứ hai ở nhũ nhi, Huang 2013). Lượt C giữ bản của lượt B vì có số liệu; nhóm dưới 2 tháng chỉ sàng lọc dấu hiệu nguy hiểm và câu đau bìu vẫn được hỏi. App chưa có triệu chứng chính về bìu, nên prior tính cả người đau bìu chọn Đau bụng: ở nam 13–17 tuổi khoảng 8/100.000 mỗi năm chia cho vài nghìn đến một vạn lượt đau bụng, khoảng 0,05–0,1%. Chưa có số liệu Việt Nam; cần bác sĩ duyệt."
+findings:
+  - finding: scrotal_pain
+    freq: very_frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [murali-urolann-2022, deng-frontpediatr-2024, pogorelic-jpediatrurol-2013, mantica-abdomradiol-2025, nhs-testicle-pain]
+      locator: "Murali 2022 tóm tắt; Deng 2024 kết quả; Pogorelić 2013 tóm tắt; Mantica 2025 tóm tắt"
+      reported: "Đau bìu 92,2% (Murali, 64 ca); đau bìu 95,5%, sưng đỏ bìu 91% (Deng, 67 trẻ); 9/84 trẻ (11%) đau bụng mà chưa đau bìu lúc đầu (Pogorelić); 7/92 người lớn (6,4%) chỉ đau bụng (Mantica)"
+      population: "Người được mổ xoắn tinh hoàn ở bệnh viện"
+      note: "Lượt C: lệch một mức (A frequent, B very_frequent). Chọn very_frequent theo số liệu: chỉ khoảng 6–11% người xoắn chưa đau bìu lúc đầu; ngay cả khi ước như lượt A (30–50% người xoắn chọn Đau bụng), nhóm chưa đau bìu chỉ chiếm khoảng một phần tư người chọn Đau bụng. Câu đau bìu được hỏi bắt buộc ở nam giới đau bụng, có câu thay thế; trả lời 'Có' đã được rf_scrotal_pain xếp mức 2. Trả lời 'Không' giảm khả năng khoảng 5 lần (trẻ có thể ngại nói): cần bác sĩ duyệt."
+  - finding: abd_pain_radiates_groin
+    freq: frequent
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [mantica-abdomradiol-2025, pogorelic-jpediatrurol-2013, nhs-testicle-pain]
+      note: "Hai lượt giống nhau. Đau từ tinh hoàn lan lên theo thừng tinh; người bệnh hay tả là đau lan xuống bẹn hoặc bộ phận sinh dục. Nguồn không cho tỷ lệ; ước khoảng một nửa. Câu đau bìu mang phần lớn thông tin, hai câu hay được trả lời cùng nhau (đề xuất gộp vào một cụm, xem biên bản). Tỷ lệ nền 1%."
+  - finding: abd_pain_location
+    dist: { epigastric: 0.03, right_upper: 0.015, left_upper: 0.015, periumbilical: 0.09, right_lower: 0.27, left_lower: 0.35, suprapubic: 0.155, whole: 0.075 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [murali-urolann-2022, deng-frontpediatr-2024, pogorelic-jpediatrurol-2013]
+      locator: "Murali 2022 (bên trái 65,6%); Deng 2024 (bên trái 68,7%)"
+      note: "Trung bình hai lượt. Đau bụng dưới cùng bên tinh hoàn bị xoắn; bên trái gặp khoảng hai phần ba. Ước lượng."
+  - finding: abd_pain_onset
+    dist: { sudden: 0.725, gradual: 0.275 }
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [eau-paediatric-urology-2026, nhs-testicle-pain]
+      locator: "EAU 2026 chương bìu cấp; NHS Testicle pain (đau đột ngột, dữ dội)"
+      note: "Trung bình hai lượt (A 0,70, B 0,75). Xoắn không hoàn toàn có thể đau tăng dần. Ước lượng."
+  - finding: abd_pain_duration
+    dist: { lt_6h: 0.40, h6_24: 0.29, d1_3: 0.21, d4_14: 0.065, gt_2w: 0.035 }
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [vasconceloscastro-jpedsurg-2020, pogorelic-jpediatrurol-2013, lukosiute-emj-2023, eau-paediatric-urology-2026]
+      locator: "Vasconcelos-Castro 2020 tóm tắt (trung vị 36 giờ khi khởi đầu bằng đau bụng, 5 giờ khi đau bìu); Pogorelić 2013 (4 giờ ở nhóm giữ được, 39 giờ ở nhóm mất tinh hoàn); Lukosiute-Urboniene 2023 (triệu chứng dưới 7 giờ là yếu tố dự báo)"
+      note: "Trung bình hai lượt (lệch 0,1). Người tự kiểm tra thường trong những giờ đầu; nhóm khởi đầu bằng đau bụng đến viện muộn hơn. Ước lượng."
+  - finding: abd_pain_severe
+    freq: frequent
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [eau-paediatric-urology-2026, nhs-testicle-pain]
+      locator: "EAU 2026 chương bìu cấp; NHS Testicle pain"
+      note: "Lượt C: lệch một mức (A occasional, B frequent). Ngang nguồn (mô tả bằng lời); đây là dấu hiệu cảnh báo của bệnh nguy hiểm nên giữ liên kết mạnh hơn (frequent): đau đột ngột, dữ dội là điển hình dù phần đau ở bụng thường nhẹ hơn ở bìu. Tính trong số người đã đau bụng."
+  - finding: vomiting
+    freq: occasional
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [murali-urolann-2022, deng-frontpediatr-2024, lukosiute-emj-2023, pogorelic-jpediatrurol-2013]
+      locator: "Murali 2022 tóm tắt; Deng 2024 kết quả; Lukosiute-Urboniene 2023 tóm tắt; Pogorelić 2013 tóm tắt"
+      reported: "Buồn nôn, nôn 18,8% (Murali), 8/67 (Deng); buồn nôn, nôn là yếu tố dự báo xoắn so với nguyên nhân bìu cấp khác (Lukosiute-Urboniene); ở trẻ khởi đầu bằng đau bụng, đau bụng và nôn là hay gặp nhất (Pogorelić)"
+      note: "Lượt C: lệch một mức (A frequent, B occasional). Chọn occasional của lượt B vì có số liệu: 12–19% ở mọi người xoắn; nhóm khởi đầu bằng đau bụng nôn nhiều hơn nhưng không có tỷ lệ. Với Đau bụng gần trung tính (tỷ lệ nền 0,2)."
+  - finding: dysuria
+    freq: rare
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [murali-urolann-2022]
+      reported: "Triệu chứng tiết niệu 3,1%"
+      note: "Chỉ lượt B có; lượt C giữ sau khi mở lại nguồn. Thấp hơn tỷ lệ nền 5%: tiểu buốt gợi ý nhiễm khuẩn tiết niệu hoặc viêm mào tinh hoàn."
+  - finding: abd_pain_migrated_rlq
+    freq: rare
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [mantica-abdomradiol-2025, pogorelic-jpediatrurol-2013]
+      note: "Chỉ lượt B có; lượt C giữ. Tính trong số người đã đau bụng. Đau từ quanh rốn chuyển xuống hố chậu phải là kiểu của viêm ruột thừa; ở xoắn tinh hoàn đau bụng dưới cùng bên, lan xuống bìu. Thấp hơn tỷ lệ nền 0,1. Ước lượng."
+warning_signs:
+  - scrotal_pain
+  - abd_pain_severe
+  - persistent_vomiting
+self_care_vi:
+  - "Không chờ xem cơn đau bìu có tự hết không, kể cả khi đau đã đỡ."
+  - "Không ăn uống trong lúc chờ khám, vì có thể phải mổ."
+  - "Trẻ trai đau bụng dưới cần được hỏi và xem bìu, vì trẻ có thể ngại nói."
+see_doctor_vi:
+  - "Đến cấp cứu ngay khi đau hoặc sưng bìu đột ngột, tốt nhất trong vòng 6 giờ từ lúc bắt đầu đau."
+  - "Đau bìu kèm đau bụng, buồn nôn hoặc nôn cần đến cấp cứu ngay, kể cả khi đau không dữ dội."
+review:
+  status: source_checked
+  authors: ["agent:pass-a", "agent:pass-b"]
+  reconciler: "agent:pass-c"
+  doctor_reviewer: null
+  updated: "2026-10-27"
+  notes_vi: "Lượt C đối chiếu 10 liên kết, mở lại mọi nguồn được trích (tóm tắt qua API Europe PMC, toàn văn Choi 2022, Murali 2022, Deng 2024). Mức 2, không được bỏ sót (hai lượt giống nhau): NHS Testicle pain: đau tinh hoàn đột ngột, dữ dội, hoặc kèm buồn nôn, nôn, đau bụng thì đến cấp cứu ngay hoặc gọi 999; EAU 2026: cửa sổ quyết định khoảng 4–6 giờ. Bác sĩ cần xem: (1) prior suy từ tỷ lệ mới mắc ở Hàn Quốc, Đài Loan, Mỹ, giả định phần lớn người đau bìu chọn Đau bụng vì app chưa có triệu chứng chính về bìu; (2) đau bìu chọn very_frequent: trả lời 'Không' giảm khả năng khoảng 5 lần, trong khi khoảng 6–11% người xoắn lúc đầu chưa đau bìu; (3) đau bìu và đau lan xuống bẹn không cùng cụm (đề xuất người bảo trì thêm cụm); (4) không liên kết sốt (Murali 9,4%, gần tỷ lệ nền) và liên quan bữa ăn (không có nguồn); viêm mào tinh hoàn chưa có trong cơ sở tri thức; (5) mã N44 chưa đối chiếu bảng ICD-10 của Bộ Y tế."

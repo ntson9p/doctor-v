@@ -1,0 +1,41 @@
+id: d-encephalitis-1
+set: dev
+title_vi: "Bé trai 6 tuổi ở Thái Bình, tháng 6, sốt cao 3 ngày, đau đầu, nôn, nay li bì, nói lẫn lộn"
+narrative_vi: "Bé K., 6 tuổi, ở Thái Bình, nhà gần ruộng lúa. Ba ngày nay bé sốt cao 39,6°C, kêu đau đầu nhiều, nôn 2 lần. Từ chiều nay bé ngủ li bì, gọi mãi mới mở mắt, nói lẫn lộn, không nhận ra bà. Bé chưa co giật. Cổ vẫn cúi được. Không ho, không sổ mũi, không tiêu chảy, không nổi ban. Bé đã tiêm đủ 2 mũi vắc xin sởi; mẹ không nhớ đã tiêm vắc xin viêm não Nhật Bản đủ chưa."
+patient:
+  age_years: 6
+  sex: male
+  region: north
+  month: 6
+complaint: fever
+answers:
+  fever_max_temp: ge_39
+  fever_duration: d3_5
+  headache: present
+  headache_severity: severe
+  vomiting: present
+  persistent_vomiting: absent
+  drowsy_hard_to_wake: present
+  confusion: present
+  seizure_recent: absent
+  neck_stiffness: absent
+  es_unresponsive_or_seizing: absent
+  es_stroke_signs: absent
+  rash_any: absent
+  cough: absent
+  runny_nose: absent
+  sore_throat: absent
+  diarrhea: absent
+  breathing_difficulty: absent
+  cold_hands_feet: absent
+  heat_exposure: absent
+  measles_vaccinated: present
+default_unmentioned: absent
+expected:
+  condition: encephalitis
+  acceptable: []
+  triage: 1
+source:
+  basis: "Viêm não cấp (nghĩ viêm não Nhật Bản ở miền Bắc, mùa hè, trẻ 2–8 tuổi): khởi phát sốt cao, nhức đầu, nôn, sau đó rối loạn tri giác (3312/QĐ-BYT 2015, bài Viêm não, mục 2, 3.2). NHS Encephalitis: lú lẫn, mất ý thức thì gọi 999 (mức 1)."
+  references: [byt-qd-3312-2015, nhs-encephalitis, cdc-je-clinical]
+author: "agent:pass-c"

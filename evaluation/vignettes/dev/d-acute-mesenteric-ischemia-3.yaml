@@ -1,0 +1,51 @@
+id: d-acute-mesenteric-ischemia-3
+set: dev
+title_vi: Nam 80 tuổi rung nhĩ, đột ngột đau bụng, nôn và đi ngoài phân lỏng nhiều lần (dễ nhầm viêm dạ dày – ruột)
+narrative_vi: Cụ L., 80 tuổi, bị rung nhĩ, đã tự ngừng thuốc chống đông. Sáng nay đột ngột đau bụng nhiều, đau khắp bụng, sau đó nôn 3 lần và đi ngoài phân lỏng 4 lần, không có máu. Con cháu nghĩ cụ ăn phải đồ ăn hỏng, nhưng những người ăn cùng không ai bị. Không sốt, không ngất, không lú lẫn, không đau ngực.
+patient:
+  age_years: 80
+  sex: male
+  region: north
+  month: 7
+complaint: abdominal_pain
+answers:
+  abd_pain_severe: present
+  abd_pain_onset: sudden
+  abd_pain_duration: lt_6h
+  abd_pain_location: whole
+  abd_pain_colicky: absent
+  vomiting: present
+  nausea: present
+  diarrhea: present
+  diarrhea_bloody: absent
+  unsafe_food_shared: absent
+  fever: absent
+  atrial_fibrillation_known: present
+  known_heart_disease: present
+  antithrombotic_use: absent
+  hypertension_known: absent
+  persistent_vomiting: absent
+  abdomen_hard_swollen: absent
+  fainting_or_near_fainting: absent
+  cold_hands_feet: absent
+  confusion: absent
+  drowsy_hard_to_wake: absent
+  chest_pain_pressure: absent
+  breathing_difficulty: absent
+  black_stool: absent
+  vomiting_blood: absent
+  no_stool_or_gas: absent
+  diabetes: absent
+  decreased_urine: absent
+default_unmentioned: absent
+expected:
+  condition: acute_mesenteric_ischemia
+  acceptable: []
+  triage: 1
+source:
+  basis: "Người cao tuổi rung nhĩ ngừng thuốc chống đông, đau bụng dữ dội đột ngột kèm nôn, tiêu chảy (phản ứng tống rỗng ruột; WSES 2022: tiêu chảy 35%), người ăn cùng không bị: dễ nhầm viêm dạ dày – ruột. Kärkkäinen 2015: từ 75 tuổi bệnh hay gặp hơn viêm ruột thừa ở người đau bụng cấp. Mức 1."
+  references:
+    - wses-ami-2022
+    - karkkainen-jgs-2015
+author: agent:pass-c
+notes_vi: Ca dễ nhầm với viêm dạ dày – ruột cấp (acute_gastroenteritis).

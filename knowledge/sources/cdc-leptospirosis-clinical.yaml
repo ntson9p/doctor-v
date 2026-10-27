@@ -1,0 +1,12 @@
+id: cdc-leptospirosis-clinical
+type: web_page
+title: "Clinical Overview of Leptospirosis"
+publisher: "Centers for Disease Control and Prevention (CDC)"
+url: "https://www.cdc.gov/leptospirosis/hcp/clinical-overview/index.html"
+license_class: L0
+license_note: "Nội dung của cơ quan liên bang Hoa Kỳ, thuộc phạm vi công cộng."
+default_tier: B
+accessed: "2026-10-27"
+verified: true
+verified_by: "agent:pass-c"
+notes_vi: "Lượt C (Giai đoạn 3, lô 2, phần b) mở lại ngày 27/10/2026 bằng WebFetch (trang ghi ngày 02/6/2026). Ủ bệnh 5–14 ngày, dao động 2–30 ngày. Triệu chứng không đặc hiệu: sốt, đau cơ, đau đầu, nôn, buồn nôn, vàng da, tiêu chảy, rét run, đau bụng, mệt, xung huyết kết mạc, đôi khi phát ban. Không điều trị có thể suy thận, vàng da, suy hô hấp, suy gan, viêm màng não; 5–10% suy đa cơ quan và tử vong. Phơi nhiễm: nước nhiễm nước tiểu động vật (lội, tắm, uống), nhất là sau bão, lũ, mưa lớn; tiếp xúc động vật nhiễm bệnh."

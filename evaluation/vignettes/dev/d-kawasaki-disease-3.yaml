@@ -1,0 +1,46 @@
+id: d-kawasaki-disease-3
+set: dev
+title_vi: "Bé trai 3 tuổi, sốt 5 ngày, đỏ mắt, ho ít, nổi ban, môi đỏ nứt, sưng mu bàn tay; đã tiêm sởi"
+narrative_vi: "Bé Đ., 3 tuổi, ở Đà Nẵng. Bé sốt 39,5°C đã 5 ngày, ho húng hắng vài tiếng. Hai mắt đỏ, không có ghèn. Từ hôm qua nổi ban đỏ ở bụng, lưng rồi lan ra tay chân, mặt không có ban. Môi đỏ, khô nứt, lưỡi đỏ. Mu bàn tay sưng, lòng bàn tay đỏ. Bé không sổ mũi. Bé đã tiêm đủ 2 mũi vắc xin sởi, không tiếp xúc ai bị sởi. Không có phỏng nước ở tay chân, không loét miệng. Bé vẫn uống được, chơi được lúc hạ sốt."
+patient:
+  age_years: 3
+  sex: male
+  region: central
+  month: 3
+complaint: fever
+answers:
+  fever_max_temp: ge_39
+  fever_duration: d3_5
+  red_eyes: present
+  cough: present
+  rash_any: present
+  rash_spreads_from_face: absent
+  rash_non_blanching: absent
+  red_lips_strawberry_tongue: present
+  hands_feet_swelling_peeling: present
+  lymph_node_swelling: absent
+  bcg_scar_red: absent
+  runny_nose: absent
+  sore_throat: absent
+  mouth_ulcers: absent
+  hand_foot_blisters: absent
+  vomiting: absent
+  diarrhea: absent
+  child_unable_to_drink: absent
+  child_vomits_everything: absent
+  drowsy_hard_to_wake: absent
+  seizure_recent: absent
+  breathing_difficulty: absent
+  cold_hands_feet: absent
+  measles_vaccinated: present
+  measles_contact: absent
+  hfmd_contact: absent
+default_unmentioned: absent
+expected:
+  condition: kawasaki_disease
+  acceptable: []
+  triage: 3
+source:
+  basis: "Dễ nhầm với sởi (sốt, đỏ mắt, ho, phát ban). Điểm gợi ý Kawasaki: ban bắt đầu ở thân, không mọc từ mặt (Lee 2022; sởi mọc từ sau tai, mặt theo 1019/QĐ-BYT), môi đỏ nứt, phù đỏ đầu chi (3312/QĐ-BYT 2015, bảng 1; sởi là chẩn đoán phân biệt), đã tiêm đủ 2 mũi vắc xin sởi (NHS Measles: khó là sởi). Khám trong 24 giờ (mức 3)."
+  references: [byt-qd-3312-2015, byt-qd-1019-2025, lee-medicina-2022, nhs-kawasaki-disease]
+author: "agent:pass-c"

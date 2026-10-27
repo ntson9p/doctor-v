@@ -1,7 +1,7 @@
 id: migraine
 names:
   vi: "Bệnh đau nửa đầu (migraine)"
-  vi_common: ["Đau nửa đầu (migraine)", "Migraine", "Thiên đầu thống", "Đau đầu vận mạch"]
+  vi_common: ["Đau nửa đầu (migraine)", "Migraine", "Đau đầu vận mạch"]
   en: "Migraine"
 codes:
   icd10: "G43"
@@ -227,6 +227,17 @@ findings:
       sources: [dieterich-jneurol-2016, nhs-migraine, byt-qd-3312-2024]
       locator: "Dieterich 2016 mục Lâm sàng; NHS Migraine (tiền triệu); 3312/QĐ-BYT (2024) bài 1 mục 3.4"
       note: "Hai lượt cùng chọn rare, above_leak_ok. Tiền triệu (thị giác, tê bì, khó nói; NHS) có thể được kể như tê nửa người hoặc nói khó rồi tự hết; cơn kiểu tiền triệu 5–60 phút gặp ở 10–30% người đau nửa đầu tiền đình (Dieterich 2016); 3312/QĐ-BYT: cần phân biệt cơn thiếu máu não thoáng qua với đau nửa đầu. Mức rare cao hơn tỷ lệ nền 1% là có chủ ý: trả lời 'Có' không loại hẳn bệnh này, nhưng tăng ít hơn nhiều so với cơn thiếu máu não thoáng qua; quy tắc rf_transient_neuro vẫn xếp mức 2."
+  # ---------- Giai đoạn 3, lô 2 (lượt C, 27/10/2026): dấu hiệu mới của lô ----------
+  - finding: eye_pain_one_side
+    freq: occasional
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [kelman-headache-2005, ihs-ichd3-2018]
+      locator: "Kelman 2005 tóm tắt (Results); ICHD-3 mục 1.1"
+      reported: "Vị trí đau hay gặp nhất là vùng mắt (67,1%), thái dương (58,0%), trán (55,9%); đau nửa đầu một bên ở 66,6% (1.283 người, cơ sở chuyên khoa)"
+      population: "Người đau nửa đầu ở cơ sở chuyên khoa (Mỹ)"
+      note: "Hai lượt cùng chọn occasional. Câu hỏi hỏi đau nhức dữ dội trong hoặc quanh một bên mắt ở cơn hiện tại, hẹp hơn 'vị trí đau từng gặp ở vùng mắt' của Kelman; ước khoảng 20–25% người đang lên cơn trả lời 'Có'. Tỷ lệ nền 3% nên trả lời 'Có' tăng khả năng khoảng 7 lần, ít hơn glôcôm góc đóng cơn cấp (very_frequent); đỏ mắt, quầng sáng quanh đèn, nhìn mờ là điểm phân biệt (rf_acute_glaucoma_signs). Câu này được hỏi ở mọi người đau đầu, nên không chọn frequent: câu trả lời 'không' sẽ làm giảm khả năng đau nửa đầu khoảng một nửa."
 warning_signs: [headache_thunderclap, es_stroke_signs, vision_loss_or_double, confusion, seizure_recent, neck_stiffness]
 self_care_vi:
   - "Khi lên cơn, nằm nghỉ trong phòng tối, yên tĩnh; ngủ được càng tốt."
@@ -244,5 +255,5 @@ review:
   authors: ["agent:pass-a", "agent:pass-b"]
   reconciler: "agent:pass-c"
   doctor_reviewer: null
-  updated: "2026-10-25"
-  notes_vi: "Lượt C đã đối chiếu 16 liên kết và mở lại mọi nguồn được trích; thêm liên kết đau đầu sét đánh very_rare theo ghi chú lô 4 (tổng 15 liên kết sau khi bỏ 2). Bỏ hai liên kết chỉ có ở lượt A, đều để rare (cao hơn tỷ lệ nền 1% nên bộ kiểm tra cảnh báo): 'cứng gáy' (ICHD-3 ghi cứng cổ là triệu chứng báo trước của cơn, nên mức thấp hơn nền cũng không đúng) và 'đột ngột mất thị lực hoặc nhìn đôi' (tiền triệu có thể để lại ám điểm); hai dấu hiệu này đã có quy tắc mức 2. Bác sĩ cần xem: (1) hệ số theo giới 1,2/0,85 áp dụng cho mọi lứa tuổi; (2) đặc điểm cơn đau lấy từ nghiên cứu ở Đan Mạch, Thổ Nhĩ Kỳ, Mỹ, Ấn Độ, chưa có số liệu người Việt; (3) tần suất buồn nôn, sợ ánh sáng trong một cơn suy từ tỷ lệ 'từng có' và LR; (4) tiền triệu có thể bị mô tả như tê một bên, giống đột quỵ; quy tắc an toàn đảm nhận. Giai đoạn 3 lô 1 (lượt C, 25/10/2026): thêm prior cho Chóng mặt (đại diện cho đau nửa đầu tiền đình: P2; 45–64 tuổi P3; từ 65 tuổi P4), mức riêng frequent cho sợ ánh sáng, sợ tiếng ồn khi triệu chứng chính là Chóng mặt, và 7 liên kết (đau đầu, cảm giác quay, chóng mặt tư thế, kiểu chóng mặt, đã từng có cơn giống hệt, ù tai hoặc nghe kém, cơn thần kinh thoáng qua); mọi giá trị cũ giữ nguyên, mọi nguồn mới đã mở lại. Bác sĩ cần xem thêm: (5) prior cho Chóng mặt là ước lượng, bệnh ít được nhận ra ở tuyến ban đầu; (6) buồn nôn (very_frequent) vẫn dùng mức của cơn đau đầu khi triệu chứng chính là Chóng mặt."
+  updated: "2026-10-27"
+  notes_vi: "Lượt C đã đối chiếu 16 liên kết và mở lại mọi nguồn được trích; thêm liên kết đau đầu sét đánh very_rare theo ghi chú lô 4 (tổng 15 liên kết sau khi bỏ 2). Bỏ hai liên kết chỉ có ở lượt A, đều để rare (cao hơn tỷ lệ nền 1% nên bộ kiểm tra cảnh báo): 'cứng gáy' (ICHD-3 ghi cứng cổ là triệu chứng báo trước của cơn, nên mức thấp hơn nền cũng không đúng) và 'đột ngột mất thị lực hoặc nhìn đôi' (tiền triệu có thể để lại ám điểm); hai dấu hiệu này đã có quy tắc mức 2. Bác sĩ cần xem: (1) hệ số theo giới 1,2/0,85 áp dụng cho mọi lứa tuổi; (2) đặc điểm cơn đau lấy từ nghiên cứu ở Đan Mạch, Thổ Nhĩ Kỳ, Mỹ, Ấn Độ, chưa có số liệu người Việt; (3) tần suất buồn nôn, sợ ánh sáng trong một cơn suy từ tỷ lệ 'từng có' và LR; (4) tiền triệu có thể bị mô tả như tê một bên, giống đột quỵ; quy tắc an toàn đảm nhận. Giai đoạn 3 lô 1 (lượt C, 25/10/2026): thêm prior cho Chóng mặt (đại diện cho đau nửa đầu tiền đình: P2; 45–64 tuổi P3; từ 65 tuổi P4), mức riêng frequent cho sợ ánh sáng, sợ tiếng ồn khi triệu chứng chính là Chóng mặt, và 7 liên kết (đau đầu, cảm giác quay, chóng mặt tư thế, kiểu chóng mặt, đã từng có cơn giống hệt, ù tai hoặc nghe kém, cơn thần kinh thoáng qua); mọi giá trị cũ giữ nguyên, mọi nguồn mới đã mở lại. Bác sĩ cần xem thêm: (5) prior cho Chóng mặt là ước lượng, bệnh ít được nhận ra ở tuyến ban đầu; (6) buồn nôn (very_frequent) vẫn dùng mức của cơn đau đầu khi triệu chứng chính là Chóng mặt. Giai đoạn 3 lô 2 (lượt C, 27/10/2026): thêm liên kết 'đau nhức dữ dội ở một bên mắt' occasional (hai lượt trùng; Kelman 2005, ICHD-3) để câu này không làm glôcôm góc đóng cơn cấp vượt đau nửa đầu khi chỉ có đau quanh mắt. Bỏ tên thường gọi 'Thiên đầu thống': trong tiếng Việt tên này thường chỉ bệnh glôcôm (hai lượt cùng ghi; báo Đại Đoàn Kết 9/4/2018: 'Glôcôm (thường gọi là bệnh thiên đầu thống)'), dễ làm người bị glôcôm góc đóng cơn cấp (mức 2) hiểu nhầm; tên này nay nằm ở bệnh glôcôm góc đóng cơn cấp. Đã xem lại theo scope.yaml, không đổi: kiểu chóng mặt và 'đã từng có cơn giống hệt' (hai lượt cùng giữ). Không liên kết quầng sáng quanh đèn, phơi nắng nóng (hai lượt cùng không liên kết). Mọi nguồn mới đã mở lại."

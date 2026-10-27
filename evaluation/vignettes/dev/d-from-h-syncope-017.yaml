@@ -62,7 +62,7 @@ answers:
   previous_abdominal_surgery: absent
 default_unmentioned: absent
 expected:
-  condition: other
+  condition: abdominal_aortic_aneurysm
   acceptable: []
   triage: 1
 source:

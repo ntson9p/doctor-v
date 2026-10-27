@@ -1,0 +1,42 @@
+id: d-heat-stroke-1
+set: dev
+title_vi: "Nam 22 tuổi gục ngã khi chạy việt dã giữa trưa nắng, đến giờ vẫn lú lẫn, người rất nóng, thở nhanh"
+narrative_vi: "Anh V., 22 tuổi, tân binh ở Bình Dương. Trưa nay đơn vị chạy việt dã 5 km dưới trời nắng gắt. Gần về đích anh đi loạng choạng rồi gục ngã. Đồng đội khiêng vào bóng râm đã hơn 15 phút mà anh vẫn chưa tỉnh táo hẳn, nói lảm nhảm, không biết mình đang ở đâu. Da anh rất nóng, đo nách 40,2°C, thở nhanh, tim đập nhanh. Không co giật. Trước đó anh khỏe mạnh, không có bệnh nền. Người dùng app là đồng đội."
+patient:
+  age_years: 22
+  sex: male
+  region: south
+  month: 4
+complaint: syncope
+answers:
+  heat_exposure: present
+  syncope_trigger: exertion
+  syncope_warning: prodrome
+  not_recovered_after_faint: present
+  confusion: present
+  drowsy_hard_to_wake: absent
+  es_unresponsive_or_seizing: absent
+  seizure_recent: absent
+  fever: present
+  fever_max_temp: ge_39
+  fever_duration: d1_2
+  breathing_difficulty: present
+  palpitations: present
+  cold_sweat: absent
+  severe_weakness: present
+  chest_pain_pressure: absent
+  headache: unknown
+  abdominal_pain: absent
+  black_stool: absent
+  vomiting_blood: absent
+  co_exposure: absent
+  diabetes: absent
+default_unmentioned: absent
+expected:
+  condition: heat_stroke
+  acceptable: []
+  triage: 1
+source:
+  basis: "Sốc nhiệt do gắng sức: gục ngã khi vận động nặng nơi nóng, lú lẫn kéo dài, thân nhiệt rất cao, thở nhanh, tim nhanh (MSD Heatstroke: thể gắng sức ở bộ đội, vận động viên; CDC NIOSH). NHS: 'Call 999 now' khi lú lẫn, mất ý thức, thân nhiệt rất cao; làm mát trong lúc chờ (mức 1)."
+  references: [nhs-heat-exhaustion-heatstroke, msd-heatstroke, cdc-niosh-heat-illness]
+author: "agent:pass-c"

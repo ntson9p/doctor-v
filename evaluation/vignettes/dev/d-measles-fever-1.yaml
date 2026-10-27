@@ -1,0 +1,44 @@
+id: d-measles-fever-1
+set: dev
+title_vi: "Bé gái 2 tuổi chưa tiêm vắc xin sởi, sốt cao 3 ngày, ho, chảy mũi, đỏ mắt, chưa nổi ban; anh trai đang bị sởi"
+narrative_vi: "Bé P., 2 tuổi, ở Hà Nội, chưa được tiêm vắc xin sởi. Anh trai 5 tuổi bị sởi, mọc ban cách đây 11 ngày. Ba ngày nay bé sốt 39,2°C, ho nhiều, chảy nước mũi, hai mắt đỏ, chảy nước mắt, quấy khóc. Bé chưa nổi ban. Bé vẫn bú, uống được, không nôn, không tiêu chảy, không thở nhanh, không li bì, không co giật. Không có phỏng nước ở tay chân, không loét miệng."
+patient:
+  age_years: 2
+  sex: female
+  region: north
+  month: 4
+complaint: fever
+answers:
+  fever_max_temp: ge_39
+  fever_duration: d3_5
+  cough: present
+  runny_nose: present
+  red_eyes: present
+  rash_any: absent
+  measles_contact: present
+  measles_vaccinated: absent
+  sick_contact_respiratory: present
+  sore_throat: unknown
+  diarrhea: absent
+  vomiting: absent
+  child_unable_to_drink: absent
+  child_vomits_everything: absent
+  drowsy_hard_to_wake: absent
+  seizure_recent: absent
+  breathing_difficulty: absent
+  ear_pain: absent
+  mouth_ulcers: absent
+  hand_foot_blisters: absent
+  red_lips_strawberry_tongue: absent
+  hands_feet_swelling_peeling: absent
+  hfmd_contact: absent
+default_unmentioned: absent
+expected:
+  condition: measles
+  acceptable: []
+  triage: 3
+source:
+  basis: "Sởi giai đoạn khởi phát (viêm long: sốt cao, ho, chảy mũi, viêm kết mạc) trước khi mọc ban, ở trẻ chưa tiêm vắc xin, có tiếp xúc người bệnh sởi trong thời gian ủ bệnh (1019/QĐ-BYT mục 2.1.1, 2.4.1). NHS Measles: nghĩ con bị sởi hoặc chưa tiêm mà tiếp xúc gần thì khám khẩn (mức 3); rf_measles_contact_fever."
+  references: [byt-qd-1019-2025, nhs-measles]
+author: "agent:pass-c"
+notes_vi: "Ca của bản mở rộng lô 2: sởi khi chưa mọc ban (tần suất phát ban đổi từ very_frequent thành frequent)."

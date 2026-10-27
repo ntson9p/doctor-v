@@ -1,0 +1,43 @@
+id: d-acute-angle-closure-glaucoma-1
+set: dev
+title_vi: "Nữ 62 tuổi, tối nay đột ngột đau nhức dữ dội mắt phải lan lên nửa đầu, mắt đỏ, nhìn mờ, thấy quầng sáng quanh đèn, nôn"
+narrative_vi: "Bà H., 62 tuổi, ở Hải Phòng. Tối nay sau khi xem phim trong phòng tối, bà đột ngột đau nhức dữ dội trong mắt phải, đau lan lên nửa đầu bên phải. Mắt phải đỏ, nhìn mờ như qua màn sương, nhìn bóng đèn thấy vòng sáng xanh đỏ. Bà buồn nôn, đã nôn 1 lần, chói mắt, chảy nước mắt. Đau đã khoảng 2 giờ, chưa từng đau như vậy. Không sốt, không cứng gáy, không yếu tay chân, nói rõ. Bà bị tăng huyết áp, uống thuốc đều."
+patient:
+  age_years: 62
+  sex: female
+  region: north
+  month: 10
+complaint: headache
+answers:
+  eye_pain_one_side: present
+  red_eyes: present
+  blurred_vision: present
+  halos_around_lights: present
+  vision_loss_or_double: absent
+  nausea: present
+  vomiting: present
+  photophobia: present
+  headache_location: one_side
+  headache_severity: severe
+  headache_course: first_time
+  headache_duration: lt_4h
+  headache_thunderclap: absent
+  neck_stiffness: absent
+  confusion: absent
+  seizure_recent: absent
+  sudden_loss_of_balance: absent
+  headache_after_head_injury: absent
+  es_stroke_signs: absent
+  fever: absent
+  visual_aura: absent
+  hypertension_known: present
+  pregnant: absent
+default_unmentioned: absent
+expected:
+  condition: acute_angle_closure_glaucoma
+  acceptable: []
+  triage: 2
+source:
+  basis: "Glôcôm góc đóng cơn cấp điển hình: khởi phát đột ngột về chiều tối, đau nhức mắt lan lên nửa đầu cùng bên, nhìn mờ như qua màn sương, nhìn đèn có quầng xanh đỏ, buồn nôn, nôn (40/QĐ-BYT 2015, bài Glôcôm góc đóng nguyên phát, mục 3a). NHS Glaucoma: triệu chứng xuất hiện đột ngột thì gọi 999 hoặc đến cấp cứu (mức 2)."
+  references: [byt-qd-40-2015, nhs-glaucoma, msd-angle-closure-glaucoma]
+author: "agent:pass-c"

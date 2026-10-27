@@ -56,14 +56,14 @@ findings:
       reported: "đến khám trung vị ngày 4 từ khi khởi bệnh (Mexico)"
       note: "Khởi phát 2–4 ngày; ban mọc sau 3–4 ngày sốt cao; thân nhiệt giảm khi ban mọc hết (toàn phát 2–5 ngày). Phân bố theo thời điểm người dùng hỏi; trung bình của hai lượt."
   - finding: rash_any
-    freq: very_frequent
+    freq: frequent
     evidence:
       tier: B
-      basis: numeric
-      sources: [delmoral-ijidreg-2026, byt-qd-1019-2025, cdc-measles-clinical-overview]
-      locator: "1019 mục 2.1.1"
-      reported: "98,3% ca không nhập viện (Mexico 2025–2026)"
-      note: "Gần như mọi ca đã xác định có ban, nhưng ban chỉ mọc sau 3–4 ngày sốt; người dùng hỏi trong giai đoạn khởi phát sẽ chưa có ban, nên hai lượt cùng chọn very_frequent."
+      basis: judgment
+      sources: [byt-qd-1019-2025, delmoral-ijidreg-2026]
+      locator: "1019/QĐ-BYT mục 2.1.1 (giai đoạn khởi phát 2–4 ngày; ban mọc sau 3–4 ngày sốt cao; thân nhiệt giảm khi ban mọc hết) và mục 2.4.2 (ca nghi ngờ cần phát ban hoặc hạt Koplik); Del Moral 2026 phần Methods, Results"
+      reported: "Ban ở 98,3% ca xác định không nhập viện (Mexico 2025–2026), nhưng ca được tìm ra chủ yếu vì có ban và ngày khởi bệnh tính từ ngày mọc ban"
+      note: "Lô 2 (lượt C, 27/10/2026): hai lượt cùng đổi very_frequent thành frequent (scope.yaml, ca dev d-from-h-fever-009). Câu hỏi hỏi lúc dùng app, khi người bệnh có thể còn ở giai đoạn khởi phát. Ghép mốc của 1019/QĐ-BYT với phân bố số ngày sốt của chính bệnh này (1–2 ngày 0,20; 3–5 ngày 0,52; 6–7 ngày 0,21; hơn 7 ngày 0,07): gần như chưa có ban ở ngày 1–2, khoảng một nửa ở ngày 3–5, gần như đủ từ ngày 6, tổng khoảng 0,5. Với very_frequent, trả lời 'chưa có ban' giảm khả năng sởi khoảng 5 lần; với frequent khoảng 2 lần. Khi đã có ban, câu ban mọc từ mặt (very_frequent) vẫn phân biệt rõ."
   - finding: rash_spreads_from_face
     freq: very_frequent
     evidence:
@@ -178,5 +178,5 @@ review:
   authors: ["agent:pass-a", "agent:pass-b"]
   reconciler: "agent:pass-c"
   doctor_reviewer: null
-  updated: "2026-10-24"
-  notes_vi: "Cần bác sĩ xem: (1) prior phụ thuộc mạnh vào đợt dịch; năm 2026 chưa có số liệu; (2) tỷ lệ triệu chứng lấy từ ca đến bệnh viện tuyến cuối ở Mexico (2025–2026) và mô tả của 1019, CDC; tiêu chảy, nôn, đau tai, khó thở chỉ là ước lượng; (3) câu hỏi tiêm vắc xin nay chỉ hỏi từ 18 tháng tuổi; tần suất 'đã tiêm đủ 2 mũi' ở ca bệnh có lẽ dưới 20–25%; (4) danh mục chưa có câu hỏi 'ban xuất hiện sau mấy ngày sốt' và hạt Koplik (khó tự quan sát); (5) 1019 cho mọi trẻ bị sởi uống vitamin A liều cao: lý do chính để khuyên khám trong 24 giờ; (6) mã ICD-10 chưa đối chiếu được."
+  updated: "2026-10-27"
+  notes_vi: "Cần bác sĩ xem: (1) prior phụ thuộc mạnh vào đợt dịch; năm 2026 chưa có số liệu; (2) tỷ lệ triệu chứng lấy từ ca đến bệnh viện tuyến cuối ở Mexico (2025–2026) và mô tả của 1019, CDC; tiêu chảy, nôn, đau tai, khó thở chỉ là ước lượng; (3) câu hỏi tiêm vắc xin nay chỉ hỏi từ 18 tháng tuổi; tần suất 'đã tiêm đủ 2 mũi' ở ca bệnh có lẽ dưới 20–25%; (4) danh mục chưa có câu hỏi 'ban xuất hiện sau mấy ngày sốt' và hạt Koplik (khó tự quan sát); (5) 1019 cho mọi trẻ bị sởi uống vitamin A liều cao: lý do chính để khuyên khám trong 24 giờ; (6) mã ICD-10 chưa đối chiếu được. Giai đoạn 3 lô 2 (lượt C, 27/10/2026): phát ban (rash_any) đổi từ very_frequent thành frequent theo cả hai lượt (lý do trong ghi chú liên kết; ca d-from-h-fever-009). Giữ tiếp xúc người bị sởi occasional (hai lượt cùng giữ: 22,7–24,8% ca có tiếp xúc đã biết; với tỷ lệ nền 1%, trả lời 'Có' tăng khả năng khoảng 20 lần, và quy tắc rf_measles_contact_fever đã đưa mức lên 3). Không liên kết các dấu hiệu Kawasaki mới (môi đỏ nứt, sưng đỏ bong da tay chân, sẹo BCG sưng đỏ; hai lượt cùng không liên kết): 1019/QĐ-BYT nêu chúng là điểm phân biệt với Kawasaki; ban sởi lan cả lòng bàn tay, bàn chân nên một số cha mẹ có thể trả lời 'có' ở câu bàn tay, bàn chân đỏ."

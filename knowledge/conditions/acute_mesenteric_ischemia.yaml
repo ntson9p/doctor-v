@@ -1,0 +1,180 @@
+id: acute_mesenteric_ischemia
+names:
+  vi: "Thiếu máu mạc treo ruột cấp"
+  vi_common: ["Tắc mạch mạc treo", "Nhồi máu ruột", "Thiếu máu ruột cấp"]
+  en: "Acute mesenteric ischaemia"
+codes:
+  icd10: "K55.0"
+  icd10_verified: false
+summary_vi:
+  - "Mạch máu nuôi ruột bị tắc hoặc giảm dòng chảy đột ngột, làm ruột thiếu máu và có thể bị hoại tử."
+  - "Hay gặp ở người cao tuổi bị rung nhĩ, bệnh tim, xơ vữa mạch máu; thường đau bụng rất dữ dội dù bụng còn mềm."
+  - "Chậm vài giờ ruột có thể bị hoại tử, nên cần gọi 115 ngay."
+urgency: 1
+cant_miss: true
+specialties: [emergency, general_surgery]
+priors:
+  - complaint: abdominal_pain
+    default: P6
+    by_age: { adult_45_64: P5, elder_65_74: P5, elder_75p: P4 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [tamme-bmjopen-2022, karkkainen-jgs-2015, wses-ami-2022, cervellin-atm-2016]
+      locator: "Tamme 2022 tóm tắt; Kärkkäinen 2015 tóm tắt; WSES 2022 phần dịch tễ"
+      reported: "Tỷ lệ mới mắc trung bình 6,2/100.000 người-năm, 5/10.000 lượt nhập viện (Tamme); 7,3/100.000/năm ở Phần Lan, nhiều hơn vỡ phình động mạch chủ bụng và, ở người đau bụng cấp từ 75 tuổi, nhiều hơn viêm ruột thừa (Kärkkäinen)"
+      population: "Dân số và bệnh viện châu Âu; chưa có số liệu Việt Nam"
+      note: "Hai lượt giống nhau: P6 dưới 45 tuổi, P5 ở 45–74 tuổi, P4 từ 75 tuổi. Tỷ lệ mới mắc tăng theo hàm mũ với tuổi; từ 75 tuổi, ở người đau bụng cấp, bệnh gặp nhiều hơn viêm ruột thừa (Kärkkäinen), nên đặt ngang mức của viêm ruột thừa ở tuổi này. Không dùng hệ số giới tính vì nguồn đã mở không cho thấy khác biệt rõ. Cần bác sĩ duyệt, nhất là mức P4 từ 75 tuổi (ngưỡng 'không được bỏ sót' ở tuổi này là 0,5%)."
+findings:
+  - finding: abd_pain_severe
+    freq: frequent
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [wses-ami-2022]
+      locator: "WSES 2022 khuyến cáo 1 (đau bụng dữ dội không tương xứng với khám thực thể)"
+      note: "Hai lượt giống nhau. Tính trong số người đã đau bụng. Bệnh cảnh kinh điển là đau dữ dội không tương xứng với khám, nhưng thể cấp trên nền mạn và thể không tắc mạch thường đau âm ỉ, lan tỏa hơn."
+  - finding: abd_pain_onset
+    dist: { sudden: 0.6, gradual: 0.4 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [wses-ami-2022, tamme-bmjopen-2022]
+      locator: "WSES 2022 phần sinh lý bệnh; Tamme 2022 (tắc động mạch 68,6%, tắc mạch và huyết khối tại chỗ gần bằng nhau)"
+      note: "Hai lượt giống nhau. Tắc mạch do cục máu đông từ tim khởi phát đột ngột; huyết khối trên nền xơ vữa, thể không tắc mạch và huyết khối tĩnh mạch thường tăng dần. Ước lượng."
+  - finding: abd_pain_location
+    dist: { epigastric: 0.15, right_upper: 0.03, left_upper: 0.03, periumbilical: 0.325, right_lower: 0.06, left_lower: 0.05, suprapubic: 0.03, whole: 0.325 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [wses-ami-2022]
+      locator: "WSES 2022 khuyến cáo 1 (đau khó khu trú)"
+      note: "Trung bình hai lượt (lệch 0,05). Đau quanh rốn hoặc lan tỏa, khó chỉ ra chỗ đau nhất. Ước lượng."
+  - finding: abd_pain_duration
+    dist: { lt_6h: 0.325, h6_24: 0.30, d1_3: 0.21, d4_14: 0.10, gt_2w: 0.065 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [wses-ami-2022, park-jvs-2002]
+      locator: "WSES 2022 khuyến cáo 1–2; Park 2002 tóm tắt (43% có triệu chứng thiếu máu mạc treo mạn từ trước)"
+      note: "Trung bình hai lượt. Phần lớn đau cấp trong 1–2 ngày; người có thiếu máu mạc treo mạn có thể đã đau sau ăn nhiều tuần. Ước lượng."
+  - finding: abd_pain_meal_relation
+    dist: { hungry_relieved_by_food: 0.03, worse_after_meal: 0.30, no_relation: 0.67 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [park-jvs-2002, wses-ami-2022]
+      locator: "Park 2002 tóm tắt; WSES 2022 khuyến cáo 2 (huyết khối động mạch: tiền sử đau sau ăn, sụt cân, sợ ăn)"
+      note: "Hai lượt giống nhau. 43% người được mổ đã có triệu chứng thiếu máu mạc treo mạn (Park); cơn đau cấp thường không liên quan bữa ăn. Gần phân bố nền."
+  - finding: nausea
+    freq: frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [wses-ami-2022, park-jvs-2002]
+      locator: "WSES 2022 phần biểu hiện lâm sàng (dẫn Park 2002)"
+      reported: "Buồn nôn 44%"
+      population: "Người được mổ vì thiếu máu mạc treo cấp"
+      note: "Hai lượt giống nhau. Với Đau bụng tỷ lệ nền 0,35 nên tác dụng nhỏ."
+  - finding: vomiting
+    freq: frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [wses-ami-2022, park-jvs-2002]
+      locator: "WSES 2022 (dẫn Park 2002)"
+      reported: "Nôn 35%"
+      note: "Hai lượt giống nhau; 35% ở cận dưới của frequent."
+  - finding: diarrhea
+    freq: frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [wses-ami-2022, park-jvs-2002]
+      locator: "WSES 2022 (dẫn Park 2002)"
+      reported: "Tiêu chảy 35%"
+      note: "Hai lượt giống nhau. Ruột thiếu máu tăng co bóp, tiết dịch; người cao tuổi đau bụng dữ dội kèm tiêu chảy dễ bị nghĩ là viêm dạ dày – ruột, nên liên kết giúp bệnh không bị loại khi trả lời 'Có'. Tỷ lệ nền 5%."
+  - finding: diarrhea_bloody
+    freq: frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [wses-ami-2022, park-jvs-2002]
+      locator: "WSES 2022 (dẫn Park 2002; huyết khối tĩnh mạch: chảy máu tiêu hóa 10%)"
+      reported: "Đi ngoài ra máu 16%, tiêu chảy 35%"
+      note: "Lượt C: lệch một mức (A occasional, B frequent). Tính trong số người đã tiêu chảy: nếu phần lớn người đi ngoài ra máu cũng tiêu chảy thì tới khoảng 16/35, gần một nửa. Ngang nguồn; đây là dấu hiệu cảnh báo của bệnh nguy hiểm nên giữ liên kết mạnh hơn (frequent). Tỷ lệ nền 1%."
+  - finding: fever
+    freq: occasional
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [wses-ami-2022]
+      locator: "WSES 2022 phần biểu hiện lâm sàng"
+      reported: "Khoảng một phần ba có bộ ba đau bụng, sốt và máu ẩn trong phân"
+      note: "Hai lượt giống nhau. Sốt xuất hiện muộn khi ruột đã tổn thương; hạ một mức cho người tự kiểm tra sớm."
+  - finding: abdomen_hard_swollen
+    freq: occasional
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [wses-ami-2022, who-bec-2018]
+      locator: "WSES 2022 khuyến cáo 1 (có dấu hiệu viêm phúc mạc là ruột đã hoại tử)"
+      note: "Hai lượt giống nhau. Giai đoạn đầu bụng còn mềm; khi ruột hoại tử thì bụng chướng, cứng. Ước 20%; quy tắc rf_abdomen_hard_swollen đã xếp mức 2."
+  - finding: atrial_fibrillation_known
+    freq: occasional
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [wses-ami-2022, tamme-bmjopen-2022]
+      locator: "WSES 2022 phần biểu hiện lâm sàng và bảng 1; Tamme 2022 tóm tắt"
+      reported: "Gần 50% người tắc mạch mạc treo do cục máu đông có rung nhĩ (WSES); tắc mạch và huyết khối tại chỗ cộng lại 68,6% (Tamme)"
+      note: "Hai lượt giống nhau. Áp dụng từ 45 tuổi theo danh mục. Tính trên mọi thể khoảng 15–30% có rung nhĩ, chỉ một phần đã được phát hiện: occasional. Tỷ lệ nền 0,04 nên 'Có' làm tăng khả năng khoảng 5 lần. Cùng cụm heart_history với bệnh tim đã biết."
+  - finding: known_heart_disease
+    freq: occasional
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [wses-ami-2022]
+      locator: "WSES 2022 bảng 1 (rung nhĩ, nhồi máu cơ tim mới, huyết khối trong tim, bệnh van, suy tim)"
+      note: "Lượt C: lệch một mức (A occasional, B frequent). Nguồn chỉ liệt kê yếu tố nguy cơ, không có tỷ lệ; rung nhĩ đã có câu riêng cùng cụm heart_history. Chọn occasional: mức frequent làm câu trả lời 'Không' (rất hay gặp) giảm khả năng bệnh này gần 2 lần mà không có số liệu. Cần bác sĩ duyệt."
+  - finding: weight_loss_unintended
+    freq: occasional
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [park-jvs-2002, wses-ami-2022]
+      locator: "Park 2002 tóm tắt; WSES 2022 khuyến cáo 2"
+      reported: "43% có triệu chứng thiếu máu mạc treo mạn từ trước (đau sau ăn, sụt cân)"
+      note: "Hai lượt giống nhau. Chỉ một phần người có triệu chứng mạn sụt cân rõ; ước 20%."
+  - finding: cold_hands_feet
+    freq: rare
+    above_leak_ok: true
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [wses-ami-2022]
+      locator: "WSES 2022 khuyến cáo 1 (chẩn đoán muộn có thể vào viện trong tình trạng sốc nhiễm khuẩn)"
+      note: "Chỉ lượt B có; lượt C giữ. Sốc là biểu hiện muộn; ước 2–3% ở người tự kiểm tra, cao hơn tỷ lệ nền 1% là có chủ ý (above_leak_ok). Quy tắc dấu hiệu sốc đã xếp mức 1–2."
+warning_signs:
+  - abd_pain_severe
+  - abdomen_hard_swollen
+  - diarrhea_bloody
+  - persistent_vomiting
+  - fainting_or_near_fainting
+  - cold_hands_feet
+  - confusion
+self_care_vi:
+  - "Gọi 115 hoặc đến cấp cứu ngay, không chờ xem cơn đau có tự hết không."
+  - "Không ăn uống gì trong lúc chờ; không tự lái xe đến viện."
+  - "Mang theo các thuốc đang dùng, nhất là thuốc chống đông, để báo cho bác sĩ."
+see_doctor_vi:
+  - "Người cao tuổi bị rung nhĩ hoặc bệnh tim mà đột ngột đau bụng rất dữ dội cần đến cấp cứu ngay."
+  - "Bụng còn mềm, ấn không đau nhiều cũng chưa loại trừ được bệnh này."
+  - "Người hay đau bụng sau khi ăn, sợ ăn và sụt cân nên đi khám sớm để kiểm tra mạch máu nuôi ruột."
+review:
+  status: source_checked
+  authors: ["agent:pass-a", "agent:pass-b"]
+  reconciler: "agent:pass-c"
+  doctor_reviewer: null
+  updated: "2026-10-27"
+  notes_vi: "Lượt C đối chiếu 16 liên kết, mở lại mọi nguồn được trích (toàn văn WSES 2022 và Tamme 2022, tóm tắt Park 2002 và Kärkkäinen 2015 qua API Europe PMC). Mức 1, không được bỏ sót (hai lượt giống nhau): WSES 2022: tử vong 30–70%, cứ chậm chụp mạch 6 giờ thì tử vong tăng gấp đôi; đau bụng dữ dội không tương xứng với khám phải coi là bệnh này cho tới khi loại trừ. Bác sĩ cần xem: (1) prior suy từ số liệu châu Âu, P4 từ 75 tuổi làm người rất cao tuổi đau bụng dữ dội dễ được khuyên cấp cứu; (2) tần suất triệu chứng lấy từ người được mổ (Park 2002 qua WSES); (3) đi ngoài ra máu chọn frequent (tính trong số người tiêu chảy) và bệnh tim đã biết chọn occasional; (4) không liên kết tăng huyết áp (chỉ lượt B có, không có tỷ lệ); (5) chưa có câu hỏi 'đau dữ dội nhưng ấn bụng không đau'; (6) mã K55.0 chưa đối chiếu bảng ICD-10 của Bộ Y tế; chưa xác minh mã MONDO nên bỏ."

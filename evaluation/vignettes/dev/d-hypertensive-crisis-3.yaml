@@ -1,0 +1,45 @@
+id: d-hypertensive-crisis-3
+set: dev
+title_vi: "Nam 47 tuổi đau đầu nhiều vùng gáy, buồn nôn, nhìn mờ, huyết áp đo 205/125"
+narrative_vi: "Anh M., 47 tuổi, ở Hà Nội, được nói là huyết áp cao từ 2 năm trước nhưng không uống thuốc. Tối nay anh đau đầu nhiều vùng gáy, tăng dần trong 3 giờ, buồn nôn, mắt nhìn mờ cả hai bên. Vợ đo huyết áp 205/125 mmHg. Đau không đến đột ngột, không phải đau dữ dội nhất từ trước tới nay. Anh tỉnh táo, nói rõ, không méo miệng, không yếu tay chân, đi lại vững. Không đau ngực, không khó thở. Không sốt, không cứng gáy."
+patient:
+  age_years: 47
+  sex: male
+  region: north
+  month: 12
+complaint: headache
+answers:
+  bp_measured: extreme
+  hypertension_known: present
+  bp_lowering_meds: absent
+  blurred_vision: present
+  vision_loss_or_double: absent
+  headache_location: back_neck
+  headache_severity: severe
+  headache_character: throbbing
+  headache_course: first_time
+  headache_duration: lt_4h
+  headache_thunderclap: absent
+  nausea: present
+  vomiting: absent
+  neck_stiffness: absent
+  confusion: absent
+  seizure_recent: absent
+  sudden_loss_of_balance: absent
+  es_stroke_signs: absent
+  eye_pain_one_side: absent
+  chest_pain_pressure: absent
+  breathing_difficulty: absent
+  fever: absent
+  headache_after_head_injury: absent
+  diabetes: absent
+  known_heart_disease: absent
+default_unmentioned: absent
+expected:
+  condition: hypertensive_crisis
+  acceptable: []
+  triage: 2
+source:
+  basis: "Dễ nhầm với đột quỵ, xuất huyết dưới nhện (đau đầu nhiều, buồn nôn ở người tăng huyết áp không điều trị), nhưng đau tăng dần, không đột ngột, không dấu hiệu thần kinh khu trú. Huyết áp từ 180/120 kèm nhìn mờ (có thể do tổn thương võng mạc): NICE NG136 khuyến cáo 1.5.2 qua quy tắc rf_extreme_bp_with_symptoms (mức 2); ICHD-3 mục 10.3; MSD (cần đánh giá tổn thương cơ quan đích)."
+  references: [nice-ng136, ihs-ichd3-2018, msd-hypertensive-emergencies]
+author: "agent:pass-c"

@@ -1,0 +1,47 @@
+id: d-ovarian-torsion-3
+set: dev
+title_vi: Nữ 23 tuổi đột ngột đau bụng dưới bên phải sau khi quan hệ, choáng muốn ngất, thử thai âm tính (dễ nhầm chửa ngoài tử cung)
+narrative_vi: Chị Q., 23 tuổi, kỳ kinh đều, kỳ gần nhất cách 3 tuần, sáng nay thử thai que 1 vạch. Tối qua ngay sau khi quan hệ, chị đột ngột đau bụng dưới bên phải, đau tăng dần, lúc đi vệ sinh thấy choáng muốn ngất, vã mồ hôi. Đi lại hay xe xóc thì đau hơn. Không chậm kinh, không ra máu âm đạo, không sốt, không nôn, không tiêu chảy, không tiểu buốt.
+patient:
+  age_years: 23
+  sex: female
+  region: central
+  month: 11
+complaint: abdominal_pain
+answers:
+  abd_pain_onset: sudden
+  abd_pain_duration: h6_24
+  abd_pain_location: right_lower
+  abd_pain_severe: absent
+  fainting_or_near_fainting: present
+  cold_sweat: present
+  abd_pain_worse_movement: present
+  pregnant: absent
+  missed_period: absent
+  vaginal_bleeding: absent
+  abnormal_vaginal_discharge: absent
+  fever: absent
+  nausea: absent
+  vomiting: absent
+  diarrhea: absent
+  dysuria: absent
+  abd_pain_migrated_rlq: absent
+  ovarian_cyst_known: absent
+  cold_hands_feet: absent
+  abdomen_hard_swollen: absent
+  pain_with_menses: absent
+  new_sexual_partner: absent
+  loss_of_appetite: absent
+default_unmentioned: absent
+expected:
+  condition: ovarian_torsion
+  acceptable: []
+  triage: 2
+source:
+  basis: "Vỡ nang hoàng thể: đau đột ngột một bên bụng dưới ngay sau quan hệ, ở nửa sau chu kỳ, có khi choáng, ngất (Chen 2026: 78,6% có yếu tố khởi phát rõ, ngất 3,2%). Không chậm kinh, thử thai âm tính nên ít nghĩ chửa ngoài tử cung. Ngất hoặc choáng kèm đau bụng: mức 2 (315/QĐ-BYT: vỡ nang chảy máu có khi phải mổ cầm máu)."
+  references:
+    - chen-bmcwomenshealth-2026
+    - byt-qd-315-2015
+    - nice-ng126
+author: agent:pass-c
+notes_vi: Ca dễ nhầm với chửa ngoài tử cung (ectopic_pregnancy) và viêm ruột thừa.

@@ -1,0 +1,57 @@
+id: d-liver-abscess-3
+set: dev
+title_vi: Nữ 60 tuổi tiểu đường, sốt 6 ngày, rét run, đau tức dưới sườn phải, không vàng da (dễ nhầm sốt xuất huyết)
+narrative_vi: Bà I., 60 tuổi, bị tiểu đường, sống ở TP. Hồ Chí Minh, mùa mưa. Sáu ngày nay sốt cao kèm rét run, đau nhức người, mệt. Ba ngày nay đau tức dưới sườn phải. Khu phố có vài người bị sốt xuất huyết. Không phát ban, không chảy máu chân răng, không nôn, không vàng da, không ho, không tiểu ít.
+patient:
+  age_years: 60
+  sex: female
+  region: south
+  month: 8
+complaint: fever
+answers:
+  fever_max_temp: ge_39
+  fever_duration: d6_7
+  chills_rigors: present
+  myalgia: present
+  fatigue: present
+  abdominal_pain: present
+  abd_pain_location: right_upper
+  abd_pain_duration: d1_3
+  abd_pain_onset: gradual
+  abd_pain_severe: absent
+  diabetes: present
+  dengue_nearby: present
+  rash_any: absent
+  bleeding_gums_nose: absent
+  vomiting: absent
+  persistent_vomiting: absent
+  jaundice: absent
+  cough: absent
+  sore_throat: absent
+  runny_nose: absent
+  headache: absent
+  retro_orbital_pain: absent
+  decreased_urine: absent
+  diarrhea: absent
+  dysuria: absent
+  breathing_difficulty: absent
+  confusion: absent
+  cold_hands_feet: absent
+  severe_weakness: absent
+  neck_stiffness: absent
+  gallstones_known: absent
+  loss_of_appetite: present
+  nausea: absent
+default_unmentioned: absent
+expected:
+  condition: liver_abscess
+  acceptable: []
+  triage: 3
+source:
+  basis: "Người đái tháo đường sốt cao rét run 6 ngày, đau hạ sườn phải, không ban, không xuất huyết: áp xe gan do vi khuẩn (Yu 2022: rét run 74,7%; Mai-Phan 2026). Sốt xuất huyết ngày 6 cũng có đau vùng gan, nhưng rét run kéo dài, không ban, đái tháo đường gợi ý áp xe gan. Cần siêu âm, xét nghiệm trong ngày (mức 3)."
+  references:
+    - yu-idr-2022
+    - maiphan-wjh-2026
+    - byt-qd-2760-2023
+author: agent:pass-c
+notes_vi: Ca dễ nhầm với sốt xuất huyết Dengue (dengue).

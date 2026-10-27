@@ -1,0 +1,152 @@
+id: hypertensive_crisis
+names:
+  vi: "Cơn tăng huyết áp"
+  vi_common: ["Cơn cao huyết áp", "Huyết áp tăng vọt"]
+  en: "Hypertensive crisis (severe hypertension, urgency or emergency)"
+codes:
+  icd10: "I10"
+  icd10_verified: false
+summary_vi:
+  - "Huyết áp tăng rất cao, thường từ 180/120 mmHg trở lên, hay gặp ở người đã bị tăng huyết áp."
+  - "Nhiều người không có triệu chứng; một số đau đầu, chóng mặt, buồn nôn hoặc chảy máu mũi."
+  - "Cần đo lại và đi khám trong ngày; nếu kèm đau ngực, khó thở, nhìn mờ, lú lẫn hoặc yếu liệt thì là cấp cứu."
+urgency: 3
+cant_miss: false
+specialties: [cardiology, general_medicine]
+applicability:
+  age_groups: [teen_13_17, adult_18_44, adult_45_64, elder_65_74, elder_75p]
+  reason_vi: "Câu hỏi số đo huyết áp chỉ hỏi từ 13 tuổi; ở trẻ nhỏ ngưỡng huyết áp khác và cần bác sĩ khám."
+priors:
+  - complaint: headache
+    default: P5
+    by_age: { teen_13_17: P6 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [vallelonga-jcm-2020, zampaglione-hypertension-1996, ihs-ichd3-2018, nhs-high-blood-pressure]
+      locator: "Vallelonga 2020 bảng 5; Zampaglione 1996 tóm tắt; ICHD-3 mục 10.3; NHS High blood pressure"
+      reported: "Ở người huyết áp trên 180/110 không tổn thương cơ quan đích: đau đầu 13% (Turin), 22% (Ý, 1996); tăng huyết áp nhẹ, vừa mạn tính không gây đau đầu (ICHD-3)"
+      note: "Lượt A P5, thiếu niên P6, từ 45 tuổi P4; lượt B P5 cho mọi người lớn, thiếu niên P6. Lượt C chọn mức của lượt B: phạm vi lô yêu cầu prior thấp khi chưa có số đo (bệnh được xác định bằng số đo; NHS: tăng huyết áp thường không có triệu chứng); lượt B đã thử P4 ở người cao tuổi trên bộ dev và thấy người 79 tuổi chóng mặt tư thế lành tính, có tăng huyết áp, chưa đo huyết áp bị hỏi thêm 10 câu và lên mức 3 chỉ vì bệnh này. Có số đo từ 180/120 thì khả năng tăng khoảng 36 lần; số đo dưới 140/90 gần như loại trừ. Cần bác sĩ duyệt."
+  - complaint: dizziness
+    default: P5
+    by_age: { teen_13_17: P6 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [vallelonga-jcm-2020, pierin-einstein-2019]
+      locator: "Vallelonga 2020 bảng 5; Pierin 2019 bảng 1"
+      reported: "Chóng mặt 10% (Turin), 15,8% (São Paulo) ở người huyết áp rất cao không tổn thương cơ quan đích"
+      note: "Lượt A P5, thiếu niên P6, từ 65 tuổi P4; lượt B P5 cho mọi người lớn. Lượt C chọn mức của lượt B, cùng lý do như với Đau đầu."
+findings:
+  - finding: bp_measured
+    dist: { normal: 0.01, high: 0.04, very_high: 0.22, extreme: 0.73 }
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [ihs-ichd3-2018, msd-hypertensive-emergencies, byt-qd-3192-2010, pierin-einstein-2019]
+      locator: "ICHD-3 mục 10.3 (tâm thu từ 180 và/hoặc tâm trương từ 120 mmHg); MSD (thường từ 180 và/hoặc 120); 3192/QĐ-BYT mục phân độ (độ 3: từ 180 và/hoặc từ 110); Pierin 2019 bảng 1"
+      reported: "Huyết áp lần đo đầu trung bình 197/125 mmHg (tăng huyết áp khẩn cấp, São Paulo)"
+      note: "Trung bình hai lượt (A 0,02/0,06/0,27/0,65; B 0,005/0,025/0,17/0,80). Phần lớn chọn 'từ 180/120'; giữ khoảng 22% cho 'từ 160/110 đến dưới 180/120' vì 3192/QĐ-BYT xếp độ 3 từ tâm trương 110, và số đo tại nhà có thể thấp hơn lúc đỉnh. Câu hỏi không có lựa chọn trung tính; 'Không rõ' không mang thông tin."
+  - finding: hypertension_known
+    freq: frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [vallelonga-jcm-2020, zampaglione-hypertension-1996, shin-jcm-2021, pierin-einstein-2019]
+      locator: "Vallelonga 2020 bảng 1; Zampaglione 1996 tóm tắt; Shin 2021 bảng 1; Pierin 2019 bảng 1"
+      reported: "Đã biết tăng huyết áp 78% (Turin), khoảng 72% ca khẩn cấp (Ý, 1996), 48,4% (Hàn Quốc), 33,7% (São Paulo)"
+      note: "Lượt A frequent, lượt B very_frequent. Lượt C chọn frequent: bốn nghiên cứu dao động 34–78%, trung bình khoảng 58%; mức thấp hơn cũng giữ đúng yêu cầu không đẩy bệnh lên chỉ vì tiền sử khi chưa có số đo. Tỷ lệ nền 0,15 nên trả lời 'Có' tăng khả năng khoảng 3 lần. Không liên kết thêm 'đang uống thuốc hạ áp' (hai lượt cùng tránh đếm trùng; lượt A để occasional, gần bằng tỷ lệ nền)."
+  - finding: chest_pain_pressure
+    freq: occasional
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [pierin-einstein-2019, vallelonga-jcm-2020, msd-hypertensive-emergencies]
+      locator: "Pierin 2019 bảng 1; Vallelonga 2020 bảng 5; MSD"
+      reported: "Đau ngực 17,8% (khẩn cấp, São Paulo); 12% (không kiểm soát, Turin)"
+      note: "Chỉ lượt A có; lượt C giữ vì có số liệu. Đau ngực kèm huyết áp từ 180/120 đã ở mức 2 (rf_extreme_bp_with_symptoms)."
+  - finding: breathing_difficulty
+    freq: occasional
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [pierin-einstein-2019, vallelonga-jcm-2020, msd-hypertensive-emergencies]
+      locator: "Pierin 2019 bảng 1; Vallelonga 2020 bảng 5; MSD"
+      reported: "Khó thở 8,7% (khẩn cấp), 27,2% (cấp cứu, São Paulo); 11% (không kiểm soát, Turin)"
+      note: "Chỉ lượt A có; lượt C giữ vì có số liệu."
+  - finding: confusion
+    freq: rare
+    above_leak_ok: true
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [zampaglione-hypertension-1996, vallelonga-jcm-2020, msd-hypertensive-emergencies]
+      locator: "Zampaglione 1996 tóm tắt; Vallelonga 2020 bảng 5; MSD"
+      reported: "Bệnh não do tăng huyết áp 16% ca cấp cứu (ca cấp cứu chiếm 24%); lú lẫn 10% (Turin, người đến cấp cứu)"
+      note: "Chỉ lượt A có; lượt C giữ. Cố ý cao hơn tỷ lệ nền 1% (bệnh não do tăng huyết áp gây lú lẫn) nhưng để rare vì số liệu là người đến cấp cứu. Lú lẫn đã ở mức 1."
+  - finding: bleeding_gums_nose
+    freq: rare
+    above_leak_ok: true
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [vallelonga-jcm-2020, zampaglione-hypertension-1996]
+      locator: "Vallelonga 2020 bảng 5; Zampaglione 1996 tóm tắt"
+      reported: "Chảy máu mũi 3% (Turin), 17% (Ý, 1996)"
+      note: "Chỉ lượt B có; lượt A cố ý không liên kết vì câu hỏi gộp chảy máu chân răng. Lượt C giữ ở rare (cao hơn tỷ lệ nền 1% có chủ ý): số liệu không thống nhất, nên trả lời 'Có' chỉ tăng nhẹ khả năng bệnh."
+  - finding: headache_location
+    dist: { one_side: 0.10, both_sides: 0.35, forehead_face: 0.10, back_neck: 0.25, whole_head: 0.20 }
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [ihs-ichd3-2018]
+      locator: "ICHD-3 mục 10.3 (thường hai bên)"
+      note: "Chỉ lượt B khai báo; lượt C giữ. Phần đau vùng gáy là ước lượng."
+  - finding: headache_character
+    dist: { throbbing: 0.65, pressing: 0.35 }
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [ihs-ichd3-2018]
+      locator: "ICHD-3 mục 10.3 (thường đau theo nhịp mạch)"
+      note: "Chỉ lượt B khai báo; lượt C giữ. Ước lượng."
+  - finding: headache_course
+    dist: { first_time: 0.40, recurrent_similar: 0.50, progressive: 0.10 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [ihs-ichd3-2018, vallelonga-jcm-2020]
+      locator: "ICHD-3 mục 10.3 (đau đầu hết khi huyết áp về bình thường); Vallelonga 2020 bảng 1 (78% đã biết tăng huyết áp)"
+      note: "Chỉ lượt B khai báo; lượt C giữ. Ước lượng."
+  - finding: headache_duration
+    dist: { lt_4h: 0.35, h4_72: 0.55, gt_3d: 0.10 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [ihs-ichd3-2018]
+      locator: "ICHD-3 mục 10.3"
+      note: "Chỉ lượt B khai báo; lượt C giữ. Ước lượng."
+warning_signs:
+  - chest_pain_pressure
+  - breathing_difficulty
+  - confusion
+  - es_stroke_signs
+  - vision_loss_or_double
+  - blurred_vision
+  - headache_thunderclap
+self_care_vi:
+  - "Ngồi nghỉ yên 5–10 phút rồi đo lại huyết áp ở tư thế ngồi."
+  - "Không uống cà phê, hút thuốc hoặc uống rượu bia trong 2 giờ trước khi đo."
+  - "Không tự uống thêm thuốc hạ huyết áp hoặc tăng liều khi chưa hỏi bác sĩ."
+  - "Uống thuốc huyết áp đều đặn theo đơn; không tự ý ngừng thuốc."
+see_doctor_vi:
+  - "Nếu đo lại vẫn từ 180/120 mmHg trở lên, đi khám trong ngày."
+  - "Đến cấp cứu ngay nếu kèm đau ngực, khó thở, lú lẫn hoặc nhìn mờ."
+  - "Gọi 115 nếu méo miệng, yếu tay chân, nói khó hoặc đau đầu đột ngột dữ dội."
+review:
+  status: source_checked
+  authors: ["agent:pass-a", "agent:pass-b"]
+  reconciler: "agent:pass-c"
+  doctor_reviewer: null
+  updated: "2026-10-27"
+  notes_vi: "Bệnh đại diện cho tăng huyết áp nặng (khoảng từ 180/120) khi chưa có tổn thương cơ quan đích; tăng huyết áp cấp cứu biểu hiện bằng đột quỵ, hội chứng vành cấp, phù phổi đã có bệnh và quy tắc riêng (rf_extreme_bp_with_symptoms mức 2, rf_extreme_bp mức 3). Mức xử trí 3, không thuộc nhóm không được bỏ sót (hai lượt thống nhất): MSD (không có tổn thương cơ quan đích thì biến chứng cấp ít xảy ra, không cần hạ áp ngay, đánh giá ngoại trú); 3192/QĐ-BYT (không hạ huyết áp quá nhanh trừ tình huống cấp cứu). Hai lượt khác nhau nhiều nhất ở bệnh này (chỉ 1 liên kết chung). Lượt C giữ thiết kế của phạm vi lô: prior thấp, bệnh chủ yếu được nhận ra nhờ số đo huyết áp; bỏ các liên kết của lượt A có mức bằng tỷ lệ nền (đau đầu, chóng mặt, buồn nôn: occasional so với 0,2; thuốc hạ áp: occasional so với 0,15) và choáng ngất (4–10%, gần tỷ lệ nền 5%); giữ đau ngực, khó thở, lú lẫn (có số liệu) và chảy máu mũi (lượt B). Lời dặn đo lại theo 3192/QĐ-BYT (nghỉ 5–10 phút, không dùng chất kích thích 2 giờ trước). Mã I10 chỉ là mã đại diện (ICD-10 của WHO không có mã riêng). Không dùng NICE NG136 (bị chặn). Đề nghị người bảo trì thêm bệnh này vào `conditions` của rf_extreme_bp_with_symptoms. Cần bác sĩ xem: (1) chưa có số liệu tỷ lệ huyết áp từ 180/120 ở người đi khám vì đau đầu, chóng mặt; (2) tần suất triệu chứng từ khoa cấp cứu ở Ý, Brazil, Hàn Quốc; (3) lựa chọn số đo chưa có mốc 180/110 riêng."

@@ -1,0 +1,46 @@
+id: d-kawasaki-disease-1
+set: dev
+title_vi: "Bé trai 2 tuổi, sốt cao 6 ngày, mắt đỏ, môi đỏ nứt, phát ban, sưng đỏ tay chân, nổi hạch cổ"
+narrative_vi: "Bé A., 2 tuổi, ở Hà Nội. Bé sốt cao 39,5–40°C liên tục 6 ngày, uống thuốc hạ sốt chỉ đỡ ít. Hai mắt bé đỏ nhưng không có ghèn, môi đỏ sẫm, khô nứt, lưỡi đỏ như quả dâu tây. Người nổi ban đỏ ở ngực, bụng. Mu bàn tay, bàn chân sưng phù, lòng bàn tay đỏ. Cổ bên phải có một hạch to. Bé quấy khóc nhiều nhưng vẫn uống được, không li bì. Không ho, không sổ mũi, không có phỏng nước ở tay chân hay loét miệng. Bé đã tiêm đủ 2 mũi vắc xin sởi."
+patient:
+  age_years: 2
+  sex: male
+  region: north
+  month: 5
+complaint: fever
+answers:
+  fever_max_temp: ge_39
+  fever_duration: d6_7
+  red_eyes: present
+  red_lips_strawberry_tongue: present
+  rash_any: present
+  rash_non_blanching: absent
+  rash_spreads_from_face: absent
+  hands_feet_swelling_peeling: present
+  lymph_node_swelling: present
+  bcg_scar_red: unknown
+  mouth_ulcers: absent
+  hand_foot_blisters: absent
+  cough: absent
+  runny_nose: absent
+  sore_throat: absent
+  vomiting: absent
+  diarrhea: absent
+  child_unable_to_drink: absent
+  child_vomits_everything: absent
+  drowsy_hard_to_wake: absent
+  seizure_recent: absent
+  breathing_difficulty: absent
+  cold_hands_feet: absent
+  measles_vaccinated: present
+  measles_contact: absent
+  hfmd_contact: absent
+default_unmentioned: absent
+expected:
+  condition: kawasaki_disease
+  acceptable: []
+  triage: 3
+source:
+  basis: "Bệnh Kawasaki thể điển hình: sốt liên tục từ 5 ngày kèm 5/5 biểu hiện chính (viêm kết mạc hai bên không nhử, thay đổi môi miệng, ban đa dạng, phù đỏ đầu chi, hạch cổ) (3312/QĐ-BYT 2015, bảng 1, mục 3.3). NHS Kawasaki disease: khám khẩn (mức 3); cần điều trị sớm trong 10 ngày đầu."
+  references: [byt-qd-3312-2015, nhs-kawasaki-disease]
+author: "agent:pass-c"

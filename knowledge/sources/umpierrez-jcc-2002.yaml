@@ -1,0 +1,15 @@
+id: umpierrez-jcc-2002
+type: primary_study
+title: Abdominal pain in patients with hyperglycemic crises
+publisher: Journal of Critical Care 2002;17(1):63–67 (Umpierrez G, Freire AX)
+date: 2002-03
+url: https://europepmc.org/article/MED/12040551
+doi: 10.1053/jcrc.2002.33030
+pmid: "12040551"
+license_class: L3
+license_note: "Bản quyền nhà xuất bản: chỉ dùng dữ kiện kèm trích dẫn."
+default_tier: B
+accessed: 2026-10-27
+verified: true
+verified_by: agent:pass-c
+notes_vi: "Lượt C (Giai đoạn 3 lô 2 phần a, 27/10/2026) mở lại tóm tắt qua API Europe PMC. Đã đối chiếu: đau bụng ở 86/189 người nhiễm toan ceton (46%), liên quan với mức toan."

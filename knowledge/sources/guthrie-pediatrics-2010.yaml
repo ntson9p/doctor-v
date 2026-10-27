@@ -1,0 +1,15 @@
+id: guthrie-pediatrics-2010
+type: statistic
+title: Incidence and trends of pediatric ovarian torsion hospitalizations in the United States, 2000-2006
+publisher: Pediatrics 2010;125(3):532–538 (Guthrie BD, Adler MD, Powell EC)
+date: 2010-03
+url: https://europepmc.org/article/MED/20123766
+doi: 10.1542/peds.2009-1360
+pmid: "20123766"
+license_class: L3
+license_note: "Bản quyền nhà xuất bản: chỉ dùng dữ kiện kèm trích dẫn."
+default_tier: B
+accessed: 2026-10-27
+verified: true
+verified_by: agent:pass-c
+notes_vi: "Lượt C (Giai đoạn 3 lô 2 phần a, 27/10/2026) mở lại tóm tắt qua API Europe PMC. Đã đối chiếu: 4,9/100.000 nữ 1–20 tuổi nhập viện vì xoắn buồng trứng (KID 2006)."

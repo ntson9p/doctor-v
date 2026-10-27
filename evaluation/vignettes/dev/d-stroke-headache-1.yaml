@@ -1,0 +1,47 @@
+id: d-stroke-headache-1
+set: dev
+title_vi: Nam 38 tuổi đau đầu, đau gáy bên phải sau khi bẻ cổ ở tiệm gội đầu, đột ngột mất thăng bằng
+narrative_vi: Anh J., 38 tuổi, khỏe mạnh. Ba ngày trước được bẻ cổ mạnh khi gội đầu ở tiệm. Từ hôm qua đau đầu vùng gáy và sau đầu bên phải, đau vừa. Sáng nay đột ngột chóng mặt, đi loạng choạng, xiêu sang phải. Không méo miệng, không yếu tay chân, nói bình thường, không nhìn đôi. Không sốt, không cứng gáy, không nôn, không ngất.
+patient:
+  age_years: 38
+  sex: male
+  region: north
+  month: 3
+complaint: headache
+answers:
+  neck_injury_or_manipulation: present
+  sudden_loss_of_balance: present
+  headache_location: back_neck
+  headache_severity: moderate
+  headache_course: first_time
+  headache_duration: h4_72
+  headache_thunderclap: absent
+  dizziness: present
+  es_stroke_signs: absent
+  vision_loss_or_double: absent
+  confusion: absent
+  seizure_recent: absent
+  neck_stiffness: absent
+  fever: absent
+  vomiting: absent
+  nausea: absent
+  fainting_or_near_fainting: absent
+  headache_after_head_injury: absent
+  hypertension_known: absent
+  diabetes: absent
+  known_heart_disease: absent
+  photophobia: absent
+  smoker: absent
+default_unmentioned: absent
+expected:
+  condition: stroke
+  acceptable: []
+  triage: 1
+source:
+  basis: "Bóc tách động mạch đốt sống sau bẻ, nắn cổ gây đột quỵ tuần hoàn sau ở người trẻ: đau gáy, đau đầu một bên kèm mất thăng bằng (Biller 2014; Engelter 2013: 40,5% có chấn thương cổ trong tháng trước). Mất thăng bằng đột ngột (chữ B của BE-FAST) ở người có yếu tố cơ học: quy tắc rf_befast_high_risk mức 1; NHS: nghĩ đột quỵ thì gọi 999."
+  references:
+    - biller-stroke-2014
+    - engelter-neurology-2013
+    - nhs-stroke-symptoms
+    - byt-qd-3312-2024
+author: agent:pass-c

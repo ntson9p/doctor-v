@@ -1,0 +1,54 @@
+id: d-acute-mesenteric-ischemia-2
+set: dev
+title_vi: Nam 66 tuổi bệnh tim, đau bụng âm ỉ tăng dần 1 ngày, đi ngoài phân lỏng có máu, sụt cân vì sợ ăn
+narrative_vi: Ông P., 66 tuổi, bị bệnh mạch vành và tăng huyết áp, hút thuốc. Mấy tháng nay cứ ăn xong khoảng nửa giờ là đau bụng nên ông sợ ăn, sụt cân. Từ hôm qua đau quanh rốn tăng dần, đau liên tục, đi ngoài phân lỏng 2 lần, lần sau có lẫn máu đỏ sẫm. Đau nhiều nhưng ông vẫn chịu được. Hơi sốt nhẹ. Không nôn, không ngất, không đau ngực, không khó thở.
+patient:
+  age_years: 66
+  sex: male
+  region: south
+  month: 5
+complaint: abdominal_pain
+answers:
+  abd_pain_severe: absent
+  abd_pain_onset: gradual
+  abd_pain_duration: d1_3
+  abd_pain_location: periumbilical
+  abd_pain_meal_relation: worse_after_meal
+  weight_loss_unintended: present
+  diarrhea: present
+  diarrhea_bloody: present
+  fever: present
+  fever_max_temp: lt_38
+  fever_duration: d1_2
+  nausea: absent
+  vomiting: absent
+  known_heart_disease: present
+  atrial_fibrillation_known: absent
+  hypertension_known: present
+  smoker: present
+  abdomen_hard_swollen: absent
+  fainting_or_near_fainting: absent
+  cold_hands_feet: absent
+  chest_pain_pressure: absent
+  breathing_difficulty: absent
+  confusion: absent
+  black_stool: absent
+  vomiting_blood: absent
+  abd_pain_colicky: absent
+  diabetes: absent
+  heartburn: absent
+  dysuria: absent
+  loss_of_appetite: present
+  chills_rigors: absent
+default_unmentioned: absent
+expected:
+  condition: acute_mesenteric_ischemia
+  acceptable: []
+  triage: 2
+source:
+  basis: "Thể cấp trên nền mạn: tiền sử đau sau ăn, sợ ăn, sụt cân (thiếu máu mạc treo mạn; Park 2002: 43%), nay đau tăng dần, đi ngoài ra máu, sốt nhẹ (WSES 2022: một phần ba có bộ ba đau bụng, sốt, máu trong phân). WSES: cần chụp cắt lớp mạch máu ngay. Người bệnh còn ổn định, không đau dữ dội, không dấu hiệu sốc nên đến cơ sở cấp cứu ngay (mức 2); thể điển hình đau dữ dội đột ngột mới cần gọi 115."
+  references:
+    - wses-ami-2022
+    - park-jvs-2002
+author: agent:pass-c
+notes_vi: "Ca không điển hình: không đau dữ dội, khởi phát từ từ, có máu trong phân."

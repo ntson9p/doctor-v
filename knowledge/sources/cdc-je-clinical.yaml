@@ -1,0 +1,13 @@
+id: cdc-je-clinical
+type: web_page
+title: "Clinical Features and Diagnosis of Japanese Encephalitis"
+publisher: "Centers for Disease Control and Prevention (CDC)"
+date: "2025-11-19"
+url: "https://www.cdc.gov/japanese-encephalitis/hcp/clinical-diagnosis/index.html"
+license_class: L0
+license_note: "Nội dung của cơ quan liên bang Hoa Kỳ, thuộc phạm vi công cộng."
+default_tier: B
+accessed: "2026-10-27"
+verified: true
+verified_by: "agent:pass-c"
+notes_vi: "Lượt C (Giai đoạn 3, lô 2, phần b) mở lại ngày 27/10/2026 bằng WebFetch (trang ghi ngày 21/10/2026, cập nhật 19/11/2025). Dưới 1% người nhiễm vi rút viêm não Nhật Bản có bệnh; viêm não cấp là thể hay được nhận ra nhất. Khởi phát đột ngột với sốt, đau đầu, nôn; những ngày sau có thể thay đổi ý thức, dấu thần kinh khu trú, yếu toàn thân, rối loạn vận động; co giật hay gặp, nhất là ở trẻ em. Tử vong khoảng 20–30%; 30–50% người sống sót có di chứng thần kinh, nhận thức hoặc tâm thần."

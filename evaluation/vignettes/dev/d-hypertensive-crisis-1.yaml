@@ -1,0 +1,46 @@
+id: d-hypertensive-crisis-1
+set: dev
+title_vi: "Nam 58 tuổi tăng huyết áp bỏ thuốc 1 tuần, đau đầu vùng gáy, huyết áp đo 195/120"
+narrative_vi: "Ông L., 58 tuổi, ở TP.HCM, bị tăng huyết áp 5 năm. Tuần trước hết thuốc nên ông tự ngừng uống. Từ sáng ông đau đầu vùng gáy mức vừa, nặng đầu, đo huyết áp ở nhà 195/120 mmHg, nghỉ 10 phút đo lại vẫn 190/118. Ông tỉnh táo, nói rõ, không đau ngực, không khó thở, không nhìn mờ, không yếu tay chân. Không buồn nôn, không nôn. Ông từng đau đầu kiểu này khi huyết áp lên."
+patient:
+  age_years: 58
+  sex: male
+  region: south
+  month: 6
+complaint: headache
+answers:
+  bp_measured: extreme
+  hypertension_known: present
+  bp_lowering_meds: absent
+  headache_location: back_neck
+  headache_severity: moderate
+  headache_character: pressing
+  headache_course: recurrent_similar
+  headache_duration: h4_72
+  headache_thunderclap: absent
+  neck_stiffness: absent
+  confusion: absent
+  seizure_recent: absent
+  vision_loss_or_double: absent
+  blurred_vision: absent
+  eye_pain_one_side: absent
+  sudden_loss_of_balance: absent
+  es_stroke_signs: absent
+  chest_pain_pressure: absent
+  breathing_difficulty: absent
+  nausea: absent
+  vomiting: absent
+  fever: absent
+  dizziness: absent
+  bleeding_gums_nose: absent
+  diabetes: absent
+  known_heart_disease: absent
+default_unmentioned: absent
+expected:
+  condition: hypertensive_crisis
+  acceptable: []
+  triage: 3
+source:
+  basis: "Tăng huyết áp nặng (từ 180/120) không có dấu hiệu tổn thương cơ quan đích (không lú lẫn, đau ngực, khó thở, nhìn mờ, yếu liệt): MSD (biến chứng cấp ít xảy ra, không cần hạ áp ngay); 3192/QĐ-BYT (không hạ huyết áp quá nhanh); ICHD-3 mục 10.3. Khám trong hôm nay (rf_extreme_bp, mức 3)."
+  references: [msd-hypertensive-emergencies, byt-qd-3192-2010, ihs-ichd3-2018]
+author: "agent:pass-c"

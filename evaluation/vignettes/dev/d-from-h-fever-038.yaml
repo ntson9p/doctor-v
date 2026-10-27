@@ -29,7 +29,7 @@ answers:
   measles_vaccinated: present
 default_unmentioned: absent
 expected:
-  condition: other
+  condition: encephalitis
   acceptable: []
   triage: 1
 source:
@@ -37,4 +37,4 @@ source:
   references:
     - "https://www.nhs.uk/conditions/headaches/"
 author: "agent:vignette-holdout"
-notes_vi: "Ngoài danh mục bệnh; gần giống viêm màng não do vi khuẩn nên dễ bị xếp vào bệnh đó. Chuyển từ bộ giữ kín (h-fever-038) ngày 25/10/2026: ca được dùng để sửa dữ liệu sau lần chạy đầu bộ giữ kín (cần mức 1, app ra mức 2), theo quy tắc giữ kín của docs/evaluation.md."
+notes_vi: "Lượt C lô 2 phần b (27/10/2026) đổi bệnh đúng từ 'other' thành encephalitis: bệnh viêm não cấp nay đã có trong danh mục, và ca mô tả đúng viêm não Nhật Bản (trẻ 7 tuổi ở miền Bắc, mùa hè, gần chuồng lợn và ruộng lúa; sốt, đau đầu, nôn, co giật, li bì, lú lẫn; 3312/QĐ-BYT 2015 bài Viêm não). Trước đây ghi: ngoài danh mục bệnh; gần giống viêm màng não do vi khuẩn nên dễ bị xếp vào bệnh đó. Chuyển từ bộ giữ kín (h-fever-038) ngày 25/10/2026: ca được dùng để sửa dữ liệu sau lần chạy đầu bộ giữ kín (cần mức 1, app ra mức 2), theo quy tắc giữ kín của docs/evaluation.md."

@@ -1,0 +1,48 @@
+id: d-acute-angle-closure-glaucoma-2
+set: dev
+title_vi: "Nam 78 tuổi đau đầu, nôn, vã mồ hôi, đau bụng từ chiều; hỏi kỹ thì mắt phải đỏ, nhức, nhìn mờ"
+narrative_vi: "Ông B., 78 tuổi, ở Nam Định. Từ chiều ông kêu đau đầu bên phải, buồn nôn, nôn 2 lần, vã mồ hôi, đau lâm râm vùng bụng. Hôm trước ông có uống thuốc cảm, thuốc ho. Con trai hỏi kỹ thì ông nói mắt phải nhức nhiều, nhìn mờ; nhìn thấy mắt phải đỏ. Ông không để ý có quầng sáng quanh đèn không. Ông tỉnh táo, nói rõ, không yếu tay chân, không sốt, không cứng gáy. Ông không bị tăng huyết áp, không tiêu chảy."
+patient:
+  age_years: 78
+  sex: male
+  region: north
+  month: 12
+complaint: headache
+answers:
+  eye_pain_one_side: present
+  red_eyes: present
+  blurred_vision: present
+  halos_around_lights: unknown
+  vision_loss_or_double: absent
+  nausea: present
+  vomiting: present
+  persistent_vomiting: absent
+  cold_sweat: present
+  abdominal_pain: present
+  headache_location: one_side
+  headache_severity: moderate
+  headache_course: first_time
+  headache_duration: lt_4h
+  headache_thunderclap: absent
+  neck_stiffness: absent
+  confusion: absent
+  drowsy_hard_to_wake: absent
+  seizure_recent: absent
+  sudden_loss_of_balance: absent
+  es_stroke_signs: absent
+  fever: absent
+  diarrhea: absent
+  chest_pain_pressure: absent
+  breathing_difficulty: absent
+  hypertension_known: absent
+  diabetes: absent
+default_unmentioned: absent
+expected:
+  condition: acute_angle_closure_glaucoma
+  acceptable: []
+  triage: 2
+source:
+  basis: "Cơn glôcôm góc đóng cấp ở người cao tuổi biểu hiện nổi bật bằng triệu chứng toàn thân (đau đầu, buồn nôn, nôn, đau bụng, vã mồ hôi), dễ bị nhầm là bệnh tiêu hóa hoặc thần kinh (MSD; 40/QĐ-BYT mục 3a); thuốc cảm, thuốc ho có tác dụng giãn đồng tử có thể gây cơn (MSD). Mắt đỏ, đau nhức một bên, nhìn mờ: đến cấp cứu ngay (NHS Glaucoma; rf_acute_glaucoma_signs, mức 2)."
+  references: [msd-angle-closure-glaucoma, byt-qd-40-2015, nhs-glaucoma]
+author: "agent:pass-c"
+notes_vi: "Ca không điển hình: nam giới, rất cao tuổi, triệu chứng toàn thân nổi bật."

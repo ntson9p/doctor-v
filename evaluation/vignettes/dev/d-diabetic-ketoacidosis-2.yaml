@@ -1,0 +1,58 @@
+id: d-diabetic-ketoacidosis-2
+set: dev
+title_vi: "Nữ 79 tuổi tiểu đường, sốt 2 ngày, khát nhiều, tiểu nhiều, mệt, choáng khi đứng, đường huyết rất cao"
+narrative_vi: "Bà G., 79 tuổi, bị tiểu đường típ 2 uống thuốc, sống một mình. Hai ngày nay bà sốt nhẹ, mệt, chán ăn. Bà khát nước nhiều, đi tiểu nhiều, đứng dậy là choáng, tối sầm mắt. Con gái đến thăm đo đường huyết được 32 mmol/L. Bà vẫn nhận ra người nhà, trả lời đúng. Không nôn, không đau bụng, không ho, không khó thở, không tiểu buốt, không đau đầu, không phát ban."
+patient:
+  age_years: 79
+  sex: female
+  region: south
+  month: 5
+complaint: fever
+answers:
+  fever_max_temp: lt_38
+  fever_duration: d1_2
+  chills_rigors: absent
+  diabetes: present
+  on_glucose_lowering_meds: present
+  glucose_measured: high
+  thirst_polyuria: present
+  fatigue: present
+  loss_of_appetite: present
+  dizziness: present
+  dizziness_on_standing: present
+  fainting_or_near_fainting: present
+  vomiting: absent
+  nausea: absent
+  abdominal_pain: absent
+  cough: absent
+  sore_throat: absent
+  runny_nose: absent
+  breathing_difficulty: absent
+  dysuria: absent
+  urinary_frequency: absent
+  flank_pain: absent
+  headache: absent
+  rash_any: absent
+  diarrhea: absent
+  confusion: absent
+  drowsy_hard_to_wake: absent
+  cold_hands_feet: absent
+  severe_weakness: absent
+  neck_stiffness: absent
+  persistent_vomiting: absent
+  decreased_urine: absent
+  ketone_breath: absent
+  myalgia: absent
+  hypertension_known: present
+  known_heart_disease: absent
+  immunocompromised: absent
+default_unmentioned: absent
+expected:
+  condition: diabetic_ketoacidosis
+  acceptable: []
+  triage: 2
+source:
+  basis: "Tăng áp lực thẩm thấu ở người cao tuổi đái tháo đường típ 2, khởi phát sau một nhiễm trùng: khát, tiểu nhiều, mất nước gây choáng tư thế, đường huyết rất cao, chưa rối loạn ý thức (3879/QĐ-BYT bài Hôn mê tăng áp lực thẩm thấu: hay gặp trên 60 tuổi, ngay sau nhiễm trùng cấp; 5481/QĐ-BYT Phần 7: biến chứng cấp đe dọa tính mạng). Cần đến cấp cứu (mức 2)."
+  references: [byt-qd-3879-2014, byt-qd-5481-2020]
+author: "agent:pass-c"
+notes_vi: "Ca không điển hình: thể tăng áp lực thẩm thấu ở người rất cao tuổi, triệu chứng chính là sốt nhẹ, không nôn, không đau bụng. Bản đầu của lượt C chọn triệu chứng chính Chóng mặt với kiểu chóng mặt liên tục; khi đó quy tắc chóng mặt liên tục ở người có nguy cơ mạch máu dừng phiên trước khi hỏi khát nhiều, nên đổi sang bối cảnh nhiễm trùng khởi phát (xem biên bản)."

@@ -1,0 +1,42 @@
+id: d-encephalitis-3
+set: dev
+title_vi: "Bé gái 3 tuổi ở Sơn La, tháng 7, sốt 2 ngày, co giật 2 lần, sau cơn vẫn li bì"
+narrative_vi: "Bé M., 3 tuổi, ở Sơn La. Hai ngày nay bé sốt 39°C, quấy khóc, nôn 1 lần. Sáng nay bé co giật toàn thân 2 lần, mỗi lần khoảng 3 phút. Đã hơn 1 giờ sau cơn mà bé vẫn ngủ li bì, gọi không mở mắt, chỉ ú ớ. Hiện bé không còn co giật. Mẹ thấy cổ bé vẫn mềm. Bé không nổi ban, không ho, không tiêu chảy, không có nốt phỏng ở tay chân hay loét miệng."
+patient:
+  age_years: 3
+  sex: female
+  region: north
+  month: 7
+complaint: fever
+answers:
+  fever_max_temp: t38_39
+  fever_duration: d1_2
+  seizure_recent: present
+  drowsy_hard_to_wake: present
+  es_unresponsive_or_seizing: absent
+  vomiting: present
+  child_vomits_everything: absent
+  child_unable_to_drink: unknown
+  neck_stiffness: absent
+  bulging_fontanelle: absent
+  headache: unknown
+  rash_any: absent
+  mouth_ulcers: absent
+  hand_foot_blisters: absent
+  startle_myoclonus: absent
+  cough: absent
+  runny_nose: absent
+  diarrhea: absent
+  breathing_difficulty: absent
+  cold_hands_feet: absent
+  measles_vaccinated: present
+default_unmentioned: absent
+expected:
+  condition: encephalitis
+  acceptable: [bacterial_meningitis]
+  triage: 1
+source:
+  basis: "Dễ nhầm với co giật do sốt: co giật do sốt đơn thuần thường ngắn và trẻ tỉnh lại nhanh, còn ở đây co giật lặp lại và li bì kéo dài sau cơn. 3312/QĐ-BYT (2015, bài Viêm não, mục 3.2.2, 3.4): rối loạn tri giác, thường có co giật; cần phân biệt với co giật do sốt cao, viêm màng não mủ. Li bì, khó đánh thức là dấu hiệu nguy hiểm toàn thân (IMCI), gọi cấp cứu (mức 1)."
+  references: [byt-qd-3312-2015, who-imci-chart-booklet-2014, nhs-encephalitis]
+author: "agent:pass-c"
+notes_vi: "Viêm màng não do vi khuẩn được chấp nhận vì tại nhà không phân biệt được (trẻ dưới 5 tuổi ít có cứng gáy)."

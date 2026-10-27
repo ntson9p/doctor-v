@@ -1,0 +1,49 @@
+id: d-heat-stroke-2
+set: dev
+title_vi: "Bà 80 tuổi ở một mình trong phòng nóng ngột ngạt giữa đợt nắng nóng, người nóng ran, lơ mơ, nói lẫn lộn"
+narrative_vi: "Bà G., 80 tuổi, sống một mình trong căn phòng mái tôn ở Hà Nội. Ba ngày nay nắng nóng gay gắt, phòng không có điều hòa, quạt hỏng. Chiều nay con gái đến thấy bà nằm trên giường, người nóng ran, da khô, gọi thì bà mở mắt nhưng nói lẫn lộn, không nhận ra con. Đo nách 39,8°C. Bà không ho, không khó thở, không nôn, không tiêu chảy, không kêu đau bụng, đi tiểu bình thường. Bà bị tăng huyết áp, đang uống thuốc. Không co giật. Người dùng app là con gái."
+patient:
+  age_years: 80
+  sex: female
+  region: north
+  month: 7
+complaint: fever
+answers:
+  heat_exposure: present
+  fever_max_temp: ge_39
+  fever_duration: d1_2
+  confusion: present
+  drowsy_hard_to_wake: present
+  seizure_recent: absent
+  es_unresponsive_or_seizing: absent
+  neck_stiffness: absent
+  cold_hands_feet: absent
+  severe_weakness: present
+  breathing_difficulty: absent
+  persistent_vomiting: absent
+  cold_sweat: absent
+  cough: absent
+  sore_throat: absent
+  runny_nose: absent
+  headache: unknown
+  abdominal_pain: absent
+  diarrhea: absent
+  rash_any: absent
+  dysuria: absent
+  urinary_frequency: absent
+  decreased_urine: absent
+  hypertension_known: present
+  bp_lowering_meds: present
+  diabetes: absent
+  known_heart_disease: absent
+  immunocompromised: absent
+default_unmentioned: absent
+expected:
+  condition: heat_stroke
+  acceptable: []
+  triage: 1
+source:
+  basis: "Sốc nhiệt thể cổ điển: người cao tuổi, ít vận động, ở nơi nóng không thông gió trong đợt nắng nóng 2–3 ngày; thân nhiệt cao, da nóng khô, rối loạn tri giác (MSD Heatstroke; NHS: người cao tuổi dễ bị; 'Call 999 now' khi lú lẫn). Lú lẫn, li bì: gọi 115 (mức 1)."
+  references: [msd-heatstroke, nhs-heat-exhaustion-heatstroke, who-bec-2018]
+author: "agent:pass-c"
+notes_vi: "Ca không điển hình: người cao tuổi, ở trong nhà, không gắng sức; nhiễm khuẩn huyết là chẩn đoán phân biệt cần loại trừ ở bệnh viện."

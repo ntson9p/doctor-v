@@ -1,0 +1,48 @@
+id: d-heat-stroke-3
+set: dev
+title_vi: "Nam 45 tuổi làm đồng giữa trưa ở Đồng Tháp, đau đầu, rồi nói lảm nhảm, đi loạng choạng, người rất nóng"
+narrative_vi: "Ông C., 45 tuổi, làm ruộng ở Đồng Tháp. Trưa nay ông phun thuốc ngoài đồng nhiều giờ dưới nắng gắt. Ông về nhà kêu đau đầu, chóng mặt, sau đó nói lảm nhảm, đi loạng choạng không vững, người rất nóng, đo nách 40°C. Vợ thấy mặt không méo, hai tay vẫn giơ lên đều, nhưng ông trả lời không đúng câu hỏi. Không co giật. Ông chưa từng đau đầu kiểu này, không đột ngột dữ dội. Không có bệnh nền. Ông mặc đồ bảo hộ, đeo khẩu trang khi phun, không nôn, không chảy nước dãi, không vã mồ hôi."
+patient:
+  age_years: 45
+  sex: male
+  region: south
+  month: 4
+complaint: headache
+answers:
+  heat_exposure: present
+  confusion: present
+  sudden_loss_of_balance: present
+  es_stroke_signs: absent
+  drowsy_hard_to_wake: absent
+  seizure_recent: absent
+  es_unresponsive_or_seizing: absent
+  fever: present
+  fever_max_temp: ge_39
+  fever_duration: d1_2
+  headache_course: first_time
+  headache_duration: lt_4h
+  headache_thunderclap: absent
+  headache_severity: moderate
+  dizziness: present
+  neck_stiffness: absent
+  vision_loss_or_double: absent
+  eye_pain_one_side: absent
+  headache_after_head_injury: absent
+  vomiting: absent
+  nausea: absent
+  breathing_difficulty: absent
+  cold_hands_feet: absent
+  severe_weakness: absent
+  cold_sweat: absent
+  flood_mud_exposure: absent
+  hypertension_known: absent
+  diabetes: absent
+default_unmentioned: absent
+expected:
+  condition: heat_stroke
+  acceptable: []
+  triage: 1
+source:
+  basis: "Dễ nhầm với đột quỵ, viêm não: lú lẫn, đi loạng choạng (MSD: dấu hiệu sớm của sốc nhiệt), sốt cao sau nhiều giờ lao động dưới nắng, không có dấu hiệu đột quỵ khu trú, khởi phát cùng lúc với phơi nắng (MSD Heatstroke; NHS: lú lẫn, mất phối hợp là dấu hiệu sốc nhiệt, 'Call 999 now'). Mức 1."
+  references: [msd-heatstroke, nhs-heat-exhaustion-heatstroke, cdc-niosh-heat-illness]
+author: "agent:pass-c"

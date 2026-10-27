@@ -1,0 +1,51 @@
+id: d-heat-exhaustion-1
+set: dev
+title_vi: "Nam 35 tuổi làm công trường ở TP.HCM, tháng 4, chóng mặt, đau đầu, buồn nôn, vã mồ hôi sau buổi trưa nắng gắt"
+narrative_vi: "Anh D., 35 tuổi, thợ xây ở TP.HCM. Trưa nay anh làm việc ngoài nắng gắt nhiều giờ, uống ít nước. Đầu giờ chiều anh thấy choáng váng, đứng dậy thì tối sầm mắt, đau đầu, buồn nôn, mệt rã rời, ra rất nhiều mồ hôi, rất khát. Anh vẫn tỉnh táo, nói chuyện bình thường, tự đi vào chỗ râm ngồi được. Không thấy mọi vật quay, không ngất, không sốt. Không đau ngực, không khó thở, không hồi hộp. Không có bệnh nền."
+patient:
+  age_years: 35
+  sex: male
+  region: south
+  month: 4
+complaint: dizziness
+answers:
+  heat_exposure: present
+  dizziness_pattern: continuous
+  vertigo_spinning: absent
+  dizziness_positional: absent
+  dizziness_on_standing: present
+  fainting_or_near_fainting: absent
+  headache: present
+  headache_thunderclap: absent
+  headache_severity: moderate
+  nausea: present
+  vomiting: absent
+  cold_sweat: present
+  fatigue: present
+  fever: absent
+  confusion: absent
+  drowsy_hard_to_wake: absent
+  severe_weakness: absent
+  cannot_walk_unaided: absent
+  sudden_loss_of_balance: absent
+  vision_loss_or_double: absent
+  transient_neuro_symptoms: absent
+  chest_pain_pressure: absent
+  breathing_difficulty: absent
+  palpitations: absent
+  hearing_loss_tinnitus: absent
+  black_stool: absent
+  diarrhea: absent
+  co_exposure: absent
+  diabetes: absent
+  hypertension_known: absent
+  known_heart_disease: absent
+default_unmentioned: absent
+expected:
+  condition: heat_exhaustion
+  acceptable: []
+  triage: 5
+source:
+  basis: "Kiệt sức do nóng: mệt, chóng mặt, đau đầu, buồn nôn, ra nhiều mồ hôi, rất khát sau làm việc nặng nơi nắng nóng; vẫn tỉnh táo (NHS Heat exhaustion and heatstroke; CDC NIOSH; MSD). NHS: thường không cần cấp cứu nếu được làm mát trong 30 phút; tự xử trí bằng 4 bước làm mát (mức 5); không đỡ sau 30 phút thì gọi cấp cứu."
+  references: [nhs-heat-exhaustion-heatstroke, cdc-niosh-heat-illness, msd-heat-exhaustion]
+author: "agent:pass-c"

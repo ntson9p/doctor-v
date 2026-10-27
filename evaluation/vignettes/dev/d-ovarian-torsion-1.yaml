@@ -1,0 +1,45 @@
+id: d-ovarian-torsion-1
+set: dev
+title_vi: Nữ 27 tuổi có u nang buồng trứng, đột ngột đau dữ dội bụng dưới bên phải, buồn nôn, nôn
+narrative_vi: Chị V., 27 tuổi, năm ngoái siêu âm được nói có u nang buồng trứng phải. Bốn giờ trước, sau khi bê chậu nước, chị đột ngột đau dữ dội bụng dưới bên phải, không đi lại được, buồn nôn và nôn 2 lần. Không chậm kinh, kỳ kinh gần nhất 2 tuần trước, chắc chắn không có thai. Không sốt, không ra máu âm đạo, không khí hư bất thường, không tiểu buốt, không tiêu chảy.
+patient:
+  age_years: 27
+  sex: female
+  region: south
+  month: 8
+complaint: abdominal_pain
+answers:
+  abd_pain_severe: present
+  abd_pain_onset: sudden
+  abd_pain_duration: lt_6h
+  abd_pain_location: right_lower
+  ovarian_cyst_known: present
+  nausea: present
+  vomiting: present
+  pregnant: absent
+  missed_period: absent
+  vaginal_bleeding: absent
+  abnormal_vaginal_discharge: absent
+  fever: absent
+  dysuria: absent
+  diarrhea: absent
+  abd_pain_migrated_rlq: absent
+  abd_pain_colicky: absent
+  fainting_or_near_fainting: absent
+  cold_sweat: absent
+  abdomen_hard_swollen: absent
+  pain_with_menses: absent
+  loss_of_appetite: absent
+  flank_pain: absent
+default_unmentioned: absent
+expected:
+  condition: ovarian_torsion
+  acceptable: []
+  triage: 2
+source:
+  basis: "Xoắn u nang buồng trứng điển hình: đau đột ngột, dữ dội một bên bụng dưới kèm nôn ở người đã biết có nang (Huchon 2012: đau một bên, đau không chịu nổi, nôn là yếu tố dự báo; Houry 2001). 315/QĐ-BYT: xoắn nang cần mổ cấp cứu; đau bụng dữ dội là mức 2."
+  references:
+    - byt-qd-315-2015
+    - huchon-humreprod-2012
+    - houry-annemergmed-2001
+author: agent:pass-c

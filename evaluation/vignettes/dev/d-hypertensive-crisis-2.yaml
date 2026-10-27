@@ -1,0 +1,52 @@
+id: d-hypertensive-crisis-2
+set: dev
+title_vi: "Nữ 66 tuổi nặng đầu nhẹ, chảy máu mũi, hơi choáng, huyết áp đo 185/110"
+narrative_vi: "Bà K., 66 tuổi, ở Đà Nẵng, bị tăng huyết áp, uống thuốc không đều. Chiều nay bà thấy nặng đầu, đau âm ỉ cả đầu mức nhẹ, hơi choáng, rồi chảy máu mũi bên trái khoảng 10 phút thì tự cầm. Con gái đo huyết áp 185/110 mmHg. Bà từng bị nặng đầu như vậy những lần huyết áp lên. Bà không thấy mọi vật quay, không ngất, đi lại vững, nói rõ, không yếu tay chân, không nhìn mờ. Không đau ngực, không khó thở, không hồi hộp. Không sốt, không buồn nôn."
+patient:
+  age_years: 66
+  sex: female
+  region: central
+  month: 3
+complaint: headache
+answers:
+  bp_measured: extreme
+  hypertension_known: present
+  bp_lowering_meds: present
+  bleeding_gums_nose: present
+  dizziness: present
+  headache_severity: mild
+  headache_location: whole_head
+  headache_character: pressing
+  headache_course: recurrent_similar
+  headache_duration: lt_4h
+  headache_thunderclap: absent
+  headache_frequent: absent
+  fainting_or_near_fainting: absent
+  sudden_loss_of_balance: absent
+  vision_loss_or_double: absent
+  blurred_vision: absent
+  eye_pain_one_side: absent
+  es_stroke_signs: absent
+  neck_stiffness: absent
+  confusion: absent
+  seizure_recent: absent
+  chest_pain_pressure: absent
+  breathing_difficulty: absent
+  palpitations: absent
+  nausea: absent
+  vomiting: absent
+  fever: absent
+  photophobia: absent
+  stress_poor_sleep: absent
+  diabetes: absent
+  known_heart_disease: absent
+default_unmentioned: absent
+expected:
+  condition: hypertensive_crisis
+  acceptable: []
+  triage: 3
+source:
+  basis: "Tăng huyết áp nặng (tâm thu từ 180) kèm triệu chứng không đặc hiệu (nặng đầu, chảy máu mũi; Zampaglione 1996, Vallelonga 2020), không có dấu hiệu tổn thương cơ quan đích: MSD (không cần hạ áp ngay, đánh giá ngoại trú); 3192/QĐ-BYT. Khám trong hôm nay (rf_extreme_bp, mức 3)."
+  references: [msd-hypertensive-emergencies, byt-qd-3192-2010, zampaglione-hypertension-1996, vallelonga-jcm-2020]
+author: "agent:pass-c"
+notes_vi: "Ca không điển hình: lý do chính là chảy máu mũi, đau đầu nhẹ. Bản đầu dùng triệu chứng chính Chóng mặt nhưng chóng mặt ở người 66 tuổi tăng huyết áp đã đúng là mức 2 theo quy tắc rf_acute_vertigo_vascular_risk (liên tục) hoặc khả năng cơn thiếu máu não thoáng qua (từng cơn), nên đổi sang Đau đầu."

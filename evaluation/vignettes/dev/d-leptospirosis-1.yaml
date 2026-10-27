@@ -1,0 +1,46 @@
+id: d-leptospirosis-1
+set: dev
+title_vi: "Nam 40 tuổi ở Quảng Nam, tháng 10, dọn bùn sau lũ, sốt cao 4 ngày, đau nhiều bắp chân, đỏ mắt"
+narrative_vi: "Anh S., 40 tuổi, làm ruộng ở Quảng Nam. Khoảng 10 ngày trước anh lội nước, dọn bùn sau trận lũ, chân có vết xước. Bốn ngày nay anh sốt đột ngột 39,5°C, rét run, đau đầu nhiều, đau nhức khắp người, đau nhất ở hai bắp chân, bóp vào rất đau; hai mắt đỏ nhưng không có ghèn. Không vàng da, nước tiểu bình thường, không chảy máu chân răng, không nổi ban. Không ho, không khó thở, không nôn, không tiêu chảy, không đau bụng. Không đi rừng, quanh nhà không ai bị sốt xuất huyết."
+patient:
+  age_years: 40
+  sex: male
+  region: central
+  month: 10
+complaint: fever
+answers:
+  fever_max_temp: ge_39
+  fever_duration: d3_5
+  chills_rigors: present
+  headache: present
+  headache_severity: severe
+  myalgia: present
+  calf_pain: present
+  red_eyes: present
+  flood_mud_exposure: present
+  jaundice: absent
+  decreased_urine: absent
+  bleeding_gums_nose: absent
+  rash_any: absent
+  cough: absent
+  runny_nose: absent
+  sore_throat: absent
+  breathing_difficulty: absent
+  vomiting: absent
+  diarrhea: absent
+  abdominal_pain: absent
+  retro_orbital_pain: absent
+  arthralgia: absent
+  malaria_area_exposure: absent
+  bush_exposure: absent
+  dengue_nearby: absent
+  heat_exposure: absent
+default_unmentioned: absent
+expected:
+  condition: leptospirosis
+  acceptable: []
+  triage: 3
+source:
+  basis: "Bệnh do Leptospira thể không vàng da: sốt đột ngột, rét run, đau đầu, đau cơ khi ấn rõ nhất ở bắp chân, đỏ kết mạc, sau lội nước bùn sau lũ (WHO 2003 chương II; CDC). Chưa có vàng da, tiểu ít, chảy máu, khó thở nên không thuộc thể nặng (rf_lepto_severe). WHO: dùng kháng sinh ngay khi nghi, tốt nhất trước ngày thứ 5: khám trong 24 giờ (mức 3)."
+  references: [who-leptospirosis-2003, cdc-leptospirosis-clinical, levett-cmr-2001]
+author: "agent:pass-c"

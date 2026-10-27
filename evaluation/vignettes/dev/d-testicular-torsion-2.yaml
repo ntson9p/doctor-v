@@ -1,0 +1,42 @@
+id: d-testicular-torsion-2
+set: dev
+title_vi: Nam 20 tuổi đau bụng dưới bên phải từ 5 giờ, hỏi kỹ mới thấy tức nhẹ bìu phải
+narrative_vi: Anh S., 20 tuổi. Năm giờ trước đột ngột đau bụng dưới bên phải, đau âm ỉ liên tục, lan xuống bẹn, buồn nôn. Khi được hỏi kỹ, anh nói bìu bên phải cũng tức nhẹ và hơi sưng, ngại nên không kể. Đau không bắt đầu từ quanh rốn, không tăng khi đi lại. Không sốt, không nôn, không tiêu chảy, không tiểu buốt, không đau hông lưng.
+patient:
+  age_years: 20
+  sex: male
+  region: south
+  month: 2
+complaint: abdominal_pain
+answers:
+  scrotal_pain: present
+  abd_pain_onset: sudden
+  abd_pain_duration: lt_6h
+  abd_pain_location: right_lower
+  abd_pain_radiates_groin: present
+  abd_pain_severe: absent
+  nausea: present
+  vomiting: absent
+  abd_pain_colicky: absent
+  abd_pain_migrated_rlq: absent
+  abd_pain_worse_movement: absent
+  fever: absent
+  diarrhea: absent
+  dysuria: absent
+  flank_pain: absent
+  hematuria: absent
+  kidney_stones_known: absent
+  loss_of_appetite: absent
+default_unmentioned: absent
+expected:
+  condition: testicular_torsion
+  acceptable: []
+  triage: 2
+source:
+  basis: "Xoắn tinh hoàn ở người lớn có thể khởi đầu bằng đau bụng dưới (Mantica 2025: 6,4%; Vasconcelos-Castro 2020: nhóm khởi đầu bằng đau bụng đến viện muộn, mất tinh hoàn nhiều hơn). NHS Testicle pain: đau tinh hoàn kèm đau bụng hoặc buồn nôn thì đến cấp cứu; mức 2."
+  references:
+    - nhs-testicle-pain
+    - mantica-abdomradiol-2025
+    - vasconceloscastro-jpedsurg-2020
+author: agent:pass-c
+notes_vi: "Ca không điển hình: người lớn, đau bụng nổi bật, đau bìu nhẹ chỉ kể khi được hỏi."

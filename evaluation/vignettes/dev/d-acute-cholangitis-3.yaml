@@ -1,0 +1,54 @@
+id: d-acute-cholangitis-3
+set: dev
+title_vi: Nam 55 tuổi có sỏi mật, sốt cao rét run, đau dưới sườn phải, vàng mắt nhẹ (dễ nhầm viêm túi mật)
+narrative_vi: Ông R., 55 tuổi, biết có sỏi mật 3 năm nay. Từ hôm qua sốt 39°C kèm rét run, đau dưới sườn phải lan lên vai phải, buồn nôn. Vợ ông thấy mắt ông hơi vàng. Không nôn, không tiêu chảy, không ho, không tiểu buốt. Ông vẫn tỉnh táo, đi lại được.
+patient:
+  age_years: 55
+  sex: male
+  region: south
+  month: 7
+complaint: fever
+answers:
+  fever_max_temp: ge_39
+  fever_duration: d1_2
+  chills_rigors: present
+  abdominal_pain: present
+  abd_pain_location: right_upper
+  abd_pain_radiates_right_shoulder: present
+  abd_pain_duration: d1_3
+  abd_pain_severe: absent
+  jaundice: present
+  gallstones_known: present
+  nausea: present
+  vomiting: absent
+  diarrhea: absent
+  cough: absent
+  sore_throat: absent
+  runny_nose: absent
+  headache: absent
+  rash_any: absent
+  dysuria: absent
+  confusion: absent
+  drowsy_hard_to_wake: absent
+  breathing_difficulty: absent
+  cold_hands_feet: absent
+  severe_weakness: absent
+  neck_stiffness: absent
+  persistent_vomiting: absent
+  myalgia: absent
+  bleeding_gums_nose: absent
+  diabetes: absent
+  pain_after_fatty_meal: absent
+default_unmentioned: absent
+expected:
+  condition: acute_cholangitis
+  acceptable: []
+  triage: 2
+source:
+  basis: "Viêm túi mật và viêm đường mật cùng sốt, đau hạ sườn phải ở người có sỏi; sốt cao kèm rét run và vàng da gợi ý viêm đường mật (Wada 2007: vàng da 60–70%; viêm túi mật vàng da 11–14%). Tam chứng Charcot: quy tắc rf_cholangitis_triad mức 2."
+  references:
+    - wada-jhbps-2007
+    - hue-tag-2025
+    - msd-choledocholithiasis-cholangitis
+author: agent:pass-c
+notes_vi: Ca dễ nhầm với viêm túi mật cấp (acute_cholecystitis).

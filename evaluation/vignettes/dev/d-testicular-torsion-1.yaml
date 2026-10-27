@@ -1,0 +1,37 @@
+id: d-testicular-torsion-1
+set: dev
+title_vi: Nam 14 tuổi đột ngột đau dữ dội bìu trái lan lên bụng dưới, nôn
+narrative_vi: Em B., 14 tuổi, đang ngủ thì thức dậy vì đau dữ dội ở bìu trái, đau lan lên bụng dưới bên trái. Em nôn 1 lần. Bìu trái sưng, đỏ, chạm vào rất đau. Đau mới 2 giờ. Không sốt, không tiểu buốt, không bị va đập.
+patient:
+  age_years: 14
+  sex: male
+  region: north
+  month: 12
+complaint: abdominal_pain
+answers:
+  scrotal_pain: present
+  abd_pain_onset: sudden
+  abd_pain_duration: lt_6h
+  abd_pain_location: left_lower
+  abd_pain_radiates_groin: present
+  abd_pain_severe: present
+  vomiting: present
+  nausea: present
+  fever: absent
+  dysuria: absent
+  urinary_frequency: absent
+  diarrhea: absent
+  abd_pain_migrated_rlq: absent
+  flank_pain: absent
+default_unmentioned: absent
+expected:
+  condition: testicular_torsion
+  acceptable: []
+  triage: 2
+source:
+  basis: "Xoắn tinh hoàn điển hình ở tuổi dậy thì: đau bìu đột ngột, dữ dội, lan lên bụng dưới, kèm nôn (EAU 2026; Murali 2022: đau bìu 92,2%). NHS Testicle pain: đau tinh hoàn đột ngột, dữ dội hoặc kèm nôn, đau bụng thì đến cấp cứu hoặc gọi 999; EAU: cửa sổ 4–6 giờ. Mức 2."
+  references:
+    - nhs-testicle-pain
+    - eau-paediatric-urology-2026
+    - murali-urolann-2022
+author: agent:pass-c

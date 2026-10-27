@@ -1,0 +1,324 @@
+id: abdominal_aortic_aneurysm
+names:
+  vi: "Phình động mạch chủ bụng dọa vỡ hoặc vỡ"
+  vi_common: ["Vỡ phình động mạch chủ bụng", "Phình động mạch chủ bụng", "Phình động mạch chủ"]
+  en: "Symptomatic or ruptured abdominal aortic aneurysm"
+codes:
+  icd10: "I71.3"
+  icd10_verified: false
+  mondo: "MONDO:0005350"
+summary_vi:
+  - "Đoạn động mạch chủ ở bụng (mạch máu lớn nhất) bị phình to, có thể vỡ gây chảy máu ồ ạt trong bụng."
+  - "Hay gặp ở nam giới cao tuổi hút thuốc, tăng huyết áp; thường không có triệu chứng cho tới khi sắp vỡ."
+  - "Đau bụng hoặc đau lưng đột ngột, dữ dội, kèm choáng, ngất hoặc da tái lạnh là dấu hiệu vỡ, cần gọi 115 ngay."
+urgency: 1
+cant_miss: true
+specialties: [emergency, general_surgery]
+priors:
+  - complaint: abdominal_pain
+    default: P6
+    by_age: { elder_65_74: P5, elder_75p: P5 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [hai-medarh-2025, chan-jvs-2021, karkkainen-jgs-2015, msd-abdominal-aortic-aneurysm, cervellin-atm-2016]
+      locator: "Hai 2025 kết quả và bàn luận; Chan 2021 tóm tắt; Kärkkäinen 2015 tóm tắt; MSD phần dịch tễ"
+      reported: "Việt Nam (Phú Thọ, Nghệ An, 810 người từ 60 tuổi, siêu âm cộng đồng): phình dưới động mạch thận 0,12%, một nghiên cứu khác ở Việt Nam 0,85%; châu Á 0,61% ở quần thể không chọn lọc (Chan); ở Phần Lan vỡ phình ít gặp hơn thiếu máu mạc treo cấp (7,3/100.000/năm); đỉnh tuổi 70–80 (MSD)"
+      population: "Cộng đồng Việt Nam và châu Á (tỷ lệ hiện mắc); bệnh viện Phần Lan"
+      note: "Lượt C: hai lượt cùng P6 dưới 45 tuổi và P5 ở 65–74 tuổi. Lệch một mức ở 45–64 tuổi (A P5, B P6) và từ 75 tuổi (A P4, B P5). Chọn bản của lượt B vì có số liệu cộng đồng Việt Nam (Hai 2025: tỷ lệ hiện mắc thấp hơn phương Tây nhiều lần), và vì mỗi bệnh 'không được bỏ sót' mới đều cộng vào ngưỡng 1% (từ 75 tuổi 0,5%): P4 từ 75 tuổi sẽ đẩy gần như mọi người cao tuổi đau bụng lên mức 2. Ước tính thô: vài đến vài chục ca phình có triệu chứng hoặc vỡ trên 100.000 người cao tuổi mỗi năm, chia cho vài nghìn lượt đau bụng đi khám, khoảng 0,05–0,1%. Hệ số giới tính tính riêng. Chưa có số liệu theo triệu chứng chính; cần bác sĩ duyệt."
+  - complaint: syncope
+    default: P6
+    by_age: { elder_65_74: P5, elder_75p: P5 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [fernando-aem-2022, hai-medarh-2025, esc-syncope-2018]
+      locator: "Fernando 2022 tóm tắt; Hai 2025 tóm tắt; ESC 2018 bảng 6"
+      reported: "Ngất ở 27,8% người vỡ phình (độ nhạy gộp, Fernando 2022)"
+      note: "Hai lượt giống nhau. Khoảng một phần tư người vỡ phình có ngất, nhưng ngất ở người cao tuổi chủ yếu do phản xạ, tư thế, nhịp tim, nên tỷ lệ do vỡ phình khoảng 0,05–0,2% ở người từ 65 tuổi (P5), dưới 65 tuổi P6. ESC 2018: ngất kèm đau bụng mới xuất hiện hoặc huyết áp tâm thu dưới 90 mmHg không rõ lý do là nguy cơ cao. Ca dev d-from-h-syncope-017 là vỡ phình biểu hiện bằng ngất. Cần bác sĩ duyệt."
+  - complaint: dizziness
+    default: P6
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [vandendries-ijem-2025, fernando-aem-2022, hai-medarh-2025]
+      locator: "van den Dries 2025 bảng 2 (lý do gọi: chóng mặt 2/20)"
+      reported: "2/20 người vỡ phình bị bỏ sót ở tuyến ban đầu gọi vì chóng mặt (van den Dries 2025)"
+      note: "Lượt C: lệch một mức từ 65 tuổi (A P5, B P6). Ước tính của lượt C: vài ca vỡ phình có triệu chứng trên 100.000 người cao tuổi mỗi năm, khoảng 10% biểu hiện chủ yếu bằng chóng mặt (van den Dries), chia cho 5–10 nghìn lượt chóng mặt đi khám trên 100.000 người cao tuổi mỗi năm, cho dưới 0,02%: P6, như lượt B. Prior này chủ yếu để bệnh được xét khi người chóng mặt có đau bụng, đau lưng, da tái lạnh. Cần bác sĩ duyệt."
+prior_modifiers:
+  - when: { sex: [male] }
+    factor: 1.6
+    evidence:
+      tier: C
+      basis: numeric
+      sources: [msd-abdominal-aortic-aneurysm, nhs-abdominal-aortic-aneurysm, hai-medarh-2025]
+      locator: "MSD phần dịch tễ (nam gấp 3 lần nữ); NHS Causes (nam từ 65 tuổi nguy cơ cao nhất); Hai 2025 (40,2% mẫu từ 60 tuổi là nam)"
+      reported: "Tỷ lệ nam/nữ khoảng 3/1"
+      note: "Lượt C chọn cặp hệ số của lượt B (1,6 và 0,55; lượt A 1,5 và 0,5): cùng tỷ số 3 nhưng tính theo tỷ lệ nam khoảng 40% ở người cao tuổi Việt Nam (Hai 2025), nên trung bình theo dân số vẫn bằng 1."
+  - when: { sex: [female] }
+    factor: 0.55
+    evidence:
+      tier: C
+      basis: numeric
+      sources: [msd-abdominal-aortic-aneurysm]
+      reported: "Tỷ lệ nam/nữ khoảng 3/1"
+      note: "Đi cặp với hệ số 1,6 cho nam."
+findings:
+  - finding: abdominal_pain
+    freq: frequent
+    evidence:
+      tier: A
+      basis: numeric
+      sources: [fernando-aem-2022, azhar-jet-2014, vandendries-ijem-2025]
+      locator: "Fernando 2022 tóm tắt; Azhar 2014 tóm tắt; van den Dries 2025 bảng 2"
+      reported: "Độ nhạy gộp của đau bụng 61,7% (Fernando); 61% (Azhar); lý do gọi ở tuyến ban đầu 40% (van den Dries)"
+      population: "Người vỡ phình ở cấp cứu, bệnh viện; tuyến ban đầu ở Hà Lan"
+      note: "Hai lượt giống nhau. Chỉ có tác dụng khi triệu chứng chính là Ngất hoặc Chóng mặt (với Đau bụng là dấu hiệu ngầm định)."
+  - finding: flank_pain
+    freq: frequent
+    evidence:
+      tier: A
+      basis: numeric
+      sources: [fernando-aem-2022, vandendries-ijem-2025, msd-abdominal-aortic-aneurysm]
+      locator: "Fernando 2022 tóm tắt; van den Dries 2025 bảng 2; MSD phần triệu chứng"
+      reported: "Độ nhạy gộp của đau lưng 53,6% (Fernando); lý do gọi 35% (van den Dries)"
+      note: "Hai lượt giống nhau. Câu đau hông lưng (câu thay thế hỏi đau ngang thắt lưng) gồm đau lưng của vỡ phình; MSD: đau sâu, liên tục, rõ nhất vùng thắt lưng – cùng."
+  - finding: abd_pain_radiates_back
+    freq: frequent
+    evidence:
+      tier: A
+      basis: judgment
+      sources: [fernando-aem-2022, msd-abdominal-aortic-aneurysm]
+      locator: "Fernando 2022 tóm tắt; MSD phần triệu chứng"
+      note: "Hai lượt giống nhau. Tính trong số người đã đau bụng; đau lưng gặp ở khoảng một nửa (53,6%). Cùng cụm pain_radiation."
+  - finding: abd_pain_radiates_groin
+    freq: occasional
+    evidence:
+      tier: A
+      basis: judgment
+      sources: [azhar-jet-2014]
+      locator: "Azhar 2014 tóm tắt"
+      reported: "Chẩn đoán nhầm ban đầu 42% (32% sau 1990); nhầm nhiều nhất với cơn đau quặn niệu quản và nhồi máu cơ tim"
+      note: "Hai lượt giống nhau. Máu tụ sau phúc mạc có thể gây đau lan xuống bẹn như sỏi niệu quản. Nguồn không cho tỷ lệ; ước 10–20%. Tỷ lệ nền 1% nên câu trả lời 'Có' không làm bệnh này tụt hạng ở người cao tuổi đau giống sỏi; cơn đau quặn thận vẫn đứng trên (frequent). Cần bác sĩ duyệt."
+  - finding: abd_pain_onset
+    dist: { sudden: 0.725, gradual: 0.275 }
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [nhs-abdominal-aortic-aneurysm, vandendries-ijem-2025, akkersdijk-eurjsurg-1998]
+      locator: "NHS Call 999 (đau đột ngột, dữ dội); van den Dries 2025 bảng 2; Akkersdijk 1998 tóm tắt"
+      reported: "Đau bắt đầu dưới 12 giờ: 85% so với 39% ở nhóm chứng (van den Dries); 43% có triệu chứng hơn 9 giờ trước khi vào viện (Akkersdijk)"
+      note: "Trung bình hai lượt (A 0,70, B 0,75 đột ngột). Một phần phình đang to đau âm ỉ tăng dần."
+  - finding: abd_pain_severe
+    freq: frequent
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [nhs-abdominal-aortic-aneurysm, msd-abdominal-aortic-aneurysm, vandendries-ijem-2025]
+      locator: "NHS Call 999; MSD phần triệu chứng; van den Dries 2025 bảng 2"
+      note: "Hai lượt giống nhau. Tính trong số người đã đau bụng. Phình chưa vỡ có triệu chứng đau âm ỉ, người cao tuổi có thể không tả là 'không chịu nổi'; không chọn very_frequent để câu trả lời 'Không' chỉ giảm khả năng khoảng 2 lần. Trả lời 'Có' đã được rf_severe_abdominal_pain xếp mức 2."
+  - finding: abd_pain_duration
+    dist: { lt_6h: 0.50, h6_24: 0.23, d1_3: 0.135, d4_14: 0.085, gt_2w: 0.05 }
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [vandendries-ijem-2025, akkersdijk-eurjsurg-1998, msd-abdominal-aortic-aneurysm]
+      locator: "van den Dries 2025 bảng 2; Akkersdijk 1998 tóm tắt"
+      reported: "Dưới 12 giờ 85% (van den Dries); hơn 9 giờ 43%, trung vị 2 ngày, có người tới 14 ngày (Akkersdijk)"
+      note: "Trung bình hai lượt (lệch dưới 0,05). Phân bố trong số người đã đau bụng; ước lượng."
+  - finding: abd_pain_location
+    dist: { epigastric: 0.12, right_upper: 0.03, left_upper: 0.065, periumbilical: 0.26, right_lower: 0.065, left_lower: 0.16, suprapubic: 0.065, whole: 0.235 }
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [msd-abdominal-aortic-aneurysm, azhar-jet-2014]
+      locator: "MSD (vỡ hay ở thành sau bên trái, dưới động mạch thận 2–4 cm); Azhar 2014"
+      note: "Trung bình hai lượt. Đau giữa bụng, quanh rốn hoặc lan tỏa; máu tụ sau phúc mạc bên trái gây đau bụng dưới hoặc hông trái giống cơn đau quặn thận. Ước lượng."
+  - finding: fainting_or_near_fainting
+    freq: occasional
+    freq_by_complaint: { dizziness: frequent }
+    evidence:
+      tier: A
+      basis: numeric
+      sources: [fernando-aem-2022, azhar-jet-2014, nhs-abdominal-aortic-aneurysm]
+      locator: "Fernando 2022 tóm tắt; Azhar 2014 tóm tắt; NHS Call 999 (mất ý thức)"
+      reported: "Ngất 27,8%, tụt huyết áp 30,9% (Fernando); sốc 46% (Azhar)"
+      note: "Hai lượt giống nhau. Với Đau bụng: occasional (gồm cả phình chưa vỡ). Với Chóng mặt: người vỡ phình chọn chóng mặt là nhóm đang tụt huyết áp, nên choáng như sắp ngất là frequent (ước lượng). Với Ngất là dấu hiệu ngầm định."
+  - finding: not_recovered_after_faint
+    freq: frequent
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [nhs-fainting, azhar-jet-2014, fernando-aem-2022]
+      locator: "NHS Fainting (Call 999 khi chưa hồi phục hẳn); Azhar 2014 (sốc 46%); Fernando 2022 (tụt huyết áp 30,9%)"
+      note: "Hai lượt giống nhau. Tính trong số người đã ngất hoặc suýt ngất. Ngất do mất máu thường kèm tụt huyết áp kéo dài, khác ngất phản xạ; một số người tạm ổn khi máu tụ lại sau phúc mạc. Ước khoảng một nửa; tỷ lệ nền 5%. Cần bác sĩ duyệt."
+  - finding: cold_hands_feet
+    freq: occasional
+    freq_by_complaint: { syncope: frequent, dizziness: frequent }
+    evidence:
+      tier: A
+      basis: numeric
+      sources: [azhar-jet-2014, fernando-aem-2022, nhs-abdominal-aortic-aneurysm]
+      locator: "Azhar 2014 tóm tắt; Fernando 2022 tóm tắt; NHS Call 999 (da tái hoặc xám)"
+      reported: "Sốc 46% (Azhar); tụt huyết áp 30,9% (Fernando)"
+      note: "Lượt C: hai lượt cùng occasional (hạ một mức vì đo ở bệnh viện, gồm cả phình chưa vỡ) và frequent cho Ngất; chỉ lượt B thêm frequent cho Chóng mặt. Hai lượt ngang nguồn; đây là dấu hiệu cảnh báo của bệnh nguy hiểm nên giữ liên kết mạnh hơn: người vỡ phình chọn Chóng mặt cũng là nhóm đang tụt huyết áp. Câu hỏi gồm cả da tái nên không liên kết thêm câu da xanh (xem biên bản)."
+  - finding: cold_sweat
+    freq: frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [vandendries-ijem-2025]
+      locator: "van den Dries 2025 bảng 2, 3"
+      reported: "Vã mồ hôi 11/12 người được hỏi (55% tổng số ca), so với 19% ở nhóm chứng cùng lý do gọi (OR 10,1)"
+      population: "20 người vỡ phình bị bỏ sót ở tuyến ban đầu ngoài giờ (Hà Lan)"
+      note: "Chỉ lượt A có; lượt C giữ sau khi mở lại toàn văn: vã mồ hôi là dấu hiệu khác biệt rõ nhất với các nguyên nhân đau bụng, đau lưng khác. Số ca nhỏ, nhiều ca không được hỏi, nên chọn frequent. Lượt B không liên kết vì chưa đọc nguồn này. Quy tắc rf_aaa_rupture_signs cố ý không dùng câu này (đau quặn thận cũng vã mồ hôi); ở đây chỉ dùng để xếp hạng."
+  - finding: severe_weakness
+    freq: occasional
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [azhar-jet-2014, fernando-aem-2022]
+      note: "Chỉ lượt A có; lượt C giữ. Sốc 46% (Azhar), tụt huyết áp 31% (Fernando) ở người vỡ phình tại viện; mệt lả không tự đi lại được là biểu hiện của sốc. Ước occasional ở người tự kiểm tra; cùng cụm shock_signs với tay chân lạnh."
+  - finding: dizziness
+    freq: occasional
+    freq_by_complaint: { syncope: frequent }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [vandendries-ijem-2025, msd-abdominal-aortic-aneurysm]
+      locator: "van den Dries 2025 bảng 2 (choáng, suýt ngất 3/8 người được hỏi); MSD (tụt huyết áp, mạch nhanh)"
+      note: "Chỉ lượt A có; lượt C giữ. Với Đau bụng gần trung tính (tỷ lệ nền 0,2). Với Ngất: người ngất do mất máu thường còn choáng sau khi tỉnh (ước lượng). Với Chóng mặt là dấu hiệu ngầm định."
+  - finding: dizziness_on_standing
+    freq: frequent
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [msd-abdominal-aortic-aneurysm, fernando-aem-2022, azhar-jet-2014]
+      locator: "MSD (tụt huyết áp, mạch nhanh); Fernando 2022 (tụt huyết áp 30,9%); Azhar 2014 (sốc 46%)"
+      note: "Lượt C: lệch một mức với Đau bụng (A occasional, riêng Ngất, Chóng mặt frequent; B frequent cho mọi triệu chứng chính). Ngang nguồn; chọn mức mạnh hơn của lượt B cho bệnh nguy hiểm: mất máu làm choáng khi ngồi dậy, đứng dậy. Tỷ lệ nền 0,15."
+  - finding: syncope_trigger
+    dist: { standing_heat: 0.045, emotion_pain: 0.235, standing_up: 0.30, toilet_cough: 0.145, exertion: 0.07, lying: 0.04, no_trigger: 0.165 }
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [msd-abdominal-aortic-aneurysm]
+      locator: "MSD (vỡ có thể xảy ra sau gắng sức nín thở như nâng vật nặng)"
+      note: "Trung bình hai lượt. Tính trong số người đã ngất hoặc suýt ngất: ngất do mất máu hay xảy ra khi vừa đứng dậy, khi đang đau dữ dội, khi rặn đi ngoài; ít liên quan nơi nóng, đông người. Ước lượng."
+  - finding: syncope_warning
+    dist: { prodrome: 0.65, palpitations_first: 0.07, no_warning: 0.28 }
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [msd-abdominal-aortic-aneurysm]
+      note: "Chỉ lượt B có; lượt C giữ (gần phân bố nền). Ngất do tụt huyết áp vì mất máu thường có choáng, vã mồ hôi, tối sầm mắt trước; ít khi hồi hộp đi trước. Ước lượng."
+  - finding: pulse_measured
+    dist: { lt_40: 0.003, n40_100: 0.173, n100_150: 0.19, gt_150: 0.034, not_measured: 0.6 }
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [msd-abdominal-aortic-aneurysm]
+      locator: "MSD (vỡ phình gây tụt huyết áp, mạch nhanh)"
+      note: "'Chưa đo' giữ đúng tỷ lệ nền 0,6. Trung bình hai lượt. Người mới đau, chảy máu ít hoặc dùng thuốc chẹn beta có thể còn mạch bình thường. Ước lượng."
+  - finding: nausea
+    freq: frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [vandendries-ijem-2025]
+      locator: "van den Dries 2025 bảng 2"
+      reported: "Buồn nôn hoặc nôn 11/16 người được hỏi (55% tổng số ca), so với 26% ở nhóm chứng"
+      note: "Chỉ lượt A có; lượt C giữ sau khi mở lại nguồn. Với Đau bụng tỷ lệ nền 0,35 nên tác dụng nhỏ; có ý nghĩa hơn với Ngất, Chóng mặt."
+  - finding: breathing_difficulty
+    freq: occasional
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [vandendries-ijem-2025, nhs-abdominal-aortic-aneurysm]
+      locator: "van den Dries 2025 bảng 2; NHS Call 999 (khó thở)"
+      reported: "Khó thở 3/10 người được hỏi"
+      note: "Hai lượt giống nhau."
+  - finding: abdomen_hard_swollen
+    freq: occasional
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [who-bec-2018, fernando-aem-2022, azhar-jet-2014]
+      locator: "WHO BEC (bụng rất cứng: chảy máu trong ổ bụng); Fernando 2022 (khối đập ở bụng 47,1%); Azhar 2014 (45%)"
+      note: "Hai lượt giống nhau. Khối đập do bác sĩ khám thấy; người nhà có thể thấy bụng chướng, cứng khi máu chảy nhiều. Ước 20%."
+  - finding: smoker
+    freq: frequent
+    evidence:
+      tier: C
+      basis: verbal
+      sources: [msd-abdominal-aortic-aneurysm, nhs-abdominal-aortic-aneurysm, hai-medarh-2025]
+      locator: "MSD (hút thuốc là yếu tố nguy cơ mạnh nhất); NHS Causes; Hai 2025 (đang hút thuốc liên quan với đường kính động mạch chủ)"
+      note: "Hai lượt giống nhau. Câu hỏi chỉ hỏi đang hút, nên ước khoảng một nửa. Tỷ lệ nền 0,2."
+  - finding: hypertension_known
+    freq: frequent
+    evidence:
+      tier: C
+      basis: verbal
+      sources: [msd-abdominal-aortic-aneurysm, nhs-abdominal-aortic-aneurysm]
+      note: "Hai lượt giống nhau. Tăng huyết áp là yếu tố nguy cơ; nhiều người Việt Nam chưa biết mình tăng huyết áp nên chọn frequent. Tỷ lệ nền 0,15."
+  - finding: known_heart_disease
+    freq: occasional
+    evidence:
+      tier: C
+      basis: verbal
+      sources: [nhs-abdominal-aortic-aneurysm, msd-abdominal-aortic-aneurysm]
+      locator: "NHS Causes (bệnh mạch vành hoặc động mạch ngoại biên)"
+      note: "Hai lượt giống nhau. Ước 20–30%; tỷ lệ nền 5%."
+  - finding: known_aaa
+    freq: occasional
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [vandendries-ijem-2025, hai-medarh-2025, chan-jvs-2021]
+      locator: "van den Dries 2025 bảng 2 (tiền sử phình 1 trong 6 người được hỏi); Chan 2021 (gợi ý sàng lọc cơ hội khi siêu âm bụng)"
+      note: "Hai lượt giống nhau. Việt Nam chưa sàng lọc, nhưng siêu âm bụng phổ biến nên một phần phình được phát hiện tình cờ; ước 10–20%. Tỷ lệ nền 1% nên 'Có' làm tăng khả năng khoảng 20 lần. Cần bác sĩ duyệt."
+  - finding: dizziness_pattern
+    dist: { brief_episodes: 0.15, long_episodes: 0.20, continuous: 0.60, chronic: 0.05 }
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [fernando-aem-2022]
+      note: "Chỉ lượt B có; lượt C giữ. Tính trong số người đã chóng mặt; choáng do mất máu kéo dài liên tục từ khi bắt đầu đau. Ước lượng."
+  - finding: vertigo_spinning
+    freq: occasional
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [fernando-aem-2022]
+      note: "Chỉ lượt B có; lượt C giữ. Tính trong số người đã chóng mặt; chóng mặt do tụt huyết áp là choáng, tối sầm mắt, không phải cảm giác quay. Thấp hơn tỷ lệ nền 0,4. Ước lượng."
+  - finding: fever
+    freq: rare
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [msd-abdominal-aortic-aneurysm]
+      locator: "MSD (biến chứng của phình, như phình do nhiễm trùng, có thể gây sốt)"
+      note: "Chỉ lượt B có; lượt C giữ. Vỡ phình thông thường không sốt; thấp hơn tỷ lệ nền 5%, giúp phân biệt với viêm thận – bể thận, viêm túi mật."
+warning_signs:
+  - abd_pain_severe
+  - fainting_or_near_fainting
+  - not_recovered_after_faint
+  - cold_hands_feet
+  - severe_weakness
+  - breathing_difficulty
+  - confusion
+self_care_vi:
+  - "Gọi 115 ngay khi đau bụng hoặc đau lưng đột ngột, dữ dội, nhất là kèm choáng, ngất hoặc da tái lạnh."
+  - "Để người bệnh nằm yên chờ xe cấp cứu; không tự lái xe đến viện."
+  - "Không ăn uống gì trong lúc chờ, vì có thể phải mổ cấp cứu."
+  - "Không tự uống thuốc giảm đau rồi chờ xem có đỡ không."
+see_doctor_vi:
+  - "Người từ 60 tuổi đau bụng hoặc đau lưng đột ngột, dữ dội cần đi cấp cứu ngay, kể cả khi từng bị sỏi thận."
+  - "Đã biết có phình động mạch chủ mà mới đau bụng hoặc đau lưng: đến cấp cứu ngay, kể cả khi chưa đau dữ dội."
+  - "Nam giới từ 65 tuổi hút thuốc hoặc tăng huyết áp nên hỏi bác sĩ về siêu âm kiểm tra động mạch chủ bụng."
+review:
+  status: source_checked
+  authors: ["agent:pass-a", "agent:pass-b"]
+  reconciler: "agent:pass-c"
+  doctor_reviewer: null
+  updated: "2026-10-27"
+  notes_vi: "Lượt C đối chiếu 30 liên kết, mở lại mọi nguồn được trích (bài báo qua API Europe PMC, toàn văn van den Dries 2025 và Hai 2025; trang MSD). Bệnh gồm phình có triệu chứng (dọa vỡ) và đã vỡ, vì triệu chứng giống nhau và đều cần chuyển viện khẩn. Bác sĩ cần xem: (1) prior P5 từ 65 tuổi, P6 ở người trẻ hơn, suy từ tỷ lệ hiện mắc ở Việt Nam (Hai 2025: 0,12%) và châu Á, chưa có số liệu theo triệu chứng chính; (2) tần suất triệu chứng lấy từ người vỡ phình ở bệnh viện và một nghiên cứu nhỏ ở tuyến ban đầu (20 ca); (3) vã mồ hôi lạnh (frequent) dựa trên van den Dries 2025, số ca nhỏ; (4) đau lan xuống bẹn và đã biết có phình (occasional) là ước lượng, mỗi câu 'Có' làm tăng khả năng khoảng 20 lần; (5) không liên kết tiểu ra máu và liên quan bữa ăn vì không có nguồn; (6) chưa mở được hướng dẫn ESVS 2024; câu đo huyết áp chưa có mức huyết áp thấp; (7) mã I71.3 (vỡ) dùng cho cả bệnh, phình chưa vỡ có triệu chứng là I71.4, chưa đối chiếu bảng ICD-10 của Bộ Y tế."
