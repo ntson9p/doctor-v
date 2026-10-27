@@ -173,5 +173,5 @@
   help_vi: "Vết tiêm phòng lao lúc mới sinh thường để lại một sẹo nhỏ ở vai hoặc phía trên cánh tay."
   applies_to:
     age_groups: [child_2m_5y]
-  leak: 0.005
-  leak_note: "Người bảo trì ước lượng; dấu hiệu khá đặc hiệu của bệnh Kawasaki ở trẻ đã tiêm BCG."
+  leak: 0.05
+  leak_note: "Tổng quan Khreis 2026 (Pediatrics International, lượt B lô 2 đọc toàn văn): ở Singapore, 9,9% trẻ sốt do nguyên nhân khác cũng có thay đổi ở sẹo BCG, so với 42,7% ở trẻ Kawasaki. Ở cộng đồng có lẽ thấp hơn nhóm nằm viện, nên chọn 5%; ước lượng ban đầu 0,5% của người bảo trì là quá thấp."
