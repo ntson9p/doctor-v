@@ -609,3 +609,19 @@ Bản đang phát hành: lô 1 (6 triệu chứng chính), tag `release-phase3-b
 2. Lượt A (2 agent).
 3. Agent viết ca giữ kín.
 4. Lượt B, lượt C, tích hợp, chấm điểm.
+
+### Lô 2: lượt R, A, B và bộ ca giữ kín (2026-10-27)
+
+- **Lượt R** (`knowledge/drafts/phase-3/batch-2/review-rules.md`):
+  - xác minh 10/12 nguồn; NICE NG18 và AHA 2017 (Kawasaki) bị chặn, không quy tắc nào chỉ dựa vào hai nguồn này;
+  - thêm 5 nguồn, trong đó có hướng dẫn mắt của Bộ Y tế (40/QĐ-BYT);
+  - không quy tắc nào đổi mức;
+  - thu hẹp 3 quy tắc: nhiễm toan ceton (cần khát nhiều, tiểu nhiều hoặc đường huyết cao), vỡ phình động mạch chủ (cần đau dữ dội kèm ngất hoặc da lạnh), tiếp xúc người bị sởi (bỏ qua khi đã tiêm đủ 2 mũi).
+- **Lượt A, B:** mỗi lượt 14 bệnh mới và 5 bệnh mở rộng; kappa có trọng số 0,925 trên 128 cặp liên kết.
+- **Thay đổi danh mục theo góp ý của các lượt:**
+  - cụm "bệnh tim đã biết": bệnh tim và rung nhĩ, để không tính trùng;
+  - tỷ lệ nền của "vết BCG sưng đỏ" từ 0,5% lên 5% (ở Singapore, 9,9% trẻ sốt do nguyên nhân khác cũng có dấu hiệu này).
+- **Dấu hiệu các lượt đề xuất** (đau lưng dữ dội đột ngột, thở sâu nhanh, da nóng khô, không đỡ sau 30 phút làm mát, thay đổi hành vi mới) chưa đưa vào danh mục. Ca giữ kín được viết khi chưa có các câu này, nên nếu thêm bây giờ, ca sẽ mặc định trả lời "không" và kết quả chấm bị sai lệch. Để cho lô sau.
+- **Bộ ca giữ kín:** 41 ca mới, do agent độc lập viết, gồm 25 ca cấp cứu. Tổng: 198 ca.
+- **Giới hạn sử dụng:** các agent bị dừng 6 lần. Từ giữa lô, chỉ chạy tối đa 2 agent cùng lúc: mỗi lần dừng, agent phải đọc lại ngữ cảnh, nên ít agent song song thì ít lần đọc lại.
+- **Đang chạy:** lượt C (2 agent).
