@@ -59,6 +59,60 @@ describe('session flow', () => {
     expect(result.urgentConditions).toEqual(['mening']);
   });
 
+  it('keeps the condition named by the rule that set the level, even when a broader rule names a likelier one', () => {
+    const base = kb.conditions.find((c) => c.id === 'mening');
+    if (!base) throw new Error('fixture has no meningitis');
+    const urgent = (id: string, urgency: 1 | 2, prior: number): typeof base => ({
+      ...base,
+      id,
+      urgency,
+      cantMiss: false,
+      priors: { fever: { default: prior, byAge: {} } },
+      links: { neck: 0.5, rash: 0.5 },
+      linksByAge: {},
+      warningSigns: [],
+    });
+    const kb2 = makeKb({
+      conditions: [...kb.conditions, urgent('sepsis', 1, 0.05), urgent('enceph', 2, 0.04), urgent('rare', 1, 0.0005)],
+      rules: [
+        ...kb.rules,
+        { id: 'r_neck_rash', level: 1, when: { all: [{ finding: 'neck', is: 'present' }, { finding: 'rash', is: 'present' }] }, complaints: null, conditions: ['rare'] },
+      ],
+    });
+    let s = startSession(kb2, 'fever', ADULT, { es_collapse: 'absent' });
+    s = answerStep(kb2, s, ask(nextStep(kb2, s)), { neck: 'present' });
+    s = answerStep(kb2, s, ask(nextStep(kb2, s)), { rash: 'present' });
+    const result = sessionResult(kb2, s);
+    expect(result.triage.level).toBe(1);
+    // Meningitis, named by the level 2 rule, is likelier than the rare condition but no longer takes its place.
+    expect(result.urgentConditions).toEqual(['sepsis', 'enceph', 'rare']);
+  });
+
+  it('at level 2, also asks a level 1 rule two signs away, the less likely sign first, within a limit', () => {
+    const twoAway = {
+      id: 'r_three',
+      level: 1 as const,
+      when: { all: [{ finding: 'neck', is: 'present' as const }, { finding: 'rash', is: 'present' as const }, { finding: 'breathless', is: 'present' as const }] },
+      complaints: null,
+      conditions: [],
+    };
+    const kb2 = makeKb({ rules: [...kb.rules, twoAway] });
+    let s = startSession(kb2, 'fever', ADULT, { es_collapse: 'absent' });
+    s = answerStep(kb2, s, ask(nextStep(kb2, s)), { neck: 'present' });
+    // Breathlessness is less likely than a rash here, so it is asked first.
+    const first = ask(nextStep(kb2, s));
+    expect(first).toMatchObject({ kind: 'finding', findingId: 'breathless', phase: 'escalation' });
+    const ended = answerStep(kb2, s, first, { breathless: 'absent' });
+    expect(nextStep(kb2, ended)).toEqual({ kind: 'done', reason: 'emergency' });
+    const second = answerStep(kb2, s, first, { breathless: 'present' });
+    expect(ask(nextStep(kb2, second))).toMatchObject({ findingId: 'rash', phase: 'escalation' });
+    // No such question once the limit is reached.
+    const kb3 = makeKb({ rules: [...kb.rules, twoAway], params: { ...PARAMS, stop: { ...PARAMS.stop, maxEscalationQuestions: 0 } } });
+    let t = startSession(kb3, 'fever', ADULT, { es_collapse: 'absent' });
+    t = answerStep(kb3, t, ask(nextStep(kb3, t)), { neck: 'present' });
+    expect(nextStep(kb3, t)).toEqual({ kind: 'done', reason: 'emergency' });
+  });
+
   it('at level 2, asks the open signs that could raise it to level 1 before stopping', () => {
     const kb2 = makeKb({
       rules: [

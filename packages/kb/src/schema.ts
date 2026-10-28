@@ -368,6 +368,8 @@ export const engineParamsSchema = z.strictObject({
     min_voi: z.number().nonnegative(),
     max_questions: z.number().int().positive(),
     soft_max_questions: z.number().int().positive(),
+    max_escalation_questions: z.number().int().nonnegative(),
+    escalation_pair_min_prob: probability,
   }),
   default_unknown_rate: probability,
   safety_net_min_prob: probability,

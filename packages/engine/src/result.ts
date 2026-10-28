@@ -52,7 +52,8 @@ export interface SessionResult {
    * named by the level 1–2 danger rules that hold (meningococcal disease for a purpuric rash,
    * however rare), level 1–2 conditions still possible, and level 3 conditions whose own warning
    * signs are present (a severe form, e.g. dengue with warning signs; for level 4–5 conditions a
-   * warning sign points to another condition). At least one rule-named condition is kept.
+   * warning sign points to another condition). At least one rule-named condition is kept, named by
+   * the rules that set the level when they name one.
    */
   urgentConditions: string[];
   /** All candidate conditions, most probable first. */
@@ -128,9 +129,17 @@ export function sessionResult(kb: CompiledKb, state: SessionState): SessionResul
   });
   conditions.sort((a, b) => b.probability - a.probability);
   const pOther = probs[probs.length - 1] ?? 0;
-  const ruleNamed = new Set(
-    triage.reasons.flatMap((r) => (r.kind === 'rule' && r.level <= 2 ? (idx.ruleById.get(r.ruleId)?.conditions ?? []) : [])),
-  );
+  const namedBy = (keep: (level: TriageLevel) => boolean): Set<string> =>
+    new Set(
+      triage.reasons.flatMap((r) =>
+        r.kind === 'rule' && r.level <= 2 && keep(r.level) ? (idx.ruleById.get(r.ruleId)?.conditions ?? []) : [],
+      ),
+    );
+  const ruleNamed = namedBy(() => true);
+  // The condition kept in any case comes from the rules that set the level: a broader level 2 rule (fainting with
+  // pain) must not take the place of the condition behind the level 1 rule (a ruptured aortic aneurysm).
+  const levelNamed = namedBy((level) => level === triage.level);
+  const keptNamed = levelNamed.size > 0 ? levelNamed : ruleNamed;
   const warningSignPresent = (id: string): boolean =>
     (idx.conditionById.get(id)?.warningSigns ?? []).some((f) => env.answers[f] === 'present' || env.implied.has(f));
   const ruleOut = conditions.filter(
@@ -139,8 +148,8 @@ export function sessionResult(kb: CompiledKb, state: SessionState): SessionResul
       (c.probability >= params.safetyNetMinProb && (c.urgency <= 2 || (c.urgency === 3 && warningSignPresent(c.conditionId)))),
   );
   const urgentConditions = ruleOut.slice(0, 3);
-  const named = ruleOut.find((c) => ruleNamed.has(c.conditionId));
-  if (named && urgentConditions.length === 3 && !urgentConditions.some((c) => ruleNamed.has(c.conditionId))) urgentConditions[2] = named;
+  const named = ruleOut.find((c) => keptNamed.has(c.conditionId));
+  if (named && urgentConditions.length === 3 && !urgentConditions.some((c) => keptNamed.has(c.conditionId))) urgentConditions[2] = named;
 
   // Safety-netting: the complaint's own list, then warning signs of urgent conditions still
   // possible and of any condition that is likely (e.g. dengue, level 3, has warning signs too).

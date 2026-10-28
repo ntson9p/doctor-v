@@ -10,7 +10,7 @@ import { indexKb } from './kb-index.ts';
 import type { EngineIndex } from './kb-index.ts';
 import { UNKNOWN } from './model.ts';
 import type { CompiledKb, Complaint, Expr, QuestionGroup } from './model.ts';
-import { evidenceItems, hypothesesFor, posterior } from './posterior.ts';
+import { evidenceItems, hypothesesFor, likelihood, posterior } from './posterior.ts';
 import { analyze, isConfident, pickQuestion } from './selection.ts';
 import { computeTriage } from './triage.ts';
 
@@ -171,6 +171,43 @@ export function nextStep(kb: CompiledKb, state: SessionState): Step {
         const next = askableOrPrerequisite(id);
         if (next !== null) return { kind: 'finding', findingId: next, phase: 'escalation', alt: false };
       }
+    }
+    // Then a level 1 rule that two more answers could make hold, for a few questions only: a rule that needs two
+    // signs (severe pain and a faint) was never reached once a level 2 rule had fired. The likeliest pair comes
+    // first, and its less likely sign is asked first, so that an unlikely pair ends after one question.
+    const escalationAsked = state.history.filter((h) => h.step.phase === 'escalation').length;
+    if (escalationAsked < params.stop.maxEscalationQuestions) {
+      const chanceOf = (id: string, value: string): number => {
+        const f = idx.findingById.get(id);
+        if (!f) return 0;
+        let p = 0;
+        hyps.links.forEach((links, h) => {
+          p += (probs[h] ?? 0) * likelihood(f, value, links?.[id], state.complaintId, params.categoricalSmoothing);
+        });
+        return p;
+      };
+      let best: { first: string; chance: number } | null = null;
+      for (const rule of idx.rulesFor(state.complaintId)) {
+        if (rule.level !== 1) continue;
+        const open = exprFindings(rule.when).filter((id) => isOpen(id) && askableOrPrerequisite(id) !== null);
+        for (const [i, a] of open.entries()) {
+          for (const b of open.slice(i + 1)) {
+            for (const va of valuesOf(a)) {
+              for (const vb of valuesOf(b)) {
+                if (evalExpr(rule.when, { ...env, answers: { ...answers, [a]: va, [b]: vb } }) !== 'T') continue;
+                const pa = chanceOf(a, va);
+                const pb = chanceOf(b, vb);
+                const chance = pa * pb;
+                if (chance >= params.stop.escalationPairMinProb && (best === null || chance > best.chance)) {
+                  best = { first: pa <= pb ? a : b, chance };
+                }
+              }
+            }
+          }
+        }
+      }
+      const next = best === null ? null : askableOrPrerequisite(best.first);
+      if (next !== null) return { kind: 'finding', findingId: next, phase: 'escalation', alt: false };
     }
     return { kind: 'done', reason: 'emergency' };
   }

@@ -68,6 +68,8 @@ export function compileKnowledge(k: RawKnowledge): CompiledKb {
       minVoi: p.stop.min_voi,
       maxQuestions: p.stop.max_questions,
       softMaxQuestions: p.stop.soft_max_questions,
+      maxEscalationQuestions: p.stop.max_escalation_questions,
+      escalationPairMinProb: p.stop.escalation_pair_min_prob,
     },
     safetyNetMinProb: p.safety_net_min_prob,
     safetyNetLikelyProb: p.safety_net_likely_prob,

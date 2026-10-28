@@ -24,7 +24,9 @@ Hàm `nextStep` quyết định bước tiếp theo từ trạng thái hiện t�
 1. **Sàng lọc cấp cứu** (`rules/emergency-screen.yaml`): hỏi nếu chưa trả lời. Giao diện thường hỏi màn này trước cả tuổi và giới, rồi truyền câu trả lời vào khi bắt đầu phiên.
 2. **Dừng vì cấp cứu ("emergency")** khi đã có quy tắc hoặc mục sàng lọc cấp cứu thỏa ở mức 1–2:
    - mức 1: dừng ngay;
-   - mức 2: trước khi dừng, hỏi thêm (pha `escalation`) các dấu hiệu có thể đưa một quy tắc mức 1 thành thỏa. Mỗi lần một câu, theo thứ tự quy tắc rồi thứ tự dấu hiệu trong quy tắc. Dấu hiệu của quy tắc mức 1 đang "Không rõ" mà có `alt_question` thì được hỏi lại trước. Hết câu như vậy thì dừng. Lý do: dừng ngay ở quy tắc mức 2 đầu tiên khiến dấu hiệu thứ hai không bao giờ được hỏi. Ví dụ tay chân lạnh (mức 2) cộng ban xuất huyết là sốc nhiễm khuẩn (mức 1); lần chạy đầu bộ ca giữ kín có 8 ca cần mức 1 mà app ra mức 2.
+   - mức 2: trước khi dừng, hỏi thêm (pha `escalation`) các dấu hiệu có thể đưa một quy tắc mức 1 thành thỏa. Mỗi lần một câu, theo thứ tự quy tắc rồi thứ tự dấu hiệu trong quy tắc. Dấu hiệu của quy tắc mức 1 đang "Không rõ" mà có `alt_question` thì được hỏi lại trước. Lý do: dừng ngay ở quy tắc mức 2 đầu tiên khiến dấu hiệu thứ hai không bao giờ được hỏi. Ví dụ tay chân lạnh (mức 2) cộng ban xuất huyết là sốc nhiễm khuẩn (mức 1); lần chạy đầu bộ ca giữ kín có 8 ca cần mức 1 mà app ra mức 2.
+     - Hết câu như vậy thì xét quy tắc mức 1 còn thiếu **hai** dấu hiệu, khi số câu đã hỏi ở pha này còn dưới `max_escalation_questions`. Chọn cặp dấu hiệu có khả năng cùng có cao nhất (tích hai xác suất dự đoán theo phân bố hiện tại), bỏ qua cặp dưới `escalation_pair_min_prob`; hỏi dấu hiệu ít khả năng hơn trước, để cặp khó xảy ra kết thúc sau một câu. Lý do: quy tắc cần hai dấu hiệu, như vỡ phình động mạch chủ (đau bụng dữ dội và ngất), không bao giờ được xét ở người đã lên mức 2 vì quy tắc khác (lượt C lô 2).
+     - Hết cả hai loại câu thì dừng.
 3. **Dấu hiệu nguy hiểm bắt buộc** của triệu chứng chính (`red_flags`), theo đúng thứ tự khai báo.
    - Mỗi mục là một dấu hiệu, hoặc một nhóm chọn nhiều.
    - Chỉ hỏi những mục áp dụng cho đối tượng (giới, nhóm tuổi), đã thỏa điều kiện hỏi (`requires`) và chưa được trả lời.
@@ -215,7 +217,7 @@ Hiển thị tối đa 5 đóng góp dương ("vì sao gợi ý") và 5 đóng g
 **Dừng vì cấp cứu** (`emergencyStop = true`):
 - Lúc dừng mới có vài câu trả lời, nên danh sách xếp hạng chưa đáng tin; bệnh lành tính có thể vẫn đứng đầu.
 - Giao diện **không hiện danh sách xếp hạng và con số %**. Thay vào đó chỉ hiện `urgentConditions`, với tiêu đề "Bác sĩ cần loại trừ": tối đa 3 tình trạng, sắp theo xác suất, chọn từ:
-  - bệnh do quy tắc mức 1–2 đang thỏa nêu tên (`conditions` của quy tắc), dù xác suất thấp. Não mô cầu khi có ban xuất huyết là lý do khiến app khuyên đi cấp cứu, nên phải hiện dù sốt xuất huyết phổ biến hơn nhiều. Luôn giữ ít nhất một bệnh như vậy;
+  - bệnh do quy tắc mức 1–2 đang thỏa nêu tên (`conditions` của quy tắc), dù xác suất thấp. Não mô cầu khi có ban xuất huyết là lý do khiến app khuyên đi cấp cứu, nên phải hiện dù sốt xuất huyết phổ biến hơn nhiều. Luôn giữ ít nhất một bệnh như vậy, lấy từ quy tắc đã đặt mức xử trí nếu quy tắc đó nêu tên bệnh: quy tắc mức 2 rộng hơn (ngất kèm đau) không được chiếm chỗ của bệnh sau quy tắc mức 1 (vỡ phình động mạch chủ, lô 2);
   - bệnh mức 1–2 có $P \ge$ `safety_net_min_prob`;
   - bệnh mức 3 có $P \ge$ `safety_net_min_prob` đang có dấu hiệu cảnh báo của chính nó (`warning_signs`, tức thể nặng của bệnh), ví dụ sốt xuất huyết có tiểu ít ở ngày thứ 4. Bệnh mức 4–5 không được thêm: với chúng, dấu hiệu cảnh báo (như cứng gáy ở cảm lạnh) chỉ ra một bệnh khác.
 
@@ -244,6 +246,7 @@ Hiển thị tối đa 5 đóng góp dương ("vì sao gợi ý") và 5 đóng g
 | `categorical_smoothing` | 0,01 | 0,02 làm "sốt hơn 7 ngày" chỉ giảm sốt xuất huyết khoảng 3 lần |
 | `thresholds` | 0,10 / 0,02 / 0,10 / 0,25 | Từ ma trận tổn thất |
 | `cant_miss_threshold` | 0,01 | |
+| `max_escalation_questions` / `escalation_pair_min_prob` | 4 / 0,002 | Người bảo trì chọn (lô 2); trên 217 ca dev, kết quả sạch không đổi |
 | `elder_threshold_factor` | 0,5 | Áp dụng từ 75 tuổi |
 | `self_care_block_other` | 0,30 | |
 | `under_triage_weights` / `cant_miss_weight` | 49 / 49 / 9 / 3; 99 | |

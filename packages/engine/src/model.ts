@@ -176,6 +176,10 @@ export interface EngineParams {
     minVoi: number;
     maxQuestions: number;
     softMaxQuestions: number;
+    /** At level 2, signs of a level 1 rule two answers away are asked only while fewer escalation questions were asked. */
+    maxEscalationQuestions: number;
+    /** ...and only when both signs together are at least this likely. */
+    escalationPairMinProb: number;
   };
   /** Urgent (level 1–2) conditions at or above this probability add their warning signs. */
   safetyNetMinProb: number;

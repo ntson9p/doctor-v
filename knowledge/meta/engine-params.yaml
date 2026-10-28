@@ -87,6 +87,12 @@ stop:
   min_voi: 0.1
   max_questions: 30
   soft_max_questions: 20
+  # Pha nâng mức (đã ở mức 2): quy tắc mức 1 còn thiếu hai dấu hiệu chỉ được hỏi khi số câu ở pha này chưa tới
+  # max_escalation_questions, và khi cả hai dấu hiệu cùng có với khả năng từ escalation_pair_min_prob. Trước đó
+  # các quy tắc như vỡ phình động mạch chủ (đau dữ dội và ngất) không bao giờ được xét ở người chóng mặt liên tục
+  # (lượt C lô 2). Người bảo trì chọn giá trị, chờ hiệu chỉnh trên bộ dev.
+  max_escalation_questions: 4
+  escalation_pair_min_prob: 0.002
 
 default_unknown_rate: 0.1
 # Danh sách "Đi cấp cứu ngay nếu…" gồm dấu hiệu cảnh báo của:
