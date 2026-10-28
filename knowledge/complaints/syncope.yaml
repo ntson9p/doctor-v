@@ -19,6 +19,8 @@ red_flags:
   # cảnh và dấu hiệu báo trước của ngất, có thai, có sốt, phơi nhiễm khí CO) được hỏi trước nhóm dấu hiệu
   # nguy hiểm (lần chấm giữ kín đầu tiên của lô 1). ESC 2018 cũng đánh giá ngất bắt đầu từ hoàn cảnh xảy ra.
   - finding: co_exposure
+  # Lô 2: hỏi sớm vì cùng lý do với khí CO; say nắng, sốc nhiệt là nguyên nhân hay gặp khi trời nóng.
+  - finding: heat_exposure
   - finding: syncope_trigger
   - finding: syncope_warning
   - finding: pregnant
@@ -44,6 +46,8 @@ cant_miss:
   - ectopic_pregnancy
   - carbon_monoxide_poisoning
   - sepsis
+  - abdominal_aortic_aneurysm
+  - heat_stroke
 # Lượt R (25/10/2026): thêm bất tỉnh hoặc co giật, đau đầu đột ngột dữ dội (NHS Fainting: gọi 999 khi không
 # đánh thức được, co giật; ESC 2018: ngất kèm đau đầu mới là nguy cơ cao). Bỏ NICE CG109 khỏi nguồn vì chưa mở được.
 safety_net:

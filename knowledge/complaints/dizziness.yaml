@@ -20,6 +20,8 @@ red_flags:
   # Hỏi đầu tiên: khi một dấu hiệu nguy hiểm đã đưa mức xử trí lên 2, bộ suy luận chỉ hỏi tiếp dấu hiệu có thể
   # dẫn tới mức 1, nên câu phơi nhiễm hỏi sau sẽ bị bỏ qua và ngộ độc khí CO không vào danh sách cần loại trừ.
   - finding: co_exposure
+  # Lô 2: hỏi sớm vì cùng lý do với khí CO; say nắng, sốc nhiệt là nguyên nhân hay gặp khi trời nóng.
+  - finding: heat_exposure
   - finding: dizziness_pattern
   # Có sốt: hỏi trước nhóm dấu hiệu nguy hiểm, để quy tắc sốc khi sốt (mức 1) chỉ còn thiếu một dấu hiệu
   # khi một dấu hiệu mức 2 đã gặp (xem syncope.yaml).
@@ -48,6 +50,9 @@ cant_miss:
   - acute_coronary_syndrome
   - ectopic_pregnancy
   - sepsis
+  - abdominal_aortic_aneurysm
+  - diabetic_ketoacidosis
+  - heat_stroke
 safety_net:
   - vision_loss_or_double
   - cannot_walk_unaided

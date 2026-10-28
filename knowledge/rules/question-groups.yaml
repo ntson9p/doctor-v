@@ -164,3 +164,34 @@
   title_vi: "Ngoài hồi hộp, còn có triệu chứng nào sau đây không?"
   findings: [dizziness, tremor, panic_fear, weight_loss_unintended, breathless_on_exertion, cold_sweat]
   none_label_vi: "Không có triệu chứng nào ở trên"
+
+# ---------- Giai đoạn 3, lô 2 ----------
+- id: kawasaki_signs
+  title_vi: "Trẻ có dấu hiệu nào sau đây không?"
+  findings:
+    - red_eyes
+    - red_lips_strawberry_tongue
+    - hands_feet_swelling_peeling
+    - lymph_node_swelling
+    - bcg_scar_red
+  none_label_vi: "Không có dấu hiệu nào ở trên"
+  allow_unknown: true
+  # Sốt từ 3 ngày ở trẻ: bệnh Kawasaki cần điều trị trong 10 ngày đầu (AHA 2017; lượt C lô 2 phần b đề xuất).
+  applies_to:
+    age_groups: [child_2m_5y, child_5_12]
+  requires:
+    - { finding: fever, is: present }
+    - { finding: fever_duration, in: [d3_5, d6_7, gt_7d] }
+- id: child_diabetes_signs
+  title_vi: "Gần đây trẻ có dấu hiệu nào sau đây không?"
+  findings:
+    - thirst_polyuria
+    - weight_loss_unintended
+  none_label_vi: "Không có dấu hiệu nào ở trên"
+  allow_unknown: true
+  # Đau bụng kèm nôn ở trẻ có thể là nhiễm toan ceton, cách đái tháo đường típ 1 hay khởi phát
+  # (NICE NG18; lượt C lô 2 phần a đề xuất).
+  applies_to:
+    age_groups: [child_2m_5y, child_5_12, teen_13_17]
+  requires:
+    - { finding: vomiting, is: present }

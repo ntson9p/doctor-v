@@ -87,3 +87,7 @@
   rho: medium
   label_vi: "Bệnh tim đã biết"
   rationale_vi: "Người bị rung nhĩ thường cũng được nói là có bệnh tim, nên hai câu trả lời \"có\" hay đi cùng nhau (lượt A lô 2 phần a đề xuất)."
+- id: groin_scrotal
+  rho: medium
+  label_vi: "Đau vùng bẹn, bìu"
+  rationale_vi: "Đau lan xuống bẹn và đau bìu hay đi cùng nhau (cơn đau quặn thận, xoắn tinh hoàn), nên không tính trùng (lượt B lô 2 phần a đề xuất)."

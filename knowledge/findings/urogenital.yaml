@@ -152,6 +152,7 @@
   type: binary
   label_vi: "Đau hoặc sưng bìu, tinh hoàn"
   question_vi: "Có đau hoặc sưng ở bìu, tinh hoàn không?"
+  cluster: groin_scrotal
   help_vi: "Trẻ trai có thể ngại nói. Hãy hỏi kỹ, hoặc xem bìu có sưng, đỏ không."
   alt_question:
     text_vi: "Bìu có một bên to hơn, đỏ, hoặc chạm vào thấy đau không?"

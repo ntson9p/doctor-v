@@ -13,6 +13,9 @@ implies: [headache]
 age_groups: [child_2m_5y, child_5_12, teen_13_17, adult_18_44, adult_45_64, elder_65_74, elder_75p]
 red_flags:
   - group: child_danger_signs
+  # Lô 2: hỏi trước nhóm dấu hiệu nguy hiểm. Người lú lẫn dừng ngay ở mức 1, nên nếu hỏi sau thì sốc nhiệt
+  # không bao giờ vào danh sách cần loại trừ, và người nhà không được nhắc làm mát (như ở Ngất, Chóng mặt).
+  - finding: heat_exposure
   - group: headache_red_flags
   # Lô 2: dấu hiệu glôcôm cấp là dấu hiệu cảnh báo của đau đầu (NICE CG150; nhóm trên đã đủ 7 mục).
   - finding: eye_pain_one_side
@@ -29,7 +32,7 @@ red_flags:
   - finding: fever_duration
 intake: [headache_associated, fever_exposures, chronic_conditions]
 # Bệnh "không được bỏ sót" (mức 1–2) có prior cho triệu chứng chính này; danh sách để kiểm tra an toàn.
-cant_miss: [bacterial_meningitis, preeclampsia, stroke, subarachnoid_hemorrhage]
+cant_miss: [bacterial_meningitis, preeclampsia, stroke, subarachnoid_hemorrhage, encephalitis, acute_angle_closure_glaucoma, heat_stroke]
 safety_net:
   - headache_thunderclap
   - neck_stiffness

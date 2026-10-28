@@ -196,7 +196,7 @@
     note: "Quy tắc mới của lượt R. NG240: ban xuất huyết lan nhanh hoặc nốt trên 2 mm thì nghĩ nhiều bệnh não mô cầu và chuyển viện cấp cứu; không loại trừ bệnh chỉ vì chưa sốt. NHS: đau bụng hoặc đau đầu kèm ban không mất khi ấn thì gọi 999 hoặc đến cấp cứu."
 - id: rf_altered_consciousness
   level: 1
-  conditions: [bacterial_meningitis, sepsis, stroke, hypoglycemia, carbon_monoxide_poisoning]
+  conditions: [bacterial_meningitis, encephalitis, sepsis, stroke, hypoglycemia, diabetic_ketoacidosis, heat_stroke, carbon_monoxide_poisoning]
   when:
     any:
       - { finding: confusion, is: present }
@@ -281,7 +281,7 @@
     note: "Xuất huyết niêm mạc là dấu hiệu cảnh báo, người bệnh được cho nhập viện. 2760 cũng ghi chảy máu chân răng, chảy máu mũi có thể gặp ở giai đoạn sốt; giữ mức 2 vì không phân biệt được tại nhà."
 - id: rf_fever_severe_abdominal_pain
   level: 2
-  conditions: [dengue, acute_appendicitis, acute_cholecystitis]
+  conditions: [dengue, acute_appendicitis, acute_cholecystitis, acute_cholangitis]
   when:
     all:
       - { finding: fever, is: present }
@@ -524,7 +524,7 @@
     note: "Đau đầu dữ dội kèm sốt cần loại trừ viêm màng não, sốt xuất huyết, sốt rét (lượt C lô 1 đề xuất); các dấu hiệu nặng hơn (cứng gáy, lú lẫn, ban xuất huyết) đã có quy tắc mức 2."
 - id: rf_cholangitis_triad
   level: 2
-  conditions: [acute_cholecystitis]
+  conditions: [acute_cholangitis, acute_cholecystitis]
   when:
     all:
       - { finding: fever, is: present }
@@ -712,7 +712,7 @@
     note: "CG141 là hướng dẫn trong bệnh viện: mọi ca xuất huyết tiêu hóa trên cấp cần được đánh giá nguy cơ bằng thang Blatchford, chỉ cân nhắc cho về sớm khi điểm bằng 0. NHS: nôn ra máu hoặc như bã cà phê, phân đen dính thì gọi 999 hoặc đến cấp cứu. 2760: nôn ra máu, phân đen là dấu hiệu cảnh báo sốt xuất huyết. Giai đoạn 3 lô 1 mở rộng phạm vi cho Chóng mặt, Ngất, Hồi hộp; lượt R đối chiếu: ESC 2018 xếp nghi chảy máu tiêu hóa vào đặc điểm nguy cơ cao của ngất. Kèm ngất hoặc choáng thì lên mức 1 (rf_syncope_gi_bleeding). Người đang uống viên sắt (hay gặp ở người thiếu máu) có thể đi ngoài phân đen nhưng không dính như hắc ín; câu hỏi đã nêu 'như hắc ín'."
 - id: rf_fainting_with_pain
   level: 2
-  conditions: [ectopic_pregnancy, acute_coronary_syndrome]
+  conditions: [ectopic_pregnancy, acute_coronary_syndrome, abdominal_aortic_aneurysm]
   # Không áp cho Chóng mặt, Hồi hộp: ở đó choáng rất hay gặp; chửa ngoài tử cung vỡ và đau ngực có quy tắc riêng.
   complaints: [abdominal_pain, fever, headache, syncope]
   when:
@@ -924,7 +924,7 @@
     note: "NG228: đau đầu sét đánh (đột ngột, dữ dội, thường đạt đỉnh trong 1–5 phút) là dấu hiệu nguy hiểm của xuất huyết dưới nhện; người nghi xuất huyết dưới nhện ở ngoài bệnh viện cần được chuyển ngay đến khoa cấp cứu. NHS: đau đầu đột ngột, cực kỳ dữ dội thì gọi 999 hoặc đến cấp cứu. Chọn mức 1 vì nguy cơ chảy máu lại và diễn biến xấu nhanh. Giai đoạn 3 lô 1 mở rộng phạm vi cho Chóng mặt và Ngất; lượt R đối chiếu: 3312/QĐ-BYT (2024) nêu chảy máu tiểu não gây nhức đầu dữ dội vùng chẩm, thất điều, nôn; ESC 2018 xếp ngất kèm đau đầu mới vào nguy cơ cao. Với Chóng mặt, câu đau đầu được hỏi ngay trong phần dấu hiệu nguy hiểm để câu này được hỏi khi có đau đầu."
 - id: rf_new_seizure
   level: 2
-  conditions: [bacterial_meningitis]
+  conditions: [bacterial_meningitis, encephalitis]
   complaints: [fever, headache]
   when: { finding: seizure_recent, is: present }
   reason_vi: "Co giật trong lần bệnh này cần được khám cấp cứu."
@@ -936,7 +936,7 @@
     note: "Lượt R bỏ CG150 khỏi nguồn vì CG150 không nêu co giật. IMCI: co giật trong lần bệnh này là dấu hiệu nguy hiểm toàn thân, chuyển viện khẩn. NHS: đau đầu kèm co giật thì gọi 999 hoặc đến cấp cứu. Đang co giật được bắt ở màn sàng lọc cấp cứu (mức 1)."
 - id: rf_vision_loss
   level: 2
-  conditions: [stroke]
+  conditions: [stroke, acute_angle_closure_glaucoma]
   complaints: [headache]
   when: { finding: vision_loss_or_double, is: present }
   reason_vi: "Đột ngột mất thị lực hoặc nhìn đôi cần được khám cấp cứu."
@@ -1045,7 +1045,7 @@
     note: "NG133 định nghĩa tăng huyết áp nặng là trên 160 mmHg tâm thu hoặc trên 110 mmHg tâm trương và khuyến cáo nhập viện (khi dưới 160/110 thì xử trí như tăng huyết áp thường). Lựa chọn 'từ 160/110' của doctor-v gồm cả đúng 160/110 (thận trọng hơn một chút)."
 - id: rf_extreme_bp_with_symptoms
   level: 2
-  conditions: [stroke]
+  conditions: [stroke, hypertensive_crisis]
   when:
     all:
       - { finding: bp_measured, in: [extreme] }
@@ -1646,6 +1646,7 @@
 # Sau lượt C, thêm các bệnh mới vào `conditions` (danh sách ở knowledge/drafts/phase-3/batch-2/scope.yaml).
 - id: rf_scrotal_pain
   level: 2
+  conditions: [testicular_torsion]
   complaints: [abdominal_pain]
   when: { finding: scrotal_pain, is: present }
   reason_vi: "Đau bụng kèm đau hoặc sưng bìu có thể là xoắn tinh hoàn. Cần đến cấp cứu ngay, vì chậm vài giờ có thể mất tinh hoàn."
@@ -1658,6 +1659,7 @@
 
 - id: rf_acute_glaucoma_signs
   level: 2
+  conditions: [acute_angle_closure_glaucoma]
   complaints: [headache]
   when:
     all:
@@ -1675,6 +1677,7 @@
 
 - id: rf_heat_stroke_signs
   level: 1
+  conditions: [heat_stroke]
   complaints: [fever, headache, dizziness, syncope]
   when:
     all:
@@ -1694,6 +1697,7 @@
 
 - id: rf_kawasaki_signs
   level: 3
+  conditions: [kawasaki_disease]
   complaints: [fever]
   when:
     all:
@@ -1717,6 +1721,7 @@
 
 - id: rf_dka_suspected
   level: 2
+  conditions: [diabetic_ketoacidosis]
   complaints: [abdominal_pain, fever, headache, dizziness, syncope]
   when:
     any:
@@ -1753,6 +1758,7 @@
 
 - id: rf_new_diabetes_child
   level: 3
+  conditions: [diabetic_ketoacidosis]
   complaints: [abdominal_pain, fever, headache, dizziness]
   when:
     all:
@@ -1771,6 +1777,7 @@
 
 - id: rf_aaa_rupture_signs
   level: 1
+  conditions: [abdominal_aortic_aneurysm]
   complaints: [abdominal_pain, syncope, dizziness]
   when:
     all:
@@ -1802,6 +1809,7 @@
 
 - id: rf_lepto_severe
   level: 2
+  conditions: [leptospirosis]
   complaints: [fever, headache]
   when:
     all:
@@ -1823,6 +1831,7 @@
 
 - id: rf_fever_jaundice
   level: 3
+  conditions: [acute_cholangitis, leptospirosis, liver_abscess, malaria]
   complaints: [fever, abdominal_pain, headache]
   when:
     all:

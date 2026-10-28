@@ -101,6 +101,7 @@
   type: binary
   label_vi: "Đau lan xuống bẹn"
   question_vi: "Cơn đau có lan xuống bẹn hoặc bộ phận sinh dục không?"
+  cluster: groin_scrotal
   requires:
     - any:
         - { finding: abdominal_pain, is: present }

@@ -25,9 +25,9 @@ red_flags:
   - finding: pregnant
   # Khi có đau bụng: dấu hiệu nặng ở bụng, như với triệu chứng chính "Đau bụng" (người bảo trì, 25/10/2026).
   - group: abdominal_red_flags
-intake: [fever_associated, fever_exposures, chronic_conditions]
+intake: [fever_associated, kawasaki_signs, fever_exposures, chronic_conditions]
 # Bệnh "không được bỏ sót" (mức 1–2) có prior cho triệu chứng chính này; danh sách để kiểm tra an toàn.
-cant_miss: [acute_appendicitis, bacterial_meningitis, sepsis]
+cant_miss: [acute_appendicitis, bacterial_meningitis, sepsis, encephalitis, acute_cholangitis, diabetic_ketoacidosis, heat_stroke]
 safety_net:
   - neck_stiffness
   - rash_non_blanching

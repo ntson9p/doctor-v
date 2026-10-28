@@ -28,9 +28,9 @@ red_flags:
   # nguy hiểm của sốt xuất huyết), như với triệu chứng chính "Sốt" (lượt C lô 2).
   - group: fever_red_flags
   - finding: fever_duration
-intake: [abdominal_associated, fever_exposures, chronic_conditions]
+intake: [abdominal_associated, child_diabetes_signs, fever_exposures, chronic_conditions]
 # Bệnh "không được bỏ sót" (mức 1–2) có prior cho triệu chứng chính này; danh sách để kiểm tra an toàn.
-cant_miss: [acute_appendicitis, acute_coronary_syndrome, acute_pancreatitis, bowel_obstruction, ectopic_pregnancy, intussusception, preeclampsia]
+cant_miss: [acute_appendicitis, acute_coronary_syndrome, acute_pancreatitis, bowel_obstruction, ectopic_pregnancy, intussusception, preeclampsia, abdominal_aortic_aneurysm, acute_mesenteric_ischemia, ovarian_torsion, testicular_torsion, diabetic_ketoacidosis, acute_cholangitis]
 safety_net:
   - abd_pain_severe
   - abdomen_hard_swollen
