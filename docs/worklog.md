@@ -625,3 +625,56 @@ Bản đang phát hành: lô 1 (6 triệu chứng chính), tag `release-phase3-b
 - **Bộ ca giữ kín:** 41 ca mới, do agent độc lập viết, gồm 25 ca cấp cứu. Tổng: 198 ca.
 - **Giới hạn sử dụng:** các agent bị dừng 6 lần. Từ giữa lô, chỉ chạy tối đa 2 agent cùng lúc: mỗi lần dừng, agent phải đọc lại ngữ cảnh, nên ít agent song song thì ít lần đọc lại.
 - **Đang chạy:** lượt C (2 agent).
+
+### Lô 2: lượt C, tích hợp, sửa bộ suy luận, chấm giữ kín, phát hành (2026-10-28)
+
+**Lượt C** (2 agent, ghi chú ở `knowledge/drafts/phase-3/batch-2/reconcile/`):
+- 14 bệnh mới, 5 bệnh mở rộng, 82 nguồn đưa vào sổ đăng ký, đều đã xác minh.
+- "Say nắng, kiệt sức do nóng" đổi tên thành "Say nắng, say nóng thể nhẹ"; "Sốc nhiệt" thành "…thể nặng". Lý do: ICD-10 xếp "say nắng" cùng mã T67.0 với sốc nhiệt.
+- "Thiên đầu thống" chuyển từ đau nửa đầu sang glôcôm, đúng cách dùng thông thường ở Việt Nam.
+- 47 ca dev mới. Hai ca dev viết trước khi có bệnh nay ghi bệnh đúng: d-from-h-syncope-017 (vỡ phình động mạch chủ), d-from-h-fever-038 (viêm não).
+
+**Tích hợp (người bảo trì):**
+- Bệnh mục tiêu cho các quy tắc lô 2. Quy tắc rộng như "đau bụng dữ dội" không gắn bệnh: bệnh được quy tắc nêu tên luôn được giữ trong danh sách, nên gắn "phình động mạch chủ" ở đây sẽ hiện cho cả người trẻ bị viêm ruột thừa.
+- Danh sách "không được bỏ sót" của các triệu chứng chính có thêm các bệnh lô 2.
+- Cụm "đau bẹn, bìu".
+- Câu "phơi nắng, làm việc nơi nóng bức" hỏi trước nhóm dấu hiệu nguy hiểm ở Ngất, Chóng mặt, Đau đầu. Người lú lẫn dừng ngay ở mức 1, nên nếu hỏi sau thì sốc nhiệt không bao giờ vào danh sách cần loại trừ.
+- Hai bảng hỏi ngắn cho trẻ:
+  - dấu hiệu Kawasaki, khi đã sốt từ 3 ngày;
+  - khát nhiều, tiểu nhiều, sụt cân, khi đau bụng kèm nôn.
+
+**Hai sửa đổi ở bộ suy luận** (`docs/engine-spec.md`):
+1. **Bước nâng mức xét cả quy tắc mức 1 còn thiếu hai dấu hiệu.** Trước đây, khi đã ở mức 2, chỉ hỏi dấu hiệu tự mình làm một quy tắc mức 1 thành đúng. Nay có thêm câu hỏi cho quy tắc còn thiếu hai dấu hiệu:
+   - tối đa 4 câu ở pha này;
+   - cặp có khả năng cao nhất hỏi trước, dấu hiệu ít khả năng hơn hỏi trước;
+   - bỏ qua cặp có khả năng dưới 0,2%.
+   Đây là việc tồn từ lô 1.
+2. **Danh sách "Bác sĩ cần loại trừ" giữ bệnh của quy tắc đã đặt mức xử trí.** Trước đây, bệnh của một quy tắc mức 2 rộng hơn (ngất kèm đau → hội chứng vành cấp) có thể chiếm chỗ của vỡ phình động mạch chủ (quy tắc mức 1).
+
+**Bộ dev** (217 ca): sạch top-3 94,9%, bỏ sót 0/106, khuyên quá mức 6,9%; nhiễu bỏ sót 11/530.
+- Hai ca nhẹ lên mức 2: cơn đau quặn thận, đau bụng kinh. Không phải do ngưỡng "không được bỏ sót", mà do tổng xác suất mọi bệnh cần cấp cứu vượt ngưỡng 2%. Mỗi bệnh nguy hiểm mới góp thêm một phần nhỏ vào tổng này. Chấp nhận vì tỷ lệ khuyên quá mức còn thấp; cần theo dõi khi các lô sau thêm bệnh.
+
+**Lần chấm giữ kín** (198 ca, `evaluation/reports/2026-10-28-holdout-e7e084565d89.md`): đạt mọi chỉ tiêu.
+- Sạch: an toàn 99,5%, bỏ sót cấp cứu 1/102, top-3 90,5%, khuyên quá mức 20,7%, tự chăm sóc nhận đúng 56,5%, ECE 0,047.
+- Nhiễu: bỏ sót 13/510 (2,5%).
+- Ca bỏ sót duy nhất: thiếu máu mạc treo trên nền mạn ở người 74 tuổi. Cần mức 1, app ra mức 2. Agent viết ca ghi rằng ca này có thể xếp mức 2. Theo quy tắc giữ kín, chưa sửa.
+
+**Phát hành:** `npm run web:release`, tag `release-phase3-batch2`. App có 60 bệnh cho 6 triệu chứng chính.
+
+**Chi phí lô 2:** 5,36 triệu token agent:
+
+| Việc | Token |
+|---|---|
+| Lượt R | 0,59 triệu |
+| Lượt A (2 agent) | 1,28 triệu |
+| Lượt B (2 agent) | 1,63 triệu |
+| Lượt C (2 agent) | 1,42 triệu |
+| Viết ca giữ kín | 0,44 triệu |
+
+- Khoảng 380 nghìn mỗi bệnh mới, tính cả lượt R và ca giữ kín. Lô 1 là khoảng 510 nghìn.
+- Giảm một phần nhờ chỉ chạy 2 agent cùng lúc, nên mỗi lần bị dừng ít agent phải đọc lại ngữ cảnh.
+- Từ lượt C, đã chạm giới hạn sử dụng theo tuần, không chỉ theo phiên.
+
+**Việc tồn mới:**
+- Các dấu hiệu chưa thêm, để không làm sai lệch bộ giữ kín đã viết: da nóng khô; không đỡ sau 30 phút làm mát; đau lưng dữ dội đột ngột; thở sâu nhanh; thay đổi hành vi; nhiệt độ từ 40°C; huyết áp thấp; nước tiểu sẫm, phân bạc màu; tiêm vắc xin viêm não Nhật Bản.
+- Theo dõi tổng xác suất nhóm bệnh cần cấp cứu khi số bệnh tăng (ngưỡng mức 2 là 2%).

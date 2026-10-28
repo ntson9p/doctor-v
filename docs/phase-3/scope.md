@@ -116,6 +116,8 @@ Bệnh đã có cần bổ sung cho triệu chứng mới: đột quỵ, hội c
 
 ### Lô 2 — Bổ sung cho Sốt, Đau bụng, Đau đầu (13 bệnh mới)
 
+> **Xong ngày 2026-10-28:** đã phát hành. Thực tế 14 bệnh mới, vì say nắng nhẹ và sốc nhiệt được tách làm hai. Kết quả chấm và chi phí: `docs/worklog.md`.
+
 Vì sao: ba triệu chứng này đang chạy nhưng còn thiếu một số bệnh nguy hiểm. Hiện các quy tắc an toàn đã bắt được những ca này (bỏ sót 0/54 ở lần chấm thứ ba), nhưng các bệnh đó chưa hiện trong danh sách "Bác sĩ cần loại trừ". Nhiều bệnh trong lô này cũng cần cho các lô sau.
 
 | Bệnh | Tiếng Anh | ICD-10 | Mức | Vì sao chọn |
