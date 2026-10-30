@@ -678,3 +678,50 @@ Bản đang phát hành: lô 1 (6 triệu chứng chính), tag `release-phase3-b
 **Việc tồn mới:**
 - Các dấu hiệu chưa thêm, để không làm sai lệch bộ giữ kín đã viết: da nóng khô; không đỡ sau 30 phút làm mát; đau lưng dữ dội đột ngột; thở sâu nhanh; thay đổi hành vi; nhiệt độ từ 40°C; huyết áp thấp; nước tiểu sẫm, phân bạc màu; tiêm vắc xin viêm não Nhật Bản.
 - Theo dõi tổng xác suất nhóm bệnh cần cấp cứu khi số bệnh tăng (ngưỡng mức 2 là 2%).
+
+## 2026-10-31 — Bàn giao sang cloud; đính chính chi phí; chọn model và effort
+
+**Bàn giao** cho phiên Claude Code trên cloud:
+- `docs/handoff.md`: trạng thái, quy tắc của chủ dự án, quy trình một lô, việc tiếp theo, việc tồn, bẫy đã gặp;
+- `CLAUDE.md`: quy tắc chung cho mọi agent;
+- `docs/phase-3/prompts/batch-2/`: nguyên văn 8 lời giao việc của lô 2, làm mẫu.
+
+Phép thử nạp toàn bộ dữ liệu (`packages/kb/test/kb.test.ts`) có lúc chạy quá giới hạn 5 giây khi máy bận. Đã nâng lên 60 giây.
+
+### Đính chính chi phí
+
+Các số "token" ở mục chi phí của Giai đoạn 1, lô 1 và lô 2 đo sai đại lượng.
+- Đó là số công cụ Agent báo khi agent xong: kích thước ngữ cảnh ở lượt gọi cuối, không phải tổng token đã dùng. Báo cáo Giai đoạn 1 còn ghi sai rằng số này "gồm cả phần đọc lại ngữ cảnh".
+- Mỗi lượt gọi model gửi lại toàn bộ ngữ cảnh. Một agent chạy 200 lượt gọi với ngữ cảnh trung bình 400 nghìn token đọc khoảng 80 triệu token.
+- Ví dụ lô 2: đã ghi 5,36 triệu token; thực tế các agent xử lý khoảng 545 triệu token.
+
+Đo lại từ bản ghi của Claude Code, cả dự án (24–31/10), theo giá API của Opus 5.5 ngày 31/10/2026. Chủ dự án dùng gói thuê bao nên không trả số tiền này; nó cho biết mức tiêu hao hạn mức sử dụng.
+
+| Phần | Agent | Token xử lý | USD theo giá API |
+|---|---|---|---|
+| Nghiên cứu ban đầu | 9 | 0,17 tỷ | 81 |
+| Giai đoạn 1 (33 bệnh) | 16 | 0,97 tỷ | 377 |
+| Giai đoạn 3, lô 1, kèm đối chiếu hai bộ ca đã công bố | 11 | 0,65 tỷ | 269 |
+| Giai đoạn 3, lô 2 | 8 | 0,55 tỷ | 220 |
+| Phiên chính, cả dự án | 1 | 0,56 tỷ | 285 |
+| **Cộng** | **45** | **2,9 tỷ** | **khoảng 1.230** |
+
+- Model chỉ viết ra 13,3 triệu token, trong đó 7,3 triệu là phần suy nghĩ.
+- Theo loại: đọc lại ngữ cảnh 46%; ghi ngữ cảnh vào bộ đệm 33%; model viết ra 22%, trong đó phần suy nghĩ 12%.
+- Trong 33% ghi vào bộ đệm, 21% là ghi lại toàn bộ ngữ cảnh sau khi bộ đệm hết hạn: sau mỗi lần dừng vì giới hạn sử dụng, hoặc khi phiên chính nghỉ quá 1 giờ.
+- Theo vai trò: phiên chính 23%, lượt C 22%, lượt B 21%, lượt A 16%, nghiên cứu ban đầu 7%, viết ca giữ kín 6%, lượt R 5%.
+- Mọi agent con chạy Opus 5.5, effort max. Khi giao việc không ghi model và effort, nên agent con dùng cấu hình của phiên chính.
+- Ngữ cảnh của agent khởi đầu khoảng 32 nghìn token. Sau 25 lượt gọi đã lên 160–290 nghìn, vì lời giao việc bảo đọc toàn bộ danh mục dấu hiệu, quy tắc, sổ nguồn và các bệnh cần phân biệt. Lúc kết thúc, lượt A, B, C ở mức 550–960 nghìn. Cửa sổ ngữ cảnh 1 triệu token nên không agent nào phải nén ngữ cảnh.
+- Từ 24 đến 27/10: 15 lần chạm giới hạn phiên, rồi chạm giới hạn tuần ngày 27/10.
+
+### Quyết định của chủ dự án
+
+Sau khi xem phân tích trên, chủ dự án chọn (chi tiết ở `docs/handoff.md`, mục 5):
+- **Model, effort:** Opus 5.5 cho mọi agent. Effort xhigh cho phiên chính, lượt C và agent viết ca giữ kín; high cho lượt A, B, R.
+  - Không dùng Sonnet 5.5 hay Haiku 5.5 cho các vai này. Việc ở đây là chuỗi dài, cần kiến thức y khoa, và nhiều lỗi không lộ ra trên bộ ca kiểm thử. Sonnet tiết kiệm được ít, vì lượt B, vai rủi ro thấp nhất để thử, chỉ chiếm 21% chi phí. Haiku dành cho phân loại, trích xuất, và tính giá gấp 5 khi ngữ cảnh trên 100 nghìn token.
+  - Hạ effort vì tài liệu của Anthropic ghi rằng max cho lợi ích giảm dần và dễ "nghĩ quá"; phần suy nghĩ chỉ chiếm 12% chi phí.
+- **Thu gọn ngữ cảnh:** mỗi lô một phiên chính mới; mỗi agent con khoảng 5 bệnh mới; phần đọc làm quen dùng một mục lục gọn của dữ liệu (việc chuẩn bị đầu tiên của lô 3).
+- Ước chừng hai thay đổi này giảm 35–40% chi phí so với lô 1–2. Chưa đo. Ở lô 3, đo bằng `npm run agent:usage`, và so chất lượng với mốc cũ: kappa A–B (0,90–0,925), số chỗ lượt C phải sửa, kết quả bộ giữ kín.
+- Nếu giữ cấu hình cũ, 9 lô còn lại (lô 3–11, 119 bệnh mới) cần khoảng 2.500–3.000 USD theo giá API.
+
+**Lệnh mới:** `npm run agent:usage` in bảng token và chi phí theo giá API của phiên Claude Code hiện tại và các agent con (mã ở `tools/`).

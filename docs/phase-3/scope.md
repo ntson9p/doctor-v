@@ -391,6 +391,8 @@ Bệnh đã có cần bổ sung: quai bị (sưng mang tai). Các bệnh của l
 - Thời gian chạy agent: khoảng 48 giờ, tức khoảng 16 giờ nếu chạy 3 agent song song; chưa tính các vòng chấm và sửa.
 - Giai đoạn 1 từng bị ngắt vì giới hạn sử dụng. Mỗi lô được lưu từng bước nên làm tiếp được.
 
+> **Đính chính (31/10/2026):** ước tính trên dựa trên số đo sai đại lượng của Giai đoạn 1 (kích thước ngữ cảnh lúc agent kết thúc). Đo lại: các agent con của lô 1 và lô 2 mỗi lô xử lý khoảng 0,55–0,65 tỷ token; kể cả phiên chính, mỗi lô khoảng 300 USD theo giá API của Opus 5.5. Cấu hình từ lô 3 và cách đo: `docs/handoff.md` mục 5, `docs/worklog.md` mục 31/10/2026.
+
 ## 7. Quyết định của chủ dự án (2026-10-25)
 
 1. **Triệu chứng chính:** duyệt 40 triệu chứng như đề xuất, thêm "Nổi cục, nổi hạch", tổng 41 (lô 11).

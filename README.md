@@ -41,6 +41,7 @@ packages/
 apps/
   web/         ứng dụng web (Astro + Preact), chạy hoàn toàn trên máy người dùng
 evaluation/    bộ ca kiểm thử, bệnh nhân mô phỏng, báo cáo
+tools/         công cụ cho người bảo trì: đo token và chi phí của phiên Claude Code
 ```
 
 ## Lệnh thường dùng
@@ -57,6 +58,7 @@ Cần Node.js 24 trở lên. Cài đặt: `npm install`.
 | `npm run eval -- --set dev --report` | Chạy bộ ca phát triển và ghi báo cáo vào `evaluation/reports/` |
 | `npm run eval:tune` | Thử các hệ số nhiệt trên bộ ca phát triển |
 | `npm run play` | Chạy thử một phiên hỏi đáp ngay trong terminal |
+| `npm run agent:usage` | Token và chi phí (theo giá API) của phiên Claude Code hiện tại và các agent con, để ghi vào nhật ký sau mỗi lô |
 | `npm run web:dev` | Chạy ứng dụng web ở chế độ phát triển (mặc định http://localhost:4321) |
 | `npm run web:build` | Build thử ứng dụng web vào `apps/web/dist-test/`. Bản đang phát hành không đổi |
 | `npm run web:release` | Phát hành: build vào `apps/web/dist/`. Chỉ chạy khi các lô đang soạn đã đạt kiểm định (`docs/evaluation.md`) |

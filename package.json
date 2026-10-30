@@ -28,6 +28,7 @@
     "play": "node evaluation/src/cli/play.ts",
     "kb:agreement": "node packages/kb/src/cli/agreement.ts",
     "kb:priors": "node packages/kb/src/cli/priors.ts",
+    "agent:usage": "node tools/src/cli/usage.ts",
     "web:dev": "npm run dev -w @doctor-v/web",
     "web:build": "npm run build -w @doctor-v/web",
     "web:release": "npm run release -w @doctor-v/web",

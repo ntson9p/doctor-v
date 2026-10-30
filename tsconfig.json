@@ -19,5 +19,5 @@
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true
   },
-  "include": ["packages/*/src", "packages/*/test", "evaluation/src", "evaluation/test", "*.ts", "*.js"]
+  "include": ["packages/*/src", "packages/*/test", "evaluation/src", "evaluation/test", "tools/src", "tools/test", "*.ts", "*.js"]
 }

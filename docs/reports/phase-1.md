@@ -155,6 +155,8 @@ Hướng sửa:
 Chưa sửa: làm theo quy tắc giữ kín ở vòng sau.
 ## 6. Chi phí
 
+> **Đính chính (31/10/2026):** các số token trong mục này là kích thước ngữ cảnh lúc agent kết thúc, không phải tổng token đã dùng, và không gồm phần đọc lại ngữ cảnh như câu dưới ghi. Đo lại từ bản ghi: các agent của Giai đoạn 1 xử lý khoảng 0,97 tỷ token, tương đương khoảng 377 USD theo giá API của Opus 5.5; nghiên cứu ban đầu thêm khoảng 81 USD. Xem `docs/worklog.md`, mục 31/10/2026.
+
 Token do các agent dùng, gồm cả phần đọc lại ngữ cảnh. Chi phí tiền thực tế phụ thuộc giá và tỷ lệ dùng bộ nhớ đệm.
 
 | Việc | Token | Thời gian chạy agent |

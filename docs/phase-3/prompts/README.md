@@ -17,3 +17,10 @@ Khi dùng cho lô mới, sửa:
 - `<scratch>`: một thư mục tạm ngoài repo, ví dụ `/tmp/doctor-v-scratch`.
 
 Triệu chứng chính mới (như lô 1 và lô 3) cần thêm vào lời giao việc: `status: in_progress`, nhóm tuổi áp dụng, và các dấu hiệu "ngầm định" của triệu chứng đó.
+
+## Từ lô 3
+
+Chủ dự án quyết định ngày 31/10/2026 (`docs/handoff.md` mục 5):
+- Khi tạo agent, ghi `model: "opus"` và `effort`: xhigh cho lượt C và agent viết ca giữ kín; high cho lượt A, B, R.
+- Mỗi agent khoảng 5 bệnh mới, nên một lượt có thể cần 3 agent thay vì 2.
+- Mục "Read first" của các tệp trong `batch-2/` bảo agent đọc toàn bộ `knowledge/findings/`, `knowledge/conditions/` (các bệnh cần phân biệt), `red-flags.yaml` và `knowledge/sources/`. Vì vậy, sau 25 lượt gọi, ngữ cảnh đã lên 160–290 nghìn token, trước khi agent bắt đầu soạn. Từ lô 3, thay phần này bằng mục lục gọn (`docs/handoff.md` mục 7, phần chuẩn bị). Chỉ mở tệp đầy đủ của 1–2 bệnh mẫu và của bệnh cần mở rộng.

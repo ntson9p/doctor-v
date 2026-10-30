@@ -1,7 +1,7 @@
 # Bàn giao: doctor-v
 
 > **Dành cho:** agent Claude Code tiếp tục dự án trên cloud.
-> **Cập nhật:** 31/10/2026, ngay sau khi phát hành Giai đoạn 3, lô 2.
+> **Cập nhật:** 31/10/2026, sau khi phát hành Giai đoạn 3, lô 2, và sau quyết định về model, effort, ngữ cảnh (mục 5).
 > Đọc hết tệp này trước khi làm việc. Nếu điều gì ở đây mâu thuẫn với `docs/worklog.md`, nhật ký mới hơn là đúng.
 
 ## 1. Dự án
@@ -19,6 +19,7 @@ Lúc chạy, app không dùng AI hay LLM nào. An toàn (không bỏ sót cấp 
 | `packages/engine/` | Bộ suy luận: chọn câu hỏi, xác suất, mức xử trí |
 | `evaluation/` | Ca kiểm thử (`vignettes/dev`, `vignettes/holdout`), bộ chấm, báo cáo (`reports/`) |
 | `apps/web/` | Ứng dụng web (Astro 7.4 + Preact 10.29), kiểm thử Playwright |
+| `tools/` | Công cụ cho người bảo trì: `npm run agent:usage` đo token và chi phí của phiên |
 | `docs/` | Kế hoạch, hướng dẫn, nhật ký (tiếng Việt) |
 
 **Đọc theo thứ tự:**
@@ -42,7 +43,7 @@ Lúc chạy, app không dùng AI hay LLM nào. An toàn (không bỏ sót cấp 
 - **Lần chấm giữ kín mới nhất** (`evaluation/reports/2026-10-28-holdout-e7e084565d89.md`), đạt mọi chỉ tiêu:
   - sạch: an toàn 99,5%, bỏ sót cấp cứu 1/102, top-3 90,5%, khuyên quá mức 20,7%, tự chăm sóc nhận đúng 56,5%, ECE 0,047;
   - nhiễu: bỏ sót 13/510.
-- **Kiểm tra hiện tại:** `npm run verify` qua (67 kiểm thử đơn vị; `kb:check` 0 lỗi, 13 cảnh báo cũ); `eval:check` 0 lỗi; kiểm thử giao diện 24/24.
+- **Kiểm tra hiện tại:** `npm run verify` qua (71 kiểm thử đơn vị; `kb:check` 0 lỗi, 13 cảnh báo cũ); `eval:check` 0 lỗi; kiểm thử giao diện 24/24.
 - Tag git có thể chưa được đẩy lên GitHub. Đừng dựa vào tag nếu `git tag` không thấy.
 
 ## 3. Quy tắc bắt buộc của chủ dự án
@@ -85,6 +86,7 @@ npm run eval -- --set holdout --report    # chấm bộ giữ kín: chỉ khi l�
 npm run kb:check -- --drafts drafts/phase-3/batch-N/pass-a   # kiểm tra bản nháp
 npm run kb:agreement -- drafts/phase-3/batch-N               # kappa giữa lượt A và B
 npm run kb:priors               # so prior các bệnh dưới cùng triệu chứng chính
+npm run agent:usage             # token và chi phí (giá API) của phiên này và các agent con
 npx playwright install --with-deps chromium   # một lần, cho kiểm thử giao diện
 npm run test:e2e -w @doctor-v/web             # 24 phép thử; build vào apps/web/dist-test/
 npm run check -w @doctor-v/web                # astro check
@@ -102,14 +104,14 @@ npm run check -w @doctor-v/web                # astro check
 | 0 | Người bảo trì | Đọc lô N trong `scope.md` và việc tồn trong worklog | |
 | 1 | Người bảo trì | Soạn danh mục (chi tiết bên dưới); chạy dev trước và sau | Commit "batch N catalog" |
 | 2 | Lượt R, 1 agent | Mở từng nguồn mới, đối chiếu quy tắc và câu chữ, sửa | `drafts/phase-3/batch-N/review-rules.md` |
-| 3 | Lượt A, 2 agent | Soạn bệnh mới và phần mở rộng | `drafts/.../pass-a/` |
+| 3 | Lượt A, mỗi agent khoảng 5 bệnh mới | Soạn bệnh mới và phần mở rộng | `drafts/.../pass-a/` |
 | 4 | Agent viết ca giữ kín, độc lập | Khoảng 40 ca: 2 ca mỗi bệnh mới, ca thay thế, ca cấp cứu, ca ngoài phạm vi | `evaluation/vignettes/holdout/` |
-| 5 | Lượt B, 2 agent, không đọc lượt A | Soạn lại độc lập | `drafts/.../pass-b/` |
+| 5 | Lượt B, chia như lượt A, không đọc lượt A | Soạn lại độc lập | `drafts/.../pass-b/` |
 | 6 | Người bảo trì | `npm run kb:agreement` (lô 2: kappa 0,925) | `agreement.md` |
-| 7 | Lượt C, 2 agent | Đối chiếu từng trường; tệp bệnh cuối cùng; chuyển nguồn vào sổ; 3 ca dev mỗi bệnh mới | `knowledge/conditions/`, `drafts/.../reconcile/`, ca dev |
+| 7 | Lượt C, chia như lượt A | Đối chiếu từng trường; tệp bệnh cuối cùng; chuyển nguồn vào sổ; 3 ca dev mỗi bệnh mới | `knowledge/conditions/`, `drafts/.../reconcile/`, ca dev |
 | 8 | Người bảo trì | Tích hợp: bệnh mục tiêu của quy tắc, danh sách `cant_miss`, thứ tự câu hỏi, cụm; chạy dev, đọc báo cáo, sửa có căn cứ | Commit "integrate batch N" |
 | 9 | Người bảo trì | Chấm giữ kín. Không đạt thì sửa theo quy tắc giữ kín rồi chấm lại | Báo cáo holdout |
-| 10 | Người bảo trì | Phát hành (mục 6); ghi worklog (kết quả, chi phí); đánh dấu lô xong trong `scope.md` | Tag `release-phase3-batchN` |
+| 10 | Người bảo trì | Phát hành (mục 6); ghi worklog (kết quả, chi phí đo bằng `npm run agent:usage`); đánh dấu lô xong trong `scope.md` | Tag `release-phase3-batchN` |
 
 **Bước 1, soạn danh mục:**
 - Triệu chứng chính mới: `knowledge/complaints/<id>.yaml` với `status: in_progress`. Bộ chấm vẫn dùng triệu chứng này; app ẩn nó, và khi tìm đúng tên thì báo "đang được soạn". Khi phát hành, bỏ trường này.
@@ -130,7 +132,23 @@ npm run check -w @doctor-v/web                # astro check
   - Không dùng dịch vụ proxy hay trình đọc trung gian.
   - icd.kcb.vn hiện chuyển hướng sang medsen.vn và không tra được, nên mã ICD-10 để `icd10_verified: false`.
 - **Agent soạn dữ liệu không chạy git.** Lịch sử git có bản nháp của lượt kia, nên mở ra là mất tính độc lập.
-- **Chi phí đã đo:** lô 1 khoảng 6,6 triệu token agent, lô 2 khoảng 5,4 triệu (khoảng 380 nghìn mỗi bệnh mới, tính cả lượt R và ca giữ kín). Số này chưa tính phần của agent chính.
+
+**Model, effort, ngữ cảnh** (chủ dự án quyết định ngày 31/10/2026; phân tích trong worklog cùng ngày):
+
+| Agent | Model | Effort |
+|---|---|---|
+| Người bảo trì (phiên chính) | Opus 5.5 | xhigh. Chủ dự án chọn khi mở phiên |
+| Lượt C; agent viết ca giữ kín, kể cả ca thay thế | Opus 5.5 | xhigh |
+| Lượt A, B, R; việc khác | Opus 5.5 | high |
+
+- Khi tạo agent bằng công cụ Agent, luôn ghi `model: "opus"` và `effort` theo bảng. Không ghi thì agent con dùng effort của phiên chính.
+- Lô 1–2 chạy effort max. Sau khi hạ effort, so với mốc cũ: kappa A–B (0,90–0,925), số chỗ lượt C phải sửa, kết quả bộ giữ kín. Nếu một vai kém hơn mốc rõ rệt, nâng vai đó lên xhigh từ lượt sau và ghi vào worklog.
+- **Thu gọn ngữ cảnh.** Mỗi lượt gọi, model đọc lại toàn bộ ngữ cảnh. Ở lô 1–2, đọc và ghi ngữ cảnh chiếm 79% chi phí.
+  - Mỗi lô một phiên chính mới. Cuối lô, cập nhật worklog và tệp này để phiên sau đọc.
+  - Mỗi agent con khoảng 5 bệnh mới; chia phần mở rộng đều cho các agent.
+  - Phần "Read first" của lời giao việc dùng mục lục gọn (mục 7, việc chuẩn bị) thay cho đọc toàn bộ `knowledge/findings/`, `knowledge/conditions/`, `red-flags.yaml`, `knowledge/sources/`. Chỉ mở tệp đầy đủ của 1–2 bệnh mẫu và của bệnh cần mở rộng.
+- **Đo chi phí:** cuối lô chạy `npm run agent:usage` (cả phiên, vì mỗi lô một phiên), chép bảng và dòng "Theo loại" vào worklog. Không dùng số token mà công cụ Agent báo khi agent xong: đó chỉ là ngữ cảnh ở lượt gọi cuối. Worklog trước 31/10/2026 đã ghi nhầm số này là chi phí.
+- **Mốc chi phí** (giá API của Opus 5.5, effort max): agent con của lô 1 khoảng 270 USD, của lô 2 khoảng 220 USD; phiên chính khoảng 70 USD mỗi lô. Chủ dự án dùng gói thuê bao nên không trả số tiền này; nó cho biết mức tiêu hao hạn mức sử dụng.
 
 ## 6. Phát hành khi làm trên cloud
 
@@ -151,6 +169,16 @@ Không đưa lên `main` một bản chưa qua chấm giữ kín mà chưa báo 
 ## 7. Việc tiếp theo: lô 3 (Ho, Khó thở, Đau ngực)
 
 Phạm vi chi tiết: `docs/phase-3/scope.md`, mục "Lô 3".
+
+**Chuẩn bị, trước bước 1** (quyết định ngày 31/10/2026, mục 5):
+1. Viết lệnh in mục lục gọn của dữ liệu, ví dụ `npm run kb:index`, mỗi mục một dòng Markdown:
+   - dấu hiệu: id, kiểu và các giá trị, câu hỏi, `requires`, cụm, lô thêm vào;
+   - triệu chứng chính: id, thứ tự các nhóm câu hỏi và `red_flags`;
+   - bệnh: id, tên, mức xử trí, prior theo triệu chứng chính, các liên kết chính;
+   - quy tắc: id, mức, triệu chứng chính, điều kiện viết gọn.
+   Dùng bộ nạp có sẵn trong `packages/kb`, và thêm kiểm thử.
+2. Sửa mục "Read first" trong lời giao việc mẫu (`docs/phase-3/prompts/`): đọc đầy đủ `kb-guide.md` và `style-guide-vi.md`; với dữ liệu thì đọc mục lục, chỉ mở tệp đầy đủ khi cần.
+3. Đo kích thước mục lục và ghi vào worklog. Mục tiêu: sau phần đọc làm quen, ngữ cảnh của agent dưới khoảng 100 nghìn token. Ở lô 1–2, sau 25 lượt gọi đã là 160–290 nghìn.
 
 - **15 bệnh mới:**
   - viêm phế quản cấp; hen phế quản (cơn hen); đợt cấp COPD; lao phổi; ho gà; viêm tiểu phế quản; viêm thanh quản cấp (croup);
