@@ -27,7 +27,9 @@ describe('Vietnamese text rules', () => {
   });
 });
 
-describe('repository knowledge base', () => {
+// The whole knowledge base is loaded and checked: several seconds now, and more with each batch, so the
+// default 5 s timeout failed on a busy machine.
+describe('repository knowledge base', { timeout: 60_000 }, () => {
   it('has no validation errors', () => {
     const result = checkKnowledge();
     const errors = result.issues.filter((i) => i.severity === 'error');
