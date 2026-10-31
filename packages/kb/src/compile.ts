@@ -140,6 +140,7 @@ export function compileKnowledge(k: RawKnowledge): CompiledKb {
       id: c.id,
       urgency: asLevel(c.urgency),
       cantMiss: c.cant_miss,
+      ruleOut: c.rule_out === true,
       applicability: convertApplicability(c.applicability),
       priors,
       priorModifiers: (c.prior_modifiers ?? []).map((m) => ({

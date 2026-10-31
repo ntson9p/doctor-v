@@ -1,0 +1,48 @@
+id: shortness_of_breath
+label_vi: "Khó thở"
+icon: lungs
+synonyms_vi:
+  - "hụt hơi"
+  - "thở dốc"
+  - "thở gấp"
+  - "thở nhanh"
+  - "ngộp thở"
+  - "tức thở"
+  - "khó thở khi nằm"
+  - "khò khè"
+  - "thở khò khè"
+  - "thở rít"
+  - "lên cơn hen"
+  - "lên cơn suyễn"
+description_vi: "Thấy thiếu hơi, thở nhanh, thở mệt hoặc khò khè hơn bình thường."
+implies: [breathing_difficulty]
+# Giai đoạn 3, lô 3: đang soạn. Bỏ trường này khi lô đạt chỉ tiêu trên bộ ca giữ kín.
+status: in_progress
+red_flags:
+  # Người bảo trì soạn (31/10/2026), chờ lượt R. Phản vệ (vừa ăn món lạ, dùng thuốc, bị đốt) và khó thở đến mức
+  # nói không trọn câu là quy tắc mức 1 một dấu hiệu, nên hỏi trước nhóm dấu hiệu nguy hiểm.
+  - group: young_infant_danger_signs
+  - group: child_danger_signs
+  - group: child_breathing_signs
+  - finding: allergen_exposure
+  - finding: dyspnea_severity
+  - group: dyspnea_red_flags
+  - finding: dyspnea_onset
+  - finding: asthma_known
+  - finding: copd_known
+  - finding: reliever_no_relief
+  - group: general_danger_signs
+  - finding: fever
+  - group: fever_red_flags
+  - finding: fever_duration
+intake: [dyspnea_associated, clot_risk, lung_conditions, chronic_conditions, fever_exposures]
+# Bệnh "không được bỏ sót" (mức 1–2) có prior cho triệu chứng chính này: điền sau lượt C.
+cant_miss: []
+safety_net:
+  - es_severe_breathing
+  - chest_pain_pressure
+  - fainting_or_near_fainting
+  - confusion
+  - stridor
+  - apnea_cyanosis_spells
+sources: [nhs-shortness-of-breath, who-imci-chart-booklet-2014]

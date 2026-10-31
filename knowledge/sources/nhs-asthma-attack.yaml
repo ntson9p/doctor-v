@@ -1,0 +1,11 @@
+id: nhs-asthma-attack
+type: web_page
+title: "Asthma attacks"
+publisher: "NHS (UK)"
+url: "https://www.nhs.uk/conditions/asthma/asthma-attack/"
+license_class: L1
+license_note: "Open Government Licence v3.0; bản chuyển thể không được trình bày như nội dung của NHS."
+default_tier: C
+accessed: "2026-10-31"
+verified: false
+notes_vi: "Người bảo trì thêm khi soạn danh mục lô 3 (31/10/2026), chưa mở; lượt R xác minh."

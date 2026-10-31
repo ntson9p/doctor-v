@@ -1,0 +1,40 @@
+id: chest_pain
+label_vi: "Đau ngực"
+icon: chest
+synonyms_vi:
+  - "tức ngực"
+  - "nặng ngực"
+  - "đau thắt ngực"
+  - "đau nhói ngực"
+  - "đè ngực"
+  - "đau lồng ngực"
+  - "đau sau xương ức"
+  - "đau tim"
+  - "nóng rát ngực"
+description_vi: "Đau, tức, nặng hoặc khó chịu ở vùng ngực."
+implies: [chest_pain]
+# Trẻ nhỏ chưa tả được đau ngực; trẻ dưới 5 tuổi khó thở hoặc ho dùng hai triệu chứng chính kia.
+age_groups: [child_5_12, teen_13_17, adult_18_44, adult_45_64, elder_65_74, elder_75p]
+# Giai đoạn 3, lô 3: đang soạn. Bỏ trường này khi lô đạt chỉ tiêu trên bộ ca giữ kín.
+status: in_progress
+red_flags:
+  # Người bảo trì soạn (31/10/2026), chờ lượt R. Hỏi kiểu đau và thời gian trước nhóm dấu hiệu nguy hiểm: đau tức
+  # giữa ngực kéo dài từ 15 phút là quy tắc mức 1 (NHS: đau ngực đột ngột không hết thì gọi 999).
+  - finding: chest_pain_pressure
+  - finding: chest_pain_duration
+  - group: chest_pain_red_flags
+  - group: general_danger_signs
+  - finding: fever
+  - group: fever_red_flags
+  - finding: fever_duration
+intake: [chest_pain_associated, clot_risk, chronic_conditions, lung_conditions]
+# Bệnh "không được bỏ sót" (mức 1–2) có prior cho triệu chứng chính này: điền sau lượt C.
+cant_miss: []
+safety_net:
+  - es_crushing_chest_pain
+  - pain_radiates_arm_jaw
+  - cold_sweat
+  - breathing_difficulty
+  - fainting_or_near_fainting
+  - chest_pain_radiates_back
+sources: [nhs-chest-pain, nice-cg95]

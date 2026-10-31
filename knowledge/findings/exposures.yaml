@@ -75,3 +75,19 @@
   help_vi: "Ví dụ cấy lúa, dọn dẹp sau lũ, khơi cống, bắt chuột, hoặc ở nhà có nhiều chuột."
   leak: 0.2
   leak_note: "Ở nông thôn, làm ruộng và lội nước rất phổ biến; người bảo trì ước lượng khoảng 20% người sốt, lượt A/B/C đối chiếu."
+
+# ---------- Giai đoạn 3, lô 3 ----------
+- id: tb_contact
+  kind: exposure
+  type: binary
+  label_vi: "Tiếp xúc gần người bị lao"
+  question_vi: "Trong nhà hoặc người hay tiếp xúc gần có ai đang bị lao không?"
+  leak: 0.02
+  leak_note: "Việt Nam có gánh nặng lao cao; người bảo trì ước lượng tỷ lệ người ho có người tiếp xúc gần đang điều trị lao."
+- id: allergen_exposure
+  kind: exposure
+  type: binary
+  label_vi: "Vừa ăn món lạ, dùng thuốc mới hoặc bị đốt"
+  question_vi: "Trong 2 giờ trước, có ăn món lạ, dùng thuốc mới, bị ong đốt không?"
+  help_vi: "Kể cả tiêm thuốc, ăn hải sản, lạc (đậu phộng), hoặc bị côn trùng khác đốt."
+  leak: moderate

@@ -750,3 +750,42 @@ Sau khi xem phân tích trên, chủ dự án chọn (chi tiết ở `docs/hando
 - Mỗi bệnh mới thêm khoảng 100 ký tự vào `index.md`, mỗi dấu hiệu khoảng 150 ký tự. Lô 3 (15 bệnh, khoảng 30 dấu hiệu) thêm khoảng 3 nghìn token.
 
 **Lời giao việc mẫu:** `docs/phase-3/prompts/README.md`, mục "Từ lô 3", có khối "Read first" mới cho từng vai. Lời giao việc của lô 3 sẽ được lưu nguyên văn ở `docs/phase-3/prompts/batch-3/`.
+
+**Kiểm thử giao diện trên cloud:** dự án ghim `@playwright/test` 1.64.1, còn máy cloud chỉ có sẵn Chromium bản khác (`/opt/pw-browsers/chromium`). Chạy bằng một tệp cấu hình tạm ngoài repo, nhập cấu hình của dự án và thêm `launchOptions.executablePath: '/opt/pw-browsers/chromium'`:
+`cd apps/web && npx playwright test --config /tmp/doctor-v-scratch/pw/pw.config.ts`. Không sửa cấu hình của dự án.
+
+### Lô 3: danh mục (bước 1)
+
+**3 triệu chứng chính mới**, `status: in_progress`, có biểu tượng riêng:
+- Ho (`cough`), mọi lứa tuổi;
+- Khó thở (`shortness_of_breath`, ngầm định `breathing_difficulty`), mọi lứa tuổi;
+- Đau ngực (`chest_pain`, ngầm định dấu hiệu mới `chest_pain`), từ 5 tuổi.
+
+**31 dấu hiệu mới** (mục "Giai đoạn 3, lô 3" trong `knowledge/findings/`):
+- ho: thời gian ho (mốc 2 tuần sàng lọc lao, 8 tuần ho mạn tính); khò khè; thở rít khi ngồi yên; ho ông ổng; 3 dấu hiệu ho gà (cơn ho dồn dập, rít cuối cơn, nôn sau ho; cụm mới `pertussis_cough`); bắt đầu sau khi bị sặc, hóc; ho ra nhiều máu;
+- khó thở: khởi phát, mức khó thở (chỉ khi gắng sức, cả khi nghỉ, nói không trọn câu); khó thở khi nằm; phù hai chân; đã xịt thuốc cắt cơn mà không đỡ; đã biết hen, bệnh phổi tắc nghẽn mạn tính;
+- trẻ nhỏ: rút lõm lồng ngực; ngừng thở, tím tái từng lúc; bú, ăn chỉ khoảng một nửa;
+- đau ngực: đau ngực (chung), thời gian cơn đau (mốc 15 phút), khi gắng sức, đột ngột dữ dội, lan ra sau lưng, ấn vào đau đúng chỗ;
+- khác: ra mồ hôi trộm về đêm; mề đay; ban mụn nước thành dải một bên; tiếp xúc người bị lao; vừa ăn món lạ, dùng thuốc mới, bị đốt (2 giờ); thuốc tránh thai, nội tiết nữ (việc tồn từ lô 1).
+- Thêm câu hỏi thay thế cho 4 dấu hiệu cũ nay nằm trong nhóm dấu hiệu nguy hiểm của Đau ngực: đau lan lên cổ, hàm, tay; vã mồ hôi lạnh; buồn nôn; sưng đau một bên bắp chân. Câu "đau lan lên cổ, hàm…" nay cũng hỏi được khi có đau ngực chung.
+
+**10 nhóm câu hỏi** (dấu hiệu nguy hiểm của từng triệu chứng; nhóm riêng cho trẻ dưới 5 tuổi; triệu chứng đi kèm; kiểu ho; dấu hiệu lao khi ho từ 2 tuần; bệnh phổi đã biết; yếu tố nguy cơ huyết khối).
+
+**28 quy tắc mới**, chỉ cho 3 triệu chứng chính mới, nguồn chờ lượt R; **7 quy tắc cũ** mở phạm vi sang triệu chứng mới (đau ngực, hồi hộp kèm dấu hiệu nguy hiểm, mạch quá nhanh hoặc quá chậm, dấu hiệu sốc). Một số lựa chọn để lượt R và bác sĩ xem lại:
+- Đau ngực: theo NHS, đau lan ra tay, cổ, hàm, lưng, hoặc kèm vã mồ hôi, buồn nôn, choáng thì gọi 115 (mức 1); đau tức giữa ngực hoặc đau đột ngột dữ dội kéo dài từ 15 phút cũng mức 1. Đau ngực kèm khó thở: mức 1 khi là đau tức giữa ngực, mức 2 với kiểu đau khác (đau kiểu màng phổi rất hay gặp khi viêm đường hô hấp).
+- Khó thở và Ho: tức ngực kèm khó thở là mức 2 (hay gặp trong cơn hen), mức 1 khi kèm vã mồ hôi, đau lan, buồn nôn, choáng.
+- Trẻ rút lõm lồng ngực: mức 2. WHO IMCI 2014 cho điều trị tại nhà khi không có dấu hiệu nguy hiểm; chờ lượt R.
+
+**14 nguồn mới** (NHS, NICE NG9, GINA, GOLD), `verified: false`; lượt R xác minh và tìm văn bản của Bộ Y tế (hen, bệnh phổi tắc nghẽn mạn tính, phản vệ, lao, ho gà, suy tim).
+
+**Phạm vi** (`knowledge/drafts/phase-3/batch-3/scope.yaml`): 15 bệnh mới, 11 bệnh mở rộng, chia 3 phần (đường hô hấp dưới ở người lớn; trẻ em, phản vệ, suy tim; đau ngực). Lao phổi có prior cho Sốt, viêm tiểu phế quản cho Sốt, trào ngược dạ dày – thực quản cho Đau bụng: sẽ so bộ dev trước và sau.
+
+**Trường mới `rule_out`** cho bệnh ung thư (`docs/kb-guide.md` mục 2.5): app nêu tên bệnh kèm nhãn "Bác sĩ cần loại trừ", theo quyết định của chủ dự án.
+
+**Bộ dev** (217 ca):
+- sạch: không ca nào đổi (so từng ca);
+- nhiễu: bỏ sót 11 → 10/530, an toàn 98,0% → 98,1%. Lý do: 4 câu hỏi thay thế mới, nên câu trả lời "Không rõ" được hỏi lại.
+
+**Kiểm tra:** `kb:check` 0 lỗi (44 cảnh báo, phần lớn là nguồn chưa xác minh); `eval:check` 0 lỗi; 77 kiểm thử đơn vị; kiểm thử giao diện 24/24.
+
+**Dấu hiệu để dành chưa thêm** (việc tồn mục 8, ý 1): chỉ thêm "phù hai chân" và "thuốc tránh thai" vì lô 3 cần. Các dấu hiệu khác thuộc lô sau (vàng da, tiết niệu, sởi…).

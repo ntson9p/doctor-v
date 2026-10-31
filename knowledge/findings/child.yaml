@@ -175,3 +175,36 @@
     age_groups: [child_2m_5y]
   leak: 0.05
   leak_note: "Tổng quan Khreis 2026 (Pediatrics International, lượt B lô 2 đọc toàn văn): ở Singapore, 9,9% trẻ sốt do nguyên nhân khác cũng có thay đổi ở sẹo BCG, so với 42,7% ở trẻ Kawasaki. Ở cộng đồng có lẽ thấp hơn nhóm nằm viện, nên chọn 5%; ước lượng ban đầu 0,5% của người bảo trì là quá thấp."
+
+# ---------- Giai đoạn 3, lô 3 ----------
+- id: chest_indrawing
+  kind: sign
+  type: binary
+  label_vi: "Rút lõm lồng ngực"
+  question_vi: "Khi bé hít vào, phần ngực dưới sườn có lõm sâu vào không?"
+  help_vi: "Nhìn khi bé nằm yên, không khóc: chỗ dưới sườn bị kéo lõm vào mỗi lần hít vào."
+  alt_question:
+    text_vi: "Khi bé thở, chỗ dưới sườn hoặc giữa các xương sườn có hõm vào không?"
+  applies_to:
+    age_groups: [child_2m_5y]
+  leak: specific
+- id: apnea_cyanosis_spells
+  kind: sign
+  type: binary
+  label_vi: "Có lúc ngừng thở, tím tái"
+  question_vi: "Bé có lúc ngừng thở, hoặc tím tái môi, mặt từng lúc không?"
+  alt_question:
+    text_vi: "Có lúc nào bé đang thở bỗng ngưng lại, mặt tái hoặc tím đi không?"
+  applies_to:
+    age_groups: [infant_0_2m, child_2m_5y]
+  leak: specific
+- id: child_feeding_reduced
+  kind: sign
+  type: binary
+  label_vi: "Bú, ăn chỉ khoảng một nửa"
+  question_vi: "Mấy ngày nay bé chỉ bú hoặc ăn được khoảng một nửa mọi ngày không?"
+  alt_question:
+    text_vi: "Mỗi cữ bú, bữa ăn, bé có bỏ dở nhiều hơn mọi ngày không?"
+  applies_to:
+    age_groups: [child_2m_5y]
+  leak: moderate

@@ -238,6 +238,8 @@ export const conditionSchema = z.strictObject({
   summary_vi: z.array(TEXT).min(1).max(3),
   urgency: LEVEL,
   cant_miss: z.boolean(),
+  /** Cancers: named in the results with the label "Bác sĩ cần loại trừ" (owner's decision, docs/phase-3/scope.md §7). */
+  rule_out: z.boolean().optional(),
   specialties: z.array(ID).min(1),
   applicability: applicabilitySchema.optional(),
   priors: z.array(priorEntrySchema).min(1),

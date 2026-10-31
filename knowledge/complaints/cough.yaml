@@ -1,0 +1,44 @@
+id: cough
+label_vi: "Ho"
+icon: cough
+synonyms_vi:
+  - "ho khan"
+  - "ho có đờm"
+  - "ho đàm"
+  - "khạc đờm"
+  - "ho kéo dài"
+  - "ho về đêm"
+  - "ho húng hắng"
+  - "ho sù sụ"
+  - "ho ra máu"
+description_vi: "Ho khan hoặc ho có đờm, mới bị hoặc đã kéo dài nhiều tuần."
+implies: [cough]
+# Giai đoạn 3, lô 3: đang soạn. Bỏ trường này khi lô đạt chỉ tiêu trên bộ ca giữ kín.
+status: in_progress
+red_flags:
+  # Người bảo trì soạn (31/10/2026), chờ lượt R. Thứ tự có chủ ý: khi một quy tắc mức 2 đã đúng, bộ suy luận chỉ
+  # hỏi tiếp dấu hiệu làm một quy tắc mức 1 thành đúng, nên các câu then chốt của quy tắc mức 1 (ngừng thở ở trẻ
+  # nhỏ, khó thở đến mức nói không trọn câu) được hỏi trước.
+  - group: young_infant_danger_signs
+  - group: child_danger_signs
+  - group: child_breathing_signs
+  - group: cough_red_flags
+  - finding: dyspnea_severity
+  - finding: hemoptysis_large
+  - group: general_danger_signs
+  - finding: fever
+  - group: fever_red_flags
+  - finding: fever_duration
+  # Ho từ 2 tuần là mốc sàng lọc lao; ho gà cũng thường kéo dài nhiều tuần.
+  - finding: cough_duration
+intake: [cough_associated, cough_character, chronic_cough_signs, lung_conditions, fever_exposures, chronic_conditions]
+# Bệnh "không được bỏ sót" (mức 1–2) có prior cho triệu chứng chính này: điền sau lượt C.
+cant_miss: []
+safety_net:
+  - breathing_difficulty
+  - stridor
+  - hemoptysis
+  - chest_pain_pressure
+  - apnea_cyanosis_spells
+  - drowsy_hard_to_wake
+sources: [nhs-cough, who-imci-chart-booklet-2014]

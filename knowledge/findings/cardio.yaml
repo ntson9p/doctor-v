@@ -13,16 +13,22 @@
   type: binary
   label_vi: "Đau lan lên cổ, hàm, vai, tay"
   question_vi: "Cơn đau có lan lên cổ, hàm, vai hoặc cánh tay không?"
+  # Lô 3: câu này được hỏi trong nhóm dấu hiệu nguy hiểm của Đau ngực, nên cần câu hỏi thay thế.
+  alt_question:
+    text_vi: "Lúc đau, có thấy đau hoặc tê lan lên cổ, hàm, vai, tay không?"
   requires:
     - any:
         - { finding: chest_pain_pressure, is: present }
         - { finding: abdominal_pain, is: present }
+        - { finding: chest_pain, is: present }
   leak: specific
 - id: cold_sweat
   kind: sign
   type: binary
   label_vi: "Vã mồ hôi lạnh"
   question_vi: "Có vã mồ hôi lạnh không?"
+  alt_question:
+    text_vi: "Có toát mồ hôi đầm đìa, người lạnh và ướt không?"
   cluster: adrenergic
   leak: moderate
 - id: bp_measured
@@ -157,6 +163,8 @@
   type: binary
   label_vi: "Sưng đau một bên bắp chân"
   question_vi: "Có bị sưng, đau ở một bên bắp chân không?"
+  alt_question:
+    text_vi: "Một bên bắp chân có to hơn bên kia, sờ vào đau không?"
   leak: 0.03
   leak_note: "Ít gặp ở người không có huyết khối tĩnh mạch hay bệnh liên kết khác; người bảo trì ước lượng."
 - id: breathless_on_exertion
@@ -189,3 +197,70 @@
   baseline: { seconds: 0.45, minutes_hours: 0.4, ongoing: 0.15 }
   requires:
     - { finding: palpitations, is: present }
+
+# ---------- Giai đoạn 3, lô 3 ----------
+- id: chest_pain
+  kind: symptom
+  type: binary
+  label_vi: "Đau ngực"
+  question_vi: "Có đau ngực không?"
+  help_vi: "Kể cả đau nhói, đau rát, tức hoặc khó chịu ở ngực."
+  cluster: chest_pain
+  leak: moderate
+- id: chest_pain_duration
+  kind: history
+  type: categorical
+  label_vi: "Cơn đau ngực kéo dài bao lâu"
+  question_vi: "Cơn đau ngực lần này đã kéo dài bao lâu?"
+  options:
+    - { id: seconds, label_vi: "Chỉ vài giây rồi hết" }
+    - { id: minutes, label_vi: "Vài phút, dưới 15 phút" }
+    - { id: over_15min, label_vi: "Từ 15 phút trở lên, hoặc vẫn đang đau" }
+    - { id: days, label_vi: "Âm ỉ nhiều ngày nay" }
+  baseline: { seconds: 0.2, minutes: 0.3, over_15min: 0.25, days: 0.25 }
+  requires:
+    - { finding: chest_pain, is: present }
+- id: chest_pain_exertional
+  kind: symptom
+  type: binary
+  label_vi: "Đau ngực khi gắng sức, đỡ khi nghỉ"
+  question_vi: "Đau ngực có xuất hiện khi gắng sức và đỡ khi nghỉ không?"
+  help_vi: "Ví dụ đau khi đi nhanh, leo dốc, mang vác, ngồi nghỉ vài phút thì hết."
+  requires:
+    - { finding: chest_pain, is: present }
+  leak: moderate
+- id: chest_pain_sudden_severe
+  kind: symptom
+  type: binary
+  label_vi: "Đau ngực đột ngột, dữ dội ngay từ đầu"
+  question_vi: "Cơn đau ngực đến đột ngột và dữ dội ngay từ đầu không?"
+  alt_question:
+    text_vi: "Cơn đau ngực có ập đến bất ngờ, mạnh nhất ngay lúc bắt đầu không?"
+  requires:
+    - { finding: chest_pain, is: present }
+  leak: moderate
+- id: chest_pain_radiates_back
+  kind: symptom
+  type: binary
+  label_vi: "Đau ngực lan ra sau lưng"
+  question_vi: "Đau ngực có lan ra sau lưng, giữa hai bả vai không?"
+  alt_question:
+    text_vi: "Lúc đau ngực, phía sau lưng giữa hai bả vai có đau theo không?"
+  requires:
+    - { finding: chest_pain, is: present }
+  cluster: pain_radiation
+  leak: moderate
+- id: chest_wall_tenderness
+  kind: sign
+  type: binary
+  label_vi: "Ấn vào ngực thấy đau đúng chỗ"
+  question_vi: "Ấn tay vào chỗ đau ở ngực có đau nhói lên đúng chỗ đó không?"
+  requires:
+    - { finding: chest_pain, is: present }
+  leak: moderate
+- id: leg_swelling_both
+  kind: sign
+  type: binary
+  label_vi: "Phù hai chân"
+  question_vi: "Hai bàn chân, cổ chân có phù, ấn vào để lại vết lõm không?"
+  leak: moderate

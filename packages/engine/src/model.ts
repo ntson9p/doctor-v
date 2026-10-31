@@ -99,6 +99,8 @@ export interface Condition {
   id: string;
   urgency: TriageLevel;
   cantMiss: boolean;
+  /** Shown with the label "Bác sĩ cần loại trừ" (cancers), whatever its urgency. */
+  ruleOut: boolean;
   applicability: Applicability | null;
   /** Keyed by complaint id; a condition is a hypothesis only for complaints listed here. */
   priors: Record<string, ComplaintPrior>;

@@ -155,7 +155,7 @@ function linkText(link: ConditionYaml['findings'][number]): string {
 }
 
 function conditionLine(c: ConditionYaml, batches: ConditionBatches, allAges: readonly string[]): string {
-  const parts: string[] = [`u${c.urgency}${c.cant_miss ? ' cant_miss' : ''}`];
+  const parts: string[] = [`u${c.urgency}${c.cant_miss ? ' cant_miss' : ''}${c.rule_out ? ' rule_out' : ''}`];
   parts.push(...formatApplicability(c.applicability, allAges));
   const extended = batches.extended.get(c.id);
   parts.push(`${batches.added.get(c.id) ?? PHASE_1}${extended ? `, mở rộng ${extended.join(', ')}` : ''}`);
