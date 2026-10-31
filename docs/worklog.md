@@ -789,3 +789,44 @@ Sau khi xem phân tích trên, chủ dự án chọn (chi tiết ở `docs/hando
 **Kiểm tra:** `kb:check` 0 lỗi (44 cảnh báo, phần lớn là nguồn chưa xác minh); `eval:check` 0 lỗi; 77 kiểm thử đơn vị; kiểm thử giao diện 24/24.
 
 **Dấu hiệu để dành chưa thêm** (việc tồn mục 8, ý 1): chỉ thêm "phù hai chân" và "thuốc tránh thai" vì lô 3 cần. Các dấu hiệu khác thuộc lô sau (vàng da, tiết niệu, sởi…).
+
+### Lô 3: lượt R, lượt A; mạng của phiên cloud (31/10/2026)
+
+**Mạng bị chặn lúc đầu.** Mạng của môi trường cloud ban đầu chỉ cho một số tên miền. Lượt R vòng 1 và lượt A phần a không mở được nguồn nào (www.nhs.uk, Europe PMC, nice.org.uk, ginasthma.org, các trang Bộ Y tế…). Chủ dự án chọn mở mạng; sau đó chạy thêm hai agent để mở nguồn:
+- lượt R vòng 2;
+- lượt A phần a, phần sửa nguồn.
+
+**Lượt R** (`knowledge/drafts/phase-3/batch-3/review-rules.md`):
+- Vòng 1 (không mở được nguồn) chỉ sửa logic:
+  - đau tức giữa ngực có quy tắc mức 2 riêng cho Đau ngực;
+  - không tính cơn đau ngực chỉ vài giây;
+  - quy tắc khó thở mà cha mẹ khó trả lời ("nói không trọn câu") chỉ áp dụng từ 5 tuổi;
+  - nhánh phản vệ theo dị nguyên cần khó thở khởi phát đột ngột;
+  - thu hẹp hai quy tắc ho gà;
+  - sắp lại thứ tự hỏi để dấu hiệu đầu tiên của mỗi quy tắc mức 1 hai dấu hiệu được hỏi trước khi quy tắc mức 2 nào đúng.
+- Vòng 2 mở 12/14 nguồn mới. NHS đã gỡ trang bóc tách động mạch chủ và tràn khí màng phổi; trang của HSE (Ireland) thay trang đầu.
+  - Mở lại trực tiếp NICE CG95, NG143, NG254. Các lượt trước đọc ba nguồn này qua dịch vụ đọc hộ, nay không được phép.
+  - Thêm 6 văn bản Bộ Y tế: lao (162/QĐ-BYT 2024, thay 1314/QĐ-BYT), hen người lớn (1851/QĐ-BYT), hen trẻ dưới 5 tuổi (4888/QĐ-BYT), bệnh phổi tắc nghẽn mạn tính (2767/QĐ-BYT), suy tim (1857/QĐ-BYT), phản vệ (Thông tư 51/2017/TT-BYT). Chưa tìm được hướng dẫn ho gà của Bộ Y tế.
+  - GINA và GOLD: dùng bản 2026.
+  - Một quy tắc đổi mức: thuyên tắc phổi (sưng đau một bên bắp chân kèm khó thở, đau ngực hoặc ho ra máu) 1 → 2, vì NHS ghi "999 hoặc đến cấp cứu". Quy tắc tương tự của lô 1 (`rf_breathless_leg_swelling`) vẫn mức 1: cần bác sĩ thống nhất.
+  - Giữ mức 2 cho ba điểm đã nêu (đau ngực kèm khó thở, tức ngực kèm khó thở, trẻ rút lõm lồng ngực), có dẫn nguồn.
+- Bộ dev không đổi sau cả hai vòng.
+
+**Lượt A** (3 agent, mỗi agent 5 bệnh mới):
+- Phần a: viêm phế quản cấp, hen, đợt cấp bệnh phổi tắc nghẽn mạn tính, lao phổi, ung thư phổi; mở rộng viêm phổi, cảm lạnh, cúm, COVID-19.
+- Phần b: ho gà, viêm tiểu phế quản, croup (gợi ý mức 4 → 3 theo NHS và 3312/QĐ-BYT), phản vệ, suy tim; mở rộng sởi, nhiễm khuẩn huyết, cơn hoảng sợ.
+- Phần c: tràn khí màng phổi, bóc tách động mạch chủ, trào ngược dạ dày – thực quản, đau thành ngực (gợi ý mức 5 → 4), zona; mở rộng hội chứng vành cấp, thuyên tắc phổi, rối loạn nhịp tim, thiếu máu.
+- Phần sửa nguồn của phần a: mở 9 nguồn, thay hoặc bỏ 4; hạ tần suất sốt, ra mồ hôi đêm, sụt cân ở lao (khảo sát lao quốc gia 2017–2018), sụt cân ở ung thư phổi.
+
+**Quyết định của người bảo trì:**
+- Không liên kết dấu hiệu chung "đau ngực" (`chest_pain`). Với Đau ngực, nó được ngầm định; với Ho, Khó thở, "đau tức giữa ngực" và "đau khi hít sâu" đã mang bằng chứng. Liên kết thêm sẽ tính một cơn đau hai lần.
+- **11 dấu hiệu thêm theo đề xuất của các lượt, trước khi agent viết ca giữ kín làm việc:** SpO2 đo bằng máy kẹp ngón tay (cùng 2 quy tắc: dưới 92% mức 2, 92–95% mức 3); triệu chứng nặng về đêm; chảy dãi, không nuốt được (mức 2); thở rên ở trẻ (mức 2); từng hút thuốc; nhiều năm hít khói bếp, khói bụi; khàn tiếng; đã tiêm đủ 3 mũi vắc xin phòng ho gà; tăng cân nhanh; đau ngực như xé (tính vào hai quy tắc bóc tách động mạch chủ); da vùng đau rát bỏng trước khi nổi ban zona.
+- Danh mục lô 3 chốt ở đây: 42 dấu hiệu mới, 33 quy tắc mới.
+- Bộ dev vẫn không đổi (so từng ca).
+
+**Đang chạy:** agent viết ca giữ kín (effort xhigh), kèm việc bổ sung câu trả lời cho các ca giữ kín cũ có nhắc tới dấu hiệu mới; lượt B phần a.
+
+**Việc tồn mới:**
+- Đau thắt ngực ổn định chưa là bệnh riêng (khoảng 7–11% người đau ngực ở tuyến ban đầu).
+- Chưa có quy tắc cho zona gần mắt hoặc ở người suy giảm miễn dịch.
+- Ở Đau ngực, câu "vừa ăn món lạ, dùng thuốc, bị đốt" không được hỏi trước khi quy tắc đau ngực dừng phiên, nên phản vệ khó lên đầu danh sách ở triệu chứng này.
