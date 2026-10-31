@@ -830,3 +830,20 @@ Sau khi xem phân tích trên, chủ dự án chọn (chi tiết ở `docs/hando
 - Đau thắt ngực ổn định chưa là bệnh riêng (khoảng 7–11% người đau ngực ở tuyến ban đầu).
 - Chưa có quy tắc cho zona gần mắt hoặc ở người suy giảm miễn dịch.
 - Ở Đau ngực, câu "vừa ăn món lạ, dùng thuốc, bị đốt" không được hỏi trước khi quy tắc đau ngực dừng phiên, nên phản vệ khó lên đầu danh sách ở triệu chứng này.
+
+### Lô 3: bộ ca giữ kín, lượt B, độ đồng thuận (31/10/2026)
+
+**Bộ ca giữ kín** (agent độc lập, effort xhigh):
+- 51 ca mới: Ho 17, Khó thở 18, Đau ngực 15, Sốt 1. Mức 1: 13 ca, mức 2: 9 ca. 21 ca người từ 65 tuổi, 13 ca trẻ dưới 18 tuổi. 4 ca ngoài phạm vi (hít hạt lạc, viêm màng ngoài tim, ho do thuốc ức chế men chuyển, ho sau nhiễm vi rút).
+- Bổ sung câu trả lời cho 41 ca giữ kín cũ có lời kể nhắc tới dấu hiệu mới (thời gian ho, đau ngực, khó thở khởi phát và mức độ…), để câu hỏi mới không bị trả lời "không" trái với lời kể. Không đổi lời kể, mức xử trí hay câu trả lời khác.
+- Agent này cũng đổi bệnh đúng của h-fever-051 từ "other" sang lao phổi: lời kể là lao điển hình, và lao nay có prior cho Sốt.
+- Tổng: 249 ca giữ kín.
+- Agent chạy một lệnh `git diff --stat` chỉ đọc, trái quy tắc không chạy git; không thay đổi gì.
+
+**Lượt B** (3 agent, không đọc bản của lượt A): 15 bệnh mới, 11 bệnh mở rộng.
+- Cả hai lượt cùng đổi mức gợi ý của croup (4 → 3) và đau thành ngực (5 → 4).
+- Lượt B phần a thêm prior Khó thở cho viêm phế quản cấp, ngoài phạm vi (Frese 2011: chẩn đoán hay gặp nhất ở người khó thở đến bác sĩ gia đình). Lượt C quyết định.
+
+**Độ đồng thuận A–B:** kappa có trọng số **0,958** trên 159 cặp liên kết (lô 1: 0,90; lô 2: 0,925). Lượt A và B chạy effort high thay cho max, chất lượng theo chỉ số này không kém hơn.
+
+**Đang chạy:** lượt C phần a, phần b (effort xhigh); phần c chạy sau.
