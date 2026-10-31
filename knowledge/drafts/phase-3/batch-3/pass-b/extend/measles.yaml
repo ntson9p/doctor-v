@@ -1,0 +1,182 @@
+id: measles
+names:
+  vi: "Sởi"
+  en: "Measles"
+codes:
+  icd10: "B05"
+  icd10_verified: false
+  mondo: "MONDO:0004619"
+summary_vi:
+  - "Bệnh do vi rút sởi, lây rất mạnh qua đường hô hấp, hay gặp ở trẻ chưa tiêm đủ vắc xin."
+  - "Thường sốt cao, ho, chảy mũi, đỏ mắt 2–4 ngày, rồi phát ban từ sau tai, mặt lan xuống người."
+  - "Có thể gây viêm phổi, viêm tai giữa, tiêu chảy; người bệnh cần được khám và cách ly."
+urgency: 3
+cant_miss: false
+specialties: [infectious_disease, pediatrics]
+priors:
+  - complaint: fever
+    default: P5
+    by_age:
+      child_2m_5y: P4
+      child_5_12: P4
+      adult_45_64: P6
+      elder_65_74: P6
+      elder_75p: P6
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-1019-2025, nguyentien-wpsar-2026, do-jcv-2021, tran-bmcinfectdis-2024]
+      reported: "Đồng Nai 2024–2025: 11.434 ca (55,9% dưới 5 tuổi, 24,3% 5–10 tuổi, 19,8% trên 10 tuổi); miền Bắc 2013–2014: 9.577 ca xác định (55,7% dưới 5 tuổi)"
+      note: "Thang tuyệt đối (kb-guide 2.3). Sởi thành dịch theo đợt (2013–2014, 2017–2019, 2024–2025); 1019: hay gặp ở trẻ dưới 3 tuổi, người lớn chưa tiêm cũng mắc. Ước trung bình theo thời gian 0,2–1% trẻ sốt (P4); vị thành niên và người lớn trẻ 0,02–0,2% (P5); từ 45 tuổi dưới 0,02% (P6). Trong đợt dịch tại địa phương có thể cao hơn nhiều lần, ngoài đợt dịch thấp hơn nhiều. Không có hệ số theo tháng vì các đợt dịch có đỉnh khác nhau. Hai lượt thống nhất (lượt A ghi thêm teen_13_17: P5, trùng mặc định)."
+findings:
+  - finding: fever
+    freq: almost_always
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-1019-2025, delmoral-ijidreg-2026]
+      locator: "1019 mục 2.1.1, 2.4.2"
+      reported: "100% (609 ca xác định, Mexico)"
+      note: "Sốt là tiêu chuẩn của ca bệnh lâm sàng. Bệnh chỉ có prior cho triệu chứng chính sốt nên liên kết này hiện không được dùng; ghi lại cho đầy đủ (lượt A)."
+  - finding: fever_max_temp
+    dist: { lt_38: 0.05, t38_39: 0.28, ge_39: 0.67 }
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-1019-2025, cdc-measles-clinical-overview]
+      locator: "1019 mục 2.1.1, 2.1.2"
+      note: "1019: sốt cao trong giai đoạn khởi phát; thể không điển hình có thể sốt nhẹ. CDC: sốt có thể tới 40,5°C. Phân bố trong số người có sốt; trung bình của hai lượt."
+  - finding: fever_duration
+    dist: { d1_2: 0.20, d3_5: 0.52, d6_7: 0.21, gt_7d: 0.07 }
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-1019-2025, delmoral-ijidreg-2026]
+      locator: "1019 mục 2.1.1"
+      reported: "đến khám trung vị ngày 4 từ khi khởi bệnh (Mexico)"
+      note: "Khởi phát 2–4 ngày; ban mọc sau 3–4 ngày sốt cao; thân nhiệt giảm khi ban mọc hết (toàn phát 2–5 ngày). Phân bố theo thời điểm người dùng hỏi; trung bình của hai lượt."
+  - finding: rash_any
+    freq: frequent
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-1019-2025, delmoral-ijidreg-2026]
+      locator: "1019/QĐ-BYT mục 2.1.1 (giai đoạn khởi phát 2–4 ngày; ban mọc sau 3–4 ngày sốt cao; thân nhiệt giảm khi ban mọc hết) và mục 2.4.2 (ca nghi ngờ cần phát ban hoặc hạt Koplik); Del Moral 2026 phần Methods, Results"
+      reported: "Ban ở 98,3% ca xác định không nhập viện (Mexico 2025–2026), nhưng ca được tìm ra chủ yếu vì có ban và ngày khởi bệnh tính từ ngày mọc ban"
+      note: "Lô 2 (lượt C, 27/10/2026): hai lượt cùng đổi very_frequent thành frequent (scope.yaml, ca dev d-from-h-fever-009). Câu hỏi hỏi lúc dùng app, khi người bệnh có thể còn ở giai đoạn khởi phát. Ghép mốc của 1019/QĐ-BYT với phân bố số ngày sốt của chính bệnh này (1–2 ngày 0,20; 3–5 ngày 0,52; 6–7 ngày 0,21; hơn 7 ngày 0,07): gần như chưa có ban ở ngày 1–2, khoảng một nửa ở ngày 3–5, gần như đủ từ ngày 6, tổng khoảng 0,5. Với very_frequent, trả lời 'chưa có ban' giảm khả năng sởi khoảng 5 lần; với frequent khoảng 2 lần. Khi đã có ban, câu ban mọc từ mặt (very_frequent) vẫn phân biệt rõ."
+  - finding: rash_spreads_from_face
+    freq: very_frequent
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-1019-2025, cdc-measles-clinical-overview]
+      locator: "1019 mục 2.1.1 (giai đoạn toàn phát)"
+      note: "Ban xuất hiện từ sau tai, sau gáy, trán, mặt, cổ rồi lan dần xuống thân mình và tứ chi; CDC: lan từ đầu xuống thân rồi chân. Tần suất trong số người đã có ban."
+  - finding: rash_non_blanching
+    freq: rare
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-1019-2025]
+      locator: "1019 mục 2.1.1 và 2.7.8"
+      note: "Ban dát sẩn mất khi căng da; sởi thể xuất huyết hiện hiếm gặp. Vết thâm giai đoạn hồi phục có thể bị hiểu nhầm. Tần suất trong số người đã có ban; mức rare thấp hơn tỷ lệ nền 5%."
+  - finding: red_eyes
+    freq: very_frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [delmoral-ijidreg-2026, byt-qd-1019-2025, cdc-measles-clinical-overview]
+      locator: "1019 mục 1 và 2.1.1"
+      reported: "viêm kết mạc 67,1% ca không nhập viện, 70,9% toàn mẫu"
+      note: "1019: viêm kết mạc là triệu chứng điển hình của giai đoạn khởi phát."
+  - finding: cough
+    freq: very_frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [delmoral-ijidreg-2026, byt-qd-1019-2025, cdc-measles-clinical-overview]
+      reported: "95,7% ca không nhập viện, 97,0% toàn mẫu"
+      note: "Số liệu từ bệnh viện tuyến cuối; ca nhẹ ở cộng đồng, nhất là ở người đã tiêm, có thể ít triệu chứng hơn, nên hạ một mức. 1019: ho có thể kéo dài 1–2 tuần sau khi hết ban."
+  - finding: runny_nose
+    freq: very_frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [delmoral-ijidreg-2026, byt-qd-1019-2025, cdc-measles-clinical-overview]
+      reported: "chảy mũi 81,5% ca không nhập viện"
+  - finding: diarrhea
+    freq: occasional
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-1019-2025, cdc-measles-clinical-overview]
+      locator: "1019 mục 2.7.3"
+      note: "1019: tiêu chảy, nôn trớ thường gặp trong giai đoạn cấp; CDC xếp tiêu chảy vào biến chứng hay gặp. Không có tỷ lệ; ước occasional ở cộng đồng (hai lượt thống nhất)."
+  - finding: vomiting
+    freq: occasional
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-1019-2025]
+      locator: "1019 mục 2.7.3"
+      note: "Như tiêu chảy: 1019 ghi nôn trớ thường gặp trong giai đoạn cấp nhưng không có tỷ lệ. Chỉ lượt A có liên kết này; giữ vì nguồn ủng hộ."
+  - finding: ear_pain
+    freq: occasional
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-1019-2025, cdc-measles-clinical-overview]
+      locator: "1019 mục 2.7.2"
+      note: "Viêm tai giữa cấp là biến chứng phổ biến nhất của sởi; không có tỷ lệ."
+  - finding: breathing_difficulty
+    freq: occasional
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-1019-2025, cdc-measles-clinical-overview]
+      locator: "1019 mục 2.7.1 và 3.2.1"
+      note: "Viêm phổi là biến chứng và nguyên nhân tử vong hàng đầu; thở nhanh là dấu hiệu cần tái khám ngay. Ở người dùng cộng đồng phần lớn chưa biến chứng, ước occasional."
+  - finding: measles_vaccinated
+    freq: occasional
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [tran-bmcinfectdis-2024, do-jcv-2021, delmoral-ijidreg-2026, byt-qd-1019-2025]
+      reported: "27,7% trẻ trên 18 tháng nằm viện vì sởi đã tiêm ít nhất 1 mũi (Hà Nội 2017–2019); 76,3% ca chưa tiêm hoặc không rõ (miền Bắc 2013–2014); 10,2% có ghi nhận ít nhất 1 mũi (Mexico)"
+      note: "Câu hỏi là đã tiêm đủ 2 mũi và chỉ hỏi từ 18 tháng tuổi, nên tỷ lệ trong số ca bệnh còn thấp hơn số đã tiêm ít nhất 1 mũi; ca nhẹ ở cộng đồng có thể nhiều người đã tiêm hơn ca nằm viện. Chọn occasional (hai lượt thống nhất), không chọn rare, để không loại sởi quá mạnh khi phụ huynh nhớ sai."
+  - finding: measles_contact
+    freq: occasional
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [delmoral-ijidreg-2026, byt-qd-1019-2025]
+      locator: "1019 mục 2.4.1"
+      reported: "có tiếp xúc ca bệnh 22,7% ca không nhập viện, 24,8% toàn mẫu"
+      note: "1019: tiếp xúc người bệnh sởi trong 7–21 ngày hoặc sống trong vùng dịch là yếu tố của ca nghi ngờ; nhiều ca không biết nguồn lây vì bệnh lây qua không khí."
+warning_signs:
+  - child_unable_to_drink
+  - child_vomits_everything
+  - breathing_difficulty
+  - es_severe_breathing
+  - drowsy_hard_to_wake
+  - confusion
+  - seizure_recent
+self_care_vi:
+  - "Cho người bệnh ở phòng riêng thoáng khí, đeo khẩu trang, hạn chế tiếp xúc người khác."
+  - "Không đến nơi đông người; trẻ nghỉ học đến 4 ngày sau khi phát ban."
+  - "Ăn uống đủ chất theo tuổi, tiếp tục cho trẻ bú mẹ."
+  - "Giữ vệ sinh da, mắt, mũi, miệng hằng ngày."
+see_doctor_vi:
+  - "Đi khám trong 24 giờ để được xác định bệnh và hướng dẫn điều trị."
+  - "Báo trước cho cơ sở y tế là nghi sởi để được khám ở khu riêng, tránh lây cho người khác."
+  - "Tái khám mỗi 2–3 ngày cho đến khi hết sốt."
+  - "Đi khám lại ngay nếu không ăn uống được, nôn mọi thứ, thở nhanh, tím tái hoặc lơ mơ."
+  - "Người tiếp xúc chưa tiêm vắc xin sởi nên hỏi cơ sở y tế về việc tiêm phòng."
+sources: [byt-qd-1019-2025, cdc-measles-clinical-overview]
+review:
+  status: source_checked
+  authors: ["agent:pass-a", "agent:pass-b"]
+  reconciler: "agent:pass-c"
+  doctor_reviewer: null
+  updated: "2026-10-27"
+  notes_vi: "Cần bác sĩ xem: (1) prior phụ thuộc mạnh vào đợt dịch; năm 2026 chưa có số liệu; (2) tỷ lệ triệu chứng lấy từ ca đến bệnh viện tuyến cuối ở Mexico (2025–2026) và mô tả của 1019, CDC; tiêu chảy, nôn, đau tai, khó thở chỉ là ước lượng; (3) câu hỏi tiêm vắc xin nay chỉ hỏi từ 18 tháng tuổi; tần suất 'đã tiêm đủ 2 mũi' ở ca bệnh có lẽ dưới 20–25%; (4) danh mục chưa có câu hỏi 'ban xuất hiện sau mấy ngày sốt' và hạt Koplik (khó tự quan sát); (5) 1019 cho mọi trẻ bị sởi uống vitamin A liều cao: lý do chính để khuyên khám trong 24 giờ; (6) mã ICD-10 chưa đối chiếu được. Giai đoạn 3 lô 2 (lượt C, 27/10/2026): phát ban (rash_any) đổi từ very_frequent thành frequent theo cả hai lượt (lý do trong ghi chú liên kết; ca d-from-h-fever-009). Giữ tiếp xúc người bị sởi occasional (hai lượt cùng giữ: 22,7–24,8% ca có tiếp xúc đã biết; với tỷ lệ nền 1%, trả lời 'Có' tăng khả năng khoảng 20 lần, và quy tắc rf_measles_contact_fever đã đưa mức lên 3). Không liên kết các dấu hiệu Kawasaki mới (môi đỏ nứt, sưng đỏ bong da tay chân, sẹo BCG sưng đỏ; hai lượt cùng không liên kết): 1019/QĐ-BYT nêu chúng là điểm phân biệt với Kawasaki; ban sởi lan cả lòng bàn tay, bàn chân nên một số cha mẹ có thể trả lời 'có' ở câu bàn tay, bàn chân đỏ."
