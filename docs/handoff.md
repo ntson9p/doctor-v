@@ -1,7 +1,7 @@
 # Bàn giao: doctor-v
 
 > **Dành cho:** agent Claude Code tiếp tục dự án trên cloud.
-> **Cập nhật:** 31/10/2026, sau khi phát hành Giai đoạn 3, lô 2, và sau quyết định về model, effort, ngữ cảnh (mục 5).
+> **Cập nhật:** 31/10/2026, sau khi phát hành Giai đoạn 3, lô 3 (Ho, Khó thở, Đau ngực).
 > Đọc hết tệp này trước khi làm việc. Nếu điều gì ở đây mâu thuẫn với `docs/worklog.md`, nhật ký mới hơn là đúng.
 
 ## 1. Dự án
@@ -30,20 +30,21 @@ Lúc chạy, app không dùng AI hay LLM nào. An toàn (không bỏ sót cấp 
 5. `docs/kb-guide.md`: hợp đồng dữ liệu. Đọc trước khi sửa `knowledge/`.
 6. `docs/engine-spec.md`, `docs/evaluation.md`, `docs/style-guide-vi.md`.
 
-## 2. Trạng thái (31/10/2026)
+## 2. Trạng thái (31/10/2026, sau lô 3)
 
 - **Giai đoạn 1** xong: 33 bệnh, 3 triệu chứng chính (Sốt, Đau bụng, Đau đầu). Báo cáo: `docs/reports/phase-1.md`.
 - **Giai đoạn 2** xong: ứng dụng web.
 - **Giai đoạn 3**, 11 lô:
   - lô 1 (Chóng mặt, Ngất, Hồi hộp): phát hành 26/10, tag `release-phase3-batch1`;
   - lô 2 (14 bệnh nguy hiểm còn thiếu cho Sốt, Đau bụng, Đau đầu…): phát hành 28/10, tag `release-phase3-batch2`;
-  - **lô 3 (Ho, Khó thở, Đau ngực) là việc tiếp theo, chưa bắt đầu.**
-- **Dữ liệu:** 60 bệnh, 205 dấu hiệu, 6 triệu chứng chính, 116 quy tắc, 436 nguồn.
-- **Ca kiểm thử:** dev 217, giữ kín 198.
-- **Lần chấm giữ kín mới nhất** (`evaluation/reports/2026-10-28-holdout-e7e084565d89.md`), đạt mọi chỉ tiêu:
-  - sạch: an toàn 99,5%, bỏ sót cấp cứu 1/102, top-3 90,5%, khuyên quá mức 20,7%, tự chăm sóc nhận đúng 56,5%, ECE 0,047;
-  - nhiễu: bỏ sót 13/510.
-- **Kiểm tra hiện tại:** `npm run verify` qua (71 kiểm thử đơn vị; `kb:check` 0 lỗi, 13 cảnh báo cũ); `eval:check` 0 lỗi; kiểm thử giao diện 24/24.
+  - lô 3 (Ho, Khó thở, Đau ngực; 15 bệnh mới, 11 mở rộng): phát hành 31/10, tag `release-phase3-batch3`, trên nhánh `claude/jolly-edison-u3qf7p` (chưa đưa lên `main`);
+  - **lô 4 (Tiêu chảy, Nôn, Táo bón, Đi ngoài ra máu, Vàng da, Trẻ quấy khóc) là việc tiếp theo, chưa bắt đầu.**
+- **Dữ liệu:** 75 bệnh, 247 dấu hiệu, 9 triệu chứng chính, 150 quy tắc, 544 nguồn.
+- **Ca kiểm thử:** dev 281, giữ kín 249.
+- **Lần chấm giữ kín mới nhất** (`evaluation/reports/2026-10-31-holdout-d01ef57b4d58.md`), đạt mọi chỉ tiêu:
+  - sạch: an toàn 98,8%, bỏ sót cấp cứu 2/124, top-3 89,3%, khuyên quá mức 23,7%, tự chăm sóc nhận đúng 51,7% (vừa qua ngưỡng 50%), ECE 0,047;
+  - nhiễu: bỏ sót 16/620.
+- **Kiểm tra hiện tại:** `npm run verify` qua (77 kiểm thử đơn vị; `kb:check` 0 lỗi, 16 cảnh báo); `eval:check` 0 lỗi; kiểm thử giao diện 24/24.
 - Tag git có thể chưa được đẩy lên GitHub. Đừng dựa vào tag nếu `git tag` không thấy.
 
 ## 3. Quy tắc bắt buộc của chủ dự án
@@ -96,6 +97,11 @@ npm run check -w @doctor-v/web                # astro check
 - "Nhiễu": 15% câu trả lời (trừ màn sàng lọc cấp cứu) bị đổi thành "Không rõ", 5 hạt giống. Khi thêm hoặc bớt một câu hỏi, chuỗi ngẫu nhiên đổi theo, nên số ca bỏ sót có thể dao động ±1 dù không có hồi quy thật. Muốn kết luận thì liệt kê từng lượt chạy trước và sau, rồi so sánh.
 - Tải tài liệu (PDF…) về một thư mục tạm ngoài repo, ví dụ `/tmp/doctor-v-scratch/<việc>/`. Không chạy gì từ đó và không chép vào repo.
 
+**Trên cloud** (ghi ở lô 3, `docs/worklog.md` ngày 31/10/2026):
+- Máy có sẵn Node 22. Cài Node 24: `export NVM_DIR=/opt/nvm; . /opt/nvm/nvm.sh; nvm install 24`, rồi thêm `/opt/nvm/versions/node/v24.22.2/bin` vào đầu `PATH` ở mỗi lệnh. Lời giao việc của agent phải nhắc điều này.
+- Mạng của môi trường phải cho phép các trang nguồn (www.nhs.uk, nice.org.uk, www.ebi.ac.uk cho Europe PMC, trang Bộ Y tế…). Ở lô 3, lúc đầu mạng bị chặn, phải chạy lại phần nguồn. Trước khi chạy agent, thử `curl -s -o /dev/null -w '%{http_code}' https://www.nhs.uk/`.
+- Kiểm thử giao diện: dự án ghim `@playwright/test` 1.64.1, máy có Chromium khác bản. Dùng tệp cấu hình tạm ngoài repo, nhập cấu hình của dự án và thêm `launchOptions: { executablePath: '/opt/pw-browsers/chromium' }`, rồi `cd apps/web && npx playwright test --config <tệp tạm>`.
+
 ## 5. Quy trình một lô
 
 Đã dùng cho lô 1 và lô 2. "Người bảo trì" là agent chính (bạn). Lời giao việc mẫu ở `docs/phase-3/prompts/` (xem README trong đó).
@@ -147,9 +153,11 @@ npm run check -w @doctor-v/web                # astro check
 - **Thu gọn ngữ cảnh.** Mỗi lượt gọi, model đọc lại toàn bộ ngữ cảnh. Ở lô 1–2, đọc và ghi ngữ cảnh chiếm 79% chi phí.
   - Mỗi lô một phiên chính mới. Cuối lô, cập nhật worklog và tệp này để phiên sau đọc.
   - Mỗi agent con khoảng 5 bệnh mới; chia phần mở rộng đều cho các agent.
-  - Phần "Read first" của lời giao việc dùng mục lục gọn (mục 7, việc chuẩn bị) thay cho đọc toàn bộ `knowledge/findings/`, `knowledge/conditions/`, `red-flags.yaml`, `knowledge/sources/`. Chỉ mở tệp đầy đủ của 1–2 bệnh mẫu và của bệnh cần mở rộng.
+  - Phần "Read first" của lời giao việc dùng mục lục gọn (`npm run kb:index -- --out-dir <thư mục>`; mẫu ở `docs/phase-3/prompts/README.md`, mục "Từ lô 3") thay cho đọc toàn bộ `knowledge/findings/`, `knowledge/conditions/`, `red-flags.yaml`, `knowledge/sources/`. Chỉ mở tệp đầy đủ của 1–2 bệnh mẫu và của bệnh cần mở rộng.
+  - Lời giao việc nguyên văn của lô 3 ở `docs/phase-3/prompts/batch-3/` (mới hơn `batch-2/`, dùng làm mẫu cho lô 4).
 - **Đo chi phí:** cuối lô chạy `npm run agent:usage` (cả phiên, vì mỗi lô một phiên), chép bảng và dòng "Theo loại" vào worklog. Không dùng số token mà công cụ Agent báo khi agent xong: đó chỉ là ngữ cảnh ở lượt gọi cuối. Worklog trước 31/10/2026 đã ghi nhầm số này là chi phí.
-- **Mốc chi phí** (giá API của Opus 5.5, effort max): agent con của lô 1 khoảng 270 USD, của lô 2 khoảng 220 USD; phiên chính khoảng 70 USD mỗi lô. Chủ dự án dùng gói thuê bao nên không trả số tiền này; nó cho biết mức tiêu hao hạn mức sử dụng.
+- **Mốc chi phí** (giá API của Opus 5.5): lô 1–2 (effort max) agent con khoảng 270 và 220 USD, phiên chính khoảng 70 USD mỗi lô; lô 3 (effort high/xhigh, mục lục gọn) agent con 181 USD, phiên chính 44 USD, khoảng 12 USD mỗi bệnh mới. Chủ dự án dùng gói thuê bao nên không trả số tiền này; nó cho biết mức tiêu hao hạn mức sử dụng.
+- **Chất lượng sau khi hạ effort** (lô 3): kappa A–B 0,958 (mốc 0,90–0,925); bộ giữ kín đạt ở lần chấm thứ hai. Giữ cấu hình hiện tại.
 
 ## 6. Phát hành khi làm trên cloud
 
@@ -167,39 +175,23 @@ npm run check -w @doctor-v/web                # astro check
 
 Không đưa lên `main` một bản chưa qua chấm giữ kín mà chưa báo chủ dự án. Bản nháp của lô đang soạn phải để trên nhánh làm việc.
 
-## 7. Việc tiếp theo: lô 3 (Ho, Khó thở, Đau ngực)
+## 7. Việc tiếp theo: lô 4 (Tiêu chảy, Nôn, Táo bón, Đi ngoài ra máu, Vàng da, Trẻ quấy khóc)
 
-Phạm vi chi tiết: `docs/phase-3/scope.md`, mục "Lô 3".
+Phạm vi chi tiết: `docs/phase-3/scope.md`, mục "Lô 4" (16 bệnh mới, trong đó 3 bệnh ung thư có `rule_out: true`).
 
-**Chuẩn bị, trước bước 1** (quyết định ngày 31/10/2026, mục 5):
-1. Viết lệnh in mục lục gọn của dữ liệu, ví dụ `npm run kb:index`, mỗi mục một dòng Markdown:
-   - dấu hiệu: id, kiểu và các giá trị, câu hỏi, `requires`, cụm, lô thêm vào;
-   - triệu chứng chính: id, thứ tự các nhóm câu hỏi và `red_flags`;
-   - bệnh: id, tên, mức xử trí, prior theo triệu chứng chính, các liên kết chính;
-   - quy tắc: id, mức, triệu chứng chính, điều kiện viết gọn.
-   Dùng bộ nạp có sẵn trong `packages/kb`, và thêm kiểm thử.
-2. Sửa mục "Read first" trong lời giao việc mẫu (`docs/phase-3/prompts/`): đọc đầy đủ `kb-guide.md` và `style-guide-vi.md`; với dữ liệu thì đọc mục lục, chỉ mở tệp đầy đủ khi cần.
-3. Đo kích thước mục lục và ghi vào worklog. Mục tiêu: sau phần đọc làm quen, ngữ cảnh của agent dưới khoảng 100 nghìn token. Ở lô 1–2, sau 25 lượt gọi đã là 160–290 nghìn.
-
-- **15 bệnh mới:**
-  - viêm phế quản cấp; hen phế quản (cơn hen); đợt cấp COPD; lao phổi; ho gà; viêm tiểu phế quản; viêm thanh quản cấp (croup);
-  - suy tim; tràn khí màng phổi; bóc tách động mạch chủ; phản vệ;
-  - trào ngược dạ dày – thực quản; đau thành ngực; zona thần kinh;
-  - ung thư phổi, kèm nhãn "Bác sĩ cần loại trừ".
-- **Bệnh đã có cần mở rộng:** viêm phổi, cảm lạnh, cúm, COVID-19, sởi (ho), hội chứng vành cấp (đau ngực, khó thở), nhiễm khuẩn huyết (khó thở); thuyên tắc phổi, rối loạn nhịp tim, cơn hoảng sợ, thiếu máu.
-- **3 triệu chứng chính mới:** làm như lô 1, với `status: in_progress`, biểu tượng mới, nhóm dấu hiệu nguy hiểm riêng, và quy tắc theo hướng dẫn chính thức (Bộ Y tế, NHS, NICE, ESC, GINA, GOLD; WHO IMCI cho trẻ thở nhanh, rút lõm lồng ngực).
-- **Dấu hiệu đã có trong danh mục:** cough, productive_cough, breathing_difficulty, pleuritic_chest_pain, hemoptysis, chest_pain_pressure, pain_radiates_arm_jaw, cold_sweat, leg_swelling_one_side, breathless_on_exertion, sore_throat, runny_nose, weight_loss_unintended, smoker, es_severe_breathing, es_crushing_chest_pain, es_anaphylaxis.
-- **Chưa có:** khò khè, thở rít, ho từng cơn kèm thở rít (ho gà), ho kéo dài trên 2–3 tuần, ra mồ hôi đêm, đau ngực khi ấn, đau ngực kiểu xé lan ra lưng, phù hai chân, khó thở khi nằm, nổi ban dải một bên… Lượt A, B có thể đề xuất thêm, nhưng đề xuất phải được thêm vào danh mục **trước** khi agent viết ca giữ kín làm việc (quy tắc 7).
-- **Quy tắc đau ngực đã có** (rf_chest_pain, rf_chest_pain_with_features…) đang giới hạn ở `complaints: [abdominal_pain, dizziness, syncope, palpitations]`. Cần mở rộng sang triệu chứng mới, và xem lại mức của từng quy tắc với Đau ngực là triệu chứng chính.
-- **Bệnh mới có prior cho triệu chứng đã phát hành** (ví dụ lao, ho gà với Sốt) sẽ đổi kết quả của triệu chứng đó. So sánh bộ dev trước và sau, và giải thích mọi thay đổi.
-
-**Cân nhắc trước lô 3:** các dấu hiệu để dành từ lô 2 (mục 8, ý 1) nay thêm được, vì lô 2 đã chấm xong. Nhưng ca giữ kín cũ không nhắc tới chúng, nên sẽ mặc định "không". Nếu một dấu hiệu mới gắn mạnh với một bệnh đã có ca giữ kín (ví dụ "da nóng khô" với sốc nhiệt), hãy nhờ một agent độc lập (vai agent viết ca giữ kín) rà các ca cũ của bệnh đó và bổ sung câu trả lời theo lời kể (narrative), không theo dữ liệu bệnh.
+- **Mở một phiên chính mới,** đọc tệp này và các mục lô 3 trong `docs/worklog.md`.
+- **Trước bước 1:** kiểm tra mạng của môi trường (mục 4), cài Node 24.
+- **6 triệu chứng chính mới**, làm như lô 3: `status: in_progress`, biểu tượng mới, nhóm dấu hiệu nguy hiểm riêng; "Trẻ quấy khóc" chỉ cho trẻ dưới 1 tuổi.
+- **Màn chọn triệu chứng:** với 15 triệu chứng, cần chia theo nhóm (`docs/phase-3/scope.md` mục 3, "Việc giao diện đi kèm").
+- **Dấu hiệu để dành** (mục 8, ý 1) thuộc lô 4: nước tiểu sẫm, phân bạc màu; trẻ quấy khóc; sốt dù đã uống kháng sinh. Thêm ợ nóng kéo dài từ 3 tuần (lô 3 đề xuất). Ca giữ kín cũ có liên quan cần agent độc lập bổ sung câu trả lời, như lô 3 đã làm (lời giao việc `batch-3/3-holdout-writer.md`, nhiệm vụ 2).
+- **Bệnh đã có cần bổ sung:** danh sách trong `scope.md`. Lô 4 thêm nhiều bệnh mức 3–5 cho Đau bụng, Sốt: so bộ dev trước và sau, nhất là chỉ tiêu tự chăm sóc (lô 3 chỉ vừa qua ngưỡng).
+- **Nên quyết trước lô 4** (việc tồn 2 và 10): cách tính ngưỡng theo tổng xác suất, và lựa chọn "Chưa đo" cho câu huyết áp. Cả hai là quyết định an toàn: người bảo trì phân tích trên bộ dev, đề xuất cho chủ dự án kèm số liệu.
 
 ## 8. Việc tồn
 
 Theo thứ tự ưu tiên. Chi tiết trong `docs/worklog.md`.
 
-1. **Dấu hiệu còn thiếu**, để dành từ lô 1–2:
+1. **Dấu hiệu còn thiếu**, để dành từ lô 1–2 (phù hai chân, thuốc tránh thai đã thêm ở lô 3):
    - da nóng khô, không đổ mồ hôi; không đỡ sau 30 phút làm mát; nhiệt độ từ 40°C;
    - đau lưng dữ dội đột ngột; khối đập theo nhịp tim ở bụng; "đau dữ dội" là dấu hiệu báo trước khi ngất (`syncope_warning`);
    - thở sâu nhanh (kiểu nhiễm toan); đang dùng insulin; bỏ liều insulin;
@@ -209,8 +201,8 @@ Theo thứ tự ưu tiên. Chi tiết trong `docs/worklog.md`.
    - tiết dịch niệu đạo; `new_sexual_partner` cho nam; thụ tinh trong ống nghiệm; thai đã xác định trong tử cung;
    - trẻ quấy khóc; sốt dù đã uống kháng sinh; hạt Koplik; đã từng mắc sởi;
    - cháy nắng, chuột rút; chảy máu mũi riêng (hiện gộp với chảy máu chân răng);
-   - từ lô 1: cắn lưỡi, tiểu không tự chủ khi ngất; bệnh van tim; thuốc mới dùng; đỏ bừng mặt; phù hai chân; thuốc tránh thai; hỏi "đái tháo đường" cho trẻ 5–12 tuổi; bệnh tim, tăng huyết áp cho người dưới 18 tuổi.
-2. **Tổng xác suất nhóm bệnh cần cấp cứu tăng dần theo số bệnh.**
+   - từ lô 1: cắn lưỡi, tiểu không tự chủ khi ngất; bệnh van tim; thuốc mới dùng; đỏ bừng mặt; hỏi "đái tháo đường" cho trẻ 5–12 tuổi; bệnh tim, tăng huyết áp cho người dưới 18 tuổi.
+2. **Tổng xác suất nhóm bệnh cần cấp cứu tăng dần theo số bệnh.** Ở lô 3 thấy rõ hơn: ho sau cảm ở người lớn bị khuyên khám trong 24 giờ, vì tổng xác suất các bệnh mức 1–3 (viêm phổi, hen, ho gà…) vượt ngưỡng mức 3 (10%).
    - Mức 2 bật khi tổng xác suất các bệnh mức 1–2 (cộng phần tương ứng của "nguyên nhân khác") từ 2% trở lên.
    - Mỗi bệnh nguy hiểm mới góp thêm một phần nhỏ, nên ca nhẹ dễ bị đẩy lên mức 2. Trong bộ dev: d-renal-colic-3, d-primary-dysmenorrhea-3.
    - Cần xem lại ngưỡng hoặc cách tính khi thêm nhiều bệnh. Đây là quyết định an toàn: đề xuất cho chủ dự án, kèm số liệu.
@@ -227,6 +219,14 @@ Theo thứ tự ưu tiên. Chi tiết trong `docs/worklog.md`.
 7. **Pháp lý:** trang ESC ghi rằng dùng nội dung hướng dẫn trong phần mềm cần giấy phép. Ghi chú này nằm ở `knowledge/sources/esc-syncope-2018.yaml` và trong worklog. Cần đưa vào phần luật sư rà soát trước khi công khai (`docs/plan.md`; bản nháp pháp lý ở `docs/legal/`).
 8. **Bác sĩ duyệt:** chưa có bác sĩ. Các điểm cần bác sĩ quyết định nằm ở `docs/reports/phase-1.md` mục 8 và trong `review.notes_vi` của từng bệnh.
 9. **Hiệu chuẩn:** con số % chưa được hiệu chuẩn (`calibrated: false`).
+10. **Câu huyết áp** (lô 3): "Không rõ" làm quy tắc huyết áp rất cao kèm khó thở ở trạng thái không xác định, nên ở Khó thở (khó thở ngầm định) người chưa đo huyết áp luôn ra ít nhất mức 3. Đề xuất thêm lựa chọn trung tính "Chưa đo"; việc này đổi cách bệnh nhân mô phỏng trả lời ở mọi ca cũ, nên cần chủ dự án quyết.
+11. **Từ lô 3, chờ bác sĩ hoặc lô sau** (chi tiết trong `docs/worklog.md` và `knowledge/drafts/phase-3/batch-3/`):
+    - hội chứng vành cấp không đau ngực (khó thở, vã mồ hôi, buồn nôn ở người cao tuổi, đái tháo đường): chưa có quy tắc mức 1; ca giữ kín h-sob-011 đang bỏ sót;
+    - zona cần thuốc kháng vi rút trong 72 giờ nhưng đang mức 4; chưa có quy tắc zona khẩn;
+    - mức của thuyên tắc phổi không thống nhất (urgency 1; quy tắc lô 3 mức 2; quy tắc lô 1 mức 1); ho gà ở trẻ dưới 6 tháng mức 2 (NHS: mức 3); hồi hộp kèm khó thở mức 2 (NHS: gọi 111);
+    - đau thắt ngực ổn định chưa là bệnh; phản vệ khó lên đầu danh sách ở Đau ngực;
+    - màn sàng lọc cấp cứu có "thở rít", nên trẻ croup thở rít khi ngồi yên dừng ngay ở mức 1;
+    - dấu hiệu đề xuất: đau ngực tăng khi cử động; đau thay đổi theo tư thế; tiếp xúc người bị ho gà; thuốc ức chế men chuyển; tím tái ở người lớn; đờm bọt hồng; sinh non; "lúc này còn khó thở không".
 
 ## 9. Bẫy đã gặp
 

@@ -13,8 +13,6 @@ synonyms_vi:
   - "ho ra máu"
 description_vi: "Ho khan hoặc ho có đờm, mới bị hoặc đã kéo dài nhiều tuần."
 implies: [cough]
-# Giai đoạn 3, lô 3: đang soạn. Bỏ trường này khi lô đạt chỉ tiêu trên bộ ca giữ kín.
-status: in_progress
 red_flags:
   # Người bảo trì soạn (31/10/2026); lượt R lô 3 sắp lại. Khi một quy tắc mức 2 đã đúng, bộ suy luận chỉ hỏi tiếp
   # dấu hiệu làm một quy tắc mức 1 thành đúng: từng dấu hiệu lẻ, và cặp hai dấu hiệu trong tối đa 4 câu; quy tắc

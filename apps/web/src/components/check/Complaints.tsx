@@ -56,9 +56,9 @@ const ICONS: Record<string, preact.JSX.Element> = {
   ),
   chest: (
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-      <path d="M5 4c2 1.2 4.5 1.8 7 1.8S17 5.2 19 4l1 16H4z" />
-      <path d="M12 6v14" stroke-width="1.6" />
-      <path d="M14.5 9.5l1.5 2-2 1 1.5 2.5" stroke-width="1.6" />
+      <path d="M12 3v18" />
+      <path d="M12 7.5C9 7.5 6 8.5 4.5 10.5M12 11.5c-3 0-6 1-7.5 3M12 15.5c-2.5 0-5 .8-6.5 2.5" stroke-width="1.6" />
+      <path d="M12 7.5c3 0 6 1 7.5 3M12 11.5c3 0 6 1 7.5 3M12 15.5c2.5 0 5 .8 6.5 2.5" stroke-width="1.6" />
     </svg>
   ),
 };

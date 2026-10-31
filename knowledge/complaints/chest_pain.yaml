@@ -15,8 +15,6 @@ description_vi: "Đau, tức, nặng hoặc khó chịu ở vùng ngực."
 implies: [chest_pain]
 # Trẻ nhỏ chưa tả được đau ngực; trẻ dưới 5 tuổi khó thở hoặc ho dùng hai triệu chứng chính kia.
 age_groups: [child_5_12, teen_13_17, adult_18_44, adult_45_64, elder_65_74, elder_75p]
-# Giai đoạn 3, lô 3: đang soạn. Bỏ trường này khi lô đạt chỉ tiêu trên bộ ca giữ kín.
-status: in_progress
 red_flags:
   # Người bảo trì soạn (31/10/2026); lượt R lô 3 sắp lại. Câu thời gian trước tiên: tự nó không làm quy tắc nào
   # đúng, và hai quy tắc mức 2 không tính cơn đau chỉ vài giây. Rồi nhóm dấu hiệu nguy hiểm (đa số là mức 1, hỏi

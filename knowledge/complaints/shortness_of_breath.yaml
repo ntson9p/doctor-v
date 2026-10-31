@@ -16,8 +16,6 @@ synonyms_vi:
   - "lên cơn suyễn"
 description_vi: "Thấy thiếu hơi, thở nhanh, thở mệt hoặc khò khè hơn bình thường."
 implies: [breathing_difficulty]
-# Giai đoạn 3, lô 3: đang soạn. Bỏ trường này khi lô đạt chỉ tiêu trên bộ ca giữ kín.
-status: in_progress
 red_flags:
   # Người bảo trì soạn (31/10/2026); lượt R lô 3 sắp lại. Ở Khó thở, gần như mọi câu dấu hiệu nguy hiểm đều tự
   # làm một quy tắc mức 2 thành đúng; sau đó bộ suy luận chỉ hỏi dấu hiệu lẻ làm một quy tắc mức 1 thành đúng (cặp
