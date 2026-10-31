@@ -1,0 +1,13 @@
+id: nhs-shingles
+type: web_page
+title: "Shingles"
+publisher: "NHS (UK)"
+date: "2023-11-23"
+url: "https://www.nhs.uk/conditions/shingles/"
+license_class: L1
+license_note: "Open Government Licence v3.0; bản chuyển thể không được trình bày như nội dung của NHS."
+default_tier: C
+accessed: "2026-10-31"
+verified: true
+verified_by: "agent:pass-b"
+notes_vi: "Lượt B tải trang bằng curl (rà soát lần cuối 23/11/2023, hạn rà soát 23/11/2026). Dấu hiệu đầu tiên: châm chích hoặc đau ở một vùng da, nhức đầu hoặc thấy mệt; ban thường mọc vài ngày sau; hiếm khi đau mà không có ban. Ban hay ở ngực và bụng, một bên người; ban hai bên ít có khả năng là zona. Không khẩn: gặp dược sĩ, cố gắng trong 3 ngày từ khi nổi ban (người từ 18 tuổi). Khám khẩn hoặc gọi 111: ban ở mắt, mũi, thay đổi thị lực, suy giảm miễn dịch nặng, đang cho con bú mà ban ở vú, từ 17 tuổi trở xuống. Tự chăm sóc: giữ ban sạch, khô; mặc đồ rộng; chườm mát; không để băng dính vào ban. Không lây zona nhưng có thể lây thủy đậu cho người chưa mắc (phụ nữ có thai, người suy giảm miễn dịch, trẻ dưới 1 tháng) khi ban còn chảy dịch."

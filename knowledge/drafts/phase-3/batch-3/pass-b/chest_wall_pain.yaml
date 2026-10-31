@@ -1,0 +1,163 @@
+id: chest_wall_pain
+names:
+  vi: "Đau thành ngực (cơ, sụn sườn)"
+  vi_common: ["Đau sụn sườn", "Viêm sụn sườn", "Đau cơ ngực", "Đau dây thần kinh liên sườn"]
+  en: "Chest wall pain (musculoskeletal chest pain, costochondritis)"
+codes:
+  icd10: "M94.0"
+  icd10_verified: false
+summary_vi:
+  - "Đau do cơ, xương sườn hoặc sụn nối xương sườn với xương ức, không do tim, phổi."
+  - "Thường đau nhói ở một chỗ, ấn vào đau tăng, cử động hoặc hít sâu cũng đau hơn."
+  - "Là nguyên nhân đau ngực hay gặp nhất, thường tự khỏi sau vài tuần; khi đau lần đầu cần bác sĩ loại trừ bệnh tim."
+urgency: 4
+cant_miss: false
+specialties: [general_medicine, musculoskeletal]
+priors:
+  - complaint: chest_pain
+    default: P1
+    by_age:
+      child_5_12: P2
+      teen_13_17: P2
+      elder_75p: P2
+    evidence:
+      tier: A
+      basis: numeric
+      sources: [haasenritter-cmj-2015, verdon-smw-2008, bosner-fampract-2010, ronga-bmcfampract-2012, sallam-cureus-2026, chun-kjp-2015]
+      locator: "Haasenritter 2015 bảng 3; Verdon 2008 tóm tắt; Bösner 2010 tóm tắt; Ronga 2012 bảng 2; Sallam 2026 tóm tắt; Chun 2015 tóm tắt"
+      reported: "Hội chứng thành ngực 24,5–49,8% người đau ngực ở phòng khám đa khoa (Thụy Sĩ 48,8%, Đức 46,6–49,8%); tuổi trung bình người bị 50,5 so với 55,4 cả nhóm. Trẻ em đau ngực ở cấp cứu: cơ xương 4,7–33,0%, không rõ nguyên nhân 24,4–45,4%; ở khoa nhi bệnh viện: cơ xương 8,8%, không rõ nguyên nhân 73,6%."
+      population: "Người đau ngực ở phòng khám đa khoa châu Âu, Bắc Mỹ; trẻ em ở cấp cứu và bệnh viện"
+      note: "Người lớn: từ 20% trở lên (P1), là nguyên nhân đau ngực hay gặp nhất ở tuyến ban đầu. Từ 75 tuổi, bệnh tim, phổi chiếm phần lớn hơn và người bị trẻ hơn trung bình nên hạ một mức (P2). Trẻ 5–17 tuổi: phần lớn là đau ngực không rõ nguyên nhân (thuộc 'nguyên nhân khác'), cơ xương 5–33%, nên P2. Chưa có số liệu Việt Nam; cần bác sĩ duyệt."
+findings:
+  - finding: chest_wall_tenderness
+    freq: very_frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [ronga-bmcfampract-2012, bosner-fampract-2010, nhs-costochondritis]
+      locator: "Ronga 2012 kết quả, bảng 3; Bösner 2010 tóm tắt; NHS Costochondritis"
+      reported: "Đau tái hiện khi ấn: 70,1% người hội chứng thành ngực, khoảng 27% người đau ngực do nguyên nhân khác (OR 6,47)."
+      population: "Người đau ngực ở phòng khám đa khoa Thụy Sĩ"
+      note: "Tính trong số người đã đau ngực. Số liệu do bác sĩ ấn; người tự ấn có thể kém chính xác hơn, nhưng vẫn ở khoảng very_frequent. Không đặc hiệu tuyệt đối: một số người đau thắt ngực cũng ấn thấy đau."
+  - finding: chest_pain_duration
+    dist: { seconds: 0.25, minutes: 0.2, over_15min: 0.2, days: 0.35 }
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [bosner-fampract-2010, nhs-costochondritis]
+      locator: "Bösner 2010 tóm tắt; NHS Costochondritis (kéo dài vài tuần đến vài tháng)"
+      reported: "Đau dai dẳng 28,0%; 72,3% không có liên quan thời gian rõ; 55,4% vẫn còn đau sau 6 tháng."
+      note: "Phân bố trong số người đã đau ngực. Đau nhói vài giây khi cử động, hoặc âm ỉ nhiều ngày; ít khi là một cơn kéo dài trên 15 phút rồi hết. Ước lượng từ số liệu trên."
+  - finding: pleuritic_chest_pain
+    freq: frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [ronga-bmcfampract-2012, nhs-costochondritis]
+      locator: "Ronga 2012 bảng 3; NHS Costochondritis"
+      reported: "Đau liên quan hít thở: OR 1,19 (không khác các nguyên nhân khác); NHS: đau tăng khi thở, khi cử động."
+      note: "Đau khi hít sâu hay gặp nhưng không phân biệt được với các nguyên nhân khác (Ronga); ước khoảng một nửa."
+  - finding: chest_pain_pressure
+    freq: frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [bosner-fampract-2010, ronga-bmcfampract-2012]
+      locator: "Bösner 2010 tóm tắt; Ronga 2012 bảng 3"
+      reported: "Đau sau xương ức 52,0% người hội chứng thành ngực (Đức); đau không sau xương ức OR 5,08, không kiểu đè ép OR 2,37 (Thụy Sĩ)."
+      note: "Câu hỏi là 'đau hoặc tức nặng ở giữa ngực', nên người đau giữa ngực do thành ngực cũng trả lời 'Có'. Hai nghiên cứu lệch nhau; ước khoảng một nửa, thấp hơn hội chứng vành cấp khi triệu chứng chính là Đau ngực."
+  - finding: chest_pain_exertional
+    freq: rare
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [bosner-bjgp-2010, nhs-costochondritis]
+      locator: "Bösner 2010 (BJGP) tóm tắt; NHS Costochondritis"
+      reported: "Đau tăng khi gắng sức: OR 4,27 cho bệnh mạch vành."
+      note: "Tính trong số người đã đau ngực. Đau thành ngực tăng khi cử động, mang vác (NHS), nhưng kiểu 'đau khi gắng sức, đỡ khi nghỉ vài phút' gợi ý bệnh mạch vành. Lượt B chọn rare (thấp hơn tỷ lệ nền 0,05) cho thận trọng: câu trả lời 'Có' không làm tăng khả năng bệnh lành tính này. Ước lượng."
+  - finding: chest_pain_sudden_severe
+    freq: rare
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [nhs-costochondritis]
+      note: "Tính trong số người đã đau ngực. Đau đột ngột dữ dội ngay từ đầu gợi ý bệnh mạch máu, tràn khí (NHS: gọi 999). Mức rare thấp hơn tỷ lệ nền 0,05. Ước lượng."
+  - finding: breathing_difficulty
+    freq: rare
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [nhs-costochondritis]
+      note: "Đau làm thở nông nhưng không gây khó thở thật; đau ngực kèm khó thở gợi ý thuyên tắc phổi (NHS: gọi 999). Mức rare thấp hơn tỷ lệ nền 0,05."
+  - finding: cold_sweat
+    freq: rare
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [nhs-costochondritis]
+      note: "Không có vã mồ hôi lạnh; mức rare thấp hơn tỷ lệ nền 0,05. Ước lượng."
+  - finding: fainting_or_near_fainting
+    freq: rare
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [nhs-costochondritis]
+      note: "Mức rare thấp hơn tỷ lệ nền 0,05. Ước lượng."
+  - finding: fever
+    freq: rare
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [nhs-costochondritis]
+      note: "Không sốt; đau ngực kèm sốt nghiêng về viêm phổi. Mức rare thấp hơn tỷ lệ nền 0,05."
+  - finding: heartburn
+    freq: rare
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [ronga-bmcfampract-2012]
+      locator: "Ronga 2012 bảng 3"
+      reported: "Đau kèm triệu chứng tiêu hóa (trào ngược, nuốt đau, nuốt khó, đau thượng vị): OR 0,54."
+      note: "Mức rare (thấp hơn tỷ lệ nền 0,05) cho tỷ số khoảng 0,5, gần OR 0,54."
+  - finding: known_heart_disease
+    freq: rare
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [ronga-bmcfampract-2012]
+      locator: "Ronga 2012 bảng 3–4"
+      reported: "Không có tiền sử bệnh mạch vành: OR 5,12 cho hội chứng thành ngực."
+      note: "Người đã biết bệnh tim ít khi đau do thành ngực hơn; mức rare thấp hơn tỷ lệ nền 0,05. Câu chỉ hỏi người từ 18 tuổi."
+  - finding: rash_any
+    freq: rare
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [byt-qd-4235-2012]
+      locator: "4235/QĐ-BYT bài đau ngực mục 2.1.2 (khám thành ngực tìm zona) và 2.3.1"
+      note: "Đau thành ngực do cơ, sụn không có ban; đau kèm ban gợi ý zona. Mức rare thấp hơn tỷ lệ nền 0,05."
+warning_signs: [es_crushing_chest_pain, pain_radiates_arm_jaw, cold_sweat, breathing_difficulty, chest_pain_sudden_severe, fainting_or_near_fainting]
+self_care_vi:
+  - "Nghỉ ngơi, tránh mang vác nặng và động tác làm đau tăng."
+  - "Chườm ấm hoặc chườm mát chỗ đau vài lần mỗi ngày."
+  - "Hỏi dược sĩ hoặc bác sĩ trước khi dùng thuốc giảm đau."
+  - "Không chờ ở nhà nếu đau ngực đè nặng, lan lên tay, hàm, kèm khó thở hoặc vã mồ hôi: gọi 115."
+see_doctor_vi:
+  - "Đau ngực lần đầu nên đi khám trong vài ngày để bác sĩ loại trừ bệnh tim, phổi."
+  - "Đi khám lại nếu đau không đỡ sau vài tuần, hoặc đau tăng dần."
+  - "Người từ 40 tuổi, người có bệnh tim, tăng huyết áp, đái tháo đường hoặc hút thuốc nên được làm điện tim."
+review:
+  status: draft
+  authors: ["agent:pass-b"]
+  updated: "2026-10-31"
+  notes_vi: "Lượt B (lô 3 phần c). Mức xử trí 4, khác gợi ý (5): NHS bài viêm sụn sườn xếp 'nghĩ mình bị viêm sụn sườn' vào khám khẩn qua NHS 111 (theo quy ước của lượt R là mức 3) để loại trừ bệnh nặng hơn, dù bệnh tự khỏi; chẩn đoán đau thành ngực là chẩn đoán loại trừ (Ronga: đau khi ấn không đặc hiệu tuyệt đối). Lượt B chọn mức 4 (khám trong vài ngày) vì ca điển hình lành tính và việc loại trừ bệnh tim cấp đã do quy tắc đau ngực và ngưỡng của hội chứng vành cấp đảm nhận; nếu theo đúng quy ước NHS thì là mức 3; nếu theo gợi ý thì là mức 5. Cần bác sĩ quyết. Mã ICD-10 M94.0 (hội chứng sụn sườn, Tietze); đau thành ngực trước không đặc hiệu thuộc R07.3 theo ICD-10 của WHO (bài Ronga ghi R07.4); chưa đối chiếu với bảng của Bộ Y tế, chưa có mã MONDO tương ứng (MONDO chỉ có hội chứng Tietze). Bác sĩ cần xem: (1) tần suất đau khi ấn đo bằng bác sĩ ấn, câu hỏi là người dân tự ấn; (2) tần suất 'đau giữa ngực' lệch giữa hai nghiên cứu (52% sau xương ức ở Đức, OR 5,08 cho đau không sau xương ức ở Thụy Sĩ); (3) prior trẻ em là ước lượng từ nghiên cứu ở bệnh viện, phần lớn trẻ đau ngực không rõ nguyên nhân; (4) đau khi gắng sức để rare cho thận trọng; (5) chưa có câu hỏi 'đau tăng khi cử động thân mình, vươn tay' (OR 2,06–2,13), đề xuất bên dưới."
+proposed_findings:
+  - id: chest_pain_worse_movement
+    kind: symptom
+    type: binary
+    label_vi: "Đau ngực tăng khi cử động thân mình"
+    question_vi: "Đau ngực có tăng khi xoay người, cúi, vươn tay hoặc đổi tư thế không?"
+    leak: moderate
+    requires:
+      - { finding: chest_pain, is: present }
+    notes_vi: "Đau liên quan cử động (OR 2,06) và tư thế (OR 2,13) gợi ý đau thành ngực (Ronga 2012), ngược với đau khi gắng sức của bệnh mạch vành; giúp tách đau thành ngực khỏi hội chứng vành cấp, trào ngược. Câu 'đau khi hít sâu hoặc khi ho' hiện có không phân biệt được (OR 1,19)."

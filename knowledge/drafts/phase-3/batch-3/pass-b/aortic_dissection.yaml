@@ -1,0 +1,239 @@
+id: aortic_dissection
+names:
+  vi: "Bóc tách động mạch chủ"
+  vi_common: ["Phình tách động mạch chủ", "Tách thành động mạch chủ", "Lóc tách động mạch chủ"]
+  en: "Acute aortic dissection"
+codes:
+  icd10: "I71.0"
+  icd10_verified: false
+summary_vi:
+  - "Lớp trong của thành động mạch chủ (mạch máu lớn nhất từ tim ra) bị rách, máu len vào tách thành mạch ra."
+  - "Thường đau ngực hoặc lưng đột ngột, dữ dội, có khi như bị xé, lan ra sau lưng hoặc xuống bụng."
+  - "Đây là cấp cứu, có thể tử vong trong vài giờ: cần gọi 115 ngay."
+urgency: 1
+cant_miss: true
+specialties: [emergency, cardiology, general_surgery]
+applicability:
+  age_groups: [teen_13_17, adult_18_44, adult_45_64, elder_65_74, elder_75p]
+  reason_vi: "Hầu như không gặp ở trẻ dưới 13 tuổi, trừ vài bệnh mô liên kết bẩm sinh rất hiếm; triệu chứng chính Đau ngực chỉ áp dụng từ 5 tuổi."
+priors:
+  - complaint: chest_pain
+    default: P5
+    by_age:
+      teen_13_17: P6
+      adult_18_44: P6
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [saricilar-bjs-2026, erhabor-ajpc-2026, evangelista-gcsp-2016, haasenritter-cmj-2015, hse-aortic-dissection]
+      locator: "Saricilar 2026 tóm tắt, bảng 1; Erhabor 2026 kết quả; Evangelista 2016 mục dịch tễ; Haasenritter 2015 bảng 3"
+      reported: "Bóc tách động mạch chủ 9,3/100.000 người lớn mỗi năm (Thụy Điển, tuổi trung bình 69), 21,8/100.000 người-năm ở cộng đồng Mỹ 45–84 tuổi (dưới 60 tuổi 15,6; từ 60 tuổi 33,0); hội chứng vành cấp chiếm 1,5–3,6% người đau ngực ở phòng khám đa khoa."
+      population: "Dân số Thụy Điển; đoàn hệ cộng đồng ARIC, MESA (Mỹ); phòng khám đa khoa châu Âu"
+      note: "Ước tính của lượt B: bóc tách hiếm hơn nhồi máu cơ tim khoảng 20–30 lần và cũng hầu như luôn có đau (đau ngực hoặc lưng), nên chiếm khoảng 1/20–1/30 phần của hội chứng vành cấp trong người đau ngực, tức khoảng 0,05–0,15% từ 45 tuổi (P5). Dưới 45 tuổi rất hiếm (người dưới 40 tuổi chủ yếu do hội chứng Marfan, van động mạch chủ hai lá, Evangelista) trong khi đau ngực ở người trẻ rất thường gặp: P6. HSE: bệnh hiếm nhưng là cấp cứu. Chưa có số liệu Việt Nam; cần bác sĩ duyệt."
+prior_modifiers:
+  - when: { sex: [male] }
+    factor: 1.3
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [saricilar-bjs-2026, hagan-jama-2000, haasenritter-cmj-2015]
+      locator: "Saricilar 2026 tóm tắt, bảng 1; Hagan 2000 tóm tắt; Haasenritter 2015 bảng 1"
+      reported: "Nam 62,2% (Thụy Điển), 65,3% (IRAD); tỷ lệ mới mắc nam 10,52 so với nữ 6,25/100.000; nam 46–51% người đi khám vì đau ngực."
+      note: "Hệ số tính so với các nguyên nhân khác của Đau ngực: 0,63 chia cho 0,48, khoảng 1,3."
+  - when: { sex: [female] }
+    factor: 0.7
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [saricilar-bjs-2026, hagan-jama-2000, haasenritter-cmj-2015]
+      reported: "Như hệ số cho nam."
+      note: "Đi cặp với hệ số nam: 0,37 chia cho 0,52, khoảng 0,7."
+findings:
+  - finding: chest_pain_sudden_severe
+    freq: very_frequent
+    evidence:
+      tier: A
+      basis: numeric
+      sources: [klompas-jama-2002, evangelista-gcsp-2016, hse-aortic-dissection, byt-qd-4235-2012]
+      locator: "Klompas 2002 tóm tắt; Evangelista 2016 bảng 2; 4235/QĐ-BYT bài đau ngực mục 2.1.1"
+      reported: "Đau dữ dội: độ nhạy gộp 90%; khởi phát đột ngột 84% (Klompas); khởi phát đột ngột 84,5% ở týp A (IRAD)."
+      note: "Tính trong số người đã đau ngực. Số liệu ở bệnh viện, nhưng gần như mọi người bóc tách đều được đưa vào viện và đặc điểm này không phụ thuộc mức nặng, nên không hạ mức. Không có đau khởi phát đột ngột làm giảm khả năng bệnh (LR- 0,3)."
+  - finding: chest_pain_tearing
+    freq: occasional
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [evangelista-gcsp-2016, hse-aortic-dissection, nhs-costochondritis]
+      locator: "Evangelista 2016 mục biểu hiện lâm sàng; HSE Symptoms; NHS Costochondritis mục gọi 999"
+      note: "Tính trong số người đã đau ngực. IRAD: đau như xé, như rách không phải mô tả phổ biến, đau sắc mới là hay gặp; HSE, NHS vẫn nêu cảm giác như có gì bị xé bên trong. Ước 20–30%. Tỷ lệ nền 0,03 nên câu trả lời 'Có' tăng khả năng khoảng 7 lần; quy tắc rf_aortic_dissection_signs đã xếp mức 1 khi kèm đột ngột dữ dội."
+  - finding: chest_pain_radiates_back
+    freq: frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [evangelista-gcsp-2016, hse-aortic-dissection, byt-qd-4235-2012]
+      locator: "Evangelista 2016 mục biểu hiện lâm sàng; HSE Symptoms; 4235/QĐ-BYT bài đau ngực mục 2.1.1 (đau lan từ ngực xuống bụng, thắt lưng thường do phình tách động mạch chủ)"
+      reported: "Đau lưng 64% ở týp B (IRAD); HSE: đau ngực hoặc lưng trên, có thể lan lên cổ hoặc dọc lưng."
+      note: "Tính trong số người đã đau ngực. Týp A đau ngực nhiều hơn, đau lưng ít hơn; ước khoảng một nửa cả nhóm. Cùng cụm pain_radiation."
+  - finding: chest_pain_duration
+    dist: { seconds: 0.01, minutes: 0.07, over_15min: 0.85, days: 0.07 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [hse-aortic-dissection, evangelista-gcsp-2016]
+      note: "Phân bố trong số người đã đau ngực. Đau dữ dội, kéo dài, không tự hết sau vài giây hay vài phút; một số người đến muộn (bóc tách týp B điều trị nội, đau tái lại). Ước lượng."
+  - finding: chest_pain_pressure
+    freq: frequent
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-4235-2012, evangelista-gcsp-2016]
+      locator: "4235/QĐ-BYT bài đau ngực mục 2.1.1 (đau dữ dội, đè ép ngực cần tìm nhồi máu cơ tim, phình tách động mạch chủ)"
+      reported: "Đau ngực 79% ở týp A, 63% ở týp B (IRAD)."
+      note: "Câu hỏi là đau hoặc tức nặng ở giữa ngực. Đau ngực trước gặp ở phần lớn người bóc tách týp A; ước khoảng một nửa trả lời 'Có' (kể cả người chủ yếu đau lưng)."
+  - finding: pain_radiates_arm_jaw
+    freq: occasional
+    evidence:
+      tier: C
+      basis: verbal
+      sources: [hse-aortic-dissection]
+      locator: "HSE Symptoms (đau có thể lan lên cổ)"
+      note: "Đau có thể lan lên cổ, hàm khi bóc tách lan tới các nhánh động mạch cảnh; ít hơn hội chứng vành cấp. Ước 20%."
+  - finding: abdominal_pain
+    freq: occasional
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [evangelista-gcsp-2016, hse-aortic-dissection, byt-qd-4235-2012]
+      locator: "Evangelista 2016 mục biểu hiện lâm sàng; HSE Symptoms"
+      reported: "Đau bụng 43% ở týp B (IRAD); HSE: có thể đau bụng đột ngột, dữ dội."
+      note: "Có ý nghĩa với Đau ngực (bệnh này chưa có prior cho Đau bụng). Týp A ít đau bụng hơn; ước 20–30% cả nhóm. Người đau bụng chẩn đoán muộn hơn, tử vong cao hơn (IRAD)."
+  - finding: fainting_or_near_fainting
+    freq: occasional
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [evangelista-gcsp-2016, hse-aortic-dissection]
+      locator: "Evangelista 2016 mục biểu hiện lâm sàng; HSE Symptoms (mất ý thức)"
+      reported: "Ngất 13% (IRAD)."
+      note: "Ngất thường báo hiệu huyết động nặng, tắc mạch não hoặc chèn ép tim; quy tắc rf_aortic_dissection_signs đã xếp mức 1 khi kèm đau đột ngột dữ dội."
+  - finding: es_stroke_signs
+    freq: occasional
+    evidence:
+      tier: A
+      basis: numeric
+      sources: [klompas-jama-2002, hse-aortic-dissection]
+      locator: "Klompas 2002 tóm tắt; HSE Symptoms"
+      reported: "Dấu thần kinh khu trú 17% (LR+ 6,6–33)."
+      note: "Màn sàng lọc cấp cứu đã dừng ở mức 1; liên kết để bóc tách hiện trong danh sách 'Bác sĩ cần loại trừ' khi người bệnh có cả đau ngực."
+  - finding: breathing_difficulty
+    freq: occasional
+    evidence:
+      tier: C
+      basis: verbal
+      sources: [hse-aortic-dissection, nhs-costochondritis]
+      locator: "HSE Symptoms (khó thở); NHS Costochondritis mục gọi 999"
+      note: "Có thể do suy tim cấp (hở van động mạch chủ), chèn ép tim, tràn máu màng phổi. Ước 20%; đau ngực kèm khó thở đã được quy tắc rf_chest_pain_breathless xếp mức 2."
+  - finding: cold_sweat
+    freq: occasional
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [hse-aortic-dissection, byt-qd-4235-2012]
+      locator: "HSE Symptoms (da vã mồ hôi, lạnh ẩm); 4235/QĐ-BYT bài đau ngực mục 2.1.2 (vã mồ hôi, xanh tái: tìm nhồi máu cơ tim, tắc mạch phổi, phình tách động mạch chủ)"
+      note: "Ước 20–30%; quy tắc rf_chest_pain_spreading_or_systemic đã xếp mức 1."
+  - finding: es_crushing_chest_pain
+    freq: occasional
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-4235-2012, hse-aortic-dissection]
+      note: "Như hội chứng vành cấp: người đau ngực dữ dội kèm vã mồ hôi dừng ở màn sàng lọc cấp cứu; liên kết để bóc tách hiện trong danh sách cần loại trừ. Ước lượng."
+  - finding: hypertension_known
+    freq: frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [evangelista-gcsp-2016, erhabor-ajpc-2026]
+      locator: "Evangelista 2016 bảng 1; Erhabor 2026 kết quả"
+      reported: "Tăng huyết áp 72% (IRAD); 53% người bóc tách so với 39% người không bị ở đoàn hệ cộng đồng (HR 2,60)."
+      note: "Câu hỏi hỏi tăng huyết áp đã biết; ở Việt Nam nhiều người chưa biết mình tăng huyết áp, nên chọn frequent (khoảng 50–65%) thay vì very_frequent. Tỷ lệ nền 0,15."
+  - finding: known_aaa
+    freq: occasional
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [evangelista-gcsp-2016]
+      locator: "Evangelista 2016 bảng 1"
+      reported: "Đã biết phình động mạch chủ 16%."
+      note: "Câu hỏi chỉ hỏi người từ 45 tuổi. Tỷ lệ nền 0,01 nên câu trả lời 'Có' tăng mạnh khả năng bệnh."
+  - finding: known_heart_disease
+    freq: occasional
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [evangelista-gcsp-2016]
+      locator: "Evangelista 2016 bảng 1"
+      reported: "Xơ vữa động mạch 31%, từng mổ tim 18% (IRAD)."
+      note: "Câu hỏi hỏi bệnh tim đã biết (mạch vành, suy tim); ước 20%, cao hơn tỷ lệ nền 0,05."
+  - finding: smoker
+    freq: frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [erhabor-ajpc-2026]
+      locator: "Erhabor 2026 kết quả, bảng 2"
+      reported: "Đang hút thuốc từ 10 gói-năm 41,2% ở người bóc tách so với 18,6%; HR 4,26–6,11."
+      note: "Cộng thêm người hút ít hơn 10 gói-năm, ước khoảng một nửa (tỷ lệ nền 0,2). Ở Việt Nam nam giới hút thuốc nhiều nên tỷ lệ có thể cao hơn."
+  - finding: diabetes
+    freq: rare
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [evangelista-gcsp-2016, erhabor-ajpc-2026]
+      locator: "Evangelista 2016 bảng 1; Erhabor 2026 kết quả"
+      reported: "Đái tháo đường 5% (IRAD); HR 0,25 (p = 0,052) ở đoàn hệ cộng đồng."
+      note: "Đái tháo đường ít gặp ở người bóc tách; mức rare thấp hơn tỷ lệ nền 0,07, câu trả lời 'Có' giảm nhẹ khả năng bệnh (ngược với hội chứng vành cấp)."
+  - finding: chest_pain_exertional
+    freq: rare
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [hse-aortic-dissection]
+      note: "Tính trong số người đã đau ngực. Đau dữ dội liên tục, không phải kiểu đau khi gắng sức, đỡ khi nghỉ. Mức rare thấp hơn tỷ lệ nền 0,05. Ước lượng."
+  - finding: chest_wall_tenderness
+    freq: rare
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [hse-aortic-dissection]
+      note: "Tính trong số người đã đau ngực. Đau từ mạch máu sâu, ấn thành ngực không làm đau tăng đúng chỗ. Mức rare thấp hơn tỷ lệ nền 0,05. Ước lượng."
+  - finding: pleuritic_chest_pain
+    freq: rare
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [hse-aortic-dissection]
+      note: "Đau không thay đổi rõ theo nhịp thở; mức rare thấp hơn tỷ lệ nền 0,05. Ước lượng."
+  - finding: fever
+    freq: rare
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [evangelista-gcsp-2016]
+      locator: "Evangelista 2016 mục chẩn đoán (sốt là biểu hiện không điển hình, làm chậm chẩn đoán)"
+      note: "Sốt là biểu hiện không điển hình; mức rare thấp hơn tỷ lệ nền 0,05."
+warning_signs: [chest_pain_sudden_severe, chest_pain_tearing, chest_pain_radiates_back, fainting_or_near_fainting, es_stroke_signs, cold_sweat, es_crushing_chest_pain]
+self_care_vi:
+  - "Gọi 115 ngay. Không tự lái xe, không tự đi bộ đến bệnh viện."
+  - "Nằm hoặc ngồi yên trong lúc chờ xe cấp cứu, tránh gắng sức."
+  - "Không chờ xem cơn đau có tự hết không, nhất là khi đau đột ngột, dữ dội hoặc lan ra sau lưng."
+  - "Không tự uống thuốc để giảm đau rồi ở nhà."
+see_doctor_vi:
+  - "Cần chụp cắt lớp mạch máu ở bệnh viện càng sớm càng tốt."
+  - "Người tăng huyết áp, đã biết phình động mạch chủ cần đo và kiểm soát huyết áp đều đặn."
+review:
+  status: draft
+  authors: ["agent:pass-b"]
+  updated: "2026-10-31"
+  notes_vi: "Lượt B (lô 3 phần c). Mức xử trí 1, không được bỏ sót, giữ như gợi ý: HSE khuyên gọi cấp cứu hoặc đến khoa cấp cứu ngay khi có dấu hiệu; NHS (bài viêm sụn sườn) xếp đau ngực, lưng đột ngột như xé vào 'gọi 999'; bệnh có thể tử vong nhanh (tử vong trong viện 27,4%, IRAD); 4235/QĐ-BYT xếp vào nguyên nhân đau ngực đe dọa tính mạng. Applicability bỏ trẻ dưới 13 tuổi (rất hiếm, ngoài bệnh mô liên kết bẩm sinh), theo hướng dẫn của người giao việc; nếu muốn giữ cả trẻ em thì đổi thành prior P6. Bác sĩ cần xem: (1) prior là ước lượng từ tỷ lệ mới mắc so với hội chứng vành cấp, chưa có số liệu người đau ngực ở tuyến ban đầu hay số liệu Việt Nam; (2) bảng triệu chứng của IRAD (Hagan 2000) chỉ đọc được tóm tắt, tần suất đau như xé, đau lưng lấy từ bài tổng hợp IRAD và trang HSE; (3) đau như xé để occasional vì IRAD ghi kiểu mô tả này không phổ biến; (4) chưa dùng hệ số theo mùa dù IRAD thấy bệnh hay gặp vào mùa đông; (5) chưa có câu hỏi về chênh lệch huyết áp hai tay, mạch yếu một bên (LR+ 5,7) vì người dân khó tự đo; (6) không tìm được mã MONDO riêng cho bóc tách động mạch chủ; mã ICD-10 I71.0 chưa đối chiếu."

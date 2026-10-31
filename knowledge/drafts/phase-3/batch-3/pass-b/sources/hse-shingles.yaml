@@ -1,0 +1,13 @@
+id: hse-shingles
+type: web_page
+title: "Shingles: symptoms, causes, diagnosis and treatments"
+publisher: "Health Service Executive (HSE), Ireland"
+date: "2024-11-05"
+url: "https://www2.hse.ie/conditions/shingles/"
+license_class: L3
+license_note: "Trang ghi © Health Service Executive, không nêu giấy phép mở: chỉ dùng dữ kiện kèm trích dẫn."
+default_tier: C
+accessed: "2026-10-31"
+verified: true
+verified_by: "agent:pass-b"
+notes_vi: "Lượt B tải trang bằng curl (rà soát lần cuối 05/11/2024). Khám bác sĩ gia đình sớm (khẩn) hoặc hỏi dược sĩ khi có dấu hiệu đầu tiên: châm chích, đau ở một vùng da, nhất là gần mắt; nhức đầu, mệt; ban thường mọc vài ngày sau. Ban một bên người, hay ở ngực, bụng. Thuốc kháng vi rút tốt nhất trong 3 ngày từ khi nổi ban. Đến khoa cấp cứu ngay nếu zona quanh mắt."
