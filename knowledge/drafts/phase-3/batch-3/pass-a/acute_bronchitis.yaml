@@ -34,7 +34,8 @@ findings:
       tier: C
       basis: judgment
       sources: [kinkade-afp-2016, vanvugt-bmj-2013]
-      reported: "ho thường kéo dài 2–3 tuần, trung bình khoảng 18 ngày (Kinkade); trung bình 9 ngày bệnh trước khi khám (GRACE)"
+      locator: "Kinkade 2016, mục Diagnosis"
+      reported: "ho thường kéo dài 2–3 tuần, một tổng quan gộp ước 18 ngày (Kinkade); trung bình 9 ngày bệnh trước khi khám (GRACE)"
       note: "Phân bố theo thời điểm người dùng hỏi: phần lớn trong 2 tuần đầu, khoảng một phần tư vào tuần thứ 3–4. Ho từ 8 tuần không còn là viêm phế quản cấp. Ước lượng."
   - finding: productive_cough
     freq: very_frequent
@@ -50,23 +51,25 @@ findings:
     evidence:
       tier: B
       basis: numeric
-      sources: [vanvugt-bmj-2013]
-      reported: "sốt theo bệnh sử 35% toàn mẫu (59% ở người viêm phổi), tức khoảng 34% ở người không viêm phổi"
-      note: "Số 34% nằm sát ranh giới occasional/frequent. Chọn occasional vì số tính theo bệnh sử (kể cả cảm giác sốt) và người không viêm phổi còn gồm cả cảm lạnh, cúm. Dùng khi triệu chứng chính là ho."
+      sources: [vanvugt-bmj-2013, kinkade-afp-2016]
+      reported: "sốt theo bệnh sử 35% toàn mẫu (59% ở người viêm phổi), tức khoảng 34% ở người không viêm phổi; khám thấy sốt ở khoảng một phần ba (Kinkade)"
+      note: "Số 34% nằm sát ranh giới occasional/frequent. Chọn occasional vì số tính theo bệnh sử (kể cả cảm giác sốt), người không viêm phổi còn gồm cả cảm lạnh, cúm, và Kinkade ghi sau vài ngày đầu ít còn sốt. Dùng khi triệu chứng chính là ho."
   - finding: fever_max_temp
     dist: { lt_38: 0.55, t38_39: 0.38, ge_39: 0.07 }
     evidence:
       tier: C
       basis: judgment
       sources: [kinkade-afp-2016]
-      note: "Sốt nếu có thường nhẹ. Sốt cao từ 39°C gợi ý cúm hoặc viêm phổi hơn. Phân bố trong số người có sốt; ước lượng."
+      locator: "mục Diagnosis; Bảng 1"
+      note: "Kinkade: sốt trên 37,8°C nên nghĩ tới cúm hoặc viêm phổi, nên sốt nếu có thường nhẹ. Sốt cao từ 39°C gợi ý cúm hoặc viêm phổi hơn. Phân bố trong số người có sốt; ước lượng."
   - finding: fever_duration
     dist: { d1_2: 0.55, d3_5: 0.35, d6_7: 0.07, gt_7d: 0.03 }
     evidence:
       tier: C
       basis: judgment
       sources: [kinkade-afp-2016]
-      note: "Sốt do vi rút thường ngắn, trong vài ngày đầu. Sốt quá 5–7 ngày gợi ý viêm phổi hoặc bệnh khác. Phân bố trong số người có sốt; ước lượng."
+      locator: "mục Diagnosis"
+      note: "Kinkade: sau vài ngày đầu ít còn sốt. Sốt quá 5–7 ngày gợi ý viêm phổi hoặc bệnh khác. Phân bố trong số người có sốt; ước lượng."
   - finding: breathing_difficulty
     freq: frequent
     evidence:
@@ -90,15 +93,7 @@ findings:
       basis: numeric
       sources: [vanvugt-bmj-2013]
       reported: "đau ngực 46% toàn mẫu (57% ở người viêm phổi)"
-      note: "Nguồn đo đau ngực chung; ở viêm phế quản đau ngực chủ yếu khi ho, đúng với câu hỏi đau khi hít sâu hoặc khi ho."
-  - finding: chest_pain
-    freq: frequent
-    evidence:
-      tier: B
-      basis: numeric
-      sources: [vanvugt-bmj-2013]
-      reported: "đau ngực 46% toàn mẫu"
-      note: "Cùng số liệu với pleuritic_chest_pain; hai câu hỏi trùng một phần (xem review.notes_vi)."
+      note: "Nguồn đo đau ngực chung; ở viêm phế quản đau ngực chủ yếu khi ho (Kinkade: đau sau xương ức hoặc thành ngực khi ho), đúng với câu hỏi đau khi hít sâu hoặc khi ho. Liên kết với dấu hiệu chung chest_pain đã bỏ (quyết định của người bảo trì) để không đếm trùng."
   - finding: runny_nose
     freq: very_frequent
     evidence:
@@ -111,16 +106,17 @@ findings:
     freq: occasional
     evidence:
       tier: C
-      basis: judgment
+      basis: verbal
       sources: [kinkade-afp-2016]
-      note: "Kinkade nhắc thuốc giãn phế quản chỉ khi có khò khè, tức là khò khè có gặp nhưng không phải phần lớn. Chưa có tỷ lệ; ước occasional. Khò khè tái đi tái lại nhiều lần gợi ý hen."
+      locator: "mục Diagnosis, Management"
+      note: "Kinkade: nghe phổi có thể có ran rít; chỉ dùng thuốc giãn phế quản khi có khò khè. 'Có thể có' ứng với occasional (kb-guide 2.1). Khò khè tái đi tái lại nhiều lần gợi ý hen."
   - finding: sick_contact_respiratory
     freq: frequent
     evidence:
       tier: C
       basis: judgment
       sources: [kinkade-afp-2016]
-      note: "Phần lớn do vi rút hô hấp, lây như cảm lạnh, cúm. Chưa có tỷ lệ; ước lượng bằng mức của cảm lạnh, cúm trong danh mục."
+      note: "Kinkade: ít nhất 90% do vi rút hô hấp (rhinovirus, cúm, á cúm, corona, RSV…), lây như cảm lạnh, cúm. Chưa có tỷ lệ tiếp xúc; ước lượng bằng mức của cảm lạnh, cúm trong danh mục."
   - finding: hemoptysis
     freq: rare
     above_leak_ok: true
@@ -128,7 +124,7 @@ findings:
       tier: C
       basis: judgment
       sources: [nhs-coughing-up-blood, kinkade-afp-2016]
-      note: "Ho nhiều có thể làm lẫn vài vệt máu trong đờm; ở tuyến ban đầu, nhiễm trùng hô hấp là nguyên nhân ho ra máu hay gặp. Ước 1–5%, cao hơn tỷ lệ nền 1% một chút (above_leak_ok) để câu 'có' không loại hẳn viêm phế quản. Ho ra máu vẫn có quy tắc mức 3 (rf_hemoptysis). Cần bác sĩ duyệt."
+      note: "Ho nhiều có thể làm lẫn vài vệt máu trong đờm (NHS xếp viêm phế quản vào nguyên nhân hay gặp); Kinkade xếp đờm có máu vào chỉ định chụp phim để loại viêm phổi. Ở tuyến ban đầu, nhiễm trùng hô hấp là nguyên nhân ho ra máu hay gặp. Ước 1–5%, cao hơn tỷ lệ nền 1% một chút (above_leak_ok) để câu 'có' không loại hẳn viêm phế quản. Ho ra máu vẫn có quy tắc mức 3 (rf_hemoptysis). Cần bác sĩ duyệt."
   - finding: night_sweats
     freq: rare
     evidence:
@@ -163,4 +159,4 @@ review:
   status: draft
   authors: ["agent:pass-a"]
   updated: "2026-10-31"
-  notes_vi: "Giai đoạn 3, lô 3, lượt A (31/10/2026). Phiên làm việc chặn WebFetch và curl (vnras.com, www.ebi.ac.uk không phân giải được), nên lượt A chỉ đọc được tóm tắt của công cụ tìm kiếm: mọi nguồn mới để verified: false và bậc C. Các con số bậc B lấy từ GRACE (vanvugt-bmj-2013, đã được lượt C kiểm tra trước đây), dùng số của toàn mẫu ho cấp vì 95% không viêm phổi. Cần bác sĩ xem: (1) prior P1 cho người lớn là ước lượng, chưa có số liệu Việt Nam; ranh giới với cảm lạnh mờ (cả hai đều do vi rút); (2) khó thở để frequent theo GRACE, người tự kiểm tra ở cộng đồng có thể ít hơn; (3) đau ngực được liên kết cả chest_pain lẫn pleuritic_chest_pain: hai câu hỏi trùng một phần nhưng không cùng cụm, có thể đếm trùng (báo người bảo trì); (4) ho ra máu rare với above_leak_ok; (5) urgency 5 giữ như gợi ý (NHS, Kinkade: tự khỏi, không cần kháng sinh); dấu hiệu nặng do quy tắc xử lý; (6) mã ICD-10 chưa đối chiếu."
+  notes_vi: "Lượt A vòng 2 (31/10/2026): đã mở Kinkade 2016 (trang AAFP) và đặt verified: true; các ý đã trích (ho 2–3 tuần, trung bình 18 ngày; sốt ở khoảng một phần ba, sau vài ngày đầu ít còn sốt; có thể có ran rít; ít nhất 90% do vi rút; đờm có máu là chỉ định chụp phim) đều có trong bài; trang báo có bài mới hơn (AFP 2025), cùng nội dung. Đã sửa: bỏ liên kết chest_pain (quyết định của người bảo trì); khò khè đổi cơ sở thành verbal; thêm vị trí trích và ghi chú nguồn; không đổi mức nào. Ghi chú vòng 1: Giai đoạn 3, lô 3, lượt A (31/10/2026). Phiên làm việc chặn WebFetch và curl, nên lượt A chỉ đọc được tóm tắt của công cụ tìm kiếm. Các con số bậc B lấy từ GRACE (vanvugt-bmj-2013, đã được lượt C kiểm tra trước đây), dùng số của toàn mẫu ho cấp vì 95% không viêm phổi. Cần bác sĩ xem: (1) prior P1 cho người lớn là ước lượng, chưa có số liệu Việt Nam; ranh giới với cảm lạnh mờ (cả hai đều do vi rút); (2) khó thở để frequent theo GRACE, người tự kiểm tra ở cộng đồng có thể ít hơn; (3) đau ngực chỉ còn liên kết pleuritic_chest_pain; (4) ho ra máu rare với above_leak_ok; (5) urgency 5 giữ như gợi ý (NHS, Kinkade: tự khỏi, không cần kháng sinh); dấu hiệu nặng do quy tắc xử lý; (6) mã ICD-10 chưa đối chiếu."

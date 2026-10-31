@@ -1,14 +1,15 @@
 id: nguyen-plosone-2020
 type: statistic
 title: "The second national tuberculosis prevalence survey in Vietnam"
-publisher: "PLoS ONE 2020;15(4):e0232142 (Nguyen và cs.)"
-date: "2020"
-url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC7179905/"
+publisher: "PLoS ONE 2020;15(4):e0232142 (Nguyen HV, Tiemersma EW, Nguyen HB, et al.)"
+date: "2020-04-23"
+url: "https://europepmc.org/article/MED/32324806"
 doi: "10.1371/journal.pone.0232142"
 pmid: "32324806"
-license_class: L1
-license_note: "PLoS ONE xuất bản theo CC BY 4.0: dùng và chuyển thể, ghi công."
+license_class: L0
+license_note: "Europe PMC ghi giấy phép CC0 (bài của tác giả có cơ quan WHO, CDC): dùng tự do, vẫn ghi nguồn."
 default_tier: B
 accessed: "2026-10-31"
-verified: false
-notes_vi: "Lượt A không mở được toàn văn: phiên làm việc chặn WebFetch (máy chủ không phân giải được tên miền), chỉ đọc tóm tắt do công cụ tìm kiếm trả về. Điều tra 10/2017–02/2018, chọn mẫu cụm nhiều tầng: 322 ca lao phổi có bằng chứng vi khuẩn trên 100.000 người lớn (KTC 95% 260–399); tỷ số nam/nữ 4,0 (2,8–5,8). Phỏng vấn sâu người bệnh lao: chỉ 57,9% (51,3–64,3%) có ho từ 2 tuần; 32,1% (26,3–38,6%) không có triệu chứng nào gợi ý lao dù phim phổi bất thường. Lượt C cần mở PMC7179905 để đối chiếu; số PMID lấy từ kết quả tìm kiếm."
+verified: true
+verified_by: "agent:pass-a"
+notes_vi: "Lượt A vòng 2 đọc toàn văn (PMC7179905) qua API Europe PMC ngày 31/10/2026. Điều tra 2017–2018 ở 82 cụm, người từ 15 tuổi, sàng lọc bằng câu hỏi và phim phổi kỹ thuật số: 61.763 người tham gia, 221 ca lao phổi có bằng chứng vi khuẩn; tỷ lệ hiện mắc 322 trên 100.000 người lớn (KTC 95% 260–399), tăng theo tuổi; tỷ số chênh nam/nữ 4,0 (2,8–5,8). Bảng 3 (phỏng vấn sâu 221 ca): ho bất kỳ 67,0%, ho dưới 2 tuần 9,1%, ho từ 2 tuần 57,9%, ho có đờm 61,1%, ho ra máu 3,2%, sốt 12,7%, sụt cân 7,7%, ra mồ hôi đêm 7,7%; 32,1% không có triệu chứng nghi lao; 97,7% có phim phổi bất thường gợi ý lao. Đây là ca phát hiện chủ động ở cộng đồng, nên tỷ lệ triệu chứng thấp hơn ở người tự đi khám."

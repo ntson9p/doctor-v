@@ -280,14 +280,6 @@ findings:
       basis: judgment
       sources: [byt-qd-1840-2025]
       note: "Lượt A, lô 3. Trong số người có khó thở; gần bằng phân bố nền. Khó thở lúc nghỉ là dấu hiệu cúm nặng (1840), đã có quy tắc mức 2. Ước lượng."
-  - finding: chest_pain
-    freq: occasional
-    evidence:
-      tier: A
-      basis: numeric
-      sources: [ebell-bmjopen-2025]
-      reported: "đau ngực 0,25 (10 nghiên cứu)"
-      note: "Lượt A, lô 3. Cùng số liệu với pleuritic_chest_pain (nguồn ghi đau ngực chung). Dùng khi triệu chứng chính là ho hoặc khó thở."
 warning_signs:
   - es_severe_breathing
   - breathing_difficulty
@@ -313,4 +305,4 @@ review:
   status: draft
   authors: ["agent:pass-a"]
   updated: "2026-10-31"
-  notes_vi: "Giai đoạn 3, lô 3, lượt A (31/10/2026). Không sửa phần đã có. Đã thêm: (a) prior Ho P2, Khó thở P3; (b) 4 liên kết: cough_duration, dyspnea_onset, dyspnea_severity, chest_pain (occasional, Ebell 2025). Không dùng nguồn mới (phiên làm việc chặn WebFetch). Nhận xét về giá trị cũ, không sửa: cúm không liên kết breathing_difficulty (lượt C bỏ vì gần tỷ lệ nền); với triệu chứng chính Ho, câu 'có khó thở' vì vậy không làm giảm khả năng cúm, trong khi cảm lạnh để rare; có thể nên thêm occasional (chưa có số liệu). Ghi chú của lượt C trước đây (giữ để tham khảo): Cần bác sĩ xem: (1) prior là ước lượng, chưa có tỷ lệ cúm trong mọi người sốt đi khám; (2) hệ số mùa ở miền Bắc dựa trên 71 đợt cúm ở một xã Hà Nam, tháng của từng mùa là quy ước của lượt C; (3) tần suất triệu chứng lấy từ người có hội chứng giống cúm nên có thể cao hơn cúm nói chung; (4) đau cơ, đau đầu, mệt được hạ mức ở trẻ em theo Silvennoinen và Ebell 2025; (5) bỏ liên kết mất ngửi (cao hơn tỷ lệ nền) và khó thở (lượt B để occasional nhưng không có số liệu; ở cộng đồng khó thở gần bằng tỷ lệ nền 5%; 1840 xếp khó thở vào cúm nặng, đã có quy tắc rf_fever_breathing); (6) mã ICD-10 chưa đối chiếu được."
+  notes_vi: "Lượt A vòng 2 (31/10/2026): không có nguồn mới cần mở; đã bỏ liên kết chest_pain (occasional, Ebell 2025) theo quyết định của người bảo trì, vì pleuritic_chest_pain đã mang cùng số liệu; không đổi gì khác. Ghi chú vòng 1: Giai đoạn 3, lô 3, lượt A (31/10/2026). Không sửa phần đã có. Đã thêm: (a) prior Ho P2, Khó thở P3; (b) 3 liên kết (sau vòng 2): cough_duration, dyspnea_onset, dyspnea_severity. Không dùng nguồn mới (phiên làm việc chặn WebFetch). Nhận xét về giá trị cũ, không sửa: cúm không liên kết breathing_difficulty (lượt C bỏ vì gần tỷ lệ nền); với triệu chứng chính Ho, câu 'có khó thở' vì vậy không làm giảm khả năng cúm, trong khi cảm lạnh để rare; có thể nên thêm occasional (chưa có số liệu). Ghi chú của lượt C trước đây (giữ để tham khảo): Cần bác sĩ xem: (1) prior là ước lượng, chưa có tỷ lệ cúm trong mọi người sốt đi khám; (2) hệ số mùa ở miền Bắc dựa trên 71 đợt cúm ở một xã Hà Nam, tháng của từng mùa là quy ước của lượt C; (3) tần suất triệu chứng lấy từ người có hội chứng giống cúm nên có thể cao hơn cúm nói chung; (4) đau cơ, đau đầu, mệt được hạ mức ở trẻ em theo Silvennoinen và Ebell 2025; (5) bỏ liên kết mất ngửi (cao hơn tỷ lệ nền) và khó thở (lượt B để occasional nhưng không có số liệu; ở cộng đồng khó thở gần bằng tỷ lệ nền 5%; 1840 xếp khó thở vào cúm nặng, đã có quy tắc rf_fever_breathing); (6) mã ICD-10 chưa đối chiếu được."

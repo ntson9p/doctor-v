@@ -7,5 +7,6 @@ license_class: L3
 license_note: "Bản quyền National Asthma Council Australia: chỉ dùng dữ kiện kèm trích dẫn."
 default_tier: B
 accessed: "2026-10-31"
-verified: false
-notes_vi: "Lượt A chỉ đọc tóm tắt do công cụ tìm kiếm trả về (WebFetch bị chặn). Đặc điểm làm tăng khả năng hen: có nhiều hơn một triệu chứng (khò khè, khó thở, tức ngực, ho), tái đi tái lại hoặc theo mùa, nặng hơn về đêm hoặc sáng sớm, khởi phát do gắng sức, không khí lạnh, chất kích thích, thuốc, dị ứng hoặc nhiễm vi rút. Đặc điểm làm giảm khả năng hen: chóng mặt, choáng; ho đơn độc không kèm triệu chứng hô hấp khác; khạc đờm mạn tính; đo chức năng hô hấp bình thường lúc có triệu chứng. Lượt C cần mở tài liệu."
+verified: true
+verified_by: "agent:pass-a"
+notes_vi: "Lượt A vòng 2 tải trang ngày 31/10/2026 (trang không ghi ngày). Đặc điểm làm tăng khả năng hen: có hơn một triệu chứng trong số khò khè, khó thở, nặng ngực, ho; triệu chứng tái đi tái lại hoặc theo mùa; nặng hơn về đêm hoặc sáng sớm; tiền sử dị ứng; khởi phát rõ do gắng sức, không khí lạnh, chất kích thích, thuốc, dị nguyên, nhiễm vi rút; gia đình có người hen, dị ứng; đỡ nhanh khi dùng thuốc giãn phế quản tác dụng nhanh. Đặc điểm làm giảm khả năng hen: chóng mặt, choáng, tê đầu chi; ho đơn độc không kèm triệu chứng hô hấp khác; khạc đờm mạn tính; khám ngực bình thường lúc có triệu chứng; thay đổi giọng; hút thuốc nhiều (hiện tại hoặc trước đây); bệnh tim mạch; chức năng hô hấp bình thường lúc có triệu chứng. Không có tỷ lệ."

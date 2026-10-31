@@ -1,11 +1,12 @@
 id: who-vn-copd
 type: web_page
-title: "Chronic obstructive pulmonary disease (COPD) – WHO Viet Nam health topics"
+title: "Chronic obstructive pulmonary disease (COPD) in Viet Nam"
 publisher: "World Health Organization, Văn phòng Việt Nam"
 url: "https://www.who.int/vietnam/health-topics/chronic-obstructive-pulmonary-disease-copd"
 license_class: L2
 license_note: "Nội dung WHO: CC BY-NC-SA 3.0 IGO; chỉ dùng phi thương mại, ghi nguồn."
 default_tier: B
 accessed: "2026-10-31"
-verified: false
-notes_vi: "Lượt A chỉ đọc tóm tắt do công cụ tìm kiếm trả về (WebFetch bị chặn). Trang nêu: bệnh phổi tắc nghẽn mạn tính gặp ở 7,1% nam và 1,9% nữ từ 40 tuổi ở Việt Nam; khoảng 3/4 số ca do khói thuốc lá (kể cả hút thụ động). Kết quả tìm kiếm còn nêu một luận án ở miền Bắc (Karolinska): tỷ lệ 7,1% (nam 10,9%, nữ 3,9%), tăng rõ theo tuổi; và nghiên cứu ở người chưa từng hút thuốc từ 40 tuổi (Respirology 2015): 94% số ca chưa từng được chẩn đoán. Lượt C cần mở trang để đối chiếu."
+verified: true
+verified_by: "agent:pass-a"
+notes_vi: "Lượt A vòng 2 tải trang ngày 31/10/2026 (trang không ghi ngày). Nguyên nhân chính là khói thuốc lá (hút chủ động hoặc hút thụ động), chiếm 3/4 số ca; yếu tố khác là ô nhiễm không khí trong và ngoài nhà, bụi và khói nghề nghiệp. Ở Việt Nam, bệnh gặp ở 7,1% nam và 1,9% nữ từ 40 tuổi. Trang không nêu tỷ lệ chưa được chẩn đoán: số 94% mà lượt A vòng 1 thấy qua kết quả tìm kiếm không có ở đây và đã bị bỏ khỏi bản nháp."

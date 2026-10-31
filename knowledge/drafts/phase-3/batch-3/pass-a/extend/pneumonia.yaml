@@ -241,17 +241,6 @@ findings:
       basis: judgment
       sources: [byt-qd-4235-2012, byt-qd-3312-2015]
       note: "Lượt A, lô 3. Trong số người có khó thở. Viêm phổi làm thở nhanh cả lúc nghỉ hay hơn viêm phế quản; người tự kiểm tra ở cộng đồng phần lớn chưa nặng. Ước lượng; khó thở lúc nghỉ có quy tắc mức 2."
-  - finding: chest_pain
-    freq: frequent
-    freq_by_age:
-      child_2m_5y: rare
-      child_5_12: occasional
-    evidence:
-      tier: A
-      basis: numeric
-      sources: [htun-scirep-2019, vanvugt-bmj-2013, shah-jama-2017]
-      reported: "người lớn: đau ngực 0,49 (gộp), 57% (GRACE); trẻ em (nghiên cứu có vị thành niên): 8–14%"
-      note: "Lượt A, lô 3. Cùng số liệu và cách tách tuổi với pleuritic_chest_pain; nguồn đo đau ngực chung nên khớp với câu hỏi này hơn. Hai câu hỏi trùng một phần nhưng không cùng cụm (xem review.notes_vi). Dùng khi triệu chứng chính là ho hoặc khó thở."
   - finding: chest_pain_duration
     dist: { seconds: 0.2, minutes: 0.15, over_15min: 0.15, days: 0.5 }
     evidence:
@@ -296,4 +285,4 @@ review:
   status: draft
   authors: ["agent:pass-a"]
   updated: "2026-10-31"
-  notes_vi: "Giai đoạn 3, lô 3, lượt A (31/10/2026). Không sửa phần đã có. Đã thêm: (a) prior Ho P3 (trẻ 2 tháng–5 tuổi P2, từ 65 tuổi P2); Khó thở P2; Đau ngực P3; (b) 8 liên kết: cough_duration, wheeze (occasional), dyspnea_onset, dyspnea_severity, chest_pain (frequent; trẻ dưới 5 tuổi rare, 5–12 tuổi occasional), chest_pain_duration, chest_pain_exertional (rare), chest_pain_sudden_severe (rare). Không dùng nguồn mới (phiên làm việc chặn WebFetch). Nhận xét về giá trị cũ, không sửa: (1) breathing_difficulty frequent ở người lớn hợp lý cho Ho, Đau ngực; (2) chest_pain và pleuritic_chest_pain cùng frequent và không cùng cụm, nên người đau ngực khi thở được tính hai lần (báo người bảo trì: nên đưa pleuritic_chest_pain vào cụm chest_pain, hoặc cho nó requires chest_pain); (3) cough very_frequent và productive_cough very_frequent không đổi; dưới triệu chứng chính Ho, cough không còn là bằng chứng. Ghi chú của lượt C trước đây (giữ để tham khảo): Cần bác sĩ xem: (1) chưa mở được hướng dẫn viêm phổi người lớn hiện hành của Bộ Y tế (4815/QĐ-BYT năm 2020; một trang thứ cấp nêu 2147/QĐ-BYT năm 2026 thay thế); mô tả triệu chứng người lớn lấy từ bài viêm phổi của 4235/QĐ-BYT (2012), các liên kết chỉ dựa vào văn bản này để bậc C; (2) prior dựa trên tỷ suất nhập viện ở Nha Trang và GRACE, chưa có số liệu ngoại trú Việt Nam; prior cho đau bụng là ước lượng; (3) tần suất người lớn lấy từ nghiên cứu chỉ tuyển người có ho; (4) bỏ liên kết li bì (lượt A, cao hơn tỷ lệ nền) và đau tăng khi cử động (lượt B, không có nguồn; dấu hiệu này đặc trưng cho bệnh bụng ngoại khoa, liên kết mạnh ở viêm phổi có thể che viêm ruột thừa); (5) lú lẫn: very_rare dưới 65 tuổi, occasional từ 65 tuổi là ước lượng; (6) mã ICD-10 chưa đối chiếu được."
+  notes_vi: "Lượt A vòng 2 (31/10/2026): không có nguồn mới cần mở (các liên kết thêm chỉ dùng nguồn đã có trong sổ); đã bỏ liên kết chest_pain theo quyết định của người bảo trì (dưới triệu chứng chính Đau ngực nó đã được ngầm định; dưới Ho, Khó thở thì pleuritic_chest_pain mang bằng chứng, liên kết thêm chest_pain là đếm trùng); không đổi gì khác. Ghi chú vòng 1: Giai đoạn 3, lô 3, lượt A (31/10/2026). Không sửa phần đã có. Đã thêm: (a) prior Ho P3 (trẻ 2 tháng–5 tuổi P2, từ 65 tuổi P2); Khó thở P2; Đau ngực P3; (b) 7 liên kết (sau vòng 2): cough_duration, wheeze (occasional), dyspnea_onset, dyspnea_severity, chest_pain_duration, chest_pain_exertional (rare), chest_pain_sudden_severe (rare). Nhận xét về giá trị cũ, không sửa: (1) breathing_difficulty frequent ở người lớn hợp lý cho Ho, Đau ngực; (2) đã bỏ liên kết chest_pain nên không còn đếm trùng với pleuritic_chest_pain; (3) cough very_frequent và productive_cough very_frequent không đổi; dưới triệu chứng chính Ho, cough không còn là bằng chứng. Ghi chú của lượt C trước đây (giữ để tham khảo): Cần bác sĩ xem: (1) chưa mở được hướng dẫn viêm phổi người lớn hiện hành của Bộ Y tế (4815/QĐ-BYT năm 2020; một trang thứ cấp nêu 2147/QĐ-BYT năm 2026 thay thế); mô tả triệu chứng người lớn lấy từ bài viêm phổi của 4235/QĐ-BYT (2012), các liên kết chỉ dựa vào văn bản này để bậc C; (2) prior dựa trên tỷ suất nhập viện ở Nha Trang và GRACE, chưa có số liệu ngoại trú Việt Nam; prior cho đau bụng là ước lượng; (3) tần suất người lớn lấy từ nghiên cứu chỉ tuyển người có ho; (4) bỏ liên kết li bì (lượt A, cao hơn tỷ lệ nền) và đau tăng khi cử động (lượt B, không có nguồn; dấu hiệu này đặc trưng cho bệnh bụng ngoại khoa, liên kết mạnh ở viêm phổi có thể che viêm ruột thừa); (5) lú lẫn: very_rare dưới 65 tuổi, occasional từ 65 tuổi là ước lượng; (6) mã ICD-10 chưa đối chiếu được."

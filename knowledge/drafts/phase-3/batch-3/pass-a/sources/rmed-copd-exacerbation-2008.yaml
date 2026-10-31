@@ -1,13 +1,15 @@
 id: rmed-copd-exacerbation-2008
 type: primary_study
-title: "Nghiên cứu triệu chứng trong đợt cấp bệnh phổi tắc nghẽn mạn tính (Respiratory Medicine 2008; chưa xác nhận tên bài)"
-publisher: "Respiratory Medicine 2008"
-date: "2008"
-url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC7125807/"
+title: "Respiratory viral infection in exacerbations of COPD"
+publisher: "Respiratory Medicine 2008;102(11):1575–1580 (McManus TE, Marley AM, Baxter N, et al.)"
+date: "2008-11"
+url: "https://europepmc.org/article/MED/18672353"
 doi: "10.1016/j.rmed.2008.06.006"
+pmid: "18672353"
 license_class: L3
-license_note: "Bản quyền Elsevier (bản mở trên PMC): chỉ dùng dữ kiện kèm trích dẫn."
+license_note: "Bản quyền Elsevier (bản mở trên PMC thuộc bộ sưu tập COVID-19): chỉ dùng dữ kiện kèm trích dẫn."
 default_tier: B
 accessed: "2026-10-31"
-verified: false
-notes_vi: "Lượt A chỉ thấy bảng 'Patient symptoms during exacerbations' qua kết quả tìm kiếm (WebFetch bị chặn); chưa xác nhận được tên bài, tác giả. 136 người trong đợt cấp: tăng khó thở 99%, khò khè 81%, tăng ho 77%, tăng lượng đờm 65%, đờm mủ hơn 60%, sốt 28%, đau họng 25%. Bối cảnh tuyển chọn chưa rõ (có thể gồm người nằm viện). Lượt C cần mở PMC7125807, ghi tên bài và kiểm tra bối cảnh."
+verified: true
+verified_by: "agent:pass-a"
+notes_vi: "Lượt A vòng 2 đọc toàn văn (PMC7125807) qua API Europe PMC ngày 31/10/2026 và xác nhận tên bài, tác giả (McManus và cs., Belfast, Bắc Ireland); giữ id cũ vì bản nháp đã dùng. Mục Methods: 136 người nhập viện vì đợt cấp bệnh phổi tắc nghẽn mạn tính, tuyển trong 24 giờ đầu; tuổi trung bình 70, FEV1 trung bình 39% dự đoán, phần lớn khó thở MRC độ 5 trong đợt cấp. Bảng 3 (triệu chứng ghi có/không): tăng khó thở 99%, khò khè 81%, tăng ho 77%, tăng lượng đờm 65%, đờm mủ tăng 60%, chảy mũi hoặc nghẹt mũi 55%, sốt 28%, đau họng 25%. Bối cảnh bệnh viện, bệnh nặng: cần hạ mức cho người tự kiểm tra ở cộng đồng."
