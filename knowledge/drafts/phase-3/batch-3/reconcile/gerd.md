@@ -58,3 +58,11 @@
 Ca d-gerd-3 ban đầu được viết cho Đau bụng (dễ nhầm viêm, loét dạ dày); sau khi bỏ prior Đau bụng, lượt C viết lại thành ca dễ nhầm bệnh tim ở Đau ngực.
 
 Đau bụng đã phát hành: với bản chính thức, bệnh này không có mặt ở Đau bụng; không ca Đau bụng nào đổi kết quả ở chế độ sạch. Ở chế độ nhiễu chỉ một thay đổi, không do bệnh này: d-acute-coronary-syndrome-2 hạt giống 5 hạng 2 xuống 3, mức xử trí không đổi (biên bản acute_coronary_syndrome).
+
+## Sau lần chấm giữ kín đầu tiên (người bảo trì, 31/10/2026)
+
+- Mức xử trí đưa về 5, như hai lượt và gợi ý phạm vi. Chủ dự án duyệt.
+- Căn cứ: NHS Heartburn and acid reflux (ợ nóng điển hình tự chăm sóc, hỏi dược sĩ; khám bác sĩ khi kéo dài từ 3 tuần, gần như ngày nào cũng có, hoặc thuốc không đỡ). Đau ngực nguy hiểm do các quy tắc riêng xử lý.
+- Lần chấm đầu, chỉ tiêu "tự chăm sóc nhận đúng" không đạt (48,3%); một trong các ca tự chăm sóc bị khuyên mức 4 là trào ngược. Ca đó (h-chest-004) được chuyển sang dev thành d-from-h-chest-004, theo quy tắc giữ kín; agent độc lập viết ca thay thế.
+- Lý do của lượt C (người chọn Đau ngực nên được bác sĩ khám một lần) vẫn đáng cân nhắc: bác sĩ cần quyết.
+- Sau khi về mức 5, hai ca dev mức 4 xuống mức 5. Người bảo trì thêm quy tắc rf_chest_pain_cardiac_risk (mức 4: đau ngực từ 45 tuổi kèm yếu tố nguy cơ tim mạch), nên d-gerd-3 (52 tuổi, tăng huyết áp) vẫn mức 4. d-gerd-1 (41 tuổi, ợ nóng gần như ngày nào cũng có 3 tuần nay) còn mức 5 thay vì 4: danh mục chưa có câu "ợ nóng kéo dài từ 3 tuần" (việc tồn, thêm ở lô sau).

@@ -1,0 +1,52 @@
+id: h-chest-016
+set: holdout
+title_vi: "Nữ 47 tuổi, 10 ngày nay nóng rát sau xương ức sau bữa ăn và khi nằm, trào nước chua lên miệng, uống thuốc kháng acid thì đỡ"
+narrative_vi: "Chị T., 47 tuổi, bán hàng ở chợ tại Cần Thơ, hơi thừa cân, không hút thuốc, không uống rượu bia, không có thai, không dùng thuốc nội tiết. Mười ngày nay, sau bữa ăn no, nhất là bữa tối có đồ chiên, cà phê hoặc trái cây chua, chị thấy nóng rát sau xương ức, lan lên cổ họng, có lúc trào nước chua lên miệng. Cúi người xuống hoặc nằm ngay sau ăn thì nặng hơn. Mỗi lần nóng rát khoảng 10 phút, lần gần nhất tối qua. Uống thuốc kháng acid dạng gói mua ở hiệu thuốc thì đỡ nhanh. Chị nói không phải cảm giác tức nặng, đè ép. Chị vẫn đi chợ, leo cầu thang, khuân hàng bình thường mà không đau, không khó thở. Chị không vã mồ hôi, không nôn, không nuốt nghẹn, không sụt cân, không đi ngoài phân đen. Chị không bị tăng huyết áp, tiểu đường, chưa được nói có bệnh tim."
+patient:
+  age_years: 47
+  sex: female
+  region: south
+  month: 7
+complaint: chest_pain
+answers:
+  chest_pain_duration: minutes
+  heartburn: present
+  similar_episodes_before: present
+  chest_pain_exertional: absent
+  chest_pain_pressure: absent
+  chest_pain_sudden_severe: absent
+  chest_pain_radiates_back: absent
+  pain_radiates_arm_jaw: absent
+  chest_wall_tenderness: absent
+  pleuritic_chest_pain: absent
+  es_crushing_chest_pain: absent
+  cold_sweat: absent
+  breathing_difficulty: absent
+  fainting_or_near_fainting: absent
+  nausea: absent
+  vomiting: absent
+  abdominal_pain: absent
+  black_stool: absent
+  vomiting_blood: absent
+  weight_loss_unintended: absent
+  cough: absent
+  fever: absent
+  hypertension_known: absent
+  diabetes: absent
+  known_heart_disease: absent
+  smoker: absent
+  heavy_alcohol: absent
+  estrogen_use: absent
+  pregnant: absent
+  regular_painkiller_use: absent
+default_unmentioned: absent
+expected:
+  condition: gerd
+  acceptable: []
+  triage: 5
+source:
+  basis: "Trào ngược dạ dày – thực quản điển hình ở phụ nữ trung niên thừa cân: 10 ngày nóng rát sau xương ức sau ăn, khi cúi hoặc nằm, trào nước chua, đỡ nhanh với thuốc kháng acid, không liên quan gắng sức, không có dấu hiệu báo động (nuốt nghẹn, sụt cân, nôn, phân đen). NHS Chest pain: đau sau ăn, trào thức ăn hoặc dịch đắng, chua thường do trào ngược; gọi 999 khi đau đột ngột không hết, lan tay, hàm, lưng, kèm vã mồ hôi, khó thở. NHS Heartburn and acid reflux: tự điều chỉnh ăn uống, hỏi dược sĩ; khám bác sĩ khi ợ nóng hầu hết các ngày từ 3 tuần trở lên, không đỡ với thuốc không kê đơn, hoặc có dấu hiệu báo động. Chưa đủ 3 tuần, không dấu hiệu báo động nên mức 5 (đồng thuận của Hội Khoa học Tiêu hóa Việt Nam về bệnh trào ngược cũng xếp ợ nóng, trào ngược là triệu chứng điển hình)."
+  references:
+    - nhs-chest-pain
+author: "agent:vignette-holdout"
+notes_vi: "Ca thay thế cho ca trào ngược đã chuyển sang bộ dev. Nóng rát sau xương ức được tính là đau ngực (khó chịu ở ngực) nên người bệnh chọn Đau ngực."

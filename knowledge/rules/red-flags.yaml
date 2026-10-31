@@ -2009,6 +2009,26 @@
     locator: "CG95 khuyến cáo 1.2.1.3 (ý thứ tư), mục 1.3 (đau ngực ổn định); 2187/QĐ-BYT (đau thắt ngực không ổn định)"
     note: "Đau thắt ngực mới xuất hiện hoặc nặng dần là đau thắt ngực không ổn định, thuộc hội chứng vành cấp. CG95 (lượt R vòng 2 mở lại trực tiếp): 1.2.1.3 xếp đau ngực mới xuất hiện, hoặc đau thắt ngực ổn định nặng lên đột ngột, tái diễn khi gắng sức nhẹ hoặc lúc nghỉ, vào nhóm gợi ý hội chứng vành cấp; mục 1.3 (đau ngực ổn định) chỉ hướng dẫn đánh giá, làm xét nghiệm, không nêu mức khẩn. Câu hỏi không phân biệt hai loại nên chọn mức 3 (nhận định); đau lúc nghỉ, kéo dài, kèm dấu hiệu khác đã có quy tắc mức 1."
 
+- id: rf_chest_pain_cardiac_risk
+  level: 4
+  complaints: [chest_pain]
+  when:
+    all:
+      - { finding: chest_pain, is: present }
+      - { age_years_gte: 45 }
+      - any:
+          - { finding: hypertension_known, is: present }
+          - { finding: diabetes, is: present }
+          - { finding: smoker, is: present }
+          - { finding: known_heart_disease, is: present }
+          - { finding: atrial_fibrillation_known, is: present }
+  reason_vi: "Bạn từ 45 tuổi và có tăng huyết áp, đái tháo đường, hút thuốc hoặc bệnh tim. Đau ngực cần được bác sĩ khám để loại trừ bệnh mạch vành."
+  evidence:
+    tier: B
+    basis: judgment
+    sources: [nice-cg95, bosner-bmcfampract-2009]
+    locator: "CG95 mục 1.3 (đau ngực ổn định: đánh giá, xét nghiệm); Bösner 2009 bảng 2"
+    note: "Người bảo trì thêm khi tích hợp lô 3 (31/10/2026), sau khi trào ngược dạ dày – thực quản về mức 5: ca dev d-gerd-3 (nữ 52 tuổi tăng huyết áp, nóng rát sau xương ức hai tuần) cần bác sĩ khám để phân biệt với đau thắt ngực. Bösner 2009: ở người từ 35 tuổi đau ngực đến bác sĩ đa khoa, 13–17% có bệnh mạch vành. CG95 mục 1.3: đau ngực ổn định nghi do tim cần được đánh giá, làm xét nghiệm (không nêu mức khẩn). Mốc 45 tuổi và danh sách yếu tố nguy cơ do người bảo trì chọn (thang Marburg dùng tuổi, bệnh mạch máu đã biết); chờ bác sĩ duyệt."
 # --- Thuyên tắc phổi, ho ra máu ---
 - id: rf_pe_signs
   level: 2
