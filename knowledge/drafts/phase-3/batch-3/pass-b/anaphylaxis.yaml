@@ -1,0 +1,234 @@
+id: anaphylaxis
+names:
+  vi: "Phản vệ"
+  vi_common: ["Sốc phản vệ", "Dị ứng nặng"]
+  en: "Anaphylaxis"
+codes:
+  icd10: "T78.2"
+  icd10_verified: false
+  mondo: "MONDO:0100053"
+summary_vi:
+  - "Phản ứng dị ứng nặng toàn thân, xảy ra vài phút đến vài giờ sau khi ăn, dùng thuốc hoặc bị côn trùng đốt."
+  - "Thường nổi mề đay, sưng môi, mắt, kèm khó thở, khò khè, thở rít, choáng hoặc nôn."
+  - "Có thể nặng lên rất nhanh và gây tử vong; cần gọi cấp cứu ngay cả khi thấy đỡ."
+urgency: 1
+cant_miss: true
+specialties: [emergency]
+priors:
+  - complaint: shortness_of_breath
+    default: P4
+    by_age:
+      infant_0_2m: P6
+      elder_65_74: P5
+      elder_75p: P5
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [ehrhard-aaci-2024, cardona-waoj-2020, byt-tt-51-2017]
+      locator: "Ehrhard 2024 phần bàn luận và bảng 3; WAO 2020 phần dịch tễ"
+      reported: "Phản vệ chiếm 0,04–0,96% lượt đến cấp cứu; 70% có triệu chứng hô hấp (khó thở, khò khè 68%); hiếm sau 65 tuổi. Tỷ lệ mắc 50–112 đợt trên 100.000 người-năm"
+      note: "Lượt B. Thang tuyệt đối. Khó thở chiếm vài phần trăm lượt đến cấp cứu; nếu 0,1–0,5% lượt cấp cứu là phản vệ và hai phần ba có khó thở, phản vệ chiếm khoảng 0,5–2% người đến cấp cứu vì khó thở. Ở cộng đồng tỷ lệ thấp hơn, và ca nặng thường dừng ở màn sàng lọc cấp cứu (es_anaphylaxis); ước 0,2–1% (P4). Từ 65 tuổi phản vệ ít gặp, khó thở chủ yếu do bệnh tim phổi: P5. Trẻ dưới 2 tháng rất hiếm: P6. Câu tiếp xúc dị nguyên, mề đay, khởi phát đột ngột mang phần lớn bằng chứng. Cần bác sĩ duyệt."
+  - complaint: cough
+    default: P5
+    by_age:
+      infant_0_2m: P6
+      elder_65_74: P6
+      elder_75p: P6
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [ehrhard-aaci-2024, nhs-anaphylaxis]
+      locator: "Ehrhard 2024 bảng 3 (ho, đau họng 14,9%)"
+      note: "Lượt B. Ho có ở một phần nhỏ người phản vệ (NHS liệt kê ho, khò khè); người ho vì phản vệ thường chọn Khó thở. Người chọn Ho phần lớn bị nhiễm trùng hô hấp; ước 0,02–0,2% (P5), từ 65 tuổi và dưới 2 tháng P6. Ước lượng."
+  - complaint: chest_pain
+    default: P5
+    by_age:
+      elder_65_74: P6
+      elder_75p: P6
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-tt-51-2017, ehrhard-aaci-2024]
+      locator: "51/2017/TT-BYT Phụ lục I (khó thở, tức ngực); Ehrhard 2024 bảng 3 (chóng mặt, vã mồ hôi lạnh, đau ngực và khác 21,5%)"
+      note: "Lượt B. Tức ngực là một triệu chứng hô hấp của phản vệ (51/2017); người đau ngực vì phản vệ ít. Ước 0,02–0,2% (P5), từ 65 tuổi P6. Ước lượng."
+findings:
+  - finding: allergen_exposure
+    freq: very_frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [ehrhard-aaci-2024, cardona-waoj-2020, byt-tt-51-2017]
+      locator: "Ehrhard 2024 phần Results; WAO 2020 phần nguyên nhân; 51/2017 Điều 2"
+      reported: "Khoảng ba phần tư có tác nhân nghi ngờ (thuốc 31,8%, thức ăn 25,6%, côn trùng 17,1%); không rõ nguyên nhân 6,5–35% (WAO)"
+      note: "Lượt B. Câu hỏi về ăn món lạ, dùng thuốc mới, bị đốt trước khi khó chịu (khoảng 2 giờ). Người dị ứng một món đã biết mà ăn phải có thể không coi là 'món lạ', nên không chọn almost_always. Tỷ lệ nền 5%: câu 'Có' tăng khả năng phản vệ khoảng 16 lần."
+  - finding: rash_any
+    freq: very_frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [ehrhard-aaci-2024, cardona-waoj-2020, byt-tt-51-2017]
+      locator: "Ehrhard 2024 bảng 3; WAO 2020 phần định nghĩa"
+      reported: "Triệu chứng da 88,7%; không có triệu chứng da ở 10–20% (WAO)"
+      note: "Lượt B. Gồm mề đay, đỏ da, phù mạch; câu hỏi của app hỏi nổi ban, mẩn đỏ trên da. Có ở ca được ghi nhận tại cấp cứu; chọn very_frequent."
+  - finding: hives
+    freq: frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [ehrhard-aaci-2024, byt-tt-51-2017, cardona-waoj-2020]
+      locator: "Ehrhard 2024 bảng 3; 51/2017 Phụ lục I (mày đay, phù mạch nhanh)"
+      reported: "Mề đay 36,2% toàn bộ, tức khoảng 40% số người có triệu chứng da; đỏ da khác 40,7%"
+      note: "Lượt B. Tần suất trong số người đã có ban. Hồ sơ cấp cứu có thể ghi thiếu mề đay; chọn frequent. Tỷ lệ nền 5%."
+  - finding: edema_face_hands
+    freq: frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [ehrhard-aaci-2024, nhs-anaphylaxis, byt-tt-51-2017]
+      locator: "Ehrhard 2024 bảng 3; NHS (sưng môi, miệng, họng, lưỡi)"
+      reported: "Phù mạch 44,4%"
+      note: "Lượt B. Câu hỏi về sưng phù mặt hoặc bàn tay mới xuất hiện; phù mạch ở môi, mi mắt, mặt. Sưng môi, lưỡi nặng thường dừng ở màn sàng lọc cấp cứu."
+  - finding: breathing_difficulty
+    freq: very_frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [ehrhard-aaci-2024, byt-tt-51-2017, nhs-anaphylaxis]
+      locator: "Ehrhard 2024 bảng 3"
+      reported: "Khó thở, co thắt phế quản, khò khè 68,0%; triệu chứng hô hấp 70,2%"
+      note: "Lượt B. Có ý nghĩa với Ho, Đau ngực (với Khó thở là dấu hiệu ngầm định). Người phản vệ chọn Ho, Đau ngực phần lớn có tổn thương hô hấp; chọn very_frequent."
+  - finding: dyspnea_onset
+    dist: { sudden: 0.85, hours_days: 0.14, weeks: 0.01 }
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [ehrhard-aaci-2024, byt-tt-51-2017, nhs-anaphylaxis]
+      locator: "Ehrhard 2024 bảng 3 (thời gian khởi phát); 51/2017 Điều 2; NHS (thường vài phút)"
+      reported: "Khởi phát dưới 30 phút sau tiếp xúc 46,5%, 30–120 phút 6,4%, trên 120 phút 9,2%, không rõ 36,9%"
+      note: "Lượt B. Phân bố trong số người khó thở. Trong số ca biết thời gian, 74% khởi phát trong 30 phút và 85% trong 2 giờ; khó thở tăng trong vài phút. Ước lượng."
+  - finding: dyspnea_severity
+    dist: { exertion: 0.20, rest: 0.62, cannot_speak: 0.18 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-tt-51-2017, ehrhard-aaci-2024]
+      locator: "51/2017 Phụ lục II (độ II: khó thở nhanh nông, tức ngực; độ III: rít thanh quản, tím tái)"
+      reported: "Độ II 68,5%, độ III 30,5%, độ IV 0,9% (Ehrhard)"
+      note: "Lượt B. Phân bố trong số người khó thở. Ca nặng nhất dừng ở màn sàng lọc cấp cứu; người còn trả lời câu này phần lớn khó thở cả lúc nghỉ. Ước lượng."
+  - finding: wheeze
+    freq: frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [ehrhard-aaci-2024, byt-tt-51-2017, nhs-anaphylaxis]
+      locator: "Ehrhard 2024 bảng 3; 51/2017 Phụ lục I (ran rít), Phụ lục II (khò khè)"
+      reported: "Khó thở, co thắt phế quản, khò khè gộp 68,0%"
+      note: "Lượt B. Số liệu gộp khó thở với khò khè; khò khè riêng ước khoảng một nửa."
+  - finding: stridor
+    freq: occasional
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-tt-51-2017, cardona-waoj-2020, nhs-anaphylaxis]
+      locator: "51/2017 Phụ lục I, II (thở rít, rít thanh quản ở độ III); WAO 2020 tiêu chuẩn chẩn đoán"
+      note: "Lượt B. Tổn thương thanh quản ở ca nặng; ước occasional. Tỷ lệ nền 1% nên câu 'Có' tăng mạnh khả năng bệnh. Đã có quy tắc mức 1–2."
+  - finding: hoarse_voice
+    freq: occasional
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-tt-51-2017, nhs-anaphylaxis, cardona-waoj-2020]
+      locator: "51/2017 Phụ lục II (độ II: khàn tiếng); NHS (khàn tiếng); WAO (đổi giọng)"
+      note: "Lượt B. Không có tỷ lệ; ước occasional."
+  - finding: chest_pain_pressure
+    freq: occasional
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-tt-51-2017, ehrhard-aaci-2024]
+      locator: "51/2017 Phụ lục I (khó thở, tức ngực); Ehrhard 2024 bảng 3"
+      note: "Lượt B. Tức ngực là triệu chứng hô hấp của phản vệ. Không có tỷ lệ riêng; ước occasional."
+  - finding: chest_pain_duration
+    dist: { seconds: 0.05, minutes: 0.45, over_15min: 0.45, days: 0.05 }
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [byt-tt-51-2017, nhs-anaphylaxis]
+      note: "Lượt B. Phân bố trong số người đau ngực: tức ngực mới xuất hiện trong vài phút đến vài giờ. Ước lượng."
+  - finding: fainting_or_near_fainting
+    freq: occasional
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [ehrhard-aaci-2024, byt-tt-51-2017]
+      locator: "Ehrhard 2024 bảng 3"
+      reported: "Ngất 10,0%; chóng mặt, vã mồ hôi lạnh, đau ngực và khác 21,5%; huyết áp tâm thu dưới 100 mmHg 19,2%"
+      note: "Lượt B. Câu hỏi gồm cả choáng như sắp ngất; ước khoảng 20%."
+  - finding: cold_sweat
+    freq: occasional
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [ehrhard-aaci-2024]
+      locator: "Ehrhard 2024 bảng 3"
+      reported: "Chóng mặt, vã mồ hôi lạnh, đau ngực và khác 21,5%"
+      note: "Lượt B. Số liệu gộp; ước occasional."
+  - finding: vomiting
+    freq: occasional
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [ehrhard-aaci-2024, byt-tt-51-2017]
+      locator: "Ehrhard 2024 bảng 3; 51/2017 Phụ lục I (đau bụng hoặc nôn)"
+      reported: "Nôn 9,6%; buồn nôn 15,3%"
+      note: "Lượt B. Nôn nhiều hơn ở phản vệ do thức ăn, côn trùng đốt."
+  - finding: abdominal_pain
+    freq: occasional
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [ehrhard-aaci-2024, byt-tt-51-2017]
+      locator: "Ehrhard 2024 bảng 3"
+      reported: "Đau bụng 8,9%"
+      note: "Lượt B. Gần ranh giới rare/occasional; 51/2017 xếp đau bụng vào các dấu hiệu gợi ý phản vệ."
+  - finding: runny_nose
+    freq: rare
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [ehrhard-aaci-2024]
+      locator: "Ehrhard 2024 bảng 3"
+      reported: "Chảy mũi 3,2%; nghẹt mũi 3,8%"
+      note: "Lượt B. Thấp hơn hẳn tỷ lệ nền 0,2: sổ mũi gợi ý nhiễm vi rút hơn phản vệ."
+  - finding: fever
+    freq: rare
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [cardona-waoj-2020, byt-tt-51-2017]
+      note: "Lượt B. Sốt không thuộc các biểu hiện của phản vệ trong hai nguồn; người phản vệ có thể đang sốt vì bệnh khác (phản vệ do kháng sinh, thuốc hạ sốt). Mức rare thấp hơn tỷ lệ nền 5%. Ước lượng."
+warning_signs:
+  - es_anaphylaxis
+  - es_severe_breathing
+  - stridor
+  - fainting_or_near_fainting
+  - cold_hands_feet
+  - confusion
+  - drowsy_hard_to_wake
+  - hoarse_voice
+self_care_vi:
+  - "Gọi 115 ngay; nếu đã được bác sĩ kê bút tiêm cấp cứu dị ứng thì dùng ngay theo hướng dẫn."
+  - "Nằm xuống, kê cao chân; nếu khó thở thì ngồi dậy từ từ. Không đứng dậy, không đi lại."
+  - "Không ăn, uống thêm thứ nghi gây dị ứng; mang theo vỏ thuốc, tên món ăn đã dùng."
+see_doctor_vi:
+  - "Phản vệ cần được tiêm thuốc và theo dõi tại cơ sở y tế ngay."
+  - "Vẫn đến bệnh viện kể cả khi triệu chứng đã đỡ: phản ứng có thể quay lại trong vài giờ."
+  - "Sau khi khỏi, khám chuyên khoa dị ứng để tìm nguyên nhân và được dặn cách phòng tránh."
+  - "Báo cho mọi bác sĩ, dược sĩ về thuốc, thức ăn đã gây phản vệ."
+sources: [byt-tt-51-2017, nhs-anaphylaxis, cardona-waoj-2020, ehrhard-aaci-2024]
+review:
+  status: draft
+  authors: ["agent:pass-b"]
+  doctor_reviewer: null
+  updated: "2026-10-31"
+  notes_vi: "Lượt B (Giai đoạn 3 lô 3, phần b). Mức xử trí 1, thuộc nhóm không được bỏ sót (giữ gợi ý): NHS chỉ ghi 'gọi 999'; 51/2017/TT-BYT: phản vệ có thể tử vong trong vài phút, tiêm bắp adrenalin ngay từ độ II. Bệnh này gồm phản vệ độ II trở lên (theo 51/2017); dị ứng chỉ có mề đay, ngứa (độ I) không thuộc bệnh này, danh mục chưa có bệnh mề đay cấp. Ca nặng thường dừng ở màn sàng lọc cấp cứu; khi màn sàng lọc trả lời 'không', bộ ba tiếp xúc dị nguyên (very_frequent), nổi ban (very_frequent) rồi mề đay (frequent), cùng khởi phát đột ngột, đưa phản vệ lên đầu so với cơn hen (hen có tiếp xúc dị nguyên rare trong bản lượt B phần a). Nếu chỉ có tiếp xúc dị nguyên kèm khò khè mà trả lời 'không nổi ban', phản vệ và hen ngang nhau ở trẻ 5–17 tuổi; quy tắc rf_anaphylaxis_signs (mức 1) vẫn áp dụng khi khó thở khởi phát đột ngột. Không liên kết asthma_known: 10,9% người phản vệ có hen (Ehrhard), mức occasional (20%) sẽ thổi phồng. Không có hệ số theo giới (nữ 53,3%). Điều cần bác sĩ xem: (1) prior là ước lượng từ tỷ lệ phản vệ ở khoa cấp cứu châu Âu, chưa có số liệu Việt Nam; (2) tần suất triệu chứng từ một khoa cấp cứu ở Thụy Sĩ (người từ 16 tuổi, độ II trở lên); trẻ em có thể khác (nôn nhiều hơn khi do thức ăn); (3) mã T78.2 là 'sốc phản vệ, không đặc hiệu', còn có T78.0 (do thức ăn), T88.6 (do thuốc), chưa đối chiếu với danh mục của Bộ Y tế. Lời khuyên nằm, kê chân, không đứng dậy dù thấy đỡ theo NHS Anaphylaxis; theo dõi vì phản ứng hai pha theo WAO 2020."
