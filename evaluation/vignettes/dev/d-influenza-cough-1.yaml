@@ -1,0 +1,53 @@
+id: d-influenza-cough-1
+set: dev
+title_vi: "Nam 34 tuổi ở Hà Nội, tháng 1, chọn Ho: ho khan 2 ngày, sốt cao đột ngột, rét run, đau nhức người"
+narrative_vi: "Anh Q., 34 tuổi, ở Hà Nội. Từ hôm kia đột ngột sốt cao 39,3°C, rét run, đau nhức khắp người, đau đầu, mệt, ho khan nhiều, đau họng. Vợ và con cùng nhà đang bị cúm. Không khó thở, không đau ngực, không nôn. Không có bệnh nền, không hút thuốc. Tự xét nghiệm COVID-19 âm tính."
+patient:
+  age_years: 34
+  sex: male
+  region: north
+  month: 1
+complaint: cough
+answers:
+  cough_duration: lt_1w
+  productive_cough: absent
+  fever: present
+  fever_max_temp: ge_39
+  fever_duration: d1_2
+  chills_rigors: present
+  myalgia: present
+  headache: present
+  fatigue: present
+  sore_throat: present
+  runny_nose: absent
+  nasal_congestion: absent
+  sick_contact_respiratory: present
+  covid_self_test: negative
+  breathing_difficulty: absent
+  pleuritic_chest_pain: absent
+  chest_pain: absent
+  chest_pain_pressure: absent
+  wheeze: absent
+  hemoptysis: absent
+  stridor: absent
+  choking_episode: absent
+  vomiting: absent
+  diarrhea: absent
+  rash_any: absent
+  confusion: absent
+  drowsy_hard_to_wake: absent
+  neck_stiffness: absent
+  asthma_known: absent
+  smoker: absent
+  diabetes: absent
+  known_heart_disease: absent
+  immunocompromised: absent
+default_unmentioned: absent
+expected:
+  condition: influenza
+  acceptable: []
+  triage: 5
+source:
+  basis: "Cúm chưa biến chứng ở người lớn khỏe mạnh: khởi phát đột ngột với sốt, rét run, đau cơ, đau đầu, ho khan (CDC; 1840/QĐ-BYT), không có dấu hiệu nặng, không thuộc nhóm nguy cơ: theo dõi tại nhà."
+  references: [byt-qd-1840-2025, cdc-flu-clinical-signs, nhs-cough]
+author: "agent:pass-c"

@@ -1,0 +1,46 @@
+id: d-croup-3
+set: dev
+title_vi: "Bé gái 13 tháng sổ mũi 2 ngày, ho ông ổng, khóc khàn, mẹ tả là thở khò khè"
+narrative_vi: "Bé M., 13 tháng tuổi, ở Cần Thơ, tháng 9. Hai ngày nay bé sổ mũi, sốt 38,3°C. Đêm qua bé ho ông ổng như tiếng chó sủa, tiếng khóc khàn đi; mẹ nghe ngực bé có tiếng khò khè khi bé khóc. Khi nằm yên, bé thở êm, không rít, không thở nhanh, ngực không lõm, không thở rên, môi hồng. Bé vẫn bú được, không chảy dãi, không li bì. Không sặc, hóc gì. Không ho thành cơn dài, không nôn sau ho."
+patient:
+  age_months: 13
+  sex: female
+  region: south
+  month: 9
+complaint: cough
+answers:
+  barking_cough: present
+  hoarse_voice: present
+  wheeze: present
+  night_respiratory_symptoms: present
+  cough_duration: lt_1w
+  runny_nose: present
+  fever: present
+  fever_max_temp: t38_39
+  fever_duration: d1_2
+  stridor: absent
+  breathing_difficulty: absent
+  chest_indrawing: absent
+  grunting: absent
+  apnea_cyanosis_spells: absent
+  drooling_cannot_swallow: absent
+  choking_episode: absent
+  child_feeding_reduced: absent
+  child_unable_to_drink: absent
+  child_vomits_everything: absent
+  drowsy_hard_to_wake: absent
+  seizure_recent: absent
+  cough_paroxysms: absent
+  inspiratory_whoop: absent
+  post_tussive_vomiting: absent
+  sick_contact_respiratory: unknown
+default_unmentioned: absent
+expected:
+  condition: croup
+  acceptable: []
+  triage: 3
+source:
+  basis: "Viêm thanh quản cấp: ho ông ổng, khàn tiếng sau 1–3 ngày viêm long, sốt nhẹ (Smith 2018; MSD Croup). Cha mẹ có thể gọi tiếng rít khi khóc là 'khò khè'; khò khè thật nếu có thường nhẹ (Smith 2018), còn viêm tiểu phế quản không có ho ông ổng. Không thở rít lúc nằm yên, không rút lõm: thể nhẹ. NHS Croup: khám khẩn (mức 3)."
+  references: [smith-afp-2018, msd-croup, nhs-croup]
+author: "agent:pass-c"
+notes_vi: "Ca dễ nhầm với viêm tiểu phế quản (người nhà trả lời có khò khè)."

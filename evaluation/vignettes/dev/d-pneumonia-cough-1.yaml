@@ -1,0 +1,54 @@
+id: d-pneumonia-cough-1
+set: dev
+title_vi: "Nam 40 tuổi chọn Ho: ho đờm 4 ngày, sốt 39°C, rét run, đau ngực khi hít sâu, hụt hơi khi đi lại"
+narrative_vi: "Anh N., 40 tuổi, ở Huế, không hút thuốc. Bốn ngày nay ho nhiều, khạc đờm vàng đặc; ba ngày nay sốt cao 39,2°C, rét run. Đau nhói ngực bên phải khi hít sâu và khi ho, mấy ngày nay chưa hết. Đi lại thấy hụt hơi, ngồi nghỉ thì đỡ, nói được cả câu. Không sổ mũi, không đau họng. Tỉnh táo. Không có bệnh nền. Tự xét nghiệm COVID-19 âm tính."
+patient:
+  age_years: 40
+  sex: male
+  region: central
+  month: 10
+complaint: cough
+answers:
+  cough_duration: lt_1w
+  productive_cough: present
+  fever: present
+  fever_max_temp: ge_39
+  fever_duration: d3_5
+  chills_rigors: present
+  pleuritic_chest_pain: present
+  chest_pain: present
+  chest_pain_duration: days
+  chest_pain_pressure: absent
+  breathing_difficulty: present
+  dyspnea_onset: hours_days
+  dyspnea_severity: exertion
+  runny_nose: absent
+  sore_throat: absent
+  nasal_congestion: absent
+  wheeze: absent
+  hemoptysis: absent
+  stridor: absent
+  choking_episode: absent
+  myalgia: absent
+  headache: absent
+  confusion: absent
+  drowsy_hard_to_wake: absent
+  cold_hands_feet: absent
+  severe_weakness: absent
+  covid_self_test: negative
+  smoker: absent
+  asthma_known: absent
+  copd_known: absent
+  diabetes: absent
+  known_heart_disease: absent
+  immunocompromised: absent
+  sick_contact_respiratory: absent
+default_unmentioned: absent
+expected:
+  condition: pneumonia
+  acceptable: []
+  triage: 3
+source:
+  basis: "Viêm phổi mắc phải ở cộng đồng điển hình ở người lớn chọn Ho: sốt cao, rét run, ho đờm, đau ngực kiểu màng phổi, khó thở khi gắng sức, không sổ mũi (4235/QĐ-BYT; GRACE). Dưới 65 tuổi, tỉnh táo, không khó thở lúc nghỉ: khám, chụp phổi trong 24 giờ."
+  references: [byt-qd-4235-2012, vanvugt-bmj-2013, kinkade-afp-2016]
+author: "agent:pass-c"

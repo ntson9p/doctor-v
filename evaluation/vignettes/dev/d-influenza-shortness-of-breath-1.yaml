@@ -1,0 +1,65 @@
+id: d-influenza-shortness-of-breath-1
+set: dev
+title_vi: "Nữ 45 tuổi chọn Khó thở: cúm ngày 3, sốt, ho, đau nhức người, nay hụt hơi khi đi lại"
+narrative_vi: "Chị D., 45 tuổi, ở Hải Dương, tháng 2. Ba ngày nay sốt 38,8°C, rét run, đau nhức khắp người, mệt, ho khan, đau họng, sổ mũi; chồng vừa được chẩn đoán cúm. Từ hôm qua thấy hụt hơi khi đi lại, tăng dần, ngồi nghỉ thì đỡ, nói được cả câu. Không đau ngực, không khò khè, không phù chân. Không có thai, không chậm kinh. Không có bệnh nền, không hút thuốc. Tự xét nghiệm COVID-19 âm tính."
+patient:
+  age_years: 45
+  sex: female
+  region: north
+  month: 2
+complaint: shortness_of_breath
+answers:
+  fever: present
+  fever_max_temp: t38_39
+  fever_duration: d3_5
+  chills_rigors: present
+  myalgia: present
+  fatigue: present
+  cough: present
+  cough_duration: lt_1w
+  productive_cough: absent
+  sore_throat: present
+  runny_nose: present
+  sick_contact_respiratory: present
+  covid_self_test: negative
+  dyspnea_onset: hours_days
+  dyspnea_severity: exertion
+  pleuritic_chest_pain: absent
+  chest_pain: absent
+  chest_pain_pressure: absent
+  wheeze: absent
+  orthopnea: absent
+  leg_swelling_both: absent
+  leg_swelling_one_side: absent
+  palpitations: absent
+  fainting_or_near_fainting: absent
+  hemoptysis: absent
+  stridor: absent
+  choking_episode: absent
+  allergen_exposure: absent
+  rash_any: absent
+  confusion: absent
+  drowsy_hard_to_wake: absent
+  cold_hands_feet: absent
+  severe_weakness: absent
+  asthma_known: absent
+  copd_known: absent
+  smoker: absent
+  former_smoker: absent
+  diabetes: absent
+  known_heart_disease: absent
+  immunocompromised: absent
+  recent_immobility: absent
+  estrogen_use: absent
+  pregnant: absent
+  missed_period: absent
+default_unmentioned: absent
+expected:
+  condition: influenza
+  acceptable: [pneumonia]
+  triage: 3
+source:
+  basis: "Cúm có khó thở khi gắng sức từ ngày thứ 3: 1840/QĐ-BYT xếp khó thở vào dấu hiệu cúm nặng hoặc biến chứng, cần khám để loại viêm phổi; chưa có khó thở lúc nghỉ, không thuộc nhóm nguy cơ: khám trong 24 giờ (quy tắc rf_fever_breathing)."
+  references: [byt-qd-1840-2025, cdc-flu-clinical-signs, frese-jcmr-2011]
+author: "agent:pass-c"
+notes_vi: "Viêm phổi biến chứng cúm cũng chấp nhận được: chỉ khám, chụp phổi mới phân biệt được."

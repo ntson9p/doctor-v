@@ -1,0 +1,46 @@
+id: d-lung-cancer-1
+set: dev
+title_vi: "Nam 66 tuổi hút thuốc 40 năm, ho hơn 2 tháng, đờm lẫn máu, sụt 5 kg"
+narrative_vi: "Ông M., 66 tuổi, ở Nam Định, hút thuốc lá 40 năm, vẫn đang hút. Hơn 2 tháng nay ho không hết, ho khan là chính, gần đây đờm có lẫn vài vệt máu. Sụt khoảng 5 kg trong 3 tháng, ăn kém, mệt. Không sốt, không ra mồ hôi đêm, không khó thở, không đau ngực. Không có ai quanh mình bị lao. Chưa từng được nói bị bệnh phổi."
+patient:
+  age_years: 66
+  sex: male
+  region: north
+  month: 8
+complaint: cough
+answers:
+  cough_duration: gt_8w
+  productive_cough: absent
+  hemoptysis: present
+  hemoptysis_large: absent
+  weight_loss_unintended: present
+  loss_of_appetite: present
+  fatigue: present
+  smoker: present
+  fever: absent
+  night_sweats: absent
+  breathing_difficulty: absent
+  pleuritic_chest_pain: absent
+  chest_pain: absent
+  chest_pain_pressure: absent
+  wheeze: absent
+  runny_nose: absent
+  tb_contact: absent
+  stridor: absent
+  choking_episode: absent
+  copd_known: absent
+  asthma_known: absent
+  lymph_node_swelling: absent
+  leg_swelling_one_side: absent
+  diabetes: absent
+  immunocompromised: absent
+default_unmentioned: absent
+expected:
+  condition: lung_cancer
+  acceptable: []
+  triage: 3
+source:
+  basis: "Ung thư phổi điển hình: người từ 40 tuổi hút thuốc, ho kéo dài, ho ra máu, sụt cân (NICE NG12 mục 1.1.1: chuyển khám theo đường nghi ung thư; Hamilton 2005). NHS Lung cancer và Coughing up blood: ho ra máu thì khám bác sĩ khẩn hoặc gọi 111 (mức 3)."
+  references: [nice-ng12, nhs-lung-cancer-symptoms, nhs-coughing-up-blood, okoli-plosone-2018]
+author: "agent:pass-c"
+notes_vi: "Ở Việt Nam lao phổi cũng là chẩn đoán phải nghĩ tới; ca này không có mồ hôi đêm, sốt, và ho đã hơn 2 tháng."

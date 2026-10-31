@@ -1,0 +1,46 @@
+id: d-asthma-2
+set: dev
+title_vi: "Bé trai 7 tuổi ho khan về đêm 3 tuần, khò khè khi chạy nhảy, chưa được chẩn đoán hen"
+narrative_vi: "Bé Q., 7 tuổi, ở Hải Phòng. Ba tuần nay ho khan, ho nhiều về đêm và gần sáng, chạy nhảy thì ho và khò khè, nghỉ một lúc thì đỡ. Năm ngoái cũng có hai đợt ho kéo dài như vậy khi trời chuyển lạnh. Bé không sốt, không sổ mũi, không đau họng, ban ngày vẫn chơi bình thường, không khó thở lúc ngồi yên. Không ho thành cơn dồn dập, không nôn sau ho. Bé chưa được bác sĩ nói là hen. Bố bị viêm mũi dị ứng."
+patient:
+  age_years: 7
+  sex: male
+  region: north
+  month: 11
+complaint: cough
+answers:
+  cough_duration: w2_8
+  productive_cough: absent
+  night_respiratory_symptoms: present
+  wheeze: present
+  similar_episodes_before: present
+  breathing_difficulty: absent
+  fever: absent
+  runny_nose: absent
+  nasal_congestion: absent
+  sore_throat: absent
+  pleuritic_chest_pain: absent
+  chest_pain: absent
+  chest_pain_pressure: absent
+  cough_paroxysms: absent
+  inspiratory_whoop: absent
+  post_tussive_vomiting: absent
+  barking_cough: absent
+  stridor: absent
+  choking_episode: absent
+  hemoptysis: absent
+  asthma_known: absent
+  night_sweats: absent
+  weight_loss_unintended: absent
+  tb_contact: absent
+  heartburn: absent
+default_unmentioned: absent
+expected:
+  condition: asthma
+  acceptable: []
+  triage: 4
+source:
+  basis: "Hen dạng ho ở trẻ: ho khan kéo dài, nặng về đêm, khò khè khi gắng sức, tái lại theo mùa (GINA 2026; Australian Asthma Handbook). Ho từ 2 tuần cần được khám trong vài ngày để tìm nguyên nhân (162/QĐ-BYT; IMCI: trẻ ho trên 2 tuần chuyển khám lao, hen); không có dấu hiệu khó thở cấp."
+  references: [gina-2026, nac-asthma-handbook, byt-qd-162-2024, who-imci-chart-booklet-2014]
+author: "agent:pass-c"
+notes_vi: "Ca không điển hình: trẻ chưa được chẩn đoán hen, ho là triệu chứng chính, không có cơn khó thở."

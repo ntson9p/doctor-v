@@ -1,0 +1,50 @@
+id: d-bronchiolitis-2
+set: dev
+title_vi: "Bé gái 10 tháng, người nhà chọn Sốt: sốt 38,6°C 2 ngày, ho, sổ mũi, thở nhanh, chưa nghe khò khè"
+narrative_vi: "Bé H., 10 tháng tuổi, ở Thành phố Hồ Chí Minh, tháng 8. Người nhà lo nhất là sốt nên chọn Sốt. Bé sốt 38,6°C hai ngày nay, sổ mũi, nghẹt mũi, ho từ hôm qua, thở nhanh hơn mọi ngày. Mẹ không nghe thấy khò khè. Bé bú ít hơn một chút nhưng vẫn được hơn một nửa, không nôn, không tiêu chảy, không li bì, không co giật. Không nổi ban, không có phỏng nước ở tay chân hay loét miệng. Ngực không lõm sâu, không thở rên. Chị họ học mẫu giáo đang bị cảm."
+patient:
+  age_months: 10
+  sex: female
+  region: south
+  month: 8
+complaint: fever
+answers:
+  fever_max_temp: t38_39
+  fever_duration: d1_2
+  cough: present
+  cough_duration: lt_1w
+  runny_nose: present
+  nasal_congestion: present
+  breathing_difficulty: present
+  wheeze: absent
+  sick_contact_respiratory: present
+  child_feeding_reduced: absent
+  child_unable_to_drink: absent
+  child_vomits_everything: absent
+  vomiting: absent
+  diarrhea: absent
+  drowsy_hard_to_wake: absent
+  seizure_recent: absent
+  rash_any: absent
+  mouth_ulcers: absent
+  hand_foot_blisters: absent
+  chest_indrawing: absent
+  grunting: absent
+  apnea_cyanosis_spells: absent
+  stridor: absent
+  ear_pain: absent
+  sore_throat: unknown
+  neck_stiffness: absent
+  bulging_fontanelle: absent
+  cold_hands_feet: absent
+  dengue_nearby: absent
+default_unmentioned: absent
+expected:
+  condition: bronchiolitis
+  acceptable: [pneumonia]
+  triage: 3
+source:
+  basis: "Viêm tiểu phế quản biểu hiện bằng sốt (khoảng 30% ca sốt, thường dưới 39°C: NICE NG9 1.1.4), ho, thở nhanh sau viêm long; người nhà chưa nghe khò khè (tiêu chuẩn là khò khè hoặc ran nổ khi bác sĩ nghe phổi, NG9 1.1.3). Tại nhà không phân biệt được với viêm phổi (sốt kèm thở nhanh ở trẻ dưới 5 tuổi là viêm phổi theo IMCI), nên chấp nhận viêm phổi. Mức 3: sốt kèm thở nhanh cần khám trong ngày (IMCI; quy tắc rf_fever_breathing)."
+  references: [nice-ng9, who-imci-chart-booklet-2014, nhs-bronchiolitis]
+author: "agent:pass-c"
+notes_vi: "Ca không điển hình (triệu chứng chính Sốt, chưa có khò khè), kiểm tra prior Sốt P3 của bệnh mới ở triệu chứng chính đã phát hành."

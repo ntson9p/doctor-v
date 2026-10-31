@@ -41,6 +41,45 @@ priors:
       sources: [moustaki-pedpulmonol-2003, byt-qd-4235-2012]
       reported: "34% trẻ trên 4 tuổi viêm phổi thùy có đau bụng (bệnh viện)"
       note: "Viêm phổi thùy dưới ở trẻ có thể giống bệnh bụng cấp; 4235 ghi người lớn viêm phổi có khi nôn, chướng bụng, đau bụng; người cao tuổi biểu hiện không điển hình. Ước 1–5% ở trẻ em, 0,2–1% ở vị thành niên và người cao tuổi, 0,02–0,2% ở người lớn. Hai lượt thống nhất."
+  - complaint: cough
+    default: P3
+    by_age:
+      infant_0_2m: P2
+      child_2m_5y: P2
+      elder_65_74: P2
+      elder_75p: P2
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [vanvugt-bmj-2013, takahashi-bmcinfectdis-2013, byt-qd-3312-2015]
+      locator: "van Vugt 2013 bảng 1"
+      reported: "140/2.820 người lớn ho cấp ở tuyến ban đầu (5%) có viêm phổi trên phim (tuổi trung bình 50); viêm phổi nhập viện ở trẻ dưới 5 tuổi và người từ 65 tuổi gấp khoảng 10 lần người trẻ (Nha Trang)"
+      population: "người lớn ho cấp ở tuyến ban đầu, 12 nước châu Âu"
+      note: "Lô 3. Thang tuyệt đối. 5% của GRACE nằm ở ranh giới P3/P2 và là người đã đi khám; người chọn Ho gồm cả cảm lạnh nhẹ ít khi đi khám, nên người lớn dưới 65 tuổi để 1–5% (P3). Lượt A để P3 cho người 45–64 tuổi, lượt B để P2; lượt C chọn P3 theo lý do trên. Trẻ dưới 5 tuổi và người từ 65 tuổi mắc nhiều hơn rõ (Takahashi; 3312): 5–20% (P2), hai lượt thống nhất. Trẻ dưới 2 tháng: lượt A P3, lượt B P2; chọn P2 vì trẻ nhỏ ho cần nghĩ nhiều tới viêm phổi (3312)."
+  - complaint: shortness_of_breath
+    default: P3
+    by_age:
+      infant_0_2m: P2
+      child_2m_5y: P2
+      elder_65_74: P2
+      elder_75p: P2
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [frese-jcmr-2011, byt-qd-3312-2015, takahashi-bmcinfectdis-2013]
+      locator: "Frese 2011 bảng 5"
+      reported: "viêm phổi 2,6% lần khám vì khó thở mới (Hà Lan), 3,2% (Đức)"
+      population: "người mọi lứa tuổi đi khám bác sĩ đa khoa vì khó thở"
+      note: "Lô 3. Lượt A để P2 cho mọi tuổi; lượt B để P3, riêng trẻ dưới 5 tuổi và người từ 65 tuổi P2. Lượt C theo lượt B (nguồn có số liệu): ở người lớn khó thở chủ yếu do viêm phế quản, hen, bệnh phổi tắc nghẽn mạn tính, suy tim; viêm phổi 1–5%. Trẻ dưới 5 tuổi: thở nhanh, rút lõm lồng ngực là tiêu chuẩn chẩn đoán viêm phổi (3312): P2. Từ 65 tuổi viêm phổi tăng khoảng 10 lần (Takahashi): P2."
+  - complaint: chest_pain
+    default: P3
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [verdon-smw-2008, vanvugt-bmj-2013, byt-qd-4235-2012]
+      locator: "Verdon 2008 tóm tắt; 4235 bài Viêm phổi mắc phải ở cộng đồng, mục 2.1.1"
+      reported: "nguyên nhân hô hấp chiếm 10% người đau ngực ở tuyến ban đầu (Thụy Sĩ); đau ngực 57% người viêm phổi (GRACE)"
+      note: "Lô 3, hai lượt thống nhất. Trong 10% đau ngực do hô hấp có viêm phổi, viêm phế quản, hen; ước viêm phổi 1–5% (P3) ở mọi lứa tuổi được hỏi."
 findings:
   - finding: fever
     freq: frequent
@@ -112,12 +151,13 @@ findings:
     freq_by_age:
       child_2m_5y: rare
       child_5_12: occasional
+    freq_by_complaint: { chest_pain: very_frequent }
     evidence:
       tier: A
       basis: numeric
-      sources: [htun-scirep-2019, vanvugt-bmj-2013, shah-jama-2017]
+      sources: [htun-scirep-2019, vanvugt-bmj-2013, shah-jama-2017, byt-qd-4235-2012]
       reported: "người lớn: đau ngực 0,49 (gộp), 57% (GRACE); trẻ em (nghiên cứu có vị thành niên): đau ngực 8–14%"
-      note: "Nguồn đo đau ngực chung, không riêng đau khi hít sâu. Trẻ dưới 5 tuổi gần như không tự báo được (lượt B)."
+      note: "Nguồn đo đau ngực chung, không riêng đau khi hít sâu. Trẻ dưới 5 tuổi gần như không tự báo được (lượt B). Lô 3 (lượt C): người viêm phổi chọn Đau ngực là nhóm đã có đau ngực, và đau của viêm phổi là đau bên tổn thương, tăng khi hít sâu, khi ho (4235), nên với Đau ngực để very_frequent (ước lượng; lượt B đã nêu vấn đề này). Giá trị theo triệu chứng chính được ưu tiên hơn mức theo tuổi."
   - finding: runny_nose
     freq: frequent
     evidence:
@@ -184,6 +224,93 @@ findings:
       basis: judgment
       sources: [takahashi-bmcinfectdis-2013, byt-qd-4235-2012]
       note: "Bệnh cấp tính; thời gian từ khởi phát đến nhập viện trung bình 2,7–4,2 ngày (Takahashi). Đau bụng kéo dài hoặc tái đi tái lại nhiều tuần không phù hợp. Ước lượng của lượt B."
+  - finding: cough_duration
+    dist: { lt_1w: 0.525, w1_2: 0.31, w2_8: 0.145, gt_8w: 0.02 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [vanvugt-bmj-2013, takahashi-bmcinfectdis-2013, byt-qd-4235-2012]
+      locator: "van Vugt 2013 bảng 1; 4235 mục 2.1.1"
+      reported: "trung bình 9 ngày bệnh trước khi khám (độ lệch chuẩn 6) ở người viêm phổi (GRACE); khởi phát đến nhập viện trung bình 2,7–4,2 ngày (Nha Trang)"
+      note: "Lô 3. Phân bố trong số người có ho. Bệnh cấp, ho mới xuất hiện và tăng dần (4235); một phần viêm phổi xuất hiện sau nhiễm vi rút 1–2 tuần. Ho từ 2 tháng gợi ý bệnh khác (lao, ung thư, bệnh phổi tắc nghẽn). Trung bình của hai lượt. Ước lượng."
+  - finding: wheeze
+    freq: occasional
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [byt-qd-3312-2015, byt-qd-4235-2012, vanvugt-bmj-2013]
+      locator: "4235 mục 2.1.1"
+      note: "Lô 3, hai lượt thống nhất. 4235 mô tả ran ẩm, ran nổ, không nêu khò khè là dấu hiệu điển hình; GRACE không đo khò khè. Viêm phổi do vi rút ở trẻ nhỏ hoặc người có bệnh phổi sẵn có thể khò khè. Thấp hơn nhiều so với hen, đợt cấp bệnh phổi tắc nghẽn. Cần bác sĩ duyệt."
+  - finding: dyspnea_onset
+    dist: { sudden: 0.08, hours_days: 0.795, weeks: 0.125 }
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-4235-2012, takahashi-bmcinfectdis-2013]
+      locator: "4235 bài Hướng dẫn chẩn đoán và xử trí khó thở (kiểu xuất hiện khó thở)"
+      note: "Lô 3. Phân bố trong số người có khó thở. 4235 xếp viêm phổi vào nhóm khó thở tiến triển nhanh (vài giờ đến vài ngày). Khó thở đột ngột trong vài phút gợi ý thuyên tắc phổi, tràn khí màng phổi. Trung bình của hai lượt."
+  - finding: dyspnea_severity
+    dist: { exertion: 0.525, rest: 0.395, cannot_speak: 0.08 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [vanvugt-bmj-2013, byt-qd-4235-2012, byt-qd-3312-2015]
+      locator: "van Vugt 2013 bảng 1"
+      reported: "ở người viêm phổi: khó thở 96/140 (69%), khó thở nặng 17/140 (12%), tức khoảng 18% người có khó thở"
+      note: "Lô 3. Phân bố trong số người có khó thở. Viêm phổi làm thở nhanh cả lúc nghỉ hay hơn viêm phế quản; người tự kiểm tra phần lớn chưa nặng. Trung bình của hai lượt. Khó thở lúc nghỉ có quy tắc mức 2."
+  - finding: spo2_measured
+    dist: { ge_96: 0.2, s92_95: 0.13, lt_92: 0.07, not_measured: 0.6 }
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [byt-qd-4235-2012, kinkade-afp-2016]
+      locator: "4235 bài khó thở, mục 2.2 và 5.2"
+      note: "Lô 3, chỉ lượt B có liên kết này (dấu hiệu mới thêm vào danh mục). Phân bố trong số người có khó thở; 'Chưa đo' đúng bằng tỷ lệ nền 0,6. Viêm phổi gây giảm ô xy máu khi tổn thương rộng; giảm ô xy máu gợi ý viêm phổi hơn viêm phế quản (Kinkade). Ước lượng."
+  - finding: chest_pain_duration
+    dist: { seconds: 0.175, minutes: 0.15, over_15min: 0.225, days: 0.45 }
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [byt-qd-4235-2012, vanvugt-bmj-2013]
+      locator: "4235 mục 2.1.1"
+      note: "Lô 3. Phân bố trong số người có đau ngực. Đau kiểu màng phổi nhói lên theo nhịp thở, nhịp ho, lặp lại trong nhiều ngày (GRACE: trung bình 9 ngày bệnh); người bệnh có thể chọn 'vài giây' (từng cơn nhói) hoặc 'âm ỉ nhiều ngày'. Trung bình của hai lượt. Ước lượng."
+  - finding: chest_pain_exertional
+    freq: rare
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [byt-qd-4235-2012]
+      note: "Lô 3, hai lượt thống nhất. Tần suất trong số người có đau ngực. Đau của viêm phổi tăng khi hít sâu, khi ho, không theo kiểu xuất hiện khi gắng sức, đỡ khi nghỉ. Mức rare thấp hơn tỷ lệ nền 5%: câu 'có' nghiêng sang bệnh mạch vành."
+  - finding: chest_pain_sudden_severe
+    freq: rare
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [byt-qd-4235-2012]
+      locator: "4235 mục 2.1.1"
+      note: "Lô 3. Tần suất trong số người có đau ngực. Lượt A rare, lượt B occasional (4235: khởi phát đột ngột, đau ngực đôi khi nổi bật ở thể do phế cầu). Lượt C chọn rare: đau của viêm phổi thường đến cùng sốt, ho trong vài ngày, và câu 'có' nên nghiêng sang tràn khí màng phổi, thuyên tắc phổi, bóc tách động mạch chủ. Ước lượng."
+  - finding: chest_wall_tenderness
+    freq: rare
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [byt-qd-4235-2012]
+      note: "Lô 3, chỉ lượt B có liên kết này. Tần suất trong số người có đau ngực. Đau do viêm phổi ở sâu, ấn thành ngực thường không làm đau nhói đúng chỗ; đau khi ấn gợi ý đau thành ngực. Mức rare thấp hơn tỷ lệ nền 5%. Ước lượng, cần bác sĩ duyệt."
+  - finding: leg_swelling_both
+    freq: rare
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [byt-qd-4235-2012]
+      note: "Lô 3, chỉ lượt B có liên kết này. Phù hai chân không thuộc bệnh cảnh viêm phổi; khó thở kèm phù gợi ý suy tim. Mức rare thấp hơn tỷ lệ nền 5%. Ước lượng."
+  - finding: weight_loss_unintended
+    freq: rare
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [byt-qd-4235-2012]
+      locator: "4235 mục 2.3.1 (chẩn đoán phân biệt với lao phổi)"
+      note: "Lô 3, chỉ lượt B có liên kết này. Viêm phổi là bệnh cấp vài ngày; sụt cân trong vài tháng gợi ý lao phổi, ung thư phổi (4235). Mức rare thấp hơn tỷ lệ nền 5%."
 warning_signs:
   - es_severe_breathing
   - child_unable_to_drink
@@ -208,5 +335,5 @@ review:
   authors: ["agent:pass-a", "agent:pass-b"]
   reconciler: "agent:pass-c"
   doctor_reviewer: null
-  updated: "2026-10-24"
-  notes_vi: "Cần bác sĩ xem: (1) chưa mở được hướng dẫn viêm phổi người lớn hiện hành của Bộ Y tế (4815/QĐ-BYT năm 2020; một trang thứ cấp nêu 2147/QĐ-BYT năm 2026 thay thế); mô tả triệu chứng người lớn lấy từ bài viêm phổi của 4235/QĐ-BYT (2012), các liên kết chỉ dựa vào văn bản này để bậc C; (2) prior dựa trên tỷ suất nhập viện ở Nha Trang và GRACE, chưa có số liệu ngoại trú Việt Nam; prior cho đau bụng là ước lượng; (3) tần suất người lớn lấy từ nghiên cứu chỉ tuyển người có ho; (4) bỏ liên kết li bì (lượt A, cao hơn tỷ lệ nền) và đau tăng khi cử động (lượt B, không có nguồn; dấu hiệu này đặc trưng cho bệnh bụng ngoại khoa, liên kết mạnh ở viêm phổi có thể che viêm ruột thừa); (5) lú lẫn: very_rare dưới 65 tuổi, occasional từ 65 tuổi là ước lượng; (6) mã ICD-10 chưa đối chiếu được."
+  updated: "2026-10-31"
+  notes_vi: "Cần bác sĩ xem: (1) chưa mở được hướng dẫn viêm phổi người lớn hiện hành của Bộ Y tế (4815/QĐ-BYT năm 2020; một trang thứ cấp nêu 2147/QĐ-BYT năm 2026 thay thế); mô tả triệu chứng người lớn lấy từ bài viêm phổi của 4235/QĐ-BYT (2012), các liên kết chỉ dựa vào văn bản này để bậc C; (2) prior dựa trên tỷ suất nhập viện ở Nha Trang và GRACE, chưa có số liệu ngoại trú Việt Nam; prior cho đau bụng là ước lượng; (3) tần suất người lớn lấy từ nghiên cứu chỉ tuyển người có ho; (4) bỏ liên kết li bì (lượt A, cao hơn tỷ lệ nền) và đau tăng khi cử động (lượt B, không có nguồn; dấu hiệu này đặc trưng cho bệnh bụng ngoại khoa, liên kết mạnh ở viêm phổi có thể che viêm ruột thừa); (5) lú lẫn: very_rare dưới 65 tuổi, occasional từ 65 tuổi là ước lượng; (6) mã ICD-10 chưa đối chiếu được. Bổ sung Giai đoạn 3 lô 3 (lượt C, 31/10/2026): thêm prior Ho P3 (dưới 5 tuổi và từ 65 tuổi P2), Khó thở P3 (dưới 5 tuổi và từ 65 tuổi P2), Đau ngực P3; thêm liên kết cough_duration, wheeze, dyspnea_onset, dyspnea_severity, spo2_measured, chest_pain_duration, chest_pain_exertional, chest_pain_sudden_severe (rare), chest_wall_tenderness, leg_swelling_both, weight_loss_unintended; pleuritic_chest_pain thêm very_frequent khi triệu chứng chính là Đau ngực. Nguồn mới frese-jcmr-2011, verdon-smw-2008, kinkade-afp-2016 (đã mở lại). Không liên kết dấu hiệu chung chest_pain (quyết định của người bảo trì). Bác sĩ cần xem thêm: prior Ho dựa trên GRACE (châu Âu, người đã đi khám); khò khè, đau khi ấn ngực, các phân bố mới là ước lượng."

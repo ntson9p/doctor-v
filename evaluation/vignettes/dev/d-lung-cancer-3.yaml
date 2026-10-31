@@ -1,0 +1,52 @@
+id: d-lung-cancer-3
+set: dev
+title_vi: "Nam 70 tuổi bị phổi tắc nghẽn, ho tăng 2 tháng, đờm lẫn máu, sụt 6 kg, khó thở như mọi khi"
+narrative_vi: "Ông T., 70 tuổi, ở Thanh Hóa, hút thuốc lào 45 năm, được chẩn đoán bệnh phổi tắc nghẽn mạn tính 4 năm nay, lúc nào cũng hơi khó thở khi đi nhanh. Hai tháng nay ho nhiều hơn hẳn, không đỡ khi dùng thuốc xịt; tuần này đờm có lẫn vài vệt máu. Sụt 6 kg trong 3 tháng, ăn kém, mệt. Khó thở khi gắng sức như mọi khi, không nặng thêm đột ngột, ngồi nghỉ thì bình thường. Không sốt, không ra mồ hôi đêm, không đau ngực, không khò khè hơn thường ngày. Bác sĩ khám sau đó: phim phổi có khối u."
+patient:
+  age_years: 70
+  sex: male
+  region: north
+  month: 10
+complaint: cough
+answers:
+  copd_known: present
+  smoker: present
+  cough_duration: gt_8w
+  productive_cough: present
+  hemoptysis: present
+  hemoptysis_large: absent
+  weight_loss_unintended: present
+  loss_of_appetite: present
+  fatigue: present
+  breathing_difficulty: present
+  dyspnea_onset: weeks
+  dyspnea_severity: exertion
+  reliever_no_relief: absent
+  wheeze: absent
+  fever: absent
+  night_sweats: absent
+  pleuritic_chest_pain: absent
+  chest_pain: absent
+  chest_pain_pressure: absent
+  runny_nose: absent
+  tb_contact: absent
+  stridor: absent
+  choking_episode: absent
+  leg_swelling_both: absent
+  leg_swelling_one_side: absent
+  orthopnea: absent
+  asthma_known: absent
+  lymph_node_swelling: absent
+  known_heart_disease: absent
+  diabetes: absent
+  immunocompromised: absent
+default_unmentioned: absent
+expected:
+  condition: lung_cancer
+  acceptable: []
+  triage: 2
+source:
+  basis: "Ung thư phổi ở người bệnh phổi tắc nghẽn mạn tính hút thuốc lâu năm (bệnh đồng mắc, 2767/QĐ-BYT mục 1.2.1): ho thay đổi kéo dài, ho ra máu, sụt cân (NICE NG12). NHS Coughing up blood: ho ra máu kèm khó thở thì gọi 999 hoặc đến cấp cứu (mức 2); quy tắc rf_hemoptysis_severe."
+  references: [nice-ng12, nhs-coughing-up-blood, byt-qd-2767-2023, hamilton-thorax-2005]
+author: "agent:pass-c"
+notes_vi: "Ca dễ nhầm với đợt cấp bệnh phổi tắc nghẽn mạn tính và lao phổi. Khó thở là khó thở nền của bệnh phổi tắc nghẽn, vẫn được trả lời 'có'."

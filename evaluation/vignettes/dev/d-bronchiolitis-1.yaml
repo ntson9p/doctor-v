@@ -1,0 +1,45 @@
+id: d-bronchiolitis-1
+set: dev
+title_vi: "Bé trai 4 tháng, sổ mũi 3 ngày rồi ho, thở nhanh, khò khè, sốt nhẹ"
+narrative_vi: "Bé A., 4 tháng tuổi, ở Hà Nội, tháng 12. Ba ngày trước bé sổ mũi, nghẹt mũi, hắt hơi; anh trai 3 tuổi đang bị cảm. Hai ngày nay bé ho nhiều, thở nhanh hơn bình thường, nghe khò khè trong ngực. Hôm qua sốt 38,2°C. Bé vẫn bú được khoảng ba phần tư so với mọi ngày, vẫn đi tiểu đều. Ngực không lõm sâu khi thở, không thở rên, không lúc nào ngừng thở hay tím môi, không li bì. Không ho thành cơn rít, không ho ông ổng. Chưa đo ô xy."
+patient:
+  age_months: 4
+  sex: male
+  region: north
+  month: 12
+complaint: cough
+answers:
+  cough_duration: lt_1w
+  breathing_difficulty: present
+  wheeze: present
+  runny_nose: present
+  nasal_congestion: present
+  fever: present
+  fever_max_temp: t38_39
+  fever_duration: d1_2
+  sick_contact_respiratory: present
+  chest_indrawing: absent
+  grunting: absent
+  apnea_cyanosis_spells: absent
+  child_feeding_reduced: absent
+  child_unable_to_drink: absent
+  child_vomits_everything: absent
+  drowsy_hard_to_wake: absent
+  seizure_recent: absent
+  stridor: absent
+  barking_cough: absent
+  cough_paroxysms: absent
+  inspiratory_whoop: absent
+  post_tussive_vomiting: absent
+  choking_episode: absent
+  dyspnea_onset: hours_days
+  spo2_measured: not_measured
+default_unmentioned: absent
+expected:
+  condition: bronchiolitis
+  acceptable: []
+  triage: 3
+source:
+  basis: "Viêm tiểu phế quản điển hình: trẻ dưới 1 tuổi, viêm long 1–3 ngày rồi ho dai dẳng, thở nhanh, khò khè; sốt dưới 39°C (NICE NG9 khuyến cáo 1.1.1–1.1.4; 3312/QĐ-BYT bài Viêm tiểu phế quản). Không có dấu hiệu chuyển cấp cứu (ngừng thở, thở rên, rút lõm rõ, tím: NG9 1.2.1). Mức 3: khám trong ngày để đếm nhịp thở, đo SpO2 (NG9 1.1.8); NHS Bronchiolitis khuyên khám khẩn khi bé thở nhanh, bú ít."
+  references: [nice-ng9, byt-qd-3312-2015, nhs-bronchiolitis]
+author: "agent:pass-c"

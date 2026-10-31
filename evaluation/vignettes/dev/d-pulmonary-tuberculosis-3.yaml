@@ -1,0 +1,45 @@
+id: d-pulmonary-tuberculosis-3
+set: dev
+title_vi: "Nam 55 tuổi hút thuốc, ho 4 tuần, đờm lẫn máu 3 ngày, mồ hôi đêm, sụt cân"
+narrative_vi: "Ông P., 55 tuổi, ở Hà Nội, hút thuốc lá 30 năm. Bốn tuần nay ho có đờm; ba ngày nay đờm có lẫn vài vệt máu. Đêm hay ra mồ hôi, sụt 3 kg trong tháng qua, hơi mệt. Không sốt, không khó thở, không đau ngực. Không biết có ai quanh mình bị lao. Chưa từng được nói bị bệnh phổi. Bác sĩ khám sau đó: xét nghiệm đờm tìm thấy vi khuẩn lao."
+patient:
+  age_years: 55
+  sex: male
+  region: north
+  month: 3
+complaint: cough
+answers:
+  cough_duration: w2_8
+  productive_cough: present
+  hemoptysis: present
+  hemoptysis_large: absent
+  night_sweats: present
+  weight_loss_unintended: present
+  fatigue: present
+  smoker: present
+  fever: absent
+  breathing_difficulty: absent
+  pleuritic_chest_pain: absent
+  chest_pain: absent
+  chest_pain_pressure: absent
+  wheeze: absent
+  runny_nose: absent
+  tb_contact: absent
+  stridor: absent
+  choking_episode: absent
+  leg_swelling_one_side: absent
+  copd_known: absent
+  asthma_known: absent
+  diabetes: absent
+  immunocompromised: absent
+  lymph_node_swelling: absent
+default_unmentioned: absent
+expected:
+  condition: pulmonary_tuberculosis
+  acceptable: []
+  triage: 3
+source:
+  basis: "Lao phổi có ho ra máu ít, dễ nhầm với ung thư phổi ở nam hút thuốc trên 40 tuổi (162/QĐ-BYT; NICE NG12 mục 1.1.1). NHS Coughing up blood và NHS TB: ho ra vài vệt máu trong đờm thì khám bác sĩ khẩn hoặc gọi 111 (mức 3)."
+  references: [byt-qd-162-2024, nhs-coughing-up-blood, nhs-tuberculosis, nice-ng12]
+author: "agent:pass-c"
+notes_vi: "Ca dễ nhầm với ung thư phổi (nam 55 tuổi hút thuốc, ho ra máu, sụt cân)."

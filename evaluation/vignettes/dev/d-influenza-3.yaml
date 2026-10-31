@@ -20,6 +20,7 @@ answers:
   myalgia: present
   fatigue: present
   cough: present
+  cough_duration: lt_1w
   sore_throat: present
   runny_nose: absent
   neck_stiffness: absent

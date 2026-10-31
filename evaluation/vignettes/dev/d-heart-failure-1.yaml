@@ -1,0 +1,52 @@
+id: d-heart-failure-1
+set: dev
+title_vi: "Nam 72 tuổi từng nhồi máu cơ tim, khó thở tăng dần 1 tuần, nằm phải kê cao gối, phù hai chân"
+narrative_vi: "Ông T., 72 tuổi, ở Bình Định, bị tăng huyết áp và từng nhồi máu cơ tim cách đây 3 năm. Một tuần nay ông khó thở tăng dần: đi vài bước hay leo cầu thang là hụt hơi, đêm nằm phải kê hai gối, có đêm phải ngồi dậy mới thở được. Hai cổ chân, bàn chân phù, ấn lõm. Năm ngày nay ông tăng 3 kg. Ông mệt, ăn kém. Ngồi nghỉ thì thở được, nói trọn câu. Không sốt, không ho, không đau ngực, không hồi hộp, không ngất. Tuần trước ông hết thuốc huyết áp, chưa mua lại. Chưa đo SpO2."
+patient:
+  age_years: 72
+  sex: male
+  region: central
+  month: 6
+complaint: shortness_of_breath
+answers:
+  dyspnea_onset: hours_days
+  dyspnea_severity: exertion
+  breathless_on_exertion: present
+  orthopnea: present
+  night_respiratory_symptoms: present
+  leg_swelling_both: present
+  rapid_weight_gain: present
+  fatigue: present
+  loss_of_appetite: present
+  hypertension_known: present
+  known_heart_disease: present
+  atrial_fibrillation_known: absent
+  diabetes: absent
+  fever: absent
+  cough: absent
+  wheeze: absent
+  chest_pain: absent
+  chest_pain_pressure: absent
+  pleuritic_chest_pain: absent
+  palpitations: absent
+  fainting_or_near_fainting: absent
+  leg_swelling_one_side: absent
+  hemoptysis: absent
+  copd_known: absent
+  asthma_known: absent
+  smoker: absent
+  former_smoker: absent
+  allergen_exposure: absent
+  recent_immobility: absent
+  previous_clot: absent
+  active_cancer: absent
+  spo2_measured: not_measured
+default_unmentioned: absent
+expected:
+  condition: heart_failure
+  acceptable: []
+  triage: 3
+source:
+  basis: "Đợt mất bù của suy tim ở người có bệnh mạch vành, tăng huyết áp, bỏ thuốc: khó thở khi gắng sức, khó thở khi nằm, phù mắt cá chân, tăng cân trên 2 kg (1857/QĐ-BYT Bảng 3, Phần III mục 3). NHS Heart failure: khó thở khi nằm, tăng cân đột ngột thì khám khẩn hoặc gọi 111 (mức 3); chưa có dấu hiệu gọi 999 (khó thở dữ dội, tím, ngất)."
+  references: [byt-qd-1857-2022, nhs-heart-failure, msd-acute-heart-failure]
+author: "agent:pass-c"

@@ -12,10 +12,12 @@ answers:
   fever_max_temp: t38_39
   fever_duration: d1_2
   cough: present
+  cough_duration: lt_1w
   productive_cough: absent
   runny_nose: present
   nasal_congestion: present
   breathing_difficulty: absent
+  chest_indrawing: absent
   child_unable_to_drink: absent
   child_vomits_everything: absent
   seizure_recent: absent

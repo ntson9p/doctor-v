@@ -1,0 +1,53 @@
+id: d-copd-exacerbation-1
+set: dev
+title_vi: "Nam 67 tuổi hút thuốc, bị phổi tắc nghẽn, 3 ngày khó thở tăng, đờm vàng nhiều sau cảm lạnh"
+narrative_vi: "Ông B., 67 tuổi, ở Thái Bình, hút thuốc lào 40 năm, được chẩn đoán bệnh phổi tắc nghẽn mạn tính 5 năm nay, ho khạc đờm buổi sáng nhiều năm. Ba ngày nay sau khi bị cảm lạnh, khó thở tăng rõ, đi lại trong nhà đã thấy mệt, ho nhiều hơn, đờm vàng đặc, khò khè. Ngồi nghỉ thì đỡ, nói được cả câu. Đã xịt thuốc giãn phế quản, đỡ một phần. Không sốt, không đau ngực, không phù chân, nằm được đầu thấp. Năm ngoái có một đợt tương tự phải đi viện. Vợ ông đun bếp củi."
+patient:
+  age_years: 67
+  sex: male
+  region: north
+  month: 12
+complaint: shortness_of_breath
+answers:
+  copd_known: present
+  smoker: present
+  reliever_no_relief: absent
+  cough: present
+  cough_duration: gt_8w
+  productive_cough: present
+  wheeze: present
+  dyspnea_onset: hours_days
+  dyspnea_severity: exertion
+  similar_episodes_before: present
+  runny_nose: present
+  fever: absent
+  chest_pain: absent
+  chest_pain_pressure: absent
+  pleuritic_chest_pain: absent
+  orthopnea: absent
+  leg_swelling_both: absent
+  leg_swelling_one_side: absent
+  palpitations: absent
+  fainting_or_near_fainting: absent
+  hemoptysis: absent
+  stridor: absent
+  allergen_exposure: absent
+  confusion: absent
+  drowsy_hard_to_wake: absent
+  cold_hands_feet: absent
+  asthma_known: absent
+  known_heart_disease: absent
+  biomass_smoke_exposure: present
+  weight_loss_unintended: absent
+  night_respiratory_symptoms: absent
+  recent_immobility: absent
+  active_cancer: absent
+default_unmentioned: absent
+expected:
+  condition: copd_exacerbation
+  acceptable: []
+  triage: 3
+source:
+  basis: "Đợt cấp bệnh phổi tắc nghẽn mạn tính mức nhẹ đến vừa sau nhiễm vi rút: khó thở, ho, đờm mủ tăng trong vài ngày, đáp ứng một phần với thuốc giãn phế quản, không khó thở lúc nghỉ, không lú lẫn (2767/QĐ-BYT mục 3.1, Bảng 3.2; GOLD 2026): cần được khám, chỉnh thuốc trong 24 giờ."
+  references: [byt-qd-2767-2023, gold-2026, rmed-copd-exacerbation-2008]
+author: "agent:pass-c"

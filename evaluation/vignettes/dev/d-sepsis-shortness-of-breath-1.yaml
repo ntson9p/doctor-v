@@ -1,0 +1,53 @@
+id: d-sepsis-shortness-of-breath-1
+set: dev
+title_vi: "Nữ 70 tuổi đái tháo đường, sốt rét run 2 ngày, ho đờm, nay thở nhanh, khó thở lúc nghỉ, lú lẫn"
+narrative_vi: "Bà K., 70 tuổi, ở Nam Định, bị đái tháo đường. Hai ngày nay bà sốt 39°C, rét run, ho có đờm vàng. Từ sáng nay bà thở nhanh, ngồi nghỉ cũng khó thở, nói chuyện lẫn lộn, không nhận ra cháu; đi tiểu ít hơn hẳn. Con gái chọn Khó thở vì thấy bà thở rất mệt. Không đau ngực, không sưng chân, không khò khè, không ngất. Chưa đo SpO2."
+patient:
+  age_years: 70
+  sex: female
+  region: north
+  month: 1
+complaint: shortness_of_breath
+answers:
+  fever: present
+  fever_max_temp: t38_39
+  fever_duration: d1_2
+  chills_rigors: present
+  cough: present
+  productive_cough: present
+  dyspnea_onset: hours_days
+  dyspnea_severity: rest
+  confusion: present
+  decreased_urine: present
+  diabetes: present
+  drowsy_hard_to_wake: absent
+  cold_hands_feet: absent
+  severe_weakness: absent
+  wheeze: absent
+  chest_pain: absent
+  chest_pain_pressure: absent
+  pleuritic_chest_pain: absent
+  leg_swelling_one_side: absent
+  leg_swelling_both: absent
+  orthopnea: absent
+  fainting_or_near_fainting: absent
+  palpitations: absent
+  hemoptysis: absent
+  rash_any: absent
+  known_heart_disease: absent
+  hypertension_known: absent
+  immunocompromised: absent
+  copd_known: absent
+  asthma_known: absent
+  allergen_exposure: absent
+  spo2_measured: not_measured
+default_unmentioned: absent
+expected:
+  condition: sepsis
+  acceptable: [pneumonia]
+  triage: 1
+source:
+  basis: "Nhiễm khuẩn huyết từ viêm phổi ở người cao tuổi có đái tháo đường: sốt rét run, thở nhanh, thay đổi ý thức, tiểu ít (5642/QĐ-BYT bài Nhiễm khuẩn huyết; NICE NG253: nhịp thở từ 25 lần/phút, lú lẫn mới là tiêu chí nguy cơ cao). NHS Sepsis: lú lẫn, thở rất nhanh thì gọi 999 (mức 1)."
+  references: [byt-qd-5642-2015, nice-ng253, nhs-sepsis]
+author: "agent:pass-c"
+notes_vi: "Ca của bản mở rộng lô 3: nhiễm khuẩn huyết ở triệu chứng chính Khó thở. Chấp nhận viêm phổi vì là ổ nhiễm khởi điểm; mô hình một bệnh chia xác suất giữa hai tình trạng."

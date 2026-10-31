@@ -34,6 +34,19 @@ priors:
       basis: judgment
       sources: [pappas-pidj-2008, iyadorai-virolj-2024, cdc-common-cold]
       note: "Đau đầu có ở khoảng một nửa người lớn bị cảm lạnh đi khám (56,6%, Iyadorai) và 15% trẻ tuổi đi học lúc khởi phát (Pappas), nhưng hiếm khi là lý do chính đi khám; người đến vì đau đầu phần lớn là đau đầu nguyên phát. Ước 1–5%; hai lượt thống nhất P3."
+  - complaint: cough
+    default: P1
+    by_age:
+      infant_0_2m: P2
+      elder_65_74: P2
+      elder_75p: P2
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [nhs-cough, vanvugt-bmj-2013, todd-irv-2018, iyadorai-virolj-2024, nguyen-jcv-2016]
+      locator: "van Vugt 2013 bảng 1"
+      reported: "NHS: ho phần lớn do cảm lạnh, cúm; 71% người lớn ho cấp ở tuyến ban đầu có sổ mũi (GRACE); ho ở 85,9% người lớn cảm lạnh ngoại trú (Malaysia), 86,2% ca giống cúm không phải cúm (TP.HCM)"
+      note: "Lô 3. Thang tuyệt đối. Cảm lạnh là bệnh rất hay gặp và phần lớn có ho; cùng với viêm phế quản cấp là hai nguyên nhân hàng đầu của ho cấp: từ 20% (P1) ở mọi tuổi từ 2 tháng đến 64 tuổi (hai lượt thống nhất). Từ 65 tuổi ho hay do viêm phổi, đợt cấp bệnh phổi tắc nghẽn mạn tính, suy tim hơn: P2, như cách hạ mức ở prior Sốt (hai lượt thống nhất). Trẻ dưới 2 tháng: lượt A P1, lượt B P2; lượt C chọn P2 (như prior Sốt ở tuổi này) vì trẻ nhỏ ho cần nghĩ nhiều hơn tới viêm tiểu phế quản, ho gà, viêm phổi. Ranh giới với viêm phế quản cấp mờ (cả hai do vi rút). Chưa có số liệu Việt Nam về lý do đi khám vì ho."
 findings:
   - finding: fever
     freq: occasional
@@ -231,6 +244,28 @@ findings:
       basis: judgment
       sources: [cdc-common-cold, msd-common-cold]
       note: "Cảm lạnh là bệnh nhẹ, đau đầu thường nhẹ. Ước lượng của lượt A."
+  - finding: cough_duration
+    dist: { lt_1w: 0.61, w1_2: 0.3, w2_8: 0.0825, gt_8w: 0.0075 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [msd-common-cold, nhs-common-cold, cdc-common-cold, thompson-bmj-2013, pappas-pidj-2008]
+      reported: "ho hay kéo dài sang tuần thứ hai (MSD); người lớn đỡ sau 1–2 tuần, trẻ nhỏ có thể lâu hơn (NHS); 73% trẻ tuổi đi học còn triệu chứng sau 10 ngày (Pappas); 90% trẻ hết triệu chứng vào ngày 15 (Thompson)"
+      note: "Lô 3. Phân bố trong số người có ho, tại thời điểm người dùng hỏi. Phần lớn dưới 1 tuần, khoảng một phần ba sang tuần thứ hai; ho từ 2 tuần ít gặp (NHS khuyên đi khám nếu ho quá 3 tuần); từ 2 tháng hầu như không do cảm lạnh. Trung bình của hai lượt (lệch dưới 0,02 mỗi ô). Ước lượng."
+  - finding: wheeze
+    freq: rare
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [nhs-common-cold, msd-common-cold]
+      note: "Lô 3. Khò khè không có trong danh sách triệu chứng cảm lạnh của NHS, MSD; MSD: cảm lạnh có thể làm nặng hen. Mức rare dưới tỷ lệ nền 5% nên câu 'có' nghiêng về hen, viêm phế quản, viêm tiểu phế quản, viêm phổi. Lượt A để occasional cho trẻ 2 tháng–5 tuổi (đường thở nhỏ hay khò khè khi nhiễm vi rút); lượt B để rare cho mọi tuổi. Lượt C chọn rare: bé khò khè cần nghĩ trước tới viêm tiểu phế quản, hen, viêm phổi. Cần bác sĩ duyệt."
+  - finding: hoarse_voice
+    freq: occasional
+    evidence:
+      tier: C
+      basis: verbal
+      sources: [nhs-common-cold]
+      note: "Lô 3, chỉ lượt B có liên kết này (dấu hiệu mới thêm vào danh mục). NHS liệt kê khàn tiếng trong triệu chứng chính của cảm lạnh. Không có tỷ lệ; ước occasional."
 warning_signs:
   - es_severe_breathing
   - drowsy_hard_to_wake
@@ -258,5 +293,5 @@ review:
   authors: ["agent:pass-a", "agent:pass-b"]
   reconciler: "agent:pass-c"
   doctor_reviewer: null
-  updated: "2026-10-24"
-  notes_vi: "Cần bác sĩ xem: (1) prior là ước lượng từ nghiên cứu căn nguyên hội chứng giống cúm (Hà Nam, TP.HCM), chưa có tỷ lệ trong mọi người sốt đi khám; (2) bỏ liên kết mất ngửi, mất vị (hai lượt để rare, cao hơn tỷ lệ nền 1%): cảm lạnh vẫn có thể giảm ngửi (NHS), nên câu 'có' nay chỉ tăng COVID-19 và viêm xoang; (3) mức thấp hơn cho trẻ dưới 12 tuổi ở đau đầu, đau cơ, mệt là ước lượng theo khả năng tự báo; (4) đau ngực khi ho để occasional theo GRACE; (5) bài Viêm mũi họng cấp tính của 5643 gộp cả viêm họng do vi khuẩn và khuyên dùng kháng sinh, chỉ lấy phần mô tả triệu chứng; (6) mã ICD-10 chưa đối chiếu được (lượt B ghi đã tra icd.kcb.vn; trang tra cứu hiện có bản ICD-10 theo Thông tư 06/2026/TT-BYT)."
+  updated: "2026-10-31"
+  notes_vi: "Cần bác sĩ xem: (1) prior là ước lượng từ nghiên cứu căn nguyên hội chứng giống cúm (Hà Nam, TP.HCM), chưa có tỷ lệ trong mọi người sốt đi khám; (2) bỏ liên kết mất ngửi, mất vị (hai lượt để rare, cao hơn tỷ lệ nền 1%): cảm lạnh vẫn có thể giảm ngửi (NHS), nên câu 'có' nay chỉ tăng COVID-19 và viêm xoang; (3) mức thấp hơn cho trẻ dưới 12 tuổi ở đau đầu, đau cơ, mệt là ước lượng theo khả năng tự báo; (4) đau ngực khi ho để occasional theo GRACE; (5) bài Viêm mũi họng cấp tính của 5643 gộp cả viêm họng do vi khuẩn và khuyên dùng kháng sinh, chỉ lấy phần mô tả triệu chứng; (6) mã ICD-10 chưa đối chiếu được (lượt B ghi đã tra icd.kcb.vn; trang tra cứu hiện có bản ICD-10 theo Thông tư 06/2026/TT-BYT). Bổ sung Giai đoạn 3 lô 3 (lượt C, 31/10/2026): prior Ho P1 (dưới 2 tháng và từ 65 tuổi P2); liên kết cough_duration (phần lớn dưới 2 tuần), wheeze (rare), hoarse_voice (occasional). Prior Ho ngang viêm phế quản cấp ở người 18–74 tuổi: hai bệnh gối nhau, phân biệt nhờ thời gian ho, đờm, đau ngực khi ho, khó thở. Liên kết cũ productive_cough (frequent) và breathing_difficulty (rare) nay có tác dụng ở Ho; giữ nguyên."

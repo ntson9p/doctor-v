@@ -1,0 +1,48 @@
+id: d-acute-bronchitis-2
+set: dev
+title_vi: "Nữ 16 tuổi, ho có đờm 16 ngày sau cảm, đôi khi khò khè nhẹ, không sốt"
+narrative_vi: "Em L., 16 tuổi, học sinh ở TP.HCM. Hơn hai tuần trước bị cảm, sổ mũi, đau họng; mấy hôm sau bắt đầu ho, lúc đầu ho khan rồi ho có đờm, nay đã 16 ngày, ho đang bớt dần. Thỉnh thoảng thấy hơi khò khè khi ho nhiều. Không sốt, không khó thở, không đau ngực, không ho ra máu. Không có cơn ho dồn dập, không nôn sau ho. Chưa từng bị hen, chưa từng có đợt ho, khò khè như vậy. Không sụt cân, không ra mồ hôi đêm. Không có thai, không chậm kinh."
+patient:
+  age_years: 16
+  sex: female
+  region: south
+  month: 9
+complaint: cough
+answers:
+  cough_duration: w2_8
+  productive_cough: present
+  runny_nose: absent
+  sore_throat: absent
+  recent_viral_illness: present
+  wheeze: present
+  fever: absent
+  breathing_difficulty: absent
+  pleuritic_chest_pain: absent
+  chest_pain: absent
+  chest_pain_pressure: absent
+  hemoptysis: absent
+  stridor: absent
+  choking_episode: absent
+  cough_paroxysms: absent
+  inspiratory_whoop: absent
+  post_tussive_vomiting: absent
+  barking_cough: absent
+  asthma_known: absent
+  similar_episodes_before: absent
+  night_respiratory_symptoms: absent
+  night_sweats: absent
+  weight_loss_unintended: absent
+  tb_contact: absent
+  smoker: absent
+  pregnant: absent
+  missed_period: absent
+default_unmentioned: absent
+expected:
+  condition: acute_bronchitis
+  acceptable: []
+  triage: 4
+source:
+  basis: "Viêm phế quản cấp ở thiếu niên, giai đoạn ho kéo dài (ho thường 2–3 tuần, có thể có ran rít; Kinkade 2016). Ho từ 2 tuần là triệu chứng nghi lao cần được khám trong vài ngày (162/QĐ-BYT); NHS Cough: ho quá 3 tuần thì khám bác sĩ gia đình."
+  references: [kinkade-afp-2016, byt-qd-162-2024, nhs-cough]
+author: "agent:pass-c"
+notes_vi: "Ca không điển hình: thiếu niên, đã sang tuần thứ ba, có khò khè nhẹ nên dễ nghĩ hen hoặc ho gà."

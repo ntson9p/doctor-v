@@ -1,0 +1,15 @@
+id: ray-critcare-2006
+type: primary_study
+title: "Acute respiratory failure in the elderly: etiology, emergency diagnosis and prognosis"
+publisher: "Critical Care 2006;10(3):R82 (Ray P, Birolleau S, Lefort Y và cs.)"
+date: "2006"
+url: "https://europepmc.org/article/MED/16723034"
+doi: "10.1186/cc4926"
+pmid: "16723034"
+license_class: L1
+license_note: "CC BY (theo Europe PMC): dùng và chuyển thể, ghi công."
+default_tier: B
+accessed: "2026-10-31"
+verified: true
+verified_by: "agent:pass-c"
+notes_vi: "Lượt C (Giai đoạn 3 lô 3, phần b) đọc lại tóm tắt và toàn văn (PMC1550946) qua API Europe PMC ngày 31/10/2026; lượt A đã đọc tóm tắt trước đó. 514 người từ 65 tuổi (trung bình 80) đến cấp cứu ở Paris vì khó thở có tiêu chuẩn suy hô hấp cấp (nhịp thở từ 25 lần/phút, PaO2 từ 70 mmHg trở xuống hoặc SpO2 từ 92% trở xuống, hoặc tăng CO2): phù phổi do tim 43%, viêm phổi cộng đồng 35%, đợt cấp bệnh hô hấp mạn 32%, tắc mạch phổi 18%, hen cấp 3%; 47% có trên hai chẩn đoán. Tử vong trong viện 16%. Nhóm chọn lọc nặng, không đại diện cho người khó thở ở tuyến ban đầu."

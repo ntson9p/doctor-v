@@ -17,6 +17,7 @@ answers:
   persistent_vomiting: absent
   cold_hands_feet: present
   breathing_difficulty: present
+  dyspnea_onset: hours_days
   confusion: absent
   drowsy_hard_to_wake: absent
   severe_weakness: absent

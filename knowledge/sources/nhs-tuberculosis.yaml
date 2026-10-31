@@ -1,0 +1,13 @@
+id: nhs-tuberculosis
+type: web_page
+title: "Tuberculosis (TB)"
+publisher: "NHS (UK)"
+date: "2026-09-10"
+url: "https://www.nhs.uk/conditions/tuberculosis-tb/"
+license_class: L1
+license_note: "Open Government Licence v3.0; bản chuyển thể không được trình bày như nội dung của NHS."
+default_tier: C
+accessed: "2026-10-31"
+verified: true
+verified_by: "agent:pass-c"
+notes_vi: "Lượt C (Giai đoạn 3 lô 3) tải lại trang ngày 31/10/2026; lượt B đã mở trước đó. Triệu chứng thường đến từ từ: ho trên 3 tuần (có đờm hoặc đờm lẫn máu), mệt kéo dài, sốt hoặc mồ hôi đêm, chán ăn, sụt cân, người khó chịu. 'See a GP' (không khẩn): ho trên 3 tuần, mệt kéo dài, sốt hoặc mồ hôi đêm không hết, chán ăn, sụt cân, sống cùng người bị lao có triệu chứng. 'Urgent GP / 111': ho ra máu hoặc đờm lẫn máu. 'Call 999 or A&E': cứng gáy và đau đầu dữ dội, sợ ánh sáng, co giật, đột ngột lú lẫn, yếu liệt (lao màng não). Điều trị kháng sinh ít nhất 6 tháng; phải uống đúng và đủ liệu trình dù đã thấy đỡ. Người dễ mắc: sống cùng người lao, suy giảm miễn dịch (HIV, đái tháo đường, hóa trị), trẻ dưới 5 tuổi, hút thuốc, uống rượu."

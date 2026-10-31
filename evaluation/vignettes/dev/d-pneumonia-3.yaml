@@ -13,6 +13,7 @@ answers:
   fever_max_temp: ge_39
   fever_duration: d1_2
   cough: present
+  cough_duration: lt_1w
   productive_cough: absent
   breathing_difficulty: present
   pleuritic_chest_pain: absent

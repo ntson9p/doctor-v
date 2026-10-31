@@ -1,0 +1,55 @@
+id: d-acute-bronchitis-3
+set: dev
+title_vi: "Nữ 40 tuổi chọn Khó thở: hụt hơi khi leo cầu thang, ho đờm 6 ngày sau cảm, hơi khò khè"
+narrative_vi: "Chị V., 40 tuổi, ở Đà Nẵng, không hút thuốc. Sáu ngày nay ho có đờm sau một đợt sổ mũi, đau họng; hai ngày nay thấy hụt hơi khi leo cầu thang, ngồi nghỉ thì bình thường, nói chuyện được bình thường. Lúc ho nhiều nghe hơi khò khè. Khó thở tăng dần trong vài ngày, không đột ngột. Không sốt, không đau ngực, không tức ngực, không hồi hộp, không sưng chân. Chưa từng bị hen, chưa từng có cơn khó thở như vậy, không khó thở về đêm. Không có thai, không chậm kinh. Bác sĩ khám sau đó: nghe phổi có ít ran rít, không có ran nổ, SpO2 98%."
+patient:
+  age_years: 40
+  sex: female
+  region: central
+  month: 12
+complaint: shortness_of_breath
+answers:
+  cough: present
+  cough_duration: lt_1w
+  productive_cough: present
+  runny_nose: present
+  sore_throat: present
+  wheeze: present
+  dyspnea_onset: hours_days
+  dyspnea_severity: exertion
+  fever: absent
+  pleuritic_chest_pain: absent
+  chest_pain: absent
+  chest_pain_pressure: absent
+  palpitations: absent
+  fainting_or_near_fainting: absent
+  leg_swelling_one_side: absent
+  leg_swelling_both: absent
+  orthopnea: absent
+  hemoptysis: absent
+  stridor: absent
+  choking_episode: absent
+  allergen_exposure: absent
+  rash_any: absent
+  asthma_known: absent
+  copd_known: absent
+  smoker: absent
+  former_smoker: absent
+  biomass_smoke_exposure: absent
+  similar_episodes_before: absent
+  night_respiratory_symptoms: absent
+  recent_immobility: absent
+  estrogen_use: absent
+  sick_contact_respiratory: present
+  pregnant: absent
+  missed_period: absent
+default_unmentioned: absent
+expected:
+  condition: acute_bronchitis
+  acceptable: []
+  triage: 3
+source:
+  basis: "Viêm phế quản cấp gây hụt hơi khi gắng sức, dễ nhầm với cơn hen (khò khè) và viêm phổi; viêm phế quản cấp là chẩn đoán hay gặp nhất ở người đi khám vì khó thở (Frese 2011). NHS Bronchitis: khó thở thì khám bác sĩ gia đình khẩn hoặc gọi 111 (mức 3)."
+  references: [frese-jcmr-2011, kinkade-afp-2016, nhs-bronchitis]
+author: "agent:pass-c"
+notes_vi: "Ca dễ nhầm với hen (khò khè, khó thở) nhưng không có tiền sử hen, không có cơn tái lại, không nặng về đêm, có bối cảnh nhiễm vi rút."

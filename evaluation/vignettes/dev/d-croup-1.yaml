@@ -1,0 +1,45 @@
+id: d-croup-1
+set: dev
+title_vi: "Bé trai 2 tuổi, sau 2 ngày cảm, đêm nay ho ông ổng, khàn tiếng, sốt nhẹ"
+narrative_vi: "Bé T., 2 tuổi, ở Hà Nội, tháng 11. Hai ngày trước bé sổ mũi, sốt nhẹ 38,1°C. Tối nay bé bỗng ho ông ổng như chó sủa, giọng khàn, khóc khàn. Khi khóc bé có tiếng rít lúc hít vào, nằm yên thì không rít. Bé không thở nhanh, ngực không lõm, môi hồng, không chảy dãi, vẫn uống nước được, không li bì. Không bị sặc, hóc gì. Không khò khè."
+patient:
+  age_years: 2
+  sex: male
+  region: north
+  month: 11
+complaint: cough
+answers:
+  barking_cough: present
+  hoarse_voice: present
+  night_respiratory_symptoms: present
+  cough_duration: lt_1w
+  runny_nose: present
+  fever: present
+  fever_max_temp: t38_39
+  fever_duration: d1_2
+  stridor: absent
+  breathing_difficulty: absent
+  chest_indrawing: absent
+  grunting: absent
+  apnea_cyanosis_spells: absent
+  drooling_cannot_swallow: absent
+  choking_episode: absent
+  child_unable_to_drink: absent
+  child_vomits_everything: absent
+  drowsy_hard_to_wake: absent
+  seizure_recent: absent
+  child_feeding_reduced: absent
+  wheeze: absent
+  cough_paroxysms: absent
+  inspiratory_whoop: absent
+  post_tussive_vomiting: absent
+  sick_contact_respiratory: unknown
+default_unmentioned: absent
+expected:
+  condition: croup
+  acceptable: []
+  triage: 3
+source:
+  basis: "Viêm thanh quản cấp điển hình, thể nhẹ: trẻ 6 tháng–3 tuổi, sau 12–72 giờ sốt nhẹ, sổ mũi thì đột ngột ho ông ổng, khàn tiếng, nặng về đêm; chỉ rít khi khóc (Smith 2018; MSD Croup). NHS Croup: nghĩ trẻ bị viêm thanh quản cấp thì khám khẩn hoặc gọi 111 (mức 3), vì bác sĩ có thể cho thuốc; 3312/QĐ-BYT: khó thở thanh quản độ 1 điều trị ngoại trú, tái khám hằng ngày."
+  references: [smith-afp-2018, msd-croup, nhs-croup, byt-qd-3312-2015]
+author: "agent:pass-c"

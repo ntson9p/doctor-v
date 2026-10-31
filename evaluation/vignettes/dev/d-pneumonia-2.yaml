@@ -12,11 +12,13 @@ answers:
   fever_max_temp: lt_38
   fever_duration: d1_2
   cough: present
+  cough_duration: lt_1w
   productive_cough: present
   fatigue: present
   loss_of_appetite: present
   breathing_difficulty: absent
   pleuritic_chest_pain: absent
+  chest_pain: absent
   chills_rigors: absent
   confusion: absent
   drowsy_hard_to_wake: absent

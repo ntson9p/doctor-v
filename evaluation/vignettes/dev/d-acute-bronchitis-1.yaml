@@ -1,0 +1,44 @@
+id: d-acute-bronchitis-1
+set: dev
+title_vi: "Nam 35 tuổi, ho có đờm 9 ngày sau cảm lạnh, không sốt, không khó thở"
+narrative_vi: "Anh K., 35 tuổi, nhân viên văn phòng ở Hà Nội, không hút thuốc. Chín ngày trước bị sổ mũi, đau họng, rồi ho nhiều, khạc đờm trắng đục, ho cả ngày. Nay sổ mũi còn ít. Không sốt, không khó thở, không đau ngực, không khò khè. Đồng nghiệp cùng phòng cũng đang ho. Không có bệnh phổi, chưa từng bị hen."
+patient:
+  age_years: 35
+  sex: male
+  region: north
+  month: 11
+complaint: cough
+answers:
+  cough_duration: w1_2
+  productive_cough: present
+  runny_nose: present
+  sore_throat: present
+  nasal_congestion: absent
+  fever: absent
+  breathing_difficulty: absent
+  pleuritic_chest_pain: absent
+  chest_pain: absent
+  chest_pain_pressure: absent
+  wheeze: absent
+  hemoptysis: absent
+  stridor: absent
+  choking_episode: absent
+  sick_contact_respiratory: present
+  asthma_known: absent
+  copd_known: absent
+  smoker: absent
+  former_smoker: absent
+  night_sweats: absent
+  weight_loss_unintended: absent
+  cough_paroxysms: absent
+  post_tussive_vomiting: absent
+  heartburn: absent
+default_unmentioned: absent
+expected:
+  condition: acute_bronchitis
+  acceptable: []
+  triage: 5
+source:
+  basis: "Viêm phế quản cấp điển hình ở người lớn: ho có đờm sau cảm lạnh, không sốt, không khó thở (Kinkade 2016). NHS Bronchitis: tự khỏi trong khoảng 3 tuần, tự chăm sóc; khám khi ho quá 3 tuần hoặc có dấu hiệu khác."
+  references: [kinkade-afp-2016, nhs-bronchitis, vanvugt-bmj-2013]
+author: "agent:pass-c"

@@ -13,9 +13,14 @@ answers:
   fever_duration: d3_5
   chills_rigors: present
   cough: present
+  cough_duration: lt_1w
   productive_cough: present
   breathing_difficulty: present
+  dyspnea_onset: hours_days
+  dyspnea_severity: exertion
   pleuritic_chest_pain: present
+  chest_pain: present
+  chest_pain_duration: days
   runny_nose: absent
   sore_throat: absent
   nasal_congestion: absent

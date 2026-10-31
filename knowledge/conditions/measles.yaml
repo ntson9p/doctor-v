@@ -28,6 +28,19 @@ priors:
       sources: [byt-qd-1019-2025, nguyentien-wpsar-2026, do-jcv-2021, tran-bmcinfectdis-2024]
       reported: "Đồng Nai 2024–2025: 11.434 ca (55,9% dưới 5 tuổi, 24,3% 5–10 tuổi, 19,8% trên 10 tuổi); miền Bắc 2013–2014: 9.577 ca xác định (55,7% dưới 5 tuổi)"
       note: "Thang tuyệt đối (kb-guide 2.3). Sởi thành dịch theo đợt (2013–2014, 2017–2019, 2024–2025); 1019: hay gặp ở trẻ dưới 3 tuổi, người lớn chưa tiêm cũng mắc. Ước trung bình theo thời gian 0,2–1% trẻ sốt (P4); vị thành niên và người lớn trẻ 0,02–0,2% (P5); từ 45 tuổi dưới 0,02% (P6). Trong đợt dịch tại địa phương có thể cao hơn nhiều lần, ngoài đợt dịch thấp hơn nhiều. Không có hệ số theo tháng vì các đợt dịch có đỉnh khác nhau. Hai lượt thống nhất (lượt A ghi thêm teen_13_17: P5, trùng mặc định)."
+  - complaint: cough
+    default: P5
+    by_age:
+      infant_0_2m: P6
+      adult_45_64: P6
+      elder_65_74: P6
+      elder_75p: P6
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-1019-2025, byt-qd-3312-2015, msd-measles, nguyentien-wpsar-2026]
+      locator: "1019/QĐ-BYT mục 2.1.1 (khởi phát 2–4 ngày: sốt cao, ho, chảy mũi, viêm kết mạc; ho có thể kéo dài 1–2 tuần sau khi hết ban); 3312 bài Bệnh sởi (tr. 500: viêm long đường hô hấp hầu như không bao giờ thiếu); MSD (giai đoạn khởi phát)"
+      note: "Giai đoạn 3 lô 3 (lượt C). Thang tuyệt đối; dịch tễ theo tuổi và theo đợt dịch như prior của Sốt. Hai lượt cùng P5 mặc định, P6 từ 45 tuổi; lệch một mức ở trẻ 2 tháng–12 tuổi (lượt A P4, cùng mức với prior Sốt; lượt B P5) và dưới 2 tháng (lượt A P5, lượt B P6). Lượt C chọn mức của lượt B: gần mọi người sởi đều ho, nhưng người sốt cao, phát ban thường chọn Sốt, còn người chọn Ho phần lớn bị cảm lạnh, viêm phế quản, nên tỷ lệ sởi trong số người chọn Ho thấp hơn ở Sốt; trẻ dưới 2 tháng còn kháng thể từ mẹ. Câu sốt (almost_always), ban lan từ mặt, đỏ mắt, tiếp xúc người bị sởi trở thành bằng chứng khi triệu chứng chính là Ho. Trong đợt dịch tại địa phương có thể cao hơn nhiều lần. Ước lượng."
 findings:
   - finding: fever
     freq: almost_always
@@ -153,6 +166,22 @@ findings:
       locator: "1019 mục 2.4.1"
       reported: "có tiếp xúc ca bệnh 22,7% ca không nhập viện, 24,8% toàn mẫu"
       note: "1019: tiếp xúc người bệnh sởi trong 7–21 ngày hoặc sống trong vùng dịch là yếu tố của ca nghi ngờ; nhiều ca không biết nguồn lây vì bệnh lây qua không khí."
+  - finding: cough_duration
+    dist: { lt_1w: 0.61, w1_2: 0.29, w2_8: 0.0925, gt_8w: 0.0075 }
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-1019-2025, msd-measles, byt-qd-3312-2015]
+      locator: "1019/QĐ-BYT mục 2.1.1 (khởi phát 2–4 ngày, ban mọc sau 3–4 ngày sốt, toàn phát 2–5 ngày; ho có thể kéo dài 1–2 tuần sau khi hết ban); MSD (khởi phát 3–7 ngày)"
+      note: "Giai đoạn 3 lô 3 (lượt C): trung bình hai lượt (lượt A 0,60/0,30/0,09/0,01; lượt B 0,62/0,28/0,095/0,005). Phân bố trong số người đã ho, lúc dùng app: phần lớn hỏi trong tuần đầu (đang sốt, mới mọc ban), một phần trong tuần thứ hai; ho từ 2 tuần ít gặp (gợi ý biến chứng), từ 2 tháng không phù hợp. Ước lượng."
+  - finding: hoarse_voice
+    freq: occasional
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-3312-2015, msd-measles]
+      locator: "3312 bài Bệnh sởi, mục biến chứng (viêm phổi, viêm thanh quản; tr. 501) và bài Khó thở thanh quản ở trẻ em (viêm thanh quản do sởi; tr. 269); MSD (bội nhiễm: viêm thanh khí phế quản)"
+      note: "Giai đoạn 3 lô 3 (lượt C): chỉ lượt B có, lượt C giữ vì hai nguồn cùng nêu viêm thanh quản là biến chứng của sởi. Không có tỷ lệ; ước occasional. Tỷ lệ nền 5%."
 warning_signs:
   - child_unable_to_drink
   - child_vomits_everything
@@ -172,11 +201,11 @@ see_doctor_vi:
   - "Tái khám mỗi 2–3 ngày cho đến khi hết sốt."
   - "Đi khám lại ngay nếu không ăn uống được, nôn mọi thứ, thở nhanh, tím tái hoặc lơ mơ."
   - "Người tiếp xúc chưa tiêm vắc xin sởi nên hỏi cơ sở y tế về việc tiêm phòng."
-sources: [byt-qd-1019-2025, cdc-measles-clinical-overview]
+sources: [byt-qd-1019-2025, cdc-measles-clinical-overview, msd-measles]
 review:
   status: source_checked
   authors: ["agent:pass-a", "agent:pass-b"]
   reconciler: "agent:pass-c"
   doctor_reviewer: null
-  updated: "2026-10-27"
-  notes_vi: "Cần bác sĩ xem: (1) prior phụ thuộc mạnh vào đợt dịch; năm 2026 chưa có số liệu; (2) tỷ lệ triệu chứng lấy từ ca đến bệnh viện tuyến cuối ở Mexico (2025–2026) và mô tả của 1019, CDC; tiêu chảy, nôn, đau tai, khó thở chỉ là ước lượng; (3) câu hỏi tiêm vắc xin nay chỉ hỏi từ 18 tháng tuổi; tần suất 'đã tiêm đủ 2 mũi' ở ca bệnh có lẽ dưới 20–25%; (4) danh mục chưa có câu hỏi 'ban xuất hiện sau mấy ngày sốt' và hạt Koplik (khó tự quan sát); (5) 1019 cho mọi trẻ bị sởi uống vitamin A liều cao: lý do chính để khuyên khám trong 24 giờ; (6) mã ICD-10 chưa đối chiếu được. Giai đoạn 3 lô 2 (lượt C, 27/10/2026): phát ban (rash_any) đổi từ very_frequent thành frequent theo cả hai lượt (lý do trong ghi chú liên kết; ca d-from-h-fever-009). Giữ tiếp xúc người bị sởi occasional (hai lượt cùng giữ: 22,7–24,8% ca có tiếp xúc đã biết; với tỷ lệ nền 1%, trả lời 'Có' tăng khả năng khoảng 20 lần, và quy tắc rf_measles_contact_fever đã đưa mức lên 3). Không liên kết các dấu hiệu Kawasaki mới (môi đỏ nứt, sưng đỏ bong da tay chân, sẹo BCG sưng đỏ; hai lượt cùng không liên kết): 1019/QĐ-BYT nêu chúng là điểm phân biệt với Kawasaki; ban sởi lan cả lòng bàn tay, bàn chân nên một số cha mẹ có thể trả lời 'có' ở câu bàn tay, bàn chân đỏ."
+  updated: "2026-10-31"
+  notes_vi: "Cần bác sĩ xem: (1) prior phụ thuộc mạnh vào đợt dịch; năm 2026 chưa có số liệu; (2) tỷ lệ triệu chứng lấy từ ca đến bệnh viện tuyến cuối ở Mexico (2025–2026) và mô tả của 1019, CDC; tiêu chảy, nôn, đau tai, khó thở chỉ là ước lượng; (3) câu hỏi tiêm vắc xin nay chỉ hỏi từ 18 tháng tuổi; tần suất 'đã tiêm đủ 2 mũi' ở ca bệnh có lẽ dưới 20–25%; (4) danh mục chưa có câu hỏi 'ban xuất hiện sau mấy ngày sốt' và hạt Koplik (khó tự quan sát); (5) 1019 cho mọi trẻ bị sởi uống vitamin A liều cao: lý do chính để khuyên khám trong 24 giờ; (6) mã ICD-10 chưa đối chiếu được. Giai đoạn 3 lô 2 (lượt C, 27/10/2026): phát ban (rash_any) đổi từ very_frequent thành frequent theo cả hai lượt (lý do trong ghi chú liên kết; ca d-from-h-fever-009). Giữ tiếp xúc người bị sởi occasional (hai lượt cùng giữ: 22,7–24,8% ca có tiếp xúc đã biết; với tỷ lệ nền 1%, trả lời 'Có' tăng khả năng khoảng 20 lần, và quy tắc rf_measles_contact_fever đã đưa mức lên 3). Không liên kết các dấu hiệu Kawasaki mới (môi đỏ nứt, sưng đỏ bong da tay chân, sẹo BCG sưng đỏ; hai lượt cùng không liên kết): 1019/QĐ-BYT nêu chúng là điểm phân biệt với Kawasaki; ban sởi lan cả lòng bàn tay, bàn chân nên một số cha mẹ có thể trả lời 'có' ở câu bàn tay, bàn chân đỏ. Giai đoạn 3 lô 3 (lượt C phần b, 31/10/2026): thêm prior Ho (mặc định P5; dưới 2 tháng và từ 45 tuổi P6), liên kết thời gian ho (phần lớn dưới 1 tuần) và khàn tiếng (occasional, viêm thanh quản do sởi theo 3312/QĐ-BYT); nguồn mới msd-measles (đã mở lại). Không sửa giá trị cũ; với Ho, các liên kết sốt (almost_always), ban lan từ mặt, đỏ mắt, tiếp xúc người bị sởi trở thành bằng chứng, và liên kết ho (very_frequent) không dùng vì là dấu hiệu ngầm định. Bác sĩ cần xem thêm: prior Ho là ước lượng, phụ thuộc mạnh vào đợt dịch; trẻ ho không sốt gần như loại sởi (sốt almost_always), đúng định nghĩa ca bệnh nhưng người nhà có thể chưa đo khi trẻ sốt nhẹ."

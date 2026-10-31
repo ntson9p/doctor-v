@@ -1,0 +1,15 @@
+id: nguyen-plosone-2020
+type: statistic
+title: "The second national tuberculosis prevalence survey in Vietnam"
+publisher: "PLoS ONE 2020;15(4):e0232142 (Nguyen HV, Tiemersma EW, Nguyen HB và cs.; Chương trình Chống lao Quốc gia)"
+date: "2020-04-23"
+url: "https://europepmc.org/article/MED/32324806"
+doi: "10.1371/journal.pone.0232142"
+pmid: "32324806"
+license_class: L0
+license_note: "CC0 (theo bản trên PMC): dùng tự do, vẫn ghi nguồn."
+default_tier: B
+accessed: "2026-10-31"
+verified: true
+verified_by: "agent:pass-c"
+notes_vi: "Lượt C (Giai đoạn 3 lô 3) đọc lại toàn văn (PMC7179905) qua API Europe PMC ngày 31/10/2026; lượt A (id này) và lượt B (id nguyenhv-plosone-2020, cùng bài) đã đọc trước đó. Điều tra quốc gia 2017–2018 ở 82 cụm, người từ 15 tuổi, sàng lọc bằng câu hỏi và phim phổi kỹ thuật số: 61.763 người tham gia, 221 ca lao phổi có bằng chứng vi khuẩn. Bảng 4: tỷ lệ hiện mắc 322/100.000 (KTC 95% 260–399); nam 522, nữ 133 (tỷ số chênh nam/nữ 4,0); theo tuổi 15–24 tuổi 63, 25–34 tuổi 203, 35–44 tuổi 287, 45–54 tuổi 423, 55–64 tuổi 618, từ 65 tuổi 689/100.000; thành thị 445, nông thôn 309, vùng xa 241; Bắc 262, Trung 316, Nam 380 (p = 0,297). Bảng 3 (phỏng vấn sâu 221 ca): ho bất kỳ 148 (67,0%), ho dưới 2 tuần 20 (9,1%), ho từ 2 tuần 128 (57,9%), ho có đờm 135 (61,1%), ho ra máu 7 (3,2%), sốt 28 (12,7%), sụt cân 17 (7,7%), ra mồ hôi đêm 17 (7,7%); 71 ca (32,1%) không có triệu chứng nghi lao. Một nửa số ca chỉ phát hiện nhờ phim phổi. Đây là ca phát hiện chủ động ở cộng đồng, nên tỷ lệ triệu chứng thấp hơn ở người tự đi khám."

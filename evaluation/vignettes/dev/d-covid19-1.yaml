@@ -12,6 +12,7 @@ answers:
   fever_max_temp: t38_39
   fever_duration: d1_2
   cough: present
+  cough_duration: lt_1w
   productive_cough: absent
   sore_throat: present
   runny_nose: present

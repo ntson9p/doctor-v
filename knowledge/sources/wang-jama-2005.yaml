@@ -1,0 +1,15 @@
+id: wang-jama-2005
+type: systematic_review
+title: "Does this dyspneic patient in the emergency department have congestive heart failure?"
+publisher: "JAMA 2005;294(15):1944–1956 (Wang CS, FitzGerald JM, Schulzer M, Mak E, Ayas NT)"
+date: "2005-10"
+url: "https://europepmc.org/article/MED/16234501"
+doi: "10.1001/jama.294.15.1944"
+pmid: "16234501"
+license_class: L3
+license_note: "Bản quyền JAMA: chỉ dùng dữ kiện kèm trích dẫn."
+default_tier: A
+accessed: "2026-10-31"
+verified: true
+verified_by: "agent:pass-c"
+notes_vi: "Lượt C (Giai đoạn 3 lô 3, phần b) đọc lại tóm tắt qua API Europe PMC ngày 31/10/2026 (không có toàn văn mở); lượt A, lượt B đã đọc trước đó. 22 nghiên cứu ở người lớn đến cấp cứu vì khó thở. Làm tăng khả năng suy tim: tiền sử suy tim (LR dương 5,8), cơn khó thở kịch phát về đêm (LR dương 2,6), tiếng tim thứ ba (11), X quang sung huyết tĩnh mạch phổi (12), điện tim rung nhĩ (3,8). Làm giảm: không có tiền sử suy tim (LR âm 0,45), không khó thở khi gắng sức (LR âm 0,48), không có ran (0,51), không có bóng tim to (0,33)."

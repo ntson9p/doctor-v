@@ -1,0 +1,59 @@
+id: d-panic-disorder-chest-pain-1
+set: dev
+title_vi: "Nữ 27 tuổi đau nhói ngực trái vài phút trong cơn sợ hãi, tim đập nhanh, run, tê tay; đã từng bị"
+narrative_vi: "Chị H., 27 tuổi, ở Thành phố Hồ Chí Minh, đang lo lắng vì công việc. Chiều nay khi đang họp, chị đột ngột sợ hãi dữ dội, tim đập nhanh, run tay, tê bì đầu ngón tay, kèm đau nhói ở ngực trái. Cơn đau kéo dài khoảng 5 phút rồi hết, không lan đi đâu, ấn vào ngực không đau. Chị không khó thở, không vã mồ hôi, không buồn nôn, không choáng. Đau không liên quan gắng sức, không tăng khi hít sâu. Hai tháng nay chị có ba cơn giống vậy. Không hút thuốc, không dùng thuốc tránh thai, không sưng chân. Không có thai, kinh nguyệt đều."
+patient:
+  age_years: 27
+  sex: female
+  region: south
+  month: 5
+complaint: chest_pain
+answers:
+  pregnant: absent
+  missed_period: absent
+  chest_pain_duration: minutes
+  chest_pain_pressure: absent
+  chest_pain_exertional: absent
+  chest_pain_sudden_severe: absent
+  chest_pain_radiates_back: absent
+  chest_pain_tearing: absent
+  chest_wall_tenderness: absent
+  pleuritic_chest_pain: absent
+  pain_radiates_arm_jaw: absent
+  palpitations: present
+  panic_fear: present
+  tremor: present
+  perioral_tingling: present
+  similar_episodes_before: present
+  stress_poor_sleep: present
+  breathing_difficulty: absent
+  cold_sweat: absent
+  nausea: absent
+  vomiting: absent
+  fainting_or_near_fainting: absent
+  dizziness: absent
+  heartburn: absent
+  cough: absent
+  fever: absent
+  rash_any: absent
+  skin_burning_band: absent
+  leg_swelling_one_side: absent
+  estrogen_use: absent
+  recent_immobility: absent
+  previous_clot: absent
+  active_cancer: absent
+  smoker: absent
+  hypertension_known: absent
+  diabetes: absent
+  known_heart_disease: absent
+  asthma_known: absent
+default_unmentioned: absent
+expected:
+  condition: panic_disorder
+  acceptable: []
+  triage: 4
+source:
+  basis: "Cơn hoảng sợ tái diễn có đau ngực ngắn: sợ hãi dữ dội đột ngột, tim nhanh, run, tê bì (NHS Panic disorder; MSD). NHS Chest pain: đau ngực đã hết nhanh, đến rồi đi, không kèm khó thở, vã mồ hôi, buồn nôn, đau lan thì khám bác sĩ gia đình; NHS Panic disorder: khám bác sĩ gia đình (mức 4)."
+  references: [nhs-panic-disorder, msd-panic-disorder, nhs-chest-pain]
+author: "agent:pass-c"
+notes_vi: "Ca của bản mở rộng lô 3: cơn hoảng sợ ở triệu chứng chính Đau ngực."
