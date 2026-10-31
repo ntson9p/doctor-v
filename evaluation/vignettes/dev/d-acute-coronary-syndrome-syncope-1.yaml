@@ -28,6 +28,7 @@ answers:
   recent_immobility: absent
   not_recovered_after_faint: absent
   pulse_measured: not_measured
+  chest_pain: absent
 default_unmentioned: absent
 expected:
   condition: acute_coronary_syndrome

@@ -1,0 +1,46 @@
+id: d-chest-wall-pain-3
+set: dev
+title_vi: "Nam 55 tuổi hút thuốc, tăng huyết áp, đau giữa ngực 2 ngày sau khiêng bao xi măng, ấn vào xương ức đau"
+narrative_vi: "Ông N., 55 tuổi, thợ xây ở Nghệ An, hút thuốc lá, bị tăng huyết áp. Hai ngày trước khiêng nhiều bao xi măng; từ tối hôm đó đau âm ỉ ở giữa ngực, chỗ xương ức, kéo dài cả ngày. Cử động tay, xoay người hoặc hít sâu thì đau nhói hơn; ấn vào xương ức thì đau đúng chỗ. Đi bộ nhanh, leo cầu thang không thấy đau hơn. Đau không lan ra tay, hàm hay lưng. Không vã mồ hôi, không khó thở, không buồn nôn, không choáng. Không sốt, không ho, không ợ chua. Chưa được nói có bệnh tim, không đái tháo đường."
+patient:
+  age_years: 55
+  sex: male
+  region: central
+  month: 5
+complaint: chest_pain
+answers:
+  chest_pain_pressure: present
+  chest_pain_duration: days
+  chest_wall_tenderness: present
+  pleuritic_chest_pain: present
+  hypertension_known: present
+  smoker: present
+  chest_pain_exertional: absent
+  chest_pain_sudden_severe: absent
+  chest_pain_radiates_back: absent
+  chest_pain_tearing: absent
+  pain_radiates_arm_jaw: absent
+  cold_sweat: absent
+  breathing_difficulty: absent
+  nausea: absent
+  fainting_or_near_fainting: absent
+  fever: absent
+  cough: absent
+  heartburn: absent
+  skin_burning_band: absent
+  rash_any: absent
+  known_heart_disease: absent
+  diabetes: absent
+  similar_episodes_before: absent
+  leg_swelling_one_side: absent
+  recent_immobility: absent
+default_unmentioned: absent
+expected:
+  condition: chest_wall_pain
+  acceptable: []
+  triage: 3
+source:
+  basis: "Đau thành ngực sau mang vác ở người có yếu tố nguy cơ tim mạch: đau giữa ngực, ấn vào đau, tăng khi cử động, không theo gắng sức (Verdon 2007; Ronga 2012), nhưng đau ngực giữa ở nam 55 tuổi hút thuốc, tăng huyết áp vẫn cần loại trừ hội chứng vành cấp: đau trong 12–72 giờ qua thì cần được đánh giá trong ngày (NICE CG95 khuyến cáo 1.2.1.8); NHS Costochondritis: gọi 111 để loại trừ bệnh nặng hơn: mức 3."
+  references: [verdon-bmcfampract-2007, ronga-bmcfampract-2012, nice-cg95, nhs-costochondritis]
+author: "agent:pass-c"
+notes_vi: "Ca dễ nhầm với hội chứng mạch vành cấp."

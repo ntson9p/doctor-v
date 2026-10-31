@@ -1,0 +1,48 @@
+id: d-pulmonary-embolism-chest-pain-1
+set: dev
+title_vi: "Nam 36 tuổi bó bột chân 2 tuần, 6 giờ nay đau nhói ngực trái khi hít sâu, hơi khó thở, tim đập nhanh"
+narrative_vi: "Anh T., 36 tuổi, ở Hải Dương, bị gãy xương cẳng chân phải, đang bó bột, nằm nhiều 2 tuần nay. Khoảng 6 giờ trước đột ngột đau nhói ngực trái, hít sâu thì đau hơn, đau vừa phải, đến giờ vẫn đau. Kèm hơi khó thở khi đi lại, ngồi nghỉ thì đỡ, tim đập nhanh. Không ho ra máu, không ho, không sốt. Không vã mồ hôi, không buồn nôn, không choáng. Ấn vào ngực không đau thêm. Không đau lan ra tay, hàm, lưng. Chưa từng bị cục máu đông, không có ung thư. Không hút thuốc."
+patient:
+  age_years: 36
+  sex: male
+  region: north
+  month: 5
+complaint: chest_pain
+answers:
+  pleuritic_chest_pain: present
+  chest_pain_duration: over_15min
+  breathing_difficulty: present
+  dyspnea_onset: sudden
+  dyspnea_severity: exertion
+  palpitations: present
+  recent_immobility: present
+  chest_pain_sudden_severe: absent
+  chest_pain_pressure: absent
+  chest_pain_tearing: absent
+  chest_pain_radiates_back: absent
+  pain_radiates_arm_jaw: absent
+  chest_wall_tenderness: absent
+  chest_pain_exertional: absent
+  hemoptysis: absent
+  cough: absent
+  fever: absent
+  cold_sweat: absent
+  nausea: absent
+  fainting_or_near_fainting: absent
+  leg_swelling_one_side: unknown
+  previous_clot: absent
+  active_cancer: absent
+  smoker: absent
+  heartburn: absent
+  skin_burning_band: absent
+  rash_any: absent
+  spo2_measured: not_measured
+default_unmentioned: absent
+expected:
+  condition: pulmonary_embolism
+  acceptable: []
+  triage: 2
+source:
+  basis: "Thuyên tắc phổi sau bất động (bó bột, nằm lâu, ESC 2019 bảng 3): đau ngực kiểu màng phổi đột ngột, khó thở, tim nhanh; chân bó bột nên không tự thấy sưng bắp chân; chưa có ngất, sốc. NHS Pulmonary embolism: 'Call 999 or go to A&E', theo quy ước của lượt R là mức 2 (quy tắc rf_chest_pain_breathless, rf_pe_signs mức 2)."
+  references: [esc-pe-2019, miniati-plosone-2012, nhs-pulmonary-embolism]
+author: "agent:pass-c"

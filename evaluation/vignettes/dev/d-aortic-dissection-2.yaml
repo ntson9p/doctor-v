@@ -1,0 +1,46 @@
+id: d-aortic-dissection-2
+set: dev
+title_vi: "Nữ 74 tuổi tăng huyết áp, đột ngột đau lưng trên và ngực, đau bụng, suýt ngất; không tả là đau như xé"
+narrative_vi: "Bà H., 74 tuổi, ở TP.HCM, bị tăng huyết áp. Khoảng 1 giờ trước, đang tưới cây thì đột ngột đau dữ dội ở lưng trên lan ra trước ngực rồi xuống bụng, đến giờ vẫn đau. Bà không tả được là đau như xé hay như dao đâm. Lúc đó bà choáng váng như sắp ngất, phải ngồi xuống. Không vã mồ hôi, không buồn nôn, không khó thở. Đau không phải tức nặng ở giữa ngực, không tăng khi hít thở, ấn vào không đau. Không yếu tay chân, không nói khó. Không sốt. Không bị đái tháo đường, chưa được nói có bệnh tim hay phình động mạch chủ."
+patient:
+  age_years: 74
+  sex: female
+  region: south
+  month: 3
+complaint: chest_pain
+answers:
+  chest_pain_sudden_severe: present
+  chest_pain_tearing: unknown
+  chest_pain_radiates_back: present
+  chest_pain_duration: over_15min
+  abdominal_pain: present
+  fainting_or_near_fainting: present
+  hypertension_known: present
+  chest_pain_pressure: absent
+  cold_sweat: absent
+  nausea: absent
+  breathing_difficulty: absent
+  pain_radiates_arm_jaw: absent
+  es_stroke_signs: absent
+  pleuritic_chest_pain: absent
+  chest_wall_tenderness: absent
+  chest_pain_exertional: absent
+  fever: absent
+  diabetes: absent
+  known_heart_disease: absent
+  known_aaa: absent
+  smoker: absent
+  similar_episodes_before: absent
+  heartburn: absent
+  skin_burning_band: absent
+  rash_any: absent
+default_unmentioned: absent
+expected:
+  condition: aortic_dissection
+  acceptable: []
+  triage: 1
+source:
+  basis: "Bóc tách động mạch chủ ở nữ cao tuổi, biểu hiện không điển hình: đau lưng, đau bụng, gục hoặc ngất hay gặp hơn ở nữ (Methorst 2026); đau như xé không phải mô tả phổ biến (IRAD, Evangelista 2016); đau bụng làm chẩn đoán muộn hơn. Đau ngực, lưng đột ngột dữ dội kèm ngất là cấp cứu (HSE; NHS Chest pain: gọi 999): mức 1."
+  references: [methorst-jtd-2026, evangelista-gcsp-2016, hse-aortic-dissection, nhs-chest-pain]
+author: "agent:pass-c"
+notes_vi: "Ca không điển hình: nữ cao tuổi, đau lưng và bụng nhiều hơn đau ngực, không tả đau như xé, suýt ngất."

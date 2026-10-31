@@ -28,6 +28,8 @@ answers:
   panic_fear: absent
   known_heart_disease: absent
   pulse_measured: not_measured
+  chest_pain: absent
+  dyspnea_onset: hours_days
 default_unmentioned: absent
 expected:
   condition: pulmonary_embolism

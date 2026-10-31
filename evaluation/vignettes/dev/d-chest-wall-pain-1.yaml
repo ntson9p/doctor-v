@@ -1,0 +1,45 @@
+id: d-chest-wall-pain-1
+set: dev
+title_vi: "Nữ 34 tuổi đau nhói ngực trái 3 ngày sau khi khiêng đồ, ấn vào đau, tăng khi cử động và hít sâu"
+narrative_vi: "Chị M., 34 tuổi, ở Đà Nẵng. Ba ngày trước chị chuyển nhà, khiêng nhiều đồ nặng. Từ hôm sau thấy đau nhói ở ngực trái, đau âm ỉ suốt ngày, xoay người, với tay hoặc hít sâu thì nhói hơn. Ấn tay vào chỗ đau giữa các xương sườn thì đau nhói đúng chỗ đó. Đau không lan ra tay, hàm hay lưng, không tức nặng giữa ngực, không đau khi đi bộ nhanh rồi hết khi nghỉ. Không khó thở, không vã mồ hôi, không buồn nôn, không choáng. Không sốt, không ho. Da chỗ đau bình thường, không nổi ban. Chưa từng bị như vậy. Không hút thuốc, không dùng thuốc tránh thai. Không có thai, không chậm kinh."
+patient:
+  age_years: 34
+  sex: female
+  region: central
+  month: 8
+complaint: chest_pain
+answers:
+  chest_pain_duration: days
+  chest_wall_tenderness: present
+  pleuritic_chest_pain: present
+  chest_pain_pressure: absent
+  chest_pain_exertional: absent
+  chest_pain_sudden_severe: absent
+  chest_pain_radiates_back: absent
+  chest_pain_tearing: absent
+  pain_radiates_arm_jaw: absent
+  breathing_difficulty: absent
+  cold_sweat: absent
+  nausea: absent
+  fainting_or_near_fainting: absent
+  fever: absent
+  cough: absent
+  heartburn: absent
+  skin_burning_band: absent
+  rash_any: absent
+  similar_episodes_before: absent
+  smoker: absent
+  estrogen_use: absent
+  leg_swelling_one_side: absent
+  recent_immobility: absent
+  pregnant: absent
+  missed_period: absent
+default_unmentioned: absent
+expected:
+  condition: chest_wall_pain
+  acceptable: []
+  triage: 4
+source:
+  basis: "Hội chứng thành ngực điển hình: đau khu trú, ấn vào đau đúng chỗ, tăng khi cử động, hít sâu, sau mang vác (Verdon 2007; Ronga 2012; NHS Costochondritis). Lần đầu đau ngực nên được bác sĩ khám; đau ngực lúc có lúc không thì khám bác sĩ gia đình (NHS Chest pain): mức 4."
+  references: [verdon-bmcfampract-2007, ronga-bmcfampract-2012, nhs-costochondritis, nhs-chest-pain]
+author: "agent:pass-c"

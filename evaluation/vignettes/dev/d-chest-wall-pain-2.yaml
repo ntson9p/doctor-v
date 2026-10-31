@@ -1,0 +1,43 @@
+id: d-chest-wall-pain-2
+set: dev
+title_vi: "Nam 15 tuổi chơi bóng rổ, 2 tuần nay có cơn nhói ngực vài giây, ấn cạnh xương ức thấy đau"
+narrative_vi: "Em B., nam, 15 tuổi, ở Hà Nội, chơi bóng rổ ở trường. Hai tuần nay thỉnh thoảng có cơn nhói ở ngực trái, mỗi cơn chỉ vài giây rồi hết, hay bị khi cúi người hoặc xoay người. Ấn vào cạnh xương ức bên trái thì đau nhói. Đau không xuất hiện khi chạy rồi đỡ khi nghỉ, không lan đi đâu. Không khó thở, không hồi hộp, không choáng, không ngất. Không sốt, không ho. Không nổi ban. Không hút thuốc. Bố mẹ khỏe, không ai đột tử."
+patient:
+  age_years: 15
+  sex: male
+  region: north
+  month: 10
+complaint: chest_pain
+answers:
+  chest_pain_duration: seconds
+  chest_wall_tenderness: present
+  similar_episodes_before: present
+  pleuritic_chest_pain: absent
+  chest_pain_pressure: absent
+  chest_pain_exertional: absent
+  chest_pain_sudden_severe: absent
+  chest_pain_radiates_back: absent
+  chest_pain_tearing: absent
+  pain_radiates_arm_jaw: absent
+  breathing_difficulty: absent
+  palpitations: absent
+  fainting_or_near_fainting: absent
+  cold_sweat: absent
+  nausea: absent
+  fever: absent
+  cough: absent
+  heartburn: absent
+  skin_burning_band: absent
+  rash_any: absent
+  smoker: absent
+  family_sudden_death: absent
+default_unmentioned: absent
+expected:
+  condition: chest_wall_pain
+  acceptable: []
+  triage: 4
+source:
+  basis: "Đau thành ngực ở thiếu niên: cơn nhói vài giây khi cử động, ấn vào đau; trẻ em đau ngực phần lớn do cơ xương hoặc không rõ nguyên nhân, nguyên nhân tim hiếm (Sallam 2026; Chun 2015). Đau ngực không rõ nguyên nhân nên được khám, không khẩn (NHS Costochondritis; NHS Chest pain): mức 4."
+  references: [sallam-cureus-2026, chun-kjp-2015, nhs-costochondritis, nhs-chest-pain]
+author: "agent:pass-c"
+notes_vi: "Ca không điển hình: thiếu niên, cơn đau chỉ vài giây."

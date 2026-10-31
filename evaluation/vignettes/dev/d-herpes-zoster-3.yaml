@@ -1,0 +1,47 @@
+id: d-herpes-zoster-3
+set: dev
+title_vi: "Nam 63 tuổi hút thuốc, tăng huyết áp, đau rát ngực trái 2 ngày, sáng nay thấy vài đám nốt đỏ dưới vú trái"
+narrative_vi: "Ông Đ., 63 tuổi, ở Hà Nam, hút thuốc lá, bị tăng huyết áp, sợ bị bệnh tim. Hai ngày nay đau rát, nhói từng cơn ở ngực trái, đau cả ngày, chạm vào da cũng đau. Sáng nay vợ thấy vài đám nốt đỏ có mụn nước nhỏ ở dưới vú trái, chỉ một bên. Đau không phải tức nặng giữa ngực, không lan ra tay hay hàm, không tăng khi gắng sức. Không khó thở, không vã mồ hôi, không buồn nôn, không choáng. Không sốt, không ho. Không đái tháo đường, chưa được nói có bệnh tim."
+patient:
+  age_years: 63
+  sex: male
+  region: north
+  month: 12
+complaint: chest_pain
+answers:
+  skin_burning_band: present
+  rash_any: present
+  dermatomal_rash: present
+  chest_wall_tenderness: present
+  chest_pain_duration: days
+  hypertension_known: present
+  smoker: present
+  hives: absent
+  chest_pain_pressure: absent
+  chest_pain_radiates_back: absent
+  chest_pain_exertional: absent
+  chest_pain_sudden_severe: absent
+  chest_pain_tearing: absent
+  pain_radiates_arm_jaw: absent
+  pleuritic_chest_pain: absent
+  breathing_difficulty: absent
+  cold_sweat: absent
+  nausea: absent
+  fainting_or_near_fainting: absent
+  fever: absent
+  cough: absent
+  heartburn: absent
+  diabetes: absent
+  known_heart_disease: absent
+  immunocompromised: absent
+  similar_episodes_before: absent
+default_unmentioned: absent
+expected:
+  condition: herpes_zoster
+  acceptable: []
+  triage: 4
+source:
+  basis: "Zona vùng ngực ở người có yếu tố nguy cơ tim mạch, dễ nhầm với đau do bệnh tim: giai đoạn khởi phát cần phân biệt với đau do bệnh tim (75/QĐ-BYT); khám thành ngực tìm zona khi đau ngực (4235/QĐ-BYT). Đã nổi mụn nước thành đám một bên theo dải; không có dấu hiệu nguy hiểm. NHS Shingles: gặp dược sĩ trong 3 ngày từ khi nổi ban: mức 4."
+  references: [byt-qd-75-2015, byt-qd-4235-2012, nhs-shingles]
+author: "agent:pass-c"
+notes_vi: "Ca dễ nhầm với hội chứng mạch vành cấp và đau thành ngực."

@@ -1,0 +1,44 @@
+id: d-acute-coronary-syndrome-chest-pain-1
+set: dev
+title_vi: "Nam 59 tuổi hút thuốc, tăng huyết áp, tức nặng giữa ngực 25 phút lan xuống tay trái, buồn nôn"
+narrative_vi: "Ông K., 59 tuổi, ở Thanh Hóa, hút thuốc lá, bị tăng huyết áp. Khoảng 25 phút trước, sau khi leo dốc về nhà, thấy tức nặng ở giữa ngực, lan xuống tay trái; ngồi nghỉ đã 20 phút vẫn không đỡ. Kèm buồn nôn. Không vã mồ hôi, không khó thở, không choáng. Cơn đau tăng dần, không dữ dội ngay từ đầu, không như xé, không lan ra sau lưng. Đau không tăng khi hít thở, ấn vào ngực không đau. Không sốt, không ho, không ợ chua. Chưa từng đau như vậy, không đái tháo đường, chưa được nói có bệnh tim."
+patient:
+  age_years: 59
+  sex: male
+  region: north
+  month: 1
+complaint: chest_pain
+answers:
+  chest_pain_pressure: present
+  chest_pain_duration: over_15min
+  pain_radiates_arm_jaw: present
+  nausea: present
+  hypertension_known: present
+  smoker: present
+  chest_pain_exertional: absent
+  chest_pain_sudden_severe: absent
+  chest_pain_tearing: absent
+  chest_pain_radiates_back: absent
+  cold_sweat: absent
+  breathing_difficulty: absent
+  fainting_or_near_fainting: absent
+  pleuritic_chest_pain: absent
+  chest_wall_tenderness: absent
+  fever: absent
+  cough: absent
+  heartburn: absent
+  skin_burning_band: absent
+  rash_any: absent
+  diabetes: absent
+  known_heart_disease: absent
+  similar_episodes_before: absent
+default_unmentioned: absent
+expected:
+  condition: acute_coronary_syndrome
+  acceptable: []
+  triage: 1
+source:
+  basis: "Hội chứng mạch vành cấp điển hình: tức nặng giữa ngực trên 15 phút, lan tay trái, buồn nôn, không đỡ khi nghỉ (NICE CG95 khuyến cáo 1.2.1.3; 2187/QĐ-BYT). NHS Chest pain: đau ngực lan ra tay, kèm buồn nôn thì gọi 999; NICE CG95 1.2.1.7: đang đau thì chuyển cấp cứu: mức 1."
+  references: [nice-cg95, byt-qd-2187-2019, nhs-chest-pain]
+author: "agent:pass-c"
+notes_vi: "Đau xuất hiện sau gắng sức nhưng không đỡ khi nghỉ, nên câu 'đau khi gắng sức và đỡ khi nghỉ' trả lời 'Không'."

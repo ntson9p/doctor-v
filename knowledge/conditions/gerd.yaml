@@ -1,0 +1,260 @@
+id: gerd
+names:
+  vi: "Bệnh trào ngược dạ dày – thực quản"
+  vi_common: ["Trào ngược", "Trào ngược dạ dày", "Ợ chua, ợ nóng"]
+  en: "Gastro-oesophageal reflux disease (GORD/GERD)"
+codes:
+  icd10: "K21"
+  icd10_verified: false
+  mondo: "MONDO:0007186"
+summary_vi:
+  - "Dịch trong dạ dày trào ngược lên thực quản, gây nóng rát sau xương ức, ợ chua."
+  - "Có thể đau tức ngực, đau vùng trên rốn, ho kéo dài hoặc khàn tiếng; hay nặng hơn sau ăn no, khi nằm hoặc cúi."
+  - "Bệnh lành tính, hay tái lại; thay đổi cách ăn uống, sinh hoạt thường giúp đỡ nhiều."
+urgency: 4
+cant_miss: false
+specialties: [gastroenterology, general_medicine]
+priors:
+  - complaint: chest_pain
+    default: P2
+    by_age:
+      child_5_12: P3
+      teen_13_17: P3
+      elder_65_74: P3
+      elder_75p: P3
+    evidence:
+      tier: A
+      basis: numeric
+      sources: [haasenritter-croatmedj-2015, bosner-bmcfampract-2009, verdon-smw-2008, chun-kjp-2015, dao-frontmed-2026, byt-qd-4235-2012]
+      locator: "Haasenritter 2015 bảng 3; Bösner 2009 bảng 2; Verdon 2008 tóm tắt; Chun 2015 tóm tắt; VNAGE 2026 khuyến cáo 1; 4235/QĐ-BYT tr. 26–27 (mục 2.3.5)"
+      reported: "Bệnh thực quản 6,0–7,1%, tiêu hóa 5,6–9,7% người đau ngực ở phòng khám đa khoa (Buntinx, Verdon); trào ngược dạ dày – thực quản 3,7% ở nữ, 3,2% ở nam (Bösner, từ 35 tuổi, tuổi trung bình 59); trẻ em, thiếu niên đau ngực ở bệnh viện: tiêu hóa 2,9% (Chun)."
+      population: "Người đau ngực ở phòng khám đa khoa châu Âu; trẻ em ở bệnh viện Hàn Quốc"
+      note: "Hai lượt cùng P2 cho người lớn. Thang tuyệt đối: bệnh thực quản (phần lớn là trào ngược) khoảng 3,5–7% người đau ngực ở tuyến ban đầu, ranh giới P3/P2. VNAGE: đau ngực không do tim là triệu chứng điển hình thứ ba của trào ngược; 4235/QĐ-BYT xếp trào ngược đầu nhóm nguyên nhân tiêu hóa. Lệch ở trẻ 5–12 tuổi (lượt A P4, lượt B P3) và từ 65 tuổi (lượt A P3, lượt B P2): lượt C chọn P3 cho trẻ theo số liệu của Chun (tiêu hóa 2,9%, đã tính phần không phải trào ngược) và P3 từ 65 tuổi vì số liệu của nhóm lớn tuổi hơn (Bösner, tuổi trung bình 59) chỉ 3,5% và bệnh tim, phổi chiếm phần lớn hơn; với bệnh lành tính, mức thấp hơn an toàn hơn. Chưa có số liệu Việt Nam theo lý do đi khám; cần bác sĩ duyệt."
+  - complaint: cough
+    default: P3
+    by_age:
+      infant_0_2m: P5
+      child_2m_5y: P5
+      child_5_12: P4
+      teen_13_17: P4
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [dao-frontmed-2026, nhs-heartburn-acid-reflux]
+      locator: "VNAGE 2026 khuyến cáo 1 (biểu hiện ngoài thực quản); NHS mục Symptoms (ho tái đi tái lại)"
+      reported: "Biểu hiện ngoài thực quản chiếm 7–23,1% biểu hiện của trào ngược; ho ở 49,1% người trào ngược trong một nghiên cứu Việt Nam."
+      note: "Hai lượt trùng trừ trẻ 2 tháng – 5 tuổi (lượt A P5, lượt B P4); ngang nguồn (ước lượng), lượt C chọn mức thấp hơn cho bệnh lành tính: trào ngược ở trẻ nhỏ chủ yếu là sinh lý, ho thường do nhiễm trùng. Người đi khám vì ho phần lớn là ho cấp do nhiễm trùng; trào ngược là một nguyên nhân hay gặp của ho kéo dài ở người lớn nhưng chỉ chiếm phần nhỏ người ho nói chung: 1–5% (P3) ở người lớn, P4 ở 5–17 tuổi. Ước lượng; cần bác sĩ duyệt."
+findings:
+  - finding: heartburn
+    freq: very_frequent
+    freq_by_complaint: { cough: frequent }
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [dao-frontmed-2026, quach-jghopen-2021, nhs-heartburn-acid-reflux]
+      locator: "VNAGE 2026 khuyến cáo 1; Quach 2021 kết quả; NHS mục Symptoms"
+      reported: "Ợ nóng 68,4–78,6%, ợ trớ 71,5–77,4% người Việt được chẩn đoán sơ bộ trào ngược (VNAGE); ợ nóng và/hoặc ợ trớ 74,2% (Quach)."
+      note: "Hai lượt cùng very_frequent; chỉ lượt B thêm frequent khi Ho. Lượt C giữ: câu hỏi gộp ợ chua và nóng rát sau xương ức, hai triệu chứng điển hình; người chỉ có biểu hiện ngoài thực quản (ho) ít có triệu chứng điển hình hơn và VNAGE dành riêng khuyến cáo cho nhóm chỉ có triệu chứng không điển hình. Tỷ lệ nền 0,05; viêm, loét dạ dày để occasional nên câu này tách được hai bệnh."
+  - finding: abd_pain_location
+    dist: { epigastric: 0.8, right_upper: 0.04, left_upper: 0.055, periumbilical: 0.04, right_lower: 0.01, left_lower: 0.01, suprapubic: 0.01, whole: 0.035 }
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [quach-jghopen-2021, dao-frontmed-2026]
+      locator: "Quach 2021 kết quả (đau thượng vị là than phiền chính hay gặp nhất)"
+      note: "Tính trong số người đã đau bụng. Hai lượt gần trùng; lượt C lấy trung bình. Đau, nóng rát vùng trên rốn và sau xương ức; tỷ lệ từng vùng là ước lượng, gần với viêm, loét dạ dày nên câu này không tách được hai bệnh. Bệnh này chưa có prior cho Đau bụng (biên bản đối chiếu); các liên kết đau bụng chỉ có tác dụng khi người chọn Đau ngực hoặc Ho trả lời có đau bụng."
+  - finding: abd_pain_meal_relation
+    dist: { hungry_relieved_by_food: 0.1, worse_after_meal: 0.55, no_relation: 0.35 }
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [nhs-heartburn-acid-reflux, dao-frontmed-2026, byt-qd-4235-2012]
+      locator: "NHS (nặng hơn sau ăn, khi nằm, khi cúi); VNAGE khuyến cáo 1 (ợ nóng hay nặng sau ăn hoặc khi nằm); 4235/QĐ-BYT tr. 24 (đau sau bữa ăn có thể do dạ dày, thực quản)"
+      note: "Hai lượt trùng. Tính trong số người đã đau bụng. Đau nặng sau ăn là kiểu hay gặp; đau lúc đói, ăn vào đỡ gợi ý loét tá tràng (0,35 ở viêm, loét dạ dày). Ước lượng."
+  - finding: abd_pain_duration
+    dist: { lt_6h: 0.065, h6_24: 0.075, d1_3: 0.12, d4_14: 0.185, gt_2w: 0.555 }
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [dao-frontmed-2026, nhs-heartburn-acid-reflux]
+      locator: "VNAGE 2026 (bệnh hay tái phát, cần kế hoạch dài hạn); NHS (ợ nóng lặp lại)"
+      note: "Tính trong số người đã đau bụng. Hai lượt gần trùng; lượt C lấy trung bình. Bệnh mạn tính, hay tái lại; một đợt có thể chỉ vài giờ sau bữa ăn no. Ước lượng."
+  - finding: abd_pain_onset
+    dist: { sudden: 0.08, gradual: 0.92 }
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [nhs-heartburn-acid-reflux]
+      note: "Hai lượt trùng. Tính trong số người đã đau bụng. Đau, rát tăng dần sau ăn; đau đột ngột dữ dội gợi ý bệnh bụng cấp. Ước lượng."
+  - finding: abd_pain_severe
+    freq: rare
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [nhs-heartburn-acid-reflux, dao-frontmed-2026]
+      note: "Hai lượt trùng. Tính trong số người đã đau bụng. Thường khó chịu, nóng rát, ít khi dữ dội không chịu nổi; biến chứng nặng hiếm ở Việt Nam (VNAGE). Mức rare thấp hơn tỷ lệ nền 5%."
+  - finding: abd_pain_worse_movement
+    freq: rare
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [nhs-heartburn-acid-reflux]
+      note: "Hai lượt trùng. Tính trong số người đã đau bụng. Không kích thích phúc mạc; đau tăng khi cúi người (NHS) khác với đau tăng khi đi lại, xe xóc. Mức rare thấp hơn tỷ lệ nền 5%."
+  - finding: cough
+    freq: occasional
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [dao-frontmed-2026, nhs-heartburn-acid-reflux]
+      locator: "VNAGE 2026 khuyến cáo 1; NHS mục Symptoms (ho hoặc nấc tái đi tái lại)"
+      reported: "Ho 49,1% người trào ngược (nghiên cứu Việt Nam, bệnh viện); biểu hiện ngoài thực quản 7–23,1%."
+      note: "Hai lượt trùng. Có tác dụng khi triệu chứng chính là Đau ngực (với Ho là dấu hiệu ngầm định). Số liệu ở bệnh viện; ở người đi khám vì đau ngực ước khoảng 20%; với tỷ lệ nền 0,2 gần như trung tính."
+  - finding: cough_duration
+    dist: { lt_1w: 0.1, w1_2: 0.1, w2_8: 0.35, gt_8w: 0.45 }
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [dao-frontmed-2026, nhs-heartburn-acid-reflux]
+      locator: "VNAGE 2026 khuyến cáo 1 (ho mạn tính là biểu hiện ngoài thực quản hay gặp)"
+      note: "Hai lượt trùng. Tính trong số người đã ho. Ho do trào ngược kéo dài, tái đi tái lại. Ho từ 2 tuần thì quy tắc rf_cough_2_weeks xếp mức 4. Ước lượng."
+  - finding: productive_cough
+    freq: rare
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [dao-frontmed-2026, nhs-heartburn-acid-reflux]
+      note: "Hai lượt trùng. Tính trong số người đã ho. Ho do trào ngược chủ yếu là ho khan, kèm cảm giác vướng họng (46,7%, VNAGE); ho có đờm nghiêng về viêm phế quản, viêm phổi, bệnh phổi tắc nghẽn. Mức rare thấp hơn tỷ lệ nền 0,2. Ước lượng, cần bác sĩ duyệt."
+  - finding: hoarse_voice
+    freq: occasional
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [dao-frontmed-2026, nhs-heartburn-acid-reflux]
+      locator: "VNAGE 2026 khuyến cáo 1; NHS mục Symptoms (khàn tiếng)"
+      reported: "Khàn tiếng 9,9% người trào ngược (nghiên cứu Việt Nam)."
+      note: "Hai lượt trùng. Mức occasional (7,5–33%) cao hơn tỷ lệ nền 0,05."
+  - finding: night_respiratory_symptoms
+    freq: occasional
+    evidence:
+      tier: C
+      basis: verbal
+      sources: [nhs-heartburn-acid-reflux, dao-frontmed-2026]
+      locator: "NHS (nặng hơn khi nằm); VNAGE khuyến cáo 1 (ợ nóng nặng khi nằm)"
+      note: "Chỉ lượt A có; lượt C giữ vì hai nguồn mô tả triệu chứng nặng hơn khi nằm. Tính trong số người đã ho hoặc khó thở. Mức occasional thấp hơn hen (cơn về đêm, gần sáng). Ước lượng."
+  - finding: fever
+    freq: rare
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [nhs-heartburn-acid-reflux, dao-frontmed-2026]
+      note: "Hai lượt trùng. Trào ngược không gây sốt; sốt nghiêng về nhiễm trùng. Mức rare thấp hơn tỷ lệ nền 5%."
+  - finding: weight_loss_unintended
+    freq: rare
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [dao-frontmed-2026, nhs-heartburn-acid-reflux]
+      locator: "VNAGE 2026 (sụt cân là dấu hiệu báo động cần nội soi); NHS (khám bác sĩ nếu sụt cân không rõ lý do)"
+      note: "Chỉ lượt B có; lượt C giữ vì hai nguồn xếp sụt cân vào dấu hiệu báo động cần tìm bệnh khác. Trào ngược đơn thuần không gây sụt cân. Mức rare thấp hơn tỷ lệ nền 5%."
+  - finding: cold_sweat
+    freq: rare
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-4235-2012, nhs-heartburn-acid-reflux, dao-frontmed-2026]
+      locator: "4235/QĐ-BYT tr. 25 (vã mồ hôi, xanh tái: cần tìm nhồi máu cơ tim, tắc mạch phổi, phình tách động mạch chủ); NHS, VNAGE (triệu chứng của trào ngược không có vã mồ hôi)"
+      note: "Chỉ lượt B có (ước lượng); lượt C giữ và ghi nguồn: hai nguồn về trào ngược không nêu vã mồ hôi trong triệu chứng, còn 4235/QĐ-BYT dặn khi có vã mồ hôi, xanh tái thì tìm nhồi máu cơ tim, tắc mạch phổi, phình tách. Mức rare thấp hơn tỷ lệ nền 5%: câu trả lời 'Có' làm trào ngược kém khả năng hơn hội chứng mạch vành cấp ở người đau ngực kèm ợ nóng."
+  - finding: chest_pain_duration
+    dist: { seconds: 0.085, minutes: 0.325, over_15min: 0.3, days: 0.29 }
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [nhs-heartburn-acid-reflux, byt-qd-4235-2012]
+      locator: "4235/QĐ-BYT tr. 24 (đau âm ỉ, từ từ: tìm đau thành ngực, đau tiêu hóa)"
+      note: "Tính trong số người đã đau ngực. Hai lượt gần trùng; lượt C lấy trung bình. Nóng rát sau ăn kéo dài vài phút đến vài giờ, hay tái lại nhiều ngày. Phân bố gần tỷ lệ nền; ước lượng."
+  - finding: chest_pain_pressure
+    freq: occasional
+    freq_by_complaint: { chest_pain: frequent }
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-4235-2012, nhs-heartburn-acid-reflux, dao-frontmed-2026]
+      locator: "4235/QĐ-BYT tr. 24 (đau giữa ngực thường do cơn đau thắt ngực hoặc nguồn gốc tiêu hóa); NHS (nóng rát giữa ngực); VNAGE khuyến cáo 1 (đau ngực không do tim 45,3%)"
+      note: "Hai lượt trùng. Khi đau ngực là lý do khám, cơn đau của trào ngược thường ở giữa ngực, sau xương ức: frequent. Với Ho ước occasional (phần lớn là nóng rát hơn là tức nặng). Có đau tức giữa ngực thì quy tắc rf_chest_pain_central vẫn xếp mức 2 để loại trừ bệnh tim."
+  - finding: chest_pain_exertional
+    freq: rare
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-4235-2012, nhs-heartburn-acid-reflux]
+      locator: "4235/QĐ-BYT tr. 24 (đau sau bữa ăn: dạ dày, thực quản; đau sau gắng sức thường do bệnh mạch vành)"
+      note: "Hai lượt trùng. Tính trong số người đã đau ngực. Mức rare thấp hơn tỷ lệ nền 5%: đau khi gắng sức, đỡ khi nghỉ nghiêng về bệnh mạch vành (quy tắc rf_chest_pain_exertional mức 3)."
+  - finding: chest_wall_tenderness
+    freq: rare
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [ronga-bmcfampract-2012, byt-qd-4235-2012]
+      locator: "Ronga 2012 bảng 3 (triệu chứng tiêu hóa ít gặp ở hội chứng thành ngực, OR 0,54)"
+      note: "Hai lượt trùng. Tính trong số người đã đau ngực. Đau từ thực quản, ấn vào thành ngực không đau nhói đúng chỗ. Mức rare thấp hơn tỷ lệ nền 5%. Ước lượng."
+  - finding: pleuritic_chest_pain
+    freq: rare
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [byt-qd-4235-2012]
+      locator: "4235/QĐ-BYT tr. 24–25 (đau tăng khi nuốt: thực quản; tăng khi ho, hít sâu: màng phổi)"
+      note: "Hai lượt trùng. Mức rare thấp hơn tỷ lệ nền 5%. Ước lượng."
+  - finding: chest_pain_sudden_severe
+    freq: rare
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [byt-qd-4235-2012, nhs-heartburn-acid-reflux]
+      locator: "4235/QĐ-BYT tr. 24 (đau âm ỉ, từ từ: đau tiêu hóa; đau đột ngột: nhồi máu cơ tim, nhồi máu phổi, tràn khí, phình tách)"
+      note: "Hai lượt trùng. Tính trong số người đã đau ngực. Mức rare thấp hơn tỷ lệ nền 5%."
+  - finding: pain_radiates_arm_jaw
+    freq: very_rare
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [byt-qd-4235-2012]
+      locator: "4235/QĐ-BYT tr. 24 (đau lan lên cổ, hàm dưới thường là cơn đau thắt ngực)"
+      note: "Chỉ lượt A có; lượt C giữ vì có nguồn. Tỷ lệ nền của dấu hiệu là 1% (specific) nên dùng very_rare để câu trả lời 'Có' không làm tăng khả năng trào ngược. Có đau lan thì quy tắc rf_chest_pain_spreading_or_systemic xếp mức 1."
+  - finding: heavy_alcohol
+    freq: occasional
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [quach-jghopen-2021, nhs-heartburn-acid-reflux]
+      locator: "Quach 2021 bảng 1; NHS (rượu làm nặng)"
+      reported: "Uống rượu bia từ 1 lần/tuần 37,4% ở người trào ngược so với 26,0% ở người không trào ngược (không còn ý nghĩa ở phân tích đa biến)."
+      note: "Chỉ lượt A có; lượt C giữ vì có số liệu Việt Nam. Câu hỏi hỏi uống nhiều; ước khoảng 20% (tỷ lệ nền 0,15): liên kết yếu."
+  - finding: similar_episodes_before
+    freq: frequent
+    evidence:
+      tier: C
+      basis: verbal
+      sources: [nhs-heartburn-acid-reflux, dao-frontmed-2026]
+      locator: "NHS (ợ nóng lặp lại thì gọi là bệnh trào ngược); VNAGE (bệnh hay tái phát)"
+      note: "Chỉ lượt A có; lượt C giữ. Ước khoảng một nửa người bệnh đã từng có cơn giống hệt (tỷ lệ nền 0,2)."
+warning_signs: [es_crushing_chest_pain, pain_radiates_arm_jaw, cold_sweat, breathing_difficulty, vomiting_blood, black_stool, persistent_vomiting, weight_loss_unintended]
+self_care_vi:
+  - "Ăn bữa nhỏ, không ăn quá no, không ăn trong 3–4 giờ trước khi đi ngủ."
+  - "Kê cao đầu giường khoảng 10–20 cm bằng gạch hoặc gỗ dưới chân giường; không chỉ chồng thêm gối."
+  - "Bỏ thuốc lá; hạn chế rượu bia, cà phê, đồ nhiều dầu mỡ, đồ chua cay nếu thấy nặng hơn."
+  - "Giảm cân nếu thừa cân; không mặc quần áo chật ở bụng."
+  - "Hỏi dược sĩ hoặc bác sĩ trước khi dùng thuốc, nhất là thuốc giảm đau chống viêm."
+see_doctor_vi:
+  - "Đặt lịch khám nếu ợ chua, nóng rát gần như ngày nào cũng có, hoặc không đỡ sau khi thay đổi ăn uống."
+  - "Đi khám sớm nếu nuốt vướng, nuốt đau, nôn nhiều, sụt cân hoặc da xanh."
+  - "Đau ngực lần đầu, nhất là người lớn tuổi, cần bác sĩ khám để loại trừ bệnh tim. Không tự cho là đau dạ dày."
+  - "Gọi 115 nếu đau tức ngực kèm vã mồ hôi, khó thở, lan lên cổ, hàm hoặc tay. Đi cấp cứu ngay nếu nôn ra máu hoặc đi ngoài phân đen."
+sources: [dao-frontmed-2026, nhs-heartburn-acid-reflux, quach-jghopen-2021, haasenritter-croatmedj-2015]
+review:
+  status: source_checked
+  authors: ["agent:pass-a", "agent:pass-b"]
+  reconciler: "agent:pass-c"
+  doctor_reviewer: null
+  updated: "2026-10-31"
+  notes_vi: "Lượt C (Giai đoạn 3 lô 3, phần c) đối chiếu 24 liên kết và mở lại mọi nguồn được trích (toàn văn VNAGE 2026, Quach 2021, Haasenritter 2015, Bösner 2009, Ronga 2012; NHS; 4235/QĐ-BYT). Mức xử trí: hai lượt cùng để 5; lượt C đổi sang 4 (khám trong vài ngày). Lý do: bệnh chỉ được xét khi người dùng chọn Đau ngực hoặc Ho; NHS Chest pain khuyên đau ngực lúc có lúc không thì khám bác sĩ gia đình, NHS Heartburn and acid reflux khuyên khám bác sĩ khi ợ nóng gần như ngày nào cũng có (trào ngược là ợ nóng lặp lại), và chính lời khuyên của hai lượt ghi đau ngực lần đầu cần bác sĩ khám để loại trừ bệnh tim. Ợ nóng thỉnh thoảng thì tự chăm sóc, hỏi dược sĩ (NHS); bác sĩ cần quyết. Không thuộc nhóm không được bỏ sót. Prior Đau bụng (hai lượt cùng P3): lượt C không đưa vào bản chính thức. Thử trên bộ dev, mọi mức từ P5 trở lên làm ca d-acute-coronary-syndrome-3 (nam 58 tuổi đau rát thượng vị, sau xương ức, buồn nôn, vã mồ hôi) tụt từ mức 1 xuống mức 2 (bỏ sót cấp cứu ở triệu chứng chính đã phát hành), vì xác suất hội chứng vành cấp của ca này chỉ vừa qua ngưỡng mức 1 (10,2% so với 10%) và trào ngược chia phần bằng chứng ợ nóng; P3 còn làm viêm tụy cấp ở hai ca, tiền sản giật ở một ca tụt hạng. Người đau thượng vị do trào ngược vẫn được xếp vào viêm, loét dạ dày (mức 4). Đề xuất người bảo trì thêm quy tắc mức 1 cho đau thượng vị kèm vã mồ hôi, buồn nôn ở người từ 45 tuổi (2187/QĐ-BYT) trước khi thêm prior Đau bụng (P3 hoặc P4) cho bệnh này. Lượt C bỏ bốn liên kết chỉ một lượt có, không có nguồn đủ: khò khè (lượt A rare, nhưng nguồn ghi 9,4% người trào ngược, khoảng occasional; không liên kết để giữ trung tính), sổ mũi, khó thở (lượt B rare, ước lượng); giữ vã mồ hôi lạnh (lượt B) với nguồn 4235/QĐ-BYT. Bác sĩ cần xem: (1) prior Đau ngực dựa trên số liệu châu Âu (3,5–7%), prior Ho là ước lượng; (2) tần suất ho, khàn tiếng lấy từ người trào ngược ở bệnh viện Việt Nam (qua VNAGE); (3) câu ợ chua gộp ợ chua và nóng rát sau xương ức, mà hội chứng vành cấp cũng có liên kết occasional với câu này; (4) chưa có câu 'đau tăng khi nằm, cúi' và 'nuốt vướng, nuốt đau'; (5) mã ICD-10 K21 chưa đối chiếu."

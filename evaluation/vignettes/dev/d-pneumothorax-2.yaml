@@ -1,0 +1,48 @@
+id: d-pneumothorax-2
+set: dev
+title_vi: "Nam 16 tuổi, 2 ngày nay đau âm ỉ ngực trái, tăng khi hít sâu, leo cầu thang hụt hơi"
+narrative_vi: "Em K., nam, 16 tuổi, học sinh ở Cần Thơ, người gầy, cao. Hai ngày trước đang ngồi xem điện thoại thì thấy nhói ở ngực trái; từ đó đau âm ỉ suốt, không dữ dội, hít sâu thì đau hơn. Hôm nay leo cầu thang lên lớp thấy hụt hơi hơn bạn bè, ngồi nghỉ thì đỡ. Khó thở tăng dần từ hôm qua, không phải đột ngột. Ấn vào ngực không đau thêm. Không sốt, không ho, không sổ mũi, không đau họng. Không hút thuốc, không bị hen. Không choáng, không vã mồ hôi. Nhà không có máy đo SpO2."
+patient:
+  age_years: 16
+  sex: male
+  region: south
+  month: 4
+complaint: chest_pain
+answers:
+  chest_pain_duration: days
+  chest_pain_sudden_severe: absent
+  pleuritic_chest_pain: present
+  breathing_difficulty: present
+  dyspnea_onset: hours_days
+  dyspnea_severity: exertion
+  spo2_measured: not_measured
+  chest_wall_tenderness: absent
+  chest_pain_pressure: absent
+  chest_pain_exertional: absent
+  chest_pain_radiates_back: absent
+  chest_pain_tearing: absent
+  pain_radiates_arm_jaw: absent
+  cold_sweat: absent
+  nausea: absent
+  fainting_or_near_fainting: absent
+  fever: absent
+  cough: absent
+  runny_nose: absent
+  sore_throat: absent
+  heartburn: absent
+  skin_burning_band: absent
+  rash_any: absent
+  smoker: absent
+  asthma_known: absent
+  similar_episodes_before: absent
+  wheeze: absent
+default_unmentioned: absent
+expected:
+  condition: pneumothorax
+  acceptable: []
+  triage: 2
+source:
+  basis: "Tràn khí màng phổi nguyên phát ở thiếu niên, đến muộn, đau vừa: thiếu niên tràn khí phần lớn chỉ đau ngực, một phần ba kèm khó thở (Klin 2021); ở thiếu niên lớn, đau liên tục 1–2 ngày (Chun 2015); 25% vào viện sau 24 giờ (Olesen 2019). Đau ngực kèm khó thở cần chụp X quang phổi ở cơ sở cấp cứu (4235/QĐ-BYT): mức 2."
+  references: [klin-medicine-2021, chun-kjp-2015, olesen-erjor-2019, byt-qd-4235-2012]
+author: "agent:pass-c"
+notes_vi: "Ca không điển hình: thiếu niên, đến muộn sau 2 ngày, đau không dữ dội, khó thở tăng dần."

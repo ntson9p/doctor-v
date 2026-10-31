@@ -21,6 +21,9 @@ answers:
   vomiting: absent
   diarrhea: absent
   heartburn: absent
+  chest_pain: present
+  chest_pain_duration: over_15min
+  dyspnea_onset: hours_days
 default_unmentioned: absent
 expected:
   condition: acute_coronary_syndrome

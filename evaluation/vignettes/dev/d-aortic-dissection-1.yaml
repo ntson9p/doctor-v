@@ -1,0 +1,45 @@
+id: d-aortic-dissection-1
+set: dev
+title_vi: "Nam 64 tuổi tăng huyết áp, đột ngột đau ngực dữ dội như xé, lan ra sau lưng giữa hai bả vai 40 phút"
+narrative_vi: "Ông S., 64 tuổi, ở Đà Nẵng, bị tăng huyết áp nhiều năm nhưng uống thuốc thất thường, hút thuốc lá. Khoảng 40 phút trước, đang ngồi uống trà thì đột ngột đau ngực dữ dội ngay từ đầu, cảm giác như bị xé bên trong, đau lan ra sau lưng giữa hai bả vai, đến giờ vẫn đau. Đau ở giữa ngực. Không vã mồ hôi, không buồn nôn, không khó thở, không choáng hay ngất. Không yếu tay chân, không nói khó. Đau không tăng khi hít thở, ấn vào ngực không đau thêm. Chưa từng đau như vậy, không bị đái tháo đường, chưa được nói có bệnh tim hay phình động mạch chủ."
+patient:
+  age_years: 64
+  sex: male
+  region: central
+  month: 12
+complaint: chest_pain
+answers:
+  chest_pain_sudden_severe: present
+  chest_pain_tearing: present
+  chest_pain_radiates_back: present
+  chest_pain_duration: over_15min
+  chest_pain_pressure: present
+  hypertension_known: present
+  smoker: present
+  cold_sweat: absent
+  nausea: absent
+  breathing_difficulty: absent
+  fainting_or_near_fainting: absent
+  pain_radiates_arm_jaw: absent
+  es_stroke_signs: absent
+  pleuritic_chest_pain: absent
+  chest_wall_tenderness: absent
+  chest_pain_exertional: absent
+  abdominal_pain: absent
+  fever: absent
+  similar_episodes_before: absent
+  diabetes: absent
+  known_heart_disease: absent
+  known_aaa: absent
+  heartburn: absent
+  skin_burning_band: absent
+  rash_any: absent
+default_unmentioned: absent
+expected:
+  condition: aortic_dissection
+  acceptable: []
+  triage: 1
+source:
+  basis: "Bóc tách động mạch chủ điển hình: đau ngực đột ngột, dữ dội, như xé, lan ra lưng giữa hai bả vai, ở người tăng huyết áp (MSD; HSE; Klompas 2002). NHS Chest pain: đau ngực đột ngột lan ra lưng thì gọi 999; bệnh tử vong 1–2% mỗi giờ nếu không điều trị (MSD): mức 1."
+  references: [msd-aortic-dissection, hse-aortic-dissection, klompas-jama-2002, nhs-chest-pain]
+author: "agent:pass-c"

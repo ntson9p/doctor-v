@@ -53,6 +53,28 @@ priors:
       sources: [bosner-bmcfampract-2018, maarsingh-annfammed-2010, vanoosterhout-jaha-2020, msd-acute-mi, canto-jama-2000]
       locator: "Bösner 2018 bảng 3–4; Maarsingh 2010 tóm tắt; van Oosterhout 2020; MSD; Canto 2000 tóm tắt"
       note: "Giai đoạn 3 lô 1; hai lượt trùng mức. Nhóm tim mạch chiếm 3,8–56,8% nguyên nhân chóng mặt ở tuyến ban đầu (57% ở người cao tuổi chóng mặt kéo dài) nhưng chủ yếu là hạ huyết áp tư thế, rối loạn nhịp; hội chứng vành cấp chỉ là phần nhỏ. Choáng váng là triệu chứng được báo cáo (van Oosterhout); người cao tuổi hay than khó thở hơn đau ngực (MSD); nhóm nhồi máu không đau ngực già hơn (Canto). Từ 75 tuổi P4, 45–74 tuổi P5, dưới 45 tuổi P6. Ước lượng."
+  - complaint: chest_pain
+    default: P3
+    by_age: { child_5_12: P6, teen_13_17: P6, adult_18_44: P4, elder_65_74: P2, elder_75p: P2 }
+    evidence:
+      tier: A
+      basis: numeric
+      sources: [haasenritter-croatmedj-2015, bosner-bmcfampract-2009, verdon-smw-2008, sallam-cureus-2026, byt-qd-2187-2019, nice-cg95]
+      locator: "Haasenritter 2015 bảng 1, 3 và phần bàn luận; Bösner 2009 bảng 2; Verdon 2008 tóm tắt; Sallam 2026 tóm tắt"
+      reported: "Hội chứng vành cấp hoặc nhồi máu cơ tim 1,5–3,6% người đau ngực ở phòng khám đa khoa (6 nghiên cứu ít sai lệch, tuổi trung bình 45–60); 3,6% ở người từ 35 tuổi, tuổi trung bình 59 (Bösner: nữ 2,9%, nam 4,5%); 10/672 (1,5%, Verdon, tuổi trung bình 55); trung vị 37% ở các nghiên cứu tại cấp cứu, tuyến sau. Trẻ em đau ngực ở cấp cứu: nguyên nhân tim 0,9–1,5%, hầu như không phải bệnh mạch vành."
+      population: "Người đau ngực ở phòng khám đa khoa châu Âu, Bắc Mỹ; trẻ em ở cấp cứu"
+      note: "Giai đoạn 3 lô 3; hai lượt trùng ở mọi nhóm tuổi. Thang tuyệt đối. 45–64 tuổi P3 (1–5%) theo số liệu tuyến ban đầu. Từ 65 tuổi P2: bệnh tăng mạnh theo tuổi (tuổi là yếu tố dự báo bệnh mạch vành, Bösner), và ở cấp cứu tỷ lệ cao hơn nhiều; người cao tuổi đau ngực ở Việt Nam hay tự đến thẳng bệnh viện. 18–44 tuổi P4; dưới 18 tuổi P6. Không thêm hệ số giới (nam 4,5% so với nữ 2,9%, chênh dưới 2 lần, và nữ hay biểu hiện không điển hình hơn). Bệnh này không gồm đau thắt ngực ổn định (6,6–11,2% người đau ngực ở phòng khám): người đau khi gắng sức, đỡ khi nghỉ sẽ dồn vào 'nguyên nhân khác'. Prior từ 65 tuổi làm phần lớn người cao tuổi đau ngực ở mức 1–2 khi chưa có câu trả lời nào; cần bác sĩ duyệt."
+  - complaint: shortness_of_breath
+    default: P5
+    by_age: { infant_0_2m: P6, child_2m_5y: P6, child_5_12: P6, teen_13_17: P6, adult_45_64: P4, elder_65_74: P4, elder_75p: P3 }
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [frese-jcmr-2011, msd-acute-mi, byt-qd-2187-2019]
+      locator: "Frese 2011 bảng 5; MSD (người cao tuổi hay than khó thở hơn đau ngực); 2187/QĐ-BYT (khó thở là triệu chứng không điển hình)"
+      reported: "Người khám bác sĩ đa khoa vì khó thở mới: nhồi máu cơ tim 0% (Hà Lan, 3.743 lần khám) và 1,1% (Đức, 1/93); bệnh tim thiếu máu cục bộ 1,2–2,2%."
+      population: "Người khó thở ở phòng khám đa khoa châu Âu"
+      note: "Giai đoạn 3 lô 3. Hai lượt trùng trừ 65–74 tuổi (lượt A P4, lượt B P3). Hội chứng vành cấp chỉ là phần nhỏ của nhóm bệnh tim thiếu máu cục bộ (1,2–2,2% mọi lứa tuổi, mà nhồi máu cơ tim gần như 0), nên lượt C chọn mức có số liệu hơn: 45–74 tuổi 0,2–1% (P4); từ 75 tuổi khó thở là biểu hiện không điển hình hay gặp (MSD, 2187/QĐ-BYT): P3; 18–44 tuổi P5; dưới 18 tuổi P6. Khó thở kèm tức ngực đã được quy tắc rf_breathless_chest_pressure (mức 2) và rf_breathless_chest_pressure_features (mức 1) xử lý. Ước lượng; cần bác sĩ duyệt."
 findings:
   - finding: chest_pain_pressure
     freq: frequent
@@ -242,6 +264,74 @@ findings:
       basis: judgment
       sources: [byt-qd-2187-2019]
       note: "Giai đoạn 3 lô 1; chỉ lượt B có, lượt C giữ. Tính trong số người đã chóng mặt. Cơn đau do thiếu máu cơ tim kéo dài trên 20–30 phút (2187/QĐ-BYT); choáng kèm theo thường kéo dài vài phút đến vài giờ. Ước lượng."
+  - finding: chest_pain_duration
+    dist: { seconds: 0.025, minutes: 0.26, over_15min: 0.625, days: 0.09 }
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [nice-cg95, byt-qd-2187-2019, bosner-bmcfampract-2009]
+      locator: "NICE CG95 khuyến cáo 1.2.1.3 (đau trên 15 phút); 2187/QĐ-BYT (đau kéo dài trên 20–30 phút); Bösner 2009 bảng 3"
+      reported: "Người bệnh mạch vành ở phòng khám (phần lớn ổn định): cơn dưới 1 phút 11–14%, 1–30 phút 36–46%, từ 30 phút trở lên khoảng 40–50%."
+      note: "Giai đoạn 3 lô 3. Tính trong số người đã đau ngực. Lượt A (0,03/0,22/0,65/0,1) và lượt B (0,02/0,3/0,6/0,08) lệch ít; lượt C lấy trung bình. Số liệu Bösner gồm cả đau thắt ngực ổn định (cơn ngắn); hội chứng vành cấp thường đau từ 15–20 phút hoặc vẫn đang đau (NICE, 2187/QĐ-BYT); đau thắt ngực không ổn định có thể thành cơn vài phút, tái lại nhiều ngày; đau chỉ vài giây hiếm."
+  - finding: chest_pain_exertional
+    freq: occasional
+    evidence:
+      tier: A
+      basis: numeric
+      sources: [swap-jama-2005, bosner-bjgp-2010, bosner-bmcfampract-2009, nice-cg95]
+      locator: "Swap 2005 tóm tắt; Bösner 2010 (BJGP) tóm tắt; Bösner 2009 bảng 3; NICE CG95 khuyến cáo 1.2.1.3"
+      reported: "Đau khởi phát khi gắng sức: LR 2,3–4,7 cho hội chứng vành cấp (Swap); đau tăng khi gắng sức OR 4,27 cho bệnh mạch vành ở tuyến ban đầu (Bösner 2010), 39–48% người bệnh mạch vành ở phòng khám (Bösner 2009)."
+      note: "Giai đoạn 3 lô 3; hai lượt trùng. Tính trong số người đã đau ngực. Câu hỏi hỏi kiểu đau thắt ngực điển hình (xuất hiện khi gắng sức, đỡ khi nghỉ), hay gặp nhất ở đau thắt ngực ổn định (thuộc 'nguyên nhân khác'); nhồi máu cơ tim phần lớn đau cả lúc nghỉ, nhưng đau thắt ngực mới hoặc nặng dần cũng có kiểu này. Ước 20–30%: câu trả lời 'Có' tăng khả năng khoảng 4 lần so với tỷ lệ nền 0,05, khớp LR của Swap. Quy tắc rf_chest_pain_exertional xếp mức 3."
+  - finding: chest_pain_radiates_back
+    freq: occasional
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [bosner-bmcfampract-2009, vanoosterhout-jaha-2020, msd-acute-mi]
+      locator: "Bösner 2009 bảng 3; van Oosterhout 2020 (đau giữa hai bả vai, nữ nhiều hơn); MSD (đau có thể lan ra lưng)"
+      reported: "Đau lan ra lưng 11–14% người bệnh mạch vành ở phòng khám (Bösner 2009)."
+      note: "Giai đoạn 3 lô 3; hai lượt trùng. Tính trong số người đã đau ngực. Cùng mức với liên kết đau bụng lan ra lưng đã có. Quy tắc rf_chest_pain_spreading_or_systemic xếp mức 1."
+  - finding: chest_wall_tenderness
+    freq: rare
+    evidence:
+      tier: A
+      basis: numeric
+      sources: [swap-jama-2005, bosner-bjgp-2010, bosner-bmcfampract-2009, ronga-bmcfampract-2012]
+      locator: "Swap 2005 tóm tắt; Bösner 2010 (BJGP) tóm tắt; Bösner 2009 bảng 3; Ronga 2012 tóm tắt"
+      reported: "Đau tái hiện khi ấn: LR 0,2–0,3 cho hội chứng vành cấp (Swap); OR 0,27 cho bệnh mạch vành (Bösner 2010); 6–19% người bệnh mạch vành ở phòng khám (Bösner 2009)."
+      note: "Giai đoạn 3 lô 3; hai lượt trùng, theo gợi ý của lô (thấp). Tính trong số người đã đau ngực. Mức rare (2,5%) thấp hơn tỷ lệ nền 5% nên câu trả lời 'Có' làm giảm khả năng khoảng 2 lần, nhẹ hơn LR 0,2–0,3 của Swap: thận trọng vì người dân tự ấn kém chính xác và dấu hiệu này không loại trừ được bệnh (Ronga)."
+  - finding: pleuritic_chest_pain
+    freq: rare
+    evidence:
+      tier: A
+      basis: numeric
+      sources: [swap-jama-2005, bosner-bmcfampract-2009]
+      locator: "Swap 2005 tóm tắt; Bösner 2009 bảng 3"
+      reported: "Đau khi hít thở, như dao đâm, theo tư thế: LR 0,2–0,3 (Swap); đau khi hít vào 4–6% người bệnh mạch vành ở phòng khám (Bösner)."
+      note: "Giai đoạn 3 lô 3; hai lượt trùng, theo gợi ý của lô (thấp). Mức rare thấp hơn tỷ lệ nền 5%: câu trả lời 'Có' giảm khả năng khoảng 2 lần, nhẹ hơn LR của Swap cho thận trọng. Có tác dụng ở mọi triệu chứng chính có hỏi câu này (kể cả Đau bụng, Ngất, Chóng mặt, Hồi hộp)."
+  - finding: chest_pain_sudden_severe
+    freq: occasional
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-4235-2012, byt-qd-2187-2019]
+      locator: "4235/QĐ-BYT tr. 24 (đau đột ngột: tìm nhồi máu cơ tim, nhồi máu phổi, tràn khí, phình tách; đau dữ dội, đè ép: nhồi máu cơ tim, phình tách)"
+      note: "Giai đoạn 3 lô 3; hai lượt trùng. Tính trong số người đã đau ngực. Nhồi máu cơ tim có thể đau đột ngột dữ dội, nhưng thường tăng dần trong vài phút, kiểu đè nặng: ước 20–30%. Quy tắc rf_chest_pain_sudden_severe xếp mức 2, kéo dài từ 15 phút thì mức 1."
+  - finding: dyspnea_onset
+    dist: { sudden: 0.375, hours_days: 0.475, weeks: 0.15 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-2187-2019, msd-acute-mi]
+      locator: "MSD mục Symptoms and Signs (vài ngày đến vài tuần trước có thể đau thắt ngực tăng dần, khó thở, mệt)"
+      note: "Giai đoạn 3 lô 3. Tính trong số người đã khó thở. Lượt A (0,35/0,5/0,15) và lượt B (0,4/0,45/0,15) lệch ít; lượt C lấy trung bình. Khó thở xuất hiện cùng cơn thiếu máu cơ tim (vài phút đến vài giờ), có khi tăng dần vài ngày trước nhồi máu. 'Đột ngột' gấp khoảng 2,5 lần nền (0,15). Ước lượng."
+  - finding: dyspnea_severity
+    dist: { exertion: 0.375, rest: 0.525, cannot_speak: 0.1 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-2187-2019, msd-acute-mi]
+      note: "Giai đoạn 3 lô 3. Tính trong số người đã khó thở. Lượt A (0,4/0,5/0,1) và lượt B (0,35/0,55/0,1) lệch ít; lượt C lấy trung bình. Trong cơn thường khó thở cả lúc nghỉ; phù phổi cấp, sốc tim (biến chứng) khó thở nặng. Đau thắt ngực không ổn định và biểu hiện không điển hình ở người cao tuổi có thể chỉ khó thở khi gắng sức (MSD, 2187/QĐ-BYT): câu trả lời 'chỉ khi gắng sức' làm giảm bệnh khoảng 1,6 lần (ca d-acute-coronary-syndrome-2 xuống hạng 2); cần bác sĩ duyệt. Ước lượng; quy tắc rf_dyspnea_at_rest xếp mức 2."
 warning_signs: [es_crushing_chest_pain, chest_pain_pressure, cold_sweat, breathing_difficulty, fainting_or_near_fainting, pain_radiates_arm_jaw]
 self_care_vi:
   - "Gọi 115 ngay. Không tự lái xe đến bệnh viện."
@@ -255,5 +345,5 @@ review:
   authors: ["agent:pass-a", "agent:pass-b"]
   reconciler: "agent:pass-c"
   doctor_reviewer: null
-  updated: "2026-10-25"
-  notes_vi: "Lượt C đã đối chiếu 20 liên kết và mở lại mọi nguồn được trích. Bỏ hai liên kết chỉ có ở lượt A: 'nôn' (mức occasional bằng đúng tỷ lệ nền 20% khi đau bụng, không mang thông tin) và 'mệt mỏi' (nguồn chỉ mô tả bằng lời, câu trả lời 'Không' sẽ làm giảm một bệnh không được bỏ sót). Bác sĩ cần xem: (1) prior là ước lượng, chưa có số liệu tỷ lệ hội chứng mạch vành cấp trong người đau bụng ở tuyến ban đầu; (2) tần suất triệu chứng kèm lấy từ người bệnh tại viện ở mọi kiểu biểu hiện, chưa có số liệu riêng cho biểu hiện đau thượng vị (vã mồ hôi hạ một mức, khó thở giữ mức); (3) không dùng hệ số theo giới; (4) tỷ lệ nền của đái tháo đường, tăng huyết áp, hút thuốc trong danh mục không đổi theo tuổi và giới, làm các liên kết yếu tố nguy cơ kém chính xác. Giai đoạn 3 lô 1 (lượt C phần b, 25/10/2026): thêm prior cho Ngất (từ 45 tuổi P4; 18–44 tuổi P5; dưới 18 tuổi P6), Hồi hộp (từ 45 tuổi P5, dưới 45 tuổi P6), Chóng mặt (từ 75 tuổi P4, 45–74 tuổi P5, dưới 45 tuổi P6); thêm 6 liên kết (hồi hộp, hoàn cảnh ngất, dấu hiệu trước ngất, mạch, chóng mặt do tư thế đầu, kiểu chóng mặt); không giữ liên kết hụt hơi khi gắng sức (occasional) của lượt A vì danh mục đã nâng tỷ lệ nền lên 0,15 nên liên kết gần như không mang thông tin mà vẫn làm tốn một câu hỏi khi Đau bụng; không giữ liên kết chóng mặt (frequent) của lượt A vì không có số liệu và câu trả lời không chóng mặt khi Đau bụng làm hạ bệnh dưới ngưỡng mức 1 ở ca d-acute-coronary-syndrome-3 và tần suất theo triệu chứng chính cho choáng, ngất khi Chóng mặt (frequent). Không dùng tần suất đau ngực theo triệu chứng chính mà lượt B đề xuất (nguồn không cho thấy khác biệt rõ). Không sửa giá trị cũ. Bác sĩ cần xem thêm: prior dưới ba triệu chứng chính mới là ước lượng từ cấp cứu Anh, Mỹ; các liên kết mới (hồi hộp, mạch) cũng có thể được hỏi khi triệu chứng chính là Đau bụng."
+  updated: "2026-10-31"
+  notes_vi: "Lượt C đã đối chiếu 20 liên kết và mở lại mọi nguồn được trích. Bỏ hai liên kết chỉ có ở lượt A: 'nôn' (mức occasional bằng đúng tỷ lệ nền 20% khi đau bụng, không mang thông tin) và 'mệt mỏi' (nguồn chỉ mô tả bằng lời, câu trả lời 'Không' sẽ làm giảm một bệnh không được bỏ sót). Bác sĩ cần xem: (1) prior là ước lượng, chưa có số liệu tỷ lệ hội chứng mạch vành cấp trong người đau bụng ở tuyến ban đầu; (2) tần suất triệu chứng kèm lấy từ người bệnh tại viện ở mọi kiểu biểu hiện, chưa có số liệu riêng cho biểu hiện đau thượng vị (vã mồ hôi hạ một mức, khó thở giữ mức); (3) không dùng hệ số theo giới; (4) tỷ lệ nền của đái tháo đường, tăng huyết áp, hút thuốc trong danh mục không đổi theo tuổi và giới, làm các liên kết yếu tố nguy cơ kém chính xác. Giai đoạn 3 lô 1 (lượt C phần b, 25/10/2026): thêm prior cho Ngất (từ 45 tuổi P4; 18–44 tuổi P5; dưới 18 tuổi P6), Hồi hộp (từ 45 tuổi P5, dưới 45 tuổi P6), Chóng mặt (từ 75 tuổi P4, 45–74 tuổi P5, dưới 45 tuổi P6); thêm 6 liên kết (hồi hộp, hoàn cảnh ngất, dấu hiệu trước ngất, mạch, chóng mặt do tư thế đầu, kiểu chóng mặt); không giữ liên kết hụt hơi khi gắng sức (occasional) của lượt A vì danh mục đã nâng tỷ lệ nền lên 0,15 nên liên kết gần như không mang thông tin mà vẫn làm tốn một câu hỏi khi Đau bụng; không giữ liên kết chóng mặt (frequent) của lượt A vì không có số liệu và câu trả lời không chóng mặt khi Đau bụng làm hạ bệnh dưới ngưỡng mức 1 ở ca d-acute-coronary-syndrome-3 và tần suất theo triệu chứng chính cho choáng, ngất khi Chóng mặt (frequent). Không dùng tần suất đau ngực theo triệu chứng chính mà lượt B đề xuất (nguồn không cho thấy khác biệt rõ). Không sửa giá trị cũ. Bác sĩ cần xem thêm: prior dưới ba triệu chứng chính mới là ước lượng từ cấp cứu Anh, Mỹ; các liên kết mới (hồi hộp, mạch) cũng có thể được hỏi khi triệu chứng chính là Đau bụng. Giai đoạn 3 lô 3 (lượt C phần c, 31/10/2026): thêm prior Đau ngực (45–64 tuổi P3, từ 65 tuổi P2, 18–44 tuổi P4, dưới 18 tuổi P6) và Khó thở (75 tuổi trở lên P3, 45–74 tuổi P4, 18–44 tuổi P5, dưới 18 tuổi P6; lượt B để P3 từ 65 tuổi, lượt C chọn P4 cho 65–74 tuổi theo Frese); thêm 8 liên kết với dấu hiệu lô 3 (thời gian cơn đau ngực, đau khi gắng sức, đau lan ra lưng, ấn vào ngực đau thấp, đau kiểu màng phổi thấp, đau đột ngột dữ dội, kiểu khởi phát và mức khó thở). Mọi nguồn mới đã mở lại (Haasenritter 2015, Bösner 2009 toàn văn; Bösner 2010, Sallam 2026, Swap 2005 tóm tắt; NICE CG95, Frese 2011, Ronga 2012 đã xác minh cùng ngày). Không sửa giá trị cũ; không liên kết dấu hiệu chung chest_pain (quyết định của người bảo trì). Lượt B đề xuất thêm tần suất theo triệu chứng chính Đau ngực cho tức nặng giữa ngực (very_frequent) và đau lan tay, hàm (frequent); lượt C không dùng: Bösner 2009 cho thấy ở người bệnh mạch vành tại phòng khám đau kiểu đè ép 61–64% nhưng vị trí sau xương ức chỉ 7–8% (phần lớn ở ngực trái), số đau lan tay 37–38% đo ở bệnh viện, và tần suất cao hơn làm câu trả lời 'Không' hạ mạnh một bệnh không được bỏ sót. Bác sĩ cần xem: (1) prior Đau ngực từ 65 tuổi (P2) là ước lượng thận trọng, số liệu tuyến ban đầu chỉ cho cả nhóm từ 35 tuổi (3,6%); (2) bệnh này không gồm đau thắt ngực ổn định (6,6–11,2% người đau ngực ở phòng khám): nên cân nhắc thêm bệnh 'đau thắt ngực ổn định' cho Đau ngực; (3) vã mồ hôi (occasional, đã hạ cho đau bụng) có thể nên là frequent khi Đau ngực (44–47%, van Oosterhout), nhưng có vã mồ hôi thì quy tắc đã xếp mức 1; (4) có ho làm giảm mạnh khả năng bệnh mạch vành ở tuyến ban đầu (OR 0,08, Bösner 2010) nhưng chưa liên kết vì câu ho được hỏi ở mọi triệu chứng chính."

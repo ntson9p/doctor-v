@@ -1,0 +1,15 @@
+id: ronga-bmcfampract-2012
+type: primary_study
+title: "Development and validation of a clinical prediction rule for chest wall syndrome in primary care"
+publisher: "BMC Family Practice 2012;13:74 (Ronga A, Vaucher P, Haasenritter J và cộng sự)"
+date: "2012-08-06"
+url: "https://europepmc.org/article/MED/22866824"
+doi: "10.1186/1471-2296-13-74"
+pmid: "22866824"
+license_class: L1
+license_note: "CC BY (theo Europe PMC, PMC3444903): dùng và chuyển thể, ghi công."
+default_tier: B
+accessed: "2026-10-31"
+verified: true
+verified_by: "agent:pass-c"
+notes_vi: "Lượt C (Giai đoạn 3 lô 3, phần c) đọc lại toàn văn PMC3444903 qua API Europe PMC ngày 31/10/2026; lượt A, lượt B đã đọc trước đó (bản nháp ở nhiều thư mục, đã gộp). Đoàn hệ TOPIC (Thụy Sĩ, 59 bác sĩ đa khoa, 644 người đau ngực phân tích, theo dõi 12 tháng): hội chứng thành ngực 284 người (44,1%), tuổi trung bình 50,5 (cả nhóm 55,4); kiểm định ở Đức (1.212 người từ 35 tuổi). Đau tái hiện khi ấn: 201/284 (70,1%) người hội chứng thành ngực so với 299/644 (46,4%) cả nhóm; dấu hiệu quan trọng nhất nhưng không đặc hiệu tuyệt đối (có người đau thắt ngực ổn định). Bảng 3 (OR hội chứng thành ngực so với nguyên nhân khác): đau tái hiện khi ấn 6,47; không có tiền sử bệnh mạch vành 5,12; đau không sau xương ức 5,08; đau khu trú 2,65; đau không kiểu đè ép 2,37; liên quan tư thế 2,13; đau như dao đâm 2,11; liên quan cử động 2,06; liên quan hít thở 1,19 (không ý nghĩa); đau lan 0,78 (không ý nghĩa); kèm ho 0,83; liên quan ho 0,57; kèm triệu chứng tiêu hóa (trào ngược, nuốt đau, nuốt khó, đau thượng vị) 0,54."

@@ -25,6 +25,8 @@ answers:
   black_stool: absent
   vomiting_blood: absent
   known_heart_disease: absent
+  chest_pain: present
+  dyspnea_onset: sudden
 default_unmentioned: absent
 expected:
   condition: pulmonary_embolism

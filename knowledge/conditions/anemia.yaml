@@ -41,6 +41,17 @@ priors:
       sources: [byt-qd-1832-2022, msd-evaluation-anemia]
       locator: "1832/QĐ-BYT bài Thiếu máu thiếu sắt mục 3.1; MSD mục Triệu chứng"
       note: "Hai lượt cùng chọn P4. Thiếu máu nặng có thể gây choáng, ngất (1832/QĐ-BYT; MSD); thiếu máu nhẹ, mạn tính ít khi tự gây ngất. Ngất do mất máu cấp thuộc xuất huyết tiêu hóa trên và chửa ngoài tử cung, không thuộc bệnh này."
+  - complaint: shortness_of_breath
+    default: P4
+    by_age: { infant_0_2m: P6 }
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [frese-jcmr-2011, byt-qd-1832-2022, who-gho-anaemia-vn, nhs-iron-deficiency-anaemia]
+      locator: "Frese 2011 bảng 5; 1832/QĐ-BYT bài Tiếp cận chẩn đoán thiếu máu mục 3.1; GHO (Việt Nam); NHS mục Symptoms"
+      reported: "Thiếu máu thiếu sắt 0,20% lần khám vì khó thở mới, 0,08% vì khó thở đã biết (Hà Lan); Việt Nam: thiếu máu ở 20,5% phụ nữ 15–49 tuổi, 22,9% trẻ 6–59 tháng, phần lớn thể nhẹ."
+      population: "Người khó thở ở phòng khám đa khoa Hà Lan; ước tính của WHO cho Việt Nam"
+      note: "Giai đoạn 3 lô 3. Hai lượt cùng P4 từ 2 tháng tuổi; lệch ở trẻ dưới 2 tháng (lượt A P6, lượt B P5): ngang nguồn, lượt C chọn mức thấp hơn cho bệnh lành tính (nhóm tuổi này chỉ sàng lọc dấu hiệu nguy hiểm). Thang tuyệt đối: số liệu Hà Lan chỉ tính thiếu máu thiếu sắt, ở nước có tỷ lệ thiếu máu thấp; ở Việt Nam thiếu máu phổ biến hơn và bệnh này gồm mọi loại thiếu máu, nên ước 0,2–1% (P4), thấp hơn prior Chóng mặt, Hồi hộp một mức. 1832/QĐ-BYT: khó thở nhất là khi gắng sức hoặc đi lại nhiều. Hệ số giới đã có áp dụng chung. Ước lượng; cần bác sĩ duyệt."
 prior_modifiers:
   - when: { sex: [female] }
     factor: 1.2
@@ -180,6 +191,23 @@ findings:
       basis: judgment
       sources: [byt-qd-1832-2022, msd-evaluation-anemia]
       note: "Trung bình hai lượt. Thiếu máu vừa, nặng có thể làm mạch nhanh lúc nghỉ để bù thiếu oxy; hiếm khi trên 150 lần/phút. 'Chưa đo' giữ đúng 0,6 (lựa chọn trung tính). Ước lượng."
+  # ---------- Giai đoạn 3, lô 3 (lượt C phần c): dấu hiệu mới của lô 3 ----------
+  - finding: dyspnea_severity
+    dist: { exertion: 0.7, rest: 0.25, cannot_speak: 0.05 }
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-1832-2022, nhs-iron-deficiency-anaemia]
+      locator: "1832/QĐ-BYT bài Tiếp cận chẩn đoán thiếu máu mục 3.1 (khó thở nhất là khi gắng sức hoặc đi lại nhiều)"
+      note: "Giai đoạn 3 lô 3. Tính trong số người đã khó thở. Hai lượt cùng để 0,8/0,17/0,03. Lượt C kéo về gần tỷ lệ nền (0,6/0,3/0,1) để tránh đếm trùng với liên kết cũ hụt hơi khi gắng sức (frequent): khi triệu chứng chính là Khó thở, hai câu cùng hỏi khó thở khi gắng sức nhưng không cùng cụm (câu này là câu nhiều lựa chọn), nên câu mức khó thở chỉ mang phần thông tin còn lại: khó thở khi nghỉ, nói không trọn câu ít gặp (chỉ ở thiếu máu rất nặng; mất máu cấp thuộc bệnh khác). Ước lượng."
+  - finding: dyspnea_onset
+    dist: { sudden: 0.05, hours_days: 0.2, weeks: 0.75 }
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-1832-2022]
+      locator: "1832/QĐ-BYT bài Thiếu máu thiếu sắt mục 3.1 (diễn biến từ từ qua 3 giai đoạn)"
+      note: "Giai đoạn 3 lô 3; hai lượt trùng. Tính trong số người đã khó thở. Thiếu máu thiếu sắt diễn biến từ từ nên khó thở tăng dần nhiều tuần, tháng; khó thở đột ngột nghiêng về bệnh khác (mất máu cấp thuộc xuất huyết tiêu hóa trên). Tỷ lệ nền 'nhiều tuần' 0,35. Ước lượng."
 warning_signs: [black_stool, vomiting_blood, chest_pain_pressure, breathing_difficulty, fainting_or_near_fainting, es_severe_bleeding]
 self_care_vi:
   - "Ăn đủ bữa, thêm thịt, rau lá xanh đậm, các loại đậu và ngũ cốc có bổ sung sắt."
@@ -197,5 +225,5 @@ review:
   authors: ["agent:pass-a", "agent:pass-b"]
   reconciler: "agent:pass-c"
   doctor_reviewer: null
-  updated: "2026-10-25"
-  notes_vi: "Lượt C đã đối chiếu 17 liên kết và mở lại mọi nguồn được trích. Mức xử trí 4, không thuộc nhóm không được bỏ sót (hai lượt giống nhau): NHS chỉ khuyên khám không khẩn khi nghĩ đến thiếu máu thiếu sắt; 1832/QĐ-BYT: cần xét nghiệm máu và tìm nguyên nhân; mất máu cấp (xuất huyết tiêu hóa, chửa ngoài tử cung) là bệnh riêng và có quy tắc mức 1–2. Người Việt hay gọi chóng mặt là 'thiếu máu não', nên mô tả có ghi rõ khác biệt và không đưa cách gọi này vào tên. Mã D64.9 (thiếu máu thiếu sắt là D50) và tên chính thức chưa đối chiếu được với bảng ICD-10 của Bộ Y tế. Bác sĩ cần xem: (1) prior P3 và P4 là ước lượng: thiếu máu rất phổ biến nhưng phần lớn nhẹ, chưa có số liệu về tỷ lệ là nguyên nhân chính của chóng mặt, hồi hộp, ngất; (2) tần suất triệu chứng theo mô tả bằng lời của 1832/QĐ-BYT, MSD, NHS; (3) hệ số giới 1,2/0,7 áp dụng cho mọi lứa tuổi; (4) bệnh tan máu bẩm sinh (thalassemia) hay gặp ở Việt Nam chưa có câu hỏi; (5) lượt C bỏ liên kết 'choáng khi vừa đứng dậy' của lượt B vì nguồn không mô tả riêng triệu chứng này."
+  updated: "2026-10-31"
+  notes_vi: "Lượt C đã đối chiếu 17 liên kết và mở lại mọi nguồn được trích. Mức xử trí 4, không thuộc nhóm không được bỏ sót (hai lượt giống nhau): NHS chỉ khuyên khám không khẩn khi nghĩ đến thiếu máu thiếu sắt; 1832/QĐ-BYT: cần xét nghiệm máu và tìm nguyên nhân; mất máu cấp (xuất huyết tiêu hóa, chửa ngoài tử cung) là bệnh riêng và có quy tắc mức 1–2. Người Việt hay gọi chóng mặt là 'thiếu máu não', nên mô tả có ghi rõ khác biệt và không đưa cách gọi này vào tên. Mã D64.9 (thiếu máu thiếu sắt là D50) và tên chính thức chưa đối chiếu được với bảng ICD-10 của Bộ Y tế. Bác sĩ cần xem: (1) prior P3 và P4 là ước lượng: thiếu máu rất phổ biến nhưng phần lớn nhẹ, chưa có số liệu về tỷ lệ là nguyên nhân chính của chóng mặt, hồi hộp, ngất; (2) tần suất triệu chứng theo mô tả bằng lời của 1832/QĐ-BYT, MSD, NHS; (3) hệ số giới 1,2/0,7 áp dụng cho mọi lứa tuổi; (4) bệnh tan máu bẩm sinh (thalassemia) hay gặp ở Việt Nam chưa có câu hỏi; (5) lượt C bỏ liên kết 'choáng khi vừa đứng dậy' của lượt B vì nguồn không mô tả riêng triệu chứng này. Giai đoạn 3 lô 3 (lượt C phần c, 31/10/2026): thêm prior Khó thở (P4, trẻ dưới 2 tháng P6) và hai liên kết (mức khó thở, kiểu khởi phát khó thở). Nguồn mới Frese 2011 đã mở lại cùng ngày; các nguồn khác đã xác minh ở lượt trước. Không sửa giá trị cũ. Hụt hơi khi gắng sức và mức khó thở 'chỉ khi gắng sức' hỏi gần cùng một điều: lượt C để phân bố mức khó thở gần tỷ lệ nền thay cho bản của hai lượt, và đề xuất người bảo trì cho câu hụt hơi khi gắng sức một tỷ lệ nền riêng khi triệu chứng chính là Khó thở (nay 0,15 là tỷ lệ chung, trong khi phần lớn người khó thở đều hụt hơi khi gắng sức). Bác sĩ cần xem thêm: prior Khó thở suy từ số liệu thiếu máu thiếu sắt ở Hà Lan, hiệu chỉnh cho Việt Nam bằng ước lượng."

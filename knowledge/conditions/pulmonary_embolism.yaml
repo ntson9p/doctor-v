@@ -44,6 +44,37 @@ priors:
       sources: [esc-pe-2019, bosner-bmcfampract-2018, miniati-plosone-2012]
       locator: "ESC 2019 mục 4.1 (tiền ngất); Bösner 2018 bảng 3; Miniati 2012 bảng 5"
       note: "Hai lượt trùng mức. Các tổng quan chóng mặt ở tuyến ban đầu không nêu thuyên tắc phổi; người thuyên tắc phổi thường có khó thở, đau ngực, ngất đi kèm (94% có ít nhất một trong bốn triệu chứng, Miniati). Từ 45 tuổi 0,02–0,2% (P5), người trẻ dưới 0,02% (P6). Ước lượng."
+  - complaint: shortness_of_breath
+    default: P5
+    by_age: { infant_0_2m: P6, child_2m_5y: P6, child_5_12: P6, adult_45_64: P4, elder_65_74: P4, elder_75p: P4 }
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [frese-jcmr-2011, esc-pe-2019, miniati-plosone-2012]
+      locator: "Frese 2011 bảng 5; ESC 2019 mục 3.1 (huyết khối tĩnh mạch ở người từ 80 tuổi gấp gần 8 lần tuổi 40–49); Miniati 2012 bảng 4"
+      reported: "Tắc mạch phổi 0,35% lần khám vì khó thở mới và 0,21% vì khó thở đã biết (Hà Lan, mọi lứa tuổi), 0/93 (Đức); khó thở đột ngột ở 80% người thuyên tắc phổi."
+      population: "Người khám bác sĩ đa khoa vì khó thở ở Hà Lan, Đức"
+      note: "Giai đoạn 3 lô 3; hai lượt trùng ở mọi nhóm tuổi. Thang tuyệt đối. Khó thở là triệu chứng hay gặp nhất của bệnh nhưng thuyên tắc phổi chỉ là phần nhỏ người khó thở ở tuyến ban đầu (0,35%, mọi tuổi). Bệnh tăng mạnh theo tuổi (ESC): từ 45 tuổi 0,2–1% (P4), 13–44 tuổi 0,02–0,2% (P5), trẻ dưới 13 tuổi P6. Khó thở đột ngột, kèm sưng một bên chân hoặc ngất đã được quy tắc xếp mức 2 trở lên. Chưa có số liệu Việt Nam; cần bác sĩ duyệt."
+  - complaint: chest_pain
+    default: P4
+    by_age: { child_5_12: P6, teen_13_17: P6, adult_18_44: P5 }
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [verdon-smw-2008, haasenritter-croatmedj-2015, esc-pe-2019, miniati-plosone-2012, byt-qd-4235-2012]
+      locator: "Verdon 2008 tóm tắt; Haasenritter 2015 bảng 3; ESC 2019 mục 3.1; Miniati 2012 bảng 3–4; 4235/QĐ-BYT tr. 24"
+      reported: "Thuyên tắc phổi 2/672 người đau ngực ở phòng khám đa khoa (0,3%, Thụy Sĩ, tuổi trung bình 55); nhóm hô hấp 10,3–18,2% người đau ngực ở tuyến ban đầu (không tách riêng); đau ngực ở 49% người thuyên tắc phổi, 84% trong số đó kiểu màng phổi."
+      note: "Giai đoạn 3 lô 3. Hai lượt cùng P4 từ 45 tuổi và P6 ở trẻ 5–12 tuổi; lệch ở 18–44 tuổi (lượt A P4, lượt B P5) và thiếu niên (lượt A P5, lượt B P6). Lượt C chọn lượt B: số 0,3% của Verdon đo ở người tuổi trung bình 55, mà huyết khối tĩnh mạch tăng mạnh theo tuổi (ESC), nên người trẻ thấp hơn: 18–44 tuổi 0,02–0,2% (P5), thiếu niên P6; phụ nữ trẻ dùng thuốc tránh thai được nâng qua liên kết estrogen_use. 4235/QĐ-BYT xếp nhồi máu phổi vào nhóm đau ngực đe dọa tính mạng. Ước lượng; cần bác sĩ duyệt."
+  - complaint: cough
+    default: P6
+    by_age: { adult_45_64: P5, elder_65_74: P5, elder_75p: P5 }
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [miniati-plosone-2012, esc-pe-2019]
+      locator: "Miniati 2012 bảng 3–4; ESC 2019 mục 4.1"
+      reported: "Ho mới xuất hiện 4% (mẫu Firenze), ho ra máu 6% người thuyên tắc phổi; 94% có ít nhất một trong bốn triệu chứng khó thở đột ngột, đau ngực, ngất, ho ra máu."
+      note: "Giai đoạn 3 lô 3. Hai lượt cùng P5 từ 45 tuổi, P6 dưới 18 tuổi; lệch ở 18–44 tuổi (lượt A P6, lượt B P5). Lượt C chọn P6 cho người dưới 45 tuổi: ít người thuyên tắc phổi ho (Miniati), người chọn Ho phần lớn do nhiễm trùng hô hấp, và bệnh ít gặp ở người trẻ (ESC). Ho ra máu đã có quy tắc rf_hemoptysis (mức 3), kèm khó thở hoặc đau ngực thì rf_hemoptysis_severe (mức 2). Ước lượng."
 findings:
   - finding: breathing_difficulty
     freq: very_frequent
@@ -57,13 +88,14 @@ findings:
       note: "Hai lượt trùng mức. Khó thở có thể nhẹ, thoáng qua khi tắc nhỏ ngoại vi (ESC). Ngất kèm khó thở đã được quy tắc rf_syncope_breathing xếp mức 1; chóng mặt choáng kèm khó thở, hồi hộp kèm khó thở được xếp mức 2."
   - finding: pleuritic_chest_pain
     freq: frequent
+    freq_by_complaint: { chest_pain: very_frequent }
     evidence:
       tier: B
       basis: numeric
       sources: [miniati-plosone-2012, esc-pe-2019, nhs-pulmonary-embolism]
       locator: "Miniati 2012 bảng 3–4; ESC 2019 mục 4.1"
       reported: "Đau ngực 49%; ở mẫu Firenze 84% số người đau ngực đau một bên kiểu màng phổi."
-      note: "Hai lượt trùng mức. Khoảng 40% có đau ngực kiểu màng phổi; ESC: đau ngực hay gặp, thường do kích thích màng phổi."
+      note: "Hai lượt trùng mức. Khoảng 40% có đau ngực kiểu màng phổi; ESC: đau ngực hay gặp, thường do kích thích màng phổi. Giai đoạn 3 lô 3: lượt B thêm very_frequent khi triệu chứng chính là Đau ngực (lượt A không thêm); lượt C giữ vì số liệu cho thấy rõ khác biệt: giá trị cũ tính trên mọi người thuyên tắc phổi (49% có đau ngực), còn trong số người đã đau ngực 84% đau kiểu màng phổi (Miniati). Đây là dấu hiệu cảnh báo của bệnh không được bỏ sót. Giá trị cho các triệu chứng chính khác không đổi."
   - finding: chest_pain_pressure
     freq: occasional
     evidence:
@@ -213,6 +245,74 @@ findings:
       basis: judgment
       sources: [esc-pe-2019]
       note: "Tính trong số người đã chóng mặt; trung bình hai lượt. Choáng do thuyên tắc phổi mới xuất hiện, kéo dài cùng khó thở, tụt huyết áp. Ước lượng."
+  - finding: dyspnea_onset
+    dist: { sudden: 0.7, hours_days: 0.24, weeks: 0.06 }
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [miniati-plosone-2012, esc-pe-2019, nhs-pulmonary-embolism]
+      locator: "Miniati 2012 bảng 3–4; ESC 2019 mục 4.1"
+      reported: "Khó thở đột ngột 80% (800 người)."
+      population: "Người thuyên tắc phổi đã xác định ở bệnh viện và phòng khám (Ý)"
+      note: "Giai đoạn 3 lô 3. Tính trong số người đã khó thở. Lượt A để đột ngột 0,65, lượt B 0,75; lượt C lấy trung bình 0,7: phần lớn người khó thở bắt đầu đột ngột, nhưng lựa chọn 'đột ngột, trong vài phút' hẹp hơn cách hỏi của nghiên cứu, và tắc nhỏ ngoại vi có thể khó thở nhẹ, tăng dần (ESC). Tỷ lệ nền 0,15. Quy tắc rf_dyspnea_sudden xếp mức 2."
+  - finding: dyspnea_severity
+    dist: { exertion: 0.35, rest: 0.5, cannot_speak: 0.15 }
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [esc-pe-2019]
+      locator: "ESC 2019 mục 4.1 (khó thở cấp và nặng khi tắc trung tâm, nhẹ và thoáng qua khi tắc nhỏ ngoại vi)"
+      note: "Giai đoạn 3 lô 3; hai lượt trùng. Tính trong số người đã khó thở. Khó thở lúc nghỉ và khó thở nặng gặp nhiều hơn nền (0,3 và 0,1). Ước lượng."
+  - finding: spo2_measured
+    dist: { ge_96: 0.12, s92_95: 0.14, lt_92: 0.14, not_measured: 0.6 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [esc-pe-2019]
+      locator: "ESC 2019 mục 4.1 (thiếu oxy máu hay gặp)"
+      note: "Giai đoạn 3 lô 3; chỉ lượt A có (dấu hiệu đã vào danh mục), lượt C giữ. Tính trong số người đã khó thở. 'Chưa đo' giữ đúng tỷ lệ nền 0,6. Phần lớn người đo được có ô xy giảm, nhưng ca nhẹ có thể bình thường. Ước lượng."
+  - finding: estrogen_use
+    freq: occasional
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [esc-pe-2019, miniati-plosone-2012]
+      locator: "ESC 2019 bảng 3 (thuốc tránh thai đường uống, liệu pháp hormon: yếu tố thuận lợi mức trung bình, OR 2–9)"
+      note: "Giai đoạn 3 lô 3; hai lượt trùng. Chỉ hỏi nữ từ 13 tuổi. Yếu tố thuận lợi mức trung bình; ở phụ nữ trẻ bị thuyên tắc phổi đây là yếu tố hay gặp, ở phụ nữ cao tuổi ít hơn. Ở Việt Nam tỷ lệ dùng thuốc tránh thai đường uống thấp hơn châu Âu; ước 10–20% (tỷ lệ nền 5%). Cần bác sĩ duyệt."
+  - finding: chest_pain_sudden_severe
+    freq: occasional
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-4235-2012, nhs-pulmonary-embolism, esc-pe-2019, miniati-plosone-2012]
+      locator: "4235/QĐ-BYT tr. 24 (đau xuất hiện đột ngột: tìm nhồi máu phổi); Miniati 2012 bảng 3 (84% đau kiểu màng phổi)"
+      note: "Giai đoạn 3 lô 3. Tính trong số người đã đau ngực. Lượt A occasional, lượt B frequent (mức mạnh cho bệnh không được bỏ sót); ngang nguồn. Lượt C chọn occasional: đau thường đột ngột nhưng mức độ vừa phải (đau kiểu màng phổi), câu hỏi cần cả đột ngột và dữ dội ngay từ đầu; với mức thấp hơn, câu trả lời 'Không' ít làm giảm bệnh, còn câu trả lời 'Có' đã được quy tắc rf_chest_pain_sudden_severe xếp mức 2."
+  - finding: chest_pain_duration
+    dist: { seconds: 0.03, minutes: 0.145, over_15min: 0.525, days: 0.3 }
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [miniati-plosone-2012, esc-pe-2019]
+      locator: "Miniati 2012 bảng 2 (thời gian từ khởi phát đến chẩn đoán)"
+      reported: "Trung vị 2 ngày từ khi có triệu chứng đến khi chẩn đoán; 25% quá 7 ngày."
+      note: "Giai đoạn 3 lô 3. Tính trong số người đã đau ngực. Lượt A (0,03/0,17/0,5/0,3) và lượt B (0,03/0,12/0,55/0,3) lệch ít; lượt C lấy trung bình. Đau màng phổi kéo dài, tăng khi thở, không hết sau vài giây; nhiều người để vài ngày mới khám."
+  - finding: orthopnea
+    freq: rare
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [miniati-plosone-2012]
+      locator: "Miniati 2012 bảng 3–4"
+      reported: "Khó thở khi nằm 0,4% (Pisa 0,7%, Firenze 0%)."
+      note: "Giai đoạn 3 lô 3; chỉ lượt A có, lượt C giữ vì có số liệu. Số liệu dưới 1% (very_rare); chọn rare vì 27% người bệnh có bệnh tim mạch từ trước (Miniati) có thể khó thở khi nằm do bệnh nền. Mức rare thấp hơn tỷ lệ nền 5%: giúp phân biệt với suy tim."
+  - finding: cough_duration
+    dist: { lt_1w: 0.7, w1_2: 0.18, w2_8: 0.1, gt_8w: 0.02 }
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [esc-pe-2019, miniati-plosone-2012]
+      locator: "Miniati 2012 bảng 2 (trung vị 2 ngày từ khởi phát đến chẩn đoán)"
+      note: "Giai đoạn 3 lô 3; chỉ lượt B có, lượt C giữ. Tính trong số người đã ho. Ho, nếu có, mới xuất hiện cùng khó thở, đau ngực. Ước lượng."
 warning_signs: [breathing_difficulty, pleuritic_chest_pain, chest_pain_pressure, hemoptysis, fainting_or_near_fainting, leg_swelling_one_side, cold_hands_feet]
 self_care_vi:
   - "Gọi 115 hoặc nhờ người đưa đến khoa cấp cứu ngay. Không tự lái xe."
@@ -226,5 +326,5 @@ review:
   authors: ["agent:pass-a", "agent:pass-b"]
   reconciler: "agent:pass-c"
   doctor_reviewer: null
-  updated: "2026-10-25"
-  notes_vi: "Lượt C (phần b) đối chiếu 20 liên kết và mở lại mọi nguồn được trích. Mức xử trí 1, thuộc nhóm không được bỏ sót, giữ như hai lượt: NHS ghi 'gọi 999 hoặc đến cấp cứu' khi khó thở đột ngột, đau ngực, tim rất nhanh, ngất, kèm lời dặn không tự lái xe mà nhờ người chở hoặc gọi xe cấp cứu (đúng nội dung mức 1 của doctor-v); ESC 2019: bệnh có thể gây tụt huyết áp, ngừng tim, cần chẩn đoán và điều trị ngay; cùng mức với nhiễm khuẩn huyết, nhồi máu cơ tim (NHS Sepsis cũng ghi '999 hoặc cấp cứu'). Theo quy ước của lượt R cho quy tắc ('999 hoặc cấp cứu' là mức 2) có thể xét mức 2; cần bác sĩ quyết. Bác sĩ cần xem: (1) prior lấy từ người ngất ở cấp cứu châu Âu, Bắc Mỹ, hạ cho cộng đồng; chưa có số liệu thuyên tắc huyết khối ở người Việt Nam; (2) phân bố hoàn cảnh ngất, dấu hiệu báo trước, kiểu chóng mặt là ước lượng; (3) số liệu triệu chứng (Miniati) ở bệnh viện; (4) chưa có câu hỏi về thuốc tránh thai, hậu sản cho bệnh này; (5) 3908/QĐ-BYT (2023) về dự phòng thuyên tắc huyết khối tĩnh mạch chưa được mở."
+  updated: "2026-10-31"
+  notes_vi: "Lượt C (phần b) đối chiếu 20 liên kết và mở lại mọi nguồn được trích. Mức xử trí 1, thuộc nhóm không được bỏ sót, giữ như hai lượt: NHS ghi 'gọi 999 hoặc đến cấp cứu' khi khó thở đột ngột, đau ngực, tim rất nhanh, ngất, kèm lời dặn không tự lái xe mà nhờ người chở hoặc gọi xe cấp cứu (đúng nội dung mức 1 của doctor-v); ESC 2019: bệnh có thể gây tụt huyết áp, ngừng tim, cần chẩn đoán và điều trị ngay; cùng mức với nhiễm khuẩn huyết, nhồi máu cơ tim (NHS Sepsis cũng ghi '999 hoặc cấp cứu'). Theo quy ước của lượt R cho quy tắc ('999 hoặc cấp cứu' là mức 2) có thể xét mức 2; cần bác sĩ quyết. Bác sĩ cần xem: (1) prior lấy từ người ngất ở cấp cứu châu Âu, Bắc Mỹ, hạ cho cộng đồng; chưa có số liệu thuyên tắc huyết khối ở người Việt Nam; (2) phân bố hoàn cảnh ngất, dấu hiệu báo trước, kiểu chóng mặt là ước lượng; (3) số liệu triệu chứng (Miniati) ở bệnh viện; (4) chưa có câu hỏi về thuốc tránh thai, hậu sản cho bệnh này; (5) 3908/QĐ-BYT (2023) về dự phòng thuyên tắc huyết khối tĩnh mạch chưa được mở. Giai đoạn 3 lô 3 (lượt C phần c, 31/10/2026): thêm prior Khó thở (từ 45 tuổi P4, 13–44 tuổi P5, dưới 13 tuổi P6), Đau ngực (từ 45 tuổi P4, 18–44 tuổi P5, dưới 18 tuổi P6) và Ho (từ 45 tuổi P5, dưới 45 tuổi P6); thêm 8 liên kết với dấu hiệu lô 3 (kiểu khởi phát khó thở, mức khó thở, SpO2, thuốc tránh thai hoặc nội tiết nữ, đau ngực đột ngột dữ dội, thời gian cơn đau ngực, khó thở khi nằm thấp, thời gian ho); thêm very_frequent khi Đau ngực cho đau kiểu màng phổi (Miniati: 84% số người đau ngực). Mọi nguồn mới đã mở lại (Frese 2011, Haasenritter 2015, Verdon 2008; Miniati 2012, ESC 2019 đã xác minh ở lượt trước). Không sửa giá trị cũ; không liên kết dấu hiệu chung chest_pain và ho. Đã thêm câu hỏi về thuốc tránh thai (điểm 4 ở trên). Bác sĩ cần xem thêm: prior Đau ngực, Ho ở người trẻ là ước lượng theo xu hướng tuổi của ESC; tỷ lệ dùng thuốc tránh thai ở người bệnh Việt Nam chưa có số liệu."

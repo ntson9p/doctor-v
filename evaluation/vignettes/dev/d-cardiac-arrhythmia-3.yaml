@@ -28,6 +28,7 @@ answers:
   pregnant: absent
   missed_period: absent
   pulse_measured: not_measured
+  chest_pain: absent
 default_unmentioned: absent
 expected:
   condition: cardiac_arrhythmia
