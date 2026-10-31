@@ -36,6 +36,28 @@ priors:
       locator: "Bösner 2018 bảng 3–4; Maarsingh 2010 tóm tắt; Hayashi 2010 bảng 3"
       reported: "Nguyên nhân tâm lý 1,8–21,6% người chóng mặt ở tuyến ban đầu (Bösner); bệnh tâm thần là nguyên nhân chính ở 10% người cao tuổi chóng mặt kéo dài (Maarsingh); chóng mặt, choáng có ở 72–88% cơn hoảng sợ (Hayashi)."
       note: "Hai lượt cùng chọn P3; lệch một mức ở 5–12 tuổi (A P4, B P5), 13–17 tuổi (A P3, B P4), 18–44 tuổi (A P2, B P3), 65–74 tuổi (A P3, B P4). Ngang nguồn (ước lượng); lượt C chọn mức thấp hơn (thận trọng hơn với bệnh lành tính). Nhóm 'tâm lý' gồm cả lo âu lan tỏa, trầm cảm, chóng mặt chức năng; cơn hoảng sợ chỉ là một phần. Ước lượng."
+  - complaint: shortness_of_breath
+    default: P3
+    by_age: { infant_0_2m: P6, child_2m_5y: P6, child_5_12: P4, elder_75p: P4 }
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [frese-jcmr-2011, nhs-panic-disorder, msd-panic-disorder]
+      locator: "Frese 2011 bảng 5; NHS Panic disorder (triệu chứng); MSD (triệu chứng, tuổi khởi phát)"
+      reported: "Tăng thông khí 7,6% lần khám bác sĩ đa khoa vì khó thở mới, 4,0% vì khó thở đã biết (Hà Lan)"
+      population: "người mọi lứa tuổi đi khám bác sĩ đa khoa vì khó thở"
+      note: "Lượt B (lô 3). Thang tuyệt đối. Cảm giác khó thở, ngột ngạt là một triệu chứng của cơn hoảng sợ (NHS, MSD). Nhóm tăng thông khí 4–8% gồm cả lo âu khác; rối loạn hoảng sợ hay khởi phát cuối tuổi vị thành niên, đầu tuổi trưởng thành (MSD; prior Hồi hộp của bản cũ dùng thêm de Jonge). Số liệu gợi ý 5–20% (P2) ở người trẻ, nhưng chọn 1–5% (P3) cho 13–74 tuổi: nhóm tăng thông khí gồm cả lo âu khác, và với Khó thở, cơn hoảng sợ cạnh tranh với thuyên tắc phổi, hội chứng vành cấp, rối loạn nhịp (các liên kết cũ hồi hộp very_frequent, khó thở khởi phát đột ngột làm tăng mạnh khả năng cơn hoảng sợ); chạy thử với các bản nháp lượt B hiện có (thuyên tắc phổi chưa có prior Khó thở), cơn hoảng sợ đứng đầu ở ca khó thở đột ngột kèm hồi hộp, đau khi hít sâu, sưng một bên chân. 5–12 tuổi và từ 75 tuổi 0,2–1% (P4; khó thở chủ yếu do bệnh tim phổi); dưới 5 tuổi P6. Ước lượng, cần bác sĩ duyệt."
+  - complaint: chest_pain
+    default: P3
+    by_age: { adult_18_44: P2, elder_75p: P4 }
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [verdon-smw-2008, nhs-panic-disorder, msd-panic-disorder]
+      locator: "Verdon 2008 tóm tắt; NHS Panic disorder; MSD (người bệnh hay lo mình bị bệnh tim, đi khám nhiều lần)"
+      reported: "Nguyên nhân tâm lý 11% người đau ngực ở tuyến ban đầu (Thụy Sĩ)"
+      population: "672 người đau ngực khám bác sĩ đa khoa"
+      note: "Lượt B (lô 3). Thang tuyệt đối. Nhóm tâm lý 11% gồm cả lo âu lan tỏa, trầm cảm; cơn hoảng sợ ước khoảng một nửa, 5–20% (P2) ở người 18–44 tuổi. Từ 45 tuổi đau ngực do tim tăng rõ, nên chọn mức thấp hơn: 45–74 tuổi và trẻ 5–17 tuổi 1–5% (P3); từ 75 tuổi 0,2–1% (P4). Ước lượng."
 prior_modifiers:
   - when: { sex: [female] }
     factor: 1.2
@@ -205,6 +227,72 @@ findings:
       basis: judgment
       sources: [msd-panic-disorder, nhs-panic-disorder]
       note: "Tính trong số người đã chóng mặt; trung bình hai lượt. Cơn kéo dài vài phút đến 1 giờ; người rối loạn hoảng sợ có thể choáng âm ỉ giữa các cơn. Ước lượng."
+  - finding: dyspnea_onset
+    dist: { sudden: 0.75, hours_days: 0.15, weeks: 0.10 }
+    evidence:
+      tier: C
+      basis: verbal
+      sources: [msd-panic-disorder, nhs-panic-disorder]
+      locator: "MSD (cơn khởi phát đột ngột); NHS (cơn đến rất nhanh)"
+      note: "Lượt B (lô 3). Phân bố trong số người khó thở. Khó thở đến đột ngột trong cơn; một phần người rối loạn hoảng sợ, lo âu thấy khó thở âm ỉ nhiều ngày, nhiều tuần. Ước lượng."
+  - finding: dyspnea_severity
+    dist: { exertion: 0.15, rest: 0.75, cannot_speak: 0.10 }
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [msd-panic-disorder, nhs-panic-disorder]
+      note: "Lượt B (lô 3). Phân bố trong số người khó thở. Khó thở trong cơn xảy ra lúc nghỉ, không liên quan gắng sức. Quy tắc rf_dyspnea_at_rest vẫn xếp mức 2 (khuyên quá mức, đã được lượt R chấp nhận). Ước lượng."
+  - finding: spo2_measured
+    dist: { ge_96: 0.38, s92_95: 0.015, lt_92: 0.005, not_measured: 0.60 }
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [msd-panic-disorder]
+      note: "Lượt B (lô 3). 'Chưa đo' giữ đúng tỷ lệ nền 0,6. Thở nhanh do hoảng sợ không làm giảm ô xy máu; SpO2 thấp gợi ý bệnh tim phổi. Ước lượng."
+  - finding: chest_pain_duration
+    dist: { seconds: 0.10, minutes: 0.60, over_15min: 0.25, days: 0.05 }
+    evidence:
+      tier: C
+      basis: verbal
+      sources: [nhs-panic-disorder, msd-panic-disorder]
+      locator: "NHS (phần lớn cơn 5–20 phút, có khi tới 1 giờ); MSD (vài phút đến 1 giờ)"
+      note: "Lượt B (lô 3). Phân bố trong số người đau ngực. Lựa chọn 'từ 15 phút trở lên, hoặc vẫn đang đau' gồm cả cơn chưa qua lúc dùng app. Ước lượng."
+  - finding: chest_pain_exertional
+    freq: rare
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [msd-panic-disorder, nhs-panic-disorder]
+      note: "Lượt B (lô 3). Tần suất trong số người đau ngực. Cơn hoảng sợ đến không theo gắng sức; đau ngực khi gắng sức, đỡ khi nghỉ gợi ý đau thắt ngực. Mức rare thấp hơn tỷ lệ nền 5%."
+  - finding: wheeze
+    freq: rare
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [msd-panic-disorder]
+      locator: "MSD (bệnh kèm hay gặp: hen, bệnh phổi tắc nghẽn mạn tính)"
+      note: "Lượt B (lô 3). Cơn hoảng sợ không gây khò khè; khò khè gợi ý hen (MSD: hen là bệnh kèm hay gặp, cần nghĩ tới trước). Mức rare thấp hơn tỷ lệ nền 5%."
+  - finding: orthopnea
+    freq: rare
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [msd-panic-disorder, nhs-panic-disorder]
+      note: "Lượt B (lô 3). Khó thở khi nằm phải ngồi dậy gợi ý suy tim, không phải cơn hoảng sợ. Mức rare thấp hơn tỷ lệ nền 5%. Ước lượng."
+  - finding: pleuritic_chest_pain
+    freq: rare
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [nhs-panic-disorder, msd-panic-disorder]
+      note: "Lượt B (lô 3). Đau ngực trong cơn hoảng sợ không có đặc điểm tăng khi hít sâu, khi ho (không có trong mô tả của NHS, MSD); kiểu đau này gợi ý viêm phổi, thuyên tắc phổi, tràn khí. Mức rare thấp hơn tỷ lệ nền 5%. Ước lượng."
+  - finding: leg_swelling_one_side
+    freq: very_rare
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [nhs-panic-disorder, msd-panic-disorder]
+      note: "Lượt B (lô 3). Sưng đau một bên bắp chân không liên quan cơn hoảng sợ; kèm khó thở thì gợi ý thuyên tắc phổi. Mức very_rare thấp hơn tỷ lệ nền 0,03. Ước lượng."
 warning_signs: [chest_pain_pressure, breathing_difficulty, fainting_or_near_fainting, es_self_harm]
 self_care_vi:
   - "Trong cơn, ngồi yên ở chỗ an toàn, thở chậm và sâu, tự nhắc rằng cơn sẽ qua."
@@ -217,9 +305,8 @@ see_doctor_vi:
   - "Tại nhà không thể tự phân biệt cơn hoảng sợ với bệnh tim."
   - "Rối loạn hoảng sợ điều trị được bằng tâm lý trị liệu hoặc thuốc theo chỉ định của bác sĩ."
 review:
-  status: source_checked
-  authors: ["agent:pass-a", "agent:pass-b"]
-  reconciler: "agent:pass-c"
+  status: draft
+  authors: ["agent:pass-b"]
   doctor_reviewer: null
-  updated: "2026-10-25"
-  notes_vi: "Lượt C (phần b) đối chiếu 18 liên kết và mở lại mọi nguồn được trích. Mức xử trí 4, không thuộc nhóm không được bỏ sót: NHS khuyên khám bác sĩ gia đình, cơn không gây hại cho cơ thể; MSD: chỉ kết luận sau khi đã khám loại trừ bệnh cơ thể. Bộ Y tế chưa có bài riêng về rối loạn hoảng sợ (Quyết định 2058/QĐ-BYT năm 2020 chỉ có lo âu lan tỏa và rối loạn hỗn hợp lo âu – trầm cảm, theo hai lượt). Bác sĩ cần xem: (1) tần suất triệu chứng lấy từ một nghiên cứu nhỏ ở khoa chuyên sâu Nhật Bản (Hayashi, 70 người); (2) prior suy từ nhóm 'tâm thần' của các nghiên cứu hồi hộp ở Mỹ, có hiệu chỉnh vì tỷ lệ mắc ở châu Á thấp hơn, chưa có số liệu Việt Nam; (3) hệ số giới là quy đổi ước lượng; (4) các triệu chứng cơ thể của cơn trùng với rối loạn nhịp, hạ đường huyết, cường giáp, nên các liên kết dễ gây nhầm (đau ngực, kiểu cơn bật tắt) được để thấp."
+  updated: "2026-10-31"
+  notes_vi: "Lượt B (Giai đoạn 3 lô 3, phần b) thêm, không sửa phần đã có: (a) prior Khó thở P3 (5–12 tuổi và từ 75 tuổi P4; dưới 5 tuổi P6) và Đau ngực P3 (18–44 tuổi P2; từ 75 tuổi P4); (b) liên kết dyspnea_onset, dyspnea_severity, spo2_measured, chest_pain_duration (phân bố), chest_pain_exertional, wheeze, orthopnea, pleuritic_chest_pain (rare, thấp hơn tỷ lệ nền) và leg_swelling_one_side (very_rare). Hai liên kết cuối (đau khi hít sâu, sưng một bên bắp chân) có thể được hỏi ở triệu chứng chính đã phát hành nhưng chỉ làm giảm khả năng cơn hoảng sợ khi trả lời 'Có'; (c) không có nguồn mới (frese-jcmr-2011, verdon-smw-2008 có sẵn trong extend/sources của lượt B phần a). Không liên kết dấu hiệu chung chest_pain (quyết định của người bảo trì); với Đau ngực, liên kết cũ chest_pain_pressure (occasional) vẫn là bằng chứng. Không thêm sốt, ho (dấu hiệu Giai đoạn 1) để không đổi kết quả của Hồi hộp, Chóng mặt. Ý kiến về giá trị cũ (không sửa): palpitations very_frequent với tỷ lệ nền 5% làm câu hồi hộp (trong nhóm dấu hiệu nguy hiểm của Khó thở) tăng khả năng cơn hoảng sợ khoảng 16 lần ở Khó thở, Đau ngực, mạnh hơn thuyên tắc phổi, hội chứng vành cấp (occasional); lượt C nên cân nhắc freq_by_complaint cho hai triệu chứng chính mới. breathing_difficulty frequent (bản cũ hạ một mức từ 75%) nay có ý nghĩa ở Đau ngực; perioral_tingling, panic_fear, similar_episodes_before giữ nguyên là bằng chứng chính phân biệt với bệnh tim phổi. Điều cần bác sĩ xem thêm: prior Khó thở, Đau ngực suy từ châu Âu (nhóm tăng thông khí, nhóm tâm lý gồm cả bệnh khác); các phân bố mới là ước lượng. Ghi chú của bản đã đối chiếu (giữ nguyên): Lượt C (phần b) đối chiếu 18 liên kết và mở lại mọi nguồn được trích. Mức xử trí 4, không thuộc nhóm không được bỏ sót: NHS khuyên khám bác sĩ gia đình, cơn không gây hại cho cơ thể; MSD: chỉ kết luận sau khi đã khám loại trừ bệnh cơ thể. Bộ Y tế chưa có bài riêng về rối loạn hoảng sợ (Quyết định 2058/QĐ-BYT năm 2020 chỉ có lo âu lan tỏa và rối loạn hỗn hợp lo âu – trầm cảm, theo hai lượt). Bác sĩ cần xem: (1) tần suất triệu chứng lấy từ một nghiên cứu nhỏ ở khoa chuyên sâu Nhật Bản (Hayashi, 70 người); (2) prior suy từ nhóm 'tâm thần' của các nghiên cứu hồi hộp ở Mỹ, có hiệu chỉnh vì tỷ lệ mắc ở châu Á thấp hơn, chưa có số liệu Việt Nam; (3) hệ số giới là quy đổi ước lượng; (4) các triệu chứng cơ thể của cơn trùng với rối loạn nhịp, hạ đường huyết, cường giáp, nên các liên kết dễ gây nhầm (đau ngực, kiểu cơn bật tắt) được để thấp."

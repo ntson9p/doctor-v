@@ -44,6 +44,16 @@ priors:
       sources: [byt-qd-5642-2015, nhs-sepsis, msd-sepsis, bosner-bmcfampract-2018]
       locator: "5642/QĐ-BYT mục 2.1; NHS Sepsis (sốt cao ít gặp hơn ở người cao tuổi); Bösner 2018 bảng 3"
       note: "Giai đoạn 3 lô 1. Hai lượt trùng mức trừ 18–44 tuổi (A P6, B P5); ngang nguồn nên lượt C chọn mức thận trọng hơn (P5). Chóng mặt ở tuyến ban đầu có rất nhiều nguyên nhân lành tính (Bösner); nhiễm khuẩn huyết biểu hiện chủ yếu bằng choáng, chóng mặt chủ yếu ở người cao tuổi. Từ 75 tuổi P4, 18–74 tuổi P5, trẻ 5–17 tuổi P6. Ước lượng."
+  - complaint: shortness_of_breath
+    default: P5
+    by_age: { infant_0_2m: P4, child_5_12: P6, teen_13_17: P6, elder_65_74: P4, elder_75p: P4 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [nice-ng253, nice-ng254, nhs-sepsis, frese-jcmr-2011]
+      locator: "NG253 chương Evaluating risk, bảng 1 (nhịp thở từ 25 lần/phút, cần oxy để giữ SpO2 trên 92%: nguy cơ cao); NG254 chương Evaluating risk level (thở rên, ngừng thở, SpO2 dưới 90%); NHS Sepsis (thở rất nhanh, khó thở); Frese 2011 bảng 5"
+      reported: "Người đi khám bác sĩ đa khoa vì khó thở: chủ yếu viêm phế quản, hen, bệnh phổi tắc nghẽn mạn tính, suy tim, viêm phổi (2,6–3,2%); nhiễm khuẩn huyết không có trong danh sách (Frese)"
+      note: "Lượt B (lô 3). Thở nhanh, khó thở là tiêu chí nguy cơ cao của nhiễm khuẩn huyết (NG253, NG254, NHS), và khoảng một nửa ổ nhiễm ở phổi (Wattanapaiboon trong bản cũ), nên một phần người nhiễm khuẩn huyết chọn Khó thở. Nhưng người chọn Khó thở phần lớn có bệnh hô hấp, tim mạch; ước 0,02–0,2% (P5) ở người lớn dưới 65 tuổi và trẻ 2 tháng–5 tuổi, 0,2–1% (P4) từ 65 tuổi và dưới 2 tháng (nhóm nguy cơ cao, thở nhanh là dấu hiệu nặng ở trẻ nhỏ), trẻ 5–17 tuổi P6. Thấp hơn hoặc bằng prior của Sốt ở cùng nhóm tuổi. Ước lượng, cần bác sĩ duyệt."
 findings:
   - finding: chills_rigors
     freq: frequent
@@ -224,6 +234,38 @@ findings:
       basis: judgment
       sources: [msd-sepsis, byt-qd-5642-2015]
       note: "Giai đoạn 3 lô 1; trung bình hai lượt. Tính trong số người đã chóng mặt. Bệnh cấp, choáng kéo dài liên tục trong những ngày bị bệnh. Ước lượng."
+  - finding: dyspnea_onset
+    dist: { sudden: 0.10, hours_days: 0.82, weeks: 0.08 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [nice-ng253, nhs-sepsis]
+      locator: "NG253 chương Evaluating risk, bảng 1; NHS Sepsis (thở rất nhanh, khó thở)"
+      note: "Lượt B (lô 3). Phân bố trong số người khó thở. Nhiễm khuẩn huyết là bệnh cấp, khó thở xuất hiện trong vài giờ đến vài ngày cùng đợt nhiễm trùng (thường viêm phổi); tăng dần nhiều tuần không phù hợp, đột ngột trong vài phút ít gặp. Ước lượng."
+  - finding: dyspnea_severity
+    dist: { exertion: 0.25, rest: 0.60, cannot_speak: 0.15 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [nice-ng253, nhs-sepsis]
+      locator: "NG253 bảng 1 (nhịp thở từ 25 lần/phút: nguy cơ cao; 21–24: nguy cơ trung bình); NHS Sepsis"
+      note: "Lượt B (lô 3). Phân bố trong số người khó thở; thở nhanh khi nghỉ là kiểu khó thở của nhiễm khuẩn huyết. Ước lượng."
+  - finding: spo2_measured
+    dist: { ge_96: 0.12, s92_95: 0.15, lt_92: 0.13, not_measured: 0.60 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [nice-ng253, nice-ng254]
+      locator: "NG253 bảng 1 (cần oxy để giữ SpO2 trên 92%: nguy cơ cao); NG254 chương Evaluating risk level (SpO2 dưới 90%: nguy cơ cao; dưới 92%: nguy cơ trung bình–cao)"
+      note: "Lượt B (lô 3). 'Chưa đo' giữ đúng tỷ lệ nền 0,6. Trong số người đo được, ước khoảng một phần ba dưới 92%. Ước lượng."
+  - finding: grunting
+    freq: occasional
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [nice-ng254, nhs-sepsis]
+      locator: "NG254 chương Evaluating risk level (thở rên là tiêu chí nguy cơ cao ở trẻ dưới 5 tuổi); NHS Sepsis (trẻ thở rên, bụng hõm dưới bờ sườn: gọi 999 hoặc đến cấp cứu)"
+      note: "Lượt B (lô 3). Chỉ hỏi trẻ dưới 5 tuổi. Không có tỷ lệ; ước occasional. Tỷ lệ nền 1%. Đã có quy tắc mức 2."
 warning_signs:
   - confusion
   - drowsy_hard_to_wake
@@ -242,9 +284,8 @@ see_doctor_vi:
   - "Nhiễm khuẩn huyết cần được dùng kháng sinh càng sớm càng tốt tại bệnh viện."
   - "Báo cho nhân viên y tế các bệnh nền, thuốc đang dùng và nơi có thể bị nhiễm khuẩn như phổi, đường tiểu, vết thương."
 review:
-  status: source_checked
-  authors: ["agent:pass-a", "agent:pass-b"]
-  reconciler: "agent:pass-c"
+  status: draft
+  authors: ["agent:pass-b"]
   doctor_reviewer: null
-  updated: "2026-10-25"
-  notes_vi: "Mức xử trí 1, thuộc nhóm không được bỏ sót (kb-guide mục 2.5; 5642: tử vong 20–50%; NHS: gọi 999 khi có dấu hiệu). Lượt C bỏ: tiểu buốt (4,3% khi đến khám, không phân biệt), nôn liên tục (không có số liệu; đã có quy tắc mức 3), để tránh làm mọi ca nhiễm trùng tiết niệu, tiêu chảy có sốt bị đẩy lên mức cấp cứu chỉ vì xác suất. Không liên kết ăn tiết canh, giết mổ lợn: chưa có số liệu tỷ lệ liên cầu lợn trong toàn bộ nhiễm khuẩn huyết. Không dùng NICE NG253/NG254 vì nice.org.uk chặn truy cập trực tiếp. Điểm cần bác sĩ xem: (1) prior hoàn toàn là ước lượng, nhất là trẻ 2 tháng–5 tuổi (P4 hay P5); (2) tần suất triệu chứng lấy từ nghiên cứu ở khoa cấp cứu Thái Lan và người cao tuổi Hà Lan; (3) mô hình một bệnh: nhiễm khuẩn huyết thường đi kèm viêm phổi, viêm thận – bể thận, nên xác suất bị chia với bệnh nguồn; (4) MONDO:0005229 là 'bacterial infectious disease with sepsis'. Giai đoạn 3 lô 1 (lượt C phần b, 25/10/2026): thêm prior cho Ngất (người lớn dưới 65 tuổi P5, từ 65 tuổi P4, trẻ 5–17 tuổi P6) và Chóng mặt (18–74 tuổi P5, từ 75 tuổi P4, trẻ 5–17 tuổi P6); thêm 6 liên kết (sốt, choáng khi đứng dậy, hoàn cảnh ngất, chưa hồi phục sau ngất, mạch, kiểu chóng mặt); không giữ liên kết chóng mặt (frequent) của lượt A vì chỉ là nhận định (NHS Sepsis không liệt kê chóng mặt) mà câu trả lời không chóng mặt sẽ hạ nhiễm khuẩn huyết ở mọi người chọn Sốt và tần suất theo triệu chứng chính cho choáng, ngất (Chóng mặt: frequent). Không sửa giá trị cũ. Bác sĩ cần xem thêm: prior dưới Ngất, Chóng mặt là ước lượng; các liên kết có sẵn (lú lẫn, khó thở, tay chân lạnh) lấy từ người bệnh đi khám vì sốt; liên kết mới choáng khi đứng dậy, mạch cũng có thể được hỏi khi triệu chứng chính là Sốt."
+  updated: "2026-10-31"
+  notes_vi: "Lượt B (Giai đoạn 3 lô 3, phần b) thêm, không sửa phần đã có: (a) prior Khó thở P5 (dưới 2 tháng và từ 65 tuổi P4; 5–17 tuổi P6); (b) liên kết dyspnea_onset, dyspnea_severity, spo2_measured (phân bố) và grunting (occasional); (c) không có nguồn mới (frese-jcmr-2011 có sẵn trong extend/sources của lượt B phần a). Với Khó thở, khó thở (frequent) là dấu hiệu ngầm định; sốt (frequent), rét run, lú lẫn, tay chân lạnh, mệt lả của bản cũ trở thành bằng chứng. Ý kiến về giá trị cũ (không sửa): liên kết cough occasional bằng tỷ lệ nền 0,2 nên trung tính, hợp với Khó thở; NICE NG253, NG254 nay mở trực tiếp được (bản cũ ghi không dùng vì bị chặn). Điều cần bác sĩ xem thêm: prior Khó thở và các phân bố mới là ước lượng. Ghi chú của bản đã đối chiếu (giữ nguyên): Mức xử trí 1, thuộc nhóm không được bỏ sót (kb-guide mục 2.5; 5642: tử vong 20–50%; NHS: gọi 999 khi có dấu hiệu). Lượt C bỏ: tiểu buốt (4,3% khi đến khám, không phân biệt), nôn liên tục (không có số liệu; đã có quy tắc mức 3), để tránh làm mọi ca nhiễm trùng tiết niệu, tiêu chảy có sốt bị đẩy lên mức cấp cứu chỉ vì xác suất. Không liên kết ăn tiết canh, giết mổ lợn: chưa có số liệu tỷ lệ liên cầu lợn trong toàn bộ nhiễm khuẩn huyết. Không dùng NICE NG253/NG254 vì nice.org.uk chặn truy cập trực tiếp. Điểm cần bác sĩ xem: (1) prior hoàn toàn là ước lượng, nhất là trẻ 2 tháng–5 tuổi (P4 hay P5); (2) tần suất triệu chứng lấy từ nghiên cứu ở khoa cấp cứu Thái Lan và người cao tuổi Hà Lan; (3) mô hình một bệnh: nhiễm khuẩn huyết thường đi kèm viêm phổi, viêm thận – bể thận, nên xác suất bị chia với bệnh nguồn; (4) MONDO:0005229 là 'bacterial infectious disease with sepsis'. Giai đoạn 3 lô 1 (lượt C phần b, 25/10/2026): thêm prior cho Ngất (người lớn dưới 65 tuổi P5, từ 65 tuổi P4, trẻ 5–17 tuổi P6) và Chóng mặt (18–74 tuổi P5, từ 75 tuổi P4, trẻ 5–17 tuổi P6); thêm 6 liên kết (sốt, choáng khi đứng dậy, hoàn cảnh ngất, chưa hồi phục sau ngất, mạch, kiểu chóng mặt); không giữ liên kết chóng mặt (frequent) của lượt A vì chỉ là nhận định (NHS Sepsis không liệt kê chóng mặt) mà câu trả lời không chóng mặt sẽ hạ nhiễm khuẩn huyết ở mọi người chọn Sốt và tần suất theo triệu chứng chính cho choáng, ngất (Chóng mặt: frequent). Không sửa giá trị cũ. Bác sĩ cần xem thêm: prior dưới Ngất, Chóng mặt là ước lượng; các liên kết có sẵn (lú lẫn, khó thở, tay chân lạnh) lấy từ người bệnh đi khám vì sốt; liên kết mới choáng khi đứng dậy, mạch cũng có thể được hỏi khi triệu chứng chính là Sốt."
