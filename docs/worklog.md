@@ -725,3 +725,28 @@ Sau khi xem phân tích trên, chủ dự án chọn (chi tiết ở `docs/hando
 - Nếu giữ cấu hình cũ, 9 lô còn lại (lô 3–11, 119 bệnh mới) cần khoảng 2.500–3.000 USD theo giá API.
 
 **Lệnh mới:** `npm run agent:usage` in bảng token và chi phí theo giá API của phiên Claude Code hiện tại và các agent con (mã ở `tools/`).
+
+## 2026-10-31 — Giai đoạn 3, lô 3 (Ho, Khó thở, Đau ngực): chuẩn bị
+
+**Môi trường cloud:** máy có sẵn Node 22, dự án cần Node 24. Cài bằng nvm có sẵn trên máy: `export NVM_DIR=/opt/nvm; . /opt/nvm/nvm.sh; nvm install 24`, rồi dùng `/opt/nvm/versions/node/v24.22.2/bin` trong `PATH`.
+
+**Mục lục gọn** (`npm run kb:index`, mã ở `packages/kb/src/catalog.ts`, 6 kiểm thử):
+- Mỗi dấu hiệu, nhóm câu hỏi, triệu chứng chính, bệnh, quy tắc, nguồn một dòng Markdown. Lô thêm vào đọc từ tiêu đề mục trong tệp YAML ("Giai đoạn 3, lô N") và từ `scope.yaml` của từng lô.
+- `--out-dir` ghi 4 tệp: `index.md` để đọc hết; `links.md` (mọi liên kết của từng bệnh), `rules.md`, `sources.md` để tìm khi cần.
+- Bản đầu gộp cả liên kết và quy tắc vào một tệp: 117 nghìn ký tự, đo được 63 nghìn token. Agent đọc nó cùng hai tài liệu hướng dẫn thì ngữ cảnh lên 131 nghìn, vượt mục tiêu 100 nghìn. Vì vậy tách liên kết, quy tắc và nguồn ra tệp riêng.
+
+**Đo kích thước** bằng một agent chỉ đọc tệp (Opus 5.5, effort high), số lấy từ bản ghi của phiên:
+
+| Bước | Ngữ cảnh (token) |
+|---|---|
+| Khởi đầu: lời nhắc hệ thống, mô tả công cụ, lời giao việc | 45.100 |
+| Đọc `docs/kb-guide.md` | +17.500 |
+| Đọc `docs/style-guide-vi.md` | +4.700 |
+| Đọc `index.md` (49 nghìn ký tự) | +28.300 |
+| **Sau phần đọc làm quen** | **95.600** |
+
+- Đạt mục tiêu dưới khoảng 100 nghìn. Ở lô 1–2, sau 25 lượt gọi đã là 160–290 nghìn.
+- Ngữ cảnh khởi đầu trên cloud là 45 nghìn, không phải 32 nghìn như lô 1–2 trên máy chủ dự án: phiên cloud có thêm nhiều công cụ.
+- Mỗi bệnh mới thêm khoảng 100 ký tự vào `index.md`, mỗi dấu hiệu khoảng 150 ký tự. Lô 3 (15 bệnh, khoảng 30 dấu hiệu) thêm khoảng 3 nghìn token.
+
+**Lời giao việc mẫu:** `docs/phase-3/prompts/README.md`, mục "Từ lô 3", có khối "Read first" mới cho từng vai. Lời giao việc của lô 3 sẽ được lưu nguyên văn ở `docs/phase-3/prompts/batch-3/`.

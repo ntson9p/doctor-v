@@ -86,6 +86,7 @@ npm run eval -- --set holdout --report    # chấm bộ giữ kín: chỉ khi l�
 npm run kb:check -- --drafts drafts/phase-3/batch-N/pass-a   # kiểm tra bản nháp
 npm run kb:agreement -- drafts/phase-3/batch-N               # kappa giữa lượt A và B
 npm run kb:priors               # so prior các bệnh dưới cùng triệu chứng chính
+npm run kb:index -- --out-dir /tmp/kb-index   # mục lục gọn cho agent (index.md đọc hết; links, rules, sources để tìm)
 npm run agent:usage             # token và chi phí (giá API) của phiên này và các agent con
 npx playwright install --with-deps chromium   # một lần, cho kiểm thử giao diện
 npm run test:e2e -w @doctor-v/web             # 24 phép thử; build vào apps/web/dist-test/
