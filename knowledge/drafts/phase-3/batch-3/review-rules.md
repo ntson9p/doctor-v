@@ -285,3 +285,134 @@ Bộ dev chưa có ca nào cho 3 triệu chứng chính mới. Thay đổi chỉ
 So từng ca (217 ca, chế độ sạch và 5 hạt giống nhiễu: mức xử trí, thứ hạng, số câu, 3 bệnh đầu): **không ca nào đổi**. Không ca cấp cứu nào bị bỏ sót thêm.
 
 Mô phỏng 41 tình huống cho Ho, Khó thở, Đau ngực (mục 1): mọi tình huống cấp cứu ra đúng mức 1 hoặc 2 ở chế độ sạch. Khi lặp 20 lần với 15% "Không rõ", hầu hết giữ mức 1–2; còn có lần ra mức 3: phản vệ có khởi phát đột ngột (1/20 mức 3, 2/20 mức 2), phản vệ đã cho khởi phát "Không rõ" (5/20 mức 3, khi câu nổi ban hoặc mề đay ở phần hỏi tiếp cũng bị "Không rõ"). Trong mô phỏng, màn sàng lọc cấp cứu được trả lời "không"; người phản vệ thật thường chọn ngay mục dị ứng nặng ở màn này (không có nhiễu "Không rõ"). Mức 3 ở các tình huống bệnh nhẹ (cảm lạnh, lao, ho mạn tính) là do lô 3 chưa có bệnh nào: "nguyên nhân khác" chiếm toàn bộ xác suất.
+
+---
+
+## Vòng 2: đối chiếu nguồn (31/10/2026)
+
+- Người thực hiện: `agent:pass-r`. Mạng đã mở: tải trang bằng `curl` vào thư mục tạm, đọc chữ bằng công cụ trích văn bản; PDF quét đọc bằng công cụ Read. Không dùng dịch vụ đọc hộ.
+- Dùng **8 lần** WebSearch (tìm trang bóc tách động mạch chủ, tràn khí màng phổi, Thông tư 51/2017, 1851/QĐ-BYT, ho gà, định nghĩa ca bệnh ho gà của WHO).
+- Không sửa `knowledge/conditions/` và bản nháp khác. Không đọc bộ ca giữ kín. Không chạy git.
+- `npm run kb:check`: trước **0 lỗi, 43 cảnh báo**; sau **0 lỗi, 17 cảnh báo** (hết toàn bộ cảnh báo nguồn chưa xác minh của lô 3).
+- `npm run eval -- --set dev`: trước và sau **giống hệt** (mục 2.6).
+
+### 2.1 Nguồn của lô 3
+
+| Nguồn | Kết quả | Ghi chú |
+|---|---|---|
+| `nhs-cough`, `nhs-shortness-of-breath`, `nhs-coughing-up-blood`, `nhs-croup`, `nhs-bronchiolitis`, `nhs-whooping-cough`, `nhs-anaphylaxis`, `nhs-heart-failure` | Đã xác minh | Ghi ngày rà soát và đủ các mục "Call 999", "Call 999 or go to A&E", "urgent GP / 111", "See a GP" trong `notes_vi`. |
+| `nhs-asthma-attack` | Đã xác minh | Địa chỉ cũ chuyển về trang Asthma; đã đổi `url`, `title`. |
+| `nhs-aortic-dissection`, `nhs-pneumothorax` | **Không xác minh được** | Hai trang đã bị gỡ khỏi www.nhs.uk (lỗi 404, không còn trong mục lục và ô tìm kiếm); NHS inform từ chối truy cập (403). Không trích nữa, giữ id. |
+| `hse-aortic-dissection` (mới) | Đã xác minh | HSE Ireland, rà soát 17/02/2026. Thay trang NHS về bóc tách động mạch chủ. Nhãn L3 (© HSE). |
+| `nice-ng9` | Đã xác minh | Xuất bản 01/6/2015, cập nhật 09/8/2021. Mục chuyển viện là **1.2**, không phải 1.3 như ghi theo trí nhớ; đã sửa locator. SpO2 dưới 92% từ 2021 chỉ là tiêu chí cân nhắc chuyển viện. |
+| `gina-2024` | Giữ chưa xác minh | Đã có bản 2026. Thêm `gina-2026` (PDF 05/2026, đã xác minh) và đổi các quy tắc sang id mới. Bản nháp lượt A còn trích `gina-2024`: lượt C nên đổi. |
+| `gold-2025` | Giữ chưa xác minh | Đã có báo cáo 2026 (bản 1.3, 08/12/2025); chưa có bản 2027. Thêm `gold-2026` (đã xác minh). Hình 4.4 (chỉ định nhập viện) là hình ảnh, không trích được chữ. |
+| `who-emro-pertussis-surveillance` (mới) | Đã xác minh | Định nghĩa ca ho gà lâm sàng của WHO: ho ít nhất 2 tuần kèm ho từng cơn, rít khi hít vào hoặc nôn sau ho. Định nghĩa riêng cho trẻ dưới 1 tuổi (ghi theo trí nhớ trước đây) không có trên trang này: đã bỏ khỏi ghi chú. |
+
+**Ba nguồn NICE cũ** (`nice-cg95`, `nice-ng143`, `nice-ng254`): nice.org.uk nay cho tải trực tiếp. Đã mở lại các trang Overview, Recommendations, History; nội dung khớp ghi chú cũ. Thay câu "đọc qua r.jina.ai" bằng ghi chú mới, thêm dữ kiện dùng ở vòng này (CG95 1.2.1.3, 1.2.1.5, 1.2.1.7, 1.2.1.8; NG143 1.2.5, 1.3.3; NG254 bảng 1).
+
+**Nguồn cũ đọc thêm:** `who-imci-chart-booklet-2014` (thêm Module 3, Cough or difficult breathing, cùng bộ tài liệu trên IRIS); `byt-qd-3312-2015` (thêm bài Dị vật đường thở, mục Trẻ bị dị vật đường thở, bài Viêm phổi do vi khuẩn, bài Viêm tiểu phế quản). Văn bản 3312/QĐ-BYT năm 2015 vẫn đọc qua bản đăng lại trên vnras.com, vì kcb.vn chỉ có tệp RAR.
+
+### 2.2 Văn bản Bộ Y tế thêm vào sổ nguồn
+
+| Id | Văn bản | Bản đã mở | Dùng cho |
+|---|---|---|---|
+| `byt-qd-162-2024` | 162/QĐ-BYT ngày 19/01/2024, Hướng dẫn chẩn đoán, điều trị và dự phòng bệnh lao; thay 1314/QĐ-BYT (24/3/2020) | PDF có chữ ký số, cổng thông tin một tỉnh (vnPortal) | `rf_cough_2_weeks`, `rf_hemoptysis` |
+| `byt-qd-1851-2020` | 1851/QĐ-BYT ngày 24/4/2020, hen người lớn và trẻ từ 12 tuổi | PDF trên vilaphoikhoe.kcb.vn | `rf_dyspnea_cannot_speak`, `rf_dyspnea_at_rest`, `rf_asthma_reliever_fails` |
+| `byt-qd-4888-2016` | 4888/QĐ-BYT ngày 12/9/2016, hen trẻ em dưới 5 tuổi | PDF trên vilaphoikhoe.kcb.vn | `rf_asthma_reliever_fails`, `rf_child_chest_indrawing` |
+| `byt-qd-2767-2023` | 2767/QĐ-BYT ngày 04/7/2023, bệnh phổi tắc nghẽn mạn tính | PDF có chữ ký số trên kcb.vn | `rf_copd_reliever_fails`, `rf_copd_flare`, `rf_dyspnea_at_rest` |
+| `byt-qd-1857-2022` | 1857/QĐ-BYT ngày 05/7/2022, suy tim cấp và mạn | PDF có chữ ký trên kcb.vn | `rf_heart_failure_signs` |
+| `byt-tt-51-2017` | Thông tư 51/2017/TT-BYT ngày 29/12/2017, phòng, chẩn đoán và xử trí phản vệ; hiệu lực 15/02/2018; thay Thông tư 08/1999/TT-BYT | Bản quét có dấu trên kcb.vn (đọc trang 1–7) | `rf_anaphylaxis_signs` |
+
+- Ba id trùng bản nháp của lượt A (`byt-qd-162-2024`, `byt-qd-1851-2020`, `byt-qd-2767-2023`): bản trong `knowledge/sources/` nay đã xác minh; lượt C dùng bản này, bỏ bản nháp.
+- Số hiệu theo trí nhớ ở vòng 1: lao **sai** (1314/QĐ-BYT đã bị 162/QĐ-BYT thay); hen 1851/QĐ-BYT đúng; bệnh phổi tắc nghẽn mạn tính là 2767/QĐ-BYT năm 2023; Thông tư 51/2017 đúng ngày.
+- **Ho gà:** không tìm được hướng dẫn chẩn đoán, điều trị của Bộ Y tế (hai lần tìm trên các trang của Bộ, Cục và Viện); chỉ có công văn chỉ đạo phòng chống dịch. Dùng NHS và WHO.
+- **Dị vật đường thở ở trẻ:** có trong 3312/QĐ-BYT năm 2015 (đã có trong sổ), không cần văn bản riêng.
+
+### 2.3 Quy tắc đã sửa
+
+Chỉ **một** quy tắc đổi mức. Các quy tắc khác giữ mức, được thay nguồn chưa xác minh bằng nguồn đã mở, ghi locator và bỏ mọi lời "theo trí nhớ".
+
+| Quy tắc | Thay đổi | Lý do |
+|---|---|---|
+| `rf_pe_signs` | **Mức 1 → mức 2**; `reason_vi` bỏ "gọi 115 ngay" | Không nguồn nào xếp tổ hợp này vào "chỉ gọi 999": NHS Pulmonary embolism và NHS Coughing up blood ghi "Call 999 or go to A&E" (mức 2), NHS Shortness of breath ghi khó thở kèm đau, sưng một bên chân thì gọi 111 (mức 3). ESC 2019 chỉ nói khả năng bệnh cao. Tình huống mức 1 vẫn có quy tắc riêng (tức ngực kèm khó thở, choáng, nói không trọn câu, sốc). `rf_breathless_leg_swelling` của lô 1 (đã phát hành) vẫn mức 1: bác sĩ nên xem cho thống nhất. |
+| `rf_chest_pain_ongoing` | Nguồn, ghi chú | CG95 1.2.1.3 xác nhận mốc **15 phút**. |
+| `rf_chest_pain_central`, `rf_chest_pain_spreading_or_systemic`, `rf_chest_pain_exertional` | Nguồn, ghi chú | CG95 mở lại; thêm NHS Shortness of breath (ngực tức, nặng: "999 or A&E"). |
+| `rf_chest_pain_sudden_severe`, `rf_aortic_dissection_signs` | Thay `nhs-aortic-dissection`, `nhs-pneumothorax` bằng `hse-aortic-dissection` | Trang NHS đã bị gỡ. HSE: đau ngực, lưng trên đột ngột, dữ dội, như xé; gọi cấp cứu hoặc đến khoa cấp cứu ngay. Bóc tách giữ mức 1 theo NHS Chest pain (đau lan ra lưng). |
+| `rf_hemoptysis`, `rf_hemoptysis_severe` | Nguồn, ghi chú | NHS Coughing up blood đúng cả hai mức và ngưỡng "hơn vài vệt máu". `rf_hemoptysis_severe` vẫn bậc C (còn 1 cảnh báo). |
+| `rf_dyspnea_cannot_speak` | Nguồn | NHS Heart failure (chỉ 999), 1851/QĐ-BYT (nói từng từ là cơn nặng), GINA 2026. NHS Shortness of breath ghi "999 or A&E": giữ mức 1 như màn sàng lọc cấp cứu. |
+| `rf_dyspnea_at_rest` | Nguồn | 2767/QĐ-BYT Bảng 3.2: khó thở khi nghỉ là triệu chứng nặng, cần nhập viện; 1851/QĐ-BYT Bảng 9. |
+| `rf_dyspnea_sudden`, `rf_breathless_fainting` | Bỏ nguồn không hợp | NHS Collapsed lung đã bị gỡ; NHS Shortness of breath không nói về khởi phát đột ngột, ngất. |
+| `rf_breathless_chest_pressure` | Nguồn, basis judgment → verbal | Xem quyết định 2 (mục 2.4). |
+| `rf_asthma_reliever_fails` | Nguồn | NHS Asthma: không đỡ sau liều tối đa (10 nhát) thì chỉ gọi 999; 1851/QĐ-BYT, 4888/QĐ-BYT, GINA 2026 tr. 181. |
+| `rf_copd_reliever_fails` | Nguồn, basis judgment → verbal | 2767/QĐ-BYT Bảng 3.2: đáp ứng không tốt với xử trí ban đầu thì điều trị nội trú. |
+| `rf_copd_flare` | Nguồn | 2767/QĐ-BYT mục 3.1, GOLD 2026 tr. 39: đợt cấp nặng lên trong vòng 14 ngày. Việc vòng 1 bỏ "khó thở tăng dần nhiều tuần" đúng với định nghĩa này. |
+| `rf_heart_failure_signs` | Nguồn | NHS Heart failure: khó thở khi nằm thì khám khẩn hoặc gọi 111 (mức 3); 1857/QĐ-BYT Bảng 3. NHS Shortness of breath xếp thấp hơn (mức 4): giữ mức 3. |
+| `rf_anaphylaxis_signs` | Nguồn, ghi chú | Thông tư 51/2017 Phụ lục I, II thay tiêu chuẩn WAO ghi theo trí nhớ; NHS Anaphylaxis "Call 999". Nhánh mề đay đúng bệnh cảnh 1, 2. Nhánh tiếp xúc dị nguyên kèm một dấu hiệu hô hấp hoặc tuần hoàn rộng hơn bệnh cảnh 2 nhưng đúng danh sách "Call 999" của NHS. |
+| `rf_stridor` | Nguồn | IMCI Module 3: thở rít khi trẻ nằm yên thì chuyển viện khẩn cấp; NHS Croup. |
+| `rf_choking_episode` | Nguồn, basis judgment → verbal | 3312/QĐ-BYT năm 2015 **có** hai phần về dị vật đường thở: trẻ tắc nghẽn đường thở chưa rõ nguyên nhân nhưng vẫn tự thở cần đưa ngay tới bệnh viện (tr. 44–45); bài Dị vật đường thở (tr. 279–282). |
+| `rf_infant_apnea` | Nguồn, locator | NG9 1.2.1 (không phải 1.3); NHS Bronchiolitis (chỉ 999). |
+| `rf_child_breathing` | Nguồn | IMCI Module 3, 3312/QĐ-BYT, NG9 1.2.2, NHS Bronchiolitis. |
+| `rf_pertussis_infant` | Ghi chú | NHS: trẻ dưới 6 tháng có triệu chứng ho gà thì khám khẩn (mức 3), nhưng thường phải điều trị ở bệnh viện. Giữ mức 2 (nhận định), **bác sĩ cần quyết định**. |
+| `rf_pertussis_signs` | Nguồn | Định nghĩa ca lâm sàng của WHO (trang EMRO) đúng nhánh "ho từ 2 tuần kèm cơn ho hoặc nôn sau ho". NHS: kháng sinh khi chẩn đoán trong 3 tuần đầu. |
+| `rf_cough_2_weeks` | Nguồn | 162/QĐ-BYT: ho kéo dài trên 2 tuần là triệu chứng nghi lao quan trọng nhất; IMCI: ho trên 2 tuần thì chuyển khám lao, hen; NHS Cough: ho trên 3 tuần thì khám bác sĩ gia đình (mức 4). |
+| `rf_palpitations_danger` (mở phạm vi) | Ghi chú | NHS Shortness of breath xếp khó thở kèm hồi hộp vào "gọi 111" (mức 3), thấp hơn NHS Heart palpitations ("999 or A&E"). Giữ mức 2, bác sĩ cần xem. |
+
+Sáu quy tắc mở phạm vi còn lại (`rf_chest_pain`, `rf_chest_pain_with_features`, `rf_pulse_extreme`, `rf_symptomatic_bradycardia`, `rf_shock_cold_and_weak`, `rf_febrile_shock_signs`): không có nguồn lô 3 nào nói khác, không sửa. Logic của vòng 1 giữ nguyên: không nguồn nào mâu thuẫn.
+
+Ghi chú đầu khối lô 3 trong `red-flags.yaml` và chú thích của `chest_pain.yaml` (câu sưng bắp chân) được cập nhật. Thêm `byt-qd-162-2024` vào `sources` của `cough.yaml`.
+
+### 2.4 Ba quyết định
+
+**1. `rf_chest_pain_breathless` (đau ngực kèm khó thở): giữ mức 2.**
+- Chỉ NHS Chest pain ghi "Call 999" (mức 1); danh sách đó nhằm nhồi máu cơ tim.
+- Ba trang NHS khác đều ghi "Call 999 or go to A&E" (mức 2): Shortness of breath (ngực tức, nặng, đau lan), Pulmonary embolism (đau ngực, khó thở đột ngột), Whooping cough (thở khó kèm đau ngực tăng khi thở, ho).
+- Phần nhồi máu cơ tim của CG95 1.2.1.3 đã là mức 1 qua các quy tắc khác: tức nặng giữa ngực kèm khó thở, đau từ 15 phút, kèm vã mồ hôi, buồn nôn, choáng, đau lan.
+- Được: không khuyên gọi 115 cho người viêm phổi, viêm phế quản đau kiểu màng phổi. Mất: lệch với NHS Chest pain.
+
+**2. `rf_breathless_chest_pressure` (khó thở kèm tức ngực, ở Khó thở và Ho): giữ mức 2.**
+- NHS Shortness of breath, trang dành đúng cho triệu chứng chính này, ghi khó thở kèm ngực tức hoặc nặng thì gọi 999 hoặc đến cấp cứu: đúng mức 2.
+- Kèm vã mồ hôi, đau lan, buồn nôn, choáng vẫn mức 1.
+- Ngực tức là triệu chứng chính của hen (NHS Asthma), nên mức 1 sẽ khuyên gọi 115 cho mọi cơn hen có tức ngực.
+
+**3. `rf_child_chest_indrawing` (rút lõm lồng ngực ở trẻ dưới 5 tuổi): giữ mức 2.**
+- Nguồn cho người chăm trẻ đều khuyên đi ngay: NHS Shortness of breath và Croup ("999 or A&E" khi bụng hõm vào dưới bờ sườn), NHS Bronchiolitis (chỉ 999), 4888/QĐ-BYT (thở co kéo: đưa đến phòng cấp cứu gần nhất).
+- NICE: NG143 xếp rút lõm vừa, nặng vào nhóm đỏ, phải được khám trực tiếp trong 2 giờ; NG9 chuyển cấp cứu khi rút lõm rõ.
+- IMCI 2014 và 3312/QĐ-BYT xếp rút lõm (không có dấu hiệu nguy hiểm) là viêm phổi, điều trị ngoại trú. Nhưng đó là sau khi nhân viên y tế đã khám và cho kháng sinh; IMCI cũng dặn người chăm trẻ đưa trẻ trở lại **ngay** khi trẻ khó thở.
+- Được: không bỏ sót viêm tiểu phế quản, viêm phổi nặng cần oxy. Mất: một số trẻ viêm phổi nhẹ được khuyên đi ngay thay vì trong 24 giờ.
+
+### 2.5 Câu chữ dấu hiệu
+
+Không sửa câu chữ nào: không nguồn nào cho thấy sai.
+- `allergen_exposure` (mốc 2 giờ trước khi khó chịu): Thông tư 51/2017 ghi phản vệ xuất hiện từ vài giây đến vài giờ; NHS ghi thường trong vài phút. Mốc 2 giờ nằm trong khoảng đó.
+- `chest_pain_duration` (mốc 15 phút): đúng CG95 1.2.1.3.
+- `cough_duration` (mốc 2 tuần): 162/QĐ-BYT ghi "trên 2 tuần", IMCI "more than 2 weeks"; lựa chọn "Từ 2 tuần" khác không đáng kể.
+- `hemoptysis_large` ("hơn vài vệt máu"): đúng NHS Coughing up blood.
+- `stridor`, `chest_indrawing`: đúng IMCI Module 3 (rít khi trẻ yên; thành ngực dưới lõm vào khi hít vào).
+- `child_feeding_reduced` ("24 giờ qua, khoảng một nửa"): NG9 1.2.2 ghi 50–75% lượng thường ngày, không nêu 24 giờ; NHS ghi "ít hơn hẳn bình thường". Mốc 24 giờ là theo quy tắc viết tiếng Việt, không mâu thuẫn nguồn; giữ.
+
+### 2.6 Kiểm tra
+
+- `npm run kb:check`: 0 lỗi, 17 cảnh báo. Còn 1 cảnh báo của lô 3 (`rf_hemoptysis_severe` bậc C); các cảnh báo khác có từ trước, không thuộc lô 3.
+- `npm run test`: 77/77 đạt.
+- `npm run eval -- --set dev`, trước và sau giống hệt: sạch top1 75,7% · top3 94,9% · an toàn 99,5% · bỏ sót cấp cứu 0/106 · quá mức 6,9%; nhiễu top1 71,2% · an toàn 98,1% · bỏ sót cấp cứu 10/530 · quá mức 18,7%. Bộ dev chưa có ca cho Ho, Khó thở, Đau ngực; các triệu chứng đã phát hành không đổi.
+
+### 2.7 Dấu hiệu còn thiếu (đề xuất cho người bảo trì)
+
+Bổ sung cho danh sách ở mục 6, xếp theo ích lợi:
+1. **`grunting`** (thở rên, trẻ dưới 5 tuổi): nay có đủ nguồn (NHS Shortness of breath, Croup, Bronchiolitis; NG9 1.2.1; NG143 1.2.5; NG254 bảng 1; 3312/QĐ-BYT viêm phổi nặng). Nên ưu tiên.
+2. **`spo2_measured`**: ngưỡng dưới 92% có trong GINA 2026, 1851/QĐ-BYT, 4888/QĐ-BYT, 2767/QĐ-BYT, NG9; dưới 90% trong NG254 và 3312/QĐ-BYT.
+3. **`cyanosis`** cho người lớn (môi, da tím tái, xám): NHS Shortness of breath, Heart failure, Anaphylaxis. Hiện chỉ có ở màn sàng lọc cấp cứu và ở `apnea_cyanosis_spells` (trẻ dưới 5 tuổi).
+4. **`drooling_cannot_swallow`** (chảy dãi, khó nuốt, muốn ngồi hơn nằm): NHS Croup xếp "999 or A&E".
+5. **`chest_pain_tearing`** (đau như xé): nay có nguồn HSE.
+6. **`no_reliever_inhaler`** hoặc `reliever_used`: NHS Asthma ghi đang lên cơn mà không có bình xịt thì gọi 999.
+7. **`frothy_pink_sputum`** (ho ra đờm hồng có bọt) và **`sudden_weight_gain`**: NHS Heart failure (khám khẩn), 1857/QĐ-BYT (tăng trên 2 kg/tuần).
+8. **`throat_tightness`** (họng thắt, khó nuốt, sưng môi lưỡi): NHS Anaphylaxis "Call 999"; hiện chỉ có ở màn sàng lọc cấp cứu.
+
+Các đề xuất `dyspnea_now`, `chest_pain_now`, `respiratory_rate_counted` của vòng 1 vẫn giữ.
+
+### 2.8 Việc cho bác sĩ
+
+- Duyệt `rf_pe_signs` mức 2 và cân nhắc hạ `rf_breathless_leg_swelling` (lô 1) cho thống nhất.
+- Ba quyết định ở mục 2.4.
+- `rf_pertussis_infant` (mức 2 so với mục khám khẩn của NHS) và `rf_palpitations_danger` ở Khó thở (mức 2 so với "gọi 111" của NHS Shortness of breath).

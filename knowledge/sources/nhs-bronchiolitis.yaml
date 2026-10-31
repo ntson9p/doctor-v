@@ -2,10 +2,12 @@ id: nhs-bronchiolitis
 type: web_page
 title: "Bronchiolitis"
 publisher: "NHS (UK)"
+date: "2026-02-19"
 url: "https://www.nhs.uk/conditions/bronchiolitis/"
 license_class: L1
 license_note: "Open Government Licence v3.0; bản chuyển thể không được trình bày như nội dung của NHS."
 default_tier: C
 accessed: "2026-10-31"
-verified: false
-notes_vi: "Người bảo trì thêm khi soạn danh mục lô 3 (31/10/2026), chưa mở; lượt R xác minh. Lượt R lô 3 (31/10/2026) không mở được: mạng của phiên chặn www.nhs.uk (curl bị proxy từ chối, WebFetch không phân giải được tên miền); không dùng dịch vụ đọc hộ. Chưa xác minh tên, ngày rà soát và các mục 'Call 999', 'A&E', 'urgent GP / 111'; các quy tắc trích nguồn này ghi rõ phần nào còn theo trí nhớ. Nhãn L1 (OGL v3.0) đúng với các trang NHS khác trong sổ."
+verified: true
+verified_by: "agent:pass-r"
+notes_vi: "Lượt R lô 3 vòng 2 tải trang trực tiếp ngày 31/10/2026 (rà soát lần cuối 19/02/2026). Bệnh của trẻ dưới 2 tuổi; nặng nhất ngày 3–5, ho thường đỡ trong 3 tuần. 'Call 999' (chỉ gọi 999): trẻ khó thở (thở rên, bụng hõm vào dưới bờ sườn, hoặc thở nhanh); có những lúc ngừng thở; da, lưỡi, môi tím hoặc xám; mềm nhũn, không tỉnh hoặc không thức được. 'Urgent GP / 111': cảm lạnh nặng dần; bú, ăn ít hơn hẳn bình thường; tã khô từ 12 giờ hoặc dấu hiệu mất nước khác; dưới 3 tháng có nhiệt độ 38°C, hoặc trên 3 tháng có nhiệt độ từ 39°C; rất mệt, quấy. Trẻ dưới 6 tháng, sinh non, có bệnh tim phổi, suy giảm miễn dịch có nguy cơ bệnh nặng."

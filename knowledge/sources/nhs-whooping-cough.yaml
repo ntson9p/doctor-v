@@ -2,10 +2,12 @@ id: nhs-whooping-cough
 type: web_page
 title: "Whooping cough"
 publisher: "NHS (UK)"
+date: "2026-08-06"
 url: "https://www.nhs.uk/conditions/whooping-cough/"
 license_class: L1
 license_note: "Open Government Licence v3.0; bản chuyển thể không được trình bày như nội dung của NHS."
 default_tier: C
 accessed: "2026-10-31"
-verified: false
-notes_vi: "Người bảo trì thêm khi soạn danh mục lô 3 (31/10/2026), chưa mở; lượt R xác minh. Lượt R lô 3 (31/10/2026) không mở được: mạng của phiên chặn www.nhs.uk (curl bị proxy từ chối, WebFetch không phân giải được tên miền); không dùng dịch vụ đọc hộ. Chưa xác minh tên, ngày rà soát và các mục 'Call 999', 'A&E', 'urgent GP / 111'; các quy tắc trích nguồn này ghi rõ phần nào còn theo trí nhớ. Nhãn L1 (OGL v3.0) đúng với các trang NHS khác trong sổ."
+verified: true
+verified_by: "agent:pass-r"
+notes_vi: "Lượt R lô 3 vòng 2 tải trang trực tiếp ngày 31/10/2026 (rà soát lần cuối 06/8/2026). Khởi đầu như cảm lạnh; sau khoảng 1 tuần có cơn ho kéo dài vài phút, nặng về đêm; có thể có tiếng rít khi hít vào (trẻ dưới 3 tháng và một số người lớn có thể không rít); trẻ nhỏ có thể khó thở, tím hoặc xám sau cơn ho; có thể nôn sau ho; ho kéo dài nhiều tuần, nhiều tháng. Trẻ dưới 6 tháng dễ biến chứng (mất nước, khó thở, viêm phổi, co giật). 'Urgent GP / 111': trẻ dưới 6 tháng có triệu chứng ho gà; ho rất nặng và nặng dần; đang có thai và tiếp xúc người bị ho gà. 'Call 999 or go to A&E': môi, lưỡi, mặt, da đột ngột tím hoặc xám; thở khó, thở nông; đau ngực tăng khi thở hoặc ho; trẻ co giật. Thường phải điều trị ở bệnh viện khi bệnh nặng hoặc trẻ dưới 6 tháng. Kháng sinh nếu chẩn đoán trong 3 tuần đầu kể từ khi ho, để giảm lây; lây tới 3 tuần sau khi bắt đầu ho."

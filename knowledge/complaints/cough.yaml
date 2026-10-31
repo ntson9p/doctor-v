@@ -45,4 +45,4 @@ safety_net:
   - chest_pain_pressure
   - apnea_cyanosis_spells
   - drowsy_hard_to_wake
-sources: [nhs-cough, who-imci-chart-booklet-2014]
+sources: [nhs-cough, who-imci-chart-booklet-2014, byt-qd-162-2024]

@@ -8,4 +8,4 @@ license_note: "Open Government Licence v3.0; bản chuyển thể không đượ
 default_tier: C
 accessed: "2026-10-31"
 verified: false
-notes_vi: "Người bảo trì thêm khi soạn danh mục lô 3 (31/10/2026), chưa mở; lượt R xác minh. Lượt R lô 3 (31/10/2026) không mở được: mạng của phiên chặn www.nhs.uk (curl bị proxy từ chối, WebFetch không phân giải được tên miền); không dùng dịch vụ đọc hộ. Chưa xác minh tên, ngày rà soát và các mục 'Call 999', 'A&E', 'urgent GP / 111'; các quy tắc trích nguồn này ghi rõ phần nào còn theo trí nhớ. Nhãn L1 (OGL v3.0) đúng với các trang NHS khác trong sổ."
+notes_vi: "Người bảo trì thêm khi soạn danh mục lô 3 (31/10/2026). Lượt R lô 3 vòng 2 (31/10/2026): địa chỉ trả lỗi 404; mục lục bệnh và ô tìm kiếm của NHS không còn bài Collapsed lung (pneumothorax). Trang NHS inform (Scotland) từ chối truy cập tự động (403). Không xác minh được, đã bỏ khỏi các quy tắc (rf_chest_pain_sudden_severe, rf_dyspnea_sudden vẫn có nguồn khác). Không xóa id này."

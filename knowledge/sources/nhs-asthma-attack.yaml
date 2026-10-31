@@ -1,11 +1,13 @@
 id: nhs-asthma-attack
 type: web_page
-title: "Asthma attacks"
+title: "Asthma (How to treat an asthma attack)"
 publisher: "NHS (UK)"
-url: "https://www.nhs.uk/conditions/asthma/asthma-attack/"
+date: "2025-04-07"
+url: "https://www.nhs.uk/conditions/asthma/"
 license_class: L1
 license_note: "Open Government Licence v3.0; bản chuyển thể không được trình bày như nội dung của NHS."
 default_tier: C
 accessed: "2026-10-31"
-verified: false
-notes_vi: "Người bảo trì thêm khi soạn danh mục lô 3 (31/10/2026), chưa mở; lượt R xác minh. Lượt R lô 3 (31/10/2026) không mở được: mạng của phiên chặn www.nhs.uk (curl bị proxy từ chối, WebFetch không phân giải được tên miền); không dùng dịch vụ đọc hộ. Chưa xác minh tên, ngày rà soát và các mục 'Call 999', 'A&E', 'urgent GP / 111'; các quy tắc trích nguồn này ghi rõ phần nào còn theo trí nhớ. Nhãn L1 (OGL v3.0) đúng với các trang NHS khác trong sổ."
+verified: true
+verified_by: "agent:pass-r"
+notes_vi: "Địa chỉ cũ https://www.nhs.uk/conditions/asthma/asthma-attack/ nay chuyển về trang Asthma; mục cơn hen nằm trong trang này. Lượt R lô 3 vòng 2 tải trang trực tiếp ngày 31/10/2026 (rà soát lần cuối 07/4/2025). Khi lên cơn: ngồi thẳng, giữ bình tĩnh; bình xịt cắt cơn màu xanh: 1 nhát mỗi 30–60 giây tới khi đỡ, tối đa 10 nhát; bình AIR hoặc MART: 1 nhát mỗi 1–3 phút, tối đa 6 nhát. 'Call 999' khi đang lên cơn hen và: thấy nặng hơn bất cứ lúc nào; không đỡ sau liều tối đa thuốc cắt cơn; không có bình xịt. 'Urgent GP': đã lên cơn và đã đỡ (khám trong 2 ngày). Cơn hen có thể đe dọa tính mạng."

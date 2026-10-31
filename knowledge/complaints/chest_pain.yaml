@@ -28,8 +28,8 @@ red_flags:
   - group: general_danger_signs
   - finding: fever
   - finding: chest_pain_pressure
-  # Sưng đau một bên bắp chân là quy tắc mức 1 một dấu hiệu khi đau ngực (rf_pe_signs). Ở nhóm clot_risk (phần
-  # hỏi tiếp) câu trả lời "Không rõ" không được hỏi lại bằng câu thay thế, nên đưa lên đây (lượt R lô 3).
+  # Sưng đau một bên bắp chân là quy tắc một dấu hiệu khi đau ngực (rf_pe_signs, mức 2 từ lượt R vòng 2). Ở nhóm
+  # clot_risk (phần hỏi tiếp) câu trả lời "Không rõ" không được hỏi lại bằng câu thay thế, nên đưa lên đây (lượt R lô 3).
   - finding: leg_swelling_one_side
   - group: fever_red_flags
   - finding: fever_duration
