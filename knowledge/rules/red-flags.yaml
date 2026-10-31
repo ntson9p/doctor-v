@@ -1888,6 +1888,7 @@
 # Câu thời gian được hỏi đầu tiên (knowledge/complaints/chest_pain.yaml).
 - id: rf_chest_pain_spreading_or_systemic
   level: 1
+  conditions: [acute_coronary_syndrome, aortic_dissection]
   complaints: [chest_pain]
   when:
     all:
@@ -1911,6 +1912,7 @@
     note: "NHS Chest pain (đã xác minh, notes_vi của nguồn): đau ngực lan ra tay, cổ, hàm, bụng hoặc lưng, hoặc kèm vã mồ hôi, buồn nôn, choáng váng, khó thở thì gọi 999. CG95 (lượt R vòng 2 mở lại trực tiếp): 1.2.1.3 đau lan ra tay, lưng, hàm, đau ngực kèm buồn nôn, nôn, vã mồ hôi, khó thở gợi ý hội chứng vành cấp; 1.2.1.5 không phải ai cũng đau giữa ngực. NHS Shortness of breath (đã xác minh) xếp đau lan ra tay, lưng, cổ, hàm vào 'Call 999 or go to A&E': giữ mức 1 theo trang Chest pain, vì trang này nói riêng về đau ngực. Với triệu chứng chính Đau ngực, mọi kiểu đau ngực đều tính, không chỉ đau tức giữa ngực. Khó thở chỉ tính khi đau tức giữa ngực (thay cho rf_chest_pain_with_features, nay không còn áp dụng cho Đau ngực); đau kiểu khác kèm khó thở là mức 2 (rf_chest_pain_breathless). Lượt R lô 3 cân nhắc bỏ cơn đau chỉ vài giây nhưng không làm: điều kiện về câu nhiều lựa chọn trả lời 'Không rõ' sẽ hạ mức 1 xuống mức 3. Chấp nhận khuyên quá mức với ợ nóng kèm buồn nôn, hay người trẻ đau thành ngực thấy choáng vì sợ: NHS không phân biệt các trường hợp này, và hội chứng vành cấp có thể đau như khó tiêu (2187/QĐ-BYT: triệu chứng không điển hình gồm đau thượng vị, buồn nôn, nôn). Chờ bác sĩ duyệt."
 - id: rf_chest_pain_central
   level: 2
+  conditions: [acute_coronary_syndrome]
   complaints: [chest_pain]
   when:
     all:
@@ -1925,6 +1927,7 @@
     note: "Lượt R lô 3 tách từ rf_chest_pain (phạm vi Đau bụng, Chóng mặt, Ngất, Hồi hộp), thêm điều kiện không phải cơn đau chỉ vài giây. CG95 (lượt R vòng 2 mở lại trực tiếp): nghi hội chứng vành cấp và đang đau, hoặc đau trong 12 giờ qua mà chưa có điện tim, thì chuyển cấp cứu (1.2.1.7); đau đã hết, cơn cuối cách 12–72 giờ thì khám khẩn trong ngày (1.2.1.8). NHS Chest pain: đau đã hết nhanh thì khám bác sĩ gia đình. NHS Shortness of breath: ngực tức hoặc nặng thì gọi 999 hoặc đến cấp cứu (mức 2). Đau tức giữa ngực kéo dài từ 15 phút là mức 1 (rf_chest_pain_ongoing). Chờ bác sĩ duyệt."
 - id: rf_chest_pain_ongoing
   level: 1
+  conditions: [acute_coronary_syndrome, aortic_dissection]
   complaints: [chest_pain]
   when:
     all:
@@ -1941,6 +1944,7 @@
     note: "NHS (đã xác minh): đau hoặc khó chịu ở ngực đột ngột và không hết thì gọi 999. CG95: nghi hội chứng vành cấp và đang đau, hoặc đau trong 12 giờ qua, thì chuyển cấp cứu. 2187/QĐ-BYT (đã xác minh): đau thắt ngực của nhồi máu cơ tim kéo dài trên 20–30 phút; chuyển ngay khi đau trên 20 phút. Mốc 15 phút: lượt R vòng 2 mở lại CG95 trực tiếp, khuyến cáo 1.2.1.3 nêu đau ở ngực và/hoặc vùng khác (tay, lưng, hàm) kéo dài trên 15 phút là triệu chứng gợi ý hội chứng vành cấp; đúng mốc của câu chest_pain_duration. Lựa chọn 'vẫn đang đau' cũng tính, đúng ý 'không hết' của NHS và ý 'đang đau' của CG95 1.2.1.7."
 - id: rf_chest_pain_breathless
   level: 2
+  conditions: [pulmonary_embolism, pneumothorax, acute_coronary_syndrome]
   complaints: [chest_pain]
   when:
     all:
@@ -1955,6 +1959,7 @@
     note: "Lượt R vòng 2 quyết định giữ mức 2 theo nguồn. Chỉ NHS Chest pain ghi đau ngực kèm khó thở thì gọi 999 (mức 1); danh sách này nhằm nhồi máu cơ tim. Các trang NHS đã mở ở vòng 2 đều xếp các tình huống còn lại vào 'Call 999 or go to A&E' (mức 2): Shortness of breath (khó thở kèm ngực tức, nặng, đau lan), Pulmonary embolism (khó thở đột ngột, đau ngực), Whooping cough (thở khó kèm đau ngực tăng khi thở, ho: có thể là viêm phổi). CG95 1.2.1.3: đau ngực kèm khó thở gợi ý hội chứng vành cấp; phần này đã thành mức 1 khi đau tức nặng giữa ngực (rf_chest_pain_spreading_or_systemic), kéo dài từ 15 phút (rf_chest_pain_ongoing), hoặc kèm vã mồ hôi, buồn nôn, choáng, đau lan. Nói không trọn câu là mức 1 (rf_dyspnea_cannot_speak). Mức 1 cho mọi đau ngực kèm khó thở sẽ khuyên gọi 115 cho rất nhiều người viêm phổi, viêm phế quản có đau kiểu màng phổi. Chờ bác sĩ duyệt."
 - id: rf_chest_pain_sudden_severe
   level: 2
+  conditions: [aortic_dissection, pneumothorax, pulmonary_embolism]
   complaints: [chest_pain]
   when:
     all:
@@ -1971,6 +1976,7 @@
     note: "NHS Chest pain (đã xác minh): đau ngực đột ngột không hết thì gọi 999; khi đó, nếu đau từ 15 phút, rf_chest_pain_ongoing cho mức 1. HSE Ireland (lượt R vòng 2 mở, thay trang NHS Aortic dissection đã bị gỡ): đau ngực hoặc lưng trên đột ngột, dữ dội, có thể như xé, là dấu hiệu chính của bóc tách động mạch chủ; có bất kỳ dấu hiệu nào thì gọi cấp cứu hoặc đến khoa cấp cứu ngay (mức 2). NHS Pulmonary embolism: đau ngực, khó thở đột ngột thì gọi 999 hoặc đến cấp cứu. Trang NHS Collapsed lung (tràn khí màng phổi) đã bị gỡ (lỗi 404), không trích nữa. Lượt R lô 3 thêm điều kiện không phải cơn đau chỉ vài giây: đau nhói vài giây rồi hết rất hay gặp ở người trẻ, còn đau của bóc tách, tràn khí, tắc mạch phổi không tự hết sau vài giây."
 - id: rf_aortic_dissection_signs
   level: 1
+  conditions: [aortic_dissection]
   complaints: [chest_pain]
   when:
     any:
@@ -2006,6 +2012,7 @@
 # --- Thuyên tắc phổi, ho ra máu ---
 - id: rf_pe_signs
   level: 2
+  conditions: [pulmonary_embolism]
   complaints: [chest_pain, shortness_of_breath, cough]
   when:
     all:
@@ -2037,6 +2044,7 @@
     note: "NHS Coughing up blood (lượt R vòng 2 mở): ho ra vài chấm, vài vệt máu nhỏ, hoặc thấy máu trong đờm thì hẹn khám khẩn hoặc gọi 111 (mức 3). NHS Pulmonary embolism và NHS Cough cũng xếp ho ra máu vào mức này. 162/QĐ-BYT (Phần II, mục 1.1) xếp ho ra máu trong triệu chứng nghi lao."
 - id: rf_hemoptysis_severe
   level: 2
+  conditions: [pulmonary_embolism, pulmonary_tuberculosis, lung_cancer]
   complaints: [cough, shortness_of_breath, chest_pain]
   when:
     any:
@@ -2092,6 +2100,7 @@
     note: "Khó thở cả lúc nghỉ gặp ở cơn hen, đợt cấp bệnh phổi tắc nghẽn mạn tính mức vừa – nặng, suy tim mất bù, viêm phổi nặng. Lượt R vòng 2 mở nguồn: 2767/QĐ-BYT xếp khó thở khi nghỉ (kèm thở nhanh, SpO2 dưới 92%) vào triệu chứng nặng của đợt cấp, cần nhập viện; 1851/QĐ-BYT: cơn hen nặng (thở trên 30 lần/phút, co kéo cơ hô hấp phụ) thì chuyển cơ sở cấp cứu. NHS Shortness of breath chỉ xếp khó thở dữ dội vào 'Call 999 or go to A&E', khó thở hơn bình thường vào 'gọi 111'; khó thở lúc nghỉ nằm giữa hai mục. Giữ mức 2 (nhận định có dựa vào hai hướng dẫn Bộ Y tế). Cơn hoảng sợ cũng hay khó thở lúc nghỉ, nên quy tắc này khuyên quá mức với cơn hoảng sợ; câu hỏi hỏi lúc khó thở nhất, không hỏi lúc này còn khó thở không (đề xuất dấu hiệu mới trong biên bản)."
 - id: rf_dyspnea_sudden
   level: 2
+  conditions: [pulmonary_embolism, pneumothorax, anaphylaxis]
   complaints: [shortness_of_breath]
   when: { finding: dyspnea_onset, in: [sudden] }
   reason_vi: "Khó thở xuất hiện đột ngột cần khám cấp cứu ngay để loại trừ tắc mạch phổi, tràn khí màng phổi."
@@ -2103,6 +2112,7 @@
     note: "NHS Pulmonary embolism (đã xác minh): khó thở đột ngột thì gọi 999 hoặc đến cấp cứu (mức 2). Khó thở đột ngột còn gặp ở tràn khí màng phổi, phản vệ, dị vật, nhồi máu cơ tim, và cơn hoảng sợ (khuyên quá mức với cơn hoảng sợ, chấp nhận). Lượt R vòng 2: bỏ nguồn NHS Collapsed lung (trang đã bị gỡ, lỗi 404) và NHS Shortness of breath (trang không nói về khởi phát đột ngột). Lượt R lô 3 đổi basis từ judgment sang verbal."
 - id: rf_breathless_fainting
   level: 2
+  conditions: [pulmonary_embolism, cardiac_arrhythmia, acute_coronary_syndrome]
   complaints: [shortness_of_breath]
   when: { finding: fainting_or_near_fainting, is: present }
   reason_vi: "Khó thở kèm ngất hoặc choáng như sắp ngất cần được khám cấp cứu ngay."
@@ -2114,6 +2124,7 @@
     note: "Cùng mức với rf_dizziness_near_syncope_breathing (Chóng mặt, lô 1): câu hỏi gộp cả choáng như sắp ngất, hay gặp khi thở nhanh do lo âu. ESC 2018 (đã xác minh): ngất kèm khó thở mới là nguy cơ cao. NHS Pulmonary embolism (đã xác minh): khó thở đột ngột kèm ngất thì gọi 999 hoặc đến cấp cứu. Với triệu chứng chính Ngất, ngất kèm khó thở là mức 1 (rf_syncope_breathing). Lượt R lô 3 giữ mức 2. Lượt R vòng 2 bỏ nguồn NHS Shortness of breath: trang không nhắc ngất (chỉ nhắc đột ngột lú lẫn, mềm nhũn ở trẻ)."
 - id: rf_breathless_chest_pressure
   level: 2
+  conditions: [acute_coronary_syndrome]
   complaints: [shortness_of_breath, cough]
   when:
     all:
@@ -2128,6 +2139,7 @@
     note: "Lượt R vòng 2 quyết định giữ mức 2 theo nguồn: NHS Shortness of breath, trang dành đúng cho triệu chứng chính Khó thở, ghi khó thở kèm ngực tức hoặc nặng thì gọi 999 hoặc đến cấp cứu (mức 2). NHS Chest pain ghi đau ngực kèm khó thở thì gọi 999 (mức 1), nhưng trang đó dành cho người đến vì đau ngực. Với Khó thở và Ho, tức ngực rất hay gặp ở cơn hen, viêm phế quản (NHS Asthma: ngực thấy tức là triệu chứng chính của hen); kèm vã mồ hôi, đau lan, buồn nôn, choáng thì mức 1 (rf_breathless_chest_pressure_features, CG95 1.2.1.3). Người bị hen có tức ngực vẫn được khuyên đi cấp cứu (khuyên quá mức nếu thuốc cắt cơn có tác dụng): không loại được bằng câu hỏi, vì câu 'đã xịt thuốc mà không đỡ' trả lời 'Không' cả khi chưa xịt (đề xuất dấu hiệu reliever_used). Lượt R vòng 2 đổi basis từ judgment sang verbal. Chờ bác sĩ duyệt."
 - id: rf_breathless_chest_pressure_features
   level: 1
+  conditions: [acute_coronary_syndrome]
   complaints: [shortness_of_breath, cough]
   when:
     all:
@@ -2147,6 +2159,7 @@
     note: "Như rf_chest_pain_with_features, bỏ điều kiện khó thở (đã ngầm định ở triệu chứng chính Khó thở). NHS Chest pain (đã xác minh): đau ngực lan ra tay, cổ, hàm, hoặc kèm vã mồ hôi, buồn nôn, choáng váng thì gọi 999. Lượt R lô 3 đồng ý; câu tức ngực được hỏi trước câu mức độ khó thở để các dấu hiệu đi kèm còn được hỏi khi một quy tắc mức 2 đã đúng."
 - id: rf_asthma_reliever_fails
   level: 1
+  conditions: [asthma]
   complaints: [shortness_of_breath, cough, chest_pain]
   when:
     all:
@@ -2161,6 +2174,7 @@
     note: "Lượt R vòng 2 mở nguồn. NHS Asthma: xịt thuốc cắt cơn màu xanh 1 nhát mỗi 30–60 giây, tối đa 10 nhát; không đỡ sau liều tối đa, thấy nặng hơn, hoặc không có bình xịt thì gọi 999 (mức 1). 1851/QĐ-BYT và GINA 2026: không đáp ứng điều trị hoặc tiếp tục xấu đi thì chuyển ngay tới cơ sở cấp cứu. 4888/QĐ-BYT (trẻ dưới 5 tuổi): thuốc cắt cơn không hiệu quả là vùng đỏ, đưa đến phòng cấp cứu gần nhất. Giữ mức 1 theo NHS. Câu 'đã biết bị hen' được hỏi đầu tiên ở Khó thở, để câu thuốc cắt cơn còn được hỏi khi một quy tắc mức 2 đã đúng."
 - id: rf_copd_reliever_fails
   level: 2
+  conditions: [copd_exacerbation]
   complaints: [shortness_of_breath, cough, chest_pain]
   when:
     all:
@@ -2208,6 +2222,7 @@
     note: "Lượt R vòng 2 mở nguồn. NHS Heart failure: khó thở khi nằm hoặc khi làm việc thường ngày thì hẹn khám khẩn hoặc gọi 111 (mức 3). 1857/QĐ-BYT: khó thở, cơn khó thở kịch phát về đêm, phù mắt cá chân là triệu chứng điển hình của suy tim; khó thở khi nằm, phù ngoại biên là dấu hiệu sung huyết của suy tim cấp. NHS Shortness of breath xếp khó thở tăng khi nằm, hoặc khó thở kèm phù mắt cá, vào 'khám bác sĩ gia đình' (không khẩn, mức 4). Giữ mức 3 theo trang Heart failure (thận trọng hơn). Suy tim mất bù nặng (khó thở cả khi nghỉ) đã có rf_dyspnea_at_rest (mức 2)."
 - id: rf_anaphylaxis_signs
   level: 1
+  conditions: [anaphylaxis]
   complaints: [shortness_of_breath, cough, chest_pain]
   when:
     any:
@@ -2244,6 +2259,7 @@
 # --- Trẻ em, đường thở ---
 - id: rf_stridor
   level: 2
+  conditions: [croup]
   complaints: [cough, shortness_of_breath, chest_pain]
   when: { finding: stridor, is: present }
   reason_vi: "Thở rít khi ngồi yên là dấu hiệu tắc nghẽn đường thở, cần được khám cấp cứu ngay."
@@ -2266,6 +2282,7 @@
     note: "Lượt R vòng 2 mở 3312/QĐ-BYT năm 2015 (bản đăng lại trên vnras.com): văn bản có hai phần về dị vật đường thở. Mục 'Trẻ bị dị vật đường thở': nghi ngờ khi trẻ đột ngột suy hô hấp, ho, nôn ọe, thở rít; trẻ tắc nghẽn đường thở chưa rõ nguyên nhân nhưng vẫn tự thở cần được đưa ngay tới bệnh viện (mức 2). Bài 'Dị vật đường thở': hay gặp ở trẻ 6 tháng – 5 tuổi; sau hội chứng xâm nhập (ho sặc sụa) trẻ có thể chỉ còn cơn ho, rít một bên, rồi thành dị vật bỏ quên; cần soi phế quản. Lượt R vòng 2 đổi basis từ judgment sang verbal. Lượt R lô 3 sửa câu gợi ý của choking_episode: không tính sặc nước rồi hết ho ngay (người lớn sặc nước rất hay gặp)."
 - id: rf_infant_apnea
   level: 1
+  conditions: [pertussis, bronchiolitis]
   complaints: [cough, shortness_of_breath]
   when: { finding: apnea_cyanosis_spells, is: present }
   reason_vi: "Trẻ có lúc ngừng thở hoặc tím tái cần gọi 115 ngay."
@@ -2277,6 +2294,7 @@
     note: "Lượt R vòng 2 mở nguồn. NG9 1.2.1: trẻ ngừng thở (thấy hoặc người nhà kể) hoặc tím trung ương thì chuyển cấp cứu ngay, thường bằng xe 999; 1.1.5: trẻ nhỏ (nhất là dưới 6 tuần) có thể chỉ biểu hiện bằng ngừng thở. NHS Bronchiolitis: có lúc ngừng thở, hoặc da, lưỡi, môi tím, xám thì chỉ gọi 999 (mức 1). NHS Whooping cough: tím, xám đột ngột thì gọi 999 hoặc đến cấp cứu; trẻ nhỏ có thể tím sau cơn ho. NG254 bảng 1: ngừng thở, tím là nguy cơ cao. Giữ mức 1. Cơn nín thở khi khóc ở trẻ 6 tháng – 5 tuổi (lành tính) có thể bị trả lời 'có': khuyên quá mức, chấp nhận."
 - id: rf_child_chest_indrawing
   level: 2
+  conditions: [pneumonia, bronchiolitis]
   complaints: [cough, shortness_of_breath]
   when: { finding: chest_indrawing, is: present }
   reason_vi: "Trẻ thở rút lõm lồng ngực là dấu hiệu khó thở nặng, cần đưa đi khám cấp cứu ngay."
@@ -2304,6 +2322,7 @@
     note: "Lượt R vòng 2 mở nguồn. IMCI Module 3 và 3312/QĐ-BYT: trẻ ho hoặc khó thở có thở nhanh là viêm phổi, uống kháng sinh, điều trị ngoại trú, khám lại sau 3 ngày (mức 3). NG9 1.2.2: cân nhắc chuyển viện khi nhịp thở trên 60 lần/phút, bú khó hoặc lượng uống chỉ 50–75% bình thường, mất nước. NHS Bronchiolitis: bú, ăn ít hơn hẳn bình thường thì hẹn khám khẩn hoặc gọi 111 (mức 3). Giữ mức 3. Câu child_feeding_reduced hỏi trong 24 giờ qua chỉ bú, ăn được khoảng một nửa: chặt hơn mốc 75% của NG9 một chút, chấp nhận."
 - id: rf_pertussis_infant
   level: 2
+  conditions: [pertussis]
   complaints: [cough]
   when:
     all:
@@ -2386,6 +2405,7 @@
     note: "4888/QĐ-BYT xếp SpO2 92–95% vào cơn hen trung bình; NG143: SpO2 từ 95% trở xuống kèm sốt, thở nhanh gợi ý viêm phổi ở trẻ. Người bảo trì chọn mức 3; chờ bác sĩ duyệt."
 - id: rf_infant_grunting
   level: 2
+  conditions: [pneumonia, bronchiolitis, sepsis]
   complaints: [cough, shortness_of_breath]
   when: { finding: grunting, is: present }
   reason_vi: "Trẻ thở rên là dấu hiệu suy hô hấp nặng, cần đưa đi khám cấp cứu ngay."

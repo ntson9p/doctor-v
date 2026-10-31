@@ -248,9 +248,10 @@
     - chest_pain_radiates_back
     - chest_pain_sudden_severe
     - cold_sweat
-    - breathing_difficulty
     - nausea
     - fainting_or_near_fainting
+    # Tích hợp lô 3: khó thở hỏi riêng sau (xem chest_pain.yaml); đau như xé thay vào chỗ đó.
+    - chest_pain_tearing
   none_label_vi: "Không có dấu hiệu nào ở trên"
   allow_unknown: true
 - id: cough_associated

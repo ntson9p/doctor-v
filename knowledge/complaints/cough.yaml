@@ -38,8 +38,10 @@ red_flags:
   # Ho từ 2 tuần là mốc sàng lọc lao; ho gà cũng thường kéo dài nhiều tuần.
   - finding: cough_duration
 intake: [cough_associated, cough_character, chronic_cough_signs, lung_conditions, fever_exposures, chronic_conditions]
-# Bệnh "không được bỏ sót" (mức 1–2) có prior cho triệu chứng chính này: điền sau lượt C.
-cant_miss: []
+# Bệnh "không được bỏ sót" (mức 1–2) có prior cho triệu chứng chính này; danh sách để kiểm tra an toàn.
+cant_miss:
+  - anaphylaxis
+  - pulmonary_embolism
 safety_net:
   - breathing_difficulty
   - stridor

@@ -25,6 +25,14 @@ red_flags:
   # phải hỏi từng câu một, và quy tắc cần ba dấu hiệu (sốc khi sốt, nhiễm khuẩn huyết) không còn được xét.
   - finding: chest_pain_duration
   - group: chest_pain_red_flags
+  # Tích hợp lô 3 (người bảo trì): câu khó thở được tách khỏi nhóm trên và hỏi sau đau khi hít sâu, hồi hộp, yếu tố
+  # nguy cơ huyết khối. Đau ngực kèm khó thở là quy tắc mức 2 và dừng phiên; nếu hỏi trước, thuyên tắc phổi và rối
+  # loạn nhịp tim không vào được danh sách cần loại trừ (ca d-pulmonary-embolism-chest-pain-1,
+  # d-cardiac-arrhythmia-chest-pain-1; lượt C lô 3 phần c). Các dấu hiệu mức 1 trong nhóm vẫn được hỏi ngay.
+  - finding: pleuritic_chest_pain
+  - finding: palpitations
+  - group: clot_risk
+  - finding: breathing_difficulty
   - group: general_danger_signs
   - finding: fever
   - finding: chest_pain_pressure
@@ -33,9 +41,14 @@ red_flags:
   - finding: leg_swelling_one_side
   - group: fever_red_flags
   - finding: fever_duration
-intake: [chest_pain_associated, clot_risk, chronic_conditions, lung_conditions]
-# Bệnh "không được bỏ sót" (mức 1–2) có prior cho triệu chứng chính này: điền sau lượt C.
-cant_miss: []
+intake: [chest_pain_associated, chronic_conditions, lung_conditions]
+# Bệnh "không được bỏ sót" (mức 1–2) có prior cho triệu chứng chính này; danh sách để kiểm tra an toàn.
+cant_miss:
+  - acute_coronary_syndrome
+  - anaphylaxis
+  - aortic_dissection
+  - pneumothorax
+  - pulmonary_embolism
 safety_net:
   - es_crushing_chest_pain
   - pain_radiates_arm_jaw

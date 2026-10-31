@@ -63,6 +63,8 @@
   alt_question:
     text_vi: "Có thấy tim đập thình thịch trong ngực, ở cổ hoặc họng không?"
   leak: moderate
+  # Lô 3: người khó thở, đau ngực hay thấy tim đập nhanh dù không do bệnh có liên kết (lượt C lô 3 phần b đề xuất).
+  leak_by_complaint: { shortness_of_breath: 0.15, chest_pain: 0.15 }
 - id: palpitation_rhythm
   kind: symptom
   type: categorical
@@ -175,6 +177,8 @@
   cluster: anemia_signs
   leak: 0.15
   leak_note: "Người cao tuổi, người ít vận động hay hụt hơi khi gắng sức dù không có bệnh liên kết; 5% là quá thấp (lượt A lô 1 phần a). Người bảo trì ước lượng."
+  # Lô 3: với Khó thở, phần lớn người bệnh hụt hơi khi gắng sức (lượt C lô 3 phần c đề xuất).
+  leak_by_complaint: { shortness_of_breath: 0.5 }
 - id: neck_pounding
   kind: symptom
   type: binary

@@ -43,9 +43,14 @@ red_flags:
   - finding: spo2_measured
   - group: fever_red_flags
   - finding: fever_duration
-intake: [dyspnea_associated, clot_risk, lung_conditions, chronic_conditions, fever_exposures]
-# Bệnh "không được bỏ sót" (mức 1–2) có prior cho triệu chứng chính này: điền sau lượt C.
-cant_miss: []
+intake: [dyspnea_associated, cough_character, clot_risk, lung_conditions, chronic_conditions, fever_exposures]
+# Bệnh "không được bỏ sót" (mức 1–2) có prior cho triệu chứng chính này; danh sách để kiểm tra an toàn.
+cant_miss:
+  - acute_coronary_syndrome
+  - anaphylaxis
+  - pneumothorax
+  - pulmonary_embolism
+  - sepsis
 safety_net:
   - es_severe_breathing
   - chest_pain_pressure
