@@ -283,3 +283,10 @@
   alt_question:
     text_vi: "Có phải nhổ nước bọt ra vì không nuốt nổi không?"
   leak: specific
+# Thêm sau lượt A phần b (31/10/2026), trước khi agent viết ca giữ kín làm việc.
+- id: hoarse_voice
+  kind: symptom
+  type: binary
+  label_vi: "Khàn tiếng"
+  question_vi: "Giọng nói hoặc tiếng khóc có khàn đi không?"
+  leak: moderate

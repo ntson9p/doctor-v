@@ -264,3 +264,11 @@
   label_vi: "Phù hai chân"
   question_vi: "Hai bàn chân, cổ chân có phù, ấn vào để lại vết lõm không?"
   leak: moderate
+# Thêm sau lượt A phần b (31/10/2026), trước khi agent viết ca giữ kín làm việc.
+- id: rapid_weight_gain
+  kind: sign
+  type: binary
+  label_vi: "Tăng cân nhanh vài ngày nay"
+  question_vi: "Vài ngày nay có tăng cân nhanh, trên 2 kg, không rõ lý do không?"
+  leak: 0.03
+  leak_note: "Tăng cân nhanh do giữ nước gặp ở suy tim nặng lên, bệnh thận, xơ gan; người bảo trì ước lượng."

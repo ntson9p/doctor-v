@@ -221,3 +221,16 @@
   applies_to:
     age_groups: [infant_0_2m, child_2m_5y]
   leak: specific
+# Thêm sau lượt A phần b (31/10/2026), trước khi agent viết ca giữ kín làm việc.
+- id: dtp_vaccinated
+  kind: risk_factor
+  type: binary
+  label_vi: "Đã tiêm đủ 3 mũi vắc xin có thành phần ho gà"
+  question_vi: "Bé đã tiêm đủ 3 mũi vắc xin 5 trong 1 hoặc 6 trong 1 chưa?"
+  help_vi: "Các vắc xin này phòng cả ho gà, thường tiêm lúc 2, 3 và 4 tháng tuổi."
+  requires:
+    - not: { age_months_lt: 5 }
+  applies_to:
+    age_groups: [child_2m_5y, child_5_12]
+  leak: 0.85
+  leak_note: "Tỷ lệ tiêm đủ 3 mũi vắc xin có thành phần ho gà ở Việt Nam khoảng 80–90% (người bảo trì ước lượng theo số liệu tiêm chủng mở rộng; lượt C đối chiếu). Ca kiểm thử không nhắc tới thì trả lời 'không rõ' (tỷ lệ nền từ 0,5)."
