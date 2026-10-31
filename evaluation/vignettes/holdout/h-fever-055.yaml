@@ -51,6 +51,7 @@ answers:
   bush_exposure: absent
   flood_mud_exposure: absent
   dengue_nearby: absent
+  chest_pain: present
 default_unmentioned: absent
 expected:
   condition: liver_abscess

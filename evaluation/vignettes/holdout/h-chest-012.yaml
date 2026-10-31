@@ -1,0 +1,55 @@
+id: h-chest-012
+set: holdout
+title_vi: "Nữ 24 tuổi đang ôn thi, đột ngột tức ngực, tim đập nhanh, hụt hơi, tê quanh miệng, sợ chết, 10 phút thì hết; lần thứ 4 trong 2 tháng"
+narrative_vi: "Em Q., nữ, 24 tuổi, học thạc sĩ ở Hà Nội, khỏe mạnh, không hút thuốc, không uống thuốc tránh thai. Mấy tuần nay em căng thẳng vì sắp bảo vệ luận văn, ngủ ít. Tối nay đang ngồi đọc tài liệu, em đột ngột thấy tức ở giữa ngực, tim đập thình thịch rất nhanh, hụt hơi như không hít đủ, tê bì quanh miệng và đầu ngón tay, run tay, lâng lâng, sợ hãi như sắp chết. Khoảng 10 phút sau mọi thứ hết dần, giờ em thấy bình thường. Đây là lần thứ 4 trong 2 tháng; lần trước em vào cấp cứu, được đo điện tim, xét nghiệm máu bình thường, bác sĩ nói là cơn hoảng sợ. Em không ngất, không vã mồ hôi lạnh, không sốt, không ho, chân không sưng, gần đây không đi xa. Tối nay em không uống cà phê hay nước tăng lực."
+patient:
+  age_years: 24
+  sex: female
+  region: north
+  month: 6
+complaint: chest_pain
+answers:
+  chest_pain_duration: minutes
+  chest_pain_pressure: present
+  palpitations: present
+  palpitation_rhythm: fast_regular
+  palpitation_duration: minutes_hours
+  breathing_difficulty: present
+  dyspnea_onset: sudden
+  dyspnea_severity: rest
+  perioral_tingling: present
+  panic_fear: present
+  tremor: present
+  dizziness: present
+  similar_episodes_before: present
+  stress_poor_sleep: present
+  chest_pain_exertional: absent
+  chest_pain_sudden_severe: absent
+  chest_pain_radiates_back: absent
+  pain_radiates_arm_jaw: absent
+  pleuritic_chest_pain: absent
+  chest_wall_tenderness: absent
+  es_crushing_chest_pain: absent
+  cold_sweat: absent
+  fainting_or_near_fainting: absent
+  fever: absent
+  cough: absent
+  leg_swelling_one_side: absent
+  recent_immobility: absent
+  stimulant_intake: absent
+  estrogen_use: absent
+  pregnant: absent
+  smoker: absent
+  family_sudden_death: absent
+default_unmentioned: absent
+expected:
+  condition: panic_disorder
+  acceptable: []
+  triage: 4
+source:
+  basis: "Cơn hoảng sợ tái diễn ở phụ nữ trẻ: đột ngột tức ngực, tim nhanh, hụt hơi, tê quanh miệng, run, sợ chết, hết sau khoảng 10 phút; đã có 4 cơn giống hệt trong 2 tháng, lần trước đã được làm điện tim, xét nghiệm bình thường; không yếu tố nguy cơ tim mạch hay huyết khối. NHS Panic disorder: phần lớn cơn kéo dài 5–20 phút, đáng sợ nhưng không nguy hiểm; khám bác sĩ gia đình để loại trừ bệnh khác và điều trị. Cơn đã hết, giống các cơn đã được khám nên mức 4."
+  references:
+    - nhs-panic-disorder
+    - nhs-chest-pain
+author: "agent:vignette-holdout"
+notes_vi: "Nếu là cơn đầu tiên, hoặc cơn khác hẳn các lần trước, hoặc đau ngực kéo dài, thì cần khám sớm hơn để loại trừ nguyên nhân tim."

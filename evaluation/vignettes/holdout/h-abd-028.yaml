@@ -27,6 +27,10 @@ answers:
   known_heart_disease: absent
   heartburn: absent
   fever: absent
+  chest_pain: present
+  chest_pain_duration: over_15min
+  dyspnea_onset: sudden
+  dyspnea_severity: rest
 default_unmentioned: absent
 expected:
   condition: acute_coronary_syndrome

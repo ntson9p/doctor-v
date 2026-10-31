@@ -1,0 +1,50 @@
+id: h-cough-017
+set: holdout
+title_vi: "Nam 38 tuổi ho khan 4 tuần sau đợt cúm, đang đỡ dần, ho khi nói nhiều hoặc gặp gió lạnh, ngoài ra khỏe"
+narrative_vi: "Anh V., 38 tuổi, nhân viên bán hàng ở TP.HCM, khỏe mạnh, không hút thuốc. Khoảng 4 tuần trước anh bị cúm: sốt cao, đau nhức người, ho, sổ mũi khoảng 1 tuần rồi hết sốt. Từ đó anh vẫn ho khan, ngứa cổ, ho nhiều khi nói chuyện lâu, khi vào phòng máy lạnh hoặc gặp gió lạnh. Hai tuần nay ho đã thưa dần. Anh không sốt, không khạc đờm, không khò khè, không khó thở, không đau ngực, không ho ra máu, không sụt cân, không ra mồ hôi đêm, không sổ mũi, không ợ chua. Anh không uống thuốc huyết áp hay thuốc gì thường xuyên. Trong nhà không ai bị lao."
+patient:
+  age_years: 38
+  sex: male
+  region: south
+  month: 9
+complaint: cough
+answers:
+  cough_duration: w2_8
+  productive_cough: absent
+  recent_viral_illness: unknown
+  fever: absent
+  wheeze: absent
+  breathing_difficulty: absent
+  chest_pain: absent
+  pleuritic_chest_pain: absent
+  hemoptysis: absent
+  weight_loss_unintended: absent
+  night_sweats: absent
+  night_respiratory_symptoms: absent
+  runny_nose: absent
+  nasal_congestion: absent
+  sore_throat: absent
+  heartburn: absent
+  hoarse_voice: absent
+  fatigue: absent
+  loss_of_appetite: absent
+  cough_paroxysms: absent
+  post_tussive_vomiting: absent
+  sick_contact_respiratory: absent
+  tb_contact: absent
+  smoker: absent
+  bp_lowering_meds: absent
+  asthma_known: absent
+  diabetes: absent
+  immunocompromised: absent
+default_unmentioned: absent
+expected:
+  condition: other
+  acceptable: []
+  triage: 4
+source:
+  basis: "Ho sau nhiễm vi rút (ho bán cấp, 3–8 tuần), ngoài danh mục: ho khan 4 tuần sau cúm, đang đỡ dần, không sốt, không đờm, không khó thở, không sụt cân, không ho ra máu, không hút thuốc, không dùng thuốc ức chế men chuyển. NHS Cough: ho thường hết trong 3–4 tuần; ho trên 3 tuần thì khám bác sĩ (không khẩn); chỉ khám khẩn khi ho rất nặng, khó thở, đau ngực, ho ra máu. Nên mức 4."
+  references:
+    - nhs-cough
+author: "agent:vignette-holdout"
+notes_vi: "Ca ngoài danh mục. Đợt cúm đã cách 4 tuần nên câu bị cảm trong 2 tuần trước để 'không rõ'. Viêm phế quản cấp là chẩn đoán gần nhất trong danh mục."

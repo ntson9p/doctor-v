@@ -37,6 +37,7 @@ answers:
   decreased_urine: absent
   sick_contact_respiratory: absent
   dengue_nearby: absent
+  skin_burning_band: present
 default_unmentioned: absent
 expected:
   condition: other

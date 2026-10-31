@@ -37,6 +37,7 @@ answers:
   diarrhea: absent
   pig_pork_exposure: absent
   dengue_nearby: absent
+  dyspnea_onset: hours_days
 default_unmentioned: absent
 expected:
   condition: sepsis

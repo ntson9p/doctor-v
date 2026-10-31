@@ -35,6 +35,11 @@ answers:
   ear_discharge: absent
   cold_hands_feet: absent
   bulging_fontanelle: absent
+  cough_duration: lt_1w
+  chest_indrawing: present
+  apnea_cyanosis_spells: present
+  child_feeding_reduced: present
+  dyspnea_onset: hours_days
 default_unmentioned: absent
 expected:
   condition: measles

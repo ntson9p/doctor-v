@@ -41,6 +41,7 @@ answers:
   diabetes: absent
   known_heart_disease: absent
   smoker: absent
+  leg_swelling_both: present
 default_unmentioned: absent
 expected:
   condition: other

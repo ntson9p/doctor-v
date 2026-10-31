@@ -28,6 +28,7 @@ answers:
   vaginal_bleeding: absent
   jaundice: absent
   diarrhea: absent
+  chest_pain: present
 default_unmentioned: absent
 expected:
   condition: preeclampsia

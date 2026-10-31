@@ -1,0 +1,46 @@
+id: h-cough-001
+set: holdout
+title_vi: "Nữ 35 tuổi, sau đợt cảm, ho có đờm 10 ngày, không sốt, không khó thở"
+narrative_vi: "Chị H., 35 tuổi, nhân viên văn phòng ở Hà Nội, khỏe mạnh, không hút thuốc. Khoảng 12 ngày trước chị bị cảm, sổ mũi, đau họng vài ngày rồi hết. Từ đó chị ho, 10 ngày nay ho nhiều hơn, khạc đờm trắng đục, có lúc hơi vàng, ho nhiều nhất buổi sáng. Chị hơi mệt nhưng vẫn đi làm, ăn uống được. Chị không sốt, không khó thở, không khò khè, không đau ngực, không ho ra máu, không sụt cân. Hiện chị không còn sổ mũi hay đau họng. Chị chưa từng bị hen, không có thai."
+patient:
+  age_years: 35
+  sex: female
+  region: north
+  month: 11
+complaint: cough
+answers:
+  cough_duration: w1_2
+  productive_cough: present
+  recent_viral_illness: present
+  fatigue: present
+  fever: absent
+  breathing_difficulty: absent
+  wheeze: absent
+  chest_pain: absent
+  pleuritic_chest_pain: absent
+  chest_pain_pressure: absent
+  hemoptysis: absent
+  weight_loss_unintended: absent
+  night_sweats: absent
+  runny_nose: absent
+  nasal_congestion: absent
+  sore_throat: absent
+  loss_of_appetite: absent
+  night_respiratory_symptoms: absent
+  cough_paroxysms: absent
+  smoker: absent
+  asthma_known: absent
+  tb_contact: absent
+  pregnant: absent
+default_unmentioned: absent
+expected:
+  condition: acute_bronchitis
+  acceptable: []
+  triage: 5
+source:
+  basis: "Viêm phế quản cấp điển hình sau cảm lạnh: ho có đờm 10 ngày, không sốt, không khó thở, không đau ngực, không ho ra máu, người khỏe mạnh không bệnh nền. NHS Cough: ho thường tự hết trong 3–4 tuần, phần lớn do cảm lạnh, cúm; chỉ khám khi ho trên 3 tuần, ho rất nặng, khó thở, đau ngực, ho ra máu. Không có dấu hiệu nào nên theo dõi tại nhà (NICE NG120 cũng khuyên tự chăm sóc với ho cấp)."
+  references:
+    - nhs-cough
+    - nhs-common-cold
+author: "agent:vignette-holdout"
+notes_vi: "Đờm hơi vàng không phải dấu hiệu nhiễm khuẩn cần kháng sinh. Mốc khám lại: ho quá 3 tuần, sốt, khó thở, đau ngực hoặc ho ra máu."

@@ -41,6 +41,7 @@ answers:
   tremor: absent
   heat_intolerance: absent
   goiter_visible: absent
+  former_smoker: present
 default_unmentioned: absent
 expected:
   condition: anemia

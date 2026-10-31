@@ -1,0 +1,48 @@
+id: h-cough-015
+set: holdout
+title_vi: "Bé gái 20 tháng đang ăn lạc rang thì sặc, ho rũ rượi; 5 giờ sau vẫn ho từng lúc, thở khò khè, hơi nhanh"
+narrative_vi: "Bé N., gái, 20 tháng, ở Nghệ An, đã tiêm chủng đầy đủ, kể cả 2 mũi vắc xin sởi. Chiều nay khoảng 5 giờ trước, bé ngồi ăn lạc rang cùng anh chị thì đột ngột sặc, ho rũ rượi, mặt đỏ, chảy nước mắt; mẹ vỗ lưng, vài phút sau bé đỡ ho, không thấy hạt lạc văng ra. Từ đó bé ho từng lúc, thở có tiếng khò khè, thở hơi nhanh hơn bình thường cả khi ngồi chơi. Bé vẫn tỉnh, chơi được, uống nước được, không chảy dãi, môi hồng, không rít khi hít vào, ngực không rút lõm. Trước đó bé hoàn toàn khỏe, không sổ mũi, không sốt."
+patient:
+  age_months: 20
+  sex: female
+  region: central
+  month: 2
+complaint: cough
+answers:
+  choking_episode: present
+  cough_duration: lt_1w
+  wheeze: present
+  breathing_difficulty: present
+  dyspnea_onset: sudden
+  dyspnea_severity: rest
+  productive_cough: absent
+  fever: absent
+  runny_nose: absent
+  nasal_congestion: absent
+  stridor: absent
+  chest_indrawing: absent
+  grunting: absent
+  apnea_cyanosis_spells: absent
+  drooling_cannot_swallow: absent
+  hoarse_voice: absent
+  child_unable_to_drink: absent
+  child_vomits_everything: absent
+  child_feeding_reduced: absent
+  drowsy_hard_to_wake: absent
+  seizure_recent: absent
+  es_severe_breathing: absent
+  sick_contact_respiratory: absent
+  asthma_known: absent
+  dtp_vaccinated: present
+  measles_vaccinated: present
+default_unmentioned: absent
+expected:
+  condition: other
+  acceptable: []
+  triage: 2
+source:
+  basis: "Dị vật đường thở (hạt lạc) ở trẻ 20 tháng, ngoài danh mục: đột ngột sặc, ho rũ rượi khi đang ăn lạc, sau đó ho từng lúc, khò khè, thở hơi nhanh; trước đó khỏe hoàn toàn. Các tổng quan về dị vật đường thở ở trẻ em: hay gặp nhất ở trẻ 1–3 tuổi, hạt lạc là dị vật hữu cơ thường gặp nhất; sau cơn sặc có thể có giai đoạn ít triệu chứng làm chậm chẩn đoán; X-quang bình thường không loại trừ, cần nội soi phế quản sớm (trong 24 giờ). Còn thở được, môi hồng, không rít, không rút lõm nên đến cơ sở cấp cứu ngay (mức 2), không phải mức 1."
+  references:
+    - nhs-cough
+author: "agent:vignette-holdout"
+notes_vi: "Ca ngoài danh mục. Nếu trẻ không thở được, không ho được, tím tái thì là mức 1 và cần sơ cứu dị vật ngay. Hen, viêm tiểu phế quản là chẩn đoán phân biệt nhưng khởi phát ngay sau sặc."

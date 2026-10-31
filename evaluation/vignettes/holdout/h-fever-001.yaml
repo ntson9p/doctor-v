@@ -25,6 +25,7 @@ answers:
   loss_of_smell_taste: absent
   ear_pain: absent
   pregnant: absent
+  cough_duration: lt_1w
 default_unmentioned: absent
 expected:
   condition: common_cold

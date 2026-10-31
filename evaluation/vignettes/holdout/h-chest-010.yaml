@@ -1,0 +1,53 @@
+id: h-chest-010
+set: holdout
+title_vi: "Nam 67 tuổi uống viên kháng sinh mới 20 phút trước, tức nặng ngực, nổi mề đay ngứa, choáng khi đứng, nôn, đau quặn bụng"
+narrative_vi: "Ông T., 67 tuổi, ở Huế, bị đau răng nên mua kháng sinh ở hiệu thuốc theo lời khuyên của người bán. Khoảng 20 phút sau khi uống viên đầu tiên, ông thấy tức nặng ở giữa ngực, khó chịu, ngứa ran khắp người, ở ngực và cổ nổi nhiều mảng đỏ gồ ngứa. Ông đau quặn bụng, buồn nôn, nôn 1 lần. Lúc đứng dậy đi vệ sinh ông choáng, tối sầm mắt như sắp ngất, phải ngồi xuống. Ông không thấy khó thở, môi và lưỡi không sưng, không khò khè. Ông lo bị đau tim, chưa nghĩ tới thuốc. Con trai đo huyết áp được 85/55 mmHg, mạch 112 lần/phút. Ông không bị tăng huyết áp, tiểu đường, chưa có bệnh tim, không hút thuốc."
+patient:
+  age_years: 67
+  sex: male
+  region: central
+  month: 3
+complaint: chest_pain
+answers:
+  chest_pain_duration: over_15min
+  chest_pain_pressure: present
+  allergen_exposure: present
+  rash_any: present
+  hives: present
+  abdominal_pain: present
+  nausea: present
+  vomiting: present
+  fainting_or_near_fainting: present
+  dizziness: present
+  pulse_measured: n100_150
+  bp_measured: normal
+  es_anaphylaxis: absent
+  es_crushing_chest_pain: absent
+  breathing_difficulty: absent
+  wheeze: absent
+  stridor: absent
+  hoarse_voice: absent
+  pain_radiates_arm_jaw: absent
+  chest_pain_radiates_back: absent
+  chest_pain_sudden_severe: absent
+  chest_pain_exertional: absent
+  pleuritic_chest_pain: absent
+  cold_sweat: absent
+  fever: absent
+  cough: absent
+  hypertension_known: absent
+  diabetes: absent
+  known_heart_disease: absent
+  smoker: absent
+default_unmentioned: absent
+expected:
+  condition: anaphylaxis
+  acceptable: []
+  triage: 1
+source:
+  basis: "Phản vệ sau uống thuốc ở người cao tuổi, không có triệu chứng hô hấp rõ: 20 phút sau viên kháng sinh đầu tiên có tức ngực, mề đay, đau quặn bụng, nôn, choáng như sắp ngất, huyết áp 85/55 mmHg. 51/2017/TT-BYT Phụ lục I, bệnh cảnh 2: ít nhất 2 trong 4 nhóm (da, niêm mạc; hô hấp gồm tức ngực; tụt huyết áp; tiêu hóa) xuất hiện vài phút đến vài giờ sau tiếp xúc; Phụ lục II độ II–III; Điều 6: tiêm adrenalin ngay. NHS Anaphylaxis: choáng, ngất, da lạnh sau dùng thuốc thì gọi 999. Mức 1."
+  references:
+    - byt-tt-51-2017
+    - nhs-anaphylaxis
+author: "agent:vignette-holdout"
+notes_vi: "Ca không điển hình: không khó thở, không sưng môi lưỡi nên câu sàng lọc phản vệ đầu trả lời 'không'. Câu huyết áp không có lựa chọn huyết áp thấp, 85/55 mmHg chỉ chọn được 'dưới 140/90'."

@@ -1,0 +1,45 @@
+id: h-chest-005
+set: holdout
+title_vi: "Nữ 29 tuổi sau 1 ngày chuyển nhà khuân đồ, 2 ngày đau nhói ngực trái cạnh xương ức, ấn vào đau đúng chỗ, đau khi xoay người"
+narrative_vi: "Chị N., 29 tuổi, ở TP.HCM, khỏe mạnh, không hút thuốc, không uống thuốc tránh thai, không có thai. Ba ngày trước chị chuyển nhà, khuân nhiều thùng đồ nặng cả ngày. Từ 2 ngày nay chị đau nhói ở ngực trái, sát cạnh xương ức, đau tăng khi xoay người, giơ tay lên cao, khi hít thật sâu. Ấn tay vào chỗ đó thì đau nhói đúng chỗ. Đau âm ỉ cả ngày, không lan đi đâu. Chị vẫn đi làm, leo cầu thang không khó thở. Chị không sốt, không ho, không vã mồ hôi, không hồi hộp. Da chỗ đau bình thường, không nổi mẩn, không rát. Chân không sưng, gần đây chị không đi xe đường dài."
+patient:
+  age_years: 29
+  sex: female
+  region: south
+  month: 3
+complaint: chest_pain
+answers:
+  chest_pain_duration: days
+  chest_wall_tenderness: present
+  pleuritic_chest_pain: present
+  chest_pain_exertional: absent
+  chest_pain_sudden_severe: absent
+  chest_pain_pressure: absent
+  chest_pain_radiates_back: absent
+  pain_radiates_arm_jaw: absent
+  skin_burning_band: absent
+  rash_any: absent
+  breathing_difficulty: absent
+  cold_sweat: absent
+  palpitations: absent
+  fainting_or_near_fainting: absent
+  cough: absent
+  fever: absent
+  hemoptysis: absent
+  leg_swelling_one_side: absent
+  recent_immobility: absent
+  heartburn: absent
+  estrogen_use: absent
+  pregnant: absent
+  smoker: absent
+  similar_episodes_before: absent
+default_unmentioned: absent
+expected:
+  condition: chest_wall_pain
+  acceptable: []
+  triage: 5
+source:
+  basis: "Đau thành ngực (cơ, sụn sườn) sau gắng sức mang vác: đau khu trú cạnh xương ức, ấn đau đúng chỗ, tăng khi cử động, xoay người, hít sâu; người trẻ không yếu tố nguy cơ tim mạch, không khó thở, không yếu tố nguy cơ huyết khối. NHS Chest pain: đau ngực tăng khi cử động hoặc ấn vào thường do cơ, xương; tự chăm sóc, khám bác sĩ nếu không đỡ. Nên mức 5."
+  references:
+    - nhs-chest-pain
+author: "agent:vignette-holdout"

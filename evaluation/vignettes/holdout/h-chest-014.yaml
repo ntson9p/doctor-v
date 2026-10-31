@@ -1,0 +1,54 @@
+id: h-chest-014
+set: holdout
+title_vi: "Nam 52 tuổi tăng huyết áp không điều trị, đang khiêng bao xi măng đột ngột đau dữ dội ngực như dao đâm xuyên ra lưng rồi xuống bụng, vã mồ hôi"
+narrative_vi: "Anh H., 52 tuổi, thợ xây ở Biên Hòa (Đồng Nai), được nói bị tăng huyết áp từ 3 năm trước nhưng không uống thuốc, hút thuốc lá, hay uống rượu. Khoảng 1 giờ trước, đang khiêng bao xi măng, anh đột ngột đau dữ dội ngay từ đầu ở giữa ngực, như dao đâm, xuyên thẳng ra sau lưng, sau đó đau lan dần xuống bụng. Anh vã mồ hôi, da tái, không ngồi yên được, buồn nôn. Đồng nghiệp đo huyết áp tay trái ở trạm y tế công trường được 200/110 mmHg. Anh vẫn tỉnh, nói được, không yếu tay chân, không méo miệng. Anh không sốt, không ho, chưa từng bị như vậy."
+patient:
+  age_years: 52
+  sex: male
+  region: south
+  month: 5
+complaint: chest_pain
+answers:
+  chest_pain_duration: over_15min
+  es_crushing_chest_pain: present
+  chest_pain_sudden_severe: present
+  chest_pain_radiates_back: present
+  abdominal_pain: present
+  abd_pain_onset: sudden
+  abd_pain_duration: lt_6h
+  abd_pain_severe: present
+  cold_sweat: present
+  nausea: present
+  bp_measured: extreme
+  hypertension_known: present
+  bp_lowering_meds: absent
+  smoker: present
+  heavy_alcohol: present
+  chest_pain_tearing: absent
+  chest_pain_pressure: absent
+  pain_radiates_arm_jaw: absent
+  pleuritic_chest_pain: absent
+  chest_wall_tenderness: absent
+  chest_pain_exertional: absent
+  breathing_difficulty: absent
+  fainting_or_near_fainting: absent
+  es_stroke_signs: absent
+  vomiting: absent
+  fever: absent
+  cough: absent
+  known_heart_disease: absent
+  known_aaa: absent
+  diabetes: absent
+  similar_episodes_before: absent
+default_unmentioned: absent
+expected:
+  condition: aortic_dissection
+  acceptable: []
+  triage: 1
+source:
+  basis: "Bóc tách động mạch chủ ở nam tăng huyết áp không điều trị, khởi phát khi gắng sức nặng: đột ngột đau dữ dội ngay từ đầu ở ngực, xuyên ra lưng rồi lan xuống bụng, vã mồ hôi, da tái, huyết áp 200/110 mmHg. HSE Aortic dissection: đau ngực hoặc lưng trên đột ngột, dữ dội, có thể lan dọc lưng, đau bụng đột ngột; gọi cấp cứu ngay. NHS Chest pain: đau ngực lan ra lưng, bụng kèm vã mồ hôi thì gọi 999. Mức 1."
+  references:
+    - hse-aortic-dissection
+    - nhs-chest-pain
+author: "agent:vignette-holdout"
+notes_vi: "Ca cấp cứu theo đề bài. Ở màn sàng lọc đầu, anh trả lời 'có' câu đau thắt hoặc đè nặng ngực dữ dội kèm vã mồ hôi (đau dữ dội, vã mồ hôi), dù tả đau như dao đâm. Hội chứng vành cấp là chẩn đoán phân biệt cùng mức."

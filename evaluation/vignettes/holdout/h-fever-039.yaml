@@ -36,6 +36,8 @@ answers:
   diarrhea: absent
   dengue_nearby: absent
   measles_vaccinated: present
+  child_feeding_reduced: present
+  dyspnea_onset: hours_days
 default_unmentioned: absent
 expected:
   condition: hand_foot_mouth_disease

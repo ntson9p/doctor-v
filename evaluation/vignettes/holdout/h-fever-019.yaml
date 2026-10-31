@@ -30,6 +30,7 @@ answers:
   confusion: absent
   jaundice: absent
   malaria_area_exposure: absent
+  cough_duration: w1_2
 default_unmentioned: absent
 expected:
   condition: scrub_typhus

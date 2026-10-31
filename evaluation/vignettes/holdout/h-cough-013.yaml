@@ -1,0 +1,57 @@
+id: h-cough-013
+set: holdout
+title_vi: "Nữ 68 tuổi tăng huyết áp, từ chiều qua đột ngột sốt 39,2°C, rét run, đau nhức người, ho khan, hàng xóm bị cúm"
+narrative_vi: "Bà S., 68 tuổi, ở Hà Nội, bị tăng huyết áp uống thuốc hằng ngày, không bị tiểu đường, không có bệnh tim phổi. Mấy hôm nay nhà hàng xóm có 3 người bị cúm. Chiều qua bà đột ngột rét run rồi sốt, cao nhất 39,2°C, đau nhức khắp người, đau đầu, mệt rã rời, chán ăn. Bà ho khan nhiều, đau rát họng. Sáng nay con gái cho bà tự xét nghiệm nhanh COVID-19, kết quả 1 vạch. Bà không khó thở, không đau ngực, vẫn tỉnh táo, tự đi lại được, uống được nước. Bà không nôn, không tiêu chảy, không mất mùi vị."
+patient:
+  age_years: 68
+  sex: female
+  region: north
+  month: 2
+complaint: cough
+answers:
+  cough_duration: lt_1w
+  productive_cough: absent
+  fever: present
+  fever_max_temp: ge_39
+  fever_duration: d1_2
+  chills_rigors: present
+  myalgia: present
+  headache: present
+  fatigue: present
+  loss_of_appetite: present
+  sore_throat: present
+  sick_contact_respiratory: present
+  covid_self_test: negative
+  hypertension_known: present
+  bp_lowering_meds: present
+  breathing_difficulty: absent
+  chest_pain: absent
+  pleuritic_chest_pain: absent
+  chest_pain_pressure: absent
+  confusion: absent
+  drowsy_hard_to_wake: absent
+  severe_weakness: absent
+  loss_of_smell_taste: absent
+  runny_nose: absent
+  vomiting: absent
+  diarrhea: absent
+  rash_any: absent
+  neck_stiffness: absent
+  diabetes: absent
+  known_heart_disease: absent
+  copd_known: absent
+  asthma_known: absent
+  immunocompromised: absent
+  smoker: absent
+default_unmentioned: absent
+expected:
+  condition: influenza
+  acceptable: [covid19]
+  triage: 3
+source:
+  basis: "Cúm mùa ở người cao tuổi: khởi phát đột ngột sốt cao, rét run, đau cơ, đau đầu, ho khan, đau họng, có người xung quanh bị cúm (CDC: dấu hiệu lâm sàng cúm). 1840/QĐ-BYT (2025): người trên 65 tuổi thuộc nhóm nguy cơ diễn biến nặng, cần khám sớm để được cân nhắc thuốc kháng vi rút (hiệu quả nhất trong 48 giờ đầu). Không khó thở, không đau ngực, tỉnh táo nên mức 3."
+  references:
+    - byt-qd-1840-2025
+    - cdc-flu-clinical-signs
+author: "agent:vignette-holdout"
+notes_vi: "Xét nghiệm nhanh COVID-19 âm tính một lần chưa loại trừ hẳn COVID-19 nên chấp nhận covid19."

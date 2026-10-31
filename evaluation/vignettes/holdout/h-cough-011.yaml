@@ -1,0 +1,58 @@
+id: h-cough-011
+set: holdout
+title_vi: "Nữ 74 tuổi tăng huyết áp, 3 ngày sốt rét run, ho đờm vàng, đau ngực phải khi ho, đi nhanh thì hụt hơi"
+narrative_vi: "Bà N., 74 tuổi, ở Hưng Yên, bị tăng huyết áp uống thuốc đều, không hút thuốc, không bị tiểu đường. Ba ngày nay bà sốt, cao nhất 38,8°C, có lúc rét run, ho nhiều, khạc đờm đặc màu vàng. Bà đau nhói ngực bên phải mỗi khi ho hoặc hít sâu. Đi nhanh hoặc lên vài bậc thềm là bà hụt hơi, ngồi nghỉ thì thở được bình thường. Bà mệt, chán ăn nhưng vẫn ăn được cháo, uống nước được, tỉnh táo, nói chuyện bình thường, tự đi lại trong nhà được. Nhà không có máy đo SpO2. Bà không ho ra máu, không phù chân, không nôn, không tiêu chảy. Trong xóm nhiều người đang bị ho, sốt."
+patient:
+  age_years: 74
+  sex: female
+  region: north
+  month: 1
+complaint: cough
+answers:
+  cough_duration: lt_1w
+  productive_cough: present
+  fever: present
+  fever_max_temp: t38_39
+  fever_duration: d3_5
+  chills_rigors: present
+  pleuritic_chest_pain: present
+  chest_pain: present
+  breathing_difficulty: present
+  dyspnea_onset: hours_days
+  dyspnea_severity: exertion
+  fatigue: present
+  loss_of_appetite: present
+  sick_contact_respiratory: present
+  hypertension_known: present
+  bp_lowering_meds: present
+  chest_pain_pressure: absent
+  hemoptysis: absent
+  wheeze: absent
+  confusion: absent
+  drowsy_hard_to_wake: absent
+  severe_weakness: absent
+  cold_hands_feet: absent
+  leg_swelling_both: absent
+  leg_swelling_one_side: absent
+  orthopnea: absent
+  vomiting: absent
+  diarrhea: absent
+  sore_throat: absent
+  runny_nose: absent
+  diabetes: absent
+  known_heart_disease: absent
+  smoker: absent
+  copd_known: absent
+  immunocompromised: absent
+default_unmentioned: absent
+expected:
+  condition: pneumonia
+  acceptable: []
+  triage: 3
+source:
+  basis: "Viêm phổi mắc phải ở cộng đồng ở người cao tuổi: sốt, rét run, ho khạc đờm vàng, đau ngực kiểu màng phổi, khó thở khi gắng sức 3 ngày (4235/QĐ-BYT, bài viêm phổi mắc phải ở cộng đồng). Bà tỉnh táo, ngồi nghỉ thở bình thường, uống được: theo thang CRB-65 chỉ có 1 điểm (tuổi), NICE NG138 khuyên cân nhắc khám đánh giá ở bệnh viện, bác sĩ quyết định điều trị ngoại trú hay nhập viện. NHS Cough: ho kèm đau ngực, khó thở thì hẹn khám khẩn. Nên mức 3."
+  references:
+    - byt-qd-4235-2012
+    - nhs-cough
+author: "agent:vignette-holdout"
+notes_vi: "Ca của bệnh đã có, triệu chứng chính mới (Ho). Lú lẫn, khó thở khi nghỉ, SpO2 dưới 92% hoặc tụt huyết áp sẽ đưa lên mức 2."

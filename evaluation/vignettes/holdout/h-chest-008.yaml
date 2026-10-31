@@ -1,0 +1,49 @@
+id: h-chest-008
+set: holdout
+title_vi: "Nam 66 tuổi tăng huyết áp, 2 ngày đau rát, châm chích một dải từ sau lưng trái vòng ra ngực trái, áo cọ vào cũng đau, chưa nổi ban"
+narrative_vi: "Ông S., 66 tuổi, ở Bắc Ninh, bị tăng huyết áp, uống thuốc đều, không hút thuốc. Hai ngày nay ông đau rát bỏng, châm chích ở da thành một dải, từ dưới bả vai trái vòng ra ngực trái, dưới núm vú. Đau liên tục cả ngày lẫn đêm, áo cọ vào cũng đau, chạm nhẹ vào da thì buốt. Đau không tăng khi đi lại, leo dốc, không tăng khi hít thở; ông vẫn làm vườn được. Ông nhìn kỹ da chỗ đau chưa thấy nổi mẩn hay mụn nước. Ông không khó thở, không vã mồ hôi, không buồn nôn, không hồi hộp, không sốt, không ho. Lúc nhỏ ông bị thủy đậu."
+patient:
+  age_years: 66
+  sex: male
+  region: north
+  month: 1
+complaint: chest_pain
+answers:
+  chest_pain_duration: days
+  skin_burning_band: present
+  chest_wall_tenderness: present
+  chest_pain_radiates_back: present
+  rash_any: absent
+  chest_pain_exertional: absent
+  chest_pain_sudden_severe: absent
+  chest_pain_pressure: absent
+  chest_pain_tearing: absent
+  pleuritic_chest_pain: absent
+  pain_radiates_arm_jaw: absent
+  es_crushing_chest_pain: absent
+  cold_sweat: absent
+  nausea: absent
+  breathing_difficulty: absent
+  palpitations: absent
+  fainting_or_near_fainting: absent
+  fever: absent
+  cough: absent
+  hypertension_known: present
+  bp_lowering_meds: present
+  diabetes: absent
+  smoker: absent
+  former_smoker: absent
+  known_heart_disease: absent
+  immunocompromised: absent
+default_unmentioned: absent
+expected:
+  condition: herpes_zoster
+  acceptable: []
+  triage: 3
+source:
+  basis: "Zona thần kinh giai đoạn tiền triệu ở người cao tuổi: 2 ngày đau rát, châm chích, tăng cảm da thành một dải một bên ngực – lưng, chưa nổi ban; không liên quan gắng sức, không khó thở, không vã mồ hôi (đau có thể có trước khi nổi ban vài ngày). NHS Chest pain: đau ngực không lúc nào hết cần được bác sĩ khám; NHS Shingles: nghĩ bị zona thì hẹn khám khẩn hoặc gọi 111 để được điều trị sớm. Người 66 tuổi đau ngực mới cần khám trong ngày để loại trừ nguyên nhân tim, nên mức 3."
+  references:
+    - nhs-chest-pain
+    - nice-cg95
+author: "agent:vignette-holdout"
+notes_vi: "Ca khó: chưa nổi ban. Đau vòng ra sau lưng dưới bả vai trái nên câu đau lan ra sau lưng trả lời 'có', dù không phải đau xé giữa hai bả vai."

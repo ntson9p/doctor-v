@@ -1,0 +1,46 @@
+id: h-sob-005
+set: holdout
+title_vi: "Bé gái 5 tuần tuổi nghẹt mũi, ho nhẹ 2 ngày, hôm nay 2 lần ngừng thở 10–15 giây, môi tái, bú kém"
+narrative_vi: "Bé L., gái, 5 tuần tuổi, ở Hà Nội, sinh đủ tháng. Anh trai 3 tuổi đi nhà trẻ về bị sổ mũi, ho. Hai ngày nay bé nghẹt mũi, chảy nước mũi, ho nhẹ, thở hơi nhanh hơn bình thường. Hôm nay mẹ thấy 2 lần bé đang nằm thì ngừng thở khoảng 10–15 giây, môi tái đi, mẹ lay thì bé thở lại. Bé bú kém hẳn, mỗi cữ chỉ bú được vài phút rồi bỏ. Bây giờ bé đang thở, môi hồng. Mẹ đo nhiệt độ ở nách 37,1°C. Bé không co giật, vẫn cử động chân tay khi tỉnh, không thở rên, mẹ chưa nghe tiếng khò khè."
+patient:
+  age_months: 1
+  sex: female
+  region: north
+  month: 12
+complaint: shortness_of_breath
+answers:
+  apnea_cyanosis_spells: present
+  young_infant_not_feeding: present
+  young_infant_fast_breathing: present
+  cough: present
+  cough_duration: lt_1w
+  nasal_congestion: present
+  runny_nose: present
+  sick_contact_respiratory: present
+  dyspnea_onset: hours_days
+  dyspnea_severity: rest
+  fever: absent
+  young_infant_low_temp: absent
+  young_infant_reduced_movement: absent
+  drowsy_hard_to_wake: absent
+  seizure_recent: absent
+  grunting: absent
+  wheeze: absent
+  stridor: absent
+  choking_episode: absent
+  cough_paroxysms: absent
+  es_severe_breathing: absent
+  es_unresponsive_or_seizing: absent
+default_unmentioned: absent
+expected:
+  condition: bronchiolitis
+  acceptable: []
+  triage: 1
+source:
+  basis: "Viêm tiểu phế quản ở trẻ dưới 6 tuần biểu hiện bằng cơn ngừng thở: nghẹt mũi, ho nhẹ 2 ngày, anh trai bị cảm, nay có 2 lần ngừng thở 10–15 giây kèm môi tái, bú kém. NICE NG9 mục 1.1.5: trẻ nhỏ (nhất là dưới 6 tuần) có thể chỉ biểu hiện bằng ngừng thở; mục 1.2.1: ngừng thở (người nhà kể) là chỉ định chuyển cấp cứu ngay, thường bằng xe cấp cứu. NHS Bronchiolitis: có lúc ngừng thở thì gọi 999. Mức 1."
+  references:
+    - nice-ng9
+    - nhs-bronchiolitis
+    - who-imci-chart-booklet-2014
+author: "agent:vignette-holdout"
+notes_vi: "Ca khó: trẻ rất nhỏ, ít khò khè, không sốt. Ở màn sàng lọc đầu, mẹ trả lời 'không' câu khó thở dữ dội, môi tím vì lúc đó bé đang thở, môi hồng. Ho gà là chẩn đoán phân biệt nhưng chưa có ho cơn."

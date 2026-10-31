@@ -1,0 +1,55 @@
+id: h-sob-008
+set: holdout
+title_vi: "Nữ 74 tuổi suy tim, tự ngưng thuốc lợi tiểu 4 ngày, ăn mặn; khó thở khi đi lại, 2 đêm phải ngồi ngủ, phù chân, tăng 2,5 kg"
+narrative_vi: "Bà T., 74 tuổi, ở TP.HCM, bị tăng huyết áp và được bác sĩ nói bị suy tim từ 2 năm nay, uống thuốc đều. Tuần trước bà về quê dự đám cưới, ăn nhiều đồ mặn, và tự ngưng thuốc lợi tiểu 4 ngày vì ngại đi tiểu nhiều trên xe; các thuốc huyết áp khác vẫn uống. Bốn ngày nay bà khó thở tăng dần: đi từ phòng ra bếp đã thở dốc; ngồi yên thì đỡ. Hai đêm nay nằm xuống là khó thở, ho khan, phải kê cao gối, ngồi dựa tường mới ngủ được. Hai bàn chân, cổ chân phù, ấn lõm. Bà cân thấy tăng 2,5 kg trong 4 ngày. Con gái đo SpO2 được 95%. Bà không đau ngực, không sốt, không khò khè, không hồi hộp, không ngất, vẫn tỉnh táo."
+patient:
+  age_years: 74
+  sex: female
+  region: south
+  month: 7
+complaint: shortness_of_breath
+answers:
+  known_heart_disease: present
+  hypertension_known: present
+  bp_lowering_meds: present
+  orthopnea: present
+  leg_swelling_both: present
+  rapid_weight_gain: present
+  dyspnea_onset: hours_days
+  dyspnea_severity: exertion
+  spo2_measured: s92_95
+  cough: present
+  cough_duration: lt_1w
+  productive_cough: absent
+  night_respiratory_symptoms: present
+  breathless_on_exertion: present
+  fatigue: present
+  chest_pain: absent
+  chest_pain_pressure: absent
+  pleuritic_chest_pain: absent
+  fever: absent
+  wheeze: absent
+  palpitations: absent
+  fainting_or_near_fainting: absent
+  confusion: absent
+  cold_sweat: absent
+  cold_hands_feet: absent
+  hemoptysis: absent
+  leg_swelling_one_side: absent
+  es_severe_breathing: absent
+  diabetes: absent
+  atrial_fibrillation_known: absent
+  copd_known: absent
+  asthma_known: absent
+  smoker: absent
+default_unmentioned: absent
+expected:
+  condition: heart_failure
+  acceptable: []
+  triage: 3
+source:
+  basis: "Suy tim mạn mất bù nhẹ sau ăn mặn và tự ngưng thuốc lợi tiểu: khó thở tăng khi gắng sức, khó thở khi nằm, ho đêm, phù hai chân, tăng 2,5 kg trong 4 ngày, ngồi nghỉ thở được, SpO2 95% (1857/QĐ-BYT: khó thở khi nằm, phù mắt cá, tăng cân trên 2 kg/tuần là triệu chứng sung huyết). NHS Heart failure: khó thở khi nằm hoặc khi làm việc thường ngày, tăng cân đột ngột thì hẹn khám khẩn hoặc gọi 111; gọi 999 khi khó thở dữ dội, tím, ngất. Nên mức 3."
+  references:
+    - byt-qd-1857-2022
+    - nhs-heart-failure
+author: "agent:vignette-holdout"

@@ -1,0 +1,47 @@
+id: h-cough-004
+set: holdout
+title_vi: "Nam 42 tuổi hút thuốc, anh ruột đang điều trị lao, ho đờm 5 tuần, sốt nhẹ về chiều, mồ hôi trộm, sụt 4 kg"
+narrative_vi: "Anh Đ., 42 tuổi, công nhân ở Bình Dương, hút khoảng nửa bao thuốc lá mỗi ngày. Anh trai sống cùng nhà được chẩn đoán lao phổi 3 tháng trước, đang uống thuốc lao. Khoảng 5 tuần nay anh ho, lúc đầu ho khan, sau khạc đờm đục. Chiều tối anh hay thấy người hâm hấp, đo được 37,6–37,8°C; đêm ra mồ hôi ướt áo. Anh mệt, ăn kém, 2 tháng nay sụt khoảng 4 kg. Anh đã tự mua thuốc ho uống nhưng không đỡ. Anh không ho ra máu, không khó thở, không đau ngực, không đau họng, không sổ mũi. Anh không bị tiểu đường, không có bệnh làm giảm sức đề kháng."
+patient:
+  age_years: 42
+  sex: male
+  region: south
+  month: 4
+complaint: cough
+answers:
+  cough_duration: w2_8
+  productive_cough: present
+  fever: present
+  fever_max_temp: lt_38
+  fever_duration: gt_7d
+  night_sweats: present
+  weight_loss_unintended: present
+  fatigue: present
+  loss_of_appetite: present
+  tb_contact: present
+  smoker: present
+  hemoptysis: absent
+  breathing_difficulty: absent
+  chest_pain: absent
+  pleuritic_chest_pain: absent
+  chest_pain_pressure: absent
+  chills_rigors: absent
+  sore_throat: absent
+  runny_nose: absent
+  wheeze: absent
+  lymph_node_swelling: absent
+  hoarse_voice: absent
+  diabetes: absent
+  immunocompromised: absent
+  heavy_alcohol: absent
+default_unmentioned: absent
+expected:
+  condition: pulmonary_tuberculosis
+  acceptable: []
+  triage: 4
+source:
+  basis: "Lao phổi điển hình: ho khạc đờm 5 tuần, sốt nhẹ về chiều, ra mồ hôi đêm, sụt cân, mệt, kém ăn, sống cùng nhà với người đang điều trị lao phổi. 162/QĐ-BYT (2024), Phần II mục 1.1: ở người lớn, ho kéo dài trên 2 tuần là triệu chứng nghi lao quan trọng nhất, kèm gầy sút, sốt nhẹ về chiều, ra mồ hôi đêm; tiếp xúc nguồn lây là yếu tố nguy cơ. Không ho ra máu, không khó thở nên đặt lịch khám trong vài ngày để chụp phổi, xét nghiệm đờm (NHS Cough: ho trên 3 tuần, sụt cân thì khám bác sĩ, không cần khám khẩn)."
+  references:
+    - byt-qd-162-2024
+    - nhs-cough
+author: "agent:vignette-holdout"

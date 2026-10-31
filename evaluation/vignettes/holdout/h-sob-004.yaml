@@ -1,0 +1,49 @@
+id: h-sob-004
+set: holdout
+title_vi: "Bé trai 8 tháng, ngày thứ 4 sổ mũi ho, nay thở khò khè, hơi nhanh khi bú, chỉ bú được nửa cữ, sốt 38,3°C"
+narrative_vi: "Bé P., nam, 8 tháng, ở TP.HCM, sinh đủ tháng, khỏe mạnh, đã tiêm đủ các mũi 5 trong 1 theo lịch. Chị gái 4 tuổi của bé đang sổ mũi. Bốn ngày nay bé sổ mũi, nghẹt mũi, ho. Từ hôm qua bé thở khò khè, mỗi lần bú thì thở nhanh, phải nhả ti nghỉ, nên 24 giờ qua chỉ bú được khoảng nửa lượng mọi ngày; lúc nằm ngủ bé thở gần như bình thường. Bé sốt 2 ngày, cao nhất 38,3°C. Mẹ nhìn kỹ khi bé nằm yên: ngực dưới không lõm vào, không thở rên, không lúc nào ngừng thở, môi hồng. Bé vẫn tỉnh, chơi một lúc, không nôn, hôm nay vẫn đi tiểu ướt 4 tã."
+patient:
+  age_months: 8
+  sex: male
+  region: south
+  month: 9
+complaint: shortness_of_breath
+answers:
+  cough: present
+  cough_duration: lt_1w
+  runny_nose: present
+  nasal_congestion: present
+  wheeze: present
+  dyspnea_onset: hours_days
+  dyspnea_severity: exertion
+  child_feeding_reduced: present
+  fever: present
+  fever_max_temp: t38_39
+  fever_duration: d1_2
+  sick_contact_respiratory: present
+  chest_indrawing: absent
+  grunting: absent
+  apnea_cyanosis_spells: absent
+  stridor: absent
+  child_unable_to_drink: absent
+  child_vomits_everything: absent
+  vomiting: absent
+  drowsy_hard_to_wake: absent
+  seizure_recent: absent
+  decreased_urine: absent
+  es_severe_breathing: absent
+  choking_episode: absent
+  rash_any: absent
+  dtp_vaccinated: present
+default_unmentioned: absent
+expected:
+  condition: bronchiolitis
+  acceptable: []
+  triage: 3
+source:
+  basis: "Viêm tiểu phế quản điển hình ở trẻ 8 tháng mùa mưa: sau 3 ngày sổ mũi, ho thì khò khè, thở nhanh khi bú, sốt nhẹ, anh chị bị cảm. NICE NG9 mục 1.2.2: cân nhắc chuyển viện khi lượng bú chỉ 50–75% bình thường; NHS Bronchiolitis: bú ít hơn hẳn bình thường thì hẹn khám khẩn hoặc gọi 111; chỉ gọi 999 khi thở rên, rút lõm, ngừng thở, tím. Chưa có dấu hiệu nặng nên mức 3."
+  references:
+    - nice-ng9
+    - nhs-bronchiolitis
+author: "agent:vignette-holdout"
+notes_vi: "Với trẻ nhỏ, 'khó thở khi gắng sức' được hiểu là khi bú, khi khóc; lúc nằm yên bé thở gần như bình thường."

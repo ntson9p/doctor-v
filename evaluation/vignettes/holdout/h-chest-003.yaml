@@ -1,0 +1,51 @@
+id: h-chest-003
+set: holdout
+title_vi: "Nữ 73 tuổi tăng huyết áp, cúi nhặt đồ thì đột ngột đau dữ dội sau lưng giữa hai bả vai lan ra ngực, choáng như sắp ngất, vã mồ hôi"
+narrative_vi: "Bà K., 73 tuổi, ở Quy Nhơn (Bình Định), bị tăng huyết áp, uống thuốc hằng ngày. Khoảng 1 giờ trước, khi cúi nhặt rổ rau, bà đột ngột đau dữ dội ngay từ đầu ở sau lưng, giữa hai bả vai, như bị dao đâm, rồi đau lan ra trước ngực. Ngay sau đó bà choáng, tối sầm mắt như sắp ngất, phải ngồi bệt xuống, vã mồ hôi, buồn nôn. Bà nghĩ bị trúng gió, con gái đang cạo gió cho bà. Đến giờ vẫn đau. Con gái đo huyết áp được 168/100 mmHg. Bà không nói cảm giác xé rách, không ho, không sốt. Ấn vào lưng, ngực không đau thêm. Bà không yếu tay chân, không méo miệng."
+patient:
+  age_years: 73
+  sex: female
+  region: central
+  month: 3
+complaint: chest_pain
+answers:
+  chest_pain_duration: over_15min
+  chest_pain_sudden_severe: present
+  chest_pain_radiates_back: present
+  fainting_or_near_fainting: present
+  cold_sweat: present
+  nausea: present
+  bp_measured: very_high
+  hypertension_known: present
+  bp_lowering_meds: present
+  chest_pain_tearing: absent
+  chest_pain_pressure: absent
+  es_crushing_chest_pain: absent
+  pain_radiates_arm_jaw: absent
+  chest_wall_tenderness: absent
+  chest_pain_exertional: absent
+  pleuritic_chest_pain: absent
+  skin_burning_band: absent
+  breathing_difficulty: absent
+  es_stroke_signs: absent
+  vomiting: absent
+  abdominal_pain: absent
+  cough: absent
+  fever: absent
+  rash_any: absent
+  known_aaa: absent
+  known_heart_disease: absent
+  diabetes: absent
+  smoker: absent
+default_unmentioned: absent
+expected:
+  condition: aortic_dissection
+  acceptable: []
+  triage: 1
+source:
+  basis: "Bóc tách động mạch chủ không điển hình ở phụ nữ cao tuổi tăng huyết áp: đau dữ dội đột ngột ở lưng trên giữa hai bả vai lan ra ngực (không tả là xé), kèm choáng như sắp ngất, vã mồ hôi; người nhà nghĩ trúng gió. HSE Aortic dissection: đau ngực hoặc lưng trên đột ngột, dữ dội; mất ý thức, da vã mồ hôi; dễ nhầm với bệnh khác; gọi cấp cứu ngay. NHS Chest pain: đau ngực lan ra lưng kèm vã mồ hôi, choáng thì gọi 999. Mức 1."
+  references:
+    - hse-aortic-dissection
+    - nhs-chest-pain
+author: "agent:vignette-holdout"
+notes_vi: "Ca không điển hình: phụ nữ, đau nhiều nhất ở lưng, không tả đau như xé. Danh mục chưa có câu hỏi so sánh mạch hoặc huyết áp hai tay."

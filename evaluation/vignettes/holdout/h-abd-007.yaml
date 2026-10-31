@@ -28,6 +28,7 @@ answers:
   smoker: present
   regular_painkiller_use: absent
   heavy_alcohol: absent
+  chest_pain: present
 default_unmentioned: absent
 expected:
   condition: peptic_ulcer_gastritis

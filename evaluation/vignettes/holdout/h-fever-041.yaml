@@ -39,6 +39,10 @@ answers:
   neck_stiffness: absent
   sick_contact_respiratory: absent
   es_unresponsive_or_seizing: absent
+  chest_pain: present
+  orthopnea: present
+  dyspnea_onset: hours_days
+  dyspnea_severity: cannot_speak
 default_unmentioned: absent
 expected:
   condition: pneumonia

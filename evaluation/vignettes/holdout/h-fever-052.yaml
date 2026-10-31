@@ -35,6 +35,7 @@ answers:
   hfmd_contact: absent
   dengue_nearby: absent
   measles_contact: absent
+  dtp_vaccinated: present
 default_unmentioned: absent
 expected:
   condition: bacterial_meningitis

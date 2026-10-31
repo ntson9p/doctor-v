@@ -1,0 +1,48 @@
+id: h-chest-001
+set: holdout
+title_vi: "Nam 21 tuổi cao gầy hút thuốc, đang ngồi học đột ngột đau nhói ngực phải, đau tăng khi hít sâu, đi lại hụt hơi"
+narrative_vi: "Anh L., 21 tuổi, sinh viên ở Hà Nội, cao 1,80 m, nặng 56 kg, hút thuốc lá 3 năm. Khoảng 4 giờ trước, đang ngồi học, anh đột ngột đau nhói dữ dội ngực bên phải, sau đó đau âm ỉ liên tục, đau tăng khi hít sâu. Từ lúc đó anh hụt hơi khi đi lại, lên cầu thang; ngồi yên thì thở được, nói trọn câu. Ấn vào ngực không đau thêm. Anh không ho, không sốt, không ho ra máu, không vã mồ hôi, đau không lan lên vai, cánh tay hay ra sau lưng. Anh không bị chấn thương, không đi xa gần đây, chân không sưng. Anh chưa từng bị như vậy, không bị hen."
+patient:
+  age_years: 21
+  sex: male
+  region: north
+  month: 11
+complaint: chest_pain
+answers:
+  chest_pain_duration: over_15min
+  chest_pain_sudden_severe: present
+  pleuritic_chest_pain: present
+  breathing_difficulty: present
+  dyspnea_onset: sudden
+  dyspnea_severity: exertion
+  smoker: present
+  chest_pain_pressure: absent
+  chest_pain_exertional: absent
+  chest_pain_radiates_back: absent
+  chest_pain_tearing: absent
+  chest_wall_tenderness: absent
+  pain_radiates_arm_jaw: absent
+  cold_sweat: absent
+  es_crushing_chest_pain: absent
+  es_severe_breathing: absent
+  fainting_or_near_fainting: absent
+  palpitations: absent
+  cough: absent
+  hemoptysis: absent
+  fever: absent
+  leg_swelling_one_side: absent
+  recent_immobility: absent
+  skin_burning_band: absent
+  asthma_known: absent
+  similar_episodes_before: absent
+default_unmentioned: absent
+expected:
+  condition: pneumothorax
+  acceptable: []
+  triage: 2
+source:
+  basis: "Tràn khí màng phổi tự phát nguyên phát điển hình: nam trẻ cao gầy hút thuốc, đột ngột đau ngực một bên kiểu màng phổi lúc nghỉ, khó thở khi gắng sức, không sốt, không chấn thương. BTS 2023: tràn khí có đau hoặc khó thở cần đánh giá tại bệnh viện (chụp phổi, chọc hút hoặc dẫn lưu). NHS Chest pain: đau ngực đột ngột và không hết hoặc kèm khó thở thì gọi 999; còn nói trọn câu, chỉ khó thở khi gắng sức nên đến cơ sở cấp cứu ngay (mức 2)."
+  references:
+    - nhs-chest-pain
+    - nhs-shortness-of-breath
+author: "agent:vignette-holdout"

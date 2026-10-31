@@ -1,0 +1,54 @@
+id: h-cough-002
+set: holdout
+title_vi: "Nam 70 tuổi không hút thuốc, ho đờm 2 tuần sau cảm, hơi khò khè về đêm, không sốt, không khó thở"
+narrative_vi: "Ông T., 70 tuổi, ở Đà Lạt (Lâm Đồng), bị tăng huyết áp nhiều năm, uống amlodipine mỗi sáng, huyết áp ổn định. Ông chưa từng hút thuốc, không có bệnh tim, bệnh phổi hay tiểu đường. Khoảng 2 tuần trước ông bị cảm, sổ mũi, đau họng 4–5 ngày. Sau đó ông ho dai dẳng, khạc đờm trắng, đêm nằm có lúc nghe ngực hơi khò khè, ho nhiều hơn về đêm. Ông vẫn đi bộ buổi sáng, làm vườn được, không thấy hụt hơi, không khó thở khi nằm, không đau ngực. Ông không sốt, không ho ra máu, không sụt cân, không ra mồ hôi đêm, ăn uống bình thường, chân không phù. Con gái đo SpO2 bằng máy kẹp ngón tay được 97%."
+patient:
+  age_years: 70
+  sex: male
+  region: highlands
+  month: 12
+complaint: cough
+answers:
+  cough_duration: w1_2
+  productive_cough: present
+  wheeze: present
+  night_respiratory_symptoms: present
+  recent_viral_illness: present
+  fever: absent
+  breathing_difficulty: absent
+  breathless_on_exertion: absent
+  orthopnea: absent
+  chest_pain: absent
+  pleuritic_chest_pain: absent
+  chest_pain_pressure: absent
+  hemoptysis: absent
+  weight_loss_unintended: absent
+  night_sweats: absent
+  loss_of_appetite: absent
+  fatigue: absent
+  leg_swelling_both: absent
+  runny_nose: absent
+  sore_throat: absent
+  cough_paroxysms: absent
+  hypertension_known: present
+  bp_lowering_meds: present
+  known_heart_disease: absent
+  diabetes: absent
+  smoker: absent
+  former_smoker: absent
+  biomass_smoke_exposure: absent
+  copd_known: absent
+  asthma_known: absent
+  tb_contact: absent
+default_unmentioned: absent
+expected:
+  condition: acute_bronchitis
+  acceptable: []
+  triage: 5
+source:
+  basis: "Viêm phế quản cấp ở người cao tuổi khỏe mạnh: ho đờm 2 tuần sau cảm lạnh, khò khè nhẹ về đêm, không sốt, không khó thở, SpO2 97%, không có bệnh tim phổi hay đái tháo đường. NHS Cough và NHS Common cold: ho thường hết trong 3–4 tuần; đi khám khi ho trên 3 tuần, khó thở, đau ngực, ho ra máu, sụt cân hoặc có bệnh nền. Khò khè nhẹ thường gặp trong viêm phế quản cấp. Chưa có dấu hiệu nào nên theo dõi tại nhà."
+  references:
+    - nhs-cough
+    - nhs-common-cold
+author: "agent:vignette-holdout"
+notes_vi: "Ca khó hơn: người cao tuổi, có khò khè và ho về đêm (dễ nghĩ hen, suy tim). Uống amlodipine (không phải thuốc nhóm ức chế men chuyển) nên không nghĩ ho do thuốc. SpO2 chỉ được hỏi khi có khó thở nên không ghi."

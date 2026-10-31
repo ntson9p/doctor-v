@@ -28,6 +28,8 @@ answers:
   diabetes: present
   hypertension_known: present
   fever: absent
+  dyspnea_onset: hours_days
+  dyspnea_severity: exertion
 default_unmentioned: absent
 expected:
   condition: acute_coronary_syndrome

@@ -37,6 +37,7 @@ answers:
   neck_stiffness: absent
   rash_any: absent
   malaria_area_exposure: absent
+  dyspnea_onset: hours_days
 default_unmentioned: absent
 expected:
   condition: sepsis

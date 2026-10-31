@@ -31,6 +31,7 @@ answers:
   rash_any: absent
   vomiting: absent
   diarrhea: absent
+  dyspnea_onset: hours_days
 default_unmentioned: absent
 expected:
   condition: sepsis

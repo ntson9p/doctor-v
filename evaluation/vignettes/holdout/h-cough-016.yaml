@@ -1,0 +1,53 @@
+id: h-cough-016
+set: holdout
+title_vi: "Nữ 66 tuổi mới uống thuốc huyết áp perindopril 2 tháng, 5 tuần nay ho khan, ngứa cổ, nặng hơn khi nằm"
+narrative_vi: "Bà L., 66 tuổi, ở Huế. Hai tháng trước bà được phát hiện tăng huyết áp, bác sĩ kê perindopril uống mỗi sáng. Khoảng 5 tuần nay bà ho khan, cảm giác ngứa, vướng ở cổ họng, ho từng tràng ngắn, nhiều hơn khi nằm và buổi tối. Bà không sốt, không khạc đờm, không khò khè, không khó thở, không đau ngực, không ho ra máu, không sụt cân, không ra mồ hôi đêm. Trước khi ho bà không bị cảm, không sổ mũi, không đau họng; không ợ chua. Bà không hút thuốc, không đun bếp củi, không có bệnh tim, chân không phù. Trong nhà không ai ho hay bị lao."
+patient:
+  age_years: 66
+  sex: female
+  region: central
+  month: 6
+complaint: cough
+answers:
+  cough_duration: w2_8
+  productive_cough: absent
+  night_respiratory_symptoms: present
+  hypertension_known: present
+  bp_lowering_meds: present
+  fever: absent
+  wheeze: absent
+  breathing_difficulty: absent
+  chest_pain: absent
+  pleuritic_chest_pain: absent
+  hemoptysis: absent
+  weight_loss_unintended: absent
+  night_sweats: absent
+  recent_viral_illness: absent
+  runny_nose: absent
+  nasal_congestion: absent
+  sore_throat: absent
+  heartburn: absent
+  hoarse_voice: absent
+  orthopnea: absent
+  leg_swelling_both: absent
+  sick_contact_respiratory: absent
+  tb_contact: absent
+  smoker: absent
+  former_smoker: absent
+  biomass_smoke_exposure: absent
+  known_heart_disease: absent
+  diabetes: absent
+  asthma_known: absent
+  copd_known: absent
+  estrogen_use: absent
+default_unmentioned: absent
+expected:
+  condition: other
+  acceptable: []
+  triage: 4
+source:
+  basis: "Ho do thuốc ức chế men chuyển (perindopril), ngoài danh mục: ho khan, ngứa họng bắt đầu vài tuần sau khi dùng thuốc, không sốt, không đờm, không khó thở, không triệu chứng mũi, không trào ngược. Các tổng quan dược lý: gặp ở 5–20% người dùng thuốc nhóm này, có thể khởi phát từ vài ngày đến vài tháng sau khi uống, hết trong 1–4 tuần sau khi đổi thuốc. NHS Cough: ho trên 3 tuần thì khám bác sĩ (không khẩn). Cần bác sĩ đổi thuốc, không tự ngừng thuốc huyết áp, nên mức 4."
+  references:
+    - nhs-cough
+author: "agent:vignette-holdout"
+notes_vi: "Ca ngoài danh mục. Danh mục chưa có câu hỏi về loại thuốc huyết áp đang dùng (nhóm ức chế men chuyển)."

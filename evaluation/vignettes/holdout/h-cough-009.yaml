@@ -1,0 +1,55 @@
+id: h-cough-009
+set: holdout
+title_vi: "Nam 81 tuổi từng đặt stent mạch vành, 3 tuần ho khan về đêm, phải kê 3 gối mới ngủ được, phù hai cổ chân, tăng 3 kg"
+narrative_vi: "Ông K., 81 tuổi, ở Hà Tĩnh, bị tăng huyết áp, 5 năm trước bị nhồi máu cơ tim được đặt stent, uống thuốc đều. Khoảng 3 tuần nay đêm nào ông cũng ho khan, ho nhiều khi vừa nằm xuống, có đêm phải ngồi dậy mới đỡ; giờ ông phải kê 3 gối mới ngủ được. Ông nghĩ mình bị ho do trời lạnh. Đi ra vườn một đoạn ngắn là ông hụt hơi, phải đứng nghỉ; ngồi yên thì thở bình thường. Hai cổ chân phù, ấn vào lõm, buổi chiều phù nhiều hơn. Tuần qua ông lên 3 kg dù ăn kém. Ông mệt. Ông không sốt, không khạc đờm, không khò khè, không đau ngực, không ho ra máu. Ông bỏ thuốc lá đã 20 năm."
+patient:
+  age_years: 81
+  sex: male
+  region: central
+  month: 12
+complaint: cough
+answers:
+  cough_duration: w2_8
+  productive_cough: absent
+  night_respiratory_symptoms: present
+  orthopnea: present
+  breathing_difficulty: present
+  dyspnea_onset: weeks
+  dyspnea_severity: exertion
+  breathless_on_exertion: present
+  leg_swelling_both: present
+  rapid_weight_gain: present
+  fatigue: present
+  loss_of_appetite: present
+  known_heart_disease: present
+  hypertension_known: present
+  bp_lowering_meds: present
+  former_smoker: present
+  fever: absent
+  wheeze: absent
+  chest_pain: absent
+  chest_pain_pressure: absent
+  pleuritic_chest_pain: absent
+  hemoptysis: absent
+  leg_swelling_one_side: absent
+  palpitations: absent
+  fainting_or_near_fainting: absent
+  confusion: absent
+  cold_sweat: absent
+  smoker: absent
+  diabetes: absent
+  copd_known: absent
+  asthma_known: absent
+  weight_loss_unintended: absent
+default_unmentioned: absent
+expected:
+  condition: heart_failure
+  acceptable: []
+  triage: 3
+source:
+  basis: "Suy tim nặng lên, biểu hiện chủ yếu bằng ho về đêm ở người từng nhồi máu cơ tim: ho khan khi nằm, phải kê cao gối, khó thở khi gắng sức, phù hai cổ chân, tăng 3 kg trong 1 tuần. 1857/QĐ-BYT (2022): ho về đêm, khó thở khi nằm, cơn khó thở kịch phát về đêm, phù mắt cá, tăng cân trên 2 kg/tuần là triệu chứng suy tim. NHS Heart failure: khó thở khi nằm, tăng cân đột ngột thì hẹn khám khẩn hoặc gọi 111; chỉ gọi 999 khi khó thở dữ dội, tím, ngất. Ngồi yên thở bình thường nên mức 3."
+  references:
+    - byt-qd-1857-2022
+    - nhs-heart-failure
+author: "agent:vignette-holdout"
+notes_vi: "Ca không điển hình: người bệnh chọn Ho vì nghĩ ho do trời lạnh."

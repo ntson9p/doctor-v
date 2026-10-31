@@ -1,0 +1,52 @@
+id: h-sob-001
+set: holdout
+title_vi: "Nữ 22 tuổi bị hen từ nhỏ, sau cảm 3 ngày khò khè, ho đêm, leo cầu thang hụt hơi, xịt thuốc cắt cơn thì đỡ"
+narrative_vi: "Em T., nữ, 22 tuổi, sinh viên ở Hà Nội, bị hen phế quản từ nhỏ, bình thường ít khi phải dùng thuốc, có bình xịt cắt cơn màu xanh. Ba ngày trước em bị cảm, sổ mũi. Từ hôm qua em khò khè nhiều hơn, ho khan, đêm qua thức giấc 2 lần vì ho và nặng ngực khó thở; leo 2 tầng cầu thang lên lớp là hụt hơi phải dừng. Từ hôm qua em đã xịt thuốc cắt cơn 4 lần, mỗi lần đỡ hẳn được 3–4 giờ. Ngồi yên em thở bình thường, nói chuyện trọn câu. Bạn cùng phòng có máy kẹp ngón tay, đo SpO2 được 96%. Em không sốt, không đau ngực, không ăn món lạ hay dùng thuốc mới, không nổi mẩn. Em không hút thuốc, không có thai, không uống thuốc tránh thai."
+patient:
+  age_years: 22
+  sex: female
+  region: north
+  month: 10
+complaint: shortness_of_breath
+answers:
+  asthma_known: present
+  reliever_no_relief: absent
+  wheeze: present
+  cough: present
+  productive_cough: absent
+  cough_duration: lt_1w
+  night_respiratory_symptoms: present
+  dyspnea_onset: hours_days
+  dyspnea_severity: exertion
+  spo2_measured: ge_96
+  runny_nose: present
+  recent_viral_illness: present
+  allergen_exposure: absent
+  rash_any: absent
+  fever: absent
+  chest_pain: absent
+  chest_pain_pressure: absent
+  pleuritic_chest_pain: absent
+  stridor: absent
+  es_severe_breathing: absent
+  es_anaphylaxis: absent
+  hemoptysis: absent
+  palpitations: absent
+  leg_swelling_one_side: absent
+  recent_immobility: absent
+  smoker: absent
+  pregnant: absent
+  estrogen_use: absent
+default_unmentioned: absent
+expected:
+  condition: asthma
+  acceptable: []
+  triage: 3
+source:
+  basis: "Đợt hen nặng lên mức nhẹ – trung bình sau nhiễm vi rút ở người đã biết bị hen: khò khè, ho đêm, khó thở khi gắng sức, phải dùng thuốc cắt cơn nhiều lần nhưng còn đáp ứng, nói trọn câu, SpO2 96% (GINA 2026 mục 9: đánh giá độ nặng theo khả năng nói, nhịp thở, SpO2; 1851/QĐ-BYT Bảng 9). NHS Asthma: đã lên cơn và đã đỡ thì hẹn khám khẩn trong 2 ngày; gọi 999 khi nặng hơn hoặc không đỡ sau liều tối đa thuốc cắt cơn. Còn đáp ứng thuốc nên mức 3."
+  references:
+    - gina-2026
+    - byt-qd-1851-2020
+    - nhs-asthma-attack
+author: "agent:vignette-holdout"
+notes_vi: "Người bệnh kể 'nặng ngực' trong cơn đêm qua nhưng không đau ngực, không tức nặng giữa ngực lúc này, nên câu đau ngực trả lời 'không'."

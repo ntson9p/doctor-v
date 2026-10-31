@@ -60,6 +60,9 @@ answers:
   known_heart_disease: absent
   hypertension_known: absent
   diabetes: absent
+  estrogen_use: present
+  dyspnea_onset: hours_days
+  dyspnea_severity: rest
 default_unmentioned: absent
 expected:
   condition: pulmonary_embolism

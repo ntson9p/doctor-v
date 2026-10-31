@@ -28,6 +28,7 @@ answers:
   child_vomits_everything: absent
   drowsy_hard_to_wake: absent
   seizure_recent: absent
+  cough_duration: lt_1w
 default_unmentioned: absent
 expected:
   condition: measles

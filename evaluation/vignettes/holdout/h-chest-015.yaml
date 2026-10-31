@@ -1,0 +1,49 @@
+id: h-chest-015
+set: holdout
+title_vi: "Nam 27 tuổi, 1 tuần sau cảm cúm, từ hôm qua đau nhói giữa ngực, nằm ngửa và hít sâu đau hơn, ngồi cúi ra trước đỡ, sốt nhẹ"
+narrative_vi: "Anh D., 27 tuổi, nhân viên văn phòng ở Hà Nội, khỏe mạnh, không hút thuốc. Khoảng 1 tuần trước anh bị cảm cúm: sốt, đau họng, sổ mũi, đau mỏi người, sau 4 ngày thì đỡ. Từ sáng hôm qua anh đau nhói ở giữa ngực, đau liên tục, tăng khi hít sâu, khi ho và khi nằm ngửa; ngồi dậy cúi người ra trước thì đỡ nhiều. Đêm qua anh phải ngồi ngủ vì nằm thì đau. Anh sốt nhẹ 37,8°C. Đau không lan ra tay, hàm, lưng; không tăng khi đi lại; ấn vào ngực không đau. Anh không khó thở, không vã mồ hôi, không hồi hộp, không ngất, không ho ra máu. Chân không sưng, không đi xa gần đây."
+patient:
+  age_years: 27
+  sex: male
+  region: north
+  month: 2
+complaint: chest_pain
+answers:
+  chest_pain_duration: over_15min
+  pleuritic_chest_pain: present
+  fever: present
+  fever_max_temp: lt_38
+  fever_duration: d1_2
+  recent_viral_illness: present
+  chest_pain_pressure: absent
+  chest_pain_exertional: absent
+  chest_pain_sudden_severe: absent
+  chest_pain_radiates_back: absent
+  chest_pain_tearing: absent
+  pain_radiates_arm_jaw: absent
+  chest_wall_tenderness: absent
+  es_crushing_chest_pain: absent
+  cold_sweat: absent
+  breathing_difficulty: absent
+  orthopnea: absent
+  palpitations: absent
+  fainting_or_near_fainting: absent
+  cough: absent
+  hemoptysis: absent
+  leg_swelling_one_side: absent
+  recent_immobility: absent
+  skin_burning_band: absent
+  rash_any: absent
+  smoker: absent
+  known_heart_disease: absent
+default_unmentioned: absent
+expected:
+  condition: other
+  acceptable: []
+  triage: 3
+source:
+  basis: "Viêm màng ngoài tim cấp sau nhiễm vi rút, ngoài danh mục: đau nhói giữa ngực liên tục, tăng khi hít sâu, ho, nằm ngửa, đỡ khi ngồi cúi ra trước, sốt nhẹ, 1 tuần sau cảm cúm; không khó thở, không ngất, không tim nhanh. NHS Pericarditis: đau ngực nhói, như dao đâm thì hẹn khám khẩn hoặc gọi 111; gọi 999 khi đau ngực đột ngột lan tay, lưng, cổ, hàm, kèm khó thở, vã mồ hôi. Nên mức 3 để được làm điện tim, siêu âm tim."
+  references:
+    - nhs-chest-pain
+author: "agent:vignette-holdout"
+notes_vi: "Ca ngoài danh mục. Danh mục chưa có câu hỏi về đau ngực đổi theo tư thế (tăng khi nằm, đỡ khi cúi ra trước). Nằm thì đau chứ không khó thở nên câu khó thở khi nằm trả lời 'không'. Trang NHS Pericarditis chưa có trong danh mục nguồn; lời khuyên ghi theo kết quả tìm kiếm ngày 31/10/2026."
