@@ -53,6 +53,7 @@ Cần Node.js 24 trở lên. Cài đặt: `npm install`.
 | `npm run verify` | Kiểm tra kiểu, lint, kiểm thử, kiểm tra dữ liệu |
 | `npm run kb:check` | Kiểm tra `knowledge/` |
 | `npm run kb:check -- --drafts drafts/pass-a` | Kiểm tra bản nháp của một lượt soạn |
+| `npm run kb:index -- --out-dir /tmp/kb-index` | Ghi mục lục gọn của dữ liệu, mỗi mục một dòng, cho agent soạn dữ liệu đọc thay cho các tệp YAML: `index.md` (dấu hiệu, nhóm câu hỏi, triệu chứng chính, bệnh) để đọc hết; `links.md`, `rules.md`, `sources.md` để tìm khi cần. `--only findings,rules` in vài mục ra màn hình |
 | `npm run kb:build` | Biên dịch dữ liệu thành `packages/kb/dist/kb.json` |
 | `npm run eval:check` | Kiểm tra định dạng các ca kiểm thử |
 | `npm run eval -- --set dev --report` | Chạy bộ ca phát triển và ghi báo cáo vào `evaluation/reports/` |
