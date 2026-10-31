@@ -16,7 +16,7 @@ New conditions: pneumothorax, aortic_dissection, gerd, chest_wall_pain, herpes_z
 Existing conditions to extend: acute_coronary_syndrome, pulmonary_embolism, cardiac_arrhythmia, anemia
 
 ## Batch notes
-- **Agreement:** weighted kappa 0.931 on 100 link pairs for parts a and b (agreement.md; refresh it with `npm run kb:agreement -- drafts/phase-3/batch-3` once part c's pass B is there).
+- **Agreement:** weighted kappa 0.958 on 159 link pairs for the whole batch (knowledge/drafts/phase-3/batch-3/agreement.md).
 - **Dates:** use 2026-10-31 in the final files.
 - **The network was blocked during part of this batch.** Pass A part a first wrote without opening any new source, then a second pass-A agent opened them and corrected the evidence; the drafts say which values were checked. Re-open what supports tier A/B claims and key findings.
 - **GINA and GOLD:** cite gina-2026 and gold-2026 (verified, in the registry), not gina-2024 or gold-2025 (superseded, unverified).
