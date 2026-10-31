@@ -1,0 +1,164 @@
+id: chest_wall_pain
+names:
+  vi: "Đau thành ngực (hội chứng thành ngực)"
+  vi_common: ["Đau cơ ngực", "Đau sụn sườn", "Viêm sụn sườn", "Đau dây thần kinh liên sườn"]
+  en: "Chest wall pain (musculoskeletal chest pain, costochondritis)"
+codes:
+  icd10: "R07.3"
+  icd10_verified: false
+summary_vi:
+  - "Đau do cơ, sụn, xương sườn ở thành ngực, là nguyên nhân đau ngực hay gặp nhất ở phòng khám."
+  - "Đau thường nhói, khu trú, tăng khi cử động, khi hít sâu hoặc khi ấn vào chỗ đau."
+  - "Bệnh lành tính, hay tự đỡ sau vài tuần nhưng dễ tái lại; lần đầu đau ngực vẫn cần khám để loại trừ bệnh tim."
+urgency: 4
+cant_miss: false
+specialties: [musculoskeletal, general_medicine]
+priors:
+  - complaint: chest_pain
+    default: P1
+    by_age:
+      elder_75p: P2
+    evidence:
+      tier: A
+      basis: numeric
+      sources: [haasenritter-croatmedj-2015, verdon-bmcfampract-2007, bosner-fampract-2010, bosner-bmcfampract-2009, verdon-smw-2008, byt-qd-4235-2012]
+      locator: "Haasenritter 2015 bảng 3; Verdon 2007 kết quả; Bösner 2010 tóm tắt; Bösner 2009 bảng 2; 4235/QĐ-BYT tr. 26 (nguyên nhân đau ngực từ thành ngực)"
+      reported: "Hội chứng thành ngực 24,5–49,8% người đau ngực ở phòng khám đa khoa (gộp 6 nghiên cứu ít sai lệch); 44,6% (Thụy Sĩ, mọi tuổi kể cả thiếu niên và người trên 75 tuổi); 46,6% (Đức, từ 35 tuổi, tuổi trung bình 59)"
+      population: "Người đau ngực ở phòng khám đa khoa châu Âu, Bắc Mỹ"
+      note: "Lượt A, lô 3. Nguyên nhân đau ngực hay gặp nhất ở tuyến ban đầu, mọi lứa tuổi, nam nữ như nhau (Verdon 2007): P1 (từ 20%). Từ 75 tuổi bệnh tim, phổi chiếm phần lớn hơn nên hạ một mức (P2); đây là ước lượng vì các nghiên cứu không tách theo nhóm tuổi. Trẻ 5–12 tuổi giữ P1: đau ngực ở trẻ em phần lớn do cơ xương, ít khi do tim (ước lượng, chưa mở nguồn nhi khoa). Bệnh gộp viêm sụn sườn, đau cơ ngực, đau sau chấn thương nhẹ, đau dây thần kinh liên sườn; zona thần kinh là bệnh riêng."
+findings:
+  - finding: chest_wall_tenderness
+    freq: very_frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [verdon-bmcfampract-2007, ronga-bmcfampract-2012, nhs-costochondritis]
+      locator: "Verdon 2007 kết quả (điểm đau khi ấn ở 214/300); Ronga 2012 tóm tắt; NHS (đau tăng khi ấn vào giữa ngực, xương sườn)"
+      reported: "Cơn đau tái hiện khi ấn ở 71% người hội chứng thành ngực (Verdon 2007, Ronga 2012)"
+      population: "Phòng khám đa khoa Thụy Sĩ"
+      note: "Lượt A, lô 3. Tính trong số người đã đau ngực. Dấu hiệu chủ chốt nhưng không đặc hiệu tuyệt đối (Ronga): người bệnh mạch vành cũng có thể đau khi ấn (Bösner 2009). Người dân tự ấn có thể kém chính xác hơn bác sĩ."
+  - finding: chest_pain_duration
+    dist: { seconds: 0.25, minutes: 0.2, over_15min: 0.15, days: 0.4 }
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [verdon-bmcfampract-2007, bosner-fampract-2010]
+      locator: "Verdon 2007 mục Clinical characteristics; Bösner 2010 tóm tắt"
+      reported: "Từng cơn vài giây đến vài ngày 50%, liên tục hàng giờ đến hàng tuần 35%, cấp và dữ dội 9% (Verdon); đau liên tục 28% (Bösner)"
+      note: "Lượt A, lô 3. Tính trong số người đã đau ngực. Quy đổi sang bốn lựa chọn của câu hỏi: đau nhói vài giây và đau âm ỉ nhiều ngày hay gặp hơn nền; cơn từ 15 phút trở lên ít hơn. Ước lượng từ số liệu."
+  - finding: pleuritic_chest_pain
+    freq: frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [verdon-bmcfampract-2007, nhs-costochondritis]
+      locator: "Verdon 2007 mục Clinical characteristics; NHS (đau tăng khi hít sâu)"
+      reported: "71% đau tăng khi đổi tư thế, cử động, nằm hoặc thở"
+      note: "Lượt A, lô 3. Câu hỏi chỉ hỏi đau khi hít sâu hoặc khi ho, hẹp hơn nhóm 'tăng khi cử động, tư thế, thở' (71%), nên ước khoảng một nửa (frequent)."
+  - finding: chest_pain_pressure
+    freq: frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [bosner-fampract-2010, verdon-bmcfampract-2007]
+      locator: "Bösner 2010 tóm tắt (đau sau xương ức 52,0%, bên trái 69,2%); Verdon 2007 bảng 2"
+      reported: "Đau sau xương ức 52%; đau không kiểu bóp nghẹt, đè ép là yếu tố dự báo (OR 2,53)"
+      note: "Lượt A, lô 3. Câu hỏi hỏi đau hoặc tức nặng ở giữa ngực: khoảng một nửa người đau thành ngực đau ở giữa ngực (Bösner), dù ít khi đau kiểu đè ép. Vì vậy dấu hiệu này không tách được đau thành ngực khỏi bệnh tim; quy tắc rf_chest_pain_central vẫn xếp mức 2 trừ khi đau chỉ vài giây."
+  - finding: chest_pain_exertional
+    freq: rare
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [verdon-bmcfampract-2007]
+      locator: "Verdon 2007 bảng 2 (đau không do gắng sức là yếu tố dự báo, OR 1,58)"
+      note: "Lượt A, lô 3. Tính trong số người đã đau ngực. Đau thành ngực tăng khi cử động phần trên cơ thể nhưng không theo kiểu xuất hiện khi gắng sức (đi nhanh, leo dốc) rồi hết khi nghỉ. Mức rare thấp hơn tỷ lệ nền 5%; ước lượng từ chiều của OR."
+  - finding: chest_pain_sudden_severe
+    freq: rare
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [verdon-bmcfampract-2007]
+      locator: "Verdon 2007 mục Clinical characteristics"
+      reported: "Đau vừa 75%, nặng 23%; cấp và dữ dội 9%"
+      note: "Lượt A, lô 3. Tính trong số người đã đau ngực. 9% 'cấp và dữ dội' gồm cả đau tăng nhanh sau cử động, rộng hơn câu hỏi (đột ngột và dữ dội ngay từ đầu), nên chọn rare thay vì occasional; mức này thấp hơn tỷ lệ nền 5% để dấu hiệu giữ giá trị cho bóc tách động mạch chủ, tràn khí màng phổi, thuyên tắc phổi. Ước lượng, cần bác sĩ duyệt."
+  - finding: chest_pain_radiates_back
+    freq: rare
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [verdon-bmcfampract-2007]
+      locator: "Verdon 2007 mục Clinical characteristics"
+      reported: "Lan ra lưng 5/300 (1,7%)"
+      note: "Lượt A, lô 3. Tính trong số người đã đau ngực. Mức rare thấp hơn tỷ lệ nền 5%."
+  - finding: pain_radiates_arm_jaw
+    freq: rare
+    above_leak_ok: true
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [verdon-bmcfampract-2007]
+      locator: "Verdon 2007 mục Clinical characteristics"
+      reported: "Lan tay trái 18/300, tay phải 4/300 (7,3%); lan cổ 3/300"
+      note: "Lượt A, lô 3. Số liệu khoảng 7–8% nằm ở ranh giới rare/occasional; chọn rare. Mức này cao hơn tỷ lệ nền 1% (specific) là theo số liệu (above_leak_ok): câu trả lời 'Có' làm tăng nhẹ khả năng đau thành ngực nhưng tăng mạnh hơn nhiều cho hội chứng mạch vành cấp, và quy tắc rf_chest_pain_spreading_or_systemic đã xếp mức 1."
+  - finding: breathing_difficulty
+    freq: rare
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [verdon-bmcfampract-2007]
+      locator: "Verdon 2007 bảng 1"
+      reported: "Kèm ho hoặc khó thở kéo dài 10%"
+      note: "Lượt A, lô 3. Có tác dụng khi triệu chứng chính là Đau ngực. 10% gồm cả ho; khó thở riêng ước dưới 7,5% (rare), thấp hơn tỷ lệ nền 5% một chút. Đau ngực kèm khó thở thì quy tắc rf_chest_pain_breathless xếp mức 2."
+  - finding: similar_episodes_before
+    freq: frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [verdon-bmcfampract-2007, bosner-fampract-2010]
+      locator: "Verdon 2007 kết quả; Bösner 2010 tóm tắt"
+      reported: "Cũ hoặc tái lại 35% lúc khám; 57% bị lại trong năm (Verdon); 55,4% còn đau sau 6 tháng (Bösner)"
+      note: "Lượt A, lô 3. Tỷ lệ nền 0,2."
+  - finding: cold_sweat
+    freq: rare
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [verdon-bmcfampract-2007, byt-qd-4235-2012]
+      locator: "4235/QĐ-BYT tr. 25 (vã mồ hôi, xanh tái: tìm nhồi máu cơ tim, tắc mạch phổi, phình tách)"
+      note: "Lượt A, lô 3. Đau thành ngực thường mức vừa, không kèm vã mồ hôi; lo lắng có thể gây vã mồ hôi. Mức rare thấp hơn tỷ lệ nền 5%. Ước lượng."
+  - finding: fainting_or_near_fainting
+    freq: rare
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [verdon-bmcfampract-2007]
+      note: "Lượt A, lô 3. Không phải triệu chứng của đau thành ngực; có thể gặp khi lo sợ. Mức rare thấp hơn tỷ lệ nền 5%. Ước lượng."
+  - finding: nausea
+    freq: rare
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [verdon-bmcfampract-2007, nhs-costochondritis]
+      note: "Lượt A, lô 3. Hai nguồn không nêu buồn nôn trong đau thành ngực. Mức rare thấp hơn tỷ lệ nền 0,2; đau ngực kèm buồn nôn nghiêng về hội chứng mạch vành cấp (quy tắc mức 1). Ước lượng."
+  - finding: fever
+    freq: rare
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [nhs-costochondritis, byt-qd-4235-2012]
+      note: "Lượt A, lô 3. Đau thành ngực không gây sốt (trừ nhiễm trùng da, cơ hiếm gặp, 4235/QĐ-BYT); sốt kèm đau ngực nghiêng về viêm phổi. Mức rare thấp hơn tỷ lệ nền 5%."
+warning_signs: [es_crushing_chest_pain, pain_radiates_arm_jaw, cold_sweat, breathing_difficulty, fainting_or_near_fainting, chest_pain_sudden_severe]
+self_care_vi:
+  - "Nghỉ ngơi, tránh mang vác nặng hoặc động tác làm đau tăng trong vài ngày."
+  - "Có thể chườm ấm hoặc chườm mát chỗ đau."
+  - "Hỏi dược sĩ hoặc bác sĩ trước khi dùng thuốc giảm đau."
+  - "Không chờ xem có tự hết không nếu đau, tức nặng giữa ngực kéo dài từ 15 phút."
+see_doctor_vi:
+  - "Lần đầu đau ngực thì nên đi khám trong vài ngày để loại trừ bệnh tim, phổi."
+  - "Đi khám sớm hơn nếu đau không đỡ sau 1–2 tuần hoặc sưng đỏ ở chỗ đau."
+  - "Gọi 115 nếu đau ngực đột ngột, lan lên cổ, hàm, tay, kèm vã mồ hôi, khó thở hoặc choáng. Không tự lái xe."
+review:
+  status: draft
+  authors: ["agent:pass-a"]
+  updated: "2026-10-31"
+  notes_vi: "Lượt A, lô 3 (phần c). Mức xử trí 4, không thuộc nhóm không được bỏ sót: đổi so với gợi ý (5). NHS Costochondritis khuyên gọi 111 (khám khẩn, mức 3 theo quy ước của lượt R) để loại trừ bệnh nặng hơn và nói đau ngực không rõ nguyên nhân không hết thì luôn cần khám; bệnh tự khỏi sau vài tuần đến vài tháng (NHS) và lành tính (Verdon 2007). Chọn mức 4 (khám trong vài ngày) vì ca điển hình (đau nhói khu trú, ấn vào đau, tăng khi cử động) không cần khám trong 24 giờ, nhưng lần đầu đau ngực vẫn nên được bác sĩ khám; dấu hiệu nguy hiểm do các quy tắc đau ngực xử lý. Bác sĩ cần quyết định giữa mức 3 (theo NHS) và mức 4–5. Mã R07.3 (đau ngực khác, gồm đau thành ngực trước); viêm sụn sườn (Tietze) là M94.0, MONDO:0001858 chỉ ứng với Tietze nên không ghi. Điểm cần bác sĩ xem: (1) prior P1 dựa trên số liệu châu Âu, chưa có số liệu Việt Nam và nhi khoa; (2) tần suất đau tức giữa ngực frequent (đau sau xương ức 52%) làm câu này không phân biệt được với bệnh tim; (3) đau đột ngột dữ dội để rare (số liệu 9% 'cấp và dữ dội'); (4) không liên kết ho: Bösner 2010 cho không ho là yếu tố dự báo, Verdon 10% kèm ho hoặc khó thở, mức occasional bằng tỷ lệ nền 0,2 nên không mang thông tin."

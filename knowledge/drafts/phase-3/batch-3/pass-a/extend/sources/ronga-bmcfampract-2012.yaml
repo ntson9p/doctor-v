@@ -1,0 +1,15 @@
+id: ronga-bmcfampract-2012
+type: primary_study
+title: "Development and validation of a clinical prediction rule for chest wall syndrome in primary care"
+publisher: "BMC Family Practice 2012;13:74 (Ronga A, Vaucher P, Haasenritter J, et al.)"
+date: "2012-08"
+url: "https://europepmc.org/article/MED/22866824"
+doi: "10.1186/1471-2296-13-74"
+pmid: "22866824"
+license_class: L1
+license_note: "CC BY."
+default_tier: B
+accessed: "2026-10-31"
+verified: true
+verified_by: "agent:pass-a"
+notes_vi: "Lượt A đọc tóm tắt qua API Europe PMC. Thuần tập 672 người đau ngực ở phòng khám (Thụy Sĩ), kiểm định ngoài ở 1.212 người (Đức). 71% (201/284) người hội chứng thành ngực có cơn đau tái hiện khi ấn; dấu hiệu này quan trọng nhất nhưng không đặc hiệu tuyệt đối. Sáu dấu hiệu: đau không ở sau xương ức, không đè ép; đau nhói; khu trú rõ; không có tiền sử bệnh mạch vành; bác sĩ không lo ngại; ấn vào đau."

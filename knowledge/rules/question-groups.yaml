@@ -276,7 +276,7 @@
   none_label_vi: "Không có triệu chứng nào ở trên"
 - id: chest_pain_associated
   title_vi: "Cơn đau ngực có đặc điểm nào sau đây không?"
-  findings: [pleuritic_chest_pain, chest_wall_tenderness, chest_pain_exertional, heartburn, cough, fever, rash_any]
+  findings: [pleuritic_chest_pain, chest_wall_tenderness, chest_pain_exertional, heartburn, cough, skin_burning_band, rash_any]
   none_label_vi: "Không có đặc điểm nào ở trên"
 - id: lung_conditions
   title_vi: "Có bệnh hoặc thói quen nào sau đây không?"

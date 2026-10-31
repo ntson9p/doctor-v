@@ -1,0 +1,215 @@
+id: aortic_dissection
+names:
+  vi: "Phình tách động mạch chủ"
+  vi_common: ["Bóc tách động mạch chủ", "Tách thành động mạch chủ"]
+  en: "Acute aortic dissection"
+codes:
+  icd10: "I71.0"
+  icd10_verified: false
+summary_vi:
+  - "Lớp trong của động mạch chủ (mạch máu lớn nhất từ tim ra) bị rách, máu chảy vào giữa các lớp thành mạch."
+  - "Thường đau ngực hoặc lưng đột ngột, rất dữ dội, như xé, có thể lan dọc lưng."
+  - "Đây là cấp cứu: cần gọi 115 ngay vì bệnh có thể gây tử vong trong vài giờ."
+urgency: 1
+cant_miss: true
+specialties: [emergency, cardiology]
+priors:
+  - complaint: chest_pain
+    default: P5
+    by_age:
+      child_5_12: P6
+      teen_13_17: P6
+      adult_18_44: P6
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [howard-circulation-2013, hagan-jama-2000, msd-aortic-dissection, haasenritter-croatmedj-2015, verdon-smw-2008, bosner-bmcfampract-2009, byt-qd-4235-2012]
+      locator: "Howard 2013 tóm tắt; Hagan 2000 tóm tắt; MSD mục Etiology; Haasenritter 2015 bảng 3; Verdon 2008 tóm tắt; Bösner 2009 bảng 2; 4235/QĐ-BYT tr. 24"
+      reported: "6/100.000 dân mỗi năm, tuổi trung bình 72 (dân số Oxford); tuổi trung bình 63 ở trung tâm chuyển tuyến (IRAD); không ghi nhận ca nào trong gần 1.900 người đau ngực ở hai nghiên cứu phòng khám đa khoa (Thụy Sĩ, Đức)"
+      population: "Dân số chung (Anh); bệnh viện chuyển tuyến; phòng khám đa khoa châu Âu"
+      note: "Lượt A, lô 3. 4235/QĐ-BYT xếp phình tách động mạch chủ ngực vào nhóm đau ngực đe dọa tính mạng cần loại trừ. Bệnh rất hiếm so với lượt khám vì đau ngực: không có ca nào trong các nghiên cứu ở tuyến ban đầu (giới hạn trên khoảng 0,2%). Đỉnh 50–65 tuổi theo MSD, tuổi trung bình 63–72; ước từ 45 tuổi 0,02–0,2% (P5), dưới 45 tuổi dưới 0,02% (P6; người trẻ chủ yếu có bệnh mô liên kết như Marfan). Ước lượng, cần bác sĩ duyệt."
+prior_modifiers:
+  - when: { sex: [male] }
+    factor: 1.4
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [hagan-jama-2000, howard-circulation-2013, methorst-jtd-2026, bosner-bmcfampract-2009]
+      locator: "Hagan 2000, Howard 2013 tóm tắt; Methorst 2026 bảng 1; Bösner 2009 bảng 2"
+      reported: "Nam 65,3% (IRAD), 60% (Oxford), 60,4% (Leiden); người đau ngực ở phòng khám đa khoa 44% nam"
+      note: "Lượt A, lô 3. Hệ số so với các nguyên nhân khác của Đau ngực: khoảng 62% người bệnh là nam so với 44–48% nam trong người đau ngực, nên nam khoảng 1,4, nữ khoảng 0,7."
+  - when: { sex: [female] }
+    factor: 0.7
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [hagan-jama-2000, howard-circulation-2013, bosner-bmcfampract-2009]
+      reported: "Nữ khoảng 35–40% người bệnh."
+      note: "Đi cặp với hệ số 1,4 cho nam."
+findings:
+  - finding: chest_pain_sudden_severe
+    freq: very_frequent
+    evidence:
+      tier: A
+      basis: numeric
+      sources: [klompas-jama-2002, pape-jacc-2015, msd-aortic-dissection, hse-aortic-dissection]
+      locator: "Klompas 2002 tóm tắt; Pape 2015 tóm tắt; MSD mục Symptoms and Signs; HSE Symptoms"
+      reported: "Đau dữ dội: độ nhạy gộp 90%; khởi phát đột ngột 84% (Klompas); đau dữ dội hoặc đau nhất từ trước tới nay 93–94% (IRAD)"
+      note: "Lượt A, lô 3. Tính trong số người đã đau ngực. Câu hỏi cần cả đột ngột và dữ dội ngay từ đầu: khoảng 80%. Không hạ mức vì đây là đặc điểm cốt lõi, không phải dấu hiệu của ca nặng; không có đau đột ngột làm giảm khả năng bệnh (LR âm 0,3, Klompas)."
+  - finding: chest_pain_radiates_back
+    freq: frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [methorst-jtd-2026, msd-aortic-dissection, hse-aortic-dissection, byt-qd-4235-2012]
+      locator: "Methorst 2026 bảng 2; MSD (đau trước ngực hoặc giữa hai bả vai); HSE (đau ngực hoặc lưng trên, lan dọc lưng); 4235/QĐ-BYT tr. 24 (đau lan xuống bụng, thắt lưng thường do phình tách)"
+      reported: "Bóc tách týp A được mổ: đau giữa hai bả vai 16%, đau lưng khác 13–21%, tổng khoảng một phần ba"
+      note: "Lượt A, lô 3. Tính trong số người đã đau ngực. Số liệu Leiden chỉ gồm týp A và ghi theo hồ sơ; týp B (đoạn xuống) hay đau lưng hơn (MSD, HSE). Chọn frequent. Có đau ngực lan ra lưng thì quy tắc rf_chest_pain_spreading_or_systemic đã xếp mức 1."
+  - finding: chest_pain_duration
+    dist: { seconds: 0.01, minutes: 0.07, over_15min: 0.85, days: 0.07 }
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [msd-aortic-dissection, hse-aortic-dissection]
+      note: "Lượt A, lô 3. Tính trong số người đã đau ngực. Đau đột ngột và kéo dài, không tự hết sau vài giây hay vài phút; một số ít đến khám muộn sau vài ngày (bóc tách bán cấp). Ước lượng."
+  - finding: chest_pain_pressure
+    freq: frequent
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-4235-2012, pape-jacc-2015, methorst-jtd-2026]
+      locator: "4235/QĐ-BYT tr. 24 (đau dữ dội, đè ép ngực: tìm nhồi máu cơ tim, phình tách động mạch chủ); Pape 2015 (đau ngực 83% týp A, 71% týp B)"
+      note: "Lượt A, lô 3. Câu hỏi hỏi đau hoặc tức nặng ở giữa ngực. Phần lớn người bóc tách týp A đau ở trước ngực; týp B đau lưng nhiều hơn. Ước khoảng một nửa đến hai phần ba trả lời 'Có'."
+  - finding: pain_radiates_arm_jaw
+    freq: occasional
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [methorst-jtd-2026, hse-aortic-dissection]
+      locator: "Methorst 2026 bảng 2; HSE Symptoms (đau có thể lan lên cổ)"
+      reported: "Đau cổ, họng khoảng 9–13%; đau tay khoảng 6–9%; đau hàm 3–9%"
+      note: "Lượt A, lô 3. Tính chung đau lan lên cổ, hàm, vai hoặc tay: khoảng 15–25%. Tỷ lệ nền 1%."
+  - finding: fainting_or_near_fainting
+    freq: occasional
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [msd-aortic-dissection, methorst-jtd-2026, hse-aortic-dissection]
+      locator: "MSD mục Symptoms and Signs; Methorst 2026 bảng 3"
+      reported: "Tới 20% ngất (MSD); gục, ngất 14% ở nam, 23% ở nữ (Leiden)"
+      note: "Lượt A, lô 3. Có đau ngực đột ngột dữ dội kèm ngất thì quy tắc rf_aortic_dissection_signs đã xếp mức 1."
+  - finding: cold_sweat
+    freq: occasional
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [methorst-jtd-2026, hse-aortic-dissection]
+      locator: "Methorst 2026 bảng 3; HSE Symptoms (da vã mồ hôi, lạnh ẩm)"
+      reported: "Vã mồ hôi 10–13%"
+      note: "Lượt A, lô 3. Số liệu ghi theo hồ sơ có thể thấp hơn thực tế; chọn occasional."
+  - finding: breathing_difficulty
+    freq: occasional
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [methorst-jtd-2026, hse-aortic-dissection]
+      locator: "Methorst 2026 bảng 3; HSE Symptoms"
+      reported: "Khó thở 7% ở nam, 17% ở nữ"
+      note: "Lượt A, lô 3. Khó thở do hở van động mạch chủ cấp, tràn dịch màng tim, tràn máu màng phổi."
+  - finding: es_stroke_signs
+    freq: occasional
+    evidence:
+      tier: A
+      basis: numeric
+      sources: [klompas-jama-2002, methorst-jtd-2026, msd-aortic-dissection, hse-aortic-dissection]
+      locator: "Klompas 2002 tóm tắt; Methorst 2026 bảng 3; MSD (thiếu máu nhánh: đột quỵ, liệt)"
+      reported: "Dấu hiệu thần kinh khu trú 17% (Klompas); liệt nửa người khoảng 4–6%, nói khó 1–3% (Leiden)"
+      note: "Lượt A, lô 3. Người có dấu hiệu đột quỵ dừng ở màn sàng lọc cấp cứu; liên kết giúp bóc tách động mạch chủ hiện trong danh sách cần loại trừ cùng đột quỵ. Tỷ lệ nền 1%."
+  - finding: es_crushing_chest_pain
+    freq: occasional
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-4235-2012, methorst-jtd-2026]
+      locator: "4235/QĐ-BYT tr. 24–25 (đau dữ dội, đè ép; vã mồ hôi, xanh tái: tìm nhồi máu cơ tim, tắc mạch phổi, phình tách động mạch chủ)"
+      note: "Lượt A, lô 3 (như hội chứng mạch vành cấp). Người đau ngực dữ dội kèm vã mồ hôi dừng ở màn sàng lọc; liên kết để bệnh hiện trong danh sách cần loại trừ. Ước lượng."
+  - finding: abdominal_pain
+    freq: occasional
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [methorst-jtd-2026, hse-aortic-dissection, msd-aortic-dissection]
+      locator: "Methorst 2026 bảng 2; HSE Symptoms (đau bụng đột ngột dữ dội)"
+      reported: "Đau bụng 13% ở nam, 8% ở nữ (týp A)"
+      note: "Lượt A, lô 3. Có tác dụng khi triệu chứng chính là Đau ngực. Týp B, bóc tách lan xuống động mạch chủ bụng hay đau bụng hơn."
+  - finding: hypertension_known
+    freq: frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [msd-aortic-dissection, howard-circulation-2013, methorst-jtd-2026]
+      locator: "MSD mục Etiology; Howard 2013 tóm tắt; Methorst 2026 bảng 1"
+      reported: "Tăng huyết áp góp phần ở hơn hai phần ba (MSD); 67,3% đang uống thuốc hạ huyết áp (Oxford); 40% có tiền sử tăng huyết áp (Leiden, týp A được mổ)"
+      note: "Lượt A, lô 3. Câu hỏi hỏi tăng huyết áp đã biết; nhiều người Việt Nam chưa biết mình tăng huyết áp, nên chọn frequent. Tỷ lệ nền 0,15."
+  - finding: known_aaa
+    freq: occasional
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [methorst-jtd-2026, msd-aortic-dissection]
+      locator: "Methorst 2026 bảng 1 (bệnh mạch máu đã có 18%)"
+      reported: "Bệnh mạch máu đã biết 18%"
+      note: "Lượt A, lô 3. Chỉ hỏi từ 45 tuổi. Câu hỏi hỏi đã được nói có phình động mạch chủ; phình động mạch chủ ngực và bệnh van động mạch chủ là yếu tố nguy cơ. Ước 10–20%; tỷ lệ nền 0,01."
+  - finding: pleuritic_chest_pain
+    freq: rare
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [msd-aortic-dissection, hse-aortic-dissection]
+      note: "Lượt A, lô 3. Đau do bóc tách không thay đổi theo nhịp thở. Mức rare thấp hơn tỷ lệ nền 5%. Ước lượng."
+  - finding: chest_wall_tenderness
+    freq: rare
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [msd-aortic-dissection]
+      note: "Lượt A, lô 3. Tính trong số người đã đau ngực. Đau từ trong lồng ngực, ấn vào thành ngực không làm đau nhói đúng chỗ. Mức rare thấp hơn tỷ lệ nền 5%. Ước lượng."
+  - finding: chest_pain_exertional
+    freq: rare
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [msd-aortic-dissection, hse-aortic-dissection]
+      note: "Lượt A, lô 3. Tính trong số người đã đau ngực. Cơn đau đến đột ngột một lần và kéo dài, không theo kiểu xuất hiện khi gắng sức rồi đỡ khi nghỉ. Mức rare thấp hơn tỷ lệ nền 5%."
+  - finding: fever
+    freq: rare
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [msd-aortic-dissection]
+      note: "Lượt A, lô 3. Sốt không phải triệu chứng khởi phát; sốt kèm đau ngực nghiêng về viêm phổi, viêm màng ngoài tim. Mức rare thấp hơn tỷ lệ nền 5%."
+warning_signs: [chest_pain_sudden_severe, chest_pain_radiates_back, es_crushing_chest_pain, fainting_or_near_fainting, cold_sweat, es_stroke_signs, breathing_difficulty]
+self_care_vi:
+  - "Gọi 115 ngay. Không tự lái xe đến bệnh viện."
+  - "Nằm hoặc ngồi yên, tránh mọi gắng sức trong lúc chờ xe cấp cứu."
+  - "Không chờ xem cơn đau có tự hết không."
+see_doctor_vi:
+  - "Cần chụp cắt lớp mạch máu ở bệnh viện có phẫu thuật tim mạch càng sớm càng tốt."
+  - "Gọi 115 khi đau ngực hoặc lưng đột ngột, rất dữ dội, nhất là ở người tăng huyết áp."
+  - "Mang theo các thuốc đang dùng, nhất là thuốc hạ huyết áp, thuốc chống đông."
+proposed_findings:
+  - id: chest_pain_tearing
+    kind: symptom
+    type: binary
+    label_vi: "Đau ngực như xé"
+    question_vi: "Cơn đau có cảm giác như bị xé, bị rách bên trong không?"
+    requires:
+      - { finding: chest_pain, is: present }
+    leak: 0.01
+    leak_note: "Ước lượng: người đau ngực không do bóc tách động mạch chủ hiếm khi tả đau như xé."
+    notes_vi: "Đề xuất của lượt R (mục 2.7), lượt A phần c nhắc lại. HSE và MSD mô tả đau như xé, như rách là đặc điểm của bóc tách động mạch chủ; câu đột ngột dữ dội hiện có cũng gặp ở tràn khí màng phổi, thuyên tắc phổi, nhồi máu cơ tim. Cần alt_question vì có thể dùng trong quy tắc mức 1."
+review:
+  status: draft
+  authors: ["agent:pass-a"]
+  updated: "2026-10-31"
+  notes_vi: "Lượt A, lô 3 (phần c). Mức xử trí 1, không được bỏ sót (giữ gợi ý). HSE ghi 'gọi 112 hoặc 999, hoặc đến khoa cấp cứu ngay' (theo quy ước của lượt R cho quy tắc thì là mức 2); chọn mức 1 vì khoảng 20% tử vong trước khi tới viện và không điều trị thì tử vong khoảng 1–2% mỗi giờ (MSD), gần một nửa ca týp A tử vong trước viện (Oxford), giống hội chứng mạch vành cấp; người bệnh cần xe cấp cứu đưa thẳng tới nơi có phẫu thuật tim mạch. Không đặt phạm vi tuổi: rất hiếm ở trẻ em nhưng vẫn gặp ở người trẻ có bệnh mô liên kết (MSD), nên dùng prior P6. Không có mã MONDO riêng cho bóc tách động mạch chủ mắc phải (OLS chỉ có các thể gia đình). Tên chính thức theo cách gọi của 4235/QĐ-BYT ('phình tách động mạch chủ'); chưa đối chiếu bảng ICD-10 của Bộ Y tế. Chưa mở được ESC 2024, ACC/AHA 2022 và toàn văn IRAD; tần suất kiểu đau lan, ngất, vã mồ hôi lấy từ Methorst 2026 (chỉ týp A được mổ, ghi theo hồ sơ). Điểm cần bác sĩ xem: (1) prior ước lượng từ tỷ lệ mới mắc, chưa có số liệu ở người đau ngực tại Việt Nam; (2) đau lan ra lưng frequent dựa một phần vào mô tả bằng lời; (3) danh mục chưa có câu 'đau như xé' (đề xuất chest_pain_tearing của lượt R) và câu mạch hoặc huyết áp hai tay chênh nhau (LR dương 5,7, Klompas; người dân khó tự đo nên không đề xuất); (4) không liên kết hút thuốc vì mức ước lượng gần tỷ lệ nền."

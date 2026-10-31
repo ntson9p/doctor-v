@@ -1958,7 +1958,9 @@
   complaints: [chest_pain]
   when:
     all:
-      - { finding: chest_pain_sudden_severe, is: present }
+      - any:
+          - { finding: chest_pain_sudden_severe, is: present }
+          - { finding: chest_pain_tearing, is: present }
       - { not: { finding: chest_pain_duration, in: [seconds] } }
   reason_vi: "Đau ngực đột ngột, dữ dội có thể do bóc tách động mạch chủ, tràn khí màng phổi hoặc tắc mạch phổi. Cần khám cấp cứu ngay."
   evidence:
@@ -1971,18 +1973,24 @@
   level: 1
   complaints: [chest_pain]
   when:
-    all:
-      - { finding: chest_pain_sudden_severe, is: present }
-      - any:
-          - { finding: chest_pain_radiates_back, is: present }
-          - { finding: fainting_or_near_fainting, is: present }
-  reason_vi: "Đau ngực đột ngột, dữ dội lan ra sau lưng hoặc kèm ngất có thể là bóc tách động mạch chủ: gọi 115 ngay."
+    any:
+      - all:
+          - any:
+              - { finding: chest_pain_sudden_severe, is: present }
+              - { finding: chest_pain_tearing, is: present }
+          - any:
+              - { finding: chest_pain_radiates_back, is: present }
+              - { finding: fainting_or_near_fainting, is: present }
+      - all:
+          - { finding: chest_pain_sudden_severe, is: present }
+          - { finding: chest_pain_tearing, is: present }
+  reason_vi: "Đau ngực đột ngột, dữ dội hoặc như xé, lan ra sau lưng hoặc kèm ngất có thể là bóc tách động mạch chủ. Gọi 115 ngay."
   evidence:
     tier: B
     basis: verbal
     sources: [hse-aortic-dissection, nhs-chest-pain]
     locator: "HSE Aortic dissection, Symptoms; NHS Chest pain (Call 999: đau lan ra lưng)"
-    note: "Mức xử trí trùng với rf_chest_pain_spreading_or_systemic; quy tắc riêng để nêu tên bóc tách động mạch chủ trong danh sách cần loại trừ (điền ở bước tích hợp), và không loại cơn đau ngắn. HSE Ireland (lượt R vòng 2 mở, thay trang NHS Aortic dissection đã bị gỡ): đau ngực hoặc lưng trên đột ngột, dữ dội, như xé, có thể lan lên cổ hoặc dọc lưng; có thể mất ý thức, khó thở, dấu hiệu giống đột quỵ, vã mồ hôi lạnh; có dấu hiệu thì gọi cấp cứu hoặc đến khoa cấp cứu ngay. Giữ mức 1 vì NHS Chest pain ghi đau ngực lan ra lưng hoặc kèm choáng thì chỉ gọi 999. Chưa mở ESC 2024 về bệnh động mạch chủ (điểm ADD-RS); HSE xác nhận đau như xé là dấu hiệu của bệnh (đề xuất dấu hiệu chest_pain_tearing trong biên bản)."
+    note: "Mức xử trí trùng với rf_chest_pain_spreading_or_systemic; quy tắc riêng để nêu tên bóc tách động mạch chủ trong danh sách cần loại trừ (điền ở bước tích hợp), và không loại cơn đau ngắn. HSE Ireland (lượt R vòng 2 mở, thay trang NHS Aortic dissection đã bị gỡ): đau ngực hoặc lưng trên đột ngột, dữ dội, như xé, có thể lan lên cổ hoặc dọc lưng; có thể mất ý thức, khó thở, dấu hiệu giống đột quỵ, vã mồ hôi lạnh; có dấu hiệu thì gọi cấp cứu hoặc đến khoa cấp cứu ngay. Giữ mức 1 vì NHS Chest pain ghi đau ngực lan ra lưng hoặc kèm choáng thì chỉ gọi 999. Chưa mở ESC 2024 về bệnh động mạch chủ (điểm ADD-RS); HSE xác nhận đau như xé là dấu hiệu của bệnh (đề xuất dấu hiệu chest_pain_tearing trong biên bản). Người bảo trì thêm dấu hiệu này sau lượt A phần c (31/10/2026): đau như xé thay được cho đau đột ngột dữ dội, và hai dấu hiệu cùng có cũng là mức 1; rf_chest_pain_sudden_severe (mức 2) tính cả đau như xé."
 - id: rf_chest_pain_exertional
   level: 3
   complaints: [chest_pain]

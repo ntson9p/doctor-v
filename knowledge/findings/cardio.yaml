@@ -272,3 +272,23 @@
   question_vi: "Vài ngày nay có tăng cân nhanh, trên 2 kg, không rõ lý do không?"
   leak: 0.03
   leak_note: "Tăng cân nhanh do giữ nước gặp ở suy tim nặng lên, bệnh thận, xơ gan; người bảo trì ước lượng."
+# Thêm sau lượt A phần c (31/10/2026), trước khi agent viết ca giữ kín làm việc.
+- id: chest_pain_tearing
+  kind: symptom
+  type: binary
+  label_vi: "Đau ngực như bị xé"
+  question_vi: "Cơn đau ngực có cảm giác như bị xé, bị rách không?"
+  alt_question:
+    text_vi: "Đau có giống như có gì đang xé toạc trong ngực, sau lưng không?"
+  requires:
+    - { finding: chest_pain, is: present }
+  leak: 0.03
+  leak_note: "Kiểu đau gợi ý bóc tách động mạch chủ (HSE, MSD; lượt R và lượt A phần c đề xuất); người bảo trì ước lượng ở người đau ngực do nguyên nhân khác."
+- id: skin_burning_band
+  kind: symptom
+  type: binary
+  label_vi: "Da vùng đau rát bỏng, chạm nhẹ cũng đau"
+  question_vi: "Da chỗ đau có rát bỏng, châm chích, áo cọ vào cũng đau không?"
+  help_vi: "Thường ở một bên ngực, lưng hoặc bụng, có khi vài ngày trước khi nổi mụn nước."
+  leak: 0.05
+  leak_note: "Gợi ý giai đoạn trước khi nổi ban của zona (75/QĐ-BYT; lượt A phần c đề xuất); người bảo trì ước lượng."
