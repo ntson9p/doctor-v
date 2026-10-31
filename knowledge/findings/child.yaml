@@ -180,11 +180,11 @@
 - id: chest_indrawing
   kind: sign
   type: binary
-  label_vi: "Rút lõm lồng ngực"
-  question_vi: "Khi bé hít vào, phần ngực dưới sườn có lõm sâu vào không?"
-  help_vi: "Nhìn khi bé nằm yên, không khóc: chỗ dưới sườn bị kéo lõm vào mỗi lần hít vào."
+  label_vi: "Ngực dưới lõm sâu mỗi lần hít vào (rút lõm lồng ngực)"
+  question_vi: "Khi bé hít vào, phần ngực dưới (vùng bờ sườn) có lõm sâu vào không?"
+  help_vi: "Nhìn khi bé nằm yên, không khóc, không bú: phần ngực dưới bị kéo lõm vào mỗi lần hít vào. Chỉ hõm nhẹ giữa các xương sườn thì chưa tính."
   alt_question:
-    text_vi: "Khi bé thở, chỗ dưới sườn hoặc giữa các xương sườn có hõm vào không?"
+    text_vi: "Khi bé hít vào, vùng bờ sườn có bị hút lõm vào không?"
   applies_to:
     age_groups: [child_2m_5y]
   leak: specific
@@ -193,6 +193,7 @@
   type: binary
   label_vi: "Có lúc ngừng thở, tím tái"
   question_vi: "Bé có lúc ngừng thở, hoặc tím tái môi, mặt từng lúc không?"
+  help_vi: "Kể cả lúc đang ho hoặc đang ngủ."
   alt_question:
     text_vi: "Có lúc nào bé đang thở bỗng ngưng lại, mặt tái hoặc tím đi không?"
   applies_to:
@@ -201,8 +202,8 @@
 - id: child_feeding_reduced
   kind: sign
   type: binary
-  label_vi: "Bú, ăn chỉ khoảng một nửa"
-  question_vi: "Mấy ngày nay bé chỉ bú hoặc ăn được khoảng một nửa mọi ngày không?"
+  label_vi: "24 giờ qua chỉ bú, ăn được khoảng một nửa"
+  question_vi: "Trong 24 giờ qua, bé chỉ bú, ăn được khoảng một nửa mọi ngày không?"
   alt_question:
     text_vi: "Mỗi cữ bú, bữa ăn, bé có bỏ dở nhiều hơn mọi ngày không?"
   applies_to:

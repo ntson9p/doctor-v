@@ -15,7 +15,7 @@
   question_vi: "Cơn đau có lan lên cổ, hàm, vai hoặc cánh tay không?"
   # Lô 3: câu này được hỏi trong nhóm dấu hiệu nguy hiểm của Đau ngực, nên cần câu hỏi thay thế.
   alt_question:
-    text_vi: "Lúc đau, có thấy đau hoặc tê lan lên cổ, hàm, vai, tay không?"
+    text_vi: "Ngoài chỗ đau chính, có đau lan cả lên cổ, hàm, vai hoặc tay không?"
   requires:
     - any:
         - { finding: chest_pain_pressure, is: present }

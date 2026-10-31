@@ -133,16 +133,16 @@
   type: binary
   label_vi: "Thở khò khè"
   question_vi: "Khi thở có nghe tiếng khò khè, cò cử không?"
-  help_vi: "Tiếng rít nhỏ, kéo dài, nghe rõ hơn khi thở ra. Người nhà có thể nghe thấy."
+  help_vi: "Tiếng kêu như huýt sáo nhỏ trong ngực, nghe rõ hơn khi thở ra. Người nhà có thể nghe thấy."
   alt_question:
-    text_vi: "Khi thở ra, có nghe tiếng rít nhỏ kéo dài trong ngực không?"
+    text_vi: "Khi thở ra, trong ngực có tiếng kêu như huýt sáo nhỏ không?"
   leak: moderate
 - id: stridor
   kind: sign
   type: binary
-  label_vi: "Thở rít khi ngồi yên"
+  label_vi: "Thở rít khi hít vào, cả lúc nằm, ngồi yên"
   question_vi: "Lúc ngồi yên, không khóc, mỗi lần hít vào có tiếng rít to không?"
-  help_vi: "Tiếng rít thô khi hít vào, khác tiếng khò khè khi thở ra. Trẻ bị viêm thanh quản hay kèm ho ông ổng."
+  help_vi: "Tiếng rít to, thô khi hít vào, khác tiếng khò khè như huýt sáo khi thở ra. Chỉ rít khi khóc, quấy thì chưa tính."
   alt_question:
     text_vi: "Khi nằm yên hoặc đang ngủ, có nghe tiếng rít mỗi lần hít vào không?"
   leak: specific
@@ -185,9 +185,9 @@
 - id: choking_episode
   kind: history
   type: binary
-  label_vi: "Bắt đầu sau khi bị sặc, hóc"
+  label_vi: "Bắt đầu ngay sau khi bị hóc, sặc đồ ăn, đồ vật"
   question_vi: "Ho hoặc khó thở có bắt đầu ngay sau khi bị sặc, hóc không?"
-  help_vi: "Ví dụ đang ăn, đang ngậm đồ chơi, hạt, xương thì bị sặc, ho rũ rượi."
+  help_vi: "Ví dụ đang ăn, đang ngậm đồ chơi, hạt, xương thì bị sặc, ho rũ rượi. Sặc nước rồi hết ho ngay thì không tính."
   requires:
     - any:
         - { finding: cough, is: present }
@@ -197,9 +197,9 @@
   kind: sign
   type: binary
   label_vi: "Ho ra nhiều máu"
-  question_vi: "Máu ho ra có nhiều không, hơn vài vệt máu lẫn trong đờm?"
+  question_vi: "Có ho ra máu tươi, nhiều hơn vài vệt máu lẫn trong đờm không?"
   alt_question:
-    text_vi: "Mỗi lần ho có ra máu tươi nhiều, từ một thìa trở lên không?"
+    text_vi: "Có lần ho ra máu tươi, từ khoảng một thìa (muỗng) trở lên không?"
   requires:
     - { finding: hemoptysis, is: present }
   leak: 0.15
@@ -239,6 +239,8 @@
   type: binary
   label_vi: "Đã xịt thuốc cắt cơn mà không đỡ"
   question_vi: "Đã xịt thuốc cắt cơn khó thở mà vẫn không đỡ không?"
+  alt_question:
+    text_vi: "Sau khi xịt thuốc vài lần, vẫn còn khó thở như trước không?"
   help_vi: "Thuốc cắt cơn là bình xịt bác sĩ dặn dùng khi lên cơn khó thở, thường có màu xanh."
   requires:
     - any:

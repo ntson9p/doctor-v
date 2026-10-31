@@ -18,13 +18,19 @@ age_groups: [child_5_12, teen_13_17, adult_18_44, adult_45_64, elder_65_74, elde
 # Giai đoạn 3, lô 3: đang soạn. Bỏ trường này khi lô đạt chỉ tiêu trên bộ ca giữ kín.
 status: in_progress
 red_flags:
-  # Người bảo trì soạn (31/10/2026), chờ lượt R. Hỏi kiểu đau và thời gian trước nhóm dấu hiệu nguy hiểm: đau tức
-  # giữa ngực kéo dài từ 15 phút là quy tắc mức 1 (NHS: đau ngực đột ngột không hết thì gọi 999).
-  - finding: chest_pain_pressure
+  # Người bảo trì soạn (31/10/2026); lượt R lô 3 sắp lại. Câu thời gian trước tiên: tự nó không làm quy tắc nào
+  # đúng, và hai quy tắc mức 2 không tính cơn đau chỉ vài giây. Rồi nhóm dấu hiệu nguy hiểm (đa số là mức 1, hỏi
+  # một lần thay cho từng câu lẻ), nhóm dấu hiệu nguy hiểm chung (tay chân lạnh kèm mệt lả: mức 1), sốt, rồi mới
+  # đến câu tức nặng giữa ngực (mức 2): trước đây câu này đứng đầu, nên khi trả lời "có" thì mọi dấu hiệu đi kèm
+  # phải hỏi từng câu một, và quy tắc cần ba dấu hiệu (sốc khi sốt, nhiễm khuẩn huyết) không còn được xét.
   - finding: chest_pain_duration
   - group: chest_pain_red_flags
   - group: general_danger_signs
   - finding: fever
+  - finding: chest_pain_pressure
+  # Sưng đau một bên bắp chân là quy tắc mức 1 một dấu hiệu khi đau ngực (rf_pe_signs). Ở nhóm clot_risk (phần
+  # hỏi tiếp) câu trả lời "Không rõ" không được hỏi lại bằng câu thay thế, nên đưa lên đây (lượt R lô 3).
+  - finding: leg_swelling_one_side
   - group: fever_red_flags
   - finding: fever_duration
 intake: [chest_pain_associated, clot_risk, chronic_conditions, lung_conditions]

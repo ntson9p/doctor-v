@@ -158,6 +158,8 @@
   type: binary
   label_vi: "Đã biết bị hen phế quản"
   question_vi: "Đã từng được bác sĩ nói bị hen phế quản (hen suyễn) chưa?"
+  alt_question:
+    text_vi: "Có được bác sĩ cho bình xịt dùng khi lên cơn khó thở không?"
   applies_to:
     age_groups: [child_2m_5y, child_5_12, teen_13_17, adult_18_44, adult_45_64, elder_65_74, elder_75p]
   leak: 0.06

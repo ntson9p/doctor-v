@@ -88,6 +88,8 @@
   kind: exposure
   type: binary
   label_vi: "Vừa ăn món lạ, dùng thuốc mới hoặc bị đốt"
-  question_vi: "Trong 2 giờ trước, có ăn món lạ, dùng thuốc mới, bị ong đốt không?"
-  help_vi: "Kể cả tiêm thuốc, ăn hải sản, lạc (đậu phộng), hoặc bị côn trùng khác đốt."
+  question_vi: "Trước khi khó chịu, có ăn món lạ, dùng thuốc mới, bị ong đốt không?"
+  help_vi: "Tính trong khoảng 2 giờ trước khi bắt đầu thấy khó chịu. Kể cả tiêm thuốc, ăn hải sản, lạc (đậu phộng), hoặc bị côn trùng khác đốt."
+  alt_question:
+    text_vi: "Trước khi khó chịu, có ăn, dùng thứ gì lạ, hoặc bị đốt không?"
   leak: moderate
