@@ -1,0 +1,13 @@
+id: globocan-2024-vietnam
+type: statistic
+title: "GLOBOCAN 2024: Viet Nam fact sheet"
+publisher: "International Agency for Research on Cancer (IARC/WHO), Global Cancer Observatory"
+date: "2026"
+url: "https://gco.iarc.who.int/media/globocan/factsheets/populations/704-viet-nam-fact-sheet.pdf"
+license_class: L2
+license_note: "Dữ liệu của IARC/WHO, dùng phi thương mại, ghi nguồn; kiểm tra điều kiện trước khi đóng gói."
+default_tier: B
+accessed: "2026-10-31"
+verified: true
+verified_by: "agent:pass-b"
+notes_vi: "Lượt B tải tệp PDF 2 trang ngày 31/10/2026. Ước tính năm 2024 cho Việt Nam (dân số khoảng 101 triệu): ung thư phổi 23.085 ca mới (13,0% mọi ca ung thư, đứng thứ hai), nam 16.127 (đứng đầu ở nam), nữ 6.958; tỷ suất mới mắc chuẩn hóa tuổi 18,3/100.000, tử vong 16,9/100.000; nam 29,0 so với nữ 9,9/100.000. Phương pháp: tỷ suất của các ghi nhận ung thư vùng áp cho dân số 2024."

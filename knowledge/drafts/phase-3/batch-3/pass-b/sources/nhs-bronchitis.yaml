@@ -1,0 +1,13 @@
+id: nhs-bronchitis
+type: web_page
+title: "Bronchitis"
+publisher: "NHS (UK)"
+date: "2026-08-18"
+url: "https://www.nhs.uk/conditions/bronchitis/"
+license_class: L1
+license_note: "Open Government Licence v3.0; bản chuyển thể không được trình bày như nội dung của NHS."
+default_tier: C
+accessed: "2026-10-31"
+verified: true
+verified_by: "agent:pass-b"
+notes_vi: "Lượt B tải trang ngày 31/10/2026 (rà soát lần cuối 18/8/2026). Viêm phế quản thường do nhiễm trùng, tự khỏi sau khoảng 3 tuần. Triệu chứng: ho (có thể có đờm), đau ngực khi ho, khó thở, đau họng, sổ mũi, sốt. Tự chăm sóc: nghỉ ngơi, uống đủ nước, mật ong pha nước ấm (không cho trẻ dưới 1 tuổi), che miệng khi ho, rửa tay, không hút thuốc. 'Urgent GP / 111': ho trên 3 tuần không đỡ; ho ra máu; đau ngực từng cơn hoặc khi thở, ho; trên 65 tuổi; có thai; bệnh mạn tính; suy giảm miễn dịch; quá mệt; khó thở. 'Call 999': khó thở đến không nói được; môi, da tím tái; đột ngột lú lẫn. Kháng sinh chỉ khi nhiễm trùng nặng hơn."

@@ -1,0 +1,240 @@
+id: pulmonary_tuberculosis
+names:
+  vi: "Lao phổi"
+  vi_common: ["Lao", "Bệnh lao"]
+  en: "Pulmonary tuberculosis"
+codes:
+  icd10: "A15.0"
+  icd10_verified: false
+  mondo: "MONDO:0006052"
+summary_vi:
+  - "Bệnh nhiễm vi khuẩn lao ở phổi, lây qua đường hô hấp khi người bệnh ho, nói."
+  - "Thường ho kéo dài trên 2 tuần, có thể kèm sốt nhẹ về chiều, ra mồ hôi đêm, sụt cân, mệt."
+  - "Bệnh chữa khỏi được nếu uống thuốc đều và đủ thời gian theo chỉ định."
+urgency: 4
+cant_miss: false
+specialties: [infectious_disease, respiratory]
+priors:
+  - complaint: cough
+    default: P4
+    by_age:
+      infant_0_2m: P6
+      child_2m_5y: P5
+      child_5_12: P5
+      teen_13_17: P5
+      adult_45_64: P3
+      elder_65_74: P3
+      elder_75p: P3
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [nguyenhv-plosone-2020, byt-qd-162-2024, byt-qd-4235-2012]
+      locator: "Nguyen 2020 bảng 3–4; 162/QĐ-BYT phần II, mục 1.1"
+      reported: "lao phổi có bằng chứng vi khuẩn ở người từ 15 tuổi: 322/100.000; 15–24 tuổi 63, 25–34 tuổi 203, 35–44 tuổi 287, 45–54 tuổi 423, 55–64 tuổi 618, từ 65 tuổi 689/100.000; 67% người bệnh có ho, 58% ho từ 2 tuần"
+      population: "điều tra hiện mắc lao quốc gia, Việt Nam 2017–2018"
+      note: "Thang tuyệt đối. Việt Nam có gánh nặng lao cao. Người đi khám vì ho chủ yếu bị nhiễm trùng hô hấp cấp; người lao có ho chỉ là phần nhỏ trong số đó. Ước 0,2–1% (P4) ở người 18–44 tuổi, 1–5% (P3) từ 45 tuổi, khi tỷ lệ hiện mắc tăng gấp 2–3 lần. Trẻ em, vị thành niên mắc ít hơn hẳn và thường do tiếp xúc nguồn lây (P5; dưới 2 tháng P6). Thời gian ho (từ 2 tuần là triệu chứng nghi lao quan trọng nhất, 162/QĐ-BYT) sẽ nâng khả năng lên. Ước lượng, cần bác sĩ duyệt."
+  - complaint: fever
+    default: P5
+    by_age:
+      infant_0_2m: P6
+      child_2m_5y: P6
+      child_5_12: P6
+      teen_13_17: P6
+      elder_65_74: P4
+      elder_75p: P4
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [nguyenhv-plosone-2020, byt-qd-162-2024, miller-cid-2000]
+      locator: "162/QĐ-BYT phần II, mục 1.1, 3.2.1"
+      reported: "sốt 12,7% người lao trong điều tra cộng đồng (Việt Nam), 52,3% người lao được báo cáo (Los Angeles), trong đó sốt trên 2 tuần 29,4%"
+      note: "Thang tuyệt đối. Lao là nguyên nhân của một phần rất nhỏ người đi khám vì sốt: phần lớn sốt là bệnh cấp vài ngày (vi rút, sốt xuất huyết, nhiễm trùng tiểu…). Lao gây sốt nhẹ về chiều, sốt kéo dài trên 2 tuần không rõ nguyên nhân (162/QĐ-BYT). Ước 0,02–0,2% (P5) ở người lớn, 0,2–1% (P4) từ 65 tuổi khi tỷ lệ lao cao nhất; trẻ em và vị thành niên P6. Câu hỏi số ngày sốt (lao phần lớn sốt trên 7 ngày) và các câu ho kéo dài, sụt cân, mồ hôi đêm sẽ nâng khả năng ở người sốt kéo dài. Ước lượng, cần so kết quả Sốt trên bộ dev trước và sau."
+  - complaint: shortness_of_breath
+    default: P5
+    by_age:
+      infant_0_2m: P6
+      child_2m_5y: P6
+      child_5_12: P6
+      teen_13_17: P6
+      elder_65_74: P4
+      elder_75p: P4
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-162-2024, byt-qd-4235-2012, nguyenhv-plosone-2020]
+      locator: "162/QĐ-BYT phần II, mục 1.1; 4235 bài khó thở (toàn trạng bị biến đổi)"
+      note: "162/QĐ-BYT: lao phổi đôi khi gây khó thở; 4235 nêu lao trong nguyên nhân khó thở kèm toàn trạng thay đổi ở người già yếu, suy giảm miễn dịch. Ít khi là lý do chính đi khám vì khó thở; ước 0,02–0,2% (P5) ở người lớn, 0,2–1% (P4) từ 65 tuổi. Ước lượng."
+prior_modifiers:
+  - when: { sex: [male] }
+    factor: 1.6
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [nguyenhv-plosone-2020, duong-tmih-2025]
+      locator: "Nguyen 2020 bảng 4, bảng 6"
+      reported: "tỷ lệ hiện mắc nam 522, nữ 133/100.000 (tỷ số 4,0); 80,3% người lao nằm viện là nam (Duong 2025)"
+      note: "Với dân số nam nữ gần bằng nhau, tỷ số 4 tương ứng khoảng 1,6 lần (nam) và 0,4 lần (nữ) mức trung bình. Hút thuốc chỉ giải thích một phần chênh lệch (tỷ số vẫn cao ở người trẻ)."
+  - when: { sex: [female] }
+    factor: 0.4
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [nguyenhv-plosone-2020]
+      locator: "Nguyen 2020 bảng 4"
+      reported: "nữ 133/100.000 so với trung bình 322/100.000"
+      note: "Cặp với hệ số nam; trung bình cả hai giới gần bằng 1."
+findings:
+  - finding: cough_duration
+    dist: { lt_1w: 0.05, w1_2: 0.09, w2_8: 0.56, gt_8w: 0.30 }
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [nguyenhv-plosone-2020, byt-qd-162-2024]
+      locator: "Nguyen 2020 bảng 3"
+      reported: "trong 148 người lao có ho: ho dưới 2 tuần 20 người (13,5%), ho từ 2 tuần 128 người (86,5%)"
+      note: "Phân bố trong số người có ho. Ho kéo dài trên 2 tuần là triệu chứng nghi lao quan trọng nhất (162/QĐ-BYT). Chia phần từ 2 tuần thành dưới và trên 2 tháng là ước lượng: bệnh tiến triển từ từ, nhiều người chậm đi khám."
+  - finding: cough
+    freq: very_frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [miller-cid-2000, nguyenhv-plosone-2020, msd-tuberculosis]
+      reported: "ho 72,7% người lao được báo cáo (Los Angeles); 67,0% người lao trong điều tra cộng đồng Việt Nam (gồm cả ca không triệu chứng)"
+      note: "Chỉ có tác dụng khi triệu chứng chính là Sốt hoặc Khó thở. MSD: ho kéo dài là triệu chứng hay gặp nhất."
+  - finding: productive_cough
+    freq: very_frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [nguyenhv-plosone-2020, msd-tuberculosis, byt-qd-162-2024]
+      locator: "Nguyen 2020 bảng 3"
+      reported: "ho có đờm 135/148 người lao có ho (91%)"
+      note: "Tần suất trong số người có ho. 162/QĐ-BYT: ho khan hoặc ho có đờm; MSD: lúc đầu ít đờm, sau nhiều hơn. Chọn very_frequent thay vì almost_always vì ho khan vẫn gặp."
+  - finding: hemoptysis
+    freq: occasional
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [nguyenhv-plosone-2020, byt-qd-162-2024, msd-tuberculosis, nhs-tuberculosis]
+      locator: "Nguyen 2020 bảng 3"
+      reported: "ho ra máu 7/221 người lao trong điều tra cộng đồng (3,2%), tức 7/148 người có ho (4,7%)"
+      note: "Điều tra cộng đồng gồm nhiều ca nhẹ, chưa đi khám; người có triệu chứng tự đi khám bệnh nặng hơn, hay có hang. 162/QĐ-BYT, NHS liệt kê ho ra máu, đờm lẫn máu; MSD ghi hiếm. Lượt B chọn occasional (khoảng 10–20% người đi khám), cao hơn số điều tra; cần bác sĩ duyệt. Ho ra máu đã có quy tắc mức 3."
+  - finding: fever
+    freq: frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [miller-cid-2000, byt-qd-162-2024, msd-tuberculosis, nguyenhv-plosone-2020]
+      reported: "sốt 52,3% người lao được báo cáo; 12,7% người lao trong điều tra cộng đồng"
+      note: "Chỉ có tác dụng khi triệu chứng chính là Ho hoặc Khó thở. 162/QĐ-BYT: sốt nhẹ về chiều; MSD: sốt nhẹ hay gặp nhưng không phải ai cũng có. Chọn số liệu người lao được chẩn đoán vì gần với người có triệu chứng đi khám."
+  - finding: fever_duration
+    dist: { d1_2: 0.05, d3_5: 0.10, d6_7: 0.10, gt_7d: 0.75 }
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [miller-cid-2000, byt-qd-162-2024]
+      reported: "sốt trên 2 tuần 29,4% trong 52,3% người có sốt, tức khoảng 56% người có sốt"
+      note: "Phân bố trong số người có sốt, tại thời điểm hỏi. Sốt kéo dài trên 2 tuần không rõ nguyên nhân là biểu hiện nghi lao (162/QĐ-BYT); người dùng thường hỏi khi đã sốt nhiều ngày. Ước lượng."
+  - finding: fever_max_temp
+    dist: { lt_38: 0.45, t38_39: 0.43, ge_39: 0.12 }
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-162-2024, msd-tuberculosis]
+      locator: "162/QĐ-BYT phần II, mục 3.2.1"
+      note: "Phân bố trong số người có sốt. Sốt nhẹ về chiều là kiểu sốt điển hình (162/QĐ-BYT, MSD). Ước lượng."
+  - finding: night_sweats
+    freq: occasional
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [duong-tmih-2025, nguyenhv-plosone-2020, byt-qd-162-2024, msd-tuberculosis]
+      reported: "ra mồ hôi đêm 34,9% (dưới 65 tuổi) và 20,8% (từ 65 tuổi) ở người lao AFB dương tính nằm viện ở Việt Nam; 7,7% trong điều tra cộng đồng"
+      note: "Số bệnh viện cao hơn người có triệu chứng ở cộng đồng; chọn occasional. MSD: mồ hôi đêm nhiều là triệu chứng kinh điển nhưng không đặc hiệu."
+  - finding: weight_loss_unintended
+    freq: frequent
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-162-2024, msd-tuberculosis, nhs-tuberculosis, nguyenhv-plosone-2020]
+      locator: "162/QĐ-BYT phần II, mục 1.1, 3.2.1"
+      reported: "sụt cân 7,7% trong điều tra cộng đồng (gồm ca không triệu chứng)"
+      note: "162/QĐ-BYT, MSD, NHS đều xếp gầy sút cân vào triệu chứng thường gặp; MSD: sụt cân tăng dần trong vài tuần. Số điều tra cộng đồng thấp vì nhiều ca chưa có triệu chứng. Lượt B chọn frequent cho người có triệu chứng; cần bác sĩ duyệt."
+  - finding: breathing_difficulty
+    freq: occasional
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-162-2024, msd-tuberculosis]
+      locator: "162/QĐ-BYT phần II, mục 1.1"
+      note: "Chỉ có tác dụng khi triệu chứng chính là Ho hoặc Sốt. 162/QĐ-BYT: đôi khi khó thở; MSD: khó thở khi tổn thương nhu mô, tràn dịch hoặc tràn khí màng phổi. Ước occasional."
+  - finding: dyspnea_onset
+    dist: { sudden: 0.05, hours_days: 0.25, weeks: 0.70 }
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [msd-tuberculosis, byt-qd-4235-2012]
+      note: "Phân bố trong số người có khó thở. Bệnh tiến triển từ từ trong nhiều tuần (MSD); khó thở đột ngột có thể do tràn khí màng phổi (MSD) nhưng hiếm. Ước lượng."
+  - finding: pleuritic_chest_pain
+    freq: occasional
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-162-2024]
+      locator: "162/QĐ-BYT phần II, mục 1.1, 3.2.1"
+      note: "162/QĐ-BYT liệt kê đau ngực trong triệu chứng lao phổi. Không có tỷ lệ; ước occasional."
+  - finding: tb_contact
+    freq: occasional
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-162-2024, nhs-tuberculosis, byt-qd-4235-2012]
+      locator: "162/QĐ-BYT phần II, mục 1.3"
+      note: "Tiếp xúc trực tiếp với nguồn lây là yếu tố nguy cơ (162/QĐ-BYT), nhất là trẻ em; 4235 nêu tiền sử tiếp xúc trong chẩn đoán phân biệt. Phần lớn người lớn mắc lao không biết mình tiếp xúc với ai (86% người lao trong điều tra chưa được điều trị, nên nguồn lây thường chưa được chẩn đoán). Ước occasional; tỷ lệ nền 2%."
+  - finding: diabetes
+    freq: occasional
+    evidence:
+      tier: C
+      basis: numeric
+      sources: [msd-tuberculosis, byt-qd-162-2024]
+      reported: "đái tháo đường 23,4% người lao (Mỹ, 2023)"
+      note: "162/QĐ-BYT xếp đái tháo đường vào yếu tố nguy cơ. Chưa có số liệu Việt Nam; dùng số của MSD (occasional). Tỷ lệ nền 7%."
+  - finding: immunocompromised
+    freq: occasional
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-162-2024, nhs-tuberculosis, msd-tuberculosis]
+      locator: "162/QĐ-BYT phần II, mục 1.3"
+      note: "Suy giảm miễn dịch (kể cả HIV, thuốc ức chế miễn dịch) là yếu tố nguy cơ chính. Câu hỏi của danh mục gồm mọi bệnh, thuốc làm giảm sức đề kháng. Không có tỷ lệ; ước occasional. Tỷ lệ nền 5%."
+  - finding: smoker
+    freq: frequent
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [msd-tuberculosis, nhs-tuberculosis, nguyenhv-plosone-2020, lam-respmed-2011]
+      reported: "hút thuốc lá (đang hoặc đã từng) 31% người lao ở Mỹ; người lao ở Việt Nam 80% là nam"
+      note: "Hút thuốc là yếu tố nguy cơ (NHS, MSD). Ở Việt Nam khoảng 45–68% nam giới hút thuốc (Lâm 2011) và 80% người lao là nam, nên ước khoảng một nửa người lao đang hút thuốc. Tỷ lệ nền 20%. Hệ số giới tính đã tính một phần, có thể đếm trùng nhẹ. Ước lượng."
+warning_signs:
+  - hemoptysis_large
+  - es_severe_breathing
+  - confusion
+  - neck_stiffness
+  - seizure_recent
+self_care_vi:
+  - "Đi khám để được chụp X quang phổi và xét nghiệm đờm."
+  - "Khi đã điều trị, uống thuốc đều hằng ngày, đủ thời gian theo chỉ định."
+  - "Không tự ngừng thuốc khi thấy đỡ: ngừng sớm thì bệnh dễ quay lại và vi khuẩn dễ kháng thuốc."
+  - "Đeo khẩu trang, che miệng khi ho, không khạc nhổ bừa bãi; mở cửa cho nhà thoáng."
+  - "Người sống cùng nhà, nhất là trẻ nhỏ, nên đi khám sàng lọc lao."
+  - "Ăn uống đủ chất, không hút thuốc, không uống rượu bia."
+see_doctor_vi:
+  - "Đi khám trong vài ngày nếu ho từ 2 tuần, nhất là khi kèm sốt về chiều, mồ hôi đêm hoặc sụt cân."
+  - "Đi khám sớm hơn nếu ho ra máu."
+  - "Đi cấp cứu ngay nếu ho ra nhiều máu tươi, khó thở nặng, lú lẫn hoặc cứng gáy."
+sources: [byt-qd-162-2024, nhs-tuberculosis, msd-tuberculosis, nguyenhv-plosone-2020]
+review:
+  status: draft
+  authors: ["agent:pass-b"]
+  updated: "2026-10-31"
+  notes_vi: "Cần bác sĩ xem: (1) urgency 4 như gợi ý: NHS xếp ho trên 3 tuần, nghi lao vào khám không khẩn; 162/QĐ-BYT yêu cầu người nghi lao được xét nghiệm. Ho ra máu (mức 3), ho ra nhiều máu, khó thở nặng, dấu hiệu lao màng não do quy tắc xử lý; (2) prior cho Sốt (P5, từ 65 tuổi P4) sẽ đổi kết quả Sốt đã phát hành: cần so bộ dev trước và sau; lao chỉ nên nổi lên khi sốt kéo dài, kèm ho lâu, sụt cân; (3) prior Ho dựa trên tỷ lệ hiện mắc quốc gia, chưa có số liệu tỷ lệ lao trong người đi khám vì ho; (4) tần suất triệu chứng: điều tra cộng đồng (Việt Nam) thấp hơn hẳn số bệnh viện; lượt B chọn mức giữa cho ho ra máu, mồ hôi đêm, sụt cân; (5) hệ số giới 1,6 và 0,4 theo tỷ số nam/nữ 4,0, có thể đếm trùng một phần với câu hút thuốc; không đặt hệ số vùng vì khác biệt vùng không có ý nghĩa thống kê (p = 0,297); (6) mã ICD-10 A15.0 (lao phổi có xác nhận vi khuẩn) chưa đối chiếu, có thể cần gộp A16."
