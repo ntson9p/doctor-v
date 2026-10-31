@@ -208,7 +208,7 @@
     - apnea_cyanosis_spells
     - child_feeding_reduced
     - choking_episode
-    - wheeze
+    - grunting
   none_label_vi: "Không có dấu hiệu nào ở trên"
   allow_unknown: true
   applies_to:
@@ -280,7 +280,7 @@
   none_label_vi: "Không có đặc điểm nào ở trên"
 - id: lung_conditions
   title_vi: "Có bệnh hoặc thói quen nào sau đây không?"
-  findings: [asthma_known, copd_known, smoker]
+  findings: [asthma_known, copd_known, smoker, former_smoker, biomass_smoke_exposure]
   none_label_vi: "Không có điều nào ở trên"
   allow_unknown: true
   applies_to:

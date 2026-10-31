@@ -247,3 +247,39 @@
         - { finding: asthma_known, is: present }
         - { finding: copd_known, is: present }
   leak: moderate
+# Thêm sau lượt R và lượt A phần a (31/10/2026), trước khi agent viết ca giữ kín làm việc.
+- id: spo2_measured
+  kind: measurement
+  type: categorical
+  label_vi: "SpO2 đo được"
+  question_vi: "Chỉ số ô xy (SpO2) đo bằng máy kẹp ngón tay là bao nhiêu?"
+  help_vi: "Chọn 'Chưa đo' nếu nhà không có máy. Đo lúc ngồi yên, tay ấm, chờ số ổn định."
+  options:
+    - { id: ge_96, label_vi: "Từ 96% trở lên" }
+    - { id: s92_95, label_vi: "Từ 92% đến 95%" }
+    - { id: lt_92, label_vi: "Dưới 92%" }
+    - { id: not_measured, label_vi: "Chưa đo", neutral: true }
+  # Người bảo trì ước lượng; nhiều gia đình có máy đo từ mùa COVID-19.
+  baseline: { ge_96: 0.33, s92_95: 0.05, lt_92: 0.02, not_measured: 0.6 }
+  requires:
+    - { finding: breathing_difficulty, is: present }
+  cost: 2
+  unknown_rate: 0.2
+- id: night_respiratory_symptoms
+  kind: symptom
+  type: binary
+  label_vi: "Ho, khó thở nặng lên về đêm"
+  question_vi: "Ho, khò khè hoặc khó thở có hay nặng lên về đêm, gần sáng không?"
+  requires:
+    - any:
+        - { finding: cough, is: present }
+        - { finding: breathing_difficulty, is: present }
+  leak: moderate
+- id: drooling_cannot_swallow
+  kind: sign
+  type: binary
+  label_vi: "Chảy dãi, không nuốt được"
+  question_vi: "Có chảy dãi nhiều vì đau, không nuốt được nước bọt không?"
+  alt_question:
+    text_vi: "Có phải nhổ nước bọt ra vì không nuốt nổi không?"
+  leak: specific

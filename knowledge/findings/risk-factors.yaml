@@ -182,3 +182,13 @@
     sex: [female]
     age_groups: [teen_13_17, adult_18_44, adult_45_64, elder_65_74, elder_75p]
   leak: moderate
+# Thêm sau lượt A phần a (31/10/2026), trước khi agent viết ca giữ kín làm việc.
+- id: former_smoker
+  kind: risk_factor
+  type: binary
+  label_vi: "Đã từng hút thuốc nhiều năm"
+  question_vi: "Trước đây có từng hút thuốc lá, thuốc lào nhiều năm rồi mới bỏ không?"
+  applies_to:
+    age_groups: [adult_18_44, adult_45_64, elder_65_74, elder_75p]
+  leak: 0.15
+  leak_note: "Nam giới Việt Nam hút thuốc nhiều (STEPS 2021); người bảo trì ước lượng tỷ lệ người đã bỏ thuốc trong số người không còn hút."

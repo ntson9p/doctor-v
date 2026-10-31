@@ -209,3 +209,15 @@
   applies_to:
     age_groups: [child_2m_5y]
   leak: moderate
+# Thêm sau lượt R (31/10/2026), trước khi agent viết ca giữ kín làm việc.
+- id: grunting
+  kind: sign
+  type: binary
+  label_vi: "Thở rên"
+  question_vi: "Mỗi lần thở ra, bé có rên khẽ thành tiếng không?"
+  help_vi: "Tiếng rên ngắn, đều đặn theo từng nhịp thở, kể cả khi bé không khóc."
+  alt_question:
+    text_vi: "Khi bé nằm yên, có nghe tiếng ư ử theo mỗi nhịp thở không?"
+  applies_to:
+    age_groups: [infant_0_2m, child_2m_5y]
+  leak: specific

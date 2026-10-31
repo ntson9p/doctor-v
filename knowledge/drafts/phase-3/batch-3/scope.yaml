@@ -50,6 +50,8 @@ extend:
 # child_feeding_reduced, night_sweats, hives, dermatomal_rash, tb_contact, allergen_exposure, asthma_known,
 # copd_known, estrogen_use, chest_pain, chest_pain_duration, chest_pain_exertional, chest_pain_sudden_severe,
 # chest_pain_radiates_back, chest_wall_tenderness, leg_swelling_both.
+# Thêm sau lượt R và lượt A phần a: spo2_measured, night_respiratory_symptoms, drooling_cannot_swallow, grunting,
+# former_smoker, biomass_smoke_exposure.
 
 # Không liên kết dấu hiệu chung `chest_pain` (người bảo trì, 31/10/2026): với Đau ngực nó được ngầm định nên không là
 # bằng chứng; với Ho, Khó thở thì chest_pain_pressure và pleuritic_chest_pain mang bằng chứng, liên kết thêm

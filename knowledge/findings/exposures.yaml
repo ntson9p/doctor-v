@@ -93,3 +93,14 @@
   alt_question:
     text_vi: "Trước khi khó chịu, có ăn, dùng thứ gì lạ, hoặc bị đốt không?"
   leak: moderate
+# Thêm sau lượt A phần a (31/10/2026), trước khi agent viết ca giữ kín làm việc.
+- id: biomass_smoke_exposure
+  kind: exposure
+  type: binary
+  label_vi: "Nhiều năm hít khói bếp, khói bụi"
+  question_vi: "Nhiều năm có đun bếp củi, than hoặc làm nơi nhiều khói bụi không?"
+  help_vi: "Kể cả đun rơm, trấu trong nhà, hoặc làm ở xưởng, mỏ nhiều bụi."
+  applies_to:
+    age_groups: [adult_18_44, adult_45_64, elder_65_74, elder_75p]
+  leak: 0.2
+  leak_note: "Đun nấu bằng củi, than còn phổ biến ở nông thôn; người bảo trì ước lượng."

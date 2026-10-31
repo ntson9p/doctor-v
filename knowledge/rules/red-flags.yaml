@@ -2352,3 +2352,49 @@
     sources: [byt-qd-162-2024, nhs-cough, who-imci-chart-booklet-2014]
     locator: "162/QĐ-BYT Phần II mục 1.1, Bảng 1; NHS Cough (See a GP: ho trên 3 tuần); IMCI Module 3 mục 3.4"
     note: "Lượt R vòng 2 mở nguồn. Văn bản hiện hành là 162/QĐ-BYT ngày 19/01/2024 (thay 1314/QĐ-BYT ngày 24/3/2020): ho kéo dài trên 2 tuần (ho khan, ho có đờm, ho ra máu) là triệu chứng nghi lao quan trọng nhất ở người lớn; ở trẻ em, bệnh kéo dài trên 2 tuần với ho, khò khè kéo dài. IMCI: trẻ ho trên 2 tuần thì chuyển khám lao, hen. NHS Cough: ho trên 3 tuần, sụt cân không rõ lý do, suy giảm miễn dịch thì khám bác sĩ gia đình (không khẩn, mức 4). Mức 4 hợp với cả ba nguồn; ho ra máu, khó thở đã có quy tắc riêng."
+
+# --- Thêm sau lượt R vòng 2 (người bảo trì, 31/10/2026), theo dấu hiệu lượt R đề xuất; nguồn đã xác minh ---
+- id: rf_spo2_low
+  level: 2
+  complaints: [shortness_of_breath, cough, chest_pain]
+  when: { finding: spo2_measured, in: [lt_92] }
+  reason_vi: "Chỉ số ô xy trong máu dưới 92% là thiếu ô xy, cần được khám cấp cứu ngay."
+  evidence:
+    tier: B
+    basis: verbal
+    sources: [byt-qd-4888-2016, byt-qd-2767-2023, nice-ng9]
+    locator: "4888/QĐ-BYT (hen trẻ dưới 5 tuổi: phân độ cơn hen); 2767/QĐ-BYT (đợt cấp nặng); NG9 khuyến cáo 1.2.2"
+    note: "4888/QĐ-BYT: cơn hen nặng khi SpO2 dưới 92%. 2767/QĐ-BYT: đợt cấp nặng có SpO2 dưới 92%, cần nhập viện. NG9 (từ 2021): SpO2 dưới 92% khi thở khí trời là tiêu chí cân nhắc chuyển viện. Máy kẹp ngón tay ở nhà có thể sai khi tay lạnh hoặc cử động, nên câu hỏi dặn đo lúc ngồi yên; vẫn để mức 2 vì sai theo hướng thấp hiếm khi bỏ sót. Chờ bác sĩ duyệt."
+- id: rf_spo2_borderline
+  level: 3
+  complaints: [shortness_of_breath, cough, chest_pain]
+  when: { finding: spo2_measured, in: [s92_95] }
+  reason_vi: "Chỉ số ô xy trong máu từ 92% đến 95% khi đang khó thở cần được khám trong 24 giờ."
+  evidence:
+    tier: B
+    basis: verbal
+    sources: [byt-qd-4888-2016, nice-ng143]
+    locator: "4888/QĐ-BYT (cơn hen trung bình: SpO2 92–95%); NG143 khuyến cáo 1.2.22"
+    note: "4888/QĐ-BYT xếp SpO2 92–95% vào cơn hen trung bình; NG143: SpO2 từ 95% trở xuống kèm sốt, thở nhanh gợi ý viêm phổi ở trẻ. Người bảo trì chọn mức 3; chờ bác sĩ duyệt."
+- id: rf_infant_grunting
+  level: 2
+  complaints: [cough, shortness_of_breath]
+  when: { finding: grunting, is: present }
+  reason_vi: "Trẻ thở rên là dấu hiệu suy hô hấp nặng, cần đưa đi khám cấp cứu ngay."
+  evidence:
+    tier: B
+    basis: verbal
+    sources: [nice-ng9, nice-ng143]
+    locator: "NG9 khuyến cáo 1.2.1; NG143 khuyến cáo 1.2.5, bảng 2"
+    note: "NG9: suy hô hấp nặng (thở rên, rút lõm lồng ngực rõ, nhịp thở trên 70 lần/phút) thì chuyển cấp cứu ngay; NG143 xếp thở rên vào nhóm đỏ. Cùng mức với rf_child_chest_indrawing: cha mẹ có thể nhầm tiếng khò khè, tiếng ngáy với thở rên. Thở rên kèm tím hoặc ngừng thở đã là mức 1 (màn sàng lọc cấp cứu, rf_infant_apnea). Chờ bác sĩ duyệt."
+- id: rf_drooling_cannot_swallow
+  level: 2
+  complaints: [cough, shortness_of_breath]
+  when: { finding: drooling_cannot_swallow, is: present }
+  reason_vi: "Chảy dãi, không nuốt được nước bọt khi ho hoặc khó thở có thể do tắc nghẽn ở họng, thanh quản. Cần khám cấp cứu ngay."
+  evidence:
+    tier: C
+    basis: verbal
+    sources: [nhs-croup]
+    locator: "NHS Croup (Call 999 or go to A&E)"
+    note: "NHS Croup: trẻ chảy dãi, khó nuốt thì gọi 999 hoặc đến cấp cứu (mức 2); đây là dấu hiệu gợi ý viêm thanh thiệt (docs/phase-3/scope.md mục 5: xử trí bằng quy tắc, không làm bệnh riêng). Áp dụng cả người lớn vì viêm thanh thiệt, áp xe quanh amiđan cũng gây chảy dãi. Chờ bác sĩ duyệt."

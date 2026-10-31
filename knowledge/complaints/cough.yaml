@@ -26,11 +26,13 @@ red_flags:
   - group: young_infant_danger_signs
   - group: child_danger_signs
   - group: child_breathing_signs
+  - finding: drooling_cannot_swallow
   - group: general_danger_signs
   - group: cough_red_flags
   - finding: fever
   - group: fever_red_flags
   - finding: dyspnea_severity
+  - finding: spo2_measured
   - finding: hemoptysis_large
   - finding: fever_duration
   # Ho từ 2 tuần là mốc sàng lọc lao; ho gà cũng thường kéo dài nhiều tuần.

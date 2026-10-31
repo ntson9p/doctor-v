@@ -30,6 +30,7 @@ red_flags:
   - group: young_infant_danger_signs
   - group: child_danger_signs
   - group: child_breathing_signs
+  - finding: drooling_cannot_swallow
   - finding: asthma_known
   - finding: allergen_exposure
   - group: general_danger_signs
@@ -39,6 +40,7 @@ red_flags:
   - finding: reliever_no_relief
   - finding: dyspnea_onset
   - finding: dyspnea_severity
+  - finding: spo2_measured
   - group: fever_red_flags
   - finding: fever_duration
 intake: [dyspnea_associated, clot_risk, lung_conditions, chronic_conditions, fever_exposures]
