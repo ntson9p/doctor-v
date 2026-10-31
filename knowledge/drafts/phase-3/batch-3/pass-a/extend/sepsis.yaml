@@ -1,0 +1,274 @@
+id: sepsis
+names:
+  vi: "Nhiễm khuẩn huyết"
+  vi_common: ["Nhiễm trùng máu", "Nhiễm trùng huyết"]
+  en: "Sepsis"
+codes:
+  icd10: "A41.9"
+  icd10_verified: false
+  mondo: "MONDO:0005229"
+summary_vi:
+  - "Tình trạng nhiễm khuẩn nặng, vi khuẩn lan vào máu và làm tổn thương nhiều cơ quan."
+  - "Có thể sốt cao, rét run hoặc thân nhiệt thấp, kèm thở nhanh, lú lẫn, tay chân lạnh, tiểu ít."
+  - "Đây là tình trạng cấp cứu, có thể gây sốc và tử vong nhanh nếu không được điều trị kịp thời."
+urgency: 1
+cant_miss: true
+specialties: [emergency, infectious_disease]
+priors:
+  - complaint: fever
+    default: P5
+    by_age: { infant_0_2m: P3, child_2m_5y: P5, elder_65_74: P4, elder_75p: P3 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [rudd-lancet-2020, nhs-sepsis, byt-qd-5642-2015, loots-bjgp-2022]
+      locator: "Rudd 2020 phần Findings; NHS Sepsis (nhóm nguy cơ cao); 5642 bài Nhiễm khuẩn huyết (yếu tố nguy cơ); Loots 2022 bảng 1"
+      reported: "Toàn cầu năm 2017 có khoảng 48,9 triệu ca nhiễm khuẩn huyết; tỷ lệ mắc cao nhất ở trẻ nhỏ, đỉnh thứ hai ở người cao tuổi; gánh nặng cao ở Đông Nam Á. NHS: nhóm nguy cơ cao gồm trẻ dưới 12 tháng và người trên 75 tuổi. Ở người cao tuổi bệnh cấp nghi nhiễm khuẩn nặng được bác sĩ gia đình khám tại nhà, 42% là nhiễm khuẩn huyết (chọn lọc mạnh)"
+      note: "Không có số liệu về tỷ lệ nhiễm khuẩn huyết trong số người sốt ở cộng đồng Việt Nam. Hai lượt trùng mức ở mọi nhóm tuổi trừ 2 tháng–5 tuổi (lượt A P4, lượt B P5 sau khi chạy thử). Lượt C chọn P5 cho 2 tháng–5 tuổi: nhóm nguy cơ cao theo NHS và 5642 là trẻ sơ sinh, trẻ dưới 12 tháng (nhóm dưới 2 tháng đã ở P3); trẻ sốt không có dấu hiệu nguy hiểm được IMCI và NHS cho theo dõi tại nhà, còn trẻ có dấu hiệu nặng đã được quy tắc mức 2 bắt. Lượt C chạy lại: với P4, trẻ 2 tuổi chỉ sốt cao 1 ngày, không có dấu hiệu nào khác bị xếp mức 2 (tổng xác suất mức 1–2 vượt ngưỡng 2%); với P5 là mức 3 (xem biên bản đối chiếu). Người lớn dưới 65 tuổi P5; 65–74 tuổi P4; từ 75 tuổi P3. Cần bác sĩ duyệt."
+  - complaint: syncope
+    default: P5
+    by_age: { child_5_12: P6, teen_13_17: P6, elder_65_74: P4, elder_75p: P4 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-5642-2015, nhs-sepsis, msd-sepsis, wattanapaiboon-idr-2020, esc-syncope-2018-practical]
+      locator: "5642/QĐ-BYT bài Nhiễm khuẩn huyết mục 2.1 (sốc nhiễm khuẩn, yếu tố nguy cơ); NHS Sepsis; MSD (người cao tuổi); Wattanapaiboon 2020 bảng 2"
+      reported: "Ở khoa cấp cứu Thái Lan, sốt là lý do đi khám của 42,1% người nhiễm khuẩn huyết."
+      note: "Giai đoạn 3 lô 1; hai lượt trùng mức. Chưa có số liệu về nhiễm khuẩn huyết trong số người ngất. Sốc nhiễm khuẩn gây tụt huyết áp, có thể thay đổi ý thức; người già, người có bệnh mạn là nhóm nguy cơ (5642/QĐ-BYT); sốt cao ít gặp hơn ở người cao tuổi (NHS), người cao tuổi có thể không có phản ứng viêm rõ (MSD); hơn một nửa người nhiễm khuẩn huyết đi khám vì lý do khác sốt (Wattanapaiboon). Ngất ở cộng đồng chủ yếu là ngất phản xạ (ESC). Người lớn dưới 65 tuổi P5, từ 65 tuổi P4, trẻ 5–17 tuổi P6; thấp hơn prior của Sốt ở cùng nhóm tuổi. Cần bác sĩ duyệt."
+  - complaint: dizziness
+    default: P5
+    by_age: { child_5_12: P6, teen_13_17: P6, elder_75p: P4 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-5642-2015, nhs-sepsis, msd-sepsis, bosner-bmcfampract-2018]
+      locator: "5642/QĐ-BYT mục 2.1; NHS Sepsis (sốt cao ít gặp hơn ở người cao tuổi); Bösner 2018 bảng 3"
+      note: "Giai đoạn 3 lô 1. Hai lượt trùng mức trừ 18–44 tuổi (A P6, B P5); ngang nguồn nên lượt C chọn mức thận trọng hơn (P5). Chóng mặt ở tuyến ban đầu có rất nhiều nguyên nhân lành tính (Bösner); nhiễm khuẩn huyết biểu hiện chủ yếu bằng choáng, chóng mặt chủ yếu ở người cao tuổi. Từ 75 tuổi P4, 18–74 tuổi P5, trẻ 5–17 tuổi P6. Ước lượng."
+  - complaint: shortness_of_breath
+    default: P5
+    by_age: { infant_0_2m: P4, child_5_12: P6, teen_13_17: P6, elder_65_74: P4, elder_75p: P4 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [nice-ng253, wattanapaiboon-idr-2020, loots-bjgp-2022, byt-qd-5642-2015, ray-critcare-2006]
+      locator: "NG253 chương Evaluating risk (nhịp thở từ 25 lần/phút: nguy cơ cao; 21–24: nguy cơ vừa); Wattanapaiboon bảng 1–2; 5642/QĐ-BYT mục 2.1"
+      reported: "Khó thở nhiều 41,4%, ổ nhiễm ở phổi 49,9% người nhiễm khuẩn huyết ở cấp cứu Thái Lan; người từ 65 tuổi đến cấp cứu vì khó thở có suy hô hấp: viêm phổi cộng đồng 35% (Ray)"
+      note: "Giai đoạn 3 lô 3 (lượt A). Thở nhanh là một tiêu chí nguy cơ của nhiễm khuẩn huyết (NG253; 5642: thở nhanh) và viêm phổi là ổ nhiễm hay gặp nhất, nên một phần người nhiễm khuẩn huyết đi khám vì khó thở. Trong số người chọn Khó thở ở cộng đồng, phần lớn do hen, bệnh phổi tắc nghẽn, viêm phổi chưa nặng, suy tim; ước 0,02–0,2% (P5) ở người lớn dưới 65 tuổi, 0,2–1% (P4) từ 65 tuổi và trẻ dưới 2 tháng (nhóm nguy cơ cao), P6 ở trẻ 5–17 tuổi; cùng cách chia với prior Ngất, Chóng mặt. Ước lượng, cần bác sĩ duyệt."
+findings:
+  - finding: chills_rigors
+    freq: frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [loots-bjgp-2022, wattanapaiboon-idr-2020, byt-qd-5642-2015, nhs-sepsis]
+      locator: "Loots bảng 1; Wattanapaiboon bảng 2; 5642 mục 2.1 (sốt có thể kèm theo rét run hoặc không); NHS (shivery)"
+      reported: "Rét run 66% (nhóm không nhiễm khuẩn huyết 60%); sốt và/hoặc rét run 53,8%"
+      note: "Tần suất trong số người đã sốt. Hai lượt trùng mức."
+  - finding: fever_max_temp
+    dist: { lt_38: 0.20, t38_39: 0.33, ge_39: 0.47 }
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [loots-bjgp-2022, byt-qd-5642-2015, nhs-sepsis]
+      locator: "Loots bảng 1; 5642 mục 2.1 (ca nặng có thể hạ thân nhiệt); NHS (nhiệt độ rất cao hoặc rất thấp)"
+      reported: "Nhiệt độ trung bình 39,0°C (độ lệch chuẩn 0,7) ở nhóm nhiễm khuẩn huyết, 38,5°C ở nhóm không"
+      note: "Trung bình hai lượt. Lựa chọn 'dưới 38°C' gồm cả người thân nhiệt thấp."
+  - finding: fever_duration
+    dist: { d1_2: 0.55, d3_5: 0.30, d6_7: 0.08, gt_7d: 0.07 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [loots-bjgp-2022]
+      locator: "Bảng 1 (bệnh tiến triển nhanh)"
+      reported: "Bệnh tiến triển nhanh ở 84% nhóm nhiễm khuẩn huyết (70% ở nhóm không)"
+      note: "Chỉ lượt A khai báo; gần với phân bố nền, lệch nhẹ về sốt mới vài ngày. Ước lượng."
+  - finding: confusion
+    freq: occasional
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [wattanapaiboon-idr-2020, loots-bjgp-2022, nhs-sepsis, byt-qd-5642-2015]
+      locator: "Wattanapaiboon bảng 2; Loots bảng 1; NHS (confused, slurred speech); 5642 mục 2.1 (có thể thay đổi ý thức)"
+      reported: "Nói ngọng hoặc lú lẫn 22,2% (cấp cứu Thái Lan, tuổi trung vị 67); thay đổi ý thức 54% ở người cao tuổi (tuổi trung vị 80) được bác sĩ gia đình khám tại nhà"
+      note: "Lượt A chọn frequent (Loots), lượt B occasional (Wattanapaiboon). Lượt C chọn occasional: nhóm Thái Lan gần người dùng doctor-v hơn (Đông Nam Á, trẻ hơn); mức thấp hơn cũng giữ cho câu trả lời 'không lú lẫn' không làm giảm mạnh khả năng bệnh. Có lú lẫn thì quy tắc mức 2 đã áp dụng."
+  - finding: drowsy_hard_to_wake
+    freq: occasional
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [wattanapaiboon-idr-2020, nhs-sepsis, byt-qd-5642-2015]
+      locator: "Wattanapaiboon bảng 2 (thay đổi ý thức là triệu chứng khi đến khám 13,0%); NHS (trẻ dưới 5 tuổi khó đánh thức, ngủ nhiều hơn); 5642 mục 2.1"
+      reported: "Thay đổi ý thức 13,0%"
+      note: "Lượt A frequent, lượt B occasional (đều ước lượng). Lượt C chọn occasional theo số liệu Wattanapaiboon; với trẻ dưới 5 tuổi (không hỏi lú lẫn), mức này giữ cho câu trả lời 'không li bì' không làm giảm mạnh khả năng bệnh. Cùng cụm với lú lẫn."
+  - finding: breathing_difficulty
+    freq: frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [wattanapaiboon-idr-2020, loots-bjgp-2022, byt-qd-5642-2015, nhs-sepsis]
+      locator: "Wattanapaiboon bảng 1–2; Loots bảng 1; 5642 mục 2.1 (thở nhanh); NHS (breathing very fast)"
+      reported: "Khó thở nhiều 41,4%; ổ nhiễm ở phổi 49,9%; nhịp thở trung bình 26 lần/phút (Loots)"
+      note: "Hai lượt trùng mức."
+  - finding: cold_hands_feet
+    freq: occasional
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [nhs-sepsis, wattanapaiboon-idr-2020, byt-qd-5642-2015]
+      locator: "NHS (da, môi tái, xám hoặc loang lổ); Wattanapaiboon bảng 1–2 (42,8% sốc nhiễm khuẩn; da loang lổ ghi nhận 1,1%); 5642 mục 2.1 (sốc nhiễm khuẩn)"
+      note: "Hai lượt trùng mức. Dấu hiệu giảm tưới máu thường bị ghi chép thiếu; ước 20–30%."
+  - finding: severe_weakness
+    freq: occasional
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [wattanapaiboon-idr-2020, byt-qd-5642-2015]
+      locator: "Wattanapaiboon bảng 2 (mệt mỏi 16,2%); 5642 mục 2.1"
+      note: "Lượt A frequent, lượt B occasional (đều ước lượng; không có số liệu về mệt lả đến mức không tự đi lại). Lượt C chọn occasional, gần số liệu mệt mỏi 16,2%; có dấu hiệu này thì quy tắc mức 2 đã áp dụng."
+  - finding: decreased_urine
+    freq: occasional
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [wattanapaiboon-idr-2020, nhs-sepsis, byt-qd-5642-2015]
+      locator: "Wattanapaiboon bảng 2 (cả ngày không đi tiểu 4,1%); NHS (trẻ không đi tiểu 12 giờ); 5642 mục 2.1 (thiểu niệu)"
+      note: "Hai lượt trùng mức. Câu hỏi doctor-v (lượng nước tiểu ít hẳn trong 12 giờ) dễ thỏa hơn 'cả ngày không đi tiểu'."
+  - finding: fainting_or_near_fainting
+    freq: occasional
+    freq_by_complaint: { dizziness: frequent }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-5642-2015, wattanapaiboon-idr-2020]
+      locator: "5642 mục 2.1 (sốc nhiễm khuẩn: tụt huyết áp); Wattanapaiboon bảng 1 (42,8% sốc)"
+      note: "Hai lượt trùng mức; choáng, ngất do tụt huyết áp, ước lượng. Giai đoạn 3 lô 1: lượt B thêm frequent khi Chóng mặt, lượt C giữ: người nhiễm khuẩn huyết chọn Chóng mặt chủ yếu bị choáng do tụt huyết áp (5642/QĐ-BYT: sốc nhiễm khuẩn; Wattanapaiboon: 42,8% sốc ở cấp cứu), còn tỷ lệ nền của dấu hiệu này khi Chóng mặt là 0,25 nên mức occasional sẽ làm câu trả lời 'Có' giảm khả năng bệnh. Với Ngất là dấu hiệu ngầm định."
+  - finding: rash_non_blanching
+    freq: frequent
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [nhs-sepsis, wertheim-plosone-2009, byt-qd-5642-2015]
+      locator: "NHS (ban không mất khi ấn); Wertheim phần Results (ban xuất huyết, bầm tím ở 14% ca liên cầu lợn); 5642 (yếu tố nguy cơ: N. meningitidis, S. suis)"
+      note: "Tần suất trong số người nhiễm khuẩn huyết đã có ban: ban do não mô cầu, liên cầu lợn, rối loạn đông máu thường là ban xuất huyết. Hai lượt trùng mức, ước khoảng một nửa."
+  - finding: cough
+    freq: occasional
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [wattanapaiboon-idr-2020, loots-bjgp-2022]
+      locator: "Wattanapaiboon bảng 2; Loots bảng 1"
+      reported: "Ho có đờm 25,2%, ho khan 3,0% khi đến khám; ổ nhiễm hô hấp 40–50%"
+      note: "Chỉ lượt A liên kết (ở mức frequent). Lượt C chọn occasional theo tỷ lệ ho khi đến khám (khoảng 28%); mức này bằng tỷ lệ nền 0,2 nên trung tính, tránh làm mọi người sốt kèm ho tăng khả năng nhiễm khuẩn huyết."
+  - finding: immunocompromised
+    freq: occasional
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [wattanapaiboon-idr-2020, byt-qd-5642-2015, nhs-sepsis]
+      locator: "Wattanapaiboon bảng 1; 5642 (yếu tố nguy cơ); NHS (higher-risk groups)"
+      reported: "Suy giảm miễn dịch 10,8%"
+      note: "Hai lượt trùng mức."
+  - finding: diabetes
+    freq: occasional
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [wattanapaiboon-idr-2020, loots-bjgp-2022, byt-qd-5642-2015]
+      locator: "Wattanapaiboon bảng 1; Loots bảng 1; 5642 (yếu tố nguy cơ: tiểu đường)"
+      reported: "Đái tháo đường 25,2% (tuổi trung vị 67); 36% so với 24% ở nhóm không (tuổi trung vị 80)"
+      note: "Hai lượt trùng mức; người dùng doctor-v trẻ hơn các nhóm nghiên cứu."
+  - finding: child_unable_to_drink
+    freq: occasional
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [nhs-sepsis]
+      locator: "Trẻ dưới 5 tuổi: not feeding"
+      note: "Hai lượt trùng mức. Chỉ hỏi ở trẻ 2 tháng–5 tuổi; ước lượng, chưa có số liệu."
+  - finding: fever
+    freq: frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [wattanapaiboon-idr-2020, byt-qd-5642-2015, nhs-sepsis, msd-sepsis]
+      locator: "Wattanapaiboon 2020 bảng 2; 5642/QĐ-BYT mục 2.1; NHS Sepsis (nhiệt độ cao hoặc thấp; sốt cao ít gặp hơn ở người cao tuổi)"
+      reported: "Sốt và/hoặc rét run 53,8%; sốt là lý do đi khám 42,1% (cấp cứu Thái Lan, tuổi trung vị 67)."
+      note: "Giai đoạn 3 lô 1. Có ý nghĩa với Ngất và Chóng mặt (với Sốt là dấu hiệu ngầm định). Lượt A very_frequent (từ 65 tuổi frequent; mô tả bằng lời), lượt B frequent (số liệu Thái Lan). Lượt C chọn frequent theo số liệu: sốt rất thường gặp nhưng ca nặng có thể hạ thân nhiệt (5642/QĐ-BYT), và người nhiễm khuẩn huyết chọn Ngất, Chóng mặt có lẽ ít sốt hơn người chọn Sốt. Mức very_frequent sẽ làm câu trả lời 'không sốt' giảm khả năng bệnh khoảng 5 lần. Tỷ lệ nền 0,05."
+  - finding: dizziness_on_standing
+    freq: occasional
+    freq_by_complaint: { syncope: frequent, dizziness: frequent }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-5642-2015, nhs-sepsis]
+      locator: "5642/QĐ-BYT mục 2.1 (sốc nhiễm khuẩn: huyết áp tâm thu dưới 90 mmHg)"
+      note: "Giai đoạn 3 lô 1; chỉ lượt B có (frequent), lượt C giữ cho Ngất, Chóng mặt: tụt huyết áp và mất nước gây choáng khi đứng; ở người nhiễm khuẩn huyết chọn hai triệu chứng chính này, ước khoảng một nửa. Mức chung occasional để câu trả lời 'Không' không hạ nhiễm khuẩn huyết ở người chọn Sốt (lý do của lượt B chỉ đúng với người đã choáng, ngất). Tỷ lệ nền 0,15. Ước lượng."
+  - finding: syncope_trigger
+    dist: { standing_heat: 0.10, emotion_pain: 0.05, standing_up: 0.30, toilet_cough: 0.10, exertion: 0.04, lying: 0.06, no_trigger: 0.35 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-5642-2015, msd-sepsis]
+      locator: "5642/QĐ-BYT mục 2.1"
+      note: "Giai đoạn 3 lô 1; trung bình hai lượt. Phân bố trong số người đã ngất hoặc suýt ngất. Tụt huyết áp và mất nước làm choáng khi vừa đứng dậy hoặc không có yếu tố khởi phát rõ. Ước lượng."
+  - finding: not_recovered_after_faint
+    freq: occasional
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-5642-2015, nhs-sepsis]
+      locator: "5642/QĐ-BYT mục 2.1 (có thể thay đổi tình trạng ý thức); NHS (lú lẫn, nói ngọng)"
+      note: "Giai đoạn 3 lô 1; chỉ lượt B có (dấu hiệu thêm sau lượt A), lượt C giữ. Tính trong số người đã ngất hoặc suýt ngất. Ước 20%. Tỷ lệ nền 0,05."
+  - finding: pulse_measured
+    dist: { lt_40: 0.004, n40_100: 0.155, n100_150: 0.221, gt_150: 0.02, not_measured: 0.6 }
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-5642-2015, msd-sepsis]
+      locator: "5642/QĐ-BYT mục 2.1 (nhịp tim nhanh); MSD (tim nhanh)"
+      note: "Giai đoạn 3 lô 1; trung bình hai lượt. 'Chưa đo' giữ đúng tỷ lệ nền 0,6. Nhịp tim nhanh là dấu hiệu thường gặp; ước hơn một nửa số người đo được có mạch trên 100. Ước lượng."
+  - finding: dizziness_pattern
+    dist: { brief_episodes: 0.12, long_episodes: 0.23, continuous: 0.58, chronic: 0.07 }
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [msd-sepsis, byt-qd-5642-2015]
+      note: "Giai đoạn 3 lô 1; trung bình hai lượt. Tính trong số người đã chóng mặt. Bệnh cấp, choáng kéo dài liên tục trong những ngày bị bệnh. Ước lượng."
+  - finding: dyspnea_onset
+    dist: { sudden: 0.10, hours_days: 0.80, weeks: 0.10 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [loots-bjgp-2022, byt-qd-5642-2015]
+      locator: "Loots bảng 1 (bệnh tiến triển nhanh 84%); 5642/QĐ-BYT mục 2.1"
+      note: "Giai đoạn 3 lô 3 (lượt A). Tính trong số người khó thở. Nhiễm khuẩn huyết tiến triển trong vài giờ đến vài ngày; khó thở đột ngột trong vài phút gợi ý tắc mạch phổi, phản vệ, tràn khí màng phổi. Ước lượng."
+  - finding: dyspnea_severity
+    dist: { exertion: 0.30, rest: 0.50, cannot_speak: 0.20 }
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [nice-ng253, wattanapaiboon-idr-2020, byt-qd-5642-2015]
+      locator: "NG253 chương Evaluating risk (nhịp thở từ 25 lần/phút; cần thở ôxy mới); Wattanapaiboon bảng 2 (khó thở nhiều 41,4%)"
+      note: "Giai đoạn 3 lô 3 (lượt A). Tính trong số người khó thở. Khó thở của nhiễm khuẩn huyết là thở nhanh lúc nghỉ do toan chuyển hóa, viêm phổi; khó thở chỉ khi gắng sức ít gặp hơn ở người nền. Số liệu ở cấp cứu; người dùng cộng đồng nhẹ hơn. Khó thở lúc nghỉ, không nói trọn câu đã có quy tắc mức 2, mức 1. Ước lượng."
+warning_signs:
+  - confusion
+  - drowsy_hard_to_wake
+  - breathing_difficulty
+  - cold_hands_feet
+  - severe_weakness
+  - decreased_urine
+  - rash_non_blanching
+  - seizure_recent
+  - fainting_or_near_fainting
+self_care_vi:
+  - "Không tự chữa tại nhà và không chờ xem có đỡ không."
+  - "Trong lúc chờ xe cấp cứu, cho người bệnh nằm nghỉ và mang theo các thuốc đang dùng."
+see_doctor_vi:
+  - "Gọi 115 hoặc đến khoa cấp cứu gần nhất ngay."
+  - "Nhiễm khuẩn huyết cần được dùng kháng sinh càng sớm càng tốt tại bệnh viện."
+  - "Báo cho nhân viên y tế các bệnh nền, thuốc đang dùng và nơi có thể bị nhiễm khuẩn như phổi, đường tiểu, vết thương."
+review:
+  status: draft
+  authors: ["agent:pass-a"]
+  updated: "2026-10-31"
+  notes_vi: "Giai đoạn 3, lô 3, lượt A (31/10/2026). Không sửa phần đã có (đã đối chiếu và kiểm định). Đã thêm: (a) prior Khó thở mặc định P5, trẻ dưới 2 tháng P4, trẻ 5–17 tuổi P6, từ 65 tuổi P4 (lý do trong ghi chú; cùng cách chia với prior Ngất, Chóng mặt); (b) 2 liên kết: dyspnea_onset (đột ngột 0,10; vài giờ đến vài ngày 0,80; nhiều tuần 0,10), dyspnea_severity (khi gắng sức 0,30; lúc nghỉ 0,50; không nói trọn câu 0,20). Nguồn mới: ray-critcare-2006 (tóm tắt trên Europe PMC; cùng bản với pass-a/sources, chép vào extend/sources). Lượt A tự mở NICE NG253, chương Evaluating risk (nice.org.uk mở được trong phiên này): nguy cơ cao khi nhịp thở từ 25 lần/phút hoặc cần thở ôxy mới; nguy cơ vừa khi 21–24 lần/phút. Với triệu chứng chính Khó thở, các liên kết cũ fever (frequent), chills_rigors, confusion, drowsy_hard_to_wake, cold_hands_feet, severe_weakness, decreased_urine, cough (occasional, gần tỷ lệ nền) nay mang thông tin; breathing_difficulty là dấu hiệu ngầm định. Không liên kết thêm khò khè, khó thở khi nằm, phù hai chân: không có nguồn và các dấu hiệu này nghiêng về hen, bệnh phổi tắc nghẽn, suy tim. Nhận xét về giá trị cũ, không sửa: fever frequent sẽ làm người khó thở không sốt hạ nhiễm khuẩn huyết khoảng 2 lần, hợp lý; mô hình một bệnh vẫn chia xác suất giữa nhiễm khuẩn huyết và viêm phổi (ghi chú cũ, mục 3)."
