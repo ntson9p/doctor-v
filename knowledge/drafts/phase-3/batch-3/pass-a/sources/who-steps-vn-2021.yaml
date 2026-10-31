@@ -1,0 +1,12 @@
+id: who-steps-vn-2021
+type: statistic
+title: "Viet Nam STEPS survey 2021: noncommunicable disease risk factors"
+publisher: "Bộ Y tế; World Health Organization, Văn phòng Khu vực Tây Thái Bình Dương"
+date: "2025"
+url: "https://extranet.who.int/ncdsmicrodata/index.php/catalog/948"
+license_class: L2
+license_note: "Báo cáo: CC BY-NC-SA 3.0 IGO; vi dữ liệu chỉ dùng phi thương mại."
+default_tier: B
+accessed: "2026-10-31"
+verified: false
+notes_vi: "Lượt A không mở được trang (WebFetch bị chặn). Số liệu lấy từ docs/research/vietnam-sources.md, mục STEPS (đã được người soạn tài liệu đó đánh dấu [XM]): thu thập 01–03/2021, 4.738 người 18–69 tuổi; hút thuốc 41,1% ở nam, 0,6% ở nữ; đường huyết lúc đói từ 7,0 mmol/L hoặc đang điều trị 7,1%. Lượt C cần mở báo cáo để đặt verified: true."

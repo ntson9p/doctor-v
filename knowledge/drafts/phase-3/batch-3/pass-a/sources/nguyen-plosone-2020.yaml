@@ -1,0 +1,14 @@
+id: nguyen-plosone-2020
+type: statistic
+title: "The second national tuberculosis prevalence survey in Vietnam"
+publisher: "PLoS ONE 2020;15(4):e0232142 (Nguyen và cs.)"
+date: "2020"
+url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC7179905/"
+doi: "10.1371/journal.pone.0232142"
+pmid: "32324806"
+license_class: L1
+license_note: "PLoS ONE xuất bản theo CC BY 4.0: dùng và chuyển thể, ghi công."
+default_tier: B
+accessed: "2026-10-31"
+verified: false
+notes_vi: "Lượt A không mở được toàn văn: phiên làm việc chặn WebFetch (máy chủ không phân giải được tên miền), chỉ đọc tóm tắt do công cụ tìm kiếm trả về. Điều tra 10/2017–02/2018, chọn mẫu cụm nhiều tầng: 322 ca lao phổi có bằng chứng vi khuẩn trên 100.000 người lớn (KTC 95% 260–399); tỷ số nam/nữ 4,0 (2,8–5,8). Phỏng vấn sâu người bệnh lao: chỉ 57,9% (51,3–64,3%) có ho từ 2 tuần; 32,1% (26,3–38,6%) không có triệu chứng nào gợi ý lao dù phim phổi bất thường. Lượt C cần mở PMC7179905 để đối chiếu; số PMID lấy từ kết quả tìm kiếm."

@@ -1,0 +1,198 @@
+id: lung_cancer
+names:
+  vi: "Ung thư phổi"
+  vi_common: ["Ung thư phế quản – phổi"]
+  en: "Lung cancer"
+codes:
+  icd10: "C34"
+  icd10_verified: false
+summary_vi:
+  - "Ung thư phổi là một nguyên nhân ít gặp của ho kéo dài, ho ra máu hoặc sụt cân."
+  - "Hay gặp hơn ở người từ 40 tuổi và người đang hoặc đã từng hút thuốc."
+  - "Phần lớn những triệu chứng này do bệnh khác, nhưng cần bác sĩ khám để loại trừ."
+urgency: 4
+cant_miss: false
+rule_out: true
+specialties: [respiratory, general_medicine]
+applicability:
+  age_groups: [teen_13_17, adult_18_44, adult_45_64, elder_65_74, elder_75p]
+  reason_vi: "Ung thư phổi hầu như không gặp ở trẻ dưới 13 tuổi."
+priors:
+  - complaint: cough
+    default: P6
+    by_age:
+      adult_45_64: P5
+      elder_65_74: P4
+      elder_75p: P4
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [iarc-globocan-vn-2022, nice-ng12]
+      reported: "24.426 ca mới năm 2022 ở Việt Nam (nam 17.007, nữ 7.419)"
+      note: "Thang tuyệt đối. Khoảng 25 ca mới trên 100.000 dân mỗi năm, tập trung từ 45 tuổi. Người ho đi khám phần lớn do nhiễm trùng; ung thư phổi ước 0,2–1% (P4) từ 65 tuổi, 0,02–0,2% (P5) ở 45–64 tuổi, dưới 0,02% (P6) khi trẻ hơn. NICE NG12 lấy mốc 40 tuổi để chụp phim phổi. Ho kéo dài, ho ra máu, sụt cân, hút thuốc làm khả năng tăng. Ước lượng."
+  - complaint: shortness_of_breath
+    default: P6
+    by_age:
+      adult_45_64: P5
+      elder_65_74: P5
+      elder_75p: P5
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [iarc-globocan-vn-2022, nice-ng12]
+      note: "Khó thở ít khi là lý do chính khiến người ung thư phổi đi khám lần đầu; người khó thở có nhiều nguyên nhân hay gặp hơn. Ước P5 từ 45 tuổi, P6 khi trẻ hơn."
+  - complaint: chest_pain
+    default: P6
+    by_age:
+      adult_45_64: P5
+      elder_65_74: P5
+      elder_75p: P5
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [iarc-globocan-vn-2022, nice-ng12]
+      note: "Đau ngực âm ỉ kéo dài là một triệu chứng trong NG12; người đau ngực phần lớn do thành ngực, tiêu hóa, tim mạch. Ước P5 từ 45 tuổi, P6 khi trẻ hơn."
+prior_modifiers:
+  - when: { sex: [male] }
+    factor: 1.4
+    evidence:
+      tier: C
+      basis: numeric
+      sources: [iarc-globocan-vn-2022]
+      reported: "nam 17.007, nữ 7.419 ca mới (tỷ số khoảng 2,3)"
+      note: "Chọn 1,4 và 0,6 (tỷ số 2,3)."
+  - when: { sex: [female] }
+    factor: 0.6
+    evidence:
+      tier: C
+      basis: numeric
+      sources: [iarc-globocan-vn-2022]
+      reported: "nam 17.007, nữ 7.419 ca mới"
+      note: "Xem hệ số cho nam. Phụ nữ không hút thuốc vẫn có thể mắc."
+findings:
+  - finding: cough
+    freq: frequent
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [nice-ng12]
+      note: "Ho là triệu chứng hay gặp nhất; các loạt ca ở bệnh viện (chỉ thấy qua kết quả tìm kiếm) ghi khoảng 58–68%. Dùng khi triệu chứng chính là khó thở hoặc đau ngực. Ước frequent."
+  - finding: cough_duration
+    dist: { lt_1w: 0.05, w1_2: 0.08, w2_8: 0.37, gt_8w: 0.5 }
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [nice-ng12]
+      note: "Ho do ung thư kéo dài, không hết như ho do vi rút; NHS và Macmillan nhắc mốc ho từ 3 tuần. Trong số người có ho; ước lượng."
+  - finding: hemoptysis
+    freq: occasional
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [nice-ng12, nhs-coughing-up-blood]
+      reported: "ho ra máu 20–35% (các loạt ca, chỉ thấy qua kết quả tìm kiếm)"
+      note: "NG12: người từ 40 tuổi ho ra máu không rõ nguyên nhân cần được chuyển khám ngay theo đường nghi ung thư. Ước occasional."
+  - finding: weight_loss_unintended
+    freq: frequent
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [nice-ng12]
+      reported: "sụt cân 47–60% (các loạt ca, chỉ thấy qua kết quả tìm kiếm)"
+      note: "Số bệnh viện thường cao hơn lúc mới có triệu chứng; vẫn chọn frequent."
+  - finding: breathing_difficulty
+    freq: frequent
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [nice-ng12]
+      reported: "khó thở 30–60% (các loạt ca)"
+      note: "Dùng khi triệu chứng chính là ho hoặc đau ngực. Ước frequent."
+  - finding: dyspnea_onset
+    dist: { sudden: 0.05, hours_days: 0.15, weeks: 0.8 }
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [nice-ng12]
+      note: "Khó thở tăng dần nhiều tuần; đột ngột khi có tràn dịch, tắc mạch phổi. Trong số người có khó thở; ước lượng."
+  - finding: dyspnea_severity
+    dist: { exertion: 0.7, rest: 0.25, cannot_speak: 0.05 }
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [nice-ng12]
+      note: "Thường khó thở khi gắng sức. Trong số người có khó thở; ước lượng."
+  - finding: chest_pain
+    freq: occasional
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [nice-ng12]
+      reported: "đau ngực 19–34% (các loạt ca)"
+      note: "Dùng khi triệu chứng chính là ho hoặc khó thở."
+  - finding: chest_pain_duration
+    dist: { seconds: 0.05, minutes: 0.1, over_15min: 0.2, days: 0.65 }
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [nice-ng12]
+      note: "Đau ngực thường âm ỉ, kéo dài nhiều ngày. Trong số người có đau ngực; ước lượng."
+  - finding: fatigue
+    freq: frequent
+    evidence:
+      tier: C
+      basis: verbal
+      sources: [nice-ng12]
+      note: "Mệt không rõ nguyên nhân nằm trong danh sách triệu chứng của NG12. Ước frequent (tỷ lệ nền 20%)."
+  - finding: smoker
+    freq: frequent
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [nice-ng12, who-steps-vn-2021]
+      reported: "hút thuốc 41,1% nam, 0,6% nữ (STEPS 2021)"
+      note: "Hút thuốc là nguyên nhân chính; câu hỏi chỉ hỏi đang hút, người đã bỏ thuốc vẫn có nguy cơ. Khoảng 70% ca là nam; ước 40–60% người bệnh đang hút (frequent)."
+  - finding: lymph_node_swelling
+    freq: occasional
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [nice-ng12]
+      note: "NG12 xếp hạch trên đòn hoặc hạch cổ kéo dài vào dấu hiệu cần chụp phim phổi. Ước occasional."
+  - finding: fever
+    freq: rare
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [nice-ng12]
+      note: "Sốt không phải triệu chứng thường gặp, trừ khi có viêm phổi kèm theo. Mức rare dưới tỷ lệ nền 5% nên câu 'có sốt' nghiêng về bệnh nhiễm trùng. Ước lượng."
+warning_signs:
+  - hemoptysis_large
+  - es_severe_breathing
+self_care_vi:
+  - "Bỏ thuốc lá, thuốc lào; tránh khói thuốc của người khác."
+  - "Ghi lại triệu chứng: ho bao lâu, có máu không, cân nặng thay đổi thế nào, để kể với bác sĩ."
+  - "Không dùng thuốc ho, thuốc nam kéo dài thay cho việc đi khám."
+see_doctor_vi:
+  - "Đi khám trong vài ngày để bác sĩ nghe phổi và cho chụp phim phổi khi cần."
+  - "Nên đi khám sớm nếu từ 40 tuổi, ho quá 3 tuần, ho ra máu, hoặc sụt cân không rõ lý do."
+  - "Đi cấp cứu ngay nếu ho ra nhiều máu hoặc khó thở nhiều."
+sources: [nice-ng12, iarc-globocan-vn-2022]
+review:
+  status: draft
+  authors: ["agent:pass-a"]
+  updated: "2026-10-31"
+  notes_vi: "Giai đoạn 3, lô 3, lượt A (31/10/2026). rule_out: true (nhãn 'Bác sĩ cần loại trừ'); urgency 4 như gợi ý. Câu chữ của summary_vi, self_care_vi, see_doctor_vi cần bác sĩ duyệt: viết để người dùng hiểu cần đi khám, không nói về tiên lượng, không gây hoảng sợ. Phiên làm việc chặn WebFetch, nên lượt A không mở được NG12, GLOBOCAN hay loạt ca nào; tần suất triệu chứng là khoảng số của các loạt ca bệnh viện chỉ thấy qua kết quả tìm kiếm (không đưa vào sổ nguồn vì chưa xác định được bài gốc), mọi liên kết bậc C. Cần bác sĩ xem: (1) prior theo tuổi; (2) applicability loại trẻ dưới 13 tuổi; (3) hệ số giới 1,4 và 0,6 cộng với câu hút thuốc có thể đếm trùng một phần; (4) danh mục chưa có câu hỏi đã từng hút thuốc (đã bỏ): câu smoker chỉ hỏi đang hút; đề xuất bên dưới; (5) chưa có câu hỏi khàn tiếng kéo dài (không đề xuất vì chưa có nguồn mở được); (6) mã ICD-10 chưa đối chiếu."
+proposed_findings:
+  - id: former_smoker
+    kind: risk_factor
+    type: binary
+    label_vi: "Đã từng hút thuốc nhiều năm"
+    question_vi: "Trước đây có từng hút thuốc lá, thuốc lào nhiều năm không?"
+    requires:
+      - { finding: smoker, is: absent }
+    applies_to:
+      age_groups: [adult_18_44, adult_45_64, elder_65_74, elder_75p]
+    leak: 0.1
+    leak_note: "Ước lượng của lượt A: khoảng 1 trong 10 người lớn hiện không hút từng hút thuốc nhiều năm (nam giới bỏ thuốc); cần số liệu GATS, STEPS."
+    notes_vi: "NICE NG12 dùng 'đã từng hút thuốc' làm tiêu chí chụp phim phổi; người bệnh phổi tắc nghẽn, ung thư phổi hay đã bỏ thuốc khi có triệu chứng, nên câu smoker (đang hút) bỏ sót họ. Lượt A, lô 3."
