@@ -157,6 +157,7 @@ findings:
       note: "Lượt B. Chỉ hỏi trẻ 2 tháng–5 tuổi. Câu hỏi chỉ tính lõm sâu phần ngực dưới; rút lõm nhẹ thường gặp nhưng lõm rõ là dấu hiệu nặng. Ước occasional ở cộng đồng. Đã có quy tắc mức 2."
   - finding: apnea_cyanosis_spells
     freq: rare
+    above_leak_ok: true
     freq_by_age:
       infant_0_2m: occasional
     evidence:
@@ -164,15 +165,16 @@ findings:
       basis: verbal
       sources: [nice-ng9, byt-qd-3312-2015, nhs-bronchiolitis]
       locator: "NG9 1.1.5 (trẻ dưới 6 tuần có thể chỉ biểu hiện bằng ngừng thở), 1.2.1; 3312 tr. 276 (thể nặng có thể tím tái, ngừng thở)"
-      note: "Lượt B. Trẻ dưới 2 tháng: occasional; trẻ lớn hơn: rare (vẫn cao hơn tỷ lệ nền 1%). Ước lượng. Đã có quy tắc mức 1."
+      note: "Lượt B. Trẻ dưới 2 tháng: occasional; trẻ lớn hơn: rare, vẫn cao hơn tỷ lệ nền 1% (above_leak_ok). Ước lượng. Đã có quy tắc mức 1."
   - finding: grunting
     freq: rare
+    above_leak_ok: true
     evidence:
       tier: B
       basis: verbal
       sources: [nice-ng9, byt-qd-3312-2015]
       locator: "NG9 1.2.1 (thở rên là dấu hiệu suy hô hấp nặng); 3312 tr. 276"
-      note: "Lượt B. Dấu hiệu của ca nặng; ước rare ở cộng đồng, cao hơn tỷ lệ nền 1%. Đã có quy tắc mức 2."
+      note: "Lượt B. Dấu hiệu của ca nặng; ước rare ở cộng đồng, cao hơn tỷ lệ nền 1% (above_leak_ok: gặp ở bệnh này nhiều hơn ở trẻ ho không mắc bệnh liên kết). Đã có quy tắc mức 2."
   - finding: child_feeding_reduced
     freq: occasional
     evidence:

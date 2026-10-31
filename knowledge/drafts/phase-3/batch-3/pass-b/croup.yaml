@@ -152,12 +152,13 @@ findings:
       note: "Lượt B. Phân bố trong số trẻ khó thở. Triệu chứng khởi phát đột ngột trong đêm, sau 1–3 ngày viêm long; người nhà có thể chọn 'đột ngột' hoặc 'vài giờ'. Ước lượng."
   - finding: chest_indrawing
     freq: rare
+    above_leak_ok: true
     evidence:
       tier: C
       basis: verbal
       sources: [bjornson-cmaj-2013, byt-qd-3312-2015, nhs-croup]
       locator: "Bjornson 2013 hộp 3 (ca nhẹ: không hoặc rút lõm nhẹ); 3312 tr. 268 (độ 2: co kéo cơ hô hấp mạnh)"
-      note: "Lượt B. Chỉ hỏi trẻ 2 tháng–5 tuổi; câu hỏi chỉ tính lõm sâu phần ngực dưới, gặp ở ca vừa, nặng. Ước rare ở cộng đồng, cao hơn tỷ lệ nền 1%. Đã có quy tắc mức 2."
+      note: "Lượt B. Chỉ hỏi trẻ 2 tháng–5 tuổi; câu hỏi chỉ tính lõm sâu phần ngực dưới, gặp ở ca vừa, nặng. Ước rare ở cộng đồng, cao hơn tỷ lệ nền 1% (above_leak_ok: dấu hiệu của ca nặng vẫn gặp ở bệnh này nhiều hơn ở người không bệnh). Đã có quy tắc mức 2."
   - finding: wheeze
     freq: rare
     evidence:
