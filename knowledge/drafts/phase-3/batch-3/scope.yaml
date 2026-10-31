@@ -51,6 +51,10 @@ extend:
 # copd_known, estrogen_use, chest_pain, chest_pain_duration, chest_pain_exertional, chest_pain_sudden_severe,
 # chest_pain_radiates_back, chest_wall_tenderness, leg_swelling_both.
 
+# Không liên kết dấu hiệu chung `chest_pain` (người bảo trì, 31/10/2026): với Đau ngực nó được ngầm định nên không là
+# bằng chứng; với Ho, Khó thở thì chest_pain_pressure và pleuritic_chest_pain mang bằng chứng, liên kết thêm
+# chest_pain sẽ tính một cơn đau hai lần. Các dấu hiệu chest_pain_* (thời gian, khi gắng sức…) vẫn liên kết được.
+
 # Việc của người bảo trì sau lượt C:
 # - điền cant_miss của các triệu chứng chính mới;
 # - thêm bệnh mới vào `conditions` của các quy tắc lô 3;
