@@ -29,6 +29,9 @@ answers:
   diabetes: absent
   smoker: absent
   edema_face_hands: absent
+  chest_pain: present
+  chest_pain_duration: minutes
+  chest_pain_exertional: present
 default_unmentioned: absent
 expected:
   condition: other

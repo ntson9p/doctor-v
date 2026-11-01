@@ -75,3 +75,32 @@
   help_vi: "Ví dụ cấy lúa, dọn dẹp sau lũ, khơi cống, bắt chuột, hoặc ở nhà có nhiều chuột."
   leak: 0.2
   leak_note: "Ở nông thôn, làm ruộng và lội nước rất phổ biến; người bảo trì ước lượng khoảng 20% người sốt, lượt A/B/C đối chiếu."
+
+# ---------- Giai đoạn 3, lô 3 ----------
+- id: tb_contact
+  kind: exposure
+  type: binary
+  label_vi: "Tiếp xúc gần người bị lao"
+  question_vi: "Trong nhà hoặc người hay tiếp xúc gần có ai đang bị lao không?"
+  leak: 0.02
+  leak_note: "Việt Nam có gánh nặng lao cao; người bảo trì ước lượng tỷ lệ người ho có người tiếp xúc gần đang điều trị lao."
+- id: allergen_exposure
+  kind: exposure
+  type: binary
+  label_vi: "Vừa ăn món lạ, dùng thuốc mới hoặc bị đốt"
+  question_vi: "Trước khi khó chịu, có ăn món lạ, dùng thuốc mới, bị ong đốt không?"
+  help_vi: "Tính trong khoảng 2 giờ trước khi bắt đầu thấy khó chịu. Kể cả tiêm thuốc, ăn hải sản, lạc (đậu phộng), hoặc bị côn trùng khác đốt."
+  alt_question:
+    text_vi: "Trước khi khó chịu, có ăn, dùng thứ gì lạ, hoặc bị đốt không?"
+  leak: moderate
+# Thêm sau lượt A phần a (31/10/2026), trước khi agent viết ca giữ kín làm việc.
+- id: biomass_smoke_exposure
+  kind: exposure
+  type: binary
+  label_vi: "Nhiều năm hít khói bếp, khói bụi"
+  question_vi: "Nhiều năm có đun bếp củi, than hoặc làm nơi nhiều khói bụi không?"
+  help_vi: "Kể cả đun rơm, trấu trong nhà, hoặc làm ở xưởng, mỏ nhiều bụi."
+  applies_to:
+    age_groups: [adult_18_44, adult_45_64, elder_65_74, elder_75p]
+  leak: 0.2
+  leak_note: "Đun nấu bằng củi, than còn phổ biến ở nông thôn; người bảo trì ước lượng."

@@ -1,0 +1,53 @@
+id: h-sob-002
+set: holdout
+title_vi: "Nam 69 tuổi bị bệnh phổi tắc nghẽn mạn tính, 4 ngày khó thở tăng khi đi lại, đờm nhiều hơn, chuyển vàng xanh, SpO2 94%"
+narrative_vi: "Ông B., 69 tuổi, ở Phú Thọ, hút thuốc lào hơn 40 năm, bỏ được 3 năm. Năm năm trước ông được chẩn đoán bệnh phổi tắc nghẽn mạn tính, dùng bình xịt hằng ngày. Nhiều năm nay sáng nào ông cũng ho khạc đờm trắng. Sau một đợt cảm, 4 ngày nay ông khó thở hơn hẳn: đi ra sân, lên bậc thềm là thở dốc phải dừng; ngồi nghỉ thì thở được. Ông ho nhiều hơn, đờm nhiều hơn, đặc, màu vàng xanh, có lúc nghe khò khè. Ông xịt thuốc cắt cơn thì đỡ được một lúc. Con trai đo SpO2 được 94%. Ông không sốt, tỉnh táo, ăn uống được, không đau ngực, không phù chân, nằm không khó thở hơn, không ho ra máu."
+patient:
+  age_years: 69
+  sex: male
+  region: north
+  month: 12
+complaint: shortness_of_breath
+answers:
+  copd_known: present
+  reliever_no_relief: absent
+  former_smoker: present
+  cough: present
+  cough_duration: gt_8w
+  productive_cough: present
+  wheeze: present
+  recent_viral_illness: present
+  dyspnea_onset: hours_days
+  dyspnea_severity: exertion
+  spo2_measured: s92_95
+  fever: absent
+  chest_pain: absent
+  chest_pain_pressure: absent
+  pleuritic_chest_pain: absent
+  leg_swelling_both: absent
+  leg_swelling_one_side: absent
+  orthopnea: absent
+  hemoptysis: absent
+  confusion: absent
+  drowsy_hard_to_wake: absent
+  cold_hands_feet: absent
+  severe_weakness: absent
+  es_severe_breathing: absent
+  smoker: absent
+  known_heart_disease: absent
+  hypertension_known: absent
+  diabetes: absent
+  asthma_known: absent
+  weight_loss_unintended: absent
+default_unmentioned: absent
+expected:
+  condition: copd_exacerbation
+  acceptable: []
+  triage: 3
+source:
+  basis: "Đợt cấp bệnh phổi tắc nghẽn mạn tính sau nhiễm vi rút: khó thở tăng, đờm nhiều hơn và đổi màu trong 4 ngày (2767/QĐ-BYT mục 3.1; GOLD 2026). 2767/QĐ-BYT Bảng 3.2: điều trị ngoại trú khi triệu chứng nhẹ (khó thở khi gắng sức, SpO2 từ 92%, tỉnh táo), nhập viện khi khó thở lúc nghỉ, SpO2 dưới 92%, đáp ứng kém. Cần khám để được kê kháng sinh, corticoid ngắn ngày trong ngày, nên mức 3."
+  references:
+    - byt-qd-2767-2023
+    - gold-2026
+author: "agent:vignette-holdout"
+notes_vi: "Ho mạn tính nhiều năm nên thời gian ho chọn 'từ 2 tháng trở lên'. Không sốt, tỉnh, SpO2 94%."

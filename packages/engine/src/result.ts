@@ -28,6 +28,7 @@ export interface ConditionScore {
   display: DisplayPercent;
   urgency: TriageLevel;
   cantMiss: boolean;
+  ruleOut: boolean;
   supporting: Contribution[];
   opposing: Contribution[];
 }
@@ -124,6 +125,7 @@ export function sessionResult(kb: CompiledKb, state: SessionState): SessionResul
       display: displayPercent(probability, params.display),
       urgency: c.urgency,
       cantMiss: c.cantMiss,
+      ruleOut: c.ruleOut,
       ...contributions(idx, items, links, state.complaintId),
     });
   });

@@ -1,0 +1,230 @@
+id: acute_bronchitis
+names:
+  vi: "Viêm phế quản cấp"
+  vi_common: ["Viêm phế quản", "Viêm khí phế quản cấp"]
+  en: "Acute bronchitis"
+codes:
+  icd10: "J20.9"
+  icd10_verified: false
+summary_vi:
+  - "Viêm cấp ở niêm mạc phế quản, phần lớn do vi rút, thường sau cảm lạnh hoặc cúm."
+  - "Ho là triệu chứng chính, có thể có đờm, đau ngực khi ho, hơi khó thở; thường không sốt hoặc chỉ sốt nhẹ."
+  - "Phần lớn tự khỏi, nhưng ho có thể kéo dài 2–3 tuần."
+urgency: 5
+cant_miss: false
+specialties: [general_medicine, respiratory]
+priors:
+  - complaint: cough
+    default: P1
+    by_age:
+      infant_0_2m: P3
+      child_2m_5y: P2
+      elder_75p: P2
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [vanvugt-bmj-2013, kinkade-afp-2016, frese-jcmr-2011, byt-qd-4235-2012]
+      locator: "van Vugt 2013 bảng 1; 4235/QĐ-BYT bài Viêm phế quản cấp (tr. 30–32)"
+      reported: "người lớn ho cấp ở tuyến ban đầu (GRACE, 12 nước châu Âu): 5% viêm phổi, phần lớn còn lại là nhiễm trùng hô hấp dưới không viêm phổi; ho là lý do đi khám ngoại trú hay gặp nhất ở Mỹ (Kinkade)"
+      note: "Thang tuyệt đối (kb-guide 2.3). Ở người lớn đi khám vì ho cấp, viêm phế quản cấp (nhiễm trùng hô hấp dưới không viêm phổi) và cảm lạnh là hai chẩn đoán hay gặp nhất; ước từ 20% trở lên (P1) cho trẻ từ 5 tuổi đến người 74 tuổi. Trẻ dưới 5 tuổi ho chủ yếu do cảm lạnh, viêm tiểu phế quản, viêm thanh quản nên hạ xuống P2; trẻ dưới 2 tháng ít được chẩn đoán viêm phế quản (P3). Từ 75 tuổi, ho hay do viêm phổi, đợt cấp bệnh phổi tắc nghẽn mạn tính, suy tim hơn, nên P2. Chưa có số liệu Việt Nam về lý do đi khám vì ho; cần đối chiếu với cảm lạnh, cúm bằng kb:priors."
+  - complaint: shortness_of_breath
+    default: P2
+    by_age:
+      infant_0_2m: P4
+      child_2m_5y: P3
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [frese-jcmr-2011]
+      locator: "Frese 2011 bảng 5"
+      reported: "viêm phế quản cấp là chẩn đoán hay gặp nhất ở người đi khám bác sĩ đa khoa vì khó thở: 24,5% lần khám vì khó thở mới (Hà Lan), 24,7% (Đức)"
+      population: "người mọi lứa tuổi đi khám bác sĩ đa khoa vì khó thở, Đức và Hà Lan"
+      note: "scope.yaml chỉ ghi Ho; lượt B thêm Khó thở vì đây là chẩn đoán hay gặp nhất của khó thở ở tuyến ban đầu (Frese). Hạ xuống P2 thay vì P1: ở Việt Nam người bị viêm phế quản thường chọn Ho làm triệu chứng chính, khó thở thường nhẹ; số liệu từ châu Âu. Trẻ dưới 5 tuổi khó thở chủ yếu do viêm tiểu phế quản, viêm phổi, hen (P3, dưới 2 tháng P4). Lượt C quyết định giữ hay bỏ."
+findings:
+  - finding: cough
+    freq: almost_always
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-4235-2012, kinkade-afp-2016]
+      locator: "4235/QĐ-BYT bài Viêm phế quản cấp, mục 2.1.1"
+      note: "Ho là triệu chứng định nghĩa bệnh. Chỉ có tác dụng khi triệu chứng chính là Khó thở."
+  - finding: productive_cough
+    freq: very_frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [vanvugt-bmj-2013, byt-qd-4235-2012, kinkade-afp-2016]
+      locator: "van Vugt 2013 bảng 1"
+      reported: "có đờm 79% ở mọi người lớn ho cấp (95% không viêm phổi)"
+      population: "người lớn ho cấp ở tuyến ban đầu"
+      note: "Tần suất trong số người có ho. 4235: những ngày đầu ho khan, sau khạc đờm trắng trong hoặc vàng, xanh, đục như mủ. Kinkade: đờm, kể cả đờm mủ, thường gặp và không có nghĩa là nhiễm vi khuẩn."
+  - finding: cough_duration
+    dist: { lt_1w: 0.32, w1_2: 0.38, w2_8: 0.28, gt_8w: 0.02 }
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [ebell-afm-2013, kinkade-afp-2016, vanvugt-bmj-2013, nhs-bronchitis]
+      reported: "thời gian ho trung bình 17,8 ngày (tổng quan hệ thống); ho thường 2–3 tuần; trung bình 10 ngày bệnh trước khi khám (GRACE)"
+      note: "Tần suất trong số người có ho, tại thời điểm người dùng hỏi. Người dùng hỏi ở bất kỳ ngày nào trong đợt ho kéo dài khoảng 18 ngày, nên khoảng 2/3 hỏi trong 2 tuần đầu, khoảng 1/4 hỏi ở tuần 3–4; ho trên 8 tuần không phù hợp viêm phế quản cấp. Phân bố là ước lượng từ thời gian trung bình, cần bác sĩ duyệt."
+  - finding: fever
+    freq: occasional
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [vanvugt-bmj-2013, kinkade-afp-2016, byt-qd-4235-2012]
+      locator: "van Vugt 2013 bảng 1; 4235 mục 2.1.1"
+      reported: "sốt theo bệnh sử 35% ở mọi người ho cấp, khoảng 34% ở người không viêm phổi; sốt khoảng một phần ba người bệnh (Kinkade)"
+      note: "Số liệu nằm sát ranh giới occasional/frequent. 4235: người bệnh thường không sốt, một số sốt nhẹ; Kinkade: sốt thường không kéo dài quá vài ngày đầu. Chọn occasional để câu 'có sốt' nghiêng về viêm phổi, cúm (GRACE: OR của sốt với viêm phổi 2,8)."
+  - finding: fever_max_temp
+    dist: { lt_38: 0.55, t38_39: 0.38, ge_39: 0.07 }
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-4235-2012, kinkade-afp-2016, vanvugt-bmj-2013]
+      reported: "nhiệt độ đo trên 37,8°C lúc khám chỉ 6% mọi người ho cấp (GRACE)"
+      note: "Phân bố trong số người có sốt. 4235: sốt nhẹ, đôi khi sốt cao; Kinkade: sốt trên 37,8°C gợi ý cúm hoặc viêm phổi. Ước lượng."
+  - finding: fever_duration
+    dist: { d1_2: 0.60, d3_5: 0.33, d6_7: 0.05, gt_7d: 0.02 }
+    evidence:
+      tier: C
+      basis: verbal
+      sources: [kinkade-afp-2016]
+      note: "Phân bố trong số người có sốt. Sốt thường chỉ trong vài ngày đầu; sốt kéo dài gợi ý viêm phổi hoặc bệnh khác. Ước lượng."
+  - finding: runny_nose
+    freq: very_frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [vanvugt-bmj-2013, byt-qd-4235-2012, nhs-bronchitis]
+      locator: "van Vugt 2013 bảng 1"
+      reported: "không sổ mũi 29% ở mọi người ho cấp, tức có sổ mũi khoảng 71%; khoảng 72% ở người không viêm phổi"
+      note: "4235: bệnh khởi phát bằng viêm mũi họng (hắt hơi, sổ mũi, đau họng). Không sổ mũi là yếu tố dự báo viêm phổi (GRACE)."
+  - finding: sore_throat
+    freq: frequent
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-4235-2012, nhs-bronchitis]
+      locator: "4235 mục 2.1.1"
+      note: "4235: khởi phát với đau rát họng; NHS liệt kê đau họng. Không có tỷ lệ; người dùng thường hỏi khi đã sang giai đoạn ho nên chọn frequent. Ước lượng."
+  - finding: hoarse_voice
+    freq: occasional
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-4235-2012]
+      locator: "4235 mục 2.1.1"
+      note: "4235: những ngày đầu ho khan, có khi khàn tiếng. Không có tỷ lệ; ước occasional."
+  - finding: breathing_difficulty
+    freq: frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [vanvugt-bmj-2013, nhs-bronchitis, kinkade-afp-2016]
+      locator: "van Vugt 2013 bảng 1"
+      reported: "khó thở 57% ở mọi người ho cấp, khoảng 56% ở người không viêm phổi; khó thở nặng 7%"
+      note: "Chỉ có tác dụng khi triệu chứng chính là Ho. Phần lớn là khó thở nhẹ khi gắng sức. Viêm phổi trong GRACE là 69%, nên câu này phân biệt kém giữa hai bệnh, đúng với số liệu."
+  - finding: dyspnea_severity
+    dist: { exertion: 0.80, rest: 0.18, cannot_speak: 0.02 }
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [vanvugt-bmj-2013]
+      locator: "van Vugt 2013 bảng 1"
+      reported: "khó thở nặng 197/2.820 (7%) so với khó thở bất kỳ 1.594/2.820 (57%), tức khoảng 12% người khó thở"
+      note: "Phân bố trong số người có khó thở. Khó thở nặng tách thành ngồi nghỉ cũng khó thở và nói không trọn câu (rất hiếm ở viêm phế quản cấp đơn thuần). Ước lượng."
+  - finding: dyspnea_onset
+    dist: { sudden: 0.05, hours_days: 0.85, weeks: 0.10 }
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [byt-qd-4235-2012, kinkade-afp-2016]
+      locator: "4235 bài Viêm phế quản cấp và bài Hướng dẫn chẩn đoán và xử trí khó thở"
+      note: "Phân bố trong số người có khó thở. Bệnh cấp, khởi đầu bằng viêm mũi họng rồi lan xuống phế quản trong vài ngày; khó thở đột ngột gợi ý dị vật, tắc mạch phổi, tràn khí màng phổi (4235). Ước lượng."
+  - finding: spo2_measured
+    dist: { ge_96: 0.36, s92_95: 0.035, lt_92: 0.005, not_measured: 0.60 }
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [kinkade-afp-2016]
+      note: "Phân bố trong số người có khó thở; 'Chưa đo' đúng bằng tỷ lệ nền 0,6. Viêm phế quản cấp không làm giảm ô xy máu; giảm ô xy gợi ý viêm phổi (Kinkade). Ước lượng."
+  - finding: wheeze
+    freq: occasional
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-4235-2012, kinkade-afp-2016]
+      locator: "4235 mục 2.1.1"
+      note: "4235: khám phổi thường bình thường, một số có ran ngáy, ran rít; Kinkade: nghe phổi có thể có ran rít, nhiều người có tăng phản ứng phế quản. Không có tỷ lệ người bệnh tự nghe thấy khò khè; ước occasional. Cần bác sĩ duyệt."
+  - finding: pleuritic_chest_pain
+    freq: frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [vanvugt-bmj-2013, nhs-bronchitis, kinkade-afp-2016]
+      locator: "van Vugt 2013 bảng 1"
+      reported: "đau ngực 46% ở mọi người ho cấp, khoảng 46% ở người không viêm phổi"
+      note: "NHS: đau ngực khi ho; Kinkade: đau sau xương ức hoặc thành ngực khi ho. GRACE đo đau ngực chung."
+  - finding: sick_contact_respiratory
+    freq: frequent
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [nhs-bronchitis, kinkade-afp-2016]
+      note: "Phần lớn do vi rút, lây qua ho, hắt hơi (NHS). Không có tỷ lệ; ước frequent như cảm lạnh."
+  - finding: weight_loss_unintended
+    freq: rare
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [byt-qd-4235-2012, nhs-cough]
+      note: "Bệnh cấp, tự khỏi, không gây sụt cân vài tháng. 4235 nêu sụt cân ở lao phổi, ung thư phổi trong chẩn đoán phân biệt; NHS Cough: sụt cân không rõ lý do thì đi khám. Mức rare thấp hơn tỷ lệ nền 5%: câu 'có' làm giảm khả năng bệnh này."
+  - finding: night_sweats
+    freq: rare
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [byt-qd-4235-2012, byt-qd-162-2024]
+      note: "Mồ hôi trộm về đêm là triệu chứng nghi lao (162/QĐ-BYT), không thuộc bệnh cảnh viêm phế quản cấp. Mức rare thấp hơn tỷ lệ nền 5%. Ước lượng."
+  - finding: asthma_known
+    freq: rare
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-4235-2012, byt-qd-1851-2020]
+      locator: "4235 bài Viêm phế quản cấp, mục 1 và 2.2"
+      note: "4235 định nghĩa viêm phế quản cấp ở người trước đó không có tổn thương phế quản và xếp hen vào chẩn đoán phân biệt; ở người bị hen, nhiễm vi rút thường gây đợt cấp hen (1851). Mức rare thấp hơn tỷ lệ nền 6%: câu 'có' nghiêng sang hen. Ước lượng."
+  - finding: copd_known
+    freq: rare
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-4235-2012, byt-qd-2767-2023]
+      locator: "2767/QĐ-BYT mục 3.1–3.2"
+      note: "Ở người đã có bệnh phổi tắc nghẽn mạn tính, nhiễm trùng phế quản là nguyên nhân hay gặp nhất của đợt cấp (2767), nên bệnh cảnh này thuộc đợt cấp. Mức rare thấp hơn tỷ lệ nền 4%. Ước lượng."
+warning_signs:
+  - es_severe_breathing
+  - hemoptysis_large
+  - confusion
+  - drowsy_hard_to_wake
+  - cold_hands_feet
+self_care_vi:
+  - "Nghỉ ngơi, uống đủ nước, giữ ấm."
+  - "Có thể uống nước ấm pha mật ong cho dịu họng; không cho trẻ dưới 1 tuổi dùng mật ong."
+  - "Không hút thuốc, tránh khói bếp, khói bụi."
+  - "Kháng sinh thường không cần cho viêm phế quản cấp, không tự mua dùng khi chưa hỏi bác sĩ."
+  - "Hỏi dược sĩ hoặc bác sĩ trước khi dùng thuốc ho, thuốc hạ sốt."
+  - "Che miệng khi ho và rửa tay thường xuyên."
+see_doctor_vi:
+  - "Đi khám nếu ho quá 3 tuần, sốt cao hoặc sốt quá 3 ngày."
+  - "Đi khám trong ngày nếu khó thở, đau ngực, hoặc ho ra máu."
+  - "Người từ 65 tuổi, có thai, có bệnh tim, phổi, tiểu đường nên đi khám sớm."
+  - "Đi cấp cứu ngay nếu khó thở đến mức không nói được, môi tím tái hoặc lú lẫn."
+sources: [byt-qd-4235-2012, nhs-bronchitis, kinkade-afp-2016, vanvugt-bmj-2013]
+review:
+  status: draft
+  authors: ["agent:pass-b"]
+  doctor_reviewer: null
+  updated: "2026-10-31"
+  notes_vi: "Cần bác sĩ xem: (1) urgency 5 như gợi ý: 4235/QĐ-BYT ghi viêm phế quản cấp đơn thuần ở người lớn tự khỏi, không cần kháng sinh; NHS khuyên tự chăm sóc, khám khi ho quá 3 tuần. NHS khuyên người từ 65 tuổi, có thai, có bệnh mạn tính đi khám sớm: phần này để ở see_doctor_vi, các quy tắc nhóm nguy cơ xử lý mức; (2) thêm prior cho Khó thở (P2) ngoài scope.yaml, theo Frese 2011; lượt C quyết định; (3) prior cho Ho là ước lượng, chưa có số liệu Việt Nam; viêm phế quản cấp và cảm lạnh gối nhau, phân biệt chủ yếu nhờ thời gian ho, đờm, đau ngực khi ho, khó thở; (4) số liệu triệu chứng lấy từ toàn bộ người lớn ho cấp của GRACE (95% không viêm phổi), gồm cả cảm lạnh có ho; (5) phân bố thời gian ho, khởi phát khó thở, SpO2 là ước lượng; (6) mã ICD-10 chưa đối chiếu; MONDO không có mục riêng cho viêm phế quản cấp ở người (chỉ có bronchitis MONDO:0003781), nên không ghi."

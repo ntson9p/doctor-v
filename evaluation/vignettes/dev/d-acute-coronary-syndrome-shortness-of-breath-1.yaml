@@ -1,0 +1,46 @@
+id: d-acute-coronary-syndrome-shortness-of-breath-1
+set: dev
+title_vi: "Nữ 79 tuổi đái tháo đường, 3 giờ nay khó thở cả khi ngồi nghỉ, mệt lả, buồn nôn, vã mồ hôi, không đau ngực"
+narrative_vi: "Bà Y., 79 tuổi, ở Vĩnh Long, bị đái tháo đường và tăng huyết áp nhiều năm. Khoảng 3 giờ nay thấy khó thở, ngồi nghỉ cũng thở mệt nhưng vẫn nói được cả câu, kèm buồn nôn, vã mồ hôi lạnh, người mệt. Không đau ngực, không tức ngực. Không sốt, không ho, không khò khè. Nằm xuống không khó thở hơn, không phù chân. Không hồi hộp, không choáng. Chưa từng bị suy tim. Nhà không có máy đo SpO2."
+patient:
+  age_years: 79
+  sex: female
+  region: south
+  month: 6
+complaint: shortness_of_breath
+answers:
+  dyspnea_onset: hours_days
+  dyspnea_severity: rest
+  nausea: present
+  cold_sweat: present
+  fatigue: present
+  diabetes: present
+  hypertension_known: present
+  spo2_measured: not_measured
+  chest_pain: absent
+  chest_pain_pressure: absent
+  pleuritic_chest_pain: absent
+  fever: absent
+  cough: absent
+  wheeze: absent
+  orthopnea: absent
+  leg_swelling_both: absent
+  leg_swelling_one_side: absent
+  palpitations: absent
+  fainting_or_near_fainting: absent
+  known_heart_disease: absent
+  asthma_known: absent
+  copd_known: absent
+  allergen_exposure: absent
+  rash_any: absent
+  recent_immobility: absent
+  smoker: absent
+default_unmentioned: absent
+expected:
+  condition: acute_coronary_syndrome
+  acceptable: []
+  triage: 1
+source:
+  basis: "Hội chứng mạch vành cấp không điển hình ở nữ cao tuổi đái tháo đường: khó thở, buồn nôn, vã mồ hôi, không đau ngực (2187/QĐ-BYT: khó thở là triệu chứng không điển hình, người già, người đái tháo đường có thể không đau ngực; MSD: người cao tuổi hay than khó thở hơn đau ngực). Nghi nhồi máu cơ tim thì gọi cấp cứu: mức 1."
+  references: [byt-qd-2187-2019, msd-acute-mi, vanoosterhout-jaha-2020]
+author: "agent:pass-c"

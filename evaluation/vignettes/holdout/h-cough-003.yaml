@@ -1,0 +1,50 @@
+id: h-cough-003
+set: holdout
+title_vi: "Bé trai 7 tuổi ho khan về đêm 6 tuần, chạy nhiều thì khò khè, hắt hơi buổi sáng, bố bị hen"
+narrative_vi: "Bé K., nam, 7 tuổi, học lớp 2 ở TP.HCM, đã tiêm chủng đầy đủ theo lịch. Khoảng 6 tuần nay bé ho khan, chủ yếu về đêm và gần sáng, có đêm ho thức giấc. Ban ngày bé ít ho, nhưng chạy nhảy giờ ra chơi hoặc đá bóng một lúc là ho, thở khò khè, hụt hơi, ngồi nghỉ vài phút thì đỡ. Sáng ngủ dậy bé hay hắt hơi, ngứa mũi, chảy nước mũi trong. Bé không sốt, ăn uống, chơi bình thường, không sụt cân, không ra mồ hôi trộm. Ho không thành cơn dồn dập, không nôn sau ho. Bé không bị hóc, sặc gì trước khi ho. Bố bé bị hen suyễn từ nhỏ. Trong nhà không ai bị lao. Bé chưa được bác sĩ nói là bị hen."
+patient:
+  age_years: 7
+  sex: male
+  region: south
+  month: 10
+complaint: cough
+answers:
+  cough_duration: w2_8
+  productive_cough: absent
+  night_respiratory_symptoms: present
+  wheeze: present
+  breathing_difficulty: present
+  dyspnea_onset: weeks
+  dyspnea_severity: exertion
+  runny_nose: present
+  nasal_congestion: absent
+  fever: absent
+  cough_paroxysms: absent
+  inspiratory_whoop: absent
+  post_tussive_vomiting: absent
+  choking_episode: absent
+  stridor: absent
+  barking_cough: absent
+  weight_loss_unintended: absent
+  night_sweats: absent
+  loss_of_appetite: absent
+  chest_pain: absent
+  sore_throat: absent
+  sick_contact_respiratory: absent
+  asthma_known: absent
+  tb_contact: absent
+  dtp_vaccinated: present
+  measles_vaccinated: present
+default_unmentioned: absent
+expected:
+  condition: asthma
+  acceptable: []
+  triage: 4
+source:
+  basis: "Hen phế quản chưa được chẩn đoán ở trẻ 7 tuổi, biểu hiện chủ yếu bằng ho: ho khan về đêm, gần sáng 6 tuần, khò khè và hụt hơi khi gắng sức, kèm viêm mũi dị ứng, bố bị hen; không sốt, không sụt cân, không ho cơn kiểu ho gà, không có dị vật. GINA 2026 (trẻ 6–11 tuổi): triệu chứng hô hấp thay đổi theo thời gian, nặng về đêm, khi gắng sức gợi ý hen, cần khám để chẩn đoán. WHO IMCI: ho trên 2 tuần hoặc khò khè tái diễn thì chuyển khám hen, lao. Không có dấu hiệu nặng nên đặt lịch khám trong vài ngày."
+  references:
+    - gina-2026
+    - who-imci-chart-booklet-2014
+    - nhs-cough
+author: "agent:vignette-holdout"
+notes_vi: "Ca không điển hình: người nhà chọn Ho, chưa ai nói bé bị hen. Khó thở chỉ khi chạy nhảy, ngồi nghỉ thì hết."

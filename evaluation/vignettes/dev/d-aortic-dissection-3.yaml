@@ -1,0 +1,46 @@
+id: d-aortic-dissection-3
+set: dev
+title_vi: "Nam 57 tuổi hút thuốc, đột ngột đau đè ép giữa ngực dữ dội, lan ra sau lưng, buồn nôn, tưởng nhồi máu cơ tim"
+narrative_vi: "Ông T., 57 tuổi, ở Hải Phòng, hút thuốc lá 30 năm, bị tăng huyết áp. Khoảng 30 phút trước, đang khiêng đồ thì đột ngột đau dữ dội ngay từ đầu, đè ép ở giữa ngực, lan ra sau lưng, cảm giác như có gì bị xé trong ngực. Ông buồn nôn nhưng không nôn, không vã mồ hôi, không khó thở, không ngất. Đau không lan lên hàm hay xuống tay. Trước đây chưa từng đau ngực khi gắng sức. Không yếu tay chân, không nói khó. Không đái tháo đường, chưa được nói có bệnh tim."
+patient:
+  age_years: 57
+  sex: male
+  region: north
+  month: 1
+complaint: chest_pain
+answers:
+  chest_pain_sudden_severe: present
+  chest_pain_pressure: present
+  chest_pain_radiates_back: present
+  chest_pain_tearing: present
+  chest_pain_duration: over_15min
+  nausea: present
+  hypertension_known: present
+  smoker: present
+  cold_sweat: absent
+  breathing_difficulty: absent
+  fainting_or_near_fainting: absent
+  pain_radiates_arm_jaw: absent
+  es_stroke_signs: absent
+  chest_pain_exertional: absent
+  pleuritic_chest_pain: absent
+  chest_wall_tenderness: absent
+  abdominal_pain: absent
+  fever: absent
+  diabetes: absent
+  known_heart_disease: absent
+  known_aaa: absent
+  similar_episodes_before: absent
+  heartburn: absent
+  skin_burning_band: absent
+  rash_any: absent
+default_unmentioned: absent
+expected:
+  condition: aortic_dissection
+  acceptable: []
+  triage: 1
+source:
+  basis: "Bóc tách động mạch chủ dễ nhầm với hội chứng mạch vành cấp: cả hai đều đau ngực dữ dội, đè ép, buồn nôn (4235/QĐ-BYT: đau dữ dội, đè ép cần tìm nhồi máu cơ tim, phình tách). Đặc điểm nghiêng về bóc tách: đau dữ dội ngay từ đầu, như xé, lan ra lưng (Klompas 2002; MSD; HSE). Gọi 115 (mức 1) như cả hai bệnh."
+  references: [byt-qd-4235-2012, klompas-jama-2002, msd-aortic-dissection, hse-aortic-dissection]
+author: "agent:pass-c"
+notes_vi: "Ca dễ nhầm với hội chứng mạch vành cấp."

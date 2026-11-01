@@ -1,0 +1,47 @@
+id: h-cough-005
+set: holdout
+title_vi: "Nam 63 tuổi hút thuốc lào 40 năm, ho 2 tháng khác hẳn mọi khi, đờm lẫn vệt máu, khàn tiếng, sụt 5 kg"
+narrative_vi: "Ông H., 63 tuổi, làm ruộng ở Thái Bình, hút thuốc lào khoảng 40 năm, đến nay vẫn hút. Trước đây sáng nào ông cũng ho vài tiếng, nhưng khoảng 2 tháng nay ông ho nhiều hơn hẳn, ho cả ngày, khạc đờm trắng. Tuần này có 3–4 lần ông thấy vài vệt máu đỏ lẫn trong đờm, không ho ra máu tươi. Ba tuần nay giọng ông khàn đi. Ông mệt, ăn kém, 2 tháng nay sụt khoảng 5 kg. Ông không sốt, không ra mồ hôi đêm, không khó thở, không đau ngực. Trong nhà, xóm không ai bị lao. Ông chưa từng được nói là có bệnh phổi tắc nghẽn mạn tính."
+patient:
+  age_years: 63
+  sex: male
+  region: north
+  month: 3
+complaint: cough
+answers:
+  cough_duration: w2_8
+  productive_cough: present
+  hemoptysis: present
+  hemoptysis_large: absent
+  hoarse_voice: present
+  weight_loss_unintended: present
+  fatigue: present
+  loss_of_appetite: present
+  smoker: present
+  fever: absent
+  night_sweats: absent
+  breathing_difficulty: absent
+  chest_pain: absent
+  pleuritic_chest_pain: absent
+  chest_pain_pressure: absent
+  wheeze: absent
+  sore_throat: absent
+  lymph_node_swelling: absent
+  tb_contact: absent
+  copd_known: absent
+  diabetes: absent
+  immunocompromised: absent
+  active_cancer: absent
+default_unmentioned: absent
+expected:
+  condition: lung_cancer
+  acceptable: []
+  triage: 3
+source:
+  basis: "Gợi ý ung thư phổi ở người hút thuốc lâu năm: ho thay đổi tính chất 2 tháng, đờm lẫn vệt máu, khàn tiếng 3 tuần, sụt cân, mệt, không sốt (NICE NG12: người từ 40 tuổi ho ra máu không rõ nguyên nhân thì chuyển khám theo đường nghi ung thư; ho, sụt cân, khàn tiếng ở người hút thuốc là dấu hiệu cần chụp phổi khẩn). NHS Coughing up blood: ho ra vài vệt máu trong đờm thì hẹn khám khẩn hoặc gọi 111, nên mức 3. Lao phổi là chẩn đoán phân biệt (162/QĐ-BYT)."
+  references:
+    - nhs-coughing-up-blood
+    - nhs-cough
+    - byt-qd-162-2024
+author: "agent:vignette-holdout"
+notes_vi: "Ho ra máu ít (vài vệt), không phải ho ra máu tươi lượng nhiều. Lao phổi có thể có cùng bệnh cảnh nhưng không sốt, không mồ hôi đêm, không tiếp xúc nguồn lây."

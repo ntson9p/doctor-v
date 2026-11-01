@@ -1,0 +1,12 @@
+id: cdc-shingles-clinical-signs
+type: web_page
+title: "Clinical Features of Shingles (Herpes Zoster)"
+publisher: "Centers for Disease Control and Prevention (CDC)"
+date: "2024-05-10"
+url: "https://www.cdc.gov/shingles/hcp/clinical-signs/index.html"
+license_class: L0
+default_tier: C
+accessed: "2026-10-31"
+verified: true
+verified_by: "agent:pass-b"
+notes_vi: "Lượt B tải trang bằng curl ngày 31/10/2026. Vài ngày trước khi nổi ban có thể nhức đầu, sợ ánh sáng, mệt mỏi; đau, ngứa, châm chích ở vùng da sắp nổi ban. Ban ở một hoặc hai khoanh da liền nhau, hay nhất ở thân mình theo khoanh ngực hoặc mặt, thường không vượt đường giữa; mụn nước mới mọc thêm trong 3–5 ngày rồi khô, đóng vảy, lành trong 2–4 tuần. Chưa có ban thì khó chẩn đoán lâm sàng (kể cả zona không ban). Đau sau zona ở khoảng 10–18%, tăng theo tuổi, hiếm dưới 40 tuổi. Người suy giảm miễn dịch hay có ban lan tỏa, biến chứng."

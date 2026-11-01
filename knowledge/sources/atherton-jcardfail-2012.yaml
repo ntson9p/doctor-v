@@ -1,0 +1,15 @@
+id: atherton-jcardfail-2012
+type: primary_study
+title: "Patient characteristics from a regional multicenter database of acute decompensated heart failure in Asia Pacific (ADHERE International-Asia Pacific)"
+publisher: "Journal of Cardiac Failure 2012;18(1):82–88 (Atherton JJ, Hayward CS, Wan Ahmad WA và cs.)"
+date: "2012-01"
+url: "https://europepmc.org/article/MED/22196846"
+doi: "10.1016/j.cardfail.2011.09.003"
+pmid: "22196846"
+license_class: L3
+license_note: "Bản quyền nhà xuất bản: chỉ dùng dữ kiện kèm trích dẫn."
+default_tier: B
+accessed: "2026-10-31"
+verified: true
+verified_by: "agent:pass-c"
+notes_vi: "Lượt C (Giai đoạn 3 lô 3, phần b) đọc lại tóm tắt qua API Europe PMC ngày 31/10/2026; lượt A đã đọc trước đó. 10.171 người nằm viện vì suy tim ở 8 nước châu Á – Thái Bình Dương (2006–2008): tuổi trung vị 67, nam 57%; khó thở là triệu chứng khi đến viện ở 95%, có ran ở 80%; tử vong trong viện 4,8%."

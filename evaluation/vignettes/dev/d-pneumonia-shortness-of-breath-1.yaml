@@ -1,0 +1,61 @@
+id: d-pneumonia-shortness-of-breath-1
+set: dev
+title_vi: "Nữ 76 tuổi chọn Khó thở: 2 ngày sốt 38,5°C, ho đờm, khó thở cả khi ngồi nghỉ"
+narrative_vi: "Bà K., 76 tuổi, ở Bắc Ninh, có tăng huyết áp. Hai ngày nay sốt 38,5°C, ho khạc đờm đục, mệt nhiều. Từ hôm qua khó thở tăng dần, nay ngồi nghỉ cũng thở mệt nhưng vẫn nói được cả câu. Không đau ngực, không khò khè, không phù chân, nằm đầu thấp được. Vẫn tỉnh táo, trả lời đúng. Không hút thuốc, không có bệnh phổi."
+patient:
+  age_years: 76
+  sex: female
+  region: north
+  month: 2
+complaint: shortness_of_breath
+answers:
+  fever: present
+  fever_max_temp: t38_39
+  fever_duration: d1_2
+  cough: present
+  cough_duration: lt_1w
+  productive_cough: present
+  fatigue: present
+  dyspnea_onset: hours_days
+  dyspnea_severity: rest
+  chills_rigors: absent
+  pleuritic_chest_pain: absent
+  chest_pain: absent
+  chest_pain_pressure: absent
+  wheeze: absent
+  orthopnea: absent
+  leg_swelling_both: absent
+  leg_swelling_one_side: absent
+  palpitations: absent
+  fainting_or_near_fainting: absent
+  hemoptysis: absent
+  stridor: absent
+  choking_episode: absent
+  allergen_exposure: absent
+  rash_any: absent
+  runny_nose: absent
+  confusion: absent
+  drowsy_hard_to_wake: absent
+  cold_hands_feet: absent
+  severe_weakness: absent
+  hypertension_known: present
+  known_heart_disease: absent
+  diabetes: absent
+  immunocompromised: absent
+  asthma_known: absent
+  copd_known: absent
+  smoker: absent
+  former_smoker: absent
+  biomass_smoke_exposure: absent
+  recent_immobility: absent
+  previous_clot: absent
+  active_cancer: absent
+default_unmentioned: absent
+expected:
+  condition: pneumonia
+  acceptable: []
+  triage: 2
+source:
+  basis: "Viêm phổi ở người từ 75 tuổi có sốt, ho đờm, khó thở cả lúc nghỉ: người cao tuổi dễ nặng (3312/4235/QĐ-BYT), khó thở khi nghỉ là dấu hiệu nặng cần đến cơ sở cấp cứu (NHS Shortness of breath; quy tắc rf_dyspnea_at_rest, rf_high_risk_fever_breathing)."
+  references: [byt-qd-4235-2012, nhs-shortness-of-breath, frese-jcmr-2011]
+author: "agent:pass-c"

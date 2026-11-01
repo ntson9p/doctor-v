@@ -1,0 +1,15 @@
+id: lam-respmed-2011
+type: primary_study
+title: "Increase in asthma and a high prevalence of bronchitis: results from a population study among adults in urban and rural Vietnam"
+publisher: "Respiratory Medicine 2011;105(2):177–185 (Lâm HT, Rönmark E, Tường NV, Ekerljung L, Chúc NT, Lundbäck B)"
+date: "2011"
+url: "https://europepmc.org/article/MED/21030231"
+doi: "10.1016/j.rmed.2010.10.001"
+pmid: "21030231"
+license_class: L3
+license_note: "Bản quyền nhà xuất bản: chỉ dùng dữ kiện kèm trích dẫn."
+default_tier: B
+accessed: "2026-10-31"
+verified: true
+verified_by: "agent:pass-b"
+notes_vi: "Lượt B đọc tóm tắt qua API Europe PMC. Người 21–70 tuổi ở nội thành Hà Nội và huyện Ba Vì: từng mắc hen 5,6% (Hà Nội) và 3,9% (Ba Vì), không khác biệt lớn giữa nam và nữ; ho kéo dài là triệu chứng hay gặp nhất (18,1% và 12,0%), rồi khạc đờm. Nam hút thuốc 49,7% (Hà Nội), 67,8% (Ba Vì); nữ 1–4%."

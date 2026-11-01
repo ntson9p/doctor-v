@@ -1,0 +1,13 @@
+id: nhs-croup
+type: web_page
+title: "Croup"
+publisher: "NHS (UK)"
+date: "2023-08-02"
+url: "https://www.nhs.uk/conditions/croup/"
+license_class: L1
+license_note: "Open Government Licence v3.0; bản chuyển thể không được trình bày như nội dung của NHS."
+default_tier: C
+accessed: "2026-10-31"
+verified: true
+verified_by: "agent:pass-r"
+notes_vi: "Lượt R lô 3 vòng 2 tải trang trực tiếp ngày 31/10/2026 (rà soát lần cuối 02/8/2023, hẹn rà soát 02/8/2026 đã quá hạn). Triệu chứng: ho ông ổng, khàn tiếng, khó thở, tiếng rít cao khi hít vào; thường nặng về đêm, tự đỡ trong khoảng 48 giờ. 'Urgent GP / 111': nghĩ trẻ bị viêm thanh quản cấp (bác sĩ có thể cho thuốc); trẻ nặng lên hoặc không đỡ sau khi khám. Trẻ dưới 3 tháng hoặc bệnh nặng có thể được chuyển viện. 'Call 999 or go to A&E': trẻ thở rất vất vả (thở rên, bụng hõm vào dưới bờ sườn, tiếng thở khác lạ); da, môi, lưỡi tím, xám, nhợt hoặc loang lổ; ngủ li bì, khó đánh thức; lặng lẽ, nằm yên bất thường; mềm nhũn, không phản ứng như bình thường; quấy, bứt rứt, khó thở, không dỗ được; chảy dãi nhiều, khó nuốt, hoặc muốn ngồi hơn nằm."

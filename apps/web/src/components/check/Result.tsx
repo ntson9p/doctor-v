@@ -130,6 +130,7 @@ export function Result({ kb, result: r, onReview, onRestart }: Props) {
                   <span style={{ width: `${width}%` }} />
                 </div>
                 {c.cantMiss && c.urgency <= 2 ? <span class="tag">Cần loại trừ sớm</span> : null}
+                {c.ruleOut ? <span class="tag">Bác sĩ cần loại trừ</span> : null}
                 {why.length > 0 ? <p class="why">Vì sao gợi ý: {why.join(', ')}.</p> : null}
               </div>
             );

@@ -378,3 +378,30 @@
   help_vi: "Người nhà thường nhận ra mùi này trước người bệnh."
   leak: 0.01
   leak_note: "Người bảo trì ước lượng."
+
+# ---------- Giai đoạn 3, lô 3 ----------
+- id: night_sweats
+  kind: symptom
+  type: binary
+  label_vi: "Ra mồ hôi trộm về đêm"
+  question_vi: "Có ra mồ hôi trộm về đêm, nhiều đến ướt áo không?"
+  leak: moderate
+- id: hives
+  kind: sign
+  type: binary
+  label_vi: "Nổi mề đay"
+  question_vi: "Ban có nổi gồ thành mảng, ngứa, lan nhanh (mề đay) không?"
+  requires:
+    - { finding: rash_any, is: present }
+  alt_question:
+    text_vi: "Trên da có những mảng sẩn đỏ, ngứa, lúc nổi lúc lặn không?"
+  leak: moderate
+- id: dermatomal_rash
+  kind: sign
+  type: binary
+  label_vi: "Ban mụn nước thành dải một bên người"
+  question_vi: "Ban có thành dải hoặc đám mụn nước ở một bên người không?"
+  help_vi: "Thường ở một bên ngực, lưng hoặc mặt, không vượt qua đường giữa cơ thể."
+  requires:
+    - { finding: rash_any, is: present }
+  leak: specific

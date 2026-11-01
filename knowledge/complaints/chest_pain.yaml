@@ -1,0 +1,57 @@
+id: chest_pain
+label_vi: "Đau ngực"
+icon: chest
+synonyms_vi:
+  - "tức ngực"
+  - "nặng ngực"
+  - "đau thắt ngực"
+  - "đau nhói ngực"
+  - "đè ngực"
+  - "đau lồng ngực"
+  - "đau sau xương ức"
+  - "đau tim"
+  - "nóng rát ngực"
+description_vi: "Đau, tức, nặng hoặc khó chịu ở vùng ngực."
+implies: [chest_pain]
+# Trẻ nhỏ chưa tả được đau ngực; trẻ dưới 5 tuổi khó thở hoặc ho dùng hai triệu chứng chính kia.
+age_groups: [child_5_12, teen_13_17, adult_18_44, adult_45_64, elder_65_74, elder_75p]
+red_flags:
+  # Người bảo trì soạn (31/10/2026); lượt R lô 3 sắp lại. Câu thời gian trước tiên: tự nó không làm quy tắc nào
+  # đúng, và hai quy tắc mức 2 không tính cơn đau chỉ vài giây. Rồi nhóm dấu hiệu nguy hiểm (đa số là mức 1, hỏi
+  # một lần thay cho từng câu lẻ), nhóm dấu hiệu nguy hiểm chung (tay chân lạnh kèm mệt lả: mức 1), sốt, rồi mới
+  # đến câu tức nặng giữa ngực (mức 2): trước đây câu này đứng đầu, nên khi trả lời "có" thì mọi dấu hiệu đi kèm
+  # phải hỏi từng câu một, và quy tắc cần ba dấu hiệu (sốc khi sốt, nhiễm khuẩn huyết) không còn được xét.
+  - finding: chest_pain_duration
+  - group: chest_pain_red_flags
+  # Tích hợp lô 3 (người bảo trì): câu khó thở được tách khỏi nhóm trên và hỏi sau đau khi hít sâu, hồi hộp, yếu tố
+  # nguy cơ huyết khối. Đau ngực kèm khó thở là quy tắc mức 2 và dừng phiên; nếu hỏi trước, thuyên tắc phổi và rối
+  # loạn nhịp tim không vào được danh sách cần loại trừ (ca d-pulmonary-embolism-chest-pain-1,
+  # d-cardiac-arrhythmia-chest-pain-1; lượt C lô 3 phần c). Các dấu hiệu mức 1 trong nhóm vẫn được hỏi ngay.
+  - finding: pleuritic_chest_pain
+  - finding: palpitations
+  - group: clot_risk
+  - finding: breathing_difficulty
+  - group: general_danger_signs
+  - finding: fever
+  - finding: chest_pain_pressure
+  # Sưng đau một bên bắp chân là quy tắc một dấu hiệu khi đau ngực (rf_pe_signs, mức 2 từ lượt R vòng 2). Ở nhóm
+  # clot_risk (phần hỏi tiếp) câu trả lời "Không rõ" không được hỏi lại bằng câu thay thế, nên đưa lên đây (lượt R lô 3).
+  - finding: leg_swelling_one_side
+  - group: fever_red_flags
+  - finding: fever_duration
+intake: [chest_pain_associated, chronic_conditions, lung_conditions]
+# Bệnh "không được bỏ sót" (mức 1–2) có prior cho triệu chứng chính này; danh sách để kiểm tra an toàn.
+cant_miss:
+  - acute_coronary_syndrome
+  - anaphylaxis
+  - aortic_dissection
+  - pneumothorax
+  - pulmonary_embolism
+safety_net:
+  - es_crushing_chest_pain
+  - pain_radiates_arm_jaw
+  - cold_sweat
+  - breathing_difficulty
+  - fainting_or_near_fainting
+  - chest_pain_radiates_back
+sources: [nhs-chest-pain, nice-cg95]

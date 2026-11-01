@@ -1,0 +1,52 @@
+id: h-cough-010
+set: holdout
+title_vi: "Nữ 52 tuổi không hút thuốc, ho khan 10 tuần, ho nhiều sau ăn no và khi nằm, hay ợ chua, sáng khàn tiếng"
+narrative_vi: "Chị P., 52 tuổi, kế toán ở Hà Nội, không hút thuốc, không có bệnh mạn tính, không uống thuốc gì thường xuyên. Khoảng 10 tuần nay chị ho khan, hay phải đằng hắng, ho nhiều sau bữa ăn no và khi vừa nằm xuống ngủ. Chị hay ợ chua, có lúc thấy chua trong miệng, nhất là sau khi ăn tối muộn. Buổi sáng ngủ dậy giọng chị hơi khàn. Chị không sốt, không khạc đờm, không khò khè, không khó thở, không đau ngực, không ho ra máu, không sụt cân, không ra mồ hôi đêm, không sổ mũi, nghẹt mũi. Trong nhà không ai ho kéo dài hay bị lao. Chị đã uống siro ho 2 lần không đỡ."
+patient:
+  age_years: 52
+  sex: female
+  region: north
+  month: 9
+complaint: cough
+answers:
+  cough_duration: gt_8w
+  productive_cough: absent
+  heartburn: present
+  hoarse_voice: present
+  night_respiratory_symptoms: present
+  fever: absent
+  wheeze: absent
+  breathing_difficulty: absent
+  chest_pain: absent
+  pleuritic_chest_pain: absent
+  chest_pain_pressure: absent
+  hemoptysis: absent
+  weight_loss_unintended: absent
+  night_sweats: absent
+  runny_nose: absent
+  nasal_congestion: absent
+  sore_throat: absent
+  abdominal_pain: absent
+  nausea: absent
+  vomiting: absent
+  recent_viral_illness: absent
+  sick_contact_respiratory: absent
+  tb_contact: absent
+  smoker: absent
+  former_smoker: absent
+  biomass_smoke_exposure: absent
+  bp_lowering_meds: absent
+  hypertension_known: absent
+  asthma_known: absent
+  estrogen_use: absent
+default_unmentioned: absent
+expected:
+  condition: gerd
+  acceptable: []
+  triage: 4
+source:
+  basis: "Ho mạn tính do trào ngược dạ dày – thực quản: ho khan 10 tuần, nặng sau ăn no và khi nằm, ợ chua, khàn tiếng buổi sáng, không hút thuốc, không dùng thuốc nhóm ức chế men chuyển, không triệu chứng mũi, không khò khè. Trào ngược là một trong các nguyên nhân hay gặp của ho trên 8 tuần ở người không hút thuốc. NHS Cough: ho trên 3 tuần thì khám bác sĩ (không khẩn). Không có dấu hiệu nặng (ho ra máu, sụt cân, khó thở) nên đặt lịch khám trong vài ngày."
+  references:
+    - nhs-cough
+author: "agent:vignette-holdout"
+notes_vi: "Ca không điển hình của trào ngược: người bệnh chọn Ho, không đau ngực. Câu ợ chua, nóng rát sau xương ức trả lời 'có' vì có ợ chua."

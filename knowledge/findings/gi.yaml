@@ -157,6 +157,8 @@
   type: binary
   label_vi: "Buồn nôn"
   question_vi: "Có buồn nôn không?"
+  alt_question:
+    text_vi: "Có cảm giác nôn nao, muốn nôn không?"
   cluster: vomiting
   leak: nonspecific
   leak_by_complaint: { abdominal_pain: 0.35 }

@@ -1,0 +1,166 @@
+id: herpes_zoster
+names:
+  vi: "Bệnh zona"
+  vi_common: ["Giời leo", "Zona thần kinh", "Zona"]
+  en: "Herpes zoster (shingles)"
+codes:
+  icd10: "B02"
+  icd10_verified: false
+  mondo: "MONDO:0005609"
+summary_vi:
+  - "Vi rút thủy đậu nằm im trong dây thần kinh từ lần mắc trước, nay hoạt động trở lại."
+  - "Thường đau rát, châm chích ở một bên ngực, lưng hoặc bụng; vài ngày sau nổi mụn nước thành dải ở vùng đó."
+  - "Hay gặp ở người từ 50 tuổi, người suy giảm miễn dịch; điều trị sớm trong 3 ngày đầu giúp giảm đau kéo dài."
+urgency: 4
+cant_miss: false
+specialties: [dermatology, infectious_disease, general_medicine]
+priors:
+  - complaint: chest_pain
+    default: P4
+    by_age:
+      child_5_12: P5
+      teen_13_17: P5
+      adult_45_64: P3
+      elder_65_74: P3
+      elder_75p: P3
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [chen-hvi-2025, cdc-shingles-clinical-overview, byt-qd-75-2015, byt-qd-4235-2012, haasenritter-cmj-2015]
+      locator: "Chen 2025 kết quả; CDC Clinical overview mục Disease rates; 75/QĐ-BYT bài Bệnh zona mục 3a; 4235/QĐ-BYT bài đau ngực mục 2.3.1"
+      reported: "Zona ở người lớn châu Á – Thái Bình Dương 6,49/1.000 người-năm (từ 50 tuổi 8,73; dưới 50 tuổi 2,80); Mỹ 2–9/1.000 dân mỗi năm; zona liên sườn và ngực bụng chiếm 50% (75/QĐ-BYT)."
+      note: "Ước tính của lượt B: từ 50 tuổi khoảng 4/1.000 người mỗi năm bị zona vùng ngực bụng; một phần trong số này (nhất là trước khi nổi ban) đi khám vì đau ngực, so với số lượt khám vì đau ngực, ước 1–5% (P3) từ 45 tuổi, 0,2–1% (P4) ở 18–44 tuổi. Trẻ em, thiếu niên ít bị và ít đau (75/QĐ-BYT; CDC): P5. 4235/QĐ-BYT xếp zona trong nguyên nhân đau ngực từ thành ngực. Không có số liệu zona trong người đau ngực ở tuyến ban đầu; cần bác sĩ duyệt."
+findings:
+  - finding: skin_burning_band
+    freq: very_frequent
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-75-2015, cdc-shingles-clinical-signs, nhs-shingles]
+      locator: "75/QĐ-BYT bài Bệnh zona mục 3a (tiền triệu: bỏng, nóng rát, châm chích, tê, đau trên một vùng da 1–5 ngày); CDC Clinical features; NHS mục first signs"
+      note: "Cảm giác bất thường trên da là tiền triệu điển hình và kéo dài trong suốt đợt bệnh (đau xuất hiện sớm, có thể trước cả tổn thương da). Trẻ em, người trẻ đau ít hơn (75/QĐ-BYT), nên chọn very_frequent thay vì almost_always. Tỷ lệ nền 0,05."
+  - finding: rash_any
+    freq: frequent
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-75-2015, cdc-shingles-clinical-signs, nhs-shingles]
+      locator: "75/QĐ-BYT mục 3a (ban đỏ xuất hiện nửa ngày đến một ngày sau tiền triệu 1–5 ngày); NHS: ban thường mọc vài ngày sau; hiếm khi đau mà không có ban"
+      note: "Gần như mọi người zona đều nổi ban, nhưng người chọn Đau ngực có thể đi khám trong mấy ngày tiền triệu, trước khi nổi ban. Ước khoảng một nửa đã có ban lúc hỏi. Ước lượng."
+  - finding: dermatomal_rash
+    freq: almost_always
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-75-2015, cdc-shingles-clinical-overview, nhs-shingles]
+      locator: "75/QĐ-BYT mục 3a (mụn nước thành đám, thành chùm dọc đường đi dây thần kinh, thường một bên, không vượt đường giữa); CDC: một hoặc hai khoanh da liền nhau; NHS: một bên người"
+      note: "Tính trong số người đã có ban. Ban thành dải hoặc đám mụn nước một bên người là dấu hiệu đặc trưng giúp chẩn đoán (CDC); hai bên hoặc lan tỏa rất hiếm (người suy giảm miễn dịch). Tỷ lệ nền 0,01."
+  - finding: hives
+    freq: rare
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [byt-qd-75-2015]
+      locator: "75/QĐ-BYT mục 3b (phân biệt giai đoạn mụn nước với herpes simplex, viêm da tiếp xúc)"
+      note: "Tính trong số người đã có ban. Ban zona là mụn nước thành đám, không phải mảng mề đay nổi gồ, lan nhanh. Mức rare thấp hơn tỷ lệ nền 0,05. Ước lượng."
+  - finding: chest_pain_duration
+    dist: { seconds: 0.1, minutes: 0.1, over_15min: 0.15, days: 0.65 }
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-75-2015]
+      locator: "75/QĐ-BYT mục 3a (tiền triệu 1–5 ngày; đau rát âm ỉ hoặc như kim châm, giật từng cơn)"
+      note: "Phân bố trong số người đã đau ngực. Đau rát âm ỉ nhiều ngày, có thể có cơn nhói ngắn. Ước lượng."
+  - finding: chest_wall_tenderness
+    freq: frequent
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [nhs-shingles, byt-qd-75-2015]
+      locator: "NHS: da vẫn đau cho đến sau khi hết ban"
+      note: "Tính trong số người đã đau ngực. Da vùng bệnh tăng cảm, chạm hoặc ấn vào thấy đau; ước khoảng một nửa trả lời 'Có'. Ước lượng."
+  - finding: chest_pain_radiates_back
+    freq: occasional
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [byt-qd-75-2015, cdc-shingles-clinical-overview]
+      locator: "75/QĐ-BYT mục 3a (theo đường phân bố của một dây thần kinh ngoại biên, từ cột sống ra trước)"
+      note: "Tính trong số người đã đau ngực. Vùng da của một dây thần kinh liên sườn chạy từ lưng vòng ra ngực, nên một số người thấy đau ở cả lưng; nhưng ít khi là đau giữa hai bả vai. Ước 20%."
+  - finding: chest_pain_pressure
+    freq: rare
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [byt-qd-75-2015, nhs-shingles]
+      note: "Đau ở một bên, trên da, không phải tức nặng giữa ngực. Mức rare thấp hơn tỷ lệ nền 0,05. Ước lượng."
+  - finding: chest_pain_exertional
+    freq: rare
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [byt-qd-75-2015]
+      note: "Tính trong số người đã đau ngực. Đau liên tục hoặc thành cơn, nặng về đêm (75/QĐ-BYT), không theo gắng sức. Mức rare thấp hơn tỷ lệ nền 0,05."
+  - finding: chest_pain_sudden_severe
+    freq: rare
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [byt-qd-75-2015]
+      note: "Tính trong số người đã đau ngực. Đau bắt đầu từ cảm giác rát, châm chích tăng dần. Mức rare thấp hơn tỷ lệ nền 0,05."
+  - finding: breathing_difficulty
+    freq: rare
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [byt-qd-75-2015]
+      note: "Không gây khó thở; mức rare thấp hơn tỷ lệ nền 0,05. Ước lượng."
+  - finding: cold_sweat
+    freq: rare
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [byt-qd-75-2015]
+      note: "Mức rare thấp hơn tỷ lệ nền 0,05. Ước lượng."
+  - finding: immunocompromised
+    freq: occasional
+    evidence:
+      tier: A
+      basis: numeric
+      sources: [chen-hvi-2025, cdc-shingles-clinical-overview, byt-qd-75-2015]
+      locator: "Chen 2025 kết quả; CDC mục Who is at risk"
+      reported: "Tỷ số mắc zona ở người suy giảm miễn dịch hoặc bệnh tự miễn so với người khác 1,98; khoảng 30% người nằm viện vì zona bị suy giảm miễn dịch (CDC)."
+      note: "Với tỷ lệ nền 0,05 và tỷ số khoảng 2–3, ước 10–15% người zona ở cộng đồng có bệnh hoặc thuốc làm giảm sức đề kháng (nằm trong khoảng occasional)."
+  - finding: diabetes
+    freq: occasional
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-75-2015]
+      locator: "75/QĐ-BYT bài Bệnh zona mục 2b (yếu tố khởi động: đái tháo đường)"
+      note: "Đái tháo đường là yếu tố khởi động; người zona phần lớn từ 50 tuổi, tuổi có nhiều người đái tháo đường. Ước 15–20% (tỷ lệ nền 0,07). Ước lượng."
+  - finding: lymph_node_swelling
+    freq: occasional
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-75-2015]
+      locator: "75/QĐ-BYT bài Bệnh zona mục 3a (hạch bạch huyết vùng lân cận sưng to)"
+      note: "Nguồn nêu bằng lời; câu hỏi hỏi hạch ở cổ, nách, bẹn. Ước 20%."
+warning_signs: [confusion, drowsy_hard_to_wake, neck_stiffness, vision_loss_or_double]
+self_care_vi:
+  - "Giữ vùng ban sạch, khô; mặc quần áo rộng, mềm."
+  - "Chườm mát vài lần mỗi ngày; không để băng dán dính vào ban."
+  - "Hỏi dược sĩ hoặc bác sĩ về thuốc giảm đau."
+  - "Khi ban còn chảy dịch, tránh gần phụ nữ có thai, trẻ dưới 1 tháng và người suy giảm miễn dịch."
+  - "Không chờ ban mọc nếu đau ngực đè nặng, lan lên tay, hàm, kèm khó thở hoặc vã mồ hôi: gọi 115."
+see_doctor_vi:
+  - "Đi khám sớm, tốt nhất trong 3 ngày đầu sau khi nổi ban, để được dùng thuốc kháng vi rút."
+  - "Đi khám ngay trong ngày nếu ban ở quanh mắt, mũi, nhìn mờ, hoặc người bệnh suy giảm miễn dịch, có thai, dưới 18 tuổi."
+  - "Chưa nổi ban mà đau ngực lần đầu thì cần bác sĩ khám để loại trừ bệnh tim."
+  - "Đến cấp cứu ngay nếu lú lẫn, lơ mơ, cứng gáy hoặc ban lan khắp người."
+review:
+  status: draft
+  authors: ["agent:pass-b"]
+  updated: "2026-10-31"
+  notes_vi: "Lượt B (lô 3 phần c). Mức xử trí 4, giữ như gợi ý: NHS khuyên gặp dược sĩ (không khẩn), cố gắng trong 3 ngày từ khi nổi ban; khám khẩn khi ban ở mắt, mũi, suy giảm miễn dịch nặng, dưới 18 tuổi; HSE khuyên khám bác sĩ gia đình sớm; thuốc kháng vi rút tốt nhất trong 72 giờ (75/QĐ-BYT, CDC). Khoảng 72 giờ nằm giữa mức 3 và 4; người cao tuổi đau nhiều có thể cần mức 3. Bác sĩ cần xem: (1) prior Đau ngực là ước lượng từ tỷ lệ mới mắc ở châu Á – Thái Bình Dương và tỷ lệ zona vùng ngực bụng (50%), chưa có số liệu zona trong người đi khám vì đau ngực; (2) tỷ lệ người đã có ban lúc hỏi (frequent) là ước lượng: nếu người dân thường đi khám khi đã nổi ban thì nên cao hơn; (3) câu 'da rát bỏng, châm chích' (very_frequent) là dấu hiệu chính trước khi nổi ban; (4) đau lan ra lưng để occasional, câu này kích hoạt quy tắc mức 1 (rf_chest_pain_spreading_or_systemic) nên người zona đau vòng ra lưng có thể bị xếp mức 1; (5) mã ICD-10 B02 chưa đối chiếu; tên chính thức theo 75/QĐ-BYT."

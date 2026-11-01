@@ -31,6 +31,9 @@ answers:
   diabetes: absent
   similar_episodes_before: absent
   family_sudden_death: absent
+  chest_pain: present
+  chest_pain_duration: over_15min
+  dyspnea_severity: rest
 default_unmentioned: absent
 expected:
   condition: cardiac_arrhythmia

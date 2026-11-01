@@ -144,6 +144,8 @@ Thêm sau lô 1 (hai ca cấp cứu của lần chấm giữ kín thứ hai bị
 
 ### Lô 3 — Ho, Khó thở, Đau ngực (15 bệnh mới)
 
+> **Xong ngày 2026-10-31:** đã phát hành, tag `release-phase3-batch3`. Kết quả chấm và chi phí: `docs/worklog.md`.
+
 Vì sao: rất hay gặp. Có nhiều bệnh nguy hiểm, nhất là ở người cao tuổi và người hút thuốc (41% nam giới, STEPS 2021).
 
 | Bệnh | Tiếng Anh | ICD-10 | Mức | Vì sao chọn |

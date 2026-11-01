@@ -725,3 +725,188 @@ Sau khi xem phân tích trên, chủ dự án chọn (chi tiết ở `docs/hando
 - Nếu giữ cấu hình cũ, 9 lô còn lại (lô 3–11, 119 bệnh mới) cần khoảng 2.500–3.000 USD theo giá API.
 
 **Lệnh mới:** `npm run agent:usage` in bảng token và chi phí theo giá API của phiên Claude Code hiện tại và các agent con (mã ở `tools/`).
+
+## 2026-10-31 — Giai đoạn 3, lô 3 (Ho, Khó thở, Đau ngực): chuẩn bị
+
+**Môi trường cloud:** máy có sẵn Node 22, dự án cần Node 24. Cài bằng nvm có sẵn trên máy: `export NVM_DIR=/opt/nvm; . /opt/nvm/nvm.sh; nvm install 24`, rồi dùng `/opt/nvm/versions/node/v24.22.2/bin` trong `PATH`.
+
+**Mục lục gọn** (`npm run kb:index`, mã ở `packages/kb/src/catalog.ts`, 6 kiểm thử):
+- Mỗi dấu hiệu, nhóm câu hỏi, triệu chứng chính, bệnh, quy tắc, nguồn một dòng Markdown. Lô thêm vào đọc từ tiêu đề mục trong tệp YAML ("Giai đoạn 3, lô N") và từ `scope.yaml` của từng lô.
+- `--out-dir` ghi 4 tệp: `index.md` để đọc hết; `links.md` (mọi liên kết của từng bệnh), `rules.md`, `sources.md` để tìm khi cần.
+- Bản đầu gộp cả liên kết và quy tắc vào một tệp: 117 nghìn ký tự, đo được 63 nghìn token. Agent đọc nó cùng hai tài liệu hướng dẫn thì ngữ cảnh lên 131 nghìn, vượt mục tiêu 100 nghìn. Vì vậy tách liên kết, quy tắc và nguồn ra tệp riêng.
+
+**Đo kích thước** bằng một agent chỉ đọc tệp (Opus 5.5, effort high), số lấy từ bản ghi của phiên:
+
+| Bước | Ngữ cảnh (token) |
+|---|---|
+| Khởi đầu: lời nhắc hệ thống, mô tả công cụ, lời giao việc | 45.100 |
+| Đọc `docs/kb-guide.md` | +17.500 |
+| Đọc `docs/style-guide-vi.md` | +4.700 |
+| Đọc `index.md` (49 nghìn ký tự) | +28.300 |
+| **Sau phần đọc làm quen** | **95.600** |
+
+- Đạt mục tiêu dưới khoảng 100 nghìn. Ở lô 1–2, sau 25 lượt gọi đã là 160–290 nghìn.
+- Ngữ cảnh khởi đầu trên cloud là 45 nghìn, không phải 32 nghìn như lô 1–2 trên máy chủ dự án: phiên cloud có thêm nhiều công cụ.
+- Mỗi bệnh mới thêm khoảng 100 ký tự vào `index.md`, mỗi dấu hiệu khoảng 150 ký tự. Lô 3 (15 bệnh, khoảng 30 dấu hiệu) thêm khoảng 3 nghìn token.
+
+**Lời giao việc mẫu:** `docs/phase-3/prompts/README.md`, mục "Từ lô 3", có khối "Read first" mới cho từng vai. Lời giao việc của lô 3 sẽ được lưu nguyên văn ở `docs/phase-3/prompts/batch-3/`.
+
+**Kiểm thử giao diện trên cloud:** dự án ghim `@playwright/test` 1.64.1, còn máy cloud chỉ có sẵn Chromium bản khác (`/opt/pw-browsers/chromium`). Chạy bằng một tệp cấu hình tạm ngoài repo, nhập cấu hình của dự án và thêm `launchOptions.executablePath: '/opt/pw-browsers/chromium'`:
+`cd apps/web && npx playwright test --config /tmp/doctor-v-scratch/pw/pw.config.ts`. Không sửa cấu hình của dự án.
+
+### Lô 3: danh mục (bước 1)
+
+**3 triệu chứng chính mới**, `status: in_progress`, có biểu tượng riêng:
+- Ho (`cough`), mọi lứa tuổi;
+- Khó thở (`shortness_of_breath`, ngầm định `breathing_difficulty`), mọi lứa tuổi;
+- Đau ngực (`chest_pain`, ngầm định dấu hiệu mới `chest_pain`), từ 5 tuổi.
+
+**31 dấu hiệu mới** (mục "Giai đoạn 3, lô 3" trong `knowledge/findings/`):
+- ho: thời gian ho (mốc 2 tuần sàng lọc lao, 8 tuần ho mạn tính); khò khè; thở rít khi ngồi yên; ho ông ổng; 3 dấu hiệu ho gà (cơn ho dồn dập, rít cuối cơn, nôn sau ho; cụm mới `pertussis_cough`); bắt đầu sau khi bị sặc, hóc; ho ra nhiều máu;
+- khó thở: khởi phát, mức khó thở (chỉ khi gắng sức, cả khi nghỉ, nói không trọn câu); khó thở khi nằm; phù hai chân; đã xịt thuốc cắt cơn mà không đỡ; đã biết hen, bệnh phổi tắc nghẽn mạn tính;
+- trẻ nhỏ: rút lõm lồng ngực; ngừng thở, tím tái từng lúc; bú, ăn chỉ khoảng một nửa;
+- đau ngực: đau ngực (chung), thời gian cơn đau (mốc 15 phút), khi gắng sức, đột ngột dữ dội, lan ra sau lưng, ấn vào đau đúng chỗ;
+- khác: ra mồ hôi trộm về đêm; mề đay; ban mụn nước thành dải một bên; tiếp xúc người bị lao; vừa ăn món lạ, dùng thuốc mới, bị đốt (2 giờ); thuốc tránh thai, nội tiết nữ (việc tồn từ lô 1).
+- Thêm câu hỏi thay thế cho 4 dấu hiệu cũ nay nằm trong nhóm dấu hiệu nguy hiểm của Đau ngực: đau lan lên cổ, hàm, tay; vã mồ hôi lạnh; buồn nôn; sưng đau một bên bắp chân. Câu "đau lan lên cổ, hàm…" nay cũng hỏi được khi có đau ngực chung.
+
+**10 nhóm câu hỏi** (dấu hiệu nguy hiểm của từng triệu chứng; nhóm riêng cho trẻ dưới 5 tuổi; triệu chứng đi kèm; kiểu ho; dấu hiệu lao khi ho từ 2 tuần; bệnh phổi đã biết; yếu tố nguy cơ huyết khối).
+
+**28 quy tắc mới**, chỉ cho 3 triệu chứng chính mới, nguồn chờ lượt R; **7 quy tắc cũ** mở phạm vi sang triệu chứng mới (đau ngực, hồi hộp kèm dấu hiệu nguy hiểm, mạch quá nhanh hoặc quá chậm, dấu hiệu sốc). Một số lựa chọn để lượt R và bác sĩ xem lại:
+- Đau ngực: theo NHS, đau lan ra tay, cổ, hàm, lưng, hoặc kèm vã mồ hôi, buồn nôn, choáng thì gọi 115 (mức 1); đau tức giữa ngực hoặc đau đột ngột dữ dội kéo dài từ 15 phút cũng mức 1. Đau ngực kèm khó thở: mức 1 khi là đau tức giữa ngực, mức 2 với kiểu đau khác (đau kiểu màng phổi rất hay gặp khi viêm đường hô hấp).
+- Khó thở và Ho: tức ngực kèm khó thở là mức 2 (hay gặp trong cơn hen), mức 1 khi kèm vã mồ hôi, đau lan, buồn nôn, choáng.
+- Trẻ rút lõm lồng ngực: mức 2. WHO IMCI 2014 cho điều trị tại nhà khi không có dấu hiệu nguy hiểm; chờ lượt R.
+
+**14 nguồn mới** (NHS, NICE NG9, GINA, GOLD), `verified: false`; lượt R xác minh và tìm văn bản của Bộ Y tế (hen, bệnh phổi tắc nghẽn mạn tính, phản vệ, lao, ho gà, suy tim).
+
+**Phạm vi** (`knowledge/drafts/phase-3/batch-3/scope.yaml`): 15 bệnh mới, 11 bệnh mở rộng, chia 3 phần (đường hô hấp dưới ở người lớn; trẻ em, phản vệ, suy tim; đau ngực). Lao phổi có prior cho Sốt, viêm tiểu phế quản cho Sốt, trào ngược dạ dày – thực quản cho Đau bụng: sẽ so bộ dev trước và sau.
+
+**Trường mới `rule_out`** cho bệnh ung thư (`docs/kb-guide.md` mục 2.5): app nêu tên bệnh kèm nhãn "Bác sĩ cần loại trừ", theo quyết định của chủ dự án.
+
+**Bộ dev** (217 ca):
+- sạch: không ca nào đổi (so từng ca);
+- nhiễu: bỏ sót 11 → 10/530, an toàn 98,0% → 98,1%. Lý do: 4 câu hỏi thay thế mới, nên câu trả lời "Không rõ" được hỏi lại.
+
+**Kiểm tra:** `kb:check` 0 lỗi (44 cảnh báo, phần lớn là nguồn chưa xác minh); `eval:check` 0 lỗi; 77 kiểm thử đơn vị; kiểm thử giao diện 24/24.
+
+**Dấu hiệu để dành chưa thêm** (việc tồn mục 8, ý 1): chỉ thêm "phù hai chân" và "thuốc tránh thai" vì lô 3 cần. Các dấu hiệu khác thuộc lô sau (vàng da, tiết niệu, sởi…).
+
+### Lô 3: lượt R, lượt A; mạng của phiên cloud (31/10/2026)
+
+**Mạng bị chặn lúc đầu.** Mạng của môi trường cloud ban đầu chỉ cho một số tên miền. Lượt R vòng 1 và lượt A phần a không mở được nguồn nào (www.nhs.uk, Europe PMC, nice.org.uk, ginasthma.org, các trang Bộ Y tế…). Chủ dự án chọn mở mạng; sau đó chạy thêm hai agent để mở nguồn:
+- lượt R vòng 2;
+- lượt A phần a, phần sửa nguồn.
+
+**Lượt R** (`knowledge/drafts/phase-3/batch-3/review-rules.md`):
+- Vòng 1 (không mở được nguồn) chỉ sửa logic:
+  - đau tức giữa ngực có quy tắc mức 2 riêng cho Đau ngực;
+  - không tính cơn đau ngực chỉ vài giây;
+  - quy tắc khó thở mà cha mẹ khó trả lời ("nói không trọn câu") chỉ áp dụng từ 5 tuổi;
+  - nhánh phản vệ theo dị nguyên cần khó thở khởi phát đột ngột;
+  - thu hẹp hai quy tắc ho gà;
+  - sắp lại thứ tự hỏi để dấu hiệu đầu tiên của mỗi quy tắc mức 1 hai dấu hiệu được hỏi trước khi quy tắc mức 2 nào đúng.
+- Vòng 2 mở 12/14 nguồn mới. NHS đã gỡ trang bóc tách động mạch chủ và tràn khí màng phổi; trang của HSE (Ireland) thay trang đầu.
+  - Mở lại trực tiếp NICE CG95, NG143, NG254. Các lượt trước đọc ba nguồn này qua dịch vụ đọc hộ, nay không được phép.
+  - Thêm 6 văn bản Bộ Y tế: lao (162/QĐ-BYT 2024, thay 1314/QĐ-BYT), hen người lớn (1851/QĐ-BYT), hen trẻ dưới 5 tuổi (4888/QĐ-BYT), bệnh phổi tắc nghẽn mạn tính (2767/QĐ-BYT), suy tim (1857/QĐ-BYT), phản vệ (Thông tư 51/2017/TT-BYT). Chưa tìm được hướng dẫn ho gà của Bộ Y tế.
+  - GINA và GOLD: dùng bản 2026.
+  - Một quy tắc đổi mức: thuyên tắc phổi (sưng đau một bên bắp chân kèm khó thở, đau ngực hoặc ho ra máu) 1 → 2, vì NHS ghi "999 hoặc đến cấp cứu". Quy tắc tương tự của lô 1 (`rf_breathless_leg_swelling`) vẫn mức 1: cần bác sĩ thống nhất.
+  - Giữ mức 2 cho ba điểm đã nêu (đau ngực kèm khó thở, tức ngực kèm khó thở, trẻ rút lõm lồng ngực), có dẫn nguồn.
+- Bộ dev không đổi sau cả hai vòng.
+
+**Lượt A** (3 agent, mỗi agent 5 bệnh mới):
+- Phần a: viêm phế quản cấp, hen, đợt cấp bệnh phổi tắc nghẽn mạn tính, lao phổi, ung thư phổi; mở rộng viêm phổi, cảm lạnh, cúm, COVID-19.
+- Phần b: ho gà, viêm tiểu phế quản, croup (gợi ý mức 4 → 3 theo NHS và 3312/QĐ-BYT), phản vệ, suy tim; mở rộng sởi, nhiễm khuẩn huyết, cơn hoảng sợ.
+- Phần c: tràn khí màng phổi, bóc tách động mạch chủ, trào ngược dạ dày – thực quản, đau thành ngực (gợi ý mức 5 → 4), zona; mở rộng hội chứng vành cấp, thuyên tắc phổi, rối loạn nhịp tim, thiếu máu.
+- Phần sửa nguồn của phần a: mở 9 nguồn, thay hoặc bỏ 4; hạ tần suất sốt, ra mồ hôi đêm, sụt cân ở lao (khảo sát lao quốc gia 2017–2018), sụt cân ở ung thư phổi.
+
+**Quyết định của người bảo trì:**
+- Không liên kết dấu hiệu chung "đau ngực" (`chest_pain`). Với Đau ngực, nó được ngầm định; với Ho, Khó thở, "đau tức giữa ngực" và "đau khi hít sâu" đã mang bằng chứng. Liên kết thêm sẽ tính một cơn đau hai lần.
+- **11 dấu hiệu thêm theo đề xuất của các lượt, trước khi agent viết ca giữ kín làm việc:** SpO2 đo bằng máy kẹp ngón tay (cùng 2 quy tắc: dưới 92% mức 2, 92–95% mức 3); triệu chứng nặng về đêm; chảy dãi, không nuốt được (mức 2); thở rên ở trẻ (mức 2); từng hút thuốc; nhiều năm hít khói bếp, khói bụi; khàn tiếng; đã tiêm đủ 3 mũi vắc xin phòng ho gà; tăng cân nhanh; đau ngực như xé (tính vào hai quy tắc bóc tách động mạch chủ); da vùng đau rát bỏng trước khi nổi ban zona.
+- Danh mục lô 3 chốt ở đây: 42 dấu hiệu mới, 33 quy tắc mới.
+- Bộ dev vẫn không đổi (so từng ca).
+
+**Đang chạy:** agent viết ca giữ kín (effort xhigh), kèm việc bổ sung câu trả lời cho các ca giữ kín cũ có nhắc tới dấu hiệu mới; lượt B phần a.
+
+**Việc tồn mới:**
+- Đau thắt ngực ổn định chưa là bệnh riêng (khoảng 7–11% người đau ngực ở tuyến ban đầu).
+- Chưa có quy tắc cho zona gần mắt hoặc ở người suy giảm miễn dịch.
+- Ở Đau ngực, câu "vừa ăn món lạ, dùng thuốc, bị đốt" không được hỏi trước khi quy tắc đau ngực dừng phiên, nên phản vệ khó lên đầu danh sách ở triệu chứng này.
+
+### Lô 3: bộ ca giữ kín, lượt B, độ đồng thuận (31/10/2026)
+
+**Bộ ca giữ kín** (agent độc lập, effort xhigh):
+- 51 ca mới: Ho 17, Khó thở 18, Đau ngực 15, Sốt 1. Mức 1: 13 ca, mức 2: 9 ca. 21 ca người từ 65 tuổi, 13 ca trẻ dưới 18 tuổi. 4 ca ngoài phạm vi (hít hạt lạc, viêm màng ngoài tim, ho do thuốc ức chế men chuyển, ho sau nhiễm vi rút).
+- Bổ sung câu trả lời cho 41 ca giữ kín cũ có lời kể nhắc tới dấu hiệu mới (thời gian ho, đau ngực, khó thở khởi phát và mức độ…), để câu hỏi mới không bị trả lời "không" trái với lời kể. Không đổi lời kể, mức xử trí hay câu trả lời khác.
+- Agent này cũng đổi bệnh đúng của h-fever-051 từ "other" sang lao phổi: lời kể là lao điển hình, và lao nay có prior cho Sốt.
+- Tổng: 249 ca giữ kín.
+- Agent chạy một lệnh `git diff --stat` chỉ đọc, trái quy tắc không chạy git; không thay đổi gì.
+
+**Lượt B** (3 agent, không đọc bản của lượt A): 15 bệnh mới, 11 bệnh mở rộng.
+- Cả hai lượt cùng đổi mức gợi ý của croup (4 → 3) và đau thành ngực (5 → 4).
+- Lượt B phần a thêm prior Khó thở cho viêm phế quản cấp, ngoài phạm vi (Frese 2011: chẩn đoán hay gặp nhất ở người khó thở đến bác sĩ gia đình). Lượt C quyết định.
+
+**Độ đồng thuận A–B:** kappa có trọng số **0,958** trên 159 cặp liên kết (lô 1: 0,90; lô 2: 0,925). Lượt A và B chạy effort high thay cho max, chất lượng theo chỉ số này không kém hơn.
+
+**Đang chạy:** lượt C phần a, phần b (effort xhigh); phần c chạy sau.
+
+### Lô 3: lượt C, tích hợp, chấm giữ kín, phát hành (31/10/2026)
+
+**Lượt C** (3 agent, effort xhigh; ghi chú ở `knowledge/drafts/phase-3/batch-3/reconcile/`):
+- 15 bệnh mới, 11 bệnh mở rộng, đều `source_checked`; 84 nguồn đưa vào sổ đăng ký, đều đã mở lại. 63 ca dev mới; các ca dev cũ của bệnh mở rộng được bổ sung câu trả lời mà lời kể đã nêu.
+- Quyết định đáng chú ý:
+  - viêm phế quản cấp giữ prior Khó thở (Frese 2011);
+  - lao phổi: prior Sốt P5;
+  - croup: mức 3;
+  - đau thành ngực: mức 4 (NHS Costochondritis: gọi 111);
+  - trào ngược dạ dày – thực quản: không có prior Đau bụng (thêm vào thì ca dev hội chứng vành cấp ở Đau bụng tụt từ mức 1 xuống 2). Lượt C đổi mức sang 4, khác cả hai lượt (xem phần chấm giữ kín).
+
+**Tích hợp (người bảo trì):**
+- Bệnh mục tiêu cho 23 quy tắc lô 3. Ba quy tắc khó thở rộng (khó thở khi nghỉ, nói không trọn câu, SpO2 dưới 92%) không gắn bệnh: gắn hen, suy tim ở đó thì hội chứng vành cấp và thuyên tắc phổi bị đẩy khỏi 3 bệnh cần loại trừ.
+- Danh sách "không được bỏ sót" của 3 triệu chứng chính mới.
+- Đau ngực: câu khó thở tách khỏi nhóm dấu hiệu nguy hiểm, hỏi sau đau khi hít sâu, hồi hộp và yếu tố nguy cơ huyết khối. Đau ngực kèm khó thở là quy tắc mức 2 và dừng phiên, nên trước đây thuyên tắc phổi không vào danh sách cần loại trừ. Ca mức 1 nay cần 3 câu thay vì 4.
+- Khó thở hỏi thêm nhóm "kiểu ho" (croup, ho gà). Tỷ lệ nền dưới các triệu chứng mới: hồi hộp 15%, hụt hơi khi gắng sức 50%.
+
+**Bộ dev** (281 ca): sạch top-3 95,0%, an toàn 99,3%, bỏ sót cấp cứu 0/126, khuyên quá mức 7,8%; nhiễu bỏ sót 10/630, khuyên quá mức 19,9%. 217 ca cũ giữ nguyên mức xử trí; 3 ca đổi hạng (hội chứng vành cấp ca 2: 1 → 2, viêm phổi ca 2: 1 → 3, thương hàn ca 2: 12 → 13). Ca viêm tai giữa ở trẻ hỏi thêm 6–7 câu (prior Sốt của viêm tiểu phế quản).
+
+**Lần chấm giữ kín thứ nhất** (249 ca, `evaluation/reports/2026-10-31-holdout-0bd832642945.md`): đạt mọi chỉ tiêu trừ "tự chăm sóc nhận đúng": 48,3% (14/29), chỉ tiêu ≥ 50%.
+- 23 ca tự chăm sóc cũ vẫn đúng 13 ca như lô 2. 6 ca mới chỉ đúng 1: trào ngược và đau thành ngực ra mức 4; ho sau cảm ra mức 3 vì tổng xác suất các bệnh mức 1–3 vượt ngưỡng 10% (việc tồn số 2).
+- Chủ dự án chọn: đưa trào ngược về mức 5 rồi chấm lại.
+  - Mức 5 theo hai lượt A, B, gợi ý phạm vi và NHS Heartburn and acid reflux (ợ nóng điển hình tự chăm sóc; khám khi kéo dài từ 3 tuần).
+  - Theo quy tắc giữ kín, ca h-chest-004 chuyển sang dev (d-from-h-chest-004); agent viết ca giữ kín viết ca thay thế h-chest-016.
+  - Thêm quy tắc `rf_chest_pain_cardiac_risk` (mức 4): đau ngực từ 45 tuổi kèm tăng huyết áp, đái tháo đường, hút thuốc hoặc bệnh tim (NICE CG95 mục 1.3; Bösner 2009). Nhờ vậy ca dev trào ngược ở người 52 tuổi tăng huyết áp vẫn mức 4. Ca dev d-gerd-1 (41 tuổi, ợ nóng gần như hằng ngày 3 tuần) còn mức 5 thay vì 4: chưa có câu "ợ nóng kéo dài từ 3 tuần".
+
+**Lần chấm giữ kín thứ hai** (249 ca, `evaluation/reports/2026-10-31-holdout-d01ef57b4d58.md`): **đạt mọi chỉ tiêu.**
+- Sạch: an toàn 98,8%, bỏ sót cấp cứu 2/124 (1,6%), top-1 69,3%, top-3 89,3%, top-10 90,2%, khuyên quá mức 23,7%, tự chăm sóc nhận đúng 51,7% (15/29), ECE 0,047, trung vị 11 câu hỏi.
+- Nhiễu: bỏ sót 16/620 (2,6%), khuyên quá mức 30,3%.
+- Hai ca bỏ sót: h-abd-051 (thiếu máu mạc treo trên nền mạn, đã có từ lô 2) và h-sob-011 (nữ 72 tuổi đái tháo đường, khó thở đột ngột, vã mồ hôi, buồn nôn, không đau ngực: cần mức 1, app ra mức 2). Theo quy tắc giữ kín, chưa sửa.
+- Tự chăm sóc chỉ vừa qua ngưỡng: ho sau cảm vẫn ra mức 3.
+
+**Phát hành:** bỏ `status: in_progress` của Ho, Khó thở, Đau ngực; vẽ lại biểu tượng Đau ngực (lồng ngực). `verify` qua (77 kiểm thử), kiểm thử giao diện 24/24. Tag `release-phase3-batch3`. App có 75 bệnh cho 9 triệu chứng chính.
+
+**Chi phí lô 3** (`npm run agent:usage`, cả phiên, giá API của Opus 5.5):
+
+| Agent | Lượt gọi | Token xử lý (triệu) | Ngữ cảnh lớn nhất (nghìn) | USD |
+|---|---|---|---|---|
+| Phiên chính (xhigh) | 290 | 136,1 | 752 | 44 |
+| 2 agent đo kích thước mục lục | 15 | 1,3 | 131 | 1 |
+| Lượt R, hai vòng (high) | 258 | 71,4 | 437 | 25 |
+| Lượt A, 3 phần và phần sửa nguồn (high) | 435 | 114,1 | 468 | 39 |
+| Agent viết ca giữ kín (xhigh) | 68 | 15,1 | 374 | 10 |
+| Lượt B, 3 phần (high) | 337 | 97,2 | 440 | 32 |
+| Lượt C, 3 phần (xhigh) | 478 | 218,1 | 847 | 72 |
+| **Cộng** | 1.881 | 653,2 | 847 | **225** |
+
+- Theo loại: đọc lại ngữ cảnh 57%; ghi ngữ cảnh vào bộ đệm 22% (ghi lại sau khi bộ đệm hết hạn 6%); model viết ra 21% (phần suy nghĩ 8%).
+- So với mốc: agent con 181 USD cho 15 bệnh mới và 11 bệnh mở rộng (lô 2: khoảng 220 USD cho 14 bệnh mới và 5 mở rộng); phiên chính 44 USD (lô 1–2: khoảng 70 USD mỗi lô). Mỗi bệnh mới khoảng 12 USD (lô 2: khoảng 16 USD). Khoảng 20 USD là phần làm lại vì mạng bị chặn lúc đầu.
+- Chất lượng so với mốc khi hạ effort: kappa A–B 0,958 (lô 1–2: 0,90–0,925); bộ giữ kín đạt chỉ tiêu ở lần chấm thứ hai, như lô 1.
+- Mục lục gọn giữ ngữ cảnh lúc bắt đầu dưới 100 nghìn, nhưng lượt C vẫn lên 635–847 nghìn ở cuối, vì đọc cả hai bản nháp, nguồn và chạy bộ dev nhiều lần.
+
+**Việc tồn mới** (chi tiết trong biên bản lượt R và `reconcile/phan-*-tong-hop.md`):
+- Ngưỡng mức 3 theo tổng xác suất (việc tồn số 2) nay ảnh hưởng rõ ở Ho: ho sau cảm ở người lớn bị khuyên khám trong 24 giờ.
+- Câu huyết áp: "Không rõ" làm quy tắc huyết áp rất cao kèm khó thở ở trạng thái không xác định, nên ở Khó thở luôn ít nhất mức 3. Đề xuất lựa chọn trung tính "Chưa đo"; đổi cách mô phỏng ca cũ nên cần chủ dự án quyết.
+- Hội chứng vành cấp không đau ngực ở người đái tháo đường, người cao tuổi (khó thở, vã mồ hôi, buồn nôn): chưa có quy tắc mức 1 (ca giữ kín h-sob-011).
+- Zona: mức 4, nhưng thuốc kháng vi rút cần trong 72 giờ (NHS: khám sớm); chưa có quy tắc zona khẩn (gần mắt, suy giảm miễn dịch).
+- Thuyên tắc phổi: urgency 1 nhưng quy tắc lô 3 mức 2, quy tắc lô 1 mức 1; ho gà ở trẻ dưới 6 tháng mức 2 (NHS: khám khẩn, mức 3); hồi hộp kèm khó thở mức 2 (NHS: gọi 111). Cần bác sĩ thống nhất.
+- Đau thắt ngực ổn định chưa là bệnh. Phản vệ khó lên đầu danh sách ở Đau ngực (câu dị nguyên không được hỏi).
+- Dấu hiệu đề xuất cho lô sau: ợ nóng kéo dài từ 3 tuần; đau ngực tăng khi cử động, xoay người; đau thay đổi theo tư thế (viêm màng ngoài tim); tiếp xúc người bị ho gà; đang dùng thuốc ức chế men chuyển; tím tái ở người lớn; đờm bọt hồng; sinh non; "lúc này còn khó thở không".
+- Màn sàng lọc cấp cứu có "thở rít", nên trẻ croup thở rít khi ngồi yên có thể dừng ngay ở mức 1.
+- Một agent viết ca giữ kín chạy `git diff --stat` (chỉ đọc), trái quy tắc không chạy git.

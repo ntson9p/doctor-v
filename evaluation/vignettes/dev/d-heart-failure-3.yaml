@@ -1,0 +1,52 @@
+id: d-heart-failure-3
+set: dev
+title_vi: "Nam 68 tuổi từng hút thuốc, khó thở 5 ngày, khò khè, ho, phù hai chân, dễ nhầm đợt cấp bệnh phổi"
+narrative_vi: "Ông H., 68 tuổi, ở Thái Bình, hút thuốc lá 30 năm, bỏ được 5 năm; chưa từng được nói bị bệnh phổi tắc nghẽn mạn tính hay hen. Ông bị tăng huyết áp, rung nhĩ. Năm ngày nay ông khó thở tăng dần, đi lại là hụt hơi, đêm phải kê cao gối, nghe khò khè trong ngực, ho khan về đêm. Hai cẳng chân phù. Không sốt, không khạc đờm vàng, không đau ngực, không ho ra máu. Ngồi nghỉ vẫn nói được trọn câu. Chưa đo SpO2."
+patient:
+  age_years: 68
+  sex: male
+  region: north
+  month: 12
+complaint: shortness_of_breath
+answers:
+  dyspnea_onset: hours_days
+  dyspnea_severity: exertion
+  breathless_on_exertion: present
+  orthopnea: present
+  night_respiratory_symptoms: present
+  wheeze: present
+  cough: present
+  cough_duration: lt_1w
+  productive_cough: absent
+  leg_swelling_both: present
+  hypertension_known: present
+  atrial_fibrillation_known: present
+  known_heart_disease: present
+  former_smoker: present
+  smoker: absent
+  copd_known: absent
+  asthma_known: absent
+  biomass_smoke_exposure: absent
+  fever: absent
+  chest_pain: absent
+  chest_pain_pressure: absent
+  pleuritic_chest_pain: absent
+  hemoptysis: absent
+  palpitations: absent
+  fainting_or_near_fainting: absent
+  leg_swelling_one_side: absent
+  rapid_weight_gain: unknown
+  fatigue: present
+  diabetes: absent
+  allergen_exposure: absent
+  spo2_measured: not_measured
+default_unmentioned: absent
+expected:
+  condition: heart_failure
+  acceptable: []
+  triage: 3
+source:
+  basis: "Đợt nặng lên của suy tim ở người có tăng huyết áp, rung nhĩ: khó thở tăng dần, khó thở khi nằm, phù hai chân; khò khè do phù phổi ('hen tim'; 1857/QĐ-BYT Bảng 3: thở rít là triệu chứng ít điển hình; MSD). Dễ nhầm với đợt cấp bệnh phổi tắc nghẽn mạn tính ở người từng hút thuốc, nhưng chưa có chẩn đoán bệnh phổi và có phù hai chân, khó thở khi nằm. NHS Heart failure: khám khẩn (mức 3)."
+  references: [byt-qd-1857-2022, msd-acute-heart-failure, nhs-heart-failure, wang-jama-2005]
+author: "agent:pass-c"
+notes_vi: "Ca dễ nhầm với đợt cấp bệnh phổi tắc nghẽn mạn tính, hen (lô 3, phần a)."

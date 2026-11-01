@@ -1,0 +1,51 @@
+id: h-sob-009
+set: holdout
+title_vi: "Nam 68 tuổi bệnh phổi tắc nghẽn mạn tính, sau cơn ho mạnh đột ngột đau nhói ngực trái, khó thở cả khi ngồi, xịt thuốc không đỡ"
+narrative_vi: "Ông Đ., 68 tuổi, ở Nam Định, hút thuốc lá 40 năm, bỏ được 5 năm, bị bệnh phổi tắc nghẽn mạn tính 6 năm, dùng bình xịt hằng ngày. Nhiều năm nay ông ho khạc ít đờm trắng mỗi sáng, mấy hôm nay vẫn như mọi khi, không đổi màu. Khoảng 3 giờ trước, sau một cơn ho mạnh, ông đột ngột đau nhói ngực bên trái, đau tăng khi hít vào, rồi khó thở nhiều, ngồi yên cũng thở dốc. Ông đã xịt thuốc cắt cơn 3 lần mà không đỡ. Ông vẫn nói được câu ngắn, tỉnh táo, môi chưa tím. Con trai đo SpO2 được 93%. Ông không sốt, không ho ra máu, chân không sưng phù."
+patient:
+  age_years: 68
+  sex: male
+  region: north
+  month: 3
+complaint: shortness_of_breath
+answers:
+  copd_known: present
+  reliever_no_relief: present
+  former_smoker: present
+  dyspnea_onset: sudden
+  dyspnea_severity: rest
+  spo2_measured: s92_95
+  chest_pain: present
+  pleuritic_chest_pain: present
+  chest_pain_sudden_severe: present
+  chest_pain_duration: over_15min
+  cough: present
+  cough_duration: gt_8w
+  productive_cough: present
+  chest_pain_pressure: absent
+  chest_pain_radiates_back: absent
+  pain_radiates_arm_jaw: absent
+  cold_sweat: absent
+  wheeze: absent
+  fever: absent
+  hemoptysis: absent
+  leg_swelling_one_side: absent
+  leg_swelling_both: absent
+  recent_immobility: absent
+  confusion: absent
+  fainting_or_near_fainting: absent
+  es_severe_breathing: absent
+  smoker: absent
+  known_heart_disease: absent
+  asthma_known: absent
+default_unmentioned: absent
+expected:
+  condition: pneumothorax
+  acceptable: []
+  triage: 2
+source:
+  basis: "Tràn khí màng phổi thứ phát ở người bệnh phổi tắc nghẽn mạn tính: sau cơn ho mạnh đột ngột đau ngực một bên kiểu màng phổi, khó thở cả khi nghỉ, thuốc cắt cơn không đỡ, đờm không đổi (khác đợt cấp nhiễm khuẩn). BTS 2023 (bệnh màng phổi): tràn khí thứ phát nguy hiểm hơn tràn khí nguyên phát, cần điều trị tại bệnh viện. NHS Shortness of breath: khó thở đột ngột, nặng thì gọi 999 hoặc đến cấp cứu. Còn nói được, SpO2 93% nên mức 2."
+  references:
+    - nhs-shortness-of-breath
+author: "agent:vignette-holdout"
+notes_vi: "Ca không điển hình: người cao tuổi có bệnh phổi nền, dễ nhầm với đợt cấp bệnh phổi tắc nghẽn mạn tính. Thuyên tắc phổi là chẩn đoán phân biệt."

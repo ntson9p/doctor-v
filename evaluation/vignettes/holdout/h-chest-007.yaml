@@ -1,0 +1,45 @@
+id: h-chest-007
+set: holdout
+title_vi: "Nữ 58 tuổi, 3 ngày rát bỏng, châm chích một bên ngực phải lan ra sau lưng, hôm qua nổi đám mụn nước thành dải"
+narrative_vi: "Bà H., 58 tuổi, ở Cần Thơ, khỏe mạnh, không bị tiểu đường, không dùng thuốc gì đặc biệt. Ba ngày trước bà thấy rát bỏng, châm chích ở da ngực bên phải, lan vòng ra sau lưng bên phải; áo cọ vào cũng đau, chạm nhẹ vào da là buốt. Hôm qua chỗ đau nổi mấy mảng đỏ, trên có từng đám mụn nước nhỏ, xếp thành một dải từ sau lưng ra trước ngực, chỉ ở bên phải. Đau liên tục, không liên quan khi đi lại, gắng sức. Bà hơi mệt, không sốt, không khó thở, không ho, không vã mồ hôi. Mụn nước không ở mặt, mắt. Lúc nhỏ bà từng bị thủy đậu."
+patient:
+  age_years: 58
+  sex: female
+  region: south
+  month: 5
+complaint: chest_pain
+answers:
+  chest_pain_duration: days
+  skin_burning_band: present
+  rash_any: present
+  dermatomal_rash: present
+  chest_wall_tenderness: present
+  fatigue: present
+  hives: absent
+  rash_non_blanching: absent
+  chest_pain_exertional: absent
+  chest_pain_sudden_severe: absent
+  chest_pain_pressure: absent
+  pleuritic_chest_pain: absent
+  pain_radiates_arm_jaw: absent
+  cold_sweat: absent
+  breathing_difficulty: absent
+  fever: absent
+  cough: absent
+  red_eyes: absent
+  immunocompromised: absent
+  diabetes: absent
+  active_cancer: absent
+  hypertension_known: absent
+  known_heart_disease: absent
+default_unmentioned: absent
+expected:
+  condition: herpes_zoster
+  acceptable: []
+  triage: 3
+source:
+  basis: "Zona thần kinh điển hình ở ngực: 2–3 ngày đau rát, châm chích, tăng cảm da một bên, rồi nổi mụn nước thành dải theo một khoanh da, không qua đường giữa. NHS Shingles: nghĩ mình bị zona thì hẹn khám khẩn hoặc gọi 111 (hoặc gặp dược sĩ) vì thuốc kháng vi rút hiệu quả nhất khi bắt đầu trong 3 ngày kể từ khi nổi ban; khám ngay khi ban gần mắt. Ban mới nổi 1 ngày nên mức 3."
+  references:
+    - nhs-chest-pain
+author: "agent:vignette-holdout"
+notes_vi: "Chạm nhẹ vào da cũng buốt nên câu ấn vào chỗ đau có đau nhói trả lời 'có'. Trang NHS Shingles chưa có trong danh mục nguồn; lời khuyên khám khẩn ghi theo kết quả tìm kiếm ngày 31/10/2026."

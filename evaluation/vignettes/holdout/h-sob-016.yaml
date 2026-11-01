@@ -1,0 +1,45 @@
+id: h-sob-016
+set: holdout
+title_vi: "Bé trai 9 tuổi bị hen, từ tối khò khè nặng dần, nay chỉ nói được vài từ, ngồi cúi người thở, xịt 8 nhát không đỡ, SpO2 89%"
+narrative_vi: "Bé N., nam, 9 tuổi, ở Hà Nội, bị hen phế quản từ năm 4 tuổi, có bình xịt cắt cơn. Mấy hôm nay trời chuyển lạnh, bé sổ mũi. Từ tối qua bé ho, khò khè, khó thở tăng dần. Trong 1 giờ qua mẹ đã cho bé xịt thuốc cắt cơn 8 nhát qua buồng đệm mà không đỡ. Bây giờ bé ngồi cúi người ra trước, tì tay lên đùi để thở, thở rất nhanh, co kéo cổ, chỉ nói được vài từ rồi phải dừng lấy hơi, mệt, vã mồ hôi. Môi chưa tím, bé vẫn tỉnh, trả lời được bằng gật đầu. Máy kẹp ngón tay đo SpO2 được 89%. Bé không sốt, không ăn món lạ, không bị ong đốt, không nổi mẩn."
+patient:
+  age_years: 9
+  sex: male
+  region: north
+  month: 10
+complaint: shortness_of_breath
+answers:
+  es_severe_breathing: present
+  asthma_known: present
+  reliever_no_relief: present
+  wheeze: present
+  cough: present
+  cough_duration: lt_1w
+  dyspnea_onset: hours_days
+  dyspnea_severity: cannot_speak
+  spo2_measured: lt_92
+  runny_nose: present
+  night_respiratory_symptoms: present
+  cold_sweat: present
+  fever: absent
+  allergen_exposure: absent
+  rash_any: absent
+  stridor: absent
+  drooling_cannot_swallow: absent
+  choking_episode: absent
+  drowsy_hard_to_wake: absent
+  confusion: absent
+  chest_pain: absent
+default_unmentioned: absent
+expected:
+  condition: asthma
+  acceptable: []
+  triage: 1
+source:
+  basis: "Cơn hen nặng ở trẻ 9 tuổi: chỉ nói được từng từ, ngồi cúi người, co kéo cơ hô hấp phụ, SpO2 89%, không đỡ sau thuốc cắt cơn. GINA 2026 mục 9 (trẻ 6–11 tuổi): nói từng từ, SpO2 dưới 92% là cơn nặng, chuyển ngay tới cơ sở cấp cứu; 1851/QĐ-BYT Bảng 9: cơn nặng là cấp cứu đe dọa tử vong. NHS Asthma: không đỡ sau liều tối đa thuốc cắt cơn thì gọi 999. Mức 1."
+  references:
+    - gina-2026
+    - byt-qd-1851-2020
+    - nhs-asthma-attack
+author: "agent:vignette-holdout"
+notes_vi: "Ca cấp cứu theo đề bài: trẻ hen nặng không nói trọn câu."

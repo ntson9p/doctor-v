@@ -1,0 +1,227 @@
+id: heart_failure
+names:
+  vi: "Suy tim (đợt nặng lên)"
+  vi_common: ["Suy tim", "Suy tim cấp", "Suy tim mất bù"]
+  en: "Heart failure (acute or worsening)"
+codes:
+  icd10: "I50.9"
+  icd10_verified: false
+  mondo: "MONDO:0005252"
+summary_vi:
+  - "Tim bơm máu kém, gây ứ dịch ở phổi và chân; có thể mới mắc hoặc là đợt nặng lên của suy tim cũ."
+  - "Thường khó thở tăng dần khi gắng sức, khi nằm, phải kê cao gối, kèm phù hai chân, tăng cân nhanh, mệt."
+  - "Hay gặp ở người cao tuổi có tăng huyết áp, bệnh mạch vành, rung nhĩ; thường cần được điều trị sớm."
+urgency: 3
+cant_miss: false
+specialties: [cardiology, general_medicine]
+priors:
+  - complaint: shortness_of_breath
+    default: P3
+    by_age:
+      infant_0_2m: P5
+      child_2m_5y: P6
+      child_5_12: P6
+      teen_13_17: P6
+      adult_18_44: P4
+      elder_65_74: P2
+      elder_75p: P2
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [frese-jcmr-2011, nguyenht-bmccvd-2025, byt-qd-1857-2022]
+      locator: "Frese 2011 bảng 5 và phần bàn luận; Nguyen 2025 bảng 2"
+      reported: "Suy tim 4,1% lần khám vì khó thở mới và 7,0% lần khám vì khó thở đã biết (Hà Lan, mọi lứa tuổi); trên 45 tuổi suy tim là chẩn đoán đứng đầu. Việt Nam: 75,5% người từ 60 tuổi nhập viện vì suy tim cấp vào viện vì khó thở"
+      population: "người đi khám bác sĩ đa khoa vì khó thở ở Đức, Hà Lan"
+      note: "Lượt B. Thang tuyệt đối. Tính chung mọi tuổi 4–7%; bệnh tập trung ở người lớn tuổi, nên 45–64 tuổi 1–5% (P3), từ 65 tuổi 5–20% (P2), 18–44 tuổi 0,2–1% (P4). Trẻ em: suy tim chủ yếu do tim bẩm sinh, biểu hiện sớm ở nhũ nhi (3312 có bài suy tim ứ huyết ở trẻ); dưới 2 tháng P5, từ 2 tháng đến 17 tuổi P6. Chưa có số liệu ngoại trú Việt Nam; cần bác sĩ duyệt."
+  - complaint: cough
+    default: P5
+    by_age:
+      infant_0_2m: P6
+      child_2m_5y: P6
+      child_5_12: P6
+      teen_13_17: P6
+      adult_18_44: P6
+      elder_65_74: P4
+      elder_75p: P3
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-1857-2022, nhs-heart-failure, frese-jcmr-2011]
+      locator: "1857 Phần II mục 1, Bảng 3 (ho về đêm là triệu chứng ít điển hình)"
+      note: "Lượt B. Người suy tim nặng lên thường chọn Khó thở; một phần chọn Ho (ho về đêm, NHS: ho ra đờm hồng có bọt). Người chọn Ho phần lớn bị nhiễm trùng hô hấp. Ước 0,02–0,2% (P5) ở 45–64 tuổi, 0,2–1% (P4) ở 65–74 tuổi, 1–5% (P3) từ 75 tuổi; dưới 45 tuổi P6. Ước lượng."
+findings:
+  - finding: breathing_difficulty
+    freq: very_frequent
+    evidence:
+      tier: A
+      basis: numeric
+      sources: [mant-hta-2009, nguyenht-bmccvd-2025, byt-qd-1857-2022]
+      locator: "Mant 2009 tóm tắt; Nguyen 2025 bảng 2; 1857 Bảng 3"
+      reported: "Khó thở có độ nhạy 89% (tuyến ban đầu); khó thở là lý do nhập viện ở 75,5%"
+      note: "Lượt B. Có ý nghĩa với Ho (với Khó thở là dấu hiệu ngầm định)."
+  - finding: breathless_on_exertion
+    freq: very_frequent
+    evidence:
+      tier: A
+      basis: numeric
+      sources: [wang-jama-2005, byt-qd-1857-2022, nhs-heart-failure]
+      locator: "Wang 2005 tóm tắt (không khó thở khi gắng sức: LR âm 0,48); 1857 Bảng 3 (giảm khả năng gắng sức)"
+      note: "Lượt B. LR âm 0,48 ứng với độ nhạy cao (ước 80–90%). Tỷ lệ nền 0,15."
+  - finding: orthopnea
+    freq: frequent
+    evidence:
+      tier: A
+      basis: numeric
+      sources: [mant-hta-2009, byt-qd-1857-2022, nhs-heart-failure]
+      locator: "Mant 2009 tóm tắt; 1857 Phần III mục 3 (khó thở khi nằm là triệu chứng sung huyết); NHS (khó thở khi nằm)"
+      reported: "Khó thở khi nằm có độ đặc hiệu 89%, độ nhạy thấp (các dấu hiệu đặc hiệu có độ nhạy 11–53%)"
+      note: "Lượt B. Số liệu ở người nghi suy tim gồm cả suy tim ổn định; ở đợt nặng lên có sung huyết, khó thở khi nằm hay gặp hơn (1857). Chọn frequent. Tỷ lệ nền 5%."
+  - finding: night_respiratory_symptoms
+    freq: frequent
+    evidence:
+      tier: A
+      basis: numeric
+      sources: [wang-jama-2005, byt-qd-1857-2022, nhs-heart-failure]
+      locator: "Wang 2005 tóm tắt (cơn khó thở kịch phát về đêm LR dương 2,6); 1857 Bảng 3 (cơn khó thở kịch phát về đêm, ho về đêm)"
+      note: "Lượt B. Tần suất trong số người đã ho hoặc khó thở. LR dương 2,6 ứng với độ nhạy khoảng 40–50%; ước frequent. Hen cũng nặng về đêm nên phân biệt vừa phải."
+  - finding: leg_swelling_both
+    freq: frequent
+    evidence:
+      tier: A
+      basis: numeric
+      sources: [mant-hta-2009, nguyenht-bmccvd-2025, byt-qd-1857-2022, nhs-heart-failure]
+      locator: "Mant 2009 tóm tắt; Nguyen 2025 bảng 2; 1857 Bảng 3 (phù mắt cá chân)"
+      reported: "Phù có độ nhạy 53%, độ đặc hiệu 72%; phù chân là lý do nhập viện ở 40,4%"
+      note: "Lượt B. Tỷ lệ nền 5%."
+  - finding: rapid_weight_gain
+    freq: occasional
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-1857-2022, nhs-heart-failure]
+      locator: "1857 Bảng 3 (tăng cân trên 2 kg/tuần là dấu hiệu kém đặc hiệu); NHS (tăng cân đột ngột: khám khẩn)"
+      note: "Lượt B. Người bệnh ít khi cân hằng ngày; ước occasional. Tỷ lệ nền 0,03."
+  - finding: dyspnea_onset
+    dist: { sudden: 0.12, hours_days: 0.58, weeks: 0.30 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-1857-2022, nguyenht-bmccvd-2025]
+      locator: "1857 Phần III mục 1 (triệu chứng tiến triển nhanh hoặc từ từ); Nguyen 2025 bảng 2 (85,2% suy tim mạn mất bù)"
+      note: "Lượt B. Phân bố trong số người khó thở. Đợt nặng lên thường diễn ra trong vài ngày; một phần tăng dần nhiều tuần; phù phổi cấp có thể khởi phát đột ngột. Ước lượng."
+  - finding: dyspnea_severity
+    dist: { exertion: 0.45, rest: 0.45, cannot_speak: 0.10 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [nguyenht-bmccvd-2025, byt-qd-1857-2022, nhs-heart-failure]
+      locator: "Nguyen 2025 bảng 2 (NYHA III/IV trước nhập viện 34,7%); 1857 bảng phân độ NYHA"
+      note: "Lượt B. Phân bố trong số người khó thở. Người còn tự dùng app thường khó thở khi gắng sức hoặc lúc nghỉ; khó thở đến không nói trọn câu là phù phổi cấp (quy tắc mức 1). Ước lượng."
+  - finding: spo2_measured
+    dist: { ge_96: 0.15, s92_95: 0.15, lt_92: 0.10, not_measured: 0.60 }
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [byt-qd-1857-2022]
+      note: "Lượt B. 'Chưa đo' giữ đúng tỷ lệ nền 0,6. Sung huyết phổi làm giảm SpO2; ước lượng."
+  - finding: known_heart_disease
+    freq: very_frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [nguyenht-bmccvd-2025, wang-jama-2005]
+      locator: "Nguyen 2025 bảng 1–2; Wang 2005 tóm tắt (tiền sử suy tim LR dương 5,8)"
+      reported: "Suy tim mạn mất bù 85,2%; hội chứng vành mạn 76,2% (người từ 60 tuổi nhập viện, Việt Nam)"
+      note: "Lượt B. Câu hỏi gồm bệnh mạch vành và suy tim đã biết; chỉ hỏi từ 18 tuổi. Người suy tim lần đầu có thể chưa biết bệnh tim, nên không chọn almost_always. Tỷ lệ nền 5%."
+  - finding: hypertension_known
+    freq: very_frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [nguyenht-bmccvd-2025, byt-qd-1857-2022]
+      locator: "Nguyen 2025 bảng 1"
+      reported: "Tăng huyết áp 73,3%"
+      note: "Lượt B. Tỷ lệ nền 0,15; chỉ hỏi từ 18 tuổi."
+  - finding: atrial_fibrillation_known
+    freq: frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [nguyenht-bmccvd-2025, wang-jama-2005]
+      locator: "Nguyen 2025 bảng 1; Wang 2005 tóm tắt (điện tim rung nhĩ LR dương 3,8)"
+      reported: "Rung nhĩ 34,7%"
+      note: "Lượt B. 34,7% nằm sát ranh giới occasional/frequent; người bệnh có thể chưa được nói là rung nhĩ. Tỷ lệ nền 0,04; chỉ hỏi từ 45 tuổi."
+  - finding: diabetes
+    freq: frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [nguyenht-bmccvd-2025]
+      locator: "Nguyen 2025 bảng 1"
+      reported: "Đái tháo đường 37,2%"
+      note: "Lượt B. Tỷ lệ nền 0,07."
+  - finding: fatigue
+    freq: frequent
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-1857-2022, nhs-heart-failure]
+      locator: "1857 Bảng 3 (mệt là triệu chứng điển hình)"
+      note: "Lượt B. Tỷ lệ nền 0,2; không có tỷ lệ, ước khoảng một nửa."
+  - finding: wheeze
+    freq: occasional
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-1857-2022]
+      locator: "1857 Bảng 3 (thở rít là triệu chứng ít điển hình)"
+      note: "Lượt B. Phù phổi có thể gây khò khè ('hen tim'); ước occasional."
+  - finding: palpitations
+    freq: occasional
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-1857-2022]
+      locator: "1857 Bảng 3 (hồi hộp là triệu chứng ít điển hình)"
+      note: "Lượt B. Ước occasional; rung nhĩ nhanh có thể làm suy tim nặng lên."
+  - finding: chest_pain_pressure
+    freq: occasional
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [nguyenht-bmccvd-2025]
+      locator: "Nguyen 2025 bảng 2"
+      reported: "Đau ngực là lý do nhập viện ở 36,1% (đã loại hội chứng vành cấp)"
+      note: "Lượt B. Câu hỏi về đau, tức nặng giữa ngực; hạ một mức so với số liệu bệnh viện để tức ngực không bị quy cho suy tim thay vì hội chứng vành cấp. Đã có quy tắc mức 2."
+  - finding: pleuritic_chest_pain
+    freq: rare
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [byt-qd-1857-2022]
+      note: "Lượt B. Đau khi hít sâu, khi ho không thuộc triệu chứng của suy tim (1857 Bảng 3); gợi ý viêm phổi, thuyên tắc phổi, tràn khí. Mức rare thấp hơn tỷ lệ nền 5%. Ước lượng."
+warning_signs:
+  - es_severe_breathing
+  - chest_pain_pressure
+  - fainting_or_near_fainting
+  - confusion
+  - cold_hands_feet
+  - cold_sweat
+  - palpitations
+self_care_vi:
+  - "Ngồi nghỉ, kê cao gối khi nằm; hạn chế muối trong bữa ăn."
+  - "Uống thuốc tim mạch đều đặn theo đơn; không tự ý ngừng hay đổi liều."
+  - "Cân mỗi sáng; tăng hơn 2 kg trong vài ngày thì báo bác sĩ."
+  - "Không tự dùng thuốc giảm đau chống viêm; hỏi bác sĩ hoặc dược sĩ trước khi dùng thuốc."
+see_doctor_vi:
+  - "Đi khám trong 24 giờ khi khó thở tăng, khó thở khi nằm, phù chân hoặc tăng cân nhanh."
+  - "Mang theo đơn thuốc, sổ khám bệnh cũ khi đi khám."
+  - "Gọi 115 ngay nếu khó thở dữ dội, không nói trọn câu, môi tím, đau thắt ngực hoặc ngất."
+  - "Ho ra đờm hồng có bọt thì cần được khám ngay trong ngày."
+sources: [byt-qd-1857-2022, nhs-heart-failure, mant-hta-2009, nguyenht-bmccvd-2025]
+review:
+  status: draft
+  authors: ["agent:pass-b"]
+  doctor_reviewer: null
+  updated: "2026-10-31"
+  notes_vi: "Lượt B (Giai đoạn 3 lô 3, phần b). Bệnh này là đợt suy tim mới xuất hiện hoặc nặng lên (suy tim cấp theo 1857/QĐ-BYT Phần III), không phải suy tim mạn ổn định. Mức xử trí 3, không thuộc nhóm không được bỏ sót (giữ gợi ý): NHS xếp khó thở khi nằm, khi làm việc thường ngày, tăng cân đột ngột vào khám khẩn; 1857: suy tim mất bù thường phải nhập viện. Ca nặng (khó thở lúc nghỉ, không nói trọn câu, tức ngực, ngất) đã có quy tắc mức 1–2. Không khai báo phạm vi tuổi: suy tim ở trẻ em hiếm nhưng có thể gặp (tim bẩm sinh), nên dùng prior thấp. Không liên kết sốt: nhiễm trùng là một yếu tố thúc đẩy (1857 Phần III mục 2), nên không nên làm câu 'có sốt' giảm khả năng suy tim. Không liên kết ho với Khó thở (để tỷ lệ nền). Điều cần bác sĩ xem: (1) prior suy từ Hà Lan, Đức (mọi lứa tuổi), chưa có số liệu theo tuổi và số liệu Việt Nam ở tuyến ban đầu; (2) yếu tố nguy cơ lấy từ người từ 60 tuổi nhập viện ở 3 bệnh viện phía Nam (Nguyen 2025), người dùng cộng đồng có thể ít bệnh nền hơn; (3) tần suất khó thở khi nằm, ho về đêm ở đợt nặng lên là ước lượng từ số liệu chẩn đoán suy tim nói chung (Mant, Wang); (4) danh mục chưa có 'ho ra đờm hồng có bọt' (NHS: khám khẩn) và 'tím tái ở người lớn'; (5) mã I50.9 chưa đối chiếu được. Lời khuyên cân hằng ngày, hạn chế muối, tuân thủ thuốc, không tự dùng thuốc chống viêm theo 1857 (chế độ ăn nhiều muối, không tuân thủ điều trị, thuốc kháng viêm không steroid là yếu tố thúc đẩy) và NHS."

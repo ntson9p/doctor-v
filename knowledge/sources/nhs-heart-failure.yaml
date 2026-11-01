@@ -1,0 +1,13 @@
+id: nhs-heart-failure
+type: web_page
+title: "Heart failure"
+publisher: "NHS (UK)"
+date: "2026-06-26"
+url: "https://www.nhs.uk/conditions/heart-failure/"
+license_class: L1
+license_note: "Open Government Licence v3.0; bản chuyển thể không được trình bày như nội dung của NHS."
+default_tier: C
+accessed: "2026-10-31"
+verified: true
+verified_by: "agent:pass-r"
+notes_vi: "Lượt R lô 3 vòng 2 tải trang trực tiếp ngày 31/10/2026 (rà soát lần cuối 26/6/2026). Triệu chứng: khó thở khi làm việc thường ngày hoặc khi nằm; mệt, choáng; phù bàn chân, mắt cá, cẳng chân, bụng; tăng cân đột ngột; ho về đêm; ho ra đờm hồng có bọt. 'See a GP': có triệu chứng suy tim. 'Urgent GP / 111': khó thở khi nằm hoặc khi làm việc thường ngày; ho ra đờm hồng có bọt; tăng cân đột ngột. 'Call 999' (chỉ gọi 999): khó thở dữ dội (thở hổn hển, nghẹn, không nói được thành lời); môi hoặc da nhợt, tím, xám; ngất và không phản ứng bình thường."

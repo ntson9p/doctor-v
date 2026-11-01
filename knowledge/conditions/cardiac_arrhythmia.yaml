@@ -46,6 +46,28 @@ priors:
       locator: "Bösner 2018 bảng 3–4; Maarsingh 2010 tóm tắt; NHS Arrhythmia"
       reported: "Tim mạch 3,8–56,8% nguyên nhân chóng mặt ở tuyến ban đầu; 57% ở người 65–95 tuổi chóng mặt kéo dài (gồm hạ huyết áp tư thế, rối loạn nhịp, suy tim, bệnh mạch não)."
       note: "Hai lượt lệch một mức ở 5–12 tuổi (A P4, B P5) và 65–74 tuổi (A P2, B P3); ngang nguồn nên lượt C chọn mức thận trọng hơn (bản của lượt A). Hai tổng quan không tách riêng rối loạn nhịp khỏi nhóm tim mạch; NHS: choáng váng, chóng mặt là triệu chứng của rối loạn nhịp. Ước lượng."
+  # ---------- Giai đoạn 3, lô 3 (lượt C phần c): triệu chứng chính mới ----------
+  - complaint: shortness_of_breath
+    default: P4
+    by_age: { infant_0_2m: P6, child_2m_5y: P6, child_5_12: P5, teen_13_17: P5, elder_65_74: P3, elder_75p: P3 }
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [frese-jcmr-2011, nhs-atrial-fibrillation, nhs-svt, esc-af-2024]
+      locator: "Frese 2011 bảng 5; NHS Atrial fibrillation, SVT (khó thở là triệu chứng); ESC 2024 mục 3.3"
+      reported: "Người khám bác sĩ đa khoa vì khó thở mới: rung, cuồng nhĩ 0,49%, rối loạn nhịp khác 0,15% (Hà Lan, 3.743 lần khám); 1,1% mỗi loại ở Đức (1/93)."
+      population: "Người khó thở ở phòng khám đa khoa châu Âu"
+      note: "Hai lượt trùng ở mọi nhóm tuổi. Thang tuyệt đối. Cộng lại khoảng 0,6% người khó thở ở tuyến ban đầu, mọi lứa tuổi: 18–64 tuổi P4. Rung nhĩ tăng mạnh theo tuổi (hay gặp từ 55 tuổi, NHS) nên từ 65 tuổi 1–5% (P3); trẻ 5–17 tuổi P5, dưới 5 tuổi P6. Có hồi hộp kèm khó thở thì quy tắc rf_palpitations_danger đã xếp mức 2. Chưa có số liệu Việt Nam; cần bác sĩ duyệt."
+  - complaint: chest_pain
+    default: P4
+    by_age: { child_5_12: P5, elder_65_74: P3, elder_75p: P3 }
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [haasenritter-croatmedj-2015, chun-kjp-2015, sallam-cureus-2026, nhs-atrial-fibrillation, nhs-svt]
+      locator: "Haasenritter 2015 bảng 3; Chun 2015 tóm tắt; Sallam 2026 tóm tắt; NHS Atrial fibrillation, SVT (đau, tức ngực)"
+      reported: "Ở phòng khám đa khoa: tim mạch 13,8–16,1% người đau ngực, trong đó bệnh mạch vành 9,7–14,8% (phần còn lại khoảng 1–4% gồm rối loạn nhịp, tăng huyết áp, viêm màng ngoài tim, suy tim). Trẻ em đau ngực: nguyên nhân tim 3,8% ở khoa nhi bệnh viện, trong đó rối loạn nhịp 65% (Chun); 0,9–1,5% ở cấp cứu (Sallam)."
+      note: "Hai lượt cùng P4 cho người lớn, P3 từ 65 tuổi, P5 ở trẻ 5–12 tuổi; lệch ở thiếu niên (lượt A P5, ước lượng; lượt B P4 theo Chun). Lượt C chọn lượt B: ở thiếu niên, rối loạn nhịp chiếm phần lớn nguyên nhân tim của đau ngực (khoảng 2,5% ở bệnh viện, 0,6–1% ở cấp cứu), hạ cho cộng đồng còn khoảng 0,2–1%. Người lớn: rối loạn nhịp là một phần của nhóm tim mạch ngoài mạch vành, ước 0,2–1% (P4); từ 65 tuổi rung nhĩ hay gặp hơn (P3). Đau ngực kèm hồi hộp, khó thở, choáng do các quy tắc đau ngực xử lý (mức 1–2). Ước lượng."
 findings:
   - finding: palpitation_rhythm
     dist: { fast_regular: 0.39, irregular: 0.44, skipped_beats: 0.08, forceful: 0.09 }
@@ -235,6 +257,39 @@ findings:
       reported: "27% người đến cấp cứu vì rung nhĩ là lần đầu phát hiện, tức khoảng 73% đã biết từ trước (Salbach); trong người hồi hộp: rung, cuồng nhĩ 16%, nhịp nhanh trên thất 10%, nhịp nhanh thất 2% (Weber)"
       population: "Khoa cấp cứu ở Đức; trung tâm đại học ở Mỹ"
       note: "Lượt C: hai lượt cùng frequent với Hồi hộp và occasional với Ngất; lệch một mức với Chóng mặt (A occasional, B frequent). Với Hồi hộp, từ 45 tuổi rung, cuồng nhĩ chiếm khoảng một nửa số rối loạn nhịp và khoảng ba phần tư người rung nhĩ đã biết bệnh, nên khoảng 35–50% trả lời 'Có': frequent (tăng khả năng khoảng 12 lần so với tỷ lệ nền 0,04, phù hợp với số liệu). Với Ngất và Chóng mặt, rối loạn nhịp ở người cao tuổi phần lớn là nhịp chậm (ESC 2018), nên chọn occasional như lượt A cho Chóng mặt (ngang nguồn, ước lượng). Áp dụng từ 45 tuổi; cùng cụm heart_history với bệnh tim đã biết. Cần bác sĩ duyệt."
+  # ---------- Giai đoạn 3, lô 3 (lượt C phần c): dấu hiệu mới của lô 3 ----------
+  - finding: dyspnea_onset
+    dist: { sudden: 0.45, hours_days: 0.35, weeks: 0.2 }
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [esc-svt-2019, nhs-svt, nhs-atrial-fibrillation, esc-af-2024]
+      locator: "ESC 2019 mục 7 (khởi phát đột ngột gợi ý nhịp nhanh vòng vào lại); NHS SVT, Atrial fibrillation (cơn kịch phát)"
+      note: "Giai đoạn 3 lô 3; hai lượt trùng. Tính trong số người đã khó thở. Cơn nhịp nhanh trên thất, rung nhĩ kịch phát bắt đầu đột ngột, khó thở xuất hiện cùng cơn; rung nhĩ dai dẳng, nhịp chậm có thể làm khó thở khi gắng sức tăng dần nhiều tuần. Tỷ lệ nền 'đột ngột' 0,15. Ước lượng."
+  - finding: dyspnea_severity
+    dist: { exertion: 0.55, rest: 0.39, cannot_speak: 0.06 }
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [esc-af-2024, nhs-atrial-fibrillation]
+      locator: "ESC 2024 mục 3.3; NHS Atrial fibrillation (khó gắng sức, rất mệt, khó thở)"
+      note: "Giai đoạn 3 lô 3. Tính trong số người đã khó thở. Lượt A (0,55/0,38/0,07) và lượt B (0,55/0,4/0,05) lệch ít; lượt C lấy trung bình. Gần với tỷ lệ nền; khó thở lúc nghỉ khi cơn nhanh hoặc có suy tim kèm theo hơi nhiều hơn. Ước lượng."
+  - finding: orthopnea
+    freq: occasional
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [esc-af-2024, nhs-atrial-fibrillation]
+      locator: "ESC 2024 mục 3.3 (rung nhĩ hay đi kèm suy tim)"
+      note: "Giai đoạn 3 lô 3; hai lượt trùng. Rung nhĩ nhanh, nhịp chậm kéo dài có thể gây hoặc làm nặng suy tim, khi đó khó thở khi nằm. Ước 10–20% (tỷ lệ nền 0,05), thấp hơn hẳn suy tim. Nguồn không cho tần suất; ước lượng."
+  - finding: chest_pain_duration
+    dist: { seconds: 0.09, minutes: 0.435, over_15min: 0.375, days: 0.1 }
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [nhs-svt, nhs-atrial-fibrillation]
+      locator: "NHS SVT (cơn thường vài phút, có khi vài giờ); NHS Atrial fibrillation (vài giây đến vài phút)"
+      note: "Giai đoạn 3 lô 3. Tính trong số người đã đau ngực. Lượt A (0,08/0,42/0,4/0,1) và lượt B (0,1/0,45/0,35/0,1) lệch ít; lượt C lấy trung bình. Đau, tức ngực đi cùng cơn nhịp nhanh, kéo dài theo cơn. Ước lượng."
 warning_signs: [chest_pain_pressure, breathing_difficulty, fainting_or_near_fainting, confusion, cold_hands_feet, transient_neuro_symptoms]
 self_care_vi:
   - "Khi đang hồi hộp mà vẫn tỉnh táo, ngồi hoặc nằm nghỉ, thở chậm."
@@ -252,5 +307,5 @@ review:
   authors: ["agent:pass-a", "agent:pass-b"]
   reconciler: "agent:pass-c"
   doctor_reviewer: null
-  updated: "2026-10-27"
-  notes_vi: "Lượt C (phần b) đối chiếu 21 liên kết và mở lại mọi nguồn được trích. Bệnh gồm rung, cuồng nhĩ, nhịp nhanh trên thất, nhịp nhanh thất, blốc tim, suy nút xoang; không gồm ngoại tâm thu đơn thuần (premature_beats). Mức xử trí 3, không thuộc nhóm không được bỏ sót: NHS khuyên khám bác sĩ khi hồi hộp tái lại, gọi 999 hoặc đến cấp cứu khi kèm đau ngực, khó thở, choáng, ngất (các quy tắc rf_palpitations_danger, rf_pulse_extreme, rf_syncope_* đã nâng mức). Bác sĩ cần xem: (1) prior của Ngất 45–64 tuổi (P2) và Chóng mặt 65–74 tuổi (P2) chọn mức thận trọng khi hai lượt lệch một mức; (2) bệnh gộp nhiều loại khác hẳn nhau (nhịp nhanh trên thất ở người trẻ, rung nhĩ và nhịp chậm ở người cao tuổi) nên các phân bố là hỗn hợp; (3) câu hỏi mạch cổ đập chưa hỏi 'nhanh và đều' nên mất phần lớn giá trị phân biệt (LR 177); (4) bệnh tim cấu trúc gây ngất chưa có trong cơ sở tri thức; (5) không có số liệu Việt Nam. Giai đoạn 3 lô 2 (lượt C, 27/10/2026): thêm liên kết đã biết rung nhĩ (frequent với Hồi hộp, occasional với Ngất và Chóng mặt), mọi giá trị cũ giữ nguyên; nguồn mới Salbach 2025 đã mở lại qua API Europe PMC. Bác sĩ cần xem thêm: (6) tỷ lệ người rối loạn nhịp đã biết mình rung nhĩ suy từ một khoa cấp cứu ở Đức, chưa có số liệu Việt Nam; (7) câu rung nhĩ đã biết và bệnh tim đã biết cùng cụm heart_history (tương quan trung bình)."
+  updated: "2026-10-31"
+  notes_vi: "Lượt C (phần b) đối chiếu 21 liên kết và mở lại mọi nguồn được trích. Bệnh gồm rung, cuồng nhĩ, nhịp nhanh trên thất, nhịp nhanh thất, blốc tim, suy nút xoang; không gồm ngoại tâm thu đơn thuần (premature_beats). Mức xử trí 3, không thuộc nhóm không được bỏ sót: NHS khuyên khám bác sĩ khi hồi hộp tái lại, gọi 999 hoặc đến cấp cứu khi kèm đau ngực, khó thở, choáng, ngất (các quy tắc rf_palpitations_danger, rf_pulse_extreme, rf_syncope_* đã nâng mức). Bác sĩ cần xem: (1) prior của Ngất 45–64 tuổi (P2) và Chóng mặt 65–74 tuổi (P2) chọn mức thận trọng khi hai lượt lệch một mức; (2) bệnh gộp nhiều loại khác hẳn nhau (nhịp nhanh trên thất ở người trẻ, rung nhĩ và nhịp chậm ở người cao tuổi) nên các phân bố là hỗn hợp; (3) câu hỏi mạch cổ đập chưa hỏi 'nhanh và đều' nên mất phần lớn giá trị phân biệt (LR 177); (4) bệnh tim cấu trúc gây ngất chưa có trong cơ sở tri thức; (5) không có số liệu Việt Nam. Giai đoạn 3 lô 2 (lượt C, 27/10/2026): thêm liên kết đã biết rung nhĩ (frequent với Hồi hộp, occasional với Ngất và Chóng mặt), mọi giá trị cũ giữ nguyên; nguồn mới Salbach 2025 đã mở lại qua API Europe PMC. Bác sĩ cần xem thêm: (6) tỷ lệ người rối loạn nhịp đã biết mình rung nhĩ suy từ một khoa cấp cứu ở Đức, chưa có số liệu Việt Nam; (7) câu rung nhĩ đã biết và bệnh tim đã biết cùng cụm heart_history (tương quan trung bình). Giai đoạn 3 lô 3 (lượt C phần c, 31/10/2026): thêm prior Khó thở (18–64 tuổi P4, từ 65 tuổi P3, 5–17 tuổi P5, dưới 5 tuổi P6) và Đau ngực (13–64 tuổi P4, từ 65 tuổi P3, 5–12 tuổi P5); thêm 4 liên kết (kiểu khởi phát khó thở, mức khó thở, khó thở khi nằm occasional, thời gian cơn đau ngực). Mọi nguồn mới đã mở lại (Frese 2011, Haasenritter 2015, Chun 2015, Sallam 2026; NHS, ESC đã xác minh ở lượt trước). Không sửa giá trị cũ; không liên kết dấu hiệu chung chest_pain. Lượt B đề xuất thêm frequent cho hồi hộp khi Khó thở và Đau ngực; lượt C không dùng: liên kết cũ đã để occasional ở người từ 45 tuổi theo ESC 2024 (ở rung nhĩ, hồi hộp ít gặp hơn mệt), nguồn không cho thấy khác biệt theo triệu chứng chính, và có hồi hộp kèm khó thở hoặc đau ngực thì quy tắc rf_palpitations_danger đã xếp mức 2. Bác sĩ cần xem thêm: prior Đau ngực, Khó thở là ước lượng từ phần dư của nhóm tim mạch và số liệu Hà Lan."

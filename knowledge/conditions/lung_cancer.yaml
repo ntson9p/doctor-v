@@ -1,0 +1,244 @@
+id: lung_cancer
+names:
+  vi: "Ung thư phổi"
+  vi_common: ["Ung thư phế quản – phổi"]
+  en: "Lung cancer"
+codes:
+  icd10: "C34"
+  icd10_verified: false
+  mondo: "MONDO:0008903"
+summary_vi:
+  - "Khối u ác tính bắt đầu ở phế quản hoặc phổi; là một nguyên nhân ít gặp của ho kéo dài, ho ra máu."
+  - "Hay gặp hơn ở người từ 40 tuổi và người đang hoặc đã từng hút thuốc."
+  - "Phần lớn những triệu chứng này do bệnh khác, nhưng cần bác sĩ khám để loại trừ."
+urgency: 4
+cant_miss: false
+rule_out: true
+specialties: [respiratory, general_medicine]
+applicability:
+  age_groups: [teen_13_17, adult_18_44, adult_45_64, elder_65_74, elder_75p]
+  reason_vi: "Ung thư phổi gần như không gặp ở trẻ dưới 13 tuổi."
+priors:
+  - complaint: cough
+    default: P6
+    by_age:
+      adult_45_64: P5
+      elder_65_74: P4
+      elder_75p: P4
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [iarc-globocan-vn-2024, nice-ng12, ruano-esmoopen-2020]
+      locator: "GLOBOCAN 2024 trang 1–2; NG12 mục 1.1"
+      reported: "Việt Nam năm 2024: 23.085 ca mới (nam 16.127, nữ 6.958), tỷ suất chuẩn hóa tuổi 18,3/100.000; ho là triệu chứng hay gặp nhất lúc chẩn đoán (33,9%, Ruano-Raviña)"
+      note: "Hai lượt trùng ở mọi nhóm tuổi. Thang tuyệt đối. Khoảng 23 ca mới trên 100.000 dân mỗi năm, tập trung từ 45 tuổi; người ho phần lớn do nhiễm trùng. Ước 0,2–1% (P4) từ 65 tuổi, 0,02–0,2% (P5) ở 45–64 tuổi, dưới 0,02% (P6) khi trẻ hơn. NICE NG12 lấy mốc 40 tuổi để chụp phim phổi. Ho kéo dài, ho ra máu, sụt cân, hút thuốc sẽ nâng khả năng."
+  - complaint: shortness_of_breath
+    default: P6
+    by_age:
+      adult_45_64: P5
+      elder_65_74: P4
+      elder_75p: P4
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [frese-jcmr-2011, iarc-globocan-vn-2024, chowienczyk-bjgp-2020]
+      locator: "Frese 2011 bảng 5; Chowienczyk 2020 bảng 2"
+      reported: "u ác đường hô hấp 0,12% lần khám vì khó thở mới, 0,40% vì khó thở đã biết (mọi lứa tuổi, Hà Lan); khó thở có mã trong năm trước chẩn đoán ở 27,1% người ung thư phổi (Anh)"
+      note: "Lượt A để P5 từ 45 tuổi; lượt B để P5 ở 45–64 tuổi, P4 từ 65 tuổi. Lượt C chọn lượt B theo số của Frese (0,12–0,40% ở mọi lứa tuổi, nên cao hơn ở người lớn tuổi). P6 dưới 45 tuổi."
+  - complaint: chest_pain
+    default: P6
+    by_age:
+      adult_45_64: P5
+      elder_65_74: P4
+      elder_75p: P4
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [verdon-smw-2008, iarc-globocan-vn-2024, ruano-esmoopen-2020]
+      locator: "Verdon 2008 tóm tắt; Ruano-Raviña 2020 bảng 1"
+      reported: "7 trong 672 người đau ngực ở tuyến ban đầu tử vong vì ung thư liên quan đến đau ngực trong 12 tháng (Thụy Sĩ, tuổi trung bình 55); đau 23,8% người ung thư phổi lúc chẩn đoán"
+      note: "Lượt A để P5 từ 45 tuổi; lượt B để P5 ở 45–64 tuổi, P4 từ 65 tuổi. Ung thư (mọi loại) khoảng 1% người đau ngực ở tuyến ban đầu (Verdon), tập trung ở người lớn tuổi; lượt C chọn lượt B. P6 dưới 45 tuổi. Ước lượng."
+prior_modifiers:
+  - when: { sex: [male] }
+    factor: 1.3
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [iarc-globocan-vn-2024]
+      reported: "tỷ suất chuẩn hóa tuổi nam 29,0, nữ 9,9/100.000; 16.127 ca nam, 6.958 ca nữ"
+      note: "Lượt A 1,4 và 0,6, lượt B 1,3 và 0,7. Chênh lệch nam/nữ (khoảng 3 lần) phần lớn do hút thuốc, mà hút thuốc đã là hai câu hỏi riêng (đang hút, đã từng hút); lượt C chọn hệ số nhỏ của lượt B để tránh đếm trùng và để ung thư phổi ở phụ nữ không hút thuốc không bị hạ quá mức."
+  - when: { sex: [female] }
+    factor: 0.7
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [iarc-globocan-vn-2024]
+      reported: "tỷ suất chuẩn hóa tuổi nữ 9,9 so với chung 18,3/100.000"
+      note: "Cặp với hệ số nam; xem ghi chú ở trên."
+findings:
+  - finding: cough
+    freq: frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [ruano-esmoopen-2020, chowienczyk-bjgp-2020, msd-lung-carcinoma, nhs-lung-cancer-symptoms]
+      locator: "Ruano-Raviña 2020 bảng 1; Chowienczyk 2020 bảng 2"
+      reported: "ho 33,9% mọi người ung thư phổi lúc chẩn đoán (31,5% không triệu chứng), tức khoảng 49% người có triệu chứng; ho có mã trong năm trước chẩn đoán 33,5% (Anh)"
+      note: "Hai lượt thống nhất. Chỉ có tác dụng khi triệu chứng chính là Khó thở hoặc Đau ngực. Ho là triệu chứng hay gặp nhất."
+  - finding: cough_duration
+    dist: { lt_1w: 0.05, w1_2: 0.08, w2_8: 0.395, gt_8w: 0.475 }
+    evidence:
+      tier: C
+      basis: verbal
+      sources: [msd-lung-carcinoma, nhs-lung-cancer-symptoms, byt-qd-4235-2012]
+      locator: "4235 bài ho kéo dài, mục 2.2"
+      note: "Phân bố trong số người có ho. Ho kéo dài, dai dẳng (MSD); ho không hết (NHS); 4235 xếp ung thư phổi trong nguyên nhân ho kéo dài trên 3 tuần. Trung bình của hai lượt. Ước lượng."
+  - finding: hemoptysis
+    freq: occasional
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [ruano-esmoopen-2020, okoli-plosone-2018, chowienczyk-bjgp-2020, nice-ng12]
+      locator: "Ruano-Raviña 2020 bảng 1; Okoli 2018 bảng 3 (số liệu Hamilton 2005); NG12 mục 1.1.1"
+      reported: "ho ra máu 11,3% lúc chẩn đoán; độ nhạy khoảng 21% trong 2 năm trước chẩn đoán (tính từ LR+ 13,2 và LR− 0,80 của Hamilton 2005); 7,8% có mã trong năm trước chẩn đoán"
+      note: "Hai lượt thống nhất. Ho ra máu có giá trị chẩn đoán cao nhất (Okoli); người từ 40 tuổi ho ra máu không rõ nguyên nhân cần được chuyển khám theo đường nghi ung thư (NG12)."
+  - finding: hemoptysis_large
+    freq: rare
+    evidence:
+      tier: C
+      basis: verbal
+      sources: [msd-lung-carcinoma]
+      note: "Chỉ lượt B có liên kết này. Tần suất trong số người ho ra máu. MSD: lượng máu thường ít, chỉ hiếm khi khối u ăn vào động mạch lớn gây chảy máu nhiều. Mức rare thấp hơn tỷ lệ nền 15%."
+  - finding: weight_loss_unintended
+    freq: occasional
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [ruano-esmoopen-2020, okoli-plosone-2018, chowienczyk-bjgp-2020, nice-ng12]
+      locator: "Ruano-Raviña 2020 bảng 1; Okoli 2018 bảng 3"
+      reported: "sụt cân 21,0% lúc chẩn đoán (khoảng 31% người có triệu chứng); độ nhạy khoảng 27% (tính từ LR+ 6,2 và LR− 0,76 của Hamilton 2005); 5,7% có mã trong năm trước chẩn đoán"
+      note: "Hai lượt thống nhất."
+  - finding: breathing_difficulty
+    freq: frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [okoli-plosone-2018, ruano-esmoopen-2020, chowienczyk-bjgp-2020, nice-ng12]
+      locator: "Okoli 2018 bảng 3; Ruano-Raviña 2020 bảng 1; Chowienczyk 2020 bảng 2"
+      reported: "độ nhạy khoảng 56% trong 2 năm trước chẩn đoán (tính từ LR+ 3,6 và LR− 0,52 của Hamilton 2005); 26,7% lúc chẩn đoán (khoảng 39% người có triệu chứng); 27,1% có mã trong năm trước chẩn đoán"
+      note: "Lượt A frequent, lượt B occasional (theo số 26,7% gồm cả người không triệu chứng). Lượt C chọn frequent: người dùng app là người có triệu chứng (39% ở Ruano-Raviña), và Hamilton đọc toàn bộ hồ sơ nên sát thực tế hơn số theo mã. Chỉ có tác dụng khi triệu chứng chính là Ho hoặc Đau ngực."
+  - finding: dyspnea_onset
+    dist: { sudden: 0.05, hours_days: 0.175, weeks: 0.775 }
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-4235-2012, msd-lung-carcinoma]
+      locator: "4235 bài Hướng dẫn chẩn đoán và xử trí khó thở"
+      note: "Phân bố trong số người có khó thở. U gây tắc phế quản, tràn dịch màng phổi cho khó thở tăng dần (4235); nhanh hơn khi viêm phổi sau chỗ tắc. Trung bình của hai lượt. Ước lượng."
+  - finding: dyspnea_severity
+    dist: { exertion: 0.7, rest: 0.25, cannot_speak: 0.05 }
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [nice-ng12, msd-lung-carcinoma]
+      note: "Chỉ lượt A có liên kết này. Phân bố trong số người có khó thở; thường khó thở khi gắng sức. Ước lượng."
+  - finding: pleuritic_chest_pain
+    freq: occasional
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [ruano-esmoopen-2020, msd-lung-carcinoma, okoli-plosone-2018]
+      locator: "Ruano-Raviña 2020 bảng 1"
+      reported: "đau 23,8% lúc chẩn đoán; khoảng 18% đau ngực âm ỉ (MSD); độ nhạy đau ngực, đau sườn khoảng 40% (Hamilton 2005)"
+      note: "Chỉ lượt B có liên kết này. Đau kiểu màng phổi khi khối u lan tới màng phổi, thành ngực (MSD). Nguồn đo đau chung; ước occasional."
+  - finding: chest_pain_duration
+    dist: { seconds: 0.05, minutes: 0.1, over_15min: 0.225, days: 0.625 }
+    evidence:
+      tier: C
+      basis: verbal
+      sources: [msd-lung-carcinoma]
+      note: "Phân bố trong số người có đau ngực. Đau ngực thường âm ỉ, kéo dài (MSD). Trung bình của hai lượt. Ước lượng."
+  - finding: chest_pain_exertional
+    freq: rare
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [msd-lung-carcinoma]
+      note: "Chỉ lượt B có liên kết này. Tần suất trong số người có đau ngực. Đau do khối u âm ỉ liên tục, không theo kiểu xuất hiện khi gắng sức, đỡ khi nghỉ. Mức rare thấp hơn tỷ lệ nền 5%: câu 'có' nghiêng sang bệnh mạch vành."
+  - finding: chest_pain_sudden_severe
+    freq: rare
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [msd-lung-carcinoma]
+      note: "Chỉ lượt B có liên kết này. Tần suất trong số người có đau ngực. Đau thường âm ỉ, tăng dần. Mức rare thấp hơn tỷ lệ nền 5%."
+  - finding: fatigue
+    freq: frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [okoli-plosone-2018, ruano-esmoopen-2020, chowienczyk-bjgp-2020, nice-ng12]
+      locator: "Okoli 2018 bảng 3; Ruano-Raviña 2020 bảng 1"
+      reported: "độ nhạy khoảng 36% trong 2 năm trước chẩn đoán (tính từ LR+ 2,3 và LR− 0,76 của Hamilton 2005); mệt 10,0% lúc chẩn đoán; 6,5% có mã trong năm trước chẩn đoán"
+      note: "Chỉ lượt A có liên kết này. Mệt không rõ nguyên nhân nằm trong danh sách triệu chứng của NG12 (mục 1.1.2). Các nguồn lệch nhau (6,5–36%); lượt C giữ frequent của lượt A vì với tỷ lệ nền 20% tỷ số khả dĩ 2,5 gần với LR+ 2,3 của Hamilton (số đọc từ toàn bộ hồ sơ). Cần bác sĩ duyệt."
+  - finding: smoker
+    freq: frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [ruano-esmoopen-2020, msd-lung-carcinoma, who-steps-vn-2021, iarc-globocan-vn-2024]
+      reported: "khoảng 85% ca liên quan hút thuốc (MSD); Tây Ban Nha: đang hút 40,1%, đã bỏ 46,9%, chưa từng hút 11,9%; Việt Nam: 70% ca ở nam, nam đang hút thuốc 41,1% (55,0% ở 45–64 tuổi), nữ 0,6%"
+      note: "Hai lượt thống nhất. Ở Việt Nam phần lớn ca nữ không hút thuốc; nhiều người bệnh đã bỏ thuốc (câu former_smoker). Ước 35–50% đang hút. Tỷ lệ nền 20%."
+  - finding: former_smoker
+    freq: occasional
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [ruano-esmoopen-2020, msd-lung-carcinoma]
+      locator: "Ruano-Raviña 2020 bảng 1"
+      reported: "đã bỏ thuốc 46,9% người bệnh ở Tây Ban Nha; nguy cơ giảm sau khi bỏ thuốc nhưng không về mức người chưa hút (MSD)"
+      note: "Chỉ lượt B có liên kết này (dấu hiệu do lượt A đề xuất). Ở Việt Nam ước 20–30% vì nhiều ca nữ không hút thuốc và ít người bỏ thuốc hơn. Tỷ lệ nền 15%. Ước lượng."
+  - finding: copd_known
+    freq: occasional
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [byt-qd-2767-2023, hamilton-thorax-2005]
+      locator: "2767 mục 1.2.1"
+      note: "Chỉ lượt B có liên kết này. Hai bệnh có chung nguyên nhân hút thuốc; 2767 nêu ung thư phổi là bệnh đồng mắc; Hamilton: hô hấp ký bất thường liên quan độc lập với ung thư phổi. Không có tỷ lệ. Tỷ lệ nền 4%."
+  - finding: lymph_node_swelling
+    freq: occasional
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [nice-ng12]
+      locator: "NG12 mục 1.1.3"
+      note: "Chỉ lượt A có liên kết này. NG12 xếp hạch trên đòn hoặc hạch cổ kéo dài vào dấu hiệu cần cân nhắc chụp phim phổi. Không có tỷ lệ; ước occasional."
+  - finding: fever
+    freq: rare
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [msd-lung-carcinoma]
+      note: "Chỉ lượt A có liên kết này. Sốt không phải triệu chứng thường gặp, trừ khi có viêm phổi sau chỗ tắc (MSD). Mức rare dưới tỷ lệ nền 5% nên câu 'có sốt' nghiêng về bệnh nhiễm trùng."
+warning_signs:
+  - hemoptysis_large
+  - es_severe_breathing
+  - confusion
+self_care_vi:
+  - "Phần lớn ho, đau ngực là do bệnh khác; vẫn nên đi khám để bác sĩ nghe phổi và chụp phim khi cần."
+  - "Bỏ thuốc lá, thuốc lào; tránh khói thuốc của người khác, khói bếp, khói bụi."
+  - "Ghi lại triệu chứng: ho bao lâu, có máu không, cân nặng thay đổi thế nào, để kể với bác sĩ."
+  - "Không dùng thuốc ho, thuốc nam kéo dài thay cho việc đi khám."
+see_doctor_vi:
+  - "Đi khám trong vài ngày nếu ho quá 3 tuần, khó thở tăng dần, đau ngực âm ỉ hoặc sụt cân không rõ lý do."
+  - "Người từ 40 tuổi, đang hoặc đã từng hút thuốc, có các triệu chứng này nên đi khám sớm."
+  - "Ho ra máu thì đi khám ngay trong ngày; ho ra nhiều máu tươi hoặc khó thở nặng thì đi cấp cứu."
+sources: [nice-ng12, iarc-globocan-vn-2024, ruano-esmoopen-2020, okoli-plosone-2018, msd-lung-carcinoma, nhs-lung-cancer-symptoms]
+review:
+  status: source_checked
+  authors: ["agent:pass-a", "agent:pass-b"]
+  reconciler: "agent:pass-c"
+  doctor_reviewer: null
+  updated: "2026-10-31"
+  notes_vi: "rule_out: true (app hiện nhãn 'Bác sĩ cần loại trừ'); urgency 4 như gợi ý. Lượt C (Giai đoạn 3 lô 3) mở lại mọi nguồn: NG12 (cập nhật 15/4/2026), bản tin GLOBOCAN 2024, Okoli 2018, Chowienczyk 2020 và Ruano-Raviña 2020 (toàn văn), Hamilton 2005 (tóm tắt), MSD, NHS. Cần bác sĩ xem: (1) câu chữ của summary_vi, self_care_vi, see_doctor_vi: viết để người dùng hiểu cần đi khám, không nói về tiên lượng, không gây hoảng sợ; (2) prior theo tuổi là ước lượng từ tỷ suất mới mắc GLOBOCAN 2024 và Frese, chưa có số liệu theo lý do đi khám ở Việt Nam; (3) applicability loại trẻ dưới 13 tuổi; (4) hệ số giới nhỏ (1,3 và 0,7) vì hút thuốc đã được hỏi; (5) tần suất triệu chứng từ Anh (tuyến ban đầu) và Tây Ban Nha (bệnh viện, gồm ca phát hiện tình cờ); mệt frequent dựa trên số của Hamilton, hai nguồn khác thấp hơn nhiều; (6) không liên kết khàn tiếng (Ruano-Raviña: thay đổi giọng 3,2%, thấp hơn tỷ lệ nền 5%), mồ hôi đêm; (7) mã ICD-10 chưa đối chiếu."

@@ -1,0 +1,12 @@
+id: gold-2025
+type: guideline_intl
+title: "Global Strategy for the Diagnosis, Management, and Prevention of Chronic Obstructive Pulmonary Disease (2025 report)"
+publisher: "Global Initiative for Chronic Obstructive Lung Disease (GOLD)"
+date: "2025"
+url: "https://goldcopd.org/2025-gold-report/"
+license_class: L3
+license_note: "Bảo lưu mọi quyền: chỉ dùng dữ kiện kèm trích dẫn."
+default_tier: B
+accessed: "2026-10-31"
+verified: false
+notes_vi: "Người bảo trì thêm khi soạn danh mục lô 3 (31/10/2026). Lượt R lô 3 vòng 2 (31/10/2026): trang chủ goldcopd.org đã đăng báo cáo 2026 (bản 1.3, ngày 08/12/2025); chưa có báo cáo 2027. Lượt R không mở bản 2025 và đổi các quy tắc sang gold-2026 (đã xác minh). Giữ id này, không trích nữa."

@@ -1,0 +1,218 @@
+id: bronchiolitis
+names:
+  vi: "Viêm tiểu phế quản cấp"
+  vi_common: ["Viêm tiểu phế quản"]
+  en: "Acute bronchiolitis"
+codes:
+  icd10: "J21.9"
+  icd10_verified: false
+  mondo: "MONDO:0020680"
+summary_vi:
+  - "Nhiễm vi rút ở các ống thở nhỏ trong phổi, gặp ở trẻ dưới 2 tuổi, nhiều nhất từ 3 đến 6 tháng tuổi."
+  - "Bắt đầu như cảm lạnh, sau vài ngày ho nhiều, thở nhanh, khò khè, bú kém."
+  - "Phần lớn tự khỏi; trẻ dưới 3 tháng, sinh non hoặc có bệnh tim phổi dễ bị nặng."
+urgency: 3
+cant_miss: false
+specialties: [pediatrics, respiratory]
+applicability:
+  age_groups: [infant_0_2m, child_2m_5y]
+  reason_vi: "Viêm tiểu phế quản chỉ gặp ở trẻ dưới 2 tuổi; trẻ lớn hơn khò khè là do bệnh khác."
+priors:
+  - complaint: cough
+    default: P2
+    by_age:
+      infant_0_2m: P2
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [nice-ng9, byt-qd-3312-2015, do-plosone-2016, do-bmcinfectdis-2023, nhs-bronchiolitis]
+      locator: "NG9 khuyến cáo 1.1.1; 3312 bài Viêm tiểu phế quản cấp ở trẻ em (tr. 275); Do 2016, Do 2023 tóm tắt"
+      reported: "48% trẻ dưới 2 tuổi nằm viện vì nhiễm trùng hô hấp dưới dương tính RSV (TP Hồ Chí Minh 2009–2010); gần 20% trẻ dưới 2 tuổi đi khám vì nhiễm trùng hô hấp dưới dương tính RSV (2019–2021)"
+      note: "Thang tuyệt đối (kb-guide 2.3). Bệnh hô hấp cấp rất hay gặp ở trẻ còn bú (3312), gần như mọi trẻ nhiễm RSV trước 2 tuổi (NHS), đỉnh 3–6 tháng (NG9). Trong số trẻ dưới 2 tuổi ho đi khám, ước 10–20% là viêm tiểu phế quản; phần lớn còn lại là cảm lạnh. Nhóm 2 tháng–5 tuổi gồm cả trẻ 2–5 tuổi không mắc bệnh này, nên trung bình cả nhóm khoảng 5–10% (P2). Trẻ dưới 2 tháng mắc ít hơn đỉnh 3–6 tháng nhưng vẫn hay gặp: P2. Không có hệ số theo tháng: 3312 ghi mùa đông xuân, Do 2016 ghi mùa mưa ở miền Nam, chưa có số liệu đủ để lượng hóa theo vùng."
+  - complaint: shortness_of_breath
+    default: P1
+    by_age:
+      infant_0_2m: P2
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [nice-ng9, byt-qd-3312-2015, do-plosone-2016]
+      locator: "NG9 khuyến cáo 1.1.1, 1.1.3, 1.1.7; 3312 tr. 275–276"
+      note: "Ở trẻ dưới 2 tuổi, viêm tiểu phế quản là nguyên nhân hay gặp nhất của thở nhanh, khò khè kèm ho; khò khè do vi rút, hen thường gặp ở trẻ lớn hơn 1 tuổi (NG9 1.1.7). Trẻ 2 tháng–5 tuổi khó thở: ước khoảng 20% (P1), vì nhóm này còn có viêm phổi, viêm thanh quản, hen, dị vật. Trẻ dưới 2 tháng khó thở cần nghĩ nhiều tới viêm phổi, nhiễm khuẩn huyết; viêm tiểu phế quản ước 5–20% (P2). Ước lượng, cần bác sĩ duyệt."
+  - complaint: fever
+    default: P3
+    by_age:
+      infant_0_2m: P3
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [nice-ng9, byt-qd-3312-2015, nhs-bronchiolitis]
+      locator: "NG9 khuyến cáo 1.1.4, 1.1.6; 3312 tr. 275; NHS (Symptoms)"
+      reported: "Sốt ở khoảng 30% trẻ viêm tiểu phế quản, thường dưới 39°C (NG9)"
+      note: "Chỉ khoảng 30% trẻ có sốt, và trẻ sốt thường được đưa đi khám vì Sốt chứ không vì ho. Trong số trẻ dưới 2 tuổi sốt đi khám, viêm tiểu phế quản ước 1–5% (P3), thấp hơn cảm lạnh (P1) và viêm phổi (P2). Mức này làm phần xác suất của cảm lạnh, viêm phổi ở trẻ sốt giảm nhẹ; câu ho, thở nhanh, khò khè mới đẩy viêm tiểu phế quản lên. Sốt cao từ 39°C nghiêng về viêm phổi (NG9 1.1.6). Ước lượng."
+findings:
+  - finding: cough
+    freq: very_frequent
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [nice-ng9, byt-qd-3312-2015, nhs-bronchiolitis]
+      locator: "NG9 khuyến cáo 1.1.3; 3312 tr. 275"
+      note: "NG9: chẩn đoán khi có ho dai dẳng sau 1–3 ngày viêm long. Không chọn almost_always vì trẻ có thể đang ở ngày đầu chỉ sổ mũi, và trẻ dưới 6 tuần có thể chỉ có cơn ngừng thở (NG9 1.1.5). Có tác dụng khi triệu chứng chính là Sốt hoặc Khó thở."
+  - finding: breathing_difficulty
+    freq: very_frequent
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [nice-ng9, byt-qd-3312-2015]
+      locator: "NG9 khuyến cáo 1.1.3; 3312 tr. 275–276 (thở nhanh, co kéo, rút lõm)"
+      note: "Thở nhanh hoặc rút lõm lồng ngực là một tiêu chuẩn chẩn đoán (NG9). Câu hỏi của app gồm cả thở nhanh. Có tác dụng khi triệu chứng chính là Ho hoặc Sốt. Thể nhẹ vài ngày đầu có thể chưa thở nhanh, nên không chọn almost_always."
+  - finding: wheeze
+    freq: frequent
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [nice-ng9, byt-qd-3312-2015, nhs-bronchiolitis]
+      locator: "NG9 khuyến cáo 1.1.3 (khò khè hoặc ran nổ); 3312 tr. 276 (khò khè tăng, ran rít, ran ngáy); NHS (thở ồn, khò khè hoặc lọc xọc)"
+      note: "Khò khè hoặc ran nổ khi nghe phổi là tiêu chuẩn chẩn đoán, nhưng cha mẹ chỉ nghe được khò khè ở một phần trẻ (ran nổ cần ống nghe). Ước khoảng một nửa."
+  - finding: runny_nose
+    freq: very_frequent
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [nice-ng9, byt-qd-3312-2015, nhs-bronchiolitis]
+      locator: "NG9 khuyến cáo 1.1.3 (giai đoạn viêm long 1–3 ngày); 3312 tr. 275 (chảy nước mũi trong)"
+      note: "Sổ mũi là triệu chứng mở đầu; ít phân biệt với cảm lạnh, nhưng giúp phân biệt với viêm phổi do vi khuẩn. Cùng cụm triệu chứng mũi với nghẹt mũi."
+  - finding: nasal_congestion
+    freq: very_frequent
+    evidence:
+      tier: C
+      basis: verbal
+      sources: [nhs-bronchiolitis, nice-ng9]
+      locator: "NHS (sneezing, runny or blocked nose)"
+      note: "Nghẹt mũi đi cùng sổ mũi trong giai đoạn đầu; cùng cụm triệu chứng mũi (tương quan vừa)."
+  - finding: fever
+    freq: occasional
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [nice-ng9, byt-qd-3312-2015]
+      locator: "NG9 khuyến cáo 1.1.4; 3312 tr. 275 (sốt vừa hoặc cao)"
+      reported: "khoảng 30%"
+      note: "Có tác dụng khi triệu chứng chính là Ho hoặc Khó thở. 3312 ghi sốt vừa hoặc cao nhưng không có tỷ lệ; chọn số của NG9."
+  - finding: fever_max_temp
+    dist: { lt_38: 0.50, t38_39: 0.42, ge_39: 0.08 }
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [nice-ng9, byt-qd-3312-2015]
+      locator: "NG9 khuyến cáo 1.1.4 (thường dưới 39°C), 1.1.6 (sốt trên 39°C nghĩ tới viêm phổi); 3312 tr. 276 (sốt vừa)"
+      note: "Tính trong số trẻ có sốt. Ước lượng."
+  - finding: fever_duration
+    dist: { d1_2: 0.55, d3_5: 0.38, d6_7: 0.05, gt_7d: 0.02 }
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [nice-ng9, nhs-bronchiolitis]
+      locator: "NG9 khuyến cáo 1.1.2 (triệu chứng nặng nhất ngày 3–5)"
+      note: "Tính trong số trẻ có sốt. Sốt do vi rút thường ngắn, trong vài ngày đầu; sốt trên 5 ngày cần nghĩ bệnh khác. Ước lượng."
+  - finding: cough_duration
+    dist: { lt_1w: 0.60, w1_2: 0.30, w2_8: 0.095, gt_8w: 0.005 }
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [nice-ng9, nhs-bronchiolitis]
+      locator: "NG9 khuyến cáo 1.1.2"
+      reported: "Triệu chứng nặng nhất ngày 3–5; ho hết trong 3 tuần ở 90% trẻ"
+      note: "Cha mẹ thường đưa trẻ đi khám ở tuần đầu, khi trẻ thở nhanh, bú kém. Ho từ 2 tháng không phù hợp. Ước lượng theo mốc của NG9."
+  - finding: young_infant_fast_breathing
+    freq: frequent
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [nice-ng9, who-imci-chart-booklet-2014, byt-qd-3312-2015]
+      locator: "NG9 khuyến cáo 1.1.3, 1.2.2 (nhịp thở trên 60 lần/phút); IMCI (trẻ dưới 2 tháng: thở nhanh từ 60 lần/phút, rút lõm nặng)"
+      note: "Chỉ hỏi ở trẻ dưới 2 tháng. Thở nhanh hoặc rút lõm là tiêu chuẩn chẩn đoán, nhưng câu hỏi theo ngưỡng của IMCI (dấu hiệu nguy hiểm, quy tắc mức 2) hẹp hơn; ước khoảng một nửa. Dấu hiệu này cũng gặp ở viêm phổi, nhiễm khuẩn huyết; mức xử trí do quy tắc quyết định."
+  - finding: chest_indrawing
+    freq: occasional
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [nice-ng9, byt-qd-3312-2015]
+      locator: "NG9 khuyến cáo 1.2.1 (rút lõm nặng: chuyển cấp cứu); 3312 tr. 276 (co kéo cơ hô hấp, rút lõm lồng ngực)"
+      note: "Chỉ hỏi ở trẻ 2 tháng–5 tuổi. Câu hỏi là rút lõm lồng ngực sâu (nặng), gặp ở thể nặng hơn; ở trẻ đi khám ban đầu ước khoảng 20%. Có dấu hiệu này thì quy tắc rf_child_chest_indrawing xếp mức 2."
+  - finding: child_feeding_reduced
+    freq: occasional
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [nice-ng9, nhs-bronchiolitis, byt-qd-3312-2015]
+      locator: "NG9 khuyến cáo 1.1.4 (bú kém hay gặp, thường sau 3–5 ngày), 1.2.2 (bú 50–75% lượng thường ngày: cân nhắc chuyển viện); 3312 tr. 276 (thể nặng không bú được)"
+      note: "Chỉ hỏi ở trẻ 2 tháng–5 tuổi. Câu hỏi là chỉ bú, ăn được khoảng một nửa, mức đã cần cân nhắc chuyển viện; ước khoảng 20% trẻ đi khám ban đầu."
+  - finding: apnea_cyanosis_spells
+    freq: rare
+    freq_by_age:
+      infant_0_2m: occasional
+    above_leak_ok: true
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [nice-ng9, byt-qd-3312-2015, nhs-bronchiolitis]
+      locator: "NG9 khuyến cáo 1.1.5 (trẻ nhỏ, nhất là dưới 6 tuần, có thể chỉ biểu hiện bằng cơn ngừng thở), 1.2.1; 3312 tr. 276 (nặng thì tím tái, ngừng thở)"
+      note: "Ngừng thở, tím là dấu hiệu nặng, gặp chủ yếu ở trẻ dưới 2 tháng (ước khoảng 20%); ở trẻ lớn hơn hiếm. Mức rare ở trẻ 2 tháng–5 tuổi cao hơn tỷ lệ nền 1% có chủ đích: so với cảm lạnh, ngừng thở vẫn nghiêng về viêm tiểu phế quản, ho gà. Có dấu hiệu này thì quy tắc rf_infant_apnea xếp mức 1."
+  - finding: stridor
+    freq: very_rare
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [nhs-croup, byt-qd-3312-2015]
+      locator: "NHS Croup (bảng phân biệt: viêm tiểu phế quản có khò khè, thở nhanh); 3312 bài Khó thở thanh quản (tr. 269)"
+      note: "Viêm tiểu phế quản tắc nghẽn đường thở nhỏ, gây khò khè khi thở ra; thở rít khi hít vào lúc nằm yên là dấu hiệu tắc đường thở trên (viêm thanh quản, dị vật). Chữ 'thở rít' trong 3312 bài này chỉ tiếng rít ở phổi. Mức very_rare thấp hơn tỷ lệ nền 1%. Ước lượng."
+  - finding: barking_cough
+    freq: very_rare
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [nhs-croup, msd-croup]
+      locator: "NHS Croup (bảng phân biệt); MSD Croup"
+      note: "Ho ông ổng là kiểu ho của viêm thanh quản cấp; ho của viêm tiểu phế quản không có đặc điểm này. Mức very_rare thấp hơn tỷ lệ nền 3%, để câu trả lời 'Có' nghiêng về viêm thanh quản. Ước lượng."
+  - finding: sick_contact_respiratory
+    freq: frequent
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-3312-2015, nhs-bronchiolitis]
+      locator: "3312 tr. 275 (yếu tố nguy cơ: trong vụ dịch cúm hoặc nhiễm RSV đường hô hấp trên); NHS (lây qua ho, hắt hơi; tránh cho trẻ sơ sinh tiếp xúc người cảm cúm)"
+      note: "Trẻ nhỏ thường lây từ anh chị, người lớn đang cảm, ho. Ước khoảng một nửa. Tỷ lệ nền 0,2."
+  - finding: dyspnea_onset
+    dist: { sudden: 0.05, hours_days: 0.85, weeks: 0.10 }
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [nice-ng9, byt-qd-3312-2015]
+      locator: "NG9 khuyến cáo 1.1.2–1.1.3; 3312 tr. 276 (sau 3–5 ngày ho tăng, xuất hiện khó thở)"
+      note: "Khó thở xuất hiện sau vài ngày viêm long. Khó thở đột ngột trong vài phút gợi ý dị vật, phản vệ, viêm thanh quản. Ước lượng."
+warning_signs:
+  - apnea_cyanosis_spells
+  - es_severe_breathing
+  - chest_indrawing
+  - young_infant_fast_breathing
+  - young_infant_not_feeding
+  - child_unable_to_drink
+  - drowsy_hard_to_wake
+self_care_vi:
+  - "Cho bé bú, uống ít một và nhiều lần; tiếp tục bú mẹ."
+  - "Làm thông mũi cho bé bằng nước muối sinh lý trước khi bú và khi ngủ."
+  - "Khi bé thức, giữ bé ở tư thế đầu cao để dễ thở; theo dõi cả ban đêm."
+  - "Không hút thuốc gần bé; không tự cho bé uống thuốc ho hoặc thuốc kháng sinh."
+see_doctor_vi:
+  - "Đi khám trong 24 giờ để được đếm nhịp thở, đo ôxy máu khi có thể và hẹn theo dõi."
+  - "Trẻ dưới 3 tháng, sinh non hoặc có bệnh tim, phổi cần đi khám sớm hơn."
+  - "Khám lại ngay nếu bé bú, ăn kém dưới một nửa, hoặc hơn 12 giờ không tiểu."
+  - "Gọi 115 nếu bé có lúc ngừng thở, tím tái, thở rất mệt, rút lõm ngực hoặc li bì khó đánh thức."
+sources: [nice-ng9, byt-qd-3312-2015, nhs-bronchiolitis]
+review:
+  status: draft
+  authors: ["agent:pass-a"]
+  updated: "2026-10-31"
+  notes_vi: "Mức xử trí 3 (giữ gợi ý): NG9 khuyên đo SpO2 ở mọi trẻ nghi viêm tiểu phế quản, kể cả ở tuyến ban đầu, và đưa thông tin an toàn cho cha mẹ; NHS khuyên khám bác sĩ gấp khi bé bú ít hẳn, ít tiểu, sốt (từ 38°C ở trẻ dưới 3 tháng); trẻ có ngừng thở, rút lõm nặng, tím thì chuyển cấp cứu (NG9 1.2.1). Ca nặng do các quy tắc rf_infant_apnea, rf_child_chest_indrawing, rg_young_infant_danger_sign, rf_child_breathing xử lý. Phạm vi tuổi: infant_0_2m, child_2m_5y; prior của nhóm 2 tháng–5 tuổi là trung bình cả nhóm vì app chưa có prior theo tháng tuổi. Lượt A đã tự mở NG9 (Recommendations, xuất bản 6/2015, cập nhật 9/8/2021) và NHS Bronchiolitis (rà soát 19/02/2026). Điểm cần bác sĩ xem: (1) prior, nhất là prior cho Sốt (P3), là ước lượng; nó làm giảm nhẹ phần của cảm lạnh, viêm phổi ở trẻ dưới 2 tuổi sốt: so bộ dev trước và sau; (2) chưa có số liệu Việt Nam về tỷ lệ viêm tiểu phế quản ở trẻ đi khám ban đầu, chỉ có tỷ lệ RSV ở trẻ nằm viện, đi khám; (3) mùa bệnh ở Việt Nam chưa lượng hóa được (3312: mùa đông xuân; miền Nam: mùa mưa) nên chưa có hệ số theo tháng; (4) danh mục chưa có câu sinh non, cũng là yếu tố nguy cơ bệnh nặng (NG9 1.3.3); không đề xuất vì chủ yếu ảnh hưởng mức nặng, không phân biệt bệnh; (5) 3312/QĐ-BYT dùng chữ 'thở rít' cho tiếng rít ở phổi, khác stridor của danh mục."

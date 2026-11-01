@@ -1,0 +1,45 @@
+id: d-pulmonary-tuberculosis-1
+set: dev
+title_vi: "Nam 48 tuổi hút thuốc, ho đờm 6 tuần, ra mồ hôi đêm, sụt 4 kg, mệt"
+narrative_vi: "Anh Đ., 48 tuổi, thợ xây ở Đồng Nai, hút thuốc lá 25 năm. Sáu tuần nay ho có đờm, không đỡ dù đã mua thuốc ho uống. Hay ra mồ hôi ướt áo về đêm, người mệt, ăn kém, sụt khoảng 4 kg trong 2 tháng. Không sốt, không ho ra máu, không khó thở, không đau ngực. Không biết có ai quanh mình bị lao. Không có bệnh nền."
+patient:
+  age_years: 48
+  sex: male
+  region: south
+  month: 6
+complaint: cough
+answers:
+  cough_duration: w2_8
+  productive_cough: present
+  night_sweats: present
+  weight_loss_unintended: present
+  fatigue: present
+  loss_of_appetite: present
+  smoker: present
+  fever: absent
+  hemoptysis: absent
+  breathing_difficulty: absent
+  pleuritic_chest_pain: absent
+  chest_pain: absent
+  chest_pain_pressure: absent
+  wheeze: absent
+  runny_nose: absent
+  sore_throat: absent
+  tb_contact: absent
+  stridor: absent
+  choking_episode: absent
+  cough_paroxysms: absent
+  diabetes: absent
+  immunocompromised: absent
+  copd_known: absent
+  asthma_known: absent
+  heartburn: absent
+default_unmentioned: absent
+expected:
+  condition: pulmonary_tuberculosis
+  acceptable: []
+  triage: 4
+source:
+  basis: "Lao phổi điển hình ở người lớn: ho kéo dài trên 2 tuần có đờm, ra mồ hôi đêm, sụt cân, mệt, kém ăn (162/QĐ-BYT phần II mục 1.1). Người nghi lao cần được chụp phim, xét nghiệm đờm trong vài ngày; NHS TB: ho trên 3 tuần, mồ hôi đêm, sụt cân thì khám bác sĩ gia đình (không khẩn)."
+  references: [byt-qd-162-2024, nhs-tuberculosis, nguyen-plosone-2020]
+author: "agent:pass-c"

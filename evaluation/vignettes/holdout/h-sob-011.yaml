@@ -1,0 +1,57 @@
+id: h-sob-011
+set: holdout
+title_vi: "Nữ 72 tuổi đái tháo đường 15 năm, 2 giờ nay đột ngột khó thở, vã mồ hôi, buồn nôn, nôn, mệt rũ, không đau ngực"
+narrative_vi: "Bà M., 72 tuổi, ở Thái Bình, bị đái tháo đường 15 năm và tăng huyết áp, uống thuốc đều. Khoảng 2 giờ trước, sau bữa sáng, bà đột ngột thấy khó thở, hụt hơi, người mệt rũ, vã mồ hôi, buồn nôn, nôn 1 lần. Đến giờ ngồi yên bà vẫn thở mệt, nói được trọn câu nhưng phải ngừng lấy hơi. Bà không thấy đau ngực, không tức ngực, không đau lan lên vai, hàm. Con dâu đo SpO2 được 94%. Bà không sốt, không ho, không khò khè, không phù chân, nằm không khó thở hơn, không thấy tim đập nhanh, không ngất. Trước đây chưa được nói có bệnh tim. Bà không bị hen hay bệnh phổi."
+patient:
+  age_years: 72
+  sex: female
+  region: north
+  month: 11
+complaint: shortness_of_breath
+answers:
+  dyspnea_onset: sudden
+  dyspnea_severity: rest
+  spo2_measured: s92_95
+  cold_sweat: present
+  nausea: present
+  vomiting: present
+  fatigue: present
+  diabetes: present
+  on_glucose_lowering_meds: present
+  hypertension_known: present
+  bp_lowering_meds: present
+  chest_pain: absent
+  chest_pain_pressure: absent
+  pleuritic_chest_pain: absent
+  es_crushing_chest_pain: absent
+  es_severe_breathing: absent
+  fever: absent
+  cough: absent
+  wheeze: absent
+  leg_swelling_both: absent
+  leg_swelling_one_side: absent
+  orthopnea: absent
+  palpitations: absent
+  fainting_or_near_fainting: absent
+  confusion: absent
+  severe_weakness: absent
+  allergen_exposure: absent
+  abdominal_pain: absent
+  known_heart_disease: absent
+  asthma_known: absent
+  copd_known: absent
+  recent_immobility: absent
+  smoker: absent
+default_unmentioned: absent
+expected:
+  condition: acute_coronary_syndrome
+  acceptable: []
+  triage: 1
+source:
+  basis: "Hội chứng vành cấp không đau ngực ở người cao tuổi đái tháo đường: đột ngột khó thở kèm vã mồ hôi, buồn nôn, nôn, mệt rũ kéo dài 2 giờ. 2187/QĐ-BYT (2019): người lớn tuổi, đái tháo đường có thể không đau ngực, triệu chứng không điển hình gồm khó thở, mệt, buồn nôn, nôn; liên lạc ngay 115. NICE CG95 mục 1.2.1.5: không phải người bệnh nào cũng đau giữa ngực. NHS Shortness of breath: khó thở đột ngột, nặng thì gọi 999 hoặc đến cấp cứu. Mức 1."
+  references:
+    - byt-qd-2187-2019
+    - nice-cg95
+    - nhs-shortness-of-breath
+author: "agent:vignette-holdout"
+notes_vi: "Ca không điển hình theo đề bài: phụ nữ cao tuổi đái tháo đường, chỉ khó thở. Không đo đường huyết."

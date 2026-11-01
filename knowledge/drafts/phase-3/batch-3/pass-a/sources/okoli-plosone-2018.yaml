@@ -1,0 +1,15 @@
+id: okoli-plosone-2018
+type: systematic_review
+title: "Is symptom-based diagnosis of lung cancer possible? A systematic review and meta-analysis of symptomatic lung cancer prior to diagnosis for comparison with real-time data from routine general practice"
+publisher: "PLoS ONE 2018;13(11):e0207686 (Okoli GN, Kostopoulou O, Delaney BC)"
+date: "2018-11-21"
+url: "https://europepmc.org/article/MED/30462699"
+doi: "10.1371/journal.pone.0207686"
+pmid: "30462699"
+license_class: L1
+license_note: "CC BY 4.0."
+default_tier: A
+accessed: "2026-10-31"
+verified: true
+verified_by: "agent:pass-a"
+notes_vi: "Lượt A vòng 2 đọc toàn văn (PMC6248994) qua API Europe PMC ngày 31/10/2026. 13 nghiên cứu ở tuyến ban đầu và bệnh viện; tỷ số chênh chẩn đoán gộp: ho ra máu 6,39, khó thở 2,73, ho 2,64, đau ngực 2,02. Bảng 3 nêu tỷ số khả dĩ từ số liệu gốc của Hamilton 2005 (nghiên cứu bệnh–chứng ở 21 phòng khám đa khoa Exeter, Anh, người từ 40 tuổi, hồ sơ 2 năm trước chẩn đoán): ho ra máu LR+ 13,2, LR− 0,80; sụt cân 6,2 và 0,76; chán ăn 4,8 và 0,84; khó thở 3,6 và 0,52; đau ngực hoặc đau sườn 3,3 và 0,68; mệt 2,3 và 0,76. Lượt A tính độ nhạy từ cặp LR+ và LR−: ho ra máu khoảng 21%, sụt cân 27%, khó thở 56%, đau ngực 40%, mệt 36% (số tự tính, chưa đối chiếu bài gốc của Hamilton)."

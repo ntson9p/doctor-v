@@ -1,0 +1,15 @@
+id: howard-circulation-2013
+type: primary_study
+title: "Population-based study of incidence and outcome of acute aortic dissection and premorbid risk factor control: 10-year results from the Oxford Vascular Study"
+publisher: "Circulation 2013;127(20):2031–2037 (Howard DP, Banerjee A, Fairhead JF, et al.)"
+date: "2013-05"
+url: "https://europepmc.org/article/MED/23599348"
+doi: "10.1161/circulationaha.112.000483"
+pmid: "23599348"
+license_class: L3
+license_note: "Bản quyền nhà xuất bản: chỉ dùng dữ kiện kèm trích dẫn."
+default_tier: B
+accessed: "2026-10-31"
+verified: true
+verified_by: "agent:pass-a"
+notes_vi: "Lượt A đọc tóm tắt qua API Europe PMC. Dân số 92.728 người ở Oxfordshire (2002–2012): bóc tách động mạch chủ 6/100.000 người mỗi năm; tuổi trung bình 72; 31/52 ca là nam; 48,6% ca týp A tử vong trước khi đến viện. 67,3% đang uống thuốc hạ huyết áp; tăng huyết áp chưa kiểm soát là yếu tố nguy cơ chính có thể điều trị."

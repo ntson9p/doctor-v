@@ -37,6 +37,7 @@ answers:
   confusion: absent
   rash_any: absent
   diabetes: absent
+  cough_duration: lt_1w
 default_unmentioned: absent
 expected:
   condition: influenza

@@ -112,6 +112,8 @@ Mức phù hợp với **ca điển hình chưa biến chứng** của bệnh. B
 
 `cant_miss: true` cho bệnh có `urgency` 1–2 mà bỏ sót có thể gây tử vong hoặc tổn hại nặng trong vài giờ đến vài ngày. Bệnh này dùng ngưỡng xử trí thấp hơn (1% thay vì 2%).
 
+`rule_out: true` chỉ dùng cho bệnh ung thư. Theo quyết định của chủ dự án (`docs/phase-3/scope.md`, mục 7), app nêu tên bệnh kèm nhãn "Bác sĩ cần loại trừ". `urgency` vẫn là mức của ca điển hình (thường là 4); dấu hiệu nguy hiểm do quy tắc xử lý.
+
 ---
 
 ## 3. Bậc bằng chứng và giấy phép

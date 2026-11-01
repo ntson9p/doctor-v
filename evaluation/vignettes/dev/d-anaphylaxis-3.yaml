@@ -1,0 +1,47 @@
+id: d-anaphylaxis-3
+set: dev
+title_vi: "Nữ 22 tuổi có hen, khó thở, khò khè đột ngột 15 phút sau uống thuốc giảm đau, kèm mề đay ở cổ"
+narrative_vi: "Chị V., 22 tuổi, ở Huế, bị hen từ nhỏ, ít khi lên cơn. Chị uống một viên thuốc giảm đau mua ở hiệu thuốc vì đau bụng kinh. Khoảng 15 phút sau, chị đột ngột khó thở, khò khè, ngồi nghỉ cũng khó thở, cổ và ngực nổi mẩn gồ, ngứa, mí mắt hơi sưng. Chị nghĩ là lên cơn hen nên không chọn mục nào ở màn sàng lọc đầu tiên, chưa kịp xịt thuốc cắt cơn. Không sốt, không ho có đờm, không sổ mũi, không đau ngực, không choáng. Đang có kinh, không có thai."
+patient:
+  age_years: 22
+  sex: female
+  region: central
+  month: 3
+complaint: shortness_of_breath
+answers:
+  pregnant: absent
+  missed_period: absent
+  asthma_known: present
+  reliever_no_relief: absent
+  allergen_exposure: present
+  rash_any: present
+  hives: present
+  edema_face_hands: present
+  wheeze: present
+  dyspnea_onset: sudden
+  dyspnea_severity: rest
+  cough: absent
+  fever: absent
+  runny_nose: absent
+  chest_pain: absent
+  chest_pain_pressure: absent
+  pleuritic_chest_pain: absent
+  fainting_or_near_fainting: absent
+  palpitations: absent
+  stridor: absent
+  hoarse_voice: absent
+  vomiting: absent
+  leg_swelling_one_side: absent
+  estrogen_use: absent
+  night_respiratory_symptoms: absent
+  spo2_measured: not_measured
+default_unmentioned: absent
+expected:
+  condition: anaphylaxis
+  acceptable: []
+  triage: 1
+source:
+  basis: "Phản vệ do thuốc (thuốc chống viêm không steroid là nguyên nhân thuốc hay gặp nhất: Ninh 2024) ở người có hen: mày đay, phù mạch kèm khó thở, khò khè khởi phát trong vài phút sau dùng thuốc (51/2017/TT-BYT Phụ lục I bệnh cảnh 1). Dễ nhầm với cơn hen; ban mề đay, sưng mí mắt và mốc thời gian sau dùng thuốc gợi ý phản vệ. NHS Anaphylaxis: gọi 999 (mức 1)."
+  references: [byt-tt-51-2017, ninh-vmj-2024, nhs-anaphylaxis]
+author: "agent:pass-c"
+notes_vi: "Ca dễ nhầm với cơn hen (lô 3, phần a)."

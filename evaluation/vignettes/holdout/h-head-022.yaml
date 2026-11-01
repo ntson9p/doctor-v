@@ -40,6 +40,7 @@ answers:
   diabetes: absent
   hypertension_known: absent
   immunocompromised: absent
+  cough_duration: lt_1w
 default_unmentioned: absent
 expected:
   condition: covid19

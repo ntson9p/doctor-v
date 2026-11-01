@@ -1,0 +1,13 @@
+id: nhs-heartburn-reflux
+type: web_page
+title: "Heartburn and acid reflux"
+publisher: "NHS (UK)"
+date: "2023-11-20"
+url: "https://www.nhs.uk/conditions/heartburn-and-acid-reflux/"
+license_class: L1
+license_note: "Open Government Licence v3.0; bản chuyển thể không được trình bày như nội dung của NHS."
+default_tier: C
+accessed: "2026-10-31"
+verified: true
+verified_by: "agent:pass-b"
+notes_vi: "Lượt B tải trang bằng curl (rà soát lần cuối 20/11/2023, hạn rà soát 20/11/2026). Triệu chứng chính: ợ nóng (nóng rát giữa ngực), vị chua khó chịu trong miệng, ho hoặc nấc tái đi tái lại, đầy bụng, buồn nôn; thường nặng hơn sau ăn, khi nằm, khi cúi. Yếu tố làm nặng: cà phê, cà chua, rượu, sô cô la, đồ béo, cay; có thai; một số thuốc như thuốc giảm đau chống viêm; thoát vị khe thực quản; vi khuẩn dạ dày. Tự chăm sóc: ăn bữa nhỏ, giảm cân nếu thừa cân, không ăn trong 3–4 giờ trước khi ngủ, kê cao đầu giường 10–20 cm (không chồng thêm gối), tránh quần áo chật ở eo, hạn chế rượu. Dược sĩ có thể tư vấn thuốc. Khám bác sĩ gia đình (không khẩn) khi ợ nóng gần như hằng ngày, không đỡ, hoặc có nuốt vướng, nôn nhiều, sụt cân không rõ lý do."

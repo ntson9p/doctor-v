@@ -37,6 +37,9 @@ answers:
   panic_fear: absent
   pallor: absent
   known_heart_disease: absent
+  chest_pain: present
+  dyspnea_onset: hours_days
+  dyspnea_severity: exertion
 default_unmentioned: absent
 expected:
   condition: pulmonary_embolism

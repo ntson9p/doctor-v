@@ -1,0 +1,12 @@
+id: cdc-shingles-clinical-overview
+type: web_page
+title: "Clinical Overview of Shingles (Herpes Zoster)"
+publisher: "Centers for Disease Control and Prevention (CDC)"
+date: "2024-06-27"
+url: "https://www.cdc.gov/shingles/hcp/clinical-overview/index.html"
+license_class: L0
+default_tier: C
+accessed: "2026-10-31"
+verified: true
+verified_by: "agent:pass-b"
+notes_vi: "Lượt B tải trang bằng curl ngày 31/10/2026 (WebFetch không phân giải được tên miền). Khoảng 1/3 người Mỹ bị zona trong đời; tỷ lệ mới mắc 2–9/1.000 dân mỗi năm tùy tuổi; nguy cơ tăng rõ sau 50 tuổi và khi suy giảm miễn dịch (ghép tạng, ung thư máu, HIV, thuốc ức chế miễn dịch kể cả corticoid); khoảng 30% người nằm viện vì zona bị suy giảm miễn dịch. Có thể đau, ngứa, châm chích ở vùng sắp nổi ban; ban ở một hoặc hai khoanh da liền nhau, hay gặp nhất ở thân mình theo khoanh ngực hoặc ở mặt, thường không vượt đường giữa, lành trong 2–4 tuần. Khó chẩn đoán trước khi nổi ban. Điều trị hiệu quả nhất trong 72 giờ đầu."

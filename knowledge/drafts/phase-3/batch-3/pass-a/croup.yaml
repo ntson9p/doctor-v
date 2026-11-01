@@ -1,0 +1,202 @@
+id: croup
+names:
+  vi: "Viêm thanh quản cấp (croup)"
+  vi_common: ["Viêm thanh quản", "Viêm thanh khí phế quản", "Croup"]
+  en: "Croup (acute laryngotracheobronchitis)"
+codes:
+  icd10: "J05.0"
+  icd10_verified: false
+  mondo: "MONDO:0005722"
+summary_vi:
+  - "Nhiễm vi rút làm sưng thanh quản, khí quản, hay gặp ở trẻ 6 tháng đến 3 tuổi."
+  - "Trẻ ho ông ổng như chó sủa, khàn tiếng, có thể thở rít khi hít vào, thường nặng hơn về đêm."
+  - "Phần lớn là thể nhẹ, khỏi trong vài ngày; thở rít cả khi nằm yên là dấu hiệu nặng."
+urgency: 3
+cant_miss: false
+specialties: [pediatrics, ent]
+applicability:
+  age_groups: [child_2m_5y, child_5_12]
+  reason_vi: "Gặp chủ yếu ở trẻ 6 tháng đến 6 tuổi; trẻ dưới 2 tháng thở rít là do bệnh khác."
+priors:
+  - complaint: cough
+    default: P3
+    by_age:
+      child_5_12: P4
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [smith-afp-2018, msd-croup, byt-qd-3312-2015]
+      locator: "Smith 2018 phần dịch tễ; MSD Croup; 3312 bài Khó thở thanh quản ở trẻ em (tr. 269–270)"
+      reported: "Mỗi năm khoảng 3% trẻ 6 tháng–3 tuổi bị croup; croup chiếm 7% số lần nằm viện vì sốt, bệnh hô hấp cấp ở trẻ dưới 5 tuổi (Mỹ)"
+      note: "Thang tuyệt đối. Trẻ nhỏ ho nhiều đợt mỗi năm, nên croup chỉ là một phần nhỏ các đợt ho; nhưng tiếng ho và thở rít làm cha mẹ đưa trẻ đi khám nhiều hơn. Trẻ 2 tháng–5 tuổi ho đi khám: ước 1–5% (P3); trẻ 5–12 tuổi ít gặp hơn hẳn, chủ yếu đến 6 tuổi (P4). Chưa có số liệu Việt Nam. Câu ho ông ổng (tỷ lệ nền 3%) mang phần lớn thông tin."
+  - complaint: shortness_of_breath
+    default: P2
+    by_age:
+      child_5_12: P3
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [smith-afp-2018, msd-croup, byt-qd-3312-2015]
+      locator: "Smith 2018 (trên 99% trẻ thở rít đột ngột là croup); 3312 tr. 269 (viêm thanh quản cấp là một nguyên nhân khó thở thanh quản cấp)"
+      note: "Trẻ nhỏ thở rít, khó thở đột ngột về đêm phần lớn là croup. Trong số trẻ 2 tháng–5 tuổi khó thở, còn viêm tiểu phế quản, viêm phổi, hen, dị vật; ước 5–20% (P2); trẻ 5–12 tuổi 1–5% (P3). Ước lượng."
+prior_modifiers:
+  - when: { sex: [male] }
+    factor: 1.2
+    evidence:
+      tier: C
+      basis: numeric
+      sources: [smith-afp-2018, msd-croup]
+      reported: "Trai/gái 1,5/1"
+      note: "Với tỷ lệ trai/gái trong dân số khoảng 1/1, tỷ lệ 1,5/1 ứng với hệ số khoảng 1,2 cho trẻ trai và 0,8 cho trẻ gái so với mức chung."
+  - when: { sex: [female] }
+    factor: 0.8
+    evidence:
+      tier: C
+      basis: numeric
+      sources: [smith-afp-2018, msd-croup]
+      reported: "Trai/gái 1,5/1"
+      note: "Xem hệ số của trẻ trai."
+findings:
+  - finding: barking_cough
+    freq: very_frequent
+    evidence:
+      tier: C
+      basis: verbal
+      sources: [smith-afp-2018, msd-croup, nhs-croup, byt-qd-3312-2015]
+      locator: "Smith 2018 (chẩn đoán dựa trên ho ông ổng, thở rít, khàn tiếng); MSD; NHS (Symptoms); 3312 tr. 269 (độ 2: ho ông ổng như chó sủa)"
+      note: "Kiểu ho đặc trưng, là cơ sở chẩn đoán. Không chọn almost_always: 3312 mô tả khó thở thanh quản độ 1 chỉ có ho còn trong hoặc hơi rè, và cha mẹ có thể không nhận ra tiếng ho. Tính trong số trẻ có ho."
+  - finding: stridor
+    freq: occasional
+    evidence:
+      tier: C
+      basis: numeric
+      sources: [smith-afp-2018, byt-qd-3312-2015, nhs-croup]
+      locator: "Smith 2018 (85% thể nhẹ; bảng Westley: thể nhẹ không thở rít lúc nằm yên); 3312 tr. 269 (độ 1: rít thanh quản nhẹ; độ 2: rít rõ)"
+      reported: "Khoảng 85% ca nhẹ, dưới 1% nặng"
+      note: "Câu hỏi của app là thở rít cả lúc ngồi yên, không khóc, tức thể vừa trở lên (khoảng 15%). Nhiều trẻ chỉ rít khi khóc, quấy. Ước khoảng 15–20%. Tỷ lệ nền 1%, nên trả lời 'Có' tăng mạnh khả năng croup; quy tắc rf_stridor xếp mức 2."
+  - finding: fever
+    freq: frequent
+    evidence:
+      tier: C
+      basis: verbal
+      sources: [smith-afp-2018, msd-croup, nhs-croup]
+      locator: "Smith 2018 (nhiều trẻ sốt nhẹ; không sốt không loại trừ); MSD (nhiều trẻ có sốt); NHS (cold-like symptoms such as a temperature)"
+      note: "Có tác dụng khi triệu chứng chính là Ho hoặc Khó thở. Ước khoảng một nửa. Croup co thắt (tái phát) thường không sốt (MSD)."
+  - finding: fever_max_temp
+    dist: { lt_38: 0.45, t38_39: 0.45, ge_39: 0.10 }
+    evidence:
+      tier: C
+      basis: verbal
+      sources: [smith-afp-2018]
+      locator: "Smith 2018 (12–72 giờ sốt nhẹ, sổ mũi; bảng phân biệt: sốt cao, nhiễm độc gợi ý viêm khí quản do vi khuẩn, viêm nắp thanh môn)"
+      note: "Tính trong số trẻ có sốt. Ước lượng."
+  - finding: runny_nose
+    freq: frequent
+    evidence:
+      tier: C
+      basis: verbal
+      sources: [smith-afp-2018, msd-croup, nhs-croup]
+      locator: "Smith 2018; MSD (thường có viêm đường hô hấp trên trước); NHS"
+      note: "Sổ mũi trong 1–3 ngày đầu; khi ho ông ổng có thể đã giảm. Ước khoảng một nửa đến hai phần ba. Tỷ lệ nền 0,2."
+  - finding: breathing_difficulty
+    freq: frequent
+    evidence:
+      tier: C
+      basis: verbal
+      sources: [smith-afp-2018, nhs-croup, msd-croup]
+      locator: "Smith 2018 (nhiều trẻ khó thở); MSD (trẻ thức giấc vì khó thở, thở nhanh, co kéo)"
+      note: "Có tác dụng khi triệu chứng chính là Ho. Thể nhẹ có thể chỉ ho ông ổng, khàn tiếng. Ước khoảng một nửa."
+  - finding: cough_duration
+    dist: { lt_1w: 0.90, w1_2: 0.08, w2_8: 0.015, gt_8w: 0.005 }
+    evidence:
+      tier: C
+      basis: verbal
+      sources: [smith-afp-2018, nhs-croup]
+      locator: "Smith 2018 (đỉnh ở giờ 24–48, khỏi trong 48 giờ đến 1 tuần); NHS (thường đỡ trong 48 giờ)"
+      note: "Bệnh cấp, ngắn ngày. Ho ông ổng kéo dài hoặc tái đi tái lại cần nghĩ bệnh khác (dị vật, hẹp thanh quản, u nhú: 3312 tr. 270). Ước lượng."
+  - finding: dyspnea_onset
+    dist: { sudden: 0.35, hours_days: 0.60, weeks: 0.05 }
+    evidence:
+      tier: C
+      basis: verbal
+      sources: [smith-afp-2018, msd-croup]
+      locator: "Smith 2018 (khởi phát đột ngột ho ông ổng, thở rít); MSD (trẻ có thể thức giấc ban đêm vì khó thở)"
+      note: "Tính trong số trẻ khó thở. Khó thở thường xuất hiện đột ngột về đêm sau 1–3 ngày cảm lạnh; cha mẹ có thể chọn 'đột ngột' hoặc 'vài giờ'. Ước lượng."
+  - finding: chest_indrawing
+    freq: occasional
+    evidence:
+      tier: C
+      basis: verbal
+      sources: [byt-qd-3312-2015, smith-afp-2018]
+      locator: "3312 tr. 269 (co kéo cơ hô hấp, lõm ức, rút lõm lồng ngực; độ 2 co kéo mạnh); Smith 2018 (bảng Westley: co kéo)"
+      note: "Chỉ hỏi ở trẻ 2 tháng–5 tuổi. Co kéo rõ gặp ở thể vừa, nặng (khoảng 15%); ước khoảng 20% vì cha mẹ có thể nhận cả co kéo nhẹ. Quy tắc rf_child_chest_indrawing xếp mức 2."
+  - finding: wheeze
+    freq: rare
+    evidence:
+      tier: C
+      basis: verbal
+      sources: [smith-afp-2018]
+      locator: "Smith 2018 (khò khè nếu có thường nhẹ; khò khè rõ cần nghĩ chẩn đoán khác)"
+      note: "Mức rare thấp hơn tỷ lệ nền 5%. Cha mẹ có thể gọi tiếng rít khi hít vào là 'khò khè', nên câu trả lời 'Có' chỉ giảm khả năng croup khoảng 2 lần, không loại trừ; ho ông ổng và thở rít vẫn quyết định."
+  - finding: sick_contact_respiratory
+    freq: frequent
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [msd-croup, smith-afp-2018]
+      locator: "MSD (lây qua không khí, dịch tiết; dịch theo mùa)"
+      note: "Bệnh do vi rút đường hô hấp lây từ người đang cảm, ho. Ước khoảng một nửa. Tỷ lệ nền 0,2."
+  - finding: choking_episode
+    freq: very_rare
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-3312-2015, smith-afp-2018]
+      locator: "3312 tr. 269 (dị vật đường thở thường có hội chứng xâm nhập); Smith 2018 (bảng chẩn đoán phân biệt)"
+      note: "Khó thở thanh quản ngay sau sặc, hóc gợi ý dị vật đường thở, không phải croup. Mức very_rare thấp hơn tỷ lệ nền 1%. Quy tắc rf_choking_episode xếp mức 2."
+  - finding: apnea_cyanosis_spells
+    freq: very_rare
+    evidence:
+      tier: C
+      basis: numeric
+      sources: [smith-afp-2018, byt-qd-3312-2015, msd-croup]
+      locator: "Smith 2018 (dưới 1% thể nặng); 3312 tr. 270 (độ 3: tím tái, rối loạn nhịp thở)"
+      note: "Chỉ hỏi ở trẻ dưới 5 tuổi. Tím tái, ngừng thở chỉ có ở thể nặng (dưới 1%). Quy tắc rf_infant_apnea xếp mức 1."
+  - finding: cough_paroxysms
+    freq: occasional
+    evidence:
+      tier: C
+      basis: verbal
+      sources: [msd-croup]
+      locator: "MSD (ho ông ổng, thường thành cơn co thắt)"
+      note: "Tính trong số trẻ có ho. Ho của croup có thể thành cơn nhưng không kéo dài nhiều tuần như ho gà. Ước khoảng 20%, gần tỷ lệ nền 5% nhân 4: phân biệt yếu."
+warning_signs:
+  - stridor
+  - chest_indrawing
+  - apnea_cyanosis_spells
+  - es_severe_breathing
+  - drowsy_hard_to_wake
+  - child_unable_to_drink
+self_care_vi:
+  - "Bế bé ngồi thẳng, dỗ cho bé bình tĩnh; khóc làm khó thở hơn."
+  - "Cho bé uống đủ nước; kiểm tra bé thường xuyên, cả ban đêm."
+  - "Không cho bé xông hơi nước nóng hoặc ngồi trong phòng đầy hơi nước."
+  - "Không tự cho bé uống thuốc ho; hỏi bác sĩ hoặc dược sĩ trước khi dùng thuốc."
+see_doctor_vi:
+  - "Đi khám trong 24 giờ; bác sĩ có thể cho thuốc giúp bệnh nhanh đỡ."
+  - "Đi khám lại ngay nếu bé nặng hơn hoặc không đỡ sau khi đã khám."
+  - "Gọi 115 nếu bé thở rít cả khi nằm yên, rút lõm ngực, môi tím, li bì hoặc chảy nhiều dãi, khó nuốt."
+sources: [smith-afp-2018, msd-croup, nhs-croup, byt-qd-3312-2015]
+proposed_findings:
+  - id: hoarse_voice
+    kind: symptom
+    type: binary
+    label_vi: "Khàn tiếng"
+    question_vi: "Giọng nói hoặc tiếng khóc có bị khàn, rè hẳn đi không?"
+    leak: moderate
+    notes_vi: "Khàn tiếng là một trong ba dấu hiệu chẩn đoán croup (Smith 2018; 3312/QĐ-BYT: triệu chứng phụ hay gặp của khó thở thanh quản) và là biểu hiện của phù thanh quản trong phản vệ (51/2017/TT-BYT, độ II); giúp phân biệt với viêm tiểu phế quản, ho gà. Lượt A, lô 3."
+review:
+  status: draft
+  authors: ["agent:pass-a"]
+  updated: "2026-10-31"
+  notes_vi: "Đổi mức xử trí từ 4 (gợi ý) thành 3: NHS (Croup) khuyên đặt lịch khám bác sĩ gấp hoặc gọi 111 ngay khi nghĩ trẻ bị croup vì bác sĩ có thể cho thuốc rút ngắn bệnh; 3312/QĐ-BYT coi khó thở thanh quản là cấp cứu hô hấp ở trẻ em, độ 1 điều trị ngoại trú bằng một liều corticoid và tái khám mỗi ngày. Không thuộc nhóm không được bỏ sót: thể vừa, nặng đã được quy tắc rf_stridor, rf_child_chest_indrawing, rf_infant_apnea xử lý. Lượt A tự mở NHS Croup (rà soát 02/8/2023), MSD Croup (3/2026), Smith 2018 (toàn văn) và bài Khó thở thanh quản của 3312/QĐ-BYT (tr. 269–270). Không mở được tổng quan Bjornson (CMAJ 2013): cmaj.ca và pmc.ncbi.nlm.nih.gov chặn truy cập tự động, Europe PMC không có toàn văn. Điểm cần bác sĩ xem: (1) prior là ước lượng, chưa có số liệu Việt Nam; (2) tần suất lấy từ mô tả của tài liệu tham khảo, chỉ thở rít lúc nằm yên có cơ sở số (85% thể nhẹ); (3) danh mục chưa có câu khàn tiếng (đề xuất hoarse_voice) và câu chảy dãi, khó nuốt (dấu hiệu viêm nắp thanh môn); (4) 3312/QĐ-BYT xếp mức độ khó thở thanh quản theo tiếng ho, tiếng rít, co kéo, khác bảng Westley của Smith 2018; (5) hệ số giới quy đổi từ tỷ lệ trai/gái 1,5/1."

@@ -1,0 +1,46 @@
+id: d-cardiac-arrhythmia-shortness-of-breath-1
+set: dev
+title_vi: "Nam 72 tuổi 3 ngày nay hụt hơi khi đi lại, mệt, tim đập nhanh không đều, máy đo mạch 130"
+narrative_vi: "Ông G., 72 tuổi, ở Bắc Ninh, bị tăng huyết áp. Ba ngày nay thấy hụt hơi khi đi lại, leo vài bậc cầu thang đã phải dừng, ngồi nghỉ thì đỡ; khó thở tăng dần, không đột ngột. Kèm mệt, thấy tim đập nhanh, lộn xộn, đến giờ vẫn còn. Con trai đo bằng máy đo huyết áp thấy mạch 130 lần mỗi phút. Không đau ngực, không choáng, không ngất. Không sốt, không ho. Nằm không khó thở hơn, không phù chân. Chưa được nói có bệnh tim hay rung nhĩ. Không hút thuốc."
+patient:
+  age_years: 72
+  sex: male
+  region: north
+  month: 11
+complaint: shortness_of_breath
+answers:
+  dyspnea_onset: hours_days
+  dyspnea_severity: exertion
+  breathless_on_exertion: present
+  palpitations: present
+  palpitation_rhythm: irregular
+  palpitation_duration: ongoing
+  pulse_measured: n100_150
+  fatigue: present
+  hypertension_known: present
+  chest_pain: absent
+  chest_pain_pressure: absent
+  pleuritic_chest_pain: absent
+  fainting_or_near_fainting: absent
+  dizziness: absent
+  fever: absent
+  cough: absent
+  orthopnea: absent
+  leg_swelling_both: absent
+  leg_swelling_one_side: absent
+  known_heart_disease: absent
+  atrial_fibrillation_known: absent
+  smoker: absent
+  copd_known: absent
+  asthma_known: absent
+  recent_immobility: absent
+  spo2_measured: not_measured
+default_unmentioned: absent
+expected:
+  condition: cardiac_arrhythmia
+  acceptable: []
+  triage: 2
+source:
+  basis: "Rung nhĩ nhanh mới phát hiện ở người cao tuổi: tim đập nhanh không đều, mạch khoảng 130, mệt, khó gắng sức, khó thở (NHS Atrial fibrillation; ESC 2024 mục 3.3). NHS Heart palpitations, Atrial fibrillation: tim nhanh hoặc không đều kèm khó thở thì gọi 999 hoặc đến cấp cứu: mức 2."
+  references: [nhs-atrial-fibrillation, nhs-heart-palpitations, esc-af-2024]
+author: "agent:pass-c"

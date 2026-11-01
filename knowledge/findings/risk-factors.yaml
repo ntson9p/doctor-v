@@ -151,3 +151,44 @@
     age_groups: [adult_45_64, elder_65_74, elder_75p]
   leak: 0.04
   leak_note: "Rung nhĩ tăng theo tuổi (vài phần trăm ở người cao tuổi); người bảo trì ước lượng."
+
+# ---------- Giai đoạn 3, lô 3 ----------
+- id: asthma_known
+  kind: history
+  type: binary
+  label_vi: "Đã biết bị hen phế quản"
+  question_vi: "Đã từng được bác sĩ nói bị hen phế quản (hen suyễn) chưa?"
+  alt_question:
+    text_vi: "Có được bác sĩ cho bình xịt dùng khi lên cơn khó thở không?"
+  applies_to:
+    age_groups: [child_2m_5y, child_5_12, teen_13_17, adult_18_44, adult_45_64, elder_65_74, elder_75p]
+  leak: 0.06
+  leak_note: "Hen gặp ở khoảng 4–8% dân số; người bảo trì ước lượng, lượt A/B đối chiếu."
+- id: copd_known
+  kind: history
+  type: binary
+  label_vi: "Đã biết bị bệnh phổi tắc nghẽn mạn tính"
+  question_vi: "Đã được bác sĩ nói bị bệnh phổi tắc nghẽn mạn tính (COPD) chưa?"
+  applies_to:
+    age_groups: [adult_18_44, adult_45_64, elder_65_74, elder_75p]
+  leak: 0.04
+  leak_note: "Bệnh gặp chủ yếu từ 40 tuổi, nhất là người hút thuốc; người bảo trì ước lượng, lượt A/B đối chiếu."
+- id: estrogen_use
+  kind: risk_factor
+  type: binary
+  label_vi: "Đang dùng thuốc tránh thai, nội tiết nữ"
+  question_vi: "Có đang uống thuốc tránh thai hoặc dùng thuốc nội tiết nữ không?"
+  applies_to:
+    sex: [female]
+    age_groups: [teen_13_17, adult_18_44, adult_45_64, elder_65_74, elder_75p]
+  leak: moderate
+# Thêm sau lượt A phần a (31/10/2026), trước khi agent viết ca giữ kín làm việc.
+- id: former_smoker
+  kind: risk_factor
+  type: binary
+  label_vi: "Đã từng hút thuốc nhiều năm"
+  question_vi: "Trước đây có từng hút thuốc lá, thuốc lào nhiều năm rồi mới bỏ không?"
+  applies_to:
+    age_groups: [adult_18_44, adult_45_64, elder_65_74, elder_75p]
+  leak: 0.15
+  leak_note: "Nam giới Việt Nam hút thuốc nhiều (STEPS 2021); người bảo trì ước lượng tỷ lệ người đã bỏ thuốc trong số người không còn hút."

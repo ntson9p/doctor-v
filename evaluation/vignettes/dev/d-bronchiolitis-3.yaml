@@ -1,0 +1,48 @@
+id: d-bronchiolitis-3
+set: dev
+title_vi: "Bé trai 9 tháng khó thở, khò khè lần đầu sau 4 ngày cảm, sốt nhẹ, dễ nhầm hen hoặc viêm phổi"
+narrative_vi: "Bé Q., 9 tháng tuổi, ở Nghệ An, tháng 2. Bốn ngày trước bé sổ mũi, ho; hai ngày nay bé thở nhanh, thở mệt, nghe khò khè rõ khi thở ra. Đây là lần đầu bé khò khè, chưa từng được nói bị hen. Bé sốt nhẹ 37,8°C. Bé vẫn bú được khoảng hai phần ba, vẫn tiểu đều. Ngực không lõm sâu, không thở rên, không tím, không lúc nào ngừng thở. Không bị sặc hay hóc gì trước đó. Không ho ông ổng, không khàn tiếng. Bố hút thuốc trong nhà."
+patient:
+  age_months: 9
+  sex: male
+  region: central
+  month: 2
+complaint: shortness_of_breath
+answers:
+  cough: present
+  cough_duration: lt_1w
+  wheeze: present
+  runny_nose: present
+  nasal_congestion: present
+  fever: present
+  fever_max_temp: lt_38
+  fever_duration: d1_2
+  dyspnea_onset: hours_days
+  chest_indrawing: absent
+  grunting: absent
+  apnea_cyanosis_spells: absent
+  child_feeding_reduced: absent
+  child_unable_to_drink: absent
+  child_vomits_everything: absent
+  drowsy_hard_to_wake: absent
+  seizure_recent: absent
+  stridor: absent
+  choking_episode: absent
+  drooling_cannot_swallow: absent
+  barking_cough: absent
+  hoarse_voice: absent
+  asthma_known: absent
+  allergen_exposure: absent
+  rash_any: absent
+  sick_contact_respiratory: present
+  spo2_measured: not_measured
+default_unmentioned: absent
+expected:
+  condition: bronchiolitis
+  acceptable: []
+  triage: 3
+source:
+  basis: "Viêm tiểu phế quản ở trẻ dưới 1 tuổi: viêm long rồi ho, thở nhanh, khò khè lần đầu, sốt nhẹ (NICE NG9 1.1.1–1.1.4). Hen, khò khè sau nhiễm vi rút gợi ý khi khò khè tái diễn từng đợt ở trẻ lớn hơn (NG9 1.1.7); viêm phổi gợi ý khi sốt trên 39°C, ran nổ khu trú (NG9 1.1.6). Không có dấu hiệu chuyển cấp cứu (NG9 1.2.1). Mức 3: khám trong ngày (NG9 1.1.8; 3312/QĐ-BYT)."
+  references: [nice-ng9, byt-qd-3312-2015]
+author: "agent:pass-c"
+notes_vi: "Ca dễ nhầm với hen, viêm phổi, viêm thanh quản cấp ở triệu chứng chính Khó thở."

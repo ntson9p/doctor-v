@@ -1,0 +1,15 @@
+id: toizumi-vaccines-2025
+type: primary_study
+title: "Cord Blood RSV-Neutralizing Antibodies and Risk of Hospitalization for RSV-Associated Acute Respiratory Infection in Vietnamese Children: A Case-Cohort Study"
+publisher: "Vaccines 2025;13(9):963 (Toizumi M, Yamagata Y, Nguyen HAT và cộng sự, Yoshida LM)"
+date: "2025"
+url: "https://europepmc.org/article/MED/41012166"
+doi: "10.3390/vaccines13090963"
+pmid: "41012166"
+license_class: L1
+license_note: "CC BY (theo Europe PMC)."
+default_tier: B
+accessed: "2026-10-31"
+verified: true
+verified_by: "agent:pass-b"
+notes_vi: "Lượt B đọc tóm tắt qua API Europe PMC. Đoàn hệ sơ sinh ở Nha Trang (1.977 trẻ): tỷ lệ nhập viện vì nhiễm trùng hô hấp cấp do vi rút hợp bào hô hấp (RSV) là 17,92 trên 1.000 trẻ-năm trong 24 tháng đầu, cao hơn ở nhũ nhi nhỏ (25,40 trên 1.000 trẻ-năm). Kháng thể trung hòa từ mẹ thấp làm tăng nguy cơ nhập viện sớm."

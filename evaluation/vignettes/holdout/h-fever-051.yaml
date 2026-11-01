@@ -43,9 +43,11 @@ answers:
   malaria_area_exposure: absent
   bush_exposure: absent
   dengue_nearby: absent
+  cough_duration: w2_8
+  night_sweats: present
 default_unmentioned: absent
 expected:
-  condition: other
+  condition: pulmonary_tuberculosis
   acceptable: []
   triage: 4
 source:

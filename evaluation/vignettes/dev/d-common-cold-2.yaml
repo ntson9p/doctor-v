@@ -14,6 +14,7 @@ answers:
   runny_nose: present
   sore_throat: present
   cough: present
+  cough_duration: lt_1w
   purulent_nasal_discharge: absent
   facial_pain_pressure: absent
   loss_of_smell_taste: absent

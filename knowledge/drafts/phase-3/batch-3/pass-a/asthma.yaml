@@ -1,0 +1,203 @@
+id: asthma
+names:
+  vi: "Hen phế quản"
+  vi_common: ["Hen suyễn", "Suyễn", "Cơn hen"]
+  en: "Asthma (asthma attack)"
+codes:
+  icd10: "J45"
+  icd10_verified: false
+summary_vi:
+  - "Bệnh mạn tính của đường thở: đường thở dễ co hẹp lại khi gặp yếu tố kích thích."
+  - "Cơn hen thường gồm khó thở, khò khè, nặng ngực, ho; hay nặng hơn về đêm hoặc sáng sớm."
+  - "Cơn nhẹ thường đỡ khi dùng thuốc cắt cơn; cơn nặng là cấp cứu."
+urgency: 3
+cant_miss: false
+specialties: [respiratory, general_medicine]
+applicability:
+  age_groups: [child_2m_5y, child_5_12, teen_13_17, adult_18_44, adult_45_64, elder_65_74, elder_75p]
+  reason_vi: "Trẻ dưới 2 tháng tuổi khò khè, khó thở là do bệnh khác, không xếp là hen."
+priors:
+  - complaint: shortness_of_breath
+    default: P2
+    by_age:
+      child_2m_5y: P3
+      child_5_12: P1
+      teen_13_17: P1
+      elder_65_74: P3
+      elder_75p: P3
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [ijgm-gina-vn-2017, gina-2026, byt-qd-1851-2020]
+      reported: "hen ở 3,9–5,6% người 21–70 tuổi tại Việt Nam; từng bị hen 10,9% ở trẻ 6–7 tuổi, khò khè 29,5% ở trẻ 13–14 tuổi (TP.HCM); 6% ở Tiền Giang (số dẫn lại trong ijgm-gina-vn-2017); hen gặp ở 1–29% dân số tùy nước (GINA 2026, tr. 25)"
+      note: "Thang tuyệt đối. Hen là nguyên nhân khó thở hay gặp nhất ở trẻ 5–17 tuổi (ước từ 20%, P1), và hay gặp ở người lớn trẻ (5–20%, P2). Trẻ 2 tháng–5 tuổi khò khè phần lớn do vi rút, viêm tiểu phế quản, nên P3. Từ 65 tuổi, khó thở chủ yếu do phổi tắc nghẽn, suy tim, viêm phổi, nên P3. Ước lượng, chưa có số liệu lý do đi khám ở Việt Nam."
+  - complaint: cough
+    default: P3
+    by_age:
+      child_5_12: P2
+      teen_13_17: P2
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [ijgm-gina-vn-2017, gina-2026, nac-asthma-handbook]
+      note: "Người ho phần lớn do nhiễm vi rút; hen là nguyên nhân ho tái đi tái lại hay gặp, nhất là ở trẻ em. Ước 1–5% (P3), trẻ 5–17 tuổi 5–20% (P2). Ho đơn độc không kèm triệu chứng khác làm giảm khả năng hen (Australian Asthma Handbook); GINA 2026 (tr. 36) xếp hen dạng ho vào các nguyên nhân hay gặp của ho khan kéo dài."
+  - complaint: chest_pain
+    default: P3
+    by_age:
+      child_5_12: P2
+      teen_13_17: P2
+      elder_65_74: P4
+      elder_75p: P4
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [gina-2026, nac-asthma-handbook]
+      note: "Nặng ngực là một trong bốn triệu chứng chính của hen (GINA 2026, Box 1-2, tr. 28); ở trẻ em và thiếu niên đau ngực hay do nguyên nhân lành tính, trong đó có hen. Ước 5–20% ở trẻ 5–17 tuổi, 1–5% ở người lớn, 0,2–1% từ 65 tuổi (nguyên nhân tim mạch chiếm ưu thế). Ước lượng, cần bác sĩ duyệt."
+findings:
+  - finding: wheeze
+    freq: very_frequent
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [gina-2026, nac-asthma-handbook]
+      locator: "GINA 2026, Box 1-2 (tr. 28) và tr. 29; mục 9 (tr. 171)"
+      note: "Khò khè là một trong bốn triệu chứng điển hình của hen và của đợt cấp (GINA); một số người chỉ ho hoặc nặng ngực mà không khò khè (hen dạng ho, GINA tr. 36). Không chọn almost_always. Hai nguồn không cho tỷ lệ."
+  - finding: breathing_difficulty
+    freq: frequent
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [gina-2026, nac-asthma-handbook]
+      note: "Khó thở là một trong bốn triệu chứng điển hình (GINA 2026, Box 1-2). Chỉ có tác dụng khi triệu chứng chính là ho hoặc đau ngực (khó thở là triệu chứng chính thì đã được tính trong prior). Người chọn ho hoặc đau ngực là nhóm có cơn nhẹ hoặc ho là chủ yếu, nên frequent. Ước lượng."
+  - finding: cough
+    freq: very_frequent
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [gina-2026, nac-asthma-handbook]
+      locator: "GINA 2026, Box 1-2 (tr. 28); mục 9 (tr. 171)"
+      note: "Ho là một trong bốn triệu chứng điển hình của hen và của đợt cấp (GINA); nguồn không cho tỷ lệ, ước very_frequent. Dùng khi triệu chứng chính là khó thở hoặc đau ngực."
+  - finding: cough_duration
+    dist: { lt_1w: 0.35, w1_2: 0.2, w2_8: 0.25, gt_8w: 0.2 }
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [nac-asthma-handbook, gina-2026]
+      note: "GINA 2026 (tr. 29, 36): triệu chứng thay đổi theo thời gian; ở hen dạng ho, ho kéo dài có thể là triệu chứng duy nhất. Cơn hen kéo dài vài giờ đến vài ngày, nhưng nhiều người hen ho tái đi tái lại hoặc ho kéo dài, nên phân bố rải đều hơn nhiễm vi rút. Ước lượng."
+  - finding: chest_pain_pressure
+    freq: occasional
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [gina-2026, nac-asthma-handbook]
+      note: "Câu hỏi gồm 'tức nặng ở giữa ngực', gần với cảm giác nặng ngực, một trong bốn triệu chứng điển hình của hen (GINA 2026, Box 1-2). Nguồn không cho tỷ lệ. Ước occasional, thấp hơn hội chứng mạch vành cấp (frequent). Đau tức ngực vẫn có quy tắc mức 2 nên không làm giảm mức xử trí."
+  - finding: chest_pain_duration
+    dist: { seconds: 0.05, minutes: 0.25, over_15min: 0.35, days: 0.35 }
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [gina-2026]
+      note: "Nặng ngực kéo dài theo cơn hen (vài giờ đến vài ngày); ít khi chỉ vài giây. Trong số người có đau ngực; ước lượng."
+  - finding: pleuritic_chest_pain
+    freq: occasional
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [gina-2026]
+      note: "Ho nhiều và thở gắng sức có thể gây đau ngực khi hít sâu, khi ho. Chưa có tỷ lệ; ước occasional."
+  - finding: dyspnea_onset
+    dist: { sudden: 0.25, hours_days: 0.6, weeks: 0.15 }
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [gina-2026, nhs-asthma-attack]
+      note: "GINA 2026 (tr. 170–171): đợt cấp là tình trạng xấu đi cấp hoặc bán cấp, triệu chứng tăng dần. Cơn hen thường nặng dần trong vài giờ đến vài ngày; một số cơn đến nhanh trong vài phút sau khi gặp yếu tố kích thích. Khó thở tăng dần nhiều tuần ít gặp hơn. Ước lượng; khó thở đột ngột có quy tắc mức 2."
+  - finding: dyspnea_severity
+    dist: { exertion: 0.55, rest: 0.37, cannot_speak: 0.08 }
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [gina-2026, nhs-asthma-attack]
+      note: "Người tự kiểm tra phần lớn có cơn nhẹ đến vừa; cơn nặng (nói không trọn câu) ít hơn. Mức 'ngồi nghỉ cũng khó thở' có quy tắc mức 2, 'nói không trọn câu' có quy tắc mức 1. Ước lượng."
+  - finding: asthma_known
+    freq: very_frequent
+    freq_by_age:
+      child_2m_5y: occasional
+      child_5_12: frequent
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [ijgm-gina-vn-2017, gina-2026]
+      note: "Người lên cơn hen phần lớn đã được bác sĩ nói là bị hen, nhưng một số người lần đầu đến khám ngay trong đợt cấp (GINA 2026, tr. 170). Trẻ nhỏ khò khè thường chưa được đặt tên là hen, nên hạ mức cho trẻ dưới 13 tuổi. Quản lý hen ở tuyến ban đầu Việt Nam còn kém (ijgm-gina-vn-2017), chưa có số liệu tỷ lệ đã được chẩn đoán. Ước lượng, cần bác sĩ duyệt."
+  - finding: reliever_no_relief
+    freq: occasional
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [nhs-asthma-attack, gina-2026]
+      note: "Trong số người đã biết bị hen: phần lớn cơn nhẹ đỡ khi xịt thuốc cắt cơn; không đỡ là dấu hiệu cơn nặng (quy tắc rf_asthma_reliever_fails, mức 1). Ước occasional."
+  - finding: similar_episodes_before
+    freq: very_frequent
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [nac-asthma-handbook, gina-2026]
+      locator: "GINA 2026, tr. 29; Australian Asthma Handbook"
+      note: "Triệu chứng tái đi tái lại, thay đổi theo thời gian là đặc điểm làm tăng khả năng hen. Nguồn không cho tỷ lệ."
+  - finding: orthopnea
+    freq: occasional
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [nac-asthma-handbook]
+      note: "Triệu chứng hen hay nặng hơn về đêm hoặc sáng sớm (Australian Asthma Handbook, GINA 2026 tr. 29); trong cơn người bệnh thích ngồi hơn nằm, nên một phần sẽ trả lời có. Ước occasional, thấp hơn suy tim."
+  - finding: fever
+    freq: occasional
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [gina-2026, nac-asthma-handbook]
+      note: "Cơn hen hay khởi phát sau nhiễm vi rút hô hấp (GINA 2026 tr. 29; Australian Asthma Handbook), có thể sốt nhẹ; nhiều cơn không sốt. Ước occasional. Sốt cao kèm khó thở nghiêng về viêm phổi."
+  - finding: weight_loss_unintended
+    freq: rare
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [nac-asthma-handbook]
+      note: "Hen không gây sụt cân; mức rare dưới tỷ lệ nền 5% nên câu 'có' nghiêng về lao, ung thư."
+  - finding: hemoptysis
+    freq: very_rare
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [nac-asthma-handbook]
+      note: "Ho ra máu không thuộc bệnh cảnh hen; mức very_rare dưới tỷ lệ nền 1%."
+warning_signs:
+  - es_severe_breathing
+  - reliever_no_relief
+  - confusion
+  - drowsy_hard_to_wake
+self_care_vi:
+  - "Ngồi thẳng, cố thở chậm, dùng thuốc cắt cơn đúng như bác sĩ đã dặn."
+  - "Tránh khói thuốc, khói bếp, bụi và những thứ từng làm lên cơn."
+  - "Dùng thuốc dự phòng đều đặn theo đơn, không tự ý ngừng khi thấy đỡ."
+  - "Luôn mang theo thuốc cắt cơn khi ra ngoài."
+see_doctor_vi:
+  - "Đi khám trong 24 giờ sau cơn hen, kể cả khi đã đỡ, để được xem lại thuốc."
+  - "Đi khám nếu phải dùng thuốc cắt cơn nhiều hơn mọi khi, hoặc thức giấc về đêm vì khó thở."
+  - "Người hay khò khè, khó thở mà chưa từng được khám về hen nên đi khám."
+  - "Đi cấp cứu ngay nếu xịt thuốc cắt cơn không đỡ, nói không trọn câu, môi tím hoặc lơ mơ."
+sources: [gina-2026, byt-qd-1851-2020, nac-asthma-handbook, nhs-asthma-attack, ijgm-gina-vn-2017]
+review:
+  status: draft
+  authors: ["agent:pass-a"]
+  updated: "2026-10-31"
+  notes_vi: "Lượt A vòng 2 (31/10/2026): đã mở và đặt verified: true cho Australian Asthma Handbook (trang đặc điểm làm tăng, giảm khả năng hen) và ijgm-gina-vn-2017 (toàn văn qua Europe PMC; số tỷ lệ hen là số dẫn lại); bỏ bản nháp nguồn byt-qd-1851-2020, dùng bản trong sổ nguồn (lượt R đã xác minh); đổi gina-2024 sang gina-2026 sau khi đối chiếu bản 2026 (Box 1-2 tr. 28, tr. 29, 36, 170–171). Các nguồn chỉ mô tả bằng lời, không có tỷ lệ triệu chứng: không đổi mức nào; nâng bậc C lên B cho các liên kết có trong hướng dẫn (khò khè, ho, khó thở, nặng ngực, tái đi tái lại) và cho prior; bỏ liên kết chest_pain (quyết định của người bảo trì); bỏ các số tỷ lệ hen trẻ em không có trong nguồn đã mở. Ghi chú vòng 1: phiên làm việc chặn WebFetch, các liên kết phần lớn là ước lượng (judgment). Cần bác sĩ xem: (1) urgency 3 như gợi ý: cơn hen điển hình cần được khám lại trong 24 giờ; cơn nặng do quy tắc (nói không trọn câu mức 1, khó thở lúc nghỉ mức 2, xịt thuốc không đỡ mức 1); (2) prior theo tuổi là ước lượng; tỷ lệ hen ở Việt Nam 3,9–5,6% (người lớn), từng bị hen 10,9% ở trẻ 6–7 tuổi tại TP.HCM (số dẫn lại); (3) applicability loại trẻ dưới 2 tháng; trẻ 2 tháng–5 tuổi khò khè do vi rút dễ bị xếp nhầm là hen; (4) chest_pain_pressure occasional có thể làm hen cạnh tranh với hội chứng mạch vành cấp ở người lớn tuổi; mức xử trí vẫn do quy tắc; (5) danh mục chưa có câu hỏi triệu chứng nặng hơn về đêm, gần sáng (đề xuất bên dưới); (6) mã ICD-10 chưa đối chiếu."
+proposed_findings:
+  - id: night_respiratory_symptoms
+    kind: symptom
+    type: binary
+    label_vi: "Ho, khó thở nặng hơn về đêm, gần sáng"
+    question_vi: "Ho hoặc khó thở có hay nặng hơn về đêm, gần sáng không?"
+    leak: moderate
+    notes_vi: "Đặc điểm làm tăng khả năng hen (GINA, Australian Asthma Handbook); giúp phân biệt hen với nhiễm vi rút, viêm phế quản cấp. Khác orthopnea (khó thở khi nằm của suy tim). Lượt A, lô 3."

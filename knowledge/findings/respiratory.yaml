@@ -112,3 +112,181 @@
   alt_question:
     text_vi: "Đờm hoặc nước bọt khi ho có lẫn máu đỏ không?"
   leak: specific
+
+# ---------- Giai đoạn 3, lô 3 ----------
+- id: cough_duration
+  kind: history
+  type: categorical
+  label_vi: "Thời gian ho"
+  question_vi: "Đã ho bao lâu rồi?"
+  options:
+    - { id: lt_1w, label_vi: "Dưới 1 tuần" }
+    - { id: w1_2, label_vi: "Từ 1 đến dưới 2 tuần" }
+    - { id: w2_8, label_vi: "Từ 2 tuần đến dưới 2 tháng" }
+    - { id: gt_8w, label_vi: "Từ 2 tháng trở lên" }
+  # Mốc 2 tuần: sàng lọc lao (ho kéo dài từ 2 tuần); mốc 8 tuần: ho mạn tính. Người bảo trì ước lượng phân bố nền.
+  baseline: { lt_1w: 0.5, w1_2: 0.25, w2_8: 0.18, gt_8w: 0.07 }
+  requires:
+    - { finding: cough, is: present }
+- id: wheeze
+  kind: sign
+  type: binary
+  label_vi: "Thở khò khè"
+  question_vi: "Khi thở có nghe tiếng khò khè, cò cử không?"
+  help_vi: "Tiếng kêu như huýt sáo nhỏ trong ngực, nghe rõ hơn khi thở ra. Người nhà có thể nghe thấy."
+  alt_question:
+    text_vi: "Khi thở ra, trong ngực có tiếng kêu như huýt sáo nhỏ không?"
+  leak: moderate
+- id: stridor
+  kind: sign
+  type: binary
+  label_vi: "Thở rít khi hít vào, cả lúc nằm, ngồi yên"
+  question_vi: "Lúc ngồi yên, không khóc, mỗi lần hít vào có tiếng rít to không?"
+  help_vi: "Tiếng rít to, thô khi hít vào, khác tiếng khò khè như huýt sáo khi thở ra. Chỉ rít khi khóc, quấy thì chưa tính."
+  alt_question:
+    text_vi: "Khi nằm yên hoặc đang ngủ, có nghe tiếng rít mỗi lần hít vào không?"
+  leak: specific
+- id: barking_cough
+  kind: symptom
+  type: binary
+  label_vi: "Ho ông ổng"
+  question_vi: "Tiếng ho có ông ổng, nghe như tiếng chó sủa không?"
+  requires:
+    - { finding: cough, is: present }
+  leak: 0.03
+  leak_note: "Kiểu ho đặc trưng của viêm thanh quản cấp (croup); người bảo trì ước lượng ở người ho không mắc bệnh này."
+- id: cough_paroxysms
+  kind: symptom
+  type: binary
+  label_vi: "Ho từng cơn dồn dập"
+  question_vi: "Có từng cơn ho dồn dập, ho đến đỏ mặt, chảy nước mắt không?"
+  requires:
+    - { finding: cough, is: present }
+  cluster: pertussis_cough
+  leak: moderate
+- id: inspiratory_whoop
+  kind: sign
+  type: binary
+  label_vi: "Cuối cơn ho có tiếng rít khi hít vào"
+  question_vi: "Cuối cơn ho, khi hít vào có tiếng rít như tiếng gà gáy không?"
+  requires:
+    - { finding: cough, is: present }
+  cluster: pertussis_cough
+  leak: specific
+- id: post_tussive_vomiting
+  kind: symptom
+  type: binary
+  label_vi: "Nôn sau cơn ho"
+  question_vi: "Sau cơn ho có bị nôn ra không?"
+  requires:
+    - { finding: cough, is: present }
+  cluster: pertussis_cough
+  leak: moderate
+- id: choking_episode
+  kind: history
+  type: binary
+  label_vi: "Bắt đầu ngay sau khi bị hóc, sặc đồ ăn, đồ vật"
+  question_vi: "Ho hoặc khó thở có bắt đầu ngay sau khi bị sặc, hóc không?"
+  help_vi: "Ví dụ đang ăn, đang ngậm đồ chơi, hạt, xương thì bị sặc, ho rũ rượi. Sặc nước rồi hết ho ngay thì không tính."
+  requires:
+    - any:
+        - { finding: cough, is: present }
+        - { finding: breathing_difficulty, is: present }
+  leak: specific
+- id: hemoptysis_large
+  kind: sign
+  type: binary
+  label_vi: "Ho ra nhiều máu"
+  question_vi: "Có ho ra máu tươi, nhiều hơn vài vệt máu lẫn trong đờm không?"
+  alt_question:
+    text_vi: "Có lần ho ra máu tươi, từ khoảng một thìa (muỗng) trở lên không?"
+  requires:
+    - { finding: hemoptysis, is: present }
+  leak: 0.15
+  leak_note: "Trong số người ho ra máu không mắc bệnh liên kết, phần lớn chỉ có vệt máu lẫn đờm; người bảo trì ước lượng."
+- id: dyspnea_onset
+  kind: history
+  type: categorical
+  label_vi: "Khó thở bắt đầu thế nào"
+  question_vi: "Khó thở bắt đầu như thế nào?"
+  options:
+    - { id: sudden, label_vi: "Đột ngột, trong vài phút" }
+    - { id: hours_days, label_vi: "Trong vài giờ đến vài ngày" }
+    - { id: weeks, label_vi: "Tăng dần nhiều tuần hoặc nhiều tháng" }
+  baseline: { sudden: 0.15, hours_days: 0.5, weeks: 0.35 }
+  requires:
+    - { finding: breathing_difficulty, is: present }
+- id: dyspnea_severity
+  kind: symptom
+  type: categorical
+  label_vi: "Mức khó thở"
+  question_vi: "Lúc khó thở nhất, mức khó thở thế nào?"
+  options:
+    - { id: exertion, label_vi: "Chỉ khó thở khi đi lại, gắng sức" }
+    - { id: rest, label_vi: "Ngồi nghỉ cũng khó thở" }
+    - { id: cannot_speak, label_vi: "Khó thở đến mức nói không trọn câu" }
+  baseline: { exertion: 0.6, rest: 0.3, cannot_speak: 0.1 }
+  requires:
+    - { finding: breathing_difficulty, is: present }
+- id: orthopnea
+  kind: symptom
+  type: binary
+  label_vi: "Khó thở khi nằm"
+  question_vi: "Nằm xuống có khó thở hơn, phải kê cao gối hoặc ngồi dậy không?"
+  leak: moderate
+- id: reliever_no_relief
+  kind: history
+  type: binary
+  label_vi: "Đã xịt thuốc cắt cơn mà không đỡ"
+  question_vi: "Đã xịt thuốc cắt cơn khó thở mà vẫn không đỡ không?"
+  alt_question:
+    text_vi: "Sau khi xịt thuốc vài lần, vẫn còn khó thở như trước không?"
+  help_vi: "Thuốc cắt cơn là bình xịt bác sĩ dặn dùng khi lên cơn khó thở, thường có màu xanh."
+  requires:
+    - any:
+        - { finding: asthma_known, is: present }
+        - { finding: copd_known, is: present }
+  leak: moderate
+# Thêm sau lượt R và lượt A phần a (31/10/2026), trước khi agent viết ca giữ kín làm việc.
+- id: spo2_measured
+  kind: measurement
+  type: categorical
+  label_vi: "SpO2 đo được"
+  question_vi: "Chỉ số ô xy (SpO2) đo bằng máy kẹp ngón tay là bao nhiêu?"
+  help_vi: "Chọn 'Chưa đo' nếu nhà không có máy. Đo lúc ngồi yên, tay ấm, chờ số ổn định."
+  options:
+    - { id: ge_96, label_vi: "Từ 96% trở lên" }
+    - { id: s92_95, label_vi: "Từ 92% đến 95%" }
+    - { id: lt_92, label_vi: "Dưới 92%" }
+    - { id: not_measured, label_vi: "Chưa đo", neutral: true }
+  # Người bảo trì ước lượng; nhiều gia đình có máy đo từ mùa COVID-19.
+  baseline: { ge_96: 0.33, s92_95: 0.05, lt_92: 0.02, not_measured: 0.6 }
+  requires:
+    - { finding: breathing_difficulty, is: present }
+  cost: 2
+  unknown_rate: 0.2
+- id: night_respiratory_symptoms
+  kind: symptom
+  type: binary
+  label_vi: "Ho, khó thở nặng lên về đêm"
+  question_vi: "Ho, khò khè hoặc khó thở có hay nặng lên về đêm, gần sáng không?"
+  requires:
+    - any:
+        - { finding: cough, is: present }
+        - { finding: breathing_difficulty, is: present }
+  leak: moderate
+- id: drooling_cannot_swallow
+  kind: sign
+  type: binary
+  label_vi: "Chảy dãi, không nuốt được"
+  question_vi: "Có chảy dãi nhiều vì đau, không nuốt được nước bọt không?"
+  alt_question:
+    text_vi: "Có phải nhổ nước bọt ra vì không nuốt nổi không?"
+  leak: specific
+# Thêm sau lượt A phần b (31/10/2026), trước khi agent viết ca giữ kín làm việc.
+- id: hoarse_voice
+  kind: symptom
+  type: binary
+  label_vi: "Khàn tiếng"
+  question_vi: "Giọng nói hoặc tiếng khóc có khàn đi không?"
+  leak: moderate

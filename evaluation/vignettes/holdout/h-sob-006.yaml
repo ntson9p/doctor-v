@@ -1,0 +1,46 @@
+id: h-sob-006
+set: holdout
+title_vi: "Bé gái 5 tuổi cảm 2 ngày, khàn tiếng; 1 giờ sáng thức dậy ho ông ổng, ngồi yên vẫn thở rít to, thở vất vả"
+narrative_vi: "Bé A., gái, 5 tuổi, ở Đà Nẵng, đã tiêm chủng đầy đủ. Hai ngày nay bé sổ mũi, khàn tiếng, sốt nhẹ, cao nhất 38,2°C. Khoảng 1 giờ sáng nay bé đột ngột thức dậy, ho ông ổng như tiếng chó sủa, mỗi lần hít vào có tiếng rít to, kể cả khi ngồi yên trong lòng mẹ, không khóc. Bé thở vất vả hơn hẳn, hoảng sợ. Bé vẫn tỉnh, nói được, uống được vài ngụm nước, không chảy dãi, nuốt được, môi hồng. Trước đó bé không bị hóc, sặc gì, không ăn món lạ hay uống thuốc mới. Bé chưa bị hen."
+patient:
+  age_years: 5
+  sex: female
+  region: central
+  month: 10
+complaint: shortness_of_breath
+answers:
+  stridor: present
+  es_severe_breathing: present
+  cough: present
+  cough_duration: lt_1w
+  barking_cough: present
+  hoarse_voice: present
+  runny_nose: present
+  night_respiratory_symptoms: present
+  fever: present
+  fever_max_temp: t38_39
+  fever_duration: d1_2
+  dyspnea_onset: sudden
+  dyspnea_severity: rest
+  drooling_cannot_swallow: absent
+  choking_episode: absent
+  allergen_exposure: absent
+  rash_any: absent
+  wheeze: absent
+  drowsy_hard_to_wake: absent
+  seizure_recent: absent
+  asthma_known: absent
+  dtp_vaccinated: present
+  measles_vaccinated: present
+default_unmentioned: absent
+expected:
+  condition: croup
+  acceptable: []
+  triage: 2
+source:
+  basis: "Viêm thanh quản cấp (croup) mức trung bình ở trẻ 5 tuổi: sau cảm, khàn tiếng, nửa đêm đột ngột ho ông ổng, thở rít khi ngồi yên, thở vất vả; không chảy dãi, nuốt được, môi hồng, tỉnh. WHO IMCI: thở rít khi trẻ nằm yên là bệnh rất nặng, chuyển viện khẩn cấp. NHS Croup: trẻ thở rất vất vả thì gọi 999 hoặc đến cấp cứu. Chưa tím, chưa li bì nên đến cơ sở cấp cứu ngay (mức 2)."
+  references:
+    - nhs-croup
+    - who-imci-chart-booklet-2014
+author: "agent:vignette-holdout"
+notes_vi: "Ca khó hơn: trẻ 5 tuổi (lớn hơn tuổi hay gặp) và thở rít khi nghỉ. Câu sàng lọc đầu có 'thở rít' nên mẹ trả lời 'có'. Viêm nắp thanh môn được loại trừ một phần vì không chảy dãi, nuốt được, có ho ông ổng."

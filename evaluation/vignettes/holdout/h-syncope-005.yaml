@@ -34,6 +34,9 @@ answers:
   hypertension_known: absent
   pregnant: absent
   missed_period: absent
+  chest_pain: present
+  dyspnea_onset: sudden
+  dyspnea_severity: rest
 default_unmentioned: absent
 expected:
   condition: pulmonary_embolism

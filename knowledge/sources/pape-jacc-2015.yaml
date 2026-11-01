@@ -1,0 +1,15 @@
+id: pape-jacc-2015
+type: primary_study
+title: "Presentation, diagnosis, and outcomes of acute aortic dissection: 17-year trends from the International Registry of Acute Aortic Dissection"
+publisher: "Journal of the American College of Cardiology 2015;66(4):350–358 (Pape LA, Awais M, Woznicki EM và cộng sự)"
+date: "2015-07"
+url: "https://europepmc.org/article/MED/26205591"
+doi: "10.1016/j.jacc.2015.05.029"
+pmid: "26205591"
+license_class: L3
+license_note: "Bản quyền nhà xuất bản: chỉ dùng dữ kiện kèm trích dẫn."
+default_tier: B
+accessed: "2026-10-31"
+verified: true
+verified_by: "agent:pass-c"
+notes_vi: "Lượt C (Giai đoạn 3 lô 3, phần c) đọc lại tóm tắt qua API Europe PMC ngày 31/10/2026; lượt A đã đọc trước đó. 4.428 người ở 28 trung tâm IRAD (12/1995–2/2013), týp A 2.952, týp B 1.476: đau dữ dội hoặc đau nhất từ trước tới nay 93% (týp A) và 94% (týp B); đau ngực 83% và 71%; không đổi trong 17 năm."

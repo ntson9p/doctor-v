@@ -1,0 +1,15 @@
+id: wang-bmj-2014
+type: primary_study
+title: "Whooping cough in school age children presenting with persistent cough in UK primary care after introduction of the preschool pertussis booster vaccination: prospective cohort study"
+publisher: "BMJ 2014;348:g3668 (Wang K, Fry NK, Campbell H, Amirthalingam G, Harrison TG, Mant D, Harnden A)"
+date: "2014"
+url: "https://europepmc.org/article/MED/24961836"
+doi: "10.1136/bmj.g3668"
+pmid: "24961836"
+license_class: L2
+license_note: "CC BY-NC (theo Europe PMC): dùng phi lợi nhuận, ghi công."
+default_tier: B
+accessed: "2026-10-31"
+verified: true
+verified_by: "agent:pass-b"
+notes_vi: "Lượt B đọc tóm tắt qua API Europe PMC. 279 trẻ 5–15 tuổi đi khám bác sĩ gia đình (Anh) vì ho kéo dài 2–8 tuần: 56 trẻ (20%, khoảng tin cậy 95% 16–25%) có bằng chứng mới nhiễm ho gà (kháng thể trong dịch miệng), gồm 39/215 trẻ (18%) đã tiêm đủ; nguy cơ 40% khi mũi nhắc trước tuổi đi học đã cách từ 7 năm. Bốn trong sáu trẻ được đếm ho trên 400 lần trong 24 giờ."

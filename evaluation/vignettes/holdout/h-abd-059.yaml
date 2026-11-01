@@ -38,6 +38,7 @@ answers:
   drowsy_hard_to_wake: absent
   cold_hands_feet: absent
   severe_weakness: absent
+  dyspnea_onset: hours_days
 default_unmentioned: absent
 expected:
   condition: diabetic_ketoacidosis

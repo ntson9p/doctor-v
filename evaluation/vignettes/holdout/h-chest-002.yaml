@@ -1,0 +1,49 @@
+id: h-chest-002
+set: holdout
+title_vi: "Nam 68 tuổi tăng huyết áp không kiểm soát, 40 phút trước đột ngột đau ngực dữ dội như xé, lan ra sau lưng giữa hai bả vai"
+narrative_vi: "Ông P., 68 tuổi, ở Hải Phòng, hút thuốc lá, bị tăng huyết áp nhiều năm nhưng uống thuốc thất thường. Khoảng 40 phút trước, đang ngồi xem ti vi, ông đột ngột đau ngực dữ dội ngay từ đầu, cảm giác như bị xé rách, đau xuyên ra sau lưng, giữa hai bả vai. Ông nói không phải kiểu đè nặng mà như có gì xé trong ngực. Đến giờ vẫn đau nhiều, không nằm yên được, vã mồ hôi, buồn nôn. Con trai đo huyết áp tay phải được 190/105 mmHg. Ông vẫn tỉnh, nói được, không yếu tay chân, không méo miệng, không ngất. Đau không lan lên hàm hay cánh tay. Ông chưa từng được nói có phình động mạch chủ hay bệnh tim."
+patient:
+  age_years: 68
+  sex: male
+  region: north
+  month: 12
+complaint: chest_pain
+answers:
+  chest_pain_duration: over_15min
+  chest_pain_sudden_severe: present
+  chest_pain_tearing: present
+  chest_pain_radiates_back: present
+  cold_sweat: present
+  nausea: present
+  bp_measured: extreme
+  hypertension_known: present
+  bp_lowering_meds: present
+  smoker: present
+  es_crushing_chest_pain: absent
+  chest_pain_pressure: absent
+  pain_radiates_arm_jaw: absent
+  chest_pain_exertional: absent
+  pleuritic_chest_pain: absent
+  chest_wall_tenderness: absent
+  breathing_difficulty: absent
+  fainting_or_near_fainting: absent
+  es_stroke_signs: absent
+  vomiting: absent
+  abdominal_pain: absent
+  fever: absent
+  known_aaa: absent
+  known_heart_disease: absent
+  diabetes: absent
+  antithrombotic_use: absent
+default_unmentioned: absent
+expected:
+  condition: aortic_dissection
+  acceptable: []
+  triage: 1
+source:
+  basis: "Bóc tách động mạch chủ điển hình: nam cao tuổi tăng huyết áp không kiểm soát, đột ngột đau ngực dữ dội ngay từ đầu, như xé, lan ra sau lưng giữa hai bả vai, vã mồ hôi, huyết áp 190/105 mmHg. HSE Aortic dissection: đau ngực hoặc lưng trên đột ngột, dữ dội, như xé, có thể lan dọc lưng; gọi cấp cứu ngay khi có bất kỳ dấu hiệu nào. Mức 1."
+  references:
+    - hse-aortic-dissection
+    - nhs-chest-pain
+author: "agent:vignette-holdout"
+notes_vi: "Ở màn sàng lọc đầu, ông trả lời 'không' câu đau thắt, đè nặng ngực vì cảm giác là xé chứ không đè nặng."

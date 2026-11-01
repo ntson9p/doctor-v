@@ -1,0 +1,15 @@
+id: moore-chest-2017
+type: systematic_review
+title: "Clinical Characteristics of Pertussis-Associated Cough in Adults and Children: A Diagnostic Systematic Review and Meta-Analysis"
+publisher: "Chest 2017;152(2):353–367 (Moore A, Ashdown HF, Shinkins B, Roberts NW, Grant CC, Lasserson DS, Harnden A)"
+date: "2017"
+url: "https://europepmc.org/article/MED/28511929"
+doi: "10.1016/j.chest.2017.04.186"
+pmid: "28511929"
+license_class: L3
+license_note: "Bài báo có bản quyền; chỉ dùng dữ kiện kèm trích dẫn."
+default_tier: A
+accessed: "2026-10-31"
+verified: true
+verified_by: "agent:pass-b"
+notes_vi: "Lượt B (Giai đoạn 3 lô 3, phần b) đọc tóm tắt qua API Europe PMC; không có toàn văn mở. Tổng quan 53 nghiên cứu so sánh người có và không có xét nghiệm dương tính với Bordetella pertussis. Người lớn: ho từng cơn có độ nhạy 93,2% (độ đặc hiệu 20,6%); không sốt có độ nhạy 81,8% (đặc hiệu 18,8%); nôn sau ho độ nhạy 32,5% (đặc hiệu 77,7%); tiếng rít khi hít vào độ nhạy 29,8% (đặc hiệu 79,5%). Trẻ em: nôn sau ho độ nhạy 60,0%, đặc hiệu 66,0%. Kết luận: ở người lớn, tiếng rít hoặc nôn sau ho làm nghĩ nhiều tới ho gà; không có cơn ho hoặc có sốt làm ít nghĩ tới."

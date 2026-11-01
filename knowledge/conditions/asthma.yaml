@@ -1,0 +1,256 @@
+id: asthma
+names:
+  vi: "Hen phế quản (cơn hen)"
+  vi_common: ["Hen suyễn", "Suyễn", "Hen", "Cơn hen"]
+  en: "Asthma (asthma attack or exacerbation)"
+codes:
+  icd10: "J45"
+  icd10_verified: false
+  mondo: "MONDO:0004979"
+summary_vi:
+  - "Bệnh mạn tính của đường thở: phế quản dễ co hẹp lại khi gặp yếu tố kích thích."
+  - "Cơn hen thường có khò khè, khó thở, nặng ngực, ho; hay nặng hơn về đêm hoặc gần sáng."
+  - "Cơn nhẹ thường đỡ khi dùng thuốc cắt cơn; cơn nặng cần cấp cứu."
+urgency: 3
+cant_miss: false
+specialties: [respiratory, general_medicine, pediatrics]
+applicability:
+  age_groups: [child_2m_5y, child_5_12, teen_13_17, adult_18_44, adult_45_64, elder_65_74, elder_75p]
+  reason_vi: "Trẻ dưới 2 tháng tuổi khò khè, khó thở là do bệnh khác (viêm tiểu phế quản, dị tật); chưa chẩn đoán hen ở tuổi này."
+priors:
+  - complaint: shortness_of_breath
+    default: P2
+    by_age:
+      child_2m_5y: P3
+      child_5_12: P1
+      teen_13_17: P1
+      elder_65_74: P3
+      elder_75p: P3
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [frese-jcmr-2011, byt-qd-4235-2012, lam-respmed-2011, gina-2026]
+      locator: "Frese 2011 bảng 5 và phần bàn luận"
+      reported: "hen phế quản 11,0% lần khám vì khó thở mới và 36,1% lần khám vì khó thở đã biết (Hà Lan), 5,4% (Đức); dưới 45 tuổi hen là chẩn đoán đứng đầu; người lớn Việt Nam từng mắc hen 3,9–5,6% (Lâm 2011)"
+      population: "người đi khám bác sĩ đa khoa vì khó thở ở Đức, Hà Lan"
+      note: "Thang tuyệt đối. Người lớn: 5–20% (P2), hai lượt thống nhất. Trẻ 5–17 tuổi: hen là nguyên nhân hàng đầu của khó thở, từ 20% (P1), hai lượt thống nhất. Từ 65 tuổi, bệnh phổi tắc nghẽn mạn tính, suy tim chiếm ưu thế: P3. Trẻ 2 tháng–5 tuổi: lượt A P3, lượt B P2; lượt C chọn P3 vì nhóm này gồm trẻ dưới 2 tuổi, khò khè chủ yếu do vi rút, viêm tiểu phế quản, và chẩn đoán hen ở trẻ dưới 5 tuổi khó (4888/QĐ-BYT). Chưa có số liệu Việt Nam theo lý do đi khám."
+  - complaint: cough
+    default: P3
+    by_age:
+      child_5_12: P2
+      teen_13_17: P2
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-4235-2012, lam-respmed-2011, nac-asthma-handbook, gina-2026]
+      locator: "4235 bài Hướng dẫn chẩn đoán và điều trị ho kéo dài, mục 2.2"
+      reported: "hen là nguyên nhân thứ hai của ho kéo dài sau bệnh mũi xoang (4235); người lớn Việt Nam từng mắc hen 3,9–5,6% (Lâm 2011)"
+      note: "Hai lượt thống nhất. Người ho phần lớn do nhiễm trùng hô hấp cấp; hen chiếm phần nhỏ, chủ yếu ở người ho kéo dài, ho về đêm. Ước 1–5% (P3), trẻ 5–17 tuổi 5–20% (P2). Ho đơn độc không kèm triệu chứng hô hấp khác làm giảm khả năng hen (Australian Asthma Handbook)."
+  - complaint: chest_pain
+    default: P3
+    by_age:
+      elder_65_74: P4
+      elder_75p: P4
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [verdon-smw-2008, byt-qd-1851-2020, gina-2026]
+      locator: "Verdon 2008 tóm tắt; 1851 Bảng 1"
+      reported: "nguyên nhân hô hấp chiếm 10% người đau ngực ở tuyến ban đầu (Thụy Sĩ)"
+      note: "Nặng ngực, tức ngực là một trong bốn triệu chứng điển hình của hen (1851, GINA). Trong 10% đau ngực do hô hấp có cả viêm phổi, viêm phế quản; ước hen 1–5% (P3). Lượt A để P2 cho trẻ 5–17 tuổi và P4 từ 65 tuổi; lượt B để P3 cho mọi tuổi. Lượt C giữ P3 cho trẻ (không có nguồn đã mở về đau ngực ở trẻ) và P4 từ 65 tuổi (nguyên nhân tim mạch chiếm ưu thế). Ước lượng, cần bác sĩ duyệt."
+findings:
+  - finding: wheeze
+    freq: very_frequent
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-1851-2020, gina-2026, nac-asthma-handbook, nhs-asthma-attack]
+      locator: "1851 mục 1, 2.1 và Bảng 1; GINA 2026 Box 1-2"
+      note: "Hai lượt thống nhất. Khò khè là triệu chứng điển hình; trong cơn có tiếng cò cử người khác cũng nghe được (1851). Một số người chỉ ho hoặc nặng ngực mà không khò khè, nên không chọn almost_always."
+  - finding: breathing_difficulty
+    freq: very_frequent
+    freq_by_complaint: { cough: frequent }
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-1851-2020, gina-2026, nhs-asthma-attack, byt-qd-4235-2012]
+      locator: "1851 mục 2.1 và Bảng 1; 4235 bài ho kéo dài, mục 2.2"
+      note: "Chỉ có tác dụng khi triệu chứng chính là Ho hoặc Đau ngực. Lượt A để frequent cho mọi triệu chứng chính; lượt B để very_frequent và frequent riêng cho Ho. Lượt C theo lượt B: người hen đau, tức ngực hầu như cũng khó thở; người đi khám vì ho gồm cả ho do hen chưa có cơn khó thở rõ (4235: chỉ ca điển hình mới khó thở cò cử)."
+  - finding: cough
+    freq: very_frequent
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-1851-2020, gina-2026, nhs-asthma-attack]
+      locator: "1851 Bảng 1; GINA 2026 Box 1-2"
+      note: "Hai lượt thống nhất. Chỉ có tác dụng khi triệu chứng chính là Khó thở hoặc Đau ngực. Ho là một trong bốn triệu chứng điển hình; cơn hen thường kết thúc bằng ho, khạc đờm trong, quánh (1851)."
+  - finding: cough_duration
+    dist: { lt_1w: 0.325, w1_2: 0.2, w2_8: 0.275, gt_8w: 0.2 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-4235-2012, gina-2026, byt-qd-1851-2020]
+      locator: "4235 bài ho kéo dài, mục 2.2"
+      note: "Phân bố trong số người có ho. Ho trong một cơn hen ngắn, nhưng hen là nguyên nhân hay gặp thứ hai của ho kéo dài trên 3 tuần (4235), nên tỷ lệ ho từ 2 tuần cao hơn nền. Trung bình của hai lượt (lệch 0,05 ở hai ô). Ước lượng."
+  - finding: night_respiratory_symptoms
+    freq: frequent
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-1851-2020, nac-asthma-handbook, byt-qd-4235-2012]
+      locator: "1851 mục 2.1, Bảng 1; 4235 bài ho kéo dài, mục 2.2"
+      note: "Lượt A đề xuất dấu hiệu này, lượt B liên kết frequent. Triệu chứng nặng hơn về đêm hoặc sáng sớm làm tăng khả năng hen (Australian Asthma Handbook, 1851); ho do hen thường về nửa đêm, gần sáng (4235). Không có tỷ lệ; frequent vì không phải cơn nào cũng về đêm. Tần suất trong số người có ho hoặc khó thở."
+  - finding: asthma_known
+    freq: very_frequent
+    freq_by_age:
+      child_2m_5y: frequent
+      child_5_12: frequent
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [byt-qd-1851-2020, byt-qd-4888-2016, gina-2026]
+      locator: "1851 mục 4.1"
+      note: "Phần lớn người lên cơn hen đã được bác sĩ nói là bị hen; đợt cấp đôi khi là biểu hiện đầu tiên của bệnh (1851). Trẻ dưới 5 tuổi: lượt A occasional, lượt B frequent (lệch hai mức); chẩn đoán hen ở trẻ nhỏ khó (4888) nên nhiều bé khò khè lần đầu chưa được nói là hen, nhưng bé đã lên cơn nhiều lần thường đã được bác sĩ nói; lượt C chọn frequent. Trẻ 5–12 tuổi: lượt A frequent, lượt B very_frequent; chọn frequent để câu 'không' không loại quá mạnh trẻ hen chưa được chẩn đoán. Tỷ lệ nền 6%. Quyết định nhiều tới kết quả; cần bác sĩ duyệt."
+  - finding: similar_episodes_before
+    freq: very_frequent
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [nac-asthma-handbook, byt-qd-1851-2020, nhs-asthma-attack]
+      locator: "1851 mục 2.1"
+      note: "Hai lượt thống nhất. Triệu chứng tái đi tái lại, thay đổi theo thời gian làm tăng khả năng hen (Australian Asthma Handbook); tiền sử có cơn khó thở kiểu hen (1851)."
+  - finding: reliever_no_relief
+    freq: occasional
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [nhs-asthma-attack, byt-qd-1851-2020]
+      locator: "1851 mục 4.4"
+      note: "Hai lượt thống nhất. Tần suất trong số người đã biết bị hen hoặc bệnh phổi tắc nghẽn mạn tính. Phần lớn cơn nhẹ, vừa đỡ khi xịt thuốc cắt cơn; không đỡ là dấu hiệu cơn nặng (quy tắc rf_asthma_reliever_fails, mức 1)."
+  - finding: dyspnea_onset
+    dist: { sudden: 0.275, hours_days: 0.6, weeks: 0.125 }
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-4235-2012, byt-qd-1851-2020, gina-2026]
+      locator: "4235 bài Hướng dẫn chẩn đoán và xử trí khó thở; 1851 mục 2.1"
+      note: "Phân bố trong số người có khó thở. 4235 xếp cơn hen vào nhóm khó thở tiến triển nhanh, có cơn xảy ra đột ngột; 1851: khó thở tăng dần, cơn kéo dài từ vài phút đến hàng giờ, hàng ngày. Trung bình của hai lượt. Khó thở đột ngột có quy tắc mức 2."
+  - finding: dyspnea_severity
+    dist: { exertion: 0.525, rest: 0.395, cannot_speak: 0.08 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-1851-2020, byt-qd-4888-2016, gina-2026]
+      locator: "1851 mục 4.4, Bảng 9; 4888 Bảng 6"
+      note: "Phân bố trong số người có khó thở. Phần lớn cơn ở cộng đồng nhẹ hoặc vừa; cơn nặng khi chỉ nói từng từ (1851). Trung bình của hai lượt. Mức 'ngồi nghỉ cũng khó thở' có quy tắc mức 2, 'nói không trọn câu' có quy tắc mức 1."
+  - finding: spo2_measured
+    dist: { ge_96: 0.25, s92_95: 0.11, lt_92: 0.04, not_measured: 0.6 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-4888-2016, gina-2026, byt-qd-1851-2020]
+      locator: "4888 Bảng 6; GINA 2026 tr. 179"
+      note: "Chỉ lượt B có liên kết này (dấu hiệu mới thêm vào danh mục). Phân bố trong số người có khó thở; 'Chưa đo' đúng bằng tỷ lệ nền 0,6. SpO2 92–95% ở cơn vừa, dưới 92% ở cơn nặng (4888, GINA). Ước lượng."
+  - finding: chest_pain_pressure
+    freq: frequent
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-1851-2020, gina-2026, nhs-asthma-attack]
+      locator: "1851 mục 1, Bảng 1; GINA 2026 Box 1-2"
+      note: "Lượt A occasional, lượt B frequent. Nặng ngực, tức ngực là một trong bốn triệu chứng điển hình (1851, GINA, NHS), và câu hỏi gồm cả 'tức nặng ở giữa ngực'; lượt C chọn frequent. Không có tỷ lệ. Khó thở kèm tức ngực vẫn có quy tắc mức 2, nên liên kết này không làm giảm mức xử trí."
+  - finding: chest_pain_duration
+    dist: { seconds: 0.05, minutes: 0.275, over_15min: 0.375, days: 0.3 }
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [byt-qd-1851-2020]
+      locator: "1851 mục 2.1"
+      note: "Phân bố trong số người có đau ngực. Nặng ngực kéo dài theo cơn hen (vài phút đến vài ngày), ít khi chỉ vài giây. Trung bình của hai lượt. Ước lượng."
+  - finding: chest_pain_exertional
+    freq: occasional
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [byt-qd-1851-2020, nhs-asthma-attack]
+      locator: "1851 Bảng 1"
+      note: "Chỉ lượt B có liên kết này. Tần suất trong số người có đau ngực. Triệu chứng hen hay khởi phát khi gắng sức, nhưng không phải kiểu đau đỡ ngay khi nghỉ như cơn đau thắt ngực. Ước occasional."
+  - finding: chest_pain_sudden_severe
+    freq: rare
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [byt-qd-1851-2020]
+      locator: "1851 mục 2.1"
+      note: "Chỉ lượt B có liên kết này. Tần suất trong số người có đau ngực. Nặng ngực do hen tăng dần theo cơn khó thở, ít khi dữ dội ngay từ đầu. Mức rare thấp hơn tỷ lệ nền 5%: câu 'có' nghiêng sang bệnh tim mạch, tràn khí màng phổi."
+  - finding: orthopnea
+    freq: occasional
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-4235-2012, nac-asthma-handbook]
+      locator: "4235 bài Hướng dẫn chẩn đoán và xử trí khó thở"
+      note: "Hai lượt thống nhất. Khó thở khi nằm gợi ý suy tim trái nhưng cũng gặp trong hen (4235); triệu chứng hen hay nặng về đêm. Ước occasional, thấp hơn suy tim."
+  - finding: leg_swelling_both
+    freq: rare
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [byt-qd-4235-2012, byt-qd-1851-2020]
+      note: "Chỉ lượt B có liên kết này. Phù hai chân không thuộc bệnh cảnh hen; khó thở kèm phù gợi ý suy tim (4235). Mức rare thấp hơn tỷ lệ nền 5%."
+  - finding: fever
+    freq: occasional
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [byt-qd-1851-2020, gina-2026, byt-qd-4235-2012]
+      locator: "1851 mục 4.1 (yếu tố khởi phát đợt cấp)"
+      note: "Hai lượt thống nhất. Nhiễm vi rút hô hấp hay khởi phát cơn hen nên có thể kèm sốt nhẹ, nhưng cơn hen tự nó không gây sốt; sốt cao kèm khó thở gợi ý viêm phổi (4235)."
+  - finding: allergen_exposure
+    freq: rare
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [byt-qd-1851-2020]
+      locator: "1851 mục bệnh đồng mắc (dị ứng thức ăn và phản vệ; bệnh hô hấp bùng phát do aspirin)"
+      reported: "dị ứng thức ăn là yếu tố khởi phát ở dưới 2% người hen; bệnh hô hấp bùng phát do aspirin 7% người hen"
+      note: "Chỉ lượt B có liên kết này. Câu hỏi nhằm phát hiện phản vệ (ăn món lạ, dùng thuốc mới, bị đốt trước khi khó chịu). Cơn hen thường do vi rút, khói bụi, thời tiết; mức rare thấp hơn tỷ lệ nền 5% để câu 'có' nghiêng sang phản vệ."
+  - finding: weight_loss_unintended
+    freq: rare
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [gina-2026]
+      note: "Chỉ lượt A có liên kết này. Hen không gây sụt cân; mức rare dưới tỷ lệ nền 5% nên câu 'có' nghiêng về lao, ung thư phổi. Ước lượng."
+  - finding: hemoptysis
+    freq: very_rare
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [gina-2026]
+      note: "Chỉ lượt A có liên kết này. Ho ra máu không thuộc bệnh cảnh hen; mức very_rare dưới tỷ lệ nền 1%. Ước lượng."
+warning_signs:
+  - es_severe_breathing
+  - reliever_no_relief
+  - confusion
+  - drowsy_hard_to_wake
+  - chest_indrawing
+self_care_vi:
+  - "Khi lên cơn: ngồi thẳng, giữ bình tĩnh, dùng thuốc cắt cơn đúng như bác sĩ đã dặn."
+  - "Nếu xịt thuốc cắt cơn mà không đỡ, hoặc thấy nặng hơn, gọi 115 ngay."
+  - "Dùng thuốc dự phòng đều đặn theo đơn, không tự ý ngừng khi thấy đỡ."
+  - "Tránh khói thuốc lá, khói bếp, bụi và những thứ đã biết làm lên cơn."
+  - "Luôn mang theo thuốc cắt cơn khi ra ngoài."
+see_doctor_vi:
+  - "Sau một cơn hen, kể cả khi đã đỡ, nên đi khám trong 2 ngày để được xem lại thuốc."
+  - "Đi khám trong 24 giờ nếu phải dùng thuốc cắt cơn nhiều hơn thường lệ."
+  - "Đi khám nếu hay ho, khò khè hoặc khó thở về đêm mà chưa từng được bác sĩ nói là hen."
+  - "Đi cấp cứu ngay nếu khó thở đến mức nói không trọn câu, môi tím hoặc lơ mơ."
+sources: [byt-qd-1851-2020, byt-qd-4888-2016, gina-2026, nhs-asthma-attack, nac-asthma-handbook]
+review:
+  status: source_checked
+  authors: ["agent:pass-a", "agent:pass-b"]
+  reconciler: "agent:pass-c"
+  doctor_reviewer: null
+  updated: "2026-10-31"
+  notes_vi: "Lượt C (Giai đoạn 3 lô 3) mở lại các nguồn mới: Australian Asthma Handbook, Frese 2011 (toàn văn, bảng 5), Lâm 2011 (tóm tắt), Verdon 2008 (tóm tắt); 1851, 4888, GINA 2026, NHS đã được lượt R xác minh. Cần bác sĩ xem: (1) urgency 3 như gợi ý: NHS khuyên khám trong 2 ngày sau cơn hen; cơn nặng do quy tắc xử lý (nói không trọn câu mức 1, khó thở lúc nghỉ mức 2, xịt thuốc không đỡ mức 1, SpO2 dưới 92% mức 2). Người chỉ ho kéo dài do hen cũng nhận mức 3, có thể hơi cao; (2) prior Khó thở dựa trên Frese (Đức, Hà Lan); prior Ho, Đau ngực là ước lượng; (3) asthma_known (very_frequent ở người lớn, frequent ở trẻ dưới 13 tuổi) quyết định nhiều tới kết quả: người hen chưa được chẩn đoán sẽ ra khả năng thấp; (4) tức ngực frequent làm hen cạnh tranh với hội chứng mạch vành cấp ở người lớn tuổi; mức xử trí vẫn do quy tắc; (5) bỏ liên kết đau ngực khi hít sâu, khi ho của lượt A (không có nguồn; dấu hiệu này hướng về viêm phổi, thuyên tắc phổi, tràn khí màng phổi); (6) chưa liên kết hút thuốc (Australian Asthma Handbook: hút thuốc nhiều làm giảm khả năng hen) vì cả hai lượt đều không có; (7) mã ICD-10 chưa đối chiếu."

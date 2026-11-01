@@ -1,0 +1,12 @@
+id: gina-2024
+type: guideline_intl
+title: "Global Strategy for Asthma Management and Prevention (2024 update)"
+publisher: "Global Initiative for Asthma (GINA)"
+date: "2024"
+url: "https://ginasthma.org/archived-reports/"
+license_class: L3
+license_note: "Bảo lưu mọi quyền: chỉ dùng dữ kiện kèm trích dẫn."
+default_tier: B
+accessed: "2026-10-31"
+verified: false
+notes_vi: "Người bảo trì thêm khi soạn danh mục lô 3 (31/10/2026). Lượt R lô 3 vòng 2 (31/10/2026): bản 2024 đã được thay bằng bản 2026 (trang ginasthma.org/reports/ chỉ còn bản 2026; bản cũ ở mục báo cáo lưu trữ). Lượt R không mở bản 2024 và đổi các quy tắc sang gina-2026 (đã xác minh). Giữ id này vì bản nháp lượt A còn trích; lượt C nên đổi sang gina-2026."

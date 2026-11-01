@@ -1,0 +1,52 @@
+id: d-pneumothorax-3
+set: dev
+title_vi: "Nam 68 tuổi bị bệnh phổi tắc nghẽn mạn tính, đang ngồi nghỉ đột ngột khó thở nặng hơn, đau ngực phải khi hít vào"
+narrative_vi: "Ông L., 68 tuổi, ở Thái Bình, bị bệnh phổi tắc nghẽn mạn tính nhiều năm, vẫn hút thuốc lào. Mấy tuần nay bệnh ổn, vẫn đi lại quanh nhà được. Khoảng 1 giờ trước, đang ngồi xem ti vi thì đột ngột khó thở hơn hẳn, ngồi yên cũng thở mệt nhưng vẫn nói được cả câu, kèm đau nhói ngực phải, hít vào thì đau. Ông chưa xịt thuốc. Không sốt, không ho nhiều hơn mọi ngày, đờm không đổi màu, không khò khè hơn. Không vã mồ hôi, không buồn nôn, không choáng. Không sưng chân. Nhà không có máy đo SpO2."
+patient:
+  age_years: 68
+  sex: male
+  region: north
+  month: 1
+complaint: shortness_of_breath
+answers:
+  copd_known: present
+  smoker: present
+  dyspnea_onset: sudden
+  dyspnea_severity: rest
+  pleuritic_chest_pain: present
+  chest_pain: present
+  chest_pain_duration: over_15min
+  chest_pain_sudden_severe: absent
+  spo2_measured: not_measured
+  reliever_no_relief: absent
+  fever: absent
+  cough: present
+  cough_duration: gt_8w
+  productive_cough: present
+  wheeze: absent
+  chest_pain_pressure: absent
+  cold_sweat: absent
+  nausea: absent
+  fainting_or_near_fainting: absent
+  leg_swelling_one_side: absent
+  leg_swelling_both: absent
+  orthopnea: absent
+  palpitations: absent
+  hemoptysis: absent
+  allergen_exposure: absent
+  rash_any: absent
+  asthma_known: absent
+  recent_immobility: absent
+  active_cancer: absent
+  previous_clot: absent
+  known_heart_disease: absent
+default_unmentioned: absent
+expected:
+  condition: pneumothorax
+  acceptable: []
+  triage: 2
+source:
+  basis: "Tràn khí màng phổi thứ phát trên nền bệnh phổi tắc nghẽn mạn tính: nghĩ tới khi người bệnh đang ổn định đột nhiên suy hô hấp nặng (4235/QĐ-BYT); khó thở đột ngột kèm đau kiểu màng phổi, không có dấu hiệu nhiễm trùng của đợt cấp (sốt, đờm đổi màu). Mọi tràn khí thứ phát phải dẫn lưu (4235/QĐ-BYT): cấp cứu ngay, mức 2."
+  references: [byt-qd-4235-2012, msd-pneumothorax, chan-annacadmedsingap-1985]
+author: "agent:pass-c"
+notes_vi: "Ca dễ nhầm với đợt cấp bệnh phổi tắc nghẽn mạn tính (phần a) và thuyên tắc phổi."

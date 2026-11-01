@@ -1,0 +1,58 @@
+id: h-sob-014
+set: holdout
+title_vi: "Nữ 78 tuổi tăng huyết áp, 3 ngày tim đập loạn không đều, đi lại là hụt hơi, mạch 128 không đều"
+narrative_vi: "Bà G., 78 tuổi, ở Quảng Ngãi, bị tăng huyết áp nhiều năm, uống thuốc đều. Ba ngày nay bà thấy tim đập nhanh, loạn xạ, không đều, liên tục không dứt. Bà mệt hơn, đi lại trong nhà, ra sân là hụt hơi, thở dốc phải ngồi nghỉ; ngồi yên thì đỡ. Bà hơi choáng khi đi lại nhưng không ngất. Con trai đo bằng máy đo huyết áp điện tử: huyết áp 138/86 mmHg, mạch 128 lần/phút, máy báo nhịp không đều. Bà không đau ngực, không tức ngực, không vã mồ hôi, không sốt, không ho, nằm không khó thở hơn, chân không phù. Bà không yếu tay chân, không méo miệng, nói rõ. Trước đây chưa được nói là có bệnh tim hay rung nhĩ. Bà không uống rượu, cà phê."
+patient:
+  age_years: 78
+  sex: female
+  region: central
+  month: 4
+complaint: shortness_of_breath
+answers:
+  palpitations: present
+  palpitation_rhythm: irregular
+  palpitation_duration: ongoing
+  palpitation_abrupt_onset: absent
+  pulse_measured: n100_150
+  bp_measured: normal
+  dyspnea_onset: hours_days
+  dyspnea_severity: exertion
+  breathless_on_exertion: present
+  fatigue: present
+  dizziness: present
+  hypertension_known: present
+  bp_lowering_meds: present
+  fainting_or_near_fainting: absent
+  chest_pain: absent
+  chest_pain_pressure: absent
+  cold_sweat: absent
+  fever: absent
+  cough: absent
+  wheeze: absent
+  orthopnea: absent
+  leg_swelling_both: absent
+  leg_swelling_one_side: absent
+  confusion: absent
+  es_stroke_signs: absent
+  es_severe_breathing: absent
+  known_heart_disease: absent
+  atrial_fibrillation_known: absent
+  antithrombotic_use: absent
+  diabetes: absent
+  heat_intolerance: absent
+  stimulant_intake: absent
+  heavy_alcohol: absent
+  recent_immobility: absent
+default_unmentioned: absent
+expected:
+  condition: cardiac_arrhythmia
+  acceptable: []
+  triage: 2
+source:
+  basis: "Rung nhĩ mới phát hiện, tần số thất nhanh, ở người cao tuổi tăng huyết áp: tim nhanh không đều liên tục 3 ngày, mạch 128 lần/phút, khó thở khi gắng sức, mệt, hơi choáng. NHS Atrial fibrillation: tim nhanh hoặc không đều kèm khó thở, chóng mặt thì gọi 999; NHS Heart palpitations: đang hồi hộp và cơn không hết, kèm khó thở hoặc choáng thì gọi 999 hoặc đến cấp cứu. Huyết áp còn ổn, không đau ngực, không ngất nên đến cơ sở cấp cứu ngay (mức 2)."
+  references:
+    - nhs-atrial-fibrillation
+    - nhs-heart-palpitations
+    - esc-af-2024
+author: "agent:vignette-holdout"
+notes_vi: "Ca của bệnh đã có, triệu chứng chính mới (Khó thở). Suy tim là chẩn đoán phân biệt nhưng không phù, không khó thở khi nằm."

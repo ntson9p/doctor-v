@@ -1,0 +1,54 @@
+id: d-measles-cough-1
+set: dev
+title_vi: "Bé trai 3 tuổi chưa tiêm sởi, ho 4 ngày, sốt cao, đỏ mắt, hôm nay nổi ban sau tai lan xuống mặt"
+narrative_vi: "Bé Đ., 3 tuổi, ở Đồng Nai, chưa được tiêm vắc xin sởi. Bốn ngày nay bé ho nhiều, chảy nước mũi, hai mắt đỏ, chảy nước mắt, sốt cao 39,4°C. Mẹ chọn Ho vì bé ho suốt đêm. Hôm nay bé nổi ban đỏ ở sau tai, rồi lan ra mặt, cổ; ấn vào ban thì mất màu. Hai tuần trước bé chơi với một bạn bị sởi. Bé vẫn uống được, không nôn, không thở nhanh, không li bì, không co giật. Không ho ông ổng, không khàn tiếng."
+patient:
+  age_years: 3
+  sex: male
+  region: south
+  month: 4
+complaint: cough
+answers:
+  cough_duration: lt_1w
+  fever: present
+  fever_max_temp: ge_39
+  fever_duration: d3_5
+  runny_nose: present
+  red_eyes: present
+  rash_any: present
+  rash_spreads_from_face: present
+  rash_non_blanching: absent
+  hives: absent
+  measles_contact: present
+  measles_vaccinated: absent
+  night_respiratory_symptoms: present
+  breathing_difficulty: absent
+  wheeze: absent
+  stridor: absent
+  barking_cough: absent
+  hoarse_voice: absent
+  chest_indrawing: absent
+  grunting: absent
+  apnea_cyanosis_spells: absent
+  child_unable_to_drink: absent
+  child_vomits_everything: absent
+  drowsy_hard_to_wake: absent
+  seizure_recent: absent
+  child_feeding_reduced: absent
+  vomiting: absent
+  diarrhea: absent
+  ear_pain: absent
+  cough_paroxysms: absent
+  post_tussive_vomiting: absent
+  productive_cough: absent
+  sick_contact_respiratory: present
+default_unmentioned: absent
+expected:
+  condition: measles
+  acceptable: []
+  triage: 3
+source:
+  basis: "Sởi ở trẻ chưa tiêm, có tiếp xúc trong thời gian ủ bệnh: giai đoạn khởi phát 2–4 ngày (sốt cao, ho, chảy mũi, viêm kết mạc) rồi phát ban từ sau tai, mặt lan xuống (1019/QĐ-BYT mục 2.1.1; MSD Measles). Mức 3: khám trong 24 giờ để được xác định bệnh, uống vitamin A và hướng dẫn cách ly (1019/QĐ-BYT); không có dấu hiệu nặng."
+  references: [byt-qd-1019-2025, msd-measles]
+author: "agent:pass-c"
+notes_vi: "Ca của bản mở rộng lô 3: sởi ở triệu chứng chính Ho."

@@ -1,0 +1,52 @@
+id: h-chest-011
+set: holdout
+title_vi: "Nam 69 tuổi 3 tuần sau mổ thay khớp gối, bắp chân trái sưng đau; 3 giờ nay đột ngột đau nhói ngực trái khi hít thở, hụt hơi, đờm lẫn máu"
+narrative_vi: "Ông C., 69 tuổi, ở Đà Nẵng, bị tăng huyết áp. Ba tuần trước ông được mổ thay khớp gối trái, về nhà chủ yếu ngồi, nằm, ít đi lại. Năm ngày nay bắp chân trái sưng, căng đau hơn chân phải. Khoảng 3 giờ trước, đang ngồi, ông đột ngột đau nhói khá dữ dội ở ngực trái, đau tăng mỗi khi hít sâu hoặc ho, đến giờ vẫn đau. Từ lúc đó ông hụt hơi khi đi vài bước; ngồi yên thì thở được, nói trọn câu. Ông ho vài tiếng, khạc ra đờm có lẫn vệt máu đỏ. Ông không sốt, không vã mồ hôi, không ngất. Ông chưa từng bị cục máu đông, không mắc ung thư, không hút thuốc."
+patient:
+  age_years: 69
+  sex: male
+  region: central
+  month: 9
+complaint: chest_pain
+answers:
+  chest_pain_duration: over_15min
+  pleuritic_chest_pain: present
+  chest_pain_sudden_severe: present
+  breathing_difficulty: present
+  dyspnea_onset: sudden
+  dyspnea_severity: exertion
+  cough: present
+  cough_duration: lt_1w
+  hemoptysis: present
+  hemoptysis_large: absent
+  leg_swelling_one_side: present
+  recent_immobility: present
+  hypertension_known: present
+  bp_lowering_meds: present
+  chest_pain_pressure: absent
+  chest_pain_exertional: absent
+  chest_pain_radiates_back: absent
+  chest_pain_tearing: absent
+  chest_wall_tenderness: absent
+  pain_radiates_arm_jaw: absent
+  es_crushing_chest_pain: absent
+  cold_sweat: absent
+  fainting_or_near_fainting: absent
+  palpitations: absent
+  fever: absent
+  previous_clot: absent
+  active_cancer: absent
+  smoker: absent
+  known_heart_disease: absent
+  diabetes: absent
+default_unmentioned: absent
+expected:
+  condition: pulmonary_embolism
+  acceptable: []
+  triage: 2
+source:
+  basis: "Thuyên tắc phổi sau mổ thay khớp gối: huyết khối tĩnh mạch sâu bắp chân, rồi đột ngột đau ngực kiểu màng phổi, khó thở, ho ra ít máu. ESC 2019 Bảng 3: thay khớp háng hoặc gối là yếu tố thuận lợi mạnh; mục 4.1: đau ngực màng phổi, khó thở, ho ra máu. NHS Pulmonary embolism: khó thở đột ngột, đau ngực thì gọi 999 hoặc đến cấp cứu. Còn nói trọn câu, không ngất nên mức 2."
+  references:
+    - esc-pe-2019
+    - nhs-pulmonary-embolism
+author: "agent:vignette-holdout"

@@ -1,0 +1,266 @@
+id: bronchiolitis
+names:
+  vi: "Viêm tiểu phế quản cấp"
+  vi_common: ["Viêm tiểu phế quản"]
+  en: "Acute bronchiolitis"
+codes:
+  icd10: "J21.9"
+  icd10_verified: false
+  mondo: "MONDO:0020680"
+summary_vi:
+  - "Nhiễm vi rút ở các phế quản nhỏ, gặp ở trẻ dưới 2 tuổi, nhiều nhất là trẻ dưới 1 tuổi."
+  - "Bắt đầu như cảm lạnh 1–3 ngày, rồi ho, thở nhanh, khò khè; nặng nhất vào ngày 3–5."
+  - "Phần lớn tự khỏi, nhưng trẻ nhỏ có thể khó thở nặng, bú kém hoặc ngừng thở."
+urgency: 3
+cant_miss: false
+specialties: [pediatrics, respiratory]
+applicability:
+  age_groups: [infant_0_2m, child_2m_5y]
+  reason_vi: "Bệnh chỉ gặp ở trẻ dưới 2 tuổi; trẻ lớn hơn khò khè thường do hen hoặc khò khè sau nhiễm vi rút."
+priors:
+  - complaint: cough
+    default: P3
+    by_age:
+      infant_0_2m: P2
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [nice-ng9, toizumi-vaccines-2025, byt-qd-3312-2015]
+      locator: "NG9 1.1.1; Toizumi 2025 tóm tắt; 3312 bài Viêm tiểu phế quản cấp ở trẻ em (tr. 275)"
+      reported: "Bệnh của trẻ dưới 2 tuổi, đỉnh 3–6 tháng (NG9); nhập viện vì nhiễm trùng hô hấp do RSV 17,9 trên 1.000 trẻ-năm trong 24 tháng đầu, 25,4 ở nhũ nhi nhỏ (Nha Trang); RSV gây 30–50% số ca (3312)"
+      note: "Lượt B. Thang tuyệt đối. Nhóm 2 tháng–5 tuổi gồm cả trẻ 2–5 tuổi không còn mắc bệnh này; ước 1–5% (P3) tính chung cho cả nhóm (ở trẻ dưới 1 tuổi cao hơn, từ 2 tuổi gần như bằng 0). Nhập viện vì RSV khoảng 2% trẻ mỗi năm; ca ngoại trú và ca do vi rút khác nhiều hơn vài lần, trong khi trẻ dưới 2 tuổi ho vài đợt mỗi năm. Trẻ dưới 2 tháng: 3312 ghi bệnh rất hay gặp ở trẻ còn bú, dưới 6 tháng là yếu tố nguy cơ; ước 5–20% (P2). Chưa có số liệu ngoại trú Việt Nam; cần bác sĩ duyệt."
+  - complaint: shortness_of_breath
+    default: P2
+    by_age:
+      infant_0_2m: P1
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [nice-ng9, byt-qd-3312-2015, nhs-bronchiolitis]
+      locator: "NG9 1.1.1, 1.1.3; 3312 bài Viêm tiểu phế quản cấp ở trẻ em (tr. 275–276)"
+      note: "Lượt B. Thở nhanh hoặc rút lõm lồng ngực là tiêu chuẩn chẩn đoán (NG9 1.1.3); bệnh rất hay gặp ở trẻ còn bú (3312). Ở trẻ dưới 2 tháng khó thở, viêm tiểu phế quản là nguyên nhân hàng đầu bên cạnh viêm phổi, nhiễm khuẩn nặng: ước từ 20% (P1). Trẻ 2 tháng–5 tuổi: cạnh tranh với viêm phổi, hen, viêm thanh quản cấp và gồm cả trẻ trên 2 tuổi: 5–20% (P2). Ước lượng, cần bác sĩ duyệt."
+  - complaint: fever
+    default: P3
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [nice-ng9, byt-qd-3312-2015]
+      locator: "NG9 1.1.4; 3312 tr. 275 (sốt vừa hoặc cao)"
+      reported: "Sốt ở khoảng 30% ca, thường dưới 39°C (NG9)"
+      note: "Lượt B. Chỉ khoảng một phần ba trẻ có sốt, và người nhà trẻ ho, khó thở thường chọn Ho hoặc Khó thở. Trong số trẻ dưới 5 tuổi chọn Sốt, nguyên nhân chính là cảm lạnh, sốt vi rút, viêm phổi, tay chân miệng; ước 1–5% (P3) cho cả hai nhóm tuổi, thấp hơn viêm phổi (P2 ở 2 tháng–5 tuổi) và cảm lạnh (P1). Không cao hơn để không lấy phần xác suất của nhiễm khuẩn huyết, nhiễm khuẩn tiết niệu ở trẻ dưới 2 tháng; trẻ dưới 3 tháng sốt vẫn được quy tắc xếp mức 2. Liên kết ho (gần như luôn có) làm câu 'không ho' loại bệnh này ở trẻ sốt đơn thuần."
+prior_modifiers:
+  - when: { regions: [north], months: [12, 1, 2, 3] }
+    factor: 1.3
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-3312-2015]
+      locator: "3312 bài Viêm tiểu phế quản cấp ở trẻ em (tr. 275)"
+      note: "Lượt B. 3312: bệnh hay gặp vào mùa đông xuân, thời tiết ẩm ướt. Không có tỷ lệ theo tháng; hệ số nhỏ là ước lượng. Chỉ áp dụng miền Bắc vì miền Nam không có mùa đông; chưa có số liệu mùa RSV theo vùng."
+findings:
+  - finding: cough
+    freq: almost_always
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [nice-ng9, byt-qd-3312-2015]
+      locator: "NG9 1.1.3 (ho dai dẳng là tiêu chuẩn chẩn đoán); 3312 tr. 275"
+      note: "Lượt B. Có ý nghĩa với Sốt và Khó thở (với Ho là dấu hiệu ngầm định). Câu trả lời 'không ho' làm giảm mạnh khả năng bệnh."
+  - finding: breathing_difficulty
+    freq: very_frequent
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [nice-ng9, byt-qd-3312-2015]
+      locator: "NG9 1.1.3 (thở nhanh hoặc rút lõm lồng ngực); 3312 tr. 276 (nhịp thở nhanh, co kéo cơ hô hấp)"
+      note: "Lượt B. Có ý nghĩa với Ho và Sốt. Thở nhanh hoặc rút lõm là tiêu chuẩn chẩn đoán; câu hỏi của app gồm cả thở nhanh, thở mệt. Người nhà có thể chưa nhận ra thở nhanh ở ca nhẹ, nên không chọn almost_always."
+  - finding: wheeze
+    freq: frequent
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [nice-ng9, byt-qd-3312-2015]
+      locator: "NG9 1.1.3 (khò khè hoặc ran nổ khi nghe phổi); 3312 tr. 276 (ran rít, ran ngáy; thể nặng khò khè tăng)"
+      note: "Lượt B. Tiêu chuẩn là khò khè hoặc ran nổ do bác sĩ nghe phổi; người nhà nghe được tiếng khò khè ở khoảng một nửa (ước lượng)."
+  - finding: runny_nose
+    freq: very_frequent
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [nice-ng9, byt-qd-3312-2015]
+      locator: "NG9 1.1.3 (giai đoạn viêm long 1–3 ngày); 3312 tr. 275 (chảy nước mũi trong)"
+      note: "Lượt B. Tỷ lệ nền 0,2."
+  - finding: nasal_congestion
+    freq: very_frequent
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [nice-ng9]
+      locator: "NG9 1.1.3 (viêm long đường hô hấp trên)"
+      note: "Lượt B. Cùng cụm triệu chứng mũi với sổ mũi."
+  - finding: fever
+    freq: occasional
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [nice-ng9, byt-qd-3312-2015]
+      locator: "NG9 1.1.4"
+      reported: "khoảng 30%"
+      note: "Lượt B. Có ý nghĩa với Ho và Khó thở. 3312 ghi sốt vừa hoặc cao; chọn số liệu của NG9."
+  - finding: fever_max_temp
+    dist: { lt_38: 0.40, t38_39: 0.50, ge_39: 0.10 }
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [nice-ng9, byt-qd-3312-2015]
+      locator: "NG9 1.1.4, 1.1.6 (sốt trên 39°C thì nghĩ viêm phổi)"
+      note: "Lượt B. Phân bố trong số trẻ có sốt: thường dưới 39°C. Ước lượng."
+  - finding: fever_duration
+    dist: { d1_2: 0.55, d3_5: 0.40, d6_7: 0.04, gt_7d: 0.01 }
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [nice-ng9]
+      locator: "NG9 1.1.2 (triệu chứng nặng nhất ngày 3–5)"
+      note: "Lượt B. Phân bố trong số trẻ có sốt; sốt quá 5 ngày ít phù hợp. Ước lượng."
+  - finding: cough_duration
+    dist: { lt_1w: 0.60, w1_2: 0.30, w2_8: 0.095, gt_8w: 0.005 }
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [nice-ng9, nhs-bronchiolitis]
+      locator: "NG9 1.1.2 (ho hết ở 90% trẻ trong 3 tuần)"
+      note: "Lượt B. Phân bố trong số trẻ đã ho, lúc người nhà dùng app: thường đi khám vào ngày 3–5 khi bệnh nặng nhất. Ho từ 2 tháng gần như không gặp. Ước lượng."
+  - finding: dyspnea_onset
+    dist: { sudden: 0.05, hours_days: 0.85, weeks: 0.10 }
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [nice-ng9, byt-qd-3312-2015]
+      locator: "NG9 1.1.3; 3312 tr. 276 (sau 3–5 ngày ho tăng, xuất hiện khó thở)"
+      note: "Lượt B. Phân bố trong số trẻ khó thở: khó thở xuất hiện sau vài ngày viêm long. Khởi phát đột ngột gợi ý dị vật, phản vệ. Ước lượng."
+  - finding: spo2_measured
+    dist: { ge_96: 0.22, s92_95: 0.12, lt_92: 0.06, not_measured: 0.60 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [nice-ng9]
+      locator: "NG9 1.1.8, 1.2.2 (SpO2 dưới 92% là tiêu chí cân nhắc chuyển viện)"
+      note: "Lượt B. 'Chưa đo' giữ đúng tỷ lệ nền 0,6. Phần lớn trẻ ở cộng đồng còn SpO2 bình thường; ước lượng."
+  - finding: chest_indrawing
+    freq: occasional
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [nice-ng9, byt-qd-3312-2015, nhs-bronchiolitis]
+      locator: "NG9 1.1.3, 1.2.1; 3312 tr. 276 (co kéo cơ hô hấp, rút lõm lồng ngực)"
+      note: "Lượt B. Chỉ hỏi trẻ 2 tháng–5 tuổi. Câu hỏi chỉ tính lõm sâu phần ngực dưới; rút lõm nhẹ thường gặp nhưng lõm rõ là dấu hiệu nặng. Ước occasional ở cộng đồng. Đã có quy tắc mức 2."
+  - finding: apnea_cyanosis_spells
+    freq: rare
+    above_leak_ok: true
+    freq_by_age:
+      infant_0_2m: occasional
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [nice-ng9, byt-qd-3312-2015, nhs-bronchiolitis]
+      locator: "NG9 1.1.5 (trẻ dưới 6 tuần có thể chỉ biểu hiện bằng ngừng thở), 1.2.1; 3312 tr. 276 (thể nặng có thể tím tái, ngừng thở)"
+      note: "Lượt B. Trẻ dưới 2 tháng: occasional; trẻ lớn hơn: rare, vẫn cao hơn tỷ lệ nền 1% (above_leak_ok). Ước lượng. Đã có quy tắc mức 1."
+  - finding: grunting
+    freq: rare
+    above_leak_ok: true
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [nice-ng9, byt-qd-3312-2015]
+      locator: "NG9 1.2.1 (thở rên là dấu hiệu suy hô hấp nặng); 3312 tr. 276"
+      note: "Lượt B. Dấu hiệu của ca nặng; ước rare ở cộng đồng, cao hơn tỷ lệ nền 1% (above_leak_ok: gặp ở bệnh này nhiều hơn ở trẻ ho không mắc bệnh liên kết). Đã có quy tắc mức 2."
+  - finding: child_feeding_reduced
+    freq: occasional
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [nice-ng9, nhs-bronchiolitis]
+      locator: "NG9 1.1.4 (bú kém hay gặp, thường sau 3–5 ngày bệnh), 1.2.2 (lượng bú 50–75% bình thường)"
+      note: "Lượt B. Chỉ hỏi trẻ 2 tháng–5 tuổi. Bú kém hay gặp nhưng câu hỏi hỏi lượng chỉ còn khoảng một nửa trong 24 giờ; ước occasional ở cộng đồng."
+  - finding: young_infant_not_feeding
+    freq: occasional
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [nice-ng9, byt-qd-3312-2015]
+      locator: "NG9 1.1.4; 3312 tr. 276 (thể nặng không bú được)"
+      note: "Lượt B. Chỉ hỏi trẻ dưới 2 tháng. Ước lượng; đã có quy tắc mức 2 cho trẻ dưới 2 tháng."
+  - finding: sick_contact_respiratory
+    freq: frequent
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-3312-2015, nhs-bronchiolitis]
+      locator: "3312 tr. 275 (yếu tố nguy cơ: trẻ nằm trong vụ dịch cúm hay viêm đường hô hấp do RSV)"
+      note: "Lượt B. NHS khuyên giữ trẻ sơ sinh tránh xa người đang cảm lạnh, cúm. Tỷ lệ nền 0,2; ước khoảng một nửa."
+  - finding: asthma_known
+    freq: rare
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [nice-ng9]
+      locator: "NG9 1.1.7 (khò khè tái diễn từng đợt, cơ địa dị ứng: nghĩ hen hơn viêm tiểu phế quản)"
+      note: "Lượt B. Chỉ hỏi từ 2 tháng. Trẻ đã được nói bị hen thì đợt khò khè này ít nghĩ là viêm tiểu phế quản; mức rare thấp hơn tỷ lệ nền 0,06."
+  - finding: barking_cough
+    freq: very_rare
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [bjornson-cmaj-2013, nice-ng9]
+      note: "Lượt B. Ho ông ổng là kiểu ho của viêm thanh quản cấp; viêm tiểu phế quản không có. Mức very_rare thấp hơn tỷ lệ nền 0,03. Ước lượng."
+  - finding: stridor
+    freq: rare
+    above_leak_ok: true
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-3312-2015, who-imci-chart-booklet-2014]
+      locator: "3312 tr. 276 (sau 3–5 ngày có thể khó thở, 'thở rít'); IMCI Module 3 (khò khè khi thở ra không phải thở rít)"
+      note: "Lượt B. Bệnh ở đường thở dưới nên thở rít khi hít vào hiếm. 3312 dùng chữ 'thở rít' cho tiếng thở của bệnh này, nên người nhà có thể trả lời 'có'; để rare, cao hơn tỷ lệ nền 1% (above_leak_ok) để bệnh không bị loại khi người nhà lẫn hai tiếng thở. Đã có quy tắc mức 2."
+  - finding: inspiratory_whoop
+    freq: very_rare
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [msd-pertussis, nice-ng9]
+      note: "Lượt B. Tiếng rít cuối cơn ho là dấu hiệu của ho gà. Mức very_rare thấp hơn tỷ lệ nền 1%. Ước lượng."
+  - finding: post_tussive_vomiting
+    freq: occasional
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [moore-chest-2017, nice-ng9]
+      locator: "Moore 2017 tóm tắt (ở trẻ em nôn sau ho có độ đặc hiệu chỉ 66%)"
+      note: "Lượt B. Trẻ nhỏ ho nhiều, nhiều đờm hay nôn trớ sau ho; ước occasional để câu này không loại viêm tiểu phế quản khi người nhà trả lời 'có'. Ước lượng."
+warning_signs:
+  - apnea_cyanosis_spells
+  - chest_indrawing
+  - grunting
+  - es_severe_breathing
+  - young_infant_not_feeding
+  - young_infant_fast_breathing
+  - child_unable_to_drink
+  - drowsy_hard_to_wake
+self_care_vi:
+  - "Cho bú hoặc uống từng ít một, nhiều lần trong ngày."
+  - "Làm thông thoáng mũi cho trẻ trước khi bú, trước khi ngủ."
+  - "Giữ trẻ ở tư thế đầu cao khi thức; không để ai hút thuốc gần trẻ."
+  - "Không tự cho trẻ uống thuốc ho, kháng sinh; hỏi bác sĩ hoặc dược sĩ trước khi dùng thuốc."
+see_doctor_vi:
+  - "Đi khám trong 24 giờ để được đếm nhịp thở, đo ô xy và hẹn theo dõi."
+  - "Bệnh thường nặng nhất vào ngày 3–5: theo dõi kỹ nhịp thở và lượng bú."
+  - "Trẻ dưới 3 tháng, sinh non, có bệnh tim, bệnh phổi cần được khám ngay trong ngày."
+  - "Đi cấp cứu ngay nếu trẻ ngừng thở từng lúc, tím tái, rút lõm ngực, thở rên hoặc bỏ bú."
+sources: [nice-ng9, byt-qd-3312-2015, nhs-bronchiolitis]
+review:
+  status: draft
+  authors: ["agent:pass-b"]
+  doctor_reviewer: null
+  updated: "2026-10-31"
+  notes_vi: "Lượt B (Giai đoạn 3 lô 3, phần b). Mức xử trí 3, không thuộc nhóm không được bỏ sót (giữ gợi ý): NHS cho chăm sóc tại nhà phần lớn ca, khám khẩn khi bú kém, sốt cao, mệt; NG9 chuyển cấp cứu khi ngừng thở, thở rên, rút lõm rõ, tím (đã có quy tắc mức 1–2). Phạm vi tuổi: dưới 2 tháng và 2 tháng–5 tuổi (bệnh chỉ gặp dưới 2 tuổi); nhóm 2 tháng–5 tuổi không tách được nên prior là trung bình của cả nhóm. Prior cho Sốt (P3) đổi kết quả của triệu chứng đã phát hành: ước thấp, có liên kết ho almost_always để trẻ sốt không ho không bị gợi ý bệnh này; cần so bộ dev trước và sau. Điều cần bác sĩ xem: (1) prior là ước lượng, chưa có số liệu ngoại trú Việt Nam (chỉ có số nhập viện vì RSV ở Nha Trang); (2) hệ số mùa đông xuân ở miền Bắc chỉ dựa vào mô tả của 3312, mùa RSV ở miền Trung, miền Nam chưa có nguồn; (3) tần suất khò khè, rút lõm, bú kém ở cộng đồng là ước lượng; (4) thở rít để rare có above_leak_ok vì 3312 dùng chữ 'thở rít' cho tiếng thở của bệnh này; (5) mã J21.9 chưa đối chiếu được. Lời khuyên giữ đầu cao, cho bú ít một nhiều lần, giữ trẻ sơ sinh tránh người cảm lạnh theo NHS Bronchiolitis; không hút thuốc gần trẻ theo 3312 (hút thuốc lá bị động là yếu tố nguy cơ)."

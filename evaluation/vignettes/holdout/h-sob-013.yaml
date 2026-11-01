@@ -1,0 +1,51 @@
+id: h-sob-013
+set: holdout
+title_vi: "Nữ 16 tuổi kinh nguyệt nhiều, 3 tháng nay leo cầu thang là hụt hơi, tim đập nhanh, mệt, da xanh, choáng khi đứng dậy"
+narrative_vi: "Em H., nữ, 16 tuổi, học sinh ở An Giang. Từ khi có kinh, mỗi kỳ em ra nhiều, kéo dài 7–8 ngày, phải thay băng liên tục. Khoảng 3 tháng nay em hay mệt, học kém tập trung; leo 3 tầng lầu lên lớp là hụt hơi, tim đập nhanh, phải dừng nghỉ; ngồi yên thì thở bình thường. Đứng dậy nhanh hay bị choáng, tối sầm mắt vài giây nhưng chưa ngất. Mẹ thấy em da xanh, môi và mí mắt nhợt. Em ăn ít thịt, hay nhịn ăn sáng. Em không sốt, không ho, không đau ngực, không phù chân, không sụt cân, không đi ngoài phân đen. Em chưa có quan hệ tình dục. Em chưa từng được nói là bị thiếu máu."
+patient:
+  age_years: 16
+  sex: female
+  region: south
+  month: 8
+complaint: shortness_of_breath
+answers:
+  dyspnea_onset: weeks
+  dyspnea_severity: exertion
+  breathless_on_exertion: present
+  palpitations: present
+  fatigue: present
+  pallor: present
+  heavy_periods: present
+  dizziness_on_standing: present
+  dizziness: present
+  anemia_known: absent
+  fainting_or_near_fainting: absent
+  pregnant: absent
+  missed_period: absent
+  fever: absent
+  cough: absent
+  wheeze: absent
+  chest_pain: absent
+  chest_pain_pressure: absent
+  orthopnea: absent
+  leg_swelling_both: absent
+  leg_swelling_one_side: absent
+  weight_loss_unintended: absent
+  black_stool: absent
+  vomiting_blood: absent
+  heat_intolerance: absent
+  tremor: absent
+  estrogen_use: absent
+  asthma_known: absent
+  allergen_exposure: absent
+default_unmentioned: absent
+expected:
+  condition: anemia
+  acceptable: []
+  triage: 4
+source:
+  basis: "Thiếu máu thiếu sắt do kinh nguyệt nhiều ở nữ vị thành niên: 3 tháng hụt hơi khi gắng sức, tim nhanh, mệt, da và niêm mạc nhợt, choáng khi đứng dậy; ngồi nghỉ thở bình thường, không đau ngực, không ngất. NHS Iron deficiency anaemia: mệt, khó thở, hồi hộp, da nhợt; kinh nguyệt nhiều là nguyên nhân rất hay gặp; khám bác sĩ gia đình (không khẩn). NHS Shortness of breath: khó thở tăng khi làm việc thường ngày thì khám bác sĩ (không khẩn). Nên mức 4."
+  references:
+    - nhs-iron-deficiency-anaemia
+    - nhs-shortness-of-breath
+author: "agent:vignette-holdout"

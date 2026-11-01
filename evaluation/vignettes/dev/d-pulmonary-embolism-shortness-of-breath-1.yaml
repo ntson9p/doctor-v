@@ -1,0 +1,47 @@
+id: d-pulmonary-embolism-shortness-of-breath-1
+set: dev
+title_vi: "Nữ 44 tuổi dùng thuốc tránh thai, sau chuyến xe 9 giờ, sáng nay đột ngột khó thở, đau ngực phải khi hít sâu, sưng bắp chân trái"
+narrative_vi: "Chị H., 44 tuổi, ở Gia Lai, đang uống thuốc tránh thai. Ba ngày trước đi xe khách 9 giờ. Từ hôm qua bắp chân trái sưng, đau. Sáng nay đang ngồi thì đột ngột khó thở, ngồi yên cũng thở mệt nhưng vẫn nói được cả câu, kèm đau nhói ngực phải khi hít sâu. Không ho ra máu, không sốt, không ho. Không choáng, không ngất. Không khò khè, không nổi mẩn. Không đau, tức nặng giữa ngực. Chưa từng bị cục máu đông, không có ung thư. Nhà không có máy đo SpO2. Không có thai, không chậm kinh."
+patient:
+  age_years: 44
+  sex: female
+  region: highlands
+  month: 9
+complaint: shortness_of_breath
+answers:
+  dyspnea_onset: sudden
+  dyspnea_severity: rest
+  pleuritic_chest_pain: present
+  chest_pain: present
+  chest_pain_duration: over_15min
+  leg_swelling_one_side: present
+  recent_immobility: present
+  estrogen_use: present
+  spo2_measured: not_measured
+  chest_pain_pressure: absent
+  chest_pain_sudden_severe: absent
+  hemoptysis: absent
+  fever: absent
+  cough: absent
+  wheeze: absent
+  fainting_or_near_fainting: absent
+  palpitations: absent
+  previous_clot: absent
+  active_cancer: absent
+  orthopnea: absent
+  leg_swelling_both: absent
+  allergen_exposure: absent
+  rash_any: absent
+  asthma_known: absent
+  smoker: absent
+  pregnant: absent
+  missed_period: absent
+default_unmentioned: absent
+expected:
+  condition: pulmonary_embolism
+  acceptable: []
+  triage: 2
+source:
+  basis: "Thuyên tắc phổi điển hình, chưa có sốc, ngất: khó thở đột ngột, đau ngực kiểu màng phổi, sưng đau một bên bắp chân, sau ngồi xe lâu, đang dùng thuốc tránh thai (ESC 2019 bảng 3, mục 4.1; Miniati 2012). NHS Pulmonary embolism: 'Call 999 or go to A&E', theo quy ước của lượt R là mức 2 (quy tắc rf_pe_signs mức 2); ca có ngất, sốc, tức ngực kèm khó thở là mức 1."
+  references: [esc-pe-2019, miniati-plosone-2012, nhs-pulmonary-embolism]
+author: "agent:pass-c"

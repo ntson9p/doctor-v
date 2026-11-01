@@ -1,0 +1,42 @@
+id: d-anaphylaxis-2
+set: dev
+title_vi: "Bé trai 9 tuổi ho liên tục, khàn tiếng, nổi mề đay sau khi ăn bánh có lạc ở tiệc sinh nhật"
+narrative_vi: "Bé P., 9 tuổi, ở Hà Nội. Khoảng 30 phút sau khi ăn bánh có lạc (đậu phộng) ở tiệc sinh nhật, bé ho khan liên tục, kêu ngứa họng, giọng khàn đi, trên bụng và lưng nổi mảng mẩn gồ, ngứa. Mẹ nghe tiếng thở khò khè nhẹ. Bé vẫn nói được trọn câu, chưa thấy khó thở rõ, môi lưỡi không sưng, không nôn, không choáng. Bé không sốt, không sổ mũi. Mẹ chọn Ho vì bé ho nhiều, không chọn mục nào ở màn sàng lọc đầu tiên."
+patient:
+  age_years: 9
+  sex: male
+  region: north
+  month: 4
+complaint: cough
+answers:
+  allergen_exposure: present
+  rash_any: present
+  hives: present
+  hoarse_voice: present
+  wheeze: present
+  cough_duration: lt_1w
+  breathing_difficulty: absent
+  stridor: absent
+  edema_face_hands: absent
+  vomiting: absent
+  abdominal_pain: absent
+  fainting_or_near_fainting: absent
+  cold_hands_feet: absent
+  fever: absent
+  runny_nose: absent
+  sore_throat: present
+  productive_cough: absent
+  choking_episode: absent
+  barking_cough: absent
+  cough_paroxysms: absent
+  asthma_known: absent
+default_unmentioned: absent
+expected:
+  condition: anaphylaxis
+  acceptable: []
+  triage: 1
+source:
+  basis: "Phản vệ không điển hình ở trẻ, biểu hiện chủ yếu bằng ho: sau ăn dị nguyên thức ăn (lạc) có mày đay kèm triệu chứng hô hấp (khò khè, khàn tiếng, ho) (51/2017/TT-BYT Phụ lục I bệnh cảnh 1; WAO 2020: triệu chứng thanh quản gồm đổi giọng). NHS Anaphylaxis: khò khè, ho, khàn tiếng sau tiếp xúc dị nguyên là dấu hiệu phản vệ, gọi 999 (mức 1). Quy tắc rf_anaphylaxis_signs (mề đay kèm khò khè)."
+  references: [byt-tt-51-2017, cardona-waoj-2020, nhs-anaphylaxis]
+author: "agent:pass-c"
+notes_vi: "Ca không điển hình (trẻ em, triệu chứng chính Ho, chưa khó thở rõ, không qua màn sàng lọc cấp cứu)."

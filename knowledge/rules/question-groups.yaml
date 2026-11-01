@@ -195,3 +195,102 @@
     age_groups: [child_2m_5y, child_5_12, teen_13_17]
   requires:
     - { finding: vomiting, is: present }
+
+# ---------- Giai đoạn 3, lô 3: ho, khó thở, đau ngực ----------
+# Người bảo trì soạn (31/10/2026), chờ lượt R. Trẻ dưới 5 tuổi có nhóm riêng: câu "đau tức giữa ngực" không
+# hợp với trẻ nhỏ, còn rút lõm lồng ngực, ngừng thở, bú kém là dấu hiệu nặng theo WHO IMCI và NICE NG9.
+- id: child_breathing_signs
+  title_vi: "Bé có dấu hiệu nào sau đây không?"
+  findings:
+    - breathing_difficulty
+    - chest_indrawing
+    - stridor
+    - apnea_cyanosis_spells
+    - child_feeding_reduced
+    - choking_episode
+    - grunting
+  none_label_vi: "Không có dấu hiệu nào ở trên"
+  allow_unknown: true
+  applies_to:
+    age_groups: [infant_0_2m, child_2m_5y]
+- id: cough_red_flags
+  title_vi: "Cùng với ho, có dấu hiệu nào sau đây không?"
+  findings:
+    - breathing_difficulty
+    - stridor
+    - hemoptysis
+    - chest_pain_pressure
+    - choking_episode
+  none_label_vi: "Không có dấu hiệu nào ở trên"
+  allow_unknown: true
+  applies_to:
+    age_groups: [child_5_12, teen_13_17, adult_18_44, adult_45_64, elder_65_74, elder_75p]
+- id: dyspnea_red_flags
+  title_vi: "Cùng với khó thở, có dấu hiệu nào sau đây không?"
+  findings:
+    - chest_pain_pressure
+    - fainting_or_near_fainting
+    - palpitations
+    - leg_swelling_one_side
+    - hemoptysis
+    - stridor
+    - choking_episode
+  none_label_vi: "Không có dấu hiệu nào ở trên"
+  allow_unknown: true
+  applies_to:
+    age_groups: [child_5_12, teen_13_17, adult_18_44, adult_45_64, elder_65_74, elder_75p]
+# Các dấu hiệu mà NHS Chest pain ghi "gọi 999" (đau lan ra tay, cổ, hàm, lưng; vã mồ hôi, buồn nôn, choáng,
+# khó thở) và dấu hiệu bóc tách động mạch chủ (đau đột ngột dữ dội, lan ra lưng).
+- id: chest_pain_red_flags
+  title_vi: "Cùng lúc đau ngực, có dấu hiệu nào sau đây không?"
+  findings:
+    - pain_radiates_arm_jaw
+    - chest_pain_radiates_back
+    - chest_pain_sudden_severe
+    - cold_sweat
+    - nausea
+    - fainting_or_near_fainting
+    # Tích hợp lô 3: khó thở hỏi riêng sau (xem chest_pain.yaml); đau như xé thay vào chỗ đó.
+    - chest_pain_tearing
+  none_label_vi: "Không có dấu hiệu nào ở trên"
+  allow_unknown: true
+- id: cough_associated
+  title_vi: "Ngoài ho, còn có triệu chứng nào sau đây không?"
+  findings: [fever, runny_nose, sore_throat, productive_cough, wheeze, pleuritic_chest_pain, heartburn]
+  none_label_vi: "Không có triệu chứng nào ở trên"
+- id: cough_character
+  title_vi: "Cơn ho có đặc điểm nào sau đây không?"
+  findings: [barking_cough, cough_paroxysms, inspiratory_whoop, post_tussive_vomiting]
+  none_label_vi: "Không có đặc điểm nào ở trên"
+  allow_unknown: true
+# Ho từ 2 tuần: các câu sàng lọc lao (ra mồ hôi đêm, sụt cân, ho ra máu, tiếp xúc người bị lao) và ung thư phổi.
+- id: chronic_cough_signs
+  title_vi: "Có điều nào sau đây không?"
+  findings: [night_sweats, weight_loss_unintended, hemoptysis, tb_contact, smoker]
+  none_label_vi: "Không có điều nào ở trên"
+  allow_unknown: true
+  requires:
+    - { finding: cough_duration, in: [w2_8, gt_8w] }
+- id: dyspnea_associated
+  title_vi: "Ngoài khó thở, còn có triệu chứng nào sau đây không?"
+  findings: [cough, wheeze, fever, pleuritic_chest_pain, orthopnea, leg_swelling_both, rash_any]
+  none_label_vi: "Không có triệu chứng nào ở trên"
+- id: chest_pain_associated
+  title_vi: "Cơn đau ngực có đặc điểm nào sau đây không?"
+  findings: [pleuritic_chest_pain, chest_wall_tenderness, chest_pain_exertional, heartburn, cough, skin_burning_band, rash_any]
+  none_label_vi: "Không có đặc điểm nào ở trên"
+- id: lung_conditions
+  title_vi: "Có bệnh hoặc thói quen nào sau đây không?"
+  findings: [asthma_known, copd_known, smoker, former_smoker, biomass_smoke_exposure]
+  none_label_vi: "Không có điều nào ở trên"
+  allow_unknown: true
+  applies_to:
+    age_groups: [child_2m_5y, child_5_12, teen_13_17, adult_18_44, adult_45_64, elder_65_74, elder_75p]
+# Yếu tố nguy cơ huyết khối (thang Wells, quy tắc PERC; ESC 2019): cần cho thuyên tắc phổi khi khó thở, đau ngực.
+- id: clot_risk
+  title_vi: "Có điều nào sau đây không?"
+  findings: [recent_immobility, previous_clot, active_cancer, estrogen_use, leg_swelling_one_side]
+  none_label_vi: "Không có điều nào ở trên"
+  allow_unknown: true
+  applies_to:
+    age_groups: [teen_13_17, adult_18_44, adult_45_64, elder_65_74, elder_75p]

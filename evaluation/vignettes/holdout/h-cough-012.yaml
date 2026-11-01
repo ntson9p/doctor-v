@@ -1,0 +1,48 @@
+id: h-cough-012
+set: holdout
+title_vi: "Bé trai 4 tuổi sổ mũi, ho 4 ngày, ho nhiều khi ngủ, hôm đầu sốt nhẹ, vẫn ăn chơi bình thường"
+narrative_vi: "Bé A., nam, 4 tuổi, ở Hải Phòng, đi mẫu giáo, đã tiêm chủng đầy đủ theo lịch, kể cả 2 mũi vắc xin sởi. Bốn ngày nay bé sổ mũi trong, nghẹt mũi, ho húng hắng, ho nhiều hơn khi nằm ngủ. Hôm đầu bé sốt nhẹ 37,8°C, từ hôm sau không sốt nữa. Bé vẫn ăn, uống sữa, chơi bình thường, không khó thở, không thở nhanh, ngực không rút lõm, không khò khè, không thở rít, không đau tai, không nôn. Bé không bị hóc, sặc gì. Trong lớp nhiều bạn đang sổ mũi."
+patient:
+  age_years: 4
+  sex: male
+  region: north
+  month: 10
+complaint: cough
+answers:
+  cough_duration: lt_1w
+  productive_cough: absent
+  runny_nose: present
+  nasal_congestion: present
+  night_respiratory_symptoms: present
+  fever: present
+  fever_max_temp: lt_38
+  fever_duration: d1_2
+  sick_contact_respiratory: present
+  breathing_difficulty: absent
+  chest_indrawing: absent
+  wheeze: absent
+  stridor: absent
+  barking_cough: absent
+  cough_paroxysms: absent
+  choking_episode: absent
+  ear_pain: absent
+  vomiting: absent
+  child_unable_to_drink: absent
+  child_vomits_everything: absent
+  child_feeding_reduced: absent
+  drowsy_hard_to_wake: absent
+  seizure_recent: absent
+  sore_throat: unknown
+  dtp_vaccinated: present
+  measles_vaccinated: present
+default_unmentioned: absent
+expected:
+  condition: common_cold
+  acceptable: []
+  triage: 5
+source:
+  basis: "Cảm lạnh thông thường ở trẻ 4 tuổi: sổ mũi, nghẹt mũi, ho 4 ngày, ho nhiều khi nằm (do dịch mũi chảy xuống họng), sốt nhẹ 1 ngày, ăn chơi bình thường, không có dấu hiệu nguy hiểm của WHO IMCI (không thở nhanh, không rút lõm, không thở rít, uống được). NHS Common cold: tự chăm sóc; đi khám khi sốt cao hơn 3 ngày, nặng lên, khó thở, không đỡ sau 10 ngày hoặc ho quá 3 tuần."
+  references:
+    - nhs-common-cold
+    - who-imci-chart-booklet-2014
+author: "agent:vignette-holdout"

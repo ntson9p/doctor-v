@@ -1,0 +1,207 @@
+id: pertussis
+names:
+  vi: "Ho gà"
+  vi_common: ["Ho gà", "Ho rũ rượi"]
+  en: "Pertussis (whooping cough)"
+codes:
+  icd10: "A37.9"
+  icd10_verified: false
+  mondo: "MONDO:0005077"
+summary_vi:
+  - "Bệnh nhiễm vi khuẩn ho gà ở đường hô hấp, lây rất mạnh qua giọt bắn khi ho."
+  - "Lúc đầu giống cảm lạnh, sau 1–2 tuần thành từng cơn ho dồn dập, có thể rít khi hít vào, nôn sau ho."
+  - "Trẻ dưới 6 tháng dễ bị nặng, có thể ngừng thở, tím tái; ho có thể kéo dài nhiều tuần."
+urgency: 3
+cant_miss: false
+specialties: [infectious_disease, pediatrics, respiratory]
+priors:
+  - complaint: cough
+    default: P4
+    by_age:
+      infant_0_2m: P3
+      child_5_12: P3
+      teen_13_17: P3
+      elder_65_74: P5
+      elder_75p: P5
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [pham-bmcpublichealth-2024, wang-bmj-2014, msd-pertussis, nhs-whooping-cough]
+      locator: "Pham 2024 bảng 1; Wang 2014 tóm tắt; MSD phần dịch tễ"
+      reported: "Trẻ nằm Bệnh viện Nhi Trung ương vì ho gà: 44% dưới 2 tháng, 88% dưới 1 tuổi, 84% chưa tiêm mũi nào; 3,2 ca trên 1.000 lượt nhập viện (2015). Anh: 20% trẻ 5–15 tuổi đi khám vì ho 2–8 tuần có bằng chứng mới nhiễm ho gà, kể cả 18% trẻ đã tiêm đủ."
+      note: "Lượt B. Thang tuyệt đối, tính trên mọi người chọn Ho (phần lớn ho dưới 1 tuần do cảm lạnh, cúm). Dưới 2 tháng: chưa đến tuổi tiêm, là nhóm mắc nhiều nhất ở miền Bắc, ước 1–5% (P3). 2 tháng–5 tuổi: phần lớn đã tiêm, ước 0,2–1% (P4). 5–17 tuổi: miễn dịch sau tiêm giảm dần, Việt Nam chưa có mũi nhắc ở tuổi đi học; nếu khoảng 10–20% lượt ho ở tuổi này là ho kéo dài và 20% trong số đó là ho gà (Wang), thì ước 1–5% (P3). Người lớn hay bị bỏ sót (MSD): P4; từ 65 tuổi P5 vì ho có nhiều nguyên nhân khác. Ca bệnh được ghi nhận ở Việt Nam ít hơn nhiều so với ước tính này, vì người lớn và trẻ lớn hiếm khi được xét nghiệm. Thời gian ho và kiểu cơn ho mang phần lớn bằng chứng. Cần bác sĩ duyệt."
+prior_modifiers:
+  - when: { regions: [north], months: [4, 5, 6, 7] }
+    factor: 1.4
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [pham-bmcpublichealth-2024]
+      locator: "Pham 2024 bảng 1, hình 1"
+      reported: "Tháng 4–7: 47,9% số ca; tháng 12–3: 37,4%; tháng 8–11: 14,7% (mỗi mùa khoảng 4 tháng)"
+      population: "trẻ dưới 5 tuổi nằm viện ở miền Bắc, 2015–2018"
+      note: "Lượt B. 47,9% số ca trong một phần ba năm, khoảng 1,4 lần mức trung bình. Chỉ có số liệu miền Bắc."
+  - when: { regions: [north], months: [8, 9, 10, 11] }
+    factor: 0.5
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [pham-bmcpublichealth-2024]
+      locator: "Pham 2024 bảng 1, hình 1"
+      reported: "Tháng 8–11: 14,7% số ca; tháng 10 ít ca nhất"
+      note: "Lượt B. 14,7% số ca trong một phần ba năm, khoảng 0,45 lần mức trung bình; làm tròn 0,5. Tháng 12–3 để trung tính (37,4%, khoảng 1,1 lần)."
+findings:
+  - finding: cough_duration
+    dist: { lt_1w: 0.15, w1_2: 0.30, w2_8: 0.50, gt_8w: 0.05 }
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [pham-bmcpublichealth-2024, who-emro-pertussis-surveillance, msd-pertussis, nhs-whooping-cough]
+      locator: "Pham 2024 bảng 1; WHO EMRO định nghĩa ca lâm sàng; MSD phần triệu chứng"
+      reported: "Từ khởi phát đến xét nghiệm trung vị 10 ngày (7–15 ngày); bệnh trung bình 7 tuần, có khi hơn 3 tháng"
+      note: "Lượt B. Phân bố trong số người đã ho, tại lúc dùng app. Giai đoạn viêm long 1–2 tuần giống cảm lạnh, ít người đi khám; giai đoạn cơn bắt đầu sau 10–14 ngày; định nghĩa ca của WHO cần ho từ 2 tuần. Trẻ nhỏ được đưa đi khám sớm hơn (trung vị 10 ngày). Từ 2 tháng ít gặp vì cơn ho thường giảm trong khoảng 4–10 tuần. Ước lượng."
+  - finding: cough_paroxysms
+    freq: very_frequent
+    evidence:
+      tier: A
+      basis: numeric
+      sources: [moore-chest-2017, pham-bmcpublichealth-2024, msd-pertussis]
+      locator: "Moore 2017 tóm tắt; Pham 2024 bảng 1"
+      reported: "Người lớn: ho từng cơn độ nhạy 93,2%; trẻ nằm viện ở Việt Nam: ho nặng (cơn ho dữ dội) 71,8%"
+      note: "Lượt B. Tần suất trong số người đã ho. Hạ một mức so với 93% vì người dùng có thể hỏi ở giai đoạn viêm long, khi chưa có cơn."
+  - finding: inspiratory_whoop
+    freq: occasional
+    freq_by_age:
+      infant_0_2m: rare
+    evidence:
+      tier: A
+      basis: numeric
+      sources: [moore-chest-2017, msd-pertussis, nhs-whooping-cough]
+      locator: "Moore 2017 tóm tắt; MSD phần triệu chứng; NHS phần triệu chứng"
+      reported: "Người lớn: tiếng rít khi hít vào độ nhạy 29,8% (độ đặc hiệu 79,5%)"
+      note: "Lượt B. Tần suất trong số người đã ho. NHS: trẻ dưới 3 tháng và một số người lớn có thể không rít; MSD: ở nhũ nhi cơn nghẹn, tím gặp nhiều hơn tiếng rít. Trẻ dưới 2 tháng: rare (ước lượng; vẫn cao hơn tỷ lệ nền 1%). Tỷ lệ nền 1% nên câu trả lời 'Có' làm tăng mạnh khả năng ho gà."
+  - finding: post_tussive_vomiting
+    freq: frequent
+    freq_by_age:
+      adult_18_44: occasional
+      adult_45_64: occasional
+      elder_65_74: occasional
+      elder_75p: occasional
+    evidence:
+      tier: A
+      basis: numeric
+      sources: [moore-chest-2017, msd-pertussis]
+      locator: "Moore 2017 tóm tắt"
+      reported: "Trẻ em: nôn sau ho độ nhạy 60,0% (độ đặc hiệu 66,0%); người lớn: 32,5% (độ đặc hiệu 77,7%)"
+      note: "Lượt B. Tần suất trong số người đã ho. Trẻ em frequent; người lớn occasional (32,5% nằm sát ranh giới, MSD: nôn là đặc trưng). Trẻ nhỏ bị cảm lạnh cũng hay nôn trớ sau ho nên câu này phân biệt kém ở trẻ (Moore)."
+  - finding: apnea_cyanosis_spells
+    freq: occasional
+    freq_by_age:
+      infant_0_2m: frequent
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [pham-bmcpublichealth-2024, msd-pertussis, nhs-whooping-cough]
+      locator: "Pham 2024 phần Methods (ngừng thở là một triệu chứng khởi phát); MSD phần triệu chứng và biến chứng; NHS phần triệu chứng"
+      note: "Lượt B. Chỉ hỏi trẻ dưới 5 tuổi. MSD: ở nhũ nhi cơn nghẹn có hay không tím có thể nhiều hơn tiếng rít; ngạt là biến chứng hay gặp nhất. NHS: trẻ nhỏ có thể tím hoặc xám sau cơn ho. Không có tỷ lệ ở cộng đồng; ước frequent dưới 2 tháng, occasional ở trẻ lớn hơn. Đã có quy tắc mức 1."
+  - finding: breathing_difficulty
+    freq: occasional
+    freq_by_age:
+      infant_0_2m: frequent
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [nhs-whooping-cough, pham-bmcpublichealth-2024]
+      locator: "NHS phần triệu chứng; Pham 2024 bảng 1 (23,2% cần oxy hoặc thở máy)"
+      note: "Lượt B. Có ý nghĩa với Ho (không ngầm định). NHS: trẻ nhỏ có thể khó thở; ngoài cơn ho người lớn thường thở bình thường. Trẻ dưới 2 tháng nằm viện: 23% cần oxy; ước frequent ở nhóm này. Ước lượng."
+  - finding: fever
+    freq: rare
+    freq_by_age:
+      adult_18_44: occasional
+      adult_45_64: occasional
+      elder_65_74: occasional
+      elder_75p: occasional
+    evidence:
+      tier: A
+      basis: numeric
+      sources: [moore-chest-2017, msd-pertussis]
+      locator: "Moore 2017 tóm tắt; MSD giai đoạn viêm long"
+      reported: "Người lớn: không sốt độ nhạy 81,8%, tức khoảng 18% có sốt"
+      note: "Lượt B. MSD: sốt hiếm. Người lớn theo số liệu Moore (occasional, cao hơn tỷ lệ nền 5% một chút); trẻ em rare theo MSD. Các bệnh cạnh tranh (viêm phổi, cúm) có sốt nhiều hơn hẳn, nên câu 'Có sốt' vẫn làm giảm thứ hạng ho gà so với chúng."
+  - finding: fever_max_temp
+    dist: { lt_38: 0.70, t38_39: 0.25, ge_39: 0.05 }
+    evidence:
+      tier: C
+      basis: verbal
+      sources: [msd-pertussis]
+      locator: "MSD giai đoạn viêm long (sốt hiếm)"
+      note: "Lượt B. Phân bố trong số người có sốt: thường sốt nhẹ. Ước lượng."
+  - finding: runny_nose
+    freq: frequent
+    evidence:
+      tier: C
+      basis: verbal
+      sources: [msd-pertussis, nhs-whooping-cough]
+      locator: "MSD giai đoạn viêm long; NHS (khởi đầu như cảm lạnh)"
+      note: "Lượt B. Giai đoạn viêm long có hắt hơi, chảy nước mắt, sổ mũi; sang giai đoạn cơn thì ít hơn. Tỷ lệ nền 0,2 nên phân biệt yếu."
+  - finding: night_respiratory_symptoms
+    freq: frequent
+    evidence:
+      tier: C
+      basis: verbal
+      sources: [msd-pertussis, nhs-whooping-cough]
+      locator: "MSD giai đoạn viêm long (ho về đêm rồi cả ngày); NHS (cơn ho nặng hơn về đêm)"
+      note: "Lượt B. Tần suất trong số người đã ho. Không có tỷ lệ; ước khoảng một nửa."
+  - finding: wheeze
+    freq: rare
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [msd-pertussis, nhs-whooping-cough]
+      note: "Lượt B. Hai nguồn không nêu khò khè; giữa các cơn người bệnh thở bình thường. Mức rare thấp hơn tỷ lệ nền 5% để câu 'Có' nghiêng về hen, viêm tiểu phế quản. Ước lượng."
+  - finding: sick_contact_respiratory
+    freq: frequent
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [msd-pertussis, pham-bmcpublichealth-2024]
+      locator: "MSD phần dịch tễ (lây cho trên 80% người tiếp xúc gần; người lớn là nguồn lây cho trẻ nhỏ); Pham 2024 phần bàn luận (tiếp xúc trong gia đình dịp Tết)"
+      note: "Lượt B. Câu hỏi về tiếp xúc người đang sốt hoặc ho trong 7 ngày qua; người lây thường đang ho kéo dài. Tỷ lệ nền 0,2. Ước lượng."
+  - finding: dtp_vaccinated
+    freq: occasional
+    freq_by_age:
+      child_5_12: very_frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [pham-bmcpublichealth-2024, wang-bmj-2014]
+      locator: "Pham 2024 bảng 1; Wang 2014 tóm tắt"
+      reported: "Trẻ dưới 5 tuổi nằm viện: 6,7% đã tiêm từ 3 mũi (khoảng 30% trong số trẻ từ 5 tháng); trẻ 5–15 tuổi ho gà ở Anh: 39/56 (70%) đã tiêm đủ"
+      note: "Lượt B. Câu hỏi chỉ hỏi trẻ từ 5 tháng đến 12 tuổi; tỷ lệ nền 0,85. Trẻ dưới 5 tuổi: occasional (vắc xin bảo vệ tốt, ca bệnh phần lớn chưa tiêm đủ). Trẻ 5–12 tuổi: miễn dịch đã giảm, phần lớn ca bệnh đã tiêm đủ lúc nhỏ: very_frequent, gần tỷ lệ nền nên gần như trung tính. Ca nằm viện có thể ít người tiêm hơn ca nhẹ ở cộng đồng."
+warning_signs:
+  - apnea_cyanosis_spells
+  - es_severe_breathing
+  - chest_indrawing
+  - grunting
+  - young_infant_not_feeding
+  - child_unable_to_drink
+  - seizure_recent
+  - drowsy_hard_to_wake
+self_care_vi:
+  - "Giữ trẻ nhỏ, nhất là trẻ dưới 6 tháng, tránh xa người đang ho."
+  - "Người bệnh ở riêng, đeo khẩu trang; nghỉ học, nghỉ làm theo hướng dẫn của bác sĩ."
+  - "Cho ăn, bú từng ít một, nhiều lần; uống đủ nước, nhất là sau cơn ho có nôn."
+  - "Không tự dùng thuốc ho, nhất là cho trẻ nhỏ; hỏi bác sĩ hoặc dược sĩ trước khi dùng thuốc."
+see_doctor_vi:
+  - "Đi khám trong 24 giờ, nhất là khi ho thành cơn, rít khi hít vào hoặc nôn sau ho."
+  - "Trẻ dưới 6 tháng có cơn ho như vậy cần được đưa đi khám ngay trong ngày."
+  - "Khám sớm, trong 3 tuần đầu, giúp được điều trị để giảm lây cho người khác."
+  - "Báo bác sĩ nếu trong nhà có trẻ nhỏ hoặc người mang thai, để được tư vấn phòng bệnh."
+  - "Đi cấp cứu ngay nếu trẻ ngừng thở, tím tái, co giật, hoặc bú kém hẳn."
+sources: [nhs-whooping-cough, who-emro-pertussis-surveillance, msd-pertussis, pham-bmcpublichealth-2024]
+review:
+  status: draft
+  authors: ["agent:pass-b"]
+  doctor_reviewer: null
+  updated: "2026-10-31"
+  notes_vi: "Lượt B (Giai đoạn 3 lô 3, phần b). Mức xử trí 3, không thuộc nhóm không được bỏ sót (giữ gợi ý): NHS chỉ xếp khám khẩn cho trẻ dưới 6 tháng có triệu chứng hoặc ho rất nặng, nặng dần; kháng sinh trong 3 tuần đầu giúp giảm lây; trẻ dưới 6 tháng thường phải điều trị ở bệnh viện, nhưng các quy tắc rf_pertussis_infant (mức 2), rf_infant_apnea (mức 1), rg_young_infant_any đã xử lý. Không tìm được hướng dẫn chẩn đoán, điều trị ho gà của Bộ Y tế (như lượt R). Không mở được trang CDC (từ chối truy cập tự động). Điều cần bác sĩ xem: (1) prior là ước lượng: ca được ghi nhận ở Việt Nam chủ yếu là trẻ dưới 1 tuổi nằm viện; P3 cho trẻ 5–17 tuổi suy từ số liệu Anh (ho kéo dài 2–8 tuần), có thể cao so với Việt Nam; (2) tần suất cơn ho, tiếng rít, nôn sau ho lấy từ Moore 2017, chủ yếu số liệu người lớn; (3) hệ số theo mùa chỉ có số liệu miền Bắc, ở trẻ nằm viện; (4) câu dtp_vaccinated chỉ hỏi tới 12 tuổi; (5) mã A37.9 chưa đối chiếu được với danh mục ICD-10 của Bộ Y tế. Lời khuyên giữ trẻ nhỏ tránh người ho theo MSD (cách ly ít nhất 4 tuần với nhũ nhi khi điều trị tại nhà) và NHS (nghỉ học, nghỉ làm tới 48 giờ sau khi bắt đầu kháng sinh, hoặc 3 tuần từ khi ho)."

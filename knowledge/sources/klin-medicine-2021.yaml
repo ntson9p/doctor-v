@@ -1,0 +1,15 @@
+id: klin-medicine-2021
+type: primary_study
+title: "Electrocardiographic changes in young patients with spontaneous pneumothorax: a retrospective study"
+publisher: "Medicine (Baltimore) 2021;100(30):e26793 (Klin B, Gueta I, Bibi H, Baram S, Abu-Kishk I)"
+date: "2021-07"
+url: "https://europepmc.org/article/MED/34397732"
+doi: "10.1097/MD.0000000000026793"
+pmid: "34397732"
+license_class: L1
+license_note: "CC BY (theo Europe PMC, PMC8322562): dùng và chuyển thể, ghi công."
+default_tier: B
+accessed: "2026-10-31"
+verified: true
+verified_by: "agent:pass-c"
+notes_vi: "Lượt C (Giai đoạn 3 lô 3, phần c) đọc lại tóm tắt qua API Europe PMC ngày 31/10/2026; lượt A đã đọc trước đó. 57 thiếu niên tràn khí tự phát nguyên phát (Israel), 86% nam, tuổi trung vị 16: triệu chứng ban đầu là đau ngực đơn thuần 66,6%, khó thở kèm đau ngực 33,3%; 21% có thay đổi điện tim (ST chênh lên 5 người), men tim bình thường ở mọi người."

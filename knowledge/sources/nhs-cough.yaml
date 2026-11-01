@@ -1,0 +1,13 @@
+id: nhs-cough
+type: web_page
+title: "Cough"
+publisher: "NHS (UK)"
+date: "2023-12-08"
+url: "https://www.nhs.uk/symptoms/cough/"
+license_class: L1
+license_note: "Open Government Licence v3.0; bản chuyển thể không được trình bày như nội dung của NHS."
+default_tier: C
+accessed: "2026-10-31"
+verified: true
+verified_by: "agent:pass-r"
+notes_vi: "Lượt R lô 3 vòng 2 tải trang trực tiếp ngày 31/10/2026 (rà soát lần cuối 08/12/2023, hẹn rà soát 08/12/2026). Ho thường tự hết trong 3–4 tuần; phần lớn do cảm lạnh, cúm. Không có mục 'Call 999'. 'Urgent GP / 111': ho rất nặng hoặc nặng lên nhanh (ho dồn dập, không dừng được); thấy rất mệt; đau ngực; sưng đau một bên cổ (hạch); khó thở; ho ra máu. 'See a GP' (không khẩn): ho trên 3 tuần; sụt cân không rõ lý do; suy giảm miễn dịch (hóa trị, đái tháo đường). Kháng sinh thường không cần cho ho."

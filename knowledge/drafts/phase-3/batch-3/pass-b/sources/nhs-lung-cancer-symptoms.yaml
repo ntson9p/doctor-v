@@ -1,0 +1,13 @@
+id: nhs-lung-cancer-symptoms
+type: web_page
+title: "Symptoms of lung cancer"
+publisher: "NHS (UK)"
+date: "2026-08-20"
+url: "https://www.nhs.uk/conditions/lung-cancer/symptoms/"
+license_class: L1
+license_note: "Open Government Licence v3.0; bản chuyển thể không được trình bày như nội dung của NHS."
+default_tier: C
+accessed: "2026-10-31"
+verified: true
+verified_by: "agent:pass-b"
+notes_vi: "Lượt B tải trang ngày 31/10/2026 (rà soát lần cuối 20/8/2026). Triệu chứng hay gặp: ho không hết, khó thở, ho ra máu, đau ngực hoặc vai, hay bị nhiễm trùng ngực hoặc nhiễm trùng không đỡ, sụt cân, chán ăn, mệt. Ít gặp: sưng mặt cổ, nuốt khó, khàn tiếng kéo dài, ngón tay dùi trống. Giai đoạn sớm có thể không có triệu chứng. 'See a GP' (không khẩn): ho trên 3 tuần hoặc có triệu chứng khác; 'Urgent GP / 111': ho ra máu; 'Call 999 or A&E': khó thở đến không nói được, đau ngực hoặc lưng trên. Trang nhấn mạnh các triệu chứng này rất hay gặp và thường do bệnh khác, nhưng nên đi khám để kiểm tra."

@@ -1,0 +1,58 @@
+id: h-sob-010
+set: holdout
+title_vi: "Nam 66 tuổi đái tháo đường, COVID-19 ngày thứ 6, sốt, ho khan, nay ngồi yên cũng thở mệt, SpO2 90%"
+narrative_vi: "Ông Q., 66 tuổi, ở Hà Nội, bị đái tháo đường típ 2 và tăng huyết áp, uống thuốc hằng ngày. Sáu ngày trước cháu nội ông dương tính COVID-19; hôm sau ông sốt, ho khan, đau mỏi người, tự xét nghiệm nhanh thấy 2 vạch. Ông sốt 5 ngày nay, cao nhất 38,7°C, mệt, ăn kém, mất mùi. Từ hôm qua ông thở mệt dần, hôm nay ngồi yên cũng thấy khó thở, đi vào nhà vệ sinh thì thở dốc. Ông vẫn nói được trọn câu, tỉnh táo. Con trai đo SpO2 bằng máy kẹp ngón tay nhiều lần, được 89–90%. Ông không đau ngực, không ho ra máu, không phù chân, tay chân ấm."
+patient:
+  age_years: 66
+  sex: male
+  region: north
+  month: 8
+complaint: shortness_of_breath
+answers:
+  covid_self_test: positive
+  fever: present
+  fever_max_temp: t38_39
+  fever_duration: d3_5
+  cough: present
+  cough_duration: lt_1w
+  productive_cough: absent
+  myalgia: present
+  fatigue: present
+  loss_of_appetite: present
+  loss_of_smell_taste: present
+  sick_contact_respiratory: present
+  dyspnea_onset: hours_days
+  dyspnea_severity: rest
+  spo2_measured: lt_92
+  diabetes: present
+  on_glucose_lowering_meds: present
+  hypertension_known: present
+  bp_lowering_meds: present
+  chest_pain: absent
+  chest_pain_pressure: absent
+  pleuritic_chest_pain: absent
+  hemoptysis: absent
+  wheeze: absent
+  leg_swelling_one_side: absent
+  leg_swelling_both: absent
+  confusion: absent
+  drowsy_hard_to_wake: absent
+  cold_hands_feet: absent
+  severe_weakness: absent
+  es_severe_breathing: absent
+  known_heart_disease: absent
+  copd_known: absent
+  asthma_known: absent
+  smoker: absent
+default_unmentioned: absent
+expected:
+  condition: covid19
+  acceptable: []
+  triage: 2
+source:
+  basis: "COVID-19 mức nặng ở người cao tuổi có đái tháo đường: ngày thứ 6, sốt, ho, nay khó thở cả khi nghỉ, SpO2 89–90%. 2671/QĐ-BYT (2023) xếp SpO2 dưới 94% khi thở khí trời vào mức nặng, cần điều trị tại bệnh viện; hướng dẫn theo dõi SpO2 tại nhà của NHS: từ 92% trở xuống thì đến cấp cứu. Còn nói trọn câu, tỉnh táo nên đến cơ sở cấp cứu ngay (mức 2)."
+  references:
+    - byt-qd-2671-2023
+    - nhs-shortness-of-breath
+author: "agent:vignette-holdout"
+notes_vi: "Ca của bệnh đã có, triệu chứng chính mới (Khó thở). Ngưỡng SpO2 trong 2671/QĐ-BYT ghi theo hiểu biết đã có, mục nguồn trong danh mục chưa trích chi tiết phân độ."

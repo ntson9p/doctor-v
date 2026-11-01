@@ -1,0 +1,50 @@
+id: h-chest-013
+set: holdout
+title_vi: "Nam 67 tuổi đái tháo đường, hút thuốc, 30 phút nay đau thắt đè nặng giữa ngực lan tay trái và hàm, vã mồ hôi, khó thở, nghỉ không đỡ"
+narrative_vi: "Ông L., 67 tuổi, ở Hà Nội, bị đái tháo đường típ 2 và tăng huyết áp, hút thuốc lá hơn 40 năm. Sáng nay trời rét, ông đi bộ thể dục quanh hồ; khoảng 30 phút trước ông thấy đau thắt, đè nặng ở giữa ngực, tăng dần, lan lên hàm và xuống cánh tay trái. Ông ngồi nghỉ trên ghế đá nhưng không đỡ, vẫn đau nhiều. Ông vã mồ hôi lạnh, buồn nôn, khó thở. Ông vẫn tỉnh, nói được. Trước đây ông chưa bị như vậy, chưa được nói là có bệnh tim. Ông không sốt, không ho, đau không tăng khi hít thở hay khi ấn vào ngực, không lan ra sau lưng."
+patient:
+  age_years: 67
+  sex: male
+  region: north
+  month: 12
+complaint: chest_pain
+answers:
+  chest_pain_duration: over_15min
+  es_crushing_chest_pain: present
+  chest_pain_pressure: present
+  pain_radiates_arm_jaw: present
+  cold_sweat: present
+  nausea: present
+  breathing_difficulty: present
+  dyspnea_onset: sudden
+  dyspnea_severity: rest
+  diabetes: present
+  on_glucose_lowering_meds: present
+  hypertension_known: present
+  bp_lowering_meds: present
+  smoker: present
+  chest_pain_exertional: absent
+  chest_pain_sudden_severe: absent
+  chest_pain_radiates_back: absent
+  chest_pain_tearing: absent
+  pleuritic_chest_pain: absent
+  chest_wall_tenderness: absent
+  fainting_or_near_fainting: absent
+  vomiting: absent
+  fever: absent
+  cough: absent
+  known_heart_disease: absent
+  similar_episodes_before: absent
+default_unmentioned: absent
+expected:
+  condition: acute_coronary_syndrome
+  acceptable: []
+  triage: 1
+source:
+  basis: "Hội chứng vành cấp điển hình ở nam cao tuổi nhiều yếu tố nguy cơ (đái tháo đường, tăng huyết áp, hút thuốc): đau thắt, đè nặng giữa ngực 30 phút, lan hàm và tay trái, khởi phát khi đi bộ trời rét, nghỉ không đỡ, vã mồ hôi, buồn nôn, khó thở. 2187/QĐ-BYT: đau ngực kéo dài kèm vã mồ hôi gợi ý nhồi máu cơ tim, liên lạc ngay 115; NICE CG95 mục 1.2.1.3, 1.2.1.7: đau trên 15 phút kèm vã mồ hôi, buồn nôn, khó thở, đang đau thì chuyển cấp cứu. NHS Chest pain: gọi 999. Mức 1."
+  references:
+    - byt-qd-2187-2019
+    - nice-cg95
+    - nhs-chest-pain
+author: "agent:vignette-holdout"
+notes_vi: "Ca cấp cứu theo đề bài. Đau bắt đầu khi gắng sức nhưng nghỉ không đỡ, nên câu đau khi gắng sức và đỡ khi nghỉ trả lời 'không'."

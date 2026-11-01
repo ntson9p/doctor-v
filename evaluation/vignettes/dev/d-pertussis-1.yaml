@@ -1,0 +1,43 @@
+id: d-pertussis-1
+set: dev
+title_vi: "Bé gái 8 tuổi ho 3 tuần, từng cơn dồn dập, rít khi hít vào, nôn sau ho"
+narrative_vi: "Bé L., 8 tuổi, ở Hà Nội, đã tiêm đủ các mũi vắc xin 5 trong 1 khi còn nhỏ. Ba tuần trước bé sổ mũi, ho nhẹ như cảm lạnh. Từ tuần thứ hai bé ho thành từng cơn dồn dập, ho đỏ mặt, chảy nước mắt; cuối cơn hít vào có tiếng rít như gà gáy, có lần nôn ra sau cơn ho. Cơn ho hay nặng về đêm. Giữa các cơn bé chơi bình thường, không khó thở, không sốt, không khò khè. Nay hết sổ mũi. Anh trai 12 tuổi cũng đang ho kéo dài."
+patient:
+  age_years: 8
+  sex: female
+  region: north
+  month: 6
+complaint: cough
+answers:
+  cough_duration: w2_8
+  cough_paroxysms: present
+  inspiratory_whoop: present
+  post_tussive_vomiting: present
+  barking_cough: absent
+  night_respiratory_symptoms: present
+  runny_nose: absent
+  sore_throat: absent
+  productive_cough: absent
+  fever: absent
+  wheeze: absent
+  stridor: absent
+  breathing_difficulty: absent
+  pleuritic_chest_pain: absent
+  chest_pain: absent
+  hemoptysis: absent
+  choking_episode: absent
+  sick_contact_respiratory: present
+  dtp_vaccinated: present
+  tb_contact: absent
+  night_sweats: absent
+  weight_loss_unintended: absent
+  asthma_known: absent
+default_unmentioned: absent
+expected:
+  condition: pertussis
+  acceptable: []
+  triage: 3
+source:
+  basis: "Ho gà điển hình ở trẻ đi học đã tiêm lúc nhỏ: giai đoạn viêm long rồi ho từng cơn, tiếng rít khi hít vào, nôn sau ho, kéo dài từ 2 tuần (định nghĩa ca lâm sàng của WHO; MSD Pertussis). Wang 2014: 20% trẻ 5–15 tuổi ho 2–8 tuần là ho gà, kể cả trẻ đã tiêm đủ. Mức 3: khám trong 24 giờ để được xét nghiệm, kháng sinh trong 3 tuần đầu giúp hạn chế lây (NHS Whooping cough); không có dấu hiệu cần cấp cứu."
+  references: [who-emro-pertussis-surveillance, msd-pertussis, nhs-whooping-cough, wang-bmj-2014]
+author: "agent:pass-c"

@@ -1,0 +1,44 @@
+id: d-pertussis-2
+set: dev
+title_vi: "Bé trai 4 tháng ho 10 ngày, từng cơn đỏ mặt, nôn trớ sau ho, không sốt, chưa có tiếng rít"
+narrative_vi: "Bé K., 4 tháng tuổi, ở Hải Dương, mới tiêm 1 mũi vắc xin 5 trong 1. Mười ngày nay bé ho, mấy ngày đầu chỉ ho nhẹ kèm sổ mũi; năm ngày nay bé ho thành từng cơn dài, ho đỏ mặt, sau cơn hay nôn trớ ra sữa. Mẹ không nghe thấy tiếng rít cuối cơn. Giữa các cơn bé thở bình thường, không tím môi, không lúc nào ngừng thở, không thở rên, ngực không lõm. Bé không sốt, vẫn bú được hơn một nửa so với mọi ngày, không li bì. Chị gái 6 tuổi ho gần một tháng nay."
+patient:
+  age_months: 4
+  sex: male
+  region: north
+  month: 5
+complaint: cough
+answers:
+  cough_duration: w1_2
+  cough_paroxysms: present
+  post_tussive_vomiting: present
+  inspiratory_whoop: absent
+  barking_cough: absent
+  night_respiratory_symptoms: unknown
+  runny_nose: absent
+  nasal_congestion: absent
+  fever: absent
+  wheeze: absent
+  stridor: absent
+  breathing_difficulty: absent
+  chest_indrawing: absent
+  apnea_cyanosis_spells: absent
+  grunting: absent
+  child_feeding_reduced: absent
+  child_unable_to_drink: absent
+  child_vomits_everything: absent
+  drowsy_hard_to_wake: absent
+  seizure_recent: absent
+  choking_episode: absent
+  sick_contact_respiratory: present
+  dtp_vaccinated: absent
+default_unmentioned: absent
+expected:
+  condition: pertussis
+  acceptable: []
+  triage: 3
+source:
+  basis: "Ho gà ở trẻ nhỏ chưa tiêm đủ: ho từng cơn kèm nôn sau ho, nguồn lây là anh chị ho kéo dài (MSD Pertussis; Pham 2020: trẻ chưa tiêm nhập viện gấp 106 lần). NHS Whooping cough: trẻ dưới 6 tháng có triệu chứng ho gà thì khám khẩn (mức 3), thường phải điều trị ở bệnh viện. Quy tắc rf_pertussis_infant của doctor-v xếp mức 2 (nhận định, chờ bác sĩ duyệt), nên ca này dự kiến khuyên quá mức."
+  references: [nhs-whooping-cough, msd-pertussis, pham-actapaediatr-2020]
+author: "agent:pass-c"
+notes_vi: "Ca không điển hình theo tuổi (trẻ dưới 6 tháng, chưa có tiếng rít). Mức đúng theo NHS là 3; ứng dụng cho mức 2 qua rf_pertussis_infant."

@@ -1,0 +1,48 @@
+id: d-pneumothorax-1
+set: dev
+title_vi: "Nam 22 tuổi cao gầy, hút thuốc, đang ngồi học thì đột ngột đau nhói ngực phải khi hít sâu, hơi khó thở"
+narrative_vi: "Anh Q., 22 tuổi, sinh viên ở Hà Nội, người cao gầy, hút thuốc lá mỗi ngày nửa bao. Khoảng 3 giờ trước, đang ngồi học thì đột ngột đau nhói ở ngực bên phải, đau vừa phải, không dữ dội. Từ đó vẫn đau, hít sâu hoặc ho thì đau tăng. Đi lại thấy hơi khó thở, ngồi yên thì đỡ, vẫn nói được cả câu. Ấn tay vào ngực không thấy đau thêm. Không sốt, không ho, không vã mồ hôi, không buồn nôn, không choáng. Đau không lan ra tay, hàm hay sau lưng. Chưa từng bị như vậy, không có bệnh phổi. Không có máy đo SpO2."
+patient:
+  age_years: 22
+  sex: male
+  region: north
+  month: 11
+complaint: chest_pain
+answers:
+  chest_pain_duration: over_15min
+  chest_pain_sudden_severe: absent
+  pleuritic_chest_pain: present
+  breathing_difficulty: present
+  dyspnea_onset: sudden
+  dyspnea_severity: exertion
+  spo2_measured: not_measured
+  smoker: present
+  chest_wall_tenderness: absent
+  chest_pain_pressure: absent
+  chest_pain_exertional: absent
+  chest_pain_radiates_back: absent
+  chest_pain_tearing: absent
+  pain_radiates_arm_jaw: absent
+  cold_sweat: absent
+  nausea: absent
+  fainting_or_near_fainting: absent
+  fever: absent
+  cough: absent
+  heartburn: absent
+  skin_burning_band: absent
+  rash_any: absent
+  similar_episodes_before: absent
+  asthma_known: absent
+  copd_known: absent
+  leg_swelling_one_side: absent
+  recent_immobility: absent
+  wheeze: absent
+default_unmentioned: absent
+expected:
+  condition: pneumothorax
+  acceptable: []
+  triage: 2
+source:
+  basis: "Tràn khí màng phổi tự phát nguyên phát điển hình: nam trẻ, cao gầy, hút thuốc, đau ngực một bên đột ngột lúc nghỉ, đau kiểu màng phổi, khó thở (4235/QĐ-BYT bài Tràn khí màng phổi; Olesen 2019; MSD). Cần chụp X quang phổi ở cơ sở cấp cứu, hút khí hoặc dẫn lưu tùy lượng khí (4235/QĐ-BYT): mức 2."
+  references: [byt-qd-4235-2012, olesen-erjor-2019, msd-pneumothorax]
+author: "agent:pass-c"

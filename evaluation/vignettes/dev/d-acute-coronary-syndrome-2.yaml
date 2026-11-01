@@ -21,6 +21,9 @@ answers:
   diarrhea: absent
   heartburn: absent
   abd_pain_meal_relation: no_relation
+  chest_pain: absent
+  dyspnea_onset: hours_days
+  dyspnea_severity: exertion
 default_unmentioned: absent
 expected:
   condition: acute_coronary_syndrome

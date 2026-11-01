@@ -27,6 +27,10 @@ answers:
   runny_nose: absent
   diabetes: absent
   known_heart_disease: absent
+  chest_pain: present
+  cough_duration: lt_1w
+  dyspnea_onset: hours_days
+  dyspnea_severity: exertion
 default_unmentioned: absent
 expected:
   condition: pneumonia

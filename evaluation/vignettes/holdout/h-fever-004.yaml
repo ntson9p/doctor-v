@@ -29,6 +29,7 @@ answers:
   pleuritic_chest_pain: absent
   confusion: absent
   loss_of_smell_taste: absent
+  cough_duration: lt_1w
 default_unmentioned: absent
 expected:
   condition: influenza

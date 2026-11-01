@@ -91,3 +91,9 @@
   rho: medium
   label_vi: "Đau vùng bẹn, bìu"
   rationale_vi: "Đau lan xuống bẹn và đau bìu hay đi cùng nhau (cơn đau quặn thận, xoắn tinh hoàn), nên không tính trùng (lượt B lô 2 phần a đề xuất)."
+
+# ---------- Giai đoạn 3, lô 3 ----------
+- id: pertussis_cough
+  rho: medium
+  label_vi: "Cơn ho kiểu ho gà"
+  rationale_vi: "Ho từng cơn dồn dập, tiếng rít cuối cơn và nôn sau ho là các mặt của cùng một kiểu cơn ho, hay có cùng nhau."

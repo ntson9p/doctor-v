@@ -1,0 +1,52 @@
+id: d-copd-exacerbation-2
+set: dev
+title_vi: "Nữ 72 tuổi không hút thuốc, đun bếp củi 40 năm, ho đờm nhiều năm, 5 ngày ho và khó thở tăng"
+narrative_vi: "Bà N., 72 tuổi, ở Phú Thọ, không hút thuốc, nấu bếp củi trong nhà hơn 40 năm. Bà ho khạc đờm mỗi sáng đã nhiều năm, đi nhanh hay hụt hơi, nhưng chưa từng đi khám phổi. Năm ngày nay ho nhiều hơn, đờm đặc và nhiều hơn, khò khè, đi lại trong nhà cũng mệt. Ngồi nghỉ thì đỡ, nói được cả câu. Không sốt, không đau ngực, không phù chân, không sụt cân, không ra mồ hôi đêm, không ho ra máu."
+patient:
+  age_years: 72
+  sex: female
+  region: north
+  month: 1
+complaint: cough
+answers:
+  cough_duration: gt_8w
+  productive_cough: present
+  breathing_difficulty: present
+  dyspnea_onset: hours_days
+  dyspnea_severity: exertion
+  wheeze: present
+  biomass_smoke_exposure: present
+  smoker: absent
+  former_smoker: absent
+  copd_known: absent
+  asthma_known: absent
+  fever: absent
+  runny_nose: absent
+  sore_throat: absent
+  pleuritic_chest_pain: absent
+  chest_pain: absent
+  chest_pain_pressure: absent
+  orthopnea: absent
+  leg_swelling_both: absent
+  hemoptysis: absent
+  night_sweats: absent
+  weight_loss_unintended: absent
+  tb_contact: absent
+  stridor: absent
+  choking_episode: absent
+  confusion: absent
+  drowsy_hard_to_wake: absent
+  known_heart_disease: absent
+  diabetes: absent
+  hypertension_known: absent
+  immunocompromised: absent
+default_unmentioned: absent
+expected:
+  condition: copd_exacerbation
+  acceptable: []
+  triage: 3
+source:
+  basis: "Bệnh phổi tắc nghẽn mạn tính chưa được chẩn đoán ở phụ nữ không hút thuốc, phơi nhiễm khói bếp (2767/QĐ-BYT mục 1.2.1; Nguyen Viet 2015: 94% chưa được chẩn đoán), nay có đợt nặng lên trong vài ngày (2767 mục 3.1): cần khám trong 24 giờ."
+  references: [byt-qd-2767-2023, nguyenviet-respirology-2015, gold-2026]
+author: "agent:pass-c"
+notes_vi: "Ca không điển hình: nữ, không hút thuốc, chưa từng được chẩn đoán, chọn Ho."

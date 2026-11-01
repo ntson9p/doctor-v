@@ -1,0 +1,55 @@
+id: d-copd-exacerbation-3
+set: dev
+title_vi: "Nữ 63 tuổi bị phổi tắc nghẽn, 3 ngày ho đờm mủ, khó thở tăng, sốt nhẹ, dễ nhầm viêm phổi"
+narrative_vi: "Bà G., 63 tuổi, ở Quảng Nam, đun bếp rơm, củi nhiều năm, được chẩn đoán bệnh phổi tắc nghẽn mạn tính 3 năm nay, không hút thuốc. Bốn ngày trước sổ mũi; ba ngày nay ho nhiều, đờm vàng xanh, khò khè, khó thở tăng khi đi lại, nhiệt độ 37,7°C trong 2 ngày. Ngồi nghỉ thì đỡ, nói được cả câu. Không rét run, không đau ngực khi thở, không phù chân. Xịt thuốc cắt cơn thì đỡ một phần. Năm trước có một đợt giống vậy. Bác sĩ khám sau đó: phim phổi không có tổn thương viêm phổi."
+patient:
+  age_years: 63
+  sex: female
+  region: central
+  month: 11
+complaint: cough
+answers:
+  copd_known: present
+  biomass_smoke_exposure: present
+  smoker: absent
+  former_smoker: absent
+  cough_duration: lt_1w
+  productive_cough: present
+  wheeze: present
+  breathing_difficulty: present
+  dyspnea_onset: hours_days
+  dyspnea_severity: exertion
+  reliever_no_relief: absent
+  similar_episodes_before: present
+  runny_nose: present
+  fever: present
+  fever_max_temp: lt_38
+  fever_duration: d1_2
+  chills_rigors: absent
+  pleuritic_chest_pain: absent
+  chest_pain: absent
+  chest_pain_pressure: absent
+  orthopnea: absent
+  leg_swelling_both: absent
+  hemoptysis: absent
+  stridor: absent
+  confusion: absent
+  drowsy_hard_to_wake: absent
+  cold_hands_feet: absent
+  severe_weakness: absent
+  asthma_known: absent
+  known_heart_disease: absent
+  diabetes: absent
+  immunocompromised: absent
+  pregnant: absent
+  missed_period: absent
+default_unmentioned: absent
+expected:
+  condition: copd_exacerbation
+  acceptable: []
+  triage: 3
+source:
+  basis: "Đợt cấp bệnh phổi tắc nghẽn mạn tính do nhiễm vi rút, có sốt nhẹ (2767/QĐ-BYT mục 3.3.1: sốt có thể có; McManus 2008: sốt 28%), dễ nhầm với viêm phổi; không có dấu hiệu nặng nên khám trong 24 giờ (2767 Bảng 3.2)."
+  references: [byt-qd-2767-2023, rmed-copd-exacerbation-2008, gold-2026]
+author: "agent:pass-c"
+notes_vi: "Ca dễ nhầm với viêm phổi (sốt, đờm mủ, khó thở) và viêm phế quản cấp."

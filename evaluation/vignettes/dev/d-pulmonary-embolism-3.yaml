@@ -30,6 +30,8 @@ answers:
   pregnant: absent
   missed_period: absent
   pulse_measured: not_measured
+  chest_pain: present
+  dyspnea_onset: sudden
 default_unmentioned: absent
 expected:
   condition: pulmonary_embolism

@@ -1,0 +1,64 @@
+# Giai đoạn 3, lô 3: Ho, Khó thở, Đau ngực (docs/phase-3/scope.md, mục 4).
+# suggested_urgency / suggested_cant_miss chỉ là gợi ý của người bảo trì; agent soạn bệnh
+# phải đối chiếu với hướng dẫn chính thức và quyết định lại (ghi lý do).
+# Ba triệu chứng chính mới có `status: in_progress`: bộ chấm dùng được, app chưa cho chọn.
+# Bệnh mới có prior cho triệu chứng đã phát hành (Sốt, Đau bụng) sẽ đổi kết quả của triệu chứng đó: so bộ dev
+# trước và sau.
+
+# Bệnh mới: soạn đủ cả file, prior chỉ cho các triệu chứng chính ghi ở đây.
+new:
+  # Phần a: đường hô hấp dưới, người lớn
+  - { id: acute_bronchitis, name_vi: "Viêm phế quản cấp", complaints: [cough], suggested_urgency: 5, suggested_cant_miss: false }
+  - { id: asthma, name_vi: "Hen phế quản (cơn hen)", complaints: [shortness_of_breath, cough, chest_pain], suggested_urgency: 3, suggested_cant_miss: false }
+  - { id: copd_exacerbation, name_vi: "Đợt cấp bệnh phổi tắc nghẽn mạn tính", complaints: [shortness_of_breath, cough], suggested_urgency: 3, suggested_cant_miss: false }
+  - { id: pulmonary_tuberculosis, name_vi: "Lao phổi", complaints: [cough, fever, shortness_of_breath], suggested_urgency: 4, suggested_cant_miss: false }
+  - { id: lung_cancer, name_vi: "Ung thư phổi", complaints: [cough, shortness_of_breath, chest_pain], suggested_urgency: 4, suggested_cant_miss: false, note: "Ghi rule_out: true (nhãn 'Bác sĩ cần loại trừ', kb-guide mục 2.5)." }
+  # Phần b: trẻ em, phản vệ, suy tim
+  - { id: pertussis, name_vi: "Ho gà", complaints: [cough], suggested_urgency: 3, suggested_cant_miss: false }
+  - { id: bronchiolitis, name_vi: "Viêm tiểu phế quản", complaints: [cough, shortness_of_breath, fever], suggested_urgency: 3, suggested_cant_miss: false, note: "Trẻ dưới 2 tuổi (applicability)." }
+  - { id: croup, name_vi: "Viêm thanh quản cấp (croup)", complaints: [cough, shortness_of_breath], suggested_urgency: 4, suggested_cant_miss: false, note: "Trẻ từ 6 tháng đến 6 tuổi là chủ yếu." }
+  - { id: anaphylaxis, name_vi: "Phản vệ", complaints: [shortness_of_breath, cough, chest_pain], suggested_urgency: 1, suggested_cant_miss: true }
+  - { id: heart_failure, name_vi: "Suy tim (đợt nặng lên)", complaints: [shortness_of_breath, cough], suggested_urgency: 3, suggested_cant_miss: false }
+  # Phần c: đau ngực
+  - { id: pneumothorax, name_vi: "Tràn khí màng phổi", complaints: [chest_pain, shortness_of_breath], suggested_urgency: 2, suggested_cant_miss: true }
+  - { id: aortic_dissection, name_vi: "Bóc tách động mạch chủ", complaints: [chest_pain], suggested_urgency: 1, suggested_cant_miss: true }
+  - { id: gerd, name_vi: "Trào ngược dạ dày – thực quản", complaints: [chest_pain, cough, abdominal_pain], suggested_urgency: 5, suggested_cant_miss: false, note: "Đau bụng đã phát hành: phân biệt với viêm loét dạ dày (peptic_ulcer_gastritis)." }
+  - { id: chest_wall_pain, name_vi: "Đau thành ngực (cơ, sụn sườn)", complaints: [chest_pain], suggested_urgency: 5, suggested_cant_miss: false }
+  - { id: herpes_zoster, name_vi: "Zona thần kinh (giời leo)", complaints: [chest_pain], suggested_urgency: 4, suggested_cant_miss: false, note: "Đau một bên ngực có thể có trước khi nổi ban vài ngày." }
+
+# Bệnh đã có: thêm prior cho các triệu chứng chính mới, liên kết với dấu hiệu mới của lô 3 và những điểm ghi ở đây.
+# Không sửa phần đã đối chiếu xong; nếu thấy giá trị cũ sai, ghi vào review.notes_vi.
+extend:
+  # Phần a
+  - { id: pneumonia, complaints: [cough, shortness_of_breath, chest_pain], note: "Liên kết cough_duration, wheeze, dyspnea_onset, dyspnea_severity, chest_pain và các câu đau ngực mới." }
+  - { id: common_cold, complaints: [cough], note: "Liên kết cough_duration (thường dưới 1–2 tuần), wheeze." }
+  - { id: influenza, complaints: [cough, shortness_of_breath], note: "Liên kết cough_duration." }
+  - { id: covid19, complaints: [cough, shortness_of_breath], note: "Liên kết cough_duration." }
+  # Phần b
+  - { id: measles, complaints: [cough], note: "Ho trong giai đoạn khởi phát, trước khi mọc ban." }
+  - { id: sepsis, complaints: [shortness_of_breath], note: "Thở nhanh là một dấu hiệu của nhiễm khuẩn huyết (NICE NG253)." }
+  - { id: panic_disorder, complaints: [shortness_of_breath, chest_pain], note: "Cơn hoảng sợ hay gây khó thở, tức ngực; liên kết dyspnea_onset, chest_pain_duration." }
+  # Phần c
+  - { id: acute_coronary_syndrome, complaints: [chest_pain, shortness_of_breath], note: "Liên kết chest_pain_duration, chest_pain_exertional, chest_pain_radiates_back, chest_wall_tenderness (thấp), pleuritic_chest_pain (thấp)." }
+  - { id: pulmonary_embolism, complaints: [shortness_of_breath, chest_pain, cough], note: "Liên kết dyspnea_onset, estrogen_use, chest_pain_sudden_severe." }
+  - { id: cardiac_arrhythmia, complaints: [shortness_of_breath, chest_pain], note: "Liên kết dyspnea_onset, orthopnea." }
+  - { id: anemia, complaints: [shortness_of_breath], note: "Khó thở khi gắng sức (breathless_on_exertion, dyspnea_severity)." }
+
+# Dấu hiệu mới của lô 3 (knowledge/findings/, mục "Giai đoạn 3, lô 3"): cough_duration, wheeze, stridor,
+# barking_cough, cough_paroxysms, inspiratory_whoop, post_tussive_vomiting, choking_episode, hemoptysis_large,
+# dyspnea_onset, dyspnea_severity, orthopnea, reliever_no_relief, chest_indrawing, apnea_cyanosis_spells,
+# child_feeding_reduced, night_sweats, hives, dermatomal_rash, tb_contact, allergen_exposure, asthma_known,
+# copd_known, estrogen_use, chest_pain, chest_pain_duration, chest_pain_exertional, chest_pain_sudden_severe,
+# chest_pain_radiates_back, chest_wall_tenderness, leg_swelling_both.
+# Thêm sau lượt R và lượt A phần a: spo2_measured, night_respiratory_symptoms, drooling_cannot_swallow, grunting,
+# former_smoker, biomass_smoke_exposure; sau lượt A phần b: hoarse_voice, dtp_vaccinated, rapid_weight_gain;
+# sau lượt A phần c: chest_pain_tearing, skin_burning_band.
+
+# Không liên kết dấu hiệu chung `chest_pain` (người bảo trì, 31/10/2026): với Đau ngực nó được ngầm định nên không là
+# bằng chứng; với Ho, Khó thở thì chest_pain_pressure và pleuritic_chest_pain mang bằng chứng, liên kết thêm
+# chest_pain sẽ tính một cơn đau hai lần. Các dấu hiệu chest_pain_* (thời gian, khi gắng sức…) vẫn liên kết được.
+
+# Việc của người bảo trì sau lượt C:
+# - điền cant_miss của các triệu chứng chính mới;
+# - thêm bệnh mới vào `conditions` của các quy tắc lô 3;
+# - phát hành (`npm run web:release`) khi lô đạt chỉ tiêu trên bộ ca giữ kín.

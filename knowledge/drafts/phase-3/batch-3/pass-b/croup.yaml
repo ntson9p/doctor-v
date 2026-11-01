@@ -1,0 +1,219 @@
+id: croup
+names:
+  vi: "Viêm thanh quản cấp (croup)"
+  vi_common: ["Viêm thanh quản", "Viêm thanh khí phế quản cấp"]
+  en: "Croup (acute laryngotracheitis)"
+codes:
+  icd10: "J05.0"
+  icd10_verified: false
+  mondo: "MONDO:0005722"
+summary_vi:
+  - "Nhiễm vi rút làm sưng thanh quản, khí quản, hay gặp ở trẻ 6 tháng đến 3 tuổi."
+  - "Thường sau 1–3 ngày sổ mũi, sốt nhẹ thì đột ngột ho ông ổng, khàn tiếng, có thể thở rít, hay về đêm."
+  - "Phần lớn nhẹ, đỡ trong khoảng 2 ngày; trẻ thở rít cả khi nằm yên cần đi cấp cứu."
+urgency: 3
+cant_miss: false
+specialties: [pediatrics, ent]
+applicability:
+  age_groups: [infant_0_2m, child_2m_5y, child_5_12, teen_13_17]
+  reason_vi: "Bệnh của trẻ em; ở người lớn rất hiếm và thường mang tên khác (viêm thanh quản, viêm nắp thanh quản)."
+priors:
+  - complaint: cough
+    default: P4
+    by_age:
+      infant_0_2m: P5
+      child_2m_5y: P3
+      teen_13_17: P5
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [bjornson-cmaj-2013, byt-qd-3312-2015]
+      locator: "Bjornson 2013 phần dịch tễ; 3312 bài Khó thở thanh quản ở trẻ em (tr. 268–271)"
+      reported: "Nguyên nhân thứ hai gây suy hô hấp ở trẻ dưới 10 tuổi; hay gặp nhất 6 tháng–3 tuổi, ít ở nhũ nhi nhỏ, trẻ lớn, vị thành niên"
+      note: "Lượt B. Thang tuyệt đối. Trẻ 2 tháng–5 tuổi chọn Ho: phần lớn là cảm lạnh; viêm thanh quản cấp ước 1–5% (P3). Trẻ 5–12 tuổi 0,2–1% (P4); dưới 2 tháng và 13–17 tuổi 0,02–0,2% (P5). Chưa có số liệu Việt Nam; cần bác sĩ duyệt."
+  - complaint: shortness_of_breath
+    default: P3
+    by_age:
+      infant_0_2m: P4
+      child_2m_5y: P2
+      teen_13_17: P4
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [bjornson-cmaj-2013, byt-qd-3312-2015]
+      locator: "Bjornson 2013 phần dịch tễ; 3312 tr. 268–269"
+      note: "Lượt B. Bệnh là nguyên nhân thứ hai gây suy hô hấp ở trẻ dưới 10 tuổi (Canada); 3312 coi khó thở thanh quản là cấp cứu hô hấp ở trẻ em, viêm thanh quản cấp là nguyên nhân cấp tính chính. Trẻ 2 tháng–5 tuổi khó thở: 5–20% (P2), sau viêm phổi, viêm tiểu phế quản; 5–12 tuổi 1–5% (P3, hen chiếm phần lớn); dưới 2 tháng và 13–17 tuổi 0,2–1% (P4). Ước lượng."
+prior_modifiers:
+  - when: { sex: [male] }
+    factor: 1.15
+    evidence:
+      tier: C
+      basis: numeric
+      sources: [bjornson-cmaj-2013]
+      locator: "Bjornson 2013 phần dịch tễ"
+      reported: "Nam/nữ 1,4:1"
+      note: "Lượt B. Tỉ số 1,4 quy đổi so với mức chung: khoảng 1,17 cho nam, 0,83 cho nữ; làm tròn 1,15 và 0,85."
+  - when: { sex: [female] }
+    factor: 0.85
+    evidence:
+      tier: C
+      basis: numeric
+      sources: [bjornson-cmaj-2013]
+      reported: "Nam/nữ 1,4:1"
+      note: "Lượt B. Xem hệ số của nam."
+findings:
+  - finding: barking_cough
+    freq: almost_always
+    evidence:
+      tier: C
+      basis: verbal
+      sources: [bjornson-cmaj-2013, bjornson-bmjopen-2024, nhs-croup, byt-qd-3312-2015]
+      locator: "Bjornson 2013 phần chẩn đoán; Bjornson 2024 tóm tắt; 3312 tr. 268 (độ 2: ho ông ổng như chó sủa)"
+      note: "Lượt B. Tần suất trong số trẻ đã ho. Ho ông ổng là triệu chứng chính và kéo dài nhất (hết ở 90% trẻ sau 3–5 ngày). Tỷ lệ nền 0,03."
+  - finding: hoarse_voice
+    freq: very_frequent
+    evidence:
+      tier: C
+      basis: verbal
+      sources: [bjornson-cmaj-2013, nhs-croup, byt-qd-3312-2015]
+      locator: "Bjornson 2013 phần chẩn đoán; 3312 tr. 268 (khàn tiếng hay mất tiếng là triệu chứng phụ hay gặp)"
+      note: "Lượt B. Khàn tiếng là một phần của bộ ba điển hình (ho ông ổng, khàn tiếng, thở rít). Không có tỷ lệ; chọn very_frequent."
+  - finding: stridor
+    freq: occasional
+    evidence:
+      tier: C
+      basis: numeric
+      sources: [bjornson-cmaj-2013, nhs-croup, byt-qd-3312-2015]
+      locator: "Bjornson 2013 phần mức độ (ít nhất hai phần ba ca nhẹ: không thở rít lúc nghỉ)"
+      reported: "Ít nhất 2/3 trẻ đến khám ở mức nhẹ, không thở rít lúc nghỉ"
+      note: "Lượt B. Câu hỏi của app chỉ tính tiếng rít lúc ngồi yên, không khóc; trẻ chỉ rít khi quấy khóc không tính. Ở cộng đồng ước dưới một phần ba có rít lúc nghỉ: occasional. Tỷ lệ nền 1% nên câu 'Có' vẫn tăng mạnh khả năng bệnh. Đã có quy tắc mức 2."
+  - finding: breathing_difficulty
+    freq: frequent
+    evidence:
+      tier: C
+      basis: verbal
+      sources: [bjornson-cmaj-2013, nhs-croup, byt-qd-3312-2015]
+      locator: "Bjornson 2013 phần chẩn đoán (đột ngột ho ông ổng, thở rít, khàn tiếng, suy hô hấp); 3312 tr. 268"
+      note: "Lượt B. Có ý nghĩa với Ho. Khó thở khi hít vào là triệu chứng cơ bản (3312), nhưng ca nhẹ chỉ ho ông ổng; ước khoảng một nửa."
+  - finding: night_respiratory_symptoms
+    freq: very_frequent
+    evidence:
+      tier: C
+      basis: verbal
+      sources: [bjornson-cmaj-2013, nhs-croup]
+      locator: "Bjornson 2013 phần dịch tễ (khởi phát và nặng hơn về đêm)"
+      note: "Lượt B. Tần suất trong số trẻ đã ho hoặc khó thở. Không có tỷ lệ; triệu chứng thường nặng hơn về đêm (Bjornson, NHS)."
+  - finding: runny_nose
+    freq: frequent
+    evidence:
+      tier: C
+      basis: verbal
+      sources: [bjornson-cmaj-2013]
+      locator: "Bjornson 2013 phần dịch tễ (24–72 giờ ho, sổ mũi, sốt trước đó)"
+      note: "Lượt B. Tỷ lệ nền 0,2; phân biệt yếu."
+  - finding: fever
+    freq: frequent
+    evidence:
+      tier: C
+      basis: verbal
+      sources: [bjornson-cmaj-2013, byt-qd-3312-2015]
+      locator: "Bjornson 2013 phần chẩn đoán (thường có sốt); 3312 tr. 269 (xử trí tùy có sốt hay không)"
+      note: "Lượt B. Có ý nghĩa với Ho và Khó thở. Không có tỷ lệ; ước khoảng một nửa."
+  - finding: fever_max_temp
+    dist: { lt_38: 0.40, t38_39: 0.50, ge_39: 0.10 }
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [bjornson-cmaj-2013]
+      note: "Lượt B. Phân bố trong số trẻ có sốt: thường sốt nhẹ, vừa. Trẻ sốt cao, trông rất mệt gợi ý viêm khí quản do vi khuẩn hoặc viêm nắp thanh quản (Bjornson). Ước lượng."
+  - finding: fever_duration
+    dist: { d1_2: 0.75, d3_5: 0.22, d6_7: 0.02, gt_7d: 0.01 }
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [bjornson-cmaj-2013, bjornson-bmjopen-2024]
+      note: "Lượt B. Phân bố trong số trẻ có sốt; bệnh ngắn ngày. Ước lượng."
+  - finding: cough_duration
+    dist: { lt_1w: 0.93, w1_2: 0.05, w2_8: 0.015, gt_8w: 0.005 }
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [bjornson-bmjopen-2024, bjornson-cmaj-2013]
+      locator: "Bjornson 2024 tóm tắt; Bjornson 2013 phần dịch tễ"
+      reported: "Ho ông ổng hết ở 90% trẻ sau 78–119 giờ; dưới 2% còn triệu chứng quá 5 đêm"
+      note: "Lượt B. Phân bố trong số trẻ đã ho, tính cả 1–3 ngày ho viêm long trước đó. Ho từ 2 tuần không phù hợp."
+  - finding: dyspnea_onset
+    dist: { sudden: 0.35, hours_days: 0.60, weeks: 0.05 }
+    evidence:
+      tier: C
+      basis: verbal
+      sources: [bjornson-cmaj-2013]
+      locator: "Bjornson 2013 phần dịch tễ (khởi phát đột ngột về đêm)"
+      note: "Lượt B. Phân bố trong số trẻ khó thở. Triệu chứng khởi phát đột ngột trong đêm, sau 1–3 ngày viêm long; người nhà có thể chọn 'đột ngột' hoặc 'vài giờ'. Ước lượng."
+  - finding: chest_indrawing
+    freq: rare
+    above_leak_ok: true
+    evidence:
+      tier: C
+      basis: verbal
+      sources: [bjornson-cmaj-2013, byt-qd-3312-2015, nhs-croup]
+      locator: "Bjornson 2013 hộp 3 (ca nhẹ: không hoặc rút lõm nhẹ); 3312 tr. 268 (độ 2: co kéo cơ hô hấp mạnh)"
+      note: "Lượt B. Chỉ hỏi trẻ 2 tháng–5 tuổi; câu hỏi chỉ tính lõm sâu phần ngực dưới, gặp ở ca vừa, nặng. Ước rare ở cộng đồng, cao hơn tỷ lệ nền 1% (above_leak_ok: dấu hiệu của ca nặng vẫn gặp ở bệnh này nhiều hơn ở người không bệnh). Đã có quy tắc mức 2."
+  - finding: wheeze
+    freq: rare
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [bjornson-cmaj-2013, who-imci-chart-booklet-2014]
+      locator: "IMCI Module 3 (khò khè khi thở ra khác thở rít)"
+      note: "Lượt B. Bệnh ở đường thở trên, tiếng rít khi hít vào chứ không phải khò khè khi thở ra. Mức rare thấp hơn tỷ lệ nền 5% để câu 'Có' nghiêng về viêm tiểu phế quản, hen. Người nhà có thể lẫn hai tiếng thở nên không để very_rare."
+  - finding: drooling_cannot_swallow
+    freq: very_rare
+    evidence:
+      tier: C
+      basis: verbal
+      sources: [bjornson-cmaj-2013, nhs-croup]
+      locator: "Bjornson 2013 hộp 2 (viêm nắp thanh quản: khó nuốt, chảy dãi, không ho ông ổng)"
+      note: "Lượt B. Chảy dãi, không nuốt được gợi ý viêm nắp thanh quản, áp xe sau họng hơn viêm thanh quản cấp. Mức very_rare thấp hơn tỷ lệ nền 1%. Đã có quy tắc mức 2."
+  - finding: choking_episode
+    freq: very_rare
+    evidence:
+      tier: C
+      basis: verbal
+      sources: [bjornson-cmaj-2013, byt-qd-3312-2015]
+      locator: "Bjornson 2013 hộp 2 (dị vật: thở rít đột ngột sau hóc, không có viêm long, không sốt); 3312 tr. 269 (dị vật đường thở thường có hội chứng xâm nhập)"
+      note: "Lượt B. Bắt đầu ngay sau hóc, sặc gợi ý dị vật đường thở. Mức very_rare thấp hơn tỷ lệ nền 1%. Đã có quy tắc mức 2."
+  - finding: hives
+    freq: very_rare
+    evidence:
+      tier: C
+      basis: verbal
+      sources: [bjornson-cmaj-2013, cardona-waoj-2020]
+      locator: "Bjornson 2013 hộp 2 (phản ứng dị ứng, phù mạch kèm mề đay)"
+      note: "Lượt B. Tần suất trong số trẻ có ban. Thở rít kèm mề đay gợi ý phản vệ. Mức very_rare thấp hơn tỷ lệ nền 5%."
+warning_signs:
+  - stridor
+  - chest_indrawing
+  - drooling_cannot_swallow
+  - apnea_cyanosis_spells
+  - grunting
+  - es_severe_breathing
+  - drowsy_hard_to_wake
+  - child_unable_to_drink
+self_care_vi:
+  - "Giữ trẻ bình tĩnh, bế hoặc cho ngồi thẳng; khóc làm trẻ khó thở hơn."
+  - "Cho trẻ uống đủ nước, bú từng ít một."
+  - "Không cho trẻ xông hơi nước nóng hoặc ngồi trong phòng đầy hơi nước."
+  - "Không tự dùng thuốc ho; hỏi bác sĩ hoặc dược sĩ trước khi dùng thuốc."
+see_doctor_vi:
+  - "Đi khám trong 24 giờ: bác sĩ có thể cho thuốc giúp giảm sưng thanh quản."
+  - "Bệnh hay nặng về đêm: theo dõi trẻ cả lúc ngủ."
+  - "Trẻ dưới 6 tháng hoặc bệnh kéo dài quá 5 ngày cần được khám lại."
+  - "Đi cấp cứu ngay nếu trẻ thở rít cả khi nằm yên, lõm ngực, tím tái, chảy dãi không nuốt được, hoặc lơ mơ."
+sources: [bjornson-cmaj-2013, nhs-croup, byt-qd-3312-2015]
+review:
+  status: draft
+  authors: ["agent:pass-b"]
+  doctor_reviewer: null
+  updated: "2026-10-31"
+  notes_vi: "Lượt B (Giai đoạn 3 lô 3, phần b). Mức xử trí 3 (gợi ý là 4): NHS khuyên đặt lịch khám khẩn hoặc gọi 111 ngay khi nghĩ trẻ bị bệnh này vì có thể cần thuốc; 3312/QĐ-BYT cho khó thở thanh quản độ 1 điều trị ngoại trú bằng corticoid một liều và tái khám mỗi ngày; Bjornson: corticoid có lợi cả ở ca nhẹ. Bệnh ngắn ngày (đỡ trong 2 ngày) nên khám trong vài ngày là quá muộn. Ca vừa, nặng (thở rít lúc nghỉ, rút lõm, chảy dãi, tím) đã có quy tắc mức 1–2. Phạm vi tuổi gồm trẻ dưới 18 tuổi; ở người lớn rất hiếm. Không có hệ số theo mùa: đỉnh cuối thu ở Canada không áp dụng được cho Việt Nam. Điều cần bác sĩ xem: (1) prior là ước lượng, không có số liệu Việt Nam; (2) tần suất khàn tiếng, ho về đêm, sốt chỉ có mô tả bằng lời; (3) tỷ lệ thở rít lúc nghỉ ở cộng đồng suy từ Bjornson (ít nhất hai phần ba ca nhẹ ở khoa cấp cứu); (4) mã J05.0 chưa đối chiếu được. Lời khuyên giữ trẻ ngồi thẳng, bình tĩnh, uống đủ nước, không xông hơi theo NHS Croup. Không nêu tên thuốc corticoid."

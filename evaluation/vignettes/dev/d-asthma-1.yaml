@@ -1,0 +1,53 @@
+id: d-asthma-1
+set: dev
+title_vi: "Nữ 24 tuổi bị hen, khó thở, khò khè từ tối qua, ho về đêm, xịt thuốc đỡ một phần"
+narrative_vi: "Chị T., 24 tuổi, ở Hà Nội, bị hen từ nhỏ, có bình xịt cắt cơn. Từ tối qua sau khi dọn nhà nhiều bụi thì khó thở, khò khè, ho nhiều về đêm, gần sáng phải ngồi dậy. Đã xịt thuốc cắt cơn 2 lần, đỡ một phần. Hiện khó thở khi đi lại, ngồi yên thì dễ chịu hơn, nói được cả câu. Không sốt, không đau hay tức ngực, không sổ mũi. Mấy năm nay từng có vài cơn giống hệt. Không có thai, không chậm kinh."
+patient:
+  age_years: 24
+  sex: female
+  region: north
+  month: 3
+complaint: shortness_of_breath
+answers:
+  asthma_known: present
+  reliever_no_relief: absent
+  wheeze: present
+  cough: present
+  cough_duration: lt_1w
+  productive_cough: absent
+  night_respiratory_symptoms: present
+  orthopnea: absent
+  dyspnea_onset: hours_days
+  dyspnea_severity: exertion
+  similar_episodes_before: present
+  fever: absent
+  chest_pain: absent
+  chest_pain_pressure: absent
+  pleuritic_chest_pain: absent
+  runny_nose: absent
+  allergen_exposure: absent
+  rash_any: absent
+  hives: absent
+  stridor: absent
+  choking_episode: absent
+  palpitations: absent
+  fainting_or_near_fainting: absent
+  leg_swelling_one_side: absent
+  leg_swelling_both: absent
+  hemoptysis: absent
+  smoker: absent
+  former_smoker: absent
+  copd_known: absent
+  estrogen_use: absent
+  recent_immobility: absent
+  pregnant: absent
+  missed_period: absent
+default_unmentioned: absent
+expected:
+  condition: asthma
+  acceptable: []
+  triage: 3
+source:
+  basis: "Cơn hen nhẹ đến vừa ở người đã biết bị hen, đỡ một phần với thuốc cắt cơn (1851/QĐ-BYT, GINA 2026). NHS Asthma: đã lên cơn và đã đỡ thì khám bác sĩ khẩn trong 2 ngày; không đỡ sau liều tối đa thì gọi 999."
+  references: [byt-qd-1851-2020, gina-2026, nhs-asthma-attack]
+author: "agent:pass-c"

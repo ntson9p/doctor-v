@@ -1,0 +1,349 @@
+id: acute_coronary_syndrome
+names:
+  vi: "Hội chứng mạch vành cấp"
+  vi_common: ["Nhồi máu cơ tim", "Hội chứng vành cấp", "Cơn đau tim"]
+  en: "Acute coronary syndrome"
+codes:
+  icd10: "I24.9"
+  icd10_verified: true
+  mondo: "MONDO:0005542"
+summary_vi:
+  - "Mạch máu nuôi tim bị hẹp hoặc tắc đột ngột, làm cơ tim thiếu máu."
+  - "Thường đau tức giữa ngực, nhưng người cao tuổi, người đái tháo đường có thể chỉ đau vùng trên rốn, buồn nôn hoặc khó thở."
+  - "Cần gọi 115 ngay vì bệnh có thể đe dọa tính mạng trong vài giờ đầu."
+urgency: 1
+cant_miss: true
+specialties: [cardiology, emergency]
+priors:
+  - complaint: abdominal_pain
+    default: P6
+    by_age: { adult_45_64: P5, elder_65_74: P4, elder_75p: P4 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [canto-jama-2000, canto-jama-2012, byt-qd-2187-2019, viniol-fampract-2014, nguyen-ijc-2022, hoangvu-ccd-2025]
+      locator: "2187/QĐ-BYT, phần nhồi máu cơ tim ST chênh lên: triệu chứng không điển hình"
+      note: "Trong đợt thử nghiệm bệnh này chỉ có prior cho đau bụng (biểu hiện đau thượng vị). 33% người nhồi máu cơ tim không đau ngực khi đến viện; nhóm này lớn tuổi hơn (trung bình 74 tuổi) và nhiều đái tháo đường hơn (Canto 2000); nữ không đau ngực nhiều hơn nam (Canto 2012); 2187/QĐ-BYT nêu đau thượng vị là biểu hiện không điển hình và người già, người đái tháo đường có thể không đau ngực. Tổng quan đau bụng ở chăm sóc ban đầu (Viniol 2014) không có bệnh tim trong các nguyên nhân thường gặp, nên tỷ lệ chắc dưới 1% kể cả ở người cao tuổi. Ở Việt Nam, người nhồi máu cơ tim nhập viện có tuổi trung bình 71,2 (Nguyen 2022), người can thiệp mạch vành 64,1 (Hoang Vu 2025). Hai lượt cùng ước: dưới 45 tuổi dưới 0,02% (P6), 45–64 tuổi P5, từ 65 tuổi P4. Không thêm hệ số theo giới dù khoảng 65–70% người bệnh là nam, vì nữ hay biểu hiện không đau ngực hơn (Canto 2012) và hay chọn đau bụng hơn; cần bác sĩ duyệt."
+  - complaint: syncope
+    default: P4
+    by_age: { child_5_12: P6, teen_13_17: P6, adult_18_44: P5 }
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [reed-emj-2010, grossman-jgerontol-2003, georgeson-jgim-1992, esc-syncope-2018-practical, msd-acute-mi, byt-qd-2187-2019]
+      locator: "Reed 2010, Grossman 2003, Georgeson 1992: tóm tắt; hướng dẫn thực hành ESC 2018 bảng web 2; MSD; 2187/QĐ-BYT (chuyển viện ngay khi có cơn ngất)"
+      reported: "Nhồi máu cơ tim cấp ở 1,4% người ngất đến cấp cứu (Reed, 289 người); 3/141 người từ 65 tuổi nằm viện vì ngất có men tim tăng (Grossman); 7% người ngất không đau ngực trong nhóm nghi thiếu máu cơ tim (Georgeson, mẫu chọn lọc)."
+      population: "Người ngất đến cấp cứu ở Anh, Mỹ"
+      note: "Giai đoạn 3 lô 1. Hai lượt cùng chọn P4 từ 45 tuổi, P6 dưới 18 tuổi; lệch ở 18–44 tuổi (A P5, B P6), ngang nguồn nên lượt C chọn mức thận trọng hơn (P5). Chỉ 2–10% người ngất đến cấp cứu (ESC), nên ở cộng đồng tỷ lệ thấp hơn số liệu cấp cứu. MSD: một số người nhồi máu cơ tim đến khám vì ngất. Chưa có số liệu Việt Nam; cần bác sĩ duyệt."
+  - complaint: palpitations
+    default: P6
+    by_age: { adult_45_64: P5, elder_65_74: P5, elder_75p: P5 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-2187-2019, vanoosterhout-jaha-2020, weber-amjmed-1996, raviele-europace-2011]
+      locator: "2187/QĐ-BYT (triệu chứng không điển hình: cảm giác hồi hộp; rối loạn nhịp là biến chứng); van Oosterhout 2020; Weber 1996 tóm tắt; EHRA 2011 mục nguyên nhân"
+      note: "Giai đoạn 3 lô 1; hai lượt trùng mức. Cảm giác hồi hộp là triệu chứng không điển hình của hội chứng vành cấp (2187/QĐ-BYT) và được báo cáo trong tổng quan triệu chứng (nữ nhiều hơn nam, van Oosterhout); các nghiên cứu nguyên nhân hồi hộp không nêu riêng hội chứng vành cấp (Weber, EHRA). Từ 45 tuổi P5, dưới 45 tuổi P6. Ước lượng."
+  - complaint: dizziness
+    default: P6
+    by_age: { adult_45_64: P5, elder_65_74: P5, elder_75p: P4 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [bosner-bmcfampract-2018, maarsingh-annfammed-2010, vanoosterhout-jaha-2020, msd-acute-mi, canto-jama-2000]
+      locator: "Bösner 2018 bảng 3–4; Maarsingh 2010 tóm tắt; van Oosterhout 2020; MSD; Canto 2000 tóm tắt"
+      note: "Giai đoạn 3 lô 1; hai lượt trùng mức. Nhóm tim mạch chiếm 3,8–56,8% nguyên nhân chóng mặt ở tuyến ban đầu (57% ở người cao tuổi chóng mặt kéo dài) nhưng chủ yếu là hạ huyết áp tư thế, rối loạn nhịp; hội chứng vành cấp chỉ là phần nhỏ. Choáng váng là triệu chứng được báo cáo (van Oosterhout); người cao tuổi hay than khó thở hơn đau ngực (MSD); nhóm nhồi máu không đau ngực già hơn (Canto). Từ 75 tuổi P4, 45–74 tuổi P5, dưới 45 tuổi P6. Ước lượng."
+  # ---------- Giai đoạn 3, lô 3 (lượt A): triệu chứng chính mới ----------
+  - complaint: chest_pain
+    default: P3
+    by_age: { child_5_12: P6, teen_13_17: P6, adult_18_44: P4, elder_65_74: P2, elder_75p: P2 }
+    evidence:
+      tier: A
+      basis: numeric
+      sources: [haasenritter-croatmedj-2015, bosner-bmcfampract-2009, verdon-smw-2008, byt-qd-2187-2019, nice-cg95]
+      locator: "Haasenritter 2015 bảng 3 và phần Bàn luận; Bösner 2009 bảng 2; Verdon 2008 tóm tắt"
+      reported: "Hội chứng vành cấp hoặc nhồi máu cơ tim 1,5–3,6% người đau ngực ở phòng khám đa khoa (6 nghiên cứu ít sai lệch); 3,6% ở người từ 35 tuổi, tuổi trung bình 59 (Bösner: nữ 2,9%, nam 4,5%); 10/672 (1,5%, Verdon, tuổi trung bình 55); trung vị 37% ở các nghiên cứu tại cấp cứu"
+      population: "Người đau ngực ở phòng khám đa khoa châu Âu, Bắc Mỹ"
+      note: "Giai đoạn 3 lô 3 (lượt A). 45–64 tuổi P3 (1–5%) theo số liệu tuyến ban đầu. Từ 65 tuổi P2 (5–20%): bệnh tăng mạnh theo tuổi, người cao tuổi đau ngực ở Việt Nam hay tự đến cấp cứu hoặc đi khám muộn, và ở cấp cứu tỷ lệ cao hơn nhiều (trung vị 37%). 18–44 tuổi P4; dưới 18 tuổi P6. Không thêm hệ số giới (nam 4,5% so với nữ 2,9% ở Bösner, chênh ít hơn 2 lần). Ước lượng cho từng nhóm tuổi, cần bác sĩ duyệt."
+  - complaint: shortness_of_breath
+    default: P5
+    by_age: { infant_0_2m: P6, child_2m_5y: P6, child_5_12: P6, teen_13_17: P6, adult_45_64: P4, elder_65_74: P4, elder_75p: P3 }
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [frese-jclinmedres-2011, msd-acute-mi, byt-qd-2187-2019]
+      locator: "Frese 2011 bảng 5; MSD (người cao tuổi hay than khó thở hơn đau ngực); 2187/QĐ-BYT (khó thở là triệu chứng không điển hình)"
+      reported: "Lượt khám đầu vì khó thở mới ở phòng khám đa khoa (Hà Lan, n = 3.743): bệnh tim thiếu máu cục bộ 1,2%, nhồi máu cơ tim 0; SESAM 2 (Đức): nhồi máu cơ tim 1/93"
+      population: "Người khó thở ở phòng khám đa khoa châu Âu"
+      note: "Giai đoạn 3 lô 3 (lượt A). Hội chứng vành cấp hiếm gặp ở người khó thở đến phòng khám (Frese), nhưng khó thở là biểu hiện chính ở một phần người cao tuổi, người đái tháo đường (2187/QĐ-BYT, MSD). Từ 75 tuổi P3, 45–74 tuổi P4, 18–44 tuổi P5, dưới 18 tuổi P6. Khó thở kèm tức ngực đã được các quy tắc rf_breathless_chest_pressure (mức 2) và rf_breathless_chest_pressure_features (mức 1) xử lý. Ước lượng."
+findings:
+  - finding: chest_pain_pressure
+    freq: frequent
+    freq_by_age: { elder_75p: occasional }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [vanoosterhout-jaha-2020, canto-jama-2000, canto-jama-2012, msd-acute-mi, byt-qd-2187-2019, georgeson-jgim-1992, grossman-jgerontol-2003]
+      note: "Trong hội chứng mạch vành cấp nói chung, đau ngực gặp ở 74–79% (van Oosterhout 2020); 2187/QĐ-BYT ghi đau ngực có thể lan xuống thượng vị. Ở người chọn đau bụng là triệu chứng chính, hai lượt cùng ước khoảng một nửa vẫn có tức ngực kèm theo. Chỉ lượt B hạ còn occasional ở người từ 75 tuổi; lượt C giữ vì nguồn cho thấy rõ xu hướng theo tuổi: nhóm không đau ngực già hơn trung bình 7 tuổi (74,2 so với 66,9, Canto 2000) và MSD ghi người cao tuổi hay than khó thở hơn đau ngực. Nhờ vậy câu trả lời 'Không đau ngực' ít làm giảm khả năng bệnh ở người từ 75 tuổi. Giai đoạn 3 lô 1: lượt B đề xuất freq_by_complaint occasional cho Ngất và Chóng mặt; lượt C không dùng vì nguồn không cho thấy khác biệt rõ: Canto 2000 (33% nhồi máu không đau ngực) cho tỷ lệ đau ngực khoảng hai phần ba ở mọi kiểu biểu hiện; Georgeson 1992 chỉ chọn người ngất không đau ngực nên không cho biết tỷ lệ đau ngực; Grossman 2003: 2/3 người cao tuổi ngất có men tim tăng có khó chịu ở ngực (số rất nhỏ). Có đau ngực kèm ngất, choáng thì quy tắc đã xếp mức 1. Cần bác sĩ duyệt."
+  - finding: es_crushing_chest_pain
+    freq: occasional
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-2187-2019, canto-jama-2000]
+      note: "Chỉ lượt A có; lượt C giữ. Người đau thắt ngực dữ dội kèm vã mồ hôi dừng ở màn sàng lọc cấp cứu; khi đó liên kết này đưa bệnh lên đầu danh sách cần loại trừ. Ở người biểu hiện chủ yếu bằng đau bụng, chỉ một phần nhỏ có kiểu đau này; occasional làm câu trả lời 'Không' chỉ giảm khả năng khoảng 1,2 lần. Cùng cụm chest_pain với 'chest_pain_pressure'."
+  - finding: pain_radiates_arm_jaw
+    freq: occasional
+    evidence:
+      tier: A
+      basis: numeric
+      sources: [vanoosterhout-jaha-2020, swap-jama-2005, byt-qd-2187-2019]
+      reported: "Đau tay hoặc vai trái 37–38% (van Oosterhout 2020); đau lan vai, cánh tay có LR+ 2,3–4,7 (Swap 2005)."
+      population: "Người hội chứng mạch vành cấp tại bệnh viện, mọi kiểu biểu hiện"
+      note: "Với người chủ yếu đau bụng, hai lượt cùng hạ một mức thành occasional (kb-guide mục 2.1). Tỷ lệ nền của dấu hiệu là 1% nên trả lời 'Có' làm tăng mạnh khả năng bệnh."
+  - finding: cold_sweat
+    freq: occasional
+    evidence:
+      tier: A
+      basis: numeric
+      sources: [vanoosterhout-jaha-2020, byt-qd-2187-2019, msd-acute-mi]
+      reported: "Vã mồ hôi 47% ở nam, 44% ở nữ."
+      population: "Người hội chứng mạch vành cấp tại bệnh viện, phần lớn có đau ngực"
+      note: "Lượt C: hai lượt lệch một mức (A occasional, B frequent). Số liệu tốt nhất là của van Oosterhout (bậc A), nhưng đo ở bệnh viện và chủ yếu ở người đau ngực; vã mồ hôi thường đi kèm cơn đau ngực điển hình (MSD; 2187/QĐ-BYT: đau ngực kéo dài kèm vã mồ hôi gợi ý nhồi máu cơ tim), và người đau thắt ngực kèm vã mồ hôi đã dừng ở màn sàng lọc cấp cứu. Vì vậy hạ một mức theo kb-guide mục 2.1, giống cách lượt B làm với đau lan tay."
+  - finding: breathing_difficulty
+    freq: frequent
+    evidence:
+      tier: A
+      basis: numeric
+      sources: [vanoosterhout-jaha-2020, msd-acute-mi, byt-qd-2187-2019]
+      reported: "Khó thở 40% ở nam, 48% ở nữ."
+      population: "Người hội chứng mạch vành cấp tại bệnh viện"
+      note: "Lượt C: hai lượt lệch một mức (A occasional, B frequent). Chọn frequent theo số liệu bậc A và không hạ mức, vì khó thở là triệu chứng nổi bật ở người biểu hiện không điển hình: 2187/QĐ-BYT xếp khó thở vào triệu chứng không điển hình, MSD ghi người cao tuổi hay than khó thở hơn đau ngực."
+  - finding: nausea
+    freq: frequent
+    evidence:
+      tier: A
+      basis: numeric
+      sources: [vanoosterhout-jaha-2020, msd-acute-mi, byt-qd-2187-2019]
+      reported: "Buồn nôn hoặc nôn 28% ở nam, 39% ở nữ."
+      population: "Người hội chứng mạch vành cấp tại bệnh viện"
+      note: "Buồn nôn, nôn hay gặp hơn ở nhồi máu thành dưới (MSD) và là triệu chứng không điển hình (2187/QĐ-BYT); ở biểu hiện đau thượng vị có thể nhiều hơn, hai lượt cùng chọn frequent. Tỷ lệ nền của buồn nôn ở người đau bụng là 35% nên dấu hiệu này phân biệt kém."
+  - finding: fainting_or_near_fainting
+    freq: occasional
+    freq_by_complaint: { dizziness: frequent }
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [vanoosterhout-jaha-2020, msd-acute-mi, byt-qd-2187-2019, esc-syncope-2018]
+      note: "Choáng váng và ngất được báo cáo trong các nghiên cứu gộp (van Oosterhout 2020); một số người đến khám vì ngất (MSD); 2187/QĐ-BYT yêu cầu chuyển ngay khi có cơn ngất. Hai lượt cùng chọn occasional. Giai đoạn 3 lô 1: lượt B thêm frequent khi Chóng mặt, lượt A ghi nhận occasional có thể thấp khi Chóng mặt; lượt C giữ: người hội chứng vành cấp chọn Chóng mặt chủ yếu có kiểu choáng như sắp ngất do rối loạn huyết động, rối loạn nhịp (ESC 2018: tiền ngất xử trí như ngất), còn tỷ lệ nền của dấu hiệu này khi Chóng mặt là 0,25 nên mức occasional sẽ làm câu trả lời 'Có' giảm khả năng bệnh. Với Ngất là dấu hiệu ngầm định; với Hồi hộp giữ mức chung."
+  - finding: heartburn
+    freq: occasional
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [msd-acute-mi, vanoosterhout-jaha-2020]
+      note: "Chỉ lượt A có; lượt C giữ. Người bệnh hay tưởng cơn đau là khó tiêu và có khi thấy đỡ sau ợ hơi hoặc uống thuốc dạ dày (MSD); 'khó tiêu' là một triệu chứng khi đến viện được van Oosterhout 2020 tổng hợp. Liên kết để câu trả lời 'có ợ chua, nóng rát sau xương ức' không làm giảm khả năng bệnh tim. Tần suất là ước lượng."
+  - finding: abd_pain_radiates_back
+    freq: occasional
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [vanoosterhout-jaha-2020, msd-acute-mi]
+      note: "Chỉ lượt B có; lượt C giữ. Đau giữa hai bả vai là triệu chứng được báo cáo, hay gặp ở nữ hơn (OR 2,15, van Oosterhout 2020); MSD: đau có thể lan ra lưng. Tần suất là ước lượng."
+  - finding: abd_pain_severe
+    freq: occasional
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-2187-2019]
+      note: "Chỉ lượt B có; lượt C giữ. Biểu hiện đau thượng vị thường là tức, đè nặng hơn là đau dữ dội. Ước lượng của người soạn."
+  - finding: abd_pain_location
+    dist: { epigastric: 0.71, right_upper: 0.05, left_upper: 0.07, periumbilical: 0.05, right_lower: 0.01, left_lower: 0.01, suprapubic: 0.01, whole: 0.09 }
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-2187-2019, vanoosterhout-jaha-2020]
+      locator: "2187/QĐ-BYT: đau có thể lan xuống vùng thượng vị nhưng không bao giờ quá rốn"
+      note: "Khi biểu hiện bằng đau bụng, vị trí điển hình là thượng vị. Tỷ lệ từng vùng là ước lượng (trung bình hai lượt); để rất thấp cho bụng dưới vì cơn đau không lan quá rốn."
+  - finding: abd_pain_duration
+    dist: { lt_6h: 0.43, h6_24: 0.25, d1_3: 0.16, d4_14: 0.09, gt_2w: 0.07 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [canto-jama-2000, byt-qd-2187-2019, nguyen-ijc-2022]
+      note: "Cơn đau do thiếu máu cơ tim kéo dài trên 20–30 phút (2187/QĐ-BYT); người không đau ngực đến viện muộn hơn (trung bình 7,9 giờ, Canto 2000); ở Việt Nam người ở nông thôn hay đến viện muộn (Nguyen 2022). Giữ một phần cho đau tái đi tái lại vì cơn đau thắt ngực không ổn định có thể tái diễn nhiều ngày. Lượt C lấy trung bình hai lượt (lệch 0,15)."
+  - finding: abd_pain_meal_relation
+    dist: { hungry_relieved_by_food: 0.05, worse_after_meal: 0.15, no_relation: 0.80 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-2187-2019]
+      note: "Chỉ lượt B có; lượt C giữ vì giúp phân biệt với loét dạ dày – tá tràng. Đau do thiếu máu cơ tim thường không liên quan bữa ăn; đau lúc đói, ăn vào đỡ gợi ý loét. Ước lượng của người soạn."
+  - finding: diabetes
+    freq: occasional
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [canto-jama-2000, hoangvu-ccd-2025, trinh-fcvm-2025, le-fcvm-2025]
+      reported: "Đái tháo đường 32,6% ở nhồi máu cơ tim không đau ngực (Canto 2000); 37,2%, 27,6% và khoảng 33% ở ba nhóm người bệnh Việt Nam."
+      note: "Số liệu nằm ở ranh giới occasional/frequent; hai lượt cùng chọn occasional vì tỷ lệ nền của danh mục (7%, người 18–69 tuổi) thấp hơn tỷ lệ ở người cao tuổi."
+  - finding: hypertension_known
+    freq: frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [hoangvu-ccd-2025, trinh-fcvm-2025, le-fcvm-2025]
+      reported: "Tăng huyết áp 73,1% (Hoang Vu 2025), 74,0% (Trinh 2025), khoảng 45% (Le 2025)."
+      note: "Câu hỏi hỏi tăng huyết áp đã biết; số liệu gồm cả người mới phát hiện khi nằm viện và nhiều người Việt Nam chưa biết mình tăng huyết áp, nên hai lượt cùng chọn frequent."
+  - finding: known_heart_disease
+    freq: occasional
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [canto-jama-2000, hoangvu-ccd-2025]
+      reported: "Từng suy tim 26,4% ở nhồi máu cơ tim không đau ngực (Canto 2000)."
+      note: "Thêm người đã biết bệnh mạch vành. Hai lượt cùng chọn occasional."
+  - finding: smoker
+    freq: occasional
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [hoangvu-ccd-2025, trinh-fcvm-2025, le-fcvm-2025]
+      reported: "Đang hút thuốc 27,3% (Hoang Vu 2025, n = 1.168), 42,5% (Trinh 2025, n = 127), khoảng 20% (Le 2025, n = 118)."
+      population: "Người hội chứng mạch vành cấp được can thiệp ở Việt Nam"
+      note: "Lượt C: hai lượt lệch một mức (A occasional, B frequent). Trung bình theo cỡ mẫu khoảng 28%, nằm trong khoảng occasional; chọn mức có nguồn lớn nhất. Mức này gần tỷ lệ nền 20% (gồm cả nữ rất ít hút thuốc) nên liên kết gần như không đổi kết quả."
+  - finding: fever
+    freq: rare
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-2187-2019]
+      note: "Chỉ lượt B có; lượt C giữ. Sốt không có trong các triệu chứng khởi phát (2187/QĐ-BYT). Đau bụng kèm sốt nghiêng về bệnh nhiễm trùng ổ bụng. Mức rare thấp hơn tỷ lệ nền 5%."
+  - finding: palpitations
+    freq: occasional
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-2187-2019, vanoosterhout-jaha-2020]
+      locator: "2187/QĐ-BYT (triệu chứng không điển hình: cảm giác hồi hộp; rối loạn nhịp trong nhồi máu cơ tim); van Oosterhout 2020"
+      note: "Giai đoạn 3 lô 1; hai lượt trùng mức. Có ý nghĩa với Ngất, Chóng mặt và Đau bụng (với Hồi hộp là dấu hiệu ngầm định). Hồi hộp được báo cáo ở người hội chứng vành cấp, nữ nhiều hơn nam (không có tỷ lệ gộp). Ước 20%. Tỷ lệ nền 0,05."
+  - finding: syncope_trigger
+    dist: { standing_heat: 0.07, emotion_pain: 0.20, standing_up: 0.09, toilet_cough: 0.055, exertion: 0.15, lying: 0.085, no_trigger: 0.35 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [esc-syncope-2018, byt-qd-2187-2019]
+      locator: "ESC 2018 bảng 5–6 (ngất khi gắng sức hoặc khi nằm; bệnh mạch vành nặng)"
+      note: "Giai đoạn 3 lô 1; trung bình hai lượt. Phân bố trong số người đã ngất hoặc suýt ngất. Ngất khi gắng sức hoặc khi nằm là đặc điểm nguy cơ cao (quy tắc rf_syncope_exertion_or_lying mức 2); người ngất trong cơn đau ngực có thể chọn 'khi đang đau'; rối loạn nhịp trong nhồi máu cơ tim gây ngất không có yếu tố khởi phát. Ước lượng."
+  - finding: syncope_warning
+    dist: { prodrome: 0.45, palpitations_first: 0.15, no_warning: 0.40 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [esc-syncope-2018, byt-qd-2187-2019]
+      note: "Giai đoạn 3 lô 1; chỉ lượt B có, lượt C giữ. Phân bố trong số người đã ngất hoặc suýt ngất. Vã mồ hôi, buồn nôn là triệu chứng của hội chứng vành cấp (2187/QĐ-BYT) nên lựa chọn 'nóng người, vã mồ hôi, buồn nôn' vẫn hay gặp; ngất do nhịp chậm, nhịp nhanh thất thường đột ngột (ESC 2018). Ước lượng."
+  - finding: pulse_measured
+    dist: { lt_40: 0.016, n40_100: 0.28, n100_150: 0.088, gt_150: 0.016, not_measured: 0.6 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-2187-2019]
+      locator: "2187/QĐ-BYT (biến chứng rối loạn nhịp: nhịp chậm xoang, blốc nhĩ thất, rung nhĩ, nhịp nhanh thất)"
+      note: "Giai đoạn 3 lô 1; trung bình hai lượt. 'Chưa đo' giữ đúng tỷ lệ nền 0,6. Phần lớn người bệnh có mạch bình thường; nhịp chậm và nhịp nhanh gặp nhiều hơn nền. Ước lượng."
+  - finding: dizziness_positional
+    freq: rare
+    evidence:
+      tier: A
+      basis: judgment
+      sources: [bosner-bmcfampract-2018]
+      locator: "Bösner 2018 phần kết quả"
+      note: "Giai đoạn 3 lô 1; chỉ lượt A có, lượt C giữ. Tính trong số người đã chóng mặt. Chóng mặt khi trở mình, nằm xuống, ngửa cổ là kiểu của bệnh tiền đình ngoại biên; với chóng mặt kiểu quay, bệnh tim mạch không đóng vai trò nào (Bösner). Mức rare thấp hơn tỷ lệ nền 0,1."
+  - finding: dizziness_pattern
+    dist: { brief_episodes: 0.15, long_episodes: 0.50, continuous: 0.25, chronic: 0.10 }
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [byt-qd-2187-2019]
+      note: "Giai đoạn 3 lô 1; chỉ lượt B có, lượt C giữ. Tính trong số người đã chóng mặt. Cơn đau do thiếu máu cơ tim kéo dài trên 20–30 phút (2187/QĐ-BYT); choáng kèm theo thường kéo dài vài phút đến vài giờ. Ước lượng."
+  # ---------- Giai đoạn 3, lô 3 (lượt A): dấu hiệu mới của lô 3 ----------
+  - finding: chest_pain_duration
+    dist: { seconds: 0.03, minutes: 0.22, over_15min: 0.65, days: 0.1 }
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [nice-cg95, byt-qd-2187-2019, bosner-bmcfampract-2009]
+      locator: "NICE CG95 khuyến cáo 1.2.1.3 (đau trên 15 phút); 2187/QĐ-BYT (đau kéo dài trên 20–30 phút); Bösner 2009 bảng 3"
+      reported: "Người bệnh mạch vành ở phòng khám (phần lớn ổn định): cơn dưới 1 phút 11–14%, 1–30 phút 36–46%, từ 30 phút trở lên khoảng 40–50%"
+      note: "Giai đoạn 3 lô 3 (lượt A). Tính trong số người đã đau ngực. Số liệu Bösner gồm cả đau thắt ngực ổn định (cơn ngắn); hội chứng vành cấp thường đau kéo dài từ 15–20 phút hoặc đang đau (NICE, 2187/QĐ-BYT), nên dồn phần lớn vào lựa chọn từ 15 phút. Đau chỉ vài giây rất ít gặp. Một phần đau tái đi tái lại vài ngày (đau thắt ngực không ổn định)."
+  - finding: chest_pain_exertional
+    freq: occasional
+    evidence:
+      tier: A
+      basis: numeric
+      sources: [swap-jama-2005, bosner-bmcfampract-2009, nice-cg95]
+      locator: "Swap 2005 tóm tắt; Bösner 2009 bảng 3; NICE CG95 khuyến cáo 1.2.1.3"
+      reported: "Đau khởi phát khi gắng sức: LR 2,3–4,7 cho hội chứng vành cấp (Swap); đau tăng khi gắng sức 39–48% ở người bệnh mạch vành tại phòng khám (Bösner)"
+      note: "Giai đoạn 3 lô 3 (lượt A). Tính trong số người đã đau ngực. Câu hỏi hỏi kiểu đau thắt ngực điển hình (xuất hiện khi gắng sức, đỡ khi nghỉ), hay gặp nhất ở đau thắt ngực ổn định (thuộc 'nguyên nhân khác'); hội chứng vành cấp thường đau cả lúc nghỉ, nhưng đau thắt ngực mới hoặc nặng dần cũng có kiểu này (NICE). Ước 20–30% (occasional; tăng khả năng khoảng 4 lần so với tỷ lệ nền 5%). Quy tắc rf_chest_pain_exertional xếp mức 3."
+  - finding: chest_pain_radiates_back
+    freq: occasional
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [bosner-bmcfampract-2009, msd-acute-mi]
+      locator: "Bösner 2009 bảng 3; MSD mục Symptoms and Signs (đau thường lan ra lưng, hàm, tay, vai)"
+      reported: "Đau lan ra lưng 11–14% người bệnh mạch vành ở phòng khám"
+      note: "Giai đoạn 3 lô 3 (lượt A). Tính trong số người đã đau ngực. Cùng mức với liên kết đau bụng lan ra lưng đã có. Quy tắc rf_chest_pain_spreading_or_systemic xếp mức 1."
+  - finding: chest_wall_tenderness
+    freq: rare
+    evidence:
+      tier: A
+      basis: numeric
+      sources: [swap-jama-2005, bosner-bmcfampract-2009, ronga-bmcfampract-2012]
+      locator: "Swap 2005 tóm tắt; Bösner 2009 bảng 3; Ronga 2012 tóm tắt"
+      reported: "Đau tái hiện khi ấn: LR 0,2–0,3 cho hội chứng vành cấp (Swap); 6–19% người bệnh mạch vành ở phòng khám (Bösner)"
+      note: "Giai đoạn 3 lô 3 (lượt A). Tính trong số người đã đau ngực. Theo gợi ý của lô (thấp). Mức rare (2,5%) thấp hơn tỷ lệ nền 5% nên câu trả lời 'Có' làm giảm khả năng khoảng 2 lần, nhẹ hơn LR 0,2–0,3 của Swap: thận trọng vì người dân tự ấn kém chính xác và dấu hiệu này không loại trừ được bệnh (Ronga). Số 6–19% của Bösner gồm cả bệnh mạch vành ổn định."
+  - finding: pleuritic_chest_pain
+    freq: rare
+    evidence:
+      tier: A
+      basis: numeric
+      sources: [swap-jama-2005, bosner-bmcfampract-2009]
+      locator: "Swap 2005 tóm tắt; Bösner 2009 bảng 3"
+      reported: "Đau kiểu màng phổi: LR 0,2–0,3 (Swap); đau khi hít vào 4–6% người bệnh mạch vành ở phòng khám (Bösner)"
+      note: "Giai đoạn 3 lô 3 (lượt A). Theo gợi ý của lô (thấp). Mức rare thấp hơn tỷ lệ nền 5%. Có tác dụng với Đau ngực, Khó thở và cả các triệu chứng chính đã phát hành nếu câu này được hỏi."
+  - finding: chest_pain_sudden_severe
+    freq: occasional
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-4235-2012, byt-qd-2187-2019]
+      locator: "4235/QĐ-BYT tr. 24 (đau đột ngột: tìm nhồi máu cơ tim, nhồi máu phổi, tràn khí, phình tách; đau dữ dội, đè ép: nhồi máu cơ tim, phình tách)"
+      note: "Giai đoạn 3 lô 3 (lượt A). Tính trong số người đã đau ngực. Nhồi máu cơ tim có thể đau đột ngột dữ dội, nhưng cơn đau thường tăng dần trong vài phút; ước 20–30%. Quy tắc rf_chest_pain_sudden_severe xếp mức 2, kéo dài từ 15 phút thì mức 1."
+  - finding: dyspnea_onset
+    dist: { sudden: 0.35, hours_days: 0.5, weeks: 0.15 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-2187-2019, msd-acute-mi]
+      locator: "MSD mục Symptoms and Signs (vài ngày đến vài tuần trước có thể đau thắt ngực tăng dần, khó thở, mệt)"
+      note: "Giai đoạn 3 lô 3 (lượt A). Tính trong số người đã khó thở. Khó thở của hội chứng vành cấp xuất hiện cùng cơn thiếu máu cơ tim (vài phút đến vài giờ); đau thắt ngực không ổn định có thể khó thở tái lại nhiều ngày. 'Đột ngột' gấp khoảng 2 lần nền (0,15). Ước lượng."
+  - finding: dyspnea_severity
+    dist: { exertion: 0.4, rest: 0.5, cannot_speak: 0.1 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-2187-2019, msd-acute-mi]
+      note: "Giai đoạn 3 lô 3 (lượt A). Tính trong số người đã khó thở. Thường khó thở cả lúc nghỉ trong cơn; suy tim cấp do nhồi máu có thể khó thở nặng. Ước lượng; quy tắc rf_dyspnea_at_rest xếp mức 2."
+warning_signs: [es_crushing_chest_pain, chest_pain_pressure, cold_sweat, breathing_difficulty, fainting_or_near_fainting, pain_radiates_arm_jaw]
+self_care_vi:
+  - "Gọi 115 ngay. Không tự lái xe đến bệnh viện."
+  - "Ngừng mọi việc đang làm, ngồi hoặc nằm nghỉ trong lúc chờ xe cấp cứu."
+see_doctor_vi:
+  - "Cần được làm điện tim và xét nghiệm máu càng sớm càng tốt."
+  - "Gọi 115 cả khi cơn đau đã giảm, nếu kèm vã mồ hôi, khó thở hoặc choáng."
+  - "Người cao tuổi, người đái tháo đường có thể bị nhồi máu cơ tim mà chỉ đau vùng trên rốn."
+review:
+  status: draft
+  authors: ["agent:pass-a"]
+  updated: "2026-10-31"
+  notes_vi: "Giai đoạn 3, lô 3, lượt A phần c (31/10/2026). Không sửa phần đã có (mọi giá trị cũ giữ nguyên; ghi chú của lượt C trước đây xem knowledge/conditions/acute_coronary_syndrome.yaml). Đã thêm: (a) prior Đau ngực P3 (5–17 tuổi P6, 18–44 tuổi P4, từ 65 tuổi P2) theo Haasenritter 2015, Bösner 2009, Verdon 2008; (b) prior Khó thở P5 (dưới 18 tuổi P6, 45–74 tuổi P4, từ 75 tuổi P3) theo Frese 2011; (c) 8 liên kết mới: thời gian cơn đau ngực (phân bố, dồn vào từ 15 phút), đau khi gắng sức occasional, đau lan ra lưng occasional, ấn vào ngực đau rare, đau kiểu màng phổi rare, đau đột ngột dữ dội occasional, kiểu khởi phát khó thở và mức khó thở (phân bố). Không thêm freq_by_complaint cho liên kết cũ: tức nặng giữa ngực (frequent) phù hợp số liệu đau đè ép 61–64% ở người bệnh mạch vành tại phòng khám (Bösner 2009); đau lan tay, hàm (occasional) thấp hơn số liệu bệnh viện 37–38% nhưng có đau lan thì quy tắc đã xếp mức 1. Không liên kết dấu hiệu chung chest_pain (quyết định của người bảo trì). Nguồn mới: haasenritter-croatmedj-2015, frese-jclinmedres-2011 (lượt A mở toàn văn qua API Europe PMC); bosner-bmcfampract-2009, verdon-smw-2008 dùng bản đã có trong extend/sources, lượt A phần c đã mở lại toàn văn Bösner 2009 (bảng 2–3). Bác sĩ cần xem: (1) prior Đau ngực từ 65 tuổi (P2) là ước lượng thận trọng, số liệu tuyến ban đầu chỉ cho cả nhóm từ 35 tuổi (3,6%); (2) bệnh này không gồm đau thắt ngực ổn định (6,6–11,2% người đau ngực ở phòng khám), người đau khi gắng sức sẽ dồn vào 'nguyên nhân khác'; nên cân nhắc thêm bệnh 'đau thắt ngực ổn định' cho Đau ngực; (3) khi Đau bụng, Ngất, Chóng mặt, Hồi hộp, các câu đau ngực mới chỉ được hỏi nếu người dùng có đau ngực."

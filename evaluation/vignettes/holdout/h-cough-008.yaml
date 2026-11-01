@@ -1,0 +1,48 @@
+id: h-cough-008
+set: holdout
+title_vi: "Bé trai 26 tháng sổ mũi, sốt nhẹ, đêm qua ho ông ổng, khóc khàn, chỉ thở rít khi khóc"
+narrative_vi: "Bé T., nam, 26 tháng, ở Hải Dương, đi nhà trẻ, đã tiêm chủng đầy đủ, kể cả 2 mũi vắc xin sởi. Hai ngày nay bé sổ mũi, sốt nhẹ, cao nhất 38,1°C. Đêm qua bé đột nhiên ho ông ổng như tiếng chó sủa, tiếng khóc khàn. Lúc bé khóc thì nghe tiếng rít khi hít vào, khi bé nằm yên hoặc ngủ thì thở êm, không rít. Bé không thở nhanh, ngực không rút lõm, môi hồng. Bé vẫn bú sữa, uống nước bình thường, không chảy dãi, không nôn, chơi được. Trước khi ho bé không bị hóc, sặc gì. Trong lớp có mấy bạn đang sổ mũi, ho."
+patient:
+  age_months: 26
+  sex: male
+  region: north
+  month: 11
+complaint: cough
+answers:
+  cough_duration: lt_1w
+  barking_cough: present
+  hoarse_voice: present
+  stridor: absent
+  night_respiratory_symptoms: present
+  runny_nose: present
+  fever: present
+  fever_max_temp: t38_39
+  fever_duration: d1_2
+  sick_contact_respiratory: present
+  breathing_difficulty: absent
+  chest_indrawing: absent
+  grunting: absent
+  apnea_cyanosis_spells: absent
+  wheeze: absent
+  drooling_cannot_swallow: absent
+  choking_episode: absent
+  child_unable_to_drink: absent
+  child_vomits_everything: absent
+  child_feeding_reduced: absent
+  vomiting: absent
+  drowsy_hard_to_wake: absent
+  seizure_recent: absent
+  cough_paroxysms: absent
+  dtp_vaccinated: present
+  measles_vaccinated: present
+default_unmentioned: absent
+expected:
+  condition: croup
+  acceptable: []
+  triage: 3
+source:
+  basis: "Viêm thanh quản cấp (croup) thể nhẹ ở trẻ 2 tuổi: sau cảm có ho ông ổng, khàn tiếng, thở rít chỉ khi khóc, nặng về đêm; nằm yên không rít, không rút lõm, uống tốt. NHS Croup: nghĩ trẻ bị croup thì hẹn khám khẩn hoặc gọi 111 (bác sĩ có thể cho thuốc); gọi 999 khi trẻ thở rất vất vả, rút lõm dưới bờ sườn, tím, li bì, chảy dãi. WHO IMCI: thở rít chỉ khi khóc, quấy thì chưa tính là thở rít. Nên mức 3."
+  references:
+    - nhs-croup
+    - who-imci-chart-booklet-2014
+author: "agent:vignette-holdout"

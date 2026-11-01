@@ -15,6 +15,7 @@ answers:
   loss_of_appetite: present
   myalgia: present
   cough: present
+  cough_duration: lt_1w
   productive_cough: absent
   runny_nose: present
   headache: absent

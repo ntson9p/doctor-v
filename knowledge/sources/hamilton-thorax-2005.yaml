@@ -1,0 +1,15 @@
+id: hamilton-thorax-2005
+type: primary_study
+title: "What are the clinical features of lung cancer before the diagnosis is made? A population based case-control study"
+publisher: "Thorax 2005;60(12):1059–1065 (Hamilton W, Peters TJ, Round A, Sharp D)"
+date: "2005-12"
+url: "https://europepmc.org/article/MED/16227326"
+doi: "10.1136/thx.2005.045880"
+pmid: "16227326"
+license_class: L3
+license_note: "Bản quyền nhà xuất bản: chỉ dùng dữ kiện kèm trích dẫn."
+default_tier: B
+accessed: "2026-10-31"
+verified: true
+verified_by: "agent:pass-c"
+notes_vi: "Lượt C (Giai đoạn 3 lô 3) đọc lại tóm tắt qua API Europe PMC ngày 31/10/2026; lượt B đã đọc trước đó. 247 người ung thư phổi trên 40 tuổi ở 21 phòng khám đa khoa Exeter (1998–2002) và 1.235 người chứng: bảy triệu chứng liên quan độc lập với ung thư phổi (ho ra máu, sụt cân, chán ăn, khó thở, đau ngực, mệt, ho), cùng ngón tay dùi trống, tăng tiểu cầu, hô hấp ký bất thường và hút thuốc. Khi bỏ 180 ngày cuối trước chẩn đoán, ho ra máu, khó thở và hô hấp ký bất thường vẫn liên quan độc lập. Tóm tắt không cho tần suất từng triệu chứng (tỷ số khả dĩ ở okoli-plosone-2018)."

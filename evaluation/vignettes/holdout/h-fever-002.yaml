@@ -28,6 +28,8 @@ answers:
   drowsy_hard_to_wake: absent
   seizure_recent: absent
   measles_vaccinated: present
+  cough_duration: lt_1w
+  dtp_vaccinated: present
 default_unmentioned: absent
 expected:
   condition: common_cold

@@ -1,0 +1,11 @@
+id: nhs-pneumothorax
+type: web_page
+title: "Collapsed lung (pneumothorax)"
+publisher: "NHS (UK)"
+url: "https://www.nhs.uk/conditions/pneumothorax/"
+license_class: L1
+license_note: "Open Government Licence v3.0; bản chuyển thể không được trình bày như nội dung của NHS."
+default_tier: C
+accessed: "2026-10-31"
+verified: false
+notes_vi: "Người bảo trì thêm khi soạn danh mục lô 3 (31/10/2026). Lượt R lô 3 vòng 2 (31/10/2026): địa chỉ trả lỗi 404; mục lục bệnh và ô tìm kiếm của NHS không còn bài Collapsed lung (pneumothorax). Trang NHS inform (Scotland) từ chối truy cập tự động (403). Không xác minh được, đã bỏ khỏi các quy tắc (rf_chest_pain_sudden_severe, rf_dyspnea_sudden vẫn có nguồn khác). Không xóa id này."

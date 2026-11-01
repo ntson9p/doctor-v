@@ -1,0 +1,50 @@
+id: d-covid19-cough-1
+set: dev
+title_vi: "Nữ 31 tuổi chọn Ho: ho khan 2 ngày, đau họng, sổ mũi, sốt nhẹ, tự xét nghiệm dương tính"
+narrative_vi: "Chị P., 31 tuổi, ở Hà Nội. Hai ngày nay ho khan, đau họng, sổ mũi, nghẹt mũi, đau đầu, mệt, sốt nhẹ 37,8°C. Đồng nghiệp ngồi cạnh vừa dương tính COVID-19; que thử nhanh của chị lên 2 vạch. Không khó thở, không đau ngực, không mất ngửi. Không có thai, không chậm kinh. Không có bệnh nền, đã tiêm vắc xin."
+patient:
+  age_years: 31
+  sex: female
+  region: north
+  month: 6
+complaint: cough
+answers:
+  cough_duration: lt_1w
+  productive_cough: absent
+  sore_throat: present
+  runny_nose: present
+  nasal_congestion: present
+  headache: present
+  fatigue: present
+  fever: present
+  fever_max_temp: lt_38
+  fever_duration: d1_2
+  covid_self_test: positive
+  sick_contact_respiratory: present
+  loss_of_smell_taste: absent
+  myalgia: absent
+  chills_rigors: absent
+  breathing_difficulty: absent
+  pleuritic_chest_pain: absent
+  chest_pain: absent
+  chest_pain_pressure: absent
+  wheeze: absent
+  hemoptysis: absent
+  stridor: absent
+  choking_episode: absent
+  asthma_known: absent
+  smoker: absent
+  diabetes: absent
+  known_heart_disease: absent
+  immunocompromised: absent
+  pregnant: absent
+  missed_period: absent
+default_unmentioned: absent
+expected:
+  condition: covid19
+  acceptable: []
+  triage: 5
+source:
+  basis: "COVID-19 mức nhẹ ở người trẻ không có bệnh nền, đã tiêm vắc xin, xét nghiệm nhanh dương tính (2671/QĐ-BYT: ca nhẹ, không khó thở, theo dõi tại nhà)."
+  references: [byt-qd-2671-2023, marquez-jamanetwopen-2022]
+author: "agent:pass-c"

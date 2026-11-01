@@ -1,0 +1,53 @@
+id: d-panic-disorder-shortness-of-breath-1
+set: dev
+title_vi: "Nữ 24 tuổi đột ngột khó thở, ngột ngạt, tim đập nhanh, tê đầu ngón tay, sợ sắp chết, SpO2 98%"
+narrative_vi: "Chị M., 24 tuổi, nhân viên văn phòng ở Hà Nội, dạo này căng thẳng, mất ngủ. Tối nay đang ngồi xem điện thoại thì đột ngột thấy ngột ngạt, hít không đủ hơi, tim đập nhanh, run tay, tê đầu ngón tay và quanh miệng, sợ như sắp chết. Cơn nặng nhất trong vài phút; sau khoảng 15 phút đỡ dần. Ba tháng trước chị cũng có một cơn giống hệt. Máy kẹp ngón tay đo SpO2 98%. Không đau ngực, không ho, không sốt, không khò khè, không sưng chân, không ngất, không dùng thuốc tránh thai. Gần đây không đi xa, không nằm lâu. Không có thai, kinh nguyệt đều."
+patient:
+  age_years: 24
+  sex: female
+  region: north
+  month: 9
+complaint: shortness_of_breath
+answers:
+  pregnant: absent
+  missed_period: absent
+  dyspnea_onset: sudden
+  dyspnea_severity: rest
+  spo2_measured: ge_96
+  palpitations: present
+  panic_fear: present
+  perioral_tingling: present
+  tremor: present
+  dizziness: present
+  similar_episodes_before: present
+  stress_poor_sleep: present
+  cold_sweat: absent
+  fainting_or_near_fainting: absent
+  chest_pain: absent
+  chest_pain_pressure: absent
+  pleuritic_chest_pain: absent
+  cough: absent
+  fever: absent
+  wheeze: absent
+  orthopnea: absent
+  leg_swelling_one_side: absent
+  leg_swelling_both: absent
+  hemoptysis: absent
+  estrogen_use: absent
+  recent_immobility: absent
+  previous_clot: absent
+  active_cancer: absent
+  allergen_exposure: absent
+  rash_any: absent
+  asthma_known: absent
+  stimulant_intake: absent
+default_unmentioned: absent
+expected:
+  condition: panic_disorder
+  acceptable: []
+  triage: 2
+source:
+  basis: "Cơn hoảng sợ tái diễn: khởi phát đột ngột, đạt đỉnh trong vài phút, kèm khó thở, ngột ngạt, tim nhanh, run, tê bì, sợ chết; tự hết sau 5–20 phút (NHS Panic disorder; MSD). Tại nhà không phân biệt được với thuyên tắc phổi hay rối loạn nhịp: NHS Heart palpitations xếp hồi hộp kèm khó thở vào 'Call 999 or go to A&E' (mức 2)."
+  references: [nhs-panic-disorder, msd-panic-disorder, nhs-heart-palpitations]
+author: "agent:pass-c"
+notes_vi: "Ca của bản mở rộng lô 3: cơn hoảng sợ ở triệu chứng chính Khó thở. Mức đúng 2 vì hồi hộp kèm khó thở chưa loại trừ được bệnh tim phổi tại nhà."

@@ -1,0 +1,35 @@
+id: d-anaphylaxis-1
+set: dev
+title_vi: "Nam 28 tuổi, 20 phút sau ăn tôm nổi mề đay khắp người, khó thở, khò khè, tức ngực"
+narrative_vi: "Anh D., 28 tuổi, ở Quảng Ninh. Khoảng 20 phút sau bữa tối có tôm, anh nổi mẩn đỏ gồ thành mảng, rất ngứa, lan nhanh khắp người, hai mí mắt sưng. Vài phút sau anh thấy khó thở, thở khò khè, tức nặng ngực, ngồi nghỉ cũng khó thở; chóng mặt như muốn ngất khi đứng dậy. Môi, lưỡi không sưng. Người nhà thấy anh khó thở ngay sau khi ăn nên chọn mục dị ứng nặng ở màn đầu tiên."
+patient:
+  age_years: 28
+  sex: male
+  region: north
+  month: 7
+complaint: shortness_of_breath
+answers:
+  es_anaphylaxis: present
+  allergen_exposure: present
+  rash_any: present
+  hives: present
+  edema_face_hands: present
+  wheeze: present
+  chest_pain_pressure: present
+  chest_pain: present
+  chest_pain_duration: over_15min
+  dyspnea_onset: sudden
+  dyspnea_severity: rest
+  fainting_or_near_fainting: present
+  stridor: absent
+  fever: absent
+default_unmentioned: absent
+expected:
+  condition: anaphylaxis
+  acceptable: []
+  triage: 1
+source:
+  basis: "Phản vệ điển hình sau ăn hải sản: mày đay, phù mạch xuất hiện nhanh kèm khó thở, khò khè, tức ngực, choáng (51/2017/TT-BYT Phụ lục I, bệnh cảnh 1; độ II–III). Thông tư 51: xử trí cấp cứu ngay tại chỗ, tiêm bắp adrenalin; NHS Anaphylaxis: gọi 999 (mức 1)."
+  references: [byt-tt-51-2017, nhs-anaphylaxis, ninh-vmj-2024]
+author: "agent:pass-c"
+notes_vi: "Người nhà chọn mục sàng lọc cấp cứu: phiên dừng ở màn đầu, chấm theo danh sách 'bác sĩ cần loại trừ'."

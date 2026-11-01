@@ -41,6 +41,26 @@ const ICONS: Record<string, preact.JSX.Element> = {
       <path d="M6 12.5h3l1.5-2.5 2 4.5 1.5-2h4" stroke-width="1.6" />
     </svg>
   ),
+  cough: (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+      <path d="M11 3a7 7 0 0 0-7 7c0 2.2 1 4 2.5 5.3V20h6v-2h2a2 2 0 0 0 2-2v-2l1.5-1-1.5-2.5A7 7 0 0 0 11 3z" />
+      <path d="M19.5 8.5l2.5-1.5M20 12.5h3M19.5 16.5l2.5 1.5" stroke-width="1.6" />
+    </svg>
+  ),
+  lungs: (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+      <path d="M12 3v8M12 11l-2 1.5M12 11l2 1.5" />
+      <path d="M9.5 7C7 7 4 11 4 16.5 4 19 5 20 6.5 20 8.5 20 10 18.5 10 16V9" />
+      <path d="M14.5 7C17 7 20 11 20 16.5 20 19 19 20 17.5 20 15.5 20 14 18.5 14 16V9" />
+    </svg>
+  ),
+  chest: (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+      <path d="M12 3v18" />
+      <path d="M12 7.5C9 7.5 6 8.5 4.5 10.5M12 11.5c-3 0-6 1-7.5 3M12 15.5c-2.5 0-5 .8-6.5 2.5" stroke-width="1.6" />
+      <path d="M12 7.5c3 0 6 1 7.5 3M12 11.5c3 0 6 1 7.5 3M12 15.5c2.5 0 5 .8 6.5 2.5" stroke-width="1.6" />
+    </svg>
+  ),
 };
 
 interface Props {

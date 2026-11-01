@@ -26,6 +26,7 @@ answers:
   confusion: absent
   severe_weakness: absent
   diarrhea: absent
+  cough_duration: lt_1w
 default_unmentioned: absent
 expected:
   condition: covid19

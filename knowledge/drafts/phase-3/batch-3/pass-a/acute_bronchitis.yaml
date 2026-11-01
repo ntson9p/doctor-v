@@ -1,0 +1,162 @@
+id: acute_bronchitis
+names:
+  vi: "Viêm phế quản cấp"
+  vi_common: ["Viêm phế quản"]
+  en: "Acute bronchitis"
+codes:
+  icd10: "J20.9"
+  icd10_verified: false
+summary_vi:
+  - "Viêm đường thở lớn trong phổi (phế quản), phần lớn do vi rút, hay xảy ra sau cảm lạnh."
+  - "Triệu chứng chính là ho, thường có đờm, có thể sốt nhẹ và đau ngực khi ho."
+  - "Thường tự khỏi; ho có thể kéo dài 2–3 tuần."
+urgency: 5
+cant_miss: false
+specialties: [general_medicine, respiratory]
+priors:
+  - complaint: cough
+    default: P2
+    by_age:
+      infant_0_2m: P3
+      adult_18_44: P1
+      adult_45_64: P1
+      elder_65_74: P1
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [vanvugt-bmj-2013, kinkade-afp-2016]
+      reported: "2.820 người lớn ho cấp đi khám ban đầu (GRACE): 95% không viêm phổi trên phim"
+      note: "Thang tuyệt đối (kb-guide 2.3). Ở người lớn, ho cấp đi khám phần lớn là nhiễm trùng hô hấp dưới không viêm phổi (GRACE), tức viêm phế quản cấp; cùng với cảm lạnh là hai nguyên nhân ho hay gặp nhất, nên ước từ 20% (P1) cho người 18–74 tuổi. Từ 75 tuổi có nhiều nguyên nhân khác (viêm phổi, đợt cấp phổi tắc nghẽn, suy tim) nên P2. Trẻ em ho cấp phần lớn là cảm lạnh, trẻ dưới 2 tuổi còn viêm tiểu phế quản, nên trẻ em P2, dưới 2 tháng P3. Chưa có số liệu Việt Nam về lý do đi khám vì ho; cần so với các bệnh khác bằng kb:priors."
+findings:
+  - finding: cough_duration
+    dist: { lt_1w: 0.35, w1_2: 0.35, w2_8: 0.28, gt_8w: 0.02 }
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [kinkade-afp-2016, vanvugt-bmj-2013]
+      locator: "Kinkade 2016, mục Diagnosis"
+      reported: "ho thường kéo dài 2–3 tuần, một tổng quan gộp ước 18 ngày (Kinkade); trung bình 9 ngày bệnh trước khi khám (GRACE)"
+      note: "Phân bố theo thời điểm người dùng hỏi: phần lớn trong 2 tuần đầu, khoảng một phần tư vào tuần thứ 3–4. Ho từ 8 tuần không còn là viêm phế quản cấp. Ước lượng."
+  - finding: productive_cough
+    freq: very_frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [vanvugt-bmj-2013]
+      reported: "79% người lớn ho cấp ở tuyến ban đầu có đờm (toàn mẫu, 95% không viêm phổi)"
+      population: "người lớn ho cấp, tuyến ban đầu, 12 nước châu Âu"
+      note: "Tần suất trong số người có ho. Đờm đục hoặc màu vàng xanh không có nghĩa là nhiễm vi khuẩn."
+  - finding: fever
+    freq: occasional
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [vanvugt-bmj-2013, kinkade-afp-2016]
+      reported: "sốt theo bệnh sử 35% toàn mẫu (59% ở người viêm phổi), tức khoảng 34% ở người không viêm phổi; khám thấy sốt ở khoảng một phần ba (Kinkade)"
+      note: "Số 34% nằm sát ranh giới occasional/frequent. Chọn occasional vì số tính theo bệnh sử (kể cả cảm giác sốt), người không viêm phổi còn gồm cả cảm lạnh, cúm, và Kinkade ghi sau vài ngày đầu ít còn sốt. Dùng khi triệu chứng chính là ho."
+  - finding: fever_max_temp
+    dist: { lt_38: 0.55, t38_39: 0.38, ge_39: 0.07 }
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [kinkade-afp-2016]
+      locator: "mục Diagnosis; Bảng 1"
+      note: "Kinkade: sốt trên 37,8°C nên nghĩ tới cúm hoặc viêm phổi, nên sốt nếu có thường nhẹ. Sốt cao từ 39°C gợi ý cúm hoặc viêm phổi hơn. Phân bố trong số người có sốt; ước lượng."
+  - finding: fever_duration
+    dist: { d1_2: 0.55, d3_5: 0.35, d6_7: 0.07, gt_7d: 0.03 }
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [kinkade-afp-2016]
+      locator: "mục Diagnosis"
+      note: "Kinkade: sau vài ngày đầu ít còn sốt. Sốt quá 5–7 ngày gợi ý viêm phổi hoặc bệnh khác. Phân bố trong số người có sốt; ước lượng."
+  - finding: breathing_difficulty
+    freq: frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [vanvugt-bmj-2013]
+      reported: "khó thở 57% toàn mẫu (69% ở người viêm phổi)"
+      population: "người lớn ho cấp, tuyến ban đầu"
+      note: "Người đi khám vì ho cấp đã được chọn là nhiễm trùng hô hấp dưới; người tự kiểm tra ở cộng đồng có thể ít khó thở hơn. Khó thở rõ lúc nghỉ không hợp với viêm phế quản (xem dyspnea_severity)."
+  - finding: dyspnea_severity
+    dist: { exertion: 0.8, rest: 0.18, cannot_speak: 0.02 }
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [kinkade-afp-2016, vanvugt-bmj-2013]
+      note: "Trong số người có khó thở. Viêm phế quản cấp thường chỉ hụt hơi khi gắng sức hoặc khi ho nhiều. Ngồi nghỉ cũng khó thở gợi ý viêm phổi, cơn hen, đợt cấp phổi tắc nghẽn. Ước lượng."
+  - finding: pleuritic_chest_pain
+    freq: frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [vanvugt-bmj-2013]
+      reported: "đau ngực 46% toàn mẫu (57% ở người viêm phổi)"
+      note: "Nguồn đo đau ngực chung; ở viêm phế quản đau ngực chủ yếu khi ho (Kinkade: đau sau xương ức hoặc thành ngực khi ho), đúng với câu hỏi đau khi hít sâu hoặc khi ho. Liên kết với dấu hiệu chung chest_pain đã bỏ (quyết định của người bảo trì) để không đếm trùng."
+  - finding: runny_nose
+    freq: very_frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [vanvugt-bmj-2013]
+      reported: "không sổ mũi 29% toàn mẫu, tức có sổ mũi khoảng 71% (người viêm phổi 56%)"
+      note: "Viêm phế quản cấp hay đi sau cảm lạnh. Câu trả lời 'không sổ mũi' vì vậy nghiêng về viêm phổi hơn (GRACE)."
+  - finding: wheeze
+    freq: occasional
+    evidence:
+      tier: C
+      basis: verbal
+      sources: [kinkade-afp-2016]
+      locator: "mục Diagnosis, Management"
+      note: "Kinkade: nghe phổi có thể có ran rít; chỉ dùng thuốc giãn phế quản khi có khò khè. 'Có thể có' ứng với occasional (kb-guide 2.1). Khò khè tái đi tái lại nhiều lần gợi ý hen."
+  - finding: sick_contact_respiratory
+    freq: frequent
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [kinkade-afp-2016]
+      note: "Kinkade: ít nhất 90% do vi rút hô hấp (rhinovirus, cúm, á cúm, corona, RSV…), lây như cảm lạnh, cúm. Chưa có tỷ lệ tiếp xúc; ước lượng bằng mức của cảm lạnh, cúm trong danh mục."
+  - finding: hemoptysis
+    freq: rare
+    above_leak_ok: true
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [nhs-coughing-up-blood, kinkade-afp-2016]
+      note: "Ho nhiều có thể làm lẫn vài vệt máu trong đờm (NHS xếp viêm phế quản vào nguyên nhân hay gặp); Kinkade xếp đờm có máu vào chỉ định chụp phim để loại viêm phổi. Ở tuyến ban đầu, nhiễm trùng hô hấp là nguyên nhân ho ra máu hay gặp. Ước 1–5%, cao hơn tỷ lệ nền 1% một chút (above_leak_ok) để câu 'có' không loại hẳn viêm phế quản. Ho ra máu vẫn có quy tắc mức 3 (rf_hemoptysis). Cần bác sĩ duyệt."
+  - finding: night_sweats
+    freq: rare
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [kinkade-afp-2016]
+      note: "Ra mồ hôi trộm về đêm không thuộc bệnh cảnh viêm phế quản cấp; mức rare thấp hơn tỷ lệ nền 5% nên câu 'có' nghiêng về lao phổi."
+  - finding: weight_loss_unintended
+    freq: rare
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [kinkade-afp-2016]
+      note: "Bệnh cấp tính vài tuần, không gây sụt cân kéo dài nhiều tháng; mức rare thấp hơn tỷ lệ nền 5%."
+warning_signs:
+  - es_severe_breathing
+  - hemoptysis_large
+  - confusion
+  - drowsy_hard_to_wake
+self_care_vi:
+  - "Nghỉ ngơi, uống đủ nước ấm; ho thường giảm dần trong 2–3 tuần."
+  - "Không tự dùng kháng sinh: bệnh phần lớn do vi rút, kháng sinh không giúp khỏi nhanh hơn."
+  - "Không hút thuốc, tránh khói thuốc và khói bếp."
+  - "Hỏi dược sĩ hoặc bác sĩ trước khi dùng thuốc ho, thuốc hạ sốt."
+see_doctor_vi:
+  - "Đi khám nếu ho kéo dài quá 3 tuần, ho ra máu, hoặc sốt quá 3 ngày."
+  - "Đi khám trong 24 giờ nếu khó thở, đau ngực khi thở, hoặc đã đỡ rồi lại sốt."
+  - "Người cao tuổi, có bệnh tim, bệnh phổi hoặc sức đề kháng kém nên đi khám sớm."
+  - "Đi cấp cứu ngay nếu khó thở nhiều, môi tím tái, lơ mơ, hoặc ho ra nhiều máu."
+sources: [kinkade-afp-2016, vanvugt-bmj-2013, nhs-cough]
+review:
+  status: draft
+  authors: ["agent:pass-a"]
+  updated: "2026-10-31"
+  notes_vi: "Lượt A vòng 2 (31/10/2026): đã mở Kinkade 2016 (trang AAFP) và đặt verified: true; các ý đã trích (ho 2–3 tuần, trung bình 18 ngày; sốt ở khoảng một phần ba, sau vài ngày đầu ít còn sốt; có thể có ran rít; ít nhất 90% do vi rút; đờm có máu là chỉ định chụp phim) đều có trong bài; trang báo có bài mới hơn (AFP 2025), cùng nội dung. Đã sửa: bỏ liên kết chest_pain (quyết định của người bảo trì); khò khè đổi cơ sở thành verbal; thêm vị trí trích và ghi chú nguồn; không đổi mức nào. Ghi chú vòng 1: Giai đoạn 3, lô 3, lượt A (31/10/2026). Phiên làm việc chặn WebFetch và curl, nên lượt A chỉ đọc được tóm tắt của công cụ tìm kiếm. Các con số bậc B lấy từ GRACE (vanvugt-bmj-2013, đã được lượt C kiểm tra trước đây), dùng số của toàn mẫu ho cấp vì 95% không viêm phổi. Cần bác sĩ xem: (1) prior P1 cho người lớn là ước lượng, chưa có số liệu Việt Nam; ranh giới với cảm lạnh mờ (cả hai đều do vi rút); (2) khó thở để frequent theo GRACE, người tự kiểm tra ở cộng đồng có thể ít hơn; (3) đau ngực chỉ còn liên kết pleuritic_chest_pain; (4) ho ra máu rare với above_leak_ok; (5) urgency 5 giữ như gợi ý (NHS, Kinkade: tự khỏi, không cần kháng sinh); dấu hiệu nặng do quy tắc xử lý; (6) mã ICD-10 chưa đối chiếu."

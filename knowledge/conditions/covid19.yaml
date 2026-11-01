@@ -28,6 +28,22 @@ priors:
       basis: judgment
       sources: [menni-lancet-2022, marquez-jamanetwopen-2022]
       note: "Đau đầu gặp ở 35–75% ca có triệu chứng nhưng ít khi là lý do chính đi khám; ước 0,2–1%, thấp hơn cúm và cảm lạnh. Hai lượt thống nhất P4."
+  - complaint: cough
+    default: P3
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [byt-qd-2671-2023, marquez-jamanetwopen-2022, struyf-cochrane-2022, nhs-cough]
+      reported: "ho 67,4% người có triệu chứng dương tính so với 50,6% người âm tính (Omicron, cộng đồng); 62,4% (gộp, chủ yếu trước Omicron)"
+      note: "Lô 3, hai lượt thống nhất. Cùng mức với prior Sốt: chưa có số liệu lưu hành 2025–2026 ở Việt Nam (2671: bệnh lưu hành theo đợt, ít được xét nghiệm). Ho là triệu chứng hay gặp của COVID-19 thời Omicron, nhưng người ho phần lớn do vi rút khác. Ước 1–5% (P3), thấp hơn cúm; cao hơn trong đợt dịch."
+  - complaint: shortness_of_breath
+    default: P4
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [byt-qd-2671-2023, marquez-jamanetwopen-2022]
+      reported: "khó thở 8,0% người có triệu chứng dương tính, 6,0% người âm tính (Omicron, cộng đồng)"
+      note: "Lô 3, hai lượt thống nhất. Thời Omicron khó thở ít gặp; 2671: ca nhẹ không khó thở, khó thở là mức trung bình trở lên. Ước 0,2–1% (P4). Người cao tuổi, có bệnh nền dễ nặng hơn nhưng chưa có số liệu để tách theo tuổi."
 findings:
   - finding: fever
     freq: occasional
@@ -167,6 +183,28 @@ findings:
       basis: judgment
       sources: [byt-qd-2671-2023]
       note: "Bệnh cấp; hiếm khi nặng dần trong nhiều tuần. Ước lượng của lượt A."
+  - finding: cough_duration
+    dist: { lt_1w: 0.6, w1_2: 0.275, w2_8: 0.115, gt_8w: 0.01 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [menni-lancet-2022, nhs-cough]
+      reported: "thời gian có triệu chứng trung bình 6,87 ngày (Omicron, ZOE); ho kéo dài 49,8%"
+      note: "Lô 3. Phân bố trong số người có ho, tại thời điểm hỏi. Phần lớn dưới 1 tuần; ho có thể kéo dài hơn các triệu chứng khác, sang tuần 2–4 (NHS Cough: ho thường hết trong 3–4 tuần). Ho từ 2 tháng gợi ý bệnh khác (hậu COVID-19 không thuộc bệnh cấp này). Trung bình của hai lượt. Ước lượng."
+  - finding: dyspnea_onset
+    dist: { sudden: 0.07, hours_days: 0.85, weeks: 0.08 }
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [byt-qd-2671-2023]
+      note: "Lô 3, hai lượt trùng. Phân bố trong số người có khó thở. Khó thở (khi có) xuất hiện sau vài ngày bệnh, khi bệnh chuyển mức trung bình. Ước lượng."
+  - finding: dyspnea_severity
+    dist: { exertion: 0.62, rest: 0.32, cannot_speak: 0.06 }
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [byt-qd-2671-2023]
+      note: "Lô 3, chỉ lượt A có liên kết này. Phân bố trong số người có khó thở, gần bằng phân bố nền. 2671: khó thở lúc nghỉ, thở nhanh là mức nặng, đã có quy tắc mức 2. Ước lượng."
 warning_signs:
   - es_severe_breathing
   - breathing_difficulty
@@ -190,5 +228,5 @@ review:
   authors: ["agent:pass-a", "agent:pass-b"]
   reconciler: "agent:pass-c"
   doctor_reviewer: null
-  updated: "2026-10-24"
-  notes_vi: "Cần bác sĩ xem: (1) prior hoàn toàn là ước lượng, không có số liệu lưu hành 2025–2026; (2) tần suất triệu chứng thay đổi theo biến thể và miễn dịch cộng đồng; số liệu Omicron lấy từ Anh và Mỹ, chủ yếu người đã tiêm; (3) chọn số liệu lúc xét nghiệm (Marquez) thay vì số cộng dồn 14 ngày (ZOE) cho đau họng, sổ mũi, đau đầu; (4) bỏ liên kết tiêu chảy (lượt B để occasional theo số trước Omicron 18,5%; thời Omicron 4,8%, gần bằng tỷ lệ nền 5%); (5) kết quả tự xét nghiệm nhanh là bằng chứng mạnh nhất; người dùng có thể đọc sai que thử; (6) nhóm nguy cơ diễn tiến nặng theo 2671 (bảng 5): trên 60 tuổi, béo phì, bệnh nền, có thai, HIV, hút thuốc lá, chưa tiêm vắc xin; quy tắc rf_high_risk_fever chỉ bắt từ 65 tuổi; (7) mã ICD-10 chưa đối chiếu được."
+  updated: "2026-10-31"
+  notes_vi: "Cần bác sĩ xem: (1) prior hoàn toàn là ước lượng, không có số liệu lưu hành 2025–2026; (2) tần suất triệu chứng thay đổi theo biến thể và miễn dịch cộng đồng; số liệu Omicron lấy từ Anh và Mỹ, chủ yếu người đã tiêm; (3) chọn số liệu lúc xét nghiệm (Marquez) thay vì số cộng dồn 14 ngày (ZOE) cho đau họng, sổ mũi, đau đầu; (4) bỏ liên kết tiêu chảy (lượt B để occasional theo số trước Omicron 18,5%; thời Omicron 4,8%, gần bằng tỷ lệ nền 5%); (5) kết quả tự xét nghiệm nhanh là bằng chứng mạnh nhất; người dùng có thể đọc sai que thử; (6) nhóm nguy cơ diễn tiến nặng theo 2671 (bảng 5): trên 60 tuổi, béo phì, bệnh nền, có thai, HIV, hút thuốc lá, chưa tiêm vắc xin; quy tắc rf_high_risk_fever chỉ bắt từ 65 tuổi; (7) mã ICD-10 chưa đối chiếu được. Bổ sung Giai đoạn 3 lô 3 (lượt C, 31/10/2026): prior Ho P3, Khó thở P4 (hoàn toàn là ước lượng, không có số liệu lưu hành 2025–2026); liên kết cough_duration, dyspnea_onset, dyspnea_severity. Liên kết cũ breathing_difficulty (occasional) nay có tác dụng ở Ho; giữ nguyên."

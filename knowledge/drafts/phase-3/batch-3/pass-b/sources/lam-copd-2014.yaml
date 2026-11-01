@@ -1,0 +1,15 @@
+id: lam-copd-2014
+type: primary_study
+title: "Prevalence of COPD by disease severity in men and women in northern Vietnam"
+publisher: "COPD 2014;11(5):575–581 (Lâm HT, Ekerljung L, Tường NV, Rönmark E, Larsson K, Lundbäck B)"
+date: "2014"
+url: "https://europepmc.org/article/MED/24867392"
+doi: "10.3109/15412555.2014.898039"
+pmid: "24867392"
+license_class: L3
+license_note: "Bản quyền nhà xuất bản: chỉ dùng dữ kiện kèm trích dẫn."
+default_tier: B
+accessed: "2026-10-31"
+verified: true
+verified_by: "agent:pass-b"
+notes_vi: "Lượt B đọc tóm tắt qua API Europe PMC. Mẫu ngẫu nhiên người 23–72 tuổi ở miền Bắc, đo hô hấp ký (565 người): bệnh phổi tắc nghẽn mạn tính theo GOLD 7,1% (nam 10,9%, nữ 3,9%); trên 50 tuổi: nam 23,5%, nữ 6,8%; nam hút thuốc trên 60 tuổi 47,8%. Tuổi và hút thuốc là yếu tố chính; giới nam mất ý nghĩa sau khi hiệu chỉnh. Không phụ nữ nào mắc bệnh từng hút thuốc."

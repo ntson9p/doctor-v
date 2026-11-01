@@ -1,0 +1,44 @@
+id: h-chest-006
+set: holdout
+title_vi: "Nữ 13 tuổi, 3 tuần nay hay đột ngột đau nhói dưới vú trái vài chục giây khi ngồi học, hít vào đau hơn, rồi tự hết"
+narrative_vi: "Em M., nữ, 13 tuổi, học sinh lớp 8 ở Hà Nội, khỏe mạnh, chơi cầu lông đều. Khoảng 3 tuần nay, mỗi tuần vài lần, đang ngồi học hoặc ngồi xem ti vi thì em đột ngột thấy đau nhói như kim châm ở một điểm dưới vú trái, hít vào thì đau hơn nên em thở nông; mỗi lần chỉ khoảng 10–30 giây rồi hết hẳn. Hôm nay bị lại một lần ở lớp nên mẹ lo. Em không đau khi chạy nhảy hay chơi cầu lông, không hụt hơi, không hồi hộp, không ngất, không choáng. Ấn vào ngực không đau, da bình thường. Em không sốt, không ho. Trong nhà không ai đột tử hay bị bệnh tim từ trẻ."
+patient:
+  age_years: 13
+  sex: female
+  region: north
+  month: 9
+complaint: chest_pain
+answers:
+  chest_pain_duration: seconds
+  pleuritic_chest_pain: present
+  similar_episodes_before: present
+  chest_pain_exertional: absent
+  chest_pain_sudden_severe: absent
+  chest_pain_pressure: absent
+  chest_pain_radiates_back: absent
+  pain_radiates_arm_jaw: absent
+  chest_wall_tenderness: absent
+  skin_burning_band: absent
+  breathing_difficulty: absent
+  breathless_on_exertion: absent
+  palpitations: absent
+  fainting_or_near_fainting: absent
+  dizziness: absent
+  cold_sweat: absent
+  fever: absent
+  cough: absent
+  rash_any: absent
+  family_sudden_death: absent
+  stress_poor_sleep: absent
+  asthma_known: absent
+default_unmentioned: absent
+expected:
+  condition: chest_wall_pain
+  acceptable: []
+  triage: 5
+source:
+  basis: "Hội chứng đau nhói trước tim (precordial catch, một dạng đau thành ngực lành tính) ở trẻ vị thành niên: đau nhói đột ngột, khu trú, vài chục giây, xảy ra lúc nghỉ, tăng khi hít vào, không liên quan gắng sức, tự hết; không khó thở, hồi hộp, ngất, tiền sử gia đình đột tử. Các tổng quan về hội chứng này: lành tính, chẩn đoán dựa vào bệnh sử, không cần điều trị; đi khám nếu tính chất đau thay đổi hoặc có triệu chứng khác. NHS Chest pain: đau thoáng qua, đã hết nhanh không phải cấp cứu. Nên mức 5."
+  references:
+    - nhs-chest-pain
+author: "agent:vignette-holdout"
+notes_vi: "Ca khó: trẻ vị thành niên, đau ngực kiểu màng phổi nhưng chỉ vài giây. Đau khi gắng sức, ngất hoặc hồi hộp ở trẻ thì phải khám tim."

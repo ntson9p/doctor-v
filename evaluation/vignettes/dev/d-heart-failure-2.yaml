@@ -1,0 +1,54 @@
+id: d-heart-failure-2
+set: dev
+title_vi: "Nữ 80 tuổi ho về đêm 2 tuần, hơi khó thở khi đi lại, phù cổ chân, chưa biết bệnh tim"
+narrative_vi: "Bà N., 80 tuổi, ở Long An, bị tăng huyết áp và đái tháo đường, chưa từng được nói có bệnh tim. Hai tuần nay bà ho khan, ho nhiều về đêm, gần sáng; đi lại trong nhà thấy hụt hơi, nằm thấp thì khó chịu nên phải kê cao gối. Hai cổ chân phù. Bà mệt hơn mọi khi. Sáng nay con gái đo huyết áp cho bà được 150/85 mmHg. Không sốt, không khạc đờm, không ho ra máu, không đau ngực, không khò khè. Không sụt cân, không ra mồ hôi đêm, không hút thuốc. Nhà không ai bị lao."
+patient:
+  age_years: 80
+  sex: female
+  region: south
+  month: 1
+complaint: cough
+answers:
+  cough_duration: w2_8
+  night_respiratory_symptoms: present
+  breathing_difficulty: present
+  breathless_on_exertion: present
+  dyspnea_severity: exertion
+  dyspnea_onset: weeks
+  orthopnea: present
+  leg_swelling_both: present
+  fatigue: present
+  hypertension_known: present
+  bp_measured: high
+  diabetes: present
+  known_heart_disease: absent
+  atrial_fibrillation_known: absent
+  rapid_weight_gain: unknown
+  productive_cough: absent
+  fever: absent
+  hemoptysis: absent
+  chest_pain: absent
+  chest_pain_pressure: absent
+  pleuritic_chest_pain: absent
+  wheeze: absent
+  runny_nose: absent
+  sore_throat: absent
+  heartburn: absent
+  weight_loss_unintended: absent
+  night_sweats: absent
+  smoker: absent
+  former_smoker: absent
+  tb_contact: absent
+  copd_known: absent
+  asthma_known: absent
+  biomass_smoke_exposure: absent
+default_unmentioned: absent
+expected:
+  condition: heart_failure
+  acceptable: []
+  triage: 3
+source:
+  basis: "Suy tim mới mắc ở người cao tuổi có tăng huyết áp, đái tháo đường, biểu hiện không điển hình bằng ho về đêm (1857/QĐ-BYT Bảng 3: ho về đêm là triệu chứng ít điển hình), kèm khó thở khi gắng sức, khó thở khi nằm, phù mắt cá chân. NHS Heart failure: khó thở khi nằm thì khám khẩn hoặc gọi 111 (mức 3); MSD: suy tim mới mắc cần được đánh giá sớm."
+  references: [byt-qd-1857-2022, nhs-heart-failure, msd-acute-heart-failure]
+author: "agent:pass-c"
+notes_vi: "Ca không điển hình (triệu chứng chính Ho, 80 tuổi, chưa biết bệnh tim)."

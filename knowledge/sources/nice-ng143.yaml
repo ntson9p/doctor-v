@@ -10,7 +10,7 @@ url: "https://www.nice.org.uk/guidance/ng143"
 license_class: L3
 license_note: "Nội dung có bản quyền NICE (© NICE, All rights reserved): chỉ dùng dữ kiện kèm trích dẫn, không sao chép câu chữ."
 default_tier: B
-accessed: "2026-10-24"
+accessed: "2026-10-31"
 verified: true
 verified_by: "agent:pass-r"
-notes_vi: "Xuất bản 07/11/2019, cập nhật lần cuối 26/11/2021 (sửa nhỏ đến 11/2025: liên kết sang NG254); rà soát 30/4/2025, không cập nhật phần đánh giá nguy cơ. Đã đối chiếu khuyến cáo 1.2.5, 1.2.12 (trẻ dưới 3 tháng có nhiệt độ từ 38°C thuộc nhóm nguy cơ cao), 1.2.13, 1.2.14, 1.2.18–1.2.19, 1.3.2–1.3.4 và bảng 2 (đèn giao thông). nice.org.uk trả lỗi 403 với truy cập tự động; lượt R đã đọc các trang chính thức (Overview, Recommendations, History) qua dịch vụ đọc văn bản r.jina.ai."
+notes_vi: "Xuất bản 07/11/2019, cập nhật lần cuối 26/11/2021 (sửa nhỏ đến 11/2025: liên kết sang NG254); rà soát 30/4/2025, không cập nhật phần đánh giá nguy cơ. Đã đối chiếu khuyến cáo 1.2.5, 1.2.12 (trẻ dưới 3 tháng có nhiệt độ từ 38°C thuộc nhóm nguy cơ cao), 1.2.13, 1.2.14, 1.2.18–1.2.19, 1.3.2–1.3.4 và bảng 2 (đèn giao thông). Lượt R lô 3 vòng 2 (31/10/2026) tải lại trực tiếp các trang Overview, Recommendations, History trên nice.org.uk (không qua dịch vụ đọc hộ) và đối chiếu lại các ý trên. Thêm: 1.2.5 xếp vào nhóm nguy cơ cao (đỏ) cả thở rên, nhịp thở trên 60 lần/phút, rút lõm lồng ngực vừa hoặc nặng; 1.3.2 dấu hiệu đe dọa tính mạng thì chuyển cấp cứu ngay (thường bằng xe 999); 1.3.3 có dấu hiệu đỏ thì phải được khám trực tiếp trong vòng 2 giờ; 1.2.22 nghĩ viêm phổi khi sốt kèm thở nhanh, ran, phập phồng cánh mũi, rút lõm lồng ngực, tím, SpO2 từ 95% trở xuống."

@@ -1,0 +1,56 @@
+id: h-sob-015
+set: holdout
+title_vi: "Nam 81 tuổi đái tháo đường, 2 ngày tiểu buốt, sốt rét run; hôm nay thở nhanh, lơ mơ, lẫn lộn, tay chân lạnh"
+narrative_vi: "Ông T., 81 tuổi, ở Tiền Giang, bị đái tháo đường và phì đại tiền liệt tuyến, uống thuốc tiểu đường hằng ngày. Hai ngày nay ông tiểu buốt, tiểu nhiều lần, sốt, có cơn rét run, con gái đo được 39,3°C. Sáng nay ông thở nhanh, thở mệt cả khi nằm yên; con gái lo nên chọn 'Khó thở'. Ông lơ mơ, gọi mới mở mắt, nói lẫn lộn, không biết đang ở đâu; mệt lả không tự ngồi dậy được. Tay chân ông lạnh, da tái. Từ tối qua ông đi tiểu rất ít. Con gái đo SpO2 được 94%. Ông không ho, không đau ngực, không nôn, không co giật, không méo miệng."
+patient:
+  age_years: 81
+  sex: male
+  region: south
+  month: 6
+complaint: shortness_of_breath
+answers:
+  fever: present
+  fever_max_temp: ge_39
+  fever_duration: d1_2
+  chills_rigors: present
+  dysuria: present
+  urinary_frequency: present
+  confusion: present
+  drowsy_hard_to_wake: present
+  severe_weakness: present
+  cold_hands_feet: present
+  decreased_urine: present
+  dyspnea_onset: hours_days
+  dyspnea_severity: rest
+  spo2_measured: s92_95
+  diabetes: present
+  on_glucose_lowering_meds: present
+  cough: absent
+  chest_pain: absent
+  chest_pain_pressure: absent
+  pleuritic_chest_pain: absent
+  vomiting: absent
+  flank_pain: unknown
+  abdominal_pain: absent
+  seizure_recent: absent
+  es_stroke_signs: absent
+  es_unresponsive_or_seizing: absent
+  es_severe_breathing: absent
+  neck_stiffness: absent
+  rash_any: absent
+  leg_swelling_both: absent
+  wheeze: absent
+  known_heart_disease: absent
+  copd_known: absent
+default_unmentioned: absent
+expected:
+  condition: sepsis
+  acceptable: []
+  triage: 1
+source:
+  basis: "Nhiễm khuẩn huyết từ đường tiết niệu ở người cao tuổi đái tháo đường: sốt cao, rét run, tiểu buốt, nay thở nhanh, lơ mơ, lẫn lộn, tay chân lạnh, tiểu ít. NICE NG253 (từ 16 tuổi): thở nhanh, thay đổi tri giác mới xuất hiện, da tái, tiểu ít là tiêu chí nguy cơ cao, cần cấp cứu ngay. Mức 1."
+  references:
+    - nice-ng253
+    - msd-sepsis
+author: "agent:vignette-holdout"
+notes_vi: "Ca của bệnh đã có, triệu chứng chính mới (Khó thở): người nhà chọn Khó thở vì thấy ông thở nhanh."

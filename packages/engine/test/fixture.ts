@@ -70,6 +70,7 @@ const duration: CategoricalFinding = {
 
 const condition = (c: Partial<Condition> & Pick<Condition, 'id' | 'urgency' | 'priors' | 'links'>): Condition => ({
   cantMiss: false,
+  ruleOut: false,
   applicability: null,
   priorModifiers: [],
   linksByAge: {},

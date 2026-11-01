@@ -1,0 +1,48 @@
+id: h-sob-017
+set: holdout
+title_vi: "Nam 45 tuổi bị ong đốt khi hái cà phê, 15 phút sau nổi mề đay khắp người, khò khè, tức ngực, choáng; ở màn đầu trả lời không"
+narrative_vi: "Anh Y., 45 tuổi, ở Đắk Lắk, đang hái cà phê thì bị một đàn ong vò vẽ đốt 3 nốt ở cổ và cánh tay. Khoảng 15 phút sau anh thấy ngứa khắp người, nổi nhiều mảng mề đay đỏ gồ lan nhanh ra ngực, lưng, đùi; thở khò khè, nặng ngực, hụt hơi dù đang ngồi, ho khan, choáng váng. Môi và lưỡi không sưng, nuốt bình thường, chưa khàn tiếng. Khi app hỏi câu đầu về sưng môi, lưỡi hoặc khó thở sau khi bị đốt, anh nghĩ mình chỉ hơi khó thở nên trả lời 'không'. Anh vẫn tỉnh, nói được câu. Anh không bị hen, không hút thuốc, chưa từng bị ong đốt nặng."
+patient:
+  age_years: 45
+  sex: male
+  region: highlands
+  month: 11
+complaint: shortness_of_breath
+answers:
+  es_anaphylaxis: absent
+  es_severe_breathing: absent
+  allergen_exposure: present
+  rash_any: present
+  hives: present
+  wheeze: present
+  cough: present
+  cough_duration: lt_1w
+  productive_cough: absent
+  dyspnea_onset: sudden
+  dyspnea_severity: rest
+  dizziness: present
+  chest_pain: present
+  chest_pain_pressure: absent
+  fainting_or_near_fainting: absent
+  stridor: absent
+  hoarse_voice: absent
+  drooling_cannot_swallow: absent
+  vomiting: absent
+  nausea: absent
+  abdominal_pain: absent
+  fever: absent
+  confusion: absent
+  asthma_known: absent
+  smoker: absent
+default_unmentioned: absent
+expected:
+  condition: anaphylaxis
+  acceptable: []
+  triage: 1
+source:
+  basis: "Phản vệ sau ong đốt: trong 15 phút có mề đay lan nhanh kèm khò khè, tức ngực, khó thở, choáng. 51/2017/TT-BYT Phụ lục I (bệnh cảnh 1: triệu chứng da kèm triệu chứng hô hấp vài phút sau tiếp xúc) và Phụ lục II (độ II: mề đay kèm khó thở, tức ngực), Điều 6: tiêm bắp adrenalin ngay từ độ II. NHS Anaphylaxis: khò khè, khó thở sau côn trùng đốt thì gọi 999. Mức 1."
+  references:
+    - byt-tt-51-2017
+    - nhs-anaphylaxis
+author: "agent:vignette-holdout"
+notes_vi: "Ca cấp cứu theo đề bài: trả lời 'không' ở câu sàng lọc phản vệ đầu tiên, phải được phát hiện qua các câu tiếp xúc dị nguyên, mề đay, khò khè. 'Nặng ngực' được tính là đau ngực (khó chịu ở ngực) nhưng không phải tức nặng giữa ngực kiểu tim."

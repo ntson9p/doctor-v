@@ -1,0 +1,45 @@
+id: d-herpes-zoster-1
+set: dev
+title_vi: "Nữ 68 tuổi đau rát thành dải ngực phải 3 ngày, hôm qua nổi mụn nước thành đám một bên"
+narrative_vi: "Bà C., 68 tuổi, ở Nam Định. Ba ngày nay thấy đau rát, châm chích ở một dải da bên ngực phải, áo cọ vào cũng đau, đau nhiều về đêm. Hôm qua chỗ đó nổi các mảng đỏ có mụn nước thành đám, chỉ ở bên phải, không ngứa nhiều. Chạm hoặc ấn vào chỗ đó thấy đau. Đau không lan ra tay, hàm, không tức nặng giữa ngực, không đau khi gắng sức. Không khó thở, không vã mồ hôi, không buồn nôn. Không sốt, không ho. Không có bệnh làm giảm sức đề kháng, không đái tháo đường. Chưa từng bị như vậy. Mắt bình thường."
+patient:
+  age_years: 68
+  sex: female
+  region: north
+  month: 10
+complaint: chest_pain
+answers:
+  skin_burning_band: present
+  rash_any: present
+  dermatomal_rash: present
+  chest_wall_tenderness: present
+  chest_pain_duration: days
+  hives: absent
+  chest_pain_radiates_back: absent
+  chest_pain_pressure: absent
+  chest_pain_exertional: absent
+  chest_pain_sudden_severe: absent
+  chest_pain_tearing: absent
+  pain_radiates_arm_jaw: absent
+  pleuritic_chest_pain: absent
+  breathing_difficulty: absent
+  cold_sweat: absent
+  nausea: absent
+  fainting_or_near_fainting: absent
+  fever: absent
+  cough: absent
+  heartburn: absent
+  immunocompromised: absent
+  diabetes: absent
+  similar_episodes_before: absent
+  lymph_node_swelling: absent
+  vision_loss_or_double: absent
+default_unmentioned: absent
+expected:
+  condition: herpes_zoster
+  acceptable: []
+  triage: 4
+source:
+  basis: "Bệnh zona vùng ngực điển hình: tiền triệu đau rát, châm chích trên một vùng da 1–5 ngày, rồi mảng đỏ, mụn nước thành đám theo dải, một bên (75/QĐ-BYT bài Bệnh zona; NHS Shingles). NHS: người từ 18 tuổi gặp dược sĩ, cố gắng trong 3 ngày từ khi nổi ban (không khẩn); thuốc kháng vi rút tốt nhất trong 72 giờ (75/QĐ-BYT): mức 4."
+  references: [byt-qd-75-2015, nhs-shingles]
+author: "agent:pass-c"

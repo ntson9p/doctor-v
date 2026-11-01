@@ -1,0 +1,50 @@
+id: d-anemia-shortness-of-breath-1
+set: dev
+title_vi: "Nữ 29 tuổi kinh nguyệt nhiều, 2 tháng nay hụt hơi tăng dần khi leo cầu thang, mệt, da xanh"
+narrative_vi: "Chị N., 29 tuổi, công nhân ở Bình Dương. Gần một năm nay kinh nguyệt ra nhiều, kéo dài 8 ngày. Hai tháng nay hụt hơi tăng dần, leo một tầng cầu thang đã phải dừng thở, ngồi nghỉ thì bình thường. Mệt, hay hoa mắt khi đứng dậy; người nhà bảo da xanh, môi nhợt. Không hồi hộp, không đau ngực, không ho, không sốt, không khò khè. Nằm không khó thở hơn, không phù chân. Không đi ngoài phân đen, không sụt cân. Chưa từng xét nghiệm máu. Nhà không có máy đo SpO2. Không có thai, không chậm kinh."
+patient:
+  age_years: 29
+  sex: female
+  region: south
+  month: 3
+complaint: shortness_of_breath
+answers:
+  dyspnea_onset: weeks
+  dyspnea_severity: exertion
+  breathless_on_exertion: present
+  fatigue: present
+  pallor: present
+  heavy_periods: present
+  dizziness: present
+  spo2_measured: not_measured
+  palpitations: absent
+  chest_pain: absent
+  chest_pain_pressure: absent
+  pleuritic_chest_pain: absent
+  cough: absent
+  fever: absent
+  wheeze: absent
+  orthopnea: absent
+  leg_swelling_both: absent
+  leg_swelling_one_side: absent
+  black_stool: absent
+  weight_loss_unintended: absent
+  anemia_known: absent
+  fainting_or_near_fainting: absent
+  asthma_known: absent
+  smoker: absent
+  estrogen_use: absent
+  recent_immobility: absent
+  allergen_exposure: absent
+  rash_any: absent
+  pregnant: absent
+  missed_period: absent
+default_unmentioned: absent
+expected:
+  condition: anemia
+  acceptable: []
+  triage: 4
+source:
+  basis: "Thiếu máu thiếu sắt do kinh nguyệt nhiều: khó thở nhất là khi gắng sức, mệt, hoa mắt, da xanh, diễn biến từ từ (1832/QĐ-BYT; NHS Iron deficiency anaemia). NHS: nghĩ đến thiếu máu thiếu sắt thì khám bác sĩ gia đình (không khẩn): mức 4."
+  references: [byt-qd-1832-2022, nhs-iron-deficiency-anaemia]
+author: "agent:pass-c"

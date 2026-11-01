@@ -1,0 +1,304 @@
+id: influenza
+names:
+  vi: "Cúm mùa"
+  vi_common: ["Cúm"]
+  en: "Seasonal influenza"
+codes:
+  icd10: "J11"
+  icd10_verified: false
+  mondo: "MONDO:0005812"
+summary_vi:
+  - "Bệnh do vi rút cúm, lây qua đường hô hấp, có quanh năm và hay tăng vào mùa đông xuân."
+  - "Thường khởi phát đột ngột với sốt, ớn lạnh, đau đầu, đau nhức người, ho khan, đau họng."
+  - "Phần lớn hết sốt sau 3–5 ngày; người già, trẻ nhỏ, người có thai hoặc có bệnh nền dễ bị nặng."
+urgency: 5
+cant_miss: false
+specialties: [infectious_disease, general_medicine]
+priors:
+  - complaint: fever
+    default: P2
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [nguyen-vaccine-2013, todd-irv-2018, nguyen-jcv-2016, byt-qd-1840-2025]
+      reported: "cúm chiếm 22% ca giống cúm (giám sát quốc gia 2006–2010; trẻ tuổi đi học 29%), 40,6% (phòng khám ban đầu TP.HCM 2013–2015), 17% số mẫu (cộng đồng Hà Nam)"
+      note: "Thang tuyệt đối (kb-guide 2.3). Hội chứng giống cúm (sốt kèm ho hoặc đau họng) chỉ là một phần trong mọi người đi khám vì sốt, nên ước cúm chiếm 5–20% người sốt (P2) ở mọi nhóm tuổi; trong mùa cúm có thể cao hơn. Hai lượt thống nhất P2, không tách theo tuổi."
+  - complaint: headache
+    default: P3
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [ebell-bmjopen-2025, todd-irv-2018, byt-qd-1840-2025]
+      note: "Đau đầu gặp ở khoảng 2/3 người bị cúm (Ebell 2025) và hơn 90% người lớn có hội chứng giống cúm (Todd), nhưng người bị cúm thường đi khám vì sốt hơn là vì đau đầu. Ước 1–5%; hai lượt thống nhất P3."
+  - complaint: cough
+    default: P2
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [todd-irv-2018, nguyen-vaccine-2013, nguyen-jcv-2016, ebell-bmjopen-2025, nhs-cough]
+      reported: "cúm chiếm 40,6% ca giống cúm ở phòng khám ban đầu TP.HCM, 22% (giám sát quốc gia 2006–2010); ho có ở 92% người cúm (gộp)"
+      note: "Lượt B (lô 3). Thang tuyệt đối. Người đi khám vì ho gồm nhiều người không sốt (cảm lạnh, viêm phế quản, ho kéo dài), nên cúm chiếm phần nhỏ hơn so với trong ca giống cúm; ước 5–20% (P2), như prior Sốt. Hệ số mùa ở miền Bắc đã có dùng chung."
+  - complaint: shortness_of_breath
+    default: P4
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [frese-jcmr-2011, byt-qd-1840-2025]
+      locator: "Frese 2011 bảng 5; 1840 mục II.2.3"
+      reported: "cúm 0,44% lần khám vì khó thở mới (Hà Lan), 1,08% (Đức)"
+      note: "Lượt B (lô 3). Cúm thường không gây khó thở; 1840 xếp khó thở vào dấu hiệu cúm nặng hoặc biến chứng (viêm phổi). Ước 0,2–1% (P4); người khó thở vì cúm có biến chứng sẽ được tính phần lớn vào viêm phổi."
+prior_modifiers:
+  - when: { regions: [north], months: [12, 1, 2, 3, 4] }
+    factor: 1.5
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [nguyen-jcv-2016, byt-qd-1840-2025]
+      locator: "Nguyen 2016, bảng 3; 1840 mục I"
+      reported: "55/71 đợt cúm (78%) vào mùa đông và mùa xuân (Hà Nam, 2008–2013)"
+      population: "cộng đồng nông thôn miền Bắc"
+      note: "78% số đợt trong khoảng nửa năm, tức khoảng 1,5 lần mức trung bình. 1840: bệnh quanh năm, tăng cao vào mùa đông xuân. Bài báo không ghi tháng của từng mùa, nên chỉ dùng các tháng thuộc đông hoặc xuân theo cả cách chia mùa dương lịch lẫn cách chia thường dùng ở miền Bắc (tháng 12–4); tháng 5 và 11 để trung tính."
+  - when: { regions: [north], months: [6, 7, 8, 9, 10] }
+    factor: 0.5
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [nguyen-jcv-2016]
+      locator: "bảng 3"
+      reported: "16/71 đợt cúm (22%) vào mùa hè và mùa thu (Hà Nam)"
+      population: "cộng đồng nông thôn miền Bắc"
+      note: "Khoảng 0,45 lần mức trung bình. Tháng 6–10 thuộc hè hoặc thu theo cả hai cách chia mùa. Hệ số trung bình cả năm gần bằng 1. Miền Nam có cúm quanh năm với đỉnh không cố định (Todd 2018) nên không đặt hệ số cho vùng khác."
+findings:
+  - finding: fever
+    freq: very_frequent
+    evidence:
+      tier: A
+      basis: numeric
+      sources: [ebell-bmjopen-2025, todd-irv-2018, cdc-flu-clinical-signs]
+      reported: "sốt tự cảm thấy hoặc đo 0,87 (gộp); 92,2% (cúm A, TP.HCM)"
+      note: "Chỉ có tác dụng khi triệu chứng chính là đau đầu. CDC: nhiều người cao tuổi, người suy giảm miễn dịch không sốt."
+  - finding: fever_max_temp
+    dist: { lt_38: 0.13, t38_39: 0.47, ge_39: 0.40 }
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [silvennoinen-pidj-2009, todd-irv-2018]
+      reported: "50% trẻ sốt từ 39°C; người 10–70 tuổi: nhiệt độ trung vị lúc khám 38,5°C (tứ phân vị 38–39)"
+      note: "Trộn số liệu trẻ em và người lớn; nhiệt độ cao nhất ở nhà thường cao hơn lúc khám. Trung bình của hai lượt."
+  - finding: fever_duration
+    dist: { d1_2: 0.52, d3_5: 0.40, d6_7: 0.06, gt_7d: 0.02 }
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-1840-2025, cdc-flu-clinical-signs]
+      locator: "1840 mục II.1.1"
+      note: "1840: phần lớn chỉ sốt 3–5 ngày rồi tự hồi phục. Phân bố theo thời điểm người dùng hỏi; trung bình của hai lượt. Sốt quá 7 ngày gợi ý biến chứng hoặc bệnh khác."
+  - finding: chills_rigors
+    freq: frequent
+    evidence:
+      tier: A
+      basis: numeric
+      sources: [ebell-bmjopen-2025, byt-qd-1840-2025]
+      reported: "rét run 0,61 (29 nghiên cứu)"
+      note: "Tần suất trong số người có sốt; 1840 nêu ớn lạnh khi khởi phát. Hai lượt thống nhất."
+  - finding: myalgia
+    freq: very_frequent
+    freq_by_age:
+      child_2m_5y: occasional
+      child_5_12: occasional
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [todd-irv-2018, silvennoinen-pidj-2009, ebell-bmjopen-2025, byt-qd-1840-2025]
+      reported: "90,7% (cúm A, người 10–70 tuổi, TP.HCM); 13% (trẻ 7–13 tuổi); 0,59 (gộp mọi lứa tuổi)"
+      note: "Lượt A để very_frequent theo Todd, lượt B để frequent theo số gộp của Ebell. Số gộp trộn trẻ em (rất ít báo đau cơ) với người lớn, nên lượt C để very_frequent cho người lớn và occasional cho trẻ dưới 12 tuổi (Silvennoinen; Ebell: đau cơ kém nhạy ở trẻ nhỏ)."
+  - finding: headache
+    freq: very_frequent
+    freq_by_age:
+      child_2m_5y: occasional
+      child_5_12: frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [todd-irv-2018, silvennoinen-pidj-2009, ebell-bmjopen-2025]
+      reported: "92,9% (cúm A, người 10–70 tuổi); 39% (trẻ 7–13 tuổi); 0,65 (gộp)"
+      note: "Dùng khi triệu chứng chính là sốt. Cùng cách xử lý như đau cơ: số gộp trộn trẻ em. Trẻ dưới 5 tuổi khó tự báo đau đầu (ước lượng)."
+  - finding: fatigue
+    freq: very_frequent
+    freq_by_age:
+      child_2m_5y: occasional
+    evidence:
+      tier: A
+      basis: numeric
+      sources: [ebell-bmjopen-2025, todd-irv-2018]
+      locator: "Ebell 2025, bảng 3 và phần bàn luận"
+      reported: "người lớn 0,82; trẻ dưới 5 tuổi 0,27; mệt 97,2% (cúm A, TP.HCM)"
+  - finding: cough
+    freq: very_frequent
+    evidence:
+      tier: A
+      basis: numeric
+      sources: [ebell-bmjopen-2025, todd-irv-2018, silvennoinen-pidj-2009]
+      reported: "0,92 (72 nghiên cứu); 95,3% (cúm A, TP.HCM); 77% (trẻ ngoại trú)"
+      note: "Nhiều nghiên cứu lấy ho làm tiêu chuẩn tuyển chọn nên số bị thổi phồng; vẫn chọn very_frequent."
+  - finding: productive_cough
+    freq: occasional
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-1840-2025, cdc-flu-clinical-signs]
+      locator: "1840 mục II.1.1"
+      note: "1840 và CDC mô tả ho khan; ho có đờm ít gặp hơn. Tần suất trong số người có ho, chưa có số liệu."
+  - finding: sore_throat
+    freq: very_frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [todd-irv-2018, ebell-bmjopen-2025]
+      reported: "89,1% (cúm A) so với 86,3% (ca giống cúm không phải cúm), TP.HCM; 0,57 gộp, độ đặc hiệu 0,48"
+      population: "người 10–70 tuổi có hội chứng giống cúm, phòng khám ban đầu TP.HCM"
+      note: "Lượt B để frequent theo số gộp của Ebell. Cả hai nguồn cho thấy đau họng gặp như nhau ở cúm và nhiễm vi rút hô hấp khác (LR+ 1,1), mà liên kết của cảm lạnh là very_frequent theo cùng nguồn Todd; chọn very_frequent để đau họng không nghiêng sai về cảm lạnh."
+  - finding: runny_nose
+    freq: very_frequent
+    evidence:
+      tier: A
+      basis: numeric
+      sources: [ebell-bmjopen-2025, todd-irv-2018]
+      reported: "chảy nước mũi 0,70; viêm mũi 0,76 (gộp); 86,3% (cúm A, TP.HCM)"
+  - finding: nasal_congestion
+    freq: very_frequent
+    evidence:
+      tier: A
+      basis: numeric
+      sources: [ebell-bmjopen-2025]
+      reported: "0,69 (13 nghiên cứu), độ đặc hiệu 0,45"
+      note: "0,69 thuộc khoảng very_frequent (từ 67%). Lượt B để frequent theo số hồi cứu 39,6% (Iyadorai); chọn số gộp."
+  - finding: vomiting
+    freq: rare
+    freq_by_age:
+      child_2m_5y: occasional
+      child_5_12: occasional
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [todd-irv-2018, byt-qd-1840-2025, cdc-flu-clinical-signs]
+      locator: "1840 mục II.1.1"
+      reported: "triệu chứng tiêu hóa 6,8% (cúm A, người 10–70 tuổi)"
+      note: "1840 và CDC: trẻ em có thể buồn nôn, nôn, tiêu chảy, nên trẻ em xếp occasional; người lớn rare (lượt B). Mức rare thấp hơn tỷ lệ nền 5%."
+  - finding: loss_of_appetite
+    freq: frequent
+    evidence:
+      tier: A
+      basis: numeric
+      sources: [ebell-bmjopen-2025]
+      reported: "0,51 (10 nghiên cứu)"
+  - finding: arthralgia
+    freq: occasional
+    evidence:
+      tier: A
+      basis: numeric
+      sources: [ebell-bmjopen-2025]
+      reported: "đau khớp 0,29 (11 nghiên cứu)"
+  - finding: pleuritic_chest_pain
+    freq: occasional
+    evidence:
+      tier: A
+      basis: numeric
+      sources: [ebell-bmjopen-2025]
+      reported: "đau ngực 0,25 (10 nghiên cứu)"
+      note: "Nguồn ghi đau ngực chung, không riêng đau khi hít sâu, khi ho."
+  - finding: diarrhea
+    freq: occasional
+    evidence:
+      tier: A
+      basis: numeric
+      sources: [ebell-bmjopen-2025, byt-qd-1840-2025]
+      reported: "0,14 (29 nghiên cứu)"
+      note: "1840: trẻ em có thể có tiêu chảy."
+  - finding: rash_any
+    freq: rare
+    evidence:
+      tier: A
+      basis: numeric
+      sources: [ebell-bmjopen-2025]
+      reported: "phát ban 0,04 (LR+ 0,58)"
+      note: "Mức rare thấp hơn tỷ lệ nền 5%: câu 'có' làm giảm khả năng cúm, đúng với LR+ dưới 1."
+  - finding: sick_contact_respiratory
+    freq: frequent
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-1840-2025, nguyen-jcv-2016]
+      locator: "1840 mục II.2.4.1"
+      note: "Ca nghi ngờ theo 1840 cần yếu tố dịch tễ (tiếp xúc gần người bệnh hoặc ở vùng đang có dịch). Nguyen 2016: ca cúm liên quan về thời gian ở 58% số hộ có nhiều ca cúm. Chưa có tỷ lệ cụ thể."
+  - finding: headache_duration
+    dist: { lt_4h: 0.10, h4_72: 0.70, gt_3d: 0.20 }
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [byt-qd-1840-2025]
+      note: "Đau đầu kéo dài theo giai đoạn sốt 3–5 ngày. Ước lượng của lượt A."
+  - finding: headache_location
+    dist: { one_side: 0.05, both_sides: 0.30, forehead_face: 0.25, back_neck: 0.10, whole_head: 0.30 }
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [cdc-flu-clinical-signs]
+      note: "Không có số liệu; đau đầu trong bệnh toàn thân thường lan tỏa, ít khi một bên. Ước lượng của lượt A."
+  - finding: headache_course
+    dist: { first_time: 0.55, recurrent_similar: 0.42, progressive: 0.03 }
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [byt-qd-1840-2025]
+      note: "Bệnh cấp, khởi phát đột ngột; hiếm khi nặng dần trong nhiều tuần. Ước lượng của lượt A."
+  - finding: headache_severity
+    dist: { mild: 0.25, moderate: 0.50, severe: 0.25 }
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [cdc-flu-clinical-signs]
+      note: "Cúm thường làm người bệnh mệt, phải nghỉ ngơi. Ước lượng của lượt A."
+  - finding: cough_duration
+    dist: { lt_1w: 0.62, w1_2: 0.27, w2_8: 0.10, gt_8w: 0.01 }
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [cdc-flu-clinical-signs, byt-qd-1840-2025]
+      locator: "1840 mục II.1.1"
+      note: "Lượt B (lô 3). Phân bố trong số người có ho, tại thời điểm hỏi. CDC: triệu chứng thường hết sau 3–7 ngày, ho có thể kéo dài hơn 2 tuần; 1840: phần lớn hồi phục sau 3–5 ngày sốt. Ho từ 2 tháng không phù hợp cúm. Ước lượng."
+  - finding: dyspnea_onset
+    dist: { sudden: 0.07, hours_days: 0.88, weeks: 0.05 }
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [byt-qd-1840-2025]
+      locator: "1840 mục II.1.2"
+      note: "Lượt B (lô 3). Phân bố trong số người có khó thở. Bệnh khởi phát đột ngột nhưng khó thở (khi có) tăng dần trong vài ngày, thường do biến chứng (1840). Ước lượng."
+warning_signs:
+  - es_severe_breathing
+  - breathing_difficulty
+  - confusion
+  - drowsy_hard_to_wake
+  - cold_hands_feet
+  - severe_weakness
+  - seizure_recent
+  - persistent_vomiting
+  - child_unable_to_drink
+self_care_vi:
+  - "Nghỉ ngơi tại nhà, uống đủ nước, ăn đủ chất, nhất là trẻ nhỏ và người cao tuổi."
+  - "Khi chưa loại trừ được sốt xuất huyết, không tự dùng aspirin hoặc ibuprofen."
+  - "Không tự dùng kháng sinh khi bị cúm nhẹ."
+  - "Đeo khẩu trang, rửa tay thường xuyên, hạn chế gặp người già và người có bệnh nền."
+see_doctor_vi:
+  - "Người từ 65 tuổi, trẻ dưới 5 tuổi, người có thai hoặc có bệnh nền nên đi khám sớm."
+  - "Bác sĩ có thể cân nhắc thuốc kháng vi rút cho những người này."
+  - "Đi khám nếu sốt quá 5 ngày, hoặc đã đỡ rồi lại sốt, ho nặng lên."
+  - "Đi cấp cứu ngay nếu khó thở tăng dần, đau tức ngực, lơ mơ, tím tái hoặc tay chân lạnh."
+sources: [byt-qd-1840-2025, byt-qd-2760-2023, cdc-flu-clinical-signs]
+review:
+  status: draft
+  authors: ["agent:pass-b"]
+  doctor_reviewer: null
+  updated: "2026-10-31"
+  notes_vi: "Lượt B (Giai đoạn 3 lô 3) thêm, không sửa phần đã có: (a) prior Ho P2, Khó thở P4; (b) liên kết cough_duration, dyspnea_onset; (c) nguồn mới frese-jcmr-2011. Điều cần bác sĩ xem thêm: bệnh này không có liên kết breathing_difficulty (lượt C cũ đã bỏ), nên ở Ho câu khó thở không làm giảm khả năng cúm; hệ số mùa miền Bắc áp cả cho Ho, Khó thở. Ghi chú của bản đã đối chiếu (giữ nguyên): Cần bác sĩ xem: (1) prior là ước lượng, chưa có tỷ lệ cúm trong mọi người sốt đi khám; (2) hệ số mùa ở miền Bắc dựa trên 71 đợt cúm ở một xã Hà Nam, tháng của từng mùa là quy ước của lượt C; (3) tần suất triệu chứng lấy từ người có hội chứng giống cúm nên có thể cao hơn cúm nói chung; (4) đau cơ, đau đầu, mệt được hạ mức ở trẻ em theo Silvennoinen và Ebell 2025; (5) bỏ liên kết mất ngửi (cao hơn tỷ lệ nền) và khó thở (lượt B để occasional nhưng không có số liệu; ở cộng đồng khó thở gần bằng tỷ lệ nền 5%; 1840 xếp khó thở vào cúm nặng, đã có quy tắc rf_fever_breathing); (6) mã ICD-10 chưa đối chiếu được."

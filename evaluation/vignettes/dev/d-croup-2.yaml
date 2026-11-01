@@ -1,0 +1,46 @@
+id: d-croup-2
+set: dev
+title_vi: "Bé gái 7 tuổi khó thở về đêm, ho ông ổng, khàn tiếng, không sốt"
+narrative_vi: "Bé N., 7 tuổi, ở Hải Phòng, tháng 10. Từ chiều qua bé hơi khàn tiếng; đến đêm bé thức dậy vì ho ông ổng, khó thở hơn, khó thở tăng dần trong vài giờ. Bé chỉ thấy hụt hơi khi chạy nhảy, ngồi yên thì nói chuyện được bình thường; ngồi yên không có tiếng rít. Không sốt, không sổ mũi. Không khò khè, không đau ngực, không ăn uống gì lạ, không bị ong đốt, không nổi mẩn. Không sặc, hóc. Năm ngoái bé từng bị một lần giống vậy. Chưa từng được nói bị hen."
+patient:
+  age_years: 7
+  sex: female
+  region: north
+  month: 10
+complaint: shortness_of_breath
+answers:
+  cough: present
+  barking_cough: present
+  hoarse_voice: present
+  night_respiratory_symptoms: present
+  cough_duration: lt_1w
+  dyspnea_onset: hours_days
+  dyspnea_severity: exertion
+  stridor: absent
+  fever: absent
+  runny_nose: absent
+  wheeze: absent
+  chest_pain: absent
+  chest_pain_pressure: absent
+  pleuritic_chest_pain: absent
+  allergen_exposure: absent
+  rash_any: absent
+  hives: absent
+  edema_face_hands: absent
+  choking_episode: absent
+  drooling_cannot_swallow: absent
+  asthma_known: absent
+  palpitations: absent
+  fainting_or_near_fainting: absent
+  similar_episodes_before: present
+  spo2_measured: not_measured
+default_unmentioned: absent
+expected:
+  condition: croup
+  acceptable: []
+  triage: 3
+source:
+  basis: "Viêm thanh quản cấp không điển hình: trẻ lớn (tới 6 tuổi là thường gặp, Smith 2018), không sốt, tái phát (croup co thắt: MSD), ho ông ổng, khàn tiếng, nặng về đêm, không thở rít lúc ngồi yên. NHS Croup: khám khẩn hoặc gọi 111 (mức 3); chỉ đi cấp cứu khi thở rất vất vả, tím, li bì."
+  references: [smith-afp-2018, msd-croup, nhs-croup]
+author: "agent:pass-c"
+notes_vi: "Ca không điển hình (trẻ 7 tuổi, không sốt, cơn tái phát), triệu chứng chính Khó thở."

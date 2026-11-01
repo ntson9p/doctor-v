@@ -1,0 +1,53 @@
+id: d-cardiac-arrhythmia-chest-pain-1
+set: dev
+title_vi: "Nữ 29 tuổi bỗng tim đập rất nhanh và đều, tức ngực, hơi choáng, cơn kéo dài 40 phút rồi dừng đột ngột"
+narrative_vi: "Chị L., 29 tuổi, ở Vũng Tàu. Tối nay đang ngồi thì tim bỗng đập rất nhanh và đều, cổ đập thình thịch, kèm tức ngực, hơi choáng nhưng không như sắp ngất. Cơn kéo dài khoảng 40 phút rồi dừng đột ngột như tắt công tắc; giờ chỉ còn hơi mệt. Mấy năm nay đã có vài cơn giống vậy nhưng ngắn hơn. Không khó thở, không vã mồ hôi, không buồn nôn. Tức ngực không lan ra tay, hàm, lưng; không tăng khi hít thở; ấn vào không đau. Không run tay, không sụt cân. Không uống cà phê hay nước tăng lực. Chưa đo mạch. Không có thai, không chậm kinh."
+patient:
+  age_years: 29
+  sex: female
+  region: south
+  month: 8
+complaint: chest_pain
+answers:
+  palpitations: present
+  palpitation_rhythm: fast_regular
+  palpitation_abrupt_onset: present
+  palpitation_duration: minutes_hours
+  neck_pounding: present
+  dizziness: present
+  chest_pain_pressure: present
+  chest_pain_duration: over_15min
+  similar_episodes_before: present
+  pulse_measured: not_measured
+  breathing_difficulty: absent
+  cold_sweat: absent
+  nausea: absent
+  fainting_or_near_fainting: absent
+  pain_radiates_arm_jaw: absent
+  chest_pain_radiates_back: absent
+  chest_pain_sudden_severe: absent
+  chest_pain_tearing: absent
+  chest_pain_exertional: absent
+  pleuritic_chest_pain: absent
+  chest_wall_tenderness: absent
+  tremor: absent
+  weight_loss_unintended: absent
+  stimulant_intake: absent
+  panic_fear: absent
+  fever: absent
+  cough: absent
+  heartburn: absent
+  skin_burning_band: absent
+  rash_any: absent
+  estrogen_use: absent
+  pregnant: absent
+  missed_period: absent
+default_unmentioned: absent
+expected:
+  condition: cardiac_arrhythmia
+  acceptable: []
+  triage: 2
+source:
+  basis: "Nhịp nhanh kịch phát trên thất: tim đập rất nhanh, đều, bắt đầu và dừng đột ngột, mạch cổ đập thình thịch, kèm tức ngực, choáng (ESC 2019 mục 7; NHS SVT). NHS SVT, Heart palpitations: tim nhanh kèm đau ngực, choáng thì gọi 999 hoặc đến cấp cứu: mức 2."
+  references: [esc-svt-2019, nhs-svt, nhs-heart-palpitations]
+author: "agent:pass-c"

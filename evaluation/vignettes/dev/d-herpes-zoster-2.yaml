@@ -1,0 +1,45 @@
+id: d-herpes-zoster-2
+set: dev
+title_vi: "Nam 58 tuổi 2 ngày nay đau rát, châm chích một dải da ngực trái, áo cọ vào cũng đau, chưa nổi ban"
+narrative_vi: "Ông V., 58 tuổi, ở Long An. Hai ngày nay thấy đau rát, châm chích ở một dải da bên ngực trái, từ dưới vú vòng ra nách, áo cọ vào cũng đau, đêm khó ngủ. Da chỗ đó chưa thấy nổi gì. Chạm vào thì đau. Đau âm ỉ suốt, không tức nặng giữa ngực, không lan ra tay hay hàm, không đau khi đi lại nhanh. Không khó thở, không vã mồ hôi, không buồn nôn, không choáng. Không sốt, không ho, không ợ chua. Không hút thuốc, không tăng huyết áp, không đái tháo đường, không có bệnh tim."
+patient:
+  age_years: 58
+  sex: male
+  region: south
+  month: 2
+complaint: chest_pain
+answers:
+  skin_burning_band: present
+  chest_wall_tenderness: present
+  chest_pain_duration: days
+  rash_any: absent
+  chest_pain_pressure: absent
+  chest_pain_radiates_back: absent
+  chest_pain_exertional: absent
+  chest_pain_sudden_severe: absent
+  chest_pain_tearing: absent
+  pain_radiates_arm_jaw: absent
+  pleuritic_chest_pain: absent
+  breathing_difficulty: absent
+  cold_sweat: absent
+  nausea: absent
+  fainting_or_near_fainting: absent
+  fever: absent
+  cough: absent
+  heartburn: absent
+  smoker: absent
+  hypertension_known: absent
+  diabetes: absent
+  known_heart_disease: absent
+  immunocompromised: absent
+  similar_episodes_before: absent
+default_unmentioned: absent
+expected:
+  condition: herpes_zoster
+  acceptable: [chest_wall_pain]
+  triage: 4
+source:
+  basis: "Giai đoạn tiền triệu của zona: bỏng rát, châm chích, đau trên một vùng da 1–5 ngày trước khi nổi ban (75/QĐ-BYT); dấu hiệu đầu là châm chích hoặc đau ở một vùng da, ban mọc vài ngày sau (NHS Shingles). Khi chưa có ban, bệnh khó phân biệt với đau thành ngực; đau ngực lúc có lúc không, không có dấu hiệu nguy hiểm thì khám bác sĩ gia đình (NHS Chest pain): mức 4."
+  references: [byt-qd-75-2015, nhs-shingles, nhs-chest-pain]
+author: "agent:pass-c"
+notes_vi: "Ca không điển hình (giai đoạn sớm, chưa nổi ban); đau thành ngực là chẩn đoán chấp nhận được khi chưa có ban."

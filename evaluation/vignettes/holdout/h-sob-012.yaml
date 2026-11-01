@@ -1,0 +1,49 @@
+id: h-sob-012
+set: holdout
+title_vi: "Nữ 31 tuổi uống thuốc tránh thai, sau chuyến xe 12 giờ đau bắp chân phải; từ hôm qua đột ngột khó thở, đau ngực khi hít sâu, mạch 115"
+narrative_vi: "Chị V., 31 tuổi, nhân viên văn phòng ở TP.HCM, uống thuốc tránh thai hằng ngày 1 năm nay, không hút thuốc. Chín ngày trước chị đi xe khách giường nằm từ Quảng Ngãi vào, ngồi gần 12 tiếng. Bốn ngày nay bắp chân phải căng, đau, hơi to hơn chân trái. Chiều qua đang leo cầu thang chị đột ngột thấy hụt hơi, phải dừng lại; từ sáng nay ngồi yên cũng thở nhanh, mệt. Chị đau nhói ngực bên phải mỗi khi hít sâu. Tim chị đập nhanh liên tục; đồng hồ thông minh báo mạch 115 lần/phút lúc ngồi nghỉ. Chị vẫn nói trọn câu. Chị không ho, không ho ra máu, không sốt, không ngất. Chị không có thai, chưa từng bị cục máu đông, không mắc ung thư, không bị hen."
+patient:
+  age_years: 31
+  sex: female
+  region: south
+  month: 2
+complaint: shortness_of_breath
+answers:
+  estrogen_use: present
+  recent_immobility: present
+  leg_swelling_one_side: present
+  dyspnea_onset: sudden
+  dyspnea_severity: rest
+  chest_pain: present
+  pleuritic_chest_pain: present
+  palpitations: present
+  pulse_measured: n100_150
+  fatigue: present
+  chest_pain_pressure: absent
+  chest_pain_sudden_severe: absent
+  cough: absent
+  hemoptysis: absent
+  fever: absent
+  fainting_or_near_fainting: absent
+  wheeze: absent
+  leg_swelling_both: absent
+  es_severe_breathing: absent
+  previous_clot: absent
+  active_cancer: absent
+  pregnant: absent
+  recent_childbirth: absent
+  smoker: absent
+  asthma_known: absent
+  allergen_exposure: absent
+  panic_fear: absent
+default_unmentioned: absent
+expected:
+  condition: pulmonary_embolism
+  acceptable: []
+  triage: 2
+source:
+  basis: "Thuyên tắc phổi ở phụ nữ trẻ uống thuốc tránh thai, sau chuyến xe ngồi lâu: đau, sưng một bên bắp chân, khó thở đột ngột rồi khó thở khi nghỉ, đau ngực kiểu màng phổi, tim nhanh 115 lần/phút. ESC 2019 (Bảng 3): thuốc tránh thai là yếu tố thuận lợi mức trung bình, ngồi lâu khi đi xa là yếu tố yếu; mục 4.1: khó thở, đau ngực màng phổi, tim nhanh. NHS Pulmonary embolism: khó thở đột ngột, đau ngực, tim rất nhanh thì gọi 999 hoặc đến cấp cứu. Còn nói trọn câu, không ngất nên mức 2."
+  references:
+    - esc-pe-2019
+    - nhs-pulmonary-embolism
+author: "agent:vignette-holdout"

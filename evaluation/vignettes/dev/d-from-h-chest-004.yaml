@@ -1,0 +1,49 @@
+id: d-from-h-chest-004
+set: dev
+title_vi: "Nam 38 tuổi, 2 tuần nay nóng rát sau xương ức sau ăn, nhất là sau nhậu và khi nằm, ợ chua, uống thuốc dạ dày thì đỡ"
+narrative_vi: "Anh T., 38 tuổi, nhân viên kinh doanh ở Đà Nẵng, hút thuốc lá, hay đi nhậu với khách. Khoảng 2 tuần nay, sau bữa ăn, nhất là sau khi uống bia, ăn đồ cay, đồ chiên, anh thấy nóng rát sau xương ức, lan lên cổ họng, ợ chua, có lúc trào nước chua lên miệng. Nằm ngay sau bữa tối thì nặng hơn. Mỗi lần nóng rát kéo dài khoảng nửa giờ đến 1 giờ, lần gần nhất tối qua. Uống thuốc dạ dày mua ở hiệu thuốc thì đỡ nhanh. Không phải cảm giác tức nặng, đè ép. Đau không liên quan gắng sức: anh vẫn chạy bộ 3 km không sao. Anh không khó thở, không vã mồ hôi, không nôn, không nuốt nghẹn, không sụt cân, phân vàng bình thường."
+patient:
+  age_years: 38
+  sex: male
+  region: central
+  month: 8
+complaint: chest_pain
+answers:
+  chest_pain_duration: over_15min
+  heartburn: present
+  smoker: present
+  heavy_alcohol: present
+  chest_pain_exertional: absent
+  chest_pain_pressure: absent
+  chest_pain_sudden_severe: absent
+  chest_pain_radiates_back: absent
+  pain_radiates_arm_jaw: absent
+  chest_wall_tenderness: absent
+  pleuritic_chest_pain: absent
+  es_crushing_chest_pain: absent
+  cold_sweat: absent
+  breathing_difficulty: absent
+  fainting_or_near_fainting: absent
+  nausea: absent
+  vomiting: absent
+  abdominal_pain: absent
+  black_stool: absent
+  vomiting_blood: absent
+  weight_loss_unintended: absent
+  cough: absent
+  fever: absent
+  hypertension_known: absent
+  diabetes: absent
+  known_heart_disease: absent
+  similar_episodes_before: present
+default_unmentioned: absent
+expected:
+  condition: gerd
+  acceptable: []
+  triage: 5
+source:
+  basis: "Trào ngược dạ dày – thực quản điển hình: nóng rát sau xương ức sau ăn, khi nằm, ợ chua, trào ngược, đỡ nhanh với thuốc kháng acid, không liên quan gắng sức, không có dấu hiệu báo động (nuốt nghẹn, sụt cân, nôn ra máu, phân đen). NHS Chest pain: đau ngực nóng rát sau ăn, ợ chua thường do trào ngược; chỉ gọi 999 khi đau đột ngột không hết, lan tay, hàm, kèm vã mồ hôi, khó thở. Theo hướng dẫn chung về trào ngược (NHS Heartburn and acid reflux), tự điều chỉnh ăn uống, hỏi dược sĩ, khám bác sĩ nếu không đỡ sau 3 tuần, nên mức 5."
+  references:
+    - nhs-chest-pain
+author: "agent:vignette-holdout"
+notes_vi: "Ợ chua, nóng rát sau xương ức được tính là đau ngực (khó chịu ở ngực) nên người bệnh chọn Đau ngực. Nam hút thuốc, hay uống rượu bia nhưng mới 38 tuổi và gắng sức không đau."

@@ -1,0 +1,15 @@
+id: klompas-jama-2002
+type: systematic_review
+title: "Does this patient have an acute thoracic aortic dissection?"
+publisher: "JAMA 2002;287(17):2262–2272 (Klompas M; The Rational Clinical Examination)"
+date: "2002-05-01"
+url: "https://europepmc.org/article/MED/11980527"
+doi: "10.1001/jama.287.17.2262"
+pmid: "11980527"
+license_class: L3
+license_note: "Bản quyền JAMA: chỉ dùng dữ kiện kèm trích dẫn."
+default_tier: A
+accessed: "2026-10-31"
+verified: true
+verified_by: "agent:pass-c"
+notes_vi: "Lượt C (Giai đoạn 3 lô 3, phần c) đọc lại tóm tắt qua API Europe PMC ngày 31/10/2026; lượt A, lượt B đã đọc trước đó. Tổng quan 21 nghiên cứu (mỗi nghiên cứu từ 18 ca bóc tách động mạch chủ ngực đã xác định): đau dữ dội có độ nhạy gộp 90%, khởi phát đột ngột 84%; không có đau khởi phát đột ngột làm giảm khả năng (LR âm 0,3). Khám: huyết áp tăng 49%, tiếng thổi tâm trương 28% (LR dương 1,4), mất mạch hoặc chênh huyết áp 31% (LR dương 5,7), dấu thần kinh khu trú 17% (LR dương 6,6–33). Phim ngực bình thường làm giảm khả năng (LR âm 0,3). Khám lâm sàng không đủ nhạy để loại trừ bệnh."

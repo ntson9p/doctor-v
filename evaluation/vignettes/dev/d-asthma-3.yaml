@@ -1,0 +1,46 @@
+id: d-asthma-3
+set: dev
+title_vi: "Nam 30 tuổi bị hen, ho đờm và khò khè 4 ngày sau cảm, khó thở về đêm"
+narrative_vi: "Anh H., 30 tuổi, ở Cần Thơ, bị hen từ thời đi học, lâu nay ít lên cơn. Năm ngày trước bị cảm, sổ mũi; bốn ngày nay ho nhiều, có đờm trắng, khò khè, đêm phải dậy xịt thuốc vì khó thở. Ban ngày hụt hơi khi đi nhanh, ngồi yên thì bình thường, nói được cả câu. Xịt thuốc cắt cơn thì đỡ. Không sốt, không đau ngực, không tức ngực. Đã từng có những đợt giống hệt khi bị cảm. Không hút thuốc."
+patient:
+  age_years: 30
+  sex: male
+  region: south
+  month: 7
+complaint: cough
+answers:
+  cough_duration: lt_1w
+  productive_cough: present
+  runny_nose: present
+  sore_throat: absent
+  wheeze: present
+  breathing_difficulty: present
+  dyspnea_onset: hours_days
+  dyspnea_severity: exertion
+  night_respiratory_symptoms: present
+  asthma_known: present
+  reliever_no_relief: absent
+  similar_episodes_before: present
+  fever: absent
+  pleuritic_chest_pain: absent
+  chest_pain: absent
+  chest_pain_pressure: absent
+  hemoptysis: absent
+  stridor: absent
+  choking_episode: absent
+  cough_paroxysms: absent
+  smoker: absent
+  former_smoker: absent
+  copd_known: absent
+  sick_contact_respiratory: absent
+  heartburn: absent
+default_unmentioned: absent
+expected:
+  condition: asthma
+  acceptable: []
+  triage: 3
+source:
+  basis: "Đợt cấp hen nhẹ khởi phát do nhiễm vi rút ở người đã biết bị hen (1851/QĐ-BYT mục 4.1; GINA 2026); dễ nhầm với viêm phế quản cấp, cảm lạnh vì có sổ mũi, ho đờm. NHS Asthma: sau cơn hen dù đã đỡ cần khám khẩn trong 2 ngày."
+  references: [byt-qd-1851-2020, gina-2026, nhs-asthma-attack]
+author: "agent:pass-c"
+notes_vi: "Ca dễ nhầm với viêm phế quản cấp: bối cảnh cảm lạnh, ho có đờm; phân biệt nhờ tiền sử hen, khò khè, khó thở về đêm, cơn tương tự trước đây."

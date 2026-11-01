@@ -175,3 +175,62 @@
     age_groups: [child_2m_5y]
   leak: 0.05
   leak_note: "Tổng quan Khreis 2026 (Pediatrics International, lượt B lô 2 đọc toàn văn): ở Singapore, 9,9% trẻ sốt do nguyên nhân khác cũng có thay đổi ở sẹo BCG, so với 42,7% ở trẻ Kawasaki. Ở cộng đồng có lẽ thấp hơn nhóm nằm viện, nên chọn 5%; ước lượng ban đầu 0,5% của người bảo trì là quá thấp."
+
+# ---------- Giai đoạn 3, lô 3 ----------
+- id: chest_indrawing
+  kind: sign
+  type: binary
+  label_vi: "Ngực dưới lõm sâu mỗi lần hít vào (rút lõm lồng ngực)"
+  question_vi: "Khi bé hít vào, phần ngực dưới (vùng bờ sườn) có lõm sâu vào không?"
+  help_vi: "Nhìn khi bé nằm yên, không khóc, không bú: phần ngực dưới bị kéo lõm vào mỗi lần hít vào. Chỉ hõm nhẹ giữa các xương sườn thì chưa tính."
+  alt_question:
+    text_vi: "Khi bé hít vào, vùng bờ sườn có bị hút lõm vào không?"
+  applies_to:
+    age_groups: [child_2m_5y]
+  leak: specific
+- id: apnea_cyanosis_spells
+  kind: sign
+  type: binary
+  label_vi: "Có lúc ngừng thở, tím tái"
+  question_vi: "Bé có lúc ngừng thở, hoặc tím tái môi, mặt từng lúc không?"
+  help_vi: "Kể cả lúc đang ho hoặc đang ngủ."
+  alt_question:
+    text_vi: "Có lúc nào bé đang thở bỗng ngưng lại, mặt tái hoặc tím đi không?"
+  applies_to:
+    age_groups: [infant_0_2m, child_2m_5y]
+  leak: specific
+- id: child_feeding_reduced
+  kind: sign
+  type: binary
+  label_vi: "24 giờ qua chỉ bú, ăn được khoảng một nửa"
+  question_vi: "Trong 24 giờ qua, bé chỉ bú, ăn được khoảng một nửa mọi ngày không?"
+  alt_question:
+    text_vi: "Mỗi cữ bú, bữa ăn, bé có bỏ dở nhiều hơn mọi ngày không?"
+  applies_to:
+    age_groups: [child_2m_5y]
+  leak: moderate
+# Thêm sau lượt R (31/10/2026), trước khi agent viết ca giữ kín làm việc.
+- id: grunting
+  kind: sign
+  type: binary
+  label_vi: "Thở rên"
+  question_vi: "Mỗi lần thở ra, bé có rên khẽ thành tiếng không?"
+  help_vi: "Tiếng rên ngắn, đều đặn theo từng nhịp thở, kể cả khi bé không khóc."
+  alt_question:
+    text_vi: "Khi bé nằm yên, có nghe tiếng ư ử theo mỗi nhịp thở không?"
+  applies_to:
+    age_groups: [infant_0_2m, child_2m_5y]
+  leak: specific
+# Thêm sau lượt A phần b (31/10/2026), trước khi agent viết ca giữ kín làm việc.
+- id: dtp_vaccinated
+  kind: risk_factor
+  type: binary
+  label_vi: "Đã tiêm đủ 3 mũi vắc xin có thành phần ho gà"
+  question_vi: "Bé đã tiêm đủ 3 mũi vắc xin phòng ho gà (5 trong 1) chưa?"
+  help_vi: "Vắc xin 5 trong 1 hoặc 6 trong 1 phòng cả ho gà, thường tiêm lúc 2, 3 và 4 tháng tuổi."
+  requires:
+    - not: { age_months_lt: 5 }
+  applies_to:
+    age_groups: [child_2m_5y, child_5_12]
+  leak: 0.85
+  leak_note: "Tỷ lệ tiêm đủ 3 mũi vắc xin có thành phần ho gà ở Việt Nam khoảng 80–90% (người bảo trì ước lượng theo số liệu tiêm chủng mở rộng; lượt C đối chiếu). Ca kiểm thử không nhắc tới thì trả lời 'không rõ' (tỷ lệ nền từ 0,5)."

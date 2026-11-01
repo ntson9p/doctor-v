@@ -25,6 +25,7 @@ answers:
   hypertension_known: absent
   bp_lowering_meds: absent
   similar_episodes_before: absent
+  chest_pain: absent
 default_unmentioned: absent
 expected:
   condition: cardiac_arrhythmia

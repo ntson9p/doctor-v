@@ -1,0 +1,59 @@
+id: shortness_of_breath
+label_vi: "Khó thở"
+icon: lungs
+synonyms_vi:
+  - "hụt hơi"
+  - "thở dốc"
+  - "thở gấp"
+  - "thở nhanh"
+  - "ngộp thở"
+  - "tức thở"
+  - "khó thở khi nằm"
+  - "khò khè"
+  - "thở khò khè"
+  - "thở rít"
+  - "lên cơn hen"
+  - "lên cơn suyễn"
+description_vi: "Thấy thiếu hơi, thở nhanh, thở mệt hoặc khò khè hơn bình thường."
+implies: [breathing_difficulty]
+red_flags:
+  # Người bảo trì soạn (31/10/2026); lượt R lô 3 sắp lại. Ở Khó thở, gần như mọi câu dấu hiệu nguy hiểm đều tự
+  # làm một quy tắc mức 2 thành đúng; sau đó bộ suy luận chỉ hỏi dấu hiệu lẻ làm một quy tắc mức 1 thành đúng (cặp
+  # hai dấu hiệu chỉ trong tối đa 4 câu). Vì vậy hỏi trước "nửa đầu" của các quy tắc mức 1 hai dấu hiệu: đã biết
+  # bị hen (rồi câu thuốc cắt cơn thành câu lẻ), vừa tiếp xúc dị nguyên (rồi câu khởi phát), nhóm dấu hiệu nguy
+  # hiểm chung (tay chân lạnh kèm mệt lả; khi tay chân lạnh làm quy tắc mức 2 đúng, câu Sốt còn được hỏi như câu lẻ
+  # của nhiễm khuẩn huyết), tức ngực (trong dyspnea_red_flags, rồi vã mồ hôi, đau lan, buồn nôn, choáng). Sốt đứng
+  # sau hai nhóm này vì người từ 65 tuổi sốt kèm khó thở là mức 2 ngay. Câu khởi phát và mức độ khó thở (mức 2 khi
+  # đột ngột, khi nghỉ) hỏi sau cùng.
+  - group: young_infant_danger_signs
+  - group: child_danger_signs
+  - group: child_breathing_signs
+  - finding: drooling_cannot_swallow
+  - finding: asthma_known
+  - finding: allergen_exposure
+  - group: general_danger_signs
+  - group: dyspnea_red_flags
+  - finding: fever
+  - finding: copd_known
+  - finding: reliever_no_relief
+  - finding: dyspnea_onset
+  - finding: dyspnea_severity
+  - finding: spo2_measured
+  - group: fever_red_flags
+  - finding: fever_duration
+intake: [dyspnea_associated, cough_character, clot_risk, lung_conditions, chronic_conditions, fever_exposures]
+# Bệnh "không được bỏ sót" (mức 1–2) có prior cho triệu chứng chính này; danh sách để kiểm tra an toàn.
+cant_miss:
+  - acute_coronary_syndrome
+  - anaphylaxis
+  - pneumothorax
+  - pulmonary_embolism
+  - sepsis
+safety_net:
+  - es_severe_breathing
+  - chest_pain_pressure
+  - fainting_or_near_fainting
+  - confusion
+  - stridor
+  - apnea_cyanosis_spells
+sources: [nhs-shortness-of-breath, who-imci-chart-booklet-2014]

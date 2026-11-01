@@ -1,0 +1,50 @@
+id: cough
+label_vi: "Ho"
+icon: cough
+synonyms_vi:
+  - "ho khan"
+  - "ho có đờm"
+  - "ho đàm"
+  - "khạc đờm"
+  - "ho kéo dài"
+  - "ho về đêm"
+  - "ho húng hắng"
+  - "ho sù sụ"
+  - "ho ra máu"
+description_vi: "Ho khan hoặc ho có đờm, mới bị hoặc đã kéo dài nhiều tuần."
+implies: [cough]
+red_flags:
+  # Người bảo trì soạn (31/10/2026); lượt R lô 3 sắp lại. Khi một quy tắc mức 2 đã đúng, bộ suy luận chỉ hỏi tiếp
+  # dấu hiệu làm một quy tắc mức 1 thành đúng: từng dấu hiệu lẻ, và cặp hai dấu hiệu trong tối đa 4 câu; quy tắc
+  # cần từ ba dấu hiệu không còn được xét. Vì vậy nhóm dấu hiệu nguy hiểm chung (lú lẫn, li bì, khó thở, tay chân
+  # lạnh, mệt lả) được hỏi trước các dấu hiệu mức 2 của ho (thở rít, sặc, ho ra máu, khó thở lúc nghỉ): khi tay
+  # chân lạnh làm quy tắc sốc mức 2 đúng, câu Sốt còn được hỏi như câu lẻ của nhiễm khuẩn huyết (sốt kèm hai nhóm
+  # dấu hiệu). Câu tức ngực (trong cough_red_flags) đi trước câu mức độ khó thở và câu Sốt, để các dấu hiệu nhồi
+  # máu cơ tim đi kèm còn được hỏi như câu lẻ.
+  - group: young_infant_danger_signs
+  - group: child_danger_signs
+  - group: child_breathing_signs
+  - finding: drooling_cannot_swallow
+  - group: general_danger_signs
+  - group: cough_red_flags
+  - finding: fever
+  - group: fever_red_flags
+  - finding: dyspnea_severity
+  - finding: spo2_measured
+  - finding: hemoptysis_large
+  - finding: fever_duration
+  # Ho từ 2 tuần là mốc sàng lọc lao; ho gà cũng thường kéo dài nhiều tuần.
+  - finding: cough_duration
+intake: [cough_associated, cough_character, chronic_cough_signs, lung_conditions, fever_exposures, chronic_conditions]
+# Bệnh "không được bỏ sót" (mức 1–2) có prior cho triệu chứng chính này; danh sách để kiểm tra an toàn.
+cant_miss:
+  - anaphylaxis
+  - pulmonary_embolism
+safety_net:
+  - breathing_difficulty
+  - stridor
+  - hemoptysis
+  - chest_pain_pressure
+  - apnea_cyanosis_spells
+  - drowsy_hard_to_wake
+sources: [nhs-cough, who-imci-chart-booklet-2014, byt-qd-162-2024]

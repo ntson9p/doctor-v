@@ -1,0 +1,215 @@
+id: pneumothorax
+names:
+  vi: "Tràn khí màng phổi"
+  vi_common: ["Tràn khí màng phổi tự phát", "Xẹp phổi do tràn khí", "Thủng phổi"]
+  en: "Pneumothorax (spontaneous)"
+codes:
+  icd10: "J93"
+  icd10_verified: false
+  mondo: "MONDO:0002076"
+summary_vi:
+  - "Không khí lọt vào khoang giữa phổi và thành ngực, làm một phần hoặc toàn bộ phổi bị xẹp."
+  - "Thường đau ngực một bên đột ngột, đau tăng khi hít sâu, kèm khó thở."
+  - "Hay gặp ở nam giới trẻ, cao gầy, hút thuốc, hoặc người có bệnh phổi mạn tính."
+urgency: 2
+cant_miss: true
+specialties: [emergency, respiratory]
+priors:
+  - complaint: chest_pain
+    default: P5
+    by_age:
+      child_5_12: P6
+      teen_13_17: P4
+      adult_18_44: P4
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [olesen-erjor-2019, bobbio-thorax-2015, ghisalberti-hlc-2020, chun-kjp-2015, haasenritter-croatmedj-2015, verdon-smw-2008, byt-qd-4235-2012]
+      locator: "Olesen 2019 bảng 3–5; Bobbio 2015 tóm tắt; Ghisalberti 2020 tóm tắt; Chun 2015 tóm tắt; Haasenritter 2015 bảng 3; 4235/QĐ-BYT tr. 24 (đau ngực), tr. 139–140 (tràn khí màng phổi)"
+      reported: "Tràn khí tự phát nguyên phát 7,3/100.000 người đến 40 tuổi mỗi năm, nam 16–25 tuổi 25–28/100.000, dưới 11 tuổi không có ca (Đan Mạch); mọi thể nằm viện 22,7/100.000 người từ 14 tuổi (Pháp); đau ở 69% người tràn khí nguyên phát; tràn khí màng phổi hoặc trung thất 1,2% trẻ em, thiếu niên đau ngực ở khoa nhi bệnh viện, chỉ ở thiếu niên lớn (Hàn Quốc). Các nghiên cứu đau ngực ở phòng khám đa khoa không tách riêng tràn khí (nằm trong nhóm hô hấp 10,3–18,2%)."
+      population: "Dân số Đan Mạch, Pháp; trẻ em đau ngực ở bệnh viện Hàn Quốc; người đau ngực ở phòng khám đa khoa châu Âu"
+      note: "Hai lượt trùng ở mọi nhóm tuổi. Thang tuyệt đối. 4235/QĐ-BYT xếp tràn khí màng phổi áp lực vào các nguyên nhân đau ngực nguy hiểm, đau đột ngột, hay ở người trẻ. Lượt C ước lại: tràn khí tự phát khoảng 10–25/100.000 người trẻ mỗi năm, phần lớn có đau; so với số lượt khám vì đau ngực ở người trẻ, khoảng 0,1–0,5% (ranh giới P5/P4). Giữ P4 cho 13–44 tuổi như hai lượt (nhóm đỉnh tuổi, tính chung hai giới; chênh lệch giới đi qua hệ số). Từ 45 tuổi, thể thứ phát ở người bệnh phổi tăng nhưng đau ngực có nhiều nguyên nhân khác hơn: P5. Trẻ 5–12 tuổi rất hiếm: P6. Bệnh không được bỏ sót nên prior này cộng vào tổng xác suất các bệnh cấp cứu; đã kiểm tra trên bộ dev (biên bản đối chiếu). Chưa có số liệu Việt Nam; cần bác sĩ duyệt."
+  - complaint: shortness_of_breath
+    default: P5
+    by_age:
+      infant_0_2m: P6
+      child_2m_5y: P6
+      child_5_12: P6
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [frese-jcmr-2011, chan-annacadmedsingap-1985, ghisalberti-hlc-2020, msd-pneumothorax, byt-qd-4235-2012]
+      locator: "Frese 2011 bảng 5; Chan 1985 tóm tắt; Ghisalberti 2020 tóm tắt; 4235/QĐ-BYT tr. 16–17 (khó thở đột ngột), tr. 140 (tràn khí thứ phát)"
+      reported: "Bảng nguyên nhân khó thở ở phòng khám đa khoa Đức, Hà Lan (3.743 lần khám vì khó thở mới) không có tràn khí màng phổi (tắc mạch phổi 0,35%); khó thở ở 54,6% người tràn khí nguyên phát, 74% người tràn khí ở khoa nội (43% có bệnh phổi tắc nghẽn mạn tính)."
+      note: "Hai lượt trùng. Thang tuyệt đối. 4235/QĐ-BYT xếp tràn khí màng phổi vào nguyên nhân khó thở đột ngột; ở người bệnh phổi tắc nghẽn mạn tính, tràn khí thứ phát biểu hiện bằng khó thở nặng lên đột ngột (tính qua liên kết copd_known). Tràn khí không có trong danh sách nguyên nhân khó thở ở tuyến ban đầu (Frese), nên dưới 0,2% (P5) từ 13 tuổi; trẻ dưới 13 tuổi P6. Ước lượng; cần bác sĩ duyệt."
+prior_modifiers:
+  - when: { sex: [male] }
+    factor: 1.6
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [olesen-erjor-2019, bobbio-thorax-2015, haasenritter-croatmedj-2015]
+      locator: "Olesen 2019 bảng 3–4; Bobbio 2015 tóm tắt; Haasenritter 2015 bảng 1"
+      reported: "Nam 85% người tràn khí nguyên phát đến 40 tuổi (tỷ số mới mắc 5,9, Đan Mạch); nữ/nam 1/3,3 ở mọi thể nằm viện (Pháp); nam 46–51% người đi khám vì đau ngực."
+      note: "Lượt A 1,7 và 0,45; lượt B 1,6 và 0,4. Hệ số tính so với các nguyên nhân khác của cùng triệu chứng chính: khoảng 77% người tràn khí là nam (Pháp, gồm cả thể thứ phát) chia cho khoảng 48% nam trong người đau ngực, được khoảng 1,6; nữ 0,23 chia cho 0,52, khoảng 0,45."
+  - when: { sex: [female] }
+    factor: 0.45
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [bobbio-thorax-2015, haasenritter-croatmedj-2015]
+      reported: "Như hệ số cho nam."
+      note: "Đi cặp với hệ số nam."
+findings:
+  - finding: pleuritic_chest_pain
+    freq: frequent
+    freq_by_complaint: { chest_pain: very_frequent }
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-4235-2012, msd-pneumothorax, ghisalberti-hlc-2020, chan-annacadmedsingap-1985]
+      locator: "4235/QĐ-BYT tr. 24–25 (đau tăng khi ho, hít sâu, đổi tư thế do màng phổi), tr. 139 (đau ngực đột ngột ở bên tràn khí); MSD mục Symptoms and Signs (đau ngực kiểu màng phổi)"
+      reported: "Đau ở 69% người tràn khí nguyên phát (Ghisalberti), 59% người tràn khí ở khoa nội (Chan)."
+      note: "Hai lượt cùng frequent; chỉ lượt A thêm very_frequent khi Đau ngực. Lượt C giữ: câu hỏi không có điều kiện đau ngực, nên khi triệu chứng chính là Khó thở chỉ khoảng hai phần ba có đau (frequent), còn khi triệu chứng chính là Đau ngực thì mọi người đều đau và cơn đau của tràn khí là đau kiểu màng phổi (MSD, 4235/QĐ-BYT): very_frequent. Cùng mức với viêm phổi, thuyên tắc phổi khi Đau ngực."
+  - finding: breathing_difficulty
+    freq: frequent
+    freq_by_age: { elder_65_74: very_frequent, elder_75p: very_frequent }
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [ghisalberti-hlc-2020, klin-medicine-2021, chan-annacadmedsingap-1985, msd-pneumothorax, byt-qd-4235-2012]
+      locator: "Ghisalberti 2020 tóm tắt; Klin 2021 tóm tắt; Chan 1985 tóm tắt; MSD; 4235/QĐ-BYT tr. 140"
+      reported: "Khó thở 54,55% (27–77,1%) người tràn khí nguyên phát; thiếu niên: khó thở kèm đau ngực 33,3%; khoa nội, 43% có bệnh phổi tắc nghẽn: khó thở là triệu chứng chính 74%."
+      note: "Có tác dụng khi triệu chứng chính là Đau ngực (với Khó thở là dấu hiệu ngầm định). Hai lượt cùng frequent; chỉ lượt A thêm very_frequent từ 65 tuổi. Lượt C giữ vì nguồn cho thấy rõ khác biệt: người cao tuổi phần lớn là tràn khí thứ phát trên nền bệnh phổi, khó thở nặng (Chan 74%; 4235/QĐ-BYT: đang ổn định đột nhiên suy hô hấp nặng), người trẻ một phần ba đến một nửa. Đây cũng là dấu hiệu cảnh báo của bệnh không được bỏ sót. Có đau ngực kèm khó thở thì quy tắc rf_chest_pain_breathless đã xếp mức 2."
+  - finding: chest_pain_sudden_severe
+    freq: frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [olesen-erjor-2019, byt-qd-4235-2012, chun-kjp-2015]
+      locator: "Olesen 2019 bảng 5; 4235/QĐ-BYT tr. 24, tr. 139; Chun 2015 tóm tắt"
+      reported: "Khởi phát triệu chứng đột ngột 95%."
+      note: "Hai lượt trùng. Tính trong số người đã đau ngực. Gần như luôn đột ngột, nhưng câu hỏi cần cả đột ngột và dữ dội ngay từ đầu, mà tràn khí nhỏ có thể đau vừa phải: khoảng một nửa."
+  - finding: chest_pain_duration
+    dist: { seconds: 0.025, minutes: 0.1, over_15min: 0.575, days: 0.3 }
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [olesen-erjor-2019, chun-kjp-2015, msd-pneumothorax]
+      locator: "Olesen 2019 bảng 5; Chun 2015 tóm tắt"
+      reported: "75% vào viện trong 24 giờ đầu; ở thiếu niên, đau liên tục 1–2 ngày sau khởi phát."
+      note: "Tính trong số người đã đau ngực. Lượt A (0,03/0,12/0,6/0,25) và lượt B (0,02/0,08/0,55/0,35) lệch ít; lượt C lấy trung bình. Đau kéo dài, không tự hết sau vài giây; một phần tư đến khám sau 24 giờ (đau âm ỉ nhiều ngày)."
+  - finding: dyspnea_onset
+    dist: { sudden: 0.7, hours_days: 0.25, weeks: 0.05 }
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [olesen-erjor-2019, msd-pneumothorax, byt-qd-4235-2012]
+      locator: "Olesen 2019 bảng 5; MSD mục Symptoms and Signs; 4235/QĐ-BYT tr. 16"
+      reported: "Khởi phát triệu chứng đột ngột 95% (tràn khí nguyên phát)."
+      note: "Tính trong số người đã khó thở. Lượt A để đột ngột 0,6 (MSD: khó thở có thể đến từ từ khi tràn khí nhỏ, tăng dần), lượt B 0,8 (Olesen 95%). Lượt C mở lại hai nguồn: số 95% là khởi phát triệu chứng nói chung (thường là cơn đau), khó thở có thể tăng dần sau đó; chọn 0,7. Tỷ lệ nền 'đột ngột' 0,15; quy tắc rf_dyspnea_sudden xếp mức 2."
+  - finding: dyspnea_severity
+    dist: { exertion: 0.45, rest: 0.45, cannot_speak: 0.1 }
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-4235-2012, msd-pneumothorax]
+      locator: "4235/QĐ-BYT tr. 139 (khó thở, thở nhanh nông khi nghỉ hoặc khi gắng sức), tr. 141 (tràn khí áp lực: thở trên 30 lần/phút)"
+      note: "Hai lượt trùng. Tính trong số người đã khó thở. Khó thở khi nghỉ gặp nhiều hơn nền (0,3); tràn khí lượng ít ở người trẻ có thể chỉ khó thở khi gắng sức. Ước lượng."
+  - finding: spo2_measured
+    dist: { ge_96: 0.2, s92_95: 0.12, lt_92: 0.08, not_measured: 0.6 }
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [byt-qd-4235-2012, msd-pneumothorax]
+      locator: "4235/QĐ-BYT tr. 140 (lượng khí ít: thở oxy, theo dõi; tràn khí áp lực: suy hô hấp)"
+      note: "Chỉ lượt A có (dấu hiệu đã vào danh mục); lượt C giữ. Tính trong số người đã khó thở. 'Chưa đo' giữ đúng tỷ lệ nền 0,6. Tràn khí nhỏ ở người trẻ thường còn ô xy bình thường; tràn khí lớn, thể thứ phát hay hạ ô xy. Ước lượng."
+  - finding: chest_pain_pressure
+    freq: rare
+    evidence:
+      tier: B
+      basis: verbal
+      sources: [byt-qd-4235-2012, msd-pneumothorax]
+      locator: "4235/QĐ-BYT tr. 24 (đau giữa ngực thường do cơn đau thắt ngực, tiêu hóa; đau bên phải hay bên trái thường do phổi, màng phổi), tr. 139 (đau ở bên tràn khí)"
+      note: "Lượt A rare (dựa vào 4235/QĐ-BYT), lượt B occasional (ước lượng). Lượt C chọn bản có nguồn: đau của tràn khí ở một bên ngực, bên bị tràn khí, ít khi là đau, tức nặng giữa ngực; MSD ghi đôi khi giống đau do thiếu máu cơ tim. Mức rare thấp hơn tỷ lệ nền 5%. Có đau tức giữa ngực thì quy tắc rf_chest_pain_central vẫn xếp mức 2."
+  - finding: chest_wall_tenderness
+    freq: rare
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [byt-qd-4235-2012, msd-pneumothorax]
+      note: "Hai lượt trùng. Tính trong số người đã đau ngực. Đau do màng phổi, không do thành ngực nên ấn vào ngực thường không làm đau nhói đúng chỗ. Mức rare thấp hơn tỷ lệ nền 5%; giúp phân biệt với đau thành ngực. Ước lượng, cần bác sĩ duyệt."
+  - finding: chest_pain_exertional
+    freq: rare
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [olesen-erjor-2019, msd-pneumothorax]
+      locator: "Olesen 2019 bảng 5; MSD mục Etiology (thường xảy ra lúc nghỉ)"
+      reported: "Lúc khởi phát: đang nghỉ 70%, đang ngủ 16%, sinh hoạt thường ngày 11%, gắng sức 3%."
+      note: "Hai lượt trùng. Tính trong số người đã đau ngực. Câu hỏi là 'đau khi gắng sức, đỡ khi nghỉ', kiểu đau thắt ngực; đau do tràn khí không đỡ khi nghỉ. Mức rare thấp hơn tỷ lệ nền 5%."
+  - finding: smoker
+    freq: frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [olesen-erjor-2019, ghisalberti-hlc-2020, msd-pneumothorax, byt-qd-4235-2012]
+      locator: "Olesen 2019 bảng 4; 4235/QĐ-BYT tr. 140"
+      reported: "Hút thuốc hằng ngày 58%, hằng tuần 2% (Đan Mạch); hút thuốc là yếu tố nguy cơ ngoại sinh quan trọng nhất (Ghisalberti)."
+      note: "Hai lượt trùng. Câu hỏi chỉ hỏi người từ 13 tuổi. Tỷ lệ nền 0,2 nên câu trả lời 'Có' tăng khả năng khoảng 2,5 lần."
+  - finding: copd_known
+    freq: occasional
+    freq_by_age:
+      adult_18_44: rare
+      elder_65_74: frequent
+      elder_75p: frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [chan-annacadmedsingap-1985, olesen-erjor-2019, msd-pneumothorax, byt-qd-4235-2012]
+      locator: "Chan 1985 tóm tắt; MSD mục Etiology; 4235/QĐ-BYT tr. 140 (tràn khí thứ phát: bệnh phổi tắc nghẽn mạn tính, giãn phế nang, hen)"
+      reported: "Bệnh phổi tắc nghẽn mạn tính 43% người tràn khí tự phát ở khoa nội (Singapore); người trẻ không có bệnh phổi (phân bố tuổi hai đỉnh)."
+      note: "Hai lượt cùng occasional, frequent từ 65 tuổi; chỉ lượt B thêm rare ở 18–44 tuổi. Lượt C giữ cả hai: người trẻ gần như chỉ bị thể nguyên phát (Olesen loại người có bệnh phổi; Chan: người trẻ không có bệnh phổi), người cao tuổi phần lớn là thể thứ phát, hay gặp nhất sau bệnh phổi tắc nghẽn (MSD). Số 43% đo ở khoa nội nên hạ một mức cho 45–64 tuổi. Mức rare ở 18–44 tuổi thấp hơn tỷ lệ nền 0,04, để câu trả lời 'Không' của người trẻ không làm giảm khả năng tràn khí. Câu chỉ hỏi người từ 18 tuổi."
+  - finding: fever
+    freq: rare
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [byt-qd-4235-2012, msd-pneumothorax]
+      locator: "4235/QĐ-BYT tr. 139 (triệu chứng: đau ngực, khó thở, ho khan)"
+      note: "Hai lượt trùng. Sốt không có trong triệu chứng của tràn khí; sốt kèm đau ngực, khó thở nghiêng về viêm phổi. Mức rare thấp hơn tỷ lệ nền 5%. Tràn khí thứ phát sau viêm phổi hoại tử, lao có thể sốt do bệnh nền."
+  - finding: fainting_or_near_fainting
+    freq: rare
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [chan-annacadmedsingap-1985, msd-pneumothorax]
+      locator: "Chan 1985 tóm tắt; MSD (tràn khí áp lực gây tụt huyết áp)"
+      reported: "1/80 người vào viện vì mất ý thức."
+      note: "Hai lượt trùng. Ngất, choáng hiếm, chủ yếu khi tràn khí áp lực. Mức rare thấp hơn tỷ lệ nền 5%. Có dấu hiệu này thì các quy tắc ngất, đau ngực, khó thở đã xếp mức 1–2."
+  - finding: es_severe_breathing
+    freq: occasional
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-4235-2012, msd-pneumothorax]
+      locator: "4235/QĐ-BYT tr. 141 (tràn khí áp lực dương: thở trên 30 lần/phút, tụt huyết áp)"
+      note: "Hai lượt trùng (như thuyên tắc phổi). Người khó thở dữ dội đã dừng ở màn sàng lọc cấp cứu; liên kết giúp tràn khí hiện trong danh sách cần loại trừ. Ước lượng."
+warning_signs: [es_severe_breathing, chest_pain_sudden_severe, breathing_difficulty, fainting_or_near_fainting, cold_hands_feet, confusion]
+self_care_vi:
+  - "Đến cơ sở cấp cứu ngay để được chụp X quang phổi. Nhờ người khác chở, không tự lái xe."
+  - "Gọi 115 nếu khó thở tăng nhanh, môi tím, vã mồ hôi lạnh hoặc lơ mơ."
+  - "Trong lúc chờ, ngồi yên ở tư thế dễ thở nhất, tránh gắng sức."
+  - "Không hút thuốc. Không đi máy bay, không lặn khi chưa được bác sĩ cho phép."
+see_doctor_vi:
+  - "Cần chụp X quang phổi để biết lượng khí. Tràn khí ít có thể chỉ theo dõi; tràn khí nhiều cần hút khí hoặc đặt ống dẫn lưu."
+  - "Bệnh hay tái lại: lại đau ngực một bên đột ngột hoặc khó thở thì đi cấp cứu ngay. Bỏ thuốc lá giúp giảm nguy cơ."
+  - "Người có bệnh phổi tắc nghẽn mạn tính, hen mà đột nhiên khó thở nặng hơn cần đi cấp cứu ngay."
+sources: [byt-qd-4235-2012, olesen-erjor-2019, msd-pneumothorax, ghisalberti-hlc-2020]
+review:
+  status: source_checked
+  authors: ["agent:pass-a", "agent:pass-b"]
+  reconciler: "agent:pass-c"
+  doctor_reviewer: null
+  updated: "2026-10-31"
+  notes_vi: "Lượt C (Giai đoạn 3 lô 3, phần c) đối chiếu 15 liên kết và mở lại mọi nguồn được trích (4235/QĐ-BYT ba bài khó thở, đau ngực, tràn khí màng phổi; Olesen 2019 toàn văn; các tóm tắt qua API Europe PMC; MSD). Mức xử trí 2, không được bỏ sót, hai lượt giống nhau: 4235/QĐ-BYT xếp tràn khí màng phổi áp lực vào nhóm đau ngực đe dọa tính mạng, cần X quang phổi để chẩn đoán, hút khí hoặc dẫn lưu tùy lượng khí; MSD: tràn khí áp lực gây ngừng tim trong vài phút; 86% người tràn khí nguyên phát nằm viện phải dẫn lưu (Olesen). Ca nặng do màn sàng lọc và các quy tắc mức 1 xử lý. Trang NHS về tràn khí đã bị gỡ (lượt R) nên không dùng. Lượt C bỏ hai liên kết chỉ lượt B có, chỉ dựa trên ước lượng: khò khè (rare, từ 65 tuổi occasional: nguồn không mô tả khò khè; mức occasional ở người cao tuổi làm tăng tràn khí ở mọi người bệnh phổi tắc nghẽn khò khè) và ợ chua (rare, không có nguồn). Bác sĩ cần xem: (1) prior là ước lượng từ tỷ lệ mới mắc, các nghiên cứu đau ngực ở tuyến ban đầu không tách riêng tràn khí; prior 13–44 tuổi P4 cộng vào tổng xác suất bệnh cấp cứu của người trẻ đau ngực; (2) tần suất triệu chứng từ bệnh viện (Đan Mạch, Singapore 1985, thiếu niên Israel) và mô tả bằng lời; (3) danh mục chưa có câu 'đau một bên ngực' và 'dáng người cao gầy'; (4) không liên kết ho (4235/QĐ-BYT có ho khan, không có tần suất); (5) mã ICD-10 J93 chưa đối chiếu bảng của Bộ Y tế."

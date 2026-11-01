@@ -1,0 +1,46 @@
+id: h-sob-018
+set: holdout
+title_vi: "Nam 24 tuổi cao gầy hút thuốc, đột ngột đau nhói ngực trái, khó thở tăng nhanh trong 2 giờ, nay không nói trọn câu, môi tím"
+narrative_vi: "Anh K., 24 tuổi, lập trình viên ở TP.HCM, cao 1,82 m, gầy, hút thuốc lá 6 năm. Khoảng 2 giờ trước, đang ngồi làm việc, anh đột ngột đau nhói dữ dội ngực bên trái, đau tăng khi hít vào, kèm hụt hơi. Anh nằm nghỉ nhưng khó thở tăng dần; nửa giờ nay anh thở rất nhanh, chỉ nói được vài từ, môi tím tái, vã mồ hôi lạnh, tim đập rất nhanh. Bạn cùng phòng dùng app giúp anh. Anh không ho, không ho ra máu, không sốt, không bị chấn thương ngực, không đi xa gần đây, chân không sưng. Anh chưa từng bị hen."
+patient:
+  age_years: 24
+  sex: male
+  region: south
+  month: 7
+complaint: shortness_of_breath
+answers:
+  es_severe_breathing: present
+  dyspnea_onset: sudden
+  dyspnea_severity: cannot_speak
+  chest_pain: present
+  pleuritic_chest_pain: present
+  chest_pain_sudden_severe: present
+  chest_pain_duration: over_15min
+  cold_sweat: present
+  palpitations: present
+  smoker: present
+  chest_pain_pressure: absent
+  chest_pain_radiates_back: absent
+  pain_radiates_arm_jaw: absent
+  cough: absent
+  hemoptysis: absent
+  fever: absent
+  wheeze: absent
+  leg_swelling_one_side: absent
+  recent_immobility: absent
+  allergen_exposure: absent
+  asthma_known: absent
+  confusion: absent
+  fainting_or_near_fainting: absent
+default_unmentioned: absent
+expected:
+  condition: pneumothorax
+  acceptable: []
+  triage: 1
+source:
+  basis: "Tràn khí màng phổi tự phát ở nam trẻ cao gầy hút thuốc, diễn tiến nặng (gợi ý tràn khí áp lực): đột ngột đau ngực một bên kiểu màng phổi, khó thở tăng nhanh, nay không nói trọn câu, tím, vã mồ hôi, tim rất nhanh. NHS Shortness of breath: khó thở dữ dội, không nói được thành lời, môi tím thì gọi 999. Tràn khí áp lực là cấp cứu cần giải áp ngay (BTS 2023). Mức 1."
+  references:
+    - nhs-shortness-of-breath
+    - nhs-chest-pain
+author: "agent:vignette-holdout"
+notes_vi: "Ca cấp cứu theo đề bài. Danh mục chưa có câu hỏi về dáng người cao gầy."

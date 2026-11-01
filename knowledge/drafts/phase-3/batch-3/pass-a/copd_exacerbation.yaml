@@ -1,0 +1,199 @@
+id: copd_exacerbation
+names:
+  vi: "Đợt cấp bệnh phổi tắc nghẽn mạn tính"
+  vi_common: ["Phổi tắc nghẽn", "Bệnh phổi tắc nghẽn mạn tính (COPD)"]
+  en: "Acute exacerbation of chronic obstructive pulmonary disease"
+codes:
+  icd10: "J44.1"
+  icd10_verified: false
+summary_vi:
+  - "Bệnh phổi mạn tính làm đường thở hẹp dần, thường do hút thuốc lá, thuốc lào hoặc khói bụi lâu năm."
+  - "Đợt cấp là khi khó thở, ho, đờm tăng lên rõ trong vài ngày, hay sau cảm lạnh."
+  - "Đợt cấp cần được khám để chỉnh thuốc; đợt nặng là cấp cứu."
+urgency: 3
+cant_miss: false
+specialties: [respiratory, general_medicine]
+applicability:
+  age_groups: [adult_18_44, adult_45_64, elder_65_74, elder_75p]
+  reason_vi: "Bệnh hình thành sau nhiều năm hít khói thuốc, khói bụi; không gặp ở trẻ em và thiếu niên."
+priors:
+  - complaint: shortness_of_breath
+    default: P2
+    by_age:
+      adult_18_44: P4
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [who-vn-copd, who-steps-vn-2021, gold-2026, byt-qd-2767-2023]
+      reported: "bệnh phổi tắc nghẽn ở 7,1% nam và 1,9% nữ từ 40 tuổi tại Việt Nam (WHO); đang hút thuốc 41,1% nam, 55,0% nam 45–64 tuổi (STEPS 2021)"
+      note: "Thang tuyệt đối. Từ 45 tuổi, đợt cấp phổi tắc nghẽn là một trong các nguyên nhân khó thở hay gặp nhất (cùng suy tim, viêm phổi): ước 5–20% (P2). Dưới 45 tuổi bệnh hiếm (2767, mục 1.2.1: hay gặp ở nam trên 40 tuổi), P4. Ở nước thu nhập thấp và trung bình hơn 90% người bệnh chưa được chẩn đoán (GOLD 2026, tr. 32), nên prior không chỉ dựa vào người đã biết bệnh. Ước lượng."
+  - complaint: cough
+    default: P3
+    by_age:
+      adult_18_44: P5
+      elder_65_74: P2
+      elder_75p: P2
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [who-vn-copd, gold-2026]
+      note: "Người ho phần lớn do nhiễm vi rút; ở người 45–64 tuổi đợt cấp phổi tắc nghẽn ước 1–5% (P3), từ 65 tuổi 5–20% (P2) vì bệnh tăng rõ theo tuổi. Dưới 45 tuổi P5. Ước lượng."
+prior_modifiers:
+  - when: { sex: [male] }
+    factor: 1.5
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [who-vn-copd]
+      reported: "nam 7,1%, nữ 1,9% từ 40 tuổi"
+      note: "Tỷ số nam/nữ khoảng 3,7 trong dân số; chọn 1,5 và 0,5 (tỷ số 3) vì câu hỏi hút thuốc đã mang một phần khác biệt này. Phụ nữ không hút thuốc vẫn có thể mắc do khói bếp."
+  - when: { sex: [female] }
+    factor: 0.5
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [who-vn-copd]
+      reported: "nam 7,1%, nữ 1,9% từ 40 tuổi"
+      note: "Xem hệ số cho nam."
+findings:
+  - finding: copd_known
+    freq: frequent
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [who-vn-copd, gold-2026]
+      note: "Ở cộng đồng, phần lớn người bệnh phổi tắc nghẽn chưa được chẩn đoán: tới 70% trên thế giới, hơn 90% ở nước thu nhập thấp và trung bình (GOLD 2026, tr. 32); người chưa được chẩn đoán vẫn có đợt cấp. Người đã có đợt cấp đi khám thường biết bệnh hơn, nhưng đợt cấp có thể là lần đầu phát hiện bệnh. Ước khoảng một nửa (frequent). Cần bác sĩ duyệt."
+  - finding: smoker
+    freq: frequent
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [who-vn-copd, who-steps-vn-2021, gold-2026]
+      reported: "3/4 số ca do khói thuốc (hút chủ động hoặc thụ động, WHO); đang hút thuốc 41,1% nam, 0,6% nữ từ 15 tuổi (STEPS 2021)"
+      note: "Câu hỏi chỉ hỏi đang hút; nhiều người bệnh đã bỏ thuốc khi phát hiện bệnh. Ước khoảng một nửa đang hút (frequent), tỷ lệ nền 20%."
+  - finding: breathing_difficulty
+    freq: very_frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [rmed-copd-exacerbation-2008, gold-2026, byt-qd-2767-2023]
+      locator: "McManus 2008, Bảng 3; GOLD 2026, tr. 92–93; 2767, mục 3.1"
+      reported: "tăng khó thở 99% (136 người nhập viện vì đợt cấp)"
+      population: "người nhập viện vì đợt cấp, Bắc Ireland, tuổi trung bình 70"
+      note: "Tăng khó thở là triệu chứng chính của đợt cấp (GOLD; 2767). Hạ một mức so với số liệu vì nghiên cứu chỉ gồm người nằm viện, bệnh nặng, và người chọn ho làm triệu chứng chính thường có đợt nhẹ hơn. Dùng khi triệu chứng chính là ho."
+  - finding: cough
+    freq: very_frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [rmed-copd-exacerbation-2008, gold-2026, byt-qd-2767-2023]
+      locator: "McManus 2008, Bảng 3; GOLD 2026, tr. 23, 93; 2767, mục 3.3.1"
+      reported: "tăng ho 77% (người nhập viện)"
+      note: "Ho mạn tính thường là triệu chứng đầu tiên của bệnh (GOLD), đợt cấp làm ho tăng; câu hỏi chỉ hỏi có ho, nên tỷ lệ có ho cao hơn tỷ lệ tăng ho. Giữ very_frequent dù nguồn ở bệnh viện. Dùng khi triệu chứng chính là khó thở."
+  - finding: productive_cough
+    freq: very_frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [rmed-copd-exacerbation-2008, gold-2026, byt-qd-2767-2023]
+      locator: "McManus 2008, Bảng 3; 2767, mục 3.3.1"
+      reported: "tăng lượng đờm 65%, đờm mủ tăng 60% (người nhập viện)"
+      note: "Tần suất trong số người có ho. Câu hỏi chỉ hỏi có đờm hay không; người bệnh phổi tắc nghẽn hay khạc đờm mạn tính, nên tỷ lệ có đờm cao hơn tỷ lệ đờm tăng (ước very_frequent)."
+  - finding: wheeze
+    freq: frequent
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [rmed-copd-exacerbation-2008, gold-2026, byt-qd-2767-2023]
+      locator: "McManus 2008, Bảng 3; GOLD 2026, tr. 23, 93"
+      reported: "khò khè 81% (người nhập viện)"
+      note: "Hạ một mức (very_frequent thành frequent) vì nghiên cứu chỉ gồm người nằm viện; khò khè ít hơn cơn hen. GOLD và 2767 (ran rít khi nghe phổi) đều nêu khò khè trong đợt cấp."
+  - finding: fever
+    freq: occasional
+    evidence:
+      tier: B
+      basis: numeric
+      sources: [rmed-copd-exacerbation-2008, gold-2026, byt-qd-2767-2023]
+      locator: "McManus 2008, Bảng 3; GOLD 2026, tr. 99; 2767, mục 3.3.1"
+      reported: "sốt 28% (người nhập viện; sốt liên quan với có vi rút)"
+      note: "Đợt cấp hay do nhiễm vi rút hoặc vi khuẩn; GOLD và 2767 ghi có thể sốt; phần lớn không sốt. Số bệnh viện vẫn thuộc mức occasional, ở cộng đồng có thể thấp hơn nhưng khó xuống dưới 7,5%. Sốt cao kèm khó thở nghiêng về viêm phổi."
+  - finding: dyspnea_onset
+    dist: { sudden: 0.08, hours_days: 0.7, weeks: 0.22 }
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [gold-2026, byt-qd-2767-2023]
+      note: "Đợt cấp là triệu chứng nặng lên trong vài ngày, tới 14 ngày (GOLD 2026 tr. 92; 2767 mục 3.1); nền khó thở tăng dần nhiều năm nên một phần người bệnh sẽ chọn 'tăng dần nhiều tuần'. Khó thở đột ngột trong vài phút gợi ý tràn khí màng phổi, thuyên tắc phổi. Ước lượng."
+  - finding: dyspnea_severity
+    dist: { exertion: 0.5, rest: 0.42, cannot_speak: 0.08 }
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [gold-2026]
+      note: "Người tự kiểm tra phần lớn có đợt nhẹ đến vừa; khó thở lúc nghỉ hay gặp hơn ở người bệnh nặng. Ước lượng; mức lúc nghỉ và nói không trọn câu có quy tắc mức 2 và 1."
+  - finding: cough_duration
+    dist: { lt_1w: 0.2, w1_2: 0.15, w2_8: 0.2, gt_8w: 0.45 }
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [gold-2026, byt-qd-2767-2023]
+      note: "Ho, khạc đờm kéo dài là triệu chứng thường gặp của bệnh (2767, mục 1.2.1; GOLD tr. 23). Nhiều người bệnh ho, khạc đờm mạn tính nhiều năm, nên gần một nửa sẽ chọn 'từ 2 tháng'; người khác kể thời gian của đợt nặng lên (vài ngày). Ước lượng."
+  - finding: reliever_no_relief
+    freq: occasional
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [gold-2026]
+      note: "Trong số người đã biết bệnh: xịt thuốc giãn phế quản không đỡ là dấu hiệu đợt nặng (quy tắc rf_copd_reliever_fails, mức 2). Ước occasional."
+  - finding: similar_episodes_before
+    freq: frequent
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [gold-2026]
+      note: "Đợt cấp hay tái lại; khi đã có một đợt thì dễ có đợt tiếp theo, và tiền sử đợt cấp là yếu tố dự báo mạnh nhất (GOLD 2026, tr. 99). Ước khoảng một nửa đã có đợt tương tự."
+  - finding: orthopnea
+    freq: occasional
+    evidence:
+      tier: C
+      basis: judgment
+      sources: [gold-2026]
+      note: "Người bệnh nặng hay phải ngồi dậy để thở; ít hơn suy tim. Ước occasional."
+  - finding: leg_swelling_both
+    freq: occasional
+    evidence:
+      tier: B
+      basis: judgment
+      sources: [byt-qd-2767-2023, gold-2026]
+      locator: "2767, mục 3.3.1 và Bảng 3.2"
+      note: "Phù chân gặp khi bệnh nặng có suy tim phải (tâm phế mạn); 2767 nêu dấu hiệu tâm phế mạn (phù) trong đợt cấp và xếp phù chi mới xuất hiện vào lý do điều trị nội trú. Nguồn không cho tỷ lệ. Ước occasional, thấp hơn suy tim."
+warning_signs:
+  - es_severe_breathing
+  - reliever_no_relief
+  - confusion
+  - drowsy_hard_to_wake
+self_care_vi:
+  - "Dùng thuốc xịt, thuốc hít đúng như bác sĩ đã dặn cho đợt nặng lên."
+  - "Bỏ thuốc lá, thuốc lào; tránh khói bếp, khói bụi."
+  - "Ngồi tư thế dễ thở, thở chậm qua môi chúm lại."
+  - "Không tự dùng kháng sinh hoặc thuốc corticoid khi chưa có bác sĩ chỉ định."
+see_doctor_vi:
+  - "Đi khám trong 24 giờ khi khó thở, ho, đờm tăng hơn thường ngày."
+  - "Người từ 40 tuổi hút thuốc mà hay ho, khạc đờm, khó thở nên đi khám để đo chức năng hô hấp."
+  - "Đi cấp cứu ngay nếu xịt thuốc không đỡ, khó thở lúc nghỉ, môi tím, lơ mơ hoặc phù chân tăng."
+sources: [gold-2026, byt-qd-2767-2023, who-vn-copd]
+review:
+  status: draft
+  authors: ["agent:pass-a"]
+  updated: "2026-10-31"
+  notes_vi: "Lượt A vòng 2 (31/10/2026): đã mở bài Respiratory Medicine 2008 (McManus và cs., toàn văn qua Europe PMC), trang WHO Việt Nam về bệnh phổi tắc nghẽn và báo cáo STEPS 2021, đặt verified: true; bảng triệu chứng khớp với bản nháp và xác nhận bối cảnh là người nhập viện. Bỏ bản nháp nguồn byt-qd-2767-2023, dùng bản trong sổ nguồn (đã đọc lại PDF, ghi số mục); đổi gold-2025 sang gold-2026 sau khi đối chiếu bản 2026. Đã sửa: nâng bậc C lên B cho prior, hệ số giới, các triệu chứng có số liệu và phù chân; thay số 94% chưa được chẩn đoán (không có trong nguồn đã mở) bằng số của GOLD 2026; không đổi mức nào. Ghi chú vòng 1: phiên làm việc chặn WebFetch. Cần bác sĩ xem: (1) urgency 3 như gợi ý: đợt cấp điển hình cần được khám chỉnh thuốc trong 24 giờ; quy tắc rf_copd_flare (mức 3) và các quy tắc khó thở xử lý đợt nặng; (2) applicability từ 18 tuổi; dưới 45 tuổi prior thấp; (3) copd_known chỉ frequent vì bệnh bị bỏ sót nhiều ở Việt Nam; (4) hệ số giới (nam 1,5, nữ 0,5) cộng với câu hút thuốc có thể đếm trùng một phần; (5) danh mục chưa có câu hỏi khói bếp củi, than (yếu tố nguy cơ chính ở phụ nữ không hút thuốc): đề xuất bên dưới; (6) mã ICD-10 chưa đối chiếu."
+proposed_findings:
+  - id: biomass_smoke_exposure
+    kind: exposure
+    type: binary
+    label_vi: "Nhiều năm đun bếp củi, than"
+    question_vi: "Đã nhiều năm nấu bếp củi, rơm hoặc than trong nhà không?"
+    applies_to:
+      age_groups: [adult_18_44, adult_45_64, elder_65_74, elder_75p]
+    leak: nonspecific
+    notes_vi: "Khói bếp sinh khối là yếu tố nguy cơ bệnh phổi tắc nghẽn mạn tính hàng đầu ở người không hút thuốc, nhất là phụ nữ nông thôn (GOLD, WHO). Câu hút thuốc hiện chỉ hỏi người đang hút. Lượt A, lô 3."

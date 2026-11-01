@@ -1,0 +1,45 @@
+id: d-common-cold-cough-1
+set: dev
+title_vi: "Nữ 28 tuổi chọn Ho: ho khan 3 ngày, sổ mũi, nghẹt mũi, đau họng, không sốt"
+narrative_vi: "Chị A., 28 tuổi, ở TP.HCM. Ba ngày nay ho khan, sổ mũi nước trong, nghẹt mũi, hắt hơi, đau rát họng, hơi khàn tiếng. Không sốt, không khó thở, không đau ngực, không khò khè. Con gái đi nhà trẻ cũng đang sổ mũi. Không có thai, không chậm kinh. Không hút thuốc."
+patient:
+  age_years: 28
+  sex: female
+  region: south
+  month: 8
+complaint: cough
+answers:
+  cough_duration: lt_1w
+  productive_cough: absent
+  runny_nose: present
+  nasal_congestion: present
+  sore_throat: present
+  hoarse_voice: present
+  sick_contact_respiratory: present
+  fever: absent
+  breathing_difficulty: absent
+  pleuritic_chest_pain: absent
+  chest_pain: absent
+  chest_pain_pressure: absent
+  wheeze: absent
+  hemoptysis: absent
+  stridor: absent
+  choking_episode: absent
+  loss_of_smell_taste: absent
+  headache: absent
+  myalgia: absent
+  covid_self_test: not_tested
+  asthma_known: absent
+  smoker: absent
+  heartburn: absent
+  pregnant: absent
+  missed_period: absent
+default_unmentioned: absent
+expected:
+  condition: common_cold
+  acceptable: []
+  triage: 5
+source:
+  basis: "Cảm lạnh điển hình (NHS Common cold: sổ mũi, nghẹt mũi, đau họng, khàn tiếng, ho; tự khỏi sau 1–2 tuần). NHS Cough: ho phần lớn do cảm lạnh, tự chăm sóc."
+  references: [nhs-common-cold, nhs-cough, msd-common-cold]
+author: "agent:pass-c"

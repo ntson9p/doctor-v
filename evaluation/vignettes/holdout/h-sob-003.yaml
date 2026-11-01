@@ -1,0 +1,55 @@
+id: h-sob-003
+set: holdout
+title_vi: "Nữ 72 tuổi không hút thuốc, 40 năm đun bếp củi, ho đờm mùa lạnh nhiều năm; 5 ngày nay khó thở cả khi ngồi, khò khè, SpO2 90%"
+narrative_vi: "Bà H., 72 tuổi, ở một xã miền núi tỉnh Lạng Sơn, chưa từng hút thuốc. Hơn 40 năm nay bà nấu ăn bằng bếp củi trong gian bếp kín. Nhiều năm nay cứ đến mùa lạnh bà lại ho khạc đờm, đi lên dốc là hụt hơi, nhưng chưa đi khám, chưa được nói bị bệnh phổi gì. Đợt rét này, 5 ngày nay bà ho nhiều hơn, đờm đặc màu vàng, khò khè, khó thở tăng dần; từ hôm qua ngồi yên cũng thở mệt, phải ngồi cúi người tì tay lên đầu gối, nói được câu nhưng chậm. Cháu bà mua máy kẹp ngón tay, đo SpO2 được 90%. Bà không sốt, không đau ngực, không ho ra máu, chân không phù, vẫn tỉnh táo, trả lời đúng."
+patient:
+  age_years: 72
+  sex: female
+  region: north
+  month: 1
+complaint: shortness_of_breath
+answers:
+  biomass_smoke_exposure: present
+  cough: present
+  cough_duration: gt_8w
+  productive_cough: present
+  wheeze: present
+  dyspnea_onset: hours_days
+  dyspnea_severity: rest
+  spo2_measured: lt_92
+  breathless_on_exertion: present
+  copd_known: absent
+  asthma_known: absent
+  smoker: absent
+  former_smoker: absent
+  fever: absent
+  chest_pain: absent
+  chest_pain_pressure: absent
+  pleuritic_chest_pain: absent
+  hemoptysis: absent
+  leg_swelling_both: absent
+  leg_swelling_one_side: absent
+  orthopnea: absent
+  confusion: absent
+  drowsy_hard_to_wake: absent
+  cold_hands_feet: absent
+  severe_weakness: absent
+  es_severe_breathing: absent
+  allergen_exposure: absent
+  known_heart_disease: absent
+  hypertension_known: absent
+  diabetes: absent
+  weight_loss_unintended: absent
+  tb_contact: absent
+default_unmentioned: absent
+expected:
+  condition: copd_exacerbation
+  acceptable: []
+  triage: 2
+source:
+  basis: "Đợt cấp bệnh phổi tắc nghẽn mạn tính chưa được chẩn đoán ở phụ nữ không hút thuốc, phơi nhiễm khói bếp củi nhiều năm (GOLD 2026: khói chất đốt sinh khối là yếu tố nguy cơ quan trọng ở người không hút thuốc): ho khạc đờm mạn tính, mùa lạnh nặng lên, nay khó thở cả khi nghỉ, khò khè, SpO2 90%. 2767/QĐ-BYT Bảng 3.2: khó thở khi nghỉ, SpO2 dưới 92% là chỉ định nhập viện. Còn tỉnh, nói được câu nên đến cơ sở cấp cứu ngay (mức 2)."
+  references:
+    - byt-qd-2767-2023
+    - gold-2026
+author: "agent:vignette-holdout"
+notes_vi: "Ca không điển hình: nữ, không hút thuốc, chưa từng được chẩn đoán. Hen khởi phát muộn và suy tim là chẩn đoán phân biệt."

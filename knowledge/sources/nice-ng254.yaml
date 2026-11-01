@@ -10,7 +10,7 @@ url: "https://www.nice.org.uk/guidance/ng254"
 license_class: L3
 license_note: "Nội dung có bản quyền NICE (© NICE, All rights reserved): chỉ dùng dữ kiện kèm trích dẫn, không sao chép câu chữ."
 default_tier: B
-accessed: "2026-10-24"
+accessed: "2026-10-31"
 verified: true
 verified_by: "agent:pass-r"
-notes_vi: "Xuất bản 19/11/2025; rà soát 05/3/2026, đang cập nhật theo thang PEWS quốc gia. Bảng 1–3 (chương Evaluating risk level): trẻ dưới 5 tuổi nguy cơ cao khi không đáp ứng giao tiếp, khó đánh thức, khóc yếu hoặc thét, thở rên, ngừng thở, da loang lổ hoặc xám tái, tím, ban không mất khi ấn, nhiệt độ dưới 36°C, hoặc dưới 3 tháng có nhiệt độ từ 38°C; tay chân lạnh và 3–6 tháng có nhiệt độ từ 39°C là nguy cơ trung bình–cao. nice.org.uk trả lỗi 403 với truy cập tự động; lượt R đã đọc các trang chính thức (Overview, Recommendations, History) qua dịch vụ đọc văn bản r.jina.ai."
+notes_vi: "Xuất bản 19/11/2025; rà soát 05/3/2026, đang cập nhật theo thang PEWS quốc gia. Bảng 1–3 (chương Evaluating risk level): trẻ dưới 5 tuổi nguy cơ cao khi không đáp ứng giao tiếp, khó đánh thức, khóc yếu hoặc thét, thở rên, ngừng thở, da loang lổ hoặc xám tái, tím, ban không mất khi ấn, nhiệt độ dưới 36°C, hoặc dưới 3 tháng có nhiệt độ từ 38°C; tay chân lạnh và 3–6 tháng có nhiệt độ từ 39°C là nguy cơ trung bình–cao. Lượt R lô 3 vòng 2 (31/10/2026) tải lại trực tiếp các trang Overview, History, Update information và chương Evaluating risk level trên nice.org.uk (không qua dịch vụ đọc hộ) và đối chiếu lại bảng 1: các ý trên đúng; thêm SpO2 dưới 90% (nguy cơ cao), dưới 92% hoặc phập phồng cánh mũi (nguy cơ trung bình–cao). Sửa nhỏ 01/2026 (từ ngữ về khuyết tật học tập)."
